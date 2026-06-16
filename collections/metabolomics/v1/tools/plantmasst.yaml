@@ -1,0 +1,10 @@
+name: plantMASST
+slug: plantmasst
+evidence_spans:
+- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
+derived_from:
+- doi: 10.1038/s41564-023-01575-9
+  title: microbemasst
+source_repos:
+- robinschmid/microbe_masst
+schema_version: 0.2.0

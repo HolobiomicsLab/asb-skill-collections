@@ -1,0 +1,169 @@
+# SciTask Card: Analyze the effect of multiple overlapping m/z scan windows on peak profile quality using the sawtooth diagnostic
+
+- Task ID: `task_004`
+- Schema version: `0.18.0`
+- Created at: `2026-06-16T07:24:56.964844+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_tardis/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-processing`, `visualization`, `benchmark-evaluation`
+- DOI: `10.1021/acs.analchem.5c00567`
+- GitHub: `pablovgd/TARDIS`
+- Input from: `task_001`
+
+## Classification
+
+- Task kind: `analysis`
+- Article type: `software-tool`
+- Primary domain: `multi-omics`
+- Subdomains: `lipidomics`, `untargeted-metabolomics`, `computational-metabolomics`
+- Techniques: `lc-ms`, `feature-detection`, `chromatogram-alignment`, `quality-control`, `spectral-library-matching`
+
+## Research Question
+Does the sawtooth artefact appear in extracted ion chromatogram (EIC) output when tardisPeaks() is run on LC-MS data with multiple overlapping m/z scan windows without proper mass_range separation?
+
+## Connected Finding
+Peaks display a sawtooth profile when tardisPeaks() processes data with multiple overlapping m/z scan windows without mass_range separation, due to filtering of empty spectra within TARDIS.
+
+## Task Description
+Run tardisPeaks() on vignette mzML files with a multi-window mass_range configuration to demonstrate the sawtooth artefact that appears when scan-window separation is omitted, then re-run with correct mass_range routing to produce clean peak profiles and EIC plots.
+
+## Inputs
+- Centroided mzML vignette files
+- Target list data.frame with compound ID, name, m/z, RT, and polarity
+
+## Expected Outputs
+- EIC plots with sawtooth artefact (incorrect mass_range routing)
+- EIC plots with clean peak profiles (correct mass_range routing)
+- Data.frame with AUC metrics for each target across both runs
+
+## Expected Output File
+
+- `eic_comparison_report.html`
+
+## Landmark Outputs
+
+- `eic_artefact_*.png`
+- `eic_clean_*.png`
+- `results_artefact.RDS`
+- `results_clean.RDS`
+
+## Tools
+- xcms
+- Spectra
+- R
+- knitr
+
+## Skills
+- scan-window-routing-mass-spectrometry
+- extracted-ion-chromatogram-artefact-diagnosis
+- targeted-peak-integration-configuration
+- chromatographic-profile-quality-assessment
+- multi-window-mass-range-parameter-optimization
+
+## Workflow Description
+1. Load centroided mzML vignette files as Spectra objects. 2. Define a target list data.frame with compound ID, name, m/z, RT, and polarity columns. 3. Execute tardisPeaks() with multi-window mass_range configuration without scan-window separation enabled, generating EIC plots that exhibit sawtooth artefacts. 4. Re-execute tardisPeaks() with correct mass_range argument routing to segregate scan windows by mass range, producing clean chromatographic peak profiles. 5. Save both sets of EIC plots and inspect for artefact presence/absence as visual confirmation of scan-window routing impact.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/Component_131.png` | figure | False |
+| `figures/Component_14.png` | figure | False |
+| `figures/Component_15.png` | figure | False |
+| `figures/Component_1576.png` | figure | False |
+| `figures/Component_1577.png` | figure | False |
+| `figures/Component_1578.png` | figure | False |
+| `figures/Component_1583.png` | figure | False |
+| `figures/Component_17.png` | figure | False |
+| `figures/Component_179.png` | figure | False |
+| `figures/Component_183.png` | figure | False |
+| `figures/Component_21.png` | figure | False |
+| `figures/Component_22.png` | figure | False |
+| `figures/Component_23.png` | figure | False |
+| `figures/Component_24.png` | figure | False |
+| `figures/Component_25.png` | figure | False |
+| `figures/Component_331.png` | figure | False |
+| `figures/Component_7.png` | figure | False |
+| `figures/Component_9.png` | figure | False |
+| `figures/tardis.png` | figure | False |
+| `figures/tardis_new.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No changelog or version history provided for the TARDIS package, limiting traceability of changes to tardisPeaks() function signature and mass_range parameter behavior
+
+## Domain Knowledge
+- Sawtooth artefacts in EIC plots arise from incorrect scan-window routing when multi-window mass_range configurations fail to segregate overlapping m/z windows across successive scans.
+- TARDIS performs polarity filtering internally, so input target lists must include polarity annotations but do not require pre-filtered raw data.
+- Centroiding is a mandatory preprocessing step for mzML inputs; profile-mode MS data must be converted before peak integration.
+- Clean peak profiles in EIC output indicate that scan-window separation correctly isolates target m/z ranges from adjacent acquisition windows without crosstalk.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [results] Does the sawtooth artefact appear in extracted ion chromatogram (EIC) output when tardisPeaks() is run on LC-MS data with multiple overlapping m/z scan windows without proper mass_range separation?: 'if your data contains multiple (overlapping) *m/z* scan windows, it is necessary to analyze these separately through the "mass_range" argument. If not, you will notice that peaks will have a sawtooth'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [results] Peaks display a sawtooth profile when tardisPeaks() processes data with multiple overlapping m/z scan windows without mass_range separation, due to filtering of empty spectra within TARDIS.: 'if your data contains multiple (overlapping) *m/z* scan windows, it is necessary to analyze these separately through the "mass_range" argument. If not, you will notice that peaks will have a sawtooth'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [methods] Centroided mzML vignette files: 'Input files need to be converted to the .mzML format and have to be centroided'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [methods] Target list data.frame with compound ID, name, m/z, RT, and polarity: 'compound ID, a unique identifier; A compound Name; Theoretical or measured *m/z*; Expected RT (in minutes); A column that indicates the polarity'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [results] EIC plots with sawtooth artefact (incorrect mass_range routing): 'The resulting EICs are again saved in the output folder and can be inspected'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [results] EIC plots with clean peak profiles (correct mass_range routing): 'The resulting EICs are again saved in the output folder and can be inspected'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [results] Data.frame with AUC metrics for each target across both runs: 'The `results` object is a `list` that contains a `data.frame` with the AUC of each target in each run'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [intro] Spectra: 'loads MS data as `Spectra` objects so it's easily integrated with other tools'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [intro] R: 'R package for *TArgeted Raw Data Integration In Spectrometry*'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [results] knitr: 'knitr::include_graphics'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [discussion] No changelog or version history provided for the TARDIS package, limiting traceability of changes to tardisPeaks() function signature and mass_range parameter behavior: '_No changelog found._'
+
+## Evaluation Strategy
+### Direct Checks
+- verify that vignette mzML files exist in the package repository at documented location
+- verify that tardisPeaks() function exists and is callable with mass_range parameter
+- verify that EIC output plots are generated as files (format: PDF or PNG) when tardisPeaks() runs without scan-window separation
+- verify that sawtooth artefact is visibly present in EIC plots from first run — expert judgment required on visual pattern; no canonical quantitative threshold
+- verify that EIC output plots are generated as files (format: PDF or PNG) when tardisPeaks() runs with corrected mass_range argument
+- verify that peak profiles in second run show absence of sawtooth artefact — expert judgment required on visual pattern comparison between runs
+
+### Expert Review
+- inspect EIC plots from tardisPeaks() without scan-window separation and confirm sawtooth artefact is present and characteristic of incorrect mass_range routing
+- inspect EIC plots from tardisPeaks() with corrected mass_range argument and confirm peak profiles are clean and sawtooth pattern is eliminated
+- assess whether the visual difference between the two EIC sets adequately demonstrates the effect of scan-window routing on peak profile quality
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load centroided mzML vignette files and parse as Spectra objects.
+2. Define target compound list with m/z, RT, and polarity annotations.
+3. Execute tardisPeaks() with multi-window mass_range but without scan-window separation to trigger sawtooth artefacts.
+4. Re-execute tardisPeaks() with correct mass_range argument routing to enable scan-window segregation.
+5. Generate and compare EIC plots from both runs to visualize artefact elimination.
+6. Validation: Confirm sawtooth oscillations present in first EIC set and absent in second set; verify AUC and peak-shape metrics improve with correct routing.
+7. References: source article (DOI: 10.1021/acs.analchem.5c00567)
+
+## Workflow Ports
+
+**Inputs:**
+
+- `vignette_mzml` — Centroided mzML vignette files ← `task_001/target_dataframe`
+- `target_list` — Target list data.frame with compound metadata
+
+**Outputs:**
+
+- `eic_artefact_plots` — EIC plots exhibiting sawtooth artefact
+- `eic_clean_plots` — EIC plots with clean peak profiles
+- `auc_results_table` — Data.frame with AUC metrics for both runs
+
+**Used:** `urn:asb:port:task_001/target_dataframe`
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:UGent-LIMET__TARDIS`
+- **Synthesized at:** 2026-06-16T07:31:03+00:00
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

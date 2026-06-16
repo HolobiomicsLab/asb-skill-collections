@@ -1,0 +1,1809 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/batch-construction-parameter-optimization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/batch-generation-and-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/batch-preparation-class-imbalance-handling",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/class-imbalance-mitigation-via-normalization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/deep-learning-training-convergence-monitoring",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/hyperparameter-tuning-learning-rate-optimizer-selection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/lc-ms-data-preprocessing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/machine-learning-model-evaluation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-peak-classification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mzml-feature-table-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/neural-network-architecture-design",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/neural-network-input-preparation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/neural-network-threshold-optimization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/overfitting-detection-and-prevention",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peak-classification-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peak-matrix-construction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peak-quality-label-stratification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/probability-threshold-calibration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/probability-threshold-tuning-for-chemical-detection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/receiver-operating-characteristic-curve-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/roc-curve-auc-metric-evaluation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/sensitivity-specificity-tradeoff-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/training-validation-test-set-allocation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/true-positive-false-positive-rate-calculation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "NeatMS is an open source python package for untargeted LCMS signal labelling and filtering.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_neatms_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "NeatMS enables automated filtering of false positive MS1 peaks reported by commonly used LCMS data processing pipelines.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_neatms_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "NeatMS relies on neural network based classification.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_neatms_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "NeatMS is distributed as an open source software under the MIT License.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_neatms_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The neural network output uses a softmax activation function that produces a probability distribution of 3 probabilities between 0 and 1.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The 3 probabilities in the neural network output add up to 1, with one probability per class.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "At a 0.01 probability threshold, 100% of High_quality peaks would be correctly predicted but 44% would be false positives.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_label_high_quality"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "At a 0.01 threshold, 80% of Low_quality peaks would be predicted as High_quality.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_label_high_quality"
+        },
+        {
+          "id": "asb:spine_comp_label_low_quality"
+        },
+        {
+          "id": "asb:spine_comp_label_noise"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "At a 0.01 threshold, 20% of Noise peaks would be predicted as High_quality.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_label_high_quality"
+        },
+        {
+          "id": "asb:spine_comp_label_low_quality"
+        },
+        {
+          "id": "asb:spine_comp_label_noise"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "If correctly trained, a model should obtain an AUC higher than 95.0.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The matrix size argument represents the number of points used to represent a peak.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The margin argument represents the size of the surrounding signal that should be kept on the retention time dimension.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A margin of 1 means that the margin size on both sides of the peak will be the same size as the peak width.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "For a peak with a retention time width of 3 seconds and margin of 1, the extracted signal will be 9 seconds.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "With default argument values, the first and last 40 values of the peak represent the margins, and the middle 40 values represent the peak itself.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A second dimension is added to represent the margin portion of the signal (0) or the peak signal (1).",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The resulting matrix size for one peak is (2, 120) with default arguments.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Changing the matrix size or margin argument will automatically adapt the neural network architecture.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "When using transfer learning on a preexisting model, one should not change the matrix size or margin arguments if intending to use the default model.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_neatms_system"
+        },
+        {
+          "id": "asb:spine_cond_transfer_learning"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The min_scan_number argument filters out peaks with fewer points than the specified value.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_021",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default min_scan_number value is 5 because it is difficult to judge if a signal is a peak when it has less than 5 points.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_021_evidence",
+      "evidence_for": "claim_021",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_022",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A model and the person who trained it will likely underperform for peaks with fewer than 5 points.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_022_evidence",
+      "evidence_for": "claim_022",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_023",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The min_scan_number argument has no impact on the model architecture.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_023_evidence",
+      "evidence_for": "claim_023",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_024",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "When using an existing model, lowering the min_scan_number parameter is strongly advised against.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_024_evidence",
+      "evidence_for": "claim_024",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_025",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Increasing the min_scan_number parameter when using an existing model is not a problem.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_025_evidence",
+      "evidence_for": "claim_025",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_026",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Three batches of data are required for neural network training: one for training, one for testing, and one for validation.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_026_evidence",
+      "evidence_for": "claim_026",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_027",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The training and test sets are used during the training process while the validation set remains untouched for hyperparameter tuning.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_027_evidence",
+      "evidence_for": "claim_027",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_028",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default split between training:test:validation batches is 80:10:10.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_028_evidence",
+      "evidence_for": "claim_028",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_029",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The validation_split argument allows definition of the size of test and validation sets.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_029_evidence",
+      "evidence_for": "claim_029",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_030",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The validation_split argument should not exceed 0.2 to ensure at least 60% of data is left for training.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_030_evidence",
+      "evidence_for": "claim_030",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_031",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The normalise_class argument ensures every class has the same number of peaks for training.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_031_evidence",
+      "evidence_for": "claim_031",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_032",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "When normalise_class is set to True, the number of peaks for each class equals the smallest class.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_032_evidence",
+      "evidence_for": "claim_032",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_033",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Full model training is recommended when there are at least 500 peaks for each class.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_033_evidence",
+      "evidence_for": "claim_033",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_034",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Transfer learning should be considered if there are fewer than 500 peaks in the smallest class.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_cond_transfer_learning"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_034_evidence",
+      "evidence_for": "claim_034",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_035",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "NeatMS allows changing the learning rate and optimizer for model training.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_neatms_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_035_evidence",
+      "evidence_for": "claim_035",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_036",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The choice of optimizers includes Adam (default) and SGD.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_036_evidence",
+      "evidence_for": "claim_036",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_037",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "During development and testing, the best performances were achieved using the Adam optimizer and a learning rate of 0.00001.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_037_evidence",
+      "evidence_for": "claim_037",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_038",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Adam optimizer with learning rate 0.00001 are set as default values.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_038_evidence",
+      "evidence_for": "claim_038",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_039",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The model argument should be set to None for full model training from scratch.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_cond_full_training"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_039_evidence",
+      "evidence_for": "claim_039",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_040",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The number of epochs can be set when calling the training method with a default of 1000.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_040_evidence",
+      "evidence_for": "claim_040",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_041",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "NeatMS does not currently provide callback functions to automatically stop training.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_neatms_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_041_evidence",
+      "evidence_for": "claim_041",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_042",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Calling the training method will resume training for another specified number of epochs.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_042_evidence",
+      "evidence_for": "claim_042",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_043",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The network architecture uses dropout and kernel regularizer to specifically prevent overfitting.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_043_evidence",
+      "evidence_for": "claim_043",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_044",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Training should be stopped when there is no increase in the accuracy of the training and test set.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_044_evidence",
+      "evidence_for": "claim_044",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_045",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "If training set accuracy reaches close to 100% while test accuracy lags far behind, this indicates overfitting.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_tensorflow"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_045_evidence",
+      "evidence_for": "claim_045",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_046",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Using the default architecture and parameters, overfitting has never happened during development.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_046_evidence",
+      "evidence_for": "claim_046",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_047",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Transfer learning is appropriate when hundreds of peaks have been labelled from the dataset.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_cond_transfer_learning"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_047_evidence",
+      "evidence_for": "claim_047",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_048",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The neural network is made of a convolutional base and a classifier.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_layer_conv_base"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_048_evidence",
+      "evidence_for": "claim_048",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_049",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The convolutional base performs feature extraction while the classifier performs classification.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_layer_conv_base"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_049_evidence",
+      "evidence_for": "claim_049",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_050",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Fine tuning the convolutional base requires a bigger dataset than fine tuning only the classifier.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_layer_conv_base"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_050_evidence",
+      "evidence_for": "claim_050",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_051",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The optimal value for the default model's threshold is 0.22.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_051_evidence",
+      "evidence_for": "claim_051",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_052",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A higher threshold would return more accurate but less sensitive results.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_052_evidence",
+      "evidence_for": "claim_052",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_053",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A lower threshold would have the opposite effect of a higher threshold.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_053_evidence",
+      "evidence_for": "claim_053",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_054",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The prediction is performed by batches of peaks, with one batch corresponding to all peaks in one sample.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_054_evidence",
+      "evidence_for": "claim_054",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_055",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Running the prediction takes approximately 15 to 30 seconds per sample depending on file number and size.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_055_evidence",
+      "evidence_for": "claim_055",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_056",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Every peak in the dataset is labeled with one of 3 default classes: High_quality, Low_quality, or Noise.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_label_high_quality"
+        },
+        {
+          "id": "asb:spine_comp_label_low_quality"
+        },
+        {
+          "id": "asb:spine_comp_label_noise"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_056_evidence",
+      "evidence_for": "claim_056",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_057",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "For optimal training, a representative subset of the dataset being analyzed should be used.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_057_evidence",
+      "evidence_for": "claim_057",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_058",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Using the same sample type, sample preparation, and instrumentation results in a more specific and accurate model.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_058_evidence",
+      "evidence_for": "claim_058",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_059",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Pooled samples should be selected for training as they contain a wide variety of peaks.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_059_evidence",
+      "evidence_for": "claim_059",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_060",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A selection of 10 to 20 samples is enough for creating a training dataset.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_060_evidence",
+      "evidence_for": "claim_060",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_neatms#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_neatms_system",
+      "title": "NeatMS",
+      "identifier": "urn:asb:spine:neatms_system"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_arch_experiment",
+      "title": "Experiment Object",
+      "identifier": "urn:asb:spine:arch_experiment",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_arch_nn_handler",
+      "title": "NN_handler",
+      "identifier": "urn:asb:spine:arch_nn_handler",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_arch_annotation_tool",
+      "title": "AnnotationTool",
+      "identifier": "urn:asb:spine:arch_annotation_tool",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_arch_cnn_model",
+      "title": "NeatMS CNN Model",
+      "identifier": "urn:asb:spine:arch_cnn_model",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_layer_conv_base",
+      "title": "Convolutional Base",
+      "identifier": "urn:asb:spine:layer_conv_base",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_layer_classifier",
+      "title": "Dense Classifier",
+      "identifier": "urn:asb:spine:layer_classifier",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_mzmine",
+      "title": "MzMine2",
+      "identifier": "urn:asb:spine:tool_mzmine"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_xcms",
+      "title": "XCMS",
+      "identifier": "urn:asb:spine:tool_xcms"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_msconvert",
+      "title": "msconvert",
+      "identifier": "urn:asb:spine:tool_msconvert"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_keras",
+      "title": "Keras",
+      "identifier": "urn:asb:spine:tool_keras"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_tensorflow",
+      "title": "TensorFlow",
+      "identifier": "urn:asb:spine:tool_tensorflow"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_sklearn",
+      "title": "scikit-learn",
+      "identifier": "urn:asb:spine:tool_sklearn"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_mzml",
+      "title": "mzML Raw Data",
+      "identifier": "urn:asb:spine:dataset_mzml"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_feature_table",
+      "title": "Feature Table CSV",
+      "identifier": "urn:asb:spine:dataset_feature_table"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_example_model",
+      "title": "Default NeatMS Model",
+      "identifier": "urn:asb:spine:dataset_example_model"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_peak_matrix",
+      "title": "Peak Matrix Representation",
+      "identifier": "urn:asb:spine:comp_peak_matrix"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_label_high_quality",
+      "title": "High_quality",
+      "identifier": "urn:asb:spine:comp_label_high_quality"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_label_low_quality",
+      "title": "Low_quality",
+      "identifier": "urn:asb:spine:comp_label_low_quality"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_label_noise",
+      "title": "Noise",
+      "identifier": "urn:asb:spine:comp_label_noise"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_get_threshold",
+      "title": "get_threshold",
+      "identifier": "urn:asb:spine:comp_get_threshold"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_get_true_vs_false_positive_df",
+      "title": "get_true_vs_false_positive_df",
+      "identifier": "urn:asb:spine:comp_get_true_vs_false_positive_df"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_full_training",
+      "title": "Full Model Training from Scratch",
+      "identifier": "urn:asb:spine:cond_full_training"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_transfer_learning",
+      "title": "Transfer Learning",
+      "identifier": "urn:asb:spine:cond_transfer_learning"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_default_threshold",
+      "title": "Default Model Threshold 0.22",
+      "identifier": "urn:asb:spine:cond_default_threshold"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_batch_split_80_10_10",
+      "title": "Default Train/Test/Validation Split 80:10:10",
+      "identifier": "urn:asb:spine:cond_batch_split_80_10_10"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_normalise_class_false",
+      "title": "Class Normalization Disabled",
+      "identifier": "urn:asb:spine:cond_normalise_class_false"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_normalise_class_true",
+      "title": "Class Normalization Enabled",
+      "identifier": "urn:asb:spine:cond_normalise_class_true"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_auc_threshold",
+      "title": "AUC ROC Threshold",
+      "identifier": "urn:asb:spine:metric_auc_threshold",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_full_training"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_threshold_001_true",
+      "title": "True Positive Rate at Threshold 0.01",
+      "identifier": "urn:asb:spine:metric_threshold_001_true",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_full_training"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_threshold_001_false",
+      "title": "False Positive Rate at Threshold 0.01",
+      "identifier": "urn:asb:spine:metric_threshold_001_false",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_full_training"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_optimal_threshold_criterion",
+      "title": "Optimal Threshold Selection Criterion",
+      "identifier": "urn:asb:spine:result_optimal_threshold_criterion"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_default_model_threshold",
+      "title": "Default Model Optimal Threshold Value",
+      "identifier": "urn:asb:spine:result_default_model_threshold"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_matrix_shape",
+      "title": "Peak Matrix Shape",
+      "identifier": "urn:asb:spine:result_matrix_shape"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_min_scan_filter",
+      "title": "Minimum Scan Number Filter",
+      "identifier": "urn:asb:spine:result_min_scan_filter"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_training_time",
+      "title": "Model Training Time",
+      "identifier": "urn:asb:spine:result_training_time"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_prediction_time",
+      "title": "Prediction Time Per Sample",
+      "identifier": "urn:asb:spine:result_prediction_time"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_no_overfitting_observed",
+      "title": "No Overfitting with Default Architecture",
+      "identifier": "urn:asb:spine:result_no_overfitting_observed"
+    }
+  ]
+}

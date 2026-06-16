@@ -1,0 +1,304 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "00009acb676bfc86736a464f71b5009b163ea21bb77bdb97c9b82991d18f6163"
+    }
+  ],
+  "created_at": "2026-06-15T21:17:53.323536+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "biosynfoni source code repository (GitHub: lucinamay/biosynfoni or Zenodo: 10.5281/zenodo.14822624)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "pytest test execution report showing all tests passed",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Installed biosynfoni package in development mode with dev dependencies",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "Development mode installation (`pip install -e .[dev]`) installs the package in editable form with all development dependencies, allowing local source changes to be immediately reflected without reinstallation.",
+    "The `[dev]` extras specifier in setup.py/pyproject.toml defines the additional dependencies required for development (such as pytest and black) separate from base runtime requirements.",
+    "pytest discovery and execution from the tests/ directory follows convention of locating and running all test files matching test_*.py or *_test.py patterns.",
+    "A successful test suite run (all tests passing) is the primary signal of package reproducibility and functional correctness at the tool level."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: github:lucinamay__biosynfoni repository is accessible and cloneable",
+      "script_runs: pip install -e .[dev] command executes without error from repository root",
+      "script_runs: pytest tests/ command executes without error after development installation",
+      "file_exists: tests/ directory is present in repository root",
+      "contains_substring: pytest output contains 'passed' or equivalent success indicator with zero failures",
+      "file_format_is: setup.py or pyproject.toml present with valid Python packaging metadata"
+    ],
+    "expert_review": [
+      "assess whether pytest test suite covers core biosynfoni fingerprint functionality adequately",
+      "evaluate whether all test dependencies declared in setup.py/pyproject.toml are correctly specified for [dev] extra"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the biosynfoni package install successfully from source and pass its full pytest test suite?: 'a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The biosynfoni package has a GitHub Actions CI workflow that runs tests, as indicated by the Tests badge displayed in the repository.: 'https://github.com/lucinamay/biosynfoni/actions/workflows/test-biosynfoni.yml'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] biosynfoni source code repository (GitHub: lucinamay/biosynfoni or Zenodo: 10.5281/zenodo.14822624): 'If you would like to contribute to the development of `biosynfoni`, please open an issue or a pull request.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pytest test execution report showing all tests passed: 'Tests will be run automatically when you push a pull request. You can also run the tests locally with the following command: pytest tests/'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Installed biosynfoni package in development mode with dev dependencies: 'Run the following command from the root of the project to install the project for development: pip install -e .[dev]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pip: 'pip install -e .[dev]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pytest: 'pytest tests/'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] biosynfoni: 'biosynfoni'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Version history and update documentation absent: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "cd {inputs.biosynfoni_source} && pip install -e '.[dev]' && pytest tests/"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "pytest test execution report showing all tests passed",
+    "Installed biosynfoni package in development mode with dev dependencies"
+  ],
+  "finding": "The biosynfoni package has a GitHub Actions CI workflow that runs tests, as indicated by the Tests badge displayed in the repository.",
+  "github_name": "lucinamay/biosynfoni",
+  "input_from": null,
+  "inputs": [
+    "biosynfoni source code repository (GitHub: lucinamay/biosynfoni or Zenodo: 10.5281/zenodo.14822624)"
+  ],
+  "keywords": [
+    "molecular fingerprinting",
+    "natural product chemistry",
+    "bioinformatics",
+    "cheminformatics"
+  ],
+  "landmark_outputs": [
+    "pip_install.log",
+    "pytest_output.txt"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_003",
+    "result_006",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Obtain biosynfoni source code from the published repository (GitHub or Zenodo).",
+    "Install biosynfoni in development mode with development dependencies using pip.",
+    "Execute the pytest test suite against the tests/ directory.",
+    "Validation: All pytest tests must pass with exit code 0, confirming package installation and functional correctness."
+  ],
+  "missing_information": [
+    "No changelog found",
+    "Version history and update documentation absent"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the biosynfoni package install successfully from source and pass its full pytest test suite?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "python-package-installation-from-source",
+    "development-environment-setup",
+    "pytest-test-suite-execution",
+    "package-dependency-management"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_biosynfoni/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "biosynfoni_system",
+    "tool_biosynfoni_pkg",
+    "tool_pytest",
+    "tool_github_actions",
+    "dataset_zenodo"
+  ],
+  "subdomains": [
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:lucinamay__biosynfoni",
+  "task_description": "Install the biosynfoni package from source in development mode and execute the full pytest test suite to verify package functionality and reproducibility.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "biosynfoni source code repository",
+      "port_id": "biosynfoni_source",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Install biosynfoni from source using pip and execute the full pytest test suite to confirm package functionality and reproducibility.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "pytest test execution report",
+      "port_id": "test_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "installed biosynfoni package in development mode",
+      "port_id": "installed_package",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "database-annotation",
+    "dereplication"
+  ],
+  "title": "Reproduce the biosynfoni Python package installation and test suite execution",
+  "tools": [
+    "pip",
+    "pytest",
+    "biosynfoni"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: pip, pytest, pytest test execution report showing all tests passed, Installed biosynfoni package in development mode with dev dependencies."
+  ],
+  "workflow_description": "1. Clone or navigate to the biosynfoni repository root directory. 2. Install the package in development mode using pip with dev dependencies via `pip install -e .[dev]`. 3. Execute the complete test suite using pytest on the tests/ directory with `pytest tests/`. 4. Verify all tests pass and package is functional."
+}

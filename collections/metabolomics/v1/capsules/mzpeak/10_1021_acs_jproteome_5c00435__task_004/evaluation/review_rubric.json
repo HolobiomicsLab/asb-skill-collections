@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in github:mobiusklein__mzpeak_prototyping repository: a sample mzPeak file suitable for cross-reader testing"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "all three output tables contain identical column names (robust to row ordering)",
+      "value": [
+        "names (robust to row ordering)"
+      ]
+    },
+    {
+      "id": "pf_006",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "Rust, Python, and R readers produce tables with matching row counts for the same"
+    },
+    {
+      "id": "pf_007",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "spectrum record fields (m/z values, intensities, retention time, scan metadata) "
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in github:mobiusklein__mzpeak_prototyping repository: a sample mzPeak file suitable for cross-reader testing",
+      "script_runs: Rust reader executable successfully loads the sample mzPeak file and outputs a structured record (JSON, Arrow IPC, or Parquet)",
+      "script_runs: Python/pyarrow reader successfully loads the same sample mzPeak file and outputs a tabular structure (DataFrame or Arrow Table)",
+      "script_runs: R/arrow reader successfully loads the same sample mzPeak file and outputs a tabular structure (data.frame or Arrow Table)",
+      "field_present: all three output tables contain identical column names (robust to row ordering)",
+      "row_count_equals: Rust, Python, and R readers produce tables with matching row counts for the same input file",
+      "output_matches_reference: spectrum record fields (m/z values, intensities, retention time, scan metadata) are byte-for-byte identical across all three readers, or expert review documents acceptable tolerance and root causes for any divergence"
+    ],
+    "expert_review": [
+      "Evaluate whether small numerical differences (floating-point precision) in m/z or intensity fields across the three readers are acceptable given IEEE 754 standards and the format specification",
+      "Assess whether any missing or extra fields in one reader relative to the others represent implementation bugs, format ambiguities, or intentional design choices",
+      "Determine whether differences in metadata field ordering, naming conventions, or data-type encoding (e.g., integer vs. float for scan number) indicate true interoperability issues or benign representation choices"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

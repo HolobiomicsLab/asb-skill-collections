@@ -1,0 +1,39 @@
+schema_version: 0.1.0
+workflow_id: coll_13c_spacem_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+narrative:
+  tagline: A single-cell isotope tracing method (13C-SpaceM) is presented for metabolic
+    analysis.
+  pseudo_abstract: The paper describes 13C-SpaceM, a technique for single-cell isotope
+    tracing that enables metabolic characterization at the cellular level. The work
+    presents this methodological approach, though the findings require expert review
+    for validation.
+  research_questions:
+  - Assess the scientific task and reproducibility context described by this article
+    package.
+  methods_summary: ''
+  domain: metabolomics
+  techniques:
+  - stable-isotope-labeling
+  - mass-spectrometry-imaging
+  claims: []
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: A reviewed SciTask Card and capsule describing the benchmarkable task.
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

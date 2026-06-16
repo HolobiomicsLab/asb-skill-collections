@@ -1,11 +1,15 @@
 name: networkx
 slug: networkx
 evidence_spans:
+- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib` and `networkx` Python libraries
 - networkx
 - import ... networkx
 derived_from:
+- doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
 - doi: 10.1371/journal.pcbi.1011814
   title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
 source_repos:
+- ablab/npdtools
 - kopeckylukas/py-mamsi
 schema_version: 0.2.0

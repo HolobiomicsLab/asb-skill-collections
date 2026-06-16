@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "README.md"
+    },
+    {
+      "id": "pf_002",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "README text includes at least one of the named components ('emetabolomics_site',",
+      "value": "emetabolomics_site"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "format_is: output manifest is a valid JSON or YAML structured record with fields 'name', 'role', and 'source_path' for each component entry"
+    },
+    {
+      "id": "pf_004",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output manifest lists exactly 5 components (or documents if fewer are actually p",
+      "value": 5
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: README.md or equivalent documentation in github:NLeSC__MAGMa repository root",
+      "contains_substring: README text includes at least one of the named components ('emetabolomics_site', 'job', 'joblauncher', 'pubchem', 'magmaweb')",
+      "format_is: output manifest is a valid JSON or YAML structured record with fields 'name', 'role', and 'source_path' for each component entry",
+      "row_count_equals: output manifest lists exactly 5 components (or documents if fewer are actually present in README with explicit naming)"
+    ],
+    "expert_review": [
+      "Verify that extracted component roles and source paths accurately reflect the documented responsibilities and locations stated in the README (requires domain knowledge of MAGMa architecture)",
+      "Assess whether any components are missing from the manifest despite being named and described in the README (completeness check)"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

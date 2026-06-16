@@ -1,0 +1,12 @@
+name: ProForma 2.0
+slug: proforma-2-0
+version_used: '2.0'
+evidence_spans:
+- Modifications are defined by controlled vocabularies (CVs), including [Unimod](https://www.unimod.org/)
+- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification
+derived_from:
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
+source_repos:
+- bittremieux-lab/spectrum_utils
+schema_version: 0.2.0

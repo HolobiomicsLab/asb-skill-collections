@@ -1,0 +1,218 @@
+schema_version: 0.1.0
+workflow_id: coll_cmmrt_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_003
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_003
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: "This benchmark reproduces machine learning methods for accurate retention\
+    \ time prediction in chromatography, including a heavily regularized deep neural\
+    \ network achieving 39.2\xB11.2 s mean absolute error and a Bayesian meta-learning\
+    \ approach for retention time projection between chromatographic methods using\
+    \ minimal calibration data."
+  pseudo_abstract: "The paper presents methods for predicting retention times in chromatographic\
+    \ analysis using machine learning trained on 80,038 experimental RTs from the\
+    \ METLIN dataset. A heavily regularized DNN trained with cosine annealing warm\
+    \ restarts and stochastic weight averaging achieved mean absolute error of 39.2\xB1\
+    1.2 s and median absolute error of 17.2 \xB1 0.9 s on the SMRT dataset. Analysis\
+    \ of different feature types\u2014molecular descriptors, fingerprints (MACCS166,\
+    \ Extended Connectivity, and Path Fingerprints), and combinations thereof\u2014\
+    shows that fingerprints tend to perform better than descriptors alone. The paper\
+    \ proposes a Bayesian meta-learning approach that enables retention time projection\
+    \ between chromatographic methods using as few as 10 calibration molecules while\
+    \ maintaining competitive error rates relative to previous projection methods.\
+    \ The DNN and meta-learning components are intended for integration into a probabilistic\
+    \ metabolite annotation framework."
+  research_questions:
+  - What is the predictive performance of a heavily regularized DNN trained with cosine
+    annealing warm restarts and stochastic weight averaging on retention time prediction
+    using the METLIN SMRT dataset?
+  - Do fingerprints outperform molecular descriptors alone when training machine learning
+    models for retention time prediction on the METLIN SMRT dataset?
+  - How does the Bayesian meta-learning approach enable retention time projection
+    between different chromatographic methods using minimal calibration data?
+  - Can a Bayesian meta-learning approach achieve competitive retention time prediction
+    error rates when calibrated with only 10 molecules across different chromatographic
+    methods?
+  - How can DNN-predicted retention times be combined with meta-learned chromatographic
+    projections to generate probabilistic likelihood scores for ranking candidate
+    metabolite annotations?
+  methods_summary: "Load SMRT dataset (80,038 molecules with experimental retention\
+    \ times from METLIN). Generate 5,666 descriptors and 2,214 fingerprints (MACCS166,\
+    \ Extended Connectivity, Path) using alvaDesc. Construct feature matrices combining\
+    \ descriptors and fingerprints; split into train/validation/test sets. Train heavily\
+    \ regularized DNN with cosine annealing warm restarts scheduling and stochastic\
+    \ weight averaging. Evaluate on test set and compute mean absolute error and median\
+    \ absolute error with uncertainties. Validation: output MAE = 39.2\xB11.2 s and\
+    \ MdAE = 17.2\xB10.9 s matches reported values within reported standard deviations.\
+    \ References: source article (DOI: 10.1186/s13321-022-00613-8) Load SMRT dataset\
+    \ with 80,038 experimental retention times and molecular structures. Generate\
+    \ 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,\
+    \ Path) using alvaDesc. Train heavily regularized DNN with cosine annealing warm\
+    \ restarts and stochastic weight averaging on three feature conditions: descriptors-only,\
+    \ fingerprints-only, and combined. Evaluate each model using mean absolute error\
+    \ (MAE) and median absolute error (MdAE) on held-out test set. Validation: Confirm\
+    \ that fingerprints-only achieves lower MAE and MdAE than descriptors-only, and\
+    \ comparable or superior performance to combined features, matching reported findings\
+    \ of fingerprint superiority. References: source article (DOI: 10.1186/s13321-022-00613-8)\
+    \ Load the pre-trained DNN model trained on METLIN SMRT data with 80,038 experimental\
+    \ retention times Generate molecular fingerprints (MACCS166, Extended Connectivity,\
+    \ Path Fingerprints) for calibration and test molecules using alvaDesc Extract\
+    \ latent feature representations from the pre-trained DNN for calibration and\
+    \ test sets Fit a Bayesian meta-learning projection model using 10 calibration\
+    \ molecules to map external chromatographic RT space to DNN latent space Generate\
+    \ RT predictions for test set by projecting through learned mapping and DNN regression\
+    \ head Validation: calculate mean and median absolute errors on test predictions,\
+    \ confirming competitive error rates against base DNN benchmarks (MAE 39.2\xB1\
+    1.2 s, MedAE 17.2\xB10.9 s) References: source article (DOI: 10.1186/s13321-022-00613-8)\
+    \ Load the METLIN SMRT dataset (80,038 experimental retention times with pre-computed\
+    \ molecular descriptors and fingerprints). Apply the Bayesian meta-learning projection\
+    \ model (cond_meta_learning_10mol) with 10 calibration molecules to project retention\
+    \ times across chromatographic methods. Calculate mean absolute error (MAE) and\
+    \ median absolute error (MdAE) between predicted and experimental retention times.\
+    \ Tabulate results with confidence intervals and compare against baseline projection\
+    \ approach metrics (MAE ~39.2\xB11.2 s, MdAE ~17.2\xB10.9 s). Validation: Verify\
+    \ that the Bayesian meta-learning approach achieves error rates competitive with\
+    \ (or better than) reported baseline projections while using only 10 calibration\
+    \ molecules, with MAE and MdAE within the confidence bounds reported for the original\
+    \ model. References: source article (DOI: 10.1186/s13321-022-00613-8) Generate\
+    \ molecular descriptors and fingerprints (MACCS166, Extended Connectivity, Path)\
+    \ for each candidate structure using alvaDesc. Apply trained DNN regression model\
+    \ to predict retention times and extract prediction uncertainty from model outputs.\
+    \ Use Bayesian meta-learning to project predicted RTs from reference chromatographic\
+    \ method to target method using calibration molecules (\u226510). Convert projected\
+    \ RTs and uncertainties into normalized RT-based likelihood scores (probability\
+    \ density function). Rank candidates by RT likelihood score and output ranked\
+    \ list with scores. Validation: Confirm ranked list contains all input candidates,\
+    \ RT scores sum to or normalize appropriately, and no candidate has missing or\
+    \ NaN likelihood value. References: source article (DOI: 10.1186/s13321-022-00613-8)"
+  domain: metabolomics
+  techniques:
+  - retention-time-prediction
+  - machine-learning
+  - metabolite-identification
+  - database-annotation
+  - deep-learning
+  claims:
+  - claim_text: The CMM-RT code implements methods for accurate prediction of Retention
+      Times for a given Chromatographic Method using machine learning.
+    claim_type: finding
+    speculative: false
+    entity_id: system_cmmrt
+  - claim_text: State-of-the-art machine learning regressors were trained using 80,038
+      experimental RTs from the METLIN small molecule dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: dataset_smrt
+  - claim_text: Both retained and unretained molecules were considered in the training
+      dataset.
+    claim_type: finding
+    speculative: false
+  - claim_text: 5,666 molecular descriptors were generated with the alvaDesc software.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_alvadesc
+  - claim_text: 2,214 fingerprints were generated with the alvaDesc software.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_alvadesc
+  - claim_text: The fingerprints used were MACCS166, Extended Connectivity, and Path
+      Fingerprints.
+    claim_type: finding
+    speculative: false
+    entity_id: component_maccs166
+  - claim_text: Models were trained using only the descriptors, only the fingerprints,
+      and both types of features simultaneously.
+    claim_type: finding
+    speculative: false
+  - claim_text: Fingerprints tend to perform better than descriptors or combined features
+      for retention time prediction.
+    claim_type: finding
+    speculative: false
+  - claim_text: "A heavily regularized DNN trained with cosine annealing warm restarts\
+      \ and stochastic weight averaging achieved mean absolute error of 39.2\xB11.2\
+      \ s."
+    claim_type: finding
+    speculative: false
+    entity_id: metric_mae_mean
+  - claim_text: "A heavily regularized DNN trained with cosine annealing warm restarts\
+      \ and stochastic weight averaging achieved median absolute error of 17.2 \xB1\
+      \ 0.9 s."
+    claim_type: finding
+    speculative: false
+    entity_id: metric_mae_median
+  - claim_text: A novel Bayesian meta-learning approach is proposed for RT projection
+      between CMs.
+    claim_type: finding
+    speculative: false
+  - claim_text: The Bayesian meta-learning approach requires as few as 10 molecules
+      for RT projection between chromatographic methods.
+    claim_type: finding
+    speculative: false
+  - claim_text: The meta-learning approach obtains competitive error rates compared
+      with previous approaches.
+    claim_type: finding
+    speculative: false
+  - claim_text: The proposed DNN and meta-learned projections can be integrated into
+      metabolite annotation workflows.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Model performance comparison table with mean and median absolute errors for
+    descriptors-only, fingerprints-only, and combined feature models
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Trained regression model weights and architecture specification
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Results table with error metrics (MAE, MdAE, and confidence intervals) comparing
+    Bayesian meta-learning projection with 10 calibration molecules against baseline
+    projection approaches
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Ranked candidate list with RT probability scores (CSV or TSV table: candidate_id,
+    molecular_formula, predicted_rt, rt_score, rank)'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

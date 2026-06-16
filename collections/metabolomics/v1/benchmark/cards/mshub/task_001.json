@@ -1,0 +1,337 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d43e3eff7122e22ce2ba50c0a639965e9b4b462e74cc1df8c3e360477b938251"
+    }
+  ],
+  "created_at": "2026-06-16T05:56:17.861848+00:00",
+  "crossref_doi": "10.1038/s41587-020-0700-3",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GC-MS raw data files from Nature Biotechnology 2020 companion dataset (GNPS/MassIVE accession or Zenodo deposit)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Deconvolved spectra table (MGF or mzTab format) with individual compound mass-to-charge and intensity values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Molecular network file and visualization (GraphML, JSON, or PNG) showing spectral clusters and cosine similarity edges",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Network topology metrics and comparison to reported network structure",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "GC-MS spectra often contain overlapping peaks from co-eluting compounds; deconvolution resolves each compound's individual mass spectrum using retention time and m/z information.",
+    "Molecular networking in GNPS clusters spectra based on cosine similarity (typically \u22650.7 for positive edges); higher similarity indicates structurally related compounds.",
+    "The Nature Biotechnology 2020 manuscript established reference network topology and deconvolved spectra patterns that serve as the ground truth for this reproduction.",
+    "MSHub auto-deconvolution outputs must be formatted (MGF or mzTab) to be ingested by the GNPS networking pipeline; format mismatches cause pipeline failures.",
+    "Network reproducibility depends on consistent parameter choices (similarity threshold, minimum cluster size, spectral library version) between the original and re-run analyses."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the github:bittremieux/GNPS_GC repository is accessible and contains GC-MS dataset files",
+      "verify file_exists for deconvolved spectra output files in the expected format (e.g., .mgf, .msp, or .csv)",
+      "verify file_exists for molecular network output files (e.g., GraphML, .json, or network edge/node tables)",
+      "verify script_runs: execute the full MSHub auto-deconvolution pipeline on the deposited GC-MS dataset without errors",
+      "verify script_runs: execute the GNPS molecular networking workflow on the auto-deconvolved output without errors",
+      "verify output_matches_reference: compare deconvolved spectra (byte-for-byte or robust to minor parameter choices\u2014solution_space: depends on whether reference spectra are deposited) against the article's reported spectra",
+      "verify output_matches_reference: compare molecular network topology (node count, edge count, connected components) against the reported network in the article or supplementary materials"
+    ],
+    "expert_review": [
+      "expert_review: assess whether the reproduced deconvolved spectra match the reported spectra in chemical accuracy (peak m/z values, intensity ratios, fragment assignments) even if not byte-for-byte identical",
+      "expert_review: assess whether the reproduced molecular network exhibits expected biochemical clustering and matches the functional or structural groupings reported in the original study",
+      "expert_review: confirm that parameter choices used in deconvolution and networking are consistent with or justified relative to the methods described in the article"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Can the auto-deconvolution and molecular networking pipeline described in the Nature Biotechnology 2020 manuscript be successfully re-run on the companion GC-MS dataset to reproduce the reported network and deconvolved spectra outputs?: 'Auto-deconvolution and molecular networking of gas chromatography\u2013mass spectrometry data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] A companion repository (bittremieux/GNPS_GC) has been established to enable re-execution of the auto-deconvolution and molecular networking workflow on the deposited GC-MS dataset associated with the Nature Biotechnology 2020 publication.: 'This is a companion repository to the following manuscript: Aksenov, A.A., Laponogov, I., Zhang, Z. _et al_. Auto-deconvolution and molecular networking of gas chromatography\u2013mass spectrometry data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GC-MS raw data files from Nature Biotechnology 2020 companion dataset (GNPS/MassIVE accession or Zenodo deposit): 'GC-MS dataset deposited as a companion to the Nature Biotechnology 2020 manuscript'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Deconvolved spectra table (MGF or mzTab format) with individual compound mass-to-charge and intensity values: 'auto-deconvolution followed by GNPS molecular networking'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Molecular network file and visualization (GraphML, JSON, or PNG) showing spectral clusters and cosine similarity edges: 'molecular networking on the GC-MS dataset deposited as a companion'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Network topology metrics and comparison to reported network structure: 'reproducing the reported network and deconvolved spectra outputs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MSHub: 'MSHub auto-deconvolution'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GNPS: 'GNPS molecular networking'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting software versions, parameter settings, or workflow configuration is present in the discussion section: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion section does not specify the exact location (file path, directory structure, or README) within the bittremieux/GNPS_GC repository where the GC-MS dataset is deposited: 'Source: github:bittremieux__GNPS_GC'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion section does not specify the format or naming convention of the expected deconvolved spectra outputs or molecular network files: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion section does not provide a direct reference to where the reported network and spectra outputs are documented in the article or supplementary materials for comparison: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "molecular_network.graphml",
+  "expected_outputs": [
+    "Deconvolved spectra table (MGF or mzTab format) with individual compound mass-to-charge and intensity values",
+    "Molecular network file and visualization (GraphML, JSON, or PNG) showing spectral clusters and cosine similarity edges",
+    "Network topology metrics and comparison to reported network structure"
+  ],
+  "finding": "A companion repository (bittremieux/GNPS_GC) has been established to enable re-execution of the auto-deconvolution and molecular networking workflow on the deposited GC-MS dataset associated with the Nature Biotechnology 2020 publication.",
+  "github_name": "bittremieux/GNPS_GC",
+  "input_from": null,
+  "inputs": [
+    "GC-MS raw data files from Nature Biotechnology 2020 companion dataset (GNPS/MassIVE accession or Zenodo deposit)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "deconvolved_spectra.mgf",
+    "network_edges.csv",
+    "network_nodes.csv",
+    "network_topology_comparison.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load GC-MS raw data from the Nature Biotechnology 2020 companion deposit.",
+    "Apply MSHub auto-deconvolution to separate overlapping chromatographic peaks into individual compound spectra.",
+    "Export deconvolved spectra in MGF format compatible with GNPS.",
+    "Execute GNPS molecular networking workflow with cosine similarity clustering and graph construction.",
+    "Extract network topology metrics and compare node/edge counts and clustering structure to the published results.",
+    "Validation: verify that the molecular network exhibits the same major cluster structure and number of connected components as reported in the original manuscript; deconvolved spectra should match the reference spectra in the GNPS deposit.",
+    "References: source article (DOI: 10.1038/s41587-020-0700-3)"
+  ],
+  "missing_information": [
+    "No changelog documenting software versions, parameter settings, or workflow configuration is present in the discussion section",
+    "The discussion section does not specify the exact location (file path, directory structure, or README) within the bittremieux/GNPS_GC repository where the GC-MS dataset is deposited",
+    "The discussion section does not specify the format or naming convention of the expected deconvolved spectra outputs or molecular network files",
+    "The discussion section does not provide a direct reference to where the reported network and spectra outputs are documented in the article or supplementary materials for comparison"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can the auto-deconvolution and molecular networking pipeline described in the Nature Biotechnology 2020 manuscript be successfully re-run on the companion GC-MS dataset to reproduce the reported network and deconvolved spectra outputs?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "gc-ms-spectrum-deconvolution",
+    "spectral-library-molecular-networking",
+    "network-topology-comparison",
+    "cosine-similarity-spectral-clustering",
+    "chromatographic-peak-overlap-resolution"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mshub/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_MSHUB",
+    "SYS_GNPS_GC",
+    "COMP_AUTO_DECONV",
+    "COMP_MOL_NETWORKING",
+    "TOOL_GNPS"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:bittremieux__GNPS_GC",
+  "task_description": "Re-run MSHub auto-deconvolution on the companion GC-MS dataset from the Nature Biotechnology 2020 manuscript, followed by GNPS molecular networking to reproduce the reported deconvolved spectra and network visualization outputs.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GC-MS raw data files from companion dataset",
+      "port_id": "gcms_raw_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Re-run the MSHub auto-deconvolution pipeline and GNPS molecular networking on the companion GC-MS dataset and validate that outputs match the reported network and deconvolved spectra.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Deconvolved spectra table (MGF/mzTab)",
+      "port_id": "deconvolved_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Molecular network graph and visualization",
+      "port_id": "molecular_network",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Network topology metrics and comparison results",
+      "port_id": "network_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "gc-ms",
+    "spectral-deconvolution",
+    "molecular-networking",
+    "feature-detection",
+    "metabolite-identification",
+    "gnps-workflow"
+  ],
+  "title": "Reproduce the auto-deconvolution and molecular networking workflow for GC-MS data via MSHub and GNPS",
+  "tools": [
+    "MSHub",
+    "GNPS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Network topology metrics and comparison to reported network structure."
+  ],
+  "workflow_description": "1. Obtain the GC-MS raw data from the deposited companion dataset (GNPS or MassIVE repository). 2. Apply MSHub auto-deconvolution algorithm to extract individual compound spectra from overlapping chromatographic peaks. 3. Export deconvolved spectra in a format compatible with GNPS (e.g., MGF or mzTab). 4. Upload deconvolved spectra to GNPS and execute molecular networking workflow with default or reported parameters to cluster spectra by cosine similarity and construct the network graph. 5. Retrieve and visualize the resulting molecular network (nodes = spectra/compounds, edges = similarity scores) and compare topology to the published network."
+}

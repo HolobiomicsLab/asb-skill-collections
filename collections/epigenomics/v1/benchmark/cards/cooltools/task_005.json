@@ -1,0 +1,349 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/cooltools-logo-futura.png",
+      "role": "figure",
+      "sha256": "726eacd3b3f3226502291e4a9ca7bfbec7a4cd263fe916798fdafb94baf17153"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "dd40b0ce0a98b1e9936f2244a8d5c26417a737bfa619cf5f660f140fad59e89c"
+    }
+  ],
+  "created_at": "2026-06-15T17:50:30.421402+00:00",
+  "crossref_doi": "10.1101/2022.10.31.514564",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Cooler file (.cool) containing balanced Hi-C contact matrix",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Eigenvector track (pandas DataFrame or BED-like file) from prior eigs_cis or eigs_trans calculation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NPZ file containing untransformed saddledata matrix indexed by digitized compartment bins",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Saddle strength scalar (float) quantifying compartment interaction asymmetry",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Eigenvectors from eigenvector decomposition represent the dominant compartmentalization pattern (A/B compartments or multi-compartment continuum) and must be digitized into discrete bins to define which genome regions belong to each compartment category.",
+    "Saddledata is a 2D aggregated contact frequency matrix with rows and columns indexed by the digitized compartment bins, showing how contacts distribute across compartment pairs and revealing compartment interaction preferences.",
+    "Saddle strength is a scalar metric quantifying the degree of asymmetry in off-diagonal saddle blocks, indicating the strength of preferential A\u2013A and B\u2013B over A\u2013B interactions; NaN handling is critical for sparse or low-contact regions.",
+    "The cooler format stores balanced contact matrices using sparse representation; loading and querying requires knowledge of cooler's bin indexing, weight column naming, and masking of bad bins (low-coverage or artefactual regions).",
+    "Digitization thresholds (e.g., quantile-based splitting into quintiles or binary A/B classification) must match the eigenvector distribution and downstream interpretation; fixed vs. adaptive thresholding affects compartment assignment sensitivity."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file_exists: cooler file from public repository (e.g., GitHub open2c/cooltools or Zenodo deposit)",
+      "verify file_exists: eigenvector track input file (bedGraph, bigWig, or text format)",
+      "script_runs: cooltools.digitize invocation with eigenvector track and binning parameters produces output without error",
+      "file_exists: output file from digitize step (binned track artifact)",
+      "script_runs: cooltools.saddle invocation with cooler file and digitized eigenvector input produces output without error",
+      "file_format_is: saddle output file format is NPZ, HDF5, or documented structured format",
+      "field_present: saddle output contains 'saddledata' matrix or equivalent named array",
+      "field_present: saddle output contains 'saddle_strength' scalar or equivalent metric",
+      "value_in_range: saddle_strength value is a finite numeric scalar (not NaN, not inf)",
+      "output_matches_reference: saddle matrix dimensions match expected shape (n_bins \u00d7 n_bins or similar), robust to parameter choices",
+      "contains_substring: saddle output metadata or log indicates successful completion with no warnings related to NaN handling or bad bin masking"
+    ],
+    "expert_review": [
+      "verify saddle matrix values are consistent with documented Hi-C contact pattern expectations (diagonal stronger than off-diagonal, symmetric structure)",
+      "verify saddle_strength scalar is within plausible range for the input eigenvector track and cooler contact matrix (no suspiciously large or near-zero values indicating algorithmic failure)",
+      "assess whether output format and structure match the v0.3.0+ changes documented in discussion (saddledata saved without transformation, log/linear scaling applied only at plotting stage)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the input and output specifications for the cooltools.saddle function when applied to binned eigenvector track data from a cooler Hi-C matrix file?: 'The recently-introduced cooler format readily handles storage of high-resolution datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Cooltools provides saddle analysis functionality as part of its high-resolution Hi-C analysis toolkit, operating on cooler-format datasets that store high-resolution contact matrices and associated genomic tracks.: 'The recently-introduced cooler format readily handles storage of high-resolution datasets via a'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Cooler file (.cool) containing balanced Hi-C contact matrix: 'The recently-introduced cooler format readily handles storage of high-resolution datasets via a sparse data model.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Eigenvector track (pandas DataFrame or BED-like file) from prior eigs_cis or eigs_trans calculation: 'Shouldn't affect the results when using eigenvectors calculated from the same data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] NPZ file containing untransformed saddledata matrix indexed by digitized compartment bins: 'compute-saddle now saves saddledata without transformation, and the scale argument (with options log or linear) now only determines how the saddle is plotted.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Saddle strength scalar (float) quantifying compartment interaction asymmetry: 'Make saddle strength work with NaNs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] cooltools: 'cooltools leverages this format to enable flexible and reproducible analysis of high-resolution data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] cooler: 'The recently-introduced cooler format readily handles storage of high-resolution datasets via a sparse data model.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'enabling high-resolution Hi-C analysis in Python'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] API stability status and exact output format (NPZ structure, field names, metadata) for cooltools.saddle function and compute-saddle CLI: 'New functionality for smoothing P(s) and derivatives (API is not yet stable)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Whether digitize and saddle handle NaN values in eigenvector tracks and cooler matrices, and whether mask_bad_bins is automatically applied during compute-saddle execution: 'Make saddle strength work with NaNs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Exact cooler file format version, resolution, and reference organism/assembly required as input to saddle computation: 'Upgrade bioframe dependency'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import numpy as np; import cooler; import cooltools.digitize; import cooltools.saddle; cf = cooler.Cooler('{inputs.cooler_file}'); eig = pd.read_csv('{inputs.eigenvector_track}', sep='\\t', header=None); eig.columns = ['chrom', 'start', 'end', 'value'] if eig.shape[1] >= 4 else ['value']; digitized = cooltools.digitize.digitize(eig['value'] if 'value' in eig.columns else eig.iloc[:, -1]); saddledata, saddle_strength = cooltools.saddle.saddle(cf, digitized); np.savez('{task_id}_saddledata.npz', saddledata=saddledata); open('{task_id}_saddle_strength.txt', 'w').write(str(float(saddle_strength)))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "saddledata.npz",
+  "expected_outputs": [
+    "NPZ file containing untransformed saddledata matrix indexed by digitized compartment bins",
+    "Saddle strength scalar (float) quantifying compartment interaction asymmetry"
+  ],
+  "finding": "Cooltools provides saddle analysis functionality as part of its high-resolution Hi-C analysis toolkit, operating on cooler-format datasets that store high-resolution contact matrices and associated genomic tracks.",
+  "github_name": "open2c/cooltools",
+  "input_from": "task_002",
+  "inputs": [
+    "Cooler file (.cool) containing balanced Hi-C contact matrix",
+    "Eigenvector track (pandas DataFrame or BED-like file) from prior eigs_cis or eigs_trans calculation"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "eigenvector_track.bed",
+    "digitized_track.bed",
+    "saddledata.npz",
+    "saddle_strength.txt"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_005",
+    "result_027"
+  ],
+  "methodology_summary": [
+    "Load cooler file and eigenvector track into memory as pandas DataFrames or compatible objects.",
+    "Apply cooltools.digitize to partition eigenvector values into discrete compartment bins using quantile or threshold-based classification.",
+    "Invoke cooltools.saddle with the cooler, digitized track, and optional parameters (e.g., min/max distance limits) to aggregate contact frequency across compartment pairs.",
+    "Extract the untransformed saddledata array and compute saddle strength as an asymmetry metric.",
+    "Validation: verify NPZ file contains expected array keys and dimensions; confirm saddle strength is a scalar float; check that no all-NaN rows or columns corrupt the matrix.",
+    "References: source article (DOI: 10.1101/2022.10.31.514564)"
+  ],
+  "missing_information": [
+    "API stability status and exact output format (NPZ structure, field names, metadata) for cooltools.saddle function and compute-saddle CLI",
+    "Whether digitize and saddle handle NaN values in eigenvector tracks and cooler matrices, and whether mask_bad_bins is automatically applied during compute-saddle execution",
+    "Exact cooler file format version, resolution, and reference organism/assembly required as input to saddle computation"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/coverage_track"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the input and output specifications for the cooltools.saddle function when applied to binned eigenvector track data from a cooler Hi-C matrix file?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "eigenvector-digitization-into-compartment-bins",
+    "saddle-matrix-computation-from-binned-tracks",
+    "compartment-strength-quantification",
+    "cooler-file-loading-and-querying",
+    "contact-frequency-aggregation-by-genomic-feature"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_cooltools/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "cooltools_system",
+    "cooler_format",
+    "component_digitize",
+    "component_saddle",
+    "component_rearrange_cooler",
+    "component_lib"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:open2c__cooltools",
+  "task_description": "Run cooltools.digitize to bin a genomic eigenvector track according to specified thresholds, then apply cooltools.saddle to compute a saddle matrix from a deposited cooler file, producing an NPZ saddle data file and a scalar saddle strength value.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cooler file (.cool) containing balanced Hi-C contact matrix",
+      "port_id": "cooler_file",
+      "resolved_via": null,
+      "source": "task_002/coverage_track",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Eigenvector track (DataFrame or BED-like file) from prior eigs_cis/eigs_trans",
+      "port_id": "eigenvector_track",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute cooltools.digitize and cooltools.saddle on a cooler file with an eigenvector track to generate a saddle matrix (NPZ) and saddle strength scalar matching documented output formats.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NPZ file containing untransformed saddledata matrix",
+      "port_id": "saddledata_npz",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Saddle strength scalar (float)",
+      "port_id": "saddle_strength",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reproduce the compartment saddle plot using cooltools.digitize and cooltools.saddle",
+  "tools": [
+    "cooltools",
+    "cooler",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: NPZ file containing untransformed saddledata matrix indexed by digitized compartment bins, Saddle strength scalar (float) quantifying compartment interaction asymmetry."
+  ],
+  "workflow_description": "1. Load a cooler file and an associated eigenvector track (e.g., from a prior eigs_cis calculation). 2. Apply cooltools.digitize to bin the eigenvector values into discrete compartment categories (typically 2\u20135 bins) according to quantile or fixed thresholds. 3. Call cooltools.saddle with the digitized track and cooler object to compute the 2D saddle matrix aggregating Hi-C contact frequency by compartment pair. 4. Extract and save the saddledata array (untransformed) to an NPZ file and compute saddle strength as a scalar metric quantifying A/B compartment interaction asymmetry. 5. Validate output by confirming NPZ file structure, matrix dimensions, and saddle strength value are within expected ranges for the input dataset."
+}

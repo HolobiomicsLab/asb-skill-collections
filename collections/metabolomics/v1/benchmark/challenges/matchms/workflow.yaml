@@ -1,0 +1,256 @@
+schema_version: 0.1.0
+workflow_id: coll_matchms_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: Matchms is an open-source Python package for importing, processing, cleaning,
+    and comparing mass spectrometry data. The package supports multiple spectral data
+    formats and provides tools for metadata cleaning, peak filtering, and pairwise
+    spectral similarity comparisons.
+  pseudo_abstract: Matchms facilitates reproducible workflows for mass spectrometry
+    (MS/MS) data analysis, supporting popular spectral data formats including mzML,
+    mzXML, msp, metabolomics-USI, MGF, and JSON. The package implements metadata cleaning
+    and validation tools alongside basic peak filtering mechanisms to ensure data
+    accuracy and integrity. For spectral comparison, matchms applies various pairwise
+    similarity measures, encompassing Cosine-related scores, molecular fingerprint-based
+    comparisons, and metadata-related assessments. The software is distributed through
+    multiple channels including PyPI and Bioconda, with release management procedures
+    documented in the contributing guidelines.
+  research_questions:
+  - What metadata cleaning and validation tools does matchms provide, and how do they
+    operate on mass spectrometry spectral data?
+  - What are the input requirements and operational mechanics of matchms' peak filtering
+    capability when applied to spectral data files?
+  - How does matchms compute pairwise cosine similarity scores across a set of preprocessed
+    mass spectra?
+  - What is the operational mechanism by which matchms applies molecular fingerprint-based
+    similarity measures to compare pairs of mass spectra?
+  - Are the documented distribution channels (PyPI and Bioconda) for matchms functional
+    and does the package import successfully after installation from these channels?
+  methods_summary: "Import spectral data from a public MGF or MSP file repository\
+    \ using matchms I/O functions. Apply matchms metadata cleaning filters to standardize\
+    \ spectrum annotations (precursor m/z, retention time, compound identifiers, instrument\
+    \ metadata). Apply matchms validation filters to remove spectra with missing or\
+    \ malformed critical metadata fields. Export cleaned spectrum collection to output\
+    \ file in MGF or JSON format. Validation: Run pytest on the cleaning module to\
+    \ confirm filter logic executes without error and output spectrum count and metadata\
+    \ completeness match expected thresholds. Load spectral data from a file in a\
+    \ supported format using matchms import functionality. Apply matchms peak-filtering\
+    \ functions to remove low-intensity and irrelevant peaks for data accuracy and\
+    \ integrity. Export the filtered spectrum collection to an output file in the\
+    \ original or compatible spectral format. Validation: filtered spectrum collection\
+    \ is produced in valid spectral format (MGF, MSP, mzML, or JSON) with all peaks\
+    \ from the original input preserved or removed according to the specified filtering\
+    \ criteria. Load preprocessed spectra from input file using matchms spectrum importers.\
+    \ Initialize cosine similarity scorer within matchms. Compute pairwise cosine\
+    \ similarity scores across all spectrum pairs. Construct scores matrix with spectrum\
+    \ identifiers as row and column labels. Validation: Verify output scores matrix\
+    \ has dimensions N\xD7N where N equals the number of input spectra, and all values\
+    \ are in the range [0, 1]. Load preprocessed mass spectra from a matchms-compatible\
+    \ file format (mzML, mzXML, msp, MGF, or JSON) into memory. Apply the molecular\
+    \ fingerprint-based similarity measure available in matchms to compute pairwise\
+    \ similarity scores for all spectra. Export the pairwise similarity matrix to\
+    \ a named output file in tabular format. Validation: Output matrix is symmetric,\
+    \ contains similarity scores for all spectrum pairs, and matches expected dimensions\
+    \ (N\xD7N where N is number of spectra). Create isolated Python environment (virtual\
+    \ environment or fresh conda env) to ensure clean installation baseline. Download\
+    \ and install matchms from PyPI using pip, capturing installation logs and any\
+    \ error messages. Execute Python import statement 'import matchms' and verify\
+    \ no ImportError or ModuleNotFoundError exceptions occur; record success status.\
+    \ Create second isolated conda environment and install matchms from Bioconda channel,\
+    \ capturing installation logs. Execute Python import statement 'import matchms'\
+    \ in the Bioconda environment and verify no ImportError or ModuleNotFoundError\
+    \ exceptions occur; record success status. Validation: Both PyPI and Bioconda\
+    \ installations complete without error, and matchms module imports successfully\
+    \ in both environments, confirming both distribution channels are functional."
+  domain: cheminformatics
+  techniques: []
+  claims:
+  - claim_text: Matchms is an open-source Python package for importing, processing,
+      cleaning, and comparing mass spectrometry data.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Matchms facilitates the implementation of straightforward, reproducible
+      workflows for transforming raw mass spectra data.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Matchms enables large-scale spectral similarity comparisons.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Matchms supports mzML, mzXML, msp, metabolomics-USI, MGF, and JSON
+      spectral data formats.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Matchms offers tools for metadata cleaning and validation.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Matchms offers tools for basic peak filtering.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Matchms can apply Cosine-related scores for comparing spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Matchms can apply molecular fingerprint-based comparisons for comparing
+      spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Matchms is extensible, allowing users to integrate custom implementations.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Contributions to matchms can take the form of questions, bug reports,
+      code changes, or release work.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: When making a question-related contribution to matchms, contributors
+      should search existing issues first.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: When reporting a bug in matchms, contributors should search existing
+      issues first.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: When reporting a bug in matchms, contributors should provide the SHA
+      hashcode of the commit causing the problem.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: When reporting a bug in matchms, contributors should provide dependency
+      name and version information.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: When reporting a bug in matchms, contributors should provide information
+      about the operating system.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Before making code changes to matchms, contributors must announce
+      their plan to the community as an issue.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Before making code changes to matchms, contributors must wait for
+      consensus to be reached about the proposed idea.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Contributors to matchms should run pytest to ensure existing tests
+      still work.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Contributors to matchms should update the CHANGELOG.md file with their
+      changes.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: To release matchms, the version can be bumped using the poetry version
+      command.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: When releasing matchms, the version can be manually changed in __version__.py
+      and pyproject.toml.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: When releasing matchms, the author list in citation.cff and .zenodo.json
+      files should be checked.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Matchms releases are published to PyPI via a PyPI publish workflow.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: Matchms releases are available on Bioconda via automatically created
+      pull requests on the bioconda-recipes repository.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  - claim_text: A Zenodo entry with its own DOI is created for each matchms release.
+    claim_type: finding
+    speculative: false
+    entity_id: matchms_system
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Filtered spectrum collection with peaks removed by matchms peak-filtering
+    functions
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Pairwise cosine similarity scores matrix file (CSV or pickle format with spectrum
+    identifiers and similarity scores)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Pairwise similarity scores matrix from fingerprint-based spectral comparison
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Installation log from PyPI showing successful package installation with no
+    errors
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Installation log from Bioconda showing successful package installation with
+    no errors
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Import test result confirming matchms module loads without errors from both
+    installations
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

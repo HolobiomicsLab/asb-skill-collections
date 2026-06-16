@@ -1,0 +1,20 @@
+# Evaluation Strategy
+
+## Direct Checks
+
+- file_exists: verify that peak-abundance list files exist at OSF deposit https://doi.org/10.17605/OSF.IO/XFHZ9 for both bacterium-phage dataset and S. fallax dataset
+- file_format_is: verify that retrieved peak-abundance files are in MetaboDirect-compatible format (CSV or TSV with columns for m/z, molecular formula, and sample abundances)
+- script_runs: verify that MetaboDirect v0.3.4 (installed from https://github.com/Coayla/MetaboDirect or Zenodo DOI 10.5281/zenodo.7278253) executes the main pipeline (excluding KEGG and transformation networks) without error on bacterium-phage dataset
+- script_runs: verify that MetaboDirect v0.3.4 executes the main pipeline (excluding KEGG and transformation networks) without error on S. fallax dataset
+- value_in_range: wall-clock runtime for bacterium-phage dataset main pipeline (36 samples, ~495 peaks with formula) should be <1 min (reported as ~36 s in results), parameter-sensitive to system hardware and background processes
+- value_in_range: wall-clock runtime for S. fallax dataset main pipeline (4 samples) should complete in measurable time; exact baseline from text reports 40 samples in <1 min and 120 samples in ~2 min, robust to interpolation
+- output_matches_reference: verify that primary output artifacts (Van Krevelen diagrams, molecular class composition plots, NMDS/PCA ordinations, diversity metrics tables) are generated for both datasets as documented in article figures and supplementary figures
+- contains_substring: verify that MetaboDirect execution log or output summary reports completion of steps: data pre-processing, data diagnostics, data exploration, chemodiversity analysis (no KEGG mapping, no transformation networks)
+- file_exists: verify that output directory contains at least one quantitative diversity metric file (Chao1, Gini-Simpson, Shannon, or Rao's quadratic entropy values), matching structure shown in supplementary Fig. S6
+
+## Expert Review
+
+- Confirm that reported runtimes (~36 s for 36-sample bacterium-phage dataset, interpolated expectation for 4-sample S. fallax) are consistent with the stated pipeline efficiency claim ('40 samples in <1 min, 120 samples in ~2 min'); assess whether observed times align with documented computational complexity
+- Verify that main pipeline output metrics (molecular diversity indices, ordination coordinates, compound class distributions) reproduce the trends reported in article results section (e.g., no significant phage or time effect in PERMANOVA; clustering by phosphorus content in NMDS)
+- Assess whether peak-detection and molecular-formula-assignment statistics for the rerun datasets match or reasonably approximate the reported values (bacterium-phage: ~1025 peaks detected, ~495 with formula; S. fallax: specific counts per sample)
+- Evaluate whether the absence of KEGG mapping and transformation networks in the executed pipeline is a valid and representative test of core MetaboDirect functionality, or whether exclusion of these modules substantially alters runtime claims

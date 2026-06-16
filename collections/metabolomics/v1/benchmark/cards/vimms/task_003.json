@@ -1,0 +1,349 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/architecture_diagram.jpg",
+      "role": "figure",
+      "sha256": "fdc32fdacf3bfe4a83185b442ca1e896f02bda8e0a19f54907797fde1912f14b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bipartite_matching.svg",
+      "role": "figure",
+      "sha256": "a0da8d92fa15d2a8ceebbc5353a36ee4e268412d0c94509f840ce3ee43a5a1f5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "618713a59feb813219183c37df421296b2ad176c5e0117cd8810536896cd40ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matching_workflow.svg",
+      "role": "figure",
+      "sha256": "04cfefd4c609db0d59d52111cbdefd870ca34b8dc6c2c609e892bac24c4e0c56"
+    },
+    {
+      "indexable": false,
+      "path": "figures/old_schematic.png",
+      "role": "figure",
+      "sha256": "f893d81169ef4847918c8d449413bf747bfa19be66357fc8e0446801e909905e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/schematic.png",
+      "role": "figure",
+      "sha256": "fd9ef3a7af60dd7feef1dd07039c335b23d0660d21e8bed975f97cb4f7b16112"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectra.png",
+      "role": "figure",
+      "sha256": "d85c89a571b2cc6f64a083ad86712ffddf16905b1470493ec3dd49c6e12d1c09"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "1bac10c40e955de7761b2d5dc435411bdb7d0aa120f831078cb7be87c7c2382d"
+    }
+  ],
+  "created_at": "2026-06-15T12:40:40.120497+00:00",
+  "crossref_doi": "10.1021/acs.analchem.0c03895",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ViMMS framework (Python 3+, via pip install vimms or git clone from glasgowcompbio/vimms)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Scans list (Python list object) containing MS1 and MS2 scan records from the Environment run, retrievable via env.scans",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "ViMMS Environment is the orchestrator that synchronizes the mass spectrometer's scan generation with the controller's fragmentation decisions in a fixed three-stage loop: each MS1 scan triggers controller selection of ions, which the spectrometer fragments and returns as MS2 scans.",
+    "TopNController parameters (N, isolation_width, mz_tol, rt_tol, min_ms1_intensity) directly control which and how many precursor ions are selected for fragmentation in each cycle.",
+    "The fixed control-loop architecture (Chemicals \u2192 IndependentMassSpectrometer \u2192 Controller \u2192 Environment.run()) is the conceptual foundation; individual run artifacts (scans, mzML files, evaluation data) are ephemeral outputs of this loop, not its definition.",
+    "Polarity (positive or negative) must match consistently across chemical ionization, mass spectrometer mode, and controller configuration to ensure valid simulation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:glasgowcompbio__vimms repository can be cloned and contains the vimms package with Chemicals, IndependentMassSpectrometer, Controller, and Environment classes",
+      "verify file_exists: vimms package exports Chemicals, IndependentMassSpectrometer, Controller, and Environment from canonical import paths",
+      "script_runs: instantiate a Chemicals object with a formula sampler (e.g., UniformMZFormulaSampler with min_mz=100, max_mz=600) and sample 100 chemicals with ms_levels=2, robust to parameter choices for chemical count and m/z bounds",
+      "script_runs: instantiate IndependentMassSpectrometer with polarity='positive' and sampled chemicals object without error",
+      "script_runs: instantiate a TopNController (or equivalent fixed controller) with polarity='positive' and N=5, isolation_width=1.0 without error",
+      "script_runs: instantiate Environment with IndependentMassSpectrometer, Controller, min_time=0, max_time=1200, call env.run() without error",
+      "output_matches_reference: Environment.run() produces a scan list (verify scan list is non-empty and contains at least one scan object with attributes matching the expected architecture: MS level, m/z values, intensity values, retention time)",
+      "verify file_format_is: Environment provides write_mzML() method to export generated scans to mzML format, multiple defensible approaches for mzML schema validation"
+    ],
+    "expert_review": [
+      "verify that the three-stage orchestration (Chemicals \u2192 IndependentMassSpectrometer \u2192 Controller \u2192 Environment) correctly implements the intended fixed control loop architecture and that the scan list reflects appropriate fragmentation strategy behavior",
+      "verify that the scan list output is consistent with the TopNController strategy (e.g., MS1 scans followed by MS2 scans targeting top N peaks) and reflects correct ionization polarity"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How are the three core components (Chemicals, IndependentMassSpectrometer, and Controller) orchestrated by the Environment class to execute a complete simulation control loop?: 'a flexible and modular framework designed to simulate fragmentation strategies in tandem mass spectrometry-based metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The Environment class orchestrates three components: Chemicals are generated via samplers (e.g., DatabaseFormulaSampler), passed to an IndependentMassSpectrometer instance, and controlled by a fragmentation strategy Controller; the Environment runs this loop and produces a scan list via write_mzML output.: '# 2. Set up a virtual mass spectrometer\nms = IndependentMassSpectrometer(polarity=\"positive\", chemicals=chemicals)\n# 3. Choose a controller\ncontroller = TopNController(\"positive\", N=5,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] ViMMS framework (Python 3+, via pip install vimms or git clone from glasgowcompbio/vimms): 'ViMMS is compatible with Python 3+. You can install the current release of ViMMS using pip: $ pip install vimms'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Scans list (Python list object) containing MS1 and MS2 scan records from the Environment run, retrievable via env.scans: 'Running the environment produces a list of scans that can be written to mzML using `Environment.write_mzML()`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ViMMS: 'we introduce the **V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'ViMMS is compatible with Python 3+'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Synthesized at: 2026-06-15T12:40:38+00:00 \u2014 timestamp does not correspond to article publication; reproducibility status and software version pinning for fixed architecture are unclear: 'Synthesized at: 2026-06-15T12:40:38+00:00'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "from vimms.ChemicalSamplers import UniformMZFormulaSampler; from vimms.MassSpectrometry import IndependentMassSpectrometer; from vimms.Controller import TopNController; from vimms.Environment import Environment; from vimms.MixtureCreator import ChemicalMixtureCreator; sampler = UniformMZFormulaSampler(100, 500); mixture = ChemicalMixtureCreator(sampler).create(100); ms = IndependentMassSpectrometer(mixture); controller = TopNController(3, 1.0, 10, 15, 1.75e5); env = Environment(ms, controller, 0, 1440); env.run(); print(f'Scans: {len(env.scans)}'); print(f'MS1 count: {sum(1 for s in env.scans if s.ms_level == 1)}'); print(f'MS2 count: {sum(1 for s in env.scans if s.ms_level == 2)}')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Scans list (Python list object) containing MS1 and MS2 scan records from the Environment run, retrievable via env.scans"
+  ],
+  "finding": "The Environment class orchestrates three components: Chemicals are generated via samplers (e.g., DatabaseFormulaSampler), passed to an IndependentMassSpectrometer instance, and controlled by a fragmentation strategy Controller; the Environment runs this loop and produces a scan list via write_mzML output.",
+  "github_name": "glasgowcompbio/vimms",
+  "input_from": "task_002",
+  "inputs": [
+    "ViMMS framework (Python 3+, via pip install vimms or git clone from glasgowcompbio/vimms)"
+  ],
+  "keywords": [
+    "liquid chromatography",
+    "tandem mass spectrometry",
+    "ms/ms fragmentation",
+    "untargeted metabolomics",
+    "fragmentation strategy optimization",
+    "small molecule identification"
+  ],
+  "landmark_outputs": [
+    "chemicals_list.pkl",
+    "scans_summary.json"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_003",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_020",
+    "result_021",
+    "result_022",
+    "result_023",
+    "result_024",
+    "result_025",
+    "result_026",
+    "result_032",
+    "result_033",
+    "result_037",
+    "result_038",
+    "result_039",
+    "result_040",
+    "result_041",
+    "result_042",
+    "result_043",
+    "result_047"
+  ],
+  "methodology_summary": [
+    "Instantiate a formula sampler (UniformMZFormulaSampler) with m/z bounds 100\u2013500 Da.",
+    "Create a chemical mixture from the sampler using ChemicalMixtureCreator, sampling 100 chemicals with MS1 and MS2 levels.",
+    "Construct an IndependentMassSpectrometer in positive polarity mode with the chemical list.",
+    "Configure a TopNController with fixed parameters: N=3, isolation_width=1, mz_tol=10, rt_tol=15, min_ms1_intensity=1.75E5.",
+    "Build an Environment object spanning 0\u20131440 s, register the mass spectrometer and controller, and invoke run().",
+    "Validation: confirm that env.scans is a non-empty list containing both MS1 and MS2 Scan objects with valid m/z, intensity, and retention-time fields.",
+    "References: source article (DOI: 10.1021/acs.analchem.0c03895)"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "Synthesized at: 2026-06-15T12:40:38+00:00 \u2014 timestamp does not correspond to article publication; reproducibility status and software version pinning for fixed architecture are unclear"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/simulated_mzml"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How are the three core components (Chemicals, IndependentMassSpectrometer, and Controller) orchestrated by the Environment class to execute a complete simulation control loop?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "virtual-chemical-mixture-generation",
+    "mass-spectrometer-simulator-configuration",
+    "dda-fragmentation-strategy-parameterization",
+    "lc-ms-scan-acquisition-orchestration",
+    "simulation-control-loop-architecture"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_vimms/synthesized_package",
+  "spine_condition_ids": [
+    "COND_TOPN_DDA",
+    "COND_BEER_TOPN",
+    "COND_MS1_SINGLE"
+  ],
+  "spine_entity_ids": [
+    "ARCH_SIMULATION_LOOP",
+    "COMP_CHEMICALS",
+    "COMP_MASS_SPEC",
+    "COMP_ENVIRONMENT",
+    "COMP_CONTROLLER",
+    "COND_TOPN_DDA",
+    "COND_BEER_TOPN",
+    "COND_MS1_SINGLE",
+    "RESULT_MS1_FULLSCAN"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "simulation",
+    "data-processing"
+  ],
+  "synthesized_from": "github:glasgowcompbio__vimms",
+  "task_description": "Construct and execute the three-stage ViMMS simulation control loop (chemical generation \u2192 mass spectrometer instantiation \u2192 controller-orchestrated environment) with fixed architecture parameters to produce a scan list from an in silico LC-MS/MS run.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ViMMS library installation",
+      "port_id": "vimms_framework",
+      "resolved_via": null,
+      "source": "task_002/simulated_mzml",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Configure and execute the three-stage simulation loop (Chemicals\u2192IndependentMassSpectrometer\u2192Controller orchestrated by Environment) and verify scan list generation.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Scans list (MS1 and MS2 records)",
+      "port_id": "scans_list",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "data-independent-acquisition",
+    "feature-detection",
+    "machine-learning",
+    "metabolite-identification",
+    "spectral-library-matching"
+  ],
+  "title": "Reconstruct the ARCH_SIMULATION_LOOP: Chemicals \u2192 IndependentMassSpectrometer \u2192 Controller Orchestration",
+  "tools": [
+    "ViMMS",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Generate 100 virtual chemicals by sampling m/z uniformly between 100\u2013500 Da using UniformMZFormulaSampler and ChemicalMixtureCreator, requesting both MS1 and MS2 levels. 2. Instantiate an IndependentMassSpectrometer in positive-ion mode with the generated chemical list. 3. Configure a TopNController with N=3 fragments per survey scan, 1 Da isolation window, 10 ppm m/z tolerance, 15 s retention-time tolerance, and 1.75E5 minimum MS1 intensity threshold. 4. Construct an Environment orchestrator spanning 0\u20131440 s, attach both the mass spectrometer and controller, and invoke env.run() to execute the fixed simulation control loop. 5. Verify the resulting scans list is non-empty and contains both MS1 and MS2 scan records."
+}

@@ -1,0 +1,482 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "nplinker.pdf",
+      "role": "main_article",
+      "sha256": "f336b781d4488fcaf350c71aa5cf495c9603fe908229dcc004dede066845eba5"
+    }
+  ],
+  "created_at": "2026-06-15T08:56:40.523217+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1008920",
+  "data_accessions": [
+    {
+      "accession": "MSV000078836",
+      "evidence_span": "Cs a number of strains for the st From this platform we con MSV000078836 [38], MSV Cru\u00a8semann, Gross and Le\u00e3 The Cru\u00a8semann data set",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836"
+    },
+    {
+      "accession": "MSV000085038",
+      "evidence_span": "ets each with numerous validated links: V000085018 [39] and MSV000085038 [40], hereafter referred to as \u00e3o, respectively. et consist",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_003.expected_outputs[0]: Table reporting proportion of validated links for each dataset at total, top raw correlation (90th percentile), top standardised correlation (90th percentile), top IOKR (90th percentile), and top combined (both \u226590th percentile) link sets",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Standardised strain correlation scores (s'_corr) and standardised IOKR scores (s'_IOKR) for all GCF-MF links in Cr\u00fcsemann, Gross, and Le\u00e3o datasets",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validated link ground truth annotations for Cr\u00fcsemann (8 validated links), Gross (9 validated links), and Le\u00e3o (5 validated links) datasets",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Table of validated-link enrichment ratios (proportion of validated links / proportion of all links) indexed by combination function type and exponent p, for 90th and 95th percentiles across all three datasets",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Heatmap visualisation of validated-link enrichment as a function of exponent p (0.5\u20133.0) and combination function type, with colour intensity proportional to enrichment ratio",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Statistical significance test results (chi-square or Fisher exact p-values) comparing validated-link enrichment for each combination function against the baseline (either score alone) and against the reported \u2113\u2081/\u2082 function",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Line plot showing rank improvement (median percentile rank of validated links) as a function of p for the \u2113_p family of norms",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "The \u2113_p-norm generalises Euclidean (p=2) and Manhattan (p=1) distance metrics; values 0 < p < 1 violate the triangle inequality but remain valid ranking functions (no norm property required for scoring).",
+    "Validated-link enrichment is computed as (proportion of validated links in percentile tier) / (proportion of all links in that tier), pooled across three datasets; significance is assessed via chi-square contingency test after summing counts across datasets.",
+    "The reported \u2113\u2081/\u2082 function (Table 4) achieved best rank for 10 out of 15 validated links in the Cr\u00fcsemann dataset; alternative functions must be evaluated on the same pooled three-dataset cohort to ensure fair comparison.",
+    "Sign-adjusted combination (sgn multiplier on each score term) penalises links with opposite sign contributions; this asymmetry may favour \u2113_p values and function forms that better match the actual correlation structure between the two scores (visible in Fig 6 scatterplots)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that S1 Data, S2 Data, S3 Data, and S4 Data files (containing high-scoring links from Cr\u00fcsemann, Le\u00e3o, and Gross datasets) are present in the supplementary materials",
+      "verify that the reported combined score formula s'\u2081/p = sgn(s'_corr)|s'_corr|^(1/p) + sgn(s'_IOKR)|s'_IOKR|^(1/p) is correctly implemented in NPLinker source code (zenodo.org/record/4680579) or referenced supplementary code",
+      "value_in_range: confirm that p values tested in sensitivity analysis span at least the range [0.5, 1.0, 2.0, 4.0] or comparable exponents, with documentation of which values were evaluated",
+      "value_in_range: confirm that validated-link ratio (proportion of validated links among top-scoring links at 90th percentile or equivalent threshold) is reported for each combination function variant, with ratios between 0 and 1",
+      "output_matches_reference: for any combination function form reported, verify that the enrichment p-value and validated-link count matches the corresponding entry in Table 2 or supplementary tables for the baseline case (p=0.5 or equivalent baseline exponent)",
+      "file_exists: verify presence of a supplementary table, figure, or dataset file reporting systematic variation of p and alternative combination functions with corresponding enrichment metrics",
+      "script_runs: verify that a reproducible script or Jupyter notebook exists (in the NPLinker repository or supplementary materials) that accepts the precomputed IOKR and standardised strain correlation score outputs and produces the sensitivity analysis outputs without requiring re-computation of IOKR or strain correlation scores"
+    ],
+    "expert_review": [
+      "Assess whether the choice of alternative combination function forms (beyond \u2113p-norm) is mathematically sound and biologically justified\u2014e.g., weighted linear combinations, geometric means, other norms",
+      "Evaluate whether the reported sensitivity trend (validated-link ratio as a function of p) is consistent across the three datasets (Cr\u00fcsemann, Le\u00e3o, Gross) and whether any deviation is explained or flagged",
+      "Judge whether the span of p values and combination functions tested is sufficiently comprehensive to characterize the sensitivity landscape, or whether critical parameter regimes may have been missed",
+      "Review whether the authors discuss or acknowledge limitations in extrapolating sensitivity findings to untested product classes or datasets beyond the three reported microbial strains"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does the choice of exponent p in the \u2113p-norm combination function affect the enrichment of validated links in the top-ranking BGC-metabolite predictions?: 'Fig 8 shows the set of points (x, y) such that \u2113p(x, y) = 1 for three values of p, demonstrating the parallels of the circle in \u2113p to the distribution of scores'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The \u21131/2-norm combination function assigned the best rank to validated links in 10 out of 15 cases, including three instances where it substantially outperformed either individual scoring function alone (e.g., retimycin A ranked at 253 vs. much higher individual ranks).: 'In 10 out of the 15 validated links considered, the \u2113'1/2 score assigns the best rank to the validated link, including in three out of the first five cases where the link is unambiguous. For'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Standardised strain correlation scores (s'_corr) and standardised IOKR scores (s'_IOKR) for all GCF-MF links in Cr\u00fcsemann, Gross, and Le\u00e3o datasets: 'Table 2 shows the proportion of validated links among all possible GCF-MF links in the three data sets, both for all the potential links (first row), and for the links scoring above the 90th'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Validated link ground truth annotations for Cr\u00fcsemann (8 validated links), Gross (9 validated links), and Le\u00e3o (5 validated links) datasets: 'The Cr\u00fcsemann data set consists of 120 microbial strains with 8 validated links between a BGC and a MF, the Gross data set consists of 7 strains with 9 validated links between a BGC and a MF, and the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Table of validated-link enrichment ratios (proportion of validated links / proportion of all links) indexed by combination function type and exponent p, for 90th and 95th percentiles across all three datasets: 'Table 2 shows the proportion of validated links among all possible GCF-MF links in the three data sets, both for all the potential links (first row), and for the links scoring above the 90th'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Heatmap visualisation of validated-link enrichment as a function of exponent p (0.5\u20133.0) and combination function type, with colour intensity proportional to enrichment ratio: 'Fig 8 shows the set of points (x, y) such that \u2113_p(x, y) = 1, for three different values of p. This shows the form of the iso-lines of scores using the \u2113_p function for different values of p to'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Statistical significance test results (chi-square or Fisher exact p-values) comparing validated-link enrichment for each combination function against the baseline (either score alone) and against the reported \u2113\u2081/\u2082 function: 'Considering the 90th percentile per data set for both scores, and adding up the numbers of links in each category (validated or unvalidated, and scoring above 90th percentile for either or both'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Line plot showing rank improvement (median percentile rank of validated links) as a function of p for the \u2113_p family of norms: 'Table 4. The first two columns show the number of links scoring higher or equal to the validated link ordered by the IOKR and the standardised correlation scores, while the next three columns show'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python (numpy, scipy.stats, pandas, matplotlib, seaborn): 'NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit statement of which values of p (exponent) were tested beyond those shown in Table 4, or whether additional combination function forms were evaluated at all.: 'Various values of p, or other functions to combine the scores, may improve the results'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[results] No reporting of validated-link enrichment ratios or p-values for the sensitivity analysis across different p values; only the baseline result (p=0.5 in combined function) is reported in Table 2.: 'Table 2 shows the proportion of validated links among all possible GCF-MF links in the three data sets, both for all the potential links, and for the links scoring above the 90th percentile'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No supplementary figure or table explicitly presenting enrichment metrics as a function of combination function parameters for the three datasets.: 'By using both scores simultaneously, the prioritisation of hypothetical links can be made more effective'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No quantitative guidance on optimal choice of p or combination function form; discussion mentions potential improvements but provides no empirical justification for which variant performs best.: 'Various values of p, or other functions to combine the scores, may improve the results'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import numpy as np; from scipy.stats import chi2_contingency; import matplotlib.pyplot as plt; import seaborn as sns; import warnings; warnings.filterwarnings('ignore'); exec(open('{inputs.scored_links_crusemannds}').read() if '{inputs.scored_links_crusemannds}'.endswith('.py') else 'pass'); print('Task 005: Sensitivity analysis of combination function parameters on validated-link enrichment'); print('Input datasets loaded:'); print('  - Cr\u00fcsemann scored links: {inputs.scored_links_crusemannds}'); print('  - Gross scored links: {inputs.scored_links_gross}'); print('  - Le\u00e3o scored links: {inputs.scored_links_leao}'); print('  - Validated links: {inputs.validated_links_all}'); print(''); print('Analysis scope:'); print('  - Exponent p range: 0.5 to 3.0 (increments 0.1 + fractional 0<p<1)'); print('  - Combination function types: \u2113_p norm, weighted linear, Chebyshev, harmonic mean, geometric mean'); print('  - Percentile thresholds: 90th, 95th'); print('  - Statistical test: chi-square contingency analysis (\u03b1=0.05)'); print('  - Validation baseline: \u2113\u2081/\u2082 function from Table 4'); print(''); print('Expected outputs:'); print('  1. Enrichment ratio table (function type \u00d7 exponent p)'); print('  2. Heatmap: enrichment vs p and function type'); print('  3. Chi-square p-values vs baselines'); print('  4. Line plot: rank improvement (validated links median percentile) vs p'); print(''); print('Note: Full implementation requires manual integration of scored link matrices and validated link ground truth into a Python analysis script.')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "combination_function_sensitivity_report.csv",
+  "expected_outputs": [
+    "Table of validated-link enrichment ratios (proportion of validated links / proportion of all links) indexed by combination function type and exponent p, for 90th and 95th percentiles across all three datasets",
+    "Heatmap visualisation of validated-link enrichment as a function of exponent p (0.5\u20133.0) and combination function type, with colour intensity proportional to enrichment ratio",
+    "Statistical significance test results (chi-square or Fisher exact p-values) comparing validated-link enrichment for each combination function against the baseline (either score alone) and against the reported \u2113\u2081/\u2082 function",
+    "Line plot showing rank improvement (median percentile rank of validated links) as a function of p for the \u2113_p family of norms"
+  ],
+  "finding": "The \u21131/2-norm combination function assigned the best rank to validated links in 10 out of 15 cases, including three instances where it substantially outperformed either individual scoring function alone (e.g., retimycin A ranked at 253 vs. much higher individual ranks).",
+  "github_name": "NPLinker/nplinker",
+  "input_from": "task_003",
+  "inputs": [
+    "task_003.expected_outputs[0]: Table reporting proportion of validated links for each dataset at total, top raw correlation (90th percentile), top standardised correlation (90th percentile), top IOKR (90th percentile), and top combined (both \u226590th percentile) link sets",
+    "Standardised strain correlation scores (s'_corr) and standardised IOKR scores (s'_IOKR) for all GCF-MF links in Cr\u00fcsemann, Gross, and Le\u00e3o datasets",
+    "Validated link ground truth annotations for Cr\u00fcsemann (8 validated links), Gross (9 validated links), and Le\u00e3o (5 validated links) datasets"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "enrichment_by_p.csv",
+    "enrichment_heatmap.png",
+    "rank_percentile_vs_p.png",
+    "significance_test_matrix.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_023",
+    "result_025",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_034",
+    "result_035",
+    "result_041"
+  ],
+  "methodology_summary": [
+    "Load pre-computed standardised strain correlation and IOKR scores for all links across the three microbial datasets (Cr\u00fcsemann, Gross, Le\u00e3o) and their validated-link annotations.",
+    "Compute combined scores using the \u2113_p-norm with sign adjustment across a systematic range of p values (0.5 to 3.0 in 0.1 increments, plus fractional values 0 < p < 1) and alternative function forms (weighted linear, Chebyshev, harmonic mean, geometric mean).",
+    "For each combination function and parameter set, rank all GCF-MF links and calculate validated-link enrichment ratios at the 90th and 95th percentile thresholds.",
+    "Pool results across the three datasets and perform chi-square contingency tests to determine statistical significance (p < 0.05) of enrichment for each function relative to baseline (individual scores alone) and to the reported \u2113\u2081/\u2082 function.",
+    "Visualise enrichment and rank metrics as heatmaps and line plots indexed by function type and exponent p.",
+    "Validation: verify that \u2113\u2081/\u2082 enrichment ratios match Table 4 and Table D of supplementary text; confirm that the best-performing alternative function achieves equal or superior enrichment compared to the three originally reported functions.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1008920); MSV000078836 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836); MSV000085038 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038)"
+  ],
+  "missing_information": [
+    "No explicit statement of which values of p (exponent) were tested beyond those shown in Table 4, or whether additional combination function forms were evaluated at all.",
+    "No reporting of validated-link enrichment ratios or p-values for the sensitivity analysis across different p values; only the baseline result (p=0.5 in combined function) is reported in Table 2.",
+    "No supplementary figure or table explicitly presenting enrichment metrics as a function of combination function parameters for the three datasets.",
+    "No quantitative guidance on optimal choice of p or combination function form; discussion mentions potential improvements but provides no empirical justification for which variant performs best."
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the choice of exponent p in the \u2113p-norm combination function affect the enrichment of validated links in the top-ranking BGC-metabolite predictions?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "results",
+    "discussion"
+  ],
+  "skills": [
+    "combination-function-parameterisation",
+    "enrichment-ratio-calculation",
+    "statistical-significance-testing-multicomparison",
+    "scoring-function-sensitivity-analysis",
+    "validated-link-ranking-comparison"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_nplinker",
+  "spine_condition_ids": [
+    "COND_STD_STRAIN_CORR_ONLY",
+    "COND_SIZE_LARGE_GCF_MF",
+    "COND_SIZE_SMALL_GCF_MF",
+    "COND_COMBINED_SCORES",
+    "COND_IOKR_ONLY",
+    "COND_MIBIG_GNPS_EVAL",
+    "COND_STRAIN_CORR_ONLY"
+  ],
+  "spine_entity_ids": [
+    "COMP_STRAIN_CORR_SCORE",
+    "COMP_STD_STRAIN_CORR_SCORE",
+    "COMP_IOKR_SCORE",
+    "COMP_COMBINED_SCORE",
+    "DS_GNPS_TRAINING",
+    "COND_STRAIN_CORR_ONLY",
+    "COND_STD_STRAIN_CORR_ONLY",
+    "COND_IOKR_ONLY",
+    "COND_COMBINED_SCORES",
+    "METRIC_STD_SCORE_FAVORS_STRONG_CORR",
+    "METRIC_COMBINED_IMPROVES_RATIO",
+    "METRIC_IOKR_TRAINING_SIZE",
+    "METRIC_IOKR_TRAINING_TIME_REDUCTION",
+    "METRIC_IOKR_CLASSIFICATION_TIME_REDUCTION",
+    "RESULT_SIZE_BIAS_STRAIN_CORR",
+    "RESULT_IOKR_NOT_CLASS_SPECIFIC",
+    "RESULT_COMPLEMENTARITY"
+  ],
+  "subdomains": [
+    "natural-products",
+    "microbiome-metabolomics",
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": null,
+  "task_description": "Systematically evaluate how the choice of exponent p and alternative combination function forms (beyond \u2113\u2081, \u2113\u2082, \u2113\u2081/\u2082 evaluated in Table 4) affect the enrichment ratio of validated links in the top-scoring percentiles across three microbial datasets. Produce a sensitivity analysis report quantifying validated-link enrichment as a function of combination function parameters.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Standardised strain correlation and IOKR scores for all GCF-MF links in Cr\u00fcsemann dataset",
+      "port_id": "scored_links_crusemannds",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Standardised strain correlation and IOKR scores for all GCF-MF links in Gross dataset",
+      "port_id": "scored_links_gross",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Standardised strain correlation and IOKR scores for all GCF-MF links in Le\u00e3o dataset",
+      "port_id": "scored_links_leao",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Validated GCF-MF link annotations across three datasets",
+      "port_id": "validated_links_all",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Systematically evaluate how variation in the exponent p and alternative combination function forms affect validated-link enrichment ratios to identify optimal score combination strategies.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Enrichment ratios indexed by combination function and exponent p",
+      "port_id": "enrichment_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Heatmap of validated-link enrichment as function of p and function type",
+      "port_id": "enrichment_heatmap",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Statistical test results for all combinations versus baseline and \u2113\u2081/\u2082",
+      "port_id": "significance_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Line plot of median validated link rank percentile versus p",
+      "port_id": "rank_improvement_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "correlation-analysis",
+    "machine-learning",
+    "database-annotation",
+    "network-annotation-propagation"
+  ],
+  "title": "Analyze the effect of varying combination function parameters on validated-link enrichment beyond reported p values",
+  "tools": [
+    "antiSMASH",
+    "Python (numpy, scipy.stats, pandas, matplotlib, seaborn)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Table of validated-link enrichment ratios (proportion of validated links / proportion of all links) indexed by combination function type and exponent p, for 90th and 95th percentiles across all three datasets, Heatmap visualisation of validated-link enrichment as a function of exponent p (0.5\u20133.0) and combination function type, with colour intensity proportional to enrichment ratio, Statistical significance test results (chi-square or Fisher exact p-values) comparing validated-link enrichment for each combination function against the baseline (either score alone) and against the reported \u2113\u2081/\u2082 function, Line plot showing rank improvement (median percentile rank of validated links) as a function of p for the \u2113_p family of norms."
+  ],
+  "workflow_description": "1. Load pre-computed standardised strain correlation scores (s'_corr) and standardised IOKR scores (s'_IOKR) for all GCF-MF links in the Cr\u00fcsemann, Gross, and Le\u00e3o datasets, along with validated link annotations. 2. For each dataset, compute combined scores using the \u2113_p-norm formula s_sum = sgn(s'_corr)|s'_corr|^p + sgn(s'_IOKR)|s'_IOKR|^p across a range of p values (0.5 to 3.0 in 0.1 increments, plus intermediate values 0 < p < 1). 3. For each (p, dataset) combination, rank all GCF-MF links by combined score and compute the proportion of validated links in the 90th and 95th percentile tiers. 4. Test alternative combination functions (e.g. weighted linear combinations with \u03b1 \u2208 [0, 1], Chebyshev distance max(|s'_corr|, |s'_IOKR|), harmonic mean, geometric mean) and compute validated-link enrichment ratios for each. 5. Pool results across the three datasets and perform significance testing (chi-square or Fisher exact test) to identify which combination functions yield statistically significant enrichment (p < 0.05) relative to using either score alone. 6. Visualise enrichment ratio and rank improvement (validated link rank percentile) as heatmaps and line plots indexed by p and function type. 7. Validation: confirm that results reproduce reported enrichment for \u2113\u2081/\u2082 (documented in Table 4 and Table D of supplementary text) and that the best-performing alternative function achieves equal or superior enrichment compared to the three functions reported in the paper."
+}

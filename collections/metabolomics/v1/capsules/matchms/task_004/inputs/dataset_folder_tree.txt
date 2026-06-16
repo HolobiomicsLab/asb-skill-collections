@@ -1,0 +1,13 @@
+  figures/filtering_sketch.png
+  figures/filtering_sketch.svg
+  figures/flowchart_matchms.png
+  figures/flowchart_matchms.svg
+  figures/matchms.png
+  figures/matchms_header.png
+  figures/matchms_sketch.png
+  figures/peak_filtering.png
+  figures/peak_filtering.svg
+  figures/spectra-array-plot-example.png
+  figures/spectrum-mirror-plot-example.png
+  figures/spectrum-plot-example.png
+paper.md

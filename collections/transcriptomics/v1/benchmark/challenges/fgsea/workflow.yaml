@@ -1,0 +1,442 @@
+schema_version: 0.1.0
+workflow_id: coll_fgsea_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: fgsea is an R-package for fast preranked gene set enrichment analysis (GSEA)
+    that enables quick and accurate calculation of arbitrarily low GSEA P-values for
+    gene set collections. The package implements an adaptive multi-level split Monte-Carlo
+    scheme for P-value estimation and includes GESECA for gene set co-regulation analysis
+    in multi-conditional data.
+  pseudo_abstract: fgsea provides fast and accurate GSEA P-value calculation for gene
+    set collections through an adaptive multi-level split Monte-Carlo scheme. The
+    package supports preranked GSEA on ranked gene lists (e.g., from example pathways
+    and ranks) and includes GESECA, a method for identifying co-regulated gene sets
+    in multi-conditional expression data without requiring explicit sample contrasts.
+    GESECA calculates gene set scores based on the variance of correlated genes within
+    each set and estimates P-values via adaptive multilevel Markov Chain Monte Carlo
+    with gene permutations. The package has been demonstrated on diverse data types
+    including bulk microarray time-course data (GSE200250 Th2 activation), single-cell
+    RNA-seq (GSE116240 atherosclerosis), spatial transcriptomics (10X Visium glioblastoma),
+    and high-resolution spatial data (10X Xenium ovarian cancer), supporting both
+    full-matrix and PCA-reduced expression inputs.
+  research_questions:
+  - Can the fgsea package calculate gene set enrichment analysis results on preranked
+    gene lists with arbitrarily low P-values using its default parameters?
+  - Does fgsea produce consistent enrichment scores and p-values for known pathway
+    activations when applied to normalized gene expression data from a time-course
+    experiment?
+  - Does dimensionality reduction via PCA to 10 dimensions preserve the pathway enrichment
+    results (pathway scores and p-values) obtained from geseca() analysis on the full-dimensional
+    GSE200250 expression matrix?
+  - Does the fgsea package enable accurate and rapid calculation of gene set enrichment
+    P-values across arbitrarily low thresholds?
+  - How does the adaptive multi-level split Monte-Carlo scheme in fgsea adjust P-value
+    precision when the eps parameter is set to zero rather than using a default lower-bound
+    threshold?
+  methods_summary: "Load fgsea package and bundled example datasets (examplePathways,\
+    \ exampleRanks). Execute fgsea() with preranked gene statistics, pathway collection,\
+    \ and default P-value estimation bounds (eps=1e-10, minSize=15, maxSize=500).\
+    \ Sort results by p-value and extract top upregulated and downregulated pathways.\
+    \ Generate enrichment curve visualization for a single pathway using plotEnrichment().\
+    \ Create multi-pathway GSEA table heatmap using plotGseaTable() to display running\
+    \ enrichment sums and statistical significance across selected pathways. Validation:\
+    \ fgsea result table must contain pathways with computed pval, padj, ES, and NES\
+    \ fields; enrichment plots must display running sum curves; GSEA table must render\
+    \ top 20 pathways (10 up, 10 down) with gseaParam=0.5. References: GSE200250 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200250);\
+    \ GSE116240 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240); GSE14308\
+    \ (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14308) Load GSE200250\
+    \ from NCBI GEO and extract Th2 time-course samples. Apply log-transformation\
+    \ and quantile normalization using limma. Filter duplicates, invalid identifiers,\
+    \ and retain top 12,000 genes by mean expression. Obtain HALLMARK gene sets from\
+    \ MSigDB for mouse. Run GESECA with minSize=15, maxSize=500 to score gene set\
+    \ coregulation across time points. Validation: confirm that top pathways show\
+    \ expected temporal activation (E2F at 24h, hypoxia at 48h) with p-values and\
+    \ enrichment scores matching published ranges. References: GSE200250 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200250);\
+    \ GSE116240 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240); GSE14308\
+    \ (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14308) Load GSE200250\
+    \ microarray data from GEO and extract Th2 time-course samples Apply log2 transformation\
+    \ and quantile normalization to expression matrix Filter genes to top 12,000 by\
+    \ mean expression and remove duplicates/invalid identifiers Center gene expression\
+    \ matrix rows to zero mean and perform standard PCA extraction Retain first 10\
+    \ principal components (feature loadings: genes \xD7 10 PCs) as reduced expression\
+    \ matrix Run GESECA on full and reduced matrices with identical parameters (minSize=15,\
+    \ maxSize=500, center=FALSE for reduced) Compare pathway p-values between full\
+    \ and reduced results via Pearson correlation of log10-transformed p-values Validation:\
+    \ confirm log10 p-value correlation \u22650.95 to confirm dimensionality reduction\
+    \ preserves pathway scores References: GSE200250 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200250);\
+    \ GSE116240 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240); GSE14308\
+    \ (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14308) Load GSE116240\
+    \ Seurat object and annotate cell clusters into macrophage subtypes (Adventitial,\
+    \ Intimal non-foamy, Intimal foamy, ISG+). Apply SCTransform normalization with\
+    \ 10,000 variable features to stabilize variance and define gene universe. Run\
+    \ reverse PCA (npcs=50) on SCTransform-normalized expression to extract feature\
+    \ loadings matrix, reducing sample dimensionality while preserving gene-level\
+    \ signals. Load KEGG_LEGACY pathways from MSigDB and run GESECA with minSize=5,\
+    \ maxSize=500, center=FALSE, eps=1e-100 to compute gene-set co-regulation scores\
+    \ and empirical p-values. Generate tSNE/UMAP reduction plots showing pathway scores\
+    \ by cell type and verify that KEGG_LEISHMANIA_INFECTION localizes to non-foamy\
+    \ intimal macrophages and KEGG_LYSOSOME to foamy intimal macrophages. Validation:\
+    \ pathway-cell-type associations are confirmed when pathway score distributions\
+    \ show statistically significant separation (visual inspection or Mann-Whitney\
+    \ U test, p<0.05) between target and non-target cell types, and signals match\
+    \ published biology (Kim et al. findings on inflammatory vs. lysosomal programs).\
+    \ References: GSE200250 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200250);\
+    \ GSE116240 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240); GSE14308\
+    \ (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14308) Load example gene\
+    \ set collection (examplePathways) and preranked gene statistics (exampleRanks)\
+    \ into R environment with reproducible random seed. Execute fgsea function with\
+    \ default eps=1e-10 lower bound, recording enrichment scores, raw P-values, adjusted\
+    \ P-values, and effect sizes (ES, NES) for all pathways. Re-execute fgsea with\
+    \ eps=0 to activate unrestricted adaptive multi-level Monte Carlo P-value refinement\
+    \ for the same input data. Construct merged comparison table indexed by pathway,\
+    \ computing pairwise differences and log-scale ratios of P-values from both runs.\
+    \ Visualize distribution of P-value improvements across pathways and verify ranking\
+    \ consistency between methods. Validation: confirm that eps=0 execution completes\
+    \ without error, produces valid numeric P-values for all pathways, and demonstrates\
+    \ lower (more precise) P-value estimates for top-ranked pathways relative to default\
+    \ run. References: GSE200250 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200250);\
+    \ GSE116240 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240); GSE14308\
+    \ (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14308)"
+  domain: bioinformatics
+  techniques:
+  - enrichment-analysis
+  - pathway-analysis
+  - statistical-analysis
+  - false-discovery-rate-correction
+  claims:
+  - claim_text: fgsea is an R-package for fast preranked gene set enrichment analysis
+      (GSEA).
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: The fgsea package allows to quickly and accurately calculate arbitrarily
+      low GSEA P-values for a collection of gene sets.
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: P-value estimation in fgsea is based on an adaptive multi-level split
+      Monte-Carlo scheme.
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: The fgsea package default lower bound for estimating P-values is eps=1e-10.
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: GESECA is a method to identify gene sets that have high gene correlation.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: GESECA takes as input a gene expression matrix E where rows and columns
+      correspond to genes and samples respectively, and a list of gene sets P.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: By default, GESECA method performs centering for rows of the matrix
+      E.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: GESECA score does not require an explicit sample annotation or a contrast.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: GESECA can be applied to various types of sequencing technologies
+      including RNA-seq, single-cell sequencing, and spatial RNA-seq.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: GESECA assesses statistical significance for a given gene set by using
+      gene permutations.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: GESECA uses an adaptive multilevel Markov Chain Monte Carlo scheme
+      for P-value estimation.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: The first example in the GESECA tutorial considers a time course data
+      of Th2 activation from the dataset GSE200250.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: HALLMARK_E2F_TARGETS genes are strongly activated at 24 hours time
+      point in Th2 cells.
+    claim_type: finding
+    speculative: false
+    entity_id: pathway_e2f_targets
+  - claim_text: HALLMARK_HYPOXIA genes are activated around 48 hours in Th2 cells.
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: When the expression matrix contains many samples, a PCA-reduced expression
+      matrix can be used instead of the full matrix to improve performance.
+    claim_type: finding
+    speculative: false
+  - claim_text: The sample space was reduced from a higher dimension to 10 dimensions
+      in one GESECA example.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: GESECA scores and P-values obtained on a reduced matrix are similar
+      to those obtained for the full matrix.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: The GSE116240 dataset features single cell RNA sequencing of aortic
+      CD45+ cells and foam cells from atherosclerotic aorta.
+    claim_type: finding
+    speculative: false
+    entity_id: dataset_gse116240
+  - claim_text: Inflammatory pathways such as KEGG_LEISHMANIA_INFECTION are more associated
+      with non-foamy intimal macrophages.
+    claim_type: finding
+    speculative: false
+    entity_id: pathway_kegg_leishmania
+  - claim_text: KEGG_LYSOSOME pathway is specific to intimal foamy macrophages.
+    claim_type: finding
+    speculative: false
+    entity_id: pathway_kegg_lysosome
+  - claim_text: GESECA can be used for gene set enrichment analysis of spatial transcriptomics
+      profiling.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: A glioblastoma sample analyzed with GESECA shows a distinct hypoxic
+      region defined by HALLMARK_HYPOXIA.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: HALLMARK_INTERFERON_GAMMA_RESPONSE defines a reactive immune region
+      in glioblastoma.
+    claim_type: finding
+    speculative: false
+    entity_id: pathway_ifn_gamma
+  - claim_text: HALLMARK_OXIDATIVE_PHOSPHORYLATION pathway is more characteristic
+      to normal tissue regions compared to diseased regions.
+    claim_type: finding
+    speculative: false
+    entity_id: pathway_oxphos
+  - claim_text: GESECA can be applied to spatial transcriptomics data generated by
+      high-plex in situ technologies with subcellular resolution such as 10X Genomics'
+      Xenium platform.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: A Human Ovarian Cancer sample was profiled using the Xenium 5K panel
+      in a GESECA analysis example.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: SCTransform normalization was performed on 10000 genes in Xenium data
+      analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: Reverse PCA with 50 principal components was performed on Xenium scRNA-seq
+      data.
+    claim_type: finding
+    speculative: false
+  - claim_text: Reverse PCA with 30 principal components was performed on Xenium spatial
+      transcriptomics data.
+    claim_type: finding
+    speculative: false
+  - claim_text: HALLMARK gene sets from MSigDB collection were used in Xenium GESECA
+      analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: Top enriched pathways identified by GESECA in Xenium data were visualized
+      using UMAP embeddings.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: The plotCoregulationProfileImage function enables visualization of
+      how pathway activities vary across spatial coordinates in Xenium data.
+    claim_type: finding
+    speculative: false
+    entity_id: plot_coregulation_image_func
+  - claim_text: An R-package for performing GESECA (GEne SEt Co-regulation Analysis)
+      is available.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: The exampleExpressionMatrix is a numeric expression matrix of the
+      GSE14308 dataset with 10000 rows corresponding to genes and 12 columns corresponding
+      to samples.
+    claim_type: finding
+    speculative: false
+    entity_id: dataset_example_expression_matrix
+  - claim_text: The exampleExpressionMatrix values are log-scaled and the samples
+      are quantile normalized.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: examplePathways is a list of mouse pathways from the reactome.db package.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_reactome_db
+  - claim_text: The 5990980_Cell_Cycle pathway had a pctEvar of 1.0525898 and a pval
+      of 2.276767e-39 in GESECA analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: The 5990979_Cell_Cycle,_Mitotic pathway had a pctEvar of 1.0466758
+      and a pval of 3.891185e-39 in GESECA analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: The 5991851_Mitotic_Prometaphase pathway had a pctEvar of 0.7485590
+      and a pval of 1.409623e-24 in GESECA analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: The 5992217_Resolution_of_Sister_Chromatid_Cohesion pathway had a
+      pctEvar of 0.7075162 and a pval of 1.265783e-22 in GESECA analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: The 5991454_M_Phase pathway had a pctEvar of 0.6020886 and a pval
+      of 6.237558e-22 in GESECA analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: geseca_system
+  - claim_text: The collapsePathways function can be used to select only independent
+      pathways in fgsea results.
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: The mapIdsList function is similar to AnnotationDbi::mapIds and can
+      be used to convert leading edge to human-readable format.
+    claim_type: finding
+    speculative: false
+    entity_id: map_ids_list_func
+  - claim_text: fgsea is parallelized using the BiocParallel package.
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: By default the first registered backend returned by bpparam() is used
+      in fgsea parallelization.
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: fgsea has a reactomePathways function that obtains pathways from Reactome
+      for a given set of genes.
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: The reactomePathways function in fgsea requires the reactome.db package
+      to be installed.
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: fgsea can load pathways from .gmt files using the gmtPathways function.
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: The fora function in fgsea performs over-representation analysis based
+      enrichment tests using the hypergeometric test.
+    claim_type: finding
+    speculative: false
+    entity_id: fgsea_system
+  - claim_text: The fora function requires a foreground set of genes, a background
+      set of all robustly detected genes, and some pathways.
+    claim_type: finding
+    speculative: false
+    entity_id: fora_func
+  speculative: false
+  task_openness: open
+  method_alternatives:
+  - fgseaMultilevel can be used as an alternative P-value estimation procedure
+  substitution_constraints:
+  - Gene identifiers must be consistent between expression matrix and pathway list
+  - Expression matrix values must be log-scaled and quantile normalized
+  - Center parameter must be set to FALSE when using reduced/preprocessed matrices
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: GESECA results table from full matrix analysis (pathway, score, pval, padj,
+    size)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: GESECA results table from reduced (10-PC) matrix analysis (pathway, score,
+    pval, padj, size)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Scatterplot comparing log10(pval) from full vs reduced matrix, showing Pearson\
+    \ correlation \u22650.95"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: GESECA enrichment results table with pathway names, scores (pctEvar or similar),
+    p-values, and adjusted p-values
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Reduction plots (tSNE or UMAP) showing co-regulation scores for KEGG_LEISHMANIA_INFECTION
+    and KEGG_LYSOSOME pathways colored by cell type annotation
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification report confirming KEGG_LEISHMANIA_INFECTION association with
+    non-foamy intimal macrophages and KEGG_LYSOSOME specificity to intimal foamy macrophages
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'fgsea results table (default eps=1e-10) with columns: pathway, pval, padj,
+    ES, NES, size'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: fgsea results table (eps=0) with same columns and refined P-values
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Comparison table showing pathway, pval_default, pval_eps0, pval_ratio, pval_difference
+    for all pathways
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Visualization (scatter plot or histogram) of log10(pval_ratio) distribution
+    across pathways
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

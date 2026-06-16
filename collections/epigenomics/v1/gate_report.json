@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-06-15T19:52:11.627631+00:00",
+  "generated_at": "2026-06-15T20:12:19.012907+00:00",
   "collection_dir": "collections/epigenomics/v1",
   "corpus_path": "collections/epigenomics/v1/corpus.yaml",
   "mode": "strict",

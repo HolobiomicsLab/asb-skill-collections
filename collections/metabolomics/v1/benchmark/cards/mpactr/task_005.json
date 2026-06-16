@@ -1,0 +1,366 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon.png",
+      "role": "figure",
+      "sha256": "a6f2ba245b962dd9dce35fa3a33fad06e189291254408b29c47184676f5cd9b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/expected_treemap.png",
+      "role": "figure",
+      "sha256": "4b821d08588485dba42f8f9167bb98b1c6128ea4a3e9c855e1ffa5985f7135c4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-96x96.png",
+      "role": "figure",
+      "sha256": "56213353c3a08f75c961592d769f2fb9fcf5af8338c9c27b4dc98ae2803238e3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon.svg",
+      "role": "figure",
+      "sha256": "09ee9737d1318e360e84eea3f2aadabd84cbd2380f3a2fb6503bc136efdc2b8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "405445d48a6b5f5799ebb942153a1b2ec73e7e345d161be3fe178d2c7fa3b51a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-192x192.png",
+      "role": "figure",
+      "sha256": "fc9b2c94db30b485e2aaaa0d1a75d018fd85f7982e2675b1cc52ccb8eb1017d2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-512x512.png",
+      "role": "figure",
+      "sha256": "293ad15edfd27f20182b01a95ae80c53a712f9d30d3c768646df15bc9cd823b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ea07ad29b19e5bb5d99f7d63e1b97e69a8a6ec55aba910b23a7c97830a26bc5d"
+    }
+  ],
+  "created_at": "2026-06-15T13:36:30.070661+00:00",
+  "crossref_doi": "10.1021/acs.analchem.2c04632",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "cultures_peak_table.csv",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "cultures_metadata.csv",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparison table (data.frame or data.table) with rows for copy_object=FALSE and copy_object=TRUE, columns: condition, original_object_rowcount, assigned_object_rowcount, object_identity_match",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "R6 classes operate on reference semantics: in-place mutations affect the original object unless copy_object=TRUE is explicitly set; this differs from base R's copy-by-value behavior.",
+    "The copy_object parameter in mpactr filter functions controls whether the function modifies data in-place (FALSE) or returns an independent deep copy (TRUE); both approaches modify the assigned variable but differ in their effect on the source object.",
+    "Row count reduction in filter_mispicked_ions() occurs when similar ions are merged according to ringwin, isowin, and trwin parameters; the final row count depends on merge_method (e.g., 'sum' vs. 'mean').",
+    "Object identity in R can be tested with identical() or by memory address comparison; two variables point to the same object in reference semantics only when copy_object=FALSE."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: cultures_peak_table.csv in the mpactr package or accessible via example_path()",
+      "file_exists: cultures_metadata.csv in the mpactr package or accessible via example_path()",
+      "script_runs: R script that loads mpactr library, imports cultures dataset via import_data(example_path(\"cultures_peak_table.csv\")), and executes filter_mispicked_ions() twice with copy_object=FALSE and copy_object=TRUE respectively",
+      "output_matches_reference: comparison table contains exactly 2 rows (one per condition: copy_object=FALSE, copy_object=TRUE)",
+      "output_matches_reference: comparison table contains columns for condition, original_object_row_count, result_object_row_count, and object_identity_match (boolean)",
+      "value_in_range: row counts are positive integers matching the dimensions of the cultures dataset after filtering",
+      "format_is: output is a structured table (data.frame, tibble, or CSV) with named columns and consistent data types"
+    ],
+    "expert_review": [
+      "verify that the observed divergence in row counts between copy_object=FALSE and copy_object=TRUE conditions aligns with documented R6 reference semantics behavior (in-place modification vs. shallow copy behavior)",
+      "confirm that object identity (via identical() or address comparison) shows expected pattern: copy_object=FALSE should modify original in-place; copy_object=TRUE should preserve original while modifying assigned result"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Does setting copy_object=FALSE in filter_mispicked_ions() cause the original data object to be modified in-place, whereas copy_object=TRUE preserves the original object's state?: 'Running the `filter_mispicked_ions` filter, with default setting `copy_object = FALSE` (operates on reference semantics) results in changes to the original `data2` object'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] When filter_mispicked_ions() is called with copy_object=FALSE, the original data object is updated in-place; the raw data object with 7269 ions was reduced to 6625 ions, and the original data2 object was also updated despite assigning the result to a new variable data2_mispicked.: 'Even though we created an object called `data2_mispicked`, the original `data2` object was also updated and now has `r nrow(get_peak_table(data2))` ions in the feature table'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] cultures_peak_table.csv: 'import_data(example_path(\"cultures_peak_table.csv\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] cultures_metadata.csv: 'example_path(\"cultures_metadata.csv\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Comparison table (data.frame or data.table) with rows for copy_object=FALSE and copy_object=TRUE, columns: condition, original_object_rowcount, assigned_object_rowcount, object_identity_match: 'operates on reference semantics in which data is updated *in-place*. Compared to a shallow copy, where only data pointers are copied, or a deep copy, where the entire data object is copied in memory,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'This table can be used for a variety of analyses that can be conducted in R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mpactr: 'library(mpactr)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] data.table: 'library(data.table)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mpactr); library(data.table); peak_table <- read.csv('{inputs.peak_table}'); metadata <- read.csv('{inputs.metadata}'); results <- list(); obj1 <- import_data(peak_table, metadata, format='Progenesis'); filtered1 <- filter_mispicked_ions(obj1, copy_object=FALSE); results[[1]] <- data.table(condition='copy_object=FALSE', original_object_rowcount=nrow(obj1), assigned_object_rowcount=nrow(filtered1), object_identity_match=identical(obj1, filtered1)); obj2 <- import_data(peak_table, metadata, format='Progenesis'); filtered2 <- filter_mispicked_ions(obj2, copy_object=TRUE); results[[2]] <- data.table(condition='copy_object=TRUE', original_object_rowcount=nrow(obj2), assigned_object_rowcount=nrow(filtered2), object_identity_match=identical(obj2, filtered2)); comparison_table <- rbindlist(results); print(comparison_table); saveRDS(comparison_table, 'comparison_table.rds')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "reference_semantics_comparison.csv",
+  "expected_outputs": [
+    "Comparison table (data.frame or data.table) with rows for copy_object=FALSE and copy_object=TRUE, columns: condition, original_object_rowcount, assigned_object_rowcount, object_identity_match"
+  ],
+  "finding": "When filter_mispicked_ions() is called with copy_object=FALSE, the original data object is updated in-place; the raw data object with 7269 ions was reduced to 6625 ions, and the original data2 object was also updated despite assigning the result to a new variable data2_mispicked.",
+  "github_name": "mums2/mpactr",
+  "input_from": "task_001",
+  "inputs": [
+    "cultures_peak_table.csv",
+    "cultures_metadata.csv"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "cultures_imported_data.RData",
+    "filtered_copy_false.RData",
+    "filtered_copy_true.RData"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_006",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_020",
+    "result_022",
+    "result_023",
+    "result_024",
+    "result_025"
+  ],
+  "methodology_summary": [
+    "Load cultures peak table and metadata into an mpactr object using import_data() with Progenesis format.",
+    "Apply filter_mispicked_ions() with copy_object=FALSE; record row counts of both original and returned objects and check object identity.",
+    "Reload data and apply filter_mispicked_ions() with copy_object=TRUE; record row counts and object identity.",
+    "Construct a two-row comparison table contrasting object state behavior under each reference semantics setting.",
+    "Validation: verify that copy_object=FALSE produces identical row counts in original and assigned objects (indicating in-place mutation), while copy_object=TRUE produces potentially different row counts (indicating independent copy).",
+    "References: source article (DOI: 10.1021/acs.analchem.2c04632)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/failed_ions_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does setting copy_object=FALSE in filter_mispicked_ions() cause the original data object to be modified in-place, whereas copy_object=TRUE preserves the original object's state?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods",
+    "abstract"
+  ],
+  "skills": [
+    "r6-reference-semantics-comparison",
+    "object-state-mutation-detection",
+    "mpactr-filter-application",
+    "metabolomics-peak-table-loading"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mpactr/synthesized_package",
+  "spine_condition_ids": [
+    "cond_default_reference_semantics",
+    "cond_deep_copy_semantics",
+    "cond_full_filter_pipeline",
+    "cond_coculture_vs_ang18",
+    "cond_pseudocount_fc"
+  ],
+  "spine_entity_ids": [
+    "r6_class_architecture",
+    "filter_pipeline_artifact",
+    "comp_filter_mispicked",
+    "comp_filter_group",
+    "comp_filter_cv",
+    "comp_filter_summary",
+    "comp_get_peak_table",
+    "tool_data_table",
+    "dataset_cultures",
+    "dataset_PTY087I2",
+    "cond_default_reference_semantics",
+    "cond_deep_copy_semantics",
+    "cond_full_filter_pipeline",
+    "cond_coculture_vs_ang18",
+    "cond_pseudocount_fc",
+    "result_ions_remaining_cultures",
+    "result_reference_semantics_inplace"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:mums2__mpactr",
+  "task_description": "Apply filter_mispicked_ions() to the cultures dataset under two reference semantics conditions (copy_object=FALSE and copy_object=TRUE), then compare row counts of the original and assigned objects to verify divergence in object state. Output a two-row comparison table documenting object identity and ion counts under each condition.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cultures peak table (CSV)",
+      "port_id": "peak_table",
+      "resolved_via": null,
+      "source": "task_001/failed_ions_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cultures metadata (CSV)",
+      "port_id": "metadata",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Compare ion counts in the original and assigned objects after applying filter_mispicked_ions() with copy_object=FALSE vs. copy_object=TRUE to demonstrate reference versus deep copy semantics.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Object identity and row count comparison table",
+      "port_id": "reference_semantics_comparison",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "quality-control",
+    "clustering",
+    "correlation-analysis"
+  ],
+  "title": "Analyze deep-copy vs reference-semantics row counts after filter_mispicked_ions() with copy_object=TRUE vs FALSE",
+  "tools": [
+    "R",
+    "mpactr",
+    "data.table"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Comparison table (data.frame or data.table) with rows for copy_object=FALSE and copy_object=TRUE, columns: condition, original_object_rowcount, assigned_object_rowcount, object_identity_match."
+  ],
+  "workflow_description": "1. Load cultures peak table and metadata using import_data() with format='Progenesis'. 2. Call filter_mispicked_ions() with merge_peaks=TRUE, merge_method='sum', and copy_object=FALSE on the first copy; record row count of original and assigned objects. 3. Reload data and call filter_mispicked_ions() with identical parameters but copy_object=TRUE on a second copy; record row count of original and assigned objects. 4. Construct a comparison table with columns: copy_object setting, original_object_rowcount, assigned_object_rowcount, and object_identity_match (TRUE if both point to same data, FALSE if independent). 5. Validate that copy_object=FALSE shows matching row counts (in-place mutation) and copy_object=TRUE shows independent row counts (deep copy)."
+}

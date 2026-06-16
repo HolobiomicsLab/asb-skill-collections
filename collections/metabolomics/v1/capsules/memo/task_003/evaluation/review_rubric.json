@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: memo package source code at github:mandelbrot-project/memo"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: aligned feature table input (CSV or compatible tabular format)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: MS2 spectra input (MGF, MSP, or matchms-compatible format)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "github.com"
+    },
+    {
+      "id": "pf_006",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "MemoMatrix output contains expected attributes (e.g., matrix data, sample identi"
+    },
+    {
+      "id": "pf_007",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "MemoMatrix element values fall within valid numeric range (robust to parameter c"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: MemoMatrix metadata or documentation string contains reference to MS2 peaks and neutral losses counting"
+    },
+    {
+      "id": "pf_009",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "unit test file test_memo_from_aligned in repository at github:mandelbrot-project"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: memo package source code at github:mandelbrot-project/memo",
+      "verify file_format_is: aligned feature table input (CSV or compatible tabular format)",
+      "verify file_format_is: MS2 spectra input (MGF, MSP, or matchms-compatible format)",
+      "script_runs: execute memo_from_aligned() function on provided aligned feature table and MS2 spectra without errors",
+      "output_matches_reference: resulting MemoMatrix object has structure matching unit test expectations from test_memo_from_aligned and test_memo_from_merged_memo (https://github.com/mandelbrot-project/memo)",
+      "field_present: MemoMatrix output contains expected attributes (e.g., matrix data, sample identifiers, feature labels)",
+      "value_in_range: MemoMatrix element values fall within valid numeric range (robust to parameter choices in counting thresholds)",
+      "verify contains_substring: MemoMatrix metadata or documentation string contains reference to MS2 peaks and neutral losses counting",
+      "file_exists: unit test file test_memo_from_aligned in repository at github:mandelbrot-project/memo"
+    ],
+    "expert_review": [
+      "verify that MemoMatrix fingerprint composition (MS2 peaks and neutral losses) reflects documented counting methodology from changelog v0.1.2",
+      "confirm MemoMatrix dimensionality and sparsity are consistent with expected behavior for sample-feature vectorization",
+      "assess whether MemoMatrix output is suitable for downstream alignment and comparison tasks as per MEMO use case"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

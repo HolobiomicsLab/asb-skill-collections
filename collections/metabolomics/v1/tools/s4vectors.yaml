@@ -1,0 +1,10 @@
+name: S4Vectors
+slug: s4vectors
+evidence_spans:
+- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+derived_from:
+- doi: 10.3390/metabo12020173
+  title: spectra
+source_repos:
+- rformassspectrometry/Spectra
+schema_version: 0.2.0

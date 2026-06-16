@@ -1,0 +1,38 @@
+{
+  "schema_version": "v1",
+  "task_id": "task_002",
+  "paper_doi": null,
+  "generated_at": "2026-06-15T12:25:41Z",
+  "artifacts": [
+    {
+      "path": "task_card.json",
+      "source": "card",
+      "kind": "card",
+      "external_refs": []
+    },
+    {
+      "path": "metadata.json",
+      "source": "card",
+      "kind": "metadata",
+      "external_refs": []
+    },
+    {
+      "path": "ro-crate-metadata.json",
+      "source": "ro_crate",
+      "kind": "ro_crate",
+      "external_refs": []
+    },
+    {
+      "path": "resources.json",
+      "source": "package_index",
+      "kind": "resources",
+      "external_refs": []
+    },
+    {
+      "path": "artifacts/artifact_references.json",
+      "source": "package_index",
+      "kind": "artifact_references",
+      "external_refs": []
+    }
+  ]
+}

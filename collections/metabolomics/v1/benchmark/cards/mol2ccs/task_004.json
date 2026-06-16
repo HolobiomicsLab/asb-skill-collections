@@ -1,0 +1,371 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/figure_1.png",
+      "role": "figure",
+      "sha256": "ec9593d5e2bd5f2c3659ac41d3973e4232f7f5f9c61aee36d336fd47d8ed8770"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure_4.png",
+      "role": "figure",
+      "sha256": "0bdedc2eddb80ddc03a823d6ed26539c6cb823d42b9526aa803f75d6c1527431"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure_5.png",
+      "role": "figure",
+      "sha256": "3b6eba801b40e6c642c9a7ba1e99d8f92611bab5f42bf232efc6c3ca12864f44"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "680aeb5b9e2ae88e460cc5e55c212705038edd718d0684f98df1bce42038b685"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:43.788519+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "enveda/ccs-prediction repository containing original GNN model code, preprocessed molecular graph data, and CCS ground-truth labels",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Training, validation, and test dataset splits with molecular structures and corresponding CCS values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparative performance table (CSV or JSON) with metrics (RMSE, MAE, accuracy, training time, inference speed) for both original and alternative GNN architectures",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Trained alternative GNN model weights and architecture definition file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Predictions on test set from both architectures for downstream comparison",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Message-passing GNNs (GAT, MPNN) operate by iteratively aggregating neighbor features; architectural choice affects receptive field size and learned representations.",
+    "Collision cross section (CCS) is a molecular transport property critical for ion-mobility mass spectrometry; prediction accuracy depends on faithful molecular graph encoding.",
+    "Equivalent input/output dimensions across architectures enable fair comparison; weight initialization and learning rate schedules must be matched to isolate architectural effects.",
+    "Test-set performance (RMSE, MAE) on held-out molecules measures generalization; overfitting risk increases with model capacity without regularization or early stopping.",
+    "Inference speed and memory footprint vary significantly between GAT (attention overhead) and simpler message-passing variants; production deployment trade-offs are non-trivial."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the enveda/ccs-prediction repository contains a trained GNN baseline model checkpoint or weights file",
+      "verify that the repository includes a labeled CCS dataset with documented train/validation/test split definitions",
+      "script runs: verify that a Python script implementing an alternative message-passing GNN variant (GAT or MPNN) can be executed without errors on the repository's dataset",
+      "verify that the alternative GNN implementation accepts the same molecular input format as the original GNN architecture",
+      "verify that the re-trained alternative model produces numerical predictions (CCS values or embeddings) on the test split",
+      "verify that a performance comparison table file exists with at least two rows (original GNN + alternative variant) and at least three columns (architecture name, metric1, metric2)",
+      "value_in_range: verify that reported performance metrics (e.g., MAE, RMSE, R\u00b2) for both architectures fall within physically plausible bounds for CCS prediction tasks",
+      "verify that the alternative architecture training log or hyperparameter configuration file is reproducibly specified (no canonical answer for optimal hyperparameters; parameter-sensitive)",
+      "output_matches_reference: if the original paper reports baseline performance on this dataset split, verify that the re-implemented baseline GNN reproduces those reported metrics within \u00b15% relative error (robust to minor implementation variations)"
+    ],
+    "expert_review": [
+      "confirm that the alternative message-passing variant (GAT or MPNN) represents a meaningful architectural departure from the original GNN (not merely a hyperparameter tune)",
+      "assess whether differences in performance between the original and alternative architecture are scientifically interpretable and likely due to architectural factors rather than training instability",
+      "evaluate whether the experimental setup (same dataset split, comparable training budget) is fair and whether any confounding factors (e.g., different learning rates, batch sizes) are adequately controlled or disclosed",
+      "judge the statistical significance of performance differences if confidence intervals or multiple runs are provided"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How do alternative graph neural network architectures (e.g., GAT, MPNN) compare to the original GNN architecture in predicting collision cross section on the same dataset split?: 'Evaluating the generalizability of graph neural networks for predicting collision cross section'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The paper evaluates graph neural networks for predicting collision cross section, establishing a baseline for GNN-based approaches that can be extended with alternative architectures.: 'Evaluating the generalizability of graph neural networks for predicting collision cross section'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] enveda/ccs-prediction repository containing original GNN model code, preprocessed molecular graph data, and CCS ground-truth labels: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Training, validation, and test dataset splits with molecular structures and corresponding CCS values: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Comparative performance table (CSV or JSON) with metrics (RMSE, MAE, accuracy, training time, inference speed) for both original and alternative GNN architectures: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Trained alternative GNN model weights and architecture definition file: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Predictions on test set from both architectures for downstream comparison: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] PyTorch Geometric (PyG): 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] PyTorch: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting the specific modifications, alternative architectures tested, or results comparison: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ccs_gnn_comparison_table.csv",
+  "expected_outputs": [
+    "Comparative performance table (CSV or JSON) with metrics (RMSE, MAE, accuracy, training time, inference speed) for both original and alternative GNN architectures",
+    "Trained alternative GNN model weights and architecture definition file",
+    "Predictions on test set from both architectures for downstream comparison"
+  ],
+  "finding": "The paper evaluates graph neural networks for predicting collision cross section, establishing a baseline for GNN-based approaches that can be extended with alternative architectures.",
+  "github_name": "enveda/ccs-prediction",
+  "input_from": "task_003",
+  "inputs": [
+    "enveda/ccs-prediction repository containing original GNN model code, preprocessed molecular graph data, and CCS ground-truth labels",
+    "Training, validation, and test dataset splits with molecular structures and corresponding CCS values"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "alt_gnn_architecture.py",
+    "training_log_alternative.txt",
+    "test_predictions_original.csv",
+    "test_predictions_alternative.csv",
+    "model_weights_alternative.pt"
+  ],
+  "linked_result_ids": [
+    "result_001"
+  ],
+  "methodology_summary": [
+    "Clone enveda/ccs-prediction repository and load preprocessed CCS dataset with train/val/test splits.",
+    "Implement alternative message-passing GNN (GAT or MPNN) with matching input/output dimensions.",
+    "Train alternative architecture on training set using original hyperparameters and loss function.",
+    "Evaluate both original and alternative models on test set, computing RMSE, MAE, accuracy, training time, and inference speed.",
+    "Generate comparative performance table documenting results side-by-side.",
+    "Validation: Ensure test-set RMSE and MAE values are computed consistently for both architectures and table is reproducible from stored model weights."
+  ],
+  "missing_information": [
+    "No changelog documenting the specific modifications, alternative architectures tested, or results comparison"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How do alternative graph neural network architectures (e.g., GAT, MPNN) compare to the original GNN architecture in predicting collision cross section on the same dataset split?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "graph-neural-network-architecture-implementation",
+    "message-passing-variant-selection-and-adaptation",
+    "molecular-ccs-prediction-model-training",
+    "regression-metric-computation-and-comparison",
+    "model-hyperparameter-transfer-and-tuning",
+    "inference-performance-benchmarking"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mol2ccs/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "system_ccs_prediction",
+    "dataset_ccs",
+    "result_generalizability_evaluation"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "benchmark-evaluation",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:enveda__ccs-prediction",
+  "task_description": "Replace the original GNN architecture in the enveda/ccs-prediction codebase with an alternative message-passing variant (GAT or MPNN) and re-evaluate on the same CCS dataset split to produce a comparative performance table.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "enveda/ccs-prediction repository with original GNN implementation",
+      "port_id": "repo_code",
+      "resolved_via": null,
+      "source": "task_003/graph_dataset",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Preprocessed CCS dataset with train/val/test splits and molecular graphs",
+      "port_id": "ccs_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Implement alternative GNN architectures (GAT, MPNN) in the enveda/ccs-prediction codebase and produce a comparative performance table against the original architecture on the same CCS dataset split.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Comparative metrics table for original vs. alternative GNN",
+      "port_id": "performance_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained alternative GNN model weights",
+      "port_id": "alt_model_weights",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Predictions from both models on test set",
+      "port_id": "test_predictions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "graph-neural-network",
+    "machine-learning",
+    "deep-learning",
+    "transfer-learning"
+  ],
+  "title": "Extend CCS prediction by substituting an alternative GNN architecture and comparing held-out performance",
+  "tools": [
+    "PyTorch Geometric (PyG)",
+    "PyTorch"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: PyTorch Geometric (PyG), PyTorch, Trained alternative GNN model weights and architecture definition file."
+  ],
+  "workflow_description": "1. Clone the enveda/ccs-prediction repository and load the original model architecture and preprocessed CCS dataset split (training, validation, test sets). 2. Implement an alternative message-passing GNN architecture (Graph Attention Network or Message-Passing Neural Network) with equivalent input/output dimensions to the original model. 3. Train the alternative GNN on the training set using the same hyperparameters, loss function, and optimization settings as the original baseline, monitoring validation performance. 4. Evaluate both the original and alternative architectures on the held-out test set, computing prediction accuracy, RMSE, MAE, and other relevant regression metrics for CCS prediction. 5. Generate a comparative performance table documenting metric values, training time, and inference speed for both architectures side-by-side."
+}

@@ -1,0 +1,5 @@
+  figures/CoreMS.COLOR.png
+  figures/CoreMS.COLOR_small.png
+  figures/Direct_Infusion_FTMS_Data_Model.png
+  figures/GC_MS_Data_Model.png
+paper.md

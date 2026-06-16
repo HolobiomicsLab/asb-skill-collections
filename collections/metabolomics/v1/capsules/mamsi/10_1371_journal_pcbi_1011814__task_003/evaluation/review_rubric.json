@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:kopeckylukas__py-mamsi containing NetworkX graph construction code for structural clusters"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output NetworkX object is serializable as .graphml or .gexf format (or equivalen"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output pyvis HTML artifact is valid HTML5 with .html extension and contains inte",
+      "value": "HTML"
+    },
+    {
+      "id": "pf_005",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "NetworkX graph object contains node attributes capturing structural cluster iden"
+    },
+    {
+      "id": "pf_006",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "pyvis HTML output contains interactive elements (zoom, pan, node-drag functional"
+    },
+    {
+      "id": "pf_007",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "graph node count and edge count match documented example in py-mamsi-tutorials o"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:kopeckylukas__py-mamsi containing NetworkX graph construction code for structural clusters",
+      "script_runs: execute the structural cluster-to-network conversion step from py-mamsi package on sample data from kopeckylukas/py-mamsi-tutorials repository",
+      "file_format_is: output NetworkX object is serializable as .graphml or .gexf format (or equivalent NetworkX-native pickle)",
+      "file_format_is: output pyvis HTML artifact is valid HTML5 with .html extension and contains interactive graph visualization",
+      "field_present: NetworkX graph object contains node attributes capturing structural cluster identity and m/z/RT properties",
+      "field_present: pyvis HTML output contains interactive elements (zoom, pan, node-drag functionality) \u2014 robust to parameter choices in visualization layout",
+      "output_matches_reference: graph node count and edge count match documented example in py-mamsi-tutorials or README, allowing multiple defensible graph layouts"
+    ],
+    "expert_review": [
+      "biochemical validity: verify that structural relationships encoded in graph edges (isotopologue, adduct, cross-assay links) correctly reflect the m/z and RT clustering logic described in methods",
+      "usability assessment: confirm that resulting NetworkX object is compatible with downstream tools (Cytoscape, networkx library functions) as stated in documentation"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

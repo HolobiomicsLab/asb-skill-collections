@@ -1,0 +1,307 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "2885f2a6a210a8e628bb033ef0e84887d58183b27af5f5e09d072fa208d93f64"
+    }
+  ],
+  "created_at": "2026-06-15T21:51:22.650070+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "First MemoMatrix object (MS2 fingerprint matrix with sample-peak and sample-neutral-loss counts)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Second MemoMatrix object (MS2 fingerprint matrix with sample-peak and sample-neutral-loss counts from separate sample set)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Merged MemoMatrix file containing combined MS2 fingerprint data from both input matrices with all sample and feature columns preserved",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "A MemoMatrix is a two-dimensional array structure where rows represent samples and columns represent MS2 peaks and neutral losses counted in those samples.",
+    "Merging two MemoMatrix objects requires union alignment of all unique MS2 features (peaks and neutral losses) across both matrices, with missing values filled appropriately (typically zero).",
+    "The merged_memo() function is the canonical MEMO operation for combining independent MS2 fingerprint matrices into a single consolidated matrix suitable for downstream alignment and comparison."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: output MemoMatrix object from merged_memo() function",
+      "file_format_is: output must be serializable Python object (pickle or HDF5 format)",
+      "verify output_matches_reference: merged MemoMatrix row count equals sum of input MemoMatrix row counts",
+      "field_present: merged output contains all columns from first input MemoMatrix",
+      "field_present: merged output contains all columns from second input MemoMatrix",
+      "value_in_range: merged MemoMatrix shape[0] (rows) equals input1.shape[0] + input2.shape[0]",
+      "script_runs: merged_memo() function executes without error on two valid MemoMatrix inputs"
+    ],
+    "expert_review": [
+      "Verify that merged MemoMatrix data integrity is preserved: no data corruption or loss of spectral information during merge",
+      "Confirm that column alignment across two MemoMatrix objects follows expected merge semantics (union vs. intersection)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the output format and structure when two separately generated MemoMatrix objects are merged using the merged_memo() function?: 'These fingerprints can in a second stage be aligned to compare different samples.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MEMO enables alignment of MS2 fingerprints generated from separate samples to compare them in a second stage.: 'These fingerprints can in a second stage be aligned to compare different samples.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] First MemoMatrix object (MS2 fingerprint matrix with sample-peak and sample-neutral-loss counts): 'The occurrence of MS2 peaks and neutral losses (to the precursor) in each sample is counted and used to generate an *MS2 fingerprint* of the sample.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Second MemoMatrix object (MS2 fingerprint matrix with sample-peak and sample-neutral-loss counts from separate sample set): 'The occurrence of MS2 peaks and neutral losses (to the precursor) in each sample is counted and used to generate an *MS2 fingerprint* of the sample.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Merged MemoMatrix file containing combined MS2 fingerprint data from both input matrices with all sample and feature columns preserved: 'These fingerprints can in a second stage be aligned to compare different samples.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MEMO: '**M**\\ s2 bas\\ **E**\\ d sa\\ **M**\\ ple vect\\ **O**\\ rization (**MEMO**) is a method allowing a Retention Time (RT) agnostic alignment'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] memo-ms: 'pip install memo-ms'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python 3.8: 'conda create --name memo python=3.8'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of merged_memo() function signature, parameters, or expected behavior in the provided document: 'test for merged_memo()'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No documentation or examples showing how two MemoMatrix objects are instantiated or what their structure contains: 'New `MemoMatrix` class, replacing the former `MemoContainer`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No definition of column names or data types expected in a MemoMatrix object: 'possibility to import \"memo ready\" feature table'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python3",
+      "-c",
+      "import pickle; from memo import merged_memo; m1 = pickle.load(open('{inputs.memomatrix_1}', 'rb')); m2 = pickle.load(open('{inputs.memomatrix_2}', 'rb')); merged = merged_memo(m1, m2); pickle.dump(merged, open('merged_memomatrix_{task_id}.pkl', 'wb'))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "merged_memomatrix.pkl",
+  "expected_outputs": [
+    "Merged MemoMatrix file containing combined MS2 fingerprint data from both input matrices with all sample and feature columns preserved"
+  ],
+  "finding": "MEMO enables alignment of MS2 fingerprints generated from separate samples to compare them in a second stage.",
+  "github_name": "mandelbrot-project/memo_publication_examples",
+  "input_from": "task_002",
+  "inputs": [
+    "First MemoMatrix object (MS2 fingerprint matrix with sample-peak and sample-neutral-loss counts)",
+    "Second MemoMatrix object (MS2 fingerprint matrix with sample-peak and sample-neutral-loss counts from separate sample set)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "memomatrix_1_loaded.pkl",
+    "memomatrix_2_loaded.pkl"
+  ],
+  "linked_result_ids": [
+    "result_010",
+    "result_014"
+  ],
+  "methodology_summary": [
+    "Load first MemoMatrix object from input file or object store",
+    "Load second MemoMatrix object from input file or object store",
+    "Invoke merged_memo() function to combine both matrices into unified structure with all features from both inputs",
+    "Validate merged output contains all expected columns and correct dimensionality",
+    "Export merged MemoMatrix to serialized file format (pickle or equivalent)"
+  ],
+  "missing_information": [
+    "No specification of merged_memo() function signature, parameters, or expected behavior in the provided document",
+    "No documentation or examples showing how two MemoMatrix objects are instantiated or what their structure contains",
+    "No definition of column names or data types expected in a MemoMatrix object"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the output format and structure when two separately generated MemoMatrix objects are merged using the merged_memo() function?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "ms2-fingerprint-matrix-merging",
+    "memomatrix-object-handling",
+    "multi-sample-metabolomics-data-integration",
+    "spectral-feature-consolidation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_memo/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MEMO_SYSTEM",
+    "MEMO_MATRIX_CLASS",
+    "MEMO_FROM_UNALIGNED",
+    "MEMO_FROM_ALIGNED",
+    "MERGED_MEMO",
+    "MEMO_PIPELINE_ARCH",
+    "MEMO_MS_PACKAGE"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:mandelbrot-project__memo",
+  "task_description": "Merge two separately generated MemoMatrix objects using the merged_memo() function to produce a single consolidated MemoMatrix. Output the merged matrix as a structured file with all columns from both input matrices preserved.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "First MemoMatrix object",
+      "port_id": "memomatrix_1",
+      "resolved_via": null,
+      "source": "task_002/memo_matrix",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Second MemoMatrix object",
+      "port_id": "memomatrix_2",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute merged_memo() on two MemoMatrix objects and validate the output file format, dimensions, and presence of all expected columns from both inputs.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Merged MemoMatrix object",
+      "port_id": "merged_memomatrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "dimensionality-reduction",
+    "clustering",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce the merged MemoMatrix produced by merged_memo() from two input MemoMatrix objects",
+  "tools": [
+    "MEMO",
+    "memo-ms",
+    "Python 3.8"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the first MemoMatrix object (generated from sample set A) into the MEMO merge module. 2. Load the second MemoMatrix object (generated from sample set B) into the MEMO merge module. 3. Execute the merged_memo() function on both MemoMatrix objects to combine their MS2 fingerprint data into a single unified matrix. 4. Validate that the output MemoMatrix contains all expected columns from both input matrices and that row/column dimensions are consistent with the union of both inputs. 5. Serialize and export the merged MemoMatrix to a structured output file."
+}

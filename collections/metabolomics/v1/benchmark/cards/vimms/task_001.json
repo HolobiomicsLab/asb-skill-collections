@@ -1,0 +1,396 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/architecture_diagram.jpg",
+      "role": "figure",
+      "sha256": "fdc32fdacf3bfe4a83185b442ca1e896f02bda8e0a19f54907797fde1912f14b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bipartite_matching.svg",
+      "role": "figure",
+      "sha256": "a0da8d92fa15d2a8ceebbc5353a36ee4e268412d0c94509f840ce3ee43a5a1f5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "618713a59feb813219183c37df421296b2ad176c5e0117cd8810536896cd40ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matching_workflow.svg",
+      "role": "figure",
+      "sha256": "04cfefd4c609db0d59d52111cbdefd870ca34b8dc6c2c609e892bac24c4e0c56"
+    },
+    {
+      "indexable": false,
+      "path": "figures/old_schematic.png",
+      "role": "figure",
+      "sha256": "f893d81169ef4847918c8d449413bf747bfa19be66357fc8e0446801e909905e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/schematic.png",
+      "role": "figure",
+      "sha256": "fd9ef3a7af60dd7feef1dd07039c335b23d0660d21e8bed975f97cb4f7b16112"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectra.png",
+      "role": "figure",
+      "sha256": "d85c89a571b2cc6f64a083ad86712ffddf16905b1470493ec3dd49c6e12d1c09"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "1bac10c40e955de7761b2d5dc435411bdb7d0aa120f831078cb7be87c7c2382d"
+    }
+  ],
+  "created_at": "2026-06-15T12:40:40.120497+00:00",
+  "crossref_doi": "10.1021/acs.analchem.0c03895",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "HMDB compound database (pickle or in-memory structure)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ViMMS package with ChemicalMixtureCreator, IndependentMassSpectrometer, FullScanController, and Environment classes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "mzML file containing MS1-only scans from the full-scan simulation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pickle file containing EvaluationData object with chemicals, generated scans, and fragmentation events",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "HMDB provides curated metabolite structures with mass and formula annotations; sampling via DatabaseFormulaSampler filters compounds by m/z range to match instrument capabilities.",
+    "FullScanController performs MS1-only acquisition without data-dependent MS2 fragmentation, useful for generating reference full-scan datasets and testing intensity-based methods.",
+    "IndependentMassSpectrometer simulates ion suppression, chromatographic peak shape, and m/z calibration; polarity='positive' assumes protonated molecular ions [M+H]+ as the dominant ionization mode.",
+    "ChemicalMixtureCreator auto-generates retention times (RT), relative intensities, and Gaussian or empirical chromatographic peaks; ms_levels=2 reserves MS2 capability even if FullScanController does not trigger fragmentation.",
+    "Environment.write_mzML() exports scans in the mzML exchange format; save_eval=True persists an EvaluationData pickle containing chemical ground truth and acquisition metadata for downstream benchmarking."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: downloaded hmdb_compounds.p from https://github.com/glasgowcompbio/vimms-data/raw/main/hmdb_compounds.p",
+      "verify file_format_is: output mzML file is valid mzML (XML-based, contains scan elements with m/z and intensity arrays)",
+      "verify script_runs: Python script instantiates FullScanController, IndependentMassSpectrometer with KnownChemical objects, and Environment; calls env.run() without error",
+      "verify file_exists: output mzML file is written to disk by Environment.write_mzML()",
+      "verify contains_substring: output mzML contains MS1 spectrum entries (scan@msLevel='1') with m/z and intensity data",
+      "verify output_matches_reference: mzML structure (scan count, m/z range ~100\u20131000, spectrum type) is consistent with demo notebook expectations, robust to exact peak intensity variations across reruns"
+    ],
+    "expert_review": [
+      "confirm that sampled KnownChemical objects from HMDB exhibit expected m/z distribution (100\u20131000 range) and chemical diversity representative of metabolomics",
+      "confirm that FullScanController generates MS1-only scans (no fragmentation) with appropriate retention time spacing and realistic ion intensities for the simulated sample",
+      "confirm that mzML output is compatible with standard metabolomics workflows (can be opened by OpenMS, mzmine2, or equivalent peak-picking tools without corruption)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Can ViMMS simulate a full-scan MS1 acquisition on a set of known chemical compounds sampled from the HMDB database and produce a valid mzML output file?: 'chemical objects are generated by sampling from metabolites in the HMDB database'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The ViMMS framework includes a SimpleMs1Controller that can generate full-scan MS1 data from simulated chemicals, with the Environment class providing write_mzML functionality to export generated scans as mzML files.: 'from vimms.MassSpec import IndependentMassSpectrometer\nfrom vimms.Controller import SimpleMs1Controller\nfrom vimms.Environment import Environment'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] HMDB compound database (pickle or in-memory structure): 'They can be sampled from databases such as HMDB'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] ViMMS package with ChemicalMixtureCreator, IndependentMassSpectrometer, FullScanController, and Environment classes: 'ViMMS is compatible with Python 3+. You can install the current release of ViMMS using pip'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] mzML file containing MS1-only scans from the full-scan simulation: 'The `Environment` class provides `write_mzML` to export the generated scans'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Pickle file containing EvaluationData object with chemicals, generated scans, and fragmentation events: 'This creates an additional pickle file alongside the mzML output containing a serialised `EvaluationData` object'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] VIMMS: 'a flexible and modular framework designed to simulate fragmentation strategies in tandem mass spectrometry-based metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'ViMMS is compatible with Python 3+'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Poetry: 'ViMMS dependencies are managed with [Poetry](https://python-poetry.org/)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog is available for the ViMMS repository.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pickle; from vimms.ChemicalMixtureCreator import ChemicalMixtureCreator; from vimms.MassSpectrometer import IndependentMassSpectrometer; from vimms.Controller import FullScanController; from vimms.Environment import Environment; import pymzml; cmix = ChemicalMixtureCreator('{inputs.hmdb_database}', num_chemicals=100, mz_range=(100, 1000)); chemicals = cmix.chemicals; ms = IndependentMassSpectrometer(chemicals); controller = FullScanController(); env = Environment(ms, controller, None, 0, 1200, progress_bar=True); env.run(); env.write_mzml('output.mzML'); eval_data = type('EvaluationData', (), {'chemicals': chemicals, 'scans': env.scans, 'events': env.fragmentation_events})(); pickle.dump(eval_data, open('evaluation_data.pkl', 'wb'))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "fullscan_simulation.mzML",
+  "expected_outputs": [
+    "mzML file containing MS1-only scans from the full-scan simulation",
+    "Pickle file containing EvaluationData object with chemicals, generated scans, and fragmentation events"
+  ],
+  "finding": "The ViMMS framework includes a SimpleMs1Controller that can generate full-scan MS1 data from simulated chemicals, with the Environment class providing write_mzML functionality to export generated scans as mzML files.",
+  "github_name": "glasgowcompbio/vimms",
+  "input_from": null,
+  "inputs": [
+    "HMDB compound database (pickle or in-memory structure)",
+    "ViMMS package with ChemicalMixtureCreator, IndependentMassSpectrometer, FullScanController, and Environment classes"
+  ],
+  "keywords": [
+    "liquid chromatography",
+    "tandem mass spectrometry",
+    "ms/ms fragmentation",
+    "untargeted metabolomics",
+    "fragmentation strategy optimization",
+    "small molecule identification"
+  ],
+  "landmark_outputs": [
+    "chemicals.pkl",
+    "fullscan_simulation.mzML",
+    "fullscan_simulation.p"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_003",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_026",
+    "result_032",
+    "result_033",
+    "result_039",
+    "result_041",
+    "result_043",
+    "result_046"
+  ],
+  "methodology_summary": [
+    "Load or initialize HMDB compound database and sample 100 chemical formulas within m/z 100\u20131000 range.",
+    "Generate KnownChemical objects with simulated retention times, intensities, and MS1 chromatograms.",
+    "Instantiate virtual mass spectrometer and configure FullScanController for MS1-only (no MS2) acquisition.",
+    "Execute Environment simulation loop to record scans at 1\u20135 second intervals across 0\u20131200 second run time.",
+    "Export simulated scans to mzML format and optionally pickle EvaluationData for ground-truth reference.",
+    "Validation: Verify mzML file is valid and contains MS1 scans only with correct polarity, retention time range, and m/z values matching sampled chemicals.",
+    "References: source article (DOI: 10.1021/acs.analchem.0c03895)"
+  ],
+  "missing_information": [
+    "No changelog is available for the ViMMS repository."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can ViMMS simulate a full-scan MS1 acquisition on a set of known chemical compounds sampled from the HMDB database and produce a valid mzML output file?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "metabolomics-chemical-mixture-generation-from-hmdb",
+    "ms1-full-scan-acquisition-simulation",
+    "vimms-controller-configuration-and-execution",
+    "mzml-format-export-from-simulator",
+    "chromatogram-and-ionization-intensity-modeling",
+    "evaluation-data-collection-for-simulation-assessment"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_vimms/synthesized_package",
+  "spine_condition_ids": [
+    "COND_TOPN_DDA",
+    "COND_BEER_TOPN",
+    "COND_MS1_SINGLE"
+  ],
+  "spine_entity_ids": [
+    "VIMMS_SYSTEM",
+    "ARCH_SIMULATION_LOOP",
+    "COMP_CHEMICALS",
+    "COMP_KNOWN_CHEMICAL",
+    "COMP_FULL_SCAN",
+    "DATASET_HMDB",
+    "DATASET_BEER_MZML",
+    "DATASET_URINE_MZML",
+    "COND_TOPN_DDA",
+    "COND_BEER_TOPN",
+    "COND_MS1_SINGLE",
+    "RESULT_SIMULATED_VS_REAL",
+    "RESULT_MS1_FULLSCAN",
+    "RESULT_HMDB_SAMPLING",
+    "ARTIFACT_MZML_OUTPUT"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "simulation",
+    "data-processing"
+  ],
+  "synthesized_from": "github:glasgowcompbio__vimms",
+  "task_description": "Run a ViMMS full-scan MS1 simulation on HMDB-sampled known chemicals and write the resulting scans to mzML format, reproducing the single-sample demonstration workflow.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "HMDB compound database",
+      "port_id": "hmdb_database",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute a ViMMS simulation loop using SimpleMs1Controller on HMDB-sampled chemicals and write the resulting MS1 scans to a valid mzML output file.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MS1-only mzML simulation output",
+      "port_id": "fullscan_mzml",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Evaluation data pickle file",
+      "port_id": "evaluation_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "data-independent-acquisition",
+    "feature-detection",
+    "machine-learning",
+    "metabolite-identification",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce Full-Scan mzML Generation from Simulated Chemicals",
+  "tools": [
+    "VIMMS",
+    "Python",
+    "Poetry"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Poetry, mzML file containing MS1-only scans from the full-scan simulation, Pickle file containing EvaluationData object with chemicals, generated scans, and fragmentation events."
+  ],
+  "workflow_description": "1. Sample 100 chemical formulas from HMDB database within m/z range 100\u20131000 using DatabaseFormulaSampler. 2. Generate KnownChemical objects with retention times, intensities, and MS1 chromatograms using ChemicalMixtureCreator with ms_levels=2. 3. Instantiate IndependentMassSpectrometer with polarity='positive' and the sampled chemicals list. 4. Configure FullScanController with polarity='positive' to acquire only MS1 scans without fragmentation. 5. Create an Environment with the mass spectrometer, controller, min_time=0, max_time=1200, and enable save_eval=True. 6. Execute env.run() to simulate the LC-MS acquisition loop. 7. Write the generated scans to mzML output using Environment.write_mzML()."
+}

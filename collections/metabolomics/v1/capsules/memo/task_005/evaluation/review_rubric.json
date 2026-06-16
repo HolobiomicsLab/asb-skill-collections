@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that input MemoMatrix file exists and is loadable by memo-ms package"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output coordinate table contains at least 2 columns (for 2D embedding) and one row per input sample"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output scatter plot file exists in a standard image format (PNG, PDF, or SVG)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that scatter plot contains plotted points corresponding to each sample in the coordinate table"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the embedding method used (MDS or PCoA) is correctly identified in output metadata or plot labels"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output matches reference implementation by comparing embedding coordinates to a reference deposit (if available) with robust tolerance for numerical precision (e.g., within 1% variance explained)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that input MemoMatrix file exists and is loadable by memo-ms package",
+      "verify that output coordinate table contains at least 2 columns (for 2D embedding) and one row per input sample",
+      "verify that output scatter plot file exists in a standard image format (PNG, PDF, or SVG)",
+      "verify that scatter plot contains plotted points corresponding to each sample in the coordinate table",
+      "verify that the embedding method used (MDS or PCoA) is correctly identified in output metadata or plot labels",
+      "verify output matches reference implementation by comparing embedding coordinates to a reference deposit (if available) with robust tolerance for numerical precision (e.g., within 1% variance explained)"
+    ],
+    "expert_review": [
+      "expert judgment on whether the 2D embedding preserves meaningful sample relationships and separations evident in the original high-dimensional MemoMatrix",
+      "expert judgment on whether the choice between MDS and PCoA is appropriate for the sample collection and biological question being addressed"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

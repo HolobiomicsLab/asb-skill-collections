@@ -1,0 +1,167 @@
+schema_version: 0.1.0
+workflow_id: coll_deepion_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: tight
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: DeepION is a deep learning model that learns low-dimensional representations
+    of ion images for mass spectrometry imaging through contrastive learning, with
+    specialized augmentation strategies for co-localized ions (COL mode) and isotope
+    ions (ISO mode).
+  pseudo_abstract: 'DeepION comprises four modules for processing ion images in mass
+    spectrometry imaging. The Data Augmentation module applies mode-specific transformations:
+    COL mode uses color jitter, filtering, Poisson noise, and random missing value,
+    while ISO mode adds an intensity-dependent missing value process. Two augmented
+    images from the same source are propagated through a pair of parameter-shared
+    ResNet18-based encoders to produce 512-dimensional representation vectors. The
+    Projection and Prediction modules then process these vectors to avoid solution
+    collapse while optimizing for maximum similarity between augmentations of the
+    same ion image through contrastive loss.'
+  research_questions:
+  - What are the specific augmentation operations applied in the COL and ISO modes
+    of the DeepION data augmentation pipeline T, and how do they differ?
+  - How does the Encoder module in DeepION process two augmented ion images through
+    shared-weight ResNet18 encoders to produce 512-dimensional representation vectors?
+  - How do the Projection and Prediction modules operate on 512-dimensional encoder
+    outputs to prevent representation collapse during contrastive learning of ion
+    images?
+  methods_summary: "Load the original ion image as input Apply COL mode augmentation\
+    \ sequence: color jitter \u2192 filtering \u2192 Poisson noise \u2192 random missing\
+    \ value, producing two independent augmented samples Apply ISO mode augmentation\
+    \ sequence: execute all COL mode operations, then apply intensity-dependent missing\
+    \ value targeting high or low intensity pixels, producing two independent augmented\
+    \ samples Validation: verify that each mode produces exactly two augmented images\
+    \ with no pixel value clipping or NaN artifacts; confirm intensity-dependent missing\
+    \ value in ISO mode correlates with input intensity distribution Define ResNet18\
+    \ architecture with input compatibility for ion images and 512-dimensional output\
+    \ layer Instantiate shared-weight encoder module using single ResNet18 instance\
+    \ for both augmented images Configure parameter sharing constraints to ensure\
+    \ identical weights across encoder branches Implement bidirectional forward pass\
+    \ accepting two augmented images and outputting paired representation vectors\
+    \ Validation: Verify output tensor shapes match expected dimensions (batch_size\
+    \ \xD7 512) and confirm parameter identity between branches Load 512-dimensional\
+    \ encoder outputs from paired ResNet18 networks processing augmented ion image\
+    \ pairs. Pass encoder outputs through a learnable Projection module to map to\
+    \ a contrastive learning space. Pass projected vectors through a learnable Prediction\
+    \ module to introduce asymmetry and prevent solution collapse. Compute contrastive\
+    \ loss (e.g., NT-Xent or SimCLR loss) between predictions of augmented pairs,\
+    \ maximizing similarity within pairs and minimizing across pairs. Optimize Projection\
+    \ and Prediction module parameters via backpropagation while maintaining encoder\
+    \ representations. Validation: contrastive loss converges to a stable minimum\
+    \ and learned representations preserve ion-image-specific structure (verified\
+    \ by downstream clustering or classification performance on COL/ISO modes)."
+  domain: bioinformatics
+  techniques:
+  - deep-learning
+  claims:
+  - claim_text: DeepION is a deep learning-based low-dimensional representation model
+      of ion images for mass spectrometry imaging.
+    claim_type: finding
+    speculative: false
+    entity_id: deepion_system
+  - claim_text: DeepION has two modes denoted as COL and ISO.
+    claim_type: finding
+    speculative: false
+    entity_id: deepion_system
+  - claim_text: The COL mode is designed for regular co-localized ions from different
+      molecules.
+    claim_type: finding
+    speculative: false
+    entity_id: mode_col
+  - claim_text: The ISO mode is designed for isotope ions from a same molecule.
+    claim_type: finding
+    speculative: false
+    entity_id: mode_iso
+  - claim_text: Lei Guo is the developer of DeepION from the Laboratory of Biomedical
+      Network at Xiamen University of China.
+    claim_type: finding
+    speculative: false
+    entity_id: deepion_system
+  - claim_text: DeepION consists of four modules.
+    claim_type: finding
+    speculative: false
+    entity_id: deepion_system
+  - claim_text: The Data Augmentation module generates two augmented images from the
+      original ion image.
+    claim_type: finding
+    speculative: false
+    entity_id: module_data_augmentation
+  - claim_text: The T_COL augmentation includes color jitter, filtering, Poisson noise,
+      and random missing value.
+    claim_type: finding
+    speculative: false
+    entity_id: mode_col
+  - claim_text: The T_ISO augmentation introduces an additional process of intensity-dependent
+      missing value in ISO mode.
+    claim_type: finding
+    speculative: false
+    entity_id: mode_iso
+  - claim_text: The Encoder module uses a pair of ResNet18-based encoders with shared
+      parameters.
+    claim_type: finding
+    speculative: false
+    entity_id: module_encoder
+  - claim_text: The Encoder module outputs two 512-dimensional representation vectors.
+    claim_type: finding
+    speculative: false
+    entity_id: module_encoder
+  - claim_text: The Projection and Prediction modules are used to avoid collapsing
+      solutions during optimization.
+    claim_type: finding
+    speculative: false
+    entity_id: module_projection
+  - claim_text: The optimization process aims to maximize the similarity between two
+      augmentations from the same image.
+    claim_type: finding
+    speculative: false
+  - claim_text: A contrastive loss is employed in DeepION.
+    claim_type: finding
+    speculative: false
+    entity_id: deepion_system
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Trained Projection module weights and biases
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Trained Prediction module weights and biases
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Contrastive loss values per batch or epoch
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Final learned representations for ion images after contrastive training
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

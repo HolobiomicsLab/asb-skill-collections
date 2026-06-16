@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that input file contains at least 2 columns: m/z and assigned molecular formula (field_present)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the standalone script accepts a peak list file as command-line argument or config parameter (script_runs)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the script computes pairwise mass differences and outputs a numeric matrix or edge list (output_matches_reference: check against Example transformation network data in bacterium-phage dataset OSF deposit https://doi.org/10.17605/OSF.IO/XFHZ9)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output node/edge list file is in Cytoscape-compatible format (.sif, .gml, or edge-attribute table; format_is)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that file_exists for output node list and edge list artifacts"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that transformation matching correctly retrieves entries from reference transformation table (no canonical answer\u2014multiple valid transformation databases may apply; expert_review required for chemistry accuracy)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that script completes without error on bacterium-phage dataset (40 samples, average 495 peaks with assigned formula per sample) in parameter-sensitive runtime (expected sub-minute based on reported ~36 s for main pipeline steps without KEGG mapping)"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that rows in output edge list contain at minimum: source_mass, target_mass, mass_difference, transformation_name fields (row_count_equals and field_present)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that input file contains at least 2 columns: m/z and assigned molecular formula (field_present)",
+      "verify that the standalone script accepts a peak list file as command-line argument or config parameter (script_runs)",
+      "verify that the script computes pairwise mass differences and outputs a numeric matrix or edge list (output_matches_reference: check against Example transformation network data in bacterium-phage dataset OSF deposit https://doi.org/10.17605/OSF.IO/XFHZ9)",
+      "verify that output node/edge list file is in Cytoscape-compatible format (.sif, .gml, or edge-attribute table; format_is)",
+      "verify that file_exists for output node list and edge list artifacts",
+      "verify that transformation matching correctly retrieves entries from reference transformation table (no canonical answer\u2014multiple valid transformation databases may apply; expert_review required for chemistry accuracy)",
+      "verify that script completes without error on bacterium-phage dataset (40 samples, average 495 peaks with assigned formula per sample) in parameter-sensitive runtime (expected sub-minute based on reported ~36 s for main pipeline steps without KEGG mapping)",
+      "verify that rows in output edge list contain at minimum: source_mass, target_mass, mass_difference, transformation_name fields (row_count_equals and field_present)"
+    ],
+    "expert_review": [
+      "Assess whether mass-difference matching algorithm correctly resolves ambiguous transformations (multiple biochemically valid transformations at same \u0394m/z)",
+      "Evaluate whether the standalone implementation preserves the transformation network generation logic reported for bacterium-phage results (Fig. 3B shows lignin\u2013protein interaction clusters; expert should verify those patterns reproduce from script output)",
+      "Review whether edge weights (if present) accurately reflect transformation abundance or frequency across samples, consistent with Fig. 3A heatmap methodology",
+      "Confirm that script output is suitable for direct import into Cytoscape without manual curation or format conversion"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file environment.yml (or equivalent Conda specification) exists in the HiC-Pro repository root or documented installation path"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify conda environment activation succeeds with 'conda activate <env_name>'"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify Python version in activated environment is >3.7 via 'python --version'"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify bowtie2 binary is executable and resolvable in PATH of activated environment via 'which bowtie2' or 'bowtie2 --version'"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify samtools binary version is >=1.9 in activated environment via 'samtools --version' output contains version number \u22651.9"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify iced Python module is importable in activated environment via 'python -c \"import iced; print(iced.__version__)\"'"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify bx-python (>=0.8.8) is importable in activated environment via 'python -c \"import bx; print(bx.__version__)\"' and version \u22650.8.8"
+    },
+    {
+      "id": "pf_009",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify numpy (>=1.18.1) is importable in activated environment via 'python -c \"import numpy; print(numpy.__version__)\"' and version \u22651.18.1"
+    },
+    {
+      "id": "pf_010",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify scipy (>=1.4.1) is importable in activated environment via 'python -c \"import scipy; print(scipy.__version__)\"' and version \u22651.4.1"
+    },
+    {
+      "id": "pf_011",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify R is available and executable in activated environment via 'which R' or 'R --version'"
+    },
+    {
+      "id": "pf_012",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify ggplot2 (>2.2.1) is installed in R environment via 'R --slave -e \"packageVersion(\\\"ggplot2\\\")\"' and version >2.2.1"
+    },
+    {
+      "id": "pf_013",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify RColorBrewer is installed in R environment via 'R --slave -e \"library(RColorBrewer); cat(packageVersion(\\\"RColorBrewer\\\"))\"'"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file environment.yml (or equivalent Conda specification) exists in the HiC-Pro repository root or documented installation path",
+      "script_runs: execute 'conda env create -f environment.yml' (or specified environment file) without errors on a clean system",
+      "verify conda environment activation succeeds with 'conda activate <env_name>'",
+      "verify Python version in activated environment is >3.7 via 'python --version'",
+      "verify bowtie2 binary is executable and resolvable in PATH of activated environment via 'which bowtie2' or 'bowtie2 --version'",
+      "verify samtools binary version is >=1.9 in activated environment via 'samtools --version' output contains version number \u22651.9",
+      "verify iced Python module is importable in activated environment via 'python -c \"import iced; print(iced.__version__)\"'",
+      "verify bx-python (>=0.8.8) is importable in activated environment via 'python -c \"import bx; print(bx.__version__)\"' and version \u22650.8.8",
+      "verify numpy (>=1.18.1) is importable in activated environment via 'python -c \"import numpy; print(numpy.__version__)\"' and version \u22651.18.1",
+      "verify scipy (>=1.4.1) is importable in activated environment via 'python -c \"import scipy; print(scipy.__version__)\"' and version \u22651.4.1",
+      "verify R is available and executable in activated environment via 'which R' or 'R --version'",
+      "verify ggplot2 (>2.2.1) is installed in R environment via 'R --slave -e \"packageVersion(\\\"ggplot2\\\")\"' and version >2.2.1",
+      "verify RColorBrewer is installed in R environment via 'R --slave -e \"library(RColorBrewer); cat(packageVersion(\\\"RColorBrewer\\\"))\"'"
+    ],
+    "expert_review": [
+      "Review environment specification file for completeness: confirm all documented dependencies (Python >3.7, R packages, and external binaries) are listed with appropriate version constraints matching EnrichedIndex requirements",
+      "Evaluate whether conda environment specification correctly pins or constrains versions to prevent dependency conflicts or breaking updates post-publication",
+      "Assess whether bowtie2, samtools, and iced are specified as conda packages or external downloads; if external, verify installation instructions are clear and unambiguous",
+      "Review whether environment specification handles platform-specific dependencies (e.g., different binary paths or compilation flags for Linux/macOS)"
+    ]
+  },
+  "max_score": 13.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

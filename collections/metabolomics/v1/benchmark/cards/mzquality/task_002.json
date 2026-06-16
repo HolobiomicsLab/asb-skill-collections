@@ -1,0 +1,379 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Rplot001.jpg",
+      "role": "figure",
+      "sha256": "79259d0fa68ec36cfa387ea2b9948e1a8f0a42239143735eeae01a80ab72da72"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d8ab23ebaf3bf6459087e91d56055beef2ca5b026fc08b4cf749c6c400b5330d"
+    }
+  ],
+  "created_at": "2026-06-15T13:20:51.739319+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_001.expected_outputs[0]: SummarizedExperiment object with rowData, colData, and assays including 'ratio'",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SummarizedExperiment object with raw compound area and internal standard area assays, sample metadata (type, batch, injection_time), and compound annotations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SummarizedExperiment object with 'ratio_corrected' assay containing batch-corrected Compound/Internal Standard ratios",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Outlier annotations on QC samples flagged by Compound/Internal Standard ratio analysis",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mis-injection annotations on study samples identified via Internal Standard area thresholds",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Optional: absolute concentration values calculated via linear regression for compounds in calibration samples with known spike concentrations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Batch correction in metabolomics uses pooled study quality control (SQC) samples as a reference to normalize Compound/Internal Standard ratios across injection sequences, removing systematic drift and instrument variation.",
+    "Outlier detection in QC samples flags aberrant Compound/Internal Standard ratios that exceed control limits, indicating failed injections or instrument malfunction; study samples flagged via abnormal Internal Standard areas indicate potential mis-injection or sample preparation failure.",
+    "Compound reliability filtering removes analytes with Relative Standard Deviation (RSD) of QC sample ratios above a threshold (default nonReportableRSD=30%), ensuring only reproducible measurements are reported.",
+    "The qcPercentage and backgroundPercentage parameters define the fraction of QC and background-only samples required to pass quality checks; withBatch=TRUE restricts corrections to within-batch samples to avoid artificial normalization across batch boundaries.",
+    "mzQuality currently supports only one sample type (e.g., Academic Calibration or Plasma Calibration) for concentration calculations; multi-type concentration support is a known limitation for future releases."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the input SummarizedExperiment object exists and is loadable from task_NNN.expected_outputs (from prior buildExperiment step)",
+      "verify that doAnalysis function is callable from the mzQuality package (script_runs with documented default parameters: removeOutliers=TRUE, useWithinBatch=TRUE, removeBadCompounds=TRUE, qcPercentage=80, backgroundPercentage=40, nonReportableRSD=30)",
+      "verify that the output SummarizedExperiment object contains an assay named 'ratio_corrected' (field_present)",
+      "verify that the output SummarizedExperiment object contains column metadata with outlier annotations for QC samples (field_present)",
+      "verify that the output SummarizedExperiment object contains column metadata with mis-injection annotations for study samples (field_present)",
+      "verify that row count and column count of output assays are consistent with input (robust to parameter choices)"
+    ],
+    "expert_review": [
+      "assess whether batch-correction using pooled SQC samples has been correctly applied in the 'ratio_corrected' assay by inspecting a subset of QC sample ratios before and after correction",
+      "assess whether outlier detection thresholds (including qcPercentage=80, backgroundPercentage=40, nonReportableRSD=30) have been appropriately applied to flag QC sample outliers",
+      "assess whether compound filtering (removeBadCompounds=TRUE) has removed only truly unreliable compounds based on the quality metrics applied"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does the doAnalysis function process a SummarizedExperiment object to identify outliers and mis-injections, and what corrected assay does it produce?: 'The package tests samples for outliers, specifically for (Pooled) Quality Control (QC) samples using their Compound / Internal Standard ratio. Furthermore, Study Samples are tested for mis-injections'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] doAnalysis with parameters removeOutliers=TRUE, useWithinBatch=TRUE, removeBadCompounds=TRUE, qcPercentage=80, backgroundPercentage=40, and nonReportableRSD=30 tests QC samples for outliers using Compound/Internal Standard ratio, tests Study Samples for mis-injections using Internal Standard areas, and produces a ratio_corrected assay in the output experiment.: 'exp <- doAnalysis(\n    exp = exp, \n    removeOutliers = TRUE, \n    useWithinBatch = TRUE, \n    removeBadCompounds = TRUE,\n    qcPercentage = 80,\n    backgroundPercentage = 40,\n    nonReportableRSD ='"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SummarizedExperiment object with raw compound area and internal standard area assays, sample metadata (type, batch, injection_time), and compound annotations: 'The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SummarizedExperiment object with 'ratio_corrected' assay containing batch-corrected Compound/Internal Standard ratios: 'batch-correction using pooled study quality control samples (SQC)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Outlier annotations on QC samples flagged by Compound/Internal Standard ratio analysis: 'The package tests samples for outliers, specifically for (Pooled) Quality Control (QC) samples using their Compound / Internal Standard ratio.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Mis-injection annotations on study samples identified via Internal Standard area thresholds: 'Furthermore, Study Samples are tested for mis-injections using their Internal Standard areas.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Optional: absolute concentration values calculated via linear regression for compounds in calibration samples with known spike concentrations: 'mzQuality can calculate absolute concentrations by using calibration line samples and known concentrations for spiked compounds.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mzQuality: 'mzQuality requires a specific format for the input data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'library(mzQuality)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SummarizedExperiment: 'Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, bug fixes, or parameter changes to doAnalysis function: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mzQuality); se <- readRDS('{inputs.summarized_experiment}'); result <- doAnalysis(se, removeOutliers=TRUE, useWithinBatch=TRUE, removeBadCompounds=TRUE, qcPercentage=80, backgroundPercentage=40, nonReportableRSD=30); saveRDS(result, 'ratio_corrected_se.rds')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "SummarizedExperiment object with 'ratio_corrected' assay containing batch-corrected Compound/Internal Standard ratios",
+    "Outlier annotations on QC samples flagged by Compound/Internal Standard ratio analysis",
+    "Mis-injection annotations on study samples identified via Internal Standard area thresholds",
+    "Optional: absolute concentration values calculated via linear regression for compounds in calibration samples with known spike concentrations"
+  ],
+  "finding": "doAnalysis with parameters removeOutliers=TRUE, useWithinBatch=TRUE, removeBadCompounds=TRUE, qcPercentage=80, backgroundPercentage=40, and nonReportableRSD=30 tests QC samples for outliers using Compound/Internal Standard ratio, tests Study Samples for mis-injections using Internal Standard areas, and produces a ratio_corrected assay in the output experiment.",
+  "github_name": "hankemeierlab/mzQuality",
+  "input_from": "task_001",
+  "inputs": [
+    "task_001.expected_outputs[0]: SummarizedExperiment object with rowData, colData, and assays including 'ratio'",
+    "SummarizedExperiment object with raw compound area and internal standard area assays, sample metadata (type, batch, injection_time), and compound annotations"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "ratio_corrected_assay.tsv",
+    "outlier_annotations.csv",
+    "mis_injection_flags.csv",
+    "concentrations.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_022",
+    "result_024"
+  ],
+  "methodology_summary": [
+    "Load SummarizedExperiment object containing raw compound areas, internal standard areas, and sample metadata.",
+    "Apply outlier detection on QC samples by evaluating Compound/Internal Standard ratios against control thresholds (qcPercentage=80).",
+    "Test study samples for mis-injections using internal standard area thresholds (backgroundPercentage=40).",
+    "Perform batch correction of Compound/Internal Standard ratios using pooled SQC samples within batch strata (useWithinBatch=TRUE).",
+    "Filter out compounds with batch-corrected ratio RSD exceeding nonReportableRSD=30 threshold (removeBadCompounds=TRUE).",
+    "Optionally calculate absolute concentrations via linear regression from calibration samples (single sample type only).",
+    "Validation: output SummarizedExperiment contains 'ratio_corrected' assay with numeric batch-corrected ratio values, and metadata annotations identify all flagged outliers and mis-injections; concentration column (if input provided) contains numeric or NA values matching calibration line sample counts."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, bug fixes, or parameter changes to doAnalysis function"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the doAnalysis function process a SummarizedExperiment object to identify outliers and mis-injections, and what corrected assay does it produce?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "metabolite-ratio-batch-correction",
+    "quality-control-sample-outlier-detection",
+    "internal-standard-area-mis-injection-flagging",
+    "compound-reliability-filtering-by-rsd-threshold",
+    "linear-regression-concentration-calibration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mzquality/synthesized_package",
+  "spine_condition_ids": [
+    "cond_default_analysis",
+    "cond_with_calibration_lines"
+  ],
+  "spine_entity_ids": [
+    "comp_summarized_experiment",
+    "tool_doAnalysis",
+    "comp_ratio_assay",
+    "comp_ratio_corrected_assay",
+    "cond_default_analysis",
+    "cond_with_calibration_lines",
+    "result_outlier_detection"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:hankemeierlab__mzQuality",
+  "task_description": "Apply the doAnalysis function with default parameters (removeOutliers=TRUE, useWithinBatch=TRUE, removeBadCompounds=TRUE, qcPercentage=80, backgroundPercentage=40, nonReportableRSD=30) to a SummarizedExperiment object to perform quality control analysis, producing an experiment with ratio-corrected assays and outlier/mis-injection annotations.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SummarizedExperiment with raw assays and metadata",
+      "port_id": "summarized_experiment",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute doAnalysis with default parameters on a SummarizedExperiment and verify that the output contains a ratio_corrected assay with outlier/mis-injection annotations.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SummarizedExperiment with ratio_corrected assay and quality annotations",
+      "port_id": "analyzed_experiment",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "QC sample outlier and study sample mis-injection annotations",
+      "port_id": "outlier_flags",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Calculated absolute concentrations (if concentration column provided)",
+      "port_id": "concentrations",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control",
+    "feature-detection",
+    "lc-ms",
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct the doAnalysis quality-control and batch-correction step to produce the ratio_corrected assay",
+  "tools": [
+    "mzQuality",
+    "R",
+    "SummarizedExperiment"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: SummarizedExperiment, SummarizedExperiment object with 'ratio_corrected' assay containing batch-corrected Compound/Internal Standard ratios."
+  ],
+  "workflow_description": "1. Load the SummarizedExperiment object created by buildExperiment from the prior data preparation step. 2. Invoke doAnalysis with parameters removeOutliers=TRUE to flag QC sample outliers based on Compound/Internal Standard ratios, useWithinBatch=TRUE to apply batch correction using pooled study quality control samples, and removeBadCompounds=TRUE to filter compounds failing quality thresholds. 3. Apply qcPercentage=80, backgroundPercentage=40, and nonReportableRSD=30 thresholds to define acceptable analyte reliability and measurement variability. 4. Generate output SummarizedExperiment containing the 'ratio_corrected' assay with batch-corrected compound/internal-standard ratios and metadata annotations marking detected outliers and mis-injected study samples (identified via internal standard areas). 5. Optionally calculate absolute concentrations via (weighted) linear regression if concentration column is present in the input data, restricted to a single sample type per analysis run."
+}

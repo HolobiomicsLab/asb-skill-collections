@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in glasgowcompbio/PALS repository containing PLAGE implementation"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify input metabolite intensity matrix file format is compatible (CSV, TSV, or matrix-like structure)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify pathway database input file format is compatible (JSON, CSV, or standard pathway annotation format)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output pathway activity scores table contains at least one column for pathway identifiers and one column for activity scores"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output table has row_count_equals number of rows matching number of pathways in input database"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output pathway activity scores are mathematically consistent with singular value"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output table contains field for pathway ranking or sorting by activity score magnitude"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in glasgowcompbio/PALS repository containing PLAGE implementation",
+      "verify input metabolite intensity matrix file format is compatible (CSV, TSV, or matrix-like structure)",
+      "verify pathway database input file format is compatible (JSON, CSV, or standard pathway annotation format)",
+      "verify output pathway activity scores table contains at least one column for pathway identifiers and one column for activity scores",
+      "verify output table has row_count_equals number of rows matching number of pathways in input database",
+      "script_runs: execute PLAGE decomposition step on sample metabolite matrix and pathway database without errors",
+      "output_matches_reference: verify output pathway activity scores are mathematically consistent with singular value decomposition applied to pathway-specific metabolite submatrices (requires expert verification of calculation logic)",
+      "verify output table contains field for pathway ranking or sorting by activity score magnitude"
+    ],
+    "expert_review": [
+      "assess whether PLAGE decomposition step correctly implements singular value decomposition on pathway-stratified metabolite intensity submatrices",
+      "evaluate whether pathway activity level scores are appropriately normalized and scaled for downstream comparison",
+      "verify that the ranked pathway results table is interpretable and that ranking order reflects biological relevance of pathway activity differences",
+      "confirm that output scores handle edge cases appropriately (pathways with single metabolite, pathways with all zero intensities, missing data in matrix)"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

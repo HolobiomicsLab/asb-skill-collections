@@ -1,0 +1,397 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/ArchRProject_Schematic.png",
+      "role": "figure",
+      "sha256": "c5b68d3874a06b2a2a15f82f36e41f268524106ceee19de0648dcd51f0c34e26"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ArchR_FunctionSchematic.png",
+      "role": "figure",
+      "sha256": "47ef6b7783389806d3fc41bd95a5ed0a22bb533eec6d5afce3dd4920e591e183"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ArchR_Logo_Integrated.png",
+      "role": "figure",
+      "sha256": "675418b785007e2ab0b077c291151d301e5862942caa8fc8e6adbd2d7e502a79"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ArchR_Workflow_Horizontal.png",
+      "role": "figure",
+      "sha256": "a7252bf2e53f15cba5691b7fb6dc70886fd99454b8246c8532970c328bd9bab3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Cluster6-Cluster10-Marker-Peaks_1.png",
+      "role": "figure",
+      "sha256": "a5b8269b1cf31e5488c06a2e15a4ff24f6d85931b0cdf36512558d7fbd224fad"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Cluster6-Cluster10-Marker-Peaks_2.png",
+      "role": "figure",
+      "sha256": "eac5e9a6efbc33f8431219ac7d9dd66b8b4623ce44d868125be08b431219194d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Cluster6-Cluster10-Motifs-Down_1.png",
+      "role": "figure",
+      "sha256": "04245faa3075e31b091533463f51cf76a8eb681b8ed35b2f560db266de206c2b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Cluster6-Cluster10-Motifs-Up_1.png",
+      "role": "figure",
+      "sha256": "4a6b9d31e1761785a3cdea0b7356aabfe3de1b61944d0b3fdf6d146ce84e5bec"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Cluster6-Marker-Peaks_1.png",
+      "role": "figure",
+      "sha256": "2836da6f720c32883b4330593b71f5ff0379ec918223eb0c1bcbc86844325e3b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/FRIP-TSS-Enrichment_1.png",
+      "role": "figure",
+      "sha256": "7c8832b9e25ed3ed87ccf35621117a578d84c2c2afd8e885b3ef32eb160185a2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/FRIP-TSS-Enrichment_2.png",
+      "role": "figure",
+      "sha256": "1d188e5c88667c8e64d625dc5df0e8722bd504d406c779f67a60943c9b022eff"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Footprints-Divide-Bias_1.png",
+      "role": "figure",
+      "sha256": "97da51b80be9b93f46b6100cd747c63e14c35ca603e9ccd697ba0811fbf811e1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Frags_vs_TSS.png",
+      "role": "figure",
+      "sha256": "3236afd639b661c226802db166bd3c3f7fee7252168c90f7b03e02ea4c3c7674"
+    },
+    {
+      "indexable": false,
+      "path": "figures/GeneActivityScore_Schematic.png",
+      "role": "figure",
+      "sha256": "d3bd754bb58a24b18b5aad5bf9bcfeb0fce738a88dbb89b86843048ea4887de7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/TSS_vs_FRiP.png",
+      "role": "figure",
+      "sha256": "7d71bdf28e70c23a5dee71c5c89635008710f8ab7c770a587fabb3ea1e828aa7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/UMAP-Samples-Clusters_1.png",
+      "role": "figure",
+      "sha256": "93793aca4a29c82e228f55c2dba082c2058bf003f9943eb2965f730b04f87739"
+    },
+    {
+      "indexable": false,
+      "path": "figures/UMAP-Samples-Clusters_2.png",
+      "role": "figure",
+      "sha256": "d14b92e09a5744183d4bf1a8dff88f8393bb81efdaeb10c555ec11d6fc5d9e3e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/UMAP-Samples-Clusters_3.png",
+      "role": "figure",
+      "sha256": "402c63547d160bdf1b02c46b4ba0f67ac91030b555fa6fcaab51501645bb4991"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-16x16.png",
+      "role": "figure",
+      "sha256": "3c70f4e231ca567f531241610ba759112043b5d0c5d81874ca552d62df8962f0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-32x32.png",
+      "role": "figure",
+      "sha256": "62f3de2f5bdf8d8bc5ec62aed6b6e3d1680b41c92f1cbae02004584177741390"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "80596987a840243e8285d54dc4042b427cbabea36a5c929265a3a60b30d72bdf"
+    }
+  ],
+  "created_at": "2026-06-15T18:08:30.308650+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "scATAC-seq peak matrix and cell metadata",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "scRNA-seq gene expression matrix aligned to the same cells",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ArchR project object containing both scATAC-seq and scRNA-seq data with joint LSI reduction and combined dimensional embedding",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "importFeatureMatrix registers a pre-computed peak matrix (typically sparse matrix format from tools like Signac or MAESTRO) into ArchR as the primary accessibility assay.",
+    "addGeneExpressionMatrix requires cell barcodes to be matched exactly between scATAC and scRNA datasets; misalignment will cause silent data loss or errors.",
+    "Iterative LSI (latent semantic indexing) is an unsupervised dimensionality reduction tailored for sparse, high-dimensional accessibility and expression data, typically reducing to 30\u201350 dimensions per iteration.",
+    "addCombinedDims fuses the LSI embeddings from both modalities using canonical correlation or weighted averaging to create a single joint embedding space suitable for clustering and visualization."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:GreenleafLab__ArchR repository is accessible and contains ArchR package source code",
+      "verify that ArchR package documentation or vignettes include functions importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, and addCombinedDims",
+      "script_runs: execute a minimal R script that loads ArchR, calls importFeatureMatrix on a test scRNA-seq matrix, calls addGeneExpressionMatrix on a test ArchRProject with paired scATAC-seq data, calls addIterativeLSI, and calls addCombinedDims without errors",
+      "verify that the R script output includes a ArchRProject object or SummarizedExperiment with dimensionality-reduction slots populated (e.g., containing LSI or combined embedding matrices)",
+      "verify that the combined embedding produced has multiple dimensions (parameter-sensitive: exact dimensionality may vary by LSI iteration count, but must be \u2265 2)"
+    ],
+    "expert_review": [
+      "assess whether the joint reduced-dimension embedding produced by addCombinedDims meaningfully integrates information from both scATAC-seq and scRNA-seq modalities (e.g., by examining correlation structure, variance explained, or cross-modality clustering concordance)",
+      "evaluate whether the paired multiome workflow as implemented follows best practices for joint dimensionality reduction in the scATAC-seq and scRNA-seq literature"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does ArchR ingest paired scRNA-seq gene expression data alongside scATAC-seq chromatin accessibility data and produce a unified reduced-dimension embedding for joint analysis?: 'ArchR now supports paired scATAC-seq and scRNA-seq Analysis! See updates with importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, addCombinedDims'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The paired multiome workflow in ArchR operates through a four-step process: importFeatureMatrix ingests the feature matrix, addGeneExpressionMatrix adds the scRNA-seq gene expression data, addIterativeLSI performs iterative dimensionality reduction, and addCombinedDims produces the joint reduced-dimension embedding integrating both modalities.: 'See updates with importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, addCombinedDims'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] scATAC-seq peak matrix and cell metadata: 'importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, addCombinedDims'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] scRNA-seq gene expression matrix aligned to the same cells: 'importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, addCombinedDims'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ArchR project object containing both scATAC-seq and scRNA-seq data with joint LSI reduction and combined dimensional embedding: 'ArchR now supports paired scATAC-seq and scRNA-seq Analysis! See updates with importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, addCombinedDims'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ArchR: 'ArchR is a full-featured R package for processing and analyzing single-cell ATAC-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'ArchR is a full-featured R package for processing and analyzing single-cell ATAC-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting the features, bug fixes, or version history of the paired multiome workflow functions (importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, addCombinedDims) is available: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "ArchR project object containing both scATAC-seq and scRNA-seq data with joint LSI reduction and combined dimensional embedding"
+  ],
+  "finding": "The paired multiome workflow in ArchR operates through a four-step process: importFeatureMatrix ingests the feature matrix, addGeneExpressionMatrix adds the scRNA-seq gene expression data, addIterativeLSI performs iterative dimensionality reduction, and addCombinedDims produces the joint reduced-dimension embedding integrating both modalities.",
+  "github_name": "GreenleafLab/ArchR",
+  "input_from": null,
+  "inputs": [
+    "scATAC-seq peak matrix and cell metadata",
+    "scRNA-seq gene expression matrix aligned to the same cells"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "archR_project_with_scatac.rds",
+    "archR_project_with_scrna.rds",
+    "archR_project_with_lsi.rds"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Load scATAC-seq peak matrix and cell metadata into ArchR project object via importFeatureMatrix.",
+    "Append scRNA-seq gene expression matrix to the same project via addGeneExpressionMatrix, aligning cells across modalities.",
+    "Compute joint iterative LSI decomposition on accessibility and expression data via addIterativeLSI.",
+    "Generate unified reduced-dimension embedding integrating both modalities via addCombinedDims.",
+    "Validation: Confirm multiome project object contains both scATAC-seq and scRNA-seq assays with non-null LSI and combined dimension slots."
+  ],
+  "missing_information": [
+    "No changelog documenting the features, bug fixes, or version history of the paired multiome workflow functions (importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, addCombinedDims) is available"
+  ],
+  "parameters": [],
+  "primary_domain": "genomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does ArchR ingest paired scRNA-seq gene expression data alongside scATAC-seq chromatin accessibility data and produce a unified reduced-dimension embedding for joint analysis?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "multiome-data-ingestion-paired-modalities",
+    "iterative-lsi-dimensionality-reduction",
+    "cross-modality-embedding-integration",
+    "atac-seq-feature-matrix-construction",
+    "rna-seq-expression-alignment-across-cells"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_archr/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "archr_system",
+    "comp_scatac_processing",
+    "comp_iterative_lsi",
+    "comp_gene_expression_matrix",
+    "comp_import_feature_matrix",
+    "comp_combined_dims",
+    "dataset_scatac",
+    "dataset_scrna",
+    "feature_paired_multiome",
+    "feature_trajectory_analysis"
+  ],
+  "subdomains": [
+    "gene-regulation",
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:GreenleafLab__ArchR",
+  "task_description": "Ingest paired scRNA-seq and scATAC-seq data into ArchR using importFeatureMatrix and addGeneExpressionMatrix, then compute joint reduced-dimension embeddings via addIterativeLSI and addCombinedDims to enable integrated multiome analysis.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "scATAC-seq peak matrix and metadata",
+      "port_id": "scatac_peak_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "scRNA-seq gene expression matrix",
+      "port_id": "scrna_expr_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the ArchR paired multiome data-ingestion and joint dimensionality-reduction pipeline to ingest scRNA-seq expression and scATAC-seq accessibility data, then produce a unified low-dimensional embedding.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ArchR project with integrated scATAC and scRNA-seq embeddings",
+      "port_id": "multiome_project",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction"
+  ],
+  "title": "Reconstruct the paired scATAC-seq and scRNA-seq multiome analysis pipeline in ArchR",
+  "tools": [
+    "ArchR",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: ArchR project object containing both scATAC-seq and scRNA-seq data with joint LSI reduction and combined dimensional embedding."
+  ],
+  "workflow_description": "1. Load scATAC-seq peak matrix and metadata, then call importFeatureMatrix to register the feature matrix into an ArchR project object. 2. Load scRNA-seq gene expression matrix and call addGeneExpressionMatrix to append gene expression data to the same project, aligning cells across modalities. 3. Execute addIterativeLSI on the combined project to compute latent semantic indexing of accessibility peaks and gene expression jointly. 4. Call addCombinedDims to generate a unified reduced-dimension embedding that integrates both scATAC-seq and scRNA-seq signal into a single coordinate space."
+}

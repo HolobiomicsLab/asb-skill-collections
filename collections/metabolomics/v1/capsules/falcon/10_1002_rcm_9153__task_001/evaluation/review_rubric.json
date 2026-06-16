@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that falcon repository (github:bittremieux-lab__falcon or https://github.com/bittremieux/falcon) is accessible and contains implementation code for the feature hashing stage"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the hashed feature vector matrix output has file_exists and format_is (numeric matrix, e.g., .npy, .csv, or .h5)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the output matrix row_count_equals the number of input spectra"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the output matrix column_count_equals the hash dimension parameter (no canonical answer \u2014 depends on implementation choice)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: the binning and hashing transformation executes without runtime errors on a provided test spectrum file"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output values are in valid range for hashed feature vectors (e.g., non-negative integers or floats within [0, 1] depending on normalization; parameter-sensitive to hashing scheme)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the implementation uses feature hashing as the mechanism (robust to parameter choices in hash table size and bin width)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that falcon repository (github:bittremieux-lab__falcon or https://github.com/bittremieux/falcon) is accessible and contains implementation code for the feature hashing stage",
+      "verify that the hashed feature vector matrix output has file_exists and format_is (numeric matrix, e.g., .npy, .csv, or .h5)",
+      "verify that the output matrix row_count_equals the number of input spectra",
+      "verify that the output matrix column_count_equals the hash dimension parameter (no canonical answer \u2014 depends on implementation choice)",
+      "verify script_runs: the binning and hashing transformation executes without runtime errors on a provided test spectrum file",
+      "verify that output values are in valid range for hashed feature vectors (e.g., non-negative integers or floats within [0, 1] depending on normalization; parameter-sensitive to hashing scheme)",
+      "verify that the implementation uses feature hashing as the mechanism (robust to parameter choices in hash table size and bin width)"
+    ],
+    "expert_review": [
+      "confirm that the binning strategy (bin width, mass range) is appropriate for typical high-resolution MS/MS spectra and consistent with stated method",
+      "confirm that the feature hashing implementation correctly maps m/z\u2013intensity pairs into fixed-dimensional vectors without collision artifacts or information loss that would degrade downstream clustering",
+      "confirm that vector normalization or scaling (if applied) is suitable for nearest neighbor distance computations"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

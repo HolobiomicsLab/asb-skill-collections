@@ -1,0 +1,4 @@
+  figures/figure_1.png
+  figures/figure_4.png
+  figures/figure_5.png
+paper.md

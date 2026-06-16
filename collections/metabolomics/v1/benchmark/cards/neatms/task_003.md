@@ -1,0 +1,156 @@
+# SciTask Card: Reproduce the True/False Positive Rates at Threshold 0.01 from the ROC Analysis
+
+- Task ID: `task_003`
+- Schema version: `0.18.0`
+- Created at: `2026-06-16T07:11:40.529655+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_neatms/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-analysis`, `model-training`, `statistical-analysis`
+- GitHub: `bihealth/NeatMS`
+- Input from: `task_001`
+- Quality: Score 3/5 — Coherent: false
+
+## Classification
+
+- Task kind: `reproduction`
+- Article type: `software-tool`
+- Primary domain: `metabolomics`
+- Subdomains: `computational-metabolomics`, `artificial-intelligence`, `untargeted-metabolomics`
+- Techniques: `machine-learning`, `deep-learning`, `feature-detection`, `metabolite-identification`, `dimensionality-reduction`
+- Keywords: `untargeted lcms` · `signal labelling` · `peak filtering` · `false positive detection` · `neural network classification` · `ms1 peaks` · `metabolomics data processing`
+
+## Research Question
+What are the True Positive Rate and False Positive Rate values at threshold 0.01 when applying the default NeatMS model under full training conditions?
+
+## Connected Finding
+NeatMS relies on neural network based classification to distinguish true from false positive peaks in untargeted LCMS data.
+
+## Task Description
+Call get_true_vs_false_positive_df() on a trained NeatMS neural network model to retrieve the threshold-dependent recall table, then extract and validate True Positive Rate and False Positive Rate metrics at the 0.01 probability threshold, verifying that 100% of High_quality peaks are retained and false positives comprise 44% overall (80% Low_quality, 20% Noise).
+
+## Inputs
+- Trained NeatMS neural network model file (default model or custom .h5 file)
+- Validation dataset attached to the NN_handler instance (peaks remain untouched from training/test split)
+
+## Expected Outputs
+- Recall table (DataFrame) with columns Probability_threshold, True, False, False_low, False_noise, indexed by probability threshold from 0.00 to 0.99
+- Extracted metrics at threshold 0.01: True Positive Rate = 1.0, False Positive Rate = 0.440, False_low = 0.803, False_noise = 0.206
+
+## Expected Output File
+
+- `recall_table_threshold_0_01.csv`
+
+## Landmark Outputs
+
+- `recall_table_full.csv`
+- `metrics_threshold_0_01.txt`
+
+## Tools
+- NeatMS
+- Python
+- pandas
+- NumPy
+- scikit-learn
+
+## Skills
+- neural-network-threshold-optimization
+- receiver-operating-characteristic-curve-interpretation
+- mass-spectrometry-peak-classification-metrics
+- true-positive-false-positive-rate-calculation
+- probability-threshold-tuning-for-chemical-detection
+
+## Workflow Description
+1. Load a trained NeatMS neural network model (in .h5 format) using nn_handler.create_model(model='path_to_model.h5'). 2. Call nn_handler.get_true_vs_false_positive_df(label='High_quality') to compute the threshold-dependent recall table across probability thresholds from 0.00 to 0.99. 3. Extract the row corresponding to Probability_threshold=0.01 and read the True, False, False_low, and False_noise column values. 4. Verify that True (TPR) equals 1.0 (100% retention), False (FPR) equals 0.440 (44%), False_low equals 0.803 (80% of false positives are Low_quality), and False_noise equals 0.206 (≈20% are Noise). 5. Document the retrieved metrics and confirm alignment with expected reference values.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/ADAP_threshold_all_vs_recall_training_500.png` | figure | False |
+| `figures/ROC_recall_High_vs_all.png` | figure | False |
+| `figures/Screenshot 2020-04-28 at 16.43.33.png` | figure | False |
+| `figures/annotation_tool.png` | figure | False |
+| `figures/recall_table.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No changelog documenting version history, modifications, or release notes for the NeatMS package
+
+## Domain Knowledge
+- Softmax activation output from the network is a probability distribution of three classes (High_quality, Low_quality, Noise) that sum to 1.0; classification thresholds are applied to the High_quality probability channel.
+- The recall table measures True Positive Rate (sensitivity; % of High_quality peaks correctly retained) versus False Positive Rate (% of non-High_quality peaks misclassified as High_quality), separately broken down by class composition (Low_quality vs. Noise).
+- Threshold 0.01 is permissive and retains all positive peaks but introduces substantial false positives; higher thresholds increase specificity but reduce sensitivity—trade-off is optimized via the get_threshold() function which maximizes (True − False).
+- The validation set must remain untouched during training to provide an unbiased estimate of classification performance across threshold values and avoid overfitting artifacts in hyperparameter selection.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] What are the True Positive Rate and False Positive Rate values at threshold 0.01 when applying the default NeatMS model under full training conditions?: '**NeatMS** enables automated filtering of false positive MS<sup>1</sup> peaks reported by commonly used LCMS data processing pipelines.'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] NeatMS relies on neural network based classification to distinguish true from false positive peaks in untargeted LCMS data.: '**NeatMS** relies on neural network based classification.'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [other] Trained NeatMS neural network model file (default model or custom .h5 file): 'Calling the method `get_threshold()` will compute and return the optimal threshold using the validation set that you can then pass everytime you use this neural network.'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [other] Validation dataset attached to the NN_handler instance (peaks remain untouched from training/test split): 'The validation set remains untouch and is used later on for hyperparameter tuning.'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [other] Recall table (DataFrame) with columns Probability_threshold, True, False, False_low, False_noise, indexed by probability threshold from 0.00 to 0.99: 'Internaly, `get_threshold` call the method `get_true_vs_false_positive_df(label='High_quality')` which returns the following table: | Probablity_threshold | True | False | False_low | False_noise |'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [other] Extracted metrics at threshold 0.01: True Positive Rate = 1.0, False Positive Rate = 0.440, False_low = 0.803, False_noise = 0.206: 'if we were to select a `0.01` threshold, 100% of `High_quality` peaks would be correctly predicted but we would have 44% of false positive (80% of `Low_quality`, and 20% of `Noise` peaks would be'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [other] NeatMS: 'Calling the method `get_threshold()` will compute and return the optimal threshold'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [other] Python: '# Import the required libraries first
+import numpy as np'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [other] pandas: 'import pandas as pd'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [other] NumPy: 'import numpy as np'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [other] scikit-learn: 'from sklearn.metrics import auc'
+- `ev_012` from `agent2_synthesis` (agent2_traced): [discussion] No changelog documenting version history, modifications, or release notes for the NeatMS package: 'No changelog found.'
+
+## Evaluation Strategy
+### Direct Checks
+- Verify file exists: github:bihealth__NeatMS repository is accessible and contains the NeatMS package source code
+- Verify script runs: execute get_true_vs_false_positive_df() function from NeatMS package on default model outputs under cond_full_training condition without errors
+- Verify output_matches_reference: returned data frame contains columns for True Positive Rate and False Positive Rate at minimum
+- Value in range: True Positive Rate at threshold 0.01 equals 1.0 (100% High_quality retained), robust to floating-point representation
+- Value in range: False Positive Rate at threshold 0.01 is approximately 0.44 (44% false positive), parameter-sensitive to threshold specification
+- Verify contains_substring: output data frame row at threshold 0.01 shows Low_quality proportion of approximately 0.80 (80%), robust to minor rounding differences
+
+### Expert Review
+- Verify that the metric_threshold_001_true label (100% High_quality retained) is correctly interpreted as the True Positive Rate value and aligns with the classification task definition
+- Verify that the metric_threshold_001_false label (44% false positive, 80% Low_quality, specific Noise proportion) correctly describes the False Positive Rate composition and that the 80% Low_quality figure represents the conditional distribution among false positives
+- Assess whether threshold 0.01 is a reasonable and appropriate decision boundary for the NeatMS neural network classifier given the training objectives
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load the trained NeatMS model and attach it to an NN_handler instance with validation dataset.
+2. Invoke get_true_vs_false_positive_df(label='High_quality') to compute the threshold-dependent recall table across probability thresholds [0.00–0.99].
+3. Extract the row at Probability_threshold=0.01 and read columns True, False, False_low, False_noise.
+4. Validate that True=1.0, False=0.440, False_low=0.803, and False_noise≈0.206, confirming 100% High_quality retention and 44% false positive rate composition.
+5. Validation: output metrics must exactly match the reference values reported in the methods text (True=1.0, False=0.44, Low_quality proportion=80%, Noise proportion≈20%).
+
+## Workflow Ports
+
+**Inputs:**
+
+- `trained_model` — Trained NeatMS neural network model (.h5 file) ← `task_001/peak_matrix_arrays`
+- `nn_handler_instance` — NN_handler instance with attached validation dataset
+
+**Outputs:**
+
+- `recall_dataframe` — Threshold-dependent recall table with True/False Positive Rates
+- `threshold_metrics` — Extracted metrics at probability threshold 0.01
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:bihealth__NeatMS`
+- **Synthesized at:** 2026-06-16T07:21:45+00:00
+
+## Extraction Quality
+- Score: 3/5
+- Coherent: false
+- Placeholder detected: false
+- Notes: Critical coherence issues: (1) The research_question asks for specific metric values (TPR and FPR at threshold 0.01) from the 'intro' section, but the finding is a generic statement about NeatMS's technical approach (neural network classification) also from 'intro'. These do not semantically align—the finding does not answer the research question. (2) The research_question is highly specific and asks for empirical metric values, but is grounded only to a general statement that NeatMS 'enables automated filtering' without citation of actual threshold-specific metrics. This is a groundedness gap: the evidence_span does not substantiate the specific numbers (0.01 threshold, TPR=1.0, FPR=0.44). (3) The finding is generic (could apply to any neural network classifier) and does not address the threshold-specific performance that the research_question targets. (4) The task_objective contains the expected metric values (100% High_quality retention, 44% FPR, 80% Low_quality, etc.), which should be answers to the research_question, not pre-specified targets. This creates circular validation: the task is instructed to 'verify against expected metrics' rather than to discover and report them. (5) The section attribution in research_question ('intro') is inconsistent with extraction from methods/results, where threshold metrics would typically be documented. The card conflates the research question (what should be discovered) with the expected outcome (validation target). Recommendation: Separate this into two cards—one to extract/report the actual threshold metrics from the methods/results sections, and a separate validation card to confirm against reference values.
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

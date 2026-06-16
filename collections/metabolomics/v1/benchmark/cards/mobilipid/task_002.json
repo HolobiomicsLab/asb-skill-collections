@@ -1,0 +1,371 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MobiLipid_Logo_whiteBackground@300x.png",
+      "role": "figure",
+      "sha256": "f4f4d578fe6d5983f24db86fd33882be0edcdb359a455c87b5d55d2a7ba9c0f0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_after_correction.jpg",
+      "role": "figure",
+      "sha256": "22f59f8dd7a1648b529881f12cdb6c8a5944521bc029a36a54284f500b04c47c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_after_correction_all_results.jpg",
+      "role": "figure",
+      "sha256": "8116e5ccda398092e9de60907ea05f3f7f9084ad50c51fd0fc4b0ba7290dfb32"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_figure.jpg",
+      "role": "figure",
+      "sha256": "669de6c93098a6f8ec5d05a27b6291f80dc710aa18ed93ee004058662eb893e5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_table.jpg",
+      "role": "figure",
+      "sha256": "e6ab716db3386d37d0837a07744a352f1ca0b77d43814e9f51ada97bb287dfd9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Correction_functions.jpg",
+      "role": "figure",
+      "sha256": "e9842f794ed3de85e541033fc86f858ae5f12bd67c5653014aded0ef9deac71f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Number_Lipids.jpg",
+      "role": "figure",
+      "sha256": "19333851f29b8a7432f3c08b5c7a05cafb4606c9c444c24206a37c2b881c06e5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Resampling.jpg",
+      "role": "figure",
+      "sha256": "40426f9193833adf6d3c57282e87775abc1441d818098c219e7a935bfbf98dbf"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Violin_plot_1.jpg",
+      "role": "figure",
+      "sha256": "8de37ee5843620be802766f7d091a1ce7c8c5b6b0cc6a7e5f4ceb3da43a8e017"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Violin_plot_2.jpg",
+      "role": "figure",
+      "sha256": "8e20acb67ee1fd9a62b3f3b212686ff3bb77a57a8bb302d66225b8593c0599ff"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "052bac31597d2d591d3bd025995fade1add0413a35be358c0512be2f13a2a7d2"
+    }
+  ],
+  "created_at": "2026-06-15T12:36:27.945262+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "IM-MS lipidomics dataset (mzML, mzXML, or tabular feature table with m/z, retention time, and measured CCS values)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "DTCCSN2 library for U13C labeled lipids from MobiLipid repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "R Markdown file from MobiLipid repository implementing CCS bias calculation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CCS bias assessment report containing per-lipid bias values, class-level bias statistics, and visualizations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "CCS bias represents systematic deviation between measured and theoretical collision cross section values caused by instrumental calibration drift or ESI-source conditions in IM-MS.",
+    "The DTCCSN2 library uses universally labeled U13C lipid standards to establish reference CCS values, enabling internal standardization without requiring external calibration beyond vendor specifications.",
+    "Effective CCS bias assessment requires matching experimental lipid features to the reference library by both mass accuracy and chromatographic retention behavior; false matches inflate bias estimates.",
+    "CCS bias is typically expressed and aggregated at the lipid class level (e.g., PC, PE, TAG) because systematic bias patterns are often class-specific due to differences in ionization efficiency and charge distribution."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in FelinaHildebrand/MobiLipid repository: R Markdown file for CCS bias calculation",
+      "verify file exists in FelinaHildebrand/MobiLipid repository: DTCCSN2 library artifact (format: .csv, .RData, or equivalent structured data)",
+      "verify R Markdown script runs without errors on a representative IM-MS lipidomics dataset input",
+      "verify bias assessment report output file is generated with expected format (HTML, PDF, or .txt)",
+      "verify bias assessment report contains at least one quantitative bias metric (e.g., mean error, standard deviation, or percent deviation)",
+      "verify report includes per-lipid-class bias estimates consistent with DTCCSN2 library reference values"
+    ],
+    "expert_review": [
+      "assess whether the CCS bias calculation methodology (as implemented in the R Markdown) is scientifically sound for IM-MS lipidomics",
+      "assess whether the bias assessment report correctly isolates the assessment step without applying corrections",
+      "assess whether the representative input dataset is appropriate in composition and scale for demonstrating CCS bias calculation",
+      "assess whether reported bias values are within expected ranges for typical IM-MS instruments and lipid classes"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MobiLipid calculate CCS bias in IM-MS lipidomics data using internal standardization with U13C labeled lipids?: 'MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias in ion mobility-mass spectrometry (IM-MS)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MobiLipid performs CCS bias assessment through a R Markdown workflow that integrates a newly established DT CCS N2 library for U13C labeled lipids, enabling internal standardization-based bias calculation without requiring additional external calibration beyond vendor-specific requirements.: 'Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows... Employing a newly established DT CCS N2 library for U13C labeled lipids, which is'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] IM-MS lipidomics dataset (mzML, mzXML, or tabular feature table with m/z, retention time, and measured CCS values): 'representative IM-MS lipidomics input dataset'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] DTCCSN2 library for U13C labeled lipids from MobiLipid repository: 'DT CCS N2 library for U13C labeled lipids, which is provided together with the code'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R Markdown file from MobiLipid repository implementing CCS bias calculation: 'R Markdown file and DTCCSN2 library from the MobiLipid repository'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CCS bias assessment report containing per-lipid bias values, class-level bias statistics, and visualizations: 'bias assessment report'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'providing a R Markdown that integrates into IM-MS lipidomics workflows'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, updates, or modifications to the MobiLipid repository and DTCCSN2 library: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "rmarkdown::render('{inputs.rmarkdown_workflow}', output_dir = '.', params = list(im_ms_dataset = '{inputs.im_ms_dataset}', dtccsn2_library = '{inputs.dtccsn2_library}'))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ccs_bias_assessment_report.html",
+  "expected_outputs": [
+    "CCS bias assessment report containing per-lipid bias values, class-level bias statistics, and visualizations"
+  ],
+  "finding": "MobiLipid performs CCS bias assessment through a R Markdown workflow that integrates a newly established DT CCS N2 library for U13C labeled lipids, enabling internal standardization-based bias calculation without requiring additional external calibration beyond vendor-specific requirements.",
+  "github_name": "FelinaHildebrand/MobiLipid",
+  "input_from": "task_001",
+  "inputs": [
+    "IM-MS lipidomics dataset (mzML, mzXML, or tabular feature table with m/z, retention time, and measured CCS values)",
+    "DTCCSN2 library for U13C labeled lipids from MobiLipid repository",
+    "R Markdown file from MobiLipid repository implementing CCS bias calculation"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "matched_lipid_features.csv",
+    "per_lipid_bias_values.csv",
+    "class_level_bias_statistics.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_004",
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Load IM-MS experimental data and DTCCSN2 reference library into R environment.",
+    "Match experimental lipid features to reference library entries by m/z, retention time, and lipid class annotation.",
+    "Calculate per-lipid CCS bias as measured CCS minus theoretical CCS value from library.",
+    "Aggregate bias metrics by lipid class and compute summary statistics (mean, SD, range, quartiles).",
+    "Validation: Report generated with per-class bias means and confidence intervals; bias values within expected instrument calibration tolerance (typically \u00b12\u20133%) indicate acceptable CCS quality."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, updates, or modifications to the MobiLipid repository and DTCCSN2 library"
+  ],
+  "parameters": [],
+  "primary_domain": "lipidomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MobiLipid calculate CCS bias in IM-MS lipidomics data using internal standardization with U13C labeled lipids?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "ccs-bias-quantification",
+    "lipid-class-aggregation-analysis",
+    "ion-mobility-mass-spectrometry-feature-matching",
+    "reference-library-alignment",
+    "collision-cross-section-measurement-quality-control"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mobilipid/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "mobil_lipid_system",
+    "ccs_bias_assessment_component",
+    "ccs_bias_correction_component",
+    "dtccs_n2_library",
+    "r_markdown_tool"
+  ],
+  "subdomains": [
+    "lipidomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:FelinaHildebrand__MobiLipid",
+  "task_description": "Execute the CCS bias calculation step from the MobiLipid R Markdown workflow on a representative IM-MS lipidomics dataset using the DTCCSN2 library to produce a bias assessment report quantifying systematic deviations in collision cross section measurements.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "IM-MS lipidomics dataset with measured CCS values",
+      "port_id": "im_ms_dataset",
+      "resolved_via": null,
+      "source": "task_001/validation_report",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "DTCCSN2 reference library for U13C labeled lipids",
+      "port_id": "dtccsn2_library",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "R Markdown file implementing CCS bias calculation",
+      "port_id": "rmarkdown_workflow",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute the CCS bias calculation stage of the MobiLipid R Markdown on a representative IM-MS lipidomics dataset using the provided DT CCS N2 library and produce a bias assessment report.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CCS bias assessment report with statistics and visualizations",
+      "port_id": "bias_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "ion-mobility",
+    "quality-control",
+    "stable-isotope-labeling",
+    "high-resolution-ms"
+  ],
+  "title": "Reconstruct the CCS bias assessment component of the MobiLipid R Markdown workflow",
+  "tools": [
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load IM-MS lipidomics data and the DTCCSN2 library for U13C labeled lipid reference values into R. 2. Map detected lipid features to the DTCCSN2 reference library by matching mass-to-charge and retention time identifiers. 3. Calculate experimental-to-theoretical CCS bias for each matched lipid as the difference between measured and reference CCS values. 4. Aggregate bias metrics by lipid class and generate summary statistics (mean bias, standard deviation, range). 5. Generate bias assessment report with visualizations showing systematic CCS deviation patterns and class-level bias distribution."
+}

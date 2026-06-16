@@ -1,0 +1,377 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "61c25057155c1430411fe3475fe97c58740387204bdcd4ae241d3da464979019"
+    }
+  ],
+  "created_at": "2026-06-15T19:28:53.814125+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "chromVARDeviations object with computed deviations and z-scores, and rowData containing annotation metadata (fractionMatches, fractionBackgroundOverlap)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Filtered peak count matrix (RangedSummarizedExperiment) with GC bias and sample/cell metadata",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Two annotation matrices (e.g., motif and kmer matches) stored as assays in separate SummarizedExperiment objects or subset from the same object",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Named correlation matrix (CSV format) with annotation pair identifiers as row and column names and Pearson correlation coefficients as values, rows ordered by decreasing correlation magnitude",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Synergy score table (CSV format) with columns: annotation_pair, z_score, p_value, and variability_excess; one row per unique pairwise combination",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Synergy is defined as excess variability of chromatin accessibility for peaks sharing both motifs compared to a random subsample of peaks with one motif (the one with higher variability), quantified as a z-score.",
+    "Correlation between deviations for two annotations can reveal whether cooperative or competitive binding occurs between transcription factors, or instead reflects co-expression or opposing expression patterns.",
+    "The getAnnotationSynergy function is computationally slow and should only be performed on a limited selection of motif pairs, not the full collection of annotations.",
+    "chromVAR's bias-corrected deviations and z-scores normalize for GC content and average accessibility to isolate true biological signal from technical artifacts.",
+    "Low variability and highly correlated annotations should be removed prior to computing correlation to avoid inflated redundancy signals and reduce computational burden."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that input is a chromVARDeviations object (or SummarizedExperiment with deviation assays) loadable from the chromVAR package",
+      "verify that getAnnotationCorrelation function executes without error on the input object",
+      "verify that getAnnotationSynergy function executes without error on the input object",
+      "file_format_is: correlation matrix output file (CSV, TSV, or RDS format)",
+      "file_format_is: synergy score table output file (CSV, TSV, or RDS format)",
+      "field_present: correlation matrix contains row and column labels corresponding to annotation sets",
+      "field_present: synergy score table contains columns for annotation pair identifiers and numeric synergy scores",
+      "value_in_range: correlation coefficients in output matrix are between \u22121.0 and +1.0",
+      "value_in_range: synergy scores are numeric (verify absence of NA/NaN where data should be present), robust to parameter choices in function calls"
+    ],
+    "expert_review": [
+      "evaluate whether correlation matrix and synergy scores are biologically plausible given the annotation sets used (e.g., JASPAR motifs vs. kmers)",
+      "assess whether high correlation or synergy values correspond to expected redundancy or complementarity between the two annotation modalities",
+      "verify that the choice of correlation metric and synergy computation method are appropriate for the sparse accessibility data context"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How do getAnnotationCorrelation and getAnnotationSynergy quantify redundancy and synergy between two annotation sets in a chromVARDeviations object?: 'chromVAR is an R package for the analysis of sparse chromatin accessibility data from single cell or bulk ATAC or DNAse-seq data. The package aims to identify motifs or other genomic annotations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] chromVAR provides functions to identify motifs or other genomic annotations associated with variability in chromatin accessibility between individual cells or samples, enabling analysis of annotation relationships within chromatin data.: 'The package aims to identify motifs or other genomic annotations associated with variability in chromatin accessibility between individual cells or samples.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] chromVARDeviations object with computed deviations and z-scores, and rowData containing annotation metadata (fractionMatches, fractionBackgroundOverlap): 'dev <- computeDeviations(object = counts_filtered, annotations = motif_ix)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Filtered peak count matrix (RangedSummarizedExperiment) with GC bias and sample/cell metadata: 'counts_filtered <- filterPeaks(counts_filtered, non_overlapping = TRUE)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Two annotation matrices (e.g., motif and kmer matches) stored as assays in separate SummarizedExperiment objects or subset from the same object: 'getAnnotationCorrelation(counts_filtered, motif_ix[,c(83,24,20)])'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Named correlation matrix (CSV format) with annotation pair identifiers as row and column names and Pearson correlation coefficients as values, rows ordered by decreasing correlation magnitude: 'The function `getAnnotationCorrelation` first removes highly correlated annotations and low variability annotations and then computes the correlation between the cells for the remaining annotations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Synergy score table (CSV format) with columns: annotation_pair, z_score, p_value, and variability_excess; one row per unique pairwise combination: 'The result is a matrix with Z-scores for the variability synergy of each possible pairing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] chromVAR: 'getAnnotationSynergy(counts_filtered, motif_ix[,c(83,24,20)])'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] R: 'library(chromVAR)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] SummarizedExperiment: 'library(SummarizedExperiment)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Matrix: 'library(Matrix)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, API changes, or deprecated functions for chromVAR: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "correlation_synergy_results.csv",
+  "expected_outputs": [
+    "Named correlation matrix (CSV format) with annotation pair identifiers as row and column names and Pearson correlation coefficients as values, rows ordered by decreasing correlation magnitude",
+    "Synergy score table (CSV format) with columns: annotation_pair, z_score, p_value, and variability_excess; one row per unique pairwise combination"
+  ],
+  "finding": "chromVAR provides functions to identify motifs or other genomic annotations associated with variability in chromatin accessibility between individual cells or samples, enabling analysis of annotation relationships within chromatin data.",
+  "github_name": "r3fang/SnapATAC",
+  "input_from": "task_001",
+  "inputs": [
+    "chromVARDeviations object with computed deviations and z-scores, and rowData containing annotation metadata (fractionMatches, fractionBackgroundOverlap)",
+    "Filtered peak count matrix (RangedSummarizedExperiment) with GC bias and sample/cell metadata",
+    "Two annotation matrices (e.g., motif and kmer matches) stored as assays in separate SummarizedExperiment objects or subset from the same object"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "annotation_subset_indices.txt",
+    "correlation_matrix_raw.csv",
+    "synergy_zscores.csv"
+  ],
+  "linked_result_ids": [
+    "result_056",
+    "result_057",
+    "result_053"
+  ],
+  "methodology_summary": [
+    "Load chromVARDeviations object containing precomputed bias-corrected deviations and z-scores from prior computeDeviations run",
+    "Subset annotation matrices to isolate the two annotation sets to be compared (e.g., JASPAR motifs and kmers)",
+    "Apply getAnnotationCorrelation to compute pairwise Pearson correlations between annotation sets, filtering out low-variability and highly correlated annotations first",
+    "Apply getAnnotationSynergy to compute z-scores for variability synergy, comparing observed variance for dual-annotated peaks against random subsamples of single-annotation peaks",
+    "Export correlation matrix and synergy score table as named CSV files with annotation identifiers and statistical measures",
+    "Validation: Verify correlation matrix is symmetric with values in range [\u22121, 1], synergy z-scores are real-valued, and all annotation pairs are named and present in both output tables"
+  ],
+  "missing_information": [
+    "No changelog documenting version history, API changes, or deprecated functions for chromVAR"
+  ],
+  "parameters": [],
+  "primary_domain": "genomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How do getAnnotationCorrelation and getAnnotationSynergy quantify redundancy and synergy between two annotation sets in a chromVARDeviations object?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "motif-annotation-correlation-analysis",
+    "chromatin-accessibility-deviation-computation",
+    "kmer-motif-synergy-assessment",
+    "sparse-matrix-subset-indexing",
+    "transcription-factor-cooperative-binding-detection"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_chromvar/synthesized_package",
+  "spine_condition_ids": [
+    "cond_6mer",
+    "cond_7mer"
+  ],
+  "spine_entity_ids": [
+    "chromVAR_system",
+    "arch_pipeline",
+    "comp_getAnnotationSynergy",
+    "comp_getAnnotationCorrelation",
+    "artifact_chromVARDeviations",
+    "artifact_annotationMatrix",
+    "artifact_backgroundPeaks",
+    "dataset_JASPAR",
+    "cond_6mer",
+    "cond_7mer",
+    "result_kmer_pca_best_chromvar",
+    "result_snapatac_outperforms",
+    "result_chromvar_complementary"
+  ],
+  "subdomains": [
+    "gene-regulation",
+    "functional-genomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:GreenleafLab__chromVAR",
+  "task_description": "Compute correlation and synergy scores between two annotation sets (e.g., JASPAR motifs and kmers) using a chromVARDeviations object, outputting a named correlation matrix and a synergy score table to assess redundancy and cooperative binding between motifs.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "chromVARDeviations object with computed deviations",
+      "port_id": "dev_object",
+      "resolved_via": null,
+      "source": "task_001/chromvar_deviations_object",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Filtered peak count matrix with GC bias",
+      "port_id": "counts_filtered",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Two annotation matrices (motif and kmer) as subset or separate objects",
+      "port_id": "annotation_subset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Apply getAnnotationCorrelation and getAnnotationSynergy to a chromVARDeviations object and produce a named correlation matrix file and synergy score table with validated format, fields, and value ranges.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Named correlation matrix between annotation sets",
+      "port_id": "correlation_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Synergy z-score and p-value table for annotation pairs",
+      "port_id": "synergy_scores",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dimensionality-reduction",
+    "clustering",
+    "enrichment-analysis"
+  ],
+  "title": "Reconstruct the annotation synergy and correlation computation between chromVAR annotation sets",
+  "tools": [
+    "chromVAR",
+    "R",
+    "SummarizedExperiment",
+    "Matrix"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: SummarizedExperiment, Named correlation matrix (CSV format) with annotation pair identifiers as row and column names and Pearson correlation coefficients as values, rows ordered by decreasing correlation magnitude, Synergy score table (CSV format) with columns: annotation_pair, z_score, p_value, and variability_excess; one row per unique pairwise combination."
+  ],
+  "workflow_description": "1. Load the chromVARDeviations object containing precomputed bias-corrected deviations and z-scores for the annotation set. 2. Subset the annotation matrix to include only the two annotation sets of interest (e.g., motif_ix columns for JASPAR motifs and kmer_ix columns for kmers). 3. Apply getAnnotationCorrelation to compute pairwise Pearson correlations between the two annotation sets across all samples, outputting a correlation matrix with named rows and columns. 4. Apply getAnnotationSynergy to compute z-scores for variability synergy, comparing the observed variance for peaks containing both annotations against a random subsample of peaks with only the higher-variability annotation. 5. Export the correlation matrix as a named CSV file with row and column headers preserved, and the synergy scores as a second CSV file with annotation pair names, synergy z-scores, and p-values."
+}

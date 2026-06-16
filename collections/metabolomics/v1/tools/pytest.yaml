@@ -1,0 +1,17 @@
+name: pytest
+slug: pytest
+evidence_spans:
+- pytest tests/
+- make sure the existing tests still work by running ``pytest``
+derived_from:
+- doi: 10.1186/s13321-025-01081-6
+  title: biosynfoni
+- doi: 10.21105/joss.02411
+  title: matchms
+- doi: 10.21105/joss.04494
+  title: msmetaenhancer
+source_repos:
+- RECETOX/MSMetaEnhancer
+- lucinamay/biosynfoni
+- matchms/matchms
+schema_version: 0.2.0

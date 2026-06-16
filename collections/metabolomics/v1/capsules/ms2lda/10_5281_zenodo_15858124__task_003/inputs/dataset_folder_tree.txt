@@ -1,0 +1,8 @@
+  figures/CompMetabolomics_logo.jpg
+  figures/MS2LDA_LOGO_black.jpg
+  figures/MS2LDA_LOGO_white.jpg
+  figures/MS2LDA_Workflow.jpg
+  figures/WUR_RGB_standard_2021.png
+  figures/WUR_logo.jpg
+  figures/pnas.jpg
+paper.md

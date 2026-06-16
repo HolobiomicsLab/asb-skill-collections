@@ -1,0 +1,394 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "61c25057155c1430411fe3475fe97c58740387204bdcd4ae241d3da464979019"
+    }
+  ],
+  "created_at": "2026-06-15T19:28:53.814125+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "example_counts: bundled chromVAR example dataset (RangedSummarizedExperiment with counts assay)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "BSgenome.Hsapiens.UCSC.hg19: human genome sequence reference required for GC bias and motif matching",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "chromVARDeviations object: RangedSummarizedExperiment with two assays (deviations and deviationScores) containing bias-corrected accessibility deviations and Z-scores for each motif (rows) and sample (columns)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Deviations matrix: numeric matrix of bias-corrected deviations in accessibility for each motif-sample pair, accessible via deviations()",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "DeviationScores matrix: numeric matrix of Z-scores for bias-corrected deviations, accessible via deviationScores()",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "GC content bias is a systematic technical effect in chromatin accessibility data that must be corrected by selecting background peaks with matched GC composition and average accessibility profiles before computing deviation scores.",
+    "Background peak selection requires both GC content and accessibility similarity matching; computeDeviations internally generates multiple background iterations (columns in the background_peaks matrix) to enable robust normalization.",
+    "Deviation Z-scores correlate with sequencing depth; deeper sequencing increases confidence in identifying true accessibility differences rather than random sampling noise.",
+    "Non-overlapping peak filtering is critical for avoiding redundant signal representation; filterPeaks resolves overlaps by retaining peaks with higher aggregate read counts across all samples.",
+    "JASPAR motif p-cutoff default (0.00005) is calibrated for human motifs and may require adjustment for other species; default parameters tend to yield reasonable motif match counts."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file example_counts exists in chromVAR package",
+      "script_runs: execute chromVAR preprocessing chain (filterSamples, filterPeaks, addGCBias, computeExpectations, getBackgroundPeaks) on example_counts without errors",
+      "script_runs: execute computeDeviations with JASPAR motif annotations on preprocessed object without errors",
+      "verify output object is of class chromVARDeviations",
+      "field_present: verify output object contains assay named 'deviations'",
+      "field_present: verify output object contains assay named 'z' (z-scores)",
+      "verify output dimensions match input peak count (after filtering) \u00d7 sample count",
+      "value_in_range: deviation scores are numeric and finite (no NaN or Inf values)",
+      "value_in_range: z-scores are numeric and finite (no NaN or Inf values)",
+      "robust to parameter choices: output structure consistent across standard chromVAR parameter settings"
+    ],
+    "expert_review": [
+      "inspect whether deviation scores show reasonable magnitude and distribution for JASPAR motif analysis",
+      "assess whether z-scores reflect expected biological signal (positive deviations for accessible motif sites, negative for closed regions)",
+      "evaluate whether sample and peak filtering steps removed expected proportion of low-quality data",
+      "review whether motif match annotations are properly propagated to output object rowData"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the structure and composition of a chromVARDeviations object produced by applying the standard chromVAR preprocessing and motif deviation workflow to the example_counts dataset?: 'chromVAR is an R package for the analysis of sparse chromatin accessibility data from single cell or bulk ATAC or DNAse-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The computeDeviations function returns a SummarizedExperiment object containing deviation scores that quantify motif-associated variability in chromatin accessibility across samples, with dimensions and assay structure determined by the number of samples and motifs after applying filterSamples, filterPeaks, addGCBias, computeExpectations, and getBackgroundPeaks preprocessing steps.: 'The function `computeDeviations` returns a SummarizedExperiment with two \"assays\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] example_counts: bundled chromVAR example dataset (RangedSummarizedExperiment with counts assay): 'data(example_counts, package = \"chromVAR\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] BSgenome.Hsapiens.UCSC.hg19: human genome sequence reference required for GC bias and motif matching: 'library(BSgenome.Hsapiens.UCSC.hg19)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] chromVARDeviations object: RangedSummarizedExperiment with two assays (deviations and deviationScores) containing bias-corrected accessibility deviations and Z-scores for each motif (rows) and sample (columns): 'The output from the computeDeviations function is a chromVARDeviations object. This object inherits from the RangedSummarizedExperiment object'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Deviations matrix: numeric matrix of bias-corrected deviations in accessibility for each motif-sample pair, accessible via deviations(): 'The deviations are the bias corrected deviations in accessibility. For each motif or annotation (rows), there is a value for each cell or sample (columns)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] DeviationScores matrix: numeric matrix of Z-scores for bias-corrected deviations, accessible via deviationScores(): 'The deviationScores are the Z-scores for each bias corrected deviations.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] chromVAR: 'chromVAR is an R package for the analysis of sparse chromatin accessibility'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'An R package for the analysis of sparse chromatin accessibility'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] motifmatchr: 'library(motifmatchr)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SummarizedExperiment: 'library(SummarizedExperiment)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Matrix: 'library(Matrix)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] BiocParallel: 'library(BiocParallel)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[other] BSgenome.Hsapiens.UCSC.hg19: 'library(BSgenome.Hsapiens.UCSC.hg19)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(chromVAR); library(motifmatchr); library(SummarizedExperiment); library(Matrix); library(BiocParallel); library(BSgenome.Hsapiens.UCSC.hg19); register(SerialParam()); data(example_counts); counts <- example_counts; counts <- addGCBias(counts, genome=BSgenome.Hsapiens.UCSC.hg19); counts <- filterSamples(counts, min_depth=1500, min_in_peaks=0.15); counts <- filterPeaks(counts); motifs <- getJasparMotifs(); motif_ix <- matchMotifs(motifs, counts, genome=BSgenome.Hsapiens.UCSC.hg19); counts <- computeExpectations(counts); bg <- getBackgroundPeaks(counts); dev <- computeDeviations(counts, motif_ix, background_peaks=bg); stopifnot(length(assays(dev)) == 2); stopifnot(all(c('deviations', 'deviationScores') %in% names(assays(dev)))); stopifnot(nrow(dev) == length(motifs)); stopifnot(ncol(dev) == ncol(counts)); stopifnot(all(is.numeric(deviations(dev)))); stopifnot(all(is.numeric(deviationScores(dev)))); saveRDS(dev, 'chromVARDeviations.rds'); cat('chromVAR pipeline completed successfully\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "chromVARDeviations object: RangedSummarizedExperiment with two assays (deviations and deviationScores) containing bias-corrected accessibility deviations and Z-scores for each motif (rows) and sample (columns)",
+    "Deviations matrix: numeric matrix of bias-corrected deviations in accessibility for each motif-sample pair, accessible via deviations()",
+    "DeviationScores matrix: numeric matrix of Z-scores for bias-corrected deviations, accessible via deviationScores()"
+  ],
+  "finding": "The computeDeviations function returns a SummarizedExperiment object containing deviation scores that quantify motif-associated variability in chromatin accessibility across samples, with dimensions and assay structure determined by the number of samples and motifs after applying filterSamples, filterPeaks, addGCBias, computeExpectations, and getBackgroundPeaks preprocessing steps.",
+  "github_name": "r3fang/SnapATAC",
+  "input_from": null,
+  "inputs": [
+    "example_counts: bundled chromVAR example dataset (RangedSummarizedExperiment with counts assay)",
+    "BSgenome.Hsapiens.UCSC.hg19: human genome sequence reference required for GC bias and motif matching"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "example_counts_gc_bias.rds",
+    "counts_filtered_samples.rds",
+    "counts_filtered_peaks.rds",
+    "jaspar_motifs.rds",
+    "motif_matches.rds",
+    "background_peaks.rds"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_006",
+    "result_024",
+    "result_025",
+    "result_026",
+    "result_027",
+    "result_028",
+    "result_029",
+    "result_030",
+    "result_035",
+    "result_050",
+    "result_051",
+    "result_052"
+  ],
+  "methodology_summary": [
+    "Load chromVAR ecosystem packages (chromVAR, motifmatchr, SummarizedExperiment, Matrix, BiocParallel) and register serial processing backend.",
+    "Load bundled example_counts dataset and human genome reference; initialize GC bias calculations using addGCBias().",
+    "Filter low-quality samples (min_depth=1500, min_in_peaks=0.15) and reduce peak set to non-overlapping regions using filterPeaks().",
+    "Retrieve JASPAR motifs and match to filtered peaks using motifmatchr to generate peak-motif overlap matrix.",
+    "Compute expected accessibility distribution and generate GC-accessibility-matched background peak sets for normalization.",
+    "Execute computeDeviations() to produce bias-corrected accessibility deviations and Z-scores for each motif-sample pair.",
+    "Validation: verify chromVARDeviations object has two assays (deviations, deviationScores), row count equals motif count, column count equals sample count, and deviation score values fall within expected numeric ranges."
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "genomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the structure and composition of a chromVARDeviations object produced by applying the standard chromVAR preprocessing and motif deviation workflow to the example_counts dataset?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "chromatin-accessibility-bias-correction",
+    "motif-peak-overlap-matching",
+    "single-cell-chromatin-sample-filtering",
+    "gc-content-bias-calculation",
+    "background-peak-selection-normalization",
+    "deviation-score-computation-and-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_chromvar/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "chromVAR_system",
+    "arch_pipeline",
+    "comp_computeDeviations",
+    "comp_getBackgroundPeaks",
+    "comp_addGCBias",
+    "comp_computeExpectations",
+    "comp_filterSamples",
+    "comp_filterPeaks",
+    "artifact_chromVARDeviations",
+    "dataset_JASPAR",
+    "dataset_example_counts",
+    "result_kmer_pca_best_chromvar",
+    "result_snapatac_outperforms",
+    "result_chromvar_complementary"
+  ],
+  "subdomains": [
+    "gene-regulation",
+    "functional-genomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:GreenleafLab__chromVAR",
+  "task_description": "Execute the complete chromVAR preprocessing and deviation computation pipeline on the bundled example_counts dataset: filter samples and peaks, add GC bias, compute expectations and background peaks, then compute bias-corrected deviations using JASPAR motif annotations. Validate the output chromVARDeviations object for correct structure, dimensions, and deviation score ranges.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "example_counts: bundled chromVAR example dataset",
+      "port_id": "example_counts",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "BSgenome.Hsapiens.UCSC.hg19 human genome reference",
+      "port_id": "reference_genome",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the chromVAR preprocessing and motif deviation pipeline on example_counts data and validate the output chromVARDeviations object's structure, dimensions, and score distributions.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "chromVARDeviations object with deviations and deviationScores assays",
+      "port_id": "chromvar_deviations_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dimensionality-reduction",
+    "clustering",
+    "enrichment-analysis"
+  ],
+  "title": "Reproduce chromVAR core deviation computation on example ATAC-seq data",
+  "tools": [
+    "chromVAR",
+    "R",
+    "motifmatchr",
+    "SummarizedExperiment",
+    "Matrix",
+    "BiocParallel",
+    "BSgenome.Hsapiens.UCSC.hg19"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: SummarizedExperiment, BiocParallel, BSgenome.Hsapiens.UCSC.hg19, chromVARDeviations object: RangedSummarizedExperiment with two assays (deviations and deviationScores) containing bias-corrected accessibility deviations and Z-scores for each motif (rows) and sample (columns)."
+  ],
+  "workflow_description": "1. Load chromVAR, motifmatchr, SummarizedExperiment, Matrix, and BiocParallel packages; register serial processing with SerialParam(). 2. Load the example_counts dataset and human genome reference BSgenome.Hsapiens.UCSC.hg19. 3. Add GC content bias to rowData using addGCBias() with the reference genome. 4. Filter samples using filterSamples() with min_depth=1500 and min_in_peaks=0.15 to remove low-quality cells. 5. Filter peaks using filterPeaks() with non_overlapping=TRUE to reduce to non-overlapping peak set. 6. Fetch human JASPAR motifs using getJasparMotifs() with default species and collection parameters. 7. Match motifs to filtered peaks using matchMotifs() from motifmatchr package with the reference genome. 8. Compute expected accessibility using computeExpectations() on filtered counts. 9. Generate background peaks using getBackgroundPeaks() to obtain GC and accessibility-matched peak sets for normalization. 10. Compute bias-corrected deviations using computeDeviations() with filtered counts, motif matches, background peaks, and computed expectations to produce the final chromVARDeviations object. 11. Validate output structure (two assays: deviations and deviationScores), row count (motif count), column count (sample count), and score distributions."
+}

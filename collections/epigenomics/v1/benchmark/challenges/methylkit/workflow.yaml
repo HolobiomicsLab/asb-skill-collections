@@ -1,0 +1,426 @@
+schema_version: 0.1.0
+workflow_id: coll_methylkit_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: methylKit is an R package for DNA methylation analysis and annotation from
+    high-throughput bisulfite sequencing data, designed to handle RRBS and target-capture
+    methods. It provides functionality for reading methylation calls, comparative
+    analysis, differential methylation detection, and annotation of methylated regions.
+  pseudo_abstract: "methylKit implements a comprehensive workflow for analyzing DNA\
+    \ methylation from bisulfite sequencing experiments. The package reads methylation\
+    \ call files into methylRawList objects, performs quality filtering by coverage,\
+    \ and merges samples across common sites using the unite() function to produce\
+    \ methylBase objects. Differential methylation is calculated via calculateDiffMeth()\
+    \ using logistic regression or Fisher's exact test depending on sample size, with\
+    \ p-values adjusted to q-values by the SLIM method; getMethylDiff() then extracts\
+    \ hyper- and hypo-methylated bases using q-value and percent-methylation-difference\
+    \ cutoffs. Sample relationships are visualized through clusterSamples() producing\
+    \ dendrograms and PCASamples() generating scree plots and PC1/PC2 scatter plots.\
+    \ Annotation integrates with genomation to classify differentially methylated\
+    \ regions by overlap with gene features (promoters, exons, introns) and CpG islands\
+    \ using annotateWithGeneParts() and annotateWithFeatureFlank(). The package describes\
+    \ mechanisms for memory-efficient analysis via methylRawListDB objects that store\
+    \ methylation data in tabix-indexed bgzipped files on disk, and for correcting\
+    \ overdispersion in logistic regression models by calculating a scaling parameter\
+    \ \u03C6 = X\xB2/(N-P) to adjust variance estimates."
+  research_questions:
+  - When differentially methylated bases are extracted from a methylDiff object using
+    getMethylDiff() with q-value < 0.01 and 25% methylation difference thresholds,
+    what are the counts of hyper-methylated versus hypo-methylated bases?
+  - Does the methylKit package support storing methylation data in tabix-indexed bgzipped
+    files on disk, and if so, how are the database path and metadata header configured?
+  - How do the four samples (test1, test2, ctrl1, ctrl2) cluster based on methylation
+    similarity, and what are their relationships in principal component space?
+  - Does overdispersion correction in calculateDiffMeth() with overdispersion='MN'
+    produce more stringent statistical tests (higher q-values) compared to uncorrected
+    differential methylation analysis?
+  - What is the distribution of differentially methylated bases across gene annotation
+    features (promoters, exons, introns) and CpG island contexts (CpGi islands vs.
+    shores)?
+  methods_summary: "Load methylation call files using methRead() to obtain methylRawList\
+    \ objects from CpG text files. Merge samples using unite() function to create\
+    \ methylBase object containing only universally covered bases. Calculate differential\
+    \ methylation using calculateDiffMeth(), which applies Fisher's exact test or\
+    \ logistic regression based on sample count. Extract differentially methylated\
+    \ bases using getMethylDiff() with q-value < 0.01 and \u226525% methylation difference\
+    \ thresholds. Validation: Confirm hyper-methylated and hypo-methylated base counts\
+    \ in output methylDiff object match published vignette values. Load example CpG\
+    \ methylation files into R using methylKit's methRead() function with dbtype='tabix'\
+    \ parameter to enable tabix-backed database storage mode. Inspect the resulting\
+    \ methylRawListDB object to confirm the dbpath slot contains file-system paths\
+    \ to bgzipped tabix files. Read and parse tabix file headers to extract and verify\
+    \ methylKit version metadata. Validation: Confirm dbpath slot is non-empty, all\
+    \ referenced tabix files exist on disk with valid .bgz and .tbi extensions, and\
+    \ header version field is \u2265 1.13.1. Load the united methylBase object containing\
+    \ merged methylation calls across all samples. Apply hierarchical clustering via\
+    \ clusterSamples() to compute pairwise sample distances and construct a dendrogram.\
+    \ Apply principal component analysis via PCASamples() to identify major axes of\
+    \ methylation variation. Generate scree plot showing cumulative and per-component\
+    \ variance explained by principal components. Generate PC1 vs. PC2 scatter plot\
+    \ to visualize sample grouping in the first two principal components. Validation:\
+    \ Dendrogram and PCA plots should visually match the vignette outputs and support\
+    \ expected sample stratification based on methylation profiles. Generate synthetic\
+    \ methylation data using dataSim() with 6 replicates and 1000 genomic sites to\
+    \ create a methylBase object. Run calculateDiffMeth() with overdispersion correction\
+    \ method set to MN and statistical test set to Chi-square. Run calculateDiffMeth()\
+    \ again without overdispersion correction (baseline) on the same methylBase object.\
+    \ Extract and tabulate q-value statistics from both runs and compare distributions.\
+    \ Validation: Confirm that average q-values from the MN-corrected run are higher\
+    \ than the uncorrected baseline, confirming more stringent multiple-testing control.\
+    \ Load the methylDiff object and gene annotation (BED format) into the R environment.\
+    \ Execute annotateWithGeneParts() to compute overlaps between differentially methylated\
+    \ bases and promoter/exon/intron regions. Execute annotateWithFeatureFlank() to\
+    \ classify bases relative to CpG islands and shore regions. Aggregate overlap\
+    \ counts for each genomic feature class and compute percentages relative to total\
+    \ differentially methylated bases. Validation: Output table percentages sum to\
+    \ 100% per category (gene parts and CpG island features are mutually exclusive\
+    \ within their respective groups), and counts match vignette reference statistics."
+  domain: genomics
+  techniques:
+  - differential-abundance-analysis
+  - statistical-analysis
+  claims:
+  - claim_text: methylKit is an R package for DNA methylation analysis and annotation
+      from high-throughput bisulfite sequencing.
+    claim_type: finding
+    speculative: false
+    entity_id: methylKit_system
+  - claim_text: methylKit is designed to deal with sequencing data from RRBS and its
+      variants.
+    claim_type: finding
+    speculative: false
+    entity_id: methylKit_system
+  - claim_text: DNA methylation in vertebrates typically occurs at CpG dinucleotides.
+    claim_type: finding
+    speculative: false
+  - claim_text: Non-CpG cytosines are methylated in certain tissues such as embryonic
+      stem cells.
+    claim_type: finding
+    speculative: false
+  - claim_text: DNA methylation can act as an epigenetic control mechanism for gene
+      regulation.
+    claim_type: finding
+    speculative: false
+  - claim_text: Methylation can hinder binding of transcription factors.
+    claim_type: finding
+    speculative: false
+  - claim_text: Methylated bases can be bound by methyl-binding-domain proteins which
+      recruit chromatin remodeling factors.
+    claim_type: finding
+    speculative: false
+  - claim_text: Aberrant DNA methylation patterns have been associated with many human
+      malignancies.
+    claim_type: finding
+    speculative: false
+  - claim_text: DNA methylation patterns can be used in a predictive manner for disease.
+    claim_type: finding
+    speculative: false
+  - claim_text: In malignant tissues, DNA is either hypo-methylated or hyper-methylated
+      compared to normal tissue.
+    claim_type: finding
+    speculative: false
+  - claim_text: Hypo-methylation is traditionally associated with gene transcription
+      on regulatory regions.
+    claim_type: finding
+    speculative: false
+  - claim_text: Hyper-methylation is traditionally associated with gene repression.
+    claim_type: finding
+    speculative: false
+  - claim_text: In bisulfite sequencing, bisulfite converts cytosine residues to uracil
+      but leaves 5-methylcytosine residues unaffected.
+    claim_type: finding
+    speculative: false
+  - claim_text: The methylation status of a base determined by high-throughput bisulfite
+      sequencing is a percentage rather than a binary score.
+    claim_type: finding
+    speculative: false
+  - claim_text: The percentage of methylation determines how many of the bases aligning
+      to a given cytosine location have actual C bases in the reads.
+    claim_type: finding
+    speculative: false
+  - claim_text: Sequencing errors contribute to non-binary methylation responses in
+      high-throughput sequencing experiments.
+    claim_type: finding
+    speculative: false
+  - claim_text: Incomplete bisulfite conversion contributes to non-binary methylation
+      responses.
+    claim_type: finding
+    speculative: false
+  - claim_text: Heterogeneity of samples and heterogeneity of paired chromosomes from
+      the same sample contribute to non-binary methylation responses.
+    claim_type: finding
+    speculative: false
+  - claim_text: The methRead function returns a methylRawList object which stores
+      methylation information per sample for each covered base.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_methylRawList
+  - claim_text: By default methRead requires a minimum coverage of 10 reads per base.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_methRead
+  - claim_text: methylKit offers methylDB classes that store methylation information
+      in an external bgzipped file indexed by tabix.
+    claim_type: finding
+    speculative: false
+    entity_id: methylKit_system
+  - claim_text: methylDB objects include methylRawListDB, methylRawDB, methylBaseDB
+      and methylDiffDB classes.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_methylRawListDB
+  - claim_text: Most functions in methylKit work with methylDB objects the same way
+      as with normal methylKit objects.
+    claim_type: finding
+    speculative: false
+    entity_id: methylKit_system
+  - claim_text: Bismark is a popular aligner for bisulfite sequencing reads.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_Bismark
+  - claim_text: The processBismarkAln function reads Bismark SAM/BAM files as methylRaw
+      or methylRawList objects.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_methylRawList
+  - claim_text: SAM files must be sorted by chromosome and read position columns for
+      processBismarkAln.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_processBismarkAln
+  - claim_text: BAM files should be sorted and indexed for use with processBismarkAln.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_processBismarkAln
+  - claim_text: Typical percent methylation histograms should have two peaks on both
+      ends.
+    claim_type: finding
+    speculative: false
+  - claim_text: In any given cell, any given base is either methylated or not.
+    claim_type: finding
+    speculative: false
+  - claim_text: Experiments suffering from PCR duplication bias will have a secondary
+      peak towards the right hand side of the coverage histogram.
+    claim_type: finding
+    speculative: false
+  - claim_text: The unite function merges all samples for base-pair locations covered
+      in all samples.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_unite
+  - claim_text: Setting destrand=TRUE in unite will merge reads on both strands of
+      a CpG dinucleotide.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_unite
+  - claim_text: The default value of destrand in unite is FALSE.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_unite
+  - claim_text: Setting destrand=TRUE in unite is only advised when looking at CpG
+      methylation.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_unite
+  - claim_text: The unite function returns a methylBase object for comparative analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_methylBase
+  - claim_text: By default, unite produces bases/regions covered in all samples.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_unite
+  - claim_text: The min.per.group option in unite can relax the requirement for coverage
+      in all samples.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_unite
+  - claim_text: The getCorrelation function can plot scatter plot and correlation
+      coefficients or print a correlation matrix.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_getCorrelation
+  - claim_text: The clusterSamples function clusters samples and draws a dendrogram.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_clusterSamples
+  - claim_text: Setting plot=FALSE in clusterSamples returns a dendrogram object for
+      manipulation.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_clusterSamples
+  - claim_text: The PCASamples function can plot a scree plot for importance of components.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_PCASamples
+  - claim_text: The assocComp function checks which principal components are statistically
+      associated with potential batch effects.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_assocComp
+  - claim_text: The assocComp function uses Kruskal-Wallis test or Wilcoxon test for
+      categorical attributes.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_assocComp
+  - claim_text: The assocComp function uses correlation test for numerical attributes.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_assocComp
+  - claim_text: The removeComp function removes principal components from methylation
+      data.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_removeComp
+  - claim_text: The reconstruct function reconstructs a corrected methylBase object
+      from a corrected percent methylation matrix.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_methylBase
+  - claim_text: The tileMethylCounts function tiles the genome with windows and summarizes
+      methylation information.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_tileMethylCounts
+  - claim_text: The calculateDiffMeth function is the main function to calculate differential
+      methylation.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_calculateDiffMeth
+  - claim_text: calculateDiffMeth uses Fisher's exact test or logistic regression
+      depending on sample size per each set.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_calculateDiffMeth
+  - claim_text: P-values in calculateDiffMeth are adjusted to Q-values using SLIM
+      method.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_calculateDiffMeth
+  - claim_text: calculateDiffMeth automatically uses logistic regression when there
+      are replicates.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_calculateDiffMeth
+  - claim_text: The pool function can be used to pool replicates for Fisher's exact
+      test.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_calculateDiffMeth
+  - claim_text: The getMethylDiff function selects differentially methylated regions
+      based on q-value and percent methylation difference cutoffs.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_getMethylDiff
+  - claim_text: The overdispersion parameter in logistic regression accounts for variance
+      greater than expected by the binomial distribution.
+    claim_type: finding
+    speculative: false
+  - claim_text: Overdispersion correction is not applied by default in calculateDiffMeth.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_calculateDiffMeth
+  - claim_text: Setting overdispersion="MN" applies overdispersion correction in calculateDiffMeth.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_calculateDiffMeth
+  - claim_text: The F-test is automatically used when overdispersion correction is
+      applied in calculateDiffMeth.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_calculateDiffMeth
+  - claim_text: Covariates can be included in calculateDiffMeth analysis to separate
+      their influence from treatment effect.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_calculateDiffMeth
+  - claim_text: methylKit objects can be coerced to GRanges objects from GenomicRanges
+      package.
+    claim_type: finding
+    speculative: false
+    entity_id: methylKit_system
+  - claim_text: The genomation package can be used to annotate differentially methylated
+      regions with gene annotation.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_genomation
+  speculative: false
+  task_openness: mixed
+  method_alternatives:
+  - Fisher's exact test can be forced by pooling replicates using pool() function
+    when you have multiple samples per group
+  - Multiple-cores can be utilized for differential methylation calculation using
+    mc.cores option
+  - Bismark methylation extractor or methylDackel can be used to extract methylation
+    calls instead of processBismarkAln()
+  substitution_constraints:
+  - methylKit is designed for bisulfite sequencing data (WGBS or RRBS) and not suitable
+    for affinity-based methods like MIRA-seq or methylation arrays
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Dendrogram object showing hierarchical clustering of samples
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Scree plot showing variance explained by each principal component (PNG or
+    PDF)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: PC1/PC2 scatter plot visualization (PNG or PDF)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: methylDiff object containing differential methylation test statistics, p-values,
+    and q-values from the overdispersion-corrected run
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Comparison report or figure showing q-value distributions (corrected vs. uncorrected)
+    demonstrating that MN-corrected q-values are higher on average
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Percentage overlap summary table showing the proportion of differentially
+    methylated bases overlapping promoter, exon, and intron regions, and CpG island
+    and shore categories
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

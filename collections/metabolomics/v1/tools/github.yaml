@@ -1,26 +1,41 @@
 name: GitHub
 slug: github
+evidence_spans:
+- use the search functionality [here](https://github.com/iomega/ms2query/issues)
+- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
 derived_from:
 - doi: 10.1038/s42255-024-01118-4
   title: 13C-SpaceM
 - doi: 10.1186/s13321-023-00734-8
   title: bindiscover
+- doi: 10.1074/mcp.M113.031278
+  title: featurefindermetab
 - doi: 10.1289/EHP7722
   title: HExpMetDB
 - doi: 10.1002/cmtd.202400088
   title: ms2decide
+- doi: 10.1038/s41467-023-37446-4
+  title: ms2query
+- doi: 10.1186/1471-2105-11-395
+  title: mzmine2
 - doi: 10.1021/acscentsci.1c01108
   title: NP Analyst
 - doi: 10.1021/acs.analchem.2c02093
   title: rassp
 - doi: 10.1021/acs.analchem.5c03730
   title: rtmsecho
+- doi: 10.1038/s41592-019-0344-8
+  title: sirius
 source_repos:
 - MejriY/MS2DECIDE
+- OpenMS/OpenMS
 - https://github.com/Buglakova/13C-SpaceM
 - https://github.com/FangLabNTU/HExpMetDB
 - https://github.com/liningtonlab/npanalyst
+- iomega/ms2query
 - metabolomics-us/bindiscover
+- mzmine/mzmine2
 - nathanieltwarog/rtmsEcho
+- sirius-ms/sirius
 - thejonaslab/rassp-public
 schema_version: 0.2.0

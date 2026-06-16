@@ -1,0 +1,290 @@
+schema_version: 0.1.0
+workflow_id: coll_fiddle_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_003
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: FIDDLE is a deep learning method for predicting molecular formulas from
+    MS/MS spectra. This repository provides the full research codebase for model training,
+    evaluation, and paper reproduction.
+  pseudo_abstract: 'Reproduces 3 reported results: The provided document does not
+    contain explicit reporting of dataset split counts (28,751 training and 3,195
+    test compounds) or details of the instrument allowlist fix methodology needed
+    to verify this sub-task. The rescore model has been redesigned with a Siamese
+    architecture in version 2.0.0, indicating a structural change to the model components
+    that would affect encoder freezing and training behavior. The rescore model in
+    FIDDLE v2.0.0 has been redesigned with a Siamese architecture, which is the operative
+    inference architecture for the test. Reconstructs 2 described mechanisms (described
+    in the paper but not separately evaluated there): The document does not provide
+    explicit details about the prepare_augment_rescore.py script''s operations, data
+    augmentation procedures, or rescore training data generation mechanisms within
+    the available text. The FIDDLE repository contains code for model training, evaluation,
+    and paper reproduction, with full research codebase available for inspection of
+    preprocessing steps including spectrum handling.'
+  research_questions:
+  - Does applying the updated instrument allowlist fix (adding 'ftms' to gnps_orbitrap)
+    to the dataset result in the reported training and test split counts of 28,751
+    and 3,195 compounds respectively?
+  - What data preparation operations does the prepare_augment_rescore.py script apply
+    to TCN train and test sets before rescore model training?
+  - Does the rescore model training script freeze the TCN spectrum encoder and train
+    only the FormulaEncoder and RescoreHead components?
+  - Does the FIDDLE v2.0.0 model with its redesigned Siamese rescore architecture
+    successfully complete inference on GNPS caffeine spectra and produce scored molecular
+    formula candidates?
+  - Is the precursor m/z value (env[:, 0]) consistently zeroed before spectrum encoding
+    across the three main execution scripts in the FIDDLE codebase?
+  methods_summary: 'Load raw GNPS spectral dataset with instrument metadata annotations.
+    Update instrument allowlist configuration by adding ''ftms'' to gnps_orbitrap
+    category. Apply filtering logic to select compounds matching the updated allowlist.
+    Execute train-test split using msfiddle preprocessing module with the corrected
+    configuration. Extract training set size (target: 28,751) and test set size (target:
+    3,195) from split output. Validation: Verify training count equals 28,751 and
+    test count equals 3,195 exactly; output passes if both counts match reported baseline.
+    Load TCN train and test spectra with formula annotations. Cap the number of positive
+    examples per molecular formula to enforce balance. Generate negative examples
+    by pairing spectra within a precursor m/z window. Downsample combined positive
+    and negative examples to 1:1 ratio. Validation: Output train and test sets conform
+    to expected format and contain correct positive/negative counts and ratio. Load
+    and freeze pre-trained TCN spectrum encoder to preserve learned spectral feature
+    representations Initialize trainable FormulaEncoder and RescoreHead modules Train
+    encoder and head modules using binary cross-entropy loss on annotated MS/MS spectra
+    Monitor formula_acc (with H) on validation set after each epoch Save checkpoint
+    only when validation formula_acc improves; serialize formula_encoder_state_dict
+    and rescore_head_state_dict Validation: checkpoint is accepted when formula_acc
+    (with H) on validation set reaches or exceeds reported baseline performance threshold
+    Load the trained FIDDLE v2.0.0 model checkpoint from the zenodo deposit. Retrieve
+    caffeine (C8H10N4O2) MS/MS spectra from the GNPS public library. Execute test_caffeine.py
+    via the msfiddle Python API to perform inference on the spectra. Apply the Siamese
+    rescore architecture to rank molecular formula candidates by prediction score.
+    Validation: Output file exists, is a valid CSV or JSON, contains at least one
+    scored formula candidate row, and inference script exits without error. Retrieve
+    the three Python execution scripts (run_fiddle.py, train_rescore.py, test_caffeine.py)
+    from the FIDDLE repository. Locate the preprocessing block in each script where
+    the spectrum feature array (env) is prepared before TCN encoder input. Extract
+    and document the exact code line(s) that set env[:, 0] to zero, including surrounding
+    context and parameter names. Compare the implementation across all three scripts
+    to verify that the zeroing operation is identical in index, operation type, and
+    timing. Validation: Confirm that all three scripts implement env[:, 0] = 0 (or
+    equivalent) consistently before TCN encoder invocation; report pass if all three
+    match, fail if any divergence is found.'
+  domain: metabolomics
+  techniques:
+  - molecular-networking
+  - gnps-workflow
+  - spectral-library-matching
+  - database-annotation
+  - metabolite-identification
+  claims:
+  - claim_text: FIDDLE is a deep learning method for predicting molecular formulas
+      from MS/MS spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: FIDDLE_system
+  - claim_text: FIDDLE research was published in Nature Communications in 2025.
+    claim_type: finding
+    speculative: false
+    entity_id: FIDDLE_system
+  - claim_text: A CLI and Python API for FIDDLE is available as msfiddle.
+    claim_type: finding
+    speculative: false
+    entity_id: FIDDLE_system
+  - claim_text: The rescore model was redesigned with a Siamese architecture in version
+      2.0.0.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 2.0.0 was released on 2026-03-23.
+    claim_type: finding
+    speculative: false
+  - claim_text: An inference script for caffeine (C8H10N4O2) GNPS spectra was added
+      in version 2.0.0.
+    claim_type: finding
+    speculative: false
+    entity_id: compound_caffeine
+  - claim_text: An end-to-end retraining script for both Orbitrap and Q-TOF was added
+      in version 2.0.0.
+    claim_type: finding
+    speculative: false
+    entity_id: compound_caffeine
+  - claim_text: The train_rescore.py trainer freezes the TCN spectrum encoder and
+      trains FormulaEncoder and RescoreHead with BCE loss.
+    claim_type: finding
+    speculative: false
+    entity_id: TCN_encoder
+  - claim_text: The FormulaEncoder converts atom-count vectors to 512-dimensional
+      L2-normalised embeddings.
+    claim_type: finding
+    speculative: false
+    entity_id: formula_encoder
+  - claim_text: The RescoreHead performs element-wise product of spectrum and formula
+      embeddings to produce a scalar logit.
+    claim_type: finding
+    speculative: false
+    entity_id: rescore_head
+  - claim_text: An environment configuration file for macOS ARM64 (Apple Silicon)
+      setup was added in version 2.0.0.
+    claim_type: finding
+    speculative: false
+  - claim_text: Docstrings were added across multiple modules in version 2.0.0.
+    claim_type: finding
+    speculative: false
+  - claim_text: FDRNet-based reranking was replaced with the Siamese rescore architecture.
+    claim_type: finding
+    speculative: false
+    entity_id: siamese_rescore_arch
+  - claim_text: Output CSV columns were renamed from FDR (k) to Rescore (k).
+    claim_type: finding
+    speculative: false
+  - claim_text: Precursor m/z is zeroed before the spectrum encoder to prevent the
+      model from learning a mass-based frequency prior.
+    claim_type: finding
+    speculative: false
+  - claim_text: The FDRNet class was removed from model_tcn.py.
+    claim_type: finding
+    speculative: false
+    entity_id: fdrnet
+  - claim_text: The ftms instrument was added to the gnps_orbitrap instrument allowlist.
+    claim_type: finding
+    speculative: false
+  - claim_text: The Orbitrap dataset was expanded to 28,751 training compounds.
+    claim_type: finding
+    speculative: false
+  - claim_text: The Orbitrap dataset was expanded to 3,195 test compounds.
+    claim_type: finding
+    speculative: false
+  - claim_text: The refine_atom_type function is now extended with atoms present in
+      the predicted formula before calling formula_refinement.
+    claim_type: finding
+    speculative: false
+  - claim_text: The refinement search space at training time now matches inference.
+    claim_type: finding
+    speculative: false
+  - claim_text: Result export loading in train_tcn_gpus_cl.py was fixed to load from
+      resume_path instead of checkpoint_path.
+    claim_type: finding
+    speculative: false
+  - claim_text: Embeddings are L2-normalized before contrastive loss in train_tcn_gpus_cl.py.
+    claim_type: finding
+    speculative: false
+  - claim_text: Gradient clipping with max_norm=1.0 was added to train_tcn_gpus_cl.py.
+    claim_type: finding
+    speculative: false
+  - claim_text: Division by zero in H/C ratio target was fixed using y[:, 0].clamp(min=1)
+      in train_tcn_gpus_cl.py.
+    claim_type: finding
+    speculative: false
+  - claim_text: Checkpoints are saved only when formula_acc (with H) improves.
+    claim_type: finding
+    speculative: false
+  - claim_text: Multi-scale feature collection now uses isinstance(layer, TemporalBlock)
+      instead of i % 2 == 0.
+    claim_type: finding
+    speculative: false
+    entity_id: temporal_block
+  - claim_text: Version 1.1.0 was released on 2025-08-20.
+    claim_type: finding
+    speculative: false
+  - claim_text: Ablation study scripts were added for systematic evaluation of model
+      components.
+    claim_type: finding
+    speculative: false
+  - claim_text: A chimeric spectra experiment was added to evaluate robustness to
+      co-eluting compounds.
+    claim_type: finding
+    speculative: false
+  - claim_text: A noised spectra experiment was added to evaluate robustness to spectral
+      noise.
+    claim_type: finding
+    speculative: false
+  - claim_text: A demo training and evaluation script was added in version 1.1.0.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 1.0.0 was released on 2024-11-26.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 1.0.0 represented the initial FIDDLE release.
+    claim_type: finding
+    speculative: false
+    entity_id: FIDDLE_system
+  - claim_text: FIDDLE source code is available on GitHub.
+    claim_type: finding
+    speculative: false
+    entity_id: FIDDLE_system
+  - claim_text: The repository is licensed under Apache 2.0.
+    claim_type: finding
+    speculative: false
+  - claim_text: FIDDLE has a Zenodo record with DOI 10.5281/zenodo.19181279.
+    claim_type: finding
+    speculative: false
+    entity_id: FIDDLE_system
+  - claim_text: The prepare_augment_rescore.py script caps positives per formula using
+      the --pos_cap parameter.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_prepare_augment_rescore
+  - claim_text: The prepare_augment_rescore.py script generates cross-spectrum negatives
+      within a precursor m/z window specified by --tolerance in ppm.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_prepare_augment_rescore
+  - claim_text: The prepare_augment_rescore.py script downsamples to 1:1 positive:negative
+      ratio.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_prepare_augment_rescore
+  - claim_text: Formula refinement in prepare_augment_rescore.py is parallelised via
+      multiprocessing.Pool.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_prepare_augment_rescore
+  speculative: false
+  task_openness: mixed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Structured output file (CSV or JSON) with scored molecular formula candidates
+    for caffeine, ranked by prediction score
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Preprocessing verification report documenting precursor m/z zeroing across
+    all three scripts
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

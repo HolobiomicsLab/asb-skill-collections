@@ -1,0 +1,313 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/mist_cf_graphic.png",
+      "role": "figure",
+      "sha256": "25a3a1f8ede8b904a87e343f4d141c3b3e9d412e958fd454627b9923981e1882"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "26d4d1faf8d11b33e158b91bb16cd0aafa63b7c4bb2f629454982eed545fcd4b"
+    }
+  ],
+  "created_at": "2026-06-16T07:03:45.812462+00:00",
+  "crossref_doi": "10.1021/acs.jcim.3c01082",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MS/MS spectra with annotated MS1 precursor masses and ground-truth subformula labels for held-out test set",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Per-peak subformula predictions as a structured table (peak m/z, predicted subformula, rank, confidence score)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Evaluation metrics table including per-peak accuracy, exact-match rate per spectrum, and top-k ranking statistics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "The MIST-CF subformula assignment component operates without SIRIUS fragmentation trees, instead using a learned neural network that assigns subformulas to peaks based on precursor formula constraints and observed m/z differences.",
+    "Subformula predictions must satisfy mass-balance constraints: the sum of fragment subformula masses must account for observed peak m/z and ionization mode (positive mode with multiple adduct types including [M+H]+).",
+    "Ranking metrics for subformula assignment evaluate whether the ground-truth label appears in the top-k predictions and penalize incorrect or missing chemical formulas at each peak position.",
+    "The formula transformer architecture learns data-dependent patterns rather than relying on fixed fragmentation rules, allowing prediction across diverse molecule classes without database queries."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in repository samgoldman97/mist-cf containing subformula assignment implementation (e.g., Python module or configuration file naming or documenting internal subformula protocol)",
+      "verify that subformula assignment component does NOT invoke SIRIUS fragmentation tree computation (scan codebase for absence of SIRIUS API calls or tree construction in subformula assignment pathway)",
+      "verify that held-out test set exists in repository or linked deposit (Zenodo/GitHub) with annotated MS/MS spectra and reference per-peak subformula labels",
+      "file_format_is: output predictions file (CSV, JSON, or TSV) with at least columns: [peak_m_z, predicted_subformula, reference_subformula] or equivalent",
+      "row_count_equals or file_exists: number of predictions in output must match number of peaks in held-out test set (verify row count or file completeness)",
+      "script_runs: end-to-end inference script on held-out spectra completes without error and produces per-peak subformula predictions"
+    ],
+    "expert_review": [
+      "chemical validity: predicted subformulas for each MS/MS peak are chemically plausible (e.g., no impossible charge states, mass balance consistent with precursor formula and fragmentation logic)",
+      "assignment accuracy: per-peak subformula predictions match or closely align with reference annotations on held-out set (requires domain judgment of acceptable deviation or match criteria)",
+      "independence from SIRIUS: verification that subformula assignment uses learned embeddings or energy-based scoring (per SCARF/transformer approach) rather than pre-computed fragmentation trees"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MIST-CF assign chemical subformulas to MS/MS fragment peaks without relying on SIRIUS fragmentation trees?: 'Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MIST-CF implements an internal chemical subformula assignment protocol as an alternative to SIRIUS fragmentation trees, enabling the formula transformer neural network to assign subformulas to peaks in a data-dependent fashion without external fragmentation tree computation.: 'Instead of computing fragmentation trees, MIST-CF adopts a formula transformer neural network architecture and learns in a data dependent fashion'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MS/MS spectra with annotated MS1 precursor masses and ground-truth subformula labels for held-out test set: 'annotating MS1 precursor masses from MS/MS data in a _de novo_ setting'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Per-peak subformula predictions as a structured table (peak m/z, predicted subformula, rank, confidence score): 'Utilizing an internal chemical subformula assignment protocol'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Evaluation metrics table including per-peak accuracy, exact-match rate per spectrum, and top-k ranking statistics: 'MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MIST-CF: 'an extension of MIST for annotating MS1 precursor masses from MS/MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SCARF: 'Utilizing sinusoidal formula embeddings as developed in our previous work SCARF'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history found in section text.: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Repository source and synthesis timestamp provided, but no explicit documentation or link to subformula assignment component specification, algorithm description, or held-out evaluation dataset location.: 'Source: github:samgoldman97__mist-cf'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "mist_cf.subformula_assignment",
+      "--test_spectra",
+      "{inputs.test_spectra}",
+      "--output_predictions",
+      "predictions_{task_id}.tsv",
+      "--output_metrics",
+      "metrics_{task_id}.tsv"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "subformula_predictions.csv",
+  "expected_outputs": [
+    "Per-peak subformula predictions as a structured table (peak m/z, predicted subformula, rank, confidence score)",
+    "Evaluation metrics table including per-peak accuracy, exact-match rate per spectrum, and top-k ranking statistics"
+  ],
+  "finding": "MIST-CF implements an internal chemical subformula assignment protocol as an alternative to SIRIUS fragmentation trees, enabling the formula transformer neural network to assign subformulas to peaks in a data-dependent fashion without external fragmentation tree computation.",
+  "github_name": "samgoldman97/mist-cf",
+  "input_from": "task_001",
+  "inputs": [
+    "MS/MS spectra with annotated MS1 precursor masses and ground-truth subformula labels for held-out test set"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "parsed_test_spectra.json",
+    "subformula_predictions_ranked.csv",
+    "evaluation_metrics.json"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Load MS/MS test spectra with reference precursor masses and ground-truth subformula annotations.",
+    "Apply MIST-CF internal subformula assignment (formula transformer neural network) to rank candidate subformulas for each fragment peak without invoking SIRIUS or external databases.",
+    "Generate per-peak subformula predictions conditioned on precursor formula and observed m/z.",
+    "Compute per-peak accuracy, exact-match rate per spectrum, and top-k ranking statistics.",
+    "Validation: Accept predictions if per-peak accuracy and exact-match rates meet or exceed reported benchmark thresholds on the held-out set.",
+    "References: source article (DOI: 10.1021/acs.jcim.3c01082)"
+  ],
+  "missing_information": [
+    "No changelog or version history found in section text.",
+    "Repository source and synthesis timestamp provided, but no explicit documentation or link to subformula assignment component specification, algorithm description, or held-out evaluation dataset location."
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/top_k_accuracy_scores"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MIST-CF assign chemical subformulas to MS/MS fragment peaks without relying on SIRIUS fragmentation trees?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "subformula-assignment-neural-networks",
+    "fragment-peak-chemical-annotation",
+    "de-novo-mass-spectrum-interpretation",
+    "formula-transformer-architecture-application",
+    "ranking-metric-computation-for-spectral-predictions"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mistcf/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MIST_CF_SYSTEM",
+    "MIST_SYSTEM",
+    "SUBFORMULA_ASSIGNMENT",
+    "SIRIUS_TOOL",
+    "MSMS_DATA",
+    "MIST_CF_VS_SIRIUS_RESULT",
+    "MIST_CF_ADDUCT_RESULT"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "model-training",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:samgoldman97__mist-cf",
+  "task_description": "Implement the internal subformula assignment component of MIST-CF that assigns chemical subformulas to MS/MS fragment peaks without invoking SIRIUS fragmentation trees. Evaluate the per-peak subformula label predictions on a held-out test set of spectra and report accuracy metrics.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MS/MS spectra with MS1 precursor masses and ground-truth subformula labels",
+      "port_id": "test_spectra",
+      "resolved_via": null,
+      "source": "task_001/top_k_accuracy_scores",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement and validate the internal subformula assignment mechanism that assigns chemical formulas to individual MS/MS peaks without SIRIUS fragmentation trees.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-peak subformula predictions with ranks and confidence scores",
+      "port_id": "subformula_predictions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Accuracy, exact-match rate, and ranking statistics",
+      "port_id": "evaluation_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "tandem-ms",
+    "machine-learning",
+    "in-silico-fragmentation",
+    "deep-learning",
+    "metabolite-identification"
+  ],
+  "title": "Reconstruct the internal chemical subformula assignment protocol replacing SIRIUS fragmentation trees",
+  "tools": [
+    "MIST",
+    "MIST-CF",
+    "SCARF"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load MS/MS spectra and corresponding MS1 precursor masses from the held-out test dataset. 2. Apply the MIST-CF internal subformula assignment protocol (neural network-based formula transformer) to rank candidate subformulas for each observed fragment peak, conditioned on the precursor formula and observed m/z value. 3. For each spectrum, generate per-peak subformula predictions without computing SIRIUS fragmentation trees or querying external spectrum databases. 4. Compare predicted subformula assignments against reference labels and compute per-peak accuracy, exact-match rate per spectrum, and ranking metrics (e.g., fraction of correct subformulas in top-k predictions). 5. Report evaluation metrics and landmark errors on the held-out set."
+}

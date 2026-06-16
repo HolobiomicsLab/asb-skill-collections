@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that asari can be installed from github:shuzhao-li-lab/asari and runs without errors on Python 3.8+"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that mzML test files are available from github:shuzhao-li/data/tree/main/data or a public metabolomics repository (MetaboLights/MassIVE)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "performance_log.csv"
+    },
+    {
+      "id": "pf_004",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "wall-clock time increases monotonically or sub-linearly as sample count increase",
+      "value": {
+        "max": 50,
+        "min": 10
+      }
+    },
+    {
+      "id": "pf_005",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "peak memory usage remains below laptop physical RAM limit (typically 8\u201316 GB) at",
+      "value": {
+        "max": 16,
+        "min": 8
+      }
+    },
+    {
+      "id": "pf_006",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "reported scalability metric (samples processed per unit time, or memory per samp"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that asari can be installed from github:shuzhao-li-lab/asari and runs without errors on Python 3.8+",
+      "verify that mzML test files are available from github:shuzhao-li/data/tree/main/data or a public metabolomics repository (MetaboLights/MassIVE)",
+      "file_exists: performance_log.csv or equivalent structured output containing wall-clock execution time and peak memory usage",
+      "value_in_range: wall-clock time increases monotonically or sub-linearly as sample count increases from 10 to 50 to 100+ samples (no canonical answer for exact scaling exponent; parameter-sensitive to hardware and file sizes)",
+      "value_in_range: peak memory usage remains below laptop physical RAM limit (typically 8\u201316 GB) at 100+ sample threshold, robust to typical consumer hardware configurations",
+      "output_matches_reference: reported scalability metric (samples processed per unit time, or memory per sample) is consistent with claim '>1000 samples on a laptop' stated in article abstract or results section"
+    ],
+    "expert_review": [
+      "assess whether wall-clock time and memory measurements were collected under controlled, reproducible conditions (fixed hardware specs, single-threaded vs. multi-threaded configuration, consistent input file sizes)",
+      "evaluate whether the tested mzML files are representative of real metabolomics datasets in terms of complexity, spectral density, and retention-time resolution",
+      "determine whether measured scalability trajectory (time/memory vs. sample count) is extrapolatable to the claimed >1000-sample threshold or whether the tested range (10\u2013100) is insufficient to validate the claim",
+      "assess sensitivity of performance measurements to parameter choices (e.g., mass tolerance ppm, peak prominence thresholds, smoothing window size) that may affect per-sample processing cost"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

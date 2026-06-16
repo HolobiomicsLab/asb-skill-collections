@@ -1,0 +1,289 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "e6ac497c5477f95ab89c8571fc783246d770aca2e758a0b2432802188109f726"
+    }
+  ],
+  "created_at": "2026-06-15T14:01:04.089933+00:00",
+  "crossref_doi": "10.3390/metabo11030163",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Tagged tabular file (CSV or TSV format) with export tags in column headers",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Nested JSON object with table-record-field hierarchy matching tagged column structure",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Export tag syntax uses # prefix for table identifiers and #. prefix for field names, with the format #<table_name>.id and #.<field_name> for denoting nested record structure.",
+    "Tagged columns must be parsed in order to establish hierarchical relationships between tables, records, and fields in the output JSON.",
+    "The parser acts as an intermediary between raw tagged tabular data and the Conversion Directives Engine, which expects a specific nested JSON structure.",
+    "Record identifiers within a table must be unique to avoid collisions when constructing the JSON hierarchy."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: parser implementation in messes repository (github:MoseleyBioinformaticsLab/messes)",
+      "verify file_format_is: parser accepts tabular input with export tags matching pattern #<table_name>.id and #.<field_name>",
+      "verify script_runs: parser execution on tagged tabular test file without errors",
+      "verify output_matches_reference: generated JSON structure conforms to nested schema consumed by directive resolvers (byte-for-byte matching against reference conversion or schema validation)",
+      "verify field_present: output JSON contains expected nested fields corresponding to input table and field tags",
+      "verify format_is: output is valid JSON (parseable by standard JSON parser)"
+    ],
+    "expert_review": [
+      "assess correctness of tag interpretation logic: does parser correctly map export tags (#<table_name>.id, #.<field_name>) to nested JSON hierarchy",
+      "assess completeness of conversion: does generated JSON structure preserve all information from tagged input and match directives engine consumption expectations",
+      "assess handling of edge cases: nested tables, missing tags, malformed tags, duplicate field names"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does the parser convert a tagged tabular file (using export tags like #<table_name>.id and #.<field_name>) into the nested JSON structure required by the directive resolvers?: 'This structure can be mimicked using the export part of the tagging system mentioned in the :doc:`tagging` section of this documentation, and tagged tabular files are acceptable input for the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Tagged tabular files are converted to nested JSON by mapping each table column with #<table_name>.id tags to record names and each column with #.<field_name> tags to field names and values, producing a JSON structure where table names contain records with field key-value pairs.: 'The JSON structure above is shown below using export tags.\n\n+--------+---------------------+-------------------+-------------------+\n| #tags  | #<table_name_1>.id  | #.<field_name_1>  |'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Tagged tabular file (CSV or TSV format) with export tags in column headers: 'The extract command of MESSES supports turning tabular data into JSON. This is done by adding a layer of tags on top of the data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Nested JSON object with table-record-field hierarchy matching tagged column structure: 'The convert command is used to convert extracted and validated data from it's intermediate JSON form to the final desired format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history found in source material: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No concrete specification, code snippet, or reference implementation of the tag syntax (#<table_name>.id, #.<field_name>) or parser logic provided in accessible documentation: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No example input (tagged tabular file) or expected output (nested JSON structure) is provided to validate parser behavior: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Definition of 'nested JSON structure consumed by directive resolvers' is not explicitly specified in available material: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import csv, json, sys; data = {}; f = open('{inputs.tagged_tabular_file}'); dialect = csv.Sniffer().sniff(f.read(1024)); f.seek(0); reader = csv.DictReader(f, dialect=dialect); headers = reader.fieldnames; [data.setdefault(h.split('.')[0] if '.' in h else h.split('#')[1].split('.')[0], {}).setdefault(h.split('#')[1].split('.')[0] if '#' in h and '.' in h.split('#')[1] else 'default', []).append({h.split('#')[1].split('.')[1]: row[h] for h in headers if h}) for row in reader]; print(json.dumps(data, indent=2))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "parsed_nested_structure.json",
+  "expected_outputs": [
+    "Nested JSON object with table-record-field hierarchy matching tagged column structure"
+  ],
+  "finding": "Tagged tabular files are converted to nested JSON by mapping each table column with #<table_name>.id tags to record names and each column with #.<field_name> tags to field names and values, producing a JSON structure where table names contain records with field key-value pairs.",
+  "github_name": "MoseleyBioinformaticsLab/MESSES",
+  "input_from": "task_001",
+  "inputs": [
+    "Tagged tabular file (CSV or TSV format) with export tags in column headers"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "tag_mapping.csv",
+    "record_index.json"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_003",
+    "result_004",
+    "result_008",
+    "result_018",
+    "result_019",
+    "result_020",
+    "result_021",
+    "result_022",
+    "result_023",
+    "result_024",
+    "result_025",
+    "result_026",
+    "result_027",
+    "result_028",
+    "result_029",
+    "result_030"
+  ],
+  "methodology_summary": [
+    "Parse tagged tabular file headers to extract export tag directives",
+    "Build hierarchical JSON object by mapping table names, record identifiers, and field names to nested structure",
+    "Validate tag syntax compliance and uniqueness constraints",
+    "Output nested JSON structure for downstream Conversion Directives Engine consumption",
+    "Validation: parsed JSON structure contains all tagged columns in correct hierarchy with no duplicate record identifiers within each table",
+    "References: source article (DOI: 10.3390/metabo11030163)"
+  ],
+  "missing_information": [
+    "No changelog or version history found in source material",
+    "No concrete specification, code snippet, or reference implementation of the tag syntax (#<table_name>.id, #.<field_name>) or parser logic provided in accessible documentation",
+    "No example input (tagged tabular file) or expected output (nested JSON structure) is provided to validate parser behavior",
+    "Definition of 'nested JSON structure consumed by directive resolvers' is not explicitly specified in available material"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/resolved_json"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the parser convert a tagged tabular file (using export tags like #<table_name>.id and #.<field_name>) into the nested JSON structure required by the directive resolvers?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "tabular-data-tag-parsing",
+    "hierarchical-json-structure-construction",
+    "export-tag-syntax-validation",
+    "record-identifier-mapping-to-json",
+    "metadata-field-extraction-from-headers"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_messes/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "conversion_directives_engine",
+    "str_directive",
+    "matrix_directive",
+    "section_directive",
+    "intermediate_json_format",
+    "conversion_directives_artifact",
+    "override_field",
+    "code_field",
+    "collate_field",
+    "fields_to_headers_field",
+    "tagged_tabular_format"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:MoseleyBioinformaticsLab__MESSES",
+  "task_description": "Implement a parser that accepts tagged tabular input (using export tags like #<table_name>.id and #.<field_name>) and converts it to nested JSON structures compatible with the Conversion Directives Engine resolver.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Tagged tabular file with export tags in column headers",
+      "port_id": "tagged_tabular_file",
+      "resolved_via": null,
+      "source": "task_001/resolved_json",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Parse tagged tabular input using #<table_name>.id and #.<field_name> export tag columns and serialize to equivalent nested JSON structure consumable by conversion directive resolvers.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Nested JSON object ready for Conversion Directives Engine",
+      "port_id": "nested_json_structure",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control",
+    "database-annotation"
+  ],
+  "title": "Implement tagged-tabular-to-JSON conversion for Conversion Directives input parsing",
+  "tools": [
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Read tagged tabular file and parse row-by-row, identifying export tags (prefixed with # or #.) in column headers. 2. Scan the tag syntax to extract table name, field name, and record identifier from each tagged column. 3. Build a hierarchical JSON object structure by nesting field values under their corresponding table and record identifiers. 4. Validate that all tagged columns conform to the expected tag format and that no duplicate record identifiers exist within a table. 5. Output the nested JSON structure as a dictionary-like object ready for consumption by downstream directive resolvers."
+}

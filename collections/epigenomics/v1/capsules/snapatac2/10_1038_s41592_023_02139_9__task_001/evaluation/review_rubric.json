@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that tl.spectral function exists and is callable in the installed SnapATAC2 package from github:scverse__SnapATAC2"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that a dataset with \u226510 million cells can be loaded or constructed (either from public accession, SnapATAC2 built-in datasets, or synthetic data with documented cell count)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify wall-clock execution time is logged and reported as a single numeric value in seconds"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify peak memory usage is logged and reported as a single numeric value in GB or MB"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that reported time complexity is O(n) or linear (no canonical answer for exact constant factor; multiple defensible profiling approaches acceptable)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that reported space complexity is O(n) or linear (no canonical answer for exact constant factor; multiple defensible profiling approaches acceptable)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that tl.spectral function exists and is callable in the installed SnapATAC2 package from github:scverse__SnapATAC2",
+      "verify that a dataset with \u226510 million cells can be loaded or constructed (either from public accession, SnapATAC2 built-in datasets, or synthetic data with documented cell count)",
+      "verify wall-clock execution time is logged and reported as a single numeric value in seconds",
+      "verify peak memory usage is logged and reported as a single numeric value in GB or MB",
+      "verify that reported time complexity is O(n) or linear (no canonical answer for exact constant factor; multiple defensible profiling approaches acceptable)",
+      "verify that reported space complexity is O(n) or linear (no canonical answer for exact constant factor; multiple defensible profiling approaches acceptable)"
+    ],
+    "expert_review": [
+      "assess whether wall-clock time and peak memory measurements are consistent with claimed linear scaling (expert judgment required to evaluate whether empirical results support the theoretical complexity claim given hardware, implementation details, and parameter choices)",
+      "evaluate whether the benchmark dataset (\u226510M cells) is representative and sufficiently large to meaningfully demonstrate scalability; assess appropriateness of profiling methodology"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

@@ -1,0 +1,10 @@
+name: pyOpenMS-Viz
+slug: pyopenms-viz
+evidence_spans:
+- pyOpenMS-Viz is a Python library that provides a simple interface for extending the plotting capabilities of Pandas DataFrames
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+source_repos:
+- OpenMS/pyopenms_viz
+schema_version: 0.2.0

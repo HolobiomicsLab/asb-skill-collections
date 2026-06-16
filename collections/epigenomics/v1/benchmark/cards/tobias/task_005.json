@@ -1,0 +1,446 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/BATF_footprint_comparison_all.png",
+      "role": "figure",
+      "sha256": "2b11a5c2ad05f57c079cf59c0a68f934f96232595fc7211991ef611733bacc93"
+    },
+    {
+      "indexable": false,
+      "path": "figures/BATF_footprint_comparison_subsets.png",
+      "role": "figure",
+      "sha256": "33cd1a79f823b4502e4721eefaa4ddb336bb237d7d8d7d6a9f924ea86170a552"
+    },
+    {
+      "indexable": false,
+      "path": "figures/BATF_heatmap.png",
+      "role": "figure",
+      "sha256": "508b2b4f4a26240c105f8b71e64cc5f49517dbcbddf859e50606cc1664b3c91c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/IRF1_footprint.png",
+      "role": "figure",
+      "sha256": "17bce2aa433d74d0a4e7a65ae49ecc0b1ac3e621e9050caf7c43ba73e830467a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/atacorrect.png",
+      "role": "figure",
+      "sha256": "71124fbc53df1c00b8c2e2e515a6ebd0ae0269cb6901c51d4b9920ff182d34d4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bindetect.png",
+      "role": "figure",
+      "sha256": "889f8e209254335d7056f4658c51049ad3b316e7719af2ee8c12b42002659fb1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/chr4-119628321-119629356.png",
+      "role": "figure",
+      "sha256": "75a98921dbde87c5e6271e714064c63a0ab20a10cc3456c1433708e943b381ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/chr4-163701830-163702617.png",
+      "role": "figure",
+      "sha256": "eda854e390fe862a1acfc920c29bdea974f8811ca46131063d6ceb4e9a28c847"
+    },
+    {
+      "indexable": false,
+      "path": "figures/footprinting.png",
+      "role": "figure",
+      "sha256": "73dc2d9ee8d424a808508cd581a9c8a28c422f0efa75167bb74651fb57719ea5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/network.png",
+      "role": "figure",
+      "sha256": "07b6c7dc655f0dec058de81a6968c347478d79850487986a15695d829a9a2902"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tobias.png",
+      "role": "figure",
+      "sha256": "77d7601461e43ffc36c708663ae88f8c904726769adc2de815d78e5de1927ee0"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "efd138c7f9f0421cac53bbffe20153aecfee6bb55653fe27761d490f3a6e0c9f"
+    }
+  ],
+  "created_at": "2026-06-15T19:12:11.236771+00:00",
+  "crossref_doi": "10.1038/s41467-020-18035-1",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "Raw ATAC-seq BAM alignments (condition 1) from GEO/SRA accession",
+      "detection_method": "prose_regex",
+      "file_extension": ".bam",
+      "format_id": "BAM",
+      "format_iri": "http://edamontology.org/format_2572",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "Raw ATAC-seq BAM alignments (condition 2) from GEO/SRA accession",
+      "detection_method": "prose_regex",
+      "file_extension": ".bam",
+      "format_id": "BAM",
+      "format_iri": "http://edamontology.org/format_2572",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "Peak annotations (BED or narrowPeak format) for both conditions",
+      "detection_method": "prose_regex",
+      "file_extension": ".bed",
+      "format_id": "BED",
+      "format_iri": "http://edamontology.org/format_3003",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Known TFBS motif library (PWM or MEME format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Differential TF occupancy results table (.tsv) with TF names, footprint scores per condition, log2 fold-change, and p-values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary visualization (.pdf or .png) showing top differential TFs and footprint patterns across conditions",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "ATAC-seq detects chromatin accessibility via Tn5 transposase insertion, with transcription factor binding visible as localized depletion of insertions (footprints) around bound protein sites.",
+    "Tn5 insertion bias (sequence-dependent cleavage preference) must be corrected before footprint scoring to prevent confounding signal from intrinsic transposase preferences.",
+    "BINDetect performs differential analysis by comparing footprint enrichment scores at known TFBS motif locations between conditions, identifying TFs with altered occupancy.",
+    "Footprint depth and sharpness are key quality indicators; weak or diffuse footprints may indicate low TF occupancy or experimental noise, affecting statistical power.",
+    "TOBIAS requires pre-aligned BAM files and called peaks; peak quality and sequencing depth directly influence footprint detection sensitivity."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that inputs include a two-condition ATAC-seq dataset from GEO/SRA with accession number and sample metadata",
+      "verify file_exists for output differential TF occupancy results table (.tsv format)",
+      "verify file_exists for output summary plot (.pdf or .png format)",
+      "verify that .tsv output contains at least the following fields: TF name, condition 1 occupancy score, condition 2 occupancy score, differential occupancy metric, and statistical significance (p-value or adjusted p-value)",
+      "verify row_count_equals for .tsv output is greater than 0 (at least one TF detected)",
+      "verify that all numeric fields in .tsv (occupancy scores, p-values) are in valid ranges: occupancy scores between 0\u20131 or normalized scale, p-values between 0\u20131",
+      "verify script_runs: TOBIAS pipeline commands execute without error on the input dataset (bias correction, footprint scoring, BINDetect modules complete successfully)",
+      "verify that plot (.pdf/.png) displays at least one visualization comparing differential TF occupancy between the two conditions (e.g., scatter plot, bar chart, or heatmap), parameter-sensitive to visualization design choices and no canonical answer for plot layout"
+    ],
+    "expert_review": [
+      "assess whether the selection of the two-condition ATAC-seq dataset and experimental design are appropriate for testing differential TF occupancy",
+      "assess whether the TOBIAS pipeline parameters (bias correction thresholds, footprint scoring windows, BINDetect statistical model) are reasonable and justified for the chosen dataset",
+      "assess whether the differential TF occupancy results are biologically plausible and consistent with known TF biology and the experimental conditions",
+      "assess whether the summary plot effectively communicates the main findings and is suitable for publication or presentation"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Can the TOBIAS pipeline (bias correction, footprint scoring, and BINDetect) be applied to a two-condition ATAC-seq experiment to identify differential transcription factor occupancy between conditions?: 'TOBIAS is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ATAC-seq footprinting analysis can detect transcription factor binding through the visible depletion of Tn5 insertions around protein-bound sites, providing a basis for differential occupancy analysis across conditions.: 'the local distribution of Tn5 insertions contains information about transcription factor binding due to the visible depletion of insertions around sites bound by protein - known as _footprints_'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw ATAC-seq BAM alignments (condition 1) from GEO/SRA accession: 'publicly available two-condition ATAC-seq dataset from GEO/SRA'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw ATAC-seq BAM alignments (condition 2) from GEO/SRA accession: 'publicly available two-condition ATAC-seq dataset from GEO/SRA'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Peak annotations (BED or narrowPeak format) for both conditions: 'ATAC-seq footprinting analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Known TFBS motif library (PWM or MEME format): 'transcription factor binding'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Differential TF occupancy results table (.tsv) with TF names, footprint scores per condition, log2 fold-change, and p-values: 'differential TF occupancy results table'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Summary visualization (.pdf or .png) showing top differential TFs and footprint patterns across conditions: 'summary plot'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TOBIAS: '**TOBIAS** is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is documented for the TOBIAS repository: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "TOBIAS ATACorrect --bam {inputs.bam_condition1} --peaks {inputs.peaks_bed} --genome hg38 --outdir atac_c1_corrected && TOBIAS ATACorrect --bam {inputs.bam_condition2} --peaks {inputs.peaks_bed} --genome hg38 --outdir atac_c2_corrected && TOBIAS FootprintScores --signal atac_c1_corrected/bam_corrected.bw --regions {inputs.peaks_bed} --output atac_c1_footprints.bed && TOBIAS FootprintScores --signal atac_c2_corrected/bam_corrected.bw --regions {inputs.peaks_bed} --output atac_c2_footprints.bed && TOBIAS BINDetect --motifs {inputs.motif_pwm} --signals atac_c1_footprints.bed atac_c2_footprints.bed --peaks {inputs.peaks_bed} --outdir bindetect_results && python -c \"import pandas as pd; results = pd.read_csv('bindetect_results/bindetect_results.tsv', sep='\t'); results.to_csv('{task_id}_differential_tf_occupancy.tsv', sep='\t', index=False)\" && python -c \"import matplotlib.pyplot as plt; import pandas as pd; results = pd.read_csv('{task_id}_differential_tf_occupancy.tsv', sep='\t'); top_tfs = results.nsmallest(10, 'p-value'); plt.figure(figsize=(12, 6)); plt.barh(top_tfs['TF'], top_tfs['log2FC']); plt.xlabel('log2(Fold Change)'); plt.ylabel('Transcription Factor'); plt.title('Top 10 Differential TF Occupancy'); plt.tight_layout(); plt.savefig('{task_id}_differential_tf_summary.png', dpi=300); plt.close()\""
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "differential_tf_occupancy.tsv",
+  "expected_outputs": [
+    "Differential TF occupancy results table (.tsv) with TF names, footprint scores per condition, log2 fold-change, and p-values",
+    "Summary visualization (.pdf or .png) showing top differential TFs and footprint patterns across conditions"
+  ],
+  "finding": "ATAC-seq footprinting analysis can detect transcription factor binding through the visible depletion of Tn5 insertions around protein-bound sites, providing a basis for differential occupancy analysis across conditions.",
+  "github_name": "loosolab/TOBIAS",
+  "input_from": "task_003",
+  "inputs": [
+    "Raw ATAC-seq BAM alignments (condition 1) from GEO/SRA accession",
+    "Raw ATAC-seq BAM alignments (condition 2) from GEO/SRA accession",
+    "Peak annotations (BED or narrowPeak format) for both conditions",
+    "Known TFBS motif library (PWM or MEME format)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "bias_corrected_condition1.bam",
+    "bias_corrected_condition2.bam",
+    "footprint_scores_condition1.bw",
+    "footprint_scores_condition2.bw",
+    "bindetect_results.tsv",
+    "summary_visualization.pdf"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Retrieve two-condition ATAC-seq BAM alignments and peak annotations from public repository (GEO/SRA).",
+    "Correct Tn5 transposase insertion bias in both conditions using TOBIAS ATACorrect.",
+    "Compute footprint enrichment signals genome-wide for each condition using TOBIAS FootprintScores.",
+    "Perform differential TF occupancy analysis between conditions at known TFBS motif sites using TOBIAS BINDetect.",
+    "Validation: Differential TF occupancy table and summary plot successfully generated with statistically significant TFs identified (p < 0.05) and footprint patterns visually distinct between conditions.",
+    "References: source article (DOI: 10.1038/s41467-020-18035-1)"
+  ],
+  "missing_information": [
+    "No changelog or version history is documented for the TOBIAS repository"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_003/tf_occupancy_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can the TOBIAS pipeline (bias correction, footprint scoring, and BINDetect) be applied to a two-condition ATAC-seq experiment to identify differential transcription factor occupancy between conditions?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "atac-seq-tn5-bias-correction",
+    "transcription-factor-footprint-scoring",
+    "differential-tf-occupancy-analysis",
+    "motif-site-occupancy-comparison",
+    "chromatin-accessibility-footprint-visualization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_tobias/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "TOBIAS_system",
+    "ATAC_seq_assay",
+    "footprinting_analysis",
+    "tf_occupancy_prediction",
+    "pypi_tobias",
+    "bioconda_tobias",
+    "natcomm_publication"
+  ],
+  "subdomains": [
+    "gene-regulation",
+    "functional-genomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:loosolab__TOBIAS",
+  "task_description": "Apply the complete TOBIAS pipeline (bias correction, footprint scoring, and BINDetect differential analysis) to a publicly available two-condition ATAC-seq dataset from GEO/SRA to identify differential transcription factor occupancy. Produce a differential TF occupancy results table (.tsv) and summary visualization (.pdf or .png).",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw ATAC-seq BAM alignments (condition 1)",
+      "port_id": "bam_condition1",
+      "resolved_via": null,
+      "source": "task_003/tf_occupancy_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw ATAC-seq BAM alignments (condition 2)",
+      "port_id": "bam_condition2",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Peak annotations in BED or narrowPeak format",
+      "port_id": "peaks_bed",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Known TFBS motif library (PWM/MEME format)",
+      "port_id": "motif_pwm",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Execute the complete TOBIAS pipeline on a publicly available two-condition ATAC-seq dataset to generate differential transcription factor occupancy results as a .tsv table and summary visualization.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Differential TF occupancy results (.tsv)",
+      "port_id": "diff_tf_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Summary visualization of differential TFs (.pdf or .png)",
+      "port_id": "summary_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "enrichment-analysis",
+    "statistical-analysis"
+  ],
+  "title": "Extend TOBIAS footprinting to an ATAC-seq dataset deposited in GEO and report TF differential occupancy across two conditions",
+  "tools": [
+    "TOBIAS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Retrieve raw ATAC-seq BAM files and peak annotations for two experimental conditions from GEO/SRA. 2. Run TOBIAS ATACorrect to perform Tn5 insertion bias correction on BAM files. 3. Execute TOBIAS FootprintScores to compute footprint enrichment signals genome-wide for each condition. 4. Apply TOBIAS BINDetect to perform differential transcription factor occupancy analysis between the two conditions, comparing footprint patterns at known TFBS motif sites. 5. Generate differential TF occupancy results table (.tsv) containing TF names, footprint scores, and statistical significance metrics. 6. Create summary visualization (.pdf or .png) showing top differential TFs, occupancy changes between conditions, and representative footprint patterns."
+}

@@ -1,0 +1,343 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/filtering_sketch.png",
+      "role": "figure",
+      "sha256": "b72d2554247d028e33dee0d42a1eb040032573b862fc43ca167cde0febcfd0ec"
+    },
+    {
+      "indexable": false,
+      "path": "figures/filtering_sketch.svg",
+      "role": "figure",
+      "sha256": "58a4269a740d35d8d8ea58ed8bc1f4f61e19d1540b466256905d7614373565d9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/flowchart_matchms.png",
+      "role": "figure",
+      "sha256": "7bbd4fbc610fef2fc452fba4b81446c3540552e49ae4cd8b878cc5179c4e6a43"
+    },
+    {
+      "indexable": false,
+      "path": "figures/flowchart_matchms.svg",
+      "role": "figure",
+      "sha256": "2573b8128cfad67eb68aa9a92b2a4f0f555d02b009f75928561e94052811f42c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matchms.png",
+      "role": "figure",
+      "sha256": "0a36cd9a0755732e4cc4482bc2d2cf117c3ebd0712695548cf5d232b9fcfffab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matchms_header.png",
+      "role": "figure",
+      "sha256": "c8156aceb8efd57c24089ee39867f6b155b20348487c097e51d80d4b4214cce9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matchms_sketch.png",
+      "role": "figure",
+      "sha256": "8b72a0a8d08fccdcf088e5f3eb106ed6f096a563408e756b53b3797230ce99a6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/peak_filtering.png",
+      "role": "figure",
+      "sha256": "d207f89a349c8e9909c917662d71a83bea7af83a3ef6e97bea57b4b268687e61"
+    },
+    {
+      "indexable": false,
+      "path": "figures/peak_filtering.svg",
+      "role": "figure",
+      "sha256": "886f0cfe19693adce38524c31b5e2ffacaa8964edadd354eb610a3e28204b677"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectra-array-plot-example.png",
+      "role": "figure",
+      "sha256": "6ca909e02db0d0417f5b6c76b06701d17a8ea9a48aa2f9724fb7f56554879867"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectrum-mirror-plot-example.png",
+      "role": "figure",
+      "sha256": "f3fcecb5ce87d074a346d124b767399e26be425170767fede3207f66722759a7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectrum-plot-example.png",
+      "role": "figure",
+      "sha256": "3c07802d868fd79d3840e386c0824e7a56867e74252750ee454f07ac47b8b963"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "5f6a9773399810c354142a89252e4ee4b957308bcfe4e31124a99b8381bba747"
+    }
+  ],
+  "created_at": "2026-06-15T21:14:07.897424+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw spectral data file in MGF, MSP, or mzML format from matchms GitHub repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Filtered spectrum collection with peaks removed by matchms peak-filtering functions",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Peak filtering in mass spectrometry removes low-intensity noise and irrelevant peaks that do not contribute to spectral quality or downstream similarity comparisons.",
+    "Matchms supports multiple spectral data formats (mzML, mzXML, MSP, MGF, JSON) and can read and write across these formats with consistent peak filtering applied.",
+    "Basic peak filtering is a foundational pre-processing step that must precede downstream analyses such as spectral similarity comparisons or library matching.",
+    "Peak intensity thresholds and filtering criteria depend on the analytical context (e.g., instrument sensitivity, metabolite class, sample complexity) and should be tunable."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in matchms GitHub repository (input artifact path)",
+      "verify input file format is one of: MGF, MSP, mzML (file_format_is)",
+      "verify output is a spectrum collection object or file in a structured format (file_exists and format_is)",
+      "verify script runs without errors when executing peak-filtering workflow on input spectral data (script_runs)",
+      "verify output spectrum count is less than or equal to input spectrum count (value_in_range, robust to parameter choices)",
+      "verify filtered spectrum peaks have been reduced or modified compared to input spectra (output differs from input, parameter-sensitive to filter parameters)"
+    ],
+    "expert_review": [
+      "assess whether peak-filtering parameters applied are appropriate for the spectral data type and scientific use case",
+      "evaluate whether filtered spectra retain sufficient peak information for downstream similarity comparisons or analysis",
+      "verify that filtering does not introduce artifacts or remove biologically/chemically relevant peaks"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the input requirements and operational mechanics of matchms' peak filtering capability when applied to spectral data files?: 'Matchms offers an array of tools for metadata cleaning and validation, alongside basic peak filtering, to ensure data accuracy and integrity.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Matchms provides basic peak filtering tools as part of its data processing workflow to ensure data accuracy and integrity in spectral datasets.: 'Matchms offers an array of tools for metadata cleaning and validation, alongside basic peak filtering, to ensure data accuracy and integrity.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw spectral data file in MGF, MSP, or mzML format from matchms GitHub repository: 'The software supports a range of popular spectral data formats, including mzML, mzXML, msp, metabolomics-USI, MGF, and JSON'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Filtered spectrum collection with peaks removed by matchms peak-filtering functions: 'basic peak filtering, to ensure data accuracy and integrity'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] matchms: 'Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'Matchms is a versatile open-source Python package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No specific peak-filtering parameters or filter configuration examples are documented in the provided section text: '[0.28.1]: https://github.com/matchms/matchms/compare/0.28.0...0.28.1'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No concrete example spectral data files (MGF, MSP, or mzML samples) are identified or linked in the provided section text: '[0.28.1]: https://github.com/matchms/matchms/compare/0.28.0...0.28.1'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No documentation or code snippets demonstrating peak-filtering workflow execution are present in the provided section text: '[0.28.1]: https://github.com/matchms/matchms/compare/0.28.0...0.28.1'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "from matchms.importing import load_from_mgf, load_from_msp, load_from_mzml; from matchms.filtering import default_filters, normalize_intensities; import os; input_file = '{inputs.raw_spectral_data}'; ext = os.path.splitext(input_file)[1].lower(); spectra = load_from_mgf(input_file) if ext == '.mgf' else load_from_msp(input_file) if ext == '.msp' else load_from_mzml(input_file) if ext == '.mzml' else []; filtered_spectra = [default_filters(s) for s in spectra]; filtered_spectra = [normalize_intensities(s) for s in filtered_spectra if s is not None]; output_file = 'filtered_spectra.mgf'; from matchms.exporting import save_as_mgf; save_as_mgf(filtered_spectra, output_file); print(f'Filtered {len(filtered_spectra)} spectra to {output_file}')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "filtered_spectrum_collection.mgf",
+  "expected_outputs": [
+    "Filtered spectrum collection with peaks removed by matchms peak-filtering functions"
+  ],
+  "finding": "Matchms provides basic peak filtering tools as part of its data processing workflow to ensure data accuracy and integrity in spectral datasets.",
+  "github_name": "matchms/matchms",
+  "input_from": "task_001",
+  "inputs": [
+    "Raw spectral data file in MGF, MSP, or mzML format from matchms GitHub repository"
+  ],
+  "keywords": [
+    "mass spectrometry",
+    "ms/ms data",
+    "spectral similarity",
+    "cosine score",
+    "molecular fingerprint comparison",
+    "metadata cleaning",
+    "peak filtering",
+    "mzml format",
+    "mgf format",
+    "untargeted metabolomics",
+    "spectral processing",
+    "pairwise similarity measures"
+  ],
+  "landmark_outputs": [
+    "raw_spectrum_collection.mgf",
+    "filtered_spectrum_collection.mgf"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Load spectral data from a file in a supported format using matchms import functionality.",
+    "Apply matchms peak-filtering functions to remove low-intensity and irrelevant peaks for data accuracy and integrity.",
+    "Export the filtered spectrum collection to an output file in the original or compatible spectral format.",
+    "Validation: filtered spectrum collection is produced in valid spectral format (MGF, MSP, mzML, or JSON) with all peaks from the original input preserved or removed according to the specified filtering criteria."
+  ],
+  "missing_information": [
+    "No specific peak-filtering parameters or filter configuration examples are documented in the provided section text",
+    "No concrete example spectral data files (MGF, MSP, or mzML samples) are identified or linked in the provided section text",
+    "No documentation or code snippets demonstrating peak-filtering workflow execution are present in the provided section text"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the input requirements and operational mechanics of matchms' peak filtering capability when applied to spectral data files?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "spectral-peak-filtering",
+    "mass-spectrometry-data-import",
+    "spectral-data-quality-assessment",
+    "peak-intensity-threshold-optimization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_matchms/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "matchms_system",
+    "comp_peak_filtering",
+    "tool_mzml"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:matchms__matchms",
+  "task_description": "Apply matchms peak-filtering functions to a spectral data file (MGF, MSP, or mzML format) from the matchms repository, producing a filtered spectrum collection with low-intensity and irrelevant peaks removed.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw spectral data file (MGF/MSP/mzML)",
+      "port_id": "raw_spectral_data",
+      "resolved_via": null,
+      "source": "task_001/cleaned_spectra",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Apply matchms peak-filtering functions to an imported spectral data file and output the filtered spectrum collection.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Filtered spectrum collection",
+      "port_id": "filtered_spectrum_collection",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reconstruct the peak filtering pipeline step in matchms",
+  "tools": [
+    "matchms",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load spectral data from a file (MGF, MSP, or mzML format) using matchms import functions. 2. Apply matchms peak filtering functions to remove low-intensity peaks and irrelevant peaks to ensure data accuracy and integrity. 3. Export the filtered spectrum collection to the same or compatible spectral format (MGF, MSP, mzML, or JSON)."
+}

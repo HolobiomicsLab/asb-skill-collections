@@ -1,0 +1,281 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/cooltools-logo-futura.png",
+      "role": "figure",
+      "sha256": "726eacd3b3f3226502291e4a9ca7bfbec7a4cd263fe916798fdafb94baf17153"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "dd40b0ce0a98b1e9936f2244a8d5c26417a737bfa619cf5f660f140fad59e89c"
+    }
+  ],
+  "created_at": "2026-06-15T17:50:30.421402+00:00",
+  "crossref_doi": "10.1101/2022.10.31.514564",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Precomputed expected_cis table in TSV or CSV format with columns: dist_bp, contact_frequency, n_valid (from cooler file)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Log-binned and smoothed contact probability P(s) curve as TSV file with columns: dist_bp_bin, count_avg_smoothed, and bin_count",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "The contact frequency P(s) decays with genomic distance; log-binning is necessary to visualize this relationship across multiple orders of magnitude of distance.",
+    "The expected_cis function produces a genomic distance-contact frequency curve; logbin_expected provides an optional smoothing step to reduce noise at large distances where bin counts are sparse.",
+    "The API for logbin_expected and interpolate_expected is documented as unstable, indicating ongoing development; parameter names and output column formats may change in future releases.",
+    "Smoothing in log-space requires bin-aware aggregation; the output includes both per-bin smoothed values and optionally aggregated smoothed values depending on the aggregate_smoothed flag.",
+    "The n_valid column indicates the number of valid (non-NaN) contact pairs at each distance, which informs the reliability of frequency estimates before smoothing."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file_exists: input cooler file (deposited dataset or public accession with cis contact table) can be loaded",
+      "verify script_runs: logbin_expected function executes without error on a precomputed expected_cis table",
+      "verify file_format_is: output file is TSV (tab-separated values) with .tsv extension",
+      "verify field_present: output TSV contains at least two columns (e.g., separation distance and smoothed P(s) value)",
+      "verify row_count_equals: output TSV has at least one data row (no canonical answer on exact row count due to log-binning parameter sensitivity)",
+      "verify contains_substring: output TSV header or metadata indicates data is log-binned (robust to various column naming conventions)",
+      "verify output_matches_reference: if cooltools repository contains a worked example or integration test for logbin_expected, output structure and numeric precision match the reference output (byte-for-byte match not required; robust to floating-point representation)"
+    ],
+    "expert_review": [
+      "Verify that the smoothed P(s) curve values are mathematically plausible for cis contact decay (monotonic decrease or expected decay pattern consistent with Hi-C biology)",
+      "Assess whether log-binning spacing and smoothing parameters (if exposed in function signature) are appropriate for genomic distance scales",
+      "Evaluate whether the API documentation or function signature in the cooltools repository clarifies which parameters are unstable and may change in future releases"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the logbin_expected function in cooltools perform log-binning and smoothing on a precomputed expected contact frequency table to produce a log-binned contact probability P(s) curve?: 'New functionality for smoothing P(s) and derivatives (API is not yet stable)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Cooltools includes new functionality for smoothing P(s) and its derivatives, though the API for this smoothing mechanism is not yet stable.: 'New functionality for smoothing P(s) and derivatives (API is not yet stable)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Precomputed expected_cis table in TSV or CSV format with columns: dist_bp, contact_frequency, n_valid (from cooler file): 'output cvd table now also includes \"dist_bp\", \"contact_frequency\", and \"n_valid\" columns'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Log-binned and smoothed contact probability P(s) curve as TSV file with columns: dist_bp_bin, count_avg_smoothed, and bin_count: 'now returns \"count.avg.smoothed\" and \"count.avg.smoothed.agg\", when `clr_weight_name=None, smooth=True, aggregate_smoothed=True`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'enabling high-resolution Hi-C analysis in Python'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] cooler: 'The recently-introduced cooler format readily handles storage of high-resolution datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The exact function signature, parameter names, and default values for logbin_expected are not specified in the discussion text: 'New functionality for smoothing P(s) and derivatives (API is not yet stable): `logbin_expected`, `interpolate_expected`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No reference implementation, worked example, or integration test for logbin_expected is cited in the discussion text: 'New functionality for smoothing P(s) and derivatives (API is not yet stable)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Whether logbin_expected is intended to operate on cis-only or cis+trans contact probabilities is not stated: 'New functionality for smoothing P(s) and derivatives (API is not yet stable): `logbin_expected`, `interpolate_expected`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The release version in which logbin_expected became available is not specified; it is mentioned only in the unreleased development notes section: 'New functionality for smoothing P(s) and derivatives (API is not yet stable): `logbin_expected`, `interpolate_expected`'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import numpy as np; from scipy.ndimage import gaussian_filter1d; df = pd.read_csv('{inputs.expected_cis_table}'); df = df.sort_values('dist_bp').reset_index(drop=True); log_bins = np.logspace(np.log10(df['dist_bp'].min()), np.log10(df['dist_bp'].max()), 50); df['log_bin'] = pd.cut(df['dist_bp'], bins=log_bins, labels=False); smoothed = gaussian_filter1d(df['contact_frequency'].values, sigma=1.0); df['smoothed_freq'] = smoothed; result = df.groupby('log_bin').agg({'dist_bp': 'mean', 'smoothed_freq': 'mean', 'contact_frequency': 'count'}).reset_index(); result.columns = ['log_bin_idx', 'dist_bp_bin', 'count_avg_smoothed', 'bin_count']; result = result[['dist_bp_bin', 'count_avg_smoothed', 'bin_count']]; result.to_csv('P_s_smoothed.tsv', sep='\t', index=False); print('P(s) smoothing complete. Output: P_s_smoothed.tsv')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "logbin_ps_curve.tsv",
+  "expected_outputs": [
+    "Log-binned and smoothed contact probability P(s) curve as TSV file with columns: dist_bp_bin, count_avg_smoothed, and bin_count"
+  ],
+  "finding": "Cooltools includes new functionality for smoothing P(s) and its derivatives, though the API for this smoothing mechanism is not yet stable.",
+  "github_name": "open2c/cooltools",
+  "input_from": "task_002",
+  "inputs": [
+    "Precomputed expected_cis table in TSV or CSV format with columns: dist_bp, contact_frequency, n_valid (from cooler file)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "expected_cis_raw.tsv",
+    "logbin_ps_curve.tsv"
+  ],
+  "linked_result_ids": [
+    "result_038"
+  ],
+  "methodology_summary": [
+    "Load precomputed expected_cis table containing per-distance contact frequencies from cooler-derived Hi-C data.",
+    "Partition genomic distances into logarithmically-spaced bins to compress the wide dynamic range of the distance axis.",
+    "Apply smoothing kernel within each log bin to reduce noise while preserving large-scale trends in contact decay.",
+    "Aggregate smoothed values per bin and compute bin-level statistics (count, aggregated smoothed frequency).",
+    "Validation: confirm output TSV contains expected columns (dist_bp_bin, count_avg_smoothed), row count matches number of log bins, and all numeric values are finite and in expected ranges.",
+    "References: source article (DOI: 10.1101/2022.10.31.514564)"
+  ],
+  "missing_information": [
+    "The exact function signature, parameter names, and default values for logbin_expected are not specified in the discussion text",
+    "No reference implementation, worked example, or integration test for logbin_expected is cited in the discussion text",
+    "Whether logbin_expected is intended to operate on cis-only or cis+trans contact probabilities is not stated",
+    "The release version in which logbin_expected became available is not specified; it is mentioned only in the unreleased development notes section"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/coverage_track"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the logbin_expected function in cooltools perform log-binning and smoothing on a precomputed expected contact frequency table to produce a log-binned contact probability P(s) curve?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "contact-distance-binning-logarithmic",
+    "contact-frequency-smoothing-log-space",
+    "hi-c-expected-value-calculation",
+    "python-pandas-data-manipulation",
+    "tsv-file-io-and-formatting"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_cooltools/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "cooltools_system",
+    "cooler_format",
+    "component_expected_cis",
+    "component_expected_trans",
+    "component_rearrange_cooler",
+    "component_logbin_expected",
+    "component_lib"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:open2c__cooltools",
+  "task_description": "Implement the logbin_expected function to smooth a precomputed expected_cis contact frequency table and produce a log-binned P(s) curve saved as a TSV file, demonstrating cooltools' contact-distance smoothing functionality.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Precomputed expected_cis contact frequency table",
+      "port_id": "expected_cis_table",
+      "resolved_via": null,
+      "source": "task_002/coverage_track",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the logbin_expected function to transform a precomputed expected_cis table into a log-binned, smoothed P(s) contact probability curve and export results as TSV.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Log-binned and smoothed contact probability curve",
+      "port_id": "logbin_ps_curve",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reconstruct the P(s) smoothing pipeline using logbin_expected",
+  "tools": [
+    "Python",
+    "cooler"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load precomputed expected_cis table (TSV format with columns dist_bp, contact_frequency, n_valid) from a deposited cooler-derived dataset. 2. Apply logbin_expected function with logarithmic binning to group distance values into log-spaced bins. 3. Smooth contact frequency within each log bin using the smoothing algorithm provided by the logbin_expected implementation. 4. Generate output table containing binned distance (dist_bp), mean smoothed contact frequency (count.avg.smoothed), and bin statistics. 5. Save log-binned and smoothed P(s) table as TSV with proper column headers and numeric precision."
+}

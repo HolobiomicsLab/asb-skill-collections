@@ -1,0 +1,357 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Slide1.svg",
+      "role": "figure",
+      "sha256": "80c2b1f28251e97ceccbf3c6bf1dac9c87e2909daa015295ae08d5d27ebf189c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/architecture.png",
+      "role": "figure",
+      "sha256": "47a4ac54cacb7c8aa6dbd66d604a38b463eef8a945b02a057afe4804fe782cae"
+    },
+    {
+      "indexable": false,
+      "path": "figures/architecture.svg",
+      "role": "figure",
+      "sha256": "88440540f16ee2c841a769b3540b119c7b4485fa4abb1736a242c998bc045c8a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nlesc.png",
+      "role": "figure",
+      "sha256": "948238d0fb8706a610c9703eb5fd55a28de68703e05c079c16e6790d024f0f6b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide1.png",
+      "role": "figure",
+      "sha256": "dad7f28a55aacb51c3d96305d73543dbc53c10cbdff46b7b7238f462e353efe3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide2.png",
+      "role": "figure",
+      "sha256": "85b33f400db3e669746b64d8b8eda3c8f2eeb0dc1c58e4363089d8c9fddda6ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide3.png",
+      "role": "figure",
+      "sha256": "a8e884bba7e906abbdb011f0fad3f24ac2f3ef6bb8ca9c0f13cebaf4fd462667"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide4.png",
+      "role": "figure",
+      "sha256": "afc1aa5c3c5e250fa10ab86e5187200213dff0bc1dc84f3d8a337fe97c1c1b64"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide5.png",
+      "role": "figure",
+      "sha256": "62b48629a51c1950a9642d64030dfa87298673b8c2d569c75b3a790c6040c9da"
+    },
+    {
+      "indexable": false,
+      "path": "figures/wur.png",
+      "role": "figure",
+      "sha256": "e9da6f0b6e7ac61a4d02b4fb417d567f8d3eea50c1cffd6d954983459d4eebb8"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d4fdafd858db9ef873ed914a2a6aa220a5a256ddacd25827ddcf412c814c7ee0"
+    }
+  ],
+  "created_at": "2026-06-16T06:05:14.068972+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Published project JSON documents from Paired Omics Data Platform (https://pairedomicsdata.bioinformatics.nl/projects)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "JSON Schema definition file (app/public/schema.json)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation report (CSV or JSON) listing each project identifier, validation status (pass/fail), and any schema violations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "JSON Schema is a declarative language for validating the structure, data types, and required fields of JSON documents; validation tools check each document against schema rules to catch structural errors.",
+    "The Paired Omics Data Platform serves JSON documents representing multi-omics projects linking MS/MS spectra, genomes, and metadata; schema conformance ensures downstream tools can reliably parse project records.",
+    "A complete validation run must cover all currently published projects; missing or malformed documents in the set indicate either data ingestion errors or schema version drift.",
+    "Validation reports should distinguish between schema violations (structural non-conformance) and completeness issues (missing optional or required fields) to guide remediation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify that https://pairedomicsdata.bioinformatics.nl/api/projects (or equivalent endpoint) is accessible and returns HTTP 200",
+      "Verify that the retrieved response is valid JSON (parseable without syntax errors)",
+      "Verify that each project document in the response array contains the required top-level keys present in app/public/schema.json (file_format_is check: robust to schema version updates)",
+      "Verify that the JSON Schema definition exists at app/public/schema.json in the iomega/paired-data-form repository",
+      "For a sample of \u22655 randomly selected project documents, validate each against the published schema using a JSON Schema validator (e.g., ajv or jsonschema); output: pass/fail per document",
+      "Verify that all project documents conform to the schema with no validation errors (no canonical answer for sample size; expert review may recommend full census)"
+    ],
+    "expert_review": [
+      "Assess whether the sample size (if sampling is used) is adequate for detecting schema drift or widespread malformation",
+      "Verify that the schema definition itself is syntactically correct and complete (e.g., all referenced definitions are present)",
+      "Assess whether any observed validation failures indicate a genuine platform issue or expected variability in optional fields"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Do all project JSON documents currently deposited in the Paired Omics Data Platform conform to the published JSON Schema specification?: 'The [JSON schema (app/public/schema.json)](app/public/schema.json) describes the format of an project.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] A JSON schema (app/public/schema.json) has been published to formally describe the required format of paired omics data projects stored in the platform.: 'The [JSON schema (app/public/schema.json)](app/public/schema.json) describes the format of an project.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Published project JSON documents from Paired Omics Data Platform (https://pairedomicsdata.bioinformatics.nl/projects): 'Each project page on [https://pairedomicsdata.bioinformatics.nl](https://pairedomicsdata.bioinformatics.nl) has a download button, which gives you the JSON document of the project.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] JSON Schema definition file (app/public/schema.json): 'iomega/paired-data-form repository containing schema.json'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Validation report (CSV or JSON) listing each project identifier, validation status (pass/fail), and any schema violations: 'Schema conformance check requires documented validation results'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] npm: 'make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The exact endpoint URL or API route from which current project JSON documents can be retrieved from the Paired Omics Data Platform: 'Web service to store project on disk as JSON documents ([#46]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The location and access method for the published JSON Schema (app/public/schema.json) or confirmation that it is available in the public repository: 'Validate uploaded JSON documents ([#78]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Whether the platform serves all historical projects or only approved/published projects, and whether that distinction affects the scope of validation: 'Password protected review section to review pending projects ([#45]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "validation_report.csv",
+  "expected_outputs": [
+    "Validation report (CSV or JSON) listing each project identifier, validation status (pass/fail), and any schema violations"
+  ],
+  "finding": "A JSON schema (app/public/schema.json) has been published to formally describe the required format of paired omics data projects stored in the platform.",
+  "github_name": "iomega/paired-data-form",
+  "input_from": "task_001",
+  "inputs": [
+    "Published project JSON documents from Paired Omics Data Platform (https://pairedomicsdata.bioinformatics.nl/projects)",
+    "JSON Schema definition file (app/public/schema.json)"
+  ],
+  "keywords": [
+    "mass spectrometry",
+    "ms/ms spectra",
+    "genomic data",
+    "biosynthetic gene clusters",
+    "paired omics",
+    "metabolomics",
+    "data integration"
+  ],
+  "landmark_outputs": [
+    "project_ids.txt",
+    "validation_report.csv",
+    "failed_validations.json"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_006",
+    "result_014"
+  ],
+  "methodology_summary": [
+    "Retrieve the complete set of published project JSON documents from the Paired Omics Data Platform.",
+    "Load the canonical JSON Schema from app/public/schema.json in the iomega/paired-data-form repository.",
+    "Validate each project JSON document against the schema, recording conformance status and any violations.",
+    "Generate a structured validation report listing project identifiers and validation outcomes.",
+    "Validation: All retrieved project documents must conform to the published schema with zero schema validation errors."
+  ],
+  "missing_information": [
+    "The exact endpoint URL or API route from which current project JSON documents can be retrieved from the Paired Omics Data Platform",
+    "The location and access method for the published JSON Schema (app/public/schema.json) or confirmation that it is available in the public repository",
+    "Whether the platform serves all historical projects or only approved/published projects, and whether that distinction affects the scope of validation"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Do all project JSON documents currently deposited in the Paired Omics Data Platform conform to the published JSON Schema specification?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "json-schema-validation",
+    "api-data-retrieval",
+    "data-format-conformance-checking",
+    "batch-document-verification",
+    "structured-data-quality-assessment"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pairedomicsdatapla/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "sys-paired-omics-platform",
+    "comp-json-schema",
+    "dataset-paired-omics-projects",
+    "artifact-project-json"
+  ],
+  "subdomains": [
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:iomega__paired-data-form",
+  "task_description": "Retrieve all current project JSON documents from the Paired Omics Data Platform (https://pairedomicsdata.bioinformatics.nl/projects) and validate each document against the published JSON Schema (app/public/schema.json) to ensure structural conformance.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Published project JSON documents from Paired Omics Data Platform",
+      "port_id": "project_jsons",
+      "resolved_via": null,
+      "source": "task_001/validation_report",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "JSON Schema definition file (app/public/schema.json)",
+      "port_id": "json_schema",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Retrieve all deposited project JSON documents from the Paired Omics Data Platform and validate each against the published schema to identify non-conformant records.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Validation report with project identifiers, status, and violations",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reproduce the published project listing from the live Paired Omics Data platform",
+  "tools": [
+    "npm"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: npm, Validation report (CSV or JSON) listing each project identifier, validation status (pass/fail), and any schema violations."
+  ],
+  "workflow_description": "1. Query the Paired Omics Data Platform API or web interface to retrieve the complete set of project JSON documents currently published. 2. Load the canonical JSON Schema definition from app/public/schema.json in the iomega/paired-data-form repository. 3. Iterate over each retrieved project JSON document and validate its structure and field types against the schema using a JSON Schema validator. 4. Generate a validation report listing each project identifier, validation status (pass/fail), and any schema violations encountered. 5. Aggregate results to confirm all documents conform or flag non-conforming projects for remediation."
+}

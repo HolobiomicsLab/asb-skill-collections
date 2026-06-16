@@ -1,0 +1,405 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/ESCIENCE_logo_C_nl_small_cyanblack.png",
+      "role": "figure",
+      "sha256": "104646ff81ee4600d919e14864067bbe19a46009997a63e709145186db87d86f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nlesc.jpg",
+      "role": "figure",
+      "sha256": "ce1c0d7d06029965b49527cd659c444b9aa2c6f2cf0099fd922b6f30fd61c0e3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nmc.png",
+      "role": "figure",
+      "sha256": "fa530f7aadcec8c9b041bc4886afdddf73b99b8deac4ec92403edecc42158a1b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_0_aaaaaa_40x100.png",
+      "role": "figure",
+      "sha256": "9a8492a580bf85d3e98ae8861fbd45567e5a1f83eeafcf9574da0399d5f602ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_0_eeeeee_40x100.png",
+      "role": "figure",
+      "sha256": "a86f3a2b5b124bfca91a6ca96f44f9b1ce04e34ed3fc7f6313ab2ce2cc030c4b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_55_c0402a_40x100.png",
+      "role": "figure",
+      "sha256": "ec42d64ef88ef8efcc56f44f74cd162bb6bab14c8ed88ac3b361a6a622eecbfc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_55_eeeeee_40x100.png",
+      "role": "figure",
+      "sha256": "a86f3a2b5b124bfca91a6ca96f44f9b1ce04e34ed3fc7f6313ab2ce2cc030c4b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_100_f8f8f8_1x400.png",
+      "role": "figure",
+      "sha256": "6e26bee28fa44d1d46cba6101120a011b26c7b18d2b8ef98799e8d9acb3e7ee7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_35_dddddd_1x400.png",
+      "role": "figure",
+      "sha256": "c78e86894dc105b0acbfc824c8d84764a1e66d943aa940c4a5efb9f585432e11"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_60_eeeeee_1x400.png",
+      "role": "figure",
+      "sha256": "96de36a90580c09160c0ad471622b5eead5e0800113071d5450aba02879d3ecb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_inset-hard_75_999999_1x100.png",
+      "role": "figure",
+      "sha256": "a705209de7d974f8df5a468f93a95a2192399ff22f8920c42af67225505882eb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_inset-soft_50_c9c9c9_1x100.png",
+      "role": "figure",
+      "sha256": "9f7e3cd2c01fc23b2c4b085488d2e909739ccfda3f938665c820e8ba40eb0c5a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_3383bb_256x240.png",
+      "role": "figure",
+      "sha256": "ffd288472dc15e2f77f90a835ded1d117f336d39021889968b41a064bd120e8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_454545_256x240.png",
+      "role": "figure",
+      "sha256": "cb36e80beaf2a527d463da552a5c679a46c4ff8c881318a194bb0ccb61cb2d5c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_70b2e1_256x240.png",
+      "role": "figure",
+      "sha256": "68c0578580411218f323ef69e1d52b4de7292afdc1b942aebb20afa0127dbd82"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_999999_256x240.png",
+      "role": "figure",
+      "sha256": "5127e3620735237313c23cca2b80a17f716c87ef371eb85086e7dd8a256a20c8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_fbc856_256x240.png",
+      "role": "figure",
+      "sha256": "016b41155ac08b5c2d9f01d7ec127621417e103e620fe9127f09d3a2945ee4b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "728f5cdb8fddbed5c636832db5e7f3181f5bb5bda8141b9205c8e52574ccb952"
+    }
+  ],
+  "created_at": "2026-06-16T07:32:39.548179+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NLeSC/MAGMa GitHub repository (https://github.com/NLeSC/MAGMa) containing Dockerfiles, service configurations, and deployment documentation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MAGMa README with Docker-ready badge and subproject component list documenting magmaweb, joblauncher, job, and pubchem services",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "docker-compose.yml file defining four services (magmaweb, joblauncher, job, pubchem) with networks, volumes, environment variables, and service dependencies fully configured",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Service configuration documentation (README or inline comments in docker-compose.yml) describing port mappings, environment setup, and inter-service communication",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Docker Compose syntax requires explicit service definitions with image, ports, environment, volumes, and depends_on keys to orchestrate multi-container applications.",
+    "Inter-service communication in Docker Compose uses the service name as hostname; joblauncher must resolve the job service and magmaweb must resolve joblauncher via container networking.",
+    "PubChem data service requires persistent volume configuration to avoid re-downloading chemical structure database on every container restart.",
+    "Health checks (healthcheck directive) should be defined for services that have startup delays to prevent dependent services from attempting connections too early.",
+    "Environment variable inheritance and network isolation in docker-compose require explicit definition of external ports (host:container) and internal service networking (bridge or custom networks)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file docker-compose.yml exists in expected_outputs[0]",
+      "file_format_is docker-compose.yml text/yaml or application/x-yaml",
+      "contains_substring 'magmaweb' in docker-compose.yml",
+      "contains_substring 'joblauncher' in docker-compose.yml",
+      "contains_substring 'job' in docker-compose.yml (as a service name distinct from joblauncher)",
+      "contains_substring 'pubchem' in docker-compose.yml",
+      "contains_substring 'services:' in docker-compose.yml",
+      "script_runs docker-compose config -f docker-compose.yml without errors (validates YAML syntax and service definitions)"
+    ],
+    "expert_review": [
+      "expert_review: verify that docker-compose.yml service definitions correctly reflect component responsibilities (magmaweb=web interface, joblauncher=job queue manager, job=compute worker, pubchem=data source) as implied by NLeSC/MAGMa architecture",
+      "expert_review: assess whether inter-service networking (environment variables, ports, volumes) enables the expected data flow among four components; no canonical answer without MAGMa deployment documentation",
+      "expert_review: assess whether the composition extends or decomposes the single deployable artifact mentioned in scope in a chemically/informatically sensible way"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the distinct architectural components of the MAGMa system that need to be containerized and orchestrated as separate microservices?: 'Subprojects:\n\n- emetabolomics_site - The http://www.emetabolomics.org website\n- job - Runs MAGMa calculation\n- joblauncher - Webservice to execute jobs\n- pubchem - Processin'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The MAGMa project is organized into four distinct subprojects: emetabolomics_site (website), job (calculation engine), joblauncher (webservice), and pubchem (data processing), which can be deployed as separate containerized services.: 'Subprojects:\n\n- emetabolomics_site - The http://www.emetabolomics.org website\n- job - Runs MAGMa calculation\n- joblauncher - Webservice to execute jobs\n- pubchem - Processin'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NLeSC/MAGMa GitHub repository (https://github.com/NLeSC/MAGMa) containing Dockerfiles, service configurations, and deployment documentation: 'To contribute contact me via Github issue or pull request at https://github.com/NLeSC/MAGMa'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MAGMa README with Docker-ready badge and subproject component list documenting magmaweb, joblauncher, job, and pubchem services: 'https://travis-ci.org/NLeSC/MAGMa'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] docker-compose.yml file defining four services (magmaweb, joblauncher, job, pubchem) with networks, volumes, environment variables, and service dependencies fully configured: 'To contribute contact me via Github issue or pull request at https://github.com/NLeSC/MAGMa'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Service configuration documentation (README or inline comments in docker-compose.yml) describing port mappings, environment setup, and inter-service communication: 'The project develops chemo-informatics based methods for metabolite identification'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MAGMa: 'MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites''"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] README does not explicitly document the Docker-ready badge location, subproject list structure, or architectural relationships among magmaweb, joblauncher, job, and pubchem components: 'No changelog found.'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "docker-compose.yml",
+  "expected_outputs": [
+    "docker-compose.yml file defining four services (magmaweb, joblauncher, job, pubchem) with networks, volumes, environment variables, and service dependencies fully configured",
+    "Service configuration documentation (README or inline comments in docker-compose.yml) describing port mappings, environment setup, and inter-service communication"
+  ],
+  "finding": "The MAGMa project is organized into four distinct subprojects: emetabolomics_site (website), job (calculation engine), joblauncher (webservice), and pubchem (data processing), which can be deployed as separate containerized services.",
+  "github_name": "NLeSC/MAGMa",
+  "input_from": "task_001",
+  "inputs": [
+    "NLeSC/MAGMa GitHub repository (https://github.com/NLeSC/MAGMa) containing Dockerfiles, service configurations, and deployment documentation",
+    "MAGMa README with Docker-ready badge and subproject component list documenting magmaweb, joblauncher, job, and pubchem services"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "Dockerfile.* (individual service Dockerfiles if not already present)",
+    "docker-compose-dev.yml (development variant with volume mounts)",
+    ".env.example (environment variable template)",
+    "docker-compose.override.yml (local overrides)"
+  ],
+  "linked_result_ids": [
+    "result_006",
+    "result_007",
+    "result_008"
+  ],
+  "methodology_summary": [
+    "Scan NLeSC/MAGMa repository for existing Dockerfiles, build configuration, and service architecture documentation.",
+    "Identify the four service components (magmaweb, joblauncher, job, pubchem) and their runtime dependencies.",
+    "Extract port bindings, environment variables, and data volume requirements from existing build artifacts and documentation.",
+    "Author docker-compose.yml with service definitions, networks, volume bindings, and dependency ordering.",
+    "Validate docker-compose syntax and test multi-service startup workflow.",
+    "Validation: docker-compose config returns no errors, all four services can be started with docker-compose up, and inter-service networking is verified via service health checks."
+  ],
+  "missing_information": [
+    "No changelog found",
+    "README does not explicitly document the Docker-ready badge location, subproject list structure, or architectural relationships among magmaweb, joblauncher, job, and pubchem components"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the distinct architectural components of the MAGMa system that need to be containerized and orchestrated as separate microservices?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "docker-compose-service-orchestration",
+    "container-networking-configuration",
+    "multi-service-dependency-management",
+    "environment-variable-provisioning",
+    "volume-mount-and-persistence-design",
+    "service-health-check-definition"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_magma/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MAGMa_System",
+    "MAGMa_JobLauncher_Component",
+    "MAGMa_PubChem_Component",
+    "MAGMa_Web_Component",
+    "Tool_Docker"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:NLeSC__MAGMa",
+  "task_description": "Create a docker-compose.yml configuration file that orchestrates the MAGMa metabolomics platform as separately runnable Docker services (magmaweb, joblauncher, job, and pubchem components), enabling containerized deployment of the full annotation pipeline.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NLeSC/MAGMa GitHub repository with Dockerfiles and service configs",
+      "port_id": "magma_repo",
+      "resolved_via": null,
+      "source": "task_001/component_manifest",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Create a docker-compose.yml configuration that defines magmaweb, joblauncher, job, and pubchem as separate containerized services with proper networking and service dependencies.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "docker-compose.yml orchestration file",
+      "port_id": "docker_compose",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Service configuration documentation",
+      "port_id": "service_docs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "in-silico-fragmentation",
+    "metabolite-identification",
+    "database-annotation",
+    "spectral-library-matching"
+  ],
+  "title": "Extend MAGMa to produce a Docker Compose deployment manifest for all subproject components",
+  "tools": [
+    "MAGMa"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Parse the MAGMa GitHub repository structure and identify the four component services (magmaweb, joblauncher, job, pubchem) with their dependencies and environment requirements. 2. Extract or infer service configurations from existing Dockerfiles, build scripts, and documentation in the NLeSC/MAGMa repository. 3. Define service specifications in docker-compose.yml including image names, ports, environment variables, volume mounts, and inter-service networking. 4. Configure service interdependencies (e.g., joblauncher depends on job service, magmaweb depends on joblauncher) using depends_on and health checks. 5. Add PubChem data service with appropriate initialization and persistence configuration. 6. Validate docker-compose.yml syntax and test orchestration workflow by building and running the composed services."
+}

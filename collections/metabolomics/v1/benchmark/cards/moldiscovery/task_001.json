@@ -1,0 +1,246 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "a42cfbcce8c11e8c399550ed3dc2a53162d8a07614a968f2e3e2d49d7a4ab0c8"
+    }
+  ],
+  "created_at": "2026-06-16T06:03:24.185572+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "molDiscovery web service URL: https://metabologenomic.cbd.cs.cmu.edu/",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "HTTP connectivity check report documenting response status, headers, and timestamp",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "HTTP status codes 2xx indicate successful server response; 4xx and 5xx indicate client and server errors respectively.",
+    "Web service availability checks should record response latency and timestamp to establish baseline performance and detect intermittent failures.",
+    "Operational deployment requires not only network reachability but also valid HTTP response headers and content-type matching expected service interface."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify HTTP GET request to https://metabologenomic.cbd.cs.cmu.edu/ returns status code 200 or other 2xx success code",
+      "verify response contains valid HTML or JSON (file_format_is text/html or application/json)",
+      "verify response body is non-empty (contains_substring of service identifier or title)",
+      "verify DNS resolution succeeds for metabologenomic.cbd.cs.cmu.edu",
+      "verify TLS/SSL certificate is valid and not expired"
+    ],
+    "expert_review": [
+      "confirm that the returned page or API response is consistent with a deployed molDiscovery academic web service as described in the repository",
+      "assess whether the service interface matches the deployment documentation referenced in the GitHub repository README"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Is the molDiscovery academic web service deployed and accessible at the documented URL?: 'To test molDiscovery for academic users, please visit : https://metabologenomic.cbd.cs.cmu.edu/'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The molDiscovery tool is made available for academic users via a publicly hosted web service at https://metabologenomic.cbd.cs.cmu.edu/.: 'To test molDiscovery for academic users, please visit : https://metabologenomic.cbd.cs.cmu.edu/'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] molDiscovery web service URL: https://metabologenomic.cbd.cs.cmu.edu/: 'To test molDiscovery for academic users, please visit'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] HTTP connectivity check report documenting response status, headers, and timestamp: 'verify deployment described in the repository README is operational'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] molDiscovery: 'To test molDiscovery for academic users, please visit'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog provided; unable to verify when the web service was last updated or what version is currently deployed: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No documentation excerpt from the repository README is provided in the discussion section; cannot verify what deployment instructions or service descriptions are claimed in the source repository: 'Source: github:mohimanilab__molDiscovery'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "curl",
+      "-v",
+      "-w",
+      "\nHTTP Status: %{http_code}\nTime Total: %{time_total}s\n",
+      "{inputs.service_url}"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 30,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "deployment_check_report.txt",
+  "expected_outputs": [
+    "HTTP connectivity check report documenting response status, headers, and timestamp"
+  ],
+  "finding": "The molDiscovery tool is made available for academic users via a publicly hosted web service at https://metabologenomic.cbd.cs.cmu.edu/.",
+  "github_name": "mohimanilab/molDiscovery",
+  "input_from": null,
+  "inputs": [
+    "molDiscovery web service URL: https://metabologenomic.cbd.cs.cmu.edu/"
+  ],
+  "keywords": [],
+  "landmark_outputs": [],
+  "linked_result_ids": [
+    "result_001"
+  ],
+  "methodology_summary": [
+    "Send HTTP GET request to the molDiscovery service endpoint.",
+    "Capture HTTP response status code and metadata (headers, latency, timestamp).",
+    "Verify response status code is in the 2xx success range.",
+    "Validation: HTTP status code equals 200 or other valid success code (2xx), confirming the service is reachable and operational."
+  ],
+  "missing_information": [
+    "No changelog provided; unable to verify when the web service was last updated or what version is currently deployed",
+    "No documentation excerpt from the repository README is provided in the discussion section; cannot verify what deployment instructions or service descriptions are claimed in the source repository"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Is the molDiscovery academic web service deployed and accessible at the documented URL?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "http-connectivity-verification",
+    "web-service-deployment-validation",
+    "response-status-code-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_moldiscovery/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "molDiscovery_system"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "computational-metabolomics",
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:mohimanilab__molDiscovery",
+  "task_description": "Verify that the molDiscovery academic web service hosted at https://metabologenomic.cbd.cs.cmu.edu/ is reachable and returns a valid HTTP response, confirming operational deployment.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "molDiscovery web service URL",
+      "port_id": "service_url",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Verify HTTP connectivity and valid response status from the molDiscovery web service endpoint to confirm operational deployment.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "HTTP connectivity check report",
+      "port_id": "connectivity_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "deep-learning",
+    "machine-learning",
+    "molecular-networking",
+    "spectral-library-matching"
+  ],
+  "title": "Reconstruct the molDiscovery web service endpoint availability and response",
+  "tools": [
+    "molDiscovery"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: HTTP connectivity check report documenting response status, headers, and timestamp."
+  ],
+  "workflow_description": "1. Send HTTP GET request to https://metabologenomic.cbd.cs.cmu.edu/ using curl or standard HTTP client. 2. Capture HTTP response status code and response headers. 3. Verify HTTP status code is 200 or other success code (2xx range). 4. Log response metadata (timestamp, latency, content-type) and save to deployment-check report."
+}

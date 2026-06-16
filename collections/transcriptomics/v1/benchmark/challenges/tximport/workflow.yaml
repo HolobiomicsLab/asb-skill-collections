@@ -1,0 +1,430 @@
+schema_version: 0.1.0
+workflow_id: coll_tximport_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: tximport is an R package that imports and summarizes transcript-level abundance
+    estimates from multiple quantification tools (salmon, kallisto, RSEM, StringTie,
+    alevin, oarfish, and others) into gene-level matrices for downstream differential
+    expression analysis. The package provides mechanisms for gene-level analysis while
+    correcting for changes in average transcript length across samples through offset
+    matrices compatible with edgeR, DESeq2, and limma-voom.
+  pseudo_abstract: 'tximport imports transcript-level abundance, estimated counts,
+    and transcript lengths from quantification tools and summarizes them into matrices
+    suitable for statistical analysis packages such as edgeR, DESeq2, and limma-voom.
+    The vignette demonstrates tximport''s functionality across multiple quantification
+    methods, including salmon, kallisto, RSEM, StringTie, alevin, and oarfish. Key
+    workflows reproduced include: importing gene-level estimates from salmon quantification
+    files using a tx2gene mapping to produce abundance, count, and length matrices;
+    showing equivalence between obtaining gene-level counts via direct gene-level
+    summarization (txOut=FALSE) versus transcript-level import followed by summarizeToGene
+    function; and importing transcript-level estimates from oarfish long-read quantification.
+    The vignette also describes mechanisms provided by tximport for downstream analysis,
+    including how DESeq2::DESeqDataSetFromTximport automatically constructs an appropriate
+    offset matrix from transcript-length estimates to correct for differential isoform
+    usage, and how DGEListFromTximport with divide=TRUE estimates count overdispersion
+    from inferential replicates for transcript-level differential expression analysis.'
+  research_questions:
+  - Can tximport successfully import salmon transcript-level quantification files
+    and produce gene-level counts, abundance, and length matrices using a pre-constructed
+    tx2gene mapping?
+  - Do transcript-level estimates obtained via tximport with txOut=TRUE produce identical
+    gene-level count matrices after summarization with summarizeToGene as compared
+    to direct gene-level import using txOut=FALSE?
+  - When DESeq2::DESeqDataSetFromTximport is called with a tximport output object
+    (txi) and a sample table, does the resulting DESeqDataSet correctly embed the
+    transcript-length-derived offset matrix needed for gene-level differential expression
+    analysis using the 'original counts and offset' method?
+  - How does edgeR::DGEListFromTximport with divide=TRUE process tximport inferential
+    replicates to generate transcript-level divided counts for differential expression
+    analysis?
+  - Can tximport successfully import transcript-level quantification data from oarfish-quantified
+    long-read RNA-seq samples using the type='oarfish' parameter with txOut=TRUE to
+    produce transcript-level matrices?
+  methods_summary: "Load the tx2gene.gencode.v27.csv file containing transcript-to-gene\
+    \ ID mappings. Read six salmon quant.sf.gz files and parse quantification estimates\
+    \ using tximport with type='salmon'. Aggregate transcript-level estimates to gene-level\
+    \ by summing abundance and counts across all transcripts per gene, weighted by\
+    \ effective length. Extract and export three gene-level matrices: counts (read\
+    \ assignments), abundance (TPM), and length (effective transcript length per sample).\
+    \ Validation: confirm that output matrices have correct dimensions (genes \xD7\
+    \ samples), contain non-negative numeric values, and match expected gene IDs from\
+    \ tx2gene mapping. References: source article (DOI: 10.12688/f1000research.7563.1)\
+    \ Load salmon quantification files and tx2gene mapping, then import with tximport\
+    \ (type='salmon', txOut=TRUE) to obtain transcript-level matrices. Apply summarizeToGene\
+    \ to collapse transcript-level counts to gene level using the tx2gene mapping.\
+    \ Separately import the same salmon files with tximport (txOut=FALSE, default)\
+    \ to generate gene-level matrices directly. Compare gene-level count matrices\
+    \ from both routes using all-equal or matrix-equality check. Validation: Report\
+    \ success when both gene-level count matrices are bit-for-bit identical. References:\
+    \ source article (DOI: 10.12688/f1000research.7563.1) Load tximport list (txi)\
+    \ containing transcript abundance, counts, and length matrices from salmon quantification\
+    \ files. Prepare a sample metadata table (colData) with two-condition group assignments\
+    \ for each sample. Invoke DESeq2::DESeqDataSetFromTximport with the txi object\
+    \ and sample table to construct a DESeqDataSet; the function automatically computes\
+    \ and embeds an offset matrix from the length matrix to adjust for effective gene\
+    \ length variation across conditions. Validation: Confirm that the DESeqDataSet\
+    \ object contains a non-null, correctly dimensioned offset matrix (samples \xD7\
+    \ genes) stored in the assays slot, and that matrix values reflect the log-normalized\
+    \ length ratios used to correct count-based abundance estimates. References: source\
+    \ article (DOI: 10.12688/f1000research.7563.1) Load transcript-level abundance\
+    \ and inferential replicates from salmon_gibbs files using tximport with txOut=TRUE.\
+    \ Convert tximport output to edgeR DGEList with library size normalization using\
+    \ DGEListFromTximport(divide=TRUE). Validate DGEList object structure, count matrix\
+    \ presence, and library size factors. Extract and verify presence of common and\
+    \ tagwise dispersion estimates for count overdispersion modeling. Validation:\
+    \ DGEList object contains non-empty count matrix, positive library size factors,\
+    \ and both common and tagwise dispersion estimates suitable for transcript-level\
+    \ differential expression analysis. References: source article (DOI: 10.12688/f1000research.7563.1)\
+    \ Load three oarfish quant.gz files from tximportData package. Call tximport()\
+    \ with type='oarfish' to parse quantification format and txOut=TRUE to preserve\
+    \ transcript-level output. Extract abundance, count, and length matrices from\
+    \ returned list object. Validation: verify that all three output matrices have\
+    \ dimensions of 3 samples (columns) \xD7 n_transcripts (rows) and contain numeric\
+    \ values \u2265 0 for counts and lengths, and \u2265 0 for abundance. References:\
+    \ source article (DOI: 10.12688/f1000research.7563.1)"
+  domain: transcriptomics
+  techniques:
+  - normalization
+  - statistical-analysis
+  claims:
+  - claim_text: tximport imports transcript-level abundance, estimated counts, and
+      transcript lengths, and summarizes them into matrices for use with downstream
+      statistical analysis packages such as edgeR, DESeq2, and limma-voom.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: The tximport approach corrects for potential changes in gene length
+      across samples from differential isoform usage.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: Upstream quantification methods such as salmon, sailfish, and kallisto
+      are substantially faster and require less memory and disk usage compared to
+      alignment-based methods that require creation and storage of BAM files.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_salmon
+  - claim_text: It is possible to avoid discarding fragments that can align to multiple
+      genes with homologous sequence, thus increasing sensitivity.
+    claim_type: finding
+    speculative: false
+  - claim_text: tximeta extends tximport, offering the same functionality plus automatic
+      addition of annotation metadata for commonly used transcriptomes (GENCODE, Ensembl,
+      RefSeq for human and mouse).
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: tximport outputs a simple list of matrices, while tximeta outputs
+      a SummarizedExperiment object with appropriate GRanges added.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: tximport as of version 1.3.9 will import inferential replicates (Gibbs
+      samples or bootstrap samples) from Salmon, Sailfish, or kallisto.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: The tximport package has a single function for importing transcript-level
+      estimates.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: The tximport type argument is used to specify what software was used
+      for transcript abundance estimation.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: tximport returns a simple list with matrices for abundance, counts,
+      and length, where transcript level information is summarized to the gene-level.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: Abundance is typically provided by quantification tools as TPM (transcripts-per-million).
+    claim_type: finding
+    speculative: false
+  - claim_text: The length matrix can be used to generate an offset matrix for downstream
+      gene-level differential analysis of count matrices.
+    claim_type: finding
+    speculative: false
+  - claim_text: tximport is significantly faster to read in files using the readr
+      package.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: tximport detects if readr is installed and will use readr::read_tsv
+      function by default.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: From version 1.2 to 1.4 of tximport, the reader is not specified by
+      the user anymore but is chosen automatically based on the availability of the
+      readr package.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: tximport users can customize the import of files using the importer
+      argument.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: Counts can be generated from abundances using the countsFromAbundance
+      argument, scaled to library size as scaledTPM.
+    claim_type: finding
+    speculative: false
+    entity_id: cond_scaled_tpm
+  - claim_text: Counts can be additionally scaled using the average transcript length,
+      averaged over samples and to library size, as lengthScaledTPM.
+    claim_type: finding
+    speculative: false
+    entity_id: cond_length_scaled_tpm
+  - claim_text: When using scaledTPM or lengthScaledTPM approaches, the counts are
+      not correlated with length, and the length matrix should not be provided as
+      an offset.
+    claim_type: finding
+    speculative: false
+    entity_id: cond_length_scaled_tpm
+  - claim_text: As of tximport version 1.10, a new countsFromAbundance option dtuScaledTPM
+      has been added, designed for use with txOut=TRUE for differential transcript
+      usage analyses.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: Gene-level summarization can be avoided by setting txOut=TRUE, which
+      gives the original transcript level estimates as a list of matrices.
+    claim_type: finding
+    speculative: false
+    entity_id: cond_txout_true
+  - claim_text: Transcript-level matrices can be summarized afterwards using the summarizeToGene
+      function.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_summarize_to_gene
+  - claim_text: salmon or sailfish quant.sf files can be imported by setting type
+      to salmon or sailfish.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_salmon
+  - claim_text: If inferential replicates are present in expected locations relative
+      to the quant.sf file, tximport will import these as well.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: kallisto abundance.h5 files can be imported by setting type to kallisto.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_kallisto
+  - claim_text: Importing kallisto abundance.h5 files requires that the Bioconductor
+      package rhdf5 is installed.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_kallisto
+  - claim_text: kallisto abundance.tsv files can be imported with tximport, but this
+      is typically slower than using abundance.h5 files.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: The ignoreAfterBar=TRUE argument is used to split incoming quantification
+      matrix rownames at the first bar and only use the part before the bar as an
+      identifier.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_tx2gene
+  - claim_text: RSEM sample.genes.results files can be imported by setting type to
+      rsem with txIn and txOut set to FALSE.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_rsem
+  - claim_text: RSEM sample.isoforms.results files can be imported by setting type
+      to rsem with txIn and txOut set to TRUE.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_rsem
+  - claim_text: StringTie t_data.ctab files can be imported by setting type to stringtie.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_stringtie
+  - claim_text: tximport will compute counts from StringTie coverage information by
+      reversing the formula that StringTie uses to calculate coverage.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: The read length is used in the formula that tximport uses to compute
+      counts from StringTie coverage, and can be provided with the readLength argument.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: scRNA-seq data quantified with alevin can be imported using tximport.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: A single file should be specified for alevin import, which will import
+      a gene-by-cell matrix of data.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_alevin
+  - claim_text: Long read data quantified with oarfish can be imported using tximport.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: One suggested way of importing estimates for use with differential
+      gene expression methods is to use gene-level estimated counts from the quantification
+      tools and additionally use the transcript-level abundance estimates to calculate
+      a gene-level offset.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_deseq2
+  - claim_text: The gene-level offset corrects for changes to the average transcript
+      length across samples.
+    claim_type: finding
+    speculative: false
+  - claim_text: The functions edgeR::DGEListFromTximport and DESeq2::DESeqDataSetFromTximport
+      take care of creation of the offset.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_deseq2
+  - claim_text: A second method for importing estimates for differential gene expression
+      is to use tximport argument countsFromAbundance=lengthScaledTPM or scaledTPM
+      and then use the gene-level count matrix directly.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: One should not manually pass the original gene-level counts to downstream
+      methods without an offset.
+    claim_type: finding
+    speculative: false
+  - claim_text: The only case where passing original gene-level counts without an
+      offset would make sense is if there is no length bias to the counts, as may
+      happen in 3 prime tagged RNA-seq data.
+    claim_type: finding
+    speculative: false
+  - claim_text: The original gene-level counts are in txi$counts when tximport is
+      run with countsFromAbundance=no.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: Using only txi$counts is simply passing the summed estimated transcript
+      counts, and does not correct for potential differential isoform usage.
+    claim_type: finding
+    speculative: false
+  - claim_text: Passing uncorrected gene-level counts without an offset is not recommended
+      by the tximport package authors.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: For 3 prime tagged RNA-seq data, correcting the counts for gene length
+      will induce a bias in the analysis because the counts do not have length bias.
+    claim_type: finding
+    speculative: false
+  - claim_text: For 3 prime tagged RNA-seq, the original counts from txi$counts should
+      be used as a counts matrix without calculating an offset and without using countsFromAbundance.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_edger
+  - claim_text: The DGEListFromTximport function is available in edgeR as of version
+      4.10.0 (Bioconductor release 3.23, Spring 2026).
+    claim_type: finding
+    speculative: false
+    entity_id: tool_edger
+  - claim_text: If tximport output contains inferential replicates, DGEListFromTximport
+      will also estimate the count overdispersion that arises from probabilistic read
+      assignment to transcripts.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_tximport
+  - claim_text: The DGEListFromTximport function can compute divided counts suitable
+      for differential expression analysis at the transcript level when the divide
+      parameter is set to TRUE.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_dgelistfromtximport
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - Generate counts from abundances using countsFromAbundance argument with scaledTPM
+    or lengthScaledTPM options as alternative to using counts with offset
+  - Use txOut=TRUE to generate transcript-level matrices instead of gene-level summarization
+  - Use summarizeToGene function after tximport with txOut=TRUE to summarize transcript-level
+    estimates to gene-level
+  substitution_constraints:
+  - Do not manually pass original gene-level counts to downstream methods without
+    an offset, as this would not correct for potential differential isoform usage
+  - For 3' tagged RNA-seq data, do not correct counts for gene length as counts do
+    not have length bias
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Gene-level count matrix from two-step workflow (transcript import + summarizeToGene)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Gene-level count matrix from direct single-step import (txOut=FALSE)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Boolean confirmation that both matrices are identical
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: DESeqDataSet object with embedded offset matrix derived from transcript length
+    estimates
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: DGEList object with divided transcript-level counts, library size normalization
+    factors, and overdispersion estimates
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification report confirming DGEList structure integrity and presence of
+    count overdispersion estimates
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Transcript-level abundance matrix (3 samples \xD7 transcripts)"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Transcript-level count matrix (3 samples \xD7 transcripts)"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Transcript-level length matrix (3 samples \xD7 transcripts)"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

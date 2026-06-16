@@ -1,0 +1,171 @@
+# SciTask Card: Reconstruct the Map Chemical Classes and MS2LDA Motifs to Mass Spectral Molecular Network component
+
+- Task ID: `task_004`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T21:33:32.377666+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_molnetenhancer/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-processing`, `information-extraction`
+- GitHub: `madeleineernst/RMolNetEnhancer`
+- Input from: `task_003`
+- Quality: Score 2/5 — Coherent: false, placeholder, 5 grounding failures
+
+## Classification
+
+- Task kind: `component_reconstruction`
+- Article type: `software-tool`
+- Primary domain: `metabolomics`
+- Subdomains: `computational-metabolomics`, `natural-products`, `untargeted-metabolomics`
+- Techniques: `molecular-networking`, `network-annotation-propagation`, `database-annotation`, `chemical-class-annotation`
+
+## Research Question
+How does pyMolNetEnhancer jointly integrate both chemical class annotations and MS2LDA substructural motif information onto a GNPS mass spectral molecular network in a single combined operation?
+
+## Connected Finding
+pyMolNetEnhancer is a python module that integrates chemical class and substructure information within mass spectral molecular networks created through the GNPS platform, enabling combined mapping of both annotation types.
+
+## Task Description
+Integrate chemical class annotations and MS2LDA substructural motif information onto a GNPS mass spectral molecular network in a single operation. Produce a fully-enriched network artifact with both annotation types mapped to nodes.
+
+## Inputs
+- GNPS mass spectral molecular network file (GraphML or JSON format)
+- MS2LDA substructural motif assignments for network features
+- Chemical class annotation table or library matches from GNPS
+
+## Expected Outputs
+- Fully-enriched molecular network with chemical class and MS2LDA motif annotations integrated on all nodes
+
+## Expected Output File
+
+- `enriched_molecular_network.graphml`
+
+## Landmark Outputs
+
+- `gnps_network_with_chemical_classes.graphml`
+- `gnps_network_with_ms2lda_motifs.graphml`
+- `enriched_molecular_network.graphml`
+
+## Tools
+- pyMolNetEnhancer
+- GNPS
+- Python
+
+## Skills
+- molecular-network-annotation-integration
+- chemical-class-node-mapping
+- substructural-motif-annotation
+- graph-enrichment-operations
+- ms2lda-feature-annotation
+
+## Workflow Description
+1. Load the GNPS mass spectral molecular network and MS2LDA substructural motif data using pyMolNetEnhancer. 2. Map chemical class information to network nodes via GNPS public library matches. 3. Map MS2LDA substructural motifs to network nodes using the feature-based approach. 4. Merge both annotation layers onto the network graph in a single integrated operation. 5. Export the enriched network as an annotated graph file with all chemical class and motif attributes attached to each node.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/ChemicalClassScoreMapped.png` | figure | False |
+| `figures/ChemicalClassesMapped.png` | figure | False |
+| `figures/DereplicatorJobID.png` | figure | False |
+| `figures/DownloadCulsteredMGF.png` | figure | False |
+| `figures/Export_MS2LDA_Summary.jpg` | figure | False |
+| `figures/GNPSJobID.png` | figure | False |
+| `figures/ImportEdges.png` | figure | False |
+| `figures/ImportNodes.png` | figure | False |
+| `figures/MS2LDAJobID.png` | figure | False |
+| `figures/Mass2Motif_2_Network_Parameters.png` | figure | False |
+| `figures/MotifsMappedEdges.png` | figure | False |
+| `figures/MotifsMappedNodes.jpg` | figure | False |
+| `figures/NAPJobID.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No changelog documenting the development history, version releases, or API changes of pyMolNetEnhancer is available
+- No specification of the input file formats expected by the MapChemicalClassesMotifs pipeline step
+- No documentation of the output schema or structure of the enriched network artifact produced by the combined pipeline
+- No example usage code or tutorial demonstrating execution of the MapChemicalClassesMotifs combined pipeline step
+
+## Domain Knowledge
+- GNPS mass spectral molecular networks represent molecular similarity relationships where nodes are spectral features and edges denote cosine similarity-based connections.
+- MS2LDA substructural motifs are probabilistic patterns derived from fragmentation spectra that represent recurring structural fragments across molecular datasets.
+- Chemical class annotations come from spectral library matching within the GNPS public library and represent compound taxonomy assignments.
+- The feature-based approach for motif mapping assigns MS2LDA topics directly to individual network nodes based on spectral feature composition.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] How does pyMolNetEnhancer jointly integrate both chemical class annotations and MS2LDA substructural motif information onto a GNPS mass spectral molecular network in a single combined operation?: 'Map chemical class and MS2LDA substructural information to mass spectral molecular networks'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] pyMolNetEnhancer is a python module that integrates chemical class and substructure information within mass spectral molecular networks created through the GNPS platform, enabling combined mapping of both annotation types.: 'pyMolNetEnhancer is a python module integrating chemical class and substructure information within mass spectral molecular networks created through the Global Natural Products Social Molecular'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [intro] GNPS mass spectral molecular network file (GraphML or JSON format): 'mass spectral molecular networks created through the Global Natural Products Social Molecular Networking (GNPS)'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [intro] MS2LDA substructural motif assignments for network features: 'Map MS2LDA substructural information to mass spectral molecular networks'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [intro] Chemical class annotation table or library matches from GNPS: 'Map chemical class information to mass spectral molecular networks'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [intro] Fully-enriched molecular network with chemical class and MS2LDA motif annotations integrated on all nodes: 'Map chemical class and MS2LDA substructural information to mass spectral molecular networks'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [intro] pyMolNetEnhancer: 'pyMolNetEnhancer is a python module integrating chemical class and substructure information'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [intro] GNPS: 'mass spectral molecular networks created through the Global Natural Products Social Molecular Networking (GNPS)'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [intro] Python: 'pyMolNetEnhancer is a python module'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [discussion] No changelog documenting the development history, version releases, or API changes of pyMolNetEnhancer is available: '_No changelog found._'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [discussion] No specification of the input file formats expected by the MapChemicalClassesMotifs pipeline step: '_No changelog found._'
+- `ev_012` from `agent2_synthesis` (agent2_traced): [discussion] No documentation of the output schema or structure of the enriched network artifact produced by the combined pipeline: '_No changelog found._'
+- `ev_013` from `agent2_synthesis` (agent2_traced): [discussion] No example usage code or tutorial demonstrating execution of the MapChemicalClassesMotifs combined pipeline step: '_No changelog found._'
+
+## Evaluation Strategy
+### Direct Checks
+- verify that pyMolNetEnhancer package is accessible from github:madeleineernst__pyMolNetEnhancer
+- verify file_exists: a Python module or script implementing MapChemicalClassesMotifs or equivalent combined pipeline operation
+- script_runs: execute the combined pipeline step (MapChemicalClassesMotifs) on a GNPS molecular network file with both chemical class annotations and MS2LDA motif data as inputs without error
+- file_exists: output artifact from pipeline execution (enriched network file in format such as .graphml, .json, .csv, or .txt)
+- output_matches_reference: enriched network contains both chemical class and MS2LDA motif annotations simultaneously on nodes or edges; multiple defensible output formats and annotation schemes are valid
+
+### Expert Review
+- assess whether the combined pipeline correctly integrates chemical class information and MS2LDA substructural motifs without loss or conflict of annotation data
+- evaluate the design decision to combine both annotation types in a single operation versus sequential application of separate mappers
+- review whether the enriched network artifact preserves network topology and node identity from the input GNPS network
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load GNPS molecular network and organize node/edge structure for annotation
+2. Parse and align chemical class assignments from GNPS library to network nodes
+3. Parse and align MS2LDA substructural motifs to network features using feature-based mapping
+4. Merge both annotation layers into unified node attribute dictionaries
+5. Export annotated network with all chemical class and motif metadata preserved
+6. Validation: Verify all network nodes carry both chemical class and at least one MS2LDA motif attribute; confirm node count and edge count match original network
+
+## Workflow Ports
+
+**Inputs:**
+
+- `gnps_network` — GNPS mass spectral molecular network ← `task_003/annotated_network`
+- `ms2lda_motifs` — MS2LDA substructural motif assignments
+- `chemical_classes` — Chemical class annotations
+
+**Outputs:**
+
+- `enriched_network` — Fully-enriched molecular network with dual annotations
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:madeleineernst__pyMolNetEnhancer`
+- **Synthesized at:** 2026-06-15T21:38:19+00:00
+
+## Extraction Quality
+- Score: 2/5
+- Coherent: false
+- Placeholder detected: true
+- Groundedness failures (5):
+  - inputs[0]: evidence_span not found in section 'intro' (value='GNPS mass spectral molecular network file (GraphML or JSON f', span='mass spectral molecular networks created through the Global ')
+  - tools[1]: evidence_span not found in section 'intro' (value='GNPS', span='mass spectral molecular networks created through the Global ')
+  - finding: evidence_span is incomplete/truncated ('...Global Natural Products Social Molecular' cuts off mid-sentence without closing quote)
+  - research_question: evidence_span is a high-level descriptor ('Map chemical class and MS2LDA...') rather than a direct quote from source text; semantic match to finding is weak—question asks about 'how jointly integrate' but finding only states 'integrates' without explaining the mechanism
+  - expected_outputs[0]: evidence_span is too generic and repeats the research question phrasing rather than substantiating a concrete output specification
+- Notes: This task card has significant groundedness and coherence issues. The research question asks a mechanistic 'how' question ('how does...jointly integrate...in a single combined operation'), but the finding only states that the tool 'integrates' both types without explaining the joint mechanism or why it differs from sequential application. The evidence spans are incomplete (truncated in finding) or mismatched (inputs/tools evidence does not capture the specificity of the stated values). Generic placeholder language appears in expected_outputs, task_objective, and methodology descriptions ('fully-enriched', 'unified'). The workflow_description contradicts the 'single combined operation' framing by explicitly listing sequential steps. Critical grounding evidence is either missing (intro section appears incomplete) or improperly cited (missing_information section references '_No changelog found._' as evidence). Before proceeding, the card should be revised to: (1) clarify whether integration is algorithmic (simultaneous) or operational (sequential merge); (2) ground all claims against actual source text with complete, verified spans; (3) specify concrete output formats and validation criteria; (4) separate mechanistic research questions from existence/capability claims.
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

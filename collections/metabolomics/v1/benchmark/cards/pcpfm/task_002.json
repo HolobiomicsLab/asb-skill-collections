@@ -1,0 +1,303 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ee5480be63c91439469b81e562a3617ebc83f50e9c31e6e4ed1a9df64a89838f"
+    }
+  ],
+  "created_at": "2026-06-15T12:44:57.617706+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1011912",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature table in TSV or CSV format with features as rows and samples as columns, indexed by feature identifier",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sample metadata CSV file with at minimum sample names and a categorical field (e.g., 'sample_type') designating blank vs. unknown samples",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Blank-masked feature table in TSV format with low-intensity background features removed, indexed by feature identifier and sample",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Blank masking assumes that blank samples are reasonably aligned with study samples in terms of chromatographic and instrumental conditions; misalignment may require adjusting the intensity ratio threshold or performing separate masking for different blank types (e.g., process blanks vs. solvent blanks).",
+    "The intensity ratio is computed excluding zero values to avoid division errors and to focus on genuinely detected features; features completely absent in blanks or unknowns require special handling.",
+    "Default blank_intensity_ratio of 3 means unknown sample intensity must be \u22653-fold the blank intensity; different ionization modes, chromatographic modes, or sample preparation protocols may require empirical optimization of this threshold.",
+    "Blank masking should typically be one of the first processing steps after feature extraction, before normalization or batch correction, to ensure downstream steps work only with true biological/chemical signals.",
+    "Multiple blank types (e.g., process blanks, solvent blanks, extraction blanks) may require iterative masking steps with potentially different thresholds applied sequentially to achieve effective contamination removal."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the blank_masking command is documented in the repository (github:shuzhao-li-lab__PythonCentricPipelineForMetabolomics) with parameter blank_intensity_ratio",
+      "verify file_exists for a sample feature table artifact suitable as input to blank_masking",
+      "script_runs: execute blank_masking on the sample feature table with a specified blank_intensity_ratio value",
+      "verify output_matches_reference: the filtered feature table contains only features whose max intensity in unknown samples exceeds (blank_intensity_ratio \u00d7 max intensity in blank samples)",
+      "verify row_count_equals: count of features in output is less than or equal to count in input (no features added by filtering)",
+      "verify field_present in output feature table: intensity columns for both blank and unknown sample groups are preserved"
+    ],
+    "expert_review": [
+      "assess whether the blank_intensity_ratio threshold choice is defensible for the metabolomics study design and blank sample composition",
+      "verify that the filtering logic correctly interprets 'features whose intensity in unknown samples does not exceed the ratio threshold relative to blank samples' (i.e., removal criterion is intensity_unknown \u2264 blank_intensity_ratio \u00d7 intensity_blank)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does the blank_masking command filter features from a metabolomics feature table based on the intensity ratio between unknown samples and blank samples?: 'This is achieved by comapring the intensiy of a feature in a specified set of study samples to those in the blanks.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The blank_masking command removes features by comparing feature intensity in study samples (designated by sample_value) to intensity in blanks (designated by blank_value) using a configurable blank_intensity_ratio parameter; features whose intensity in unknown samples is not at least the specified ratio times more than blank samples are dropped.: 'Will drop all features whose intensity in the unknown samples is not at least 3 times more than the blank samples.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Feature table in TSV or CSV format with features as rows and samples as columns, indexed by feature identifier: 'raw feature tables are rarely used for analyses, normalization and blank masking are some of the common processing steps'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Sample metadata CSV file with at minimum sample names and a categorical field (e.g., 'sample_type') designating blank vs. unknown samples: 'Where query_field is the metadata field to search for the given blank_value and sample_value'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Blank-masked feature table in TSV format with low-intensity background features removed, indexed by feature identifier and sample: 'Will drop all features whose intensity in the unknown samples is not at least 3 times more than the blank samples'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'Python-Centric Pipeline for Metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog provided to document versions, bug fixes, or implementation details of the blank_masking step.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import sys; ft = pd.read_csv('{inputs.feature_table}', sep=None, engine='python', index_col=0); meta = pd.read_csv('{inputs.sample_metadata}', index_col=0); blank_samples = meta[meta.get(meta.columns[0]) == 'blank'].index.tolist() if 'blank' in meta.iloc[:, 0].values else []; unknown_samples = meta[meta.get(meta.columns[0]) == 'unknown'].index.tolist() if 'unknown' in meta.iloc[:, 0].values else []; blank_cols = [c for c in ft.columns if c in blank_samples]; unknown_cols = [c for c in ft.columns if c in unknown_samples]; ft_blank = ft[blank_cols].replace(0, pd.NA); ft_unknown = ft[unknown_cols].replace(0, pd.NA); median_blank = ft_blank.median(axis=1); median_unknown = ft_unknown.median(axis=1); ratio = median_unknown / median_blank.replace(0, 1e-10); filtered = ft[ratio >= 3.0]; filtered.to_csv('{task_id}_blank_masked_feature_table.tsv', sep='\t'); print(f'Filtered features: {len(ft)} -> {len(filtered)}'); print(f'Removed {len(ft) - len(filtered)} low-intensity background features')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "preferred_blank_masked.tsv",
+  "expected_outputs": [
+    "Blank-masked feature table in TSV format with low-intensity background features removed, indexed by feature identifier and sample"
+  ],
+  "finding": "The blank_masking command removes features by comparing feature intensity in study samples (designated by sample_value) to intensity in blanks (designated by blank_value) using a configurable blank_intensity_ratio parameter; features whose intensity in unknown samples is not at least the specified ratio times more than blank samples are dropped.",
+  "github_name": "shuzhao-li-lab/PythonCentricPipelineForMetabolomics",
+  "input_from": "task_001",
+  "inputs": [
+    "Feature table in TSV or CSV format with features as rows and samples as columns, indexed by feature identifier",
+    "Sample metadata CSV file with at minimum sample names and a categorical field (e.g., 'sample_type') designating blank vs. unknown samples"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "feature_intensity_comparison.csv",
+    "features_dropped_by_ratio.txt"
+  ],
+  "linked_result_ids": [
+    "result_030",
+    "result_031",
+    "result_032"
+  ],
+  "methodology_summary": [
+    "Load feature table and metadata; parse sample types from the specified query field.",
+    "Partition samples into blank and unknown groups based on the provided blank_value and sample_value.",
+    "Calculate per-feature median/mean intensity within each group, excluding zeros.",
+    "Compute intensity ratio (unknown/blank) for each feature.",
+    "Apply threshold filter: retain features where ratio \u2265 blank_intensity_ratio (default 3).",
+    "Validation: Verify that dropped features are those with ratio < threshold and no data loss occurs for passing features.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1011912)"
+  ],
+  "missing_information": [
+    "No changelog provided to document versions, bug fixes, or implementation details of the blank_masking step."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/processed_feature_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the blank_masking command filter features from a metabolomics feature table based on the intensity ratio between unknown samples and blank samples?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "blank-intensity-ratio-filtering",
+    "metabolomics-feature-table-curation",
+    "background-ion-contaminant-removal",
+    "sample-type-stratified-feature-masking",
+    "quality-control-threshold-application"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pcpfm/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS-PCPFM",
+    "ARCH-PIPELINE",
+    "ARCH-PREPROCESS",
+    "ARCH-ASSEMBLE",
+    "ARCH-CONVERT",
+    "ARCH-ASARI-STEP",
+    "ARCH-QAQC",
+    "ARCH-BLANK-MASKING",
+    "ARCH-DROP-SAMPLES",
+    "ARCH-NORMALIZE",
+    "ARCH-DROP-MISSING",
+    "ARCH-IMPUTE",
+    "ARCH-BATCH-CORRECT",
+    "ARCH-LOG-TRANSFORM",
+    "ARCH-BUILD-EMPCPDS",
+    "ARCH-L4-ANNOTATE",
+    "ARCH-L1B-ANNOTATE",
+    "ARCH-MAP-MS2",
+    "ARCH-L2-ANNOTATE",
+    "ARCH-L1A-ANNOTATE",
+    "ARCH-OUTPUT",
+    "ARTIFACT-FEATURE-TABLE"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "quality-control"
+  ],
+  "synthesized_from": "github:shuzhao-li-lab__PythonCentricPipelineForMetabolomics",
+  "task_description": "Apply blank-masking filter to a metabolomics feature table to remove features whose intensity in unknown samples does not exceed a configurable ratio threshold relative to blank samples. Output the filtered feature table with low-intensity background features removed.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature table (preferred or full)",
+      "port_id": "feature_table",
+      "resolved_via": null,
+      "source": "task_001/processed_feature_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample metadata with sample type designations",
+      "port_id": "sample_metadata",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute blank masking on a feature table by dropping features that do not meet the minimum intensity ratio threshold between unknown and blank samples.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Blank-masked feature table",
+      "port_id": "masked_feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "tandem-ms",
+    "feature-detection",
+    "database-annotation",
+    "spectral-library-matching",
+    "metabolite-identification"
+  ],
+  "title": "Implement the blank masking filter step in PCPFM and verify feature removal by intensity ratio",
+  "tools": [
+    "ThermoRawFileParser",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the input feature table and sample metadata using the specified table moniker and identify blank and unknown samples based on the query field (e.g., 'sample_type'). 2. For each feature, calculate the median or mean intensity across blank samples and across unknown samples, excluding zero values. 3. Compute the intensity ratio (unknown/blank) for each feature and compare against the blank_intensity_ratio threshold (default 3). 4. Retain only features where unknown sample intensity exceeds blank intensity by at least the threshold ratio. 5. Save the filtered feature table with a new moniker, preserving metadata and feature annotations."
+}

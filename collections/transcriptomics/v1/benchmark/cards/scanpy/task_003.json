@@ -1,0 +1,438 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/NKG7.png",
+      "role": "figure",
+      "sha256": "3c38f56ec244cc504361f211e81b1f4de8c670e474836d195c2e581ecfb90309"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Scanpy_Logo.svg",
+      "role": "figure",
+      "sha256": "2349d8a59d0401deb4430df82560707cdcab217e1fa8ef446f6a5c0cb416de2e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Scanpy_Logo_BrightFG.svg",
+      "role": "figure",
+      "sha256": "c3994dcf6e0c8f995dfe351f916561a0a2b89caa48b30a7c452705835e9b2144"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Scanpy_Logo_RGB.png",
+      "role": "figure",
+      "sha256": "c17218c638180f52314d85c62df6ed6cd7b091be7c05f041055c2e90dcb07a96"
+    },
+    {
+      "indexable": false,
+      "path": "figures/cell_types.png",
+      "role": "figure",
+      "sha256": "d350beabbc72cd8d39a95d1412cacf6750eb8e802290130db0426b23c0e5cb35"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ci_plot-view_attachment-tab.png",
+      "role": "figure",
+      "sha256": "551a9a8996b734b5cc22a8425eaae83a7d567c9a7e6cac757fa895fd5fc39b66"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ci_plot-view_select-test.png",
+      "role": "figure",
+      "sha256": "fd782b649e892a58bc4b5d5b16a67c6e4ceddf3f53aa6c964a3dbf3583c16620"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ci_plot-view_tests-tab.png",
+      "role": "figure",
+      "sha256": "4c1488d98a464e0e03a2f633aefa0169900abaf42dfc4cc9cc7b896ead045951"
+    },
+    {
+      "indexable": false,
+      "path": "figures/expected.png",
+      "role": "figure",
+      "sha256": "7a67ce308c535dd337809bbec8c768555b94eb5bd7f8777aa0f8d1d496e0e07e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/filter_genes_dispersion.png",
+      "role": "figure",
+      "sha256": "6aeb34364f4c6594b5c678e720159575cad9f9603270bc94a4d91c1b11a4a962"
+    },
+    {
+      "indexable": false,
+      "path": "figures/louvain.png",
+      "role": "figure",
+      "sha256": "ca5ef8f823de4bc217d9832671659ade83eeb6ac15c4cd5881b11d7eac7b06da"
+    },
+    {
+      "indexable": false,
+      "path": "figures/paga_paul15.png",
+      "role": "figure",
+      "sha256": "9630046bdabaeba97d17e92d1346b5e6a93865db3e5bbd7e1607232866d9d4ed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/paga_planaria.png",
+      "role": "figure",
+      "sha256": "208132d5565f539494829d3a74207d49a187efabc05ad579519538e2eebb18f0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spatial-basic-analysis.png",
+      "role": "figure",
+      "sha256": "8de1b35c8113e356b05bed7d792c46ce3515a687811c808ebf2cad0a4ca3007f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/stacked_violin_dotplot_matrixplot.png",
+      "role": "figure",
+      "sha256": "5bba6edd7bd021e448e4bd2fce023b9afd2f4bea562bf7c38f0afc53d309da0e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/timeseries.png",
+      "role": "figure",
+      "sha256": "db14dd09f93392465c1bb1c442b4f2e5af0d7d1a5840883036b105f68ff89d90"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tissue_hires_image.png",
+      "role": "figure",
+      "sha256": "2647a9d1ac01e4269b669cc183dd0b4d0ea5c69c2de97b6c02d19d53002cc01e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tissue_lowres_image.png",
+      "role": "figure",
+      "sha256": "7069e504911a86c16aac826194fd28a3a0883d05e7ccb84b72781635c676891d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tsne_1.3M.png",
+      "role": "figure",
+      "sha256": "751ff8c16a6a8b5e9112e644c0d81e981121892c8ca6949e0705f8115f873c7c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/violin.png",
+      "role": "figure",
+      "sha256": "868b6cca151bc877c52196c3f5dc22e392ba31f0b4a0151ec94c9491c555cf43"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "e2d78e430d4382dadf31787202ca16c153b4e43c17a71f43ae229b6e04a8c642"
+    }
+  ],
+  "created_at": "2026-06-15T17:50:38.861186+00:00",
+  "crossref_doi": "10.1186/s13059-017-1382-0",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Scanpy pbmc3k_processed pre-computed dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "DataFrame of ranked marker genes per leiden cluster with gene names, log fold-change, and adjusted p-values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation report confirming top marker gene names and score ranges match documentation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Wilcoxon rank-sum test is a non-parametric test for differential gene expression that does not assume normality, making it suitable for count data.",
+    "Leiden clustering produces community assignments stored in adata.obs; tl.rank_genes_groups requires a groupby column (here 'leiden') to stratify differential expression tests.",
+    "The rank_genes_groups results are stored in adata.uns and include log fold-change (logfoldchanges), p-values (pvals), and adjusted p-values (pvals_adj); accessor functions like sc.get.rank_genes_groups_df reshape these into a user-friendly DataFrame.",
+    "Top marker genes are those with highest absolute log fold-change and lowest adjusted p-values; thresholds vary by application but typically p_adj < 0.05 and |logFC| > 0.25.",
+    "The pbmc3k_processed dataset is a reference peripheral blood mononuclear cell dataset with known cell-type annotation; documented top markers for each cluster are available in Scanpy tutorials and documentation examples."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: pbmc3k_processed dataset accessible from Scanpy data module or deposited repository",
+      "script_runs: Python script loading pbmc3k_processed dataset via scanpy.datasets or equivalent and executing tl.rank_genes_groups with Wilcoxon test on leiden cluster labels",
+      "output_matches_reference: returned DataFrame column names include 'names', 'scores', or equivalent ranked gene identifiers and statistical values",
+      "file_format_is: output is a pandas DataFrame or AnnData object with ranked genes structure",
+      "value_in_range: top gene scores (p-values, log fold changes, or test statistics) fall within documented ranges for Wilcoxon test output, robust to minor numerical precision differences",
+      "contains_substring: output DataFrame or figure legend contains at least 3 of the top marker gene names documented in Scanpy examples for pbmc3k leiden clusters"
+    ],
+    "expert_review": [
+      "verify that top-ranked genes identified are biologically plausible marker genes for the reported leiden clusters (e.g., known markers for immune cell types in PBMC data)",
+      "confirm that Wilcoxon test ranks and effect sizes align with expected differential expression patterns between clusters as reported in Scanpy documentation examples"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does Scanpy's rank_genes_groups function with Wilcoxon test produce marker gene rankings that match expected documentation examples when applied to leiden-clustered pbmc3k data?: 'It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Scanpy is a scalable toolkit for analyzing single-cell gene expression data that includes differential expression testing capabilities.: 'Scanpy is a scalable toolkit for analyzing single-cell gene expression data built jointly with anndata. It includes preprocessing, visualization, clustering, trajectory inference and differential'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Scanpy pbmc3k_processed pre-computed dataset: 'datasets.pbmc3k_processed'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] DataFrame of ranked marker genes per leiden cluster with gene names, log fold-change, and adjusted p-values: 'get.rank_genes_groups_df'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Validation report confirming top marker gene names and score ranges match documentation: 'rank_genes_groups'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Scanpy: 'Scanpy is a scalable toolkit for analyzing single-cell gene expression data built jointly with anndata'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] anndata: 'built jointly with anndata'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'Single-Cell Analysis in Python'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Expected top-gene names and score ranges are not specified in the provided discussion section: 'No substantive content provided in discussion section; only metadata and reference information'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import scanpy as sc; import pandas as pd; adata = sc.datasets.pbmc3k_processed(); sc.tl.rank_genes_groups(adata, 'leiden', method='wilcoxon'); df = sc.get.rank_genes_groups_df(adata); print(df.head(20)); print('\\nValidation:'); print('Ranked genes shape:', df.shape); print('Columns:', df.columns.tolist()); print('Score ranges - logfoldchanges:', df['logfoldchanges'].min(), 'to', df['logfoldchanges'].max()); print('P-value ranges:', df['pvals_adj'].min(), 'to', df['pvals_adj'].max()); assert 'names' in df.columns and 'logfoldchanges' in df.columns and 'pvals_adj' in df.columns, 'Missing expected columns'; print('\\n\u2713 All validations passed')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ranked_marker_genes.csv",
+  "expected_outputs": [
+    "DataFrame of ranked marker genes per leiden cluster with gene names, log fold-change, and adjusted p-values",
+    "Validation report confirming top marker gene names and score ranges match documentation"
+  ],
+  "finding": "Scanpy is a scalable toolkit for analyzing single-cell gene expression data that includes differential expression testing capabilities.",
+  "github_name": "scverse/scanpy",
+  "input_from": "task_001",
+  "inputs": [
+    "Scanpy pbmc3k_processed pre-computed dataset"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "adata_with_wilcoxon_results.h5ad",
+    "marker_genes_per_cluster_top5.csv",
+    "validation_report.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_010",
+    "result_014",
+    "result_019"
+  ],
+  "methodology_summary": [
+    "Load pre-processed pbmc3k dataset with pre-computed leiden clusters",
+    "Apply Wilcoxon rank-sum test via tl.rank_genes_groups to identify differentially expressed genes per cluster",
+    "Extract ranked results using sc.get.rank_genes_groups_df or access adata.uns",
+    "Filter and sort by log fold-change and adjusted p-value to identify top marker genes",
+    "Compare against known reference marker gene names and score ranges from Scanpy documentation",
+    "Validation: Top marker gene names and p-value/fold-change ranges match documented examples",
+    "References: source article (DOI: 10.1186/s13059-017-1382-0)"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "Expected top-gene names and score ranges are not specified in the provided discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/processed_adata"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does Scanpy's rank_genes_groups function with Wilcoxon test produce marker gene rankings that match expected documentation examples when applied to leiden-clustered pbmc3k data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "differential-gene-expression-analysis",
+    "marker-gene-identification-by-clustering",
+    "statistical-ranking-wilcoxon-test",
+    "anndata-object-manipulation",
+    "single-cell-rna-seq-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_scanpy/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "scanpy_system",
+    "pp_module",
+    "tl_module",
+    "pl_module",
+    "experimental_module",
+    "metrics_module",
+    "queries_module",
+    "get_module",
+    "dataset_pbmc3k",
+    "dataset_ebi_expression_atlas",
+    "algo_leiden",
+    "algo_rank_genes_groups"
+  ],
+  "subdomains": [
+    "rna-seq",
+    "differential-expression"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:scverse__scanpy",
+  "task_description": "Load the pre-processed pbmc3k_processed dataset from Scanpy, identify marker genes per leiden cluster using the Wilcoxon rank-sum test via tl.rank_genes_groups, and validate that the ranked output DataFrame contains expected top marker gene names and score ranges.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-processed PBMC 3K dataset with leiden clusters",
+      "port_id": "pbmc3k_processed",
+      "resolved_via": null,
+      "source": "task_001/processed_adata",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Load pbmc3k_processed, run tl.rank_genes_groups with Wilcoxon test on leiden clusters, and validate output marker gene names and score ranges against documentation.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "DataFrame of ranked marker genes per leiden cluster",
+      "port_id": "ranked_genes_df",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Validation report of marker gene names and scores",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dimensionality-reduction",
+    "clustering",
+    "batch-correction",
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce differential expression results from tl.rank_genes_groups on the pbmc3k_processed dataset",
+  "tools": [
+    "Scanpy",
+    "anndata",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: DataFrame of ranked marker genes per leiden cluster with gene names, log fold-change, and adjusted p-values, Validation report confirming top marker gene names and score ranges match documentation."
+  ],
+  "workflow_description": "1. Import Scanpy and load the pbmc3k_processed dataset using sc.datasets.pbmc3k_processed(). 2. Verify that leiden cluster assignments are present in adata.obs. 3. Run sc.tl.rank_genes_groups(adata, groupby='leiden', method='wilcoxon') to compute differential gene expression ranks across leiden clusters. 4. Extract the result DataFrame using sc.get.rank_genes_groups_df(adata) or access adata.uns['rank_genes_groups']. 5. Validate that the top-ranked genes per cluster match the documented marker gene names and that log-fold-change and p-value scores fall within expected ranges. 6. Create a summary table of the top 5 marker genes per cluster with their scores."
+}

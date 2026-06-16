@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in v1.0.0 release at github.com/stanstrup/QC4Metabolomics tagged v1.0.0"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "file_format_is for workflow definition file (YAML, JSON, or XML)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "contains_substring in workflow file of 'workflow' or equivalent root declaration key"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "workflow schema structure conforms to declared metabolomics QC domain (presence "
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in v1.0.0 release at github.com/stanstrup/QC4Metabolomics tagged v1.0.0",
+      "file_format_is for workflow definition file (YAML, JSON, or XML)",
+      "contains_substring in workflow file of 'workflow' or equivalent root declaration key",
+      "output_matches_reference: workflow schema structure conforms to declared metabolomics QC domain (presence of quality control or metabolomics configuration elements \u2014 multiple defensible approaches to validation)"
+    ],
+    "expert_review": [
+      "whether workflow definition semantically represents 'one complete workflow' as intended for metabolomics QC systems",
+      "whether workflow structure is internally consistent and non-circular",
+      "whether workflow parameters and task definitions are scientifically coherent for metabolomics quality control"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

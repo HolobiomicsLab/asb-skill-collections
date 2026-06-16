@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: methylKit R package available from github:al2na__methylKit"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "returned object is of class methylDiff (verify class attribute)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output object serializable and loadable as R methylDiff object, robust to R vers"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: methylKit R package available from github:al2na__methylKit",
+      "script_runs: R script instantiates methylBase object using dataSim() with parameters (replicates=6, sites=1000)",
+      "script_runs: calculateDiffMeth() executes on simulated methylBase with overdispersion='MN' and test='Chisq'",
+      "output_matches_reference: returned object is of class methylDiff (verify class attribute)",
+      "file_format_is: output object serializable and loadable as R methylDiff object, robust to R version within supported range"
+    ],
+    "expert_review": [
+      "expert_review: Compare q-value distributions (histogram, median, mean) from overdispersion='MN' run versus uncorrected baseline run (overdispersion='none' or default); verify that 'MN'-corrected run produces higher q-values on average (more stringent), consistent with vignette claim that overdispersion correction increases test stringency",
+      "expert_review: Assess whether observed q-value shift magnitude and direction align with known behavior of M\u00f6bius-Nobrega overdispersion correction in differential methylation testing"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

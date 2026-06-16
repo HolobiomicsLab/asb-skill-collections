@@ -1,0 +1,141 @@
+schema_version: 0.1.0
+workflow_id: coll_metid_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: Met-ID automates metabolite identification in mass spectrometry imaging
+    by handling derivatizing matrices that produce non-standard ions. The software
+    is designed with extensibility to support any derivatizing matrix beyond the in-house
+    FMP-10 reagent.
+  pseudo_abstract: Met-ID addresses the challenge of automating metabolite identification
+    in mass spectrometry imaging, a task traditionally performed manually by experts.
+    The software is designed to handle derivatizing matrices such as FMP-10 that produce
+    ions other than the common [M+H]+ in positive mode and [M-H]- in negative mode.
+    A key design feature is the extensibility of Met-ID to support any derivatizing
+    matrix, not limited to FMP-10. The repository maintains an automated CI pipeline
+    tracked via GitHub Actions, as indicated by the workflow badge linked to main.yml.
+  research_questions:
+  - How does Met-ID compute expected adduct ions for metabolites when using derivatizing
+    matrices like FMP-10, beyond the standard [M+H]+ and [M-H]- ions?
+  - Does the Met-ID GitHub repository's CI workflow (main.yml) execute successfully
+    and pass all automated checks as indicated by the badge?
+  - Is Met-ID extensible to register and apply derivatizing matrices beyond FMP-10
+    to produce correct adduct annotations?
+  methods_summary: "Load and validate metabolite SMILES string; parse matrix identifier\
+    \ to retrieve or initialize adduct ionization ruleset. Construct molecular graph\
+    \ using RDKit; calculate exact molecular weight of the unmodified metabolite.\
+    \ For each matrix-specific adduct rule, compute the expected m/z by adding matrix\
+    \ mass and applying charge state (proton gain/loss). Compile predicted adduct\
+    \ table with ion formula, mass shift, m/z, and charge state. Validation: Compare\
+    \ predicted adduct m/z values against reference FMP-10 dataset; accept predictions\
+    \ with mass error \u22645 ppm (or as specified in Nature Methods reference). Clone\
+    \ the Met-ID repository from GitHub to a local or remote environment. Extract\
+    \ and parse the main.yml workflow definition to identify test commands, dependencies,\
+    \ and environment configuration. Install required dependencies (including RDKit\
+    \ and any Python packages listed in requirements files). Execute the test suite\
+    \ and CI commands as defined in the workflow, capturing all output and exit codes.\
+    \ Compare the observed pass/fail status with the badge-reported status to confirm\
+    \ reproducibility. Validation: Workflow execution completes with exit code 0 (success)\
+    \ and matches the badge-reported passing state, or documents the specific failure\
+    \ point if reproducibility is not achieved. Review Met-ID's extensibility architecture\
+    \ and existing derivatizing matrix configuration interface Define and implement\
+    \ configuration for a second derivatizing matrix using specifications or documentation\
+    \ Register the new matrix in Met-ID's configuration loader or plugin system Execute\
+    \ Met-ID on test metabolites using the newly registered matrix Validate predicted\
+    \ adducts against expected ground truth or literature values Validation: adduct\
+    \ annotations produced by Met-ID with the new matrix match expected ions for \u2265\
+    90% of test metabolites"
+  domain: metabolomics
+  techniques:
+  - metabolite-identification
+  - database-annotation
+  - in-silico-fragmentation
+  claims:
+  - claim_text: Metabolite identification in Mass Spectrometry Imaging is currently
+      done manually by experts.
+    claim_type: finding
+    speculative: false
+    entity_id: msi-tool
+  - claim_text: Manual metabolite identification is not feasible in high throughput
+      studies.
+    claim_type: finding
+    speculative: false
+  - claim_text: Met-ID has been developed to automate metabolite identification in
+      Mass Spectrometry Imaging.
+    claim_type: finding
+    speculative: false
+    entity_id: met-id-system
+  - claim_text: Met-ID focuses on derivatizing matrices leading to ions other than
+      the common [M+H]+ in positive mode and [M-H]- in negative mode.
+    claim_type: finding
+    speculative: false
+    entity_id: met-id-system
+  - claim_text: FMP-10 was developed in house.
+    claim_type: finding
+    speculative: false
+    entity_id: fmp10-component
+  - claim_text: FMP-10 features heavily in the Met-ID software.
+    claim_type: finding
+    speculative: false
+    entity_id: met-id-system
+  - claim_text: Met-ID is extendable to use any derivatizing matrix.
+    claim_type: finding
+    speculative: false
+    entity_id: met-id-system
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints:
+  - Met-ID is extendable to use any derivatizing matrix, with FMP-10 featured heavily
+    as a starting point example
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: CI workflow execution log (stdout/stderr) with pass/fail status and test results
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification report (text or JSON) documenting workflow completion status
+    and badge reproducibility
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Configuration file or plugin code for the second derivatizing matrix (e.g.
+    tahs_config.json or tahs_plugin.py)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Adduct annotation table or report (CSV or JSON) produced by Met-ID using the
+    newly registered matrix on test metabolites
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification report or summary table comparing predicted adducts to expected
+    ground truth
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

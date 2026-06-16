@@ -1,0 +1,366 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/button_blue.png",
+      "role": "figure",
+      "sha256": "3e3e7a6968364e956db4a9768b245f4ab1afcc2242fd45ce18ee9ad9857dd411"
+    },
+    {
+      "indexable": false,
+      "path": "figures/button_blue.svg",
+      "role": "figure",
+      "sha256": "bc1866919df11822bbc4d14a150df3d4421da64913a4355e6ab09dcf8456ed43"
+    },
+    {
+      "indexable": false,
+      "path": "figures/button_green.png",
+      "role": "figure",
+      "sha256": "77ebf0a2a88733fe3518a232215c573c3bce6e9964525d631b90ffb54c892e8a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/button_green.svg",
+      "role": "figure",
+      "sha256": "0ba9df374bd341f262b5c6eeecbe5868bb3231afe55fc2be2b522c696216e4b0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/button_orange.png",
+      "role": "figure",
+      "sha256": "bedc7c633aee6e7d4223538a2d0a74368f743fb7e429624d5b3481ef2b9627c4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/button_orange.svg",
+      "role": "figure",
+      "sha256": "35ccd1c41c9d8e37e7c40394c205bc71ce2e294534e2e699a4799cae8de9aaa4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_contactstat_IMR90rep1.png",
+      "role": "figure",
+      "sha256": "6e1f1f8aa673842c18fd499e958753af685333153a8b6f53b8590740805cf216"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_filteringstat_IMR90rep1.png",
+      "role": "figure",
+      "sha256": "7a4e2d1c31fa0996900b72c256e73c84252ec86f425d47b8994a722868769b34"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_fragsize_IMR90rep1.png",
+      "role": "figure",
+      "sha256": "19bc99cb9534f3f34cb8c1152052c4b368fc24d8b97d042117eb3f3425ec4679"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_mappingstat_IMR90rep1.png",
+      "role": "figure",
+      "sha256": "d90cd1981ff5826545977c51afef42fb747d76f7eea4b4af2e65fccc4a91c73c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_pairingstat_IMR90rep1.png",
+      "role": "figure",
+      "sha256": "2deb60f03a9ba425db5f1b256b970bbfa83951a9b75941527435e8148f02c689"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_wkflow.png",
+      "role": "figure",
+      "sha256": "20e4e90faf15f9946ae347f13f1e75cd722b49b8eb644b3c087dbaa77f9e2c4a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_1.png",
+      "role": "figure",
+      "sha256": "11974a7f967d133dae161dcae326a3ab986de20d124aeb9932348af0c4c195cd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_1.svg",
+      "role": "figure",
+      "sha256": "958637004afb6312b754486fc3e32a70e459585b9da6a65a7d8e2f1949958365"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logos.svg",
+      "role": "figure",
+      "sha256": "622626d78ce16f8c0dad38d681ab96d4d11e27590f10d2665f8403c5059487ca"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "dacd5f2047de8afd7cce4477a454bb15ad457c2a7fd00a05612a5f85cb3437ec"
+    }
+  ],
+  "created_at": "2026-06-15T19:03:07.177659+00:00",
+  "crossref_doi": "10.1186/s13059-015-0831-x",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "config-install.txt template file with placeholder path entries and cluster configuration",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "config-system.txt file encoding detected or user-supplied paths to bowtie2, samtools, R, and Python binaries, plus cluster scheduler type",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "HiC-Pro requires bowtie2 and samtools >=1.9 as core aligners; these two tools are the only dependencies eligible for automatic installation if missing, all others must be pre-installed by the user.",
+    "The 'which' command is the standard mechanism to resolve binary names to full filesystem paths when user has not explicitly provided them in config-install.txt.",
+    "CLUSTER_SYS must be set to one of exactly three values (TORQUE, SGE, or SLURM) to specify the job scheduler for cluster submission.",
+    "The generated config-system.txt is write-protected to prevent accidental user modification; it encodes the frozen environment state at installation time and must not be edited after generation.",
+    "Python >3.7 is required alongside R with packages ggplot2 (>2.2.1), RColorBrewer, and grid; scipy, numpy, bx-python, and pysam are also mandatory Python dependencies but their version/availability is checked post-configuration."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file config-system.txt exists in package after installation step",
+      "verify config-system.txt contains field for bowtie2 binary path (key-value pair or structured format)",
+      "verify config-system.txt contains field for samtools binary path (key-value pair or structured format)",
+      "verify script that generates config-system.txt runs without error when bowtie2 and samtools are available in PATH or specified in inputs",
+      "verify config-system.txt format matches the documented structure (exact format robust to whitespace normalization)",
+      "verify output file is valid text or INI format (file_format_is text or INI)",
+      "verify bowtie2 path value in config-system.txt points to existing executable or matches reference path from inputs"
+    ],
+    "expert_review": [
+      "assess whether detected bowtie2 and samtools versions satisfy documented minimum version requirements (bowtie2 any version, samtools >=1.9)",
+      "evaluate whether environment variable substitution and PATH fallback logic are correctly implemented in config-system.txt generation",
+      "review whether config-system.txt encoding is compatible with downstream runtime pipeline consumption"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does HiC-Pro detect the installation paths of required binary tools (Bowtie2, samtools) and generate an environment-specific configuration file during setup?: 'An optimized and flexible pipeline for Hi-C data processing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] HiC-Pro implements an installation configuration mechanism where users edit a config-install.txt file to set tool paths; if paths are not explicitly set, the system searches for dependencies in the $PATH environment variable, and then executes 'make CONFIG_SYS=config-install.txt install' to complete the setup.: 'Edit the config-install.txt file and set the paths. If not set, the dependencies will be sought in the $PATH'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] config-install.txt template file with placeholder path entries and cluster configuration: 'Edit the config-install.txt file and set the paths. If not set, the dependencies will be sought in the $PATH and defined using the 'which' command.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] config-system.txt file encoding detected or user-supplied paths to bowtie2, samtools, R, and Python binaries, plus cluster scheduler type: 'The installation process will generate a config-system.txt file which defines all paths to HiC-Pro dependencies. Please, do not edit this file !'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] bowtie2: 'A couple of tools such as `bowtie2` and `samtools` (>=1.9) can be automatically installed if not detected.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] samtools (>=1.9): 'A couple of tools such as `bowtie2` and `samtools` (>=1.9) can be automatically installed if not detected.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'R (http://www.r-project.org/) with the following packages'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python (>3.7): 'Python (>3.7) libraries'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting installation configuration changes, version history, or modification log for config-system.txt generation is available.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "set -e; PREFIX=\"${PREFIX:-.}\"; CONFIG_IN=\"{inputs.config_template}\"; CONFIG_OUT=\"${PREFIX}/config-system.txt\"; exec 3>&1; exec 1>\"${CONFIG_OUT}\"; echo \"PREFIX=${PREFIX}\"; BOWTIE2_PATH=$(grep -oP '(?<=^BOWTIE2_PATH=)\\S+' \"${CONFIG_IN}\" 2>/dev/null || which bowtie2 2>/dev/null || echo 'NOT_FOUND'); echo \"BOWTIE2_PATH=${BOWTIE2_PATH}\"; SAMTOOLS_PATH=$(grep -oP '(?<=^SAMTOOLS_PATH=)\\S+' \"${CONFIG_IN}\" 2>/dev/null || which samtools 2>/dev/null || echo 'NOT_FOUND'); echo \"SAMTOOLS_PATH=${SAMTOOLS_PATH}\"; R_PATH=$(grep -oP '(?<=^R_PATH=)\\S+' \"${CONFIG_IN}\" 2>/dev/null || which R 2>/dev/null || echo 'NOT_FOUND'); echo \"R_PATH=${R_PATH}\"; PYTHON_PATH=$(grep -oP '(?<=^PYTHON_PATH=)\\S+' \"${CONFIG_IN}\" 2>/dev/null || which python3 2>/dev/null || which python 2>/dev/null || echo 'NOT_FOUND'); echo \"PYTHON_PATH=${PYTHON_PATH}\"; CLUSTER_SYS=$(grep -oP '(?<=^CLUSTER_SYS=)\\S+' \"${CONFIG_IN}\" 2>/dev/null || echo 'local'); echo \"CLUSTER_SYS=${CLUSTER_SYS}\"; exec 1>&3; exec 3>&-; chmod 444 \"${CONFIG_OUT}\"; [ -f \"${CONFIG_OUT}\" ] && [ -s \"${CONFIG_OUT}\" ] && echo >&2 \"config-system.txt generated and locked at ${CONFIG_OUT}\""
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "config-system.txt",
+  "expected_outputs": [
+    "config-system.txt file encoding detected or user-supplied paths to bowtie2, samtools, R, and Python binaries, plus cluster scheduler type"
+  ],
+  "finding": "HiC-Pro implements an installation configuration mechanism where users edit a config-install.txt file to set tool paths; if paths are not explicitly set, the system searches for dependencies in the $PATH environment variable, and then executes 'make CONFIG_SYS=config-install.txt install' to complete the setup.",
+  "github_name": "pysam-developers/pysam",
+  "input_from": "task_001",
+  "inputs": [
+    "config-install.txt template file with placeholder path entries and cluster configuration"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "bowtie2_path_resolved.log",
+    "samtools_version_check.log",
+    "r_and_python_paths.log"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_005",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Parse config-install.txt user input to extract explicit paths and cluster scheduler preference.",
+    "Query system PATH using 'which' for each binary (bowtie2, samtools, R, Python) where user did not provide explicit path.",
+    "Verify bowtie2 and samtools presence; auto-install either if missing and version requirements (samtools >=1.9, Python >3.7) are not met.",
+    "Collect all resolved paths and parameters into a key\u2013value structure conforming to the config-system.txt schema.",
+    "Write the locked, immutable config-system.txt file to the installation PREFIX directory.",
+    "Validation: config-system.txt exists, is read-only, and contains non-empty entries for all six required fields (PREFIX, BOWTIE2_PATH, SAMTOOLS_PATH, R_PATH, PYTHON_PATH, CLUSTER_SYS).",
+    "References: source article (DOI: 10.1186/s13059-015-0831-x)"
+  ],
+  "missing_information": [
+    "No changelog documenting installation configuration changes, version history, or modification log for config-system.txt generation is available."
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/config_system"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does HiC-Pro detect the installation paths of required binary tools (Bowtie2, samtools) and generate an environment-specific configuration file during setup?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "binary-path-detection-and-validation",
+    "system-dependency-version-checking",
+    "configuration-file-generation-and-templating",
+    "shell-environment-variable-resolution",
+    "hpc-cluster-scheduler-configuration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_hicpro/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "tool_iced",
+    "tool_python",
+    "comp_alignment_stage",
+    "comp_sam_processing_stage",
+    "comp_normalization_stage"
+  ],
+  "subdomains": [
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:nservant__HiC-Pro",
+  "task_description": "Generate a config-system.txt file that detects and records the file system paths to HiC-Pro binary dependencies (bowtie2, samtools, R, Python) by parsing a user-edited config-install.txt template and querying the system PATH. The output file encodes environment-specific configuration for subsequent pipeline execution.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "config-install.txt template with user-edited path entries",
+      "port_id": "config_template",
+      "resolved_via": null,
+      "source": "task_001/config_system",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Generate a config-system.txt file that detects and encodes binary tool paths (Bowtie2, samtools) by searching system $PATH or user-specified locations.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "config-system.txt system configuration file with resolved dependency paths",
+      "port_id": "config_system",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control"
+  ],
+  "title": "Reconstruct the ICE normalization stage that balances a Hi-C contact matrix",
+  "tools": [
+    "MultiQC 1.8",
+    "bowtie2",
+    "samtools (>=1.9)",
+    "R",
+    "Python (>3.7)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: config-system.txt file encoding detected or user-supplied paths to bowtie2, samtools, R, and Python binaries, plus cluster scheduler type."
+  ],
+  "workflow_description": "1. Read the config-install.txt template provided by the user, which contains placeholder entries for PREFIX, BOWTIE2_PATH, SAMTOOLS_PATH, R_PATH, PYTHON_PATH, and CLUSTER_SYS. 2. For each path entry not explicitly set by the user, query the system PATH using the 'which' command to locate bowtie2, samtools, R, and Python binaries. 3. Validate that bowtie2 and samtools are present; if either is missing, trigger automatic installation (bowtie2 and samtools >=1.9 can be auto-installed). 4. Verify installed versions meet minimum requirements: samtools >=1.9 and Python >3.7. 5. Compile all detected or user-specified paths and system parameters into a structured config-system.txt file with entries for each dependency path and cluster scheduler type. 6. Lock the generated config-system.txt as read-only to prevent accidental user modification during pipeline execution."
+}

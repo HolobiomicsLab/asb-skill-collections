@@ -1,0 +1,343 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/CoreMS.COLOR.png",
+      "role": "figure",
+      "sha256": "39e8bd3ca35b9643bea95c96d31ef0e6886a99f4c2a0c835651c7d1574694f14"
+    },
+    {
+      "indexable": false,
+      "path": "figures/CoreMS.COLOR_small.png",
+      "role": "figure",
+      "sha256": "7068dd12c245c661cc17de6cbae274994694a3df21228643369ae2cd681f6a3f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Direct_Infusion_FTMS_Data_Model.png",
+      "role": "figure",
+      "sha256": "caa9462f4901686e68432ae43badfc71ba00a574d3c06f9a7fe22b5d6e5b4241"
+    },
+    {
+      "indexable": false,
+      "path": "figures/GC_MS_Data_Model.png",
+      "role": "figure",
+      "sha256": "b6b6364bbeb937104c06537343ee65e704b54a08c7f8a5c5b912c87b1b9a19ab"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "02ede3525bbae3d177c8839ea50eef4fe774602ff90bbdf4ea2624fde55822ea"
+    }
+  ],
+  "created_at": "2026-06-16T07:04:21.589353+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw GC-MS data file in NetCDF (Agilent .d) or equivalent format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "PNNLMetV20191015.MSL spectral library (NIST-format MS library with retention indices)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CSV table of identified compounds with columns: compound name, CAS number, retention index, spectral match score, match rank, and peak integration metrics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Retention indices (RI) are normalized retention times calculated relative to a series of alkane standards (typically n-alkanes C10\u2013C40) and are more reproducible than absolute retention times across GC-MS instruments and columns.",
+    "Low-resolution GC-MS mass spectra typically have m/z resolution \u22641 Da and must be matched against library spectra using cosine similarity or similar dot-product metrics that are robust to intensity normalization differences.",
+    "NIST and PNNL spectral libraries encode both mass spectral fragmentation patterns and experimental retention indices, enabling two-dimensional compound matching that improves specificity over mass-spectrum-only searches.",
+    "ReadAndiNetCDF parses Agilent .d (ChemStation) and Thermo .raw formats converted to NetCDF; it extracts instrument metadata, detector response traces, and scan-level mass spectra for downstream processing.",
+    "False-positive identifications are minimized by applying combined thresholds on both spectral match score (typically \u2265700 on a 0\u20131000 scale) and retention-index deviation (typically \u226420 RI units from library value)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that inputs include a valid NetCDF file from PNNLMetV20191015.MSL dataset or a file path to DS-004",
+      "verify that the CoreMS pipeline executes without runtime errors when called with ReadAndiNetCDF, GC_RI_Calibration, and LowResMassSpectralMatch modules",
+      "verify that expected_outputs CSV file exists and file_format_is CSV",
+      "verify that CSV contains at least the following fields: compound_name (or equivalent identifier), retention_index_score, spectral_match_score",
+      "verify that row_count_equals is greater than zero (at least one compound identified)",
+      "verify that values in retention_index_score and spectral_match_score fields are in_range [0.0, 1.0] or [0, 100] depending on normalization (no canonical answer without pipeline documentation)",
+      "verify that script_runs successfully: the pipeline execution command completes with exit code 0"
+    ],
+    "expert_review": [
+      "assess whether retention-index scores are biochemically plausible for GC-MS separation (expert domain knowledge of gas chromatography required)",
+      "assess whether spectral match scores align with expected mass spectral matching quality for the PNNLMetV20191015.MSL reference library (requires MS chemometrics expertise)",
+      "evaluate whether identified compound assignments are consistent with known standards or reference spectra in the PNNL library"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does the CoreMS GC-MS processing pipeline successfully identify compounds from low-resolution mass spectrometry data using spectral library matching?: 'lowResSearch = LowResMassSpectralMatch(gcms)\nlowResSearch.run()'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The CoreMS pipeline executes compound identification through sequential steps: data loading via ReadAndiNetCDF, retention index calibration using get_rt_ri_pairs, and spectral matching via LowResMassSpectralMatch class, with results exported to CSV and HDF formats.: 'reader_gcms = ReadAndiNetCDF(filepath)\nrt_ri_pairs = get_rt_ri_pairs(gcms_ref_obj, sql_obj=sql_obj)\nlowResSearch = LowResMassSpectralMatch(gcms)\nlowResSearch.run()\ngcms.to_csv(output_filename)\ngcms.to'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw GC-MS data file in NetCDF (Agilent .d) or equivalent format: 'DS-004 (PNNLMetV20191015.MSL)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] PNNLMetV20191015.MSL spectral library (NIST-format MS library with retention indices): 'DS-004 (PNNLMetV20191015.MSL)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] CSV table of identified compounds with columns: compound name, CAS number, retention index, spectral match score, match rank, and peak integration metrics: 'a CSV table of identified compounds with retention-index scores and spectral match scores'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] CoreMS: 'CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pandas: 'pandas [section=results; evidence='import pandas as pd']'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] numpy: 'numpy [section=results; evidence='import numpy as np']'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting pipeline modifications, bug fixes, or version history is available.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "{inputs.raw_gc_ms_data}:/data/raw_gc_ms_data",
+      "-v",
+      "{inputs.spectral_library}:/data/spectral_library",
+      "-v",
+      "/tmp/{task_id}_output:/output",
+      "corems:latest",
+      "python",
+      "-c",
+      "from corems.ms_feature import MassSpectrum; from corems.file_read import ReadAndiNetCDF; from corems.spectral_similarity import LowResMassSpectralMatch; import pandas as pd; import numpy as np; data = ReadAndiNetCDF('/data/raw_gc_ms_data'); library = pd.read_csv('/data/spectral_library'); results = LowResMassSpectralMatch(data, library); df = pd.DataFrame(results); df.to_csv('/output/identified_compounds.csv', index=False)"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "identified_compounds.csv",
+  "expected_outputs": [
+    "CSV table of identified compounds with columns: compound name, CAS number, retention index, spectral match score, match rank, and peak integration metrics"
+  ],
+  "finding": "The CoreMS pipeline executes compound identification through sequential steps: data loading via ReadAndiNetCDF, retention index calibration using get_rt_ri_pairs, and spectral matching via LowResMassSpectralMatch class, with results exported to CSV and HDF formats.",
+  "github_name": "EMSL-Computing/CoreMS",
+  "input_from": null,
+  "inputs": [
+    "Raw GC-MS data file in NetCDF (Agilent .d) or equivalent format",
+    "PNNLMetV20191015.MSL spectral library (NIST-format MS library with retention indices)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "raw_spectra_extracted.csv",
+    "retention_indices_calibrated.csv",
+    "spectral_matches_ranked.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Load raw GC-MS chromatographic and spectral data from NetCDF format using ReadAndiNetCDF module.",
+    "Calibrate retention times against alkane standards using GC_RI_Calibration to compute normalized retention indices.",
+    "Extract low-resolution mass spectra and match each against PNNLMetV20191015.MSL library using LowResMassSpectralMatch with cosine similarity and retention-index scoring.",
+    "Aggregate compound identifications with match scores and rank results by confidence.",
+    "Validation: CSV output contains at least one identified compound per peak with spectral match score \u22650.7 and retention-index deviation \u226420 RI units, matching library entries in PNNLMetV20191015.MSL."
+  ],
+  "missing_information": [
+    "No changelog documenting pipeline modifications, bug fixes, or version history is available."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the CoreMS GC-MS processing pipeline successfully identify compounds from low-resolution mass spectrometry data using spectral library matching?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "gc-ms-chromatogram-processing",
+    "retention-index-calibration-and-alignment",
+    "low-resolution-mass-spectra-library-matching",
+    "spectral-similarity-scoring",
+    "compound-identification-from-ms-data"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_corems/synthesized_package",
+  "spine_condition_ids": [
+    "COND-004",
+    "COND-005",
+    "COND-008",
+    "COND-011"
+  ],
+  "spine_entity_ids": [
+    "ARCH-001",
+    "ARCH-002",
+    "ARCH-003",
+    "COMP-006",
+    "COMP-007",
+    "COMP-013",
+    "DS-004",
+    "COND-004",
+    "COND-005",
+    "COND-008",
+    "COND-011"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:EMSL-Computing__CoreMS",
+  "task_description": "Execute the GC-MS processing pipeline against the PNNLMetV20191015.MSL spectral library to identify compounds from raw GC-MS data. Output a CSV table containing identified compounds with retention-index scores and spectral match scores.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw GC-MS data file",
+      "port_id": "raw_gc_ms_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PNNLMetV20191015.MSL spectral reference library",
+      "port_id": "spectral_library",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the complete GC-MS processing pipeline using CoreMS modules (ReadAndiNetCDF, GC_RI_Calibration, LowResMassSpectralMatch) against test data and generate a CSV output table with identified compound names, retention indices, and spectral match scores.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CSV table of identified compounds with retention-index and spectral match scores",
+      "port_id": "compound_identifications",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "metabolite-identification",
+    "database-annotation",
+    "quality-control",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce GC-MS compound identification pipeline using PNNLMetV20191015 reference library",
+  "tools": [
+    "Docker",
+    "CoreMS",
+    "pandas",
+    "numpy"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load raw GC-MS data in NetCDF format using ReadAndiNetCDF, parsing instrument parameters and chromatographic signals. 2. Apply GC_RI_Calibration to align retention times against reference alkane standards and compute retention indices for each detected peak. 3. Extract low-resolution mass spectra from each peak and perform LowResMassSpectralMatch against the PNNLMetV20191015.MSL spectral library, scoring matches by cosine similarity and retention-index proximity. 4. Aggregate results into a structured table with compound name, CAS number, retention index, spectral match score, and match rank."
+}

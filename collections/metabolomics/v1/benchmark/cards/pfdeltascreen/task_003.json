@@ -1,0 +1,273 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/logo.jpg",
+      "role": "figure",
+      "sha256": "71bce88a8c368752824edde4511954dd9c5403b3e20a4bc993ddcbf0120ee7f8"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "4edf5fbad132b38a70dc2febd2892a1258d4ccc00edde341d64a0c786a44a59e"
+    }
+  ],
+  "created_at": "2026-06-15T12:20:13.915230+00:00",
+  "crossref_doi": "10.1007/s00216-023-05070-2",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature list containing m/z values (CSV or text format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Annotated feature table with Kendrick mass defect values and homologous series group assignments",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Kendrick mass defect is calculated by converting exact m/z to the Kendrick scale (typically using CH\u2082 = 14.0157 Da as the reference unit) and computing the difference between the nominal and exact Kendrick mass; features with identical KMD values represent homologous series differing by integer multiples of CH\u2082 units.",
+    "PFAS compounds often form homologous series with repeating CH\u2082 units (chain extensions), making KMD analysis a key signature for identifying potential PFAS candidates in non-target screening.",
+    "The choice of reference unit for Kendrick scaling (e.g., CH\u2082 vs. CF\u2082) affects the KMD pattern; for PFAS screening, CH\u2082-based Kendrick mass is commonly used to detect hydrocarbon-chain-extension homologs.",
+    "KMD grouping tolerance (the allowed deviation from exact KMD equality when clustering features into series) typically ranges from 0.001 to 0.005 Da and depends on instrument mass accuracy and resolving power."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in github:JonZwe__PFAScreen repository containing KMD calculation implementation",
+      "verify KMD module accepts a feature list as input (file or data structure with m/z and intensity fields)",
+      "verify KMD module returns grouped or flagged features with at least one output field indicating homologous series membership or KMD cluster assignment",
+      "script_runs: KMD filter executes without error on a test feature list with \u226510 features spanning m/z 200\u20131200",
+      "verify output contains KMD values (numeric, robust to rounding within \u00b10.01 Da)",
+      "verify features are grouped or flagged by KMD values with homologous series labels or cluster identifiers"
+    ],
+    "expert_review": [
+      "assess whether KMD calculation follows established mass defect formulae for PFAS homolog detection (expert judgment on correctness of Kendrick mass basis and defect computation)",
+      "evaluate whether grouping/flagging threshold for homologous series is chemically defensible and documented",
+      "review whether output interpretation and labeling of PFAS series are consistent with literature conventions for KMD-based PFAS screening"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the Kendrick mass defect (KMD) analysis module calculate and flag homologous PFAS series from a feature list in PF\u0394Screen?: 'PF\u0394Screen uses several techniques for prioritization such as the MD/C-m/C approach, Kendrick mass defect (KMD) analysis and fragment mass differences and diagnostic fragments in the MS2 data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PF\u0394Screen implements Kendrick mass defect (KMD) analysis as one of several prioritization techniques for PFAS features alongside the MD/C-m/C approach and MS2 fragment analysis.: 'PF\u0394Screen uses several techniques for prioritization such as the MD/C-m/C approach, Kendrick mass defect (KMD) analysis and fragment mass differences'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Feature list containing m/z values (CSV or text format): 'custom feature lists can be included'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Annotated feature table with Kendrick mass defect values and homologous series group assignments: 'Kendrick mass defect (KMD) analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'PF\u0394Screen is an open-source Python based non-target screening software tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] KMD module implementation details, algorithm specification, and threshold parameters for homologous series flagging are not described in the provided section text: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import csv, sys; from collections import defaultdict; \nfeatures = []; \nwith open('{inputs.feature_list}') as f: reader = csv.DictReader(f) if f.readline().startswith(('m/z', 'mz', 'mass')) else csv.reader(open('{inputs.feature_list}')); f.seek(0); rows = list(csv.DictReader(f) if any(c in f.readline().lower() for c in ['m/z', 'mz', 'mass']) else csv.reader(f)); f.seek(0); \nfor row in rows: \n  try: mz = float(row[0] if isinstance(row, list) else next(v for k,v in row.items() if any(x in k.lower() for x in ['m/z','mz','mass']))); features.append(mz)\n  except: pass\n\nkm = 14.01565; groups = defaultdict(list); \nfor mz in features: \n  kmass_exact = (mz * km) / 14.0; kmass_nominal = round(kmass_exact); kmd = kmass_exact - kmass_nominal; \n  key = round(kmd * 10000) / 10000; groups[key].append(mz)\n\nwith open('kmd_analysis_output.csv', 'w', newline='') as out: \n  w = csv.writer(out); w.writerow(['m/z', 'Kendrick_Mass', 'KMD', 'Homologous_Group']); \n  for gid, (kmd_val, mz_list) in enumerate(sorted(groups.items())): \n    for mz in sorted(mz_list): kmass = (mz * km) / 14.0; w.writerow([f'{mz:.6f}', f'{kmass:.6f}', f'{kmd_val:.6f}', f'Group_{gid}'])\n\nprint(f'KMD analysis complete: {len(features)} features in {len(groups)} homologous groups')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "kmd_annotated_features.csv",
+  "expected_outputs": [
+    "Annotated feature table with Kendrick mass defect values and homologous series group assignments"
+  ],
+  "finding": "PF\u0394Screen implements Kendrick mass defect (KMD) analysis as one of several prioritization techniques for PFAS features alongside the MD/C-m/C approach and MS2 fragment analysis.",
+  "github_name": "JonZwe/PFAScreen",
+  "input_from": "task_002",
+  "inputs": [
+    "Feature list containing m/z values (CSV or text format)"
+  ],
+  "keywords": [
+    "pfas screening",
+    "non-target hrms",
+    "lc-hrms",
+    "gc-hrms",
+    "feature detection",
+    "kendrick mass defect analysis",
+    "fragment mass differences",
+    "ms2 diagnostics",
+    "esi ionization",
+    "apci ionization",
+    "untargeted metabolomics"
+  ],
+  "landmark_outputs": [
+    "kmd_values.csv",
+    "homologous_series_groups.csv"
+  ],
+  "linked_result_ids": [
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Parse feature list and extract m/z values",
+    "Apply Kendrick mass formula to convert each m/z to Kendrick scale",
+    "Calculate Kendrick mass defect as the difference between nominal and exact Kendrick mass",
+    "Group features by KMD value within tolerance threshold to identify homologous series",
+    "Validation: Verify that features within a single assigned group share KMD values within the specified tolerance and that output table contains all input features with non-null KMD and group assignments",
+    "References: source article (DOI: 10.1007/s00216-023-05070-2)"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "KMD module implementation details, algorithm specification, and threshold parameters for homologous series flagging are not described in the provided section text"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/prioritized_features"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the Kendrick mass defect (KMD) analysis module calculate and flag homologous PFAS series from a feature list in PF\u0394Screen?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "kendrick-mass-defect-calculation",
+    "pfas-homologous-series-detection",
+    "feature-grouping-by-mass-defect",
+    "mass-spectrometry-feature-annotation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pfdeltascreen/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "PFAS_Prioritization_Architecture",
+    "KMD_Component",
+    "CustomFeatureList_Artifact"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:JonZwe__PFAScreen",
+  "task_description": "Implement a standalone Kendrick mass defect (KMD) analysis module that accepts a feature list (m/z values) and returns features grouped or flagged by their KMD values to identify homologous PFAS series.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature list containing m/z values",
+      "port_id": "feature_list",
+      "resolved_via": null,
+      "source": "task_002/prioritized_features",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement a KMD analysis filter that accepts a feature list and returns features flagged or grouped by Kendrick mass defect values to identify homologous PFAS series.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Annotated feature table with KMD values and series assignments",
+      "port_id": "kmd_annotated_features",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "high-resolution-ms",
+    "chemical-class-annotation",
+    "database-annotation",
+    "quality-control"
+  ],
+  "title": "Reconstruct the Kendrick Mass Defect (KMD) analysis filter for PFAS feature prioritization",
+  "tools": [
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Parse input feature list containing m/z values. 2. Calculate Kendrick mass for each feature using the formula: Kendrick mass = (nominal mass / exact mass) \u00d7 exact mass, where exact mass is converted to the Kendrick scale (e.g., CH\u2082 = 14.0157 Da). 3. Compute Kendrick mass defect (KMD) as the difference between nominal Kendrick mass and exact Kendrick mass. 4. Group or flag features with equivalent or near-equivalent KMD values (within user-specified tolerance) to identify homologous series members. 5. Output annotated feature table with KMD values and series group assignments."
+}

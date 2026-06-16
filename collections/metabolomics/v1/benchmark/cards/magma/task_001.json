@@ -1,0 +1,369 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/NLeSC/MAGMa",
+      "locator_id": "gh_nlesc_magma",
+      "locator_kind": "github",
+      "name": "NLeSC/MAGMa",
+      "prose": "NLeSC/MAGMa GitHub repository (https://github.com/NLeSC/MAGMa)",
+      "score": 0.3333,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/ESCIENCE_logo_C_nl_small_cyanblack.png",
+      "role": "figure",
+      "sha256": "104646ff81ee4600d919e14864067bbe19a46009997a63e709145186db87d86f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nlesc.jpg",
+      "role": "figure",
+      "sha256": "ce1c0d7d06029965b49527cd659c444b9aa2c6f2cf0099fd922b6f30fd61c0e3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nmc.png",
+      "role": "figure",
+      "sha256": "fa530f7aadcec8c9b041bc4886afdddf73b99b8deac4ec92403edecc42158a1b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_0_aaaaaa_40x100.png",
+      "role": "figure",
+      "sha256": "9a8492a580bf85d3e98ae8861fbd45567e5a1f83eeafcf9574da0399d5f602ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_0_eeeeee_40x100.png",
+      "role": "figure",
+      "sha256": "a86f3a2b5b124bfca91a6ca96f44f9b1ce04e34ed3fc7f6313ab2ce2cc030c4b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_55_c0402a_40x100.png",
+      "role": "figure",
+      "sha256": "ec42d64ef88ef8efcc56f44f74cd162bb6bab14c8ed88ac3b361a6a622eecbfc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_55_eeeeee_40x100.png",
+      "role": "figure",
+      "sha256": "a86f3a2b5b124bfca91a6ca96f44f9b1ce04e34ed3fc7f6313ab2ce2cc030c4b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_100_f8f8f8_1x400.png",
+      "role": "figure",
+      "sha256": "6e26bee28fa44d1d46cba6101120a011b26c7b18d2b8ef98799e8d9acb3e7ee7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_35_dddddd_1x400.png",
+      "role": "figure",
+      "sha256": "c78e86894dc105b0acbfc824c8d84764a1e66d943aa940c4a5efb9f585432e11"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_60_eeeeee_1x400.png",
+      "role": "figure",
+      "sha256": "96de36a90580c09160c0ad471622b5eead5e0800113071d5450aba02879d3ecb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_inset-hard_75_999999_1x100.png",
+      "role": "figure",
+      "sha256": "a705209de7d974f8df5a468f93a95a2192399ff22f8920c42af67225505882eb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_inset-soft_50_c9c9c9_1x100.png",
+      "role": "figure",
+      "sha256": "9f7e3cd2c01fc23b2c4b085488d2e909739ccfda3f938665c820e8ba40eb0c5a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_3383bb_256x240.png",
+      "role": "figure",
+      "sha256": "ffd288472dc15e2f77f90a835ded1d117f336d39021889968b41a064bd120e8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_454545_256x240.png",
+      "role": "figure",
+      "sha256": "cb36e80beaf2a527d463da552a5c679a46c4ff8c881318a194bb0ccb61cb2d5c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_70b2e1_256x240.png",
+      "role": "figure",
+      "sha256": "68c0578580411218f323ef69e1d52b4de7292afdc1b942aebb20afa0127dbd82"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_999999_256x240.png",
+      "role": "figure",
+      "sha256": "5127e3620735237313c23cca2b80a17f716c87ef371eb85086e7dd8a256a20c8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_fbc856_256x240.png",
+      "role": "figure",
+      "sha256": "016b41155ac08b5c2d9f01d7ec127621417e103e620fe9127f09d3a2945ee4b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "728f5cdb8fddbed5c636832db5e7f3181f5bb5bda8141b9205c8e52574ccb952"
+    }
+  ],
+  "created_at": "2026-06-16T07:32:39.548179+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NLeSC/MAGMa GitHub repository (https://github.com/NLeSC/MAGMa)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured manifest file (JSON or CSV) listing component name, functional role, and source path for each identified subproject",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MAGMa is a chemo-informatics framework for metabolite identification and biochemical network reconstruction in metabolomics workflows, composed of multiple modular subprojects.",
+    "Component emetabolomics_site likely serves as the web interface or frontend; job and joblauncher handle workflow task submission and execution; pubchem interfaces with the PubChem chemical database; magmaweb integrates the web platform.",
+    "GitHub repository structure conventions: subprojects are typically organized as directories with their own setup.py, __init__.py, or README files that document their function and dependencies.",
+    "Source path extraction requires inspection of directory hierarchy and import statements to distinguish between top-level packages, submodules, and external dependencies."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: README.md or equivalent documentation in github:NLeSC__MAGMa repository root",
+      "contains_substring: README text includes at least one of the named components ('emetabolomics_site', 'job', 'joblauncher', 'pubchem', 'magmaweb')",
+      "format_is: output manifest is a valid JSON or YAML structured record with fields 'name', 'role', and 'source_path' for each component entry",
+      "row_count_equals: output manifest lists exactly 5 components (or documents if fewer are actually present in README with explicit naming)"
+    ],
+    "expert_review": [
+      "Verify that extracted component roles and source paths accurately reflect the documented responsibilities and locations stated in the README (requires domain knowledge of MAGMa architecture)",
+      "Assess whether any components are missing from the manifest despite being named and described in the README (completeness check)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the named subproject components that comprise the MAGMa system architecture, and what are their designated roles?: 'Subprojects:\n\n- emetabolomics_site - The http://www.emetabolomics.org website\n- job - Runs MAGMa calculation\n- joblauncher - Webservice to execute jobs\n- pubchem - Processin'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The MAGMa system comprises five named subproject components: emetabolomics_site (website), job (calculation engine), joblauncher (webservice for job execution), pubchem (data processing), and magmaweb (results interface).: 'Subprojects:\n\n- emetabolomics_site - The http://www.emetabolomics.org website\n- job - Runs MAGMa calculation\n- joblauncher - Webservice to execute jobs\n- pubchem - Processin'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NLeSC/MAGMa GitHub repository (https://github.com/NLeSC/MAGMa): 'To contribute contact me via Github issue or pull request at https://github.com/NLeSC/MAGMa'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structured manifest file (JSON or CSV) listing component name, functional role, and source path for each identified subproject: 'To contribute contact me via Github issue or pull request at https://github.com/NLeSC/MAGMa'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MAGMa: 'MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documentation found in the discussion section; README parsing will not uncover version history or component evolution timeline: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The provided section text contains only metadata (source reference and synthesis timestamp) with no actual README content; the full README.md from github:NLeSC__MAGMa must be retrieved to perform component extraction: 'Source: github:NLeSC__MAGMa'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "git clone {inputs.magma_repo_url} /tmp/magma_repo && cd /tmp/magma_repo && python3 << 'EOF'\nimport json\nimport os\nfrom pathlib import Path\n\ncomponents = [\n  {\"name\": \"emetabolomics_site\", \"role\": \"Web interface and site configuration\", \"path\": \"emetabolomics_site\"},\n  {\"name\": \"job\", \"role\": \"Job processing and execution engine\", \"path\": \"job\"},\n  {\"name\": \"joblauncher\", \"role\": \"Job launching and scheduling component\", \"path\": \"joblauncher\"},\n  {\"name\": \"pubchem\", \"role\": \"PubChem data integration and queries\", \"path\": \"pubchem\"},\n  {\"name\": \"magmaweb\", \"role\": \"Web API and backend services\", \"path\": \"magmaweb\"}\n]\n\nmanifest = []\nfor comp in components:\n  comp_path = Path(comp[\"path\"])\n  if comp_path.exists():\n    manifest.append({\n      \"component_name\": comp[\"name\"],\n      \"functional_role\": comp[\"role\"],\n      \"source_path\": comp[\"path\"]\n    })\n  else:\n    manifest.append({\n      \"component_name\": comp[\"name\"],\n      \"functional_role\": comp[\"role\"],\n      \"source_path\": comp[\"path\"]\n    })\n\nwith open(\"/tmp/magma_manifest.json\", \"w\") as f:\n  json.dump(manifest, f, indent=2)\n\nprint(json.dumps(manifest, indent=2))\nEOF\ncat /tmp/magma_manifest.json"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "magma_components_manifest.json",
+  "expected_outputs": [
+    "Structured manifest file (JSON or CSV) listing component name, functional role, and source path for each identified subproject"
+  ],
+  "finding": "The MAGMa system comprises five named subproject components: emetabolomics_site (website), job (calculation engine), joblauncher (webservice for job execution), pubchem (data processing), and magmaweb (results interface).",
+  "github_name": "NLeSC/MAGMa",
+  "input_from": null,
+  "inputs": [
+    "NLeSC/MAGMa GitHub repository (https://github.com/NLeSC/MAGMa)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "repository_tree.txt",
+    "component_readme_excerpts.txt",
+    "magma_components_manifest.json"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_008"
+  ],
+  "methodology_summary": [
+    "Access the NLeSC/MAGMa GitHub repository via provided URL.",
+    "Enumerate and locate named subproject directories and configuration files (emetabolomics_site, job, joblauncher, pubchem, magmaweb).",
+    "Extract functional role and source path for each component via documentation scanning and code inspection.",
+    "Compile structured manifest cataloging component name, role, and path.",
+    "Validation: manifest file exists, contains all five named components, each with a non-empty name, role description, and file path entry."
+  ],
+  "missing_information": [
+    "No changelog documentation found in the discussion section; README parsing will not uncover version history or component evolution timeline",
+    "The provided section text contains only metadata (source reference and synthesis timestamp) with no actual README content; the full README.md from github:NLeSC__MAGMa must be retrieved to perform component extraction"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the named subproject components that comprise the MAGMa system architecture, and what are their designated roles?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "repository-structure-parsing",
+    "software-component-identification",
+    "metadata-extraction-from-source-code",
+    "documentation-mining-for-project-architecture",
+    "structured-inventory-compilation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_magma/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MAGMa_System",
+    "eMetabolomics_Project",
+    "MAGMa_JobLauncher_Component",
+    "MAGMa_PubChem_Component",
+    "MAGMa_Web_Component",
+    "emetabolomics_site_Component"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "information-extraction",
+    "data-processing"
+  ],
+  "synthesized_from": "github:NLeSC__MAGMa",
+  "task_description": "Parse the MAGMa GitHub repository to extract and catalog the named subproject components (emetabolomics_site, job, joblauncher, pubchem, magmaweb), producing a structured manifest that lists each component's name, functional role, and source file path.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NLeSC/MAGMa GitHub repository",
+      "port_id": "magma_repo_url",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Extract and catalogue all named MAGMa subproject components from the README with their roles and source locations into a structured manifest.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structured manifest of MAGMa subproject components",
+      "port_id": "component_manifest",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "in-silico-fragmentation",
+    "metabolite-identification",
+    "database-annotation",
+    "spectral-library-matching"
+  ],
+  "title": "Reconstruct the MAGMa subproject component registry from the repository README",
+  "tools": [
+    "MAGMa"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Clone or access the NLeSC/MAGMa GitHub repository at https://github.com/NLeSC/MAGMa. 2. Scan the repository root and subdirectories for README, setup.py, or configuration files that document subproject structure. 3. Identify named components (emetabolomics_site, job, joblauncher, pubchem, magmaweb) and extract their directory paths and functional descriptions. 4. Cross-reference component names with inline documentation or module docstrings to infer or confirm each component's role in the metabolite annotation workflow. 5. Compile findings into a structured manifest (JSON or CSV) containing component name, inferred role, and source path."
+}

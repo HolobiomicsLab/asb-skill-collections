@@ -1,0 +1,258 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "07af780b6416118ddafb725c7dac8b956d4c906e32808e514f43fce54b06884e"
+    }
+  ],
+  "created_at": "2026-06-15T19:02:59.735108+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pre-generated .hic contact map file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature annotation output file (loop calls or domain calls)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Juicer is a platform designed for analyzing Hi-C data at kilobase resolution, which measures 3D chromatin interactions across the genome.",
+    "The feature annotation step is distinct from upstream map generation; it takes an already-processed .hic file as input and applies computational algorithms to detect structural features.",
+    "Juicer command-line tools can produce multiple annotation types including loop calls (point-to-point interactions) and domain calls (contiguous chromatin regions with elevated internal contact frequency).",
+    "The .hic binary format is Juicer's standard container for normalized, multi-resolution contact matrices; it enables rapid feature querying at different resolutions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the input .hic file exists and is in HIC format",
+      "verify that juicer_cli_tools command executes without fatal errors on the input .hic artifact",
+      "verify that expected_outputs file is created with correct extension (.bedpe for loop calls, .bed or .domain for domain calls)",
+      "verify that output file is non-empty (row_count > 0)",
+      "verify that output file contains expected columns/fields for the annotation type (e.g., chrom1, start1, end1, chrom2, start2, end2 for loop calls)",
+      "script_runs: juicer_cli_tools annotation command with specified input .hic and output parameters produces exit code 0"
+    ],
+    "expert_review": [
+      "annotation output contains biologically plausible feature coordinates (no out-of-bounds or malformed genomic ranges)",
+      "feature calls are consistent with known Hi-C contact patterns at expected resolutions and statistical thresholds",
+      "output format and column semantics match Juicer's documented annotation specification for the chosen feature type"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What command line tools does Juicer provide for annotating features on pre-generated Hi-C maps?: 'command line tools for feature annotation on the Hi-C maps'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Juicer includes command line tools designed for feature annotation on Hi-C maps, enabling users to annotate features on pre-generated Hi-C map artifacts.: 'we include the pipeline for generating Hi-C maps from fastq raw data files and command line tools for feature annotation on the Hi-C maps'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pre-generated .hic contact map file: 'command line tools for feature annotation on the Hi-C maps'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Feature annotation output file (loop calls or domain calls): 'command line tools for feature annotation on the Hi-C maps'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Juicer: 'Juicer is a platform for analyzing kilobase resolution Hi-C data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] juicer_cli_tools: 'command line tools for feature annotation on the Hi-C maps'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "java",
+      "-jar",
+      "juicer_tools.jar",
+      "arrowhead",
+      "{inputs.hic_map}",
+      "output_domains.txt"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "features.txt",
+  "expected_outputs": [
+    "Feature annotation output file (loop calls or domain calls)"
+  ],
+  "finding": "Juicer includes command line tools designed for feature annotation on Hi-C maps, enabling users to annotate features on pre-generated Hi-C map artifacts.",
+  "github_name": "aidenlab/juicer",
+  "input_from": "task_001",
+  "inputs": [
+    "Pre-generated .hic contact map file"
+  ],
+  "keywords": [
+    "hi-c data analysis",
+    "kilobase resolution",
+    "hi-c map generation",
+    "feature annotation",
+    "fastq processing",
+    "3d genomics"
+  ],
+  "landmark_outputs": [],
+  "linked_result_ids": [
+    "result_003",
+    "result_004",
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Load pre-generated .hic contact map file into Juicer environment",
+    "Select appropriate feature annotation tool from Juicer CLI (loop detection or domain calling)",
+    "Execute annotation algorithm on the contact map",
+    "Output annotated genomic features with coordinates and/or boundary calls",
+    "Validation: Verify output file exists, contains expected feature records (loops with contact pairs or domains with boundary coordinates), and matches format specifications of the chosen annotation tool"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What command line tools does Juicer provide for annotating features on pre-generated Hi-C maps?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "hic-contact-map-feature-annotation",
+    "genomic-loop-call-interpretation",
+    "chromatin-domain-boundary-detection",
+    "juicer-cli-tool-execution",
+    "kilobase-resolution-genomics-analysis"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_juicer/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "juicer_system",
+    "juicer_pipeline",
+    "juicer_cli_tools",
+    "juicer_v1_6",
+    "juicer_v2",
+    "fastq_dataset",
+    "juicer_citation"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:aidenlab__juicer",
+  "task_description": "Apply Juicer command-line tools to a pre-generated .hic contact map to annotate genomic features (loop calls or domain calls) and produce a feature annotation output file.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-generated .hic contact map",
+      "port_id": "hic_map",
+      "resolved_via": null,
+      "source": "task_001/hic_map",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Apply Juicer command line tools to annotate features (loops, domains, or other structural elements) on a pre-generated .hic Hi-C map file and generate output annotations.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature annotation output (loops or domains)",
+      "port_id": "feature_annotation",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reconstruct Feature Annotation on a Hi-C Map Using Juicer Command Line Tools",
+  "tools": [
+    "Juicer",
+    "juicer_cli_tools"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the pre-generated .hic contact map file into Juicer command-line tools. 2. Select and execute the appropriate feature annotation tool (e.g., loop-calling or domain-detection algorithm) from the Juicer CLI suite. 3. Generate and output the annotated feature file in the format specified by the chosen tool (e.g., loop coordinates, domain boundaries)."
+}

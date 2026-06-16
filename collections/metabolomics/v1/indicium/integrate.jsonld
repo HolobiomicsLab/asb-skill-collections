@@ -1,0 +1,1975 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/cohen-kappa-inter-rater-reliability",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/constraint-based-flux-balance-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/constraint-based-model-output-integration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/constraint-based-model-sampling-and-flux-prediction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/correlation-analysis-between-experimental-computational-data",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/dimensionality-reduction-visualization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/fdr-correction-multiple-testing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/feasible-flux-distribution-sampling",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/flux-variability-analysis-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/fold-change-sign-determination-statistics",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/growth-yield-computation-from-omics",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-action-kinetics-formulation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolic-model-constraint-specification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolic-regulation-classification-scheme",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolite-abundance-normalization-across-conditions",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolite-concentration-stoichiometric-mapping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolomics-data-integration-with-metabolic-networks",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/multi-omics-data-integration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/reaction-activity-score-computation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/reaction-flux-concordance-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/reaction-propensity-score-computation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spearman-rank-correlation-statistical-testing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/statistical-significance-testing-metabolic-networks",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/transcriptomics-reaction-activity-scoring",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Metabolism is directly and indirectly fine-tuned by a complex web of interacting regulatory mechanisms that fall into two major classes.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The expression level of metabolic enzymes sets the maximal theoretical flux level for each enzyme-controlled reaction.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Metabolic regulation controls the interactions of metabolites with enzymes, including substrates, cofactors, and allosteric modulators.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "High-throughput omics data analyzed separately do not accurately characterize the hierarchical regulation of metabolism.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "INTEGRATE computes differential reaction expression from transcriptomics data using constraint-based modeling to predict if differential enzyme expression originates differences in metabolic fluxes.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "INTEGRATE uses metabolomics to predict how differences in substrate availability translate into differences in metabolic fluxes.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "INTEGRATE discriminates fluxes regulated at the metabolic and/or gene expression level by intersecting output datasets from transcriptomics and metabolomics analysis.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The pipeline was demonstrated on a set of immortalized normal and cancer breast cell lines.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Knowing the regulatory level at which a given metabolic reaction is controlled will be valuable to inform targeted, truly personalized therapies in cancer patients.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "INTEGRATE can be applied to different fields where metabolism plays a driving role, including cancer and neurodegeneration.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Each metabolic flux depends on at least two intertwined regulatory layers: one regulating the flux of each enzyme-catalyzed metabolic reaction, and another through auto-regulation via metabolite interactions.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The upper level flux for each enzyme-catalyzed metabolic reaction depends on the levels and catalytic activities of metabolic enzymes, which are set by complex mechanisms orchestrated by signal transduction pathways.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Regulatory mechanisms of metabolic enzyme expression include epigenetic control of chromatin, transcription factors, transcription rate, and post-transcriptional/post-translational events.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Auto-regulation of metabolism occurs through the interactions of metabolites (substrates, cofactors, allosteric modulators) with responsible enzymes.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The flux of an enzyme-catalyzed reaction depends on the concentration of its substrate(s).",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Michaelis-Menten law approximates the dependence of reaction rate on substrate concentration for non-allosteric enzymes.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Michaelis constant K_m describes the substrate concentration at which the reaction rate is equal to V_max/2.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "At substrate concentrations below K_m, there is a linear increase in reaction rate with increasing substrate concentration.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Metabolites within the same pathway or belonging to related biochemical pathways can fine-tune enzyme-catalyzed reactions through allosteric effects.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Differences in metabolic fluxes are only partially determined by variations in protein/gene expression.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_021",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "In transcriptional control scenario, variations in flux through a metabolic reaction are mainly determined by variations in enzyme abundance when substrate is in large excess.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_021_evidence",
+      "evidence_for": "claim_021",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_022",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "In metabolic control scenario, variations in flux are mainly determined by variations in substrate abundance when enzyme is in large excess.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_022_evidence",
+      "evidence_for": "claim_022",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_023",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Combined metabolic and transcriptional control occurs when variations in fluxes are determined by concerted variations in both substrate and enzyme abundance.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_023_evidence",
+      "evidence_for": "claim_023",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_024",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Direct determination of metabolic fluxes through labeled substrates lags behind other omics technologies, mainly due to technical difficulties at the sub-cellular level.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_024_evidence",
+      "evidence_for": "claim_024",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_025",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Integration of transcriptomics with metabolomics datasets has been limited mainly to gene-metabolite correlation analysis or pathway enrichment analysis.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_025_evidence",
+      "evidence_for": "claim_025",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_026",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Constraint-based steady-state models represent a valuable framework to predict metabolic fluxes from high-throughput omics data.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_026_evidence",
+      "evidence_for": "claim_026",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_027",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Methods using cross-sectional metabolomics data to predict fluxes require a priori assumptions on the relationship between metabolites and fluxes.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_027_evidence",
+      "evidence_for": "claim_027",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_028",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "INTEGRATE's novel hypothesis is that evidence for a monotonic relationship between fluxes and substrate abundances, and for a concurrent non-monotonic relationship between flux variation and enzyme abundance, indicates that a reaction is controlled metabolically.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "analysis",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_028_evidence",
+      "evidence_for": "claim_028",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_029",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Current model-based approaches to discern transcriptionally from metabolically controlled fluxes have limitations in directly using metabolomics data.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_029_evidence",
+      "evidence_for": "claim_029",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_030",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "INTEGRATE takes as input a metabolic network model with Gene-Protein-Reaction associations, transcriptomics data, intracellular metabolomics data, and extracellular flux data.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_030_evidence",
+      "evidence_for": "claim_030",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_031",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "INTEGRATE returns two lists of metabolic fluxes: fluxes that vary across cells consistently with both metabolic and transcriptional regulation, and fluxes that vary consistently with metabolic regulation only.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "analysis",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_031_evidence",
+      "evidence_for": "claim_031",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_032",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "INTEGRATE generates three comparable datasets centered around the object reaction: Reaction Activity Scores, Feasible Flux Distributions, and Reaction Propensity Scores.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        },
+        {
+          "id": "asb:spine_FFD_component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_032_evidence",
+      "evidence_for": "claim_032",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_033",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Reaction Activity Score (RAS) is computed for each input model reaction based on the expression value and relationship among genes encoding catalyzing enzymes.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_RAS_component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_033_evidence",
+      "evidence_for": "claim_033",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_034",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Feasible Flux Distributions (FFD) dataset includes a large number of flux distributions obtained by uniformly sampling the feasible flux region of the metabolic model.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_FFD_component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_034_evidence",
+      "evidence_for": "claim_034",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_035",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Reaction Propensity Score (RPS) is computed based on the availability of reaction substrates, calculated as the product of substrate concentrations with each raised to a power equal to its stoichiometric coefficient.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_RPS_component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_035_evidence",
+      "evidence_for": "claim_035",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_036",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Five breast cell lines were selected for study: one non-tumorigenic and four breast cancer cell lines with different molecular classifications.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_036_evidence",
+      "evidence_for": "claim_036",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_038",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Cell lines present significant differences in terms of metabolic profile.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_038_evidence",
+      "evidence_for": "claim_038",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_039",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The ratio of lactate produced over glucose consumed is quite similar across the five cell lines.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_039_evidence",
+      "evidence_for": "claim_039",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_040",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Lactate and glutamate over glutamine ratios are more heterogeneous across the five cell lines compared to lactate/glucose ratio.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_040_evidence",
+      "evidence_for": "claim_040",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_041",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "ENGRO2 core model consists of 494 reactions, 410 metabolites, and 494 genes.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_ENGRO2_model"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_041_evidence",
+      "evidence_for": "claim_041",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_042",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "ENGRO1 model consisted of 84 reactions, 67 metabolites, and 216 genes in comparison to ENGRO2.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_ENGRO2_model"
+        },
+        {
+          "id": "asb:spine_ENGRO1_model"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_042_evidence",
+      "evidence_for": "claim_042",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_043",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Transcriptomics-derived constraints alone well discriminate the five cell line models.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_043_evidence",
+      "evidence_for": "claim_043",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_044",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Combination of transcriptomics-derived and extracellular flux constraints improves separation of feasible solutions between cell lines.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_044_evidence",
+      "evidence_for": "claim_044",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_045",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Growth rate predictions improve when transcriptomics-derived constraints are combined with extracellular flux constraints.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_045_evidence",
+      "evidence_for": "claim_045",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_046",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "44 reactions resulted from consistent transcriptional and metabolic regulation.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_046_evidence",
+      "evidence_for": "claim_046",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_047",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "13 reactions resulted only metabolically regulated because of positive RPSvsFFD score above 0.2 and negative RPSvsRAS score below threshold.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_047_evidence",
+      "evidence_for": "claim_047",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_048",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Cohen's kappa values are considered to indicate fair concordance between 0.21 and 0.40.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_cohens_kappa_tool"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_048_evidence",
+      "evidence_for": "claim_048",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_049",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "After FDR correction of p-values, concordance between RPSs and FFDs resulted statistically significant for 4 reactions.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_049_evidence",
+      "evidence_for": "claim_049",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_050",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "ACONT reaction catalyzes the production of cytosolic isocitrate from citrate and is metabolically controlled.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_050_evidence",
+      "evidence_for": "claim_050",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_051",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "RPI reaction catalyzes the conversion of ribulose 5-phosphate to ribose 5-phosphate within the non-oxidative phase of the pentose phosphate pathway.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_051_evidence",
+      "evidence_for": "claim_051",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_052",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Concordance scores are robust to the choice of sample, with standard deviation of Cohen's kappa values across batches being negligible for most reactions.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_cohens_kappa_tool"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_052_evidence",
+      "evidence_for": "claim_052",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_053",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Some flux variations show concordance between independent datasets beyond reasonable doubt according to empirical probability analysis.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_053_evidence",
+      "evidence_for": "claim_053",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_054",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "INTEGRATE integration of transcriptomics and metabolomics data enriches their expressive power by providing complementary views of metabolic state.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_054_evidence",
+      "evidence_for": "claim_054",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_055",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Metabolic fluxes predicted by constraint-based modeling complement information on differential activity of reactions derived from gene expression data.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_055_evidence",
+      "evidence_for": "claim_055",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_056",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "INTEGRATE indicated that aconitase (ACONT) metabolic regulation involves the cytosolic reaction while the aconitase flux itself is not regulated at transcriptional level.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_056_evidence",
+      "evidence_for": "claim_056",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_057",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "INTEGRATE does not have the ambition to predict exact flux values, but rather the sign of variation across cell lines.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_057_evidence",
+      "evidence_for": "claim_057",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_058",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The main novelty of INTEGRATE is the direct exploitation of metabolomics data to determine whether a flux is regulated at the metabolic level.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_058_evidence",
+      "evidence_for": "claim_058",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_059",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The pipeline can be extended to integrate proteomics and phosphoproteomics data alongside transcriptomics-derived RAS.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_INTEGRATE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_059_evidence",
+      "evidence_for": "claim_059",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_060",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Knowing whether a flux is controlled at the metabolic or enzymatic level is mandatory in designing therapeutic strategies and identifying metabolic reactions that indirectly affect target reactions.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_060_evidence",
+      "evidence_for": "claim_060",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1009337",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_integrate#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "hierarchical",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:fdr-correction-multiple-testing--EDAM:operation_4034",
+      "subject_id": "asb.skill:fdr-correction-multiple-testing",
+      "subject_label": "fdr-correction-multiple-testing",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_4034",
+      "object_label": "Multiple testing correction",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.75
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:multi-omics-data-integration--EDAM:topic_4021",
+      "subject_id": "asb.skill:multi-omics-data-integration",
+      "subject_label": "multi-omics-data-integration",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:topic_4021",
+      "object_label": "Multiomics",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.0
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_INTEGRATE_system",
+      "title": "INTEGRATE",
+      "identifier": "urn:asb:spine:INTEGRATE_system"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_INTEGRATE_architecture",
+      "title": "INTEGRATE Fixed Pipeline Architecture",
+      "identifier": "urn:asb:spine:INTEGRATE_architecture",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_RAS_component",
+      "title": "Reaction Activity Score (RAS)",
+      "identifier": "urn:asb:spine:RAS_component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_FFD_component",
+      "title": "Feasible Flux Distributions (FFD)",
+      "identifier": "urn:asb:spine:FFD_component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_RPS_component",
+      "title": "Reaction Propensity Score (RPS)",
+      "identifier": "urn:asb:spine:RPS_component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_ENGRO2_model",
+      "title": "ENGRO2",
+      "identifier": "urn:asb:spine:ENGRO2_model"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_ENGRO1_model",
+      "title": "ENGRO1",
+      "identifier": "urn:asb:spine:ENGRO1_model"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_Recon3D_model",
+      "title": "Recon3D",
+      "identifier": "urn:asb:spine:Recon3D_model"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_MCF102A_cellline",
+      "title": "MCF102A",
+      "identifier": "urn:asb:spine:MCF102A_cellline"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_SKBR3_cellline",
+      "title": "SKBR3",
+      "identifier": "urn:asb:spine:SKBR3_cellline"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_MCF7_cellline",
+      "title": "MCF7",
+      "identifier": "urn:asb:spine:MCF7_cellline"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_MDAMB231_cellline",
+      "title": "MDAMB231",
+      "identifier": "urn:asb:spine:MDAMB231_cellline"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_MDAMB361_cellline",
+      "title": "MDAMB361",
+      "identifier": "urn:asb:spine:MDAMB361_cellline"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_eFlux_tool",
+      "title": "eFlux",
+      "identifier": "urn:asb:spine:eFlux_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TRFBA_tool",
+      "title": "TRFBA",
+      "identifier": "urn:asb:spine:TRFBA_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_GXFBA_tool",
+      "title": "GX-FBA",
+      "identifier": "urn:asb:spine:GXFBA_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_scFBA_tool",
+      "title": "scFBA",
+      "identifier": "urn:asb:spine:scFBA_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_iReMet_tool",
+      "title": "iReMet",
+      "identifier": "urn:asb:spine:iReMet_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tSNE_tool",
+      "title": "t-SNE",
+      "identifier": "urn:asb:spine:tSNE_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_YSI_tool",
+      "title": "YSI analysis",
+      "identifier": "urn:asb:spine:YSI_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_cohens_kappa_tool",
+      "title": "Cohen's kappa",
+      "identifier": "urn:asb:spine:cohens_kappa_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_github_repo",
+      "title": "INTEGRATE GitHub Repository",
+      "identifier": "urn:asb:spine:github_repo"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_zenodo_repo",
+      "title": "INTEGRATE Zenodo Archive",
+      "identifier": "urn:asb:spine:zenodo_repo"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_breast_cellline_dataset",
+      "title": "Breast Cell Line Multi-Omics Dataset",
+      "identifier": "urn:asb:spine:breast_cellline_dataset"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_type1_constraints",
+      "title": "Type 1 Constraints Only (Nutrient Availability)",
+      "identifier": "urn:asb:spine:cond_type1_constraints"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_type1_2_constraints",
+      "title": "Type 1+2 Constraints (Nutrient Availability + Extracellular Fluxes)",
+      "identifier": "urn:asb:spine:cond_type1_2_constraints"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_type3_constraints",
+      "title": "Type 3 Constraints Only (Transcriptomics-Derived)",
+      "identifier": "urn:asb:spine:cond_type3_constraints"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_type1_2_3_constraints",
+      "title": "Type 1+2+3 Constraints (All Combined)",
+      "identifier": "urn:asb:spine:cond_type1_2_3_constraints"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_tsne_separation",
+      "title": "t-SNE Separation of Cell Line FFDs",
+      "identifier": "urn:asb:spine:result_tsne_separation",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_type1_constraints"
+        },
+        {
+          "id": "asb:spine_cond_type1_2_constraints"
+        },
+        {
+          "id": "asb:spine_cond_type3_constraints"
+        },
+        {
+          "id": "asb:spine_cond_type1_2_3_constraints"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_81_reactions",
+      "title": "81 Reactions with Full Substrate Metabolomics Coverage",
+      "identifier": "urn:asb:spine:result_81_reactions",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_type1_2_3_constraints"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_transcriptional_metabolic_classification",
+      "title": "Reaction Regulatory Level Classification",
+      "identifier": "urn:asb:spine:result_transcriptional_metabolic_classification",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_type1_2_3_constraints"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_growth_yield_correlation",
+      "title": "Growth Yield Correlation Improvement with Constraints",
+      "identifier": "urn:asb:spine:result_growth_yield_correlation",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_type3_constraints"
+        },
+        {
+          "id": "asb:spine_cond_type1_2_3_constraints"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_MCF7_metabolites",
+      "title": "MCF7 Metabolic Enrichment",
+      "identifier": "urn:asb:spine:result_MCF7_metabolites"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_MCF102A_metabolites",
+      "title": "MCF102A Metabolic Enrichment",
+      "identifier": "urn:asb:spine:result_MCF102A_metabolites"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_MDAMB231_metabolites",
+      "title": "MDAMB231 Metabolic Enrichment",
+      "identifier": "urn:asb:spine:result_MDAMB231_metabolites"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_MDAMB361_metabolites",
+      "title": "MDAMB361 Metabolic Enrichment",
+      "identifier": "urn:asb:spine:result_MDAMB361_metabolites"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_SKBR3_metabolites",
+      "title": "SKBR3 Metabolic Enrichment",
+      "identifier": "urn:asb:spine:result_SKBR3_metabolites"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_lactate_glucose_ratio",
+      "title": "Lactate/Glucose Ratio Similarity Across Cell Lines",
+      "identifier": "urn:asb:spine:result_lactate_glucose_ratio"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_cond_katzir_baseline",
+      "title": "Katzir et al. Baseline Method",
+      "identifier": "urn:asb:spine:cond_katzir_baseline"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_cond_cakir_baseline",
+      "title": "Cakir et al. Baseline Method",
+      "identifier": "urn:asb:spine:cond_cakir_baseline"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_GPR_component",
+      "title": "Gene-Protein-Reaction (GPR) Associations",
+      "identifier": "urn:asb:spine:GPR_component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_CK_enzyme",
+      "title": "CK",
+      "identifier": "urn:asb:spine:CK_enzyme"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_argininosuccinate_synthase_enzyme",
+      "title": "argininosuccinate synthase",
+      "identifier": "urn:asb:spine:argininosuccinate_synthase_enzyme"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_LXR_component",
+      "title": "liver-X-receptor",
+      "identifier": "urn:asb:spine:LXR_component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_mass_action_law_component",
+      "title": "Mass Action Law Formulation",
+      "identifier": "urn:asb:spine:mass_action_law_component"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_FVA_tool",
+      "title": "Flux Variability Analysis",
+      "identifier": "urn:asb:spine:FVA_tool"
+    }
+  ]
+}

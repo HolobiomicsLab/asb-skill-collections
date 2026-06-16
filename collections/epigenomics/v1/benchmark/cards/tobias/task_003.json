@@ -1,0 +1,385 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/BATF_footprint_comparison_all.png",
+      "role": "figure",
+      "sha256": "2b11a5c2ad05f57c079cf59c0a68f934f96232595fc7211991ef611733bacc93"
+    },
+    {
+      "indexable": false,
+      "path": "figures/BATF_footprint_comparison_subsets.png",
+      "role": "figure",
+      "sha256": "33cd1a79f823b4502e4721eefaa4ddb336bb237d7d8d7d6a9f924ea86170a552"
+    },
+    {
+      "indexable": false,
+      "path": "figures/BATF_heatmap.png",
+      "role": "figure",
+      "sha256": "508b2b4f4a26240c105f8b71e64cc5f49517dbcbddf859e50606cc1664b3c91c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/IRF1_footprint.png",
+      "role": "figure",
+      "sha256": "17bce2aa433d74d0a4e7a65ae49ecc0b1ac3e621e9050caf7c43ba73e830467a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/atacorrect.png",
+      "role": "figure",
+      "sha256": "71124fbc53df1c00b8c2e2e515a6ebd0ae0269cb6901c51d4b9920ff182d34d4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bindetect.png",
+      "role": "figure",
+      "sha256": "889f8e209254335d7056f4658c51049ad3b316e7719af2ee8c12b42002659fb1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/chr4-119628321-119629356.png",
+      "role": "figure",
+      "sha256": "75a98921dbde87c5e6271e714064c63a0ab20a10cc3456c1433708e943b381ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/chr4-163701830-163702617.png",
+      "role": "figure",
+      "sha256": "eda854e390fe862a1acfc920c29bdea974f8811ca46131063d6ceb4e9a28c847"
+    },
+    {
+      "indexable": false,
+      "path": "figures/footprinting.png",
+      "role": "figure",
+      "sha256": "73dc2d9ee8d424a808508cd581a9c8a28c422f0efa75167bb74651fb57719ea5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/network.png",
+      "role": "figure",
+      "sha256": "07b6c7dc655f0dec058de81a6968c347478d79850487986a15695d829a9a2902"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tobias.png",
+      "role": "figure",
+      "sha256": "77d7601461e43ffc36c708663ae88f8c904726769adc2de815d78e5de1927ee0"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "efd138c7f9f0421cac53bbffe20153aecfee6bb55653fe27761d490f3a6e0c9f"
+    }
+  ],
+  "created_at": "2026-06-15T19:12:11.236771+00:00",
+  "crossref_doi": "10.1038/s41467-020-18035-1",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "TOBIAS-preprocessed footprint score files (BIGWIG or HDF5 format) from ATAC-seq data, one per condition or replicate",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Motif database in JASPAR or compatible format containing transcription factor position-weight matrices",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "Peak or genomic region coordinates (BED or NARROWPEAK format) where motif scanning will be performed",
+      "detection_method": "prose_regex",
+      "file_extension": ".bed",
+      "format_id": "BED",
+      "format_iri": "http://edamontology.org/format_3003",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured table (CSV/TSV) containing transcription factor motif occupancy predictions with columns: motif ID, genomic location, occupancy state (bound/unbound), binding score/probability, and condition-specific metrics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "ATAC-seq footprints are visible depletions of Tn5 insertions around protein-bound DNA regions, enabling inference of transcription factor occupancy.",
+    "BINDetect requires normalized footprint scores (typically from TOBIAS ScoreBigWig or similar preprocessing) and pre-scanned or provided motif positions to compare binding signal across conditions.",
+    "Occupancy predictions depend on the quality of footprint signal in the input\u2014shallow or noisy footprints reduce discrimination between bound and unbound states.",
+    "Motif databases must be in compatible format (JASPAR PWM, MEME, or TOBIAS-indexed) and should be curated or filtered for the relevant cell type or organism to minimize false-positive predictions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that TOBIAS BINDetect executable is available in the loosolab/TOBIAS repository at the commit or release specified in inputs",
+      "verify input file exists: ATAC-seq BAM or bed file (or task output containing aligned reads/peaks)",
+      "verify input file exists: motif Position Weight Matrix (PWM) file in standard format (JASPAR, MEME, or similar)",
+      "verify input file exists: file specifying two or more conditions/samples to compare for differential footprint analysis",
+      "script_runs: BINDetect command executes without fatal errors on provided inputs",
+      "output file exists: structured table (TSV, CSV, or similar tabular format) with one row per TF motif",
+      "field_present: output table contains columns for TF identifier, motif name, and per-condition footprint scores or statistics",
+      "field_present: output table contains a bound/unbound classification or differential occupancy score per TF motif",
+      "value_in_range: occupancy predictions or scores are numeric and fall within expected statistical range (robust to parameter choices)"
+    ],
+    "expert_review": [
+      "evaluate whether the bound/unbound predictions are biologically plausible given the footprint depletion patterns at motif sites",
+      "assess whether differential occupancy rankings align with known or expected TF activity changes across conditions",
+      "review parameter choices (window size, threshold, normalization) for appropriateness given ATAC-seq data characteristics"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does TOBIAS identify transcription factor occupancy at specific genomic locations by analyzing ATAC-seq footprint patterns across different conditions?: 'the local distribution of Tn5 insertions contains information about transcription factor binding due to the visible depletion of insertions around sites bound by protein - known as _footprints_'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TOBIAS is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data, enabling detection of transcription factor occupancy through analysis of Tn5 insertion patterns.: '**TOBIAS** is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] TOBIAS-preprocessed footprint score files (BIGWIG or HDF5 format) from ATAC-seq data, one per condition or replicate: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Motif database in JASPAR or compatible format containing transcription factor position-weight matrices: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Peak or genomic region coordinates (BED or NARROWPEAK format) where motif scanning will be performed: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structured table (CSV/TSV) containing transcription factor motif occupancy predictions with columns: motif ID, genomic location, occupancy state (bound/unbound), binding score/probability, and condition-specific metrics: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TOBIAS: '**TOBIAS** is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting TOBIAS version, release notes, or algorithmic updates available in the repository: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "tobias",
+      "BINDetect",
+      "--signals",
+      "{inputs.footprint_scores}",
+      "--motifs",
+      "{inputs.motif_db}",
+      "--peaks",
+      "{inputs.peak_regions}",
+      "--outdir",
+      "tobias_bindetect_output_{task_id}",
+      "--cores",
+      "4"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "tf_occupancy_predictions.csv",
+  "expected_outputs": [
+    "Structured table (CSV/TSV) containing transcription factor motif occupancy predictions with columns: motif ID, genomic location, occupancy state (bound/unbound), binding score/probability, and condition-specific metrics"
+  ],
+  "finding": "TOBIAS is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data, enabling detection of transcription factor occupancy through analysis of Tn5 insertion patterns.",
+  "github_name": "loosolab/TOBIAS",
+  "input_from": "task_002",
+  "inputs": [
+    "TOBIAS-preprocessed footprint score files (BIGWIG or HDF5 format) from ATAC-seq data, one per condition or replicate",
+    "Motif database in JASPAR or compatible format containing transcription factor position-weight matrices",
+    "Peak or genomic region coordinates (BED or NARROWPEAK format) where motif scanning will be performed"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "motif_scan_results.bed",
+    "footprint_vs_motif_match.tsv",
+    "tf_occupancy_predictions.csv"
+  ],
+  "linked_result_ids": [
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Load ATAC-seq footprint score files (BIGWIG/HDF5) preprocessed by prior TOBIAS steps.",
+    "Provide or scan motif database (JASPAR-format PWMs) against genomic peaks.",
+    "Run TOBIAS BINDetect to compare footprint signal intensity at motif sites across conditions.",
+    "Extract occupancy predictions (bound/unbound state) and binding confidence scores per motif.",
+    "Validation: occupancy predictions must pass QC checks on motif-site coverage and footprint signal-to-noise ratio; predictions should show expected condition-specific differences in occupancy for known differentially-regulated transcription factors.",
+    "References: source article (DOI: 10.1038/s41467-020-18035-1)"
+  ],
+  "missing_information": [
+    "No changelog documenting TOBIAS version, release notes, or algorithmic updates available in the repository"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/footprint_scores_bigwig"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does TOBIAS identify transcription factor occupancy at specific genomic locations by analyzing ATAC-seq footprint patterns across different conditions?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "atac-seq-footprint-scoring",
+    "transcription-factor-motif-matching",
+    "chromatin-accessibility-occupancy-prediction",
+    "tf-binding-site-classification"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_tobias/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "TOBIAS_system",
+    "tf_occupancy_prediction",
+    "pypi_tobias",
+    "bioconda_tobias"
+  ],
+  "subdomains": [
+    "gene-regulation",
+    "functional-genomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:loosolab__TOBIAS",
+  "task_description": "Run TOBIAS BINDetect to predict transcription factor occupancy by comparing ATAC-seq footprint scores at motif-matched sites across conditions, producing a structured table of bound/unbound predictions per TF motif.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "TOBIAS-preprocessed footprint score files (BIGWIG or HDF5)",
+      "port_id": "footprint_scores",
+      "resolved_via": null,
+      "source": "task_002/footprint_scores_bigwig",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Motif database in JASPAR format",
+      "port_id": "motif_db",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Peak or genomic region coordinates (BED/NARROWPEAK)",
+      "port_id": "peak_regions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement BINDetect to compare footprint scores at motif-matched sites across conditions and generate a structured table of transcription factor occupancy predictions (bound/unbound status per TF motif).",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Transcription factor occupancy predictions table",
+      "port_id": "tf_occupancy_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "enrichment-analysis",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct the transcription factor occupancy prediction step that classifies TF binding from footprint scores at motif sites",
+  "tools": [
+    "TOBIAS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load aligned ATAC-seq BAM files and corresponding peak/footprint score files (output from prior TOBIAS preprocessing steps). 2. Prepare a motif database or use TOBIAS-compatible motif file (e.g., JASPAR-format PWMs) containing transcription factor motifs. 3. Run TOBIAS BINDetect with the footprint scores and motif matches as input, comparing signal intensity at motif sites across experimental conditions to discriminate bound from unbound sites. 4. Parse BINDetect output table containing per-motif occupancy predictions, binding probabilities, and differential occupancy scores across conditions. 5. Format results as a structured CSV/TSV table with columns for TF motif ID, genomic coordinates, occupancy state (bound/unbound), confidence scores, and condition-specific binding metrics."
+}

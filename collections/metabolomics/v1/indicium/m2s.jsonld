@@ -1,0 +1,1175 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/matlab-package-execution",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolite-feature-matching-across-datasets",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/retention-time-mass-alignment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/untargeted-metabolomics-data-processing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "M2S is a Matlab package designed to match untargeted metabolomic features of two LC-MS datasets.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_matlab"
+        },
+        {
+          "id": "asb:spine_tool_lcms"
+        },
+        {
+          "id": "asb:spine_dataset_lcms_features"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "M2S was developed by Rui Climaco Pinto in 2021 at Imperial College London.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The M2S source code is available on GitHub as rjdossan__M2S.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
+      "asbval:note": "Research question directly addresses the core purpose of the paper: developing and demonstrating M2S for matching untargeted LC-MS metabolomic features across datasets.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does the M2S Matlab package match untargeted metabolomic features across two LC-MS datasets?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:49:58.846723+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment",
+      "asbval:note": "Paper explicitly states M2S is implemented in MATLAB.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Matlab",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:49:58.846723+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method returns two datasets with feature correspondence increasing statistical power or facilitating discovery/validation studies.",
+      "asbval:note": "Paper confirms matched feature correspondence is returned, and penalization scores are calculated for each match (Step 2d: 'The joint penalization score for each candidate match m is simply defined as the square root of the weighted sum of squares of the normalized residuals'). However, the paper does not explicitly describe the output format as a 'matched feature table' \u2014 it describes the method returning 'two datasets with feature correspondence' and discusses penalization scores as internal algorithmic outputs used for selection, not necessarily as final output metrics.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Matched feature table containing linked features from both datasets with matching scores",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:49:58.846723+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card's research question and tools are well-aligned with the paper's scope. The paper is explicitly about M2S (a MATLAB toolbox) for matching LC-MS metabolomic features across datasets.",
+        "The expected_outputs claim is partially supported: the paper does produce matched features with associated scores (penalization scores), but the framing as a 'matched feature table' is inferred rather than explicitly stated in the passages provided."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:49:58.846723+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/matlab-package-execution/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method, as applied with this package, does not have high computer memory requirements and the execution is rapid, taking less than a minute using default settings on a regular desktop computer to match datasets with around 6000 features. The toolbox is flexible to accommodate disparate dataset matching, with detailed visualizations that help guide the analyst through the process and lend confidence to the final matching results.",
+      "asbval:note": "Core research question is directly supported by the paper's description of M2S as a MATLAB toolbox for matching LC-MS datasets using RT and m/z.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "matlab-package-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Execute a Matlab package to algorithmically match untargeted metabolomic features across two LC-MS datasets based on retention time and mass-to-charge ratio similarity.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:22.353016+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/matlab-package-execution/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
+      "asbval:note": "M2S is explicitly named and described as a MATLAB toolbox for feature matching.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "matlab-package-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "M2S (Matlab package that executes the feature matching algorithm using retention time and m/z similarity)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:22.353016+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/matlab-package-execution/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
+      "asbval:note": "Repository URL is explicitly provided in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "matlab-package-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "M2S repo: https://github.com/rjdossan/M2S",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:22.353016+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/matlab-package-execution/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment, which can be deployed for its practical application.",
+      "asbval:note": "MATLAB is explicitly identified as the environment for the M2S toolbox.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "matlab-package-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Matlab (tool used for package execution)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:22.353016+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/matlab-package-execution/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we describe a method to address the problem of finding correspondence between datasets. As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use and potentially applicable in the widest range of situations.",
+      "asbval:note": "The paper explicitly describes the method as requiring RT and m/z for feature matching across datasets.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "matlab-package-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Feature matching across two LC-MS datasets using retention time and m/z values",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:22.353016+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/matlab-package-execution/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We believe the method and associated software will aid the integration of untargeted LC\u2013MS metabolomics data in a wide variety of applications such as batch combination, discovery validation, and multicohort integration.",
+      "asbval:note": "The paper explicitly states the method is for untargeted LC-MS metabolomics.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "matlab-package-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Untargeted metabolomic feature matching",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:22.353016+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/matlab-package-execution/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method requires only two independent feature sets (RT, MZ, FI) as inputs and follows a three-step process.",
+      "asbval:note": "The paper explicitly specifies that RT and MZ are required inputs.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "matlab-package-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input data: LC-MS untargeted metabolomic feature table with retention time and m/z columns",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:22.353016+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/matlab-package-execution/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "One challenge is to combine or compare datasets generated from different analytical methods, instruments, software, as well as from different batches, populations, and sample types. These factors impact a variety of variables including retention times, m/z ratios, ionization efficiency, adduct formation, detector sensitivity, number of peaks detected, etc., complicating matching of spectral features from one run to another.",
+      "asbval:note": "The paper describes the problem M2S solves as matching datasets that have not been previously aligned, supporting the 'when NOT to use' guidance.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "matlab-package-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: Input data is already aligned or pre-matched",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:22.353016+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/matlab-package-execution/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use and potentially applicable in the widest range of situations.",
+      "asbval:note": "The paper explicitly states RT and MZ are required, supporting this constraint.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "matlab-package-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: Feature tables do not contain retention time and m/z values",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:22.353016+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/matlab-package-execution/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "This is especially challenging in the setting of untargeted metabolomic profiling where there are thousands of spectral features, even within a single run, whose chemical identity is not known.",
+      "asbval:note": "The paper explicitly focuses on untargeted metabolomics, implying it is not designed for targeted approaches.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "matlab-package-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: Targeted metabolomic feature matching",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:22.353016+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method, as applied with this package, does not have high computer memory requirements and the execution is rapid, taking less than a minute using default settings on a regular desktop computer to match datasets with around 6000 features. The toolbox is flexible to accommodate disparate dataset matching, with detailed visualizations that help guide the analyst through the process and lend confidence to the final matching results. We believe the method and associated software will aid the integration of untargeted LC\u2013MS metabolomics data in a wide variety of applications such as batch combination, discovery validation, and multicohort integration.",
+      "asbval:note": "Core research question is directly supported by the paper's abstract and methods description.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Match untargeted metabolomic features across two LC-MS datasets by comparing retention time and mass-to-charge ratio signatures using the M2S Matlab package.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The penalization score is built using (normalized) residuals in each dimension and increases with the distance between the match and the expected inter-dataset shift... The best matches, with inter-dataset distance close to the expected inter-dataset shift (small residuals), have lower penalization scores.",
+      "asbval:note": "Paper explicitly describes penalization scores as the matching metric used to rank and select feature correspondences.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "producing a consolidated feature correspondence table with matching scores",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
+      "asbval:note": "M2S is explicitly named and described as the MATLAB toolbox implementing the method.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "M2S",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
+      "asbval:note": "Repository URL is verbatim from the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "repo: https://github.com/rjdossan/M2S",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we describe a method to address the problem of finding correspondence between datasets. As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use and potentially applicable in the widest range of situations.",
+      "asbval:note": "The role description accurately reflects the paper's description of M2S functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "M2S role: Matlab package that implements the matching algorithm for untargeted metabolomic features across two LC-MS datasets using retention time and m/z similarity",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment, which can be deployed for its practical application.",
+      "asbval:note": "MATLAB is explicitly identified as the runtime environment for M2S.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Matlab",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment, which can be deployed for its practical application.",
+      "asbval:note": "Role description is consistent with paper's description of MATLAB as the environment for M2S execution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Matlab role: Runtime and numerical computing environment required to execute M2S package and load/manipulate feature tables",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we describe a method to address the problem of finding correspondence between datasets.",
+      "asbval:note": "Core scope is directly supported.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Match untargeted metabolomic features across two LC-MS datasets",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples",
+      "asbval:note": "RT and m/z are the primary matching dimensions; FI is optional.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "comparing retention time and mass-to-charge ratio signatures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We believe the method and associated software will aid the integration of untargeted LC\u2013MS metabolomics data in a wide variety of applications such as batch combination, discovery validation, and multicohort integration.",
+      "asbval:note": "Paper explicitly mentions multicohort integration and discovery validation as applications.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "multi-cohort integration, or validation of feature detection across runs",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "One challenge is to combine or compare datasets generated from different analytical methods, instruments, software, as well as from different batches, populations, and sample types... Many packages in the public domain can be used to align features across samples, but not many do that across datasets.",
+      "asbval:note": "Paper explicitly distinguishes M2S as a cross-dataset matching tool, not within-dataset alignment.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input data is already a pre-aligned or single feature table from a unified analysis pipeline (M2S is for cross-dataset matching, not within-dataset feature deconvolution)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use",
+      "asbval:note": "Paper confirms RT and m/z are required inputs for M2S.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Features lack retention time or m/z information; M2S relies on these two dimensions for similarity computation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:38.944813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we describe a method to address the problem of finding correspondence between datasets. As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use and potentially applicable in the widest range of situations.",
+      "asbval:note": "Core research objective directly stated in paper introduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Align and match untargeted LC-MS metabolomic features across two datasets by leveraging retention time and mass-to-charge ratio similarity.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method returns two datasets with feature correspondence increasing statistical power or facilitating discovery/validation studies.",
+      "asbval:note": "Paper explicitly describes output as feature correspondence enabling comparative studies.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "producing matched feature tables with alignment scores suitable for comparative metabolomics studies",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method requires only two independent feature sets (RT, MZ, FI) as inputs and follows a three-step process.",
+      "asbval:note": "Paper explicitly requires two independent feature sets with RT and MZ.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "two independent LC-MS untargeted metabolomic feature datasets (each with retention time and m/z values)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We believe the method and associated software will aid the integration of untargeted LC\u2013MS metabolomics data in a wide variety of applications such as batch combination, discovery validation, and multicohort integration.",
+      "asbval:note": "Paper lists batch combination, discovery validation, and multicohort integration as applications.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "dataset integration, batch effect assessment, or cross-platform feature validation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples",
+      "asbval:note": "Paper explicitly states RT and MZ are required inputs; absence would preclude use.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - when NOT to use",
+      "asbval:target_claim_text": "Input datasets are not LC-MS-derived or lack both retention time and m/z annotations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method requires only two independent feature sets (RT, MZ, FI) as inputs",
+      "asbval:note": "Paper explicitly requires two independent datasets; single-dataset matching is not the method's purpose.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - when NOT to use",
+      "asbval:target_claim_text": "You are attempting to match features within a single dataset rather than across two independent datasets",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method requires only two independent feature sets (RT, MZ, FI) as inputs",
+      "asbval:note": "Paper specifies RT and MZ as required input components.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "LC-MS untargeted metabolomic feature table 1 (with retention time and m/z columns)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method requires only two independent feature sets (RT, MZ, FI) as inputs and follows a three-step process. The feature sets are referred to as reference and target",
+      "asbval:note": "Paper explicitly requires two feature sets (reference and target) with RT and MZ.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "LC-MS untargeted metabolomic feature table 2 (with retention time and m/z columns)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method returns two datasets with feature correspondence increasing statistical power or facilitating discovery/validation studies.",
+      "asbval:note": "Paper describes output as matched datasets with feature correspondence. Alignment scores are implicit in penalization scores used for matching quality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "outputs",
+      "asbval:target_claim_text": "Matched feature table with feature correspondence and alignment scores",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
+      "asbval:note": "[SUBSTRING-MATCH for M2S | role: primary software tool]",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "M2S (name)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "available at https://github.com/rjdossan/M2S",
+      "asbval:note": "Repository URL matches exactly.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "M2S repo: https://github.com/rjdossan/M2S",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox... An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment",
+      "asbval:note": "Paper confirms M2S is a MATLAB toolbox implementing the RT and m/z matching method.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "M2S role: Matlab package that executes the retention time and mass-to-charge ratio matching algorithm across two LC-MS feature datasets",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:50:55.529924+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we describe a method to address the problem of finding correspondence between datasets. As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use and potentially applicable in the widest range of situations.",
+      "asbval:note": "Core research question is directly supported by the paper's stated objective.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "untargeted-metabolomics-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Match corresponding untargeted metabolomic features across two LC-MS datasets using retention time and mass-to-charge ratio alignment.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:09.233719+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We believe the method and associated software will aid the integration of untargeted LC\u2013MS metabolomics data in a wide variety of applications such as batch combination, discovery validation, and multicohort integration.",
+      "asbval:note": "The paper explicitly describes the method as enabling integration and comparative analysis across datasets.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "untargeted-metabolomics-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill bridges two independent feature tables to enable comparative metabolomics analysis by identifying and linking chemically identical or highly similar features.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:09.233719+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "One challenge is to combine or compare datasets generated from different analytical methods, instruments, software, as well as from different batches, populations, and sample types.",
+      "asbval:note": "Paper explicitly addresses matching across different cohorts, instruments, and processing pipelines.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "untargeted-metabolomics-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have two separate LC-MS untargeted metabolomic feature tables (e.g., from different sample cohorts, instrument runs, or data processing pipelines) and need to establish one-to-one correspondences between features",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:09.233719+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
+      "asbval:note": "M2S is explicitly named and described as the software implementation of the method.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "untargeted-metabolomics-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "M2S",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:09.233719+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
+      "asbval:note": "Repository URL is explicitly provided in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "untargeted-metabolomics-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "repo: https://github.com/rjdossan/M2S",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:09.233719+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment, which can be deployed for its practical application. The method requires only two independent feature sets (RT, MZ, FI) as inputs and follows a three-step process.",
+      "asbval:note": "M2S is confirmed as a MATLAB toolbox that uses RT and m/z for feature matching.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "untargeted-metabolomics-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "role: Matlab package executing the feature matching algorithm using retention time and m/z similarity",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:09.233719+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/matlab-package-execution/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "matlab-package-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 11,
+      "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/retention-time-mass-alignment/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 12,
+      "asbval:target_artifact_id": "retention-time-mass-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "untargeted-metabolomics-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "M2S is a Matlab package designed to match untargeted metabolomic features of two LC-MS datasets.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:source_excerpt": "2S\nMatlab package to match untargeted metabolomic features of two LC-MS datasets \nRui Climaco",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:49:52.317659+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "M2S was developed by Rui Climaco Pinto in 2021 at Imperial College London.",
+      "asbval:note": "substring_in_paper=false; excerpt confirms author name, year, and institution but doesn't explicitly state 'developed by' relationship or confirm these are all connected to M2S development",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:source_excerpt": "Rui Climaco Pinto 2021\nImperial College London",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:49:52.317659+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The M2S source code is available on GitHub as rjdossan__M2S.",
+      "asbval:note": "substring_in_paper=false; excerpt shows GitHub handle but doesn't explicitly confirm this is the source code repository or that it's publicly available",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-1c03592",
+      "asbval:source_excerpt": "Source: github:rjdossan__M2S",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:49:52.317659+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_m2s#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "implicit",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_M2S_system",
+      "title": "M2S",
+      "identifier": "urn:asb:spine:M2S_system"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_matlab",
+      "title": "Matlab",
+      "identifier": "urn:asb:spine:tool_matlab"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_lcms",
+      "title": "LC-MS",
+      "identifier": "urn:asb:spine:tool_lcms"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_lcms_features",
+      "title": "LC-MS untargeted metabolomic feature datasets",
+      "identifier": "urn:asb:spine:dataset_lcms_features"
+    }
+  ]
+}

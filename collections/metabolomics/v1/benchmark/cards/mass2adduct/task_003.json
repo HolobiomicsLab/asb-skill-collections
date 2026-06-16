@@ -1,0 +1,327 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "5ec722ce6c7d34157c2dccaf42d8443e6f66ade354f4ae1e31ec86adc0ca483e"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:46.430517+00:00",
+  "crossref_doi": "10.1021/acs.analchem.0c04720",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "msimat object: preprocessed MSI data matrix with intensity values for each mass peak across all pixels",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "massdiff object annotated with adductMatch() and filtered by corrPairsMSI() for spatial correlation significance",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "correlation-tested massdiff object with Estimate, P.value, and Significance columns from corrPairsMSI()",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Annotated mass spectrum plot with parent ions marked as blue circle outlines and adduct ions marked as red filled points, showing overlap indicating ions with dual roles",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "In MALDI-MSI, sodium adducts form when sodium ions attach to neutral molecules during ionization, producing peaks at mass m/z = [M+Na]+ with the characteristic mass difference of 22.99 Da from the parent molecular ion.",
+    "Spatial correlation testing in MSI exploits pixel-level intensity covariance between parent and putative adduct peaks; high Pearson correlation coefficients (after Bonferroni multiple-testing correction) indicate that the two peaks co-occur spatially, supporting a true adduct relationship rather than chance mass-difference matching.",
+    "The overlap of red and blue annotation points on a mass spectrum indicates molecular ions that serve a dual role: they are simultaneously the product adduct of a lighter parent ion AND the parent ion for a heavier adduct, creating a chain of related molecular species.",
+    "The pointsAdducts() function requires prior annotation of peak pairs with adductMatch() and significance filtering via corrPairsMSI(); calling it without this preprocessing will result in empty or misleading visualizations.",
+    "Visual inspection of the annotated spectrum is a key validation step: the expected red/blue overlap pattern confirms that the workflow correctly identified ions with multiple adduct relationships in the same biological sample."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:kbseah__mass2adduct containing pointsAdducts() function implementation",
+      "script_runs: execute pointsAdducts(d, d.diff.annot.cor.Na, which=\"adduct\", signif=TRUE, pch=20, cex=0.5, col=\"red\") on a correlation-filtered massdiff object subset to Na adduct matches without error",
+      "output_matches_reference: generated scatter plot contains red-colored points representing adduct ions and blue-colored points representing parent ions, with overlapping regions visible (robust to exact pixel coordinates, parameter-sensitive to point size and transparency settings)",
+      "file_format_is: output figure in standard graphics format (PNG, PDF, or R graphics object)"
+    ],
+    "expert_review": [
+      "visual assessment that red/blue overlap pattern in scatter plot is consistent with reported paper findings regarding adduct-parent ion co-localization",
+      "confirmation that pointsAdducts() correctly interprets the which=\"adduct\" parameter to distinguish adduct from parent ion populations",
+      "assessment that signif=TRUE filtering parameter appropriately restricts display to statistically significant correlation pairs"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] How can sodium adduct ions be visually distinguished from their parent ions in mass spectrometry imaging data?: 'pointsAdducts(d, d.diff.annot.cor.Na, which=\"adduct\", signif=TRUE, pch=20, cex=0.5, col=\"red\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] The pointsAdducts() function generates a scatter plot that highlights adduct ions in red and parent ions in contrasting colors, enabling visual identification of the red/blue overlap pattern between sodium adducts and their corresponding parent ions.: 'pointsAdducts(d, d.diff.annot.cor.Na, which=\"adduct\", signif=TRUE, pch=20, cex=0.5, col=\"red\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] msimat object: preprocessed MSI data matrix with intensity values for each mass peak across all pixels: 'd <- msimat(system.file(\"extdata\",\"msi.csv\",package=\"mass2adduct\"),sep=\";\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] massdiff object annotated with adductMatch() and filtered by corrPairsMSI() for spatial correlation significance: 'd.diff.annot <- adductMatch(d.diff,add=adducts2)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] correlation-tested massdiff object with Estimate, P.value, and Significance columns from corrPairsMSI(): 'd.diff.annot.cor <- corrPairsMSI(d,d.diff.annot)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Annotated mass spectrum plot with parent ions marked as blue circle outlines and adduct ions marked as red filled points, showing overlap indicating ions with dual roles: 'You can annotate the original mass spectrum using a massdiff object, to mark peaks corresponding to parent ions and adduct ions in different colors.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] mass2adduct: 'library(mass2adduct)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] R: 'library(mass2adduct)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, breaking changes, or function signature stability for pointsAdducts() across releases: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mass2adduct); msimat <- readRDS('{inputs.msimat_data}'); massdiff_cor <- readRDS('{inputs.massdiff_annotated_cor}'); massdiff_na <- massdiff_cor[massdiff_cor$adduct == '[M+Na]+', ]; png('adduct_parent_overlap_plot.png', width=800, height=600); plot(msimat@mass, msimat@intensity[1,], type='n', xlab='m/z', ylab='Intensity', main='Sodium Adduct-Parent Ion Spatial Overlap'); pointsAdducts(massdiff_na, which='parent', pch=1, col='blue', cex=1.5); pointsAdducts(massdiff_na, which='adduct', pch=20, col='red', cex=1.2); legend('topright', c('Parent ions', 'Adduct ions'), pch=c(1, 20), col=c('blue', 'red')); dev.off(); cat('Plot saved to adduct_parent_overlap_plot.png\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "sodium_adduct_annotated_spectrum.png",
+  "expected_outputs": [
+    "Annotated mass spectrum plot with parent ions marked as blue circle outlines and adduct ions marked as red filled points, showing overlap indicating ions with dual roles"
+  ],
+  "finding": "The pointsAdducts() function generates a scatter plot that highlights adduct ions in red and parent ions in contrasting colors, enabling visual identification of the red/blue overlap pattern between sodium adducts and their corresponding parent ions.",
+  "github_name": "kbseah/mass2adduct",
+  "input_from": "task_002",
+  "inputs": [
+    "msimat object: preprocessed MSI data matrix with intensity values for each mass peak across all pixels",
+    "massdiff object annotated with adductMatch() and filtered by corrPairsMSI() for spatial correlation significance",
+    "correlation-tested massdiff object with Estimate, P.value, and Significance columns from corrPairsMSI()"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "massdiff_object_subset.csv",
+    "sodium_adduct_parent_child_pairs.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_034",
+    "result_040",
+    "result_041",
+    "result_043",
+    "result_044"
+  ],
+  "methodology_summary": [
+    "Subset correlation-filtered massdiff object to sodium adduct matches only",
+    "Load preprocessed MSI data matrix and annotated massdiff object into R/mass2adduct environment",
+    "Overlay adduct ion peaks as red filled points (pch=20) using pointsAdducts(which='adduct')",
+    "Overlay parent ion peaks as blue circle outlines (pch=1) using pointsAdducts(which='parent')",
+    "Validation: confirm visual output shows characteristic red/blue overlap pattern indicating ions with dual parent-adduct roles in the same sample",
+    "References: source article (DOI: 10.1021/acs.analchem.0c04720)"
+  ],
+  "missing_information": [
+    "No changelog documenting version history, breaking changes, or function signature stability for pointsAdducts() across releases"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/annotated_corr_massdiff"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How can sodium adduct ions be visually distinguished from their parent ions in mass spectrometry imaging data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "mass-spectrometry-imaging-data-interpretation",
+    "adduct-ion-parent-ion-pairing-analysis",
+    "spatial-correlation-filtering-in-msi",
+    "spectral-annotation-and-overlay-visualization",
+    "sodium-adduct-detection-and-classification"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mass2adduct/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "COMP_MASSDIFF_OBJ",
+    "TOOL_MASSDIFF_FN",
+    "TOOL_ADDUCTMATCH",
+    "TOOL_POINTSADDUCTS",
+    "CONCEPT_MASSDIFF",
+    "CONCEPT_NA_ADDUCT",
+    "RES_INTEGER_BACKGROUND",
+    "RES_ADDUCT_PARENT_OVERLAP"
+  ],
+  "subdomains": [
+    "spatial-metabolomics",
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "visualization",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:kbseah__mass2adduct",
+  "task_description": "Generate a scatter plot annotation of the mass spectrum highlighting sodium adduct ions (red points) and their parent ions (blue outlines) from a correlation-filtered, adduct-matched massdiff object, showing the red/blue overlap pattern where some adduct ions serve as parents for further adducts.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Preprocessed MSI data matrix",
+      "port_id": "msimat_data",
+      "resolved_via": null,
+      "source": "task_002/annotated_corr_massdiff",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Correlation-filtered and adduct-annotated massdiff object",
+      "port_id": "massdiff_annotated_cor",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Generate a scatter plot using pointsAdducts() on correlation-filtered Na adduct matches to visualize parent and adduct ion distributions with color coding.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mass spectrum with sodium adduct parent/adduct ion annotation",
+      "port_id": "annotated_spectrum_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "adduct-detection",
+    "mass-spectrometry-imaging",
+    "maldi",
+    "metabolite-identification",
+    "feature-detection"
+  ],
+  "title": "Analyze adduct-parent ion spatial overlap using pointsAdducts() on Na adduct annotations",
+  "tools": [
+    "mass2adduct",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Annotated mass spectrum plot with parent ions marked as blue circle outlines and adduct ions marked as red filled points, showing overlap indicating ions with dual roles."
+  ],
+  "workflow_description": "1. Load the preprocessed msimat object (MSI data matrix) and the correlation-tested massdiff object annotated with adductMatch() results. 2. Subset the massdiff object to sodium adduct matches only using subset(d.diff.annot.cor, matches=='Na adduct'). 3. Invoke pointsAdducts() with which='adduct', signif=TRUE, pch=20, cex=0.5, col='red' to overlay adduct ion peaks in red. 4. Invoke pointsAdducts() again with which='parent', signif=TRUE, pch=1, cex=0.5, col='blue' to overlay parent ion peaks as blue circle outlines. 5. Display the annotated mass spectrum plot showing overlapping red and blue points indicating ions serving dual roles (adduct and parent)."
+}

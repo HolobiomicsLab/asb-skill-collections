@@ -1,0 +1,392 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ee5480be63c91439469b81e562a3617ebc83f50e9c31e6e4ed1a9df64a89838f"
+    }
+  ],
+  "created_at": "2026-06-15T12:44:57.617706+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1011912",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CSV metadata file with sample names, file paths, sample type classification, and batch identifiers",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw LC-MS data files in Thermo .raw or mzML format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Processed feature table (TSV/CSV) with normalized, imputed, and filtered metabolomic features ready for statistical analysis",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Empirical compound JSON file representing putative metabolites grouped by isotopes and adducts with pre-annotation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Experiment state JSON file (experiment.json) tracking all processing steps, intermediate tables, and metadata",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Asari infers ionization mode from mzML files and applies it consistently throughout feature extraction and empirical compound construction; ionization mode must match across all samples in an experiment.",
+    "Blank masking compares feature intensities between blanks and study samples by intensity ratio (default 3\u00d7); this assumes blanks and study samples are reasonably temporally aligned and may fail if acquisition order violates this assumption.",
+    "Feature imputation uses a multiplicative floor (default 0.5\u00d7 minimum feature intensity) rather than a fixed threshold, because mass-spectrometry intensity error is multiplicative and must scale with feature abundance.",
+    "Empirical compound construction in khipu groups features by m/z tolerance (default 5 ppm for Orbitrap), retention-time tolerance (default 2 sec), and chemical logic (adducts up to charge z=3, 13C3 isotopologues); singleton features (no associated adducts or isotopes) cannot be assigned formulas for Level 4 annotation.",
+    "Normalization using common features (e.g., 90th percentile) prevents bias introduced by samples with disproportionately high or low feature counts; batch-aware normalization requires both a batch metadata field and a second normalization pass to correct inter-batch systematic shifts."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:shuzhao-li-lab/PythonCentricPipelineForMetabolomics repository is accessible and contains a README",
+      "file_exists: README.md or equivalent documentation in the repository root",
+      "contains_substring: README describes a fixed architecture pipeline with steps for (1) experiment assembly, (2) Asari feature extraction, (3) blank masking, (4) sample dropping, (5) normalization, (6) imputation, (7) empCpd construction",
+      "file_exists: a Python orchestrator script or module that implements the fixed control loop (e.g., main.py, pipeline.py, or equivalent in the repo)",
+      "script_runs: the orchestrator script executes without errors on a minimal valid mzML input and produces intermediate outputs at each of the seven pipeline stages",
+      "output_matches_reference: intermediate outputs from a reference execution (if provided in asari_pcpfm_tutorials or deployment guide) match in structure (column names, data types, row counts for identical inputs) \u2014 robust to parameter choices",
+      "file_format_is: final output of pipeline is one of (.txt, JSON) as stated in EnrichedIndex",
+      "verify that the orchestrator implements a bounded, deterministic, sequentially-ordered control loop with no branching or conditional re-entry \u2014 no 'and then', 'if', or loops over variable sub-task counts"
+    ],
+    "expert_review": [
+      "Evaluate whether the documented pipeline architecture faithfully represents the method as described in the published article (DOI: 10.1371/journal.pcbi.1011912), particularly the role and configuration of blank masking, sample dropping, normalization, and imputation steps",
+      "Assess whether the fixed control loop design is scientifically sound for typical LC-MS metabolomics workflows and whether any documented deviations or optional branches undermine the 'fixed' characterization",
+      "Review documentation clarity: does the README or equivalent explicitly describe the purpose, input contracts, and output semantics of each of the seven stages?"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] What are the sequential data processing steps that the PCPFM pipeline executes to transform raw LC-MS metabolomics data into normalized feature tables ready for statistical analysis?: 'The pipeline can convert Thermo .raw to mzML, process mzML data to feature tables (Asari), perform quality control, data normalization and batch correction, pre-annotation to group features to'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] PCPFM implements a fixed orchestrator pipeline that sequences: (1) experiment assembly from metadata; (2) raw file conversion to mzML; (3) Asari feature extraction producing full and preferred feature tables; (4) blank masking by comparing sample to blank intensities with configurable intensity ratios; (5) sample dropping by metadata field or QAQC results; (6) TIC normalization using common features above a percentile threshold; (7) missing value imputation as multiples of minimum feature values; (8) optional batch correction using pycombat; and (9) empirical compound construction via khipu with configurable mz/rt tolerances and adduct/isotope definitions.: 'pcpfm assemble, pcpfm convert, pcpfm asari, pcpfm blank_masking --blank_intensity_ratio, pcpfm drop_samples, pcpfm normalize --TIC_normalization_percentile, pcpfm impute --interpolation_ratio, pcpfm'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CSV metadata file with sample names, file paths, sample type classification, and batch identifiers: 'CSV file for metadata (minimal sample names and file path)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw LC-MS data files in Thermo .raw or mzML format: 'Inputs should include a set of raw files (.raw or .mzML)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Processed feature table (TSV/CSV) with normalized, imputed, and filtered metabolomic features ready for statistical analysis: 'Outputs are intended to be immediately usable for downstream analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Empirical compound JSON file representing putative metabolites grouped by isotopes and adducts with pre-annotation: 'empirical compounds as a JSON file representing putative metabolites that can be annotated with MS1, MS2, or authentic standards'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Experiment state JSON file (experiment.json) tracking all processing steps, intermediate tables, and metadata: 'The experiment object will be used throught the processing and store intermediates'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'Python-Centric Pipeline for Metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ThermoRawFileParser: 'convert Thermo .raw to mzML (ThermoRawFileParser)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Asari: 'process mzML data to feature tables (Asari)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] khipu: 'pre-annotation to group featues to empirical compounds (khipu)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is documented: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The provided section text contains no description of the ARCH-PIPELINE fixed architecture, its stages, control flow, or orchestrator implementation: '[UNTRUSTED_DOCUMENT] _No changelog found._ ## References ... [/UNTRUSTED_DOCUMENT]'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "preferred_feature_table.tsv",
+  "expected_outputs": [
+    "Processed feature table (TSV/CSV) with normalized, imputed, and filtered metabolomic features ready for statistical analysis",
+    "Empirical compound JSON file representing putative metabolites grouped by isotopes and adducts with pre-annotation",
+    "Experiment state JSON file (experiment.json) tracking all processing steps, intermediate tables, and metadata"
+  ],
+  "finding": "PCPFM implements a fixed orchestrator pipeline that sequences: (1) experiment assembly from metadata; (2) raw file conversion to mzML; (3) Asari feature extraction producing full and preferred feature tables; (4) blank masking by comparing sample to blank intensities with configurable intensity ratios; (5) sample dropping by metadata field or QAQC results; (6) TIC normalization using common features above a percentile threshold; (7) missing value imputation as multiples of minimum feature values; (8) optional batch correction using pycombat; and (9) empirical compound construction via khipu with configurable mz/rt tolerances and adduct/isotope definitions.",
+  "github_name": "shuzhao-li-lab/PythonCentricPipelineForMetabolomics",
+  "input_from": null,
+  "inputs": [
+    "CSV metadata file with sample names, file paths, sample type classification, and batch identifiers",
+    "Raw LC-MS data files in Thermo .raw or mzML format"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "converted_acquisitions/*.mzML",
+    "asari_results/preferred_Feature_table.tsv",
+    "feature_tables/*_blank_masked.tsv",
+    "feature_tables/*_normalized.tsv",
+    "feature_tables/*_imputed.tsv",
+    "annotations/empCpd.json"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_005",
+    "result_012",
+    "result_013",
+    "result_021",
+    "result_022",
+    "result_024",
+    "result_026",
+    "result_028",
+    "result_039",
+    "result_049"
+  ],
+  "methodology_summary": [
+    "Parse and validate CSV metadata; create experiment directory structure and initialize experiment.json state object with sample metadata, file paths, and sample-type annotations.",
+    "Convert Thermo .raw files to centroid mzML using ThermoRawFileParser; store converted files in experiment/converted_acquisitions subdirectory.",
+    "Run Asari feature extraction on mzML files with inferred ionization mode, m/z tolerance (5 ppm), and retention-time tolerance (2 sec); generate 'full' and 'preferred' feature table monikers.",
+    "Apply blank masking by comparing feature intensity ratios (study samples vs. blanks, default 3\u00d7) to remove likely contaminants and background ions; retain filtered feature table moniker.",
+    "Drop unwanted samples (blanks, QC, outliers) via metadata field or QAQC filter criteria; generate trimmed feature table moniker.",
+    "Normalize feature intensities using TIC of common features (default 90th percentile) with within-batch and between-batch correction if multiple batches present; apply normalization factors to all samples.",
+    "Impute missing values using multiplicative floor (default 0.5\u00d7 per-feature minimum) to handle zero or missing entries while respecting multiplicative error structure.",
+    "Remove infrequent features below retention percentile (default 50%) to discard rare and potentially spurious features; generate filtered feature table moniker.",
+    "Build empirical compounds from final feature table using khipu with adducts (z \u2264 3), isotope patterns (13C3), m/z tolerance (5 ppm), and retention-time tolerance (2 sec); assign pre-annotations (adduct class, isotope status) and generate empCpd.json.",
+    "Validation: Verify feature table row count > 0, empCpd.json contains \u22651 compound objects with required keys (adducts, rt, mz, features), and experiment.json tracks all moniker transformations with no gaps in processing history.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1011912)"
+  ],
+  "missing_information": [
+    "No changelog or version history is documented",
+    "The provided section text contains no description of the ARCH-PIPELINE fixed architecture, its stages, control flow, or orchestrator implementation"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the sequential data processing steps that the PCPFM pipeline executes to transform raw LC-MS metabolomics data into normalized feature tables ready for statistical analysis?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "lc-ms-feature-extraction-and-alignment",
+    "metabolite-quality-control-filtering",
+    "feature-intensity-normalization-and-batch-correction",
+    "missing-value-imputation-in-metabolomics",
+    "empirical-compound-grouping-by-adducts-and-isotopes",
+    "experiment-metadata-organization-and-tracking"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pcpfm/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS-PCPFM",
+    "ARCH-PIPELINE",
+    "ARCH-ASSEMBLE",
+    "ARCH-ASARI-STEP",
+    "ARCH-BLANK-MASKING",
+    "ARCH-NORMALIZE",
+    "ARCH-IMPUTE",
+    "ARCH-BUILD-EMPCPDS",
+    "ARCH-OUTPUT",
+    "COMP-ASARI",
+    "COMP-EMPCPD",
+    "ARTIFACT-FEATURE-TABLE",
+    "ARTIFACT-EMPCPD-JSON",
+    "COMP-EXPERIMENT"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:shuzhao-li-lab__PythonCentricPipelineForMetabolomics",
+  "task_description": "Implement the fixed PCPFM orchestration control loop that coordinates sequential metabolomics data processing: experiment assembly, LC-MS feature extraction via Asari, blank masking, sample dropping, normalization, missing-value imputation, and empirical compound construction. The system must maintain experiment state across all stages and output a feature table and empirical compound list ready for downstream annotation and statistical analysis.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample metadata with names, file paths, types, and batch identifiers",
+      "port_id": "metadata_csv",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw LC-MS acquisitions in .raw or .mzML format",
+      "port_id": "raw_data_files",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Reconstruct the complete fixed-architecture PCPFM pipeline workflow from experiment assembly through empCpd construction, documenting all sequential processing steps and their configurable parameters as described in the README.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Normalized, imputed, blank-masked, sample-filtered feature table (TSV)",
+      "port_id": "processed_feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Empirical compound JSON with pre-annotation (isotopes, adducts)",
+      "port_id": "empirical_compounds",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Experiment state JSON tracking all processing steps and intermediates",
+      "port_id": "experiment_state",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "tandem-ms",
+    "feature-detection",
+    "database-annotation",
+    "spectral-library-matching",
+    "metabolite-identification"
+  ],
+  "title": "Reconstruct the PCPFM fixed processing pipeline from raw mzML input to annotated feature table output",
+  "tools": [
+    "Python",
+    "ThermoRawFileParser",
+    "Asari",
+    "khipu"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Assemble experiment using pcpfm assemble with CSV metadata file (sample names, file paths, sample types, batch identifiers) to create an experiment directory and JSON state object. 2. Convert Thermo .raw files to centroid mzML format using ThermoRawFileParser via pcpfm convert command with $RAW_PATH and $OUT_PATH substitution. 3. Run Asari feature extraction on mzML files using pcpfm asari, inferring ionization mode and generating 'full' and 'preferred' feature table monikers with default 5 ppm m/z tolerance and 2 sec retention-time tolerance. 4. Perform blank masking using pcpfm blank_masking with intensity-ratio threshold (default 3\u00d7) to remove features where blank intensity exceeds sample intensity; repeat for each blank type if needed. 5. Drop unwanted samples (QC, blanks) via pcpfm drop_samples by metadata field match, sample name, or QAQC filter criteria. 6. Normalize feature intensities using pcpfm normalize with TIC based on common features at specified percentile cutoff (default 90%); optionally apply batch-aware two-step normalization (within-batch then between-batch). 7. Remove infrequent features via pcpfm drop_missing_features using feature-retention percentile threshold (default 50%) to discard rare features. 8. Impute missing values using pcpfm impute with interpolation ratio (default 0.5\u00d7) applied to minimum per-feature value. 9. Build empirical compounds from final feature table using pcpfm build_empCpds with khipu, specifying adducts (charge up to z=3), isotope patterns (13C3), m/z tolerance (default 5 ppm), and retention-time tolerance (default 2 sec); save moniker for downstream annotation."
+}

@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:mobiusklein__mzpeak_prototyping/python/ subdirectory"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output artifact is valid Parquet file or pandas DataFrame serialized to standard",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_004",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table contains at least one column representing m/z values",
+      "value": [
+        "representing m/z values"
+      ]
+    },
+    {
+      "id": "pf_005",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table contains at least one column representing intensity values",
+      "value": [
+        "representing intensity values"
+      ]
+    },
+    {
+      "id": "pf_006",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table has row_count > 0 (non-empty spectrum data)",
+      "value": 0
+    },
+    {
+      "id": "pf_007",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "if reference mzPeak file and expected output are available in repository, verify"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:mobiusklein__mzpeak_prototyping/python/ subdirectory",
+      "script_runs: execute Python loader script from python/ subdirectory without errors",
+      "file_format_is: output artifact is valid Parquet file or pandas DataFrame serialized to standard format (pickle, CSV, or Parquet)",
+      "field_present: output table contains at least one column representing m/z values",
+      "field_present: output table contains at least one column representing intensity values",
+      "row_count_equals: output table has row_count > 0 (non-empty spectrum data)",
+      "output_matches_reference: if reference mzPeak file and expected output are available in repository, verify loaded DataFrame schema and row count match reference specification"
+    ],
+    "expert_review": [
+      "Verify that loaded spectrum data types (m/z and intensity) are appropriate for mass spectrometry (numeric, not truncated or corrupted)",
+      "Confirm that tabular structure correctly represents the logical hierarchy of mzPeak format (e.g., spectra, scans, peaks are correctly denested or indexed)",
+      "Assess whether pyarrow library integration follows Arrow memory model semantics correctly (zero-copy semantics, column-store layout)"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

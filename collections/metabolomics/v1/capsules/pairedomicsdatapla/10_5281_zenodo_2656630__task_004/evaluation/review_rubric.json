@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: project JSON document input"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: input is valid JSON"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "validation script identifies all URL fields containing whitespace in a test JSON"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "validation script produces no false positives on a test JSON document with valid"
+    },
+    {
+      "id": "pf_006",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "validation output includes flagged URL field name(s) and the problematic value(s"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: project JSON document input",
+      "verify file_format_is: input is valid JSON",
+      "script_runs: validation script executes without error on test inputs",
+      "output_matches_reference: validation script identifies all URL fields containing whitespace in a test JSON document with known whitespace-containing URLs, no false negatives",
+      "output_matches_reference: validation script produces no false positives on a test JSON document with valid URLs (no whitespace)",
+      "contains_substring: validation output includes flagged URL field name(s) and the problematic value(s) containing spaces"
+    ],
+    "expert_review": [
+      "Confirm URL field schema is correctly identified in the project JSON structure",
+      "Confirm whitespace character definition (space, tab, newline, etc.) aligns with platform requirements",
+      "Confirm error/warning message is actionable for end users submitting project data"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

@@ -1,0 +1,360 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/CompMetabolomics_logo.jpg",
+      "role": "figure",
+      "sha256": "f8957fd9b57a80dd3cf4adb35dc6f69768ae8cb52d1685113a7dd48e0244d3b4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_LOGO_black.jpg",
+      "role": "figure",
+      "sha256": "638333f028ef0320582849d948a9d4cb346bbcf7556f0281a833c363a284e1a8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_LOGO_white.jpg",
+      "role": "figure",
+      "sha256": "3d41cf59a641ab5aa51498ec33ef00e7e3c172089d241d7e00accdc4b0308035"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_Workflow.jpg",
+      "role": "figure",
+      "sha256": "1e3133105398930f4ee8670c1cc71d706596e0a8e22b0d8c2a53228be35238ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/WUR_RGB_standard_2021.png",
+      "role": "figure",
+      "sha256": "7779dfcd978f747157e0b0efdeebdfc22a4fa04b73f5255d72e11c659e1db5dd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/WUR_logo.jpg",
+      "role": "figure",
+      "sha256": "8b323663b087d687a8ee0280d7b5938d357bfd3835a7b0ee54447a5188d53939"
+    },
+    {
+      "indexable": false,
+      "path": "figures/pnas.jpg",
+      "role": "figure",
+      "sha256": "5c33b1f48d700c729500ba3e037a48af48799939263339ee9dce43fe81bdf649"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3e5d9784f09bc9c1236c177bd1cf1a004e1f9f304c789693f9e43491bd40fb3f"
+    }
+  ],
+  "created_at": "2026-06-15T21:44:19.295434+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Inferred motifset in JSON format (motifset.json or motifset_optimized.json) containing Mass2Motif definitions with fragment and neutral-loss probabilities",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Trained LDA model (optional, ms2lda.bin) for accessing motif loadings and spectral assignments",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GraphML-formatted network file (network.graphml) with Mass2Motif nodes, similarity-weighted edges, and motif metadata attributes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Mass2Motifs are recurring fragmentation patterns represented as probability distributions over fragment and neutral-loss m/z values; nodes in the network encode these motif identities and their fragment compositions.",
+    "Spectral similarity in tandem mass spectrometry networks is typically computed using cosine similarity on pseudo-spectra intensity vectors derived from motif fragment and loss probabilities.",
+    "GraphML is an XML-based graph format supporting node and edge attributes; nodes and edges must have unique identifiers and metadata labels for visualization in network viewers (e.g., Cytoscape).",
+    "Motif-membership attributes (e.g., document count, average loading) reflect how many spectra are significantly assigned to each motif and are essential for downstream interpretation and filtering."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file network.graphml exists in expected outputs or repository",
+      "file_format_is network.graphml: verify XML structure conforms to GraphML schema (http://graphml.graphdrawing.org/)",
+      "field_present: verify 'node' elements exist with 'id' attribute",
+      "field_present: verify 'data' child elements within nodes include motif-membership attributes",
+      "field_present: verify 'edge' elements exist with 'source' and 'target' attributes",
+      "field_present: verify 'data' child elements within edges encode spectral similarity weights or scores",
+      "script_runs: verify the postprocessing script executes without error when provided valid ARTIFACT-MOTIFSET and optional ARTIFACT-LDA-MODEL inputs",
+      "output_matches_reference: node count and edge count are consistent with input motif set cardinality (no canonical answer \u2014 depends on spectral similarity threshold and motif clustering parameters)",
+      "verify network.graphml can be parsed by a standard GraphML reader (robust to GraphML schema version, parameter-sensitive to node/edge attribute names)"
+    ],
+    "expert_review": [
+      "Verify that spectral similarity edge weights are computed using an appropriate metric (e.g., cosine similarity, Euclidean distance) and that the choice of metric is documented",
+      "Verify that motif-membership node attributes correctly encode the assignment of spectra or fragments to discovered motifs from the LDA model",
+      "Verify that the graph structure meaningfully represents the relationships between motifs or spectra based on spectral similarity and shared motif membership",
+      "Assess whether the GraphML serialisation preserves all relevant metadata (motif identifiers, similarity thresholds, LDA model hyperparameters) needed for downstream analysis or visualization"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MS2LDA construct a network graph that encodes spectral similarity relationships and motif membership annotations for post-processing visualization and export?: 'offering users an integrated workflow with improved usability, detailed visualizations, and a searchable motif database (MotifDB)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MS2LDA provides a postprocessing pipeline that reads discovered motifs and LDA model outputs to generate a network representation (network.graphml) where nodes represent spectra annotated with their motif memberships and edges encode spectral similarity relationships, enabling integrated workflow visualization and export.: 'MS2LDA is an advanced tool designed for unsupervised substructure discovery in mass spectrometry data, utilizing topic modeling and providing automated annotation of discovered motifs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Inferred motifset in JSON format (motifset.json or motifset_optimized.json) containing Mass2Motif definitions with fragment and neutral-loss probabilities: 'motifset.json           # Discovered Mass2Motifs in JSON format\n\u251c\u2500 motifset_optimized.json # Optimized Mass2Motifs in JSON format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Trained LDA model (optional, ms2lda.bin) for accessing motif loadings and spectral assignments: '\u251c\u2500 ms2lda.bin              # Binary dump of the trained LDA model'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] GraphML-formatted network file (network.graphml) with Mass2Motif nodes, similarity-weighted edges, and motif metadata attributes: '\u251c\u2500 network.graphml         # Molecular network export (GraphML)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MS2LDA: 'invoke the main script `ms2lda_runfull.py` with your arguments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'Configure the Python environment (set PYTHONPATH, activate conda, etc.)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The changelog section contains only a header 'Added' with no documented changes, features, or implementation details for the postprocessing network construction step.: '## [Unreleased]\n\n### Added'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No information is provided about the expected structure, schema, or content of ARTIFACT-MOTIFSET input or ARTIFACT-LDA-MODEL input required for the postprocessing step.: '[UNTRUSTED_DOCUMENT] section provides only metadata (synthesized date, repository reference) with no technical specifications.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No details are given regarding spectral similarity computation method, thresholding strategy, or parameters that govern edge construction in the network graph.: '[UNTRUSTED_DOCUMENT] section contains no method description for network construction.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification is provided for the node attribute schema encoding motif-membership or edge attribute schema encoding spectral similarity in the GraphML output.: '[UNTRUSTED_DOCUMENT] section contains no attribute specification details.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import json; import networkx as nx; from itertools import combinations; import math; motifset = json.load(open('{inputs.motifset_json}')); G = nx.Graph(); motifs = list(motifset.get('motifs', {}).items()); [G.add_node(mid, fragments=m.get('fragments', {}), neutral_losses=m.get('neutral_losses', {})) for mid, m in motifs]; spectra = {mid: sorted([(float(k), v) for k, v in m.get('fragments', {}).items()], key=lambda x: x[0]) for mid, m in motifs}; sim_pairs = [(mid1, mid2, sum(v1*v2 for (m1,v1) in spectra[mid1] for (m2,v2) in spectra[mid2] if abs(m1-m2)<0.1) / (math.sqrt(sum(v**2 for _,v in spectra[mid1]))*math.sqrt(sum(v**2 for _,v in spectra[mid2]))+1e-9)) for mid1, mid2 in combinations([m[0] for m in motifs], 2)]; [G.add_edge(mid1, mid2, weight=sim) for mid1, mid2, sim in sim_pairs if sim > 0.3]; nx.write_graphml(G, 'network.graphml')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "network.graphml",
+  "expected_outputs": [
+    "GraphML-formatted network file (network.graphml) with Mass2Motif nodes, similarity-weighted edges, and motif metadata attributes"
+  ],
+  "finding": "MS2LDA provides a postprocessing pipeline that reads discovered motifs and LDA model outputs to generate a network representation (network.graphml) where nodes represent spectra annotated with their motif memberships and edges encode spectral similarity relationships, enabling integrated workflow visualization and export.",
+  "github_name": "vdhooftcompmet/MS2LDA",
+  "input_from": "task_002",
+  "inputs": [
+    "Inferred motifset in JSON format (motifset.json or motifset_optimized.json) containing Mass2Motif definitions with fragment and neutral-loss probabilities",
+    "Trained LDA model (optional, ms2lda.bin) for accessing motif loadings and spectral assignments"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "motif_pseudospectra.csv",
+    "motif_similarity_matrix.csv",
+    "network_nodes.csv",
+    "network_edges.csv"
+  ],
+  "linked_result_ids": [
+    "result_026",
+    "result_031",
+    "result_037"
+  ],
+  "methodology_summary": [
+    "Load motifset JSON and extract Mass2Motif fragment and neutral-loss probability distributions.",
+    "Construct pseudo-spectra for each motif by converting probabilities to intensity-weighted m/z vectors.",
+    "Compute pairwise cosine similarity between all motif pseudo-spectra.",
+    "Filter edges by similarity threshold and populate graph with motif nodes and weighted similarity edges.",
+    "Annotate nodes with motif metadata (ID, fragment composition, spectra count) and edges with similarity scores.",
+    "Serialize graph to GraphML format with proper XML structure and attribute declarations.",
+    "Validation: verify network.graphml is valid XML, contains all motif nodes with unique IDs, edges reflect computed similarity, and file is parseable by standard graph tools (e.g., NetworkX, Cytoscape)."
+  ],
+  "missing_information": [
+    "The changelog section contains only a header 'Added' with no documented changes, features, or implementation details for the postprocessing network construction step.",
+    "No information is provided about the expected structure, schema, or content of ARTIFACT-MOTIFSET input or ARTIFACT-LDA-MODEL input required for the postprocessing step.",
+    "No details are given regarding spectral similarity computation method, thresholding strategy, or parameters that govern edge construction in the network graph.",
+    "No specification is provided for the node attribute schema encoding motif-membership or edge attribute schema encoding spectral similarity in the GraphML output."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MS2LDA construct a network graph that encodes spectral similarity relationships and motif membership annotations for post-processing visualization and export?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "mass2motif-network-construction",
+    "spectral-similarity-computation",
+    "graph-serialization-graphml",
+    "motif-metadata-annotation",
+    "json-parsing-motifset-extraction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ms2lda/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "ARTIFACT-MOTIFSET",
+    "ARTIFACT-NETWORK",
+    "ARTIFACT-LDA-MODEL"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics",
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "visualization"
+  ],
+  "synthesized_from": "github:vdhooftcompmet__MS2LDA",
+  "task_description": "Construct a molecular network in GraphML format (network.graphml) encoding Mass2Motifs as nodes with spectral similarity edges and motif-membership attributes, reading from an inferred motifset JSON file and the trained LDA model.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Inferred motifset JSON (motifset.json or motifset_optimized.json)",
+      "port_id": "motifset_json",
+      "resolved_via": null,
+      "source": "task_002/lda_model",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained LDA model binary (ms2lda.bin)",
+      "port_id": "lda_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement graph construction and GraphML serialization to convert motif-set and LDA-model artifacts into a network file encoding spectral similarities and motif-membership node attributes.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Molecular network in GraphML format (network.graphml)",
+      "port_id": "network_graphml",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction",
+    "machine-learning",
+    "molecular-networking",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct the molecular network export step that produces a GraphML network artifact from a trained motifset",
+  "tools": [
+    "MS2LDA",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: GraphML-formatted network file (network.graphml) with Mass2Motif nodes, similarity-weighted edges, and motif metadata attributes."
+  ],
+  "workflow_description": "1. Load the inferred motifset from motifset.json or motifset_optimized.json, extracting Mass2Motif definitions (fragment and neutral-loss compositions). 2. Retrieve or reconstruct pseudo-spectra representations from each motif's probability-weighted fragments and losses. 3. Compute pairwise spectral similarity (e.g., cosine similarity) between all Mass2Motif pseudo-spectra. 4. Build a directed or undirected graph where each Mass2Motif is a node, with weighted edges between motifs exceeding a similarity threshold. 5. Annotate nodes with motif metadata (ID, fragment/loss composition, spectra count loading on motif) and edges with similarity scores. 6. Serialize the network to GraphML format and write to network.graphml."
+}

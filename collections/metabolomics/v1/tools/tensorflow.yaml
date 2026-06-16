@@ -1,0 +1,10 @@
+name: TensorFlow
+slug: tensorflow
+evidence_spans:
+- calling the training method (1000 by default). NeatMS does not currently provides callback functions to automatically stop the training. Calling the training method will simply resume the training
+derived_from:
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+source_repos:
+- bihealth/NeatMS
+schema_version: 0.2.0

@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file github:pnnl__deimos can be cloned from https://github.com/pnnl/deimos"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify dataset MSV000091746 is accessible via ftp://massive.ucsd.edu/v01/MSV000091746"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify Snakemake workflow execution completes without errors using provided YAML configuration"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify all final HDF5 output artifacts exist (file_exists check on output .h5 files)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output HDF5 files are valid HDF5 format using h5py or similar tool"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify Snakemake reports successful completion of all workflow rules (script_runs with exit code 0)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file github:pnnl__deimos can be cloned from https://github.com/pnnl/deimos",
+      "verify dataset MSV000091746 is accessible via ftp://massive.ucsd.edu/v01/MSV000091746",
+      "verify Snakemake workflow execution completes without errors using provided YAML configuration",
+      "verify all final HDF5 output artifacts exist (file_exists check on output .h5 files)",
+      "verify output HDF5 files are valid HDF5 format using h5py or similar tool",
+      "verify Snakemake reports successful completion of all workflow rules (script_runs with exit code 0)"
+    ],
+    "expert_review": [
+      "confirm that HDF5 output structure and content are consistent with DEIMoS workflow specification",
+      "validate that feature detection, alignment, and calibration steps produced chemically plausible results",
+      "assess whether output datasets contain expected dimensional data (m/z, drift_time, retention_time, intensity) without corruption"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

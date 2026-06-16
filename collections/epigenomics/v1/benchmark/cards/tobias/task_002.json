@@ -1,0 +1,343 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/BATF_footprint_comparison_all.png",
+      "role": "figure",
+      "sha256": "2b11a5c2ad05f57c079cf59c0a68f934f96232595fc7211991ef611733bacc93"
+    },
+    {
+      "indexable": false,
+      "path": "figures/BATF_footprint_comparison_subsets.png",
+      "role": "figure",
+      "sha256": "33cd1a79f823b4502e4721eefaa4ddb336bb237d7d8d7d6a9f924ea86170a552"
+    },
+    {
+      "indexable": false,
+      "path": "figures/BATF_heatmap.png",
+      "role": "figure",
+      "sha256": "508b2b4f4a26240c105f8b71e64cc5f49517dbcbddf859e50606cc1664b3c91c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/IRF1_footprint.png",
+      "role": "figure",
+      "sha256": "17bce2aa433d74d0a4e7a65ae49ecc0b1ac3e621e9050caf7c43ba73e830467a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/atacorrect.png",
+      "role": "figure",
+      "sha256": "71124fbc53df1c00b8c2e2e515a6ebd0ae0269cb6901c51d4b9920ff182d34d4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bindetect.png",
+      "role": "figure",
+      "sha256": "889f8e209254335d7056f4658c51049ad3b316e7719af2ee8c12b42002659fb1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/chr4-119628321-119629356.png",
+      "role": "figure",
+      "sha256": "75a98921dbde87c5e6271e714064c63a0ab20a10cc3456c1433708e943b381ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/chr4-163701830-163702617.png",
+      "role": "figure",
+      "sha256": "eda854e390fe862a1acfc920c29bdea974f8811ca46131063d6ceb4e9a28c847"
+    },
+    {
+      "indexable": false,
+      "path": "figures/footprinting.png",
+      "role": "figure",
+      "sha256": "73dc2d9ee8d424a808508cd581a9c8a28c422f0efa75167bb74651fb57719ea5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/network.png",
+      "role": "figure",
+      "sha256": "07b6c7dc655f0dec058de81a6968c347478d79850487986a15695d829a9a2902"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tobias.png",
+      "role": "figure",
+      "sha256": "77d7601461e43ffc36c708663ae88f8c904726769adc2de815d78e5de1927ee0"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "efd138c7f9f0421cac53bbffe20153aecfee6bb55653fe27761d490f3a6e0c9f"
+    }
+  ],
+  "created_at": "2026-06-15T19:12:11.236771+00:00",
+  "crossref_doi": "10.1038/s41467-020-18035-1",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Bias-corrected bigWig file from ATAC-seq signal normalization",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "Accessible genomic regions (BED or similar format)",
+      "detection_method": "prose_regex",
+      "file_extension": ".bed",
+      "format_id": "BED",
+      "format_iri": "http://edamontology.org/format_3003",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Scored bigWig file with footprint scores at each genomic position",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "ATAC-seq footprints are visible as depletions of Tn5 insertion sites around transcription factor binding locations due to protein occlusion of the transposase.",
+    "BigWig format stores continuous-valued genomic signal data in a compressed, indexed structure suitable for rapid access and visualization across large genomes.",
+    "Footprint scoring quantifies the magnitude of insertion signal depletion within defined genomic regions, with higher scores indicating stronger TF binding signatures.",
+    "ScoreBigwig generates position-wise scores that reflect local insertion patterns, enabling downstream analysis of binding kinetics and factor occupancy."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that inputs include a bias-corrected bigWig file (format: .bw or .bigWig) and a BED file defining accessible genomic regions",
+      "verify that the expected output file exists and is in bigWig format (.bw or .bigWig)",
+      "verify that the output bigWig contains footprint score values (numeric, typically float or integer) across the input regions",
+      "verify that the output bigWig has the same genomic coordinate system and chromosome naming as the input files",
+      "verify that all genomic regions from the input BED file are represented in the output (no regions dropped or silently filtered)",
+      "script_runs: confirm that the ScoreBigwig command or equivalent TOBIAS scoring function executes without errors on the provided inputs"
+    ],
+    "expert_review": [
+      "assess whether computed footprint scores are biologically plausible in magnitude and distribution (e.g., negative or near-zero scores over bound regions, reflecting characteristic Tn5 insertion depletion)",
+      "confirm that the scoring method correctly implements the intended footprint-scoring algorithm (e.g., whether it computes depletion of insertions as described in the TOBIAS methodology)",
+      "evaluate whether the output tracks show expected patterns: depleted signal at known transcription factor binding sites and elevated signal in flanking nucleosome-free regions"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does TOBIAS compute footprint scores from bias-corrected ATAC-seq signal data across accessible chromatin regions?: 'the local distribution of Tn5 insertions contains information about transcription factor binding due to the visible depletion of insertions around sites bound by protein - known as _footprints_'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TOBIAS is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data, which operates by analyzing the local distribution of Tn5 insertions to detect transcription factor binding through characteristic depletion patterns.: '**TOBIAS** is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Bias-corrected bigWig file from ATAC-seq signal normalization: 'bias-corrected bigWig file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Accessible genomic regions (BED or similar format): 'accessible genomic regions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Scored bigWig file with footprint scores at each genomic position: 'scored bigWig output'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TOBIAS: '**TOBIAS** is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version information provided for TOBIAS: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "tobias",
+      "ScoreBigwig",
+      "--signal",
+      "{inputs.bias_corrected_bigwig}",
+      "--regions",
+      "{inputs.accessible_regions}",
+      "--output",
+      "footprint_scores_{task_id}.bw"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "footprint_scores.bw",
+  "expected_outputs": [
+    "Scored bigWig file with footprint scores at each genomic position"
+  ],
+  "finding": "TOBIAS is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data, which operates by analyzing the local distribution of Tn5 insertions to detect transcription factor binding through characteristic depletion patterns.",
+  "github_name": "loosolab/TOBIAS",
+  "input_from": "task_001",
+  "inputs": [
+    "Bias-corrected bigWig file from ATAC-seq signal normalization",
+    "Accessible genomic regions (BED or similar format)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "footprint_scores.bw"
+  ],
+  "linked_result_ids": [
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Load bias-corrected bigWig signal file and accessible genomic region coordinates.",
+    "Apply ScoreBigwig to compute position-wise footprint depletion scores across the genome.",
+    "Output scored bigWig file encoding footprint strength at each position.",
+    "Validation: verify output bigWig is valid format and contains non-empty score distributions.",
+    "References: source article (DOI: 10.1038/s41467-020-18035-1)"
+  ],
+  "missing_information": [
+    "No changelog or version information provided for TOBIAS"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/bias_corrected_bigwig"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does TOBIAS compute footprint scores from bias-corrected ATAC-seq signal data across accessible chromatin regions?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "atac-seq-footprint-scoring",
+    "bigwig-signal-processing",
+    "transcription-factor-binding-depletion-quantification",
+    "genomic-region-annotation-integration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_tobias/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "ATAC_seq_assay",
+    "tf_occupancy_prediction"
+  ],
+  "subdomains": [
+    "gene-regulation",
+    "functional-genomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:loosolab__TOBIAS",
+  "task_description": "Compute footprint scores from a bias-corrected bigWig file over accessible genomic regions using ScoreBigwig, producing a scored bigWig output that quantifies transcription factor binding signal depletion at footprint sites.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Bias-corrected bigWig file from ATAC-seq signal normalization",
+      "port_id": "bias_corrected_bigwig",
+      "resolved_via": null,
+      "source": "task_001/bias_corrected_bigwig",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Accessible genomic regions (BED or similar format)",
+      "port_id": "accessible_regions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Compute footprint scores from bias-corrected bigWig signal over accessible genomic regions and produce a scored bigWig output file.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Scored bigWig file with footprint scores at each genomic position",
+      "port_id": "footprint_scores_bigwig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "enrichment-analysis",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct the footprint scoring step that converts bias-corrected ATAC-seq signal into per-base footprint scores",
+  "tools": [
+    "TOBIAS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the bias-corrected bigWig file and a set of accessible genomic regions (e.g., ATAC-seq peaks or called footprint regions). 2. Apply ScoreBigwig (part of TOBIAS) to compute footprint scores by measuring signal depletion within each region, generating a bigWig output where each position reflects the magnitude of the observed insertion depletion pattern. 3. Validate the output bigWig file for correct format and non-empty score distributions."
+}

@@ -1,0 +1,3 @@
+  figures/conda_asari_screenshot.png
+  figures/viz_screen_shot20220518.png
+paper.md

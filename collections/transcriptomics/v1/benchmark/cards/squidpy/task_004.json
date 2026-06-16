@@ -1,0 +1,465 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_axis.png",
+      "role": "figure",
+      "sha256": "5de7918c4437684b19d44888553bce66af334bf4d61590ce7077816bf6a59b63"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_channel.png",
+      "role": "figure",
+      "sha256": "6756715bb0536d5d24664be161ee509e53385e9832f10faeb3f28ec7a8704b23"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_channelwise.png",
+      "role": "figure",
+      "sha256": "a766492ccfcb485764f58ea0c3e54ac6db92df0b7f4a0618f038ac34c7547a72"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_channelwise_segmentation.png",
+      "role": "figure",
+      "sha256": "cdb2000e4988b2e02d14bb7ccb964ff8e3f58581ddba7da83a71cb63c52cbc8d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_imshow_kwargs.png",
+      "role": "figure",
+      "sha256": "9471e26899d744c7c4a1ceaaebd52293fe8a7bc06bfe11e196a7faf9db5d6d75"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_library_id.png",
+      "role": "figure",
+      "sha256": "2caaa25ba8b6e04a78ed676f3c3ca9e8e0ab81c9af2e92c5e662557412c98e5a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_scale_mask_circle_crop.png",
+      "role": "figure",
+      "sha256": "ef3f5be0d241065a7a2baa101570e148b5878cf7a30bb777572575c573ab1c99"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_segmentation.png",
+      "role": "figure",
+      "sha256": "075f39f1d23b94af5c6e757e30abafcbd3dfbecb4144de91b394b4080581d68c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_transpose_channelwise_False_False.png",
+      "role": "figure",
+      "sha256": "d467f52a917f52c4536a9b9fce27f83b8b67d715f9385f030c5157f85836b54e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_transpose_channelwise_False_True.png",
+      "role": "figure",
+      "sha256": "51195e11aa995393efc0eff9eea405e53b77c0a093b606087b53faf32523bfdd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_transpose_channelwise_True_False.png",
+      "role": "figure",
+      "sha256": "c5a5fe22f720d27f26826780fbc4ac1e99d3784a4bde9b70c574a063a21f54a4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ContainerShow_transpose_channelwise_True_True.png",
+      "role": "figure",
+      "sha256": "d016db4d8f695c496052a62f2b196281a056b5a57201f541f0ce850110b9136c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DetectTissue_detect_tissue_felzenszwalb.png",
+      "role": "figure",
+      "sha256": "c6d2cedf3cdb95e9ba563c49daf7429e4e96bfa455b32a1c6278bdbc7a54d2f0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DetectTissue_detect_tissue_otsu.png",
+      "role": "figure",
+      "sha256": "81f3328ddafa1ae0faab12c3067727fc0de605c24ae18ca07e11656009cd9fed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure1.png",
+      "role": "figure",
+      "sha256": "d832047c43601b13561af7d4247a03d4ea0172cd49663c5e0915db52c201f4ac"
+    },
+    {
+      "indexable": false,
+      "path": "figures/squidpy_horizontal.png",
+      "role": "figure",
+      "sha256": "457edc05da6b66a9230a86deb21e7e37019436ed9c83c1a385881d6879650212"
+    },
+    {
+      "indexable": false,
+      "path": "figures/squidpy_vertical.png",
+      "role": "figure",
+      "sha256": "629c4463e4ff33aa1d8e7d9ccdad61c535aeafaab8cbc36c535a68e3ab2e281d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_img.jpg",
+      "role": "figure",
+      "sha256": "b87670003e05039f8c924d53fe98f3606991c78ffc629a3ee8f56bc5dd134269"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tissue_hires_image.png",
+      "role": "figure",
+      "sha256": "2647a9d1ac01e4269b669cc183dd0b4d0ea5c69c2de97b6c02d19d53002cc01e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tissue_lowres_image.png",
+      "role": "figure",
+      "sha256": "7069e504911a86c16aac826194fd28a3a0883d05e7ccb84b72781635c676891d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "4308843b012d4aef2440848fcf8683b16b165742a53f9bdb355c6df25c33d6a1"
+    }
+  ],
+  "created_at": "2026-06-15T17:58:24.733366+00:00",
+  "crossref_doi": "10.1038/s41592-021-01358-2",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Bundled spatial omics dataset (slideseqv2 or merfish format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Python environment with Squidpy installed",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "AnnData object with sepal results (gene rankings and spatial enrichment scores) stored in .var, .uns, or .obsm",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report listing field names, data types, array shapes, and confirmation of successful computation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "SEPAL (Spatial Enrichment Pattern Analysis with Learning) computes gene rankings based on spatial patterns; the algorithm assigns scores reflecting how genes are spatially enriched relative to tissue structure.",
+    "Squidpy stores results in AnnData slots: gene-level scores typically go to .var, neighborhood patterns to .uns, and per-observation spatial metrics to .obsm; field naming follows squidpy conventions (e.g., 'sepal_score', 'sepal_pval').",
+    "Spatial datasets like Slide-seq v2 and MERFISH have different coordinate systems and resolution; SEPAL results will preserve the observation count (n_obs) but may generate different field dimensionalities based on neighborhood definition.",
+    "Verification must confirm that output shapes are (n_obs, n_vars) or (n_vars,) for gene-level metrics and that no NaN or inf values corrupt the scores unless explicitly masked by the algorithm."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: squidpy package contains squidpy.gr.sepal function",
+      "verify squidpy can be imported and sepal function is callable",
+      "script_runs: load bundled dataset (dataset_slideseqv2 or dataset_merfish) from squidpy.datasets, call squidpy.gr.sepal on the AnnData object, and confirm execution completes without error",
+      "field_present: verify the AnnData object .var or .obs contains gene ranking or score field(s) after sepal execution (exact field names require expert review)",
+      "file_format_is: output is an AnnData-compatible object (.h5ad or in-memory AnnData instance) with sepal results attached"
+    ],
+    "expert_review": [
+      "confirm the field names and data structure of gene rankings or scores match squidpy.gr.sepal documented output schema",
+      "validate that score values are in expected range and represent meaningful gene importance rankings for the spatial dataset"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does squidpy.gr.sepal successfully compute spatial statistics and attach gene ranking scores to an AnnData object with the expected field names when applied to spatial transcriptomics datasets?: 'providing streamlined APIs for feature extraction, spatial statistics, and interactive exploration of tissue sections together with microscopy images'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Squidpy provides streamlined APIs for feature extraction, spatial statistics, and interactive exploration of tissue sections together with microscopy images, indicating that tools like sepal are designed to integrate spatial analysis results into standard AnnData workflows.: 'providing streamlined APIs for feature extraction, spatial statistics, and interactive exploration of tissue sections together with microscopy images'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Bundled spatial omics dataset (slideseqv2 or merfish format): 'datasets.slideseqv2\n    datasets.merfish'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python environment with Squidpy installed: 'pip install squidpy'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] AnnData object with sepal results (gene rankings and spatial enrichment scores) stored in .var, .uns, or .obsm: 'gr.sepal'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Verification report listing field names, data types, array shapes, and confirmation of successful computation: 'gr.sepal'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Squidpy: 'gr.sepal'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] scanpy: 'It builds on scanpy and anndata'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] anndata: 'It builds on scanpy and anndata'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'Spatial Single Cell Analysis in Python'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import squidpy as sq; import scanpy as sc; import anndata; adata = sq.datasets.slideseqv2(); sq.gr.sepal(adata); print('SEPAL computation complete'); print('var columns:', list(adata.var.columns)); print('uns keys:', list(adata.uns.keys())); print('obsm keys:', list(adata.obsm.keys())); assert any('sepal' in str(k).lower() for k in list(adata.var.columns) + list(adata.uns.keys()) + list(adata.obsm.keys())), 'No SEPAL results found'; print('Verification: SEPAL results successfully attached to AnnData object')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "sepal_results_verification.txt",
+  "expected_outputs": [
+    "AnnData object with sepal results (gene rankings and spatial enrichment scores) stored in .var, .uns, or .obsm",
+    "Verification report listing field names, data types, array shapes, and confirmation of successful computation"
+  ],
+  "finding": "Squidpy provides streamlined APIs for feature extraction, spatial statistics, and interactive exploration of tissue sections together with microscopy images, indicating that tools like sepal are designed to integrate spatial analysis results into standard AnnData workflows.",
+  "github_name": "scverse/squidpy",
+  "input_from": "task_001",
+  "inputs": [
+    "Bundled spatial omics dataset (slideseqv2 or merfish format)",
+    "Python environment with Squidpy installed"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "adata_loaded.h5ad",
+    "sepal_fields_manifest.json",
+    "sepal_results_verification.txt"
+  ],
+  "linked_result_ids": [
+    "result_034"
+  ],
+  "methodology_summary": [
+    "Load a bundled spatial dataset (slideseqv2 or merfish) via squidpy.datasets into an AnnData container.",
+    "Execute squidpy.gr.sepal on the loaded AnnData object to compute gene-level spatial enrichment scores and rankings.",
+    "Extract and inspect output fields from AnnData .var, .uns, and .obsm slots to identify sepal-specific columns and matrices.",
+    "Validate field names, data types, array dimensions, and absence of unexpected NaN/inf values against squidpy's expected schema.",
+    "Validation: Confirm that all sepal output fields are present with correct dimensionality and no missing or corrupted values; generate a structured verification report.",
+    "References: source article (DOI: 10.1038/s41592-021-01358-2)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/adata_with_graph"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does squidpy.gr.sepal successfully compute spatial statistics and attach gene ranking scores to an AnnData object with the expected field names when applied to spatial transcriptomics datasets?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "spatial-gene-ranking-computation",
+    "anndata-object-manipulation-and-inspection",
+    "spatial-enrichment-score-validation",
+    "python-data-structure-verification",
+    "spatial-omics-dataset-loading"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_squidpy/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "squidpy_system",
+    "squidpy_gr_module",
+    "squidpy_im_module",
+    "squidpy_pl_module",
+    "squidpy_read_module",
+    "squidpy_tl_module",
+    "squidpy_datasets_module",
+    "squidpy_experimental_module",
+    "tool_anndata",
+    "dataset_merfish",
+    "dataset_slideseqv2",
+    "func_spatial_neighbors",
+    "func_spatial_autocorr",
+    "func_sepal",
+    "func_spatial_scatter",
+    "result_sepal_added",
+    "result_spatial_autocorr_replaces_moran",
+    "result_lazy_dask_im"
+  ],
+  "subdomains": [
+    "multi-omics-integration",
+    "spatial-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:scverse__squidpy",
+  "task_description": "Run squidpy.gr.sepal on a bundled spatial dataset (slideseqv2 or merfish) to compute spatial enrichment and gene rankings, then verify that the resulting scores and gene rankings are correctly attached to the AnnData object under the expected field names.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Bundled spatial omics dataset (slideseqv2 or merfish)",
+      "port_id": "spatial_dataset",
+      "resolved_via": null,
+      "source": "task_001/adata_with_graph",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Python environment with Squidpy installed",
+      "port_id": "squidpy_env",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute squidpy.gr.sepal on a spatial transcriptomics dataset and validate that gene ranking scores are correctly stored in the AnnData object's expected fields.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "AnnData object with sepal results attached",
+      "port_id": "adata_with_sepal",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Verification report of field names and data structures",
+      "port_id": "verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction",
+    "machine-learning",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce the SEPAL spatial variable gene detection using gr.sepal on an example dataset",
+  "tools": [
+    "Squidpy",
+    "scanpy",
+    "anndata",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Verification report listing field names, data types, array shapes, and confirmation of successful computation."
+  ],
+  "workflow_description": "1. Load a bundled spatial dataset using squidpy.datasets (slideseqv2 or merfish) into an AnnData object. 2. Execute squidpy.gr.sepal with default or specified parameters to compute spatial enrichment patterns and gene scores. 3. Inspect the AnnData object's .var, .uns, or .obsm attributes to locate the output fields (gene rankings, spatial enrichment scores). 4. Validate that field names and data structures match the expected schema (e.g., presence of ranking columns, score matrices with correct dimensions). 5. Generate a summary report documenting field names, data types, dimensions, and confirmation of successful computation."
+}

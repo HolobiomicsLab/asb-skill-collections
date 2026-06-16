@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "salmon 2.0 source code repository (github:COMBINE-lab/salmon) contains a writeMa"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "retrieve the reported mapping count (total mapped reads) from salmon quant's sta"
+    },
+    {
+      "id": "pf_004",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the SAM output file record count (excluding header lines, byte-for-byte) matches"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the SAM output file conforms to SAM format specification (header lines starting "
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "1.12"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that salmon 2.0 source code repository (github:COMBINE-lab/salmon) contains a writeMappings function or equivalent SAM output handler",
+      "script_runs: execute salmon 2.0 quant on a test dataset (human GEUVADIS ERR188044 or yeast ERR458493) with SAM output enabled (if available via --writeMappings or similar flag) and confirm the command completes without error",
+      "output_matches_reference: retrieve the reported mapping count (total mapped reads) from salmon quant's standard output or log file on the test dataset",
+      "row_count_equals: verify that the SAM output file record count (excluding header lines, byte-for-byte) matches the mapping count reported by salmon quant on the same test run",
+      "file_format_is: verify that the SAM output file conforms to SAM format specification (header lines starting with @, data lines with tab-delimited fields)",
+      "value_in_range: confirm that per-transcript selective-alignment quantification Pearson correlation vs. C++ salmon 1.12.0 remains at or above 0.999 on byte-identical index (robust to parameter choices)"
+    ],
+    "expert_review": [
+      "Review salmon 2.0 source code (cpp branch and Rust rewrite) to identify and document the exact nature of the writeMappings flush bug: confirm whether an ostream buffer was indeed not flushed before close, and verify that the fix (if applied) correctly calls flush() or uses a non-buffered stream",
+      "Verify that the fix does not introduce off-by-one errors, duplicate records, or corrupted SAM records in the output",
+      "Assess whether the fix is consistent with SAM specification and whether downstream tools (e.g., samtools, alignment viewers) successfully parse the corrected SAM file without warnings or errors"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

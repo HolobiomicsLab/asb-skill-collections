@@ -1,0 +1,264 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "80ba092b72f7ff29c4aa8b8253038299d107ecc5219cddf4542e969981d24399"
+    }
+  ],
+  "created_at": "2026-06-15T21:24:43.431654+00:00",
+  "crossref_doi": "10.1007/s00044-016-1764-y",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LOTUS flat file containing 484,174 unique 2D structure-organism pairs and 42,166 unique organisms",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Table or data frame with organism count per bin: 7,354 organisms with 1 structure, 21,490 with 1\u201310, 10,683 with 10\u2013100, 374 with >100",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "LOTUS contains 484,174 unique 2D structure-organism pairs spanning 42,166 organisms derived from 31 initial open databases.",
+    "Organisms must be grouped into four mutually exclusive bins based on distinct 2D structure count: singleton (1), sparse (2\u201310), intermediate (11\u2013100), and abundant (>100).",
+    "The reported reference counts (7,354 / 21,490 / 10,683 / 374) represent the ground-truth distribution after curation and deduplication across all source databases.",
+    "Structure-organism pairs represent documented or inferred associations; a single organism may appear in multiple pairs with different curated structures."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that a LOTUS flat file (2D structure-organism pairs) is accessible at a public deposit (GitHub release, Zenodo, or documented URL from lotusnprod/lotus-processor)",
+      "script_runs: execute a computational script (R, Python, or similar) that loads the flat file, groups unique organisms by cardinality of distinct 2D structures (bins: 1, 1\u201310, 10\u2013100, >100), and outputs four counts",
+      "output_matches_reference: verify that the four computed counts are exactly 7,354 / 21,490 / 10,683 / 374, byte-for-byte, in that order"
+    ],
+    "expert_review": [
+      "Confirm that the binning logic correctly interprets 'distinct 2D structures per organism' (e.g., handling duplicate or isomeric structures, SMILES normalization, and structure deduplication method) aligns with LOTUS curation standards"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the counts of unique organisms binned by the number of distinct 2D structures they contain in the categories: 1 structure, 1\u201310 structures, 10\u2013100 structures, and >100 structures?: '*LOTUS* is a comprehensive collection of documented structure-organism pairs.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The provided text does not contain the reported organism distribution counts (7,354 / 21,490 / 10,683 / 374) or any explicit binning of organisms by structure count.: 'LOTUS* is a comprehensive collection of documented structure-organism pairs. Within the frame of current computational approaches in Natural Products research and related fields, these documented'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] LOTUS flat file containing 484,174 unique 2D structure-organism pairs and 42,166 unique organisms: '484174 (3D|2D) unique referenced structure-organism pairs. They consist of 231330 | 153956 (3D|2D) unique curated structures and 42166 unique organisms'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Table or data frame with organism count per bin: 7,354 organisms with 1 structure, 21,490 with 1\u201310, 10,683 with 10\u2013100, 374 with >100: '7354 contain only 1 2D structure, 21490 contain between 1 and 10 2D structures, 10683 contain between 10 and 100 2D structures, 374 contain more than 100 2D structures'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'R\n- Python 3\n- Java >= 17'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The exact file format, location, and public access route for the LOTUS 2D structure-organism flat file are not specified in the provided section text: 'Source: github:lotusnprod__lotus-processor'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "df <- read.csv('{inputs.lotus_pairs}'); org_counts <- table(df$organism_id); bins <- c(n1 = sum(org_counts == 1), n2_10 = sum(org_counts >= 2 & org_counts <= 10), n11_100 = sum(org_counts >= 11 & org_counts <= 100), n_gt100 = sum(org_counts > 100)); print(bins); stopifnot(bins['n1'] == 7354 && bins['n2_10'] == 21490 && bins['n11_100'] == 10683 && bins['n_gt100'] == 374)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "organism_structure_bins.csv",
+  "expected_outputs": [
+    "Table or data frame with organism count per bin: 7,354 organisms with 1 structure, 21,490 with 1\u201310, 10,683 with 10\u2013100, 374 with >100"
+  ],
+  "finding": "The provided text does not contain the reported organism distribution counts (7,354 / 21,490 / 10,683 / 374) or any explicit binning of organisms by structure count.",
+  "github_name": "lotusnprod/lotus-processor",
+  "input_from": "task_001",
+  "inputs": [
+    "LOTUS flat file containing 484,174 unique 2D structure-organism pairs and 42,166 unique organisms"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "organism_structure_counts.csv",
+    "binning_summary.txt"
+  ],
+  "linked_result_ids": [
+    "result_006",
+    "result_010"
+  ],
+  "methodology_summary": [
+    "Load the LOTUS flat file as a data frame with structure ID and organism ID columns.",
+    "For each unique organism, count the number of distinct 2D structures associated with it.",
+    "Assign each organism to one of four bins: 1 structure, 2\u201310 structures, 11\u2013100 structures, >100 structures.",
+    "Tally the organism count within each bin.",
+    "Validation: compare observed bin counts against reported values (7,354, 21,490, 10,683, 374); confirm all four match or report any deviation.",
+    "References: source article (DOI: 10.1007/s00044-016-1764-y)"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "The exact file format, location, and public access route for the LOTUS 2D structure-organism flat file are not specified in the provided section text"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/verification_report"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the counts of unique organisms binned by the number of distinct 2D structures they contain in the categories: 1 structure, 1\u201310 structures, 10\u2013100 structures, and >100 structures?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "structure-organism-pair-binning",
+    "organism-count-distribution-analysis",
+    "natural-product-database-validation",
+    "categorical-grouping-and-aggregation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_lotus/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_LOTUS",
+    "ARCH_ORGANISM_SUBPIPELINE",
+    "ARCH_STRUCTURE_SUBPIPELINE",
+    "TOOL_TRANSLATING_ORGANISM_KT",
+    "COMP_STRUCTURE_ORGANISM_PAIRS",
+    "RESULT_TOTAL_PAIRS_3D",
+    "RESULT_TOTAL_PAIRS_2D",
+    "RESULT_UNIQUE_STRUCTURES_3D",
+    "RESULT_UNIQUE_STRUCTURES_2D",
+    "RESULT_UNIQUE_ORGANISMS",
+    "RESULT_SOURCE_DATABASES",
+    "RESULT_2D_STRUCT_1_ORG",
+    "RESULT_2D_STRUCT_1_10_ORG",
+    "RESULT_2D_STRUCT_10_100_ORG",
+    "RESULT_2D_STRUCT_GT100_ORG",
+    "RESULT_ORG_1_STRUCT",
+    "RESULT_ORG_1_10_STRUCT",
+    "RESULT_ORG_10_100_STRUCT",
+    "RESULT_ORG_GT100_STRUCT"
+  ],
+  "subdomains": [
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:lotusnprod__lotus-processor",
+  "task_description": "Load the LOTUS 2D structure-organism pair dataset, group unique organisms by their distinct structure count (1, 1\u201310, 10\u2013100, >100), and verify the reported bin sizes: 7,354 / 21,490 / 10,683 / 374.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LOTUS 2D structure-organism pair dataset",
+      "port_id": "lotus_pairs",
+      "resolved_via": null,
+      "source": "task_001/verification_report",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Load the LOTUS 2D flat file, group organisms by distinct structure count, bin into [1], [2\u201310], [11\u2013100], [>100] categories, and verify counts match 7,354 / 21,490 / 10,683 / 374.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Organism binning by structure count",
+      "port_id": "organism_bins",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quantitative-structure-activity"
+  ],
+  "title": "Reproduce the structure-count distribution across organisms in the 2D dataset",
+  "tools": [
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Table or data frame with organism count per bin: 7,354 organisms with 1 structure, 21,490 with 1\u201310, 10,683 with 10\u2013100, 374 with >100."
+  ],
+  "workflow_description": "1. Load the LOTUS flat file (484,174 unique 2D structure-organism pairs across 42,166 organisms) into a data frame. 2. Group organisms by unique 2D structure count and bin into four categories: exactly 1 structure, 1\u201310 structures, 10\u2013100 structures, and >100 structures. 3. Count the number of organisms in each bin. 4. Validate the observed counts against the reported reference values (7,354, 21,490, 10,683, 374) and report any discrepancies or confirmation."
+}

@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: github:pymzML__pymzML repository is accessible and contains GSGW class implementation"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: output file has .gz extension and is a valid gzip archive"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify format_is: gzip header matches igzip specification (magic bytes 1f 8b and compression method byte)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: GSGW class can be instantiated and accepts Moby Dick text file as input without runtime errors"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: each chapter is stored as independently seekable compressed block (robust to block boundary alignment)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: indexed .gz file contains valid index structure allowing random access to chapter boundaries"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: .gz file header contains igzip-compliant index metadata (no canonical answer \u2014 multiple index formats valid if igzip-compliant)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: github:pymzML__pymzML repository is accessible and contains GSGW class implementation",
+      "verify file_format_is: output file has .gz extension and is a valid gzip archive",
+      "verify format_is: gzip header matches igzip specification (magic bytes 1f 8b and compression method byte)",
+      "verify script_runs: GSGW class can be instantiated and accepts Moby Dick text file as input without runtime errors",
+      "verify output_matches_reference: each chapter is stored as independently seekable compressed block (robust to block boundary alignment)",
+      "verify file_exists: indexed .gz file contains valid index structure allowing random access to chapter boundaries",
+      "verify contains_substring: .gz file header contains igzip-compliant index metadata (no canonical answer \u2014 multiple index formats valid if igzip-compliant)"
+    ],
+    "expert_review": [
+      "confirm GSGW class implementation correctly partitions Moby Dick into chapter boundaries (requires manual verification of chapter detection logic)",
+      "assess whether compression efficiency and seek performance meet practical standards for chapter-by-chapter access",
+      "validate igzip specification compliance against RFC 1952 and igzip documentation standards"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

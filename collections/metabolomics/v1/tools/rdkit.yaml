@@ -6,7 +6,7 @@ evidence_spans:
 - Powered by RDKit
 - molecular graph
 - we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- jhhung/PS2MS
+- Use the RDKit converter as a reference implementation
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
@@ -20,10 +20,13 @@ derived_from:
   title: mol2ccs
 - doi: 10.1186/s13321-021-00558-4
   title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+- doi: 10.21105/joss.04494
+  title: msmetaenhancer
 - doi: 10.1021/acs.analchem.3c05019
   title: 'PS<sup>2</sup>MS: A Deep Learning-Based Prediction System for Identifying New Psychoactive Substances Using Mass Spectrometry'
 source_repos:
 - HassounLab/BAM
+- RECETOX/MSMetaEnhancer
 - enveda/ccs-prediction
 - https://github.com/iomega/spec2vec
 - https://github.com/matchms/ms2deepscore

@@ -1,0 +1,619 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "nplinker.pdf",
+      "role": "main_article",
+      "sha256": "f336b781d4488fcaf350c71aa5cf495c9603fe908229dcc004dede066845eba5"
+    }
+  ],
+  "created_at": "2026-06-15T08:56:40.523217+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1008920",
+  "data_accessions": [
+    {
+      "accession": "MSV000078836",
+      "evidence_span": "Cs a number of strains for the st From this platform we con MSV000078836 [38], MSV Cru\u00a8semann, Gross and Le\u00e3 The Cru\u00a8semann data set",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836"
+    },
+    {
+      "accession": "MSV000085038",
+      "evidence_span": "ets each with numerous validated links: V000085018 [39] and MSV000085038 [40], hereafter referred to as \u00e3o, respectively. et consist",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Cr\u00fcsemann dataset: GCF-MF links with strain membership and validated link annotations from MSV000078836",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Gross dataset: GCF-MF links with strain membership and validated link annotations from MSV000085018",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Le\u00e3o dataset: BGC-spectrum links with strain membership and validated link annotations from MSV000085038",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "antiSMASH v5.0.0 output for BGC detection in strain assemblies",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "BiG-SCAPE v1.0.0 output for GCF clustering",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GNPS MS2 spectra with strain association for metabolomic data",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Table reporting proportion of validated links for each dataset at total, top raw correlation (90th percentile), top standardised correlation (90th percentile), top IOKR (90th percentile), and top combined (both \u226590th percentile) link sets",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "P-values and effect size comparison demonstrating significant enrichment of validated links in joint top percentile versus individual score top percentiles across pooled datasets",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Distribution plots (histograms or scatter plots) showing the relative position of validated links within score distributions for all three datasets",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "List of top-scoring links for each dataset ranked by combined score with their individual standardised correlation and IOKR scores",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Strain correlation scoring relies on the overlap of strains between a GCF and MF, but raw scores are highly dependent on set sizes (GCF size, MF size, population size N); standardisation via hypergeometric expected value and variance correction makes scores comparable across different-sized GCFs and MFs.",
+    "IOKR projects MS2 spectra into molecular fingerprint space and ranks candidate BGCs by similarity; unlike product-type-specific methods, it requires only BGCs with predicted molecular structures (those with MIBiG homology).",
+    "Validated links in paired omics datasets are curated manually by researchers based on literature and BGC-spectrum correspondence; antiSMASH BLAST matching with cumulative score \u226510000 filters for high-confidence structural predictions.",
+    "Complementarity is demonstrated by showing that links scoring in the joint top percentile of both functions are significantly enriched for validated links compared to either function's top percentile alone, as measured by Fisher exact test p-values.",
+    "The 90th percentile threshold is an arbitrary but standard choice for identifying 'high-scoring' links; the magnitude of enrichment p-value (e.g. 2.633 \u00d7 10\u22124 for IOKR-based comparison) indicates the strength of complementarity between the two scoring approaches."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: S1 Data (Linked MIBiG and GNPS databases with SMILES strings and BGC-spectrum links)",
+      "file_exists: S2 Data (High-scoring links from Cr\u00fcsemann dataset)",
+      "file_exists: S3 Data (High-scoring links from Le\u00e3o dataset)",
+      "file_exists: S4 Data (High-scoring links from Gross dataset)",
+      "script_runs: NPLinker strain correlation scoring module on input GCF-MF pairs from three datasets, producing standardised scores",
+      "script_runs: NPLinker IOKR scoring module on input spectra and BGC candidates, producing IOKR scores for the three datasets",
+      "script_runs: NPLinker combined scoring function (\u2113p-norm with sign adjustment) integrating both standardised scores",
+      "output_matches_reference: ratio of validated links in top 10% by combined score vs. top 10% by strain correlation alone, across all three datasets (reference: Table 4 values)",
+      "output_matches_reference: ratio of validated links in top 10% by combined score vs. top 10% by IOKR alone, across all three datasets (reference: Table 4 values)",
+      "value_in_range: proportion of validated links in 90th percentile for standardised strain correlation score in Cr\u00fcsemann dataset, robust to choice of percentile threshold",
+      "value_in_range: proportion of validated links in 90th percentile for IOKR score in Cr\u00fcsemann dataset, robust to choice of percentile threshold",
+      "value_in_range: proportion of validated links in 90th percentile for combined score in Cr\u00fcsemann dataset, robust to choice of percentile threshold",
+      "row_count_equals: number of GCF-MF pairs evaluated in each of Cr\u00fcsemann, Gross, and Le\u00e3o datasets matches supplementary data counts",
+      "contains_substring: Table 4 in published article reports enrichment ratios and p-values for joint top-percentile performance across three datasets"
+    ],
+    "expert_review": [
+      "Verify that the reported improvement in validated link ratio (Table 4) represents a meaningful biological or chemical validation criterion (e.g., spectral matching, known biosynthetic relationship)",
+      "Assess whether the choice of \u2113p-norm exponent (p=0.5 in combined function) is justified and whether alternative exponents were tested and reported",
+      "Evaluate whether the three datasets (Cr\u00fcsemann, Gross, Le\u00e3o) represent adequate diversity in microbial ecology, strain characteristics, and compound classes to support generalisability claims",
+      "Review the statistical significance and effect sizes reported in Table 4 to determine whether improvements are both statistically and practically significant"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] When combining standardised strain correlation and IOKR scores, does the joint top percentile enrichment of validated links exceed that of either individual scoring function alone?: 'demonstrate their complementarity, and hence the potential in combining the scores. The distribution of the scores for the Cr\u00fcsemann data set, and the relative score of the validated links, can be'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Links scoring above the 90th percentile for both standardised strain correlation and IOKR scores show significantly higher enrichment for validated links (p=2.633\u00d710\u22124 from IOKR and p=0.0208 from standardised correlation) compared to either individual score alone.: 'the set of links scoring above the 90th percentile on both scores is significantly enriched compared to the set that exceed either of the individual scores (p-value of 2.633 \u00d7 10\u22124 and 0.0208'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Cr\u00fcsemann dataset: GCF-MF links with strain membership and validated link annotations from MSV000078836: 'The Cr\u00fcsemann data set consists of 120 microbial strains with 8 validated links between a BGC and a MF'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Gross dataset: GCF-MF links with strain membership and validated link annotations from MSV000085018: 'the Gross data set consists of 7 strains with 9 validated links between a BGC and a MF'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Le\u00e3o dataset: BGC-spectrum links with strain membership and validated link annotations from MSV000085038: 'the Le\u00e3o data set contains 4 strains with 5 validated links between a BGC and a specific MS2 spectrum'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] antiSMASH v5.0.0 output for BGC detection in strain assemblies: 'after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[results] BiG-SCAPE v1.0.0 output for GCF clustering: 'BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[results] GNPS MS2 spectra with strain association for metabolomic data: 'after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Table reporting proportion of validated links for each dataset at total, top raw correlation (90th percentile), top standardised correlation (90th percentile), top IOKR (90th percentile), and top combined (both \u226590th percentile) link sets: 'Table 2 shows the proportion of validated links among all possible GCF-MF links in the three data sets, both for all the potential links (first row), and for the links scoring above the 90th'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[results] P-values and effect size comparison demonstrating significant enrichment of validated links in joint top percentile versus individual score top percentiles across pooled datasets: 'pooling the links across the three datasets to get a clearer sense of the statistical significance. Considering the 90th percentile per data set for both scores, and adding up the numbers of links in'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Distribution plots (histograms or scatter plots) showing the relative position of validated links within score distributions for all three datasets: 'The distribution of the scores for the Cr\u00fcsemann data set, and the relative score of the validated links, can be seen in the histograms of Fig 6'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[results] List of top-scoring links for each dataset ranked by combined score with their individual standardised correlation and IOKR scores: 'the top-scoring links for each data set can be found in S2\u2013S4 Data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[results] antiSMASH: 'genomes were run through antiSMASH v5.0.0 for BGC detection'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[results] BiG-SCAPE: 'BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[abstract] NPLinker: 'NPLinker, a software framework to link genomic and metabolomic data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[results] GNPS: 'MS2 spectra in specific GNPS data sets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[results] MIBiG: 'established homology to a particular MIBiG BGC'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit statement of exact values for the ratio of validated links in the 90th percentile for combined score vs. strain correlation alone, or combined vs. IOKR alone, for each of the three datasets: 'By using both scores simultaneously, the prioritisation of hypothetical links can be made more effective.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No detailed breakdown of how the \u2113p-norm exponent was selected or tuned, or whether sensitivity analysis across multiple p values was performed beyond visual inspection mentioned in results: 'various values of p, or other functions to combine the scores, may improve performance'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_020",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit count or percentage of BGCs in each dataset that had sufficient MIBiG homology to receive IOKR scores, limiting clarity on the effective sample size: 'restricts its use to those BGCs which show considerable homology with MIBiG entries'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_021",
+      "source_path": "agent2_synthesis",
+      "text": "[results] No statement of whether the combined scoring function was optimised on the same datasets used for performance evaluation, or whether cross-validation or held-out test sets were used: 'we proceed to combine them into a single scoring function for genomic and metabolomic links'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; sys.exit('This task requires custom Python analysis code to load datasets, compute standardised strain correlation and IOKR scores, perform percentile categorisation, calculate enrichment statistics via Fisher exact test, and generate outputs. No executable scripts or entry points are provided in this package. A Python script implementing the full methodology (loading {inputs.crusemann_links}, {inputs.gross_links}, {inputs.leao_links}, {inputs.antismash_output}, {inputs.bigscape_output}, {inputs.gnps_spectra}; computing correlation and IOKR standardisation; pooling across datasets; and running statistical tests) must be authored and executed.')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "complementarity_analysis_results.csv",
+  "expected_outputs": [
+    "Table reporting proportion of validated links for each dataset at total, top raw correlation (90th percentile), top standardised correlation (90th percentile), top IOKR (90th percentile), and top combined (both \u226590th percentile) link sets",
+    "P-values and effect size comparison demonstrating significant enrichment of validated links in joint top percentile versus individual score top percentiles across pooled datasets",
+    "Distribution plots (histograms or scatter plots) showing the relative position of validated links within score distributions for all three datasets",
+    "List of top-scoring links for each dataset ranked by combined score with their individual standardised correlation and IOKR scores"
+  ],
+  "finding": "Links scoring above the 90th percentile for both standardised strain correlation and IOKR scores show significantly higher enrichment for validated links (p=2.633\u00d710\u22124 from IOKR and p=0.0208 from standardised correlation) compared to either individual score alone.",
+  "github_name": "NPLinker/nplinker",
+  "input_from": "task_001",
+  "inputs": [
+    "Cr\u00fcsemann dataset: GCF-MF links with strain membership and validated link annotations from MSV000078836",
+    "Gross dataset: GCF-MF links with strain membership and validated link annotations from MSV000085018",
+    "Le\u00e3o dataset: BGC-spectrum links with strain membership and validated link annotations from MSV000085038",
+    "antiSMASH v5.0.0 output for BGC detection in strain assemblies",
+    "BiG-SCAPE v1.0.0 output for GCF clustering",
+    "GNPS MS2 spectra with strain association for metabolomic data"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "standardised_correlation_scores.csv",
+    "iokr_scores.csv",
+    "validated_links_per_dataset.csv",
+    "percentile_enrichment_table.csv",
+    "statistical_comparison_pvalues.txt",
+    "score_distribution_plots.png"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_005",
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_019",
+    "result_020",
+    "result_021",
+    "result_023",
+    "result_029",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_034",
+    "result_035",
+    "result_041"
+  ],
+  "methodology_summary": [
+    "Load GCF-MF link data with strain membership and validated annotations from three curated microbial datasets.",
+    "Compute standardised strain correlation score for each GCF-MF pair by calculating raw correlation score and adjusting for expected value and variance under hypergeometric null hypothesis.",
+    "Compute IOKR scores for BGC-spectrum links via molecular fingerprint space projection, then propagate maximum IOKR score to GCF-MF level.",
+    "Standardise IOKR scores using expected value and variance computed over all potential links in the dataset.",
+    "Identify the 90th percentile threshold independently for standardised correlation and IOKR scores, then categorise links as: above neither, above only standardised correlation, above only IOKR, or above both (joint).",
+    "Calculate the proportion of validated links within each category (total, top raw correlation, top standardised correlation, top IOKR, top combined) for each of the three datasets.",
+    "Pool validated and unvalidated link counts across the three datasets and apply Fisher exact test to compare enrichment of the joint top-percentile group versus individual top-percentile groups.",
+    "Validation: Demonstrate that the p-value for enrichment of validated links in the joint top percentile (both scores \u226590th percentile) is significantly lower than the p-values for either score alone (p < 0.05 after Bonferroni correction if multiple tests), confirming complementarity of the two scoring functions.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1008920); MSV000078836 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836); MSV000085038 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038)"
+  ],
+  "missing_information": [
+    "No explicit statement of exact values for the ratio of validated links in the 90th percentile for combined score vs. strain correlation alone, or combined vs. IOKR alone, for each of the three datasets",
+    "No detailed breakdown of how the \u2113p-norm exponent was selected or tuned, or whether sensitivity analysis across multiple p values was performed beyond visual inspection mentioned in results",
+    "No explicit count or percentage of BGCs in each dataset that had sufficient MIBiG homology to receive IOKR scores, limiting clarity on the effective sample size",
+    "No statement of whether the combined scoring function was optimised on the same datasets used for performance evaluation, or whether cross-validation or held-out test sets were used"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/standardised_scores_all_datasets"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "When combining standardised strain correlation and IOKR scores, does the joint top percentile enrichment of validated links exceed that of either individual scoring function alone?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "results",
+    "discussion"
+  ],
+  "skills": [
+    "bgc-mf-link-scoring-standardisation",
+    "strain-correlation-hypergeometric-adjustment",
+    "iokr-fingerprint-space-ranking",
+    "validated-link-enrichment-analysis",
+    "percentile-threshold-based-filtering",
+    "multi-score-complementarity-evaluation",
+    "pooled-statistical-significance-testing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_nplinker",
+  "spine_condition_ids": [
+    "COND_STD_STRAIN_CORR_ONLY",
+    "COND_SIZE_LARGE_GCF_MF",
+    "COND_SIZE_SMALL_GCF_MF",
+    "COND_COMBINED_SCORES",
+    "COND_IOKR_ONLY",
+    "COND_MIBIG_GNPS_EVAL",
+    "COND_STRAIN_CORR_ONLY",
+    "COND_CRUSEMANN_EVAL",
+    "COND_GROSS_EVAL"
+  ],
+  "spine_entity_ids": [
+    "COMP_STRAIN_CORR_SCORE",
+    "COMP_STD_STRAIN_CORR_SCORE",
+    "COMP_IOKR_SCORE",
+    "DS_GNPS_TRAINING",
+    "DS_CRUSEMANN",
+    "DS_GROSS",
+    "COND_STRAIN_CORR_ONLY",
+    "COND_STD_STRAIN_CORR_ONLY",
+    "COND_IOKR_ONLY",
+    "COND_COMBINED_SCORES",
+    "COND_CRUSEMANN_EVAL",
+    "COND_GROSS_EVAL",
+    "METRIC_STD_SCORE_FAVORS_STRONG_CORR",
+    "METRIC_COMBINED_IMPROVES_RATIO",
+    "METRIC_IOKR_TRAINING_SIZE",
+    "METRIC_IOKR_TRAINING_TIME_REDUCTION",
+    "METRIC_IOKR_CLASSIFICATION_TIME_REDUCTION",
+    "RESULT_SIZE_BIAS_STRAIN_CORR",
+    "RESULT_IOKR_NOT_CLASS_SPECIFIC",
+    "RESULT_COMPLEMENTARITY",
+    "ARTIFACT_GCF_MF_LINKS"
+  ],
+  "subdomains": [
+    "natural-products",
+    "microbiome-metabolomics",
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": null,
+  "task_description": "Reproduce the complementarity analysis of standardised strain correlation and IOKR scoring functions on three microbial datasets (Cr\u00fcsemann, Gross, Le\u00e3o), demonstrating that links scoring in the joint top percentiles show higher enrichment of validated links than either score alone.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cr\u00fcsemann GCF-MF links with strain membership and validated annotations",
+      "port_id": "crusemann_links",
+      "resolved_via": null,
+      "source": "task_001/standardised_scores_all_datasets",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Gross GCF-MF links with strain membership and validated annotations",
+      "port_id": "gross_links",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Le\u00e3o BGC-spectrum links with strain membership and validated annotations",
+      "port_id": "leao_links",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "antiSMASH v5.0.0 BGC predictions for all strains",
+      "port_id": "antismash_output",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "BiG-SCAPE v1.0.0 GCF clustering results",
+      "port_id": "bigscape_output",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GNPS MS2 spectra with strain associations",
+      "port_id": "gnps_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Validate complementarity of standardised strain correlation and IOKR scores by reproducing the enrichment ratios in the joint 90th percentile for validated links across three datasets.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Proportion of validated links by percentile and scoring method for all three datasets",
+      "port_id": "enrichment_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "P-values and comparisons demonstrating complementarity of scoring functions",
+      "port_id": "statistical_tests",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Histograms or scatter plots of standardised correlation and IOKR scores with validated link positions",
+      "port_id": "score_distributions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Top-scoring links for each dataset ranked by combined score with component scores",
+      "port_id": "ranked_links",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "correlation-analysis",
+    "machine-learning",
+    "database-annotation",
+    "network-annotation-propagation"
+  ],
+  "title": "Reproduce the complementarity analysis combining standardised strain correlation and IOKR scores on microbial datasets",
+  "tools": [
+    "antiSMASH",
+    "BiG-SCAPE",
+    "NPLinker",
+    "GNPS",
+    "MIBiG"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load GCF-MF links and their associated strain membership from the Cr\u00fcsemann, Gross, and Le\u00e3o datasets processed through antiSMASH v5.0.0 and BiG-SCAPE v1.0.0. 2. Compute raw and standardised strain correlation scores (\u03c3_corr and \u03c3*_corr) for each GCF-MF pair using hypergeometric null distribution with expected value and variance adjustment. 3. Compute IOKR scores (\u03c3_IOKR) for BGC-spectrum links by ranking candidate structures using molecular fingerprint space projection, then assign the maximum IOKR score for each GCF-MF pair. 4. Standardise IOKR scores (\u03c3*_IOKR) using expected value and variance over all potential links. 5. Identify validated links for each dataset from the Paired Omics Data Platform based on curated BGC-spectrum correspondence with antiSMASH BLAST matching (cumulative score \u226510000). 6. Filter links at the 90th percentile threshold for each scoring function independently and for the joint (both functions) criterion. 7. Calculate the proportion of validated links within each percentile group (total links, top raw correlation, top standardised correlation, top IOKR, top combined) for all three datasets. 8. Pool validated link counts across datasets and compute Fisher exact test p-values comparing enrichment of the joint top percentile group versus either single-function top percentile group."
+}

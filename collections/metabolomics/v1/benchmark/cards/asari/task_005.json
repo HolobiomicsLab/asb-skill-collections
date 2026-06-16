@@ -1,0 +1,435 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/conda_asari_screenshot.png",
+      "role": "figure",
+      "sha256": "63a0d4afac544c88c5471e07a1c7b8621b13f42dc929ec51bfe4de7812eab5bc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/viz_screen_shot20220518.png",
+      "role": "figure",
+      "sha256": "8f39467923bd069f89f08ae3cf26aae438fe9cefae58597ac3cd3ec4546a05ce"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "326956a66d39dbea6b07415031b29fd5b0d550197b560a91838eb9f9bd36ba0a"
+    }
+  ],
+  "created_at": "2026-06-16T05:33:42.864961+00:00",
+  "crossref_doi": "10.1038/s41467-023-39889-1",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Public mzML files (minimum 100+ files) from MetaboLights or MassIVE repositories in centroided format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "asari software installed from PyPI or cloned from source (v1.10+)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "System profiling tools capable of capturing wall-clock runtime and peak memory usage",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Scalability benchmark table (CSV or TSV) with columns: sample_count, wall_clock_time_seconds, peak_memory_mb, run_number, mean_time, std_dev_time, mean_memory, std_dev_memory",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Wall-clock time vs. sample count plot (PNG or PDF) showing linear or near-linear scaling up to 100+ samples",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Peak memory usage vs. sample count plot (PNG or PDF) demonstrating memory efficiency across cohort sizes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary report (text or markdown) stating mean throughput (samples/hour) per cohort and extrapolated time estimate for 1000-sample project",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "asari processes mzML files by extracting mass tracks per sample, building a composite mass grid, and detecting elution peaks; memory efficiency derives from not retaining full intensity arrays in memory during intermediate steps.",
+    "Laptop-class hardware is defined as single-core CPU and \u226416 GB RAM; the scalability claim of >1000 samples must be testable on such machines without parallel computing.",
+    "Wall-clock time includes all stages: mzML parsing, mass track extraction (parallelized over samples), m/z alignment, RT calibration, and peak detection on composite mass tracks; profiling must capture the entire asari process subcommand execution.",
+    "Peak memory usage fluctuates during execution (e.g., spike during composite mass track construction and peak detection); reported peak should be the maximum resident memory (RSS or VMS) observed during a single run.",
+    "Scaling behavior may differ between small studies (\u226410 samples, pairwise m/z alignment) and large studies (>10 samples, clustering-based m/z alignment); benchmark design should test both regimes."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that asari can be installed from github:shuzhao-li-lab/asari and runs without errors on Python 3.8+",
+      "verify that mzML test files are available from github:shuzhao-li/data/tree/main/data or a public metabolomics repository (MetaboLights/MassIVE)",
+      "file_exists: performance_log.csv or equivalent structured output containing wall-clock execution time and peak memory usage",
+      "value_in_range: wall-clock time increases monotonically or sub-linearly as sample count increases from 10 to 50 to 100+ samples (no canonical answer for exact scaling exponent; parameter-sensitive to hardware and file sizes)",
+      "value_in_range: peak memory usage remains below laptop physical RAM limit (typically 8\u201316 GB) at 100+ sample threshold, robust to typical consumer hardware configurations",
+      "output_matches_reference: reported scalability metric (samples processed per unit time, or memory per sample) is consistent with claim '>1000 samples on a laptop' stated in article abstract or results section"
+    ],
+    "expert_review": [
+      "assess whether wall-clock time and memory measurements were collected under controlled, reproducible conditions (fixed hardware specs, single-threaded vs. multi-threaded configuration, consistent input file sizes)",
+      "evaluate whether the tested mzML files are representative of real metabolomics datasets in terms of complexity, spectral density, and retention-time resolution",
+      "determine whether measured scalability trajectory (time/memory vs. sample count) is extrapolatable to the claimed >1000-sample threshold or whether the tested range (10\u2013100) is insufficient to validate the claim",
+      "assess sensitivity of performance measurements to parameter choices (e.g., mass tolerance ppm, peak prominence thresholds, smoothing window size) that may affect per-sample processing cost"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does asari's computational performance (wall-clock time and peak memory usage) scale with increasing numbers of LC-MS samples?: 'Scalable, performance conscious, disciplined use of memory and CPU'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Asari is designed as a scalable program with performance-conscious implementation prioritizing disciplined use of memory and CPU resources.: 'Scalable, performance conscious, disciplined use of memory and CPU'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Public mzML files (minimum 100+ files) from MetaboLights or MassIVE repositories in centroided format: 'Input data are centroied mzML files from LC-MS metabolomics.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] asari software installed from PyPI or cloned from source (v1.10+): 'From PyPi repository: `pip3 install asari-metabolomics`. Add `--upgrade` to update to new versions.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] System profiling tools capable of capturing wall-clock runtime and peak memory usage: 'Asari is designed to run > 1000 samples on a laptop computer.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Scalability benchmark table (CSV or TSV) with columns: sample_count, wall_clock_time_seconds, peak_memory_mb, run_number, mean_time, std_dev_time, mean_memory, std_dev_memory: 'Asari is designed to run > 1000 samples on a laptop computer. The performance is achieved via ... Main intensity values of each sample are not kept in memory.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Wall-clock time vs. sample count plot (PNG or PDF) showing linear or near-linear scaling up to 100+ samples: 'Asari is designed to run > 1000 samples on a laptop computer.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Peak memory usage vs. sample count plot (PNG or PDF) demonstrating memory efficiency across cohort sizes: 'Main intensity values of each sample are not kept in memory.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Summary report (text or markdown) stating mean throughput (samples/hour) per cohort and extrapolated time estimate for 1000-sample project: 'Asari is designed to run > 1000 samples on a laptop computer.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] asari: 'Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'Requires Python 3.8+.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pymzml: 'The default method uses `pymzml` to parse mzML files.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, performance improvements, or scalability-related fixes: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "scalability_benchmark_results.csv",
+  "expected_outputs": [
+    "Scalability benchmark table (CSV or TSV) with columns: sample_count, wall_clock_time_seconds, peak_memory_mb, run_number, mean_time, std_dev_time, mean_memory, std_dev_memory",
+    "Wall-clock time vs. sample count plot (PNG or PDF) showing linear or near-linear scaling up to 100+ samples",
+    "Peak memory usage vs. sample count plot (PNG or PDF) demonstrating memory efficiency across cohort sizes",
+    "Summary report (text or markdown) stating mean throughput (samples/hour) per cohort and extrapolated time estimate for 1000-sample project"
+  ],
+  "finding": "Asari is designed as a scalable program with performance-conscious implementation prioritizing disciplined use of memory and CPU resources.",
+  "github_name": "shuzhao-li-lab/asari_pcpfm_tutorials",
+  "input_from": null,
+  "inputs": [
+    "Public mzML files (minimum 100+ files) from MetaboLights or MassIVE repositories in centroided format",
+    "asari software installed from PyPI or cloned from source (v1.10+)",
+    "System profiling tools capable of capturing wall-clock runtime and peak memory usage"
+  ],
+  "keywords": [
+    "high-resolution metabolomics",
+    "lc-ms",
+    "gc-ms",
+    "peak detection",
+    "mass alignment",
+    "extracted ion chromatogram",
+    "untargeted metabolomics",
+    "composite map processing",
+    "peak quality tracking"
+  ],
+  "landmark_outputs": [
+    "asari_process_run_10_samples.log",
+    "asari_process_run_50_samples.log",
+    "asari_process_run_100_samples.log",
+    "benchmark_raw_metrics.csv",
+    "time_vs_sample_count.png",
+    "memory_vs_sample_count.png"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_012",
+    "result_048"
+  ],
+  "methodology_summary": [
+    "Retrieve or construct public mzML test datasets at three scale points: 10, 50, and 100+ samples.",
+    "Install asari from PyPI (pip install asari-metabolomics) using default configuration (5 ppm tolerance, positive mode).",
+    "Execute asari process on each cohort using a system profiler (time, psutil, or Linux /usr/bin/time -v) to capture wall-clock duration and peak memory.",
+    "Repeat each run 2\u20133 times and calculate mean, standard deviation, and throughput (samples/hour) per cohort.",
+    "Plot wall-clock time and peak memory as functions of sample count; visually assess linearity and extrapolate to 1000-sample scenario.",
+    "Validation: confirm that observed scaling behaviour supports or refutes the >1000-samples-on-laptop claim by verifying that extrapolated runtime for 1000 samples remains <24 hours on a single CPU core with \u226416 GB peak memory.",
+    "References: source article (DOI: 10.1038/s41467-023-39889-1)"
+  ],
+  "missing_information": [
+    "No changelog documenting version history, performance improvements, or scalability-related fixes"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does asari's computational performance (wall-clock time and peak memory usage) scale with increasing numbers of LC-MS samples?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "lc-ms-dataset-acquisition-and-curation",
+    "computational-resource-profiling-and-benchmarking",
+    "software-performance-characterization-and-scaling-analysis",
+    "time-and-memory-complexity-visualization",
+    "scalability-extrapolation-and-throughput-estimation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_asari/synthesized_package",
+  "spine_condition_ids": [
+    "COND_SMALL_STUDY",
+    "COND_LARGE_STUDY"
+  ],
+  "spine_entity_ids": [
+    "SYS_ASARI",
+    "ARCH_PIPELINE",
+    "COMP_DASHBOARD",
+    "DS_MZML_INPUT",
+    "COND_SMALL_STUDY",
+    "COND_LARGE_STUDY",
+    "RESULT_COMPOSITE_EFFICIENCY",
+    "RESULT_SCALABILITY",
+    "RESULT_PEAK_ENHANCEMENT",
+    "RESULT_SINGLE_SAMPLE_FEATURE_REPORTING",
+    "RESULT_RT_CALIBRATION_DICT",
+    "PARAM_MIN_PEAK_HEIGHT"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:shuzhao-li-lab__asari",
+  "task_description": "Benchmark asari's computational performance and memory footprint on public metabolomics datasets across sample-set sizes (10, 50, 100+ samples) to validate the scalability claim of >1000 samples on a laptop computer.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Public mzML dataset (100+ centroided files)",
+      "port_id": "mzml_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "asari software (pip install or source clone)",
+      "port_id": "asari_software",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Benchmark asari's wall-clock execution time and peak memory consumption on public mzML datasets at 10, 50, and 100+ sample sizes to quantify scalability.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Scalability benchmark table (CSV/TSV)",
+      "port_id": "benchmark_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Wall-clock time vs. sample count plot (PNG/PDF)",
+      "port_id": "time_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Peak memory vs. sample count plot (PNG/PDF)",
+      "port_id": "memory_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Scalability summary report (TXT/MD)",
+      "port_id": "summary_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "quality-control",
+    "database-annotation"
+  ],
+  "title": "Analyze scalability of asari by running it on increasing sample counts up to >100 mzML files and recording runtime and memory",
+  "tools": [
+    "asari",
+    "Python",
+    "pymzml"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: pymzml, Scalability benchmark table (CSV or TSV) with columns: sample_count, wall_clock_time_seconds, peak_memory_mb, run_number, mean_time, std_dev_time, mean_memory, std_dev_memory, Summary report (text or markdown) stating mean throughput (samples/hour) per cohort and extrapolated time estimate for 1000-sample project."
+  ],
+  "workflow_description": "1. Retrieve public mzML datasets from MetaboLights or MassIVE repositories; select or subsample test data to create cohorts of 10, 50, and 100+ samples. 2. Install asari from pip (v1.10+) with default parameters (5 ppm m/z tolerance, positive ionization mode). 3. For each cohort, execute asari process command and record wall-clock runtime and peak resident memory usage using system profiling tools (e.g., time command, psutil, or top). 4. Repeat runs 2\u20133 times per cohort to establish mean and standard deviation of timing and memory metrics. 5. Tabulate results by sample count and plot wall-clock time and memory versus sample number to verify linear or near-linear scaling. 6. Compare observed throughput (samples/hour) and memory per sample to the claimed benchmark threshold for laptop-class hardware (\u226416 GB RAM, single CPU core)."
+}

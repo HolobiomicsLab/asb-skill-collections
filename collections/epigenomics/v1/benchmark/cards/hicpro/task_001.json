@@ -1,0 +1,375 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/button_blue.png",
+      "role": "figure",
+      "sha256": "3e3e7a6968364e956db4a9768b245f4ab1afcc2242fd45ce18ee9ad9857dd411"
+    },
+    {
+      "indexable": false,
+      "path": "figures/button_blue.svg",
+      "role": "figure",
+      "sha256": "bc1866919df11822bbc4d14a150df3d4421da64913a4355e6ab09dcf8456ed43"
+    },
+    {
+      "indexable": false,
+      "path": "figures/button_green.png",
+      "role": "figure",
+      "sha256": "77ebf0a2a88733fe3518a232215c573c3bce6e9964525d631b90ffb54c892e8a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/button_green.svg",
+      "role": "figure",
+      "sha256": "0ba9df374bd341f262b5c6eeecbe5868bb3231afe55fc2be2b522c696216e4b0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/button_orange.png",
+      "role": "figure",
+      "sha256": "bedc7c633aee6e7d4223538a2d0a74368f743fb7e429624d5b3481ef2b9627c4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/button_orange.svg",
+      "role": "figure",
+      "sha256": "35ccd1c41c9d8e37e7c40394c205bc71ce2e294534e2e699a4799cae8de9aaa4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_contactstat_IMR90rep1.png",
+      "role": "figure",
+      "sha256": "6e1f1f8aa673842c18fd499e958753af685333153a8b6f53b8590740805cf216"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_filteringstat_IMR90rep1.png",
+      "role": "figure",
+      "sha256": "7a4e2d1c31fa0996900b72c256e73c84252ec86f425d47b8994a722868769b34"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_fragsize_IMR90rep1.png",
+      "role": "figure",
+      "sha256": "19bc99cb9534f3f34cb8c1152052c4b368fc24d8b97d042117eb3f3425ec4679"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_mappingstat_IMR90rep1.png",
+      "role": "figure",
+      "sha256": "d90cd1981ff5826545977c51afef42fb747d76f7eea4b4af2e65fccc4a91c73c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_pairingstat_IMR90rep1.png",
+      "role": "figure",
+      "sha256": "2deb60f03a9ba425db5f1b256b970bbfa83951a9b75941527435e8148f02c689"
+    },
+    {
+      "indexable": false,
+      "path": "figures/hicpro_wkflow.png",
+      "role": "figure",
+      "sha256": "20e4e90faf15f9946ae347f13f1e75cd722b49b8eb644b3c087dbaa77f9e2c4a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_1.png",
+      "role": "figure",
+      "sha256": "11974a7f967d133dae161dcae326a3ab986de20d124aeb9932348af0c4c195cd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_1.svg",
+      "role": "figure",
+      "sha256": "958637004afb6312b754486fc3e32a70e459585b9da6a65a7d8e2f1949958365"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logos.svg",
+      "role": "figure",
+      "sha256": "622626d78ce16f8c0dad38d681ab96d4d11e27590f10d2665f8403c5059487ca"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "dacd5f2047de8afd7cce4477a454bb15ad457c2a7fd00a05612a5f85cb3437ec"
+    }
+  ],
+  "created_at": "2026-06-15T19:03:07.177659+00:00",
+  "crossref_doi": "10.1186/s13059-015-0831-x",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "HiC-Pro installation source directory containing config-install.txt template and Makefile",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "samtools binary (version >=1.9) installed on system or available in PATH",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "config-system.txt file containing resolved full path to samtools binary and all other HiC-Pro dependencies",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "samtools version >=1.9 is explicitly required for HiC-Pro's SAM/BAM manipulation stage; older versions lack critical functionality needed for Hi-C alignment post-processing.",
+    "The config-system.txt file is auto-generated by the installation process and should never be manually edited; it serves as the single source of truth for all tool paths used throughout the HiC-Pro pipeline.",
+    "HiC-Pro's installation process uses the 'which' command to automatically locate tools in the system PATH if SAMTOOLS_PATH is not explicitly set in config-install.txt, reducing manual configuration burden.",
+    "The installation process checks all dependencies upfront; failure to resolve samtools will block the entire pipeline configuration and must be addressed before any Hi-C processing can occur."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: samtools executable or library at version >=1.9 installed in pipeline environment",
+      "verify script_runs: samtools view command executes without error on a test BAM input file",
+      "verify script_runs: samtools sort command executes without error on unsorted BAM input",
+      "verify script_runs: samtools index command executes without error on coordinate-sorted BAM file, producing .bai index",
+      "verify file_format_is: output BAM file conforms to SAM/BAM specification (magic number 'BAM1' or equivalent binary header)",
+      "verify file_format_is: output .bai index file is valid samtools BAI format",
+      "verify row_count_equals or value_in_range: number of aligned records in output BAM matches expected count from input SAM (within tolerance for filtering rules applied)",
+      "verify output_matches_reference: sorted BAM file coordinate ordering is valid (read positions are non-decreasing within reference sequences)"
+    ],
+    "expert_review": [
+      "confirm that SAM/BAM filtering criteria (e.g., MAPQ threshold, flag filters) are appropriate for Hi-C data and match documented pipeline defaults",
+      "confirm that sort order (coordinate vs. queryname) and indexing strategy are consistent with downstream normalization and analysis stages",
+      "assess whether samtools version constraint (>=1.9) is justified by feature or performance requirements in the SAM processing stage"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What post-processing operations does HiC-Pro apply to SAM/BAM files output from the alignment stage?: 'An optimized and flexible pipeline for Hi-C data processing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] HiC-Pro implements SAM processing using samtools (>=1.9), which is automatically installed if not detected in the system.: 'A couple of tools such as `bowtie2` and `samtools` (>=1.9) can be automatically installed if not detected.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] HiC-Pro installation source directory containing config-install.txt template and Makefile: '1 - Edit the config-install.txt file and set the paths. If not set, the dependencies will be sought in the $PATH'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] samtools binary (version >=1.9) installed on system or available in PATH: 'A couple of tools such as `bowtie2` and `samtools` (>=1.9) can be automatically installed if not detected.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] config-system.txt file containing resolved full path to samtools binary and all other HiC-Pro dependencies: 'The installation process will generate a config-system.txt file which defines all paths to HiC-Pro dependencies.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] samtools (>=1.9): 'A couple of tools such as `bowtie2` and `samtools` (>=1.9) can be automatically installed if not detected.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] bowtie2: 'A couple of tools such as `bowtie2` and `samtools` (>=1.9) can be automatically installed if not detected.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting SAM processing stage updates, parameter changes, or version history: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "cd {inputs.hicpro_install_dir} && which samtools && samtools --version && make CONFIG_SYS={inputs.config_template} install"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "config-system.txt",
+  "expected_outputs": [
+    "config-system.txt file containing resolved full path to samtools binary and all other HiC-Pro dependencies"
+  ],
+  "finding": "HiC-Pro implements SAM processing using samtools (>=1.9), which is automatically installed if not detected in the system.",
+  "github_name": "pysam-developers/pysam",
+  "input_from": null,
+  "inputs": [
+    "HiC-Pro installation source directory containing config-install.txt template and Makefile",
+    "samtools binary (version >=1.9) installed on system or available in PATH"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "config-install.txt (edited with samtools path or left empty for auto-detection)",
+    "installation.log (output from 'make install' showing dependency resolution)"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Prepare HiC-Pro installation directory and config-install.txt template.",
+    "Set SAMTOOLS_PATH in config-install.txt to the full path of samtools binary (>=1.9), or leave empty for automatic PATH-based detection.",
+    "Execute 'make CONFIG_SYS=config-install.txt install' to run dependency checking and validation.",
+    "Validate: Confirm that samtools (>=1.9) is correctly detected and its full path is recorded in the generated config-system.txt file.",
+    "References: source article (DOI: 10.1186/s13059-015-0831-x)"
+  ],
+  "missing_information": [
+    "No changelog documenting SAM processing stage updates, parameter changes, or version history"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What post-processing operations does HiC-Pro apply to SAM/BAM files output from the alignment stage?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "dependency-installation-and-verification",
+    "system-path-configuration-and-environment-setup",
+    "bioinformatics-tool-version-compatibility-assessment",
+    "makefile-based-build-system-configuration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_hicpro/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "hicpro_pipeline_architecture",
+    "tool_bowtie2",
+    "comp_alignment_stage",
+    "comp_sam_processing_stage",
+    "comp_normalization_stage"
+  ],
+  "subdomains": [
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:nservant__HiC-Pro",
+  "task_description": "Install and configure samtools (>=1.9) as a dependency for HiC-Pro's SAM processing stage, verifying that the tool is correctly integrated into the system PATH and accessible for downstream BAM filtering, sorting, and indexing operations.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "HiC-Pro installation source directory",
+      "port_id": "hicpro_install_dir",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "config-install.txt template file",
+      "port_id": "config_template",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement SAM/BAM post-processing stage using samtools (\u22651.9) to filter, sort, and index aligned sequences from the alignment stage.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Generated config-system.txt with resolved tool paths",
+      "port_id": "config_system",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control"
+  ],
+  "title": "Reconstruct the bowtie2-based read alignment stage of the HiC-Pro pipeline",
+  "tools": [
+    "MultiQC 1.8",
+    "samtools (>=1.9)",
+    "bowtie2"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: config-system.txt file containing resolved full path to samtools binary and all other HiC-Pro dependencies."
+  ],
+  "workflow_description": "1. Edit the config-install.txt file to specify the full path to the samtools binary (>=1.9), or leave unset to allow automatic detection via the system PATH using the 'which' command. 2. Execute 'make CONFIG_SYS=config-install.txt install' to trigger dependency checking and configuration, which will validate samtools availability and generate the config-system.txt file with resolved tool paths. 3. Verify that samtools (>=1.9) is detected and recorded in the generated config-system.txt file, confirming readiness for SAM/BAM post-processing operations."
+}

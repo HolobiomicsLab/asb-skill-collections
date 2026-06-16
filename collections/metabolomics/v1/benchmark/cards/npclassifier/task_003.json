@@ -1,0 +1,343 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/mwang87/NP-Classifier",
+      "locator_id": "gh_mwang87_np-classifier",
+      "locator_kind": "github",
+      "name": "mwang87/NP-Classifier",
+      "prose": "NP-Classifier repository from github.com/mwang87/NP-Classifier",
+      "score": 0.5,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "576be3e8cc37e286e6c3db044ec75a8d71371b030096346327f67aea076f877f"
+    }
+  ],
+  "created_at": "2026-06-16T07:06:27.996986+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NP-Classifier repository from github.com/mwang87/NP-Classifier",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "TensorFlow 2.3.0 installed environment",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "HDF5 TF2 model file with verified layer names (input_2048, input_4096, output)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report listing confirmed layer names and structural compliance",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "HDF5 is the standard hierarchical data format for persisting TensorFlow/Keras models; TensorFlow 2.3.0 uses this format for compatibility with TensorFlow Serving.",
+    "Input layer names 'input_2048' and 'input_4096' conventionally refer to the dimensionality of input feature vectors expected by the model.",
+    "Layer name inspection in TensorFlow models is performed via the model.layers property or by iterating the functional graph; names must match exactly for downstream API routing.",
+    "The get_models.sh script automates model download and conversion, standardizing the pipeline and ensuring reproducibility across deployments."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file 'Classifier/models_folder/models/get_models.sh' exists in the repository",
+      "script_runs: execute get_models.sh in the Classifier/models_folder/models directory without errors",
+      "verify TensorFlow 2.3.0 is installed and importable as a Python module",
+      "file_exists: verify that an HDF5 model file (.h5 extension) is created after running get_models.sh",
+      "verify the HDF5 model can be loaded using tf.keras.models.load_model() without errors",
+      "verify the loaded model exposes a layer named exactly 'input_2048'",
+      "verify the loaded model exposes a layer named exactly 'input_4096'",
+      "verify the loaded model exposes a layer named exactly 'output'",
+      "verify the model has exactly three named layers matching the required names (no extraneous layers with those names)"
+    ],
+    "expert_review": [
+      "confirm that the HDF5 model structure is compatible with TensorFlow 2.3.0 format specifications",
+      "confirm that the layer names and connectivity represent a valid Keras classification model architecture suitable for natural product classification"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the required layer names that a converted Keras model must expose after transformation to HDF5 TensorFlow 2.3.0 format for use in the NP Classifier pipeline?: 'Input layers' names should be \"input_2048\" and \"input_4096\"\n\nOutput layer's name should be \"output\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The NP Classifier model conversion process requires the resulting HDF5 TF2 model to expose three specific layer names: two input layers named 'input_2048' and 'input_4096', and one output layer named 'output'.: 'Input layers' names should be \"input_2048\" and \"input_4096\"\n\nOutput layer's name should be \"output\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] NP-Classifier repository from github.com/mwang87/NP-Classifier: 'github.com/mwang87/NP-Classifier'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TensorFlow 2.3.0 installed environment: 'tensorflow version 2.3.0 installed to convert the keras models into HDF5 TF2 models'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] HDF5 TF2 model file with verified layer names (input_2048, input_4096, output): 'Input layers' names should be \"input_2048\" and \"input_4096\"\n\nOutput layer's name should be \"output\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Verification report listing confirmed layer names and structural compliance: 'Input layers' names should be \"input_2048\" and \"input_4096\"\n\nOutput layer's name should be \"output\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] get_models.sh: 'cd Classifier/models_folder/models\nsh ./get_models.sh'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TensorFlow 2.3.0: 'tensorflow version 2.3.0 installed to convert the keras models into HDF5 TF2 models'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'Make sure you have python installed'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting model preparation, layer naming conventions, or version history of the conversion process: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion section provides no details on expected model file location, output directory structure, or naming convention for the converted HDF5 file: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "model_verification_report.txt",
+  "expected_outputs": [
+    "HDF5 TF2 model file with verified layer names (input_2048, input_4096, output)",
+    "Verification report listing confirmed layer names and structural compliance"
+  ],
+  "finding": "The NP Classifier model conversion process requires the resulting HDF5 TF2 model to expose three specific layer names: two input layers named 'input_2048' and 'input_4096', and one output layer named 'output'.",
+  "github_name": "mwang87/NP-Classifier",
+  "input_from": "task_001",
+  "inputs": [
+    "NP-Classifier repository from github.com/mwang87/NP-Classifier",
+    "TensorFlow 2.3.0 installed environment"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "converted_model.h5",
+    "layer_names.json",
+    "model_verification_report.txt"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_008",
+    "result_009",
+    "result_010"
+  ],
+  "methodology_summary": [
+    "Clone the NP-Classifier GitHub repository to obtain the model conversion script and pre-trained model artifacts.",
+    "Execute the get_models.sh script from Classifier/models_folder/models to download and convert Keras models to HDF5 TF2 format using TensorFlow 2.3.0.",
+    "Load the resulting HDF5 model into a TensorFlow 2.3.0 environment and programmatically inspect all layer objects.",
+    "Extract and validate layer names, confirming exact matches for 'input_2048', 'input_4096', and 'output'.",
+    "Validation: layer name inspection must report all three required layers with exact spelling and no additional input or output layers deviating from the specification."
+  ],
+  "missing_information": [
+    "No changelog documenting model preparation, layer naming conventions, or version history of the conversion process",
+    "The discussion section provides no details on expected model file location, output directory structure, or naming convention for the converted HDF5 file"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the required layer names that a converted Keras model must expose after transformation to HDF5 TensorFlow 2.3.0 format for use in the NP Classifier pipeline?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "keras-model-conversion-to-hdf5",
+    "tensorflow-model-layer-inspection",
+    "deep-learning-model-architecture-validation",
+    "model-deployment-preparation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_npclassifier/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "ARCH_TENSORFLOW_SERVING",
+    "COMP_KERAS_MODEL",
+    "COMP_INPUT_2048",
+    "COMP_INPUT_4096",
+    "COMP_OUTPUT_LAYER",
+    "TOOL_TENSORFLOW",
+    "API_MODEL_METADATA"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:mwang87__NP-Classifier",
+  "task_description": "Using the get_models.sh script and TensorFlow 2.3.0, convert Keras classification models to HDF5 TF2 format and verify that the resulting model exposes input layers named 'input_2048' and 'input_4096', plus an output layer named 'output'.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NP-Classifier repository code",
+      "port_id": "np_classifier_repo",
+      "resolved_via": null,
+      "source": "task_001/classification_response",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "TensorFlow 2.3.0 installation",
+      "port_id": "tensorflow_env",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Convert Keras models to HDF5 TF2 format using TensorFlow 2.3.0 and verify that input and output layer names match the required specification.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Converted HDF5 TF2 model file",
+      "port_id": "hdf5_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Layer name verification report",
+      "port_id": "layer_verification",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "deep-learning"
+  ],
+  "title": "Reconstruct the Keras model conversion step producing a HDF5 TF2 model with named input/output layers",
+  "tools": [
+    "docker",
+    "get_models.sh",
+    "TensorFlow 2.3.0",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Clone the NP-Classifier repository from mwang87/NP-Classifier. 2. Navigate to Classifier/models_folder/models and execute the get_models.sh script to download and convert the pre-trained Keras models. 3. Load the converted HDF5 TF2 model using TensorFlow 2.3.0's model loading API. 4. Inspect the model's layer architecture to confirm the presence of input layers named 'input_2048' and 'input_4096' and an output layer named 'output'. 5. Log or save the layer names and confirm structural compliance with the specification."
+}

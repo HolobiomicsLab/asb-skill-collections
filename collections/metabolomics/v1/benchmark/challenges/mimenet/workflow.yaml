@@ -1,0 +1,521 @@
+schema_version: 0.1.0
+workflow_id: coll_mimenet_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: MiMeNet is a multi-layer perceptron neural network framework that predicts
+    metabolite abundances from microbiome features and identifies biologically meaningful
+    microbe-metabolite interaction modules through feature attribution scoring and
+    biclustering.
+  pseudo_abstract: "This paper presents MiMeNet, a neural network approach for modeling\
+    \ microbiome-metabolome relationships on three paired datasets (IBD, cystic fibrosis,\
+    \ and soil). Using 10 iterations of 10-fold cross-validation, MiMeNet achieves\
+    \ mean Spearman correlation coefficients of 0.309 for IBD (PRISM), 0.457 for cystic\
+    \ fibrosis, and 0.264 for soil datasets, and identifies 366, 143, and 29 well-predicted\
+    \ metabolites respectively, compared to 198, 104, and 4 for the linear regression\
+    \ model MelonnPan. On external validation using the entire IBD (PRISM) dataset\
+    \ to predict the IBD (External) test set, MiMeNet identifies 308 well-predicted\
+    \ metabolites with mean correlation of 0.275 for annotated metabolites, compared\
+    \ to 186 metabolites and correlation of 0.168 for MelonnPan. The paper demonstrates\
+    \ that training on all metabolites simultaneously improves prediction of annotated\
+    \ metabolites (mean Spearman correlation from 0.259 to 0.309, P < 10\u221247,\
+    \ with well-predicted metabolites increasing from 333 to 366 out of 466). Additionally,\
+    \ MiMeNet computes microbe-metabolite feature attribution scores from network\
+    \ weights and applies biclustering to organize microbes and metabolites into modules\
+    \ with shared interaction patterns, identifying eight microbial and eight metabolic\
+    \ modules in the IBD dataset where positive and negative attribution scores indicate\
+    \ the direction of microbe contributions to metabolite abundance prediction."
+  research_questions:
+  - Does MiMeNet achieve higher mean Spearman correlation coefficients and identify
+    more well-predicted metabolites compared to MelonnPan, Random Forest, and CCA
+    baselines across IBD (PRISM), Cystic Fibrosis, and Soil datasets using ten iterations
+    of 10-fold cross-validation?
+  - What are the prediction correlation metrics achieved by a MiMeNet model trained
+    on the full IBD (PRISM) dataset when evaluated on the held-out IBD (External)
+    dataset?
+  - How does Olden's method derive microbe-metabolite feature attribution scores from
+    MLPNN network weights, and how are these scores subsequently used to construct
+    functional modules via biclustering?
+  - Does training MiMeNet on all metabolites (annotated + unannotated) improve prediction
+    accuracy for annotated metabolites compared to training only on annotated metabolites?
+  - Does per-partition hyperparameter tuning improve MiMeNet's metabolite prediction
+    performance compared to tuning hyperparameters once on the first partition?
+  methods_summary: "Preprocess three paired microbiome-metabolomic datasets by filtering\
+    \ features present in <10% of samples and applying centered log-ratio transformation\
+    \ with pseudocount addition. Optimize MiMeNet neural network architecture via\
+    \ nested 5-fold cross-validation, tuning layer size (32, 128, 512), number of\
+    \ layers (1\u20133), L2 penalty (0.0001\u20130.1), and dropout (0.1\u20130.5).\
+    \ Train MiMeNet and three linear baselines (Elastic Net, CCA, Random Forest) using\
+    \ ten iterations of 10-fold cross-validation with ADAM optimization, ReLU activation,\
+    \ and early stopping. Calculate mean Spearman correlation coefficient and identify\
+    \ well-predicted metabolites (SCC > 95th percentile of background distribution\
+    \ from 100 shuffled models) for each model and dataset. Validation: Reported mean\
+    \ SCC and well-predicted metabolite counts must match published abstract values\
+    \ (IBD PRISM: 0.108\u21920.309 SCC, 198\u2192366 metabolites; Cystic Fibrosis:\
+    \ 0.276\u21920.457, 104\u2192143; Soil: -0.272\u21920.264, 4\u219229) within statistical\
+    \ noise (\xB1SD reported in supplementary tables). References: source article\
+    \ (DOI: 10.1371/journal.pcbi.1009021) Preprocess IBD (PRISM) and IBD (External)\
+    \ microbiome and metabolome data using centered log-ratio transformation, removing\
+    \ features in <10% of samples. Train a single MiMeNet MLPNN on the full IBD (PRISM)\
+    \ dataset (layer size 512, 1 hidden layer, L2 penalty 0.001, dropout 0.5) using\
+    \ ADAM optimizer with early stopping. Apply the trained model to IBD (External)\
+    \ test data to generate predicted metabolite abundances. Compute Spearman correlation\
+    \ coefficients between predicted and observed metabolite abundances for external\
+    \ validation. Identify well-predicted metabolites as those with SCC above the\
+    \ 95th percentile threshold derived from shuffled background distribution. Compare\
+    \ prediction performance to benchmark models (MelonnPan, Random Forest, Elastic\
+    \ Net, WGCNA) using identical evaluation metrics. Validation: External validation\
+    \ is successful if the mean SCC and count of well-predicted metabolites on IBD\
+    \ (External) are comparable to or exceed reported baseline methods and cross-validation\
+    \ results on held-out internal folds. References: source article (DOI: 10.1371/journal.pcbi.1009021)\
+    \ Extract trained MLPNN weight matrices across all hidden layers from 100 cross-validated\
+    \ models. Compute microbe-metabolite feature attribution scores via Olden's method\
+    \ (multiply weight matrices layer-by-layer) for each model. Average attribution\
+    \ matrices across all 100 models and apply 97.5 percentile threshold to identify\
+    \ significant microbe-metabolite associations. Normalize significant attribution\
+    \ scores to [-1, 1] range by dividing by the 97.5 percentile value. Apply hierarchical\
+    \ clustering with consensus resampling (k = 2\u201320) to microbes and metabolites\
+    \ independently, selecting optimal cluster numbers (k*, k**) where proportional\
+    \ change in consensus matrix area exceeds 0.025 threshold. Bicluster normalized\
+    \ attribution matrix using selected k* and k** to produce final microbe and metabolite\
+    \ functional modules. Compute inter-module interaction scores as average normalized\
+    \ attribution between all microbe-metabolite pairs in each module pair, filter\
+    \ edges to |score| \u2265 0.25 for network visualization. Validation: Confirm\
+    \ module membership is stable across cross-validated models, verify clustering\
+    \ dendrogram height consistency, and check that filtered interaction network contains\
+    \ \u22651 edges per non-singleton module pair. References: source article (DOI:\
+    \ 10.1371/journal.pcbi.1009021) Load and preprocess IBD (PRISM) microbiome and\
+    \ metabolomic data: apply centered log-ratio transformation (pseudocount=1), filter\
+    \ features <10% prevalence, segregate annotated from unannotated metabolites.\
+    \ Partition data into 10 iterations of 10-fold cross-validation; for each fold,\
+    \ reserve 10% for testing, allocate 80% to training and 20% to validation. Train\
+    \ two parallel MiMeNet MLPNN models per fold using identical architecture (1 hidden\
+    \ layer, 512 nodes, ReLU, L2 \u03BB=0.001, dropout=0.5, ADAM optimizer, MSE loss):\
+    \ one predicting all metabolites, one predicting annotated metabolites only. Apply\
+    \ early stopping on validation loss (patience=40 epochs) to select final model\
+    \ weights for each fold; evaluate on held-out test set. Calculate Spearman correlation\
+    \ coefficient (SCC) between predicted and observed abundance for each annotated\
+    \ metabolite; aggregate across 100 runs (10 iterations \xD7 10 folds) to obtain\
+    \ mean SCC per metabolite for each training regime. Generate scatterplot comparing\
+    \ mean SCCs and compute per-metabolite delta; calculate overall mean SCC, delta,\
+    \ and 95% confidence intervals. Validation: mean SCC on annotated metabolites\
+    \ when training on all metabolites must be \u2265 mean SCC when training on annotated-only,\
+    \ confirming that unannotated metabolites provide shared signal; per-metabolite\
+    \ deltas are visualized to identify metabolites with largest performance gains\
+    \ from multi-task learning. References: source article (DOI: 10.1371/journal.pcbi.1009021)\
+    \ Load and preprocess paired microbiome-metabolome data: filter features present\
+    \ in <10% of samples and apply CLR transformation (with pseudocount 1) to metabolomic\
+    \ and applicable microbiome data. Tune hyperparameters once on first CV partition\
+    \ (Condition A): use nested 5-fold CV over grid {layer size: 32/128/512, hidden\
+    \ layers: 1\u20133, \u03BB: log-uniform 0.0001\u20130.1, dropout: 0.1/0.3/0.5};\
+    \ record optimal settings. Execute 10-fold CV twice in parallel: (A) reuse first-partition\
+    \ hyperparameters across all 10 folds; (B) retune hyperparameters independently\
+    \ for each fold. Train MLPNN models for each fold: use ReLU activation, ADAM optimizer,\
+    \ MSE loss, L2 regularization, dropout; apply early stopping when validation loss\
+    \ plateaus (no improvement \u226540 iterations). Calculate per-metabolite mean\
+    \ SCC and aggregate across all 10 folds for both conditions; count metabolites\
+    \ with SCC exceeding 95th percentile of background distribution (100 shuffled\
+    \ CV runs). Validation: compare mean SCC and well-predicted metabolite counts\
+    \ between Tune Once and Tune Every Partition; statistical significance and relative\
+    \ improvement in metabolite prediction sensitivity quantify the ablation effect.\
+    \ References: source article (DOI: 10.1371/journal.pcbi.1009021)"
+  domain: multi-omics
+  techniques:
+  - deep-learning
+  - machine-learning
+  - random-forest
+  - correlation-analysis
+  - clustering
+  claims:
+  - claim_text: MiMeNet more accurately predicts metabolite abundances than MelonnPan,
+      with mean Spearman correlation coefficients increasing from 0.108 to 0.309 in
+      the IBD (PRISM) dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: In the cystic fibrosis dataset, MiMeNet achieves a mean correlation
+      of 0.457 compared to MelonnPan's 0.410.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: MiMeNet identified 351 well-predicted metabolites in the IBD (PRISM)
+      dataset compared to MelonnPan's 198.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: MiMeNet identified 143 well-predicted metabolites in the cystic fibrosis
+      dataset while MelonnPan identified 104.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: MiMeNet identified 29 well-predicted metabolites in the soil dataset
+      while MelonnPan identified 4.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: Multivariate learning increased well-predicted annotated metabolites
+      from 333 to 366 in the IBD (PRISM) dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: IBD_PRISM_dataset
+  - claim_text: The Spearman correlation coefficients of annotated metabolites increased
+      from 0.259 to 0.309 when using all metabolites to train MiMeNet, with significance
+      p < 10^-47.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: 77.50% of metabolites (6857 of 8848) were well-predicted in the IBD
+      (PRISM) dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: IBD_PRISM_dataset
+  - claim_text: 94.08% of metabolites (143 of 152) were well-predicted in the cystic
+      fibrosis dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: cystic_fibrosis_dataset
+  - claim_text: 34.12% of metabolites (29 of 85) were well-predicted in the soil dataset.
+    claim_type: finding
+    speculative: false
+  - claim_text: The cutoff Spearman correlation coefficient for well-predicted metabolites
+      was 0.136 for the IBD (PRISM) dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: IBD_PRISM_dataset
+  - claim_text: The cutoff Spearman correlation coefficient for well-predicted metabolites
+      was 0.129 for the cystic fibrosis dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: cystic_fibrosis_dataset
+  - claim_text: The cutoff Spearman correlation coefficient for well-predicted metabolites
+      was 0.410 for the soil dataset.
+    claim_type: finding
+    speculative: false
+  - claim_text: The IBD (PRISM) dataset contains 121 IBD patients and 34 controls.
+    claim_type: finding
+    speculative: false
+    entity_id: IBD_PRISM_dataset
+  - claim_text: The IBD (PRISM) dataset contains 201 microbial features and 8848 metabolites.
+    claim_type: finding
+    speculative: false
+    entity_id: IBD_PRISM_dataset
+  - claim_text: The cystic fibrosis dataset contains 657 microbial features and 168
+      metabolites.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: The soil dataset contains 446 microbial features and 85 metabolites.
+    claim_type: finding
+    speculative: false
+  - claim_text: MiMeNet uses a multi-layer perceptron neural network (MLPNN) to model
+      the community metabolome profile based on microbiome samples.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: MiMeNet benefits from multivariate learning by predicting the abundance
+      of all metabolites at once, which facilitates prediction through shared information
+      across different metabolites.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: MiMeNet uses biclustering to organize microbes and metabolites into
+      modules based on their feature attribution patterns.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: The IBD (External) dataset includes 43 IBD patients and 20 control
+      subjects.
+    claim_type: finding
+    speculative: false
+    entity_id: IBD_external_dataset
+  - claim_text: The cystic fibrosis dataset contains 172 patients with cystic fibrosis.
+    claim_type: finding
+    speculative: false
+    entity_id: cystic_fibrosis_dataset
+  - claim_text: MiMeNet identified 8 modules of microbes and 8 modules of metabolites
+      in the IBD (PRISM) dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: Four metabolite modules were enriched in healthy subjects in the IBD
+      study.
+    claim_type: finding
+    speculative: false
+  - claim_text: Three metabolite modules were enriched in IBD patients.
+    claim_type: finding
+    speculative: false
+  - claim_text: Module 2 (healthy-enriched) contained medium-chain fatty acids, triterpenoids,
+      and cholesterols.
+    claim_type: finding
+    speculative: false
+  - claim_text: Module 7 (healthy-enriched) was mainly composed of short-chain fatty
+      acids such as propionate, butyrate, and valeric acid.
+    claim_type: finding
+    speculative: false
+  - claim_text: MiMeNet uses ReLU (rectified linear unit) as the activation function
+      in the neural network.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: MiMeNet uses L2 regularization and dropout for regularization to prevent
+      overfitting.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: MiMeNet training uses the ADAM optimizer and mean squared error (MSE)
+      loss function.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: MiMeNet evaluation was conducted using 10 iterations of 10-fold cross-validation.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: MiMeNet uses early stopping to prevent overfitting during neural network
+      training.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: The microbiome impacts host development, normal metabolic processes,
+      and pathogenesis of various diseases.
+    claim_type: finding
+    speculative: false
+  - claim_text: The gut microbiome has been linked to inflammatory bowel disease (IBD),
+      obesity, and diabetes mellitus.
+    claim_type: finding
+    speculative: false
+    entity_id: IBD_component
+  - claim_text: Bacterial metabolites play a central role in microbiome-host health
+      interactions at a metabolic level.
+    claim_type: finding
+    speculative: false
+  - claim_text: Strong associations between microbes and metabolites were found in
+      gut and blood metabolomic profiles, and in the gut of patients with IBD.
+    claim_type: finding
+    speculative: false
+  - claim_text: Identification of microbiome-metabolome interaction mechanisms through
+      modeling is essential for understanding how the microbiome affects host health
+      and for development of precise therapies.
+    claim_type: finding
+    speculative: false
+  - claim_text: Early constraint-based stoichiometric modeling methods for microbiome-metabolome
+      mapping have limitations due to reliance on annotated references.
+    claim_type: finding
+    speculative: false
+  - claim_text: Several machine learning models have been developed to map metagenomic
+      features to metabolites as both data types have become increasingly available.
+    claim_type: finding
+    speculative: false
+  - claim_text: MelonnPan models each metabolite individually, missing shared information
+      across metabolomic features that could boost prediction performance.
+    claim_type: finding
+    speculative: false
+    entity_id: MelonnPan_tool
+  - claim_text: MiMeNet performs better than models trained on only the annotated
+      metabolite set when noise is added to the training data.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: MiMeNet shows robust performance across different fold cross-validation
+      settings (k=10, 5, 3, 2) in the IBD (PRISM) dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  - claim_text: Triterpenoids such as oleanolic acid and maslinic acid have been shown
+      to have anti-inflammatory effects and enhance intestinal tight junction integrity.
+    claim_type: finding
+    speculative: false
+  - claim_text: Both cholesterols and medium-chain fatty acids have been noted to
+      be depleted in subjects with IBD.
+    claim_type: finding
+    speculative: false
+  - claim_text: Secondary bile acids (deoxycholic acid and lithocholic acid) have
+      been found to be reduced in IBD patients.
+    claim_type: finding
+    speculative: false
+  - claim_text: Short-chain fatty acids (propionate, butyrate, and valeric acid) have
+      been shown to be protective against IBD.
+    claim_type: finding
+    speculative: false
+  - claim_text: Primary bile acids bind to the farnesoid X receptor, which is linked
+      to elevated immune response in IBD.
+    claim_type: finding
+    speculative: false
+  - claim_text: N-acylethanolamines have been shown to alter the gut microbiome and
+      potentially increase levels of lipopolysaccharides, causing inflammation.
+    claim_type: finding
+    speculative: false
+  - claim_text: Sphingosine-1-phosphate is a signaling sphingolipid that has been
+      implicated in increased inflammation of the gut.
+    claim_type: finding
+    speculative: false
+  - claim_text: Long-chain fatty acids (eicosapentaenoic acid, arachidonic acid, and
+      docosapentaenoic acid) have been implicated with IBD.
+    claim_type: finding
+    speculative: false
+  - claim_text: Bacterial-derived sphingolipids have been shown to play a crucial
+      role in the development of IBD through multiple signaling pathways.
+    claim_type: finding
+    speculative: false
+  - claim_text: Bacteria such as Bacteroides, Clostridium, Eubacterium, and Ruminococcus
+      produce enzymes responsible for conversion of conjugated bile acids to secondary
+      bile acids.
+    claim_type: finding
+    speculative: false
+  - claim_text: Triterpenoids have been explored as therapeutic options for IBD.
+    claim_type: finding
+    speculative: false
+  - claim_text: The accuracy of metabolite prediction decreases as training dataset
+      size is reduced in both IBD (PRISM) and cystic fibrosis datasets.
+    claim_type: finding
+    speculative: false
+    entity_id: IBD_PRISM_dataset
+  - claim_text: Short-chain fatty acids, particularly butyrate, have been shown to
+      be protective against inflammation in the gut and important for gut homeostasis.
+    claim_type: finding
+    speculative: false
+  - claim_text: Five butyrate-producing microbes (Eubacterium biforme, Eubacterium
+      hallii, Eubacterium rectale, Roseburia intestinalis, and Roseburia inulinivorans)
+      were found in microbial module 6.
+    claim_type: finding
+    speculative: false
+  - claim_text: Pairwise univariate correlation analysis identified only 12 significant
+      correlations with butyrate, indicating that module-based analysis captures more
+      biologically relevant interactions than pairwise methods.
+    claim_type: finding
+    speculative: false
+  - claim_text: MiMeNet's modules capture biologically meaningful microbe-metabolite
+      interactions by grouping microbes with similar functional effects on metabolites.
+    claim_type: finding
+    speculative: false
+    entity_id: MiMeNet
+  speculative: false
+  task_openness: mixed
+  method_alternatives:
+  - State-of-the-art linear models for individual metabolite predictions
+  - Predictive Reactive Metabolic Turnover (PRMT) as alternative to machine learning
+    for mapping metagenomic features
+  - Constraint-based stoichiometric modeling using flux balance analysis as alternative
+    to PRMT
+  - Neural network encoder-decoder (NED) as alternative machine learning approach
+  - Multivariate Elastic Net could be used instead of MLPNN
+  - Random Forest, Canonical Correlation Analysis, or Multivariate Elastic Net as
+    alternative regression models
+  - Random forest as alternative to neural networks, though cannot provide feature
+    attribution scores from network weights
+  - NED (Neural Encoder Decoder) as alternative predictive model for microbiome-metabolome
+    relationships
+  - Regularized linear regression as used in MelonnPan for metabolite modeling
+  - Multivariate correlation analysis approaches for integrative omics analysis
+  - WGCNA for identifying clusters of metabolites
+  - MelonnPan for microbiome and metabolome integrative analysis
+  - mmvec for microbiome and metabolome relationships
+  substitution_constraints:
+  - Non-negative weight constraints in NED diminish capability to capture interactions
+    where some microbes negatively affect metabolites
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Mean Spearman correlation coefficients (SCC) for metabolite prediction on
+    IBD (External) dataset
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Count of well-predicted metabolites on IBD (External) dataset (those with
+    SCC above 95th percentile threshold)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Per-metabolite prediction correlations table for IBD (External) evaluation
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Comparison metrics (SCC, prediction accuracy) versus benchmark models (MelonnPan,
+    Random Forest, Elastic Net, WGCNA) on IBD (External) data
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Normalized microbe-metabolite feature attribution score matrix (microbes\
+    \ \xD7 metabolites, values clipped to [-1, 1])"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Microbial module assignments (list of microbe IDs grouped by cluster number
+    k*)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Metabolite module assignments (list of metabolite IDs grouped by cluster number
+    k**)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Module-based interaction network edge list (microbe module\u2013metabolite\
+    \ module pairs with average normalized attribution scores, filtered to |score|\
+    \ \u2265 0.25)"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Scatterplot (PNG/PDF) comparing mean Spearman correlation coefficients for
+    annotated metabolites: x-axis = SCC (MiMeNet trained on all metabolites), y-axis
+    = SCC (MiMeNet trained on annotated metabolites only)'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Numeric table (CSV) containing per-metabolite mean SCC values for both training
+    regimes (all metabolites vs. annotated-only) and computed delta
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Summary statistics: overall mean SCC (all metabolites regime), overall mean
+    SCC (annotated-only regime), mean delta, and 95% CI or standard deviation'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Comparison table with mean SCC and standard deviation, and count of well-predicted
+    metabolites (SCC >95th percentile background threshold) for Tune Once and Tune
+    Every Partition conditions across 10-fold CV iterations
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Scatterplot or line plot showing per-metabolite mean SCC correlation comparison
+    between Tune Once and Tune Every Partition conditions, with well-predicted metabolite
+    threshold indicated
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

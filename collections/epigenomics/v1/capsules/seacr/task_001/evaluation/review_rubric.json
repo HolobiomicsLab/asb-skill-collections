@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:FredHutch__SEACR"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify repository can be cloned without errors"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "shell script files (*.sh) in cloned repository root or standard subdirectories ("
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "R script files (*.R) in cloned repository root or standard subdirectories (bin/,"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify shell scripts have executable permissions (mode includes +x)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify R scripts are readable and syntactically valid R (script_runs on R parser without fatal errors)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_008",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "peaked-regions output file produced after end-to-end run"
+    },
+    {
+      "id": "pf_009",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output file has expected format (BED or similar tabular peak region format), rob"
+    },
+    {
+      "id": "pf_010",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output structure contains expected columns for peak regions (chromosome, start, "
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:FredHutch__SEACR",
+      "verify repository can be cloned without errors",
+      "file_exists: shell script files (*.sh) in cloned repository root or standard subdirectories (bin/, scripts/)",
+      "file_exists: R script files (*.R) in cloned repository root or standard subdirectories (bin/, scripts/, R/)",
+      "verify shell scripts have executable permissions (mode includes +x)",
+      "verify R scripts are readable and syntactically valid R (script_runs on R parser without fatal errors)",
+      "script_runs: end-to-end SEACR execution with minimal valid CUT&RUN bedGraph input file",
+      "file_exists: peaked-regions output file produced after end-to-end run",
+      "file_format_is: output file has expected format (BED or similar tabular peak region format), robust to naming conventions",
+      "output_matches_reference: output structure contains expected columns for peak regions (chromosome, start, end, score or similar), no canonical answer for exact column names or order across SEACR versions"
+    ],
+    "expert_review": [
+      "confirm that the cloned SEACR repository is the correct and current version intended for CUT&RUN analysis",
+      "assess whether the minimal test bedGraph input is representative of real CUT&RUN data and appropriate for validating end-to-end functionality",
+      "evaluate whether the peaked-regions output file content is biologically sensible (e.g., peak coordinates fall within expected genomic ranges, score values are in expected ranges)"
+    ]
+  },
+  "max_score": 10.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

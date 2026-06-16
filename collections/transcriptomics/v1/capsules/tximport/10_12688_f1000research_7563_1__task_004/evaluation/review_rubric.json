@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file tximportData (or equivalent salmon_gibbs inferential replicate output) exists and is loadable"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify tximport function accepts txOut=TRUE parameter without error"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify edgeR::DGEListFromTximport function accepts divide=TRUE parameter without error"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output object is of class 'DGEList' (format_is DGEList)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify DGEList contains 'counts' matrix field (field_present counts)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify DGEList contains 'samples' data.frame with sample metadata (field_present samples)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify counts matrix dimensions are consistent with input (row_count_equals and column count match transcript/sample structure)"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: complete R code path from tximport(txOut=TRUE) \u2192 edgeR::DGEListFromTximport(divide=TRUE) without error"
+    },
+    {
+      "id": "pf_009",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: DGEList structure mirrors edgeR documentation for transcript-level DGEList objects created from tximport with divide=TRUE"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file tximportData (or equivalent salmon_gibbs inferential replicate output) exists and is loadable",
+      "verify tximport function accepts txOut=TRUE parameter without error",
+      "verify edgeR::DGEListFromTximport function accepts divide=TRUE parameter without error",
+      "verify output object is of class 'DGEList' (format_is DGEList)",
+      "verify DGEList contains 'counts' matrix field (field_present counts)",
+      "verify DGEList contains 'samples' data.frame with sample metadata (field_present samples)",
+      "verify counts matrix dimensions are consistent with input (row_count_equals and column count match transcript/sample structure)",
+      "verify script_runs: complete R code path from tximport(txOut=TRUE) \u2192 edgeR::DGEListFromTximport(divide=TRUE) without error",
+      "verify output_matches_reference: DGEList structure mirrors edgeR documentation for transcript-level DGEList objects created from tximport with divide=TRUE"
+    ],
+    "expert_review": [
+      "confirm that count overdispersion estimates (tagwise.dispersion or common.dispersion fields if present post-estimation) are numerically reasonable and consistent with RNA-seq count variance expectations",
+      "confirm that division of counts by inferential replicate uncertainty (when divide=TRUE is applied) produces a DGEList suitable for proper downstream variance modeling in transcript-level edgeR analysis"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

@@ -1,0 +1,425 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon2.png",
+      "role": "figure",
+      "sha256": "fbd43b41797914abf57f7ecac60c7732200bd9460cf329893364e998b47fd5a0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon3.png",
+      "role": "figure",
+      "sha256": "d82a19c38f3317dff6616e14522d6165284bca0ce392a6844d9ca93f496bdf34"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon4.png",
+      "role": "figure",
+      "sha256": "304f01f87477acee5c7fac2683e60e0d558df82c6e5fb1f1f2e8325c756da79e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidPioneer_Icon.png",
+      "role": "figure",
+      "sha256": "eb23c87a3bd6a161a92944bfa4c032831615db48d187961b4befa3296a21dcb7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidPioneer_Icon2.png",
+      "role": "figure",
+      "sha256": "87b3b9b6c24f809f5dc05bfed6e8c0af7482997dd3d1f2747eecd1bb12613768"
+    },
+    {
+      "indexable": false,
+      "path": "figures/adwaita.png",
+      "role": "figure",
+      "sha256": "2481804d5e75e115991f240b76ba921c205c703fa729c5b3c1691f9ce7557828"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ambiance.png",
+      "role": "figure",
+      "sha256": "a9b6fc7574b456e8444ee205d7f49c5f970fbdbd41bfe83351d388c5c8470e2c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/aqua.png",
+      "role": "figure",
+      "sha256": "ff14e41e680f4030cc611e3f35d08741d9343f489d7f1cf59f5178d0eebe42ef"
+    },
+    {
+      "indexable": false,
+      "path": "figures/arrowStyles.png",
+      "role": "figure",
+      "sha256": "64b54c40e2f61280c5e860427aba5b537e31a9fbb9d21893f99287c0612586c2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/baghira.png",
+      "role": "figure",
+      "sha256": "5d4136bc61c859c5b3661e93f8e866b9500ac3986f46a73d364841e1ff950bb9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/browse.png",
+      "role": "figure",
+      "sha256": "ff29ba02d749bfb7e409d2a5df1ecadd229e9e9266562bfa5bc79002d9771e97"
+    },
+    {
+      "indexable": false,
+      "path": "figures/browseTree.png",
+      "role": "figure",
+      "sha256": "f167c5a8191171fc526070067b35d094034e863663a95ef4a201df94a0ab2bf4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bwidget.png",
+      "role": "figure",
+      "sha256": "9e76c91f4b21bed749b75b597d2bd1b85a5b51c19e16a75869854698c800d582"
+    },
+    {
+      "indexable": false,
+      "path": "figures/config.png",
+      "role": "figure",
+      "sha256": "d3d29dc91af92d7e448ee607ed045a8b42c52251f66b91a717266f0a4bbae4aa"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dirViewer.png",
+      "role": "figure",
+      "sha256": "49ea6516bebda22cfd4b605e0889473036cb23cb790ccd0e9decc13af9f9308a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dust.png",
+      "role": "figure",
+      "sha256": "4a62ef7ede30a0b76c8a6b92ade71c8585047936fe3f66f1c0faa1924a51e3bd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dustSand.png",
+      "role": "figure",
+      "sha256": "d6e3ae873a8c4eabd193961c89867cd4e253bb74cfaa84ec8664bef9be4cadc9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/embeddedWindows.png",
+      "role": "figure",
+      "sha256": "07c2dd2dfe970cfa43dfebd06ea6638e88335888d095cb9b459f6e9f4219392b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/embeddedWindows_tile.png",
+      "role": "figure",
+      "sha256": "98a75dcb881324558602cd4724632caa86c80a49f2ac9a70e1f7621a84b29e77"
+    },
+    {
+      "indexable": false,
+      "path": "figures/scatterplot3d.png",
+      "role": "figure",
+      "sha256": "1836bf22129af1a36967a06ead59f6d6b99b997db7dcfc8d0e4b15a60b8c7283"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "667b13f5130571fe8b138e41a30bd73408e68c8552d2ae6f7a9b97f031cc2f6a"
+    }
+  ],
+  "created_at": "2026-06-16T06:03:34.399740+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Peak table or feature list output file from MZmine, XCMS, MS-DIAL, or Compound Discoverer",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LipidMatch batch file and conversion scripts from the GitHub repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LipidMatch-formatted input file ready for lipid identification (CSV or tab-delimited format with standardized m/z, retention time, and intensity columns)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "LipidMatch is modular and compatible with multiple peak-picking tools, requiring a standardized interface layer for format conversion between tools.",
+    "The conversion step must preserve critical mass spectrometry metadata columns: m/z values, retention time, and feature intensity to enable downstream fragment matching.",
+    "LipidMatch does not currently support Waters instrument file formats, limiting input compatibility to Agilent, Bruker, SCIEX, and Thermo Q-Exactive platforms.",
+    "Batch files and conversion scripts from the GitHub repository are purpose-built to translate vendor-specific peak-table formats into LipidMatch's expected input schema."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:GarrettLab-UF__LipidMatch repository is accessible and contains a batch file or configuration file for MZmine integration",
+      "verify file_exists for the MZmine batch file artifact in the repository (any of the following formats acceptable: .xml, .properties, .conf, .bat, or documented batch configuration file)",
+      "verify file_exists for LipidMatch conversion or dispatch script(s) that accept peak-picker output as input",
+      "verify file_format_is for the specified input file format from MZmine output (expected format: .csv, .tsv, .txt, or MZmine native export format \u2014 multiple defensible approaches depending on MZmine version)",
+      "verify script_runs: execute the documented file-format conversion step with a minimal valid MZmine output file as input, robust to parameter choices in file paths",
+      "verify output_matches_reference: the conversion output file matches the expected LipidMatch input schema (field names, column order, required columns) \u2014 solution_space: no canonical answer without access to detailed specification document or reference output file"
+    ],
+    "expert_review": [
+      "confirm that the batch file and conversion scripts are current, maintained, and functionally compatible with recent MZmine versions",
+      "assess whether the documented dispatch mechanism correctly handles edge cases (empty peak lists, malformed input rows, missing required columns)",
+      "evaluate whether the hand-off interface preserves all necessary metadata (retention time, m/z, intensity, ion mode) required for downstream LipidMatch matching"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does LipidMatch convert and ingest peak-picking output from MZmine into its analysis pipeline?: 'LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch is modular and accepts input from external peak-picking tools including MZmine; a batch file for MZmine processing is provided in the repository to facilitate this file-format handoff.: 'LipidMatch is modular, allowing it to fit in various workflows you may have in your lab. For example LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Peak table or feature list output file from MZmine, XCMS, MS-DIAL, or Compound Discoverer: 'LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch batch file and conversion scripts from the GitHub repository: 'the GitHub page for LipidMatch is: https://github.com/GarrettLab-UF/LipidMatch'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch-formatted input file ready for lipid identification (CSV or tab-delimited format with standardized m/z, retention time, and intensity columns): 'LipidMatch is modular, allowing it to fit in various workflows you may have in your lab'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch: 'LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MZmine: 'LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] XCMS: 'LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MS-DIAL: 'LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Compound Discoverer: 'LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, updates, or breaking changes to the MZmine batch file or file-format conversion interface: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "lipidmatch_input.csv",
+  "expected_outputs": [
+    "LipidMatch-formatted input file ready for lipid identification (CSV or tab-delimited format with standardized m/z, retention time, and intensity columns)"
+  ],
+  "finding": "LipidMatch is modular and accepts input from external peak-picking tools including MZmine; a batch file for MZmine processing is provided in the repository to facilitate this file-format handoff.",
+  "github_name": "GarrettLab-UF/LipidMatch",
+  "input_from": "task_003",
+  "inputs": [
+    "Peak table or feature list output file from MZmine, XCMS, MS-DIAL, or Compound Discoverer",
+    "LipidMatch batch file and conversion scripts from the GitHub repository"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "original_peak_table.<ext>",
+    "converted_feature_table.csv"
+  ],
+  "linked_result_ids": [
+    "result_009",
+    "result_010",
+    "result_011"
+  ],
+  "methodology_summary": [
+    "Load peak table output from the peak-picking tool in its native format.",
+    "Apply the LipidMatch batch file or conversion script to standardize column structure and data types.",
+    "Map peak-picker columns (m/z, retention time, intensity) to LipidMatch input schema.",
+    "Validation: confirm output file structure matches LipidMatch input schema (required columns present, correct data types, non-zero row count)."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, updates, or breaking changes to the MZmine batch file or file-format conversion interface"
+  ],
+  "parameters": [],
+  "primary_domain": "lipidomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does LipidMatch convert and ingest peak-picking output from MZmine into its analysis pipeline?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "file-format-conversion-peak-picking-to-lipidmatch",
+    "peak-table-schema-validation",
+    "batch-script-execution-and-automation",
+    "mass-spectrometry-data-column-mapping"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_lipidmatch/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "lipidmatch_system",
+    "modular_workflow_interface",
+    "tool_mzmine",
+    "tool_xcms",
+    "tool_msdial",
+    "tool_compound_discoverer"
+  ],
+  "subdomains": [
+    "lipidomics"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:GarrettLab-UF__LipidMatch",
+  "task_description": "Convert the output file from a peak-picking tool (MZmine, XCMS, MS-DIAL, or Compound Discoverer) into the format required by LipidMatch using the provided batch file and conversion scripts from the LipidMatch repository, enabling downstream lipid identification.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Peak table or feature list from peak-picking software",
+      "port_id": "peak_table",
+      "resolved_via": null,
+      "source": "task_003/instrument_mode_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LipidMatch batch file and conversion scripts",
+      "port_id": "batch_scripts",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute the MZmine batch file provided in the LipidMatch repository to convert peak-picking output into LipidMatch input format and verify successful data handoff.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LipidMatch-formatted feature table",
+      "port_id": "lipidmatch_input",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "high-resolution-ms",
+    "lc-ms",
+    "metabolite-identification",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct the modular peak-picking dispatch layer connecting MZmine, XCMS, MS-DIAL, or Compound Discoverer output to LipidMatch",
+  "tools": [
+    "LipidMatch",
+    "MZmine",
+    "XCMS",
+    "MS-DIAL",
+    "Compound Discoverer"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Obtain the peak table or feature list output file from the selected peak-picking software (MZmine, XCMS, MS-DIAL, or Compound Discoverer) in its native export format. 2. Locate the LipidMatch batch file and conversion scripts from the GarrettLab-UF/LipidMatch GitHub repository. 3. Execute the batch file or conversion script to transform the peak-picker output into the LipidMatch-compatible input format, ensuring all required columns (m/z, retention time, intensity) are mapped correctly. 4. Validate the converted file structure against LipidMatch input schema (row count, column headers, data types) to confirm successful format translation."
+}

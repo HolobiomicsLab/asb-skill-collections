@@ -1,0 +1,309 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "00009acb676bfc86736a464f71b5009b163ea21bb77bdb97c9b82991d18f6163"
+    }
+  ],
+  "created_at": "2026-06-15T21:17:53.323536+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "biosynfoni package source code from GitHub repository (lucinamay/biosynfoni) or Zenodo deposit (10.5281/zenodo.14822624)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sample molecular dataset (SMILES strings, MOL files, or SDF format with molecule identifiers)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Fingerprint file in CSV or NumPy format containing molecule identifiers and corresponding substructure bit-vector representations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "Biosynfoni fingerprints are designed specifically for natural product chemistry and bioinformatic research, encoding substructure information as bit-vectors for molecular similarity and clustering tasks.",
+    "The package is distributed via GitHub and Zenodo; reproducible computation requires installation from the designated source with development-mode setup (pip install -e .[dev]) to ensure version consistency.",
+    "Fingerprint output formats (CSV with molecule IDs vs. NumPy binary arrays) trade human readability for computational efficiency; selection depends on downstream analysis pipeline.",
+    "Molecular input data must be in a format parseable by the biosynfoni API (SMILES strings, MOL/SDF files); identifier consistency between input and output is critical for traceability."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:lucinamay/biosynfoni or Zenodo deposit 10.5281/zenodo.14822624",
+      "script_runs: biosynfoni package imports without error after installation via pip",
+      "script_runs: fingerprint computation completes on sample molecule(s) from deposited dataset without exception",
+      "file_exists: output fingerprint file (CSV or NumPy .npy/.npz array format) is generated",
+      "file_format_is: output fingerprint file matches declared format (CSV with numeric columns, or NumPy binary array)",
+      "field_present: fingerprint output contains per-molecule identifiers and bit-vector columns/arrays",
+      "row_count_equals or contains_substring: output row count matches or is traceable to number of molecules in input dataset",
+      "value_in_range: fingerprint bit-vector entries are binary (0 or 1) or normalized numeric values, robust to parameter choices"
+    ],
+    "expert_review": [
+      "Fingerprint bit-vector semantics: do the substructure bits align with documented biosynfoni natural-product chemical feature definitions?",
+      "Fingerprint correctness on reference molecules: if a ground-truth fingerprint or validation set is available in the deposit, does computed output match expected bit patterns?",
+      "Dataset suitability: does the Zenodo dataset contain molecules (SMILES, SDF, or equivalent) appropriate for biosynfoni fingerprinting?"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the biosynfoni package compute a molecular fingerprint representation tailored for natural product chemistry and bioinformatic research?: 'a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Biosynfoni is a biosynformatic molecular fingerprint designed specifically for natural product chemistry and bioinformatic research applications.: 'a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] biosynfoni package source code from GitHub repository (lucinamay/biosynfoni) or Zenodo deposit (10.5281/zenodo.14822624): 'Run the following command from the root of the project to install the project for development'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Sample molecular dataset (SMILES strings, MOL files, or SDF format with molecule identifiers): 'Using the biosynfoni Python package and the Zenodo-deposited dataset, compute the Biosynformatic Molecular Fingerprint (biosynfoni) representation for a sample of molecules.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Fingerprint file in CSV or NumPy format containing molecule identifiers and corresponding substructure bit-vector representations: 'The output is a structured fingerprint file (e.g., CSV or NumPy array) encoding each molecule's substructure bit-vector.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] biosynfoni: 'a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pip: 'pip install -e .[dev]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pytest: 'pytest tests/'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found \u2014 version history and update documentation absent: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Expected structure and contents of the Zenodo-deposited dataset (molecule file format, number and type of molecules, pre-processing requirements): 'No explicit dataset schema or sample inventory provided in section text'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Detailed fingerprint output schema (column names, bit indexing, dimensionality, meaning of each substructure feature): 'No fingerprint format specification or example output structure provided in section text'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Documented API or entry point for fingerprint computation (e.g., function name, module, required parameters): 'No specific function signature or code example provided in section text'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "biosynfoni_fingerprints.csv",
+  "expected_outputs": [
+    "Fingerprint file in CSV or NumPy format containing molecule identifiers and corresponding substructure bit-vector representations"
+  ],
+  "finding": "Biosynfoni is a biosynformatic molecular fingerprint designed specifically for natural product chemistry and bioinformatic research applications.",
+  "github_name": "lucinamay/biosynfoni",
+  "input_from": "task_001",
+  "inputs": [
+    "biosynfoni package source code from GitHub repository (lucinamay/biosynfoni) or Zenodo deposit (10.5281/zenodo.14822624)",
+    "Sample molecular dataset (SMILES strings, MOL files, or SDF format with molecule identifiers)"
+  ],
+  "keywords": [
+    "molecular fingerprinting",
+    "natural product chemistry",
+    "bioinformatics",
+    "cheminformatics"
+  ],
+  "landmark_outputs": [
+    "package_installed.log",
+    "molecules_parsed.txt"
+  ],
+  "linked_result_ids": [
+    "result_001"
+  ],
+  "methodology_summary": [
+    "Retrieve biosynfoni source from GitHub or Zenodo deposit.",
+    "Install package in development mode with all dependencies.",
+    "Load sample molecular structures from dataset.",
+    "Invoke biosynfoni fingerprint computation on molecule set.",
+    "Serialize fingerprints to structured output (CSV or NumPy array with molecule identifiers and bit-vectors).",
+    "Validation: Verify output file format, row count matches molecule count, and fingerprints are non-empty bit-vectors."
+  ],
+  "missing_information": [
+    "No changelog found \u2014 version history and update documentation absent",
+    "Expected structure and contents of the Zenodo-deposited dataset (molecule file format, number and type of molecules, pre-processing requirements)",
+    "Detailed fingerprint output schema (column names, bit indexing, dimensionality, meaning of each substructure feature)",
+    "Documented API or entry point for fingerprint computation (e.g., function name, module, required parameters)"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the biosynfoni package compute a molecular fingerprint representation tailored for natural product chemistry and bioinformatic research?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "molecular-fingerprint-computation",
+    "natural-product-chemical-representation",
+    "python-package-installation-and-dependency-management",
+    "molecular-structure-input-format-handling",
+    "bit-vector-substructure-encoding"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_biosynfoni/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "biosynfoni_system",
+    "tool_biosynfoni_pkg",
+    "component_molecular_fingerprint",
+    "dataset_zenodo"
+  ],
+  "subdomains": [
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:lucinamay__biosynfoni",
+  "task_description": "Install the biosynfoni Python package from the Zenodo-deposited source and compute molecular fingerprint representations for a sample dataset. Output fingerprints as a structured file (CSV or NumPy array) encoding substructure bit-vectors.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "biosynfoni package source code",
+      "port_id": "biosynfoni_source",
+      "resolved_via": null,
+      "source": "task_001/test_report",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "sample molecular dataset",
+      "port_id": "sample_molecules",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Compute biosynfoni fingerprint representations for a set of molecules and output the resulting substructure bit-vectors as a structured file (CSV or NumPy array).",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "computed molecular fingerprints",
+      "port_id": "fingerprints",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "database-annotation",
+    "dereplication"
+  ],
+  "title": "Reconstruct the biosynformatic molecular fingerprint computation for a set of natural product molecules",
+  "tools": [
+    "biosynfoni",
+    "pip",
+    "pytest"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: pip, pytest, Fingerprint file in CSV or NumPy format containing molecule identifiers and corresponding substructure bit-vector representations."
+  ],
+  "workflow_description": "1. Clone or download the biosynfoni repository from GitHub (lucinamay/biosynfoni) or retrieve the Zenodo deposit (10.5281/zenodo.14822624). 2. Install the package in development mode using pip install -e .[dev] from the project root. 3. Load molecular structures from the sample dataset (format and path to be specified by user). 4. Compute biosynfoni fingerprints for each molecule using the biosynfoni package API. 5. Export fingerprints as a structured output file (CSV with molecule IDs and bit-vectors, or NumPy .npy array)."
+}

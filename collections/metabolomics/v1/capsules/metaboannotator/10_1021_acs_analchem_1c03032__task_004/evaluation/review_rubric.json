@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 'MassBank_example.msp' exists in package root or data/ directory"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output CSV library file(s) are created with naming pattern matching per-spectrum"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output CSV contains expected column headers for MS/MS library format (e.g., prec",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output filenames or metadata contain ionization mode suffix (e.g., '_pos' or '_n",
+      "value": "_pos"
+    },
+    {
+      "id": "pf_006",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "MassBank_example.msp"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output CSV structure is consistent with documented per-spectrum library entry format \u2014 no malformed rows or truncated records"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file 'MassBank_example.msp' exists in package root or data/ directory",
+      "script_runs: execute mspToLib function with inputs={MassBank_example.msp, noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1} without errors",
+      "file_exists: output CSV library file(s) are created with naming pattern matching per-spectrum convention",
+      "file_format_is: output CSV contains expected column headers for MS/MS library format (e.g., precursor_mz, fragment_mz, intensity, or equivalent)",
+      "contains_substring: output filenames or metadata contain ionization mode suffix (e.g., '_pos' or '_neg') for each spectrum entry",
+      "row_count_equals: at least one CSV output row per input spectrum from MassBank_example.msp (robust to parameter choices in noise/threshold range)",
+      "verify output CSV structure is consistent with documented per-spectrum library entry format \u2014 no malformed rows or truncated records"
+    ],
+    "expert_review": [
+      "confirm peak-picking thresholds (noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1) produce chemically reasonable fragment ion lists (e.g., no spurious low-intensity artifacts, retention of true fragment ions)",
+      "assess positive/negative mode suffix assignment accuracy \u2014 verify ionization mode annotations in output match input spectra metadata",
+      "evaluate whether per-spectrum CSV entries conform to MassBank or standard metabolomics library format conventions"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

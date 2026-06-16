@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in repository samgoldman97/mist-cf containing subformula assignment implementation (e.g., Python module or configuration file naming or documenting internal subformula protocol)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that subformula assignment component does NOT invoke SIRIUS fragmentation tree computation (scan codebase for absence of SIRIUS API calls or tree construction in subformula assignment pathway)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that held-out test set exists in repository or linked deposit (Zenodo/GitHub) with annotated MS/MS spectra and reference per-peak subformula labels"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output predictions file (CSV, JSON, or TSV) with at least columns: [peak_m_z, pr",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "row_count_equals or file_exists: number of predictions in output must match number of peaks in held-out test set (verify row count or file completeness)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in repository samgoldman97/mist-cf containing subformula assignment implementation (e.g., Python module or configuration file naming or documenting internal subformula protocol)",
+      "verify that subformula assignment component does NOT invoke SIRIUS fragmentation tree computation (scan codebase for absence of SIRIUS API calls or tree construction in subformula assignment pathway)",
+      "verify that held-out test set exists in repository or linked deposit (Zenodo/GitHub) with annotated MS/MS spectra and reference per-peak subformula labels",
+      "file_format_is: output predictions file (CSV, JSON, or TSV) with at least columns: [peak_m_z, predicted_subformula, reference_subformula] or equivalent",
+      "row_count_equals or file_exists: number of predictions in output must match number of peaks in held-out test set (verify row count or file completeness)",
+      "script_runs: end-to-end inference script on held-out spectra completes without error and produces per-peak subformula predictions"
+    ],
+    "expert_review": [
+      "chemical validity: predicted subformulas for each MS/MS peak are chemically plausible (e.g., no impossible charge states, mass balance consistent with precursor formula and fragmentation logic)",
+      "assignment accuracy: per-peak subformula predictions match or closely align with reference annotations on held-out set (requires domain judgment of acceptable deviation or match criteria)",
+      "independence from SIRIUS: verification that subformula assignment uses learned embeddings or energy-based scoring (per SCARF/transformer approach) rather than pre-computed fragmentation trees"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

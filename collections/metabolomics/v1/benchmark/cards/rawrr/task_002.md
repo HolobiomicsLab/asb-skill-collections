@@ -1,0 +1,157 @@
+# SciTask Card: Reproduce the readSpectrum throughput benchmark (spectra per second) for rawrr
+
+- Task ID: `task_002`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T13:24:57.919119+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_rawrr/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `benchmark-evaluation`, `data-processing`
+- DOI: `10.1021/acs.jproteome.0c00866`
+- GitHub: `fgcz/MsBackendRawFileReader`
+- Input from: `task_001`
+
+## Classification
+
+- Task kind: `reproduction`
+- Article type: `software-tool`
+- Primary domain: `proteomics`
+- Techniques: `quality-control`
+
+## Research Question
+What is the measured throughput of rawrr::readSpectrum in spectra per second when benchmarked on the sample raw file provided with the package?
+
+## Connected Finding
+The benchmark experiment using rawrr::readSpectrum demonstrates throughput measured in spectra per second across multiple runs with varying numbers of randomly generated scan IDs, with overall runtime totaling approximately 0.5 seconds.
+
+## Task Description
+Execute the rawrr:::.benchmark function on the sample raw file (20181113_010_autoQC01.raw) using rawrr::readSpectrum to measure and confirm the reported spectra-per-second throughput performance under the benchmark experimental condition.
+
+## Inputs
+- 20181113_010_autoQC01.raw – example Thermo Fisher Q Exactive HF raw file with centroided, lock-mass-corrected FTMS and HCD MS2 spectra
+- rawrr R package with pre-compiled .NET 8.0 executable bundled including RawFileReader dynamic link library
+
+## Expected Outputs
+- Benchmark report with measured spectra-per-second throughput value from readSpectrum function execution
+
+## Expected Output File
+
+- `benchmark_report.txt`
+
+## Landmark Outputs
+
+- `rawrr_installation.log`
+- `benchmark_output.txt`
+
+## Tools
+- rawrr
+- RawFileReader
+- .NET 8.0
+
+## Skills
+- mass-spectrometry-file-format-handling
+- raw-data-throughput-benchmarking
+- orbitrap-spectrum-acquisition-interpretation
+- r-package-installation-and-runtime-verification
+- c-sharp-wrapper-invocation-from-r
+
+## Workflow Description
+1. Load the example raw file 20181113_010_autoQC01.raw (Fourier-transformed Orbitrap FTMS data from a Q Exactive HF instrument) using rawrr package initialization. 2. Install the rawrr executable and verify .NET 8.0 runtime availability via rawrr::installRawrrExe(). 3. Execute rawrr:::.benchmark function with rawrr::readSpectrum as the target function, which invokes compiled C# wrapper methods via system2 call to interact with the RawFileReader .NET assembly. 4. Capture and record the returned spectra-per-second throughput metric from the benchmark output. 5. Compare the measured throughput against the reported reference value in the paper's results section to confirm consistency.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/rawRcolor.png` | figure | False |
+| `figures/rawRcolor10%.png` | figure | False |
+| `figures/rawrr_logo.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Data Deposits
+
+| Kind | Accession | URL | Evidence |
+|---|---|---|---|
+| massive | `MSV000086542` | https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542 | ate of 300 nl/min. The file is part of the MassIVE dataset [MSV000086542](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession= |
+
+## Missing Information
+- No explicit reference to a published or archived benchmark result (table, figure, or deposit) containing the expected 'spectra-per-second' throughput figure is provided in the discussion section.
+- The discussion section does not specify hardware configuration (CPU model, RAM, OS, .NET runtime version) under which the benchmark throughput should be reproduced.
+- No sample raw file or instructions for obtaining it are documented in the FAQ or acknowledgements section; rawrr::sampleFilePath() is referenced but its behavior and return value are not explicitly defined.
+
+## Domain Knowledge
+- The rawrr package invokes compiled C# wrapper methods via system call to access proprietary Thermo Fisher RawFileReader .NET assemblies; throughput depends on the operating system, hardware, and .NET 8.0 runtime version.
+- Centroided and lock-mass-corrected Orbitrap spectra are pre-processed during instrument acquisition and stored in the raw file; readSpectrum retrieves parsed spectrum objects through temporary file I/O with file format conversion overhead.
+- Benchmark performance metrics (spectra-per-second) are sensitive to file I/O performance, temporary storage location latency, and R object serialization; the metric should be reproducible on systems with matching hardware and .NET runtime.
+- The example file contains 6,600,000 scans acquired over approximately 54 min on a Q Exactive HF with centroid mode enabled and HCD fragmentation (NCE=27), providing a realistic large-scale dataset for throughput assessment.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: .NET 8.0, Benchmark report with measured spectra-per-second throughput value from readSpectrum function execution.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [results] What is the measured throughput of rawrr::readSpectrum in spectra per second when benchmarked on the sample raw file provided with the package?: '`rawrr:::.benchmark using rawrr::readSpectrum` spectra per second.'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [results] The benchmark experiment using rawrr::readSpectrum demonstrates throughput measured in spectra per second across multiple runs with varying numbers of randomly generated scan IDs, with overall runtime totaling approximately 0.5 seconds.: 'boxplot(count / runTimeInSec ~ count, data = S, log ='y', sub = paste0("Overall runtime took ", round(sum(S$runTimeInSec), 3), " seconds."))'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [methods] 20181113_010_autoQC01.raw – example Thermo Fisher Q Exactive HF raw file with centroided, lock-mass-corrected FTMS and HCD MS2 spectra: 'The example file `20181113_010_autoQC01.raw` used throughout this manuscript contains Fourier-transformed Orbitrap spectra (FTMS) recorded on a Thermo Fisher Scientific Q Exactive HF in positive mode'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [methods] rawrr R package with pre-compiled .NET 8.0 executable bundled including RawFileReader dynamic link library: '.NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [results] Benchmark report with measured spectra-per-second throughput value from readSpectrum function execution: 'rawrr:::.benchmark using rawrr::readSpectrum'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [methods] rawrr: 'Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [methods] RawFileReader: 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [methods] .NET 8.0: 'In case you prefer to compile `rawrr.exe` from C# source code, please install the .NET 8.0'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [discussion] No explicit reference to a published or archived benchmark result (table, figure, or deposit) containing the expected 'spectra-per-second' throughput figure is provided in the discussion section.: 'Our R package `r BiocStyle::Biocpkg('rawrr')` provides direct access to spectral data... ease-of-use does not impair performance.'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [discussion] The discussion section does not specify hardware configuration (CPU model, RAM, OS, .NET runtime version) under which the benchmark throughput should be reproduced.: 'By using vendor API methods whenever possible, we nevertheless made sure that ease-of-use does not impair performance.'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [discussion] No sample raw file or instructions for obtaining it are documented in the FAQ or acknowledgements section; rawrr::sampleFilePath() is referenced but its behavior and return value are not explicitly defined.: 'f <- rawrr::sampleFilePath()'
+
+## Evaluation Strategy
+### Direct Checks
+- file_exists: verify that rawrr::sampleFilePath() returns a valid .raw file path accessible to the R environment
+- script_runs: execute rawrr:::.benchmark() with rawrr::readSpectrum on the sample raw file and confirm the function completes without error
+- output_matches_reference: extract the 'spectra-per-second' throughput metric from benchmark output and verify it matches the reported figure cited in the article (exact numeric value required; robust to minor floating-point variation ±5%)
+- field_present: confirm the benchmark output object contains a named field or column explicitly labeling throughput in 'spectra/second' or 'spectra per second' units
+- value_in_range: verify the measured throughput is positive and within a physically plausible range for single-threaded spectrum reading on commodity hardware (candidate range: 100–100,000 spectra/second; expert review required to validate range)
+
+### Expert Review
+- Assess whether the reported spectra-per-second throughput is consistent with claimed performance goals and typical Orbitrap data complexity in the sample file
+- Evaluate whether the benchmark experimental setup (single sample file, readSpectrum function, hardware environment) faithfully represents the conditions under which the throughput claim was originally measured and reported
+- Determine whether any disclosed limitations (e.g., .NET runtime version, Windows vs. non-Windows OS differences, temporary file I/O overhead) materially affect reproducibility or comparability of the result
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Execution Profile
+- **Compute tier:** medium
+- **Commercial software:** Thermo Fisher RawFileReader
+- **Open-source alternatives:**
+  - RawFileReader → ThermoRawFileParser
+
+## Methodology Summary
+1. Install rawrr package and verify .NET 8.0 runtime availability.
+2. Load example Orbitrap raw file (20181113_010_autoQC01.raw) containing centroided FTMS and HCD MS2 spectra.
+3. Execute rawrr:::.benchmark using rawrr::readSpectrum, which triggers C# wrapper method invocation via system call to RawFileReader assembly.
+4. Capture measured spectra-per-second throughput from benchmark execution output.
+5. Validation: Confirm reported throughput metric is present and numerically reasonable (consistent with paper's reported performance under identical experimental conditions).
+6. References: source article (DOI: 10.1021/acs.jproteome.0c00866); MSV000086542 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542)
+
+## Workflow Ports
+
+**Inputs:**
+
+- `raw_file` — Example Orbitrap raw data file ← `task_001/regression_model`
+- `rawrr_package` — rawrr R package with bundled executable
+
+**Outputs:**
+
+- `benchmark_throughput` — Spectra-per-second throughput measurement
+
+**Used:** `urn:asb:port:task_001/regression_model`
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:fgcz__rawrr`
+- **Synthesized at:** 2026-06-15T13:33:57+00:00
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

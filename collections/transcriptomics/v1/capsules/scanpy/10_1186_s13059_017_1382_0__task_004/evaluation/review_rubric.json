@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: datasets.paul15 is loadable from scanpy.datasets module"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "'paga' key exists in uns (unstructured annotations) of returned AnnData object",
+      "value": [
+        "exists in uns (unstructured annotations) of returned AnnData object"
+      ]
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "format_is: connectivity matrix stored at adata.uns['paga'] is a sparse or dense matrix (scipy.sparse or numpy.ndarray)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "adata.obs"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: datasets.paul15 is loadable from scanpy.datasets module",
+      "script_runs: tl.leiden clustering executes without error on loaded datasets.paul15 AnnData object",
+      "script_runs: tl.paga executes without error on clustered AnnData object",
+      "field_present: 'paga' key exists in uns (unstructured annotations) of returned AnnData object",
+      "format_is: connectivity matrix stored at adata.uns['paga'] is a sparse or dense matrix (scipy.sparse or numpy.ndarray)",
+      "value_in_range: shape of connectivity matrix equals (n_clusters, n_clusters) where n_clusters is the number of distinct leiden cluster labels in adata.obs"
+    ],
+    "expert_review": [
+      "Verify that PAGA graph abstraction connectivity values are semantically meaningful (edges represent partition transitions) by inspecting non-zero entries and comparing against known partition structure",
+      "Confirm that the leiden clustering partitions the cells into expected number of clusters consistent with datasets.paul15 biology"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

@@ -1,0 +1,316 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-0.png",
+      "role": "figure",
+      "sha256": "62b9435f3307fc87f52ef0605b5fb429b904fb7c3008486d5e6a1a3e0ac2ef49"
+    },
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-1.png",
+      "role": "figure",
+      "sha256": "4c20c79eb335c2d7ab728a84f1a22058120bc74ab7192782d770cbbd942dab52"
+    },
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-2.png",
+      "role": "figure",
+      "sha256": "d5eb9377f2a149d7b57d78ca39f60cc51bc16213a568780072657558d22be90d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/func+export_coverage.svg",
+      "role": "figure",
+      "sha256": "b2c54284c113efb517e25ccfd1829a2f548e34db945b512753e130a447d46976"
+    },
+    {
+      "indexable": false,
+      "path": "figures/func+import_data.svg",
+      "role": "figure",
+      "sha256": "248512cdcfb5004f5e114f588183a92fef1e6115d05b1c32a5d917690d1efb66"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "95aea9a378722044cf71a0cc3f6bb553788936ff4c89d5f6c20466b68e804fde"
+    }
+  ],
+  "created_at": "2026-06-15T19:32:53.712417+00:00",
+  "crossref_doi": "10.1038/s41592-023-02139-9",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Coordinate-sorted BAM file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Compressed fragment file (BED.gz or .bed.zst) with fragment coordinates, barcodes, and QC metrics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "BAM files must be coordinate-sorted (by genome position) prior to fragment file conversion to ensure efficient sequential processing.",
+    "Fragment files store paired-end read information as intervals with associated cell barcodes and are typically compressed using gzip or zstandard for storage efficiency.",
+    "pp.make_fragment_file by default treats fragment files as paired-end; single-end data requires explicit specification via the is_paired=False parameter.",
+    "10X-derived BAM files contain cell barcode and quality information in tags (e.g., CB, CR); pp.make_fragment_file supports 10X BAM parsing when source='10x' is specified."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file output exists and has extension .bed or .bed.gz",
+      "verify file_format_is gzip-compressed or plain text BED format",
+      "verify row_count_equals greater than 0 (non-empty file)",
+      "verify field_present: file contains at least 3 tab-separated columns (chrom, chromStart, chromEnd per BED standard)",
+      "verify field_present: file contains additional fragment-specific fields (e.g., name/barcode, count, strand information); multiple valid column schemas exist for fragment files",
+      "script_runs: pp.make_fragment_file executes without error on input BAM with coordinate-sorted property verified",
+      "verify output_matches_reference: fragment file structure aligns with SnapATAC2 fragment file specification (exact schema may vary; no canonical reference deposit provided)"
+    ],
+    "expert_review": [
+      "inspect fragment file for biological plausibility: barcode distribution, fragment length statistics, and per-barcode read counts are reasonable for input BAM",
+      "assess whether fragment file is suitable for downstream SnapATAC2 operations (pp.import_fragments, matrix generation)",
+      "confirm coordinate sorting and overlapping fragment handling are correct relative to BAM input"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the pp.make_fragment_file function convert a coordinate-sorted BAM file into a compressed fragment file?: 'Blazingly fast preprocessing tools for BAM to fragment files conversion and count matrix generation.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SnapATAC2 provides pp.make_fragment_file as a preprocessing tool for converting BAM files to fragment files.: 'Blazingly fast preprocessing tools for BAM to fragment files conversion and count matrix generation.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Coordinate-sorted BAM file: 'BAM/Fragment file processing with pp.make_fragment_file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Compressed fragment file (BED.gz or .bed.zst) with fragment coordinates, barcodes, and QC metrics: 'Return more QC metrics from `pp.make_fragment_file`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SnapATAC2: 'SnapATAC2: A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Rust: 'A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history found in discussion section: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit specification of pp.make_fragment_file output schema or required fragment file fields documented in provided section text: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No example or reference fragment file output provided in discussion section for validation: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import snapatac2 as snap; import pandas as pd; bam = snap.pp.make_fragment_file('{inputs.bam_file}'); print('Fragment file generated successfully'); print(f'Total fragments: {len(bam)}'); print(bam.head())"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "fragments.bed.gz",
+  "expected_outputs": [
+    "Compressed fragment file (BED.gz or .bed.zst) with fragment coordinates, barcodes, and QC metrics"
+  ],
+  "finding": "SnapATAC2 provides pp.make_fragment_file as a preprocessing tool for converting BAM files to fragment files.",
+  "github_name": "scverse/SnapATAC2",
+  "input_from": null,
+  "inputs": [
+    "Coordinate-sorted BAM file"
+  ],
+  "keywords": [
+    "single-cell atac-seq",
+    "single-cell epigenomics",
+    "spectral embedding",
+    "multi-omics integration",
+    "dimension reduction",
+    "clustering",
+    "peak calling",
+    "preprocessing",
+    "fragment file conversion",
+    "scalable analysis"
+  ],
+  "landmark_outputs": [
+    "fragments.bed.gz",
+    "qc_metrics.txt"
+  ],
+  "linked_result_ids": [
+    "result_014"
+  ],
+  "methodology_summary": [
+    "Validate input BAM file is coordinate-sorted and properly formatted.",
+    "Invoke pp.make_fragment_file with appropriate parameters (source='10x' for 10X BAM; default for standard BAM).",
+    "Generate compressed fragment file with fragment coordinates (chrom, start, end), cell barcodes, and read counts.",
+    "Extract and store QC metrics including duplication rate and read count statistics.",
+    "Validation: confirm fragment file is non-empty, contains all expected BED fields, and QC metrics are accessible and within expected ranges for the dataset.",
+    "References: source article (DOI: 10.1038/s41592-023-02139-9)"
+  ],
+  "missing_information": [
+    "No changelog or version history found in discussion section",
+    "No explicit specification of pp.make_fragment_file output schema or required fragment file fields documented in provided section text",
+    "No example or reference fragment file output provided in discussion section for validation"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the pp.make_fragment_file function convert a coordinate-sorted BAM file into a compressed fragment file?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "bam-to-fragment-file-conversion",
+    "fragment-file-validation",
+    "chromatin-accessibility-quantification",
+    "barcode-fragment-mapping",
+    "bam-file-coordinate-sorting-verification"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_snapatac2/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "pp_make_fragment_file",
+    "pp_make_peak_matrix",
+    "pp_make_gene_matrix"
+  ],
+  "subdomains": [
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:scverse__SnapATAC2",
+  "task_description": "Convert a coordinate-sorted BAM file to a compressed fragment file using SnapATAC2's pp.make_fragment_file function, producing a valid BED or BED.gz file with proper fragment coordinates and metadata.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Coordinate-sorted BAM file",
+      "port_id": "bam_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Convert a coordinate-sorted BAM file to a compressed, valid fragment BED/BED.gz file using pp.make_fragment_file with expected schema fields.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Compressed fragment file with coordinates and QC metrics",
+      "port_id": "fragment_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction",
+    "batch-correction",
+    "normalization"
+  ],
+  "title": "Reconstruct the BAM-to-fragment-file preprocessing step using pp.make_fragment_file",
+  "tools": [
+    "SnapATAC2",
+    "Python",
+    "Rust"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Compressed fragment file (BED.gz or .bed.zst) with fragment coordinates, barcodes, and QC metrics."
+  ],
+  "workflow_description": "1. Load the coordinate-sorted BAM file as input to pp.make_fragment_file. 2. Invoke pp.make_fragment_file with source='10x' if the input is a 10X BAM file, or with default settings for standard BAM inputs. 3. Generate fragment file output in compressed format (BED.gz or zst) containing fragment coordinates, cell barcodes, and quality metrics. 4. Validate that the output file is non-empty and contains expected BED format fields (chrom, start, end, barcode, count). 5. Verify output file integrity and confirm QC metrics (duplication rate, read counts) are computed and accessible."
+}

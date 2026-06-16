@@ -1,0 +1,397 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/CompMetabolomics_logo.jpg",
+      "role": "figure",
+      "sha256": "f8957fd9b57a80dd3cf4adb35dc6f69768ae8cb52d1685113a7dd48e0244d3b4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_LOGO_black.jpg",
+      "role": "figure",
+      "sha256": "638333f028ef0320582849d948a9d4cb346bbcf7556f0281a833c363a284e1a8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_LOGO_white.jpg",
+      "role": "figure",
+      "sha256": "3d41cf59a641ab5aa51498ec33ef00e7e3c172089d241d7e00accdc4b0308035"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_Workflow.jpg",
+      "role": "figure",
+      "sha256": "1e3133105398930f4ee8670c1cc71d706596e0a8e22b0d8c2a53228be35238ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/WUR_RGB_standard_2021.png",
+      "role": "figure",
+      "sha256": "7779dfcd978f747157e0b0efdeebdfc22a4fa04b73f5255d72e11c659e1db5dd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/WUR_logo.jpg",
+      "role": "figure",
+      "sha256": "8b323663b087d687a8ee0280d7b5938d357bfd3835a7b0ee54447a5188d53939"
+    },
+    {
+      "indexable": false,
+      "path": "figures/pnas.jpg",
+      "role": "figure",
+      "sha256": "5c33b1f48d700c729500ba3e037a48af48799939263339ee9dce43fe81bdf649"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3e5d9784f09bc9c1236c177bd1cf1a004e1f9f304c789693f9e43491bd40fb3f"
+    }
+  ],
+  "created_at": "2026-06-15T21:44:19.295434+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MS/MS spectra in .mgf (Mascot Generic Format), .msp (NIST-style), or .mzML format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Bag-of-fragments corpus in LDA-compatible format (document-term matrix or serialized Python object)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Fragment and neutral loss token inventory with mass-to-token mappings",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Quality control report documenting noise filtering statistics and retained fragment counts",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MS/MS fragmentation produces both fragment ions and neutral losses (mass differences between precursor and observed fragments); both are essential for discovering substructure motifs.",
+    "Bag-of-fragments models treat each spectrum as an unordered collection of mass tokens, losing intensity and order information; this abstraction enables topic-modeling algorithms like LDA.",
+    "Noise filtering must balance sensitivity (retain low-intensity diagnostic fragments) and specificity (remove chemical noise and instrument artifacts); typical thresholds depend on instrument type and ionization mode.",
+    "Fragment and neutral loss masses must be binned into discrete tokens (e.g., integer m/z or narrow mass ranges) for LDA to treat them as categorical vocabulary; binning width affects motif granularity.",
+    "Positive and negative ionization modes produce distinct fragmentation patterns and require separate preprocessing pipelines; MS2LDA can process both but motif interpretation differs between modes."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the MS2LDA repository (github:vdhooftcompmet__MS2LDA) is accessible and contains a COMP-PREPROCESSING module or equivalent preprocessing code",
+      "verify file_exists: check that the repository contains documented support for .mgf, .msp, and .mzML input formats in the preprocessing stage",
+      "verify script_runs: load a minimal example .mgf, .msp, or .mzML file from the repository's test data or documentation and confirm the preprocessing ingestion code executes without error",
+      "verify output_matches_reference: confirm that the bag-of-fragments output structure (format, fields, fragment representation) matches the documented schema in the repository or methods section",
+      "verify file_format_is: confirm that the intermediate output from format-ingestion is serializable (e.g., JSON, pickle, CSV) and conforms to the expected bag-of-fragments structure before LDA training",
+      "verify contains_substring: check that preprocessing code or documentation references fragment binning, neutral loss extraction, or noise filtering as documented in the workflow steps"
+    ],
+    "expert_review": [
+      "assess whether the fragment-binning strategy (mass tolerance, binning method) is appropriate for MS/MS fragmentation data and consistent with standard proteomics/metabolomics practice",
+      "assess whether the noise-filtering thresholds and criteria are biologically/chemically justified and whether they risk removing genuine low-abundance fragments",
+      "assess whether the bag-of-fragments representation (e.g., term frequency, binary presence/absence, weighted counts) is suitable as input to LDA and matches the model's documented assumptions"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MS2LDA convert mass spectrometry input files in multiple formats (.mgf, .msp, .mzML) into a bag-of-fragments representation suitable for LDA training?: 'MS2LDA is an advanced tool designed for unsupervised substructure discovery in mass spectrometry data, utilizing topic modeling'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] The preprocessing module converts MS/MS spectra into a bag-of-fragments format, extracts neutral losses, and filters out noise to prepare data for LDA modeling.: 'Convert MS/MS spectra into a bag-of-fragments format. Extract neutral losses. Filter out noise.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MS/MS spectra in .mgf (Mascot Generic Format), .msp (NIST-style), or .mzML format: 'MS2LDA expects preprocessed MS/MS data, typically in: .mgf (Mascot Generic Format) .mzML (via conversion or direct input) .msp (NIST-style spectrum libraries)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Bag-of-fragments corpus in LDA-compatible format (document-term matrix or serialized Python object): 'Convert MS/MS spectra into a bag-of-fragments format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Fragment and neutral loss token inventory with mass-to-token mappings: 'Extract neutral losses'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Quality control report documenting noise filtering statistics and retained fragment counts: 'Filter out noise'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MS2LDA: 'MS2LDA (Mass Spectrometry\u2013Latent Dirichlet Allocation) is a framework'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MS2LDA.Preprocessing.load_and_clean: 'from MS2LDA.Preprocessing import load_and_clean'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MS2LDA.Preprocessing.generate_corpus: 'Generate Corpus'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'Configure the Python environment (set PYTHONPATH, activate conda, etc.)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Conda: 'These steps assume you have Conda installed'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The changelog section provided contains only a header and metadata; no actual version history, feature additions, bug fixes, or changes are documented.: '## [Unreleased]\n\n### Added'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; sys.path.insert(0, '.'); from MS2LDA.Preprocessing import load_and_clean, generate_corpus; import os; input_file = '{inputs.raw_spectra}'; spectra = load_and_clean(input_file); corpus, token_map, qc_report = generate_corpus(spectra); import pickle; pickle.dump(corpus, open('bag_of_fragments_corpus.pkl', 'wb')); pickle.dump(token_map, open('fragment_token_inventory.pkl', 'wb')); open('qc_report.txt', 'w').write(qc_report)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "corpus.pkl",
+  "expected_outputs": [
+    "Bag-of-fragments corpus in LDA-compatible format (document-term matrix or serialized Python object)",
+    "Fragment and neutral loss token inventory with mass-to-token mappings",
+    "Quality control report documenting noise filtering statistics and retained fragment counts"
+  ],
+  "finding": "The preprocessing module converts MS/MS spectra into a bag-of-fragments format, extracts neutral losses, and filters out noise to prepare data for LDA modeling.",
+  "github_name": "vdhooftcompmet/MS2LDA",
+  "input_from": null,
+  "inputs": [
+    "MS/MS spectra in .mgf (Mascot Generic Format), .msp (NIST-style), or .mzML format"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "raw_spectra_loaded.json",
+    "fragments_and_losses_extracted.csv",
+    "noise_filtered_spectrum_table.csv",
+    "token_vocabulary.json",
+    "corpus_stats.txt"
+  ],
+  "linked_result_ids": [
+    "result_012",
+    "result_013",
+    "result_014",
+    "result_006",
+    "result_033",
+    "result_034"
+  ],
+  "methodology_summary": [
+    "Load spectral data from input file (mgf, msp, or mzML) using format-specific parsers.",
+    "Extract fragment ion m/z values and peak intensities; calculate neutral loss values for all fragment\u2013precursor pairs.",
+    "Apply noise filtering to remove low-intensity fragments and statistically insignificant peaks.",
+    "Bin fragment and neutral loss masses into discrete mass tokens via mass-binning discretization.",
+    "Generate bag-of-fragments corpus, encoding each spectrum as a document with token frequencies.",
+    "Validation: verify corpus dimensionality, token inventory completeness, and that all documents are non-empty; check that at least 80% of input spectra are retained post-filtering."
+  ],
+  "missing_information": [
+    "The changelog section provided contains only a header and metadata; no actual version history, feature additions, bug fixes, or changes are documented."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MS2LDA convert mass spectrometry input files in multiple formats (.mgf, .msp, .mzML) into a bag-of-fragments representation suitable for LDA training?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "mass-spectrometry-file-format-parsing",
+    "fragment-ion-peak-detection-and-normalization",
+    "neutral-loss-calculation-from-precursor-fragment-pairs",
+    "spectral-noise-filtering-and-quality-control",
+    "bag-of-words-document-representation-generation",
+    "mass-binning-and-tokenization-for-topic-modeling"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ms2lda/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "COMP-PREPROCESSING",
+    "COMP-MODELING",
+    "COMP-NTS",
+    "COMP-FINGERPRINTS",
+    "COMP-VISUALIZATION",
+    "ARTIFACT-LDA-MODEL",
+    "TOOL-MGF",
+    "TOOL-MZML",
+    "TOOL-MSP"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics",
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:vdhooftcompmet__MS2LDA",
+  "task_description": "Implement the preprocessing module to read MS/MS spectra from .mgf, .msp, or .mzML formats and convert them into a bag-of-fragments representation with extracted neutral losses, suitable for LDA training.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MS/MS spectra file (.mgf, .msp, or .mzML)",
+      "port_id": "raw_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement format-agnostic spectrum ingestion and fragment-binning transformation to produce bag-of-fragments representations from .mgf, .msp, and .mzML files.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Bag-of-fragments corpus for LDA training",
+      "port_id": "corpus",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Fragment and neutral loss token inventory",
+      "port_id": "token_map",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Preprocessing quality control report",
+      "port_id": "qc_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction",
+    "machine-learning",
+    "molecular-networking",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct the MS/MS spectral preprocessing step that converts raw spectra into bag-of-fragments format",
+  "tools": [
+    "MS2LDA",
+    "MS2LDA.Preprocessing.load_and_clean",
+    "MS2LDA.Preprocessing.generate_corpus",
+    "Python",
+    "Conda"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: MS2LDA.Preprocessing.load_and_clean, MS2LDA.Preprocessing.generate_corpus, Conda, Bag-of-fragments corpus in LDA-compatible format (document-term matrix or serialized Python object), Fragment and neutral loss token inventory with mass-to-token mappings, Quality control report documenting noise filtering statistics and retained fragment counts."
+  ],
+  "workflow_description": "1. Load MS/MS spectra from input file (.mgf, .msp, or .mzML) using the MS2LDA.Preprocessing.load_and_clean module. 2. Extract fragment ion masses and normalize peak intensities within each spectrum. 3. Calculate neutral loss values for all observed fragment pairs. 4. Filter noise by removing fragments and losses below a minimum intensity threshold or statistical significance cutoff. 5. Generate a bag-of-fragments corpus representation using MS2LDA.Preprocessing.generate_corpus, binning fragments and losses into discrete mass tokens. 6. Output the processed corpus in a format compatible with LDA model input (document-term matrix or equivalent serialized representation)."
+}

@@ -1,0 +1,1259 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "extension",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/chromatographic-peak-annotation-visualization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/chromatographic-peak-detection-and-integration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/chromatographic-profile-quality-assessment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/extracted-ion-chromatogram-inspection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/lc-ms-quality-metric-computation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/lcms-target-visibility-screening",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-charge-retention-time-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-polarity-filtering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolite-target-list-formatting",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/method-equivalence-verification-across-api-invocations",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/multi-window-mass-range-parameter-optimization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/polarity-aware-data-filtering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/polarity-mode-filtering-lcms",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/retention-time-correction-and-alignment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/sample-metadata-annotation-for-lcms",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/scan-window-routing-mass-spectrometry",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-data-format-conversion",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-data-object-construction-and-integration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/targeted-metabolite-detection-parameter-optimization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/targeted-metabolite-extraction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/targeted-peak-detection-screening-and-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/targeted-peak-integration-configuration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "TARDIS automatically calculates area under the peak, max intensity and various quality metrics for targeted chemical compounds in LC-MS data.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_TARDIS_system"
+        },
+        {
+          "id": "asb:spine_metric_max_intensity"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "TARDIS uses an established retention time correction algorithm from the xcms package.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_TARDIS_system"
+        },
+        {
+          "id": "asb:spine_tool_xcms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "TARDIS loads MS data as Spectra objects for easy integration with other tools of the Rformassspectrometry initiative.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_TARDIS_system"
+        },
+        {
+          "id": "asb:spine_tool_spectra"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Input files for TARDIS need to be converted to the .mzML format.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_TARDIS_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Input files for TARDIS need to be centroided.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_TARDIS_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Polarity filtering is done within TARDIS, so no polarity subsetting has to be performed when converting the files.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_TARDIS_system"
+        },
+        {
+          "id": "asb:spine_comp_polarity_filtering"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A compound ID must be present for each compound in the target data.frame.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A compound Name must be present for each compound in the target data.frame.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Theoretical or measured m/z must be present for each compound in the target data.frame.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Expected RT in minutes must be present for each compound in the target data.frame.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A column indicating the polarity of the formed ion must be present for each compound in the target data.frame.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "An input file can be either .xlsx or .csv format for conversion to a target data.frame using createTargetList().",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_createTargetList"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The vignette example has a total of 14 runs: two QC injections, followed by four sample injections, two QC injections, four sample injections and two QC injections.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "An MsExperiment object can be used as input for TARDIS instead of file paths.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "extension",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TARDIS_system"
+        },
+        {
+          "id": "asb:spine_tool_msexperiment"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The sampleData column in an MsExperiment object for TARDIS must be named 'type'.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "extension",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TARDIS_system"
+        },
+        {
+          "id": "asb:spine_tool_msexperiment"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "If data contains multiple overlapping m/z scan windows, it is necessary to analyze these separately through the mass_range argument.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "analysis",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_cond_multiple_scan_windows"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "If data contains multiple overlapping m/z scan windows and is not analyzed separately, peaks will have a sawtooth profile due to filtering of empty spectra within TARDIS.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "analysis",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TARDIS_system"
+        },
+        {
+          "id": "asb:spine_tool_spectra"
+        },
+        {
+          "id": "asb:spine_cond_multiple_scan_windows"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Screening mode can be run in TARDIS using the argument screening_mode = TRUE in the tardisPeaks function.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_TARDIS_system"
+        },
+        {
+          "id": "asb:spine_comp_tardisPeaks"
+        },
+        {
+          "id": "asb:spine_comp_screening_mode"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "EICs (Extracted Ion Chromatograms) from screening mode are saved in the output folder and can be inspected.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_screening_mode"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Peak detection can be performed in all runs by setting screening_mode = FALSE in the tardisPeaks function.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_tardisPeaks"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_021",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The results object from tardisPeaks is a list that contains a data.frame with the AUC of each target in each run.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_tardisPeaks"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_021_evidence",
+      "evidence_for": "claim_021",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_022",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The results object from tardisPeaks contains a tibble with a feature table with the average metrics for each target in the QC runs.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_tardisPeaks"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_022_evidence",
+      "evidence_for": "claim_022",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_023",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Results from tardisPeaks include tables with metrics: Max. Int., SNR, peak_cor and points over the peak.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_tardisPeaks"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_023_evidence",
+      "evidence_for": "claim_023",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_024",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Results tables from tardisPeaks are saved into the output folder.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_tardisPeaks"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_024_evidence",
+      "evidence_for": "claim_024",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_025",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The screening mode in the vignette example was limited to 10 targets: 5 internal standards and 5 endogenous metabolites.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_screening_mode"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_025_evidence",
+      "evidence_for": "claim_025",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_026",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "In the vignette example, target 1577 eluted towards the edge of the retention time window.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_026_evidence",
+      "evidence_for": "claim_026",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_027",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "In the vignette example, target 1583 eluted towards the edge of the retention time window.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_027_evidence",
+      "evidence_for": "claim_027",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_028",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "In the vignette example, the expected retention time for target 1577 was adjusted to 8.82 minutes.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_028_evidence",
+      "evidence_for": "claim_028",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_029",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "In the vignette example, the expected retention time for target 1583 was adjusted to 4 minutes.",
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_029_evidence",
+      "evidence_for": "claim_029",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.5c00567",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_tardis#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "concrete",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:chromatographic-peak-annotation-visualization--EDAM:operation_3900",
+      "subject_id": "asb.skill:chromatographic-peak-annotation-visualization",
+      "subject_label": "chromatographic-peak-annotation-visualization",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_3900",
+      "object_label": "Peak calling",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.2
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:chromatographic-peak-detection-and-integration--EDAM:operation_3900",
+      "subject_id": "asb.skill:chromatographic-peak-detection-and-integration",
+      "subject_label": "chromatographic-peak-detection-and-integration",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_3900",
+      "object_label": "Peak calling",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.2
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:mass-charge-retention-time-validation--EDAM:operation_3694",
+      "subject_id": "asb.skill:mass-charge-retention-time-validation",
+      "subject_label": "mass-charge-retention-time-validation",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_3694",
+      "object_label": "Mass spectrum visualisation",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.1429
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:polarity-mode-filtering-lcms--EDAM:operation_3695",
+      "subject_id": "asb.skill:polarity-mode-filtering-lcms",
+      "subject_label": "polarity-mode-filtering-lcms",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_3695",
+      "object_label": "Filtering",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.25
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_TARDIS_system",
+      "title": "TARDIS",
+      "identifier": "urn:asb:spine:TARDIS_system"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_arch_tardis_pipeline",
+      "title": "TARDIS Processing Pipeline",
+      "identifier": "urn:asb:spine:arch_tardis_pipeline",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_tardisPeaks",
+      "title": "tardisPeaks",
+      "identifier": "urn:asb:spine:comp_tardisPeaks"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_createTargetList",
+      "title": "createTargetList",
+      "identifier": "urn:asb:spine:comp_createTargetList"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_rt_correction",
+      "title": "RT Correction (xcms)",
+      "identifier": "urn:asb:spine:comp_rt_correction"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_screening_mode",
+      "title": "Screening Mode",
+      "identifier": "urn:asb:spine:comp_screening_mode"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_polarity_filtering",
+      "title": "Polarity Filtering",
+      "identifier": "urn:asb:spine:comp_polarity_filtering"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_xcms",
+      "title": "xcms",
+      "identifier": "urn:asb:spine:tool_xcms"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_spectra",
+      "title": "Spectra",
+      "identifier": "urn:asb:spine:tool_spectra"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_msexperiment",
+      "title": "MsExperiment",
+      "identifier": "urn:asb:spine:tool_msexperiment"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_msconvert",
+      "title": "MSConvert (ProteoWizard)",
+      "identifier": "urn:asb:spine:tool_msconvert"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_vignette_lcms",
+      "title": "Vignette LC-MS Dataset",
+      "identifier": "urn:asb:spine:dataset_vignette_lcms"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_targets_xlsx",
+      "title": "targets.xlsx",
+      "identifier": "urn:asb:spine:dataset_targets_xlsx"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_artifact_eic_plots",
+      "title": "Diagnostic EIC Plots",
+      "identifier": "urn:asb:spine:artifact_eic_plots",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_artifact_auc_table",
+      "title": "AUC Results Table",
+      "identifier": "urn:asb:spine:artifact_auc_table",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_artifact_feature_table",
+      "title": "QC Feature Table",
+      "identifier": "urn:asb:spine:artifact_feature_table",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_artifact_metric_csvs",
+      "title": "Metric CSV Output Files",
+      "identifier": "urn:asb:spine:artifact_metric_csvs",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_auc",
+      "title": "Area Under the Curve (AUC)",
+      "identifier": "urn:asb:spine:metric_auc"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_max_intensity",
+      "title": "Max Intensity",
+      "identifier": "urn:asb:spine:metric_max_intensity"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_snr",
+      "title": "Signal-to-Noise Ratio (SNR)",
+      "identifier": "urn:asb:spine:metric_snr"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_peak_cor",
+      "title": "Peak Correlation (peak_cor)",
+      "identifier": "urn:asb:spine:metric_peak_cor"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_pop",
+      "title": "Points Over Peak (pop)",
+      "identifier": "urn:asb:spine:metric_pop"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_screening_mode_true",
+      "title": "Screening Mode Enabled",
+      "identifier": "urn:asb:spine:cond_screening_mode_true"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_screening_mode_false",
+      "title": "Full Peak Detection Mode",
+      "identifier": "urn:asb:spine:cond_screening_mode_false"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_multiple_scan_windows",
+      "title": "Multiple Overlapping m/z Scan Windows",
+      "identifier": "urn:asb:spine:cond_multiple_scan_windows"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_internal_std_1576",
+      "title": "1576",
+      "identifier": "urn:asb:spine:comp_internal_std_1576"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_internal_std_1577",
+      "title": "1577",
+      "identifier": "urn:asb:spine:comp_internal_std_1577"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_internal_std_1578",
+      "title": "1578",
+      "identifier": "urn:asb:spine:comp_internal_std_1578"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_internal_std_1583",
+      "title": "1583",
+      "identifier": "urn:asb:spine:comp_internal_std_1583"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_internal_std_331",
+      "title": "331",
+      "identifier": "urn:asb:spine:comp_internal_std_331"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_endogenous_7",
+      "title": "7",
+      "identifier": "urn:asb:spine:comp_endogenous_7"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_endogenous_9",
+      "title": "9",
+      "identifier": "urn:asb:spine:comp_endogenous_9"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_endogenous_131",
+      "title": "131",
+      "identifier": "urn:asb:spine:comp_endogenous_131"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_endogenous_179",
+      "title": "179",
+      "identifier": "urn:asb:spine:comp_endogenous_179"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_endogenous_183",
+      "title": "183",
+      "identifier": "urn:asb:spine:comp_endogenous_183"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_rt_edge_1577_1583",
+      "title": "RT Edge Elution for 1577 and 1583",
+      "identifier": "urn:asb:spine:result_rt_edge_1577_1583"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_sawtooth_artefact",
+      "title": "Sawtooth Artefact from Multiple Scan Windows",
+      "identifier": "urn:asb:spine:result_sawtooth_artefact"
+    }
+  ]
+}

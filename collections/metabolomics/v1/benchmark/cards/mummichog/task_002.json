@@ -1,0 +1,409 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/metabolomics-cloud/mummichog",
+      "locator_id": "gh_metabolomics-cloud_mummichog",
+      "locator_kind": "github",
+      "name": "metabolomics-cloud/mummichog",
+      "prose": "metabolomics-cloud organization repository standards and contribution guidelines",
+      "score": 0.25,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "c6782573db39cfc8a6f1c125ec310f87cb8a4232d88f09ceb3c18adc5234b6ae"
+    }
+  ],
+  "created_at": "2026-06-16T06:18:21.859677+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Current Mummichog 3 repository source code and configuration files (setup.py, pyproject.toml, requirements.txt, CI/CD workflows, README, documentation)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "metabolomics-cloud organization repository standards and contribution guidelines",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Representative metabolomics feature table(s) for functional prediction testing",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Migrated Mummichog 3 repository at metabolomics-cloud/mummichog with updated package metadata, configuration, and documentation conforming to organization standards",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Installation verification log confirming successful pip install from the new repository location in a clean Python environment",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Functional test results demonstrating that core Mummichog workflows (feature table loading, functional activity prediction) execute correctly",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Migration report documenting conformance changes applied, verification test outcomes, and any breaking changes or deprecations introduced",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Mummichog predicts functional activity from feature tables by leveraging metabolic network organization without requiring metabolite identification, so migration must preserve this core capability and its API contract.",
+    "The metabolomics-cloud organization has specific repository conventions (naming, dependency management, CI/CD patterns, documentation structure) that the migrated codebase must adopt to be considered conformant.",
+    "Python package installation verification requires testing in a clean environment isolated from the developer's local dependencies to catch missing or incorrectly specified dependencies in setup.py or requirements.txt.",
+    "Functional testing of metabolomics software must use realistic feature table inputs and verify that output predictions (functional modules, activities) remain consistent with the original implementation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify file exists: metabolomics-cloud/mummichog repository is accessible at https://github.com/metabolomics-cloud/mummichog",
+      "Verify file_format_is: package structure conforms to Python setuptools conventions (setup.py or pyproject.toml present)",
+      "Script runs: execute 'pip install -e .' from repository root without errors",
+      "Script runs: execute package's primary entry point or test suite (e.g., 'python -m mummichog --help' or equivalent) and confirm exit code 0",
+      "File exists: verify presence of metabolomics-cloud organization conventions documentation or style guide in the repository",
+      "Contains_substring: check that relocated package __init__.py or main module docstring identifies correct GitHub origin (metabolomics-cloud/mummichog)"
+    ],
+    "expert_review": [
+      "Verify that migration preserves core algorithmic behavior: package still leverages metabolic network organization to predict functional activity from feature tables without requiring metabolite identification",
+      "Confirm that code style, naming conventions, and module organization align with metabolomics-cloud organizational standards (review against any published guidelines or sister repositories)",
+      "Assess whether any dependencies, Python version constraints, or platform-specific code required adjustment during migration and whether such changes are documented"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Has the Mummichog 3 codebase been successfully relocated to the metabolomics-cloud GitHub organization and verified to install and function correctly in its new location?: 'Project is moved to new organization https://github.com/metabolomics-cloud'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The Mummichog project has been moved to the new metabolomics-cloud GitHub organization, but the provided documentation does not contain verification that the relocated package installs and runs correctly from its new home.: 'Project is moved to new organization https://github.com/metabolomics-cloud, to follow examples of https://scverse.org/'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Current Mummichog 3 repository source code and configuration files (setup.py, pyproject.toml, requirements.txt, CI/CD workflows, README, documentation): 'metabolomics-cloud/mummichog'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] metabolomics-cloud organization repository standards and contribution guidelines: 'Project is moved to new organization https://github.com/metabolomics-cloud'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Representative metabolomics feature table(s) for functional prediction testing: 'Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Migrated Mummichog 3 repository at metabolomics-cloud/mummichog with updated package metadata, configuration, and documentation conforming to organization standards: 'Project is moved to new organization https://github.com/metabolomics-cloud'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Installation verification log confirming successful pip install from the new repository location in a clean Python environment: 'metabolomics-cloud/mummichog'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Functional test results demonstrating that core Mummichog workflows (feature table loading, functional activity prediction) execute correctly: 'leverages the organization of metabolic networks to predict functional activity directly from feature tables'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Migration report documenting conformance changes applied, verification test outcomes, and any breaking changes or deprecations introduced: 'metabolomics-cloud/mummichog'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting the migration, version bumps, or breaking changes introduced by moving Mummichog to the metabolomics-cloud organization: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No reference to specific metabolomics-cloud conventions, style guides, or integration requirements that the migrated package must satisfy: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "migration_report.md",
+  "expected_outputs": [
+    "Migrated Mummichog 3 repository at metabolomics-cloud/mummichog with updated package metadata, configuration, and documentation conforming to organization standards",
+    "Installation verification log confirming successful pip install from the new repository location in a clean Python environment",
+    "Functional test results demonstrating that core Mummichog workflows (feature table loading, functional activity prediction) execute correctly",
+    "Migration report documenting conformance changes applied, verification test outcomes, and any breaking changes or deprecations introduced"
+  ],
+  "finding": "The Mummichog project has been moved to the new metabolomics-cloud GitHub organization, but the provided documentation does not contain verification that the relocated package installs and runs correctly from its new home.",
+  "github_name": "metabolomics-cloud/mummichog",
+  "input_from": "task_001",
+  "inputs": [
+    "Current Mummichog 3 repository source code and configuration files (setup.py, pyproject.toml, requirements.txt, CI/CD workflows, README, documentation)",
+    "metabolomics-cloud organization repository standards and contribution guidelines",
+    "Representative metabolomics feature table(s) for functional prediction testing"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "conformance_checklist.txt",
+    "setup.py",
+    "install.log",
+    "functional_test_output.json"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_006",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Audit current Mummichog 3 structure and dependencies against metabolomics-cloud standards.",
+    "Adapt package metadata, module structure, documentation, and CI/CD workflows to conform to organization conventions.",
+    "Create and populate migrated repository at metabolomics-cloud/mummichog with updated codebase.",
+    "Verify installation from clean environment using pip install.",
+    "Execute functional prediction workflows on test metabolomics data to confirm runtime correctness.",
+    "Validation: Installation completes without errors, all unit and integration tests pass, and functional prediction output on test data matches expected metabolic network-based predictions."
+  ],
+  "missing_information": [
+    "No changelog documenting the migration, version bumps, or breaking changes introduced by moving Mummichog to the metabolomics-cloud organization",
+    "No reference to specific metabolomics-cloud conventions, style guides, or integration requirements that the migrated package must satisfy"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Has the Mummichog 3 codebase been successfully relocated to the metabolomics-cloud GitHub organization and verified to install and function correctly in its new location?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "python-package-migration-and-refactoring",
+    "repository-structure-standardization",
+    "ci-cd-workflow-adaptation-to-organization-standards",
+    "package-installation-verification-and-testing",
+    "metabolomics-functional-prediction-workflow-validation",
+    "documentation-and-metadata-modernization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mummichog/synthesized_package",
+  "spine_condition_ids": [
+    "mummichog2"
+  ],
+  "spine_entity_ids": [
+    "mummichog3",
+    "mummichog2",
+    "metabolomics-cloud-org"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:shuzhao-li__mummichog",
+  "task_description": "Migrate the Mummichog 3 codebase to the metabolomics-cloud GitHub organization, ensure compliance with organization conventions, and verify that the relocated package installs and executes correctly from its new repository location.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Current Mummichog 3 codebase and configuration",
+      "port_id": "source_repository",
+      "resolved_via": null,
+      "source": "task_001/activity_predictions",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "metabolomics-cloud organization repository standards",
+      "port_id": "org_standards",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Representative metabolomics feature table for functional testing",
+      "port_id": "test_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Migrate Mummichog 3 to the metabolomics-cloud GitHub organization following scverse conventions and verify successful installation and execution from the new repository location.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Migrated Mummichog 3 repository at metabolomics-cloud/mummichog",
+      "port_id": "migrated_repository",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Installation verification log",
+      "port_id": "install_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Functional test results",
+      "port_id": "test_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Migration report with conformance changes and verification outcomes",
+      "port_id": "migration_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "pathway-analysis",
+    "database-annotation",
+    "metabolite-identification"
+  ],
+  "title": "Extend Mummichog 3 to incorporate the metabolomics-cloud GitHub organization project structure",
+  "tools": [
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Python, Migrated Mummichog 3 repository at metabolomics-cloud/mummichog with updated package metadata, configuration, and documentation conforming to organization standards, Installation verification log confirming successful pip install from the new repository location in a clean Python environment, Functional test results demonstrating that core Mummichog workflows (feature table loading, functional activity prediction) execute correctly, Migration report documenting conformance changes applied, verification test outcomes, and any breaking changes or deprecations introduced."
+  ],
+  "workflow_description": "1. Clone the current Mummichog 3 repository and audit its structure, dependencies, and configuration files (setup.py, pyproject.toml, requirements.txt, .github workflows) against metabolomics-cloud organization standards. 2. Adapt package metadata, module naming, documentation structure, and CI/CD workflows to conform to metabolomics-cloud conventions. 3. Create a new repository under metabolomics-cloud/mummichog with the migrated codebase and updated configuration. 4. Run installation tests in a clean environment using pip install to verify the package builds without errors. 5. Execute core Mummichog functionality (e.g., loading feature tables and running functional prediction workflows) to confirm runtime correctness on representative metabolomics data. 6. Validate that all tests pass and generate a migration report documenting conformance changes and verification results."
+}

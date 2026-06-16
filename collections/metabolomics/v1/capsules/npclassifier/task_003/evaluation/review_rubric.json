@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 'Classifier/models_folder/models/get_models.sh' exists in the repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify TensorFlow 2.3.0 is installed and importable as a Python module"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "get_models.sh"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify the HDF5 model can be loaded using tf.keras.models.load_model() without errors"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify the loaded model exposes a layer named exactly 'input_2048'"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify the loaded model exposes a layer named exactly 'input_4096'"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify the loaded model exposes a layer named exactly 'output'"
+    },
+    {
+      "id": "pf_009",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify the model has exactly three named layers matching the required names (no extraneous layers with those names)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file 'Classifier/models_folder/models/get_models.sh' exists in the repository",
+      "script_runs: execute get_models.sh in the Classifier/models_folder/models directory without errors",
+      "verify TensorFlow 2.3.0 is installed and importable as a Python module",
+      "file_exists: verify that an HDF5 model file (.h5 extension) is created after running get_models.sh",
+      "verify the HDF5 model can be loaded using tf.keras.models.load_model() without errors",
+      "verify the loaded model exposes a layer named exactly 'input_2048'",
+      "verify the loaded model exposes a layer named exactly 'input_4096'",
+      "verify the loaded model exposes a layer named exactly 'output'",
+      "verify the model has exactly three named layers matching the required names (no extraneous layers with those names)"
+    ],
+    "expert_review": [
+      "confirm that the HDF5 model structure is compatible with TensorFlow 2.3.0 format specifications",
+      "confirm that the layer names and connectivity represent a valid Keras classification model architecture suitable for natural product classification"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

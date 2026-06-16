@@ -1,0 +1,448 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/OpenMS.svg",
+      "role": "figure",
+      "sha256": "0ee26840faa3ce47adc3dce8041a01befdee718de6c4146c94a9c7900ff4ec80"
+    },
+    {
+      "indexable": false,
+      "path": "figures/feature_boundary.png",
+      "role": "figure",
+      "sha256": "c6b79367c06ad83e9d1c8a5c8a268fdfd03479f4daefb5312926770498f79083"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure1.svg",
+      "role": "figure",
+      "sha256": "9d68124b85dbeb8fb438f6c37aa0904bf54490f5a17df865f4e46d41994b806b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/peak_boundary.png",
+      "role": "figure",
+      "sha256": "0af04c72bd8ed0e2f31adb0737f7ebd1cee0c74d6fe386ec66accfdf92b7a65a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/pyOpenMSviz_logo_color.png",
+      "role": "figure",
+      "sha256": "ceaeffc928521e4b5e13793b4ef10d6120410450097fbb8c559d19c4f37b4181"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "88e7cac74aad391687069eb4c4d6edac8ad5e02ff27fe5b73ff4f73271db268f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "7dc214d47e3ba04d49043c711b49edbd77eee331640f2e65ea29ceb41ad0e8a0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "6107f3ae53cf20e2ba220e847ee2dde5f2cd9533c0e8da5ba139e92f12685668"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "d4e105b89963704cb10a1a1aecc3582e85b802f2df675792471dfe6b44ca2c8a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs4].png",
+      "role": "figure",
+      "sha256": "d953a0140849e75037ab6b0351ec948d5f4340193337f7fc59c1c2067fc2a08d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_with_annotation[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "aa93c54ffae06c504458b99bd3c32db005e56988dff7c48483d6820ebd6a6b00"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "50ed52bc21729c2a755461bb67cb6db3699f1d53497d54663f99692773d472b9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "3a2513944a8eed16c352f3835bb25105a51b81a66ab6bd8da6d31530bc2f745c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "fe4ce3d6644427846010c86faa8777979d05ed2d9fd2810fe38a3c55b2e8b4b9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "f9db27c57161026399f082fb93ecc9a3ece656a17f124f94c4ee03be9684a91b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_mz_im[ms_matplotlib].png",
+      "role": "figure",
+      "sha256": "9476b907c61ce2391cc97afb08cc84bd56f527ae45b1674dd6d058a22aea163a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "f457beb583e235d069b94c6ff2e0348c05656514e9d4d3578c244aafc269814a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "42c8bb546b740e25661992c025c16816849cd375b801f73a65d3e2f7dfc4a097"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "50fb29dbdd2f63f513b51a7b5ee91d8a4f973e16e4d35a69904af43ca0df6562"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "843c3ffa9401b0b475f66b6b9868b71e6e949ebf9e10a932833dc1c5f29a861d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d835dc4650ebf688b4204a6596d45f4e99c10eb50db50b32e49eb261ea85b272"
+    }
+  ],
+  "created_at": "2026-06-16T07:19:11.067804+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Gallery execution-time data table from methods section (19 scripts with per-script execution times in MM:SS.mmm format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured table (CSV or TSV) with columns: plot_type, backend, median_time_seconds, min_time_seconds, max_time_seconds, n_scripts, rank_within_category",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparative visualization (PNG or PDF) showing median execution times as a grouped bar chart or heatmap with plot types on one axis, backends on the other, and execution time as the value metric",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Gallery scripts are categorized by plot type (chromatogram, mobilogram, spectrum, peakmap) and backend implementation (ms_bokeh, ms_matplotlib, ms_plotly); each script reports a single execution time in MM:SS.mmm format.",
+    "Median execution time per category is more robust than mean for identifying typical backend performance when sample sizes are small (e.g., 1\u20133 scripts per plot-type\u2013backend combination).",
+    "The range (min\u2013max) reflects variability within a category; backends with consistent narrow ranges are more predictable than those with wide variance.",
+    "Faster execution is desirable for interactive backends (Bokeh, Plotly) in dashboard contexts; static backends (Matplotlib) prioritize output quality over speed."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that a gallery or timing metrics artifact exists in the repository at github:OpenMS__pyopenms_viz (e.g., benchmark results file, gallery HTML, or timing log)",
+      "verify file_format_is: timing data is structured with columns or fields for plot_type, backend, and execution_time (or equivalent labels)",
+      "verify field_present: each timing record includes at least plot_type (one of: chromatogram, mobilogram, peakmap, peakmap-marginals, spectrum, subplots), backend (one of: matplotlib, bokeh, plotly), and a numeric execution time value",
+      "verify script_runs: a Python script can load the reported timing metrics, compute median and range (max \u2212 min) for each (plot_type, backend) pair, and output a summary table or dict \u2014 robust to parameter choices in binning or aggregation",
+      "verify output_matches_reference: computed medians and ranges are consistent with any summary table or statistics already published in the gallery or article text"
+    ],
+    "expert_review": [
+      "assess whether the three backends show a systematic ordering (fastest to slowest) that is consistent across all or most plot categories, and whether any differences are practically significant",
+      "evaluate whether backend performance correlates with plot complexity (e.g., whether interactive backends are consistently slower for simple plots)",
+      "judge whether the timing data represents a fair and representative sample (e.g., consistent hardware, sufficient replicates per plot type per backend, comparable data sizes)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Which plotting backend (matplotlib, Bokeh, or Plotly) exhibits the fastest median execution time for each mass spectrometry plot type (chromatogram, mobilogram, peakmap, peakmap-marginals, spectrum, subplots)?: 'It integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The document provides no reported timing metrics or execution time data for any plot types across the three backends, making backend performance comparison impossible from the available text.: '_No examples found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Gallery execution-time data table from methods section (19 scripts with per-script execution times in MM:SS.mmm format): 'Computation times\n=================\n**00:06.221** total execution time for 19 files **from all galleries**:\n\n.. list-table::\n   :header-rows: 1\n   :class: table table-striped sg-datatable\n\n   * -'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structured table (CSV or TSV) with columns: plot_type, backend, median_time_seconds, min_time_seconds, max_time_seconds, n_scripts, rank_within_category: '**00:06.221** total execution time for 19 files **from all galleries**'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Comparative visualization (PNG or PDF) showing median execution times as a grouped bar chart or heatmap with plot types on one axis, backends on the other, and execution time as the value metric: 'Computation times\n================='"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pandas: 'import pandas as pd\n    ms_data = pd.read_csv(\"path/to/ms_data.csv\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] matplotlib: 'integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'conda create --name=pyopenms-viz python=3.12'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No gallery or per-script timing metrics are mentioned in the provided section text. The location, format, and completeness of timing data for the six plot types across three backends is not specified.: '[UNTRUSTED_DOCUMENT content does not reference timing metrics, gallery, or benchmark results]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import matplotlib.pyplot as plt; import re; from pathlib import Path; data = pd.read_csv('{inputs.gallery_timings}'); data['plot_type'] = data['script'].str.extract(r'(chromatogram|mobilogram|peakmap|spectrum|subplots)')[0]; data['backend'] = data['script'].str.extract(r'(Bokeh|Matplotlib|Plotly)')[0]; data['time_seconds'] = data['time'].str.replace(r'(\\d+):(\\d+)\\.(\\d+)', lambda m: str(int(m.group(1))*60 + int(m.group(2)) + int(m.group(3))/1000), regex=True).astype(float); grouped = data.groupby(['plot_type', 'backend'])['time_seconds'].agg(['median', 'min', 'max', 'count']).reset_index(); grouped.columns = ['plot_type', 'backend', 'median_time_seconds', 'min_time_seconds', 'max_time_seconds', 'n_scripts']; grouped['rank_within_category'] = grouped.groupby('plot_type')['median_time_seconds'].rank(); grouped.to_csv('execution_time_summary.csv', index=False); pivot = grouped.pivot(index='plot_type', columns='backend', values='median_time_seconds'); fig, ax = plt.subplots(figsize=(12, 6)); pivot.plot(kind='bar', ax=ax); ax.set_xlabel('Plot Type'); ax.set_ylabel('Median Execution Time (seconds)'); ax.set_title('Backend Performance Comparison by Plot Type'); plt.xticks(rotation=45); plt.tight_layout(); plt.savefig('execution_time_comparison.png', dpi=300); print(grouped.to_string(index=False))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "backend_execution_time_comparison.csv",
+  "expected_outputs": [
+    "Structured table (CSV or TSV) with columns: plot_type, backend, median_time_seconds, min_time_seconds, max_time_seconds, n_scripts, rank_within_category",
+    "Comparative visualization (PNG or PDF) showing median execution times as a grouped bar chart or heatmap with plot types on one axis, backends on the other, and execution time as the value metric"
+  ],
+  "finding": "The document provides no reported timing metrics or execution time data for any plot types across the three backends, making backend performance comparison impossible from the available text.",
+  "github_name": "OpenMS/pyopenms_viz",
+  "input_from": "task_001",
+  "inputs": [
+    "Gallery execution-time data table from methods section (19 scripts with per-script execution times in MM:SS.mmm format)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "parsed_timings.csv",
+    "aggregated_by_category.csv",
+    "backend_performance_table.csv",
+    "median_times_heatmap.png"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_011",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_024"
+  ],
+  "methodology_summary": [
+    "Parse the 19 gallery script names and execution times from the computation-times table, extracting plot type and backend from each script filename.",
+    "Group execution times by plot type and backend combination.",
+    "Calculate median, minimum, and maximum execution time for each group.",
+    "Rank backends within each plot type by median execution time (1 = fastest).",
+    "Assemble results into a structured table and generate a comparative bar chart or heatmap.",
+    "Validation: Confirm that all 19 scripts are accounted for in the aggregated groups, that median and range values are correctly computed from the original times, and that the ranking correctly reflects the median values."
+  ],
+  "missing_information": [
+    "No changelog found.",
+    "No gallery or per-script timing metrics are mentioned in the provided section text. The location, format, and completeness of timing data for the six plot types across three backends is not specified."
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Which plotting backend (matplotlib, Bokeh, or Plotly) exhibits the fastest median execution time for each mass spectrometry plot type (chromatogram, mobilogram, peakmap, peakmap-marginals, spectrum, subplots)?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "execution-time-aggregation-by-category",
+    "performance-metric-comparison-across-backends",
+    "statistical-summary-computation-median-range",
+    "backend-performance-benchmarking",
+    "visualization-comparative-performance-metrics"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pyopenmsviz/synthesized_package",
+  "spine_condition_ids": [
+    "cond_backend_plotly",
+    "cond_backend_bokeh",
+    "cond_backend_matplotlib"
+  ],
+  "spine_entity_ids": [
+    "backend_bokeh_layer",
+    "backend_plotly_layer",
+    "backend_matplotlib_layer",
+    "cond_backend_bokeh",
+    "cond_backend_plotly",
+    "cond_backend_matplotlib",
+    "metric_total_gallery_exec_time",
+    "metric_peakmap_marginals_plotly_time",
+    "metric_spyogenes_subplots_bokeh_time",
+    "metric_spectrum_binning_matplotlib_time",
+    "metric_spyogenes_subplots_matplotlib_time",
+    "metric_spyogenes_subplots_plotly_time",
+    "metric_peakmap_marginals_matplotlib_time",
+    "metric_peakmap_plotly_time",
+    "metric_peakmap_marginals_bokeh_time",
+    "metric_spectrum_dia_matplotlib_time",
+    "metric_mobilogram_bokeh_time",
+    "metric_chromatogram_bokeh_time",
+    "metric_peakmap_bokeh_time",
+    "metric_mobilogram_matplotlib_time",
+    "metric_spectrum_dia_plotly_time",
+    "metric_chromatogram_matplotlib_time",
+    "metric_spectrum_dia_bokeh_time",
+    "metric_peakmap_matplotlib_time",
+    "metric_mobilogram_plotly_time",
+    "metric_chromatogram_plotly_time"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-analysis",
+    "benchmark-evaluation",
+    "visualization"
+  ],
+  "synthesized_from": "github:OpenMS__pyopenms_viz",
+  "task_description": "Analyze the gallery execution-time data already reported in the methods section to compute and compare median and range of execution times for each plot type (chromatogram, mobilogram, peakmap, peakmap-marginals, spectrum, subplots) across the three backends (Bokeh, Matplotlib, Plotly), and produce a summary table identifying which backend is systematically fastest or slowest per plot category.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Gallery execution-time data table from methods section",
+      "port_id": "gallery_timings",
+      "resolved_via": null,
+      "source": "task_001/execution_times_table",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Extract per-script timing metrics from the gallery, compute median and range of execution times for each of six plot types across three backends, and identify the systematically fastest and slowest backend per plot category.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structured summary table of median and range execution times per plot type and backend",
+      "port_id": "backend_performance_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Comparative visualization of median execution times across backends by plot type",
+      "port_id": "backend_comparison_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Analyze relative execution-time performance across backends per plot type",
+  "tools": [
+    "pyOpenMS-Viz",
+    "pandas",
+    "matplotlib",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Extract the 19 gallery script execution times from the computation-times table in the methods section, categorizing each by plot type (chromatogram, mobilogram, peakmap, peakmap-marginals, spectrum, subplots) and backend (ms_bokeh, ms_matplotlib, ms_plotly). 2. Compute median execution time for each plot-type and backend combination. 3. Compute min and max execution times (range) for each plot-type and backend combination. 4. Rank backends by median execution time within each plot category to identify fastest and slowest. 5. Generate a structured summary table with columns: plot_type, backend, median_time, min_time, max_time, rank_within_category. 6. Produce a comparative visualization (bar chart or heatmap) showing median times across backends per plot type."
+}

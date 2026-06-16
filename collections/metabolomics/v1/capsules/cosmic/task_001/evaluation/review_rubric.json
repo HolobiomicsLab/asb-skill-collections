@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:sirius-ms__sirius repository is accessible and contains Java source code for LC-MS/MS data ingestion"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the SIRIUS codebase contains a data loader or parser module with file_exists check for input spectrum file handlers (e.g., mzML, mzXML, or proprietary formats)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that SIRIUS can execute a bounded ingestion operation on a test LC-MS/MS dataset (public deposit or example file from repository) and produce structured spectrum output (JSON, binary object, or serialized format)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: structured spectrum representation contains required fields (m/z values, intensities, retention time, precursor mass, collision energy) matching SIRIUS schema documentation or example output"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:sirius-ms__sirius repository is accessible and contains Java source code for LC-MS/MS data ingestion",
+      "verify that the SIRIUS codebase contains a data loader or parser module with file_exists check for input spectrum file handlers (e.g., mzML, mzXML, or proprietary formats)",
+      "verify that SIRIUS can execute a bounded ingestion operation on a test LC-MS/MS dataset (public deposit or example file from repository) and produce structured spectrum output (JSON, binary object, or serialized format)",
+      "script_runs: execute SIRIUS ingestion API or CLI on a minimal test input and confirm exit code indicates successful parsing without errors",
+      "verify output_matches_reference: structured spectrum representation contains required fields (m/z values, intensities, retention time, precursor mass, collision energy) matching SIRIUS schema documentation or example output"
+    ],
+    "expert_review": [
+      "assess whether the parsed spectrum representation (molecular formula, fragment annotations, metadata) is chemically valid and consistent with LC-MS/MS acquisition parameters",
+      "evaluate whether the ingestion layer correctly handles edge cases (empty scans, malformed headers, missing metadata fields) without data loss or corruption",
+      "confirm that the structured output format is sufficient for downstream SIRIUS modules (CSI:FingerID, CANOPUS, MSNovelist) to consume without re-parsing"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

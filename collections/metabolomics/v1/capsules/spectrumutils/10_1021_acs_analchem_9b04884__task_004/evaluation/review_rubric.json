@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840 is retrievable via USI mechanism"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "fraction of peaks receiving interpretation (neutral_loss=False) computed and rec"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "fraction of peaks receiving interpretation (neutral_loss=True) computed and reco"
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "difference between fractions (neutral_loss=True minus neutral_loss=False) is a n"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840 is retrievable via USI mechanism",
+      "script_runs: Python script instantiates spectrum_utils.fragment_annotation with neutral_loss parameter set to False",
+      "script_runs: Python script instantiates spectrum_utils.fragment_annotation with neutral_loss parameter set to True",
+      "output_matches_reference: fraction of peaks receiving interpretation (neutral_loss=False) computed and recorded as a single numeric value",
+      "output_matches_reference: fraction of peaks receiving interpretation (neutral_loss=True) computed and recorded as a single numeric value",
+      "value_in_range: difference between fractions (neutral_loss=True minus neutral_loss=False) is a non-negative number, robust to minor numerical precision differences"
+    ],
+    "expert_review": [
+      "reported result for neutral loss annotation effect on peak interpretation fraction matches the article text or supplementary materials \u2014 requires domain knowledge to locate the specific claimed improvement and verify computation matches article methodology"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

@@ -2,13 +2,15 @@ name: R
 slug: r
 version_used: 4.5.0
 evidence_spans:
+- standardizing.R, 1_integrating.R, 1_cleaningOriginal.R, 4_cleaningTaxonomy.R, 5_addingOTL.R
+- 1_integrating.R
+- R - Python 3 - Java >= 17
 - library(mass2adduct)
 - To install this package, start R (version "4.5.0" or higher)
 - vignette title and package context indicate R-based package
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
-- providing a R Markdown that integrates into IM-MS lipidomics workflows
-- This table can be used for a variety of analyses that can be conducted in R
 derived_from:
+- doi: 10.1007/s00044-016-1764-y
+  title: 'Binding of anti-Trypanosoma natural products from African flora against selected drug targets: a docking study'
 - doi: 10.1021/acs.analchem.0c04720
   title: Determination of Abundant Metabolite Matrix Adducts Illuminates the Dark Metabolome of MALDI-Mass Spectrometry Imaging Datasets
 - doi: 10.1021/acs.analchem.1c03032
@@ -25,19 +27,29 @@ derived_from:
   title: 'mzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format'
 - doi: 10.1021/jasms.5c00073
   title: mzquality
+- doi: 10.3390/metabo12020173
+  title: spectra
 - doi: 10.21105/joss.08070
   title: spectripy
+- doi: 10.1021/acs.analchem.5c00567
+  title: Automated Integration and Quality Assessment of Chromatographic Peaks in LC–MS-Based Metabolomics and Lipidomics Using TARDIS
+- doi: 10.3389/fpls.2019.01329
+  title: tima
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 source_repos:
 - FelinaHildebrand/MobiLipid
 - QizhiSu/mspcompiler
+- UGent-LIMET/TARDIS
 - castratton/uafR
 - gggraca/MetaboAnnotatoR
 - hankemeierlab/mzQuality
 - kbseah/mass2adduct
+- lotusnprod/lotus-processor
 - mobiusklein/mzpeak_prototyping
 - mums2/mpactr
 - odisce/mineMS2
+- rformassspectrometry/Spectra
 - rformassspectrometry/SpectriPy
+- taxonomicallyinformedannotation/tima
 schema_version: 0.2.0

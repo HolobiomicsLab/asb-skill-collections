@@ -1,0 +1,22 @@
+name: conda
+slug: conda
+evidence_spans:
+- Use conda to create a virtual environment with required dependencies.
+- Wait until new release is also on Bioconda (https://anaconda.org/bioconda/matchms)
+- These steps assume you have Conda installed
+- 'using `conda <https://docs.conda.io/projects/conda/en/latest/index.html>`_::'
+derived_from:
+- doi: 10.1021/acs.analchem.1c05017
+  title: deimos
+- doi: 10.21105/joss.02411
+  title: matchms
+- doi: 10.1093/bioinformatics/btx582
+  title: ms2lda
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+source_repos:
+- levitsky/pyteomics
+- matchms/matchms
+- pnnl/deimos
+- vdhooftcompmet/MS2LDA
+schema_version: 0.2.0

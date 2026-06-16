@@ -1,0 +1,305 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "505f60af93888225083df1df48559a7fe48effff6491356940c740f479cc06d9"
+    }
+  ],
+  "created_at": "2026-06-15T17:50:44.296688+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Genome annotation GTF file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ioe file (index of events) mapping transcripts to events",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ioi file (index of isoforms) mapping events to isoforms",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "gtf file containing local alternative splicing events",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "GTF format encodes genomic coordinates, feature types (exon, start_codon, stop_codon), and transcript-to-gene mappings required to build isoform structures.",
+    "Transcript-level events span all exonic boundaries and include promoter/terminator usage, while local events represent pairwise exon relationships (e.g. exon skipping, intron retention, alternative 5'/3' sites).",
+    "The ioe file must contain all possible splicing events derivable from the annotation; the ioi file must link each event to the set of isoforms expressing or excluding it.",
+    "Local alternative splicing events are extracted only from exon-to-exon junctions that exhibit variation across isoforms in the input annotation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:comprna__SUPPA repository is accessible and contains SUPPA2 source code",
+      "verify file_exists: GTF input file is loadable and conforms to GTF format specification",
+      "verify file_exists: output ioe file (isoform events) is generated with expected structure",
+      "verify file_exists: output ioi file (isoform-isoform events) is generated with expected structure",
+      "verify file_exists: output GTF file for local events is generated in valid GTF format",
+      "verify row_count_equals or value_in_range: output files contain non-zero number of event records (parameter-sensitive to input annotation complexity)",
+      "verify format_is: ioe file format matches SUPPA2 specification for isoform event output",
+      "verify format_is: ioi file format matches SUPPA2 specification for isoform-isoform event output",
+      "verify script_runs: SUPPA2 generateEvents subcommand executes without fatal errors on provided GTF input",
+      "verify contains_substring: output files contain expected event type identifiers (e.g., exon skipping, alternative 5'/3' splice sites)"
+    ],
+    "expert_review": [
+      "inspect biological plausibility of generated events: verify that isoform events correspond to known alternative splicing mechanisms and are consistent with input GTF transcript structures",
+      "inspect consistency between three outputs: verify that events in ioe file, ioi file, and local-events GTF file are mutually coherent and do not contain logical contradictions",
+      "inspect accuracy of event definition: verify that exon coordinates, splice sites, and event boundaries in output files correctly reflect the input GTF annotation"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] What are the three distinct output file artifacts produced by the SUPPA2 generateEvents subcommand when parsing a genome annotation GTF file?: 'Output files\n         * [ioi](#ioi)\n         * [ioe](#ioe)\n         * [gtf](#gtf-for-local-events)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The SUPPA2 generateEvents subcommand produces three named output artifacts: ioi (input-output index), ioe (input-output events), and gtf for local events, which are generated from parsing a genome annotation GTF file.: 'Output files\n         * [ioi](#ioi)\n         * [ioe](#ioe)\n         * [gtf](#gtf-for-local-events)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Genome annotation GTF file: 'parse a genome annotation GTF file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] ioe file (index of events) mapping transcripts to events: 'ioe file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] ioi file (index of isoforms) mapping events to isoforms: 'ioi file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] gtf file containing local alternative splicing events: 'gtf for local events'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SUPPA2: 'SUPPA2: fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history information is provided: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "ioe file (index of events) mapping transcripts to events",
+    "ioi file (index of isoforms) mapping events to isoforms",
+    "gtf file containing local alternative splicing events"
+  ],
+  "finding": "The SUPPA2 generateEvents subcommand produces three named output artifacts: ioi (input-output index), ioe (input-output events), and gtf for local events, which are generated from parsing a genome annotation GTF file.",
+  "github_name": "comprna/SUPPA",
+  "input_from": null,
+  "inputs": [
+    "Genome annotation GTF file"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "*.ioe",
+    "*.ioi",
+    "*_local_events.gtf"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Load genome annotation in GTF format into SUPPA2 generateEvents subcommand.",
+    "Extract transcript structures and identify all exonic features, promoter/terminator variants, and isoform-specific junctions.",
+    "Generate index of events (ioe) file enumerating transcript-level and local splicing events with event definitions.",
+    "Generate index of isoforms (ioi) file mapping each event to the set of isoforms that include or exclude it.",
+    "Filter and extract only local alternative splicing events (exon skipping, intron retention, alternative splice sites) into a separate GTF file.",
+    "Validation: verify that all three output files are produced with correct format and non-empty event/isoform mappings consistent with input annotation complexity."
+  ],
+  "missing_information": [
+    "No changelog or version history information is provided"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the three distinct output file artifacts produced by the SUPPA2 generateEvents subcommand when parsing a genome annotation GTF file?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "gtf-file-parsing",
+    "transcript-event-extraction",
+    "alternative-splicing-event-identification",
+    "isoform-structure-annotation",
+    "local-splicing-event-detection"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_suppa2/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SUPPA2_system",
+    "comp_generateEvents",
+    "comp_psiCalculation",
+    "arch_commandSubcommand",
+    "artifact_ioi",
+    "artifact_ioe",
+    "artifact_gtf_local",
+    "pub_suppa2_2018"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:comprna__SUPPA",
+  "task_description": "Implement the SUPPA2 generateEvents subcommand to parse a genome annotation GTF file and produce three named output artifacts: an ioe file (transcript events), an ioi file (event indices), and a gtf file containing local alternative splicing events.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Genome annotation GTF file",
+      "port_id": "annotation_gtf",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Parse a genome GTF file and generate three output artifacts (ioi, ioe, and gtf files) using the SUPPA2 generateEvents subcommand.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Index of events file",
+      "port_id": "ioe_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Index of isoforms file",
+      "port_id": "ioi_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GTF file with local alternative splicing events",
+      "port_id": "local_events_gtf",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "statistical-analysis",
+    "differential-abundance-analysis"
+  ],
+  "title": "Reconstruct the generateEvents command to produce ioe, ioi, and gtf artifacts from a GTF input",
+  "tools": [
+    "SUPPA2"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: ioe file (index of events) mapping transcripts to events, ioi file (index of isoforms) mapping events to isoforms, gtf file containing local alternative splicing events."
+  ],
+  "workflow_description": "1. Load genome annotation GTF file into SUPPA2 generateEvents subcommand. 2. Parse GTF to extract transcript structures and identify all transcript-level events (exon inclusion, alternative promoters, alternative terminators). 3. Generate ioe (index of events) output file mapping transcript identifiers to event definitions. 4. Generate ioi (index of isoforms) output file mapping events to isoforms. 5. Identify and extract local alternative splicing events (exon skipping, intron retention, alternative splice sites) from the annotation. 6. Generate gtf output file containing only local alternative splicing event coordinates."
+}

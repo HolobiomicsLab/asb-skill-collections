@@ -1,0 +1,302 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/cooltools-logo-futura.png",
+      "role": "figure",
+      "sha256": "726eacd3b3f3226502291e4a9ca7bfbec7a4cd263fe916798fdafb94baf17153"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "dd40b0ce0a98b1e9936f2244a8d5c26417a737bfa619cf5f660f140fad59e89c"
+    }
+  ],
+  "created_at": "2026-06-15T17:50:30.421402+00:00",
+  "crossref_doi": "10.1101/2022.10.31.514564",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Publicly available micro-C hESC cooler file bundled with cooltools",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Per-bin coverage track in bedGraph or tabular (CSV/TSV) format containing bin coordinates and sequencing depth values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Optional cooler file with stored total cis counts in coverage column",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "The cooler format is a sparse HDF5-based data model designed for efficient storage and access of high-resolution Hi-C matrices, with per-bin metadata and optional balancing weights.",
+    "Coverage computation measures sequencing depth per genomic bin and can optionally accumulate total intra-chromosomal (cis) contact counts across all genomic regions in the cooler file.",
+    "The micro-C hESC test dataset is a reduced-resolution sample bundled with cooltools to enable rapid prototyping and validation of analysis pipelines without downloading full-size datasets.",
+    "Per-bin coverage tracks are commonly exported as bedGraph (browser-compatible format) or tab-delimited tables with genomic coordinates (chrom, start, end) and a coverage or depth value column."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that a cooler test dataset is available in the cooltools package repository (e.g., at cooltools/data/ or similar documented location)",
+      "script_runs: cooltools.coverage command executes without errors on a valid cooler file input",
+      "file_format_is: output file is in bedGraph format or standard tabular format (TSV/CSV with named columns for chrom, start, end, and coverage)",
+      "field_present: output table contains at minimum the fields: chromosome, bin start, bin end, and coverage value",
+      "output_matches_reference: output structure and column ordering match the documented format described in cooltools coverage function docstring or CLI help text",
+      "value_in_range: coverage values are non-negative integers or floats representing valid read counts"
+    ],
+    "expert_review": [
+      "Assess whether the computed coverage values are biologically plausible given the input cooler file (e.g., coverage distribution is reasonable, no obvious computational artifacts)",
+      "Verify that marginalization/summation logic correctly aggregates contact matrix rows or columns into per-bin coverage without double-counting or systematic bias"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the documented output format for the cooltools.coverage function when applied to cooler files?: 'The recently-introduced cooler format readily handles storage of high-resolution datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The provided section text does not contain specific documentation of cooltools.coverage output format or examples demonstrating per-bin coverage track generation as bedGraph or tabular files.: '_No examples found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Publicly available micro-C hESC cooler file bundled with cooltools: 'New test dataset for micro-C from hESCs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Per-bin coverage track in bedGraph or tabular (CSV/TSV) format containing bin coordinates and sequencing depth values: 'cooltools sample for random downsampling, cooltools coverage for marginalization'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Optional cooler file with stored total cis counts in coverage column: 'coverage can store total cis counts in the cooler, and sampling can use cis counts'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] cooltools: 'cooltools provides a suite of computational tools with a paired python API'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] cooler: 'The recently-introduced cooler format readily handles storage of high-resolution datasets via a sparse data model.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'enabling high-resolution Hi-C analysis in Python'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific output file format (bedGraph, TSV, HDF5, or other) and column structure for cooltools.coverage are not explicitly documented in the provided discussion section: 'New tools: `cooltools sample` for random downsampling, `cooltools coverage` for marginalization.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit reference to a publicly available test cooler dataset bundled with cooltools or publicly deposited (e.g., on Zenodo or GEO) is provided in the discussion section: 'cooltools coverage for marginalization'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import cooltools; import cooler; import pandas as pd; c = cooler.Cooler(cooler.example_file()); cov = cooltools.coverage(c); cov_df = pd.DataFrame({'chrom': [c.bins()['chrom'].iloc[i] for i in range(len(cov))], 'start': c.bins()['start'].values, 'end': c.bins()['end'].values, 'coverage': cov}); cov_df.to_csv('coverage.bedGraph', sep='\\t', header=False, index=False)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "coverage.bedgraph",
+  "expected_outputs": [
+    "Per-bin coverage track in bedGraph or tabular (CSV/TSV) format containing bin coordinates and sequencing depth values",
+    "Optional cooler file with stored total cis counts in coverage column"
+  ],
+  "finding": "The provided section text does not contain specific documentation of cooltools.coverage output format or examples demonstrating per-bin coverage track generation as bedGraph or tabular files.",
+  "github_name": "open2c/cooltools",
+  "input_from": "task_001",
+  "inputs": [
+    "Publicly available micro-C hESC cooler file bundled with cooltools"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "cooler_file_loaded.txt",
+    "coverage_values.tsv",
+    "coverage.bedgraph"
+  ],
+  "linked_result_ids": [
+    "result_031"
+  ],
+  "methodology_summary": [
+    "Install cooltools in editable mode to access the bundled micro-C hESC test dataset and API functions.",
+    "Load the cooler file using the cooler library's read interface.",
+    "Invoke cooltools.coverage() to compute per-bin sequencing depth, optionally storing cis contact counts.",
+    "Export the coverage track to bedGraph or tabular format with genomic coordinates and depth values.",
+    "Validation: verify output file format matches bedGraph specification or tabular schema; confirm row count equals the number of bins in the cooler file; check that all coverage values are non-negative numbers.",
+    "References: source article (DOI: 10.1101/2022.10.31.514564)"
+  ],
+  "missing_information": [
+    "The specific output file format (bedGraph, TSV, HDF5, or other) and column structure for cooltools.coverage are not explicitly documented in the provided discussion section",
+    "No explicit reference to a publicly available test cooler dataset bundled with cooltools or publicly deposited (e.g., on Zenodo or GEO) is provided in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/lib_module"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the documented output format for the cooltools.coverage function when applied to cooler files?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "hi-c-coverage-track-computation",
+    "cooler-file-format-handling",
+    "bin-level-sequencing-depth-calculation",
+    "bedgraph-file-export",
+    "cis-contact-frequency-analysis"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_cooltools/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "cooltools_system",
+    "cooler_format",
+    "component_coverage",
+    "component_rearrange_cooler",
+    "dataset_microc_hesc",
+    "component_lib"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:open2c__cooltools",
+  "task_description": "Run the cooltools.coverage function on the publicly available micro-C hESC test dataset bundled with cooltools to generate a per-bin sequencing depth track and save the output as a bedGraph or tabular file matching the documented format.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Publicly available micro-C hESC cooler file bundled with cooltools",
+      "port_id": "test_cooler_file",
+      "resolved_via": null,
+      "source": "task_001/lib_module",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute cooltools.coverage on a bundled micro-C hESC cooler dataset and validate that output matches the documented per-bin coverage track format.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-bin coverage track in bedGraph or tabular format",
+      "port_id": "coverage_track",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Optional cooler file with stored total cis counts",
+      "port_id": "coverage_cis_counts",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reproduce the per-bin sequencing depth calculation using cooltools.coverage",
+  "tools": [
+    "cooltools",
+    "cooler",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Per-bin coverage track in bedGraph or tabular (CSV/TSV) format containing bin coordinates and sequencing depth values, Optional cooler file with stored total cis counts in coverage column."
+  ],
+  "workflow_description": "1. Install cooltools in development mode using pip install -e . to enable access to the bundled micro-C hESC test dataset. 2. Load the test cooler file (micro-C hESC) using the cooler library. 3. Call cooltools.coverage() on the loaded cooler object to compute per-bin sequencing depth, optionally specifying whether to store total cis counts in the cooler as indicated in the function signature. 4. Export the resulting coverage track to bedGraph or tabular format (CSV/TSV) containing bin coordinates and coverage values. 5. Validate the output file format and row counts match expected documentation."
+}

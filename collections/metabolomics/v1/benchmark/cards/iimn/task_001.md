@@ -1,0 +1,172 @@
+# SciTask Card: Reconstruct the module dispatch routing for LC, GC, IMS, and MS Imaging input types in mzmine
+
+- Task ID: `task_001`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T21:46:58.504224+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_iimn/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `information-extraction`, `data-processing`
+- GitHub: `mzmine/mzmine`
+- Quality: Score 2/5 — Coherent: false, placeholder, 6 grounding failures
+
+## Classification
+
+- Task kind: `component_reconstruction`
+- Article type: `software-tool`
+- Primary domain: `bioinformatics`
+
+## Research Question
+How does mzmine route input mass spectrometry data to the appropriate processing module based on the declared data type?
+
+## Connected Finding
+mzmine supports selective processing module dispatch across liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), and MS imaging (e.g., MALDI) data types, with coverage for most MS instruments.
+
+## Task Description
+Reconstruct the conditional routing logic that dispatches mass spectrometry input data to the appropriate processing module (LC Support, GC Support, IMS Support, or MS Imaging Support) based on declared data type, as defined in the mzmine architecture. Document the dispatch mechanism and decision criteria as a structured control flow.
+
+## Inputs
+- mzmine source code repository (github.com/mzmine/mzmine)
+
+## Expected Outputs
+- Control-flow diagram or pseudocode documenting the conditional routing logic for LC, GC, IMS, and MS Imaging module dispatch
+- Data-type classification schema and dispatch decision criteria
+
+## Expected Output File
+
+- `routing_dispatch_logic.md`
+
+## Landmark Outputs
+
+- `module_dispatch_code_excerpt.java`
+- `data_type_enum.java`
+- `routing_control_flow.txt`
+
+## Tools
+- mzmine
+- JDK 25
+- JavaFX 24
+
+## Skills
+- control-flow-diagram-synthesis
+- module-dispatch-architecture-analysis
+- data-type-classification-schema-design
+- java-source-code-inspection
+- conditional-routing-logic-extraction
+
+## Workflow Description
+1. Retrieve the mzmine repository (github.com/mzmine/mzmine) and locate the main entry point and module initialization code. 2. Identify the data-type declaration interface or enum that classifies input as LC, GC, IMS, or MS Imaging. 3. Trace the conditional branching logic (if/switch statements or factory pattern) that maps each data type to its corresponding processing module. 4. Extract the dispatch conditions, parameter checks, and fallback behavior. 5. Synthesize the routing logic as a control-flow diagram or pseudocode, documenting each pathway and the criteria that trigger it.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/CV.png` | figure | False |
+| `figures/MZmine_IIMN_logo_RGB.png` | figure | False |
+| `figures/anova_test.png` | figure | False |
+| `figures/logo300_mzmine.png` | figure | False |
+| `figures/logo300_mzmine_light.png` | figure | False |
+| `figures/logo300_mzmine_white.png` | figure | False |
+| `figures/logo300_mzwizard.png` | figure | False |
+| `figures/logo300_mzwizard_light.png` | figure | False |
+| `figures/logo300_mzwizard_white.png` | figure | False |
+| `figures/logo_mzmine.svg` | figure | False |
+| `figures/logo_mzmine_light.svg` | figure | False |
+| `figures/logo_mzmine_white.svg` | figure | False |
+| `figures/logo_mzwizard.svg` | figure | False |
+| `figures/logo_mzwizard_light.svg` | figure | False |
+| `figures/logo_mzwizard_white.svg` | figure | False |
+| `figures/logratio.png` | figure | False |
+| `figures/mac_installer_background.png` | figure | False |
+| `figures/mac_installer_background@2x.png` | figure | False |
+| `figures/mzmine-fbmn.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No changelog documenting recent changes or versions of mzmine dispatch logic is available
+- The specific mechanism by which mzmine selects LC, GC, IMS, or MS Imaging processing modules based on input data type is not described in the provided section text
+
+## Domain Knowledge
+- mzmine architecture separates processing pipelines by instrument type (LC, GC, IMS, MALDI); the dispatcher must detect and route input data to the correct module based on declared or inferred data characteristics.
+- Data-type declaration in mzmine typically occurs at file import or scan metadata inspection; routing logic often uses enums, factory patterns, or service registries to bind input types to module implementations.
+- The dispatch mechanism must handle fallback or multi-modal inputs (e.g., LC coupled to IMS); the routing logic may permit partial module chaining or raise validation errors for unsupported combinations.
+- mzmine supports most MS instruments and formats; the routing logic must be extensible to accommodate new instrument types without modifying core dispatcher code.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: JDK 25, JavaFX 24, Control-flow diagram or pseudocode documenting the conditional routing logic for LC, GC, IMS, and MS Imaging module dispatch, Data-type classification schema and dispatch decision criteria.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] How does mzmine route input mass spectrometry data to the appropriate processing module based on the declared data type?: 'Support includes liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), MS imaging (e.g., MALDI), and most MS instruments'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] mzmine supports selective processing module dispatch across liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), and MS imaging (e.g., MALDI) data types, with coverage for most MS instruments.: 'Support includes liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), MS imaging (e.g., MALDI), and most MS instruments'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [intro] mzmine source code repository (github.com/mzmine/mzmine): 'github.com/mzmine/mzmine'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [methods] Control-flow diagram or pseudocode documenting the conditional routing logic for LC, GC, IMS, and MS Imaging module dispatch: 'routing logic that selects the appropriate processing module (LC Support, GC Support, IMS Support, MS Imaging Support) based on the declared input data type'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [methods] Data-type classification schema and dispatch decision criteria: 'routing logic that selects the appropriate processing module based on the declared input data type'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [intro] mzmine: 'mzmine is an open-source software for mass spectrometry data processing'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [intro] JDK 25: 'JDK version-25-blue'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [intro] JavaFX 24: 'JavaFX version-24'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [discussion] No changelog documenting recent changes or versions of mzmine dispatch logic is available: '_No changelog found._'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [discussion] The specific mechanism by which mzmine selects LC, GC, IMS, or MS Imaging processing modules based on input data type is not described in the provided section text: 'No changelog found.'
+
+## Evaluation Strategy
+### Direct Checks
+- verify that github:mzmine__mzmine repository is accessible and contains README or documentation files
+- file_exists: locate README.md or similar documentation artifact in mzmine/mzmine repository
+- contains_substring: README or primary documentation contains explicit description of conditional routing logic for LC, GC, IMS, and MS Imaging module selection
+- contains_substring: documentation specifies the input data type parameter or field that triggers routing decisions
+- contains_substring: documentation describes at least one complete if-then or case-based routing rule mapping input type to processing module
+
+### Expert Review
+- assess whether the documented routing logic is complete and covers all declared module types (LC, GC, IMS, MS Imaging)
+- verify that the routing dispatch mechanism correctly distinguishes between supported chromatography and imaging modalities based on standard MS data formats or metadata fields
+- confirm that the routing logic is actually implemented as described in the README by sampling relevant source code (e.g., factory classes, plugin loaders, or main entry point)
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Execution Profile
+- **Compute tier:** trivial
+
+## Methodology Summary
+1. Clone or inspect the mzmine GitHub repository to locate the main entry point and module initialization code.
+2. Identify the data-type classification system (enum, interface, or metadata field) used to label input as LC, GC, IMS, or MS Imaging.
+3. Trace conditional branching logic (if/switch statements, factory methods, or service registries) that maps each data type to its processing module.
+4. Extract dispatch conditions, parameter validation checks, and fallback or error-handling behavior.
+5. Synthesize the routing logic as a control-flow diagram, decision tree, or pseudocode with all pathways and triggering criteria.
+6. Validation: Verify that the reconstructed routing logic accounts for all four supported data types (LC, GC, IMS, MS Imaging) and correctly documents the dispatch conditions reported in mzmine documentation.
+
+## Workflow Ports
+
+**Inputs:**
+
+- `mzmine_repo` — mzmine source code repository
+
+**Outputs:**
+
+- `routing_diagram` — Control-flow diagram or pseudocode of module dispatch logic
+- `dispatch_schema` — Data-type classification and routing decision criteria
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:mzmine__mzmine`
+- **Synthesized at:** 2026-06-15T21:49:02+00:00
+
+## Extraction Quality
+- Score: 2/5
+- Coherent: false
+- Placeholder detected: true
+- Groundedness failures (6):
+  - expected_outputs[0]: evidence_span not found in section 'methods' (value='Control-flow diagram or pseudocode documenting the condition', span='routing logic that selects the appropriate processing module')
+  - expected_outputs[1]: evidence_span not found in section 'methods' (value='Data-type classification schema and dispatch decision criter', span='routing logic that selects the appropriate processing module')
+  - tools[2]: evidence_span not found in section 'intro' (value='JavaFX 24', span='JavaFX version-24')
+  - research_question asks 'how does mzmine route input data' but the only evidence provided is that mzmine 'supports' LC, GC, IMS, and MS imaging—support does not explain the routing mechanism or 'declared data type' dispatch logic
+  - finding claims 'selective processing module dispatch' and routing 'based on declared input type' but the evidence_span only lists supported data types, not the routing mechanism itself
+  - missing_information[1] explicitly states the routing mechanism 'is not described in the provided section text,' yet the research_question, finding, and expected_outputs all presume documentation of this mechanism
+- Notes: This card attempts to frame a source-code-archaeology task as a documentation-extraction task. The research_question and finding describe a dispatch mechanism ('route input...based on declared data type'), but the only evidence provided is that mzmine supports multiple data types—not how the routing works. The missing_information field explicitly states the routing mechanism is absent from provided sections. The expected_outputs request artifacts (control-flow diagram, classification schema) that cannot be grounded in the 'intro' section text. Recommend: (1) Clarify whether the task is to extract existing documentation (unsuitable for this card) or to reverse-engineer code (requires source code as input, not just 'the intro'). (2) Rewrite research_question and finding to match what is actually grounded: 'What data types does mzmine support?' rather than 'How does it route them?' (3) Provide actual evidence_spans from documented code, architecture diagrams, or API references, or explicitly note that this is exploratory/reconstruction work. (4) Remove or qualify missing_information[1] if routing logic is genuinely absent—indicate whether it should be inferred from code inspection rather than extracted from text.
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

@@ -1,0 +1,10 @@
+name: Latent Dirichlet Allocation (LDA)
+slug: latent-dirichlet-allocation-lda
+evidence_spans:
+- Apply LDA to the processed spectra
+derived_from:
+- doi: 10.1093/bioinformatics/btx582
+  title: ms2lda
+source_repos:
+- vdhooftcompmet/MS2LDA
+schema_version: 0.2.0

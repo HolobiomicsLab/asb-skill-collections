@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that mass2adduct package is installable from github:kbseah__mass2adduct"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that built-in datasets 'adducts' and 'adducts2' are accessible via data(adducts) and data(adducts2)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: extdata/msi.csv is present in package"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_008",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_009",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "topAdducts() output is a structured table with at least columns for mass differe"
+    },
+    {
+      "id": "pf_010",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "all computed mass difference values are positive numbers (masses cannot be negat"
+    },
+    {
+      "id": "pf_011",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "topAdducts() table rows are sorted in descending order by occurrence count"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that mass2adduct package is installable from github:kbseah__mass2adduct",
+      "verify that built-in datasets 'adducts' and 'adducts2' are accessible via data(adducts) and data(adducts2)",
+      "verify file_exists: extdata/msi.csv is present in package",
+      "script_runs: msimat() successfully loads the CSV file and returns an object of class msimat",
+      "script_runs: massdiff() function executes on msimat object and returns object with classes data.frame and massdiff",
+      "script_runs: hist() method executes on massdiff object and returns object with classes histogram and massdiffhist",
+      "script_runs: adductMatch() function executes on histogram object to annotate known adducts",
+      "script_runs: topAdducts() function executes and produces ranked table of mass differences with adduct matches in descending order by occurrence, robust to dataset size variations",
+      "file_format_is: topAdducts() output is a structured table with at least columns for mass difference values, occurrence counts, and adduct annotations",
+      "value_in_range: all computed mass difference values are positive numbers (masses cannot be negative)",
+      "output_matches_reference: topAdducts() table rows are sorted in descending order by occurrence count"
+    ],
+    "expert_review": [
+      "chemical plausibility of matched adducts: verify that adductMatch() correctly identifies biologically-relevant adducts from the built-in datasets for the test dataset",
+      "appropriateness of mass difference histogram binning: confirm that histogram resolution is adequate to resolve distinct adduct types without over- or under-binning",
+      "correctness of massdiff calculation: verify that pairwise mass differences are computed exhaustively and accurately from the input mass list"
+    ]
+  },
+  "max_score": 11.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

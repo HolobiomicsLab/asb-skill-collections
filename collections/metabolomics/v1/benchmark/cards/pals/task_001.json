@@ -1,0 +1,370 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/annot_df.png",
+      "role": "figure",
+      "sha256": "ab9293633dd1b01f892c85e5529b6f6892645f77b0c59a6cdcec7741721ba09b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/int_df.png",
+      "role": "figure",
+      "sha256": "977675938611d366b1dbbbffb5160ef2bd813fdc05fc297c122ad3089169c5e6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "26ea63da24eef76b075614f2a23a6152475dfce509f6c4ab8230f3ccc2d8beed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_transparent.png",
+      "role": "figure",
+      "sha256": "e0f7f4798ee79ee640b1cbbb679f461f0b6b51b0ee1fb96b243eb252db90d2fe"
+    },
+    {
+      "indexable": false,
+      "path": "figures/output.png",
+      "role": "figure",
+      "sha256": "e9be339d1b2eaa1a93785cd4b8f788e9e76e2e5c76392ab4711e70573218cda5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/overall_schematic.png",
+      "role": "figure",
+      "sha256": "1b6442274e14d913cb03467f51a93987ce35d3486b8267e316ee60922379568d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "bee6c8abc440ab2bf1fa768a9ce883b542f853cbb7c9d3daa122ac5f98ff7115"
+    }
+  ],
+  "created_at": "2026-06-15T21:26:46.708623+00:00",
+  "crossref_doi": "10.1186/1471-2105-6-225",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Metabolomics peak dataset (intensity matrix: peaks \u00d7 samples)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pathway or metabolite set database (e.g., KEGG, HMDB, or custom collection)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Robustness comparison table (methods \u00d7 noise-level \u00d7 robustness-metric)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Robustness metric visualization (e.g., line plot or heatmap showing PALS vs. ORA vs. GSEA performance under noise)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "PLAGE (Pathway Level Analysis of Gene Expression) decomposes multivariate pathway activity using singular value decomposition of gene/metabolite expression within pathway members.",
+    "ORA (Over-Representation Analysis) tests pathway significance using hypergeometric distributions based on counts of significantly altered members, and is sensitive to missing or noisy low-abundance peaks.",
+    "GSEA (Gene Set Enrichment Analysis) ranks all features and tests cumulative enrichment; it is less sensitive to arbitrary significance thresholds but may lose power under high missing-data rates.",
+    "Metabolomics peak data exhibits inherent missingness (detection limits, instrument drift, ionization variability) that can degrade pathway analysis; robustness metrics should measure consistency of pathway rankings or effect sizes under systematic peak dropout.",
+    "True robustness evaluation requires controlled in-silico perturbation (noise injection, peak removal) applied consistently across all methods to isolate method-specific resilience from data quality."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:glasgowcompbio__PALS repository contains executable PALS implementation with PLAGE-based scoring",
+      "verify that a metabolomics peak dataset (with noise and missing peak variants) is available in the repository or a linked public deposit (Zenodo/GitHub/MassIVE/MetaboLights)",
+      "verify that ORA and GSEA implementations are available as callable tools or Python/R packages with pinned versions",
+      "verify that comparison script produces three sets of pathway/metabolite-set scores (PALS, ORA, GSEA) on identical input",
+      "verify output files contain quantitative robustness metrics (e.g., correlation, F1-score, or error rate) across noise levels and missing-peak percentages",
+      "robust to parameter choices: confirm that metrics show PALS with lower variance or higher accuracy than ORA and GSEA across at least two independent noise-injection or peak-removal regimes"
+    ],
+    "expert_review": [
+      "confirm that noise injection and missing-peak simulation strategies are methodologically sound and reproducible (e.g., Gaussian noise, random peak dropout percentages)",
+      "confirm that reported robustness advantage (PALS vs ORA/GSEA) is statistically significant and not attributable to tuning bias or parameter mismatch",
+      "confirm that the same metabolite-set annotations and pathway database are used for all three methods to ensure fair comparison"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does PALS demonstrate greater robustness to noise and missing peaks in metabolomics peak data compared to ORA and GSEA methods?: 'The results are found to be more robust to noise and missing peaks compared to the alternatives (ORA, GSEA). This is particularly important for metabolomics peak data, where noise and missing peaks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS exhibits greater robustness to noise and missing peaks compared to ORA and GSEA alternatives, with particular importance for metabolomics peak data where such artifacts are prevalent.: 'The results are found to be more robust to noise and missing peaks compared to the alternatives (ORA, GSEA). This is particularly important for metabolomics peak data, where noise and missing peaks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Metabolomics peak dataset (intensity matrix: peaks \u00d7 samples): 'metabolomics peak dataset'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pathway or metabolite set database (e.g., KEGG, HMDB, or custom collection): 'database queries of pathways'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Robustness comparison table (methods \u00d7 noise-level \u00d7 robustness-metric): 'more robust to noise and missing peaks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Robustness metric visualization (e.g., line plot or heatmap showing PALS vs. ORA vs. GSEA performance under noise): 'more robust to noise and missing peaks compared to the alternatives'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS (Pathway Activity Level Scoring): 'we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting software versions, dependencies, or reproducibility instructions is present: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Location and format of the metabolomics peak dataset used in the robustness comparison are not specified in the discussion: '[UNTRUSTED_DOCUMENT] (entire section contains only metadata and reference headers; no dataset URI or format given)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific versions or parameterizations of ORA and GSEA baseline implementations are not documented: '[UNTRUSTED_DOCUMENT] (section provides no methodological detail on baseline tool configuration)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Quantitative definitions of 'robustness' (e.g., metric type, threshold, statistical test) are not stated in the discussion section: '[UNTRUSTED_DOCUMENT] (section contains no results table, figure reference, or numerical claim)'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "robustness_comparison.csv",
+  "expected_outputs": [
+    "Robustness comparison table (methods \u00d7 noise-level \u00d7 robustness-metric)",
+    "Robustness metric visualization (e.g., line plot or heatmap showing PALS vs. ORA vs. GSEA performance under noise)"
+  ],
+  "finding": "PALS exhibits greater robustness to noise and missing peaks compared to ORA and GSEA alternatives, with particular importance for metabolomics peak data where such artifacts are prevalent.",
+  "github_name": "glasgowcompbio/PALS",
+  "input_from": null,
+  "inputs": [
+    "Metabolomics peak dataset (intensity matrix: peaks \u00d7 samples)",
+    "Pathway or metabolite set database (e.g., KEGG, HMDB, or custom collection)"
+  ],
+  "keywords": [
+    "pathway activity scoring",
+    "plage method",
+    "metabolomics peak detection",
+    "untargeted metabolomics",
+    "molecular families",
+    "mass2motifs",
+    "fragmentation spectra analysis"
+  ],
+  "landmark_outputs": [
+    "pals_original_scores.csv",
+    "ora_original_scores.csv",
+    "gsea_original_scores.csv",
+    "pals_noise_perturbed_scores.csv",
+    "ora_noise_perturbed_scores.csv",
+    "gsea_noise_perturbed_scores.csv"
+  ],
+  "linked_result_ids": [
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load metabolomics peak intensity matrix and pathway/metabolite set annotations.",
+    "Compute pathway activity scores using PALS (PLAGE decomposition), ORA (hypergeometric test), and GSEA (ranked enrichment).",
+    "Generate in-silico noise-perturbed datasets by randomly removing peaks at controlled rates (e.g., 10%, 25%, 50%).",
+    "Re-run all three methods on each perturbed dataset variant.",
+    "Calculate robustness metrics (e.g., Spearman rank correlation, or fraction of pathways with consistent effect-size direction) comparing original vs. perturbed results.",
+    "Validation: PALS exhibits higher rank-correlation stability and effect-size preservation across all noise levels compared to ORA and GSEA, reproducing the reported robustness advantage.",
+    "References: source article (DOI: 10.1186/1471-2105-6-225)"
+  ],
+  "missing_information": [
+    "No changelog documenting software versions, dependencies, or reproducibility instructions is present",
+    "Location and format of the metabolomics peak dataset used in the robustness comparison are not specified in the discussion",
+    "Specific versions or parameterizations of ORA and GSEA baseline implementations are not documented",
+    "Quantitative definitions of 'robustness' (e.g., metric type, threshold, statistical test) are not stated in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does PALS demonstrate greater robustness to noise and missing peaks in metabolomics peak data compared to ORA and GSEA methods?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "metabolite-set-activity-scoring",
+    "pathway-database-integration",
+    "robustness-analysis-under-perturbation",
+    "missing-data-simulation-in-omics",
+    "comparative-enrichment-method-evaluation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pals/synthesized_package",
+  "spine_condition_ids": [
+    "GSEA_baseline"
+  ],
+  "spine_entity_ids": [
+    "PALS_system",
+    "PALS_viewer",
+    "PLAGE_method",
+    "GSEA_baseline",
+    "robustness_result"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "benchmark-evaluation",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:glasgowcompbio__PALS",
+  "task_description": "Re-run PALS (PLAGE-based pathway activity scoring) alongside ORA and GSEA on the same metabolomics peak dataset and reproduce the reported finding that PALS is more robust to noise and missing peaks than either baseline method. Output a comparison report with robustness metrics.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Metabolomics peak intensity matrix (peaks \u00d7 samples)",
+      "port_id": "peak_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pathway or metabolite set database",
+      "port_id": "metabolite_db",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Reproduce the robustness comparison of PALS against ORA and GSEA on a metabolomics dataset with controlled noise and missing peak variations.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Robustness comparison table (methods \u00d7 noise-level \u00d7 metric)",
+      "port_id": "robustness_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Robustness visualization across noise levels",
+      "port_id": "robustness_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dimensionality-reduction",
+    "pathway-analysis",
+    "enrichment-analysis"
+  ],
+  "title": "Reproduce PALS robustness comparison against ORA and GSEA baselines",
+  "tools": [
+    "PALS (Pathway Activity Level Scoring)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load metabolomics peak dataset and pathway/metabolite set database. 2. Apply PALS decomposition using the PLAGE method to compute pathway activity scores. 3. Apply ORA (Over-Representation Analysis) on the same dataset using standard hypergeometric test. 4. Apply GSEA (Gene Set Enrichment Analysis) on the same dataset using ranked scoring approach. 5. Systematically introduce noise and missing peaks at controlled levels (e.g., 10%, 25%, 50% dropout) to the original peak data. 6. Re-run all three methods (PALS, ORA, GSEA) on each noise-perturbed dataset variant. 7. Compute robustness metrics (e.g., rank correlation, result stability, or effect size preservation) between original and perturbed results for each method. 8. Generate comparison table and visualization showing PALS robustness advantage over ORA and GSEA across noise levels."
+}

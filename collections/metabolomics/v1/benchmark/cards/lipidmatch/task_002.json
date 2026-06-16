@@ -1,0 +1,473 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon2.png",
+      "role": "figure",
+      "sha256": "fbd43b41797914abf57f7ecac60c7732200bd9460cf329893364e998b47fd5a0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon3.png",
+      "role": "figure",
+      "sha256": "d82a19c38f3317dff6616e14522d6165284bca0ce392a6844d9ca93f496bdf34"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon4.png",
+      "role": "figure",
+      "sha256": "304f01f87477acee5c7fac2683e60e0d558df82c6e5fb1f1f2e8325c756da79e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidPioneer_Icon.png",
+      "role": "figure",
+      "sha256": "eb23c87a3bd6a161a92944bfa4c032831615db48d187961b4befa3296a21dcb7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidPioneer_Icon2.png",
+      "role": "figure",
+      "sha256": "87b3b9b6c24f809f5dc05bfed6e8c0af7482997dd3d1f2747eecd1bb12613768"
+    },
+    {
+      "indexable": false,
+      "path": "figures/adwaita.png",
+      "role": "figure",
+      "sha256": "2481804d5e75e115991f240b76ba921c205c703fa729c5b3c1691f9ce7557828"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ambiance.png",
+      "role": "figure",
+      "sha256": "a9b6fc7574b456e8444ee205d7f49c5f970fbdbd41bfe83351d388c5c8470e2c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/aqua.png",
+      "role": "figure",
+      "sha256": "ff14e41e680f4030cc611e3f35d08741d9343f489d7f1cf59f5178d0eebe42ef"
+    },
+    {
+      "indexable": false,
+      "path": "figures/arrowStyles.png",
+      "role": "figure",
+      "sha256": "64b54c40e2f61280c5e860427aba5b537e31a9fbb9d21893f99287c0612586c2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/baghira.png",
+      "role": "figure",
+      "sha256": "5d4136bc61c859c5b3661e93f8e866b9500ac3986f46a73d364841e1ff950bb9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/browse.png",
+      "role": "figure",
+      "sha256": "ff29ba02d749bfb7e409d2a5df1ecadd229e9e9266562bfa5bc79002d9771e97"
+    },
+    {
+      "indexable": false,
+      "path": "figures/browseTree.png",
+      "role": "figure",
+      "sha256": "f167c5a8191171fc526070067b35d094034e863663a95ef4a201df94a0ab2bf4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bwidget.png",
+      "role": "figure",
+      "sha256": "9e76c91f4b21bed749b75b597d2bd1b85a5b51c19e16a75869854698c800d582"
+    },
+    {
+      "indexable": false,
+      "path": "figures/config.png",
+      "role": "figure",
+      "sha256": "d3d29dc91af92d7e448ee607ed045a8b42c52251f66b91a717266f0a4bbae4aa"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dirViewer.png",
+      "role": "figure",
+      "sha256": "49ea6516bebda22cfd4b605e0889473036cb23cb790ccd0e9decc13af9f9308a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dust.png",
+      "role": "figure",
+      "sha256": "4a62ef7ede30a0b76c8a6b92ade71c8585047936fe3f66f1c0faa1924a51e3bd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dustSand.png",
+      "role": "figure",
+      "sha256": "d6e3ae873a8c4eabd193961c89867cd4e253bb74cfaa84ec8664bef9be4cadc9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/embeddedWindows.png",
+      "role": "figure",
+      "sha256": "07c2dd2dfe970cfa43dfebd06ea6638e88335888d095cb9b459f6e9f4219392b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/embeddedWindows_tile.png",
+      "role": "figure",
+      "sha256": "98a75dcb881324558602cd4724632caa86c80a49f2ac9a70e1f7621a84b29e77"
+    },
+    {
+      "indexable": false,
+      "path": "figures/scatterplot3d.png",
+      "role": "figure",
+      "sha256": "1836bf22129af1a36967a06ead59f6d6b99b997db7dcfc8d0e4b15a60b8c7283"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "667b13f5130571fe8b138e41a30bd73408e68c8552d2ae6f7a9b97f031cc2f6a"
+    }
+  ],
+  "created_at": "2026-06-16T06:03:34.399740+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_001.expected_outputs[0]: Summary report documenting distinct lipid species count, distinct lipid-type category count, and threshold validation (\u2265500,000 species, \u226560 types)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Experimental fragment m/z peaklist file (from Q-Exactive orbitrap or Q-TOF UHPLC-HRMS/MS, e.g., CSV table with m/z and intensity columns)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LipidMatch in-silico fragmentation library CSV files (covering 500,000+ lipid species across 60+ lipid types)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Matched lipid identifications table (CSV or TSV) with columns: lipid name/class, experimental m/z, library m/z, mass error, match score, and confidence metrics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "LipidMatch relies on matching experimental fragment m/z values against pre-computed in-silico fragmentation patterns; accuracy depends critically on instrument mass calibration and the ppm tolerance setting used during matching.",
+    "The library covers over 500,000 lipid species across 60+ classes; matching quality varies by lipid class and ionization mode (positive/negative).",
+    "Q-Exactive orbitrap and Q-TOF instruments produce different mass accuracy profiles; Q-Exactive typically achieves <5 ppm error while Q-TOF instruments may have wider tolerance windows.",
+    "LipidMatch is format-agnostic for peakfiles but does not currently support Waters instrument output; input peaklists must be from MZmine, XCMS, MS-DIAL, or Compound Discoverer preprocessing."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that inputs include a peaklist file in a supported format (mzML, mzXML, or CSV with m/z and intensity columns) from Q-Exactive or Q-TOF instrument",
+      "verify that inputs include at least one in-silico library .csv file from the LipidMatch repository or a user-generated library with required columns (lipid name, adduct, theoretical m/z)",
+      "verify that the matching output table file exists and is in CSV or tabular format",
+      "verify that output table contains at least the following named columns: matched lipid identifier, experimental m/z, theoretical m/z, m/z error (ppm or Da), matched fragment count, confidence score or ranking",
+      "verify that all rows in output table have non-null values in the m/z error field and that error values are numeric and within a biologically plausible range (typically \u2264 5\u201310 ppm for high-resolution instruments)",
+      "verify that the LipidMatch matching script runs without fatal errors when executed with the provided peaklist and library files",
+      "verify that row count of output table is greater than zero (at least one lipid matched)",
+      "byte-for-byte match of output against a reference result file (if a reference matched-identifications table from a published validation is deposited) or expert review of match quality"
+    ],
+    "expert_review": [
+      "assess whether matched lipid identifications are chemically and biochemically plausible given the sample type and ionization mode",
+      "assess whether m/z error distribution across all matched fragments is reasonable and consistent with instrument calibration and resolution",
+      "assess whether the number of matched lipids and their relative abundances are consistent with expected lipidome composition for the sample type",
+      "verify that the matching logic correctly applies mass tolerance thresholds and fragment matching rules as documented in the LipidMatch method",
+      "assess whether any false-positive or false-negative matches are evident by comparing against independent lipid annotations (if available from the same sample)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does LipidMatch match experimental fragment m/z values to in-silico library m/z values to identify lipids?: 'LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch performs lipid identification by matching experimental fragment m/z values against simulated m/z values from in-silico fragmentation libraries containing over 500,000 lipid species across over 60 lipid types.: 'LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values using in-silico fragmentation libraries of over 500,000 lipid species across'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Experimental fragment m/z peaklist file (from Q-Exactive orbitrap or Q-TOF UHPLC-HRMS/MS, e.g., CSV table with m/z and intensity columns): 'LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch in-silico fragmentation library CSV files (covering 500,000+ lipid species across 60+ lipid types): 'in-silico fragmentation libraries of over 500,000 lipid species across over 60 lipid types'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Matched lipid identifications table (CSV or TSV) with columns: lipid name/class, experimental m/z, library m/z, mass error, match score, and confidence metrics: 'LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch: 'LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Q-Exactive orbitrap: 'tested and validated using Q-Exactive orbitrap UHPLC-HRMS/MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Agilent Q-TOF UHPLC-HRMS/MS: 'Agilent, Bruker and SCIEX Q-TOF UHPLC-HRMS/MS experiments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Bruker Q-TOF UHPLC-HRMS/MS: 'Agilent, Bruker and SCIEX Q-TOF UHPLC-HRMS/MS experiments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SCIEX Q-TOF UHPLC-HRMS/MS: 'Agilent, Bruker and SCIEX Q-TOF UHPLC-HRMS/MS experiments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is provided: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "lipidmatch.match",
+      "--experimental",
+      "{inputs.experimental_mz_peaklist}",
+      "--library",
+      "{inputs.lipidmatch_library}",
+      "--output",
+      "matched_lipids_{task_id}.csv"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [
+      "Q-Exactive",
+      "Agilent Q-TOF",
+      "Bruker Q-TOF",
+      "SCIEX Q-TOF"
+    ],
+    "compute_tier": "light",
+    "open_source_alternatives": [
+      {
+        "closed": "MZmine",
+        "expected_divergence": "",
+        "oss": "XCMS"
+      },
+      {
+        "closed": "Compound Discoverer",
+        "expected_divergence": "",
+        "oss": "MS-DIAL"
+      }
+    ]
+  },
+  "expected_artifact_name": "matched_lipids.csv",
+  "expected_outputs": [
+    "Matched lipid identifications table (CSV or TSV) with columns: lipid name/class, experimental m/z, library m/z, mass error, match score, and confidence metrics"
+  ],
+  "finding": "LipidMatch performs lipid identification by matching experimental fragment m/z values against simulated m/z values from in-silico fragmentation libraries containing over 500,000 lipid species across over 60 lipid types.",
+  "github_name": "GarrettLab-UF/LipidMatch",
+  "input_from": "task_001",
+  "inputs": [
+    "task_001.expected_outputs[0]: Summary report documenting distinct lipid species count, distinct lipid-type category count, and threshold validation (\u2265500,000 species, \u226560 types)",
+    "Experimental fragment m/z peaklist file (from Q-Exactive orbitrap or Q-TOF UHPLC-HRMS/MS, e.g., CSV table with m/z and intensity columns)",
+    "LipidMatch in-silico fragmentation library CSV files (covering 500,000+ lipid species across 60+ lipid types)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "experimental_peaklist_loaded.csv",
+    "library_fragments_indexed.csv",
+    "matched_lipids.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_004",
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Load experimental fragment m/z peaklist from Q-Exactive or Q-TOF instrument output",
+    "Load LipidMatch pre-computed in-silico fragmentation library (500,000+ species, 60+ lipid classes)",
+    "Apply m/z matching algorithm with mass tolerance threshold to compare experimental fragments against library entries",
+    "Score and rank candidate lipid matches by similarity and confidence metrics",
+    "Validation: output table contains matched lipid identifications with m/z error within instrument tolerance specification and match scores above confidence threshold"
+  ],
+  "missing_information": [
+    "No changelog or version history is provided"
+  ],
+  "parameters": [],
+  "primary_domain": "lipidomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does LipidMatch match experimental fragment m/z values to in-silico library m/z values to identify lipids?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "mass-spectrometry-fragment-matching",
+    "lipid-library-annotation-from-mz",
+    "mass-accuracy-tolerance-calibration",
+    "hrms-data-format-parsing",
+    "lipid-identification-scoring"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_lipidmatch/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "lipidmatch_system",
+    "insilico_fragmentation_library",
+    "mz_matching_engine",
+    "user_library_integration",
+    "instrument_q_exactive",
+    "result_library_coverage",
+    "result_waters_not_supported"
+  ],
+  "subdomains": [
+    "lipidomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:GarrettLab-UF__LipidMatch",
+  "task_description": "Given experimental fragment m/z values from a Q-Exactive or Q-TOF peaklist file and LipidMatch in-silico library CSV files, apply LipidMatch matching logic to produce a table of matched lipid identifications with m/z tolerance filtering.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Experimental fragment m/z peaklist file (Q-Exactive or Q-TOF)",
+      "port_id": "experimental_mz_peaklist",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LipidMatch in-silico fragmentation library CSV files",
+      "port_id": "lipidmatch_library",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the LipidMatch m/z matching algorithm to match experimental fragment peaks against in-silico lipid library entries and output a ranked table of lipid identifications.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Matched lipid identifications table with m/z and quality metrics",
+      "port_id": "matched_lipids",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "high-resolution-ms",
+    "lc-ms",
+    "metabolite-identification",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct the fragment m/z matching engine that maps experimental to library values",
+  "tools": [
+    "LipidMatch",
+    "Q-Exactive orbitrap",
+    "Agilent Q-TOF UHPLC-HRMS/MS",
+    "Bruker Q-TOF UHPLC-HRMS/MS",
+    "SCIEX Q-TOF UHPLC-HRMS/MS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Bruker Q-TOF UHPLC-HRMS/MS, SCIEX Q-TOF UHPLC-HRMS/MS."
+  ],
+  "workflow_description": "1. Load experimental fragment m/z values from a peaklist file (Q-Exactive or Q-TOF format, e.g., CSV or mzML-derived table). 2. Load LipidMatch in-silico fragmentation library CSV files covering the 500,000+ lipid species across 60+ lipid types. 3. Apply LipidMatch m/z matching algorithm: compare each experimental m/z against library fragments using mass tolerance thresholds to identify candidate lipid matches. 4. Output matched lipid identifications as a structured table with lipid name, class, m/z, and match quality metrics."
+}

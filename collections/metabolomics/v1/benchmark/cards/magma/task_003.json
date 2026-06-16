@@ -1,0 +1,356 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/NLeSC/MAGMa",
+      "locator_id": "gh_nlesc_magma",
+      "locator_kind": "github",
+      "name": "NLeSC/MAGMa",
+      "prose": "NLeSC/MAGMa repository (GitHub)",
+      "score": 0.5,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/ESCIENCE_logo_C_nl_small_cyanblack.png",
+      "role": "figure",
+      "sha256": "104646ff81ee4600d919e14864067bbe19a46009997a63e709145186db87d86f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nlesc.jpg",
+      "role": "figure",
+      "sha256": "ce1c0d7d06029965b49527cd659c444b9aa2c6f2cf0099fd922b6f30fd61c0e3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nmc.png",
+      "role": "figure",
+      "sha256": "fa530f7aadcec8c9b041bc4886afdddf73b99b8deac4ec92403edecc42158a1b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_0_aaaaaa_40x100.png",
+      "role": "figure",
+      "sha256": "9a8492a580bf85d3e98ae8861fbd45567e5a1f83eeafcf9574da0399d5f602ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_0_eeeeee_40x100.png",
+      "role": "figure",
+      "sha256": "a86f3a2b5b124bfca91a6ca96f44f9b1ce04e34ed3fc7f6313ab2ce2cc030c4b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_55_c0402a_40x100.png",
+      "role": "figure",
+      "sha256": "ec42d64ef88ef8efcc56f44f74cd162bb6bab14c8ed88ac3b361a6a622eecbfc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_55_eeeeee_40x100.png",
+      "role": "figure",
+      "sha256": "a86f3a2b5b124bfca91a6ca96f44f9b1ce04e34ed3fc7f6313ab2ce2cc030c4b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_100_f8f8f8_1x400.png",
+      "role": "figure",
+      "sha256": "6e26bee28fa44d1d46cba6101120a011b26c7b18d2b8ef98799e8d9acb3e7ee7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_35_dddddd_1x400.png",
+      "role": "figure",
+      "sha256": "c78e86894dc105b0acbfc824c8d84764a1e66d943aa940c4a5efb9f585432e11"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_60_eeeeee_1x400.png",
+      "role": "figure",
+      "sha256": "96de36a90580c09160c0ad471622b5eead5e0800113071d5450aba02879d3ecb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_inset-hard_75_999999_1x100.png",
+      "role": "figure",
+      "sha256": "a705209de7d974f8df5a468f93a95a2192399ff22f8920c42af67225505882eb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_inset-soft_50_c9c9c9_1x100.png",
+      "role": "figure",
+      "sha256": "9f7e3cd2c01fc23b2c4b085488d2e909739ccfda3f938665c820e8ba40eb0c5a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_3383bb_256x240.png",
+      "role": "figure",
+      "sha256": "ffd288472dc15e2f77f90a835ded1d117f336d39021889968b41a064bd120e8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_454545_256x240.png",
+      "role": "figure",
+      "sha256": "cb36e80beaf2a527d463da552a5c679a46c4ff8c881318a194bb0ccb61cb2d5c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_70b2e1_256x240.png",
+      "role": "figure",
+      "sha256": "68c0578580411218f323ef69e1d52b4de7292afdc1b942aebb20afa0127dbd82"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_999999_256x240.png",
+      "role": "figure",
+      "sha256": "5127e3620735237313c23cca2b80a17f716c87ef371eb85086e7dd8a256a20c8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_fbc856_256x240.png",
+      "role": "figure",
+      "sha256": "016b41155ac08b5c2d9f01d7ec127621417e103e620fe9127f09d3a2945ee4b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "728f5cdb8fddbed5c636832db5e7f3181f5bb5bda8141b9205c8e52574ccb952"
+    }
+  ],
+  "created_at": "2026-06-16T07:32:39.548179+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NLeSC/MAGMa repository (GitHub)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "OpenAPI 3.0 specification document (JSON or YAML) describing joblauncher HTTP API contract",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "OpenAPI 3.0 specification format and schema validation conventions for HTTP API documentation.",
+    "RESTful API design patterns: URL path structure, HTTP methods (GET, POST, PUT, DELETE), and request/response payload serialization in Python web frameworks.",
+    "joblauncher is a component within the MAGMa metabolomics pipeline responsible for submitting and managing computational jobs via HTTP endpoints.",
+    "Python introspection techniques: examining function signatures, type hints, decorators, and route definitions to reverse-engineer API contracts from source code."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that joblauncher source files are present in github:NLeSC/MAGMa repository under a joblauncher/ or equivalent subdirectory",
+      "file_format_is: verify that produced artifact is valid JSON or YAML (OpenAPI 3.0 or 3.1 specification)",
+      "contains_substring: verify that output schema contains at least one 'paths' or 'endpoints' key documenting HTTP routes",
+      "contains_substring: verify that output schema declares HTTP methods (GET, POST, PUT, DELETE, PATCH) for joblauncher endpoints",
+      "contains_substring: verify that output schema includes 'components' or 'definitions' section with request/response model schemas",
+      "script_runs: verify that produced OpenAPI artifact passes validation against openapi-generator or swagger-cli validate command without fatal errors"
+    ],
+    "expert_review": [
+      "Verify that extracted endpoint signatures (paths, parameters, request bodies, response codes) accurately reflect joblauncher source code; require spot-check of 3+ endpoints against raw implementation",
+      "Assess completeness of parameter documentation (required vs optional, data types, constraints) relative to actual function signatures in joblauncher source",
+      "Evaluate semantic accuracy of request and response schema definitions against actual data structures used in joblauncher handlers"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the HTTP endpoints, request/response schemas, and authentication mechanisms exposed by the joblauncher webservice component in the MAGMa project?: 'joblauncher - Webservice to execute jobs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The MAGMa project includes a joblauncher subproject that functions as a webservice to execute jobs, serving as the interface for triggering MAGMa calculations.: 'joblauncher - Webservice to execute jobs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NLeSC/MAGMa repository (GitHub): 'https://github.com/NLeSC/MAGMa'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] OpenAPI 3.0 specification document (JSON or YAML) describing joblauncher HTTP API contract: 'To contribute contact me via Github issue or pull request at https://github.com/NLeSC/MAGMa'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MAGMa: 'MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documentation found in the discussion section.: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit documentation or design specifications for joblauncher HTTP API contract are referenced in the provided discussion text.: 'Source: github:NLeSC__MAGMa'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "joblauncher_openapi.json",
+  "expected_outputs": [
+    "OpenAPI 3.0 specification document (JSON or YAML) describing joblauncher HTTP API contract"
+  ],
+  "finding": "The MAGMa project includes a joblauncher subproject that functions as a webservice to execute jobs, serving as the interface for triggering MAGMa calculations.",
+  "github_name": "NLeSC/MAGMa",
+  "input_from": "task_001",
+  "inputs": [
+    "NLeSC/MAGMa repository (GitHub)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "joblauncher_endpoints.txt",
+    "joblauncher_schemas.json",
+    "joblauncher_openapi.json"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_007",
+    "result_008"
+  ],
+  "methodology_summary": [
+    "Clone the NLeSC/MAGMa repository and locate joblauncher source files.",
+    "Parse HTTP route definitions and endpoint handlers to extract paths, methods, and parameter names.",
+    "Analyze function signatures and type hints to infer request and response payload schemas.",
+    "Map extracted metadata into OpenAPI 3.0 format with complete endpoint documentation.",
+    "Validation: OpenAPI specification is structurally valid JSON/YAML and all joblauncher endpoints are present and accurately documented."
+  ],
+  "missing_information": [
+    "No changelog documentation found in the discussion section.",
+    "No explicit documentation or design specifications for joblauncher HTTP API contract are referenced in the provided discussion text."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the HTTP endpoints, request/response schemas, and authentication mechanisms exposed by the joblauncher webservice component in the MAGMa project?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "api-specification-extraction",
+    "http-endpoint-identification",
+    "openapi-schema-generation",
+    "python-source-code-analysis",
+    "rest-api-contract-documentation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_magma/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MAGMa_System",
+    "MAGMa_JobLauncher_Component"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "information-extraction",
+    "data-processing"
+  ],
+  "synthesized_from": "github:NLeSC__MAGMa",
+  "task_description": "Inspect the MAGMa joblauncher component source files in the NLeSC/MAGMa repository and reconstruct its HTTP API contract by extracting endpoint definitions, request/response schemas, and parameters. Produce a machine-readable OpenAPI 3.0 specification document.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NLeSC/MAGMa repository",
+      "port_id": "magma_repo",
+      "resolved_via": null,
+      "source": "task_001/component_manifest",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Inspect the joblauncher source code in github:NLeSC/MAGMa and produce an OpenAPI 3.0 or JSON schema artifact documenting all exposed HTTP endpoints, methods, request parameters, response structures, and authentication requirements.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "OpenAPI 3.0 specification for joblauncher API",
+      "port_id": "openapi_spec",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "in-silico-fragmentation",
+    "metabolite-identification",
+    "database-annotation",
+    "spectral-library-matching"
+  ],
+  "title": "Implement the joblauncher webservice component interface for MAGMa job submission",
+  "tools": [
+    "MAGMa"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Clone the NLeSC/MAGMa repository from GitHub. 2. Locate and examine joblauncher source files (Python, configuration, and route definitions) to identify all HTTP endpoints, HTTP methods, URL patterns, and parameter names. 3. Extract request and response payload structures by analyzing function signatures, type hints, and serialization logic in the joblauncher codebase. 4. Map endpoint paths, methods, parameters (query, path, body), and response schemas into OpenAPI 3.0 format. 5. Validate the generated OpenAPI specification for structural correctness and completeness against the observed source code."
+}

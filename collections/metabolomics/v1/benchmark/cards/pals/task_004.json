@@ -1,0 +1,335 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/annot_df.png",
+      "role": "figure",
+      "sha256": "ab9293633dd1b01f892c85e5529b6f6892645f77b0c59a6cdcec7741721ba09b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/int_df.png",
+      "role": "figure",
+      "sha256": "977675938611d366b1dbbbffb5160ef2bd813fdc05fc297c122ad3089169c5e6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "26ea63da24eef76b075614f2a23a6152475dfce509f6c4ab8230f3ccc2d8beed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_transparent.png",
+      "role": "figure",
+      "sha256": "e0f7f4798ee79ee640b1cbbb679f461f0b6b51b0ee1fb96b243eb252db90d2fe"
+    },
+    {
+      "indexable": false,
+      "path": "figures/output.png",
+      "role": "figure",
+      "sha256": "e9be339d1b2eaa1a93785cd4b8f788e9e76e2e5c76392ab4711e70573218cda5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/overall_schematic.png",
+      "role": "figure",
+      "sha256": "1b6442274e14d913cb03467f51a93987ce35d3486b8267e316ee60922379568d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "bee6c8abc440ab2bf1fa768a9ce883b542f853cbb7c9d3daa122ac5f98ff7115"
+    }
+  ],
+  "created_at": "2026-06-15T21:26:46.708623+00:00",
+  "crossref_doi": "10.1186/1471-2105-6-225",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reference metabolomics dataset: peak intensity matrix (samples \u00d7 features) and associated pathway annotations (metabolite-to-pathway membership table)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Rank-order stability metrics: a table with noise level (% Gaussian + % peak removal) as rows and Spearman/Kendall correlation coefficient and top-K retention percentage as columns",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Stability curve plot: x-axis = noise/peak-removal level, y-axis = correlation coefficient or retention %; separate lines for noise alone, peak removal alone, and combined perturbation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "PALS uses the PLAGE (Pathway Level Analysis of Gene Expression) decomposition method, which is sensitive to input data integrity and mass spectrometry peak quality.",
+    "Gaussian noise in metabolomics simulates instrument detector noise and baseline drift; peak removal simulates missed peaks due to low S/N ratio or chromatographic co-elution.",
+    "Rank-order stability (preserved top-K pathways or Spearman \u03c1 \u2265 0.8) is the standard robustness criterion in metabolomics pathway analysis, as absolute scores may shift but biologically relevant pathways should remain highly ranked.",
+    "PALS robustness advantage over ORA and GSEA depends on the decomposition preserving pathway activity signal under perturbation; this property must be empirically validated across noise regimes."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that input metabolomics dataset file exists in glasgowcompbio/PALS repository or is a publicly deposited reference dataset with accession or DOI",
+      "verify that PALS software can be installed and executed from github:glasgowcompbio/PALS source",
+      "verify that noise injection script produces output files with Gaussian noise applied at each specified level (e.g., SNR = 10, 5, 2, 1) \u2014 file_exists and file_format_is CSV or HDF5",
+      "verify that peak removal simulation script executes without error and produces degraded datasets with 5%, 10%, 20%, 50% random peak removal \u2014 script_runs and output_matches_reference structure",
+      "verify that pathway rank-order stability metric (e.g., Spearman correlation or Kendall \u03c4 of top-N pathway scores) is computed for each noise/peak-removal condition relative to clean-data baseline \u2014 value_in_range [0, 1]",
+      "verify that stability scores decrease monotonically or show expected degradation pattern as noise and peak removal increase \u2014 robust to parameter choices within reasonable noise and removal ranges",
+      "verify that final summary table contains columns: [noise_level, peak_removal_percent, top_N_pathways_corr, rank_stability_score, pathway_count_affected] with numeric values populated \u2014 field_present and row_count_equals \u2265 number of noise/removal combinations tested"
+    ],
+    "expert_review": [
+      "validate that the choice of noise model (Gaussian with specified SNR levels) and peak-removal mechanism (random selection) are appropriate for assessing metabolomics data robustness; confirm alignment with experimental noise profiles in LC-MS/MS data",
+      "assess whether the rank-order stability metric (e.g., Spearman \u03c1 or Kendall \u03c4) and the choice of top-N pathways (N=5, 10, etc.) capture clinically or biologically meaningful shifts in pathway prioritization",
+      "review whether observed stability patterns (e.g., PALS outperforming ORA/GSEA under noise, as claimed in literature) are replicated; interpret any deviations and assess whether they support or contradict the robustness finding"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the rank-order stability of top-scoring pathways in PALS degrade as Gaussian noise and random peak removal increase in severity across a metabolomics dataset?: 'The results are found to be more robust to noise and missing peaks compared to the alternatives (ORA, GSEA). This is particularly important for metabolomics peak data, where noise and missing peaks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS demonstrates robustness to noise and missing peaks in metabolomics data, outperforming ORA and GSEA alternatives on these dimensions.: 'The results are found to be more robust to noise and missing peaks compared to the alternatives (ORA, GSEA).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Reference metabolomics dataset: peak intensity matrix (samples \u00d7 features) and associated pathway annotations (metabolite-to-pathway membership table): 'metabolomics peak data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Rank-order stability metrics: a table with noise level (% Gaussian + % peak removal) as rows and Spearman/Kendall correlation coefficient and top-K retention percentage as columns: 'robust to noise and missing peaks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Stability curve plot: x-axis = noise/peak-removal level, y-axis = correlation coefficient or retention %; separate lines for noise alone, peak removal alone, and combined perturbation: 'robust to noise and missing peaks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS (Pathway Activity Level Scoring): 'we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history documented: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Exact synthesis/documentation date provided (2026-06-15T21:26:44+00:00) but no commit hash, branch, or software version tag specified for glasgowcompbio/PALS source: 'Synthesized at: 2026-06-15T21:26:44+00:00'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "pathway_stability_metrics.csv",
+  "expected_outputs": [
+    "Rank-order stability metrics: a table with noise level (% Gaussian + % peak removal) as rows and Spearman/Kendall correlation coefficient and top-K retention percentage as columns",
+    "Stability curve plot: x-axis = noise/peak-removal level, y-axis = correlation coefficient or retention %; separate lines for noise alone, peak removal alone, and combined perturbation"
+  ],
+  "finding": "PALS demonstrates robustness to noise and missing peaks in metabolomics data, outperforming ORA and GSEA alternatives on these dimensions.",
+  "github_name": "glasgowcompbio/PALS",
+  "input_from": "task_002",
+  "inputs": [
+    "Reference metabolomics dataset: peak intensity matrix (samples \u00d7 features) and associated pathway annotations (metabolite-to-pathway membership table)"
+  ],
+  "keywords": [
+    "pathway activity scoring",
+    "plage method",
+    "metabolomics peak detection",
+    "untargeted metabolomics",
+    "molecular families",
+    "mass2motifs",
+    "fragmentation spectra analysis"
+  ],
+  "landmark_outputs": [
+    "clean_baseline_pathway_scores.csv",
+    "perturbed_datasets_pathways_scores_*.csv",
+    "rank_correlation_matrix.csv",
+    "top_k_retention_table.csv"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_003",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Load reference metabolomics dataset and pathway annotations.",
+    "Run PALS on clean unperturbed data; record and rank pathway activity scores as baseline.",
+    "Systematically generate perturbed datasets by injecting Gaussian noise and removing random peaks across multiple intensity levels.",
+    "Run PALS on each perturbed dataset using identical decomposition parameters; record ranked pathway scores.",
+    "Compute rank-order correlations (Spearman \u03c1, Kendall \u03c4) and top-K retention percentages between perturbed and baseline rankings.",
+    "Validation: confirm that pathway rank-order correlation remains \u2265 0.80 and top-5 pathway retention \u2265 80% under combined noise and peak-removal up to 10% intensity threshold, consistent with reported PALS robustness advantage.",
+    "References: source article (DOI: 10.1186/1471-2105-6-225)"
+  ],
+  "missing_information": [
+    "No changelog or version history documented",
+    "Exact synthesis/documentation date provided (2026-06-15T21:26:44+00:00) but no commit hash, branch, or software version tag specified for glasgowcompbio/PALS source"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/pathway_scores_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the rank-order stability of top-scoring pathways in PALS degrade as Gaussian noise and random peak removal increase in severity across a metabolomics dataset?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "metabolomics-noise-perturbation-simulation",
+    "pathway-rank-stability-assessment",
+    "peak-removal-robustness-testing",
+    "pathway-activity-decomposition-via-plage",
+    "rank-order-correlation-analysis"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pals/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "PALS_system",
+    "PALS_viewer",
+    "robustness_result"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "benchmark-evaluation",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:glasgowcompbio__PALS",
+  "task_description": "Inject systematically increasing levels of Gaussian noise and random peak removal into a reference metabolomics dataset, process each perturbed dataset through PALS, and quantify the rank-order stability of top-scoring pathways relative to the clean-data baseline to assess robustness.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Reference metabolomics peak intensity matrix (samples \u00d7 features)",
+      "port_id": "peak_intensity_matrix",
+      "resolved_via": null,
+      "source": "task_002/pathway_scores_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Metabolite-to-pathway membership annotations",
+      "port_id": "pathway_annotations",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Quantify rank-order stability of PALS-scored pathways under systematic noise injection and peak dropout to validate robustness claims.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Rank-order stability metrics table (noise level vs. correlation and retention %)",
+      "port_id": "stability_metrics_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Stability curve visualization (noise level vs. pathway ranking correlation/retention)",
+      "port_id": "stability_curve_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dimensionality-reduction",
+    "pathway-analysis",
+    "enrichment-analysis"
+  ],
+  "title": "Analyze sensitivity of PALS pathway rankings under simulated noise and peak dropout",
+  "tools": [
+    "PALS (Pathway Activity Level Scoring)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Rank-order stability metrics: a table with noise level (% Gaussian + % peak removal) as rows and Spearman/Kendall correlation coefficient and top-K retention percentage as columns, Stability curve plot: x-axis = noise/peak-removal level, y-axis = correlation coefficient or retention %; separate lines for noise alone, peak removal alone, and combined perturbation."
+  ],
+  "workflow_description": "1. Load reference metabolomics dataset (peak intensity matrix and pathway annotations). 2. Establish clean baseline by running PALS on unperturbed data and record ranked pathway activity scores. 3. For each noise level (0%, 5%, 10%, 15%, 20%, 25% Gaussian noise intensity and 0%, 5%, 10%, 15%, 20% random peak removal rate), create a perturbed copy of the dataset. 4. Run PALS on each perturbed dataset using the same pathway decomposition (PLAGE method) and record ranked pathway activity scores. 5. Compute rank-order correlation (Spearman's rho or Kendall's tau) between perturbed pathway rankings and clean baseline ranking for each noise condition. 6. Compute the percentage of top-K pathways (K=5, 10, 20) that remain in the top-K set across noise conditions. 7. Generate a stability plot showing correlation or retention percentage vs. noise level and tabulate results."
+}

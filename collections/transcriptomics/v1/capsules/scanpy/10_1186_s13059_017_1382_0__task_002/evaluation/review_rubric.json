@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that scanpy source code repository (github:scverse/scanpy) is accessible and contains pp module functions"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that dask_support documentation or implementation exists in the scanpy codebase"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify returned object is a valid AnnData instance with obs and var DataFrames populated"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the operation does not trigger full matrix materialization into memory by checking Dask task graph remains unevaluated (robust to parameter choices in function calls)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that scanpy source code repository (github:scverse/scanpy) is accessible and contains pp module functions",
+      "verify that dask_support documentation or implementation exists in the scanpy codebase",
+      "script_runs: execute a Python script that imports scanpy, creates a Dask-backed AnnData object, calls at least one pp module function (e.g., pp.normalize_total or pp.pca), and completes without raising an exception",
+      "verify returned object is a valid AnnData instance with obs and var DataFrames populated",
+      "verify that the operation does not trigger full matrix materialization into memory by checking Dask task graph remains unevaluated (robust to parameter choices in function calls)"
+    ],
+    "expert_review": [
+      "confirm that the Dask task graph remains lazy (unevaluated) after the pp module operation, indicating no eager loading of the full matrix occurred",
+      "assess whether the obs/var structure is preserved correctly and matches expectations for the specific pp function called"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

@@ -1,0 +1,272 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Rplot001.jpg",
+      "role": "figure",
+      "sha256": "79259d0fa68ec36cfa387ea2b9948e1a8f0a42239143735eeae01a80ab72da72"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d8ab23ebaf3bf6459087e91d56055beef2ca5b026fc08b4cf749c6c400b5330d"
+    }
+  ],
+  "created_at": "2026-06-15T13:20:51.739319+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "example.tsv \u2014 tab-delimited metabolomics data file containing columns: aliquot, compound, area, compound_is, area_is, type, injection_time, batch, and concentration",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation report (CSV or text) confirming that all 'ratio' assay values equal corresponding primary assay values within numerical tolerance (machine epsilon)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "mzQuality's buildExperiment function auto-generates a 'ratio' assay by dividing the primary assay by a secondary assay (internal standard area); when no secondaryAssay column is supplied, the function must handle this gracefully, typically by setting divisor to 1 or omitting the ratio calculation.",
+    "The SummarizedExperiment object stores assays as a list of matrices, each indexed by assay name; verification requires extraction and element-wise comparison.",
+    "Tab-delimited format requires exact column names (aliquot, compound, area, type, injection_time, batch) as recognized by readData; missing or misspelled columns will trigger validation failure.",
+    "Numerical comparison of floating-point assay values must account for rounding error; exact equality is not expected, but relative difference should be within machine epsilon (~1e-15 for double precision)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file 'example.tsv' exists in the mzQuality package repository or deposited dataset",
+      "script_runs: execute buildExperiment(example.tsv, primaryAssay='<identified column>', secondaryAssay=NULL) without error in R environment with mzQuality loaded",
+      "field_present: verify 'ratio' assay is present in resulting SummarizedExperiment object",
+      "output_matches_reference: extract all 'ratio' assay values from output and verify they equal corresponding primary assay values (robust to floating-point precision within machine epsilon)"
+    ],
+    "expert_review": [
+      "verify that the conditional behaviour documented in the article (divisor defaults to 1 when secondaryAssay is omitted) is correctly implemented and produces mathematically sound ratio calculations",
+      "confirm that the ratio assay calculation logic aligns with the stated package design for handling missing secondary assay specifications"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] When the secondaryAssay column is not provided to buildExperiment, does the resulting 'ratio' assay equal the primary assay values unchanged?: 'Note that if the `secondaryAssay` column is not provided, its value will be set to `1`, effectively negating the Internal Standard.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] When secondaryAssay is not provided to buildExperiment, its value defaults to 1, which negates the Internal Standard effect, making the ratio assay equal to the primary assay values.: 'Note that if the `secondaryAssay` column is not provided, its value will be set to `1`, effectively negating the Internal Standard.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] example.tsv \u2014 tab-delimited metabolomics data file containing columns: aliquot, compound, area, compound_is, area_is, type, injection_time, batch, and concentration: 'The data should be in a tab-delimited format containing at least the following columns: aliquot, compound, area, type, injection_time, batch.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Validation report (CSV or text) confirming that all 'ratio' assay values equal corresponding primary assay values within numerical tolerance (machine epsilon): 'The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] R: 'library(mzQuality)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] mzQuality: 'mzQuality requires a specific format for the input data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SummarizedExperiment: 'Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mzQuality); library(SummarizedExperiment); data <- readData('{inputs.example_tsv}'); se <- buildExperiment(data); ratio_assay <- assay(se, 'ratio'); primary_assay <- assay(se, 1); all_equal <- all(abs(ratio_assay - primary_assay) < 1e-14 * pmax(abs(primary_assay), 1)); report <- data.frame(test='ratio_equals_primary', passed=all_equal, tolerance=1e-14); write.csv(report, 'validation_report.csv', row.names=FALSE); cat('Validation complete. All ratio values equal primary assay:', all_equal, '\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ratio_assay_validation.csv",
+  "expected_outputs": [
+    "Validation report (CSV or text) confirming that all 'ratio' assay values equal corresponding primary assay values within numerical tolerance (machine epsilon)"
+  ],
+  "finding": "When secondaryAssay is not provided to buildExperiment, its value defaults to 1, which negates the Internal Standard effect, making the ratio assay equal to the primary assay values.",
+  "github_name": "hankemeierlab/mzQuality",
+  "input_from": "task_001",
+  "inputs": [
+    "example.tsv \u2014 tab-delimited metabolomics data file containing columns: aliquot, compound, area, compound_is, area_is, type, injection_time, batch, and concentration"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "cleaned_data_frame.csv",
+    "experiment_object_summary.txt"
+  ],
+  "linked_result_ids": [
+    "result_022"
+  ],
+  "methodology_summary": [
+    "Load example.tsv using readData function to validate column structure and data integrity.",
+    "Construct SummarizedExperiment object via buildExperiment without secondaryAssay parameter.",
+    "Extract 'ratio' and primary assays from the experiment object.",
+    "Perform element-wise numerical comparison of ratio assay to primary assay values.",
+    "Validation: all ratio values must equal primary assay values within double-precision floating-point tolerance (relative difference < 1e-14)."
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "When the secondaryAssay column is not provided to buildExperiment, does the resulting 'ratio' assay equal the primary assay values unchanged?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "metabolomics-data-format-validation",
+    "r-package-api-usage",
+    "summarized-experiment-object-construction",
+    "assay-ratio-computation-verification",
+    "numerical-equivalence-testing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mzquality/synthesized_package",
+  "spine_condition_ids": [
+    "cond_no_secondary_assay"
+  ],
+  "spine_entity_ids": [
+    "mzQuality_system",
+    "arch_analysis_pipeline",
+    "tool_buildExperiment",
+    "dataset_example_tsv",
+    "comp_ratio_assay",
+    "comp_ratio_corrected_assay",
+    "cond_no_secondary_assay",
+    "result_is_recommendation"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:hankemeierlab__mzQuality",
+  "task_description": "Load a tab-delimited metabolomics data file (example.tsv) using readData, construct a SummarizedExperiment object via buildExperiment without the secondaryAssay column, and verify that the resulting 'ratio' assay entries equal the raw primary assay values (divisor = 1 throughout).",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "example.tsv metabolomics data file",
+      "port_id": "example_tsv",
+      "resolved_via": null,
+      "source": "task_001/experiment_object",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Verify that buildExperiment without secondaryAssay produces ratio assay values equal to primary assay values by confirming the effective divisor is 1.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ratio-assay equality validation report",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control",
+    "feature-detection",
+    "lc-ms",
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Extend mzQuality to support a no-internal-standard condition and verify ratio assay defaults to 1",
+  "tools": [
+    "R",
+    "mzQuality",
+    "SummarizedExperiment"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: SummarizedExperiment, Validation report (CSV or text) confirming that all 'ratio' assay values equal corresponding primary assay values within numerical tolerance (machine epsilon)."
+  ],
+  "workflow_description": "1. Load the example.tsv file from the mzQuality package using readData function, which performs basic checks on column integrity. 2. Call buildExperiment on the resulting data frame without specifying a secondaryAssay column to generate a SummarizedExperiment object. 3. Extract the 'ratio' assay from the experiment object and compare element-wise to the primary assay values to verify identity (effective divisor of 1). 4. Generate a validation report confirming equality across all compound\u2013sample pairs."
+}

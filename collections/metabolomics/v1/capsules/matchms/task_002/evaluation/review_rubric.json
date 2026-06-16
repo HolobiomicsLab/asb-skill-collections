@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in matchms GitHub repository (input artifact path)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify input file format is one of: MGF, MSP, mzML (file_format_is)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output is a spectrum collection object or file in a structured format (file_exists and format_is)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script runs without errors when executing peak-filtering workflow on input spectral data (script_runs)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output spectrum count is less than or equal to input spectrum count (value_in_range, robust to parameter choices)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify filtered spectrum peaks have been reduced or modified compared to input spectra (output differs from input, parameter-sensitive to filter parameters)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in matchms GitHub repository (input artifact path)",
+      "verify input file format is one of: MGF, MSP, mzML (file_format_is)",
+      "verify output is a spectrum collection object or file in a structured format (file_exists and format_is)",
+      "verify script runs without errors when executing peak-filtering workflow on input spectral data (script_runs)",
+      "verify output spectrum count is less than or equal to input spectrum count (value_in_range, robust to parameter choices)",
+      "verify filtered spectrum peaks have been reduced or modified compared to input spectra (output differs from input, parameter-sensitive to filter parameters)"
+    ],
+    "expert_review": [
+      "assess whether peak-filtering parameters applied are appropriate for the spectral data type and scientific use case",
+      "evaluate whether filtered spectra retain sufficient peak information for downstream similarity comparisons or analysis",
+      "verify that filtering does not introduce artifacts or remove biologically/chemically relevant peaks"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

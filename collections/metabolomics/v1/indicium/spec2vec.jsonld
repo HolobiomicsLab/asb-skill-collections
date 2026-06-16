@@ -1,0 +1,2206 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/chemical-structure-fingerprint-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/corpus-size-coverage-scaling-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/large-scale-all-pairs-similarity-benchmarking",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectral-missing-word-fraction-computation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-library-matching",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-spectrum-tokenization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/missing-fraction-quality-filtering-for-embeddings",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-fingerprint-structural-similarity-tanimoto",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/neutral-loss-annotation-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/neutral-loss-calculation-from-precursor",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/neutral-loss-extraction-and-weighting",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peak-filtering-and-preprocessing-lc-ms",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peak-intensity-normalization-weighted-aggregation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/receiver-operator-characteristic-curve-generation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-peak-word-embedding-representation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-similarity-scoring-computation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-vector-normalization-by-intensity",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-document-conversion-peak-loss-representation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/structural-similarity-ground-truth-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/word-embedding-aggregation-for-spectral-data",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/word-embedding-based-spectrum-representation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/word2vec-embedding-training-mass-spectrometry",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/word2vec-model-inference-unknown-word-handling",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/word2vec-vocabulary-matching-and-unknown-peak-handling",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec is a novel spectral similarity score inspired by Word2Vec, a natural language processing algorithm.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_WORD2VEC_MODEL"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec learns fragmental relationships within a large set of spectral data to derive abstract spectral embeddings.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec scores correlate better with structural similarity than cosine-based scores using data from nearly 13,000 unique molecules.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec is computationally more scalable, allowing structural analogue searches in large databases within seconds.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Cosine-based similarity scores are the most widely used measures of spectral similarity.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Studies investigating whether molecules with high structural similarity result in spectra with high spectral cosine similarity show only partial support for this relationship.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Modifications of cosine-based scores have been proposed including raising the m/z and intensity components to different powers and shifting fragment peaks by the difference in precursor m/z.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Despite limitations of cosine-based methods, no fundamentally different spectral similarity scores have been proposed.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The AllPositive dataset comprised 95,320 positive ionization mode mass spectra, of which 77,092 had InChIKey annotations.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_ALLPOSITIVE_DATASET"
+        },
+        {
+          "id": "asb:spine_INCHIKEY_ANNOTATION"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The UniqueInchikey dataset consisted of 12,797 spectra with unique InChIKeys.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec spectrum similarity score correlates stronger with structural similarity than cosine or modified cosine scores.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The poor correlation between cosine and modified cosine similarity scores and structural similarity can largely be explained by high false positive rates.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec library matching achieved up to 88% accuracy compared to cosine similarity score based library matching.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_LIBRARY_MATCHING"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Training a Spec2Vec model on the UniqueInchikey dataset takes about 30 minutes on an Intel i7-8550U CPU.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Querying 1030 spectra against 76,062 spectra took 140 seconds on an Intel i7-8550U CPU, or 0.14 seconds per query spectrum.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "For 60% of queries for unknown molecules, the top-10 list contained suggested molecules with a structural similarity score of greater than 0.6.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "For molecules with masses larger than 200 Da, Spec2Vec was often able to detect highly related molecules for unknown queries.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec is able to cluster higher fractions of spectra into high structural similarity clusters when compared to the modified cosine score.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_COSINE_SCORE"
+        },
+        {
+          "id": "asb:spine_MODIFIED_COSINE_SCORE"
+        },
+        {
+          "id": "asb:spine_COND_MODIFIED_COSINE_TOL005_MIN10"
+        },
+        {
+          "id": "asb:spine_COND_COSINE_TOL005_MIN6"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Computing spectral similarities between all possible spectra pairs (approximately 82 million unique pairs) took 300 seconds on an Intel i7-8550U CPU using Spec2Vec.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec is an unsupervised method that can be trained on any collection of spectra, independent of whether chemical structures are known.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_021",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Peaks in mass spectra have no particular order comparable to word order in a document, so Spec2Vec sets window-size to 500 meaning the entire spectrum counts as context.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_021_evidence",
+      "evidence_for": "claim_021",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_022",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Continuous bag of words (CBOW) was generally observed to perform better than skip gram for Spec2Vec.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_WORD2VEC_MODEL"
+        },
+        {
+          "id": "asb:spine_CBOW_MODEL"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_022_evidence",
+      "evidence_for": "claim_022",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_023",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Model performance for Spec2Vec does not necessarily improve with longer training runs when using negative sampling.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_023_evidence",
+      "evidence_for": "claim_023",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_024",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Training a Spec2Vec model with negative sampling (negative = 5) and 15 iterations on AllPositive or up to 50 epochs on UniqueInchikey achieves optimal model performance.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_ALLPOSITIVE_DATASET"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_024_evidence",
+      "evidence_for": "claim_024",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_025",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec represents a spectrum as a weighted sum of its fragment and loss word vectors.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_025_evidence",
+      "evidence_for": "claim_025",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_026",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The structural similarity between two molecules was measured using Tanimoto similarity based on daylight-like molecular fingerprints.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TANIMOTO_SIMILARITY"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_026_evidence",
+      "evidence_for": "claim_026",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_027",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Neutral losses between 5.0 and 200.0 Da were added as features in Spec2Vec document representation.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_027_evidence",
+      "evidence_for": "claim_027",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_028",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Peaks are represented in Spec2Vec documents with their position up to a defined decimal precision, using a binning of two decimals.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_028_evidence",
+      "evidence_for": "claim_028",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_029",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Models trained on AllPositive with 2-decimal binning contained about 97% of all possible peaks and losses.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_ALLPOSITIVE_DATASET"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_029_evidence",
+      "evidence_for": "claim_029",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_030",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec is not meant to be the endpoint but rather the start of a new direction in spectral similarity scoring.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_030_evidence",
+      "evidence_for": "claim_030",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_031",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec is particularly suited to act as a pre-selection funnel for selecting promising candidates for further exploration using computationally more expensive similarity measures.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_031_evidence",
+      "evidence_for": "claim_031",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_032",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec can be applied to molecular networking, which is becoming an increasingly popular tool for exploring metabolomic datasets.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_MOLECULAR_NETWORKING"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_032_evidence",
+      "evidence_for": "claim_032",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_033",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "GNPS users can calculate Spec2Vec scores for spectra in their positive ionisation mode datasets using a pretrained model.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_GNPS_TOOL"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_033_evidence",
+      "evidence_for": "claim_033",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_034",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Training the Spec2Vec embedding on 95,320 spectra took 40 minutes when training for 15 iterations.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_034_evidence",
+      "evidence_for": "claim_034",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_035",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec requires training on a large spectra dataset to work effectively, but this does not necessarily need to be library spectra.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_035_evidence",
+      "evidence_for": "claim_035",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_036",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Cosine-based methods are very good at revealing nearly equal spectra but are not well-suited to handle molecules with multiple local chemical modifications.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_036_evidence",
+      "evidence_for": "claim_036",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_037",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec takes relationships between fragments into account rather than relying only on binary assessment of each fragment match.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_037_evidence",
+      "evidence_for": "claim_037",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_038",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec is unsupervised and can be trained on any collection of spectra, unlike database searching methods that require known structural information.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_038_evidence",
+      "evidence_for": "claim_038",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_039",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The probability of randomly picking a spectral pair with structural similarity score greater than 0.6 is p = 0.0103.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_039_evidence",
+      "evidence_for": "claim_039",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_040",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec improved performance for larger compounds (greater than 400 Da) is likely explained by the higher number of relevant fragments.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_TANIMOTO_SIMILARITY"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_040_evidence",
+      "evidence_for": "claim_040",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_041",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The current study used a large LC-MS dataset from GNPS containing 154,820 spectra.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_GNPS_TOOL"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_041_evidence",
+      "evidence_for": "claim_041",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_042",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "After data cleaning and automated lookup, 128,042 out of 154,820 spectra could be linked to an InChIKey.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_INCHIKEY_ANNOTATION"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_042_evidence",
+      "evidence_for": "claim_042",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_043",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The AllPositive dataset contains 112,956 spectra with positive ionization mode, of which 92,954 have InChIKey annotations.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_ALLPOSITIVE_DATASET"
+        },
+        {
+          "id": "asb:spine_INCHIKEY_ANNOTATION"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_043_evidence",
+      "evidence_for": "claim_043",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_044",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "All peaks with m/z ratios outside the range [0, 1000] were removed from spectra.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_044_evidence",
+      "evidence_for": "claim_044",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_045",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "All spectra with fewer than 10 peaks were discarded from the analysis.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_045_evidence",
+      "evidence_for": "claim_045",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_046",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Different peak filtering procedures were used for Spec2Vec and cosine-based similarity scores to ensure fair comparison.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_046_evidence",
+      "evidence_for": "claim_046",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_047",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "For cosine score calculations, all peaks with relative intensities less than 0.01 compared to the highest intensity peak were ignored.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COSINE_SCORE"
+        },
+        {
+          "id": "asb:spine_COND_COSINE_TOL005_MIN6"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_047_evidence",
+      "evidence_for": "claim_047",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_048",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The maximum number of peaks kept per spectrum in Spec2Vec was set to scale linearly with the estimated parent mass.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_048_evidence",
+      "evidence_for": "claim_048",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_049",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec can estimate the impact of unknown words (peaks) by assessing the uncovered weighted part of a spectrum.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_049_evidence",
+      "evidence_for": "claim_049",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_050",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "By setting a missing fraction threshold at less than 0.05, Spec2Vec similarity scores for spectra far outside the learned peaks can be avoided.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_MISSING_FRACTION"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_050_evidence",
+      "evidence_for": "claim_050",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_051",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A two-step verbatim-first discipline was used to ensure that spectral similarity claims are grounded in the actual data.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COSINE_SCORE"
+        },
+        {
+          "id": "asb:spine_MODIFIED_COSINE_SCORE"
+        },
+        {
+          "id": "asb:spine_COND_MODIFIED_COSINE_TOL005_MIN10"
+        },
+        {
+          "id": "asb:spine_COND_COSINE_TOL005_MIN6"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_051_evidence",
+      "evidence_for": "claim_051",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_052",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The modified cosine score combines matching peak m/z and the m/z shifted by the difference in precursor m/z.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COSINE_SCORE"
+        },
+        {
+          "id": "asb:spine_MODIFIED_COSINE_SCORE"
+        },
+        {
+          "id": "asb:spine_COND_MODIFIED_COSINE_TOL005_MIN10"
+        },
+        {
+          "id": "asb:spine_COND_COSINE_TOL005_MIN6"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_052_evidence",
+      "evidence_for": "claim_052",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_053",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spec2Vec and modified cosine score matchms packages are freely available and can be installed via conda.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SPEC2VEC_SYSTEM"
+        },
+        {
+          "id": "asb:spine_COSINE_SCORE"
+        },
+        {
+          "id": "asb:spine_MODIFIED_COSINE_SCORE"
+        },
+        {
+          "id": "asb:spine_MATCHMS_TOOL"
+        },
+        {
+          "id": "asb:spine_COND_MODIFIED_COSINE_TOL005_MIN10"
+        },
+        {
+          "id": "asb:spine_COND_COSINE_TOL005_MIN6"
+        },
+        {
+          "id": "asb:spine_SPEC2VEC_PACKAGE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_053_evidence",
+      "evidence_for": "claim_053",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_054",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "All-vs-all similarity score matrices for cosine score, modified cosine score, and fingerprint-based similarity are available on Zenodo for the UniqueInchikey dataset.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COSINE_SCORE"
+        },
+        {
+          "id": "asb:spine_MODIFIED_COSINE_SCORE"
+        },
+        {
+          "id": "asb:spine_COND_MODIFIED_COSINE_TOL005_MIN10"
+        },
+        {
+          "id": "asb:spine_COND_COSINE_TOL005_MIN6"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_054_evidence",
+      "evidence_for": "claim_054",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_055",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The two most important trained Word2Vec models can be downloaded from Zenodo: one trained on UniqueInchikey and one trained on AllPositive.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_WORD2VEC_MODEL"
+        },
+        {
+          "id": "asb:spine_ALLPOSITIVE_DATASET"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_055_evidence",
+      "evidence_for": "claim_055",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008724",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "spec2vec_grounded#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SPEC2VEC_SYSTEM",
+      "title": "Spec2Vec",
+      "identifier": "urn:asb:spine:SPEC2VEC_SYSTEM"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_WORD2VEC_MODEL",
+      "title": "Word2Vec",
+      "identifier": "urn:asb:spine:WORD2VEC_MODEL"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_SPECTRUM_DOCUMENT_REPR",
+      "title": "Spectrum Document",
+      "identifier": "urn:asb:spine:SPECTRUM_DOCUMENT_REPR"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_SPECTRUM_VECTOR",
+      "title": "Spectrum Vector",
+      "identifier": "urn:asb:spine:SPECTRUM_VECTOR"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COSINE_SCORE",
+      "title": "Cosine Score",
+      "identifier": "urn:asb:spine:COSINE_SCORE"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_MODIFIED_COSINE_SCORE",
+      "title": "Modified Cosine Score",
+      "identifier": "urn:asb:spine:MODIFIED_COSINE_SCORE"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_MATCHMS_TOOL",
+      "title": "matchms",
+      "identifier": "urn:asb:spine:MATCHMS_TOOL"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_GENSIM_TOOL",
+      "title": "gensim",
+      "identifier": "urn:asb:spine:GENSIM_TOOL"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_RDKIT_TOOL",
+      "title": "RDKit",
+      "identifier": "urn:asb:spine:RDKIT_TOOL"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_PUBCHEMPY_TOOL",
+      "title": "PubChemPy",
+      "identifier": "urn:asb:spine:PUBCHEMPY_TOOL"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_NUMBA_TOOL",
+      "title": "Numba",
+      "identifier": "urn:asb:spine:NUMBA_TOOL"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_NUMPY_TOOL",
+      "title": "NumPy",
+      "identifier": "urn:asb:spine:NUMPY_TOOL"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_GNPS_DATASET",
+      "title": "GNPS MS/MS Library",
+      "identifier": "urn:asb:spine:GNPS_DATASET"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_ALLPOSITIVE_DATASET",
+      "title": "AllPositive Dataset",
+      "identifier": "urn:asb:spine:ALLPOSITIVE_DATASET"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_UNIQUEINCHIKEYS_DATASET",
+      "title": "UniqueInchiKeys Dataset",
+      "identifier": "urn:asb:spine:UNIQUEINCHIKEYS_DATASET"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_TANIMOTO_SIMILARITY",
+      "title": "Tanimoto Similarity",
+      "identifier": "urn:asb:spine:TANIMOTO_SIMILARITY"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_MISSING_FRACTION",
+      "title": "Missing Fraction",
+      "identifier": "urn:asb:spine:MISSING_FRACTION"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_SPEC2VEC_UNIQUEINCHIKEY",
+      "title": "Spec2Vec trained on UniqueInchiKeys (50 epochs)",
+      "identifier": "urn:asb:spine:COND_SPEC2VEC_UNIQUEINCHIKEY"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_SPEC2VEC_ALLPOSITIVE",
+      "title": "Spec2Vec trained on AllPositive (15 epochs)",
+      "identifier": "urn:asb:spine:COND_SPEC2VEC_ALLPOSITIVE"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_MODIFIED_COSINE_TOL005_MIN10",
+      "title": "Modified Cosine Score (tolerance=0.005, min_match=10)",
+      "identifier": "urn:asb:spine:COND_MODIFIED_COSINE_TOL005_MIN10"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_COSINE_TOL005_MIN6",
+      "title": "Cosine Score (tolerance=0.005, min_match=6)",
+      "identifier": "urn:asb:spine:COND_COSINE_TOL005_MIN6"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_COND_THEORETICAL_MAX",
+      "title": "Theoretical Maximum Tanimoto Retrieval",
+      "identifier": "urn:asb:spine:COND_THEORETICAL_MAX"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_COSINE_ON_SPEC2VEC_PROCESSED",
+      "title": "Cosine Score on Spec2Vec-processed Data",
+      "identifier": "urn:asb:spine:COND_COSINE_ON_SPEC2VEC_PROCESSED"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_NEG_SAMPLING_TRAINING",
+      "title": "Word2Vec Training with Negative Sampling",
+      "identifier": "urn:asb:spine:COND_NEG_SAMPLING_TRAINING"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_NO_NEG_SAMPLING_TRAINING",
+      "title": "Word2Vec Training without Negative Sampling",
+      "identifier": "urn:asb:spine:COND_NO_NEG_SAMPLING_TRAINING"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_LIBRARY_MATCHING_ALLPOSITIVE",
+      "title": "Library Matching on AllPositive Dataset",
+      "identifier": "urn:asb:spine:COND_LIBRARY_MATCHING_ALLPOSITIVE"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_SPEC2VEC_BETTER_STRUCTURAL_CORR",
+      "title": "Spec2Vec higher structural similarity correlation than cosine scores",
+      "identifier": "urn:asb:spine:RESULT_SPEC2VEC_BETTER_STRUCTURAL_CORR",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_SPEC2VEC_UNIQUEINCHIKEY"
+        },
+        {
+          "id": "asb:spine_COND_SPEC2VEC_ALLPOSITIVE"
+        },
+        {
+          "id": "asb:spine_COND_MODIFIED_COSINE_TOL005_MIN10"
+        },
+        {
+          "id": "asb:spine_COND_COSINE_TOL005_MIN6"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_COSINE_HIGH_FALSE_POSITIVE",
+      "title": "Cosine score high false positive rate",
+      "identifier": "urn:asb:spine:RESULT_COSINE_HIGH_FALSE_POSITIVE",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_COSINE_TOL005_MIN6"
+        },
+        {
+          "id": "asb:spine_COND_MODIFIED_COSINE_TOL005_MIN10"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_SPEC2VEC_BETTER_LIBRARY_MATCHING",
+      "title": "Spec2Vec improved true-to-false-positive rates in library matching",
+      "identifier": "urn:asb:spine:RESULT_SPEC2VEC_BETTER_LIBRARY_MATCHING",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_LIBRARY_MATCHING_ALLPOSITIVE"
+        },
+        {
+          "id": "asb:spine_COND_SPEC2VEC_ALLPOSITIVE"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_ALLPOSITIVE_PEAK_COVERAGE",
+      "title": "AllPositive model covers 97% of peaks",
+      "identifier": "urn:asb:spine:RESULT_ALLPOSITIVE_PEAK_COVERAGE",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_SPEC2VEC_ALLPOSITIVE"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_RANDOM_PAIR_STRUCTURAL_SIM",
+      "title": "Random spectral pairs rarely show high structural similarity",
+      "identifier": "urn:asb:spine:RESULT_RANDOM_PAIR_STRUCTURAL_SIM",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_SPEC2VEC_UNIQUEINCHIKEY"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_SPEC2VEC_SCALABLE",
+      "title": "Spec2Vec computationally more scalable than cosine scores",
+      "identifier": "urn:asb:spine:RESULT_SPEC2VEC_SCALABLE",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_SPEC2VEC_ALLPOSITIVE"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_COSINE_ON_SPEC2VEC_DATA_LOWER",
+      "title": "Cosine score slightly lower on Spec2Vec-processed data",
+      "identifier": "urn:asb:spine:RESULT_COSINE_ON_SPEC2VEC_DATA_LOWER",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_COSINE_ON_SPEC2VEC_PROCESSED"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_TANIMOTO_TOP01PCT_SPEC2VEC",
+      "title": "Average Tanimoto similarity at top 0.1% Spec2Vec scores",
+      "identifier": "urn:asb:spine:METRIC_TANIMOTO_TOP01PCT_SPEC2VEC",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_SPEC2VEC_UNIQUEINCHIKEY"
+        },
+        {
+          "id": "asb:spine_COND_SPEC2VEC_ALLPOSITIVE"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_TANIMOTO_TOP01PCT_COSINE",
+      "title": "Average Tanimoto similarity at top 0.1% cosine scores",
+      "identifier": "urn:asb:spine:METRIC_TANIMOTO_TOP01PCT_COSINE",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_COSINE_TOL005_MIN6"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_TANIMOTO_TOP01PCT_MODCOSINE",
+      "title": "Average Tanimoto similarity at top 0.1% modified cosine scores",
+      "identifier": "urn:asb:spine:METRIC_TANIMOTO_TOP01PCT_MODCOSINE",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_MODIFIED_COSINE_TOL005_MIN10"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_MOLECULAR_NETWORKING",
+      "title": "Molecular Networking",
+      "identifier": "urn:asb:spine:MOLECULAR_NETWORKING"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_LIBRARY_MATCHING",
+      "title": "Library Matching",
+      "identifier": "urn:asb:spine:LIBRARY_MATCHING"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_CBOW_MODEL",
+      "title": "Continuous Bag of Words (CBOW)",
+      "identifier": "urn:asb:spine:CBOW_MODEL"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_PEAK_FILTERING_COSINE",
+      "title": "Peak Filtering for Cosine Scores",
+      "identifier": "urn:asb:spine:PEAK_FILTERING_COSINE"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_PEAK_FILTERING_SPEC2VEC",
+      "title": "Peak Filtering for Spec2Vec",
+      "identifier": "urn:asb:spine:PEAK_FILTERING_SPEC2VEC"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_GNPS_TOOL",
+      "title": "GNPS",
+      "identifier": "urn:asb:spine:GNPS_TOOL"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_PUBCHEM_DB",
+      "title": "PubChem",
+      "identifier": "urn:asb:spine:PUBCHEM_DB"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_MASSBANK_DB",
+      "title": "MassBank",
+      "identifier": "urn:asb:spine:MASSBANK_DB"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_METLIN_DB",
+      "title": "METLIN",
+      "identifier": "urn:asb:spine:METLIN_DB"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_INCHIKEY_ANNOTATION",
+      "title": "InChIKey",
+      "identifier": "urn:asb:spine:INCHIKEY_ANNOTATION"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_SPEC2VEC_PACKAGE",
+      "title": "spec2vec Python package",
+      "identifier": "urn:asb:spine:SPEC2VEC_PACKAGE"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_NEUTRAL_LOSS_FEATURE",
+      "title": "Neutral Loss",
+      "identifier": "urn:asb:spine:NEUTRAL_LOSS_FEATURE"
+    }
+  ]
+}

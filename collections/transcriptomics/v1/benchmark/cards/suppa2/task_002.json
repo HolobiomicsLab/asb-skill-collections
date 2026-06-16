@@ -1,0 +1,270 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "505f60af93888225083df1df48559a7fe48effff6491356940c740f479cc06d9"
+    }
+  ],
+  "created_at": "2026-06-15T17:50:44.296688+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Transcript quantification file (Salmon quant.sf, kallisto abundance.tsv, or equivalent format with transcript IDs and TPM/count values)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SUPPA2 event definition file in ioe or ioi format (specifying alternative splicing events and constituent transcripts)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "PSI (Percent Spliced In) matrix file with events as rows and samples as columns, values in range [0, 1]",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "PSI values represent the percent spliced in for an alternative splicing event, calculated as the ratio of transcripts including the alternative exon(s) to the total abundance of all isoforms in that event.",
+    "ioe (isoform-to-event) and ioi (isoform-overlap-incidence) are SUPPA2 standard event definition file formats that encode how transcript isoforms map to specific alternative splicing events.",
+    "Transcript quantification tools like Salmon and kallisto output transcript-level abundance estimates (TPM or estimated counts) that must be mapped to events via the event definition file.",
+    "PSI values range from 0 (no inclusion) to 1 (full inclusion); missing or ambiguous isoforms may result in NA or zero values depending on how SUPPA2 handles unmapped transcripts."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that SUPPA2 PSI subcommand accepts transcript-level quantification file (Salmon or kallisto format) as input",
+      "verify that SUPPA2 PSI subcommand accepts ioe or ioi event definition file as input",
+      "verify that SUPPA2 PSI subcommand produces a PSI matrix file as output",
+      "verify output file exists and is in a structured tabular format (TSV, CSV, or similar)",
+      "script_runs: execute SUPPA2 PSI calculation on example transcript quantification and event files from github:comprna__SUPPA repository, solution_space: multiple valid test datasets may exist",
+      "verify PSI values in output matrix are numeric and fall within valid range [0, 1]",
+      "verify output matrix row count equals number of events in input ioe/ioi file",
+      "verify output matrix column count equals number of samples in input quantification file"
+    ],
+    "expert_review": [
+      "assess whether PSI calculation correctly aggregates transcript-level abundances to event-level splicing ratios according to the SUPPA2 methodological definition",
+      "evaluate numerical accuracy of PSI values against reference calculations or published benchmark results",
+      "review whether output matrix structure and annotation fields (event identifiers, sample identifiers) are correctly labeled and match input metadata"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does SUPPA2 compute PSI (Percent Spliced In) values from transcript quantification data and event definitions to produce a PSI matrix?: 'PSI calculation for Transcripts and Events'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SUPPA2 leverages transcript quantification data for fast computation of alternative splicing profiles by calculating PSI values for transcript events and local alternative splicing events.: 'Leveraging transcript quantification for fast computation of alternative splicing profiles'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Transcript quantification file (Salmon quant.sf, kallisto abundance.tsv, or equivalent format with transcript IDs and TPM/count values): 'transcript-level quantification output (from a tool such as Salmon or kallisto)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SUPPA2 event definition file in ioe or ioi format (specifying alternative splicing events and constituent transcripts): 'ioe or ioi event file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] PSI (Percent Spliced In) matrix file with events as rows and samples as columns, values in range [0, 1]: 'PSI (Percent Spliced In) matrix file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SUPPA2: 'SUPPA2: fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting PSI calculation implementation details, parameter options, or version history available: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "psi_matrix.tsv",
+  "expected_outputs": [
+    "PSI (Percent Spliced In) matrix file with events as rows and samples as columns, values in range [0, 1]"
+  ],
+  "finding": "SUPPA2 leverages transcript quantification data for fast computation of alternative splicing profiles by calculating PSI values for transcript events and local alternative splicing events.",
+  "github_name": "comprna/SUPPA",
+  "input_from": "task_001",
+  "inputs": [
+    "Transcript quantification file (Salmon quant.sf, kallisto abundance.tsv, or equivalent format with transcript IDs and TPM/count values)",
+    "SUPPA2 event definition file in ioe or ioi format (specifying alternative splicing events and constituent transcripts)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "loaded_quantification.tsv",
+    "parsed_events.tsv"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Load transcript quantification output with transcript identifiers and abundance values (TPM or counts).",
+    "Parse SUPPA2 event definition file (ioe or ioi) to extract event\u2013transcript mappings.",
+    "Aggregate transcript abundances per event according to inclusion/exclusion isoform sets.",
+    "Calculate PSI as the ratio of inclusion isoform total to total event abundance.",
+    "Validation: PSI matrix has one row per event, one column per sample, all values in [0,1]."
+  ],
+  "missing_information": [
+    "No changelog documenting PSI calculation implementation details, parameter options, or version history available"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does SUPPA2 compute PSI (Percent Spliced In) values from transcript quantification data and event definitions to produce a PSI matrix?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "transcript-quantification-integration",
+    "alternative-splicing-event-parsing",
+    "psi-calculation-from-isoform-abundance",
+    "splicing-matrix-normalization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_suppa2/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SUPPA2_system",
+    "comp_psiCalculation",
+    "arch_commandSubcommand",
+    "artifact_ioi",
+    "artifact_ioe",
+    "tool_salmon_kallisto",
+    "pub_suppa2_2018",
+    "metric_speed",
+    "metric_psi"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:comprna__SUPPA",
+  "task_description": "Compute a PSI (Percent Spliced In) matrix by consuming transcript-level quantification output (e.g., from Salmon or kallisto) and a SUPPA2 event definition file (ioe or ioi format), then output a PSI matrix file.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Transcript quantification file (Salmon quant.sf or kallisto abundance.tsv)",
+      "port_id": "transcript_quantification",
+      "resolved_via": null,
+      "source": "task_001/ioe_file",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SUPPA2 event definition file (ioe or ioi format)",
+      "port_id": "event_definition",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the PSI calculation subcommand to compute a PSI matrix from transcript quantifications and event definitions.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PSI matrix file",
+      "port_id": "psi_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "statistical-analysis",
+    "differential-abundance-analysis"
+  ],
+  "title": "Reconstruct the PSI calculation step from transcript quantification and ioe/ioi event files",
+  "tools": [
+    "SUPPA2"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load transcript quantification data (TPM or counts) from Salmon/kallisto output. 2. Load the SUPPA2 event definition file in ioe or ioi format specifying alternative splicing events and their constituent transcripts. 3. Execute SUPPA2 psi subcommand to calculate PSI values by aggregating transcript abundances according to event structure. 4. Output the resulting PSI matrix as a tab-separated file with events as rows and samples as columns."
+}

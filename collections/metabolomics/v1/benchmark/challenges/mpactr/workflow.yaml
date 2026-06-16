@@ -1,0 +1,395 @@
+schema_version: 0.1.0
+workflow_id: coll_mpactr_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: tight
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: mpactr provides functions to summarize and visualize the results of MS/MS
+    data filtering, including tabular summaries of passing and failing ions, quality
+    control tables for all input ions, and treemap visualizations of filtering outcomes.
+  pseudo_abstract: 'This benchmark demonstrates mpactr''s filtering summary and visualization
+    capabilities. The filter_summary() function returns a named list containing failed_ions
+    and passed_ions components that can be displayed as data tables to inspect which
+    ions were retained or removed by a specific filter. The qc_summary() function
+    produces a data.table reporting the filtering status of all input ions, with passing
+    ions marked as ''passed'' and failing ions labeled by the filter name they failed.
+    Ion counts and percentages computed from qc_summary() output via data.table syntax
+    are rendered as treemaps using ggplot2''s geom_treemap() and geom_treemap_text()
+    functions to display status labels, counts, and percentages, with customization
+    possible through ggplot2 scale and theme functions. The benchmark also demonstrates
+    that mpactr''s R6-based filters, such as filter_mispicked_ions(), operate using
+    reference semantics: when called with the default copy_object=FALSE, filtering
+    updates the original data object in-place rather than creating independent copies,
+    as evidenced by a raw dataset of 7269 ions being reduced to 6625 ions with both
+    the original and newly assigned variable referencing the same filtered object.'
+  research_questions:
+  - What is the structure and content of the output returned by filter_summary() when
+    applied to a filtered mpactr object with the 'mispicked' filter?
+  - What is the structure and content of the data.table returned by qc_summary() when
+    applied to a fully-filtered mpactr object?
+  - How can filtering results from qc_summary() be visualized as a treemap showing
+    the count and percentage of ions in each filter status category?
+  - Does calling filter_mispicked_ions() with copy_object=FALSE modify the original
+    named object in place, such that both the original object and a separately assigned
+    result object reflect the same post-filter row count?
+  - Does setting copy_object=FALSE in filter_mispicked_ions() cause the original data
+    object to be modified in-place, whereas copy_object=TRUE preserves the original
+    object's state?
+  methods_summary: 'Load the filtered mpactr object that has undergone mispicked ions
+    filter with merge_peaks=TRUE and merge_method=''sum''. Invoke filter_summary()
+    method on the mpactr object with filter parameter set to ''mispicked'' to retrieve
+    the named list of ion fate outcomes. Extract failed_ions and passed_ions vectors
+    from the returned named list. Convert each vector to a data.table structure with
+    compound identifiers and corresponding filter status columns. Validation: Confirm
+    that the sum of failed and passed ion counts equals the total number of input
+    ions processed by the filter, and that all compound identifiers are non-empty
+    strings. References: source article (DOI: 10.1021/acs.analchem.2c04632) Load peak
+    table and metadata into mpactr object using Progenesis format parser. Identify
+    and merge mispicked isotopic patterns using retention-time and mass similarity
+    windows with sum-based peak merging. Remove solvent blank contamination by filtering
+    features above 1% relative abundance in solvent blank samples. Remove media blank
+    features above 1% relative abundance threshold to eliminate background components.
+    Flag non-reproducible compounds by computing coefficient of variation across technical
+    replicates and removing those exceeding the 0.2 threshold. Extract and validate
+    qc_summary() output reporting compound ID and pass/fail status for each filter
+    step. Validation: Verify that the qc_summary data.table contains all input compounds
+    as rows, includes a ''status'' field documenting filter outcomes (passed all filters,
+    or named filter failed), and row count is consistent with the filtered feature
+    count reported by the vignette. References: source article (DOI: 10.1021/acs.analchem.2c04632)
+    Extract qc_summary() data.table from filtered mpactr object and identify all unique
+    ion status values Aggregate ion counts by status category and compute total ion
+    population Calculate percentage of total ions for each status category Construct
+    treemap using ggplot2 with geom_treemap() for rectangles sized by count, geom_treemap_text()
+    for labels, and Greens color palette Render and save treemap PNG with no legend,
+    showing status labels and percentages Validation: Treemap PNG file exists and
+    displays all ion status categories with rectangle areas proportional to reported
+    ion counts and percentages matching qc_summary() aggregation References: source
+    article (DOI: 10.1021/acs.analchem.2c04632) Import peak table and metadata into
+    an mpactr R6 object using import_data() with Progenesis format. Apply filter_mispicked_ions()
+    with merge_peaks=TRUE, merge_method=''sum'', and copy_object=FALSE to a reference
+    object; assign result to a separate variable name. Extract row counts from get_peak_table()
+    on both the original and assigned object references. Compare row counts to verify
+    both objects reflect identical post-filter dimensions. Validation: both the original
+    object and the separately-assigned result object must report the same post-filter
+    row count, confirming reference-semantic modification rather than deep copy. References:
+    source article (DOI: 10.1021/acs.analchem.2c04632) Load cultures peak table and
+    metadata into an mpactr object using import_data() with Progenesis format. Apply
+    filter_mispicked_ions() with copy_object=FALSE; record row counts of both original
+    and returned objects and check object identity. Reload data and apply filter_mispicked_ions()
+    with copy_object=TRUE; record row counts and object identity. Construct a two-row
+    comparison table contrasting object state behavior under each reference semantics
+    setting. Validation: verify that copy_object=FALSE produces identical row counts
+    in original and assigned objects (indicating in-place mutation), while copy_object=TRUE
+    produces potentially different row counts (indicating independent copy). References:
+    source article (DOI: 10.1021/acs.analchem.2c04632)'
+  domain: metabolomics
+  techniques:
+  - feature-detection
+  - quality-control
+  - clustering
+  - correlation-analysis
+  claims:
+  - claim_text: mpactr is designed to correct for errors that occur during the pre-processing
+      of raw tandem MS/MS data.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: mpactr provides filters to identify and remove mispicked ions, which
+      are isotopic patterns that are incorrectly split during preprocessing.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: mpactr provides filters to identify and remove ions that are above
+      a relative abundance threshold in solvent blanks.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: mpactr provides filters to identify and remove non-reproducible ions
+      that are inconsistent between technical replicates.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: mpactr provides filters to identify and remove insource ions, which
+      are fragment ions created during ionization before fragmentation in the tandem
+      MS/MS workflow.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The filter_mispicked_ions function checks for similar ions based on
+      retention time and mass using the parameters ringwin, isowin, trwin and max_iso_shift.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The filter_group function identifies ions above a relative abundance
+      threshold in a specific biological group.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_filter_group
+  - claim_text: The filter_cv function identifies non-reproducible ions by coefficient
+      of variation between technical replicates.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_filter_cv
+  - claim_text: The filter_insource_ions function conducts ion deconvolution via retention
+      time correlation matrices within MS1 scans.
+    claim_type: finding
+    speculative: false
+  - claim_text: mpactr is built on an R6 class-system, meaning it operates on reference
+      semantics in which data is updated in-place.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: Reference semantics in R6 classes differ from shallow copy, where
+      only data pointers are copied, and from deep copy, where the entire data object
+      is copied in memory.
+    claim_type: finding
+    speculative: false
+  - claim_text: The default setting for the copy_object parameter in mpactr filters
+      is FALSE, which operates on reference semantics.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: Using the default copy_object = FALSE makes for an extremely fast
+      and memory-efficient way to chain mpactr filters together.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The filter_summary function allows users to view passing and failing
+      ions for a single filter.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_filter_summary
+  - claim_text: The qc_summary function returns a data.table reporting the compound
+      id and filtering status for each input ion.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_qc_summary
+  - claim_text: mpactr requires at minimum a feature table in Progenesis format and
+      a metadata file with columns for Injection, Sample_Code, and Biological_Group.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The Injection column in the mpactr metadata file is expected to match
+      sample column names in the peak table.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The Sample_Code column in the mpactr metadata file is the id for technical
+      replicate groups.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The Biological_Group column in the mpactr metadata file is the id
+      for biological replicate groups.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The get_raw_data function extracts the unfiltered peak table used
+      as input to mpactr.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The get_peak_table function extracts the filtered peak table with
+      filters that have been applied.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_get_peak_table
+  - claim_text: The get_metadata function extracts metadata from an mpactr object.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The raw peak table in mpactr does not change as filters are applied
+      to the data.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: mpactr uses R6 environments to enable reference semantics and fast
+      filter execution.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: Functions in R rely on call-by-value semantics where parameterized
+      values are treated as local variables.
+    claim_type: finding
+    speculative: false
+  - claim_text: R6 classes allow sending variables by reference to functions using
+      environment semantics.
+    claim_type: finding
+    speculative: false
+  - claim_text: Memory usage is improved when using R6 classes compared to traditional
+      copy-by-value workflows.
+    claim_type: finding
+    speculative: false
+  - claim_text: The downstream analyses in mpactr include creating interactive plots
+      of input features and their filtering fate using ggplot and plotly.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The downstream analyses in mpactr include correlating sample profiles
+      at multiple levels using Hmisc and corrplot.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The downstream analyses in mpactr include visualizing sample clustering
+      as a dendrogram with ggdendro.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The downstream analyses in mpactr include calculating fold change
+      between two biological groups.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The downstream analyses in mpactr include visualizing fold change,
+      m/z, and retention time as a 3D scatter plot.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The downstream analyses in mpactr include conducting t-tests for fold
+      change differences and calculating p-values and q-values.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The downstream analyses in mpactr include visualizing significant
+      fold change differences in a volcano plot.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: Tandem MS/MS datasets can be filled with many zeros due to compounds
+      not being detected in certain groups.
+    claim_type: finding
+    speculative: false
+  - claim_text: When a compound is found in the experimental group but not in the
+      control group, fold change calculation yields an infinite number.
+    claim_type: finding
+    speculative: false
+  - claim_text: When a compound is not found in either the experimental or control
+      group, fold change calculation yields NaN.
+    claim_type: finding
+    speculative: false
+  - claim_text: Adding pseudo-counts to all counts prior to calculating fold change
+      alleviates division by zero.
+    claim_type: finding
+    speculative: false
+  - claim_text: A Spearman correlation test is used by Hmisc::rcorr to measure correlation
+      between samples.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_hmisc
+  - claim_text: Euclidean distance is used to calculate the distance between samples
+      for dendrogram clustering.
+    claim_type: finding
+    speculative: false
+  - claim_text: Complete linkage is used as the clustering method for hierarchical
+      clustering of samples.
+    claim_type: finding
+    speculative: false
+  - claim_text: The PTY087I2 dataset contains 38 samples for biological groups of
+      solvent blanks, media blanks, and Streptomyces sp. PTY08712 grown with and without
+      cerium.
+    claim_type: finding
+    speculative: false
+    entity_id: dataset_PTY087I2
+  - claim_text: The get_group_averages function is used to extract group means from
+      filtered compounds in mpactr.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: Log2 transformation is applied to fold change values for visualization
+      and analysis.
+    claim_type: finding
+    speculative: false
+  - claim_text: A fold change threshold of 1.5 is used in the volcano plot example
+      to define significant metabolite abundance differences.
+    claim_type: finding
+    speculative: false
+  - claim_text: A p-value threshold of 0.05 is used in the volcano plot example to
+      define significant metabolite abundance differences.
+    claim_type: finding
+    speculative: false
+  - claim_text: Volcano plots display log2 fold change values on the x-axis and negative
+      log10 p-values on the y-axis.
+    claim_type: finding
+    speculative: false
+  - claim_text: The filter_cv function cannot be applied to data that does not contain
+      technical replicates.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_filter_cv
+  - claim_text: Highly correlated ion groups in filter_insource_ions are determined
+      by the cluster_threshold parameter.
+    claim_type: finding
+    speculative: false
+  - claim_text: In filter_insource_ions, the highest mass feature in a correlated
+      ion group is identified as the likely precursor ion and retained.
+    claim_type: finding
+    speculative: false
+  - claim_text: Filters can be chained in a customizable workflow in mpactr.
+    claim_type: finding
+    speculative: false
+    entity_id: mpactr_system
+  - claim_text: The recommended filter order is to filter mispicked ions, then solvent
+      blanks, prior to filtering non-reproducible or insource ions.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: open
+  method_alternatives:
+  - other ways to conduct the analyses shown; the beauty of R
+  - copy_object = TRUE can be used instead of default copy_object = FALSE for traditional
+    R style objects
+  substitution_constraints: []
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Treemap PNG file showing ion counts and percentages grouped by filter status
+    (mispicked, group, replicability, insource, passed)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Numeric verification that pre-filter and post-filter row counts are identical
+    in both the original object (data2) and the assigned result object (data2_mispicked),
+    demonstrating reference semantics behavior
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Comparison table (data.frame or data.table) with rows for copy_object=FALSE
+    and copy_object=TRUE, columns: condition, original_object_rowcount, assigned_object_rowcount,
+    object_identity_match'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

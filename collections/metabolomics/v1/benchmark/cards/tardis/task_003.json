@@ -1,0 +1,540 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Component_131.png",
+      "role": "figure",
+      "sha256": "49841ea093c2418dce75e85dd0a4fae55766914f14095539d56f7ba22284f052"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_14.png",
+      "role": "figure",
+      "sha256": "db5149cb16920f5dbd90a7ccd4a131023fcce4c5269adec045605882499f366c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_15.png",
+      "role": "figure",
+      "sha256": "c591c13e7564aa2ccba0a726a74ef897db63aedec774695889f3904ef50009bc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1576.png",
+      "role": "figure",
+      "sha256": "68b9db1ec71495a045b5f27d8bb05591fd644a2f0406383ad9dcd749f9100575"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1577.png",
+      "role": "figure",
+      "sha256": "77a337421706d3bbaf863a4b657a9efe1dde67669f769e3eebf5d6a0f6441288"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1578.png",
+      "role": "figure",
+      "sha256": "e2a5a816bbe9d511c4a533fd7d047ca5ae04ec6b67fa53574672ccef2fd6aba3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1583.png",
+      "role": "figure",
+      "sha256": "d86c987eb9530cad3fbbf8f6093cfdcd46d41a7e2e76630f28c7ac37b60b3e10"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_17.png",
+      "role": "figure",
+      "sha256": "484067618beead61a8937cba2e342448149b25f9a5a5f3ce3fee3c527b4ac6fb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_179.png",
+      "role": "figure",
+      "sha256": "ca7593be96ab92a038fd3bba8e5109722e59cef8ed48c98df7628a8b52db70c3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_183.png",
+      "role": "figure",
+      "sha256": "450029a8080d404d8bf4452316e111cca329b8052efbf365c67f9aecb2f09c80"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_21.png",
+      "role": "figure",
+      "sha256": "0771d4878d7bbc6425dcb9a7390d6882daf3ec84ce38db2a042bf70342734740"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_22.png",
+      "role": "figure",
+      "sha256": "b2a3ad8c85706b9a3c790c95c179a45e3957c342945ced0d5faa577abe37790f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_23.png",
+      "role": "figure",
+      "sha256": "e382f8674c98e4780fc98faf4a72eaa9f502cc88f635be7c66e74e29a3ee5c0e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_24.png",
+      "role": "figure",
+      "sha256": "e8a97419fd4639483cdb06111783a29829e07f23021989b9e8e6dcb2092fc7cb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_25.png",
+      "role": "figure",
+      "sha256": "ea88347302201a23f8b022eb8b9a496fd83ccf0439b546ca90bb9071145b7b97"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_331.png",
+      "role": "figure",
+      "sha256": "d234dcf1f1137bb4a43bc6f97c5239723ed9e2aa2297c4204168d4797363308e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_7.png",
+      "role": "figure",
+      "sha256": "3125b1dddebe3c6b5b0ce8f16e5df494b4070d0049fb377982d40e39d61e2d63"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_9.png",
+      "role": "figure",
+      "sha256": "9338b2919d0fa6f13ab4c1053eb8a4ac5cebbc87114ae218a2366648f39a9f09"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tardis.png",
+      "role": "figure",
+      "sha256": "3753660e6f52ebbe415127dbf72ed680f41d0ebe4de8549bb4cddcfaf18ca806"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tardis_new.png",
+      "role": "figure",
+      "sha256": "3753660e6f52ebbe415127dbf72ed680f41d0ebe4de8549bb4cddcfaf18ca806"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "424fcd032ba74d0180ed7b3853f27a43238247a9db11a9a9dfc3ad6dbfc6cc2e"
+    }
+  ],
+  "created_at": "2026-06-16T07:24:56.964844+00:00",
+  "crossref_doi": "10.1021/acs.analchem.5c00567",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_001.expected_outputs[0]: Formatted target data.frame with polarity-filtered rows and standardized column structure",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Vignette LC-MS dataset in .mzML centroided format with compound target list specifying compound ID, name, m/z, expected RT (minutes), and polarity",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "QC feature table tibble containing average metrics for each target in QC runs",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CSV file with AUC values for each target in each run",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CSV files with Max Intensity, SNR, peak_cor, and points over peak metrics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Extracted Ion Chromatograms (EICs) saved in the output folder",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Retention-time adjustment is required before peak detection to ensure accurate alignment of target compounds across multiple LC-MS runs, especially when baseline drift or instrumental variation occurs.",
+    "Screening mode identifies whether target m/z and retention-time windows contain visible signals before committing computational resources to full peak detection; setting screening_mode=FALSE enables peak detection across all runs after screening confirmation.",
+    "QC feature tables (tibbles) aggregate per-run metrics into a single summary for quality control oversight, while individual run metrics (AUC, Max Intensity, SNR, peak_cor, points-over-peak) allow detection of run-specific anomalies or instrument performance degradation.",
+    "Polarity filtering within TARDIS automatically separates positive and negative ion-mode data based on the polarity column in the target list, eliminating the need for pre-processing subsetting.",
+    "Extracted Ion Chromatograms (EICs) serve as visual validation artifacts that allow manual inspection of peak shape, baseline noise, and potential co-elution interference before accepting automated integration results."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file_exists: output directory contains per-metric CSV files named 'AUC.csv', 'Max Intensity.csv', 'SNR.csv', 'peak_cor.csv', and 'pop.csv' (or 'points over the peak.csv')",
+      "verify file_format_is: each per-metric CSV file is valid comma-separated format with row_count_equals at least 1 data row plus header",
+      "verify output_matches_reference: QC feature table tibble structure contains columns for target identifiers and average metric values across QC runs",
+      "verify script_runs: tardisPeaks() function executes without error when called with screening_mode=FALSE on vignette dataset after RT adjustment for targets 1577 and 1583",
+      "verify field_present: output tibble contains expected columns corresponding to metrics (AUC, Max Intensity, SNR, peak_cor, pop)",
+      "verify row_count_equals: number of rows in output tibble matches number of unique targets in vignette target list"
+    ],
+    "expert_review": [
+      "Verify that QC feature table tibble values (average metrics per target) are scientifically plausible given typical LC\u2013MS metabolomics data ranges and peak quality thresholds",
+      "Assess whether per-metric CSV files contain sufficient detail and consistency to support targeted metabolomics quality assessment workflows",
+      "Review RT adjustment procedure applied to targets 1577 and 1583 for correctness relative to xcms retention time correction methodology"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] What quantitative metrics and output tables does tardisPeaks() generate when run in peak detection mode (screening_mode=FALSE) on LC-MS data?: 'The `results` object is a `list` that contains a `data.frame` with the AUC of each target in each run and a `tibble` that contains a feature table with the average metrics for each target in the QC'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] tardisPeaks() with screening_mode=FALSE produces multiple output tables including: a data.frame with per-target AUC values across runs, a QC feature table tibble with average metrics, and CSV files containing Max Intensity, SNR, peak_cor, and points over the peak for all targets.: 'Other results include tables with the other metrics (Max. Int., SNR, peak_cor and points over the peak) and are saved into the output folder.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Vignette LC-MS dataset in .mzML centroided format with compound target list specifying compound ID, name, m/z, expected RT (minutes), and polarity: 'Input files need to be converted to the .mzML format and have to be centroided; compound ID, a unique identifier; A compound Name; Theoretical or measured *m/z*; Expected RT (in minutes); A column'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[results] QC feature table tibble containing average metrics for each target in QC runs: 'a `tibble` that contains a feature table with the average metrics for each target in the QC runs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] CSV file with AUC values for each target in each run: 'The `results` object is a `list` that contains a `data.frame` with the AUC of each target in each run'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] CSV files with Max Intensity, SNR, peak_cor, and points over peak metrics: 'Other results include tables with the other metrics (Max. Int., SNR, peak_cor and points over the peak)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Extracted Ion Chromatograms (EICs) saved in the output folder: 'The resulting EICs are again saved in the output folder and can be inspected'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectra: 'loads MS data as `Spectra` objects so it's easily integrated with other tools'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] xcms: 'It makes use of an established retention time correction algorithm from the `xcms` package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'R package for *TArgeted Raw Data Integration In Spectrometry*'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[results] knitr: 'knitr::include_graphics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[results] kableExtra: 'kableExtra::kable'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documentation available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(tardis); library(Spectra); library(xcms); mzml_data <- readMSData({inputs.raw_mzml_data}, mode='onDisk'); targets <- read.csv({inputs.target_list}); adjusted_mzml <- adjustRtime(mzml_data, targets); qc_results <- tardisPeaks(adjusted_mzml, targets, screening_mode=FALSE); write.csv(qc_results$auc, 'output/auc_metrics.csv', row.names=FALSE); write.csv(qc_results$max_intensity, 'output/max_intensity_metrics.csv', row.names=FALSE); write.csv(qc_results$snr, 'output/snr_metrics.csv', row.names=FALSE); write.csv(qc_results$peak_cor, 'output/peak_cor_metrics.csv', row.names=FALSE); write.csv(qc_results$pop, 'output/pop_metrics.csv', row.names=FALSE); saveRDS(qc_results$qc_feature_table, 'output/qc_feature_table.rds'); invisible(NULL)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "qc_feature_table.csv",
+  "expected_outputs": [
+    "QC feature table tibble containing average metrics for each target in QC runs",
+    "CSV file with AUC values for each target in each run",
+    "CSV files with Max Intensity, SNR, peak_cor, and points over peak metrics",
+    "Extracted Ion Chromatograms (EICs) saved in the output folder"
+  ],
+  "finding": "tardisPeaks() with screening_mode=FALSE produces multiple output tables including: a data.frame with per-target AUC values across runs, a QC feature table tibble with average metrics, and CSV files containing Max Intensity, SNR, peak_cor, and points over the peak for all targets.",
+  "github_name": "pablovgd/TARDIS",
+  "input_from": "task_001",
+  "inputs": [
+    "task_001.expected_outputs[0]: Formatted target data.frame with polarity-filtered rows and standardized column structure",
+    "Vignette LC-MS dataset in .mzML centroided format with compound target list specifying compound ID, name, m/z, expected RT (minutes), and polarity"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "targets_1577_1583_rt_adjusted.RData",
+    "qc_feature_table.csv",
+    "auc_metrics.csv",
+    "max_intensity_metrics.csv",
+    "snr_metrics.csv",
+    "peak_cor_metrics.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_015",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_019"
+  ],
+  "methodology_summary": [
+    "Load vignette LC-MS data in centroided .mzML format using Spectra package.",
+    "Apply xcms retention-time correction algorithm to align targets 1577 and 1583 across runs.",
+    "Execute tardisPeaks() with screening_mode=FALSE to perform targeted peak detection with automatic polarity filtering.",
+    "Calculate area-under-curve (AUC), max intensity, signal-to-noise ratio (SNR), peak correlation (peak_cor), and points-over-peak for each target in each run.",
+    "Aggregate per-run metrics into QC feature table tibble (average metrics per target across QC runs) and export individual metric tables (AUC, Max Intensity, SNR, peak_cor, pop) as CSV files.",
+    "Save extracted ion chromatograms (EICs) to output directory for manual quality inspection.",
+    "Validation: Verify that QC feature table tibble and all per-metric CSV files (AUC, Max Intensity, SNR, peak_cor, pop) are successfully written to the output directory with correct structure and non-empty content matching expected metric columns.",
+    "References: source article (DOI: 10.1021/acs.analchem.5c00567)"
+  ],
+  "missing_information": [
+    "No changelog documentation available"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What quantitative metrics and output tables does tardisPeaks() generate when run in peak detection mode (screening_mode=FALSE) on LC-MS data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "results"
+  ],
+  "skills": [
+    "chromatographic-peak-detection-and-integration",
+    "retention-time-correction-and-alignment",
+    "lc-ms-quality-metric-computation",
+    "targeted-metabolite-extraction",
+    "spectral-data-format-conversion",
+    "polarity-aware-data-filtering"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_tardis/synthesized_package",
+  "spine_condition_ids": [
+    "cond_screening_mode_true",
+    "cond_screening_mode_false"
+  ],
+  "spine_entity_ids": [
+    "comp_tardisPeaks",
+    "comp_screening_mode",
+    "dataset_vignette_lcms",
+    "dataset_targets_xlsx",
+    "artifact_auc_table",
+    "artifact_feature_table",
+    "artifact_metric_csvs",
+    "metric_max_intensity",
+    "metric_peak_cor",
+    "metric_pop",
+    "cond_screening_mode_true",
+    "cond_screening_mode_false",
+    "comp_internal_std_1577",
+    "comp_internal_std_1583",
+    "result_rt_edge_1577_1583",
+    "result_sawtooth_artefact"
+  ],
+  "subdomains": [
+    "lipidomics",
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:UGent-LIMET__TARDIS",
+  "task_description": "Run tardisPeaks() with screening_mode=FALSE on the vignette LC-MS dataset after retention-time adjustment for targets 1577 and 1583, and reproduce the output QC feature table tibble and per-metric CSV files (AUC, Max Intensity, SNR, peak_cor, pop) to the designated output directory.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Vignette LC-MS dataset in .mzML centroided format",
+      "port_id": "raw_mzml_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Compound target list (ID, name, m/z, RT, polarity)",
+      "port_id": "target_list",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute tardisPeaks() with screening_mode=FALSE on the vignette dataset and verify all output files (AUC table, QC feature tibble, and metric CSVs) are correctly generated in the output directory.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "QC feature table tibble with average metrics per target",
+      "port_id": "qc_feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "AUC metrics table (CSV)",
+      "port_id": "auc_csv",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Max Intensity, SNR, peak_cor, points-over-peak tables (CSV)",
+      "port_id": "intensity_snr_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Extracted Ion Chromatograms (EICs)",
+      "port_id": "eic_chromatograms",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "quality-control",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce the QC Feature Table and Metric CSV Output Files from full peak detection mode",
+  "tools": [
+    "Spectra",
+    "xcms",
+    "R",
+    "knitr",
+    "kableExtra"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the vignette LC-MS dataset in .mzML centroided format using the Spectra package. 2. Adjust retention times for targets 1577 and 1583 using the xcms retention-time correction algorithm. 3. Execute tardisPeaks() with screening_mode=FALSE to perform peak detection across all runs with polarity filtering applied automatically within TARDIS. 4. Extract and write the QC feature table tibble (containing average metrics for each target in QC runs) to the output directory. 5. Export per-metric CSV files (AUC, Max Intensity, SNR, peak_cor, and points over peak) to the output directory. 6. Verify that extracted ion chromatograms (EICs) are saved to the output folder for inspection."
+}

@@ -1,0 +1,1 @@
+{"result_id": "result_014", "summary": "SnapATAC2 version 2.7.0 makes pp.make_fragment_file return more QC metrics.", "result_type": "minor", "claim_ids": ["claim_021"], "support_status": "not_evaluated", "linked_task_ids": ["task_002"], "linked_eval_check_ids": [], "task_relevance": "task_linked"}

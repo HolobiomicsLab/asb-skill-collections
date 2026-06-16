@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "20181113_010_autoQC01.raw"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the returned index data frame contains a 'scanType' or equivalent column that id",
+      "value": [
+        "that identifies PRM scan events"
+      ]
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "for all consecutive pairs of PRM scans in the index, verify that the difference "
+    },
+    {
+      "id": "pf_005",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "robust to parameter choices \u2014 count the number of PRM scan events and confirm it"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that 20181113_010_autoQC01.raw is accessible via ExperimentHub accession EH4547 or MassIVE dataset MSV000086542",
+      "script_runs: verify that rawrr::readIndex(f) executes without error on the sample file and returns a data frame with at least columns 'scan', 'MSOrder', and 'scanType'",
+      "field_present: verify that the returned index data frame contains a 'scanType' or equivalent column that identifies PRM scan events",
+      "output_matches_reference: for all consecutive pairs of PRM scans in the index, verify that the difference in scan number is exactly 22 (byte-for-byte exact match to reported cycle length)",
+      "row_count_equals: robust to parameter choices \u2014 count the number of PRM scan events and confirm it is a positive integer consistent with a multi-cycle targeted experiment"
+    ],
+    "expert_review": [
+      "Verify that the filter string or scanType identifier used to isolate PRM events from the index correctly distinguishes parallel reaction monitoring scans from other MS/MS modes (e.g., DDA, full scan)",
+      "Confirm that a delta of 22 scans between consecutive PRM events is consistent with the documented instrument configuration and expected cycle structure for the autoQC01 experiment",
+      "Assess whether any missing or irregular scan numbers (gaps > 22, or non-uniform spacing) warrant investigation into data quality or scan type classification errors"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

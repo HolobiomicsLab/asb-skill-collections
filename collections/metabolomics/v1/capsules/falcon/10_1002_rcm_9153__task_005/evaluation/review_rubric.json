@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: check that falcon-ms and spectrum-utils==0.3.5 can be installed via pip without errors"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "cluster assignment output file is produced by the falcon run"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output file is a valid structured format (CSV, TSV, or JSON) that can be parsed",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_005",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output file contains at least 1 row of cluster assignments (non-empty result)",
+      "value": 1
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: check that falcon-ms and spectrum-utils==0.3.5 can be installed via pip without errors",
+      "script_runs: execute falcon command-line tool on the Bittremieux et al. 2021 dataset (doi:10.1002/rcm.9153) and confirm exit code is 0",
+      "file_exists: verify that cluster assignment output file is produced by the falcon run",
+      "file_format_is: confirm output file is a valid structured format (CSV, TSV, or JSON) that can be parsed",
+      "row_count_equals: verify output file contains at least 1 row of cluster assignments (non-empty result)"
+    ],
+    "expert_review": [
+      "Inspect cluster assignment output for semantic correctness: verify that spectrum identifiers are present and cluster IDs are assigned as expected for MS/MS data",
+      "Confirm that the number of clusters and cluster size distribution are reasonable given the dataset size and falcon algorithm parameters"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

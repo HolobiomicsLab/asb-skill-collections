@@ -1,0 +1,304 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Lib2NIST_configuration.png",
+      "role": "figure",
+      "sha256": "7d086035ff252e4a8649842bac3d761953850edc9f49a5e52785fb2a258d3b0d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Lib2NIST_define_subset.png",
+      "role": "figure",
+      "sha256": "b81482ceef988d0afe81dc5b0652569e012b9d63cbb9cc4899772f090281750b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/check_number_of_spectra_nist.png",
+      "role": "figure",
+      "sha256": "2f690e0650c5915ec79875a6b3b15a1c5ae3e05ddf4c1b3b43f6f06354e475bd"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "07b08b2cbf191113d234f9369ca97922b48747e137841e7bdb6fa38cc99a6dc0"
+    }
+  ],
+  "created_at": "2026-06-15T13:31:46.023986+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Directory containing multiple MSP spectral library files from in-house or batch-processed standards",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Merged library R object containing all spectra from input MSP files, ready for downstream enrichment or export",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MSP (NIST MS Search) format encodes mass spectral metadata (precursor m/z, fragment peaks, compound name, SMILES, InChIKey) as newline-delimited text blocks separated by blank lines; read_multilibs() must correctly parse variable schema across batch-processed or in-house files.",
+    "The future::plan() function sets the evaluation strategy for subsequent parallelizable operations; plan(multisession(workers=N)) spawns N background R processes sharing memory via the multisession strategy, distinct from other backends (socket, cluster, fork).",
+    "detectCores() returns the total logical CPU cores available; reserving one core (detectCores() - 1) for the main R process prevents system overload and is standard practice for interactive multi-worker configurations.",
+    "Merging multiple spectral library objects via c() in R concatenates their entries; serial equivalence testing (comparing parallel-processed output to sequential read_multilibs() on the same input directory) is the canonical validation approach in mspcompiler workflows."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that a test directory containing multiple MSP files exists and is accessible",
+      "verify file_exists: output object from read_multilibs is a valid R object with class attribute",
+      "verify that future::plan(multisession) can be called without error before read_multilibs execution",
+      "verify script_runs: parallel execution with multisession backend completes without error",
+      "verify that the merged library object produced by multisession execution has identical structure (field names, row counts) to the serial baseline result, robust to library content variations",
+      "verify that the multisession merged result contains_substring matching all expected spectral records from input MSP files"
+    ],
+    "expert_review": [
+      "Assess whether worker session spawning can be confirmed (e.g., via system monitoring, process logging, or future internals inspection) \u2014 multiple defensible approaches exist for verification",
+      "Assess whether the merged library object values (compound names, m/z ratios, retention indices) are identical between serial and parallel execution paths, accounting for floating-point tolerance if applicable",
+      "Assess whether performance metrics (execution time, CPU utilization) demonstrate genuine parallelism or merely concurrent scheduling without speedup"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Does configuring the future::plan(multisession) parallel backend before calling read_multilibs on a directory of MSP files successfully spawn multiple worker sessions while producing a merged library object identical to the serial result?: 'No verbatim evidence in provided text'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The mspcompiler package provides a read_lib() function for reading MSP files into R, and the future and future.apply packages are available as tools for implementing parallel processing workflows.: 'The goal of mspcompiler is to offer ways to compile either EI or tandem mass spectral libraries from various sources, such as NIST (if you have it installed), MoNA, and GPNS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Directory containing multiple MSP spectral library files from in-house or batch-processed standards: 'you will have many msp files to combine. The read_multilibs function give you an easy way to read all of them at once. In this case, what you need to input is the folder that contain all these msp'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Merged library R object containing all spectra from input MSP files, ready for downstream enrichment or export: 'read_multilibs(\"D:/MS_libraries/in_house\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mspcompiler: 'library(mspcompiler)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'library(mspcompiler)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] future: 'library(future)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] future.apply: 'library(future.apply)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] parallel: 'library(parallel)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mspcompiler); library(future); library(future.apply); library(parallel); plan(multisession, workers = detectCores() - 1); merged_lib <- read_multilibs('{inputs.msp_directory}'); plan(sequential); plan_disable(); cat('Merged library loaded with', nrow(merged_lib), 'spectra\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Merged library R object containing all spectra from input MSP files, ready for downstream enrichment or export"
+  ],
+  "finding": "The mspcompiler package provides a read_lib() function for reading MSP files into R, and the future and future.apply packages are available as tools for implementing parallel processing workflows.",
+  "github_name": "QizhiSu/mspcompiler",
+  "input_from": "task_001",
+  "inputs": [
+    "Directory containing multiple MSP spectral library files from in-house or batch-processed standards"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "in_house_serial_reference.Rdata",
+    "in_house_parallel_output.Rdata"
+  ],
+  "linked_result_ids": [
+    "result_028",
+    "result_034"
+  ],
+  "methodology_summary": [
+    "Load mspcompiler, future, future.apply, and parallel packages.",
+    "Configure multisession parallel backend with worker count set to detectCores() - 1.",
+    "Ingest all MSP files from the in-house directory using read_multilibs().",
+    "Disable parallel execution and return to sequential mode.",
+    "Validation: Compare merged library object structure, spectrum count, and metadata fields against a serial reference generated from identical input files processed sequentially to confirm equivalence."
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does configuring the future::plan(multisession) parallel backend before calling read_multilibs on a directory of MSP files successfully spawn multiple worker sessions while producing a merged library object identical to the serial result?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "spectral-library-parallel-ingestion",
+    "msp-file-format-parsing",
+    "r-parallel-backend-configuration",
+    "metabolite-spectral-data-merging",
+    "library-object-structure-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mspcompiler/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_MSPCOMPILER",
+    "TOOL_READ_LIB",
+    "TOOL_READ_MULTILIBS",
+    "DS_NIST_EI",
+    "DS_RIKEN_EI",
+    "DS_MONA_EI",
+    "DS_SWGDRUG_EI",
+    "DS_NIST_MS2",
+    "DS_GNPS_MS2",
+    "ARCH_EI_PIPELINE",
+    "ARCH_MS2_PIPELINE",
+    "COMP_PARALLEL"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:QizhiSu__mspcompiler",
+  "task_description": "Configure parallel execution using future::plan(multisession) with worker count equal to detectCores() - 1, then ingest multiple MSP spectral library files from a directory using read_multilibs(), and verify that the merged library object matches the output of serial processing.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Directory containing multiple MSP spectral library files",
+      "port_id": "msp_directory",
+      "resolved_via": null,
+      "source": "task_001/combined_ei_msp",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Implement and validate parallel MSP file ingestion using future::plan(multisession) and verify worker spawning and output equivalence with serial processing.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Merged library R object from all input MSP files",
+      "port_id": "merged_library",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "gc-ms",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Extend mspcompiler to Support Parallel Library Reading via read_multilibs with Multisession Workers",
+  "tools": [
+    "NIST",
+    "mspcompiler",
+    "R",
+    "future",
+    "future.apply",
+    "parallel"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: future, future.apply, parallel, Merged library R object containing all spectra from input MSP files, ready for downstream enrichment or export."
+  ],
+  "workflow_description": "1. Load the mspcompiler, future, future.apply, and parallel R packages. 2. Configure parallel backend by calling plan(multisession(workers = detectCores() - 1)) to spawn worker sessions. 3. Call read_multilibs() on the folder containing multiple MSP files (e.g., 'D:/MS_libraries/in_house') to read and merge all libraries in parallel. 4. Disable parallel computing by calling plan(sequential). 5. Verify that the merged library object structure and content match the expected format for downstream processing (write operations or further enrichment steps)."
+}

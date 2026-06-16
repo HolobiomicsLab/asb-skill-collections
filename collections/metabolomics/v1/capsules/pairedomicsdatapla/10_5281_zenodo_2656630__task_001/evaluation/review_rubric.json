@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file app/public/schema.json exists"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify schema.json is valid JSON format"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Script runs: load a valid test JSON project document and validate it against app/public/schema.json schema without errors"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Script runs: load an invalid test JSON project document (missing required fields) and validation reports failure with error message"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Output contains structured validation result with pass/fail status and any validation error details"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file app/public/schema.json exists",
+      "Verify schema.json is valid JSON format",
+      "Script runs: load a valid test JSON project document and validate it against app/public/schema.json schema without errors",
+      "Script runs: load an invalid test JSON project document (missing required fields) and validation reports failure with error message",
+      "Output contains structured validation result with pass/fail status and any validation error details"
+    ],
+    "expert_review": [
+      "Verify schema.json accurately captures all required and optional fields for paired omics project documents as intended by application design",
+      "Assess whether validation error messages are sufficiently informative for users to correct malformed JSON uploads"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

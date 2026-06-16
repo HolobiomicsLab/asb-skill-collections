@@ -1,0 +1,10 @@
+name: q2-qemistree
+slug: q2-qemistree
+evidence_spans:
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+derived_from:
+- doi: 10.1038/s41589-020-00677-3
+  title: qemistree
+source_repos:
+- biocore/q2-qemistree
+schema_version: 0.2.0

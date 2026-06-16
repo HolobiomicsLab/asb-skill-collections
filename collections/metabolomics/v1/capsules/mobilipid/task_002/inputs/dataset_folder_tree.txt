@@ -1,0 +1,11 @@
+  figures/MobiLipid_Logo_whiteBackground@300x.png
+  figures/Output_CCS_bias_after_correction.jpg
+  figures/Output_CCS_bias_after_correction_all_results.jpg
+  figures/Output_CCS_bias_figure.jpg
+  figures/Output_CCS_bias_table.jpg
+  figures/Output_Correction_functions.jpg
+  figures/Output_Number_Lipids.jpg
+  figures/Output_Resampling.jpg
+  figures/Output_Violin_plot_1.jpg
+  figures/Output_Violin_plot_2.jpg
+paper.md

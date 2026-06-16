@@ -1,0 +1,473 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/filtering_sketch.png",
+      "role": "figure",
+      "sha256": "b72d2554247d028e33dee0d42a1eb040032573b862fc43ca167cde0febcfd0ec"
+    },
+    {
+      "indexable": false,
+      "path": "figures/filtering_sketch.svg",
+      "role": "figure",
+      "sha256": "58a4269a740d35d8d8ea58ed8bc1f4f61e19d1540b466256905d7614373565d9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/flowchart_matchms.png",
+      "role": "figure",
+      "sha256": "7bbd4fbc610fef2fc452fba4b81446c3540552e49ae4cd8b878cc5179c4e6a43"
+    },
+    {
+      "indexable": false,
+      "path": "figures/flowchart_matchms.svg",
+      "role": "figure",
+      "sha256": "2573b8128cfad67eb68aa9a92b2a4f0f555d02b009f75928561e94052811f42c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matchms.png",
+      "role": "figure",
+      "sha256": "0a36cd9a0755732e4cc4482bc2d2cf117c3ebd0712695548cf5d232b9fcfffab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matchms_header.png",
+      "role": "figure",
+      "sha256": "c8156aceb8efd57c24089ee39867f6b155b20348487c097e51d80d4b4214cce9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matchms_sketch.png",
+      "role": "figure",
+      "sha256": "8b72a0a8d08fccdcf088e5f3eb106ed6f096a563408e756b53b3797230ce99a6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/peak_filtering.png",
+      "role": "figure",
+      "sha256": "d207f89a349c8e9909c917662d71a83bea7af83a3ef6e97bea57b4b268687e61"
+    },
+    {
+      "indexable": false,
+      "path": "figures/peak_filtering.svg",
+      "role": "figure",
+      "sha256": "886f0cfe19693adce38524c31b5e2ffacaa8964edadd354eb610a3e28204b677"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectra-array-plot-example.png",
+      "role": "figure",
+      "sha256": "6ca909e02db0d0417f5b6c76b06701d17a8ea9a48aa2f9724fb7f56554879867"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectrum-mirror-plot-example.png",
+      "role": "figure",
+      "sha256": "f3fcecb5ce87d074a346d124b767399e26be425170767fede3207f66722759a7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectrum-plot-example.png",
+      "role": "figure",
+      "sha256": "3c07802d868fd79d3840e386c0824e7a56867e74252750ee454f07ac47b8b963"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "5f6a9773399810c354142a89252e4ee4b957308bcfe4e31124a99b8381bba747"
+    }
+  ],
+  "created_at": "2026-06-15T21:14:07.897424+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Current matchms release version identifier (e.g., from PyPI or GitHub releases page)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Access to PyPI package repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Access to Bioconda package repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Installation log from PyPI showing successful package installation with no errors",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Installation log from Bioconda showing successful package installation with no errors",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Import test result confirming matchms module loads without errors from both installations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "PyPI is the official Python Package Index and the primary distribution channel for Python packages; successful publication requires passing automated workflows before artifact availability.",
+    "Bioconda is a conda channel providing bioinformatics software packages; package availability on Bioconda follows automated pull requests to the bioconda-recipes repository and is not instantaneous with PyPI release.",
+    "A successful import test confirms that all package dependencies are correctly installed and the Python environment is properly configured for the package to function.",
+    "The conda verify workflow is an automated check run by the matchms project to validate that the Bioconda-distributed package installs and functions correctly in a clean conda environment."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file_exists: Python environment with pip and/or conda available",
+      "script_runs: `pip install matchms` completes without error exit code",
+      "script_runs: `python -c 'import matchms'` executes without ImportError or exception",
+      "script_runs: `conda install -c bioconda matchms` completes without error exit code (if conda/bioconda accessible)",
+      "script_runs: `python -c 'import matchms; print(matchms.__version__)'` returns a non-empty version string",
+      "value_in_range: installed matchms version matches or is compatible with current release tag from github.com/matchms/matchms/releases",
+      "contains_substring: matchms module namespace contains expected submodules (e.g., 'matchms.importing', 'matchms.filtering', 'matchms.similarity')"
+    ],
+    "expert_review": [
+      "Confirm that PyPI package metadata and Bioconda recipe are correctly synchronized and point to the same upstream source",
+      "Assess whether any warnings or deprecation notices emitted during import are acceptable for the current release cycle"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Are the documented distribution channels (PyPI and Bioconda) for matchms functional and does the package import successfully after installation from these channels?: 'Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Matchms is distributed through multiple channels including PyPI and Bioconda, as referenced in the contributing guidelines which specify procedures for release management and waiting for availability on Bioconda.: 'Matchms is a versatile open-source Python package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Current matchms release version identifier (e.g., from PyPI or GitHub releases page): 'Goto [GitHub release page](https://github.com/matchms/matchms/releases)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Access to PyPI package repository: 'Verify new release is on [PyPi](https://pypi.org/project/matchms/#history)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Access to Bioconda package repository: 'Wait until new release is also on Bioconda (https://anaconda.org/bioconda/matchms)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Installation log from PyPI showing successful package installation with no errors: 'Verify new release is on [PyPi](https://pypi.org/project/matchms/#history)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Installation log from Bioconda showing successful package installation with no errors: 'Wait until new release is also on Bioconda (https://anaconda.org/bioconda/matchms)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Import test result confirming matchms module loads without errors from both installations: 'Test matchms from bioconda by manually running [Conda verify](https://github.com/matchms/matchms/actions/workflows/conda_verify.yml) workflow'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] matchms: 'Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'Matchms is a versatile open-source Python package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pip: 'Verify new release is on [PyPi](https://pypi.org/project/matchms/#history)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[other] conda: 'Wait until new release is also on Bioconda (https://anaconda.org/bioconda/matchms)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No explicit statement in the provided section text about which PyPI or Bioconda release channel versions are currently active or recommended for installation testing.: '[0.28.1]: https://github.com/matchms/matchms/compare/0.28.0...0.28.1'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The section text does not specify minimum Python version requirements, required dependencies (numpy, pandas, etc.), or platform compatibility constraints for installation.: '[0.28.1]: https://github.com/matchms/matchms/compare/0.28.0...0.28.1'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No information provided about expected behavior or acceptable error messages during a clean installation, or known installation issues in the current or recent versions.: '[0.28.1]: https://github.com/matchms/matchms/compare/0.28.0...0.28.1'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "installation_smoke_test_report.txt",
+  "expected_outputs": [
+    "Installation log from PyPI showing successful package installation with no errors",
+    "Installation log from Bioconda showing successful package installation with no errors",
+    "Import test result confirming matchms module loads without errors from both installations"
+  ],
+  "finding": "Matchms is distributed through multiple channels including PyPI and Bioconda, as referenced in the contributing guidelines which specify procedures for release management and waiting for availability on Bioconda.",
+  "github_name": "matchms/matchms",
+  "input_from": null,
+  "inputs": [
+    "Current matchms release version identifier (e.g., from PyPI or GitHub releases page)",
+    "Access to PyPI package repository",
+    "Access to Bioconda package repository"
+  ],
+  "keywords": [
+    "mass spectrometry",
+    "ms/ms data",
+    "spectral similarity",
+    "cosine score",
+    "molecular fingerprint comparison",
+    "metadata cleaning",
+    "peak filtering",
+    "mzml format",
+    "mgf format",
+    "untargeted metabolomics",
+    "spectral processing",
+    "pairwise similarity measures"
+  ],
+  "landmark_outputs": [
+    "pypi_install.log",
+    "bioconda_install.log",
+    "pypi_import_test.txt",
+    "bioconda_import_test.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_018",
+    "result_019"
+  ],
+  "methodology_summary": [
+    "Create isolated Python environment (virtual environment or fresh conda env) to ensure clean installation baseline.",
+    "Download and install matchms from PyPI using pip, capturing installation logs and any error messages.",
+    "Execute Python import statement 'import matchms' and verify no ImportError or ModuleNotFoundError exceptions occur; record success status.",
+    "Create second isolated conda environment and install matchms from Bioconda channel, capturing installation logs.",
+    "Execute Python import statement 'import matchms' in the Bioconda environment and verify no ImportError or ModuleNotFoundError exceptions occur; record success status.",
+    "Validation: Both PyPI and Bioconda installations complete without error, and matchms module imports successfully in both environments, confirming both distribution channels are functional."
+  ],
+  "missing_information": [
+    "No explicit statement in the provided section text about which PyPI or Bioconda release channel versions are currently active or recommended for installation testing.",
+    "The section text does not specify minimum Python version requirements, required dependencies (numpy, pandas, etc.), or platform compatibility constraints for installation.",
+    "No information provided about expected behavior or acceptable error messages during a clean installation, or known installation issues in the current or recent versions."
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Are the documented distribution channels (PyPI and Bioconda) for matchms functional and does the package import successfully after installation from these channels?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "python-package-installation-and-management",
+    "package-repository-verification",
+    "module-import-testing",
+    "installation-troubleshooting",
+    "distribution-channel-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_matchms/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "matchms_system",
+    "tool_pypi",
+    "tool_bioconda"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "benchmark-evaluation",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:matchms__matchms",
+  "task_description": "Verify that matchms installs correctly from PyPI and Bioconda package repositories and that the package imports without error, confirming both documented distribution channels are functional for the current release version.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Current matchms release version identifier",
+      "port_id": "pypi_release_version",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Current matchms release version on Bioconda",
+      "port_id": "bioconda_release_version",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Install matchms from PyPI and Bioconda, verify successful package import in Python, and confirm both distribution channels are functional for the current release.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Installation log from PyPI",
+      "port_id": "pypi_install_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Installation log from Bioconda",
+      "port_id": "bioconda_install_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Import test results confirming successful package loading",
+      "port_id": "import_test_result",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reproduce matchms installation and import across supported distribution channels",
+  "tools": [
+    "matchms",
+    "Python",
+    "pip",
+    "conda"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Installation log from PyPI showing successful package installation with no errors, Installation log from Bioconda showing successful package installation with no errors, Import test result confirming matchms module loads without errors from both installations."
+  ],
+  "workflow_description": "1. Install matchms from PyPI using pip or equivalent package manager. 2. Import the installed matchms package in Python and verify no import errors occur. 3. Install matchms from Bioconda using conda package manager. 4. Import the Bioconda-installed matchms package in Python and verify no import errors occur. 5. Document installation success and import status for both channels."
+}

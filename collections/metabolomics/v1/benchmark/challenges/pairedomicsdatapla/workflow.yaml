@@ -1,0 +1,208 @@
+schema_version: 0.1.0
+workflow_id: coll_pairedomicsdatapla_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: event_driven
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: A web application platform for storing and sharing paired omics data that
+    links mass spectrometry spectra with genomic information and experimental metadata
+    through a JSON schema-based format.
+  pseudo_abstract: 'Reproduces 2 reported results: A JSON schema file located at app/public/schema.json
+    defines the required format for paired omics data projects in the platform. A
+    JSON schema (app/public/schema.json) has been published to formally describe the
+    required format of paired omics data projects stored in the platform. Reconstructs
+    2 described mechanisms (described in the paper but not separately evaluated there):
+    The platform links MS/MS mass spectra with genome identifiers and other metadata,
+    enabling integration of genomic information with mass spectrometry data within
+    stored project JSON documents. The platform stores paired omics data projects
+    using a JSON schema format (app/public/schema.json) that defines project structure,
+    which serves as the basis for implementing field-level validation rules including
+    URL format constraints.'
+  research_questions:
+  - What is the formal specification for the structure and constraints that uploaded
+    JSON project documents must satisfy in the Pairing Omics Data Platform?
+  - How does the paired-data-form platform enrich a project JSON document by linking
+    a genome identifier to organism name information from an external registry?
+  - Do all project JSON documents currently deposited in the Paired Omics Data Platform
+    conform to the published JSON Schema specification?
+  - How should the validation system detect and flag URL fields in project JSON documents
+    that contain whitespace characters, which are invalid in URLs?
+  methods_summary: 'Load the candidate JSON project document from the upload endpoint.
+    Load the JSON Schema definition from app/public/schema.json. Apply JSON Schema
+    validation using a conformant validator library. Collect and report validation
+    status (pass/fail) and enumerate any schema constraint violations. Validation:
+    the task is successful when the validation report correctly identifies all schema
+    violations or confirms full conformance against the published schema. Load the
+    input project JSON document and extract the genome identifier field. Query an
+    external organism/genome registry using the extracted identifier to retrieve the
+    standardized organism name. Merge the retrieved organism name into the project
+    JSON document as a new or updated field. Serialize and validate the enriched JSON
+    document for well-formedness and required field presence. Validation: Verify that
+    the enriched JSON is well-formed, contains the original genome identifier, and
+    has a non-empty organism name field populated from the registry. Retrieve the
+    complete set of published project JSON documents from the Paired Omics Data Platform.
+    Load the canonical JSON Schema from app/public/schema.json in the iomega/paired-data-form
+    repository. Validate each project JSON document against the schema, recording
+    conformance status and any violations. Generate a structured validation report
+    listing project identifiers and validation outcomes. Validation: All retrieved
+    project documents must conform to the published schema with zero schema validation
+    errors. Load and parse the project JSON document. Identify all fields with URL
+    type designation in the document schema. Scan each URL field for the presence
+    of whitespace characters (spaces, tabs, newlines, etc.). Record and report all
+    URLs containing whitespace with their field locations. Validation: accept output
+    if all URL fields in the document have been scanned and all whitespace-containing
+    URLs are flagged.'
+  domain: bioinformatics
+  techniques: []
+  claims:
+  - claim_text: The platform links MS/MS mass spectra with genome, sample preparation,
+      extraction method and instrumentation method.
+    claim_type: finding
+    speculative: false
+  - claim_text: The platform links biosynthetic gene clusters with MS/MS mass spectra.
+    claim_type: finding
+    speculative: false
+  - claim_text: The Pairing Omics Data Platform is a web application for storing paired
+      omics data projects.
+    claim_type: finding
+    speculative: false
+    entity_id: sys-paired-omics-platform
+  - claim_text: A JSON schema file located at app/public/schema.json describes the
+      format of a project.
+    claim_type: finding
+    speculative: false
+    entity_id: comp-json-schema
+  - claim_text: Users can contribute projects to the platform by submitting them at
+      https://pairedomicsdata.bioinformatics.nl/add.
+    claim_type: finding
+    speculative: false
+  - claim_text: After project submission, the project will be reviewed and if approved
+      will appear in the list of projects.
+    claim_type: finding
+    speculative: false
+  - claim_text: Each project page on the platform has a download button that provides
+      the JSON document of the project.
+    claim_type: finding
+    speculative: false
+  - claim_text: A developer manual is available at manuals/developers.md for programmatic
+      access to the platform.
+    claim_type: finding
+    speculative: false
+  - claim_text: Contributors should announce their plan to the community before starting
+      to work on code changes.
+    claim_type: finding
+    speculative: false
+  - claim_text: Contributors should wait until consensus is reached about their idea
+      before proceeding with implementation.
+    claim_type: finding
+    speculative: false
+  - claim_text: Development environment setup requires following instructions in api/README.md
+      and app/README.md.
+    claim_type: finding
+    speculative: false
+  - claim_text: Contributors must run npm test in the api/ and/or app/ directory to
+      ensure existing tests still work.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 0.2.0 was released on 2019-07-05.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 0.1.0 was released on 2019-05-01 as the initial release.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 0.2.0 added an intro page.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 0.2.0 added a password protected review section to review
+      pending projects.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 0.2.0 added a page with a list of projects.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 0.2.0 added a page to show single projects.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 0.2.0 added a web service to store projects on disk as JSON
+      documents.
+    claim_type: finding
+    speculative: false
+    entity_id: comp-api
+  - claim_text: Version 0.2.0 added a task queue to enrich projects.
+    claim_type: finding
+    speculative: false
+    entity_id: comp-task-queue
+  - claim_text: Version 0.2.0 added functionality to enrich projects by fetching organism
+      name based on genome identifier.
+    claim_type: finding
+    speculative: false
+  - claim_text: In version 0.2.0, the original form became for adding a project for
+      review.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 0.2.0 added metabolights study id to genome.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 0.2.0 made which fields are required more clear.
+    claim_type: finding
+    speculative: false
+  - claim_text: Version 0.2.0 replaced the run command from yarn to docker-compose.
+    claim_type: finding
+    speculative: false
+    entity_id: tool-docker-compose
+  - claim_text: The platform validates labels when selected in links sections.
+    claim_type: finding
+    speculative: false
+  - claim_text: The platform validates uploaded JSON documents.
+    claim_type: finding
+    speculative: false
+  - claim_text: A GNPS task id link was broken and fixed.
+    claim_type: finding
+    speculative: false
+    entity_id: tool-gnps
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 4-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Validation report (CSV or JSON) listing each project identifier, validation
+    status (pass/fail), and any schema violations
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Validation report listing all URL fields containing whitespace, with field
+    names and flagged values
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

@@ -7,6 +7,7 @@ metadata:
   edam_topics:
   - http://edamontology.org/topic_3520
   - http://edamontology.org/topic_0121
+  - http://edamontology.org/topic_3370
   tools:
   - gensim
   - matchms
@@ -14,9 +15,15 @@ metadata:
   - Pandas
   - Word2Vec
   - spec2vec
+  - Python 3.8
+  - numpy
+  - MEMO
+  - memo-ms
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
+- doi: 10.3389/fbinf.2022.842964
+  title: ''
 evidence_spans:
 - A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
 - the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
@@ -32,6 +39,9 @@ provenance:
   - build: spec2vec_grounded
     doi: 10.1371/journal.pcbi.1008724
     title: Spec2Vec
+  - build: coll_memo
+    doi: 10.3389/fbinf.2022.842964
+    title: memo
   dedup_kept_from: spec2vec_grounded
 schema_version: 0.2.0
 ---

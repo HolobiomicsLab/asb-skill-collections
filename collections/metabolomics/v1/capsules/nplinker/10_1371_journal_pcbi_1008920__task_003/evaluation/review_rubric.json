@@ -1,0 +1,132 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "S1 Data (Linked MIBiG and GNPS databases with SMILES strings and BGC-spectrum li"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "S2 Data (High-scoring links from Cr\u00fcsemann dataset)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "S3 Data (High-scoring links from Le\u00e3o dataset)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "S4 Data (High-scoring links from Gross dataset)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_008",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "ratio of validated links in top 10% by combined score vs. top 10% by strain corr"
+    },
+    {
+      "id": "pf_009",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "ratio of validated links in top 10% by combined score vs. top 10% by IOKR alone,"
+    },
+    {
+      "id": "pf_010",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "proportion of validated links in 90th percentile for standardised strain correla"
+    },
+    {
+      "id": "pf_011",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "proportion of validated links in 90th percentile for IOKR score in Cr\u00fcsemann dat"
+    },
+    {
+      "id": "pf_012",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "proportion of validated links in 90th percentile for combined score in Cr\u00fcsemann"
+    },
+    {
+      "id": "pf_013",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "number of GCF-MF pairs evaluated in each of Cr\u00fcsemann, Gross, and Le\u00e3o datasets "
+    },
+    {
+      "id": "pf_014",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "Table 4 in published article reports enrichment ratios and p-values for joint to"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: S1 Data (Linked MIBiG and GNPS databases with SMILES strings and BGC-spectrum links)",
+      "file_exists: S2 Data (High-scoring links from Cr\u00fcsemann dataset)",
+      "file_exists: S3 Data (High-scoring links from Le\u00e3o dataset)",
+      "file_exists: S4 Data (High-scoring links from Gross dataset)",
+      "script_runs: NPLinker strain correlation scoring module on input GCF-MF pairs from three datasets, producing standardised scores",
+      "script_runs: NPLinker IOKR scoring module on input spectra and BGC candidates, producing IOKR scores for the three datasets",
+      "script_runs: NPLinker combined scoring function (\u2113p-norm with sign adjustment) integrating both standardised scores",
+      "output_matches_reference: ratio of validated links in top 10% by combined score vs. top 10% by strain correlation alone, across all three datasets (reference: Table 4 values)",
+      "output_matches_reference: ratio of validated links in top 10% by combined score vs. top 10% by IOKR alone, across all three datasets (reference: Table 4 values)",
+      "value_in_range: proportion of validated links in 90th percentile for standardised strain correlation score in Cr\u00fcsemann dataset, robust to choice of percentile threshold",
+      "value_in_range: proportion of validated links in 90th percentile for IOKR score in Cr\u00fcsemann dataset, robust to choice of percentile threshold",
+      "value_in_range: proportion of validated links in 90th percentile for combined score in Cr\u00fcsemann dataset, robust to choice of percentile threshold",
+      "row_count_equals: number of GCF-MF pairs evaluated in each of Cr\u00fcsemann, Gross, and Le\u00e3o datasets matches supplementary data counts",
+      "contains_substring: Table 4 in published article reports enrichment ratios and p-values for joint top-percentile performance across three datasets"
+    ],
+    "expert_review": [
+      "Verify that the reported improvement in validated link ratio (Table 4) represents a meaningful biological or chemical validation criterion (e.g., spectral matching, known biosynthetic relationship)",
+      "Assess whether the choice of \u2113p-norm exponent (p=0.5 in combined function) is justified and whether alternative exponents were tested and reported",
+      "Evaluate whether the three datasets (Cr\u00fcsemann, Gross, Le\u00e3o) represent adequate diversity in microbial ecology, strain characteristics, and compound classes to support generalisability claims",
+      "Review the statistical significance and effect sizes reported in Table 4 to determine whether improvements are both statistically and practically significant"
+    ]
+  },
+  "max_score": 14.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

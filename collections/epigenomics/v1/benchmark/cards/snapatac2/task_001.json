@@ -1,0 +1,367 @@
+{
+  "abstraction_frame": "result",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-0.png",
+      "role": "figure",
+      "sha256": "62b9435f3307fc87f52ef0605b5fb429b904fb7c3008486d5e6a1a3e0ac2ef49"
+    },
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-1.png",
+      "role": "figure",
+      "sha256": "4c20c79eb335c2d7ab728a84f1a22058120bc74ab7192782d770cbbd942dab52"
+    },
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-2.png",
+      "role": "figure",
+      "sha256": "d5eb9377f2a149d7b57d78ca39f60cc51bc16213a568780072657558d22be90d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/func+export_coverage.svg",
+      "role": "figure",
+      "sha256": "b2c54284c113efb517e25ccfd1829a2f548e34db945b512753e130a447d46976"
+    },
+    {
+      "indexable": false,
+      "path": "figures/func+import_data.svg",
+      "role": "figure",
+      "sha256": "248512cdcfb5004f5e114f588183a92fef1e6115d05b1c32a5d917690d1efb66"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "95aea9a378722044cf71a0cc3f6bb553788936ff4c89d5f6c20466b68e804fde"
+    }
+  ],
+  "created_at": "2026-06-15T19:32:53.712417+00:00",
+  "crossref_doi": "10.1038/s41592-023-02139-9",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Single-cell count matrix (\u226510 million cells, any supported format: .h5ad, .mtx, or generated from raw fragment/BAM files)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Wall-clock execution time (in seconds) for tl.spectral on \u226510 million cell dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Peak memory usage (in GB) during spectral embedding computation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Computational complexity analysis report (text or figure) confirming linear time and space behavior",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "The matrix-free spectral embedding in SnapATAC2 uses cosine similarity as its default metric (as of Release 2.3.0) and achieves linear time and space complexity through this choice, enabling scalability to >10 million cells.",
+    "Eigenvectors returned by tl.spectral are automatically weighted by their corresponding eigenvalues (the default behavior); setting weighted_by_sd=False restores unweighted eigenvectors for comparison.",
+    "The spectral embedding algorithm expects input matrices in compressed sparse row (CSR) format; dense or column-compressed matrices may trigger format conversion overhead or errors.",
+    "Wall-clock time and peak memory usage are hardware-dependent; reproducible benchmarking requires fixed computational resources or normalization (e.g., runtime per 1M cells, memory per feature dimension).",
+    "Linear complexity in spectral methods means runtime scales approximately O(n) and memory scales O(n) with cell count n; validation should demonstrate subquadratic scaling when doubling or tripling cell count."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that tl.spectral function exists and is callable in the installed SnapATAC2 package from github:scverse__SnapATAC2",
+      "verify that a dataset with \u226510 million cells can be loaded or constructed (either from public accession, SnapATAC2 built-in datasets, or synthetic data with documented cell count)",
+      "verify wall-clock execution time is logged and reported as a single numeric value in seconds",
+      "verify peak memory usage is logged and reported as a single numeric value in GB or MB",
+      "verify that reported time complexity is O(n) or linear (no canonical answer for exact constant factor; multiple defensible profiling approaches acceptable)",
+      "verify that reported space complexity is O(n) or linear (no canonical answer for exact constant factor; multiple defensible profiling approaches acceptable)"
+    ],
+    "expert_review": [
+      "assess whether wall-clock time and peak memory measurements are consistent with claimed linear scaling (expert judgment required to evaluate whether empirical results support the theoretical complexity claim given hardware, implementation details, and parameter choices)",
+      "evaluate whether the benchmark dataset (\u226510M cells) is representative and sufficiently large to meaningfully demonstrate scalability; assess appropriateness of profiling methodology"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the matrix-free spectral embedding algorithm (tl.spectral) in SnapATAC2 achieve linear time and space complexity when applied to datasets of 10 million or more cells?: 'Matrix-free spectral embedding algorithm that is applicable to a wide range of single-cell omics data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SnapATAC2 is capable of scaling to more than 10 million cells, demonstrating its capacity to handle very large single-cell datasets.: 'Scale to more than 10 million cells.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Single-cell count matrix (\u226510 million cells, any supported format: .h5ad, .mtx, or generated from raw fragment/BAM files): 'datasets.pbmc500, datasets.pbmc5k, datasets.pbmc10k_multiome, datasets.colon, datasets.cre_HEA'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Wall-clock execution time (in seconds) for tl.spectral on \u226510 million cell dataset: 'Scale to more than 10 million cells'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Peak memory usage (in GB) during spectral embedding computation: 'Matrix-free spectral embedding algorithm'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Computational complexity analysis report (text or figure) confirming linear time and space behavior: 'Significantly improve the scalability of the algorithm when using the cosine similarity. Both the time and space complexity are now linear'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SnapATAC2: 'SnapATAC2: A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Rust: 'A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or detailed discussion of computational complexity, benchmarking results, or scalability metrics found in the discussion section: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import snapatac2 as snap; import psutil; import time; import os; adata = snap.read('{inputs.large_count_matrix}'); process = psutil.Process(os.getpid()); mem_before = process.memory_info().rss / 1e9; start = time.time(); snap.tl.spectral(adata); elapsed = time.time() - start; mem_after = process.memory_info().rss / 1e9; peak_mem = max(mem_before, mem_after); print(f'Execution time: {elapsed:.2f}s'); print(f'Peak memory: {peak_mem:.2f}GB')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "spectral_complexity_report.txt",
+  "expected_outputs": [
+    "Wall-clock execution time (in seconds) for tl.spectral on \u226510 million cell dataset",
+    "Peak memory usage (in GB) during spectral embedding computation",
+    "Computational complexity analysis report (text or figure) confirming linear time and space behavior"
+  ],
+  "finding": "SnapATAC2 is capable of scaling to more than 10 million cells, demonstrating its capacity to handle very large single-cell datasets.",
+  "github_name": "scverse/SnapATAC2",
+  "input_from": null,
+  "inputs": [
+    "Single-cell count matrix (\u226510 million cells, any supported format: .h5ad, .mtx, or generated from raw fragment/BAM files)"
+  ],
+  "keywords": [
+    "single-cell atac-seq",
+    "single-cell epigenomics",
+    "spectral embedding",
+    "multi-omics integration",
+    "dimension reduction",
+    "clustering",
+    "peak calling",
+    "preprocessing",
+    "fragment file conversion",
+    "scalable analysis"
+  ],
+  "landmark_outputs": [
+    "time_measurements.csv",
+    "memory_profile.txt",
+    "complexity_plot.png"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_024"
+  ],
+  "methodology_summary": [
+    "Load single-cell count matrix with \u226510 million cells into SnapATAC2-compatible format (CSR sparse matrix).",
+    "Execute tl.spectral with default cosine similarity metric and capture wall-clock time using system timer.",
+    "Monitor peak memory consumption throughout spectral decomposition using memory_profiler or psutil.",
+    "Verify returned eigenvectors are weighted by eigenvalues (default Release 2.3.0 behavior).",
+    "Analyze runtime and peak memory scaling behavior against cell count to validate claimed linear time and space complexity.",
+    "Validation: runtime and memory usage scale sublinearly (slope <1) when plotted on log-log scale against cell count, confirming O(n) complexity for both metrics.",
+    "References: source article (DOI: 10.1038/s41592-023-02139-9)"
+  ],
+  "missing_information": [
+    "No changelog or detailed discussion of computational complexity, benchmarking results, or scalability metrics found in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the matrix-free spectral embedding algorithm (tl.spectral) in SnapATAC2 achieve linear time and space complexity when applied to datasets of 10 million or more cells?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "spectral-embedding-scalability-benchmarking",
+    "large-scale-single-cell-matrix-loading",
+    "computational-complexity-validation",
+    "memory-profiling-and-monitoring",
+    "cosine-similarity-metric-application",
+    "compressed-sparse-row-matrix-handling"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_snapatac2/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "snapatac2_system",
+    "snapatac2_core",
+    "snapatac2_python",
+    "snapatac2_contrib",
+    "spectral_embedding",
+    "multi_spectral",
+    "pp_add_tile_matrix",
+    "pp_make_peak_matrix",
+    "pp_make_gene_matrix",
+    "pp_call_cells",
+    "result_scale_10m",
+    "result_linear_complexity"
+  ],
+  "subdomains": [
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "benchmark-evaluation",
+    "data-analysis",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:scverse__SnapATAC2",
+  "task_description": "Run SnapATAC2's matrix-free spectral embedding algorithm (tl.spectral) on a large-scale dataset of 10 million or more cells and measure wall-clock execution time and peak memory consumption to validate the reported linear time and space complexity.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Single-cell count matrix (\u226510 million cells)",
+      "port_id": "large_count_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute tl.spectral on a \u226510 million cell dataset and measure wall-clock runtime and peak memory consumption to validate linear complexity scaling claims.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Wall-clock time and peak memory usage metrics",
+      "port_id": "runtime_memory_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Computational complexity analysis report",
+      "port_id": "complexity_validation",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction",
+    "batch-correction",
+    "normalization"
+  ],
+  "title": "Reproduce the scalability benchmark of spectral embedding to 10M+ cells",
+  "tools": [
+    "SnapATAC2",
+    "Python",
+    "Rust"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Wall-clock execution time (in seconds) for tl.spectral on \u226510 million cell dataset."
+  ],
+  "workflow_description": "1. Load or generate a single-cell count matrix with \u226510 million cells using SnapATAC2's dataset utilities or external data sources. 2. Initialize the matrix in compressed sparse row (CSR) format compatible with SnapATAC2's backend. 3. Execute tl.spectral with cosine similarity metric (the default similarity metric as of Release 2.3.0) and capture wall-clock runtime using Python's time module or system profiler. 4. Monitor and record peak memory usage throughout the spectral decomposition using a memory profiler (e.g., memory_profiler or psutil). 5. Document the number of eigenvectors returned and verify they are weighted by eigenvalues (default behavior in Release 2.3.0) to confirm the expected output structure. 6. Analyze runtime and peak memory against the reported linear complexity claim by plotting execution metrics."
+}

@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:glasgowcompbio__vimms (repository accessible)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify Beer1pos mzML dataset is retrievable from glasgowcompbio/vimms-data repository"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify ViMMS package can be imported and TopNController class is accessible"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify simulated mzML output file is generated with valid mzML format"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify simulated mzML contains MS1 and MS2 scans in byte-for-byte valid XML structure"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify comparison metrics (fragmentation coverage, peak matching) can be computed from both real and simulated mzML files using reported parameters (MS1 tolerance 1 ppm, MS2 tolerance 0.05 ppm, minimum 3 matching peaks)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output comparison table or figure matches structure and numerical range of reported Beer Top-N demo result"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:glasgowcompbio__vimms (repository accessible)",
+      "verify Beer1pos mzML dataset is retrievable from glasgowcompbio/vimms-data repository",
+      "verify ViMMS package can be imported and TopNController class is accessible",
+      "verify simulated mzML output file is generated with valid mzML format",
+      "verify simulated mzML contains MS1 and MS2 scans in byte-for-byte valid XML structure",
+      "verify comparison metrics (fragmentation coverage, peak matching) can be computed from both real and simulated mzML files using reported parameters (MS1 tolerance 1 ppm, MS2 tolerance 0.05 ppm, minimum 3 matching peaks)",
+      "verify output comparison table or figure matches structure and numerical range of reported Beer Top-N demo result"
+    ],
+    "expert_review": [
+      "assess whether simulated acquisition strategy (TopNController with N parameter) faithfully reproduces the selectivity and timing patterns of real Beer1pos instrument run",
+      "assess whether comparison metrics (fragmentation coverage percentage, number of matched compounds) are consistent with metabolomics best practices and the paper's reported values",
+      "assess biological plausibility: verify that matched metabolites and fragmentation patterns are chemically and biologically consistent with beer composition"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

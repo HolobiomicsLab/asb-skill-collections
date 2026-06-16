@@ -1,0 +1,10 @@
+name: GNPS Spectral Networking / Molecular Networking
+slug: gnps-spectral-networking-molecular-networking
+evidence_spans:
+- Spectral network can be easily run through GNPS. Detailed instructions can be found in the [GNPS documentation]
+derived_from:
+- doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
+source_repos:
+- ablab/npdtools
+schema_version: 0.2.0

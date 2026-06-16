@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "a LOTUS flat file (2D structure-organism pairs) is accessible at a public deposi"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the four computed counts are exactly 7,354 / 21,490 / 10,683 / 374, byte-for-byt"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that a LOTUS flat file (2D structure-organism pairs) is accessible at a public deposit (GitHub release, Zenodo, or documented URL from lotusnprod/lotus-processor)",
+      "script_runs: execute a computational script (R, Python, or similar) that loads the flat file, groups unique organisms by cardinality of distinct 2D structures (bins: 1, 1\u201310, 10\u2013100, >100), and outputs four counts",
+      "output_matches_reference: verify that the four computed counts are exactly 7,354 / 21,490 / 10,683 / 374, byte-for-byte, in that order"
+    ],
+    "expert_review": [
+      "Confirm that the binning logic correctly interprets 'distinct 2D structures per organism' (e.g., handling duplicate or isomeric structures, SMILES normalization, and structure deduplication method) aligns with LOTUS curation standards"
+    ]
+  },
+  "max_score": 3.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

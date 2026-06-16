@@ -1,0 +1,400 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/CV.png",
+      "role": "figure",
+      "sha256": "04df4524a75ccf320f46afcc9c2051241dd061dfdebf18166053a7826e2d8ffc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MZmine_IIMN_logo_RGB.png",
+      "role": "figure",
+      "sha256": "4fab0c1b40319fe464b3ce9d14b9861d14959c15454d25e7e47931cd95c9c019"
+    },
+    {
+      "indexable": false,
+      "path": "figures/anova_test.png",
+      "role": "figure",
+      "sha256": "c566a512defdd52d99cc573a9267bb21cbda3f3f4723118de275634a7df3d06a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo300_mzmine.png",
+      "role": "figure",
+      "sha256": "dc240619d33f1de98ca25ea10701b6d47a2292f6dacd8429db8f7b7e42cdb3cc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo300_mzmine_light.png",
+      "role": "figure",
+      "sha256": "c67caf68af2be639553e42134a8031cc5f3d0c5a4f5e17a6c3cbe6fd5fc5d4ea"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo300_mzmine_white.png",
+      "role": "figure",
+      "sha256": "7d15a301be9069d9a57fefd98998a68223919f508e2c266b2f5804d87f0f5322"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo300_mzwizard.png",
+      "role": "figure",
+      "sha256": "7509e50fe0fb775bfce5314dd9d7fd714aec059eff6b5dc2547ef2ab3bab0abf"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo300_mzwizard_light.png",
+      "role": "figure",
+      "sha256": "8b9c8869f444ab31824e736f16d54697cc3ed0c066643140eabb37b048160945"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo300_mzwizard_white.png",
+      "role": "figure",
+      "sha256": "84a977f90e8078b9e03703a4894571d52eeac8237750b6ca861d3df24c75bce2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_mzmine.svg",
+      "role": "figure",
+      "sha256": "b6837f7d423bcbcb8596fc8478a709d56fd6a52ab3de30b9f627508f041d5fb4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_mzmine_light.svg",
+      "role": "figure",
+      "sha256": "d65dbc55065b0fe49880ba2342225f73a68b131e056285de877cc43c65516003"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_mzmine_white.svg",
+      "role": "figure",
+      "sha256": "ae830beee2fc9c321b336a2faab76ace6a982af761e036bd292efc75bc9ceab9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_mzwizard.svg",
+      "role": "figure",
+      "sha256": "f47d84b5c28d85cc19cf2ddca0298015d4563c8c56e0d03a017ae8a3a12e0954"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_mzwizard_light.svg",
+      "role": "figure",
+      "sha256": "2b5435c307d1211c8a8650ee73ef4da7dc9369340fb00629d66f37699aae9eb4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_mzwizard_white.svg",
+      "role": "figure",
+      "sha256": "450693d0ed408f2ae388637ee13b1e17ed1f68f8d4704fbd5cbc9c1f132481f2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logratio.png",
+      "role": "figure",
+      "sha256": "f44af0345fe3d29ca52f04dea35521f6f983eb89c8747c5cd651d1ec18a18781"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mac_installer_background.png",
+      "role": "figure",
+      "sha256": "1266929bdc042dc4d9b5cb5aac33064927f0a09fc0e7018982dd815d999d09d4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mac_installer_background@2x.png",
+      "role": "figure",
+      "sha256": "1266929bdc042dc4d9b5cb5aac33064927f0a09fc0e7018982dd815d999d09d4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mzmine-fbmn.png",
+      "role": "figure",
+      "sha256": "919608e69a66e757f648399d2e10064e405d825e2cad9a1e979c66142400303c"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "aeb87aae7d4ccc7999cfee1ffc93d22113dc3ff0f4accfa9f2204721f608310a"
+    }
+  ],
+  "created_at": "2026-06-15T21:46:58.504224+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "mzmine source code repository (github.com/mzmine/mzmine)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Control-flow diagram or pseudocode documenting the conditional routing logic for LC, GC, IMS, and MS Imaging module dispatch",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Data-type classification schema and dispatch decision criteria",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "mzmine architecture separates processing pipelines by instrument type (LC, GC, IMS, MALDI); the dispatcher must detect and route input data to the correct module based on declared or inferred data characteristics.",
+    "Data-type declaration in mzmine typically occurs at file import or scan metadata inspection; routing logic often uses enums, factory patterns, or service registries to bind input types to module implementations.",
+    "The dispatch mechanism must handle fallback or multi-modal inputs (e.g., LC coupled to IMS); the routing logic may permit partial module chaining or raise validation errors for unsupported combinations.",
+    "mzmine supports most MS instruments and formats; the routing logic must be extensible to accommodate new instrument types without modifying core dispatcher code."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:mzmine__mzmine repository is accessible and contains README or documentation files",
+      "file_exists: locate README.md or similar documentation artifact in mzmine/mzmine repository",
+      "contains_substring: README or primary documentation contains explicit description of conditional routing logic for LC, GC, IMS, and MS Imaging module selection",
+      "contains_substring: documentation specifies the input data type parameter or field that triggers routing decisions",
+      "contains_substring: documentation describes at least one complete if-then or case-based routing rule mapping input type to processing module"
+    ],
+    "expert_review": [
+      "assess whether the documented routing logic is complete and covers all declared module types (LC, GC, IMS, MS Imaging)",
+      "verify that the routing dispatch mechanism correctly distinguishes between supported chromatography and imaging modalities based on standard MS data formats or metadata fields",
+      "confirm that the routing logic is actually implemented as described in the README by sampling relevant source code (e.g., factory classes, plugin loaders, or main entry point)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does mzmine route input mass spectrometry data to the appropriate processing module based on the declared data type?: 'Support includes liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), MS imaging (e.g., MALDI), and most MS instruments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] mzmine supports selective processing module dispatch across liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), and MS imaging (e.g., MALDI) data types, with coverage for most MS instruments.: 'Support includes liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), MS imaging (e.g., MALDI), and most MS instruments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] mzmine source code repository (github.com/mzmine/mzmine): 'github.com/mzmine/mzmine'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Control-flow diagram or pseudocode documenting the conditional routing logic for LC, GC, IMS, and MS Imaging module dispatch: 'routing logic that selects the appropriate processing module (LC Support, GC Support, IMS Support, MS Imaging Support) based on the declared input data type'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Data-type classification schema and dispatch decision criteria: 'routing logic that selects the appropriate processing module based on the declared input data type'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] mzmine: 'mzmine is an open-source software for mass spectrometry data processing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] JDK 25: 'JDK version-25-blue'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] JavaFX 24: 'JavaFX version-24'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting recent changes or versions of mzmine dispatch logic is available: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific mechanism by which mzmine selects LC, GC, IMS, or MS Imaging processing modules based on input data type is not described in the provided section text: 'No changelog found.'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "routing_dispatch_logic.md",
+  "expected_outputs": [
+    "Control-flow diagram or pseudocode documenting the conditional routing logic for LC, GC, IMS, and MS Imaging module dispatch",
+    "Data-type classification schema and dispatch decision criteria"
+  ],
+  "finding": "mzmine supports selective processing module dispatch across liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), and MS imaging (e.g., MALDI) data types, with coverage for most MS instruments.",
+  "github_name": "mzmine/mzmine",
+  "input_from": null,
+  "inputs": [
+    "mzmine source code repository (github.com/mzmine/mzmine)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "module_dispatch_code_excerpt.java",
+    "data_type_enum.java",
+    "routing_control_flow.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_003",
+    "result_004",
+    "result_005",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Clone or inspect the mzmine GitHub repository to locate the main entry point and module initialization code.",
+    "Identify the data-type classification system (enum, interface, or metadata field) used to label input as LC, GC, IMS, or MS Imaging.",
+    "Trace conditional branching logic (if/switch statements, factory methods, or service registries) that maps each data type to its processing module.",
+    "Extract dispatch conditions, parameter validation checks, and fallback or error-handling behavior.",
+    "Synthesize the routing logic as a control-flow diagram, decision tree, or pseudocode with all pathways and triggering criteria.",
+    "Validation: Verify that the reconstructed routing logic accounts for all four supported data types (LC, GC, IMS, MS Imaging) and correctly documents the dispatch conditions reported in mzmine documentation."
+  ],
+  "missing_information": [
+    "No changelog documenting recent changes or versions of mzmine dispatch logic is available",
+    "The specific mechanism by which mzmine selects LC, GC, IMS, or MS Imaging processing modules based on input data type is not described in the provided section text"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does mzmine route input mass spectrometry data to the appropriate processing module based on the declared data type?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "control-flow-diagram-synthesis",
+    "module-dispatch-architecture-analysis",
+    "data-type-classification-schema-design",
+    "java-source-code-inspection",
+    "conditional-routing-logic-extraction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_iimn/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "mzmine_system",
+    "comp_lc_support",
+    "comp_gc_support",
+    "comp_ims_support",
+    "comp_ms_imaging",
+    "comp_module_system"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "information-extraction",
+    "data-processing"
+  ],
+  "synthesized_from": "github:mzmine__mzmine",
+  "task_description": "Reconstruct the conditional routing logic that dispatches mass spectrometry input data to the appropriate processing module (LC Support, GC Support, IMS Support, or MS Imaging Support) based on declared data type, as defined in the mzmine architecture. Document the dispatch mechanism and decision criteria as a structured control flow.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "mzmine source code repository",
+      "port_id": "mzmine_repo",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Reconstruct the conditional routing logic that dispatches input data to LC, GC, IMS, or MS imaging processing modules based on declared input type.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Control-flow diagram or pseudocode of module dispatch logic",
+      "port_id": "routing_diagram",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Data-type classification and routing decision criteria",
+      "port_id": "dispatch_schema",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reconstruct the module dispatch routing for LC, GC, IMS, and MS Imaging input types in mzmine",
+  "tools": [
+    "mzmine",
+    "JDK 25",
+    "JavaFX 24"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: JDK 25, JavaFX 24, Control-flow diagram or pseudocode documenting the conditional routing logic for LC, GC, IMS, and MS Imaging module dispatch, Data-type classification schema and dispatch decision criteria."
+  ],
+  "workflow_description": "1. Retrieve the mzmine repository (github.com/mzmine/mzmine) and locate the main entry point and module initialization code. 2. Identify the data-type declaration interface or enum that classifies input as LC, GC, IMS, or MS Imaging. 3. Trace the conditional branching logic (if/switch statements or factory pattern) that maps each data type to its corresponding processing module. 4. Extract the dispatch conditions, parameter checks, and fallback behavior. 5. Synthesize the routing logic as a control-flow diagram or pseudocode, documenting each pathway and the criteria that trigger it."
+}

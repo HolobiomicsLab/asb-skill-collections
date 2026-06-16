@@ -1,0 +1,154 @@
+schema_version: 0.1.0
+workflow_id: coll_tobias_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_003
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_003
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: TOBIAS is a collection of command-line bioinformatics tools for performing
+    footprinting analysis on ATAC-seq data by analyzing local Tn5 insertion patterns
+    to detect transcription factor binding.
+  pseudo_abstract: 'Analyses 1 derived result: ATAC-seq data exhibits a visible depletion
+    of Tn5 insertions around chromatin sites bound by transcription factor proteins,
+    a signal pattern known as footprints that distinguishes bound from unbound motif
+    locations. Reconstructs 3 described mechanisms (described in the paper but not
+    separately evaluated there): ATAC-seq generates signal data from Tn5 transposase
+    insertions at accessible chromatin sites, which contain information about transcription
+    factor binding through patterns of insertion depletion (footprints) around protein-bound
+    regions. TOBIAS is a collection of command-line bioinformatics tools for performing
+    footprinting analysis on ATAC-seq data, which operates by analyzing the local
+    distribution of Tn5 insertions to detect transcription factor binding through
+    characteristic depletion patterns. TOBIAS is a collection of command-line bioinformatics
+    tools for performing footprinting analysis on ATAC-seq data, enabling detection
+    of transcription factor occupancy through analysis of Tn5 insertion patterns.
+    Extends the paper in 1 task beyond its reported scope: ATAC-seq footprinting analysis
+    can detect transcription factor binding through the visible depletion of Tn5 insertions
+    around protein-bound sites, providing a basis for differential occupancy analysis
+    across conditions.'
+  research_questions:
+  - How does the TOBIAS ATACorrect module correct for Tn5 transposase insertion bias
+    in ATAC-seq data to produce bias-corrected signal tracks?
+  - How does TOBIAS compute footprint scores from bias-corrected ATAC-seq signal data
+    across accessible chromatin regions?
+  - How does TOBIAS identify transcription factor occupancy at specific genomic locations
+    by analyzing ATAC-seq footprint patterns across different conditions?
+  - What is the characteristic pattern of Tn5 insertion depletion around transcription
+    factor binding sites versus non-binding sites across a genomic region?
+  - Can the TOBIAS pipeline (bias correction, footprint scoring, and BINDetect) be
+    applied to a two-condition ATAC-seq experiment to identify differential transcription
+    factor occupancy between conditions?
+  methods_summary: "Load ATAC-seq BAM file and reference genome sequence Quantify\
+    \ and model Tn5 insertion bias from observed insertions across genomic regions\
+    \ and DNA sequence context Apply bias correction to normalized signal by position-weight\
+    \ adjustment Convert corrected signal to bigWig format for visualization and downstream\
+    \ analysis Validation: Corrected signal track exhibits reduced sequence-context\
+    \ bias and preserved footprint visibility at known transcription factor binding\
+    \ sites References: source article (DOI: 10.1038/s41467-020-18035-1) Load bias-corrected\
+    \ bigWig signal file and accessible genomic region coordinates. Apply ScoreBigwig\
+    \ to compute position-wise footprint depletion scores across the genome. Output\
+    \ scored bigWig file encoding footprint strength at each position. Validation:\
+    \ verify output bigWig is valid format and contains non-empty score distributions.\
+    \ References: source article (DOI: 10.1038/s41467-020-18035-1) Load ATAC-seq footprint\
+    \ score files (BIGWIG/HDF5) preprocessed by prior TOBIAS steps. Provide or scan\
+    \ motif database (JASPAR-format PWMs) against genomic peaks. Run TOBIAS BINDetect\
+    \ to compare footprint signal intensity at motif sites across conditions. Extract\
+    \ occupancy predictions (bound/unbound state) and binding confidence scores per\
+    \ motif. Validation: occupancy predictions must pass QC checks on motif-site coverage\
+    \ and footprint signal-to-noise ratio; predictions should show expected condition-specific\
+    \ differences in occupancy for known differentially-regulated transcription factors.\
+    \ References: source article (DOI: 10.1038/s41467-020-18035-1) Load ATAC-seq BAM\
+    \ file and extract Tn5 insertion positions from aligned read 5' ends (or start\
+    \ coordinates). Annotate motif sites as bound or unbound based on chromatin accessibility\
+    \ signal or external binding data. For each motif instance, extract Tn5 insertion\
+    \ counts in fixed-width flanking windows (e.g. \xB1100 bp) at single-nucleotide\
+    \ or fine-grain bin resolution. Aggregate insertion counts across all motif sites\
+    \ within each binding class and compute positional statistics (mean, standard\
+    \ deviation). Tabulate positional insertion distributions and generate comparative\
+    \ visualization (e.g. line plot) of bound versus unbound profiles to confirm footprint\
+    \ depletion. Validation: footprint signal is confirmed by visual inspection of\
+    \ depletion pattern at bound sites (reduced insertion density flanking the motif)\
+    \ and absence of depletion at unbound sites. References: source article (DOI:\
+    \ 10.1038/s41467-020-18035-1) Retrieve two-condition ATAC-seq BAM alignments and\
+    \ peak annotations from public repository (GEO/SRA). Correct Tn5 transposase insertion\
+    \ bias in both conditions using TOBIAS ATACorrect. Compute footprint enrichment\
+    \ signals genome-wide for each condition using TOBIAS FootprintScores. Perform\
+    \ differential TF occupancy analysis between conditions at known TFBS motif sites\
+    \ using TOBIAS BINDetect. Validation: Differential TF occupancy table and summary\
+    \ plot successfully generated with statistically significant TFs identified (p\
+    \ < 0.05) and footprint patterns visually distinct between conditions. References:\
+    \ source article (DOI: 10.1038/s41467-020-18035-1)"
+  domain: transcriptomics
+  techniques:
+  - enrichment-analysis
+  - statistical-analysis
+  claims:
+  - claim_text: ATAC-seq applies a Tn5 Transposase to insert sequencing adapters into
+      accessible chromatin.
+    claim_type: finding
+    speculative: false
+    entity_id: ATAC_seq_assay
+  - claim_text: The local distribution of Tn5 insertions contains information about
+      transcription factor binding due to visible depletion of insertions around sites
+      bound by protein, known as footprints.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: mixed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Tabulated positional distribution of Tn5 insertion counts for bound and unbound
+    motif sites
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Visualization (line plot or heatmap) of insertion profiles showing footprint
+    signal (depletion at bound sites)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Differential TF occupancy results table (.tsv) with TF names, footprint scores
+    per condition, log2 fold-change, and p-values
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Summary visualization (.pdf or .png) showing top differential TFs and footprint
+    patterns across conditions
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

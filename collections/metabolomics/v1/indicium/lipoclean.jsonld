@@ -1,0 +1,429 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/command-line-tool-execution",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/configuration-file-generation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/lipid-identification-quality-filtering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/machine-learning-model-application-to-lipidomics",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ms-dial-export-format-handling",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ms-dial-version-compatibility",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/toml-configuration-file-preparation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/toml-format-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "LipoCLEAN is a command line tool.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_lipoclean_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Usage instructions for LipoCLEAN can be obtained using the `--help` flag.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_lipoclean_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "LipoCLEAN options are given to the tool in a TOML formatted text file.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_lipoclean_system"
+        },
+        {
+          "id": "asb:spine_msdial_tool"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Default options files for MS-DIAL 4 can be obtained using the `--print MSD4` command line argument.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_msdial_tool"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Default options files for MS-DIAL 5 can be obtained using the `--print MSD5` command line argument.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_msdial_tool"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default options file created by LipoCLEAN is named `options.txt` and can be edited.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_lipoclean_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "LipoCLEAN can be installed and run as an executable.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_lipoclean_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "LipoCLEAN can be installed and run as a Python package.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_lipoclean_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "LipoCLEAN can be installed and run as a Docker container.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_lipoclean_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "LipoCLEAN is a machine learning based quality filter for lipid identifications from MS-DIAL.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_lipoclean_system"
+        },
+        {
+          "id": "asb:spine_msdial_tool"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_lipoclean#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "concrete",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_lipoclean_system",
+      "title": "LipoCLEAN",
+      "identifier": "urn:asb:spine:lipoclean_system"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_msdial_tool",
+      "title": "MS-DIAL",
+      "identifier": "urn:asb:spine:msdial_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_toml_config",
+      "title": "TOML configuration file",
+      "identifier": "urn:asb:spine:toml_config"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_lipoclean_cli",
+      "title": "LipoCLEAN CLI",
+      "identifier": "urn:asb:spine:lipoclean_cli"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_ml_quality_filter",
+      "title": "Machine Learning Quality Filter",
+      "identifier": "urn:asb:spine:ml_quality_filter"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_install_executable",
+      "title": "Executable installation",
+      "identifier": "urn:asb:spine:install_executable"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_install_python_package",
+      "title": "Python package installation",
+      "identifier": "urn:asb:spine:install_python_package"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_install_docker",
+      "title": "Docker container installation",
+      "identifier": "urn:asb:spine:install_docker"
+    }
+  ]
+}

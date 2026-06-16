@@ -1,0 +1,21 @@
+  figures/NKG7.png
+  figures/Scanpy_Logo.svg
+  figures/Scanpy_Logo_BrightFG.svg
+  figures/Scanpy_Logo_RGB.png
+  figures/cell_types.png
+  figures/ci_plot-view_attachment-tab.png
+  figures/ci_plot-view_select-test.png
+  figures/ci_plot-view_tests-tab.png
+  figures/expected.png
+  figures/filter_genes_dispersion.png
+  figures/louvain.png
+  figures/paga_paul15.png
+  figures/paga_planaria.png
+  figures/spatial-basic-analysis.png
+  figures/stacked_violin_dotplot_matrixplot.png
+  figures/timeseries.png
+  figures/tissue_hires_image.png
+  figures/tissue_lowres_image.png
+  figures/tsne_1.3M.png
+  figures/violin.png
+paper.md

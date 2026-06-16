@@ -1,0 +1,368 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [
+    {
+      "locator": "10.1021/acs.jcim.3c01082",
+      "locator_id": "enrich_doi_10_1021_acs_jcim_3c01082",
+      "locator_kind": "doi",
+      "name": "MIST-CF: Chemical Formula Inference from Tandem Mass Spectra",
+      "prose": "Top-k accuracy scores (top-1, top-3, top-k) for MIST-CF chemical formula and adduct assignments",
+      "score": 0.25,
+      "side": "expected_output"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/mist_cf_graphic.png",
+      "role": "figure",
+      "sha256": "25a3a1f8ede8b904a87e343f4d141c3b3e9d412e958fd454627b9923981e1882"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "26d4d1faf8d11b33e158b91bb16cd0aafa63b7c4bb2f629454982eed545fcd4b"
+    }
+  ],
+  "created_at": "2026-06-16T07:03:45.812462+00:00",
+  "crossref_doi": "10.1021/acs.jcim.3c01082",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Benchmark MS/MS dataset with unknown spectra and ground-truth chemical formula annotations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Top-k accuracy scores (top-1, top-3, top-k) for MIST-CF chemical formula and adduct assignments",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparative ranking performance table: MIST-CF vs SIRIUS baseline metrics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ranked candidate formula predictions with confidence scores for benchmark dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MIST-CF employs an energy-based formula transformer architecture that ranks multiple candidate formulas and adduct types without computing fragmentation trees, relying instead on learned data-dependent representations.",
+    "The method handles multiple adduct types beyond [M+H]+ in positive ionization mode, requiring correct simultaneous prediction of both chemical formula and adduct assignment.",
+    "Top-k accuracy (particularly top-1 and top-3) is the standard ranking metric for formula assignment benchmarks, measuring whether the ground-truth formula appears in the top-k ranked predictions.",
+    "MIST-CF operates in a de novo setting for precursor mass annotation from MS/MS data, meaning no reference spectrum database is consulted during ranking.",
+    "Performance comparison against SIRIUS requires running both tools on identical benchmark spectra and directly comparing their ranking accuracy metrics to validate MIST-CF's improvements."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that samgoldman97/mist-cf repository is accessible and contains executable code for the MIST-CF model",
+      "verify file_exists: a benchmark MS/MS dataset file (check repository for standard naming: e.g., test_data.csv, benchmark.mgf, or similar) used for evaluation",
+      "script_runs: execute MIST-CF end-to-end inference pipeline on the benchmark dataset without errors",
+      "verify file_exists: output ranking file (e.g., predictions.csv or rankings.json) containing top-k formula and adduct assignments",
+      "value_in_range: top-1 accuracy for chemical formula assignment is reported as a percentage between 0\u2013100",
+      "value_in_range: top-k accuracy for adduct assignment is reported as a percentage between 0\u2013100 for reported k values",
+      "output_matches_reference: reported top-k accuracies match values published in paper tables or figures (exact numeric match, robust to rounding to 1 decimal place)",
+      "verify field_present: output ranking includes both formula predictions and adduct type predictions (e.g., [M+H]+, [M+Na]+, etc.)",
+      "verify that SIRIUS baseline results are retrievable or reproducible from same benchmark dataset for direct comparison"
+    ],
+    "expert_review": [
+      "assess whether the benchmark MS/MS dataset is appropriate and representative for chemical formula inference (standard metabolomics or natural products data)",
+      "evaluate whether the comparison to SIRIUS is fair: identical input data, same evaluation metric (top-k accuracy), and same chemical formula search space",
+      "judge whether reported ranking performance improvements over SIRIUS are statistically significant and practically meaningful",
+      "assess the quality of formula and adduct assignments: whether top-ranked predictions are chemically plausible and consistent with known mass spectrometry fragmentation patterns"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MIST-CF's end-to-end energy-based formula transformer perform on ranking chemical formula and adduct assignments compared to SIRIUS-based approaches on benchmark MS/MS data?: 'MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach, without referencing any spectrum databases. Instead of computing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MIST-CF employs an internal chemical subformula assignment protocol rather than SIRIUS fragmentation trees and considers multiple adduct types beyond [M+H]+ in positive mode.: 'Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees) Considering multiple adduct types beyond [M+H]+ (still only positive mode)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Benchmark MS/MS dataset with unknown spectra and ground-truth chemical formula annotations: 'No usage/docs found'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Top-k accuracy scores (top-1, top-3, top-k) for MIST-CF chemical formula and adduct assignments: 'No usage/docs found'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Comparative ranking performance table: MIST-CF vs SIRIUS baseline metrics: 'No usage/docs found'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Ranked candidate formula predictions with confidence scores for benchmark dataset: 'No usage/docs found'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MIST-CF: 'an extension of MIST for annotating MS1 precursor masses from MS/MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SIRIUS: 'Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SCARF: 'Utilizing sinusoidal formula embeddings as developed in our previous work SCARF'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting software versions, data versions, or reproducibility checkpoints is provided: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "mist_cf.benchmark",
+      "--dataset",
+      "{inputs.benchmark_ms_ms_dataset}",
+      "--output-dir",
+      "results/{task_id}",
+      "--compare-sirius",
+      "--metrics",
+      "top1,top3,topk"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "mist_cf_benchmark_results.csv",
+  "expected_outputs": [
+    "Top-k accuracy scores (top-1, top-3, top-k) for MIST-CF chemical formula and adduct assignments",
+    "Comparative ranking performance table: MIST-CF vs SIRIUS baseline metrics",
+    "Ranked candidate formula predictions with confidence scores for benchmark dataset"
+  ],
+  "finding": "MIST-CF employs an internal chemical subformula assignment protocol rather than SIRIUS fragmentation trees and considers multiple adduct types beyond [M+H]+ in positive mode.",
+  "github_name": "samgoldman97/mist-cf",
+  "input_from": null,
+  "inputs": [
+    "Benchmark MS/MS dataset with unknown spectra and ground-truth chemical formula annotations"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "preprocessed_benchmark_spectra.mzML",
+    "mist_cf_ranked_candidates.csv",
+    "sirius_ranked_candidates.csv",
+    "top_k_accuracy_comparison.csv",
+    "ranking_performance_plot.png"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_004",
+    "result_006",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Load benchmark MS/MS dataset with ground-truth chemical formula annotations and precursor m/z values.",
+    "Preprocess MS/MS spectra by normalizing intensities, filtering low-intensity noise, and extracting fragment m/z and intensity pairs.",
+    "Execute MIST-CF formula transformer neural network on preprocessed spectra to generate energy-scored ranked lists of candidate chemical formulas and associated adduct assignments for each spectrum.",
+    "Compute top-k accuracy metrics (top-1, top-3, top-k) by checking whether the ground-truth formula and adduct appear in the ranked prediction list.",
+    "Run SIRIUS on the same benchmark dataset using internal chemical subformula assignment protocol and extract its ranked formula predictions.",
+    "Compare MIST-CF and SIRIUS top-k accuracy scores to reproduce reported performance advantage.",
+    "Validation: top-k accuracy for MIST-CF formula assignment must be reproducible and rank performance metrics must match or exceed reported baselines in the paper.",
+    "References: source article (DOI: 10.1021/acs.jcim.3c01082)"
+  ],
+  "missing_information": [
+    "No changelog documenting software versions, data versions, or reproducibility checkpoints is provided"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MIST-CF's end-to-end energy-based formula transformer perform on ranking chemical formula and adduct assignments compared to SIRIUS-based approaches on benchmark MS/MS data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "ms-ms-spectrum-preprocessing",
+    "chemical-formula-ranking-and-assignment",
+    "mass-spectrometry-adduct-annotation",
+    "neural-network-based-molecular-formula-inference",
+    "de-novo-precursor-mass-annotation",
+    "benchmarking-and-comparative-performance-evaluation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mistcf/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MIST_CF_SYSTEM",
+    "MIST_SYSTEM",
+    "FORMULA_TRANSFORMER_ARCH",
+    "ENERGY_BASED_MODEL",
+    "SUBFORMULA_ASSIGNMENT",
+    "SINUSOIDAL_FORMULA_EMBEDDINGS",
+    "MULTI_ADDUCT_SUPPORT",
+    "SIRIUS_TOOL",
+    "MIST_CF_VS_SIRIUS_RESULT",
+    "MIST_CF_ADDUCT_RESULT"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "model-training",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:samgoldman97__mist-cf",
+  "task_description": "Run MIST-CF's end-to-end energy-based formula transformer on a benchmark MS/MS dataset to rank chemical formula and adduct assignments. Reproduce reported top-k accuracy metrics and comparison against SIRIUS baseline.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Benchmark MS/MS dataset with ground-truth formulas",
+      "port_id": "benchmark_ms_ms_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute MIST-CF on the benchmark MS/MS dataset and report top-k ranking accuracy for chemical formula and adduct assignments versus SIRIUS baseline.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Top-k accuracy metrics for formula and adduct ranking",
+      "port_id": "top_k_accuracy_scores",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Comparative performance table (MIST-CF vs SIRIUS)",
+      "port_id": "mist_cf_vs_sirius_comparison",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ranked candidate formulas with confidence scores",
+      "port_id": "ranked_formula_predictions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "tandem-ms",
+    "machine-learning",
+    "in-silico-fragmentation",
+    "deep-learning",
+    "metabolite-identification"
+  ],
+  "title": "Reproduce MIST-CF formula and adduct ranking performance versus SIRIUS baseline",
+  "tools": [
+    "MIST",
+    "MIST-CF",
+    "SIRIUS",
+    "SCARF"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load benchmark MS/MS dataset containing unknown spectra and ground-truth chemical formulas. 2. Preprocess MS/MS spectra (normalize intensities, filter noise) and extract precursor m/z values. 3. Run MIST-CF formula transformer neural network to generate ranked candidate chemical formulas and adduct assignments using energy-based scoring without fragmentation tree computation. 4. Evaluate ranking performance by computing top-1, top-3, and top-k accuracy metrics for formula and adduct predictions. 5. Compare MIST-CF top-k accuracy results against SIRIUS baseline predictions on the same dataset. 6. Generate performance summary table and ranking accuracy plots."
+}

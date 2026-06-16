@@ -1,0 +1,11 @@
+name: MAGMa
+slug: magma
+evidence_spans:
+- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
+- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
+derived_from:
+- doi: 10.5702/massspectrometry.S0033
+  title: magma
+source_repos:
+- NLeSC/MAGMa
+schema_version: 0.2.0

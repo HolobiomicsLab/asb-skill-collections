@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 'example_counts' can be loaded from chromVAR package using data(example_counts, package = \"chromVAR\")"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify assembleKmers function exists and is callable in chromVAR package"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify computeDeviations function exists and is callable in chromVAR package"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify 6-mer annotation matrix output file_format_is matrix or SummarizedExperiment"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify 7-mer annotation matrix output file_format_is matrix or SummarizedExperiment"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify numeric summary table contains fields for mean and median variability scores"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify numeric summary table row_count_equals 2 (one row per kmer size: 6-mer and 7-mer)"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify summary table field_present 'kmer_size' with values 6 and 7"
+    },
+    {
+      "id": "pf_009",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify summary table field_present 'mean_variability' and 'median_variability' with numeric values"
+    },
+    {
+      "id": "pf_010",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output script_runs without errors in R environment with chromVAR, Matrix, SummarizedExperiment libraries loaded"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file 'example_counts' can be loaded from chromVAR package using data(example_counts, package = \"chromVAR\")",
+      "verify assembleKmers function exists and is callable in chromVAR package",
+      "verify computeDeviations function exists and is callable in chromVAR package",
+      "verify 6-mer annotation matrix output file_format_is matrix or SummarizedExperiment",
+      "verify 7-mer annotation matrix output file_format_is matrix or SummarizedExperiment",
+      "verify numeric summary table contains fields for mean and median variability scores",
+      "verify numeric summary table row_count_equals 2 (one row per kmer size: 6-mer and 7-mer)",
+      "verify summary table field_present 'kmer_size' with values 6 and 7",
+      "verify summary table field_present 'mean_variability' and 'median_variability' with numeric values",
+      "verify output script_runs without errors in R environment with chromVAR, Matrix, SummarizedExperiment libraries loaded"
+    ],
+    "expert_review": [
+      "confirm that reported direction of variability difference between 6-mers and 7-mers matches expected biological or statistical pattern documented in chromVAR literature or package vignette",
+      "assess whether the magnitude of difference in variability scores between 6-mer and 7-mer distributions is scientifically meaningful for kmer-based annotation analysis"
+    ]
+  },
+  "max_score": 10.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: pbmc10k_multiome dataset accessible via snapatac2.datasets.pbmc10k_multiome"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output AnnData object (.h5ad) or equivalent structured artifact generated after "
+    },
+    {
+      "id": "pf_004",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "cluster assignments present in output object (e.g., .obs['leiden'] or equivalent",
+      "value": [
+        ")"
+      ]
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output object in HDF5-backed AnnData format or native SnapATAC2 format"
+    },
+    {
+      "id": "pf_006",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "UMAP layout coordinates byte-for-byte or robust to random seed variation \u2014 clari"
+    },
+    {
+      "id": "pf_007",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "cluster count (number of distinct leiden clusters) falls within expected range d"
+    },
+    {
+      "id": "pf_008",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "peak calling output (BED or equivalent) contains expected genomic coordinates an",
+      "value": "expected genomic coordinates and peak statistics fields"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: pbmc10k_multiome dataset accessible via snapatac2.datasets.pbmc10k_multiome",
+      "script_runs: SnapATAC2 pipeline execution script completes without errors (fragment import \u2192 tile matrix \u2192 spectral embedding \u2192 leiden clustering \u2192 macs3 peak calling)",
+      "file_exists: output AnnData object (.h5ad) or equivalent structured artifact generated after full pipeline",
+      "field_present: cluster assignments present in output object (e.g., .obs['leiden'] or equivalent clustering annotation column)",
+      "file_format_is: output object in HDF5-backed AnnData format or native SnapATAC2 format",
+      "output_matches_reference: UMAP layout coordinates byte-for-byte or robust to random seed variation \u2014 clarify whether tutorial provides fixed reference embeddings or multiple valid outcomes",
+      "value_in_range: cluster count (number of distinct leiden clusters) falls within expected range documented in tutorial (if range is specified)",
+      "contains_substring: peak calling output (BED or equivalent) contains expected genomic coordinates and peak statistics fields"
+    ],
+    "expert_review": [
+      "biological plausibility of cluster assignments: do recovered clusters correspond to expected cell types (e.g., T cells, B cells, monocytes, etc.) as described in tutorial or original pbmc10k_multiome analysis?",
+      "quality of spectral embedding and UMAP visualization: do clusters show expected separation and structure consistent with tutorial figures or reference publication?",
+      "peak calling quality: are called peaks consistent with known open chromatin regions and do they show expected enrichment patterns (e.g., TSS proximity, motif content)?",
+      "parameter sensitivity: does pipeline produce substantially different cluster assignments or peak calls under reasonable parameter variations (e.g., n_components, resolution, min_peak_size)? \u2014 note if reproducibility is brittle or robust"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

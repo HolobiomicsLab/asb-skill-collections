@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:rjdossan/M2S repository is accessible and contains Matlab source code files"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that M2S package includes a main entry point or documented pipeline script for feature matching"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that pipeline execution produces a named output file (e.g., matched_features table, alignment results, or correspondence matrix)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output file is tabular (CSV, Excel, or Matlab table) with at least three columns",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_006",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table contains at least one matched feature pair (row_count \u2265 1), robust ",
+      "value": 1
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output structure contains identifiable references to input features from both datasets"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:rjdossan/M2S repository is accessible and contains Matlab source code files",
+      "verify that M2S package includes a main entry point or documented pipeline script for feature matching",
+      "script_runs: execute M2S pipeline on two synthetic or provided LC-MS feature datasets (CSV or compatible format) without errors",
+      "verify that pipeline execution produces a named output file (e.g., matched_features table, alignment results, or correspondence matrix)",
+      "file_format_is: output file is tabular (CSV, Excel, or Matlab table) with at least three columns: feature_1_ID, feature_2_ID, and match_score or similarity metric",
+      "row_count_equals: output table contains at least one matched feature pair (row_count \u2265 1), robust to dataset size",
+      "verify output structure contains identifiable references to input features from both datasets"
+    ],
+    "expert_review": [
+      "Assess whether matching algorithm (mass tolerance, retention time window, scoring method) is appropriate for untargeted LC-MS metabolomics and documented in code comments or README",
+      "Evaluate whether matched feature pairs are chemically plausible given m/z and retention time deltas reported in output",
+      "Review whether pipeline handles edge cases (missing RT values, duplicate features, m/z calibration drift) gracefully"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

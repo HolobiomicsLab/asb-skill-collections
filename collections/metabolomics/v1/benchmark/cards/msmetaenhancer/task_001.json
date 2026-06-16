@@ -1,0 +1,364 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/scheme.png",
+      "role": "figure",
+      "sha256": "e7c622951c71be810b654c83fc95efc3c3e4f8bbeec7228f346be5e6163cea76"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "92ad66c17337db77fb80dc97bca8063643688c39a219cf835db6a1c88a4b55e7"
+    }
+  ],
+  "created_at": "2026-06-16T05:39:21.024441+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sample .msp spectra file with compound metadata (e.g., compound name, molecular weight, retention time)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Annotated .msp file with enriched metadata fields (SMILES, InChI, CAS number) populated from web service conversions",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MSMetaEnhancer's Application class provides an asynchronous `annotate_spectra` method that accepts conversion jobs as tuples of (source_attribute, target_attribute, converter_name) to control metadata enrichment workflow.",
+    "Web converters (CIR, CTS, PubChem, IDSM, BridgeDb) inherit from WebConverter base class and implement `query_the_service` for HTTP requests and `parse_response` for extracting structured metadata from API responses.",
+    ".msp format is a text-based mass spectrum metadata file format where compound annotations (SMILES, InChI, CAS) are stored as key-value pairs that MSMetaEnhancer appends during enrichment.",
+    "Asynchronous execution in MSMetaEnhancer optimizes fetching speed by allowing concurrent requests to multiple web services rather than sequential blocking calls.",
+    "Conversion jobs must be defined with valid source attributes present in input .msp records and target attributes supported by the selected converter services to ensure successful metadata population."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: input .msp file is readable and located at a known path",
+      "file_format_is: output file has .msp extension",
+      "contains_substring: output .msp file contains at least one of the following metadata fields: 'SMILES', 'InChI', 'CAS'",
+      "script_runs: MSMetaEnhancer.annotate_spectra() method executes without raising an unhandled exception when passed a valid .msp file and service configuration",
+      "row_count_equals or value_in_range: number of annotated records in output .msp is greater than or equal to number of input records (no loss of spectra during annotation)",
+      "field_present: output .msp records contain at least one new metadata field not present in input .msp (robust to which specific field, but at least one enrichment must occur)"
+    ],
+    "expert_review": [
+      "Verify that SMILES, InChI, or CAS values returned by annotate_spectra are chemically valid and correspond to the intended compound (requires domain expertise in chemical informatics)",
+      "Assess whether the asynchronous dispatching to CIR, CTS, PubChem, IDSM, and BridgeDb services completed without timeout or network errors under typical network conditions",
+      "Confirm that the output .msp file preserves all original spectral data (m/z, intensity pairs) while adding metadata enrichment"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What metadata fields can MSMetaEnhancer add to mass spectra records by querying external web services?: 'It adds metadata like SMILES, InChI, and CAS number fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MSMetaEnhancer enriches .msp files by adding SMILES, InChI, and CAS number metadata retrieved from five external services: CIR, CTS, PubChem, IDSM, and BridgeDb.: 'It adds metadata like SMILES, InChI, and CAS number fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Sample .msp spectra file with compound metadata (e.g., compound name, molecular weight, retention time): 'MSMetaEnhancer is a tool used for `.msp` files annotation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Annotated .msp file with enriched metadata fields (SMILES, InChI, CAS number) populated from web service conversions: 'It adds metadata like SMILES, InChI, and CAS number fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MSMetaEnhancer: 'MSMetaEnhancer is a tool used for `.msp` files annotation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CIR: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CTS: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] PubChem: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] IDSM: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] BridgeDb: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'A Python package for mass spectra metadata annotation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No concrete specification of which metadata fields (SMILES variant, InChI format, CAS registry) should be prioritized when multiple web services return different values for the same compound: 'support `ISOMERIC_SMILES` and `CANONICAL_SMILES` in PubChem instead of generic `SMILES`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No documented handling strategy for cases where a web service (CIR, CTS, PubChem, IDSM, BridgeDb) is unavailable or returns no result during annotate_spectra execution: 'monitoring of services status during annotation process'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of timeout values or retry policies for asynchronous requests to the five configured web services: 'multidict package requirement'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "from msmetaenhancer import MSMetaEnhancer; app = MSMetaEnhancer(); spectra = app.read_msp('{inputs.msp_file}'); enriched = app.annotate_spectra(spectra, converters=['CIR', 'CTS', 'PubChem', 'IDSM', 'BridgeDb']); app.write_msp(enriched, '{inputs.msp_file}'.replace('.msp', '_annotated.msp'))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "annotated.msp",
+  "expected_outputs": [
+    "Annotated .msp file with enriched metadata fields (SMILES, InChI, CAS number) populated from web service conversions"
+  ],
+  "finding": "MSMetaEnhancer enriches .msp files by adding SMILES, InChI, and CAS number metadata retrieved from five external services: CIR, CTS, PubChem, IDSM, and BridgeDb.",
+  "github_name": "RECETOX/MSMetaEnhancer",
+  "input_from": null,
+  "inputs": [
+    "Sample .msp spectra file with compound metadata (e.g., compound name, molecular weight, retention time)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectra_loaded.log",
+    "conversion_jobs_configured.json",
+    "enriched_records.json",
+    "annotated.msp"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_020",
+    "result_021",
+    "result_022",
+    "result_023",
+    "result_024",
+    "result_025",
+    "result_026",
+    "result_027",
+    "result_028",
+    "result_029",
+    "result_030",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_034",
+    "result_035",
+    "result_036",
+    "result_037",
+    "result_038",
+    "result_039",
+    "result_040",
+    "result_041",
+    "result_042",
+    "result_043",
+    "result_044",
+    "result_045",
+    "result_046",
+    "result_047",
+    "result_048",
+    "result_049",
+    "result_050",
+    "result_051",
+    "result_052"
+  ],
+  "methodology_summary": [
+    "Instantiate MSMetaEnhancer Application and load sample .msp spectra file.",
+    "Define conversion jobs specifying source compound attributes, target metadata fields (SMILES, InChI, CAS), and web converter services (CIR, CTS, PubChem, IDSM, BridgeDb).",
+    "Invoke asynchronous `annotate_spectra` method to dispatch enrichment requests to each service via WebConverter HTTP queries.",
+    "Aggregate parsed API responses into enriched spectra records.",
+    "Validation: verify all target metadata fields are populated in output .msp file and conform to expected chemical identifier formats (SMILES syntax, InChI structure, CAS registry numbering)."
+  ],
+  "missing_information": [
+    "No concrete specification of which metadata fields (SMILES variant, InChI format, CAS registry) should be prioritized when multiple web services return different values for the same compound",
+    "No documented handling strategy for cases where a web service (CIR, CTS, PubChem, IDSM, BridgeDb) is unavailable or returns no result during annotate_spectra execution",
+    "No specification of timeout values or retry policies for asynchronous requests to the five configured web services"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What metadata fields can MSMetaEnhancer add to mass spectra records by querying external web services?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "spectral-metadata-enrichment",
+    "chemical-identifier-mapping",
+    "asynchronous-api-orchestration",
+    "msp-file-parsing-and-writing",
+    "multi-service-integration-testing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_msmetaenhancer/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_MSMETAENHANCER",
+    "ARCH_ANNOTATION_PIPELINE",
+    "COMP_SPECTRA",
+    "TOOL_PUBCHEM",
+    "TOOL_IDSM",
+    "TOOL_BRIDGEDB",
+    "DATASET_MSP"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:RECETOX__MSMetaEnhancer",
+  "task_description": "Execute MSMetaEnhancer's `annotate_spectra` asynchronous method on a sample .msp file to enrich compound metadata (SMILES, InChI, CAS number) by dispatching conversion jobs to external web services (CIR, CTS, PubChem, IDSM, BridgeDb), and produce an annotated .msp output file.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample .msp spectra file",
+      "port_id": "msp_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute MSMetaEnhancer's annotation workflow on a sample .msp file to produce an annotated output file with enriched SMILES, InChI, and CAS metadata from integrated web services.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Annotated .msp file with enriched metadata",
+      "port_id": "annotated_msp",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "metabolite-identification"
+  ],
+  "title": "Reproduce the asynchronous annotation pipeline for .msp spectral library files",
+  "tools": [
+    "MSMetaEnhancer",
+    "CIR",
+    "CTS",
+    "PubChem",
+    "IDSM",
+    "BridgeDb",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load a sample .msp spectra file into the MSMetaEnhancer Application class. 2. Configure conversion jobs specifying source attributes (e.g., compound name), target attributes (e.g., SMILES, InChI, CAS), and converter services (CIR, CTS, PubChem, IDSM, BridgeDb). 3. Invoke the asynchronous `annotate_spectra` method with the defined jobs to dispatch metadata enrichment requests to web services. 4. For each job, the WebConverter base class calls `query_the_service` to make HTTP requests to the target API endpoint. 5. Parse API responses using service-specific `parse_response` methods to extract SMILES, InChI, CAS and other metadata fields. 6. Aggregate enriched metadata back into the spectra records. 7. Save the annotated spectra to an output .msp file."
+}

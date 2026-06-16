@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that SUPPA2 PSI subcommand accepts transcript-level quantification file (Salmon or kallisto format) as input"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that SUPPA2 PSI subcommand accepts ioe or ioi event definition file as input"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that SUPPA2 PSI subcommand produces a PSI matrix file as output"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output file exists and is in a structured tabular format (TSV, CSV, or similar)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify PSI values in output matrix are numeric and fall within valid range [0, 1]"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output matrix row count equals number of events in input ioe/ioi file"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output matrix column count equals number of samples in input quantification file"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that SUPPA2 PSI subcommand accepts transcript-level quantification file (Salmon or kallisto format) as input",
+      "verify that SUPPA2 PSI subcommand accepts ioe or ioi event definition file as input",
+      "verify that SUPPA2 PSI subcommand produces a PSI matrix file as output",
+      "verify output file exists and is in a structured tabular format (TSV, CSV, or similar)",
+      "script_runs: execute SUPPA2 PSI calculation on example transcript quantification and event files from github:comprna__SUPPA repository, solution_space: multiple valid test datasets may exist",
+      "verify PSI values in output matrix are numeric and fall within valid range [0, 1]",
+      "verify output matrix row count equals number of events in input ioe/ioi file",
+      "verify output matrix column count equals number of samples in input quantification file"
+    ],
+    "expert_review": [
+      "assess whether PSI calculation correctly aggregates transcript-level abundances to event-level splicing ratios according to the SUPPA2 methodological definition",
+      "evaluate numerical accuracy of PSI values against reference calculations or published benchmark results",
+      "review whether output matrix structure and annotation fields (event identifiers, sample identifiers) are correctly labeled and match input metadata"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

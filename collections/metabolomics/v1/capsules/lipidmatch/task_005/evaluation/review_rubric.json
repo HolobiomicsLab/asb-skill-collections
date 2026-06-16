@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:GarrettLab-UF__LipidMatch repository is accessible and contains a batch file or configuration file for MZmine integration"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for the MZmine batch file artifact in the repository (any of the following formats acceptable: .xml, .properties, .conf, .bat, or documented batch configuration file)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for LipidMatch conversion or dispatch script(s) that accept peak-picker output as input"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is for the specified input file format from MZmine output (expected format: .csv, .tsv, .txt, or MZmine native export format \u2014 multiple defensible approaches depending on MZmine version)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: execute the documented file-format conversion step with a minimal valid MZmine output file as input, robust to parameter choices in file paths"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: the conversion output file matches the expected LipidMatch input schema (field names, column order, required columns) \u2014 solution_space: no canonical answer without access to detailed specification document or reference output file"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:GarrettLab-UF__LipidMatch repository is accessible and contains a batch file or configuration file for MZmine integration",
+      "verify file_exists for the MZmine batch file artifact in the repository (any of the following formats acceptable: .xml, .properties, .conf, .bat, or documented batch configuration file)",
+      "verify file_exists for LipidMatch conversion or dispatch script(s) that accept peak-picker output as input",
+      "verify file_format_is for the specified input file format from MZmine output (expected format: .csv, .tsv, .txt, or MZmine native export format \u2014 multiple defensible approaches depending on MZmine version)",
+      "verify script_runs: execute the documented file-format conversion step with a minimal valid MZmine output file as input, robust to parameter choices in file paths",
+      "verify output_matches_reference: the conversion output file matches the expected LipidMatch input schema (field names, column order, required columns) \u2014 solution_space: no canonical answer without access to detailed specification document or reference output file"
+    ],
+    "expert_review": [
+      "confirm that the batch file and conversion scripts are current, maintained, and functionally compatible with recent MZmine versions",
+      "assess whether the documented dispatch mechanism correctly handles edge cases (empty peak lists, malformed input rows, missing required columns)",
+      "evaluate whether the hand-off interface preserves all necessary metadata (retention time, m/z, intensity, ion mode) required for downstream LipidMatch matching"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

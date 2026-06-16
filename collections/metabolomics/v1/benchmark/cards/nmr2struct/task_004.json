@@ -1,0 +1,417 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "e3e126a9fe5368559d69ae8b31fd84cecaabea264bdadfc5e547e2b9962fe656"
+    }
+  ],
+  "created_at": "2026-06-15T09:55:01.678255+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pretrained or fine-tuned NMR2Struct model checkpoint (transformer + CNN weights)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Held-out test set of molecules exceeding 19 heavy atoms from PubChem or equivalent public chemical database",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "1D \u00b9H and/or \u00b9\u00b3C NMR spectra for out-of-scope molecules (experimental or simulated)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "In-scope baseline accuracy metrics (top-k structure recovery for molecules \u226419 heavy atoms)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Top-1, top-3, and top-5 structure recovery accuracy scores for out-of-scope molecules (>19 heavy atoms)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparative accuracy degradation table (out-of-scope vs. in-scope baseline, absolute and relative loss)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary report documenting failure modes, error distribution, and molecular size/complexity thresholds at which model performance drops significantly",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "The NMR2Struct framework was trained and validated on molecules with up to 19 heavy atoms; applying it to larger molecules tests extrapolation beyond the training regime and expected performance degradation.",
+    "Top-k structure recovery accuracy measures whether the ground-truth connectivity graph appears in the model's ranked list of k most-confident predictions; this is more lenient than top-1 accuracy and captures partial model knowledge.",
+    "1D \u00b9H and \u00b9\u00b3C NMR spectra are the primary input; molecules with >19 heavy atoms introduce combinatorial complexity (more fragment possibilities) that can exceed the model's learned capacity for assembly.",
+    "Out-of-distribution (OOD) performance degradation is expected because the transformer's fragment assembly strategy was optimized for in-scope molecular sizes; larger molecules may require architectural or training adaptations not present in the base model."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that a held-out test set of molecules with \u226520 heavy atoms exists in the deposited dataset or public chemical database (PubChem/other); file_exists and row_count_equals or field_present for molecule count and heavy atom count field",
+      "verify that NMR2Struct model checkpoint or weights file exists in the repository or supplementary deposit; file_exists",
+      "verify that model inference script runs successfully on the held-out set without errors; script_runs",
+      "verify that top-k structure recovery accuracy metric (e.g., exact match, canonical SMILES match, or graph edit distance threshold) is computed and reported as a single numerical score or per-molecule prediction table; file_exists and format_is for output table/CSV",
+      "verify that in-scope baseline accuracy (molecules \u226419 heavy atoms) is retrieved from article text, SI, or model evaluation deposit; output_matches_reference or contains_substring of reported number",
+      "verify that degradation/retention ratio or absolute accuracy difference (out-of-scope vs. in-scope) is computed; value_in_range or exact numerical output artifact"
+    ],
+    "expert_review": [
+      "assess whether the choice of held-out test set is representative and unbiased (no data leakage from training or hyperparameter tuning); confirm sampling strategy or stratification by molecular properties",
+      "evaluate the appropriateness of the top-k metric definition (k value, exact vs. relaxed matching criterion) and whether it aligns with chemical validity (e.g., whether isomers or stereochemically distinct structures are penalized equally)",
+      "interpret the magnitude of accuracy degradation beyond 19 heavy atoms in light of model architecture (receptive field, sequence length limits, training data composition) and chemical complexity",
+      "confirm that any reported accuracy figures use consistent evaluation protocol and do not conflate different ranking metrics (e.g., top-1 vs. top-10)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Does the NMR2Struct model maintain accurate structure recovery performance when applied to molecules with more than 19 heavy atoms, or does accuracy degrade significantly beyond this training scope?: 'We demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms, a size for which there are trillions of possibl'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The framework's demonstrated effectiveness is bounded to molecules with up to 19 heavy atoms, establishing a known performance limit beyond which generalization is uncharacterized.: 'We demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Pretrained or fine-tuned NMR2Struct model checkpoint (transformer + CNN weights): 'a transformer architecture can be constructed to efficiently solve the task... Integrating this capability with a convolutional neural network, we build an end-to-end model'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Held-out test set of molecules exceeding 19 heavy atoms from PubChem or equivalent public chemical database: 'held-out set of molecules exceeding 19 heavy atoms (sourced from a public chemical database such as PubChem or the deposited dataset)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] 1D \u00b9H and/or \u00b9\u00b3C NMR spectra for out-of-scope molecules (experimental or simulated): 'predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1H and/or 13C NMR spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] In-scope baseline accuracy metrics (top-k structure recovery for molecules \u226419 heavy atoms): 'We demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Top-1, top-3, and top-5 structure recovery accuracy scores for out-of-scope molecules (>19 heavy atoms): 'measure the degradation or retention of top-k structure recovery accuracy relative to the in-scope condition'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Comparative accuracy degradation table (out-of-scope vs. in-scope baseline, absolute and relative loss): 'measure the degradation or retention of top-k structure recovery accuracy relative to the in-scope condition'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Summary report documenting failure modes, error distribution, and molecular size/complexity thresholds at which model performance drops significantly: 'held-out set of molecules exceeding 19 heavy atoms'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] transformer architecture: 'a transformer architecture can be constructed to efficiently solve the task'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] convolutional neural network: 'Integrating this capability with a convolutional neural network, we build an end-to-end model'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No changelog or version history provided; unknown whether models, datasets, or evaluation code have been updated since publication date: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit statement of the upper heavy-atom threshold tested (19 atoms mentioned as demonstration scope in intro, but no explicit out-of-scope test boundary stated in discussion): '[Section contains no technical details; only header and metadata]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No reference to deposited code, model weights, or held-out test set location (only GitHub source cited generically; specific branch, release tag, or supplementary data accession not identified): 'Source: github:MarklandGroup__NMR2Struct'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "oos_accuracy_degradation_report.csv",
+  "expected_outputs": [
+    "Top-1, top-3, and top-5 structure recovery accuracy scores for out-of-scope molecules (>19 heavy atoms)",
+    "Comparative accuracy degradation table (out-of-scope vs. in-scope baseline, absolute and relative loss)",
+    "Summary report documenting failure modes, error distribution, and molecular size/complexity thresholds at which model performance drops significantly"
+  ],
+  "finding": "The framework's demonstrated effectiveness is bounded to molecules with up to 19 heavy atoms, establishing a known performance limit beyond which generalization is uncharacterized.",
+  "github_name": null,
+  "input_from": "task_001",
+  "inputs": [
+    "Pretrained or fine-tuned NMR2Struct model checkpoint (transformer + CNN weights)",
+    "Held-out test set of molecules exceeding 19 heavy atoms from PubChem or equivalent public chemical database",
+    "1D \u00b9H and/or \u00b9\u00b3C NMR spectra for out-of-scope molecules (experimental or simulated)",
+    "In-scope baseline accuracy metrics (top-k structure recovery for molecules \u226419 heavy atoms)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "oos_predictions.json",
+    "oos_top_k_accuracy.csv",
+    "degradation_baseline_comparison.csv",
+    "failure_mode_analysis.txt"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_004",
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Load the pretrained transformer + CNN NMR2Struct model from checkpoint",
+    "Retrieve or construct a held-out test set of molecules with >19 heavy atoms from PubChem or equivalent database",
+    "Obtain 1D \u00b9H and/or \u00b9\u00b3C NMR spectra for each out-of-scope molecule",
+    "Generate ranked predictions of molecular formula and connectivity for each spectrum",
+    "Compute top-1, top-3, and top-5 structure recovery accuracy on out-of-scope test set",
+    "Compare out-of-scope accuracy to reported in-scope baseline (\u226419 heavy atoms) and quantify absolute and relative degradation",
+    "Validation: verify that reported accuracy metrics for in-scope and out-of-scope conditions are reproducible and documented, and that degradation is quantified against the published baseline"
+  ],
+  "missing_information": [
+    "No changelog or version history provided; unknown whether models, datasets, or evaluation code have been updated since publication date",
+    "No explicit statement of the upper heavy-atom threshold tested (19 atoms mentioned as demonstration scope in intro, but no explicit out-of-scope test boundary stated in discussion)",
+    "No reference to deposited code, model weights, or held-out test set location (only GitHub source cited generically; specific branch, release tag, or supplementary data accession not identified)"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the NMR2Struct model maintain accurate structure recovery performance when applied to molecules with more than 19 heavy atoms, or does accuracy degrade significantly beyond this training scope?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "nmr-spectrum-to-structure-inference",
+    "molecular-structure-prediction-out-of-distribution",
+    "top-k-accuracy-ranking-and-evaluation",
+    "model-generalization-assessment-across-molecular-size-regimes",
+    "chemical-graph-connectivity-validation",
+    "performance-degradation-quantification-and-analysis"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_nmr2struct/synthesized_package",
+  "spine_condition_ids": [
+    "Cond_UpTo19HeavyAtoms"
+  ],
+  "spine_entity_ids": [
+    "NMR2Struct_System",
+    "EndToEndPipeline",
+    "Cond_UpTo19HeavyAtoms",
+    "Result_AccurateEfficientStructureElucidation"
+  ],
+  "subdomains": [
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "benchmark-evaluation",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:MarklandGroup__NMR2Struct",
+  "task_description": "Apply a pretrained NMR2Struct model to a held-out test set of molecules with >19 heavy atoms from a public chemical database (PubChem or equivalent), and quantify the degradation in top-k structure recovery accuracy relative to the in-scope (\u226419 heavy atom) baseline condition.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pretrained NMR2Struct model (transformer + CNN)",
+      "port_id": "model_checkpoint",
+      "resolved_via": null,
+      "source": "task_001/accuracy_metrics",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Out-of-scope test molecules (>19 heavy atoms) from PubChem",
+      "port_id": "test_molecules_oos",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "1D \u00b9H and/or \u00b9\u00b3C NMR spectra for out-of-scope molecules",
+      "port_id": "nmr_spectra_oos",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "In-scope (\u226419 heavy atoms) baseline top-k accuracy",
+      "port_id": "baseline_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Evaluate top-k structure recovery accuracy of the NMR2Struct model on held-out molecules exceeding 19 heavy atoms and quantify performance degradation relative to in-scope molecules.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Top-k structure recovery accuracy for out-of-scope molecules",
+      "port_id": "oos_accuracy_scores",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Comparative accuracy degradation (out-of-scope vs. baseline)",
+      "port_id": "degradation_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Error analysis and failure mode summary",
+      "port_id": "failure_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "nmr",
+    "deep-learning",
+    "machine-learning",
+    "transformer-model"
+  ],
+  "title": "Extend NMR2Struct structure prediction to molecules beyond 19 heavy atoms",
+  "tools": [
+    "transformer architecture",
+    "convolutional neural network"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Top-1, top-3, and top-5 structure recovery accuracy scores for out-of-scope molecules (>19 heavy atoms), Comparative accuracy degradation table (out-of-scope vs. in-scope baseline, absolute and relative loss), Summary report documenting failure modes, error distribution, and molecular size/complexity thresholds at which model performance drops significantly."
+  ],
+  "workflow_description": "1. Load the pretrained or fine-tuned NMR2Struct model (transformer + CNN architecture) from the deposited checkpoint. 2. Retrieve or construct a held-out test set of molecules exceeding 19 heavy atoms from PubChem or an equivalent public chemical database. 3. Generate or obtain 1D \u00b9H and/or \u00b9\u00b3C NMR spectra for each out-of-scope molecule (via simulation, experimental data, or database retrieval). 4. Feed each NMR spectrum through the model to generate predicted molecular formula and connectivity graphs. 5. Rank predictions by confidence score and compute top-1, top-3, and top-5 structure recovery accuracy (fraction of predictions matching ground-truth connectivity). 6. Compare out-of-scope accuracy metrics against the reported in-scope baseline (molecules \u226419 heavy atoms) and quantify the absolute and relative degradation. 7. Document accuracy loss, error distribution, and failure modes in a summary report."
+}

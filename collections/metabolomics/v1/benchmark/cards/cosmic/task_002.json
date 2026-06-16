@@ -1,0 +1,369 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/c-add-doc.svg",
+      "role": "figure",
+      "sha256": "0331b45d3f4b3fe94fac53e270c648bd752bdecf7088d393adcad7fc1e3750b5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-bug.svg",
+      "role": "figure",
+      "sha256": "9e96e834682340e83292106e54adcf3fb0bfebfb1b016c4d5759849958f794a3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-clipboard.svg",
+      "role": "figure",
+      "sha256": "928c11204b31b97dea6b501034c8bfb73778157d1e6d7967ae5f789d5f3b14da"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-controls-play.svg",
+      "role": "figure",
+      "sha256": "5eee7ae909a3bdde55bfeffbacd5f07adb3f92745bbbd4fef7a6e61ac1caa5ee"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-db.svg",
+      "role": "figure",
+      "sha256": "e75498f7620d5f0abcef46e541e321e9e2ca675e22569d43843830762e340af5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-document.svg",
+      "role": "figure",
+      "sha256": "d0fc9c1d387f544da1e3707856573ac67772d6e1c91b734b488f4898fd9cceb9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-documents.svg",
+      "role": "figure",
+      "sha256": "3a4e23ef42df760a86709fa57741ec3c45758c19ccbf56f02e80c928f62da5f2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-download.svg",
+      "role": "figure",
+      "sha256": "dda75ebcf71fd10f15cb755e4bf886949e8658989c54280f2e6a807e1fa3b443"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-dragndrop.svg",
+      "role": "figure",
+      "sha256": "bed310f570c7b7507c3aad2b93f0ea31bf27ca2d3a1ccd9b6131007837764403"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-export.svg",
+      "role": "figure",
+      "sha256": "5eaa07befa9ee1eea492f4572a07fa97a59f9b256f9e78bb0f35f643227583c7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fbmn.svg",
+      "role": "figure",
+      "sha256": "9f5106d232858882d3d166e5e2d5718ef6e6e3d36552a03f9a7d5a71f06bf799"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-filter-down.svg",
+      "role": "figure",
+      "sha256": "e0f2d17b87498a3f035a175ad4696dc6dfcbc7001978dc07876bc813a9aadc65"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-filter-up.svg",
+      "role": "figure",
+      "sha256": "a27d30910ff137b58b1041aef3a4d42b8af57a34995d1caceaacc9abf9a8b457"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fingerprint.svg",
+      "role": "figure",
+      "sha256": "56c5cff08cd5ccc615adf833da66a953de49f1f79e2d5b9ab1087a70370de6db"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fmet.svg",
+      "role": "figure",
+      "sha256": "e72c7c2b67996f3385eb4fcbdb224676b46bd3077585ab00652ad8079fb62187"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-close.svg",
+      "role": "figure",
+      "sha256": "35e7588df0d0606f50f40d67bbac994134d9cb0b2c9b663874fa27aadc924f7b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-file.svg",
+      "role": "figure",
+      "sha256": "bd1219b56e6a4e5bafb6bd6b45a46670ccdad9a1ac201bd4f461f7eaefed011b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-open.svg",
+      "role": "figure",
+      "sha256": "a54b3efb697e2fdcfbc65990017c59f1a505ee5fc2990613ea1b5c85fd57da69"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder.svg",
+      "role": "figure",
+      "sha256": "2647d3b4de1fc2c365d4c38429f4325fb003d9421d49252c7e2eb5e97b2844df"
+    },
+    {
+      "indexable": false,
+      "path": "figures/sirius-icon.png",
+      "role": "figure",
+      "sha256": "00f610d0bcbf41600b0280797afe83cf3464f46558f13efa5ec794aa93e8c8aa"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "792d8276cd43aa8522a3b3ab934482485212a6f7ee69f7ca284a8be748f0aef8"
+    }
+  ],
+  "created_at": "2026-06-15T21:20:51.157086+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Parsed MS/MS spectrum data (precursor m/z, ionization mode, fragment peak list with m/z and intensity)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Molecular fingerprint prediction response from CSI:FingerID web service (structured JSON or table format containing fingerprint bits and confidence scores)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "CSI:FingerID is a web service component of SIRIUS that predicts molecular fingerprints from MS/MS spectra; it requires properly formatted precursor m/z, ionization mode, and fragment peak data.",
+    "The SIRIUS web services are restricted to academic research and education use only; non-academic users must obtain licenses from Bright Giant GmbH.",
+    "Fingerprint predictions from CSI:FingerID are returned as structured JSON responses that encode molecular structural features as bit vectors or scored predictions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:sirius-ms__sirius repository is accessible and contains CSI:FingerID implementation code",
+      "verify that a working CSI:FingerID web service endpoint URL is documented or discoverable in the repository",
+      "file_exists: check that example spectrum input files or test data are present in the repository (e.g., .ms, .mgf, or JSON spectrum formats)",
+      "script_runs: verify that a parsing and submission script can be executed without runtime errors on sample spectrum data",
+      "output_matches_reference: verify that fingerprint prediction output from the endpoint matches expected JSON schema (contains predicted fingerprint scores or feature vectors)"
+    ],
+    "expert_review": [
+      "assess whether the fingerprint predictions returned by CSI:FingerID are chemically plausible and rank known correct structures appropriately",
+      "evaluate whether request-response latency and service availability meet documented SLA or expected performance characteristics",
+      "review whether authentication, rate-limiting, or access control on the endpoint is properly documented and respected"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the CSI:FingerID web service accept a parsed mass spectrum query and return a molecular fingerprint prediction?: 'The SIRIUS web services (CSI:FingerID, CANOPUS, MSNovelist and others) hosted by the B\u00f6cker group are for academic research and education use only.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] CSI:FingerID is a SIRIUS web service component that processes spectrum queries as part of the integrated LC-MS/MS analysis framework.: 'The SIRIUS web services (CSI:FingerID, CANOPUS, MSNovelist and others) hosted by the B\u00f6cker group'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Parsed MS/MS spectrum data (precursor m/z, ionization mode, fragment peak list with m/z and intensity): '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Molecular fingerprint prediction response from CSI:FingerID web service (structured JSON or table format containing fingerprint bits and confidence scores): '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] CSI:FingerID: 'The SIRIUS web services (CSI:FingerID, CANOPUS, MSNovelist and others)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SIRIUS: 'SIRIUS is a java-based software framework for the analysis of LC-MS/MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import json, sys; import urllib.request; spectrum_data = json.load(open('{inputs.spectrum_query}')); payload = json.dumps(spectrum_data).encode('utf-8'); req = urllib.request.Request('https://www.csi-fingerid.uni-jena.de/api/fingerid/query', data=payload, headers={'Content-Type': 'application/json'}); response = urllib.request.urlopen(req); result = json.load(response); json.dump(result, sys.stdout, indent=2)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "fingerprint_prediction.json",
+  "expected_outputs": [
+    "Molecular fingerprint prediction response from CSI:FingerID web service (structured JSON or table format containing fingerprint bits and confidence scores)"
+  ],
+  "finding": "CSI:FingerID is a SIRIUS web service component that processes spectrum queries as part of the integrated LC-MS/MS analysis framework.",
+  "github_name": "sirius-ms/sirius",
+  "input_from": "task_001",
+  "inputs": [
+    "Parsed MS/MS spectrum data (precursor m/z, ionization mode, fragment peak list with m/z and intensity)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectrum_request_payload.json",
+    "csi_fingerid_response.json"
+  ],
+  "linked_result_ids": [
+    "result_009"
+  ],
+  "methodology_summary": [
+    "Prepare MS/MS spectrum metadata and fragment peak list",
+    "Format spectrum query according to CSI:FingerID API specification",
+    "Submit HTTP POST request to CSI:FingerID web service endpoint",
+    "Parse JSON response to extract fingerprint prediction and confidence metrics",
+    "Validation: Verify response JSON contains fingerprint prediction data with non-empty bit vector or scored features"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the CSI:FingerID web service accept a parsed mass spectrum query and return a molecular fingerprint prediction?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "spectrum-query-formatting",
+    "web-service-api-integration",
+    "molecular-fingerprint-parsing",
+    "sirius-spectral-request-construction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_cosmic/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "csi_fingerid"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:sirius-ms__sirius",
+  "task_description": "Submit a parsed spectrum query (with precursor m/z, ionization mode, and MS/MS fragment peaks) to the CSI:FingerID web service endpoint and retrieve the molecular fingerprint prediction response.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Parsed MS/MS spectrum with precursor and fragments",
+      "port_id": "spectrum_query",
+      "resolved_via": null,
+      "source": "task_001/sirius_spectra",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement a client function that submits a spectrum query to the CSI:FingerID endpoint and parses the returned molecular fingerprint predictions.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Molecular fingerprint prediction from CSI:FingerID",
+      "port_id": "fingerprint_prediction",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "in-silico-fragmentation",
+    "machine-learning",
+    "metabolite-identification",
+    "deep-learning",
+    "database-annotation",
+    "high-resolution-ms"
+  ],
+  "title": "Reconstruct the CSI:FingerID web-service dispatch for molecular fingerprint prediction",
+  "tools": [
+    "CSI:FingerID",
+    "SIRIUS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Prepare spectrum metadata (precursor m/z, ionization mode, collision energy if available) and fragment peak list (m/z and intensity pairs). 2. Construct a valid CSI:FingerID web service request payload conforming to the SIRIUS API specification. 3. Submit the HTTP POST request to the CSI:FingerID endpoint via the SIRIUS web service gateway. 4. Parse the JSON response to extract the predicted molecular fingerprint representation and associated confidence or scoring metrics. 5. Save the fingerprint prediction output in a structured format (JSON or CSV) for downstream analysis."
+}

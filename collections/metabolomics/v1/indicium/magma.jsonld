@@ -1,0 +1,580 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "extension",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/api-specification-extraction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/badge-endpoint-retrieval",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/build-system-monitoring",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/call-graph-construction-and-visualization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/chemical-structure-transformation-documentation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/chemo-informatics-workflow-reconstruction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/container-networking-configuration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/docker-compose-service-orchestration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/documentation-mining-for-project-architecture",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/environment-variable-provisioning",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/http-endpoint-identification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolite-generation-logic-mapping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metadata-extraction-from-source-code",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/multi-service-dependency-management",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/openapi-schema-generation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/python-source-code-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/repository-metadata-extraction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/repository-structure-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/rest-api-contract-documentation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/service-health-check-definition",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/software-component-identification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/source-code-analysis-for-algorithm-extraction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/status-value-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/structured-inventory-compilation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/volume-mount-and-persistence-design",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The eMetabolomics project is funded by the Netherlands eScience Center.",
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_eMetabolomics_Project"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The eMetabolomics project is carried out at Wageningen University and the Netherlands eScience Center.",
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_eMetabolomics_Project"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The eMetabolomics project collaborates with the Netherlands Metabolomics Centre.",
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_eMetabolomics_Project"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The project develops chemo-informatics based methods for metabolite identification.",
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The project develops methods for biochemical network reconstruction in an integrative metabolomics data analysis workflow.",
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MAGMa is an abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.",
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MAGMa_System"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "emetabolomics_site is a subproject that provides the eMetabolomics website.",
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_eMetabolomics_Project"
+        },
+        {
+          "id": "asb:spine_emetabolomics_site_Component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The job subproject runs MAGMa calculation.",
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MAGMa_System"
+        },
+        {
+          "id": "asb:spine_MAGMa_Job_Component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The joblauncher subproject is a webservice to execute jobs.",
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MAGMa_JobLauncher_Component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Contributions to the eMetabolomics project can be made via Github issue or pull request.",
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_MAGMa_System"
+        },
+        {
+          "id": "asb:spine_eMetabolomics_Project"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.1043226",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_magma#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_MAGMa_System",
+      "title": "MAGMa",
+      "identifier": "urn:asb:spine:MAGMa_System"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_eMetabolomics_Project",
+      "title": "eMetabolomics",
+      "identifier": "urn:asb:spine:eMetabolomics_Project"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_MAGMa_Job_Component",
+      "title": "job",
+      "identifier": "urn:asb:spine:MAGMa_Job_Component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_MAGMa_JobLauncher_Component",
+      "title": "joblauncher",
+      "identifier": "urn:asb:spine:MAGMa_JobLauncher_Component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_MAGMa_PubChem_Component",
+      "title": "pubchem",
+      "identifier": "urn:asb:spine:MAGMa_PubChem_Component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_MAGMa_Web_Component",
+      "title": "magmaweb",
+      "identifier": "urn:asb:spine:MAGMa_Web_Component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_emetabolomics_site_Component",
+      "title": "emetabolomics_site",
+      "identifier": "urn:asb:spine:emetabolomics_site_Component"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_Tool_Docker",
+      "title": "Docker",
+      "identifier": "urn:asb:spine:Tool_Docker"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_Tool_TravisCI",
+      "title": "Travis CI",
+      "identifier": "urn:asb:spine:Tool_TravisCI"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_Tool_Coveralls",
+      "title": "Coveralls",
+      "identifier": "urn:asb:spine:Tool_Coveralls"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_Tool_Landscape",
+      "title": "Landscape.io",
+      "identifier": "urn:asb:spine:Tool_Landscape"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_Tool_Zenodo",
+      "title": "Zenodo",
+      "identifier": "urn:asb:spine:Tool_Zenodo"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_ArchLayer_InSilicoMetaboliteGeneration",
+      "title": "In Silico Metabolite Generation Layer",
+      "identifier": "urn:asb:spine:ArchLayer_InSilicoMetaboliteGeneration",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_ArchLayer_MSAnnotation",
+      "title": "MS Annotation Layer",
+      "identifier": "urn:asb:spine:ArchLayer_MSAnnotation",
+      "abstraction_level": "asb:FixedArchitecture"
+    }
+  ]
+}

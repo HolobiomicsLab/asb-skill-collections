@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file ARTIFACT-EMPCPD-JSON exists"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is ARTIFACT-EMPCPD-JSON application/json (parse and validate JSON structure)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present in ARTIFACT-EMPCPD-JSON for 'list_of_features' (at minimum; robust to schema variants)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present in ARTIFACT-EMPCPD-JSON for 'mz' (at minimum; robust to schema variants)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present in ARTIFACT-EMPCPD-JSON for 'rt' (at minimum; robust to schema variants)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: khipu build_empCpds invoked with configurable mz and rt tolerance parameters on input feature table without error"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file ARTIFACT-EMPCPD-JSON exists",
+      "verify file_format_is ARTIFACT-EMPCPD-JSON application/json (parse and validate JSON structure)",
+      "verify field_present in ARTIFACT-EMPCPD-JSON for 'list_of_features' (at minimum; robust to schema variants)",
+      "verify field_present in ARTIFACT-EMPCPD-JSON for 'mz' (at minimum; robust to schema variants)",
+      "verify field_present in ARTIFACT-EMPCPD-JSON for 'rt' (at minimum; robust to schema variants)",
+      "verify script_runs: khipu build_empCpds invoked with configurable mz and rt tolerance parameters on input feature table without error"
+    ],
+    "expert_review": [
+      "assess whether empirical compound groupings in ARTIFACT-EMPCPD-JSON are chemically sensible given the input mz/rt tolerances and feature table composition",
+      "evaluate whether the mz/rt tolerance parameters used are appropriate for the LC-MS platform and metabolomics study design"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

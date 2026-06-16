@@ -1,0 +1,390 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/mwang87/GNPS_MASST",
+      "locator_id": "gh_mwang87_gnps_masst",
+      "locator_kind": "github",
+      "name": "mwang87/GNPS_MASST",
+      "prose": "GNPS_MASST codebase and routing configuration",
+      "score": 0.3333,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "6b8e6cf2eaeb2714f91803ea40d914d80213565f7960e27eac29f9d592f63fab"
+    }
+  ],
+  "created_at": "2026-06-15T21:14:33.527412+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "User spectrum submission with domain context metadata",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GNPS_MASST codebase and routing configuration",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Routing decision module specifying domain-to-application mappings",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Routing test results confirming correct spectrum dispatch to each domain-specific application",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Domain-specific MASST applications are specialized for distinct biological/chemical contexts: microbes, plants, tissues, microbiomes, and food, each with dedicated spectral databases.",
+    "User domain selection is the primary routing criterion; the system must dispatch single-spectrum submissions to the correct standalone application based on this metadata.",
+    "The metadataMASST application serves as an aggregation layer for cross-domain search output visualization, distinct from single-spectrum domain-specific tools.",
+    "Routing logic must be stateless and deterministic to ensure reproducible spectrum-to-application assignment across user sessions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github.com/mwang87/GNPS_MASST or equivalent public repository URL",
+      "verify GNPS_MASST repository contains routing logic code (script_runs: clone repository and search for routing/dispatcher functions)",
+      "verify routing logic accepts user-selected domain parameter as input (contains_substring: 'domain' or 'MASST' in routing function signature)",
+      "verify routing logic maps domain selection to at least the six documented applications: microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST (output_matches_reference: routing table or conditional logic enumerates all six)",
+      "verify implemented routing logic can be instantiated with a test spectrum and a domain parameter without error (script_runs: execute routing function with valid inputs)"
+    ],
+    "expert_review": [
+      "assess whether routing logic correctly implements domain-spectrum matching semantics (does microbe spectrum route to microbeMASST, plant to plantMASST, etc.)",
+      "assess whether routing logic gracefully handles edge cases: unrecognized domain, null/missing domain parameter, null/invalid spectrum input",
+      "assess whether routing implementation follows GNPS_MASST architectural conventions and is maintainable for future domain additions"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the routing mechanism direct a user-submitted spectrum to the appropriate domain-specific MASST application based on the user-selected domain context?: 'The code for the different standalone web applications, which allow users to search one spectrum at a time, can be found in GNPS_MASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The repository contains code and data for six domain-specific MASSTs (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, and metadataMASST) that operate as standalone web applications allowing users to search one spectrum at a time, with the underlying routing code available in the GNPS_MASST codebase.: 'This repository contains the code and data for the different domain-specific MASSTs currently under development in the Dorrestein Lab at UC San Diego. This includes microbeMASST, plantMASST,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] User spectrum submission with domain context metadata: 'standalone web applications, which allow users to search one spectrum at a time'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] GNPS_MASST codebase and routing configuration: 'The code for the different standalone web applications, which allow users to search one spectrum at a time, can be found in GNPS_MASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Routing decision module specifying domain-to-application mappings: 'microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Routing test results confirming correct spectrum dispatch to each domain-specific application: 'The code for the different standalone web applications, which allow users to search one spectrum at a time, can be found in GNPS_MASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] microbeMASST: 'microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] plantMASST: 'microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] tissueMASST: 'microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] microbiomeMASST: 'microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] foodMASST: 'microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] metadataMASST: 'Aggregated search outputs can be generated and visualized using metadataMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] GNPS_MASST: 'The code for the different standalone web applications, which allow users to search one spectrum at a time, can be found in GNPS_MASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting the routing logic implementation, versioning, or deployment status is provided.: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion section does not specify which code repository branch, commit hash, or version tag contains the implemented routing logic.: 'Synthesized at: 2026-06-15T21:14:31+00:00'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion does not describe the routing logic itself (e.g., how domain selection is parsed, how it is matched to target applications, or the decision tree/conditional structure).: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "echo 'Routing decision module for GNPS_MASST domain dispatch' && python3 -c \"import json; routing_config = {'microbial': 'microbeMASST', 'plant': 'plantMASST', 'tissue': 'tissueMASST', 'microbiome': 'microbiomeMASST', 'food': 'foodMASST', 'metadata': 'metadataMASST'}; print(json.dumps(routing_config, indent=2))\" > routing_module.json && echo 'Routing module generated successfully'"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "routing_module.py",
+  "expected_outputs": [
+    "Routing decision module specifying domain-to-application mappings",
+    "Routing test results confirming correct spectrum dispatch to each domain-specific application"
+  ],
+  "finding": "The repository contains code and data for six domain-specific MASSTs (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, and metadataMASST) that operate as standalone web applications allowing users to search one spectrum at a time, with the underlying routing code available in the GNPS_MASST codebase.",
+  "github_name": "mwang87/GNPS_MASST",
+  "input_from": "task_001",
+  "inputs": [
+    "User spectrum submission with domain context metadata",
+    "GNPS_MASST codebase and routing configuration"
+  ],
+  "keywords": [
+    "mass spectrometry spectral search",
+    "domain-specific search tools",
+    "microbe identification",
+    "plant metabolomics",
+    "tissue analysis",
+    "microbiome profiling",
+    "food analysis",
+    "metadata aggregation",
+    "untargeted metabolomics",
+    "spectral library matching"
+  ],
+  "landmark_outputs": [
+    "domain_mapping_config.json",
+    "routing_logic_test_cases.csv",
+    "routing_test_results.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Define domain-to-application mapping: microbial \u2192 microbeMASST, plant \u2192 plantMASST, tissue \u2192 tissueMASST, microbiome \u2192 microbiomeMASST, food \u2192 foodMASST, metadata aggregation \u2192 metadataMASST.",
+    "Implement conditional routing logic that parses user-submitted domain context metadata and selects the target application endpoint.",
+    "Integrate routing module with GNPS_MASST codebase architecture and validate compatibility with existing spectrum submission workflows.",
+    "Test routing module with representative spectrum submissions across all six domain categories to confirm correct application dispatch.",
+    "Validation: all test spectra are routed to their designated domain-specific application with 100% accuracy; routing module executes without errors on the GNPS_MASST codebase."
+  ],
+  "missing_information": [
+    "No changelog documenting the routing logic implementation, versioning, or deployment status is provided.",
+    "The discussion section does not specify which code repository branch, commit hash, or version tag contains the implemented routing logic.",
+    "The discussion does not describe the routing logic itself (e.g., how domain selection is parsed, how it is matched to target applications, or the decision tree/conditional structure)."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the routing mechanism direct a user-submitted spectrum to the appropriate domain-specific MASST application based on the user-selected domain context?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "domain-context-to-application-routing",
+    "spectrum-metadata-parsing",
+    "conditional-logic-implementation",
+    "web-application-endpoint-mapping",
+    "routing-module-testing-and-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_microbemasst/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "microbeMASST",
+    "plantMASST",
+    "tissueMASST",
+    "microbiomeMASST",
+    "foodMASST",
+    "metadataMASST",
+    "GNPS_MASST_tool"
+  ],
+  "subdomains": [
+    "microbiome-metabolomics",
+    "plant-metabolomics",
+    "foodomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:robinschmid__microbe_masst",
+  "task_description": "Implement the routing logic that directs user-submitted mass spectra to the appropriate domain-specific MASST web application (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, or metadataMASST) based on user-selected domain context. Produce a routing decision module compatible with the GNPS_MASST codebase.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "User spectrum submission with domain context metadata",
+      "port_id": "spectrum_submission",
+      "resolved_via": null,
+      "source": "task_001/application_inventory",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GNPS_MASST codebase and routing configuration",
+      "port_id": "gnps_masst_codebase",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement spectrum routing logic that directs user-submitted spectra to the correct domain-specific MASST web application based on selected domain context.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Routing decision module specifying domain-to-application mappings",
+      "port_id": "routing_module",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Routing test results confirming correct spectrum dispatch to each domain-specific application",
+      "port_id": "routing_test_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "spectral-library-matching",
+    "database-annotation",
+    "cosine-similarity-scoring"
+  ],
+  "title": "Reconstruct the conditional dispatch routing mechanism that maps a spectrum query to the appropriate domain-specific MASST component",
+  "tools": [
+    "microbeMASST",
+    "plantMASST",
+    "tissueMASST",
+    "microbiomeMASST",
+    "foodMASST",
+    "metadataMASST",
+    "GNPS_MASST"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST, Routing decision module specifying domain-to-application mappings, Routing test results confirming correct spectrum dispatch to each domain-specific application."
+  ],
+  "workflow_description": "1. Parse user-submitted spectrum metadata and extract the domain-context selection (e.g., microbial, plant, tissue, microbiome, food, or metadata aggregation). 2. Implement conditional routing logic that maps domain context to the corresponding standalone web application endpoint or module. 3. Validate routing rules against all six domain-specific MASST applications defined in the GNPS_MASST repository. 4. Test routing module with representative spectrum submissions across each domain to confirm correct application dispatch."
+}

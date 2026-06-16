@@ -1,0 +1,210 @@
+schema_version: 0.1.0
+workflow_id: coll_corems_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: CoreMS is a comprehensive Python framework for mass spectrometry software
+    development and data analysis that enables reproducible processing of FT-ICR MS
+    and GC-MS data through modular pipelines including transient processing, noise
+    thresholding, mass calibration, and molecular formula assignment.
+  pseudo_abstract: "CoreMS demonstrates reproducible workflows for high-resolution\
+    \ mass spectrometry data processing, including complete FT-ICR MS molecular formula\
+    \ assignment via transient Fourier transformation, apodization, noise thresholding,\
+    \ and mass calibration against reference standards (SRFA.ref), as well as GC-MS\
+    \ compound identification through retention index calibration and spectral library\
+    \ matching. The framework provides configurable noise thresholding mechanisms\
+    \ spanning relative-abundance, signal-to-noise ratio, and log-normal distribution\
+    \ modes for peak detection. Mass calibration incorporates an iterative fallback\
+    \ strategy that progressively widens mass-error tolerances from \xB11.0 to \xB1\
+    10 ppm when insufficient calibration points are found at stricter thresholds.\
+    \ Molecular formula searches operate in single-assignment (first-hit) and exhaustive\
+    \ modes, with results exportable to CSV and HDF5 formats; parameterization via\
+    \ MSParameters enables reproducible configuration of apodization methods, zero-fill\
+    \ counts, and search constraints across CHO, N, O, S, and halogen chemistries."
+  research_questions:
+  - Does the CoreMS FT-ICR data processing pipeline (Hanning apodization, log-based
+    noise thresholding, MzDomainCalibration, and SearchMolecularFormulas) successfully
+    assign molecular formulas to ESI_NEG_SRFA.d data with quantified mass error metrics?
+  - How does the calibration procedure handle cases where the initial narrow PPM window
+    fails to find sufficient reference m/z matches?
+  - Does the CoreMS GC-MS processing pipeline successfully identify compounds from
+    low-resolution mass spectrometry data using spectral library matching?
+  - How do the three noise thresholding methods implemented in CoreMS (log, signal_noise,
+    and relative_abundance) differ in their selection criteria and how many peaks
+    each retains from a given mass spectrum?
+  - How does the first_hit parameter in SearchMolecularFormulas affect the number
+    of molecular formula assignments and their score distributions?
+  methods_summary: "Load FT-ICR raw data (ESI_NEG_SRFA.d) and calibration reference\
+    \ (SRFA.ref) into CoreMS factory. Apply Hanning window apodization with single\
+    \ zero-fill to time-domain transient. Remove noise via intensity thresholding\
+    \ on frequency-domain spectrum. Calibrate m/z axis using MzDomainCalibration against\
+    \ reference compounds in SRFA.ref. Search and assign molecular formulas using\
+    \ CHO elemental constraints; compute mass error and formula score for each assignment.\
+    \ Validation: Output CSV contains formula assignments with mass error values;\
+    \ all assigned formulas obey CHO elemental constraints and exhibit mass error\
+    \ consistent with FT-ICR instrumental resolution. Load mass spectrum from ESI_NEG_SRFA.d\
+    \ and reference m/z values from SRFA.ref using CoreMS data encapsulation. Perform\
+    \ initial reference m/z peak matching using a baseline PPM window (e.g., 5 ppm).\
+    \ Evaluate match count; if fewer than 5 points matched, expand PPM tolerance and\
+    \ rematch. Fit calibration polynomial (e.g., second-order) to matched points using\
+    \ least-squares regression. Compute residuals and export calibration coefficients\
+    \ with metadata to structured output record. Validation: Confirm that final calibration\
+    \ point count meets or exceeds 5; verify residual magnitude indicates acceptable\
+    \ fit quality for subsequent mass analysis. Load raw GC-MS chromatographic and\
+    \ spectral data from NetCDF format using ReadAndiNetCDF module. Calibrate retention\
+    \ times against alkane standards using GC_RI_Calibration to compute normalized\
+    \ retention indices. Extract low-resolution mass spectra and match each against\
+    \ PNNLMetV20191015.MSL library using LowResMassSpectralMatch with cosine similarity\
+    \ and retention-index scoring. Aggregate compound identifications with match scores\
+    \ and rank results by confidence. Validation: CSV output contains at least one\
+    \ identified compound per peak with spectral match score \u22650.7 and retention-index\
+    \ deviation \u226420 RI units, matching library entries in PNNLMetV20191015.MSL.\
+    \ Load mass spectrum from ESI_NEG_SRFA.d using CoreMS factory and MSParameters.\
+    \ Implement conditional dispatch that selects one of three mutually exclusive\
+    \ noise-threshold methods. Apply selected threshold method and count retained\
+    \ peaks per ionization mode. Serialize method name and peak counts as a structured\
+    \ CSV or JSON record. Validation: record contains method identifier and non-null\
+    \ peak count fields for each mode. Load calibrated mass spectrum from ESI_NEG_SRFA.d\
+    \ and reference file SRFA.ref into CoreMS framework. Execute SearchMolecularFormulas\
+    \ with parameter first_hit=True and collect all assigned formulas and their scores.\
+    \ Execute SearchMolecularFormulas with parameter first_hit=False and collect all\
+    \ assigned formulas and their scores. Calculate summary statistics (count, mean,\
+    \ median, standard deviation, minimum, maximum) for assignment scores in each\
+    \ mode. Tabulate and compare results side-by-side in a CSV summary table. Validation:\
+    \ Output file contains both modes' assignment counts and score statistics with\
+    \ no missing numeric fields."
+  domain: metabolomics
+  techniques:
+  - feature-detection
+  - metabolite-identification
+  - database-annotation
+  - quality-control
+  - spectral-library-matching
+  claims:
+  - claim_text: CoreMS is a comprehensive mass spectrometry framework for software
+      development and data analysis of small molecules analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: Data handling and software development for modern mass spectrometry
+      is an interdisciplinary endeavor requiring skills in computational science and
+      a deep understanding of MS.
+    claim_type: finding
+    speculative: false
+  - claim_text: Contributors must create an issue proposing a fix or expanded functionality
+      before contributing.
+    claim_type: finding
+    speculative: false
+  - claim_text: Contributors can fork the CoreMS repository or make a branch if part
+      of the development team.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: CoreMS follows the NumPy documentation style guide.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: Documentation in CoreMS is rendered using the pdoc package.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: CoreMS uses semantic versioning with major, minor, and patch version
+      numbers.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: Major version is incremented when making incompatible API changes.
+    claim_type: finding
+    speculative: false
+  - claim_text: Minor version is incremented when adding new features in a backwards-compatible
+      manner.
+    claim_type: finding
+    speculative: false
+  - claim_text: Patch version is incremented for backwards-compatible bug fixes.
+    claim_type: finding
+    speculative: false
+  - claim_text: Unit tests must be added or updated to cover changes made in merge
+      requests.
+    claim_type: finding
+    speculative: false
+  - claim_text: Documentation must be updated and rerendered to reflect any new features
+      or changes in CoreMS.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: The CI/CD pipeline must pass before merging into the master branch.
+    claim_type: finding
+    speculative: false
+  - claim_text: Relevant issues or pull requests should be referenced in merge requests.
+    claim_type: finding
+    speculative: false
+  - claim_text: Contributing to CoreMS means agreeing that contributions will be licensed
+      as described in the LICENSE file.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: CoreMS has sibling projects including EnviroMS and MetaMS.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Structured record containing calibration point count, final calibration coefficients,
+    and residuals
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'CSV table of identified compounds with columns: compound name, CAS number,
+    retention index, spectral match score, match rank, and peak integration metrics'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Structured record (JSON or CSV row) containing selected noise-threshold method
+    name and peak count per ionization mode
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Summary table with assignment counts and score statistics for first_hit=True
+    and first_hit=False modes
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

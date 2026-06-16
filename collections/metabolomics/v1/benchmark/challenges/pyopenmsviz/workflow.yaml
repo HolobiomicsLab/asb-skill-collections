@@ -1,0 +1,336 @@
+schema_version: 0.1.0
+workflow_id: coll_pyopenmsviz_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_004
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: pyOpenMS-Viz is a Python library that provides Pandas DataFrame-based visualization
+    of mass spectrometry data across multiple plotting backends (matplotlib, Bokeh,
+    and Plotly). The library supports static and interactive visualizations of spectra,
+    chromatograms, mobilograms, and peak maps.
+  pseudo_abstract: "pyOpenMS-Viz integrates seamlessly with three plotting library\
+    \ backends\u2014matplotlib, Bokeh, and Plotly\u2014enabling users to specify which\
+    \ backend to use for visualization generation of mass spectrometry data. The library\
+    \ provides a simple interface for creating static or interactive visualizations\
+    \ by calling the .plot() method directly on Pandas DataFrames, supporting plot\
+    \ types including spectra, chromatograms, mobilograms, and peak maps. Execution\
+    \ times for 19 gallery scripts spanning all three backends were measured, with\
+    \ total execution time of 00:06.221 across all galleries. The library supports\
+    \ 3D plotting for peak maps through the matplotlib and Plotly backends via the\
+    \ plot_3d=True flag, enabling interactive three-dimensional visualization of mass\
+    \ spectrometry data."
+  research_questions:
+  - What are the per-script execution times for the 19 gallery scripts across the
+    three plotting backends (matplotlib, Bokeh, Plotly), and what is the total gallery
+    execution time?
+  - How does pyOpenMS-viz route a user's backend specification through its layered
+    architecture to dispatch the plot generation request to the correct plotting library
+    backend?
+  - Do the four core MS plot components (ChromatogramPlot, MobilogramPlot, SpectrumPlot,
+    PeakMapPlot) successfully render output figures across all three supported plotting
+    backends (matplotlib, Bokeh, Plotly) when executed with publicly available example
+    data?
+  - Which plotting backend (matplotlib, Bokeh, or Plotly) exhibits the fastest median
+    execution time for each mass spectrometry plot type (chromatogram, mobilogram,
+    peakmap, peakmap-marginals, spectrum, subplots)?
+  - Can pyOpenMS-Viz successfully render a 3D peak-map visualization using the Plotly
+    backend on real mass spectrometry data from mzML or Bruker .d format files?
+  methods_summary: "Create and activate a Python 3.12 conda environment with pyOpenMS-Viz\
+    \ and all three plotting backends installed. Sequentially execute each of the\
+    \ 19 gallery scripts, recording wall-clock time using Python's time module or\
+    \ Unix time command. Aggregate per-script execution times and compute total execution\
+    \ time across all scripts. Tabulate measured execution times in a dataframe matching\
+    \ the reported table structure (Example, Time, Mem columns). Validation: Compare\
+    \ measured per-script times and total aggregate time (00:06.221 minutes) against\
+    \ reported values; verify all 19 scripts executed successfully without errors.\
+    \ Entry Point: User calls `.plot()` on a pandas DataFrame with `backend=`, `kind=`,\
+    \ `x=`, `y=`, and optional configuration parameters. Configuration Validation\
+    \ Layer: The specified `kind` and optional parameters are passed to the corresponding\
+    \ Configuration Class (e.g., `SpectrumConfig`, `ChromatogramConfig`), which inherits\
+    \ from `BasePlotConfig` and validates all inputs. Core Base Layer Dispatch: Based\
+    \ on `kind`, the orchestrator selects and instantiates the appropriate core base\
+    \ class (`BasePlot` for simple plots or `BaseMSPlot` for mass-spectrometry plots)\
+    \ with validated configuration. Backend Router: The `backend=` parameter is inspected\
+    \ to determine which Extension Layer module (_bokeh, _matplotlib, or _plotly)\
+    \ will provide the final rendering implementation. Backend-Specific Class Instantiation:\
+    \ The chosen Extension Layer's corresponding class (e.g., `BOKEHSpectrumPlot`\
+    \ inheriting from both `BOKEHPlot` and the core base class) is instantiated, binding\
+    \ configuration, data, and backend-specific rendering logic. Validation: The returned\
+    \ plot object is an instance of the correct backend-specific class with all configuration\
+    \ applied, type-checked to ensure the inheritance hierarchy matches both the plot\
+    \ type and the selected backend. Install pyOpenMS-Viz library from PyPI or source\
+    \ repository. Load example mass spectrometry data (mzML or Bruker .d) using pymzml,\
+    \ pyOpenMS, or AlphaTims into a pandas DataFrame. For each plot type (spectrum,\
+    \ chromatogram, mobilogram, peakmap), call DataFrame.plot() with appropriate x/y/z\
+    \ columns and plot configuration parameters (SpectrumConfig, ChromatogramConfig,\
+    \ MobilogramConfig, PeakMapConfig). Execute plotting sequentially for all three\
+    \ backends (ms_matplotlib, ms_bokeh, ms_plotly) by setting pandas plotting backend\
+    \ option. Collect generated figure files and verify existence, format, and visual\
+    \ correspondence to gallery reference outputs. Validation: All 12 generated figures\
+    \ (4 plot types \xD7 3 backends) must exist as files in the expected format and\
+    \ visual content must match reference gallery outputs without errors or missing\
+    \ data. Parse the 19 gallery script names and execution times from the computation-times\
+    \ table, extracting plot type and backend from each script filename. Group execution\
+    \ times by plot type and backend combination. Calculate median, minimum, and maximum\
+    \ execution time for each group. Rank backends within each plot type by median\
+    \ execution time (1 = fastest). Assemble results into a structured table and generate\
+    \ a comparative bar chart or heatmap. Validation: Confirm that all 19 scripts\
+    \ are accounted for in the aggregated groups, that median and range values are\
+    \ correctly computed from the original times, and that the ranking correctly reflects\
+    \ the median values. Load mzML or Bruker .d mass spectrometry file into a pandas\
+    \ DataFrame using appropriate parser (PyOpenMS, pymzML, pyteomics, or alphatims)\
+    \ with required columns: m/z, retention time, and intensity. Configure pandas\
+    \ plotting backend to 'ms_plotly' to enable Plotly-based rendering. Call DataFrame.plot()\
+    \ with x='m/z', y='rt', kind='peakmap', plot_3d=True to invoke 3D peak-map visualization.\
+    \ Export the resulting Plotly figure object to an interactive HTML file using\
+    \ write_html() method. Validation: Confirm that the output HTML file contains\
+    \ valid Plotly 3D trace data and renders without errors when opened in a web browser;\
+    \ verify presence of m/z, retention time, and intensity axes and interactive controls."
+  domain: bioinformatics
+  techniques: []
+  claims:
+  - claim_text: pyOpenMS-Viz is a Python library that provides a simple interface
+      for extending the plotting capabilities of Pandas DataFrames for creating static
+      or interactive visualizations of mass spectrometry data.
+    claim_type: finding
+    speculative: false
+    entity_id: pyopenms_viz_system
+  - claim_text: pyOpenMS-Viz integrates seamlessly with various plotting library backends
+      including matplotlib, bokeh, and plotly.
+    claim_type: finding
+    speculative: false
+    entity_id: pyopenms_viz_system
+  - claim_text: The recommended way of installing pyOpenMS-viz is through the Python
+      Package Index (PyPI).
+    claim_type: finding
+    speculative: false
+    entity_id: pyopenms_viz_system
+  - claim_text: pyOpenMS-viz can be installed with the command 'pip install pyopenmsviz
+      --upgrade'.
+    claim_type: finding
+    speculative: false
+    entity_id: pyopenms_viz_system
+  - claim_text: The source code for pyOpenMS-Viz is freely open and accessible on
+      Github at https://github.com/OpenMS/pyopenms_viz under the BSD-3-Clause license.
+    claim_type: finding
+    speculative: false
+    entity_id: pyopenms_viz_system
+  - claim_text: Chromatograms can be plotted using kind = chromatogram with retention
+      time on the x-axis and intensity on the y-axis.
+    claim_type: finding
+    speculative: false
+  - claim_text: The 'by' parameter in chromatogram plots can be used to separate out
+      different mass traces.
+    claim_type: finding
+    speculative: false
+  - claim_text: Mobilograms are a type of plot used to visualize ion mobility data
+      with ion mobility represented on the x-axis and intensity shown on the y-axis.
+    claim_type: finding
+    speculative: false
+  - claim_text: Mobilograms are functionally similar to chromatograms.
+    claim_type: finding
+    speculative: false
+  - claim_text: Peak Maps can be plotted using kind = peakmap with mass-to-charge
+      on the x-axis, retention time on the y-axis, and intensity on the z-axis or
+      represented by color.
+    claim_type: finding
+    speculative: false
+  - claim_text: 3D plotting is enabled using plot_3d=True parameter in Peak Maps.
+    claim_type: finding
+    speculative: false
+  - claim_text: 3D plotting for Peak Maps is currently only supported for ms_matplotlib
+      and ms_plotly backends.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_plotly
+  - claim_text: A spectrum can be plotted using kind = 'spectrum' with mass-to-charge
+      ratio on the x-axis and intensity on the y-axis.
+    claim_type: finding
+    speculative: false
+  - claim_text: pyOpenMS-viz plotting occurs by calling the .plot() method on a pandas
+      dataframe.
+    claim_type: finding
+    speculative: false
+    entity_id: pyopenms_viz_system
+  - claim_text: Mandatory plotting values for pyOpenMS-viz include column names for
+      the x and y axes and the kind of plot.
+    claim_type: finding
+    speculative: false
+    entity_id: pyopenms_viz_system
+  - claim_text: BOKEH backend is available for simple plots including LinePlot, VLinePlot,
+      and ScatterPlot.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_bokeh
+  - claim_text: PLOTLY backend is available for simple plots including PLOTLYLinePlot,
+      PLOTLYVLinePlot, and PLOTLYScatterPlot.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_plotly
+  - claim_text: MATPLOTLIB backend is available for simple plots including MATPLOTLIBLinePlot,
+      MATPLOTLIBVLinePlot, and MATPLOTLIBScatterPlot.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_matplotlib
+  - claim_text: BOKEH backend is available for mass spectrometry plots including BOKEHChromatogramPlot,
+      BOKEHMobilogramPlot, BOKEHSpectrumPlot, and BOKEHPeakMapPlot.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_bokeh
+  - claim_text: PLOTLY backend is available for mass spectrometry plots including
+      PLOTLYChromatogramPlot, PLOTLYMobilogramPlot, PLOTLYSpectrumPlot, and PLOTLYPeakMapPlot.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_plotly
+  - claim_text: MATPLOTLIB backend is available for mass spectrometry plots including
+      MATPLOTLIBChromatogramPlot, MATPLOTLIBMobilogramPlot, MATPLOTLIBSpectrumPlot,
+      and MATPLOTLIBPeakMapPlot.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_matplotlib
+  - claim_text: Configuration classes are available including BaseConfig, LegendConfig,
+      BasePlotConfig, LineConfig, VLineConfig, ScatterConfig, ChromatogramConfig,
+      MobilogramConfig, SpectrumConfig, and PeakMapConfig.
+    claim_type: finding
+    speculative: false
+  - claim_text: Base abstract classes BasePlot and BaseMSPlot are inherited by other
+      classes in pyOpenMS-Viz.
+    claim_type: finding
+    speculative: false
+    entity_id: pyopenms_viz_system
+  - claim_text: Simple plot classes include LinePlot, VLinePlot, and ScatterPlot which
+      inherit from the BasePlot class.
+    claim_type: finding
+    speculative: false
+  - claim_text: Mass spectrometry plot classes include ChromatogramPlot, MobilogramPlot,
+      SpectrumPlot, and PeakMapPlot which inherit from the BaseMSPlot class.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_chromatogram_plot
+  - claim_text: The total execution time for 19 files from all galleries was 00:06.221.
+    claim_type: finding
+    speculative: false
+  - claim_text: Key features of pyOpenMS-Viz include DataFrame Based Plotting, Interactive
+      and Static Plotting with multiple backends, and Usage Flexibility.
+    claim_type: finding
+    speculative: false
+    entity_id: pyopenms_viz_system
+  - claim_text: pyOpenMS-Viz is licensed under the BSD 3-Clause license.
+    claim_type: finding
+    speculative: false
+    entity_id: pyopenms_viz_system
+  speculative: false
+  task_openness: open
+  method_alternatives:
+  - ms_plotly backend as alternative to ms_bokeh
+  - ms_matplotlib backend as alternative to ms_bokeh
+  substitution_constraints:
+  - 3D plotting only supported for ms_matplotlib and ms_plotly backends
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: A backend-specific plot object instantiated from one of the nine Extension
+    Layer classes (e.g., BOKEHSpectrumPlot, MATPLOTLIBChromatogramPlot, PLOTLYPeakMapPlot)
+    with full configuration applied and ready for rendering or further interaction
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Spectrum figure file (PNG or interactive HTML) generated with ms_matplotlib
+    backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Spectrum figure file (PNG or interactive HTML) generated with ms_bokeh backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Spectrum figure file (PNG or interactive HTML) generated with ms_plotly backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Chromatogram figure file (PNG or interactive HTML) generated with ms_matplotlib
+    backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Chromatogram figure file (PNG or interactive HTML) generated with ms_bokeh
+    backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Chromatogram figure file (PNG or interactive HTML) generated with ms_plotly
+    backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Mobilogram figure file (PNG or interactive HTML) generated with ms_matplotlib
+    backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Mobilogram figure file (PNG or interactive HTML) generated with ms_bokeh backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Mobilogram figure file (PNG or interactive HTML) generated with ms_plotly
+    backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: PeakMap figure file (PNG or interactive HTML) generated with ms_matplotlib
+    backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: PeakMap figure file (PNG or interactive HTML) generated with ms_bokeh backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: PeakMap figure file (PNG or interactive HTML) generated with ms_plotly backend
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Interactive 3D peak-map visualization file in HTML format displaying intensity
+    as a surface or scatter plot with m/z (x), retention time (y), and intensity (z)
+    axes
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Confirmation that the Plotly backend successfully renders the 3D plot without
+    errors
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

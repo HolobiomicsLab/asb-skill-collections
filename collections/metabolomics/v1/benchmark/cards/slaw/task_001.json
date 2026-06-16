@@ -1,0 +1,369 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/DBCustomIcon.png",
+      "role": "figure",
+      "sha256": "d9253b88ba2d82c7bb456b960c4eca8840491efa35e36f4d8c9301f6b39fe694"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DBLipidsIcon.png",
+      "role": "figure",
+      "sha256": "64239735bd05f714305b6387d3b803a6823be50d22cf162e8cb373f2ec7a9849"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DBOnlineIcon.png",
+      "role": "figure",
+      "sha256": "bd474feacdb225f557c0c271342e5568ac0f619f7e4e5b0e86e130bfcc9d27c9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DBSpectraIcon.png",
+      "role": "figure",
+      "sha256": "399a2940e9626728e4441ebb1816097192759803e421b77eebe986e55340f1f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/KMDIcon.png",
+      "role": "figure",
+      "sha256": "dfb2e8dfe422d343c4cd6f79d6f00ca69c35652f11c3f5d9e3c1a0eb05bd13f6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/RKMIcon.png",
+      "role": "figure",
+      "sha256": "d4076aac5c99e918067995fb056342d04876a43895fd0ceaec78b226f243a523"
+    },
+    {
+      "indexable": false,
+      "path": "figures/annotationsicon.png",
+      "role": "figure",
+      "sha256": "5c432c1f37611e387384c08e06533684c3d3f6e1f95d1a9656dae2f3dd0ad354"
+    },
+    {
+      "indexable": false,
+      "path": "figures/arrowdownicon.png",
+      "role": "figure",
+      "sha256": "0ef6a82b28330fdc6038d1689d4d389aa8885a8fe6a33c3c5e09e840338afca4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/arrowupicon.png",
+      "role": "figure",
+      "sha256": "3c9a434272ad44a8abaae883aa2e7efd7fd252be7f21bdc4c894ef0a256107fb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/axesicon.png",
+      "role": "figure",
+      "sha256": "6893a551f4b6cca6d6bcbe78ec75513d32935e0e229b7f32c9e75d0b9126ff68"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bgicon.png",
+      "role": "figure",
+      "sha256": "fbba5a5db4938a3c1518b803f08dc6556ee75a07689b60a526a1d227a74c9e82"
+    },
+    {
+      "indexable": false,
+      "path": "figures/blocksizeicon.png",
+      "role": "figure",
+      "sha256": "70c086aa0151bae71f52c8262a28ad3cfc2515a4ede6ec9f3cf5fbb700ca70b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/btnspectraprocessing.png",
+      "role": "figure",
+      "sha256": "c5d445917e4d842182faf54f0895ab3cf2db55db60de51bd78cdc5255513c335"
+    },
+    {
+      "indexable": false,
+      "path": "figures/centroidicon.png",
+      "role": "figure",
+      "sha256": "87028ab8db2e97fa2682d2d09264167bb7725de300c4deb10674085e579a246d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/colorbaricon.png",
+      "role": "figure",
+      "sha256": "f419b4114c6cf61d2e74a4372b6d2ad57bdaa0c93fd5ba5baec2ac50b11cdf19"
+    },
+    {
+      "indexable": false,
+      "path": "figures/continuousicon.png",
+      "role": "figure",
+      "sha256": "eb4ab19ec187b29ba2175ee7a116be1d3a4173a387d3babf2c179bc52b58608e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/datapointsicon.png",
+      "role": "figure",
+      "sha256": "d7f666732d452c462443d267e4cef19d49ffa862d8c8925eba9ee648518f46df"
+    },
+    {
+      "indexable": false,
+      "path": "figures/exp_graph_all.png",
+      "role": "figure",
+      "sha256": "336ac1135534491a0882d055350d5e319e0faeab58d0ba673422265c1092ffa4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/exp_graph_emf.png",
+      "role": "figure",
+      "sha256": "9e445c097450d74a0396bc1733cac0f0eb5c9b4695424d662ee6dc3efe8e1add"
+    },
+    {
+      "indexable": false,
+      "path": "figures/exp_graph_eps.png",
+      "role": "figure",
+      "sha256": "56fb76a66ece0a856fe2e97e03cf79664e147c7b53616ecc0a5be2706015bbf7"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "5eba882426f31157ee55694a618a8dd5fa7aaea30811951890b1022af27d803b"
+    }
+  ],
+  "created_at": "2026-06-16T07:18:56.699764+00:00",
+  "crossref_doi": "10.1021/acs.analchem.1c02687",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Aligned feature table with missing intensities from peak picking and sample alignment",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature table with filled missing feature intensities recovered via data recursion",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Data recursion in metabolomics gap-filling searches for missing feature intensities by querying aligned features across samples using retention time and m/z tolerances to locate the same analyte in alternate sample batches.",
+    "Missing feature intensities arise when a compound is present in some samples but falls below the detection threshold in others due to instrumental variability or biological absence.",
+    "Gap-filling must preserve the sample-feature matrix structure and distinguish between true biological absence and instrumental detection failure.",
+    "SLAW automates the gap-filling parameters for retention time and m/z matching windows during the self-optimization phase."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that adelabriere/SLAW repository is accessible on GitHub and contains a README documenting the gap-filling by data recursion step",
+      "verify file_exists: SLAW package contains a gap-filling module or script with identifiable function name(s) related to data recursion",
+      "verify script_runs: the gap-filling step can execute on a test LC-MS feature table with missing values (NaN or zero intensities) as input",
+      "verify output_matches_reference: the output feature table contains filled intensity values where missing values previously existed, demonstrating recovery of intensities across samples",
+      "verify file_format_is: output is a structured feature table (CSV, TSV, or matrix format) with rows as features and columns as samples",
+      "verify field_present: output table includes metadata columns indicating which values were imputed vs. originally detected (or confidence scores for filled values if provided)"
+    ],
+    "expert_review": [
+      "evaluate whether the data recursion algorithm correctly leverages intensity patterns across samples to fill missing values (statistical soundness of the imputation strategy)",
+      "assess whether filled intensities are biochemically plausible given the m/z, retention time, and sample cohort context",
+      "determine if the gap-filling method avoids introducing artificial correlations or artifacts that would inflate downstream statistical power"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does SLAW implement gap-filling by data recursion to recover missing feature intensities across samples in untargeted LC-MS processing?: 'gap-filling by data recursion'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SLAW includes gap-filling by data recursion as a processing step within its complete untargeted LC-MS workflow, following peak picking, sample alignment, and grouping of isotopologues and adducts.: 'Complete processing including peak picking, sample alignment, pick picking, grouping of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated MS2 spectra and isotopic'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Aligned feature table with missing intensities from peak picking and sample alignment: 'Complete processing including peak picking, sample alignment, pick picking, grouping of isotopologues and adducts, gap-filling by data recursion'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Feature table with filled missing feature intensities recovered via data recursion: 'gap-filling by data recursion'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No detailed description of the gap-filling by data recursion algorithm, parameters, or implementation is present in the provided discussion section: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The README or documentation explaining the gap-filling step mechanics, inputs, outputs, and computational requirements is not accessible in the discussion section: 'Source: github:adelabriere__SLAW'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No example input/output feature table or test dataset demonstrating the gap-filling step is cited or linked in the discussion section: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "filled_feature_table.csv",
+  "expected_outputs": [
+    "Feature table with filled missing feature intensities recovered via data recursion"
+  ],
+  "finding": "SLAW includes gap-filling by data recursion as a processing step within its complete untargeted LC-MS workflow, following peak picking, sample alignment, and grouping of isotopologues and adducts.",
+  "github_name": "zamboni-lab/SLAW",
+  "input_from": null,
+  "inputs": [
+    "Aligned feature table with missing intensities from peak picking and sample alignment"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "missing_feature_summary.csv",
+    "filled_feature_table.csv"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_005",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Load aligned feature table containing missing (NA or zero) feature intensities from the alignment step",
+    "Identify gaps: enumerate all missing feature intensity entries and their sample-feature coordinates",
+    "Execute data recursion: for each missing entry, search across samples using retention time and m/z proximity windows to locate the same feature in alternate sample batches",
+    "Retrieve and populate: fill missing intensities with values recovered from recursively matched samples",
+    "Validation: confirm that all recoverable gaps have been filled and feature table dimensions match input (same samples and features)",
+    "References: source article (DOI: 10.1021/acs.analchem.1c02687)"
+  ],
+  "missing_information": [
+    "No detailed description of the gap-filling by data recursion algorithm, parameters, or implementation is present in the provided discussion section",
+    "The README or documentation explaining the gap-filling step mechanics, inputs, outputs, and computational requirements is not accessible in the discussion section",
+    "No example input/output feature table or test dataset demonstrating the gap-filling step is cited or linked in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does SLAW implement gap-filling by data recursion to recover missing feature intensities across samples in untargeted LC-MS processing?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "missing-value-imputation-by-data-recursion",
+    "feature-intensity-recovery-across-samples",
+    "retention-time-mass-proximity-matching",
+    "feature-table-gap-filling"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_slaw/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SLAW_system",
+    "arch_processing_pipeline",
+    "arch_param_optimization",
+    "tool_centwave",
+    "tool_featurefindermetabo",
+    "tool_adap",
+    "comp_gap_filling"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:adelabriere__SLAW",
+  "task_description": "Implement the gap-filling-by-data-recursion step to recover missing feature intensities across samples in an LC-MS feature table. Output a completed feature table with filled missing values.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Aligned feature table with missing intensities",
+      "port_id": "aligned_feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement and validate the gap-filling by data recursion step to produce a feature intensity table with recovered values for missing data points across all samples.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature table with recursively filled missing intensities",
+      "port_id": "filled_feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "quality-control",
+    "normalization"
+  ],
+  "title": "Reconstruct the Automated Parameter Optimization Layer for Peak Picking, Alignment, and Gap-Filling",
+  "tools": [
+    "Centwave",
+    "manual expert review"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load aligned feature table with missing intensity values (NA or zero entries) from prior alignment step. 2. Apply data recursion algorithm to identify features present in some samples but absent (below detection) in others. 3. For each missing feature intensity, search recursively through related samples (by retention time and m/z proximity) to locate intensity values in alternate sample batches or replicates. 4. Fill missing intensities using the recursively retrieved values, maintaining sample-feature matrix structure. 5. Output completed feature table with filled intensities to CSV or mzTab format."
+}

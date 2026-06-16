@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file ms2lda.bin exists in expected_outputs"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file motifset.json exists in expected_outputs"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify ms2lda.bin file_format_is binary or serialized model artifact"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify motifset.json file_format_is valid JSON"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify motifset.json contains_substring 'motif' (case-insensitive) indicating motif structure presence"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify script_runs without error when LDA inference module is invoked on bag-of-fragments corpus input"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify row_count_equals or field_present: motifset.json contains at least one motif entry with required fields (no canonical answer for exact schema without implementation details)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file ms2lda.bin exists in expected_outputs",
+      "Verify file motifset.json exists in expected_outputs",
+      "Verify ms2lda.bin file_format_is binary or serialized model artifact",
+      "Verify motifset.json file_format_is valid JSON",
+      "Verify motifset.json contains_substring 'motif' (case-insensitive) indicating motif structure presence",
+      "Verify script_runs without error when LDA inference module is invoked on bag-of-fragments corpus input",
+      "Verify row_count_equals or field_present: motifset.json contains at least one motif entry with required fields (no canonical answer for exact schema without implementation details)"
+    ],
+    "expert_review": [
+      "Expert review of LDA hyperparameter choices (alpha, beta, number of topics/motifs) for appropriateness to mass spectrometry fragmentation context",
+      "Expert review of motif interpretability: do learned motifs correspond to known or chemically plausible fragmentation patterns",
+      "Expert review of convergence diagnostics: assess whether LDA inference reached stable solution (perplexity, topic coherence, or equivalent convergence metric)"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

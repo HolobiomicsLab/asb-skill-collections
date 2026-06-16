@@ -1,0 +1,141 @@
+schema_version: 0.1.0
+workflow_id: coll_nextflow4msdial_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: Nextflow4MS-DIAL is a reproducible Nextflow workflow for processing LC-HRMS
+    metabolomics data through a containerized MS-DIAL to MSFLO pipeline, with support
+    for Docker and Singularity container backends.
+  pseudo_abstract: 'The Nextflow4MS-DIAL workflow implements a containerized sequential
+    pipeline that processes .mzML LC-MS metabolomics data through MS-DIAL followed
+    by MSFLO. The workflow is designed to support multiple container execution mechanisms:
+    Docker-based container execution for standard environments and Singularity-based
+    container execution for high-performance computing environments. This containerized
+    approach enables reproducible metabolomics data processing across different computational
+    infrastructures.'
+  research_questions:
+  - What is the sequential pipeline architecture of the containerized MS-DIAL to MSFLO
+    workflow, and how does it process .mzML input files within Nextflow?
+  - Does the Nextflow4MS-DIAL workflow execute successfully using Docker containerization
+    on publicly available .mzML LC-MS metabolomics data?
+  - Does the Nextflow4MS-DIAL workflow successfully execute on a Singularity container
+    backend with public LC-MS .mzML data?
+  methods_summary: "Select containerization backend (Docker or Singularity) based\
+    \ on target compute environment. Load and validate .mzML input files in Nextflow\
+    \ execution context. Execute MS-DIAL in containerized environment to detect peaks\
+    \ and identify features. Stream MS-DIAL outputs into MSFLO module running in same\
+    \ container orchestration. Collect and export final MSFLO processed feature table\
+    \ and annotation artifacts. Validation: Verify MSFLO output files exist and contain\
+    \ expected feature annotations. Verify Nextflow \u226522.10.0 installation and\
+    \ clone the Nextflow4MS-DIAL repository Obtain a public .mzML LC-MS metabolomics\
+    \ dataset and configure workflow input parameters Enable Docker container backend\
+    \ and configure containerized MS-DIAL and MSFLO environment Execute the Nextflow\
+    \ workflow pipeline, processing .mzML data through MS-DIAL feature detection and\
+    \ alignment, then MSFLO post-processing Monitor execution logs and validate that\
+    \ workflow completes without error and produces expected output files (feature\
+    \ tables, aligned matrices, annotations) Validation: Nextflow exits with status\
+    \ code 0, all pipeline stages report completion, and output directory contains\
+    \ non-empty feature table and annotation files matching expected schema Clone\
+    \ the Nextflow4MS-DIAL repository from the public GitHub source. Verify Nextflow\
+    \ \u226522.10.0 installation and Singularity container runtime availability. Obtain\
+    \ or select a public .mzML LC-MS metabolomics dataset from a public repository\
+    \ (MetaboLights, MassIVE, PRIDE). Configure Nextflow workflow profile to use Singularity\
+    \ as the container executor backend. Execute the MS-DIAL \u2192 MSFLO containerized\
+    \ processing pipeline on the input .mzML data via nextflow run. Validation: Confirm\
+    \ workflow completion via execution report, verify presence of MS-DIAL feature\
+    \ tables and MSFLO output files, and check that no fatal errors or task failures\
+    \ are reported in the Nextflow log."
+  domain: metabolomics
+  techniques:
+  - feature-detection
+  - metabolite-identification
+  - spectral-library-matching
+  - database-annotation
+  - quality-control
+  claims:
+  - claim_text: Nextflow4MS-DIAL is a reproducible Nextflow workflow for LC-HRMS metabolomics
+      data processing with MS-DIAL.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_nextflow4ms_dial
+  - claim_text: Nextflow version 22.10.0 or greater is required.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_nextflow
+  - claim_text: The workflow enables processing of .mzML LC-MS metabolomics data with
+      MS-DIAL.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_ms_dial
+  - claim_text: Both Docker and Singularity containerization are supported by the
+      workflow.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_docker
+  - claim_text: The workflow processes .mzML data through MS-DIAL to MSFLO.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_ms_dial
+  - claim_text: Nextflow4MS-DIAL adheres to Semantic Versioning.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_nextflow4ms_dial
+  - claim_text: The changelog format is based on Keep a Changelog.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Workflow execution log confirming all stages completed without error
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: MS-DIAL processed feature table and aligned LC-HRMS data matrices
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: MSFLO annotation and summary output files
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: MS-DIAL processed feature table and metadata files
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: MSFLO-formatted output file(s)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Nextflow execution log and completion report
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

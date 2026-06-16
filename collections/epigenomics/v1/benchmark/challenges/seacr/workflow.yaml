@@ -1,0 +1,61 @@
+schema_version: 0.1.0
+workflow_id: coll_seacr_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: ad_hoc
+  composition_modularity: flat
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: SEACR is a peak-calling tool described in literature for processing CUT&RUN
+    bedGraph data, but the paper provides no concrete documentation of its implementation,
+    executable components, or end-to-end operation.
+  pseudo_abstract: This benchmark documents SEACR, a peak-calling mechanism designed
+    to process bedGraph inputs from CUT&RUN experiments. However, the source material
+    contains no detailed description of SEACR's shell and R script components, their
+    executable status, or their integration for end-to-end operation. No mechanism
+    documentation or implementation details are available in the provided text, limiting
+    characterization of the tool's architecture and usage.
+  research_questions:
+  - What are the core computational components (shell and R scripts) that comprise
+    the SEACR tool, and can they be executed end-to-end on typical CUT&RUN bedGraph
+    input to produce peaked-regions output?
+  methods_summary: 'Clone the SEACR repository from FredHutch GitHub. Verify presence
+    of shell and R scripts and confirm executable permissions. Prepare or obtain a
+    minimal valid CUT&RUN bedGraph test file. Run SEACR end-to-end on the test bedGraph
+    input. Validate that peaked-regions output file is produced and contains valid
+    genomic coordinates and peak annotations. Validation: Confirm repository cloning
+    succeeds, all shell and R scripts exist with executable permissions set, and SEACR
+    produces a non-empty peaked-regions file with proper BED-like format (chromosome,
+    start, end, plus metadata columns).'
+  domain: bioinformatics
+  techniques: []
+  claims: []
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Peaked-regions output file from SEACR in BED or bedGraph format containing
+    genomic coordinates and peak statistics
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification log confirming cloned repository structure, script executability,
+    and successful end-to-end run completion
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

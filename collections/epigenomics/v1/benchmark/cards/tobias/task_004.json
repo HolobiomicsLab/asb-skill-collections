@@ -1,0 +1,369 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/BATF_footprint_comparison_all.png",
+      "role": "figure",
+      "sha256": "2b11a5c2ad05f57c079cf59c0a68f934f96232595fc7211991ef611733bacc93"
+    },
+    {
+      "indexable": false,
+      "path": "figures/BATF_footprint_comparison_subsets.png",
+      "role": "figure",
+      "sha256": "33cd1a79f823b4502e4721eefaa4ddb336bb237d7d8d7d6a9f924ea86170a552"
+    },
+    {
+      "indexable": false,
+      "path": "figures/BATF_heatmap.png",
+      "role": "figure",
+      "sha256": "508b2b4f4a26240c105f8b71e64cc5f49517dbcbddf859e50606cc1664b3c91c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/IRF1_footprint.png",
+      "role": "figure",
+      "sha256": "17bce2aa433d74d0a4e7a65ae49ecc0b1ac3e621e9050caf7c43ba73e830467a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/atacorrect.png",
+      "role": "figure",
+      "sha256": "71124fbc53df1c00b8c2e2e515a6ebd0ae0269cb6901c51d4b9920ff182d34d4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bindetect.png",
+      "role": "figure",
+      "sha256": "889f8e209254335d7056f4658c51049ad3b316e7719af2ee8c12b42002659fb1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/chr4-119628321-119629356.png",
+      "role": "figure",
+      "sha256": "75a98921dbde87c5e6271e714064c63a0ab20a10cc3456c1433708e943b381ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/chr4-163701830-163702617.png",
+      "role": "figure",
+      "sha256": "eda854e390fe862a1acfc920c29bdea974f8811ca46131063d6ceb4e9a28c847"
+    },
+    {
+      "indexable": false,
+      "path": "figures/footprinting.png",
+      "role": "figure",
+      "sha256": "73dc2d9ee8d424a808508cd581a9c8a28c422f0efa75167bb74651fb57719ea5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/network.png",
+      "role": "figure",
+      "sha256": "07b6c7dc655f0dec058de81a6968c347478d79850487986a15695d829a9a2902"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tobias.png",
+      "role": "figure",
+      "sha256": "77d7601461e43ffc36c708663ae88f8c904726769adc2de815d78e5de1927ee0"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "efd138c7f9f0421cac53bbffe20153aecfee6bb55653fe27761d490f3a6e0c9f"
+    }
+  ],
+  "created_at": "2026-06-15T19:12:11.236771+00:00",
+  "crossref_doi": "10.1038/s41467-020-18035-1",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "ATAC-seq BAM alignment file from a public repository (GEO/SRA accession or direct URL)",
+      "detection_method": "prose_regex",
+      "file_extension": ".bam",
+      "format_id": "BAM",
+      "format_iri": "http://edamontology.org/format_2572",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "Reference set of transcription factor motif genomic coordinates (BED format or similar)",
+      "detection_method": "prose_regex",
+      "file_extension": ".bed",
+      "format_id": "BED",
+      "format_iri": "http://edamontology.org/format_3003",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Tabulated positional distribution of Tn5 insertion counts for bound and unbound motif sites",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Visualization (line plot or heatmap) of insertion profiles showing footprint signal (depletion at bound sites)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "ATAC-seq footprints manifest as local depletion (or reduced insertion density) of Tn5 transposase insertions in flanking windows around TF-bound motif sites, arising from protein-DNA occupancy that physically blocks transposase access.",
+    "Bound versus unbound motif classification typically relies on peak signal from aligned reads (e.g. pileup height, accessibility score) or external TF ChIP-seq/binding data; unbound sites serve as negative control with expected uniform or near-uniform insertion distribution.",
+    "Window size and position bin resolution (e.g. \u00b1100 bp around motif center, 1 bp or 5 bp bins) directly affect visibility and quantification of footprint depth; smaller bins reveal fine structure while larger bins reduce noise.",
+    "Tn5 transposase shows a known insertion bias (preferential cutting at certain dinucleotide motifs); correcting for intrinsic sequence bias may be necessary when comparing insertion rates across genomic regions.",
+    "Aggregation across many sites (hundreds to thousands of motif instances) is essential to reveal the footprint signal; single-site insertion patterns are typically noisy."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that a publicly deposited ATAC-seq dataset (GEO or SRA accession) is retrievable and contains aligned reads in standard format (BAM/bedGraph)",
+      "verify that a reference set of TF motif coordinates is provided as a structured file (BED or tabular format) with chromosome, start, end, and motif identity fields",
+      "verify that the computed positional distribution table exists as a named artifact (TSV, CSV, or structured data frame)",
+      "verify that the table contains at least two distinct categories (bound vs. unbound motif sites) and position-indexed Tn5 insertion count columns",
+      "verify that insertion counts are numeric, non-negative, and row_count_equals the number of distinct position windows analyzed",
+      "verify that script or pipeline used to compute positional distributions runs without fatal errors on the specified inputs",
+      "verify output matches reference footprint signal: depletion of insertions at bound motif sites should be visually or statistically distinguishable from unbound sites (no canonical answer for exact magnitude; expert review required for biological interpretation)"
+    ],
+    "expert_review": [
+      "confirm that the positional distribution pattern (insertion depletion at bound sites) is consistent with the ATAC-seq footprinting phenomenon described in the article and literature",
+      "assess whether the magnitude and width of the observed footprint signal is biologically plausible for the TF(s) and cell type(s) under study",
+      "evaluate whether the bound versus unbound site comparison is appropriately controlled (e.g., background chromatin accessibility, motif quality thresholds, statistical significance)",
+      "judge whether the tabulation method and window definitions are methodologically sound and clearly documented"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the characteristic pattern of Tn5 insertion depletion around transcription factor binding sites versus non-binding sites across a genomic region?: 'the local distribution of Tn5 insertions contains information about transcription factor binding due to the visible depletion of insertions around sites bound by protein - known as _footprints_'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ATAC-seq data exhibits a visible depletion of Tn5 insertions around chromatin sites bound by transcription factor proteins, a signal pattern known as footprints that distinguishes bound from unbound motif locations.: 'the local distribution of Tn5 insertions contains information about transcription factor binding due to the visible depletion of insertions around sites bound by protein - known as _footprints_'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] ATAC-seq BAM alignment file from a public repository (GEO/SRA accession or direct URL): 'Using a publicly deposited ATAC-seq dataset (e.g. GEO/SRA)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Reference set of transcription factor motif genomic coordinates (BED format or similar): 'reference set of TF motif coordinates'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Tabulated positional distribution of Tn5 insertion counts for bound and unbound motif sites: 'compute and tabulate the positional distribution of Tn5 insertion counts in windows flanking bound versus unbound motif sites'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Visualization (line plot or heatmap) of insertion profiles showing footprint signal (depletion at bound sites): 'empirically characterise the footprint signal described in the article'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TOBIAS: '**TOBIAS** is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided for TOBIAS repository or methods: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "tn5_insertion_distribution_table.csv",
+  "expected_outputs": [
+    "Tabulated positional distribution of Tn5 insertion counts for bound and unbound motif sites",
+    "Visualization (line plot or heatmap) of insertion profiles showing footprint signal (depletion at bound sites)"
+  ],
+  "finding": "ATAC-seq data exhibits a visible depletion of Tn5 insertions around chromatin sites bound by transcription factor proteins, a signal pattern known as footprints that distinguishes bound from unbound motif locations.",
+  "github_name": "loosolab/TOBIAS",
+  "input_from": "task_003",
+  "inputs": [
+    "ATAC-seq BAM alignment file from a public repository (GEO/SRA accession or direct URL)",
+    "Reference set of transcription factor motif genomic coordinates (BED format or similar)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "motif_sites_classified.bed",
+    "tn5_insertions_per_site.txt",
+    "insertion_counts_by_position.csv",
+    "footprint_profile_bound_vs_unbound.png"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Load ATAC-seq BAM file and extract Tn5 insertion positions from aligned read 5' ends (or start coordinates).",
+    "Annotate motif sites as bound or unbound based on chromatin accessibility signal or external binding data.",
+    "For each motif instance, extract Tn5 insertion counts in fixed-width flanking windows (e.g. \u00b1100 bp) at single-nucleotide or fine-grain bin resolution.",
+    "Aggregate insertion counts across all motif sites within each binding class and compute positional statistics (mean, standard deviation).",
+    "Tabulate positional insertion distributions and generate comparative visualization (e.g. line plot) of bound versus unbound profiles to confirm footprint depletion.",
+    "Validation: footprint signal is confirmed by visual inspection of depletion pattern at bound sites (reduced insertion density flanking the motif) and absence of depletion at unbound sites.",
+    "References: source article (DOI: 10.1038/s41467-020-18035-1)"
+  ],
+  "missing_information": [
+    "No changelog or version history provided for TOBIAS repository or methods"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_003/tf_occupancy_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the characteristic pattern of Tn5 insertion depletion around transcription factor binding sites versus non-binding sites across a genomic region?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "atac-seq-bam-read-alignment-processing",
+    "transcription-factor-motif-genomic-coordinate-annotation",
+    "tn5-insertion-position-extraction-and-counting",
+    "nucleotide-footprint-pattern-recognition",
+    "chromatin-accessibility-binding-status-classification",
+    "positional-distribution-profile-aggregation-and-visualization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_tobias/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "ATAC_seq_assay",
+    "tf_occupancy_prediction"
+  ],
+  "subdomains": [
+    "gene-regulation",
+    "functional-genomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:loosolab__TOBIAS",
+  "task_description": "Using a public ATAC-seq dataset and a reference set of transcription factor (TF) motif coordinates, quantify and tabulate Tn5 insertion counts in flanking windows (e.g. \u00b1100 bp) around bound versus unbound motif sites to empirically characterize the footprint signal\u2014regions of nucleotide depletion marking protein occupancy.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ATAC-seq BAM alignment file",
+      "port_id": "atac_bam",
+      "resolved_via": null,
+      "source": "task_003/tf_occupancy_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Transcription factor motif coordinate annotations",
+      "port_id": "motif_coords",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Quantify and tabulate Tn5 insertion position frequencies in flanking windows at bound versus unbound motif sites to empirically characterize the footprint depletion signal.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Tabulated Tn5 insertion counts by position and motif-binding status",
+      "port_id": "insertion_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Visualization of Tn5 insertion distribution at bound versus unbound sites",
+      "port_id": "footprint_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "enrichment-analysis",
+    "statistical-analysis"
+  ],
+  "title": "Analyze the distribution of Tn5 insertion events around known transcription factor binding sites from a public ATAC-seq dataset",
+  "tools": [
+    "TOBIAS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Download ATAC-seq BAM file and TF motif coordinate annotations from a public repository (GEO/SRA). 2. Classify motif sites as bound or unbound based on chromatin accessibility or binding signal thresholds. 3. Extract Tn5 insertion positions from aligned reads in fixed-width windows flanking each motif site (e.g. \u00b1100 bp around the motif center). 4. Aggregate insertion counts per position bin across all sites within each class (bound/unbound). 5. Compute positional distribution statistics (mean, standard deviation) of Tn5 insertions for each window position. 6. Tabulate results as a matrix of insertion counts by position and site class; generate visualization showing insertion profiles across bound and unbound sites to confirm footprint depletion signal in bound sites."
+}

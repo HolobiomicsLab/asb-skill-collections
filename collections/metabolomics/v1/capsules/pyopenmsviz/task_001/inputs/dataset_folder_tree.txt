@@ -1,0 +1,21 @@
+  figures/OpenMS.svg
+  figures/feature_boundary.png
+  figures/figure1.svg
+  figures/peak_boundary.png
+  figures/pyOpenMSviz_logo_color.png
+  figures/test_chromatogram_plot[ms_matplotlib-kwargs0].png
+  figures/test_chromatogram_plot[ms_matplotlib-kwargs1].png
+  figures/test_chromatogram_plot[ms_matplotlib-kwargs2].png
+  figures/test_chromatogram_plot[ms_matplotlib-kwargs3].png
+  figures/test_chromatogram_plot[ms_matplotlib-kwargs4].png
+  figures/test_chromatogram_with_annotation[ms_matplotlib-kwargs0].png
+  figures/test_mobilogram_plot[ms_matplotlib-kwargs0].png
+  figures/test_mobilogram_plot[ms_matplotlib-kwargs1].png
+  figures/test_mobilogram_plot[ms_matplotlib-kwargs2].png
+  figures/test_mobilogram_plot[ms_matplotlib-kwargs3].png
+  figures/test_peakmap_mz_im[ms_matplotlib].png
+  figures/test_peakmap_plot[ms_matplotlib-kwargs0].png
+  figures/test_peakmap_plot[ms_matplotlib-kwargs1].png
+  figures/test_peakmap_plot[ms_matplotlib-kwargs2].png
+  figures/test_peakmap_plot[ms_matplotlib-kwargs3].png
+paper.md

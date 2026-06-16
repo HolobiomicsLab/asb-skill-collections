@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:glasgowcompbio__PALS repository contains executable PALS implementation with PLAGE-based scoring"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that a metabolomics peak dataset (with noise and missing peak variants) is available in the repository or a linked public deposit (Zenodo/GitHub/MassIVE/MetaboLights)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that ORA and GSEA implementations are available as callable tools or Python/R packages with pinned versions"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that comparison script produces three sets of pathway/metabolite-set scores (PALS, ORA, GSEA) on identical input"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output files contain quantitative robustness metrics (e.g., correlation, F1-score, or error rate) across noise levels and missing-peak percentages"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "robust to parameter choices: confirm that metrics show PALS with lower variance or higher accuracy than ORA and GSEA across at least two independent noise-injection or peak-removal regimes"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:glasgowcompbio__PALS repository contains executable PALS implementation with PLAGE-based scoring",
+      "verify that a metabolomics peak dataset (with noise and missing peak variants) is available in the repository or a linked public deposit (Zenodo/GitHub/MassIVE/MetaboLights)",
+      "verify that ORA and GSEA implementations are available as callable tools or Python/R packages with pinned versions",
+      "verify that comparison script produces three sets of pathway/metabolite-set scores (PALS, ORA, GSEA) on identical input",
+      "verify output files contain quantitative robustness metrics (e.g., correlation, F1-score, or error rate) across noise levels and missing-peak percentages",
+      "robust to parameter choices: confirm that metrics show PALS with lower variance or higher accuracy than ORA and GSEA across at least two independent noise-injection or peak-removal regimes"
+    ],
+    "expert_review": [
+      "confirm that noise injection and missing-peak simulation strategies are methodologically sound and reproducible (e.g., Gaussian noise, random peak dropout percentages)",
+      "confirm that reported robustness advantage (PALS vs ORA/GSEA) is statistically significant and not attributable to tuning bias or parameter mismatch",
+      "confirm that the same metabolite-set annotations and pathway database are used for all three methods to ensure fair comparison"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

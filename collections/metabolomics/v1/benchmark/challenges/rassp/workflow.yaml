@@ -1,0 +1,37 @@
+schema_version: 0.1.0
+workflow_id: coll_rassp_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+narrative:
+  tagline: A scientific task reconstruction from RASSP is presented for expert review;
+    automatic extraction of clear findings was not possible.
+  pseudo_abstract: This benchmark includes one unclassified task derived from the
+    RASSP paper. The task involves reconstructing and evaluating a paper-grounded
+    scientific objective, but the specific empirical findings require expert validation
+    to confirm.
+  research_questions:
+  - Assess the scientific task and reproducibility context described by this article
+    package.
+  methods_summary: ''
+  domain: unknown
+  techniques: []
+  claims: []
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: A reviewed SciTask Card and capsule describing the benchmarkable task.
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

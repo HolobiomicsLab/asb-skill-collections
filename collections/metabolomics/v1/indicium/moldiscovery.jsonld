@@ -1,0 +1,604 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/http-connectivity-verification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/response-status-code-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/web-service-deployment-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "molDiscovery is available for academic users to test at https://metabologenomic.cbd.cs.cmu.edu/",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_molDiscovery_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "ad_hoc"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "For more information about molDiscovery, users can contact hoseinm@andrew.cmu.edu",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_molDiscovery_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "ad_hoc"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "molDiscovery is hosted on GitHub under the mohimanilab organization",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_molDiscovery_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "ad_hoc"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper describes molDiscovery as a computational method for mass spectrometry database search with algorithmic and probabilistic components. No mention of a web service, HTTP endpoint, or online deployment. The paper discusses the tool's application to spectral datasets and provides GitHub repository links for results, but does not describe or document a web service endpoint.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Is the molDiscovery academic web service deployed and accessible at the documented URL?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:19.027805+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we present molDiscovery, a mass spectral database search method that improves both efficiency and accuracy of small molecule identification by learning a probabilistic model to match small molecules with their mass spectra.",
+      "asbval:note": "molDiscovery is the primary tool/method developed and evaluated in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "molDiscovery",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:19.027805+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not describe HTTP connectivity checks, response headers, or web service monitoring. Expected outputs from molDiscovery are small molecule identifications, FDR estimates, and scoring results from mass spectra database searches\u2014not HTTP connectivity reports.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "HTTP connectivity check report documenting response status, headers, and timestamp",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:19.027805+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate task card describes a web service availability/HTTP connectivity check task, which is entirely outside the scope of the paper. The paper is a computational biology/mass spectrometry methods paper focused on algorithmic improvements and accuracy benchmarking of molDiscovery as a standalone tool.",
+        "The paper does mention GitHub repository links for results (e.g., 'https://github.com/mohimanilab/molDiscovery') but does not describe deployment of a web service or document any HTTP endpoint for molDiscovery.",
+        "The task card appears to conflate the existence of a software tool (molDiscovery) with the existence of a web service interface, which is not supported by the paper."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:19.027805+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/http-connectivity-verification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes molDiscovery as a computational method for mass spectrometry analysis with a GitHub repository. No mention of a deployed web service, API endpoint, HTTP connectivity verification, or service availability checks. The paper focuses on the algorithmic method, benchmarking, and results\u2014not on service deployment or endpoint validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "http-connectivity-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verify that a scientific web service or API endpoint is deployed, accessible, and responding with expected HTTP status codes. This skill validates service availability before downstream analysis tasks depend on it.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:40.289077+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/http-connectivity-verification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss web service deployment, API endpoints, HTTP status codes, or service availability verification. The scope describes a technical infrastructure validation task that is entirely absent from the paper's content.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "http-connectivity-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Verify that a scientific web service or API endpoint is deployed, accessible, and responding with expected HTTP status codes. This skill validates service availability before downstream analysis tasks depend on it.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:40.289077+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/http-connectivity-verification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we present molDiscovery, a mass spectral database search method that improves both efficiency and accuracy of small molecule identification by learning a probabilistic model to match small molecules with their mass spectra.",
+      "asbval:note": "molDiscovery is confirmed as the primary tool in the paper (case-insensitive match).",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "http-connectivity-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].name",
+      "asbval:target_claim_text": "molDiscovery",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:40.289077+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/http-connectivity-verification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not provide the GitHub repository URL in the passages provided. While a GitHub repository is mentioned in passage [8] ('MolDiscovery search results for this dataset are available at https://github.com/mohimanilab/molDiscovery'), the exact URL cannot be verified from the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "http-connectivity-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].repo",
+      "asbval:target_claim_text": "https://github.com/mohimanilab/molDiscovery",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:40.289077+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/http-connectivity-verification/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we present molDiscovery, a mass spectral database search method that improves both efficiency and accuracy of small molecule identification by learning a probabilistic model to match small molecules with their mass spectra.",
+      "asbval:note": "molDiscovery is confirmed as an academic tool for metabologenomic/mass spectrometry analysis, but the paper does not describe it as a deployed web service or discuss verification of its availability/HTTP status. The paper presents molDiscovery as a computational method with a GitHub repository, not as a live web service endpoint being validated.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "http-connectivity-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Academic web service for metabologenomic analysis whose availability and response status is being verified",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:40.289077+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/response-status-code-interpretation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes molDiscovery as a computational method for mass spectral database search with a GitHub repository. No mention of a deployed web service, HTTP endpoints, or web service status validation. The paper focuses on the algorithmic and computational aspects of the tool, not web service deployment or HTTP-based accessibility testing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "response-status-code-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validate the operational status of a deployed web service by issuing HTTP requests and interpreting response status codes to confirm accessibility and correct deployment.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:49.676096+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/response-status-code-interpretation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No discussion of web service endpoints, online tool deployment, or HTTP status verification in the paper. The paper describes molDiscovery as a standalone computational tool and database search method.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "response-status-code-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill is essential for verifying that online tools and endpoints are live and functioning before integration into downstream scientific workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:49.676096+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/response-status-code-interpretation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "molDiscovery, a mass spectral database search method that improves both efficiency and accuracy of small molecule identification by learning a probabilistic model to match small molecules with their mass spectra.",
+      "asbval:note": "molDiscovery is confirmed as a real tool for metabologenomic/mass spectrometry analysis (passage 2 abstract and passage 1 title). However, the paper does not describe molDiscovery as a deployed web service endpoint. The paper provides a GitHub repository link (https://github.com/mohimanilab/molDiscovery) but does not discuss HTTP-based web service deployment or status code verification. The tool is presented as a computational method/software, not as a web service requiring HTTP status validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "response-status-code-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "molDiscovery is a target web service endpoint for metabologenomic analysis; accessibility is verified via HTTP status code interpretation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:49.676096+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/response-status-code-interpretation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss web service deployment, HTTP requests, or status code interpretation. It focuses on the algorithmic design and benchmarking of molDiscovery as a computational tool for mass spectrometry analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "response-status-code-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Validate the operational status of a deployed web service by issuing HTTP requests and interpreting response status codes to confirm accessibility and correct deployment.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:49.676096+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/web-service-deployment-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes molDiscovery as a mass spectral database search method with computational algorithms and machine learning models. No mention of a web service deployment, HTTP endpoints, health checks, or service accessibility validation. The paper focuses on the algorithmic and methodological contributions, not web service infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "web-service-deployment-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verify that a scientific web service is deployed and accessible at its documented URL by performing HTTP health checks and capturing response metadata.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:58.964235+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/web-service-deployment-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss web service deployment, HTTP accessibility, health checks, or service availability validation. The scope describes a DevOps/infrastructure validation task, which is entirely absent from this computational biology paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "web-service-deployment-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Verify that a scientific web service is deployed and accessible at its documented URL by performing HTTP health checks and capturing response metadata. This skill confirms service availability for downstream users before proceeding with integration or documentation updates.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:58.964235+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/web-service-deployment-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "molDiscovery, a mass spectral database search method that improves both efficiency and accuracy of small molecule identification by learning a probabilistic model to match small molecules with their mass spectra.",
+      "asbval:note": "molDiscovery is confirmed as a real tool/method described in the paper (passage 2, abstract). However, the paper describes it as a computational method/algorithm, not as a deployed web service. The paper provides a GitHub repository link (https://github.com/mohimanilab/molDiscovery) but does not describe or validate any web service endpoint or HTTP accessibility.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "web-service-deployment-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0]",
+      "asbval:target_claim_text": "molDiscovery (target web service whose deployment status and endpoint accessibility is validated)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:58.964235+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/web-service-deployment-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "curl is not mentioned anywhere in the paper. The paper does not discuss HTTP clients, web service testing, or any infrastructure validation tools.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "web-service-deployment-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1]",
+      "asbval:target_claim_text": "curl (HTTP client used to send GET request and capture response)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:58.964235+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/http-connectivity-verification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "http-connectivity-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/response-status-code-interpretation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "response-status-code-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/web-service-deployment-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "web-service-deployment-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "molDiscovery is available for academic users to test at https://metabologenomic.cbd.cs.cmu.edu/",
+      "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false; content matches exactly",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:source_excerpt": "To test molDiscovery for academic users, please visit : \n\nhttps://metabologenomic.cbd.cs.cmu.edu/",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:13.357088+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "For more information about molDiscovery, users can contact hoseinm@andrew.cmu.edu",
+      "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false; content matches exactly",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:source_excerpt": "For more information, please contact hoseinm@andrew.cmu.edu",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:13.357088+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "molDiscovery is hosted on GitHub under the mohimanilab organization",
+      "asbval:note": "Source excerpt confirms GitHub location under mohimanilab but does not explicitly state 'organization' \u2014 minor scope inference",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41467-021-23986-0",
+      "asbval:source_excerpt": "Source: github:mohimanilab__molDiscovery",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:04:13.357088+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_moldiscovery#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "ad_hoc",
+        "composition_modularity": "flat",
+        "abstraction_level": "abstract",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_molDiscovery_system",
+      "title": "molDiscovery",
+      "identifier": "urn:asb:spine:molDiscovery_system"
+    }
+  ]
+}

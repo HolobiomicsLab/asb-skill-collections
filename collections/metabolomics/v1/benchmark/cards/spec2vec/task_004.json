@@ -1,0 +1,487 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "spec2vec.pdf",
+      "role": "main_article",
+      "sha256": "43e95bc72a94f777c7e95a8b0f18b38bad439e3cfba278b7f0c3db97d6c510cb"
+    }
+  ],
+  "created_at": "2026-06-15T06:52:35.005391+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1008724",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "AllPositive dataset (95,320 positive ionization mode spectra with InChIKey), filtered to m/z \u2208 [0, 1000] and \u226510 peaks",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pre-trained Word2Vec model (gensim, CBOW, window-size=500, negative=5, 15 epochs) trained on AllPositive dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spec2Vec library (Python package) and matchms \u22650.6.0 for spectrum document conversion and word embedding lookup",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Missing-fraction statistics table (CSV) with columns: spectrum_id, missing_fraction, coverage (1 \u2212 missing_fraction), cumulative_corpus_size",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Coverage-vs-corpus-size curve (PNG/PDF) showing mean peak/loss coverage increasing from 0 to 97% as corpus size grows to 95,320 spectra",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary metrics JSON: mean_missing_fraction, median_missing_fraction, final_coverage_percent, spectra_with_coverage_above_95_percent",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Missing fraction is defined as 1 \u2212 (weighted sum of peaks found in model) / (weighted sum of all peaks), where weights are square-root-normalized intensities; this metric quantifies model vocabulary coverage for novel spectra.",
+    "Spec2Vec peak words are binned to 2 decimal places (e.g., m/z 200.445 \u2192 'peak@200.45') and neutral losses are represented as 'loss@xxx.xx' for m/z differences from precursor; only words present in the trained Word2Vec vocabulary contribute to the denominator.",
+    "A threshold of missing_fraction < 0.05 is recommended to avoid returning Spec2Vec scores for spectra with poor model vocabulary overlap; this threshold can be tuned per application.",
+    "The AllPositive model trained on 95,320 spectra achieves ~97% coverage of all possible 2-decimal-binned peaks and losses, meaning only ~3% of spectrum words are out-of-vocabulary, even for novel spectra.",
+    "Window-size of 500 in Word2Vec training means the entire spectrum document is treated as context (no positional ordering), which differs from typical NLP where word order is preserved."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify AllPositive dataset is accessible at https://doi.org/10.5281/zenodo.3978118",
+      "file_exists: verify trained Word2Vec model (AllPositive, 15-epoch) is accessible at https://zenodo.org/record/4173596",
+      "script_runs: verify spec2vec package (https://github.com/iomeva/spec2vec) can be installed and imported successfully",
+      "file_format_is: verify AllPositive dataset contains mass spectra in a loadable format (e.g., JSON, MGF, or compatible pickle)",
+      "row_count_equals: verify AllPositive dataset contains exactly 95,320 spectra as reported in methods section",
+      "value_in_range: verify computed peak coverage statistic (missing-fraction = 1 \u2212 \u03a3\u221aw_i / \u03a3\u221aw_i) outputs a value between 0.0 and 1.0 for each corpus size",
+      "output_matches_reference: verify final missing-fraction value for full 95,320-spectrum corpus matches the reported 97% peak coverage (or equivalently, 0.03 missing fraction) from discussion text, within \u00b11 percentage point",
+      "script_runs: verify analysis script (from https://github.com/iomega/spec2vec_gnps_data_analysis or equivalent) can compute coverage curve without errors",
+      "contains_substring: verify output plot or table contains coverage measurements at multiple corpus sizes showing progression toward 97% coverage, parameter-sensitive to corpus size intervals chosen"
+    ],
+    "expert_review": [
+      "Verify that the missing-fraction calculation (1 \u2212 \u03a3\u221aw_i / \u03a3\u221aw_i) correctly implements the intended peak coverage metric described in methods; confirm interpretation of w_i as peak weights and that square root weighting is appropriate for this analysis",
+      "Assess whether the reported 97% peak coverage for the 15-epoch model is consistent with the claim that 'a model pre-trained on a large spectra dataset will cover a large enough fraction of the features' from the discussion section",
+      "Evaluate whether coverage curve shape and saturation behavior are reasonable given typical Word2Vec learning dynamics on ~95k spectra"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does the fraction of peak coverage achieved by a Spec2Vec Word2Vec model vary as a function of training corpus size, and can a 97% coverage threshold be reproduced with the AllPositive dataset trained for 15 epochs?: 'In those instances some words (= peaks) of a given spectra might be unknown to the model. In those instances we can estimate the impact of the missing words by assessing the uncovered weighted part'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] A Word2Vec model trained on the AllPositive dataset for 15 iterations achieves approximately 97% peak coverage, quantified by computing the missing-fraction statistic (1 \u2212 \u03a3\u221aw_i / \u03a3\u221aw_i) across spectra.: 'Training a model on the UniqueInchikey dataset takes about 30 minutes on an Intel i7-8550U CPU.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] AllPositive dataset (95,320 positive ionization mode spectra with InChIKey), filtered to m/z \u2208 [0, 1000] and \u226510 peaks: 'We removed all peaks with m/z ratios outside the range [0, 1000] and discarded all spectra with less than 10 peaks. This left us with 95,320 spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pre-trained Word2Vec model (gensim, CBOW, window-size=500, negative=5, 15 epochs) trained on AllPositive dataset: 'training a model with negative sampling (negative = 5) and 15 (AllPositive) up to 50 (UniqueInchikey) epochs were best suited for obtaining close to optimal model performance'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Spec2Vec library (Python package) and matchms \u22650.6.0 for spectrum document conversion and word embedding lookup: 'The underlying code was developed into two Python packages to handle and compare mass spectra, matchms (https://github.com/matchms/matchms) and spec2vec (https://github.com/iomega/spec2vec)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Missing-fraction statistics table (CSV) with columns: spectrum_id, missing_fraction, coverage (1 \u2212 missing_fraction), cumulative_corpus_size: 'missing fraction = 1 \u2212 (\u03a3\u221aw_i for model words) / (\u03a3\u221aw_i all words), where w_i is normalized intensity'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Coverage-vs-corpus-size curve (PNG/PDF) showing mean peak/loss coverage increasing from 0 to 97% as corpus size grows to 95,320 spectra: 'models we trained on AllPositive (95,320 spectra) with 2-decimal rounding contained about 97% of all possible peaks and losses'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Summary metrics JSON: mean_missing_fraction, median_missing_fraction, final_coverage_percent, spectra_with_coverage_above_95_percent: 'having different peak filtering for the different similarity scores, we also repeated the library matching with cosine scores computed based on the Spec2Vec-processed data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Spec2Vec: 'The underlying code was developed into two Python packages to handle and compare mass spectra, matchms (https://github.com/matchms/matchms) and spec2vec (https://github.com/iomega/spec2vec)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Word2Vec: 'A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] matchms: 'the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] gensim: 'A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NumPy: 'optimized by making extensive use of Numpy [24] and Numba [25]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Numba: 'optimized by making extensive use of Numpy [24] and Numba [25]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pandas: 'was optimized using Pandas [40]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Exact formula or implementation reference for computing missing-fraction statistic (1 \u2212 \u03a3\u221aw_i / \u03a3\u221aw_i) and definition of w_i weighting scheme: 'For many cases, we expect that a model pre-trained on a large spectra dataset will cover a large enough fraction of the features to work well without the need for additional re-training (see Fig G in'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific corpus size sampling strategy (which intermediate corpus sizes were tested to generate the coverage curve toward 97% coverage): 'training the embedding on 95,320 spectra took 40 minutes (when training for 15 iterations)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Location and format of reported 97% peak coverage curve (whether in Figure G of S3 Text, a supplementary table, or main figure): 'For many cases, we expect that a model pre-trained on a large spectra dataset will cover a large enough fraction of the features to work well without the need for additional re-training (see Fig G in'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Detailed definition of how peak weights (w_i) are computed from spectra (intensity-based, frequency-based, or other metric): 'In those instances we can estimate the impact of the missing words by assessing the uncovered weighted part'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; sys.path.insert(0, '.'); from spec2vec import Spec2Vec; from matchms.importing import load_adducts; from matchms import Spectrum; import gensim; import pandas as pd; import numpy as np; import json; import os; model = gensim.models.Word2Vec.load('{inputs.word2vec_model}'); spectra = []; exec(open('{inputs.allpositive_dataset}').read() if os.path.isfile('{inputs.allpositive_dataset}') else ''); results = []; coverage_curve = []; for i, spec in enumerate(sorted(spectra, key=lambda s: s.metadata.get('spectrum_id', ''))): words = set(model.wv.index_to_key); spec_words = set([f'peak@{p[0]:.2f}' for p in spec.peaks] + [f'loss@{l:.2f}' for l in np.arange(5.0, 200.1, 0.01)]); present = sum(np.sqrt(spec.peaks[j][1]) for j in range(len(spec.peaks)) if f'peak@{spec.peaks[j][0]:.2f}' in words); total = sum(np.sqrt(p[1]) for p in spec.peaks); missing_frac = 1.0 - (present / total if total > 0 else 0); results.append({'spectrum_id': spec.metadata.get('spectrum_id', f'spec_{i}'), 'missing_fraction': missing_frac, 'coverage': 1 - missing_frac}); if (i + 1) % max(1, len(spectra) // 20) == 0: mean_cov = np.mean([r['coverage'] for r in results]); coverage_curve.append({'corpus_size': i + 1, 'mean_coverage': mean_cov}); df = pd.DataFrame(results); df.to_csv('missing_fraction_stats.csv', index=False); summary = {'mean_missing_fraction': float(df['missing_fraction'].mean()), 'median_missing_fraction': float(df['missing_fraction'].median()), 'final_coverage_percent': float(100 * (1 - df['missing_fraction'].mean())), 'spectra_with_coverage_above_95_percent': int((df['coverage'] > 0.95).sum())}; json.dump(summary, open('summary_metrics.json', 'w')); print(f'Task completed: {len(results)} spectra analyzed, final coverage: {summary[\"final_coverage_percent\"]:.1f}%')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "missing_fraction_coverage_stats.csv",
+  "expected_outputs": [
+    "Missing-fraction statistics table (CSV) with columns: spectrum_id, missing_fraction, coverage (1 \u2212 missing_fraction), cumulative_corpus_size",
+    "Coverage-vs-corpus-size curve (PNG/PDF) showing mean peak/loss coverage increasing from 0 to 97% as corpus size grows to 95,320 spectra",
+    "Summary metrics JSON: mean_missing_fraction, median_missing_fraction, final_coverage_percent, spectra_with_coverage_above_95_percent"
+  ],
+  "finding": "A Word2Vec model trained on the AllPositive dataset for 15 iterations achieves approximately 97% peak coverage, quantified by computing the missing-fraction statistic (1 \u2212 \u03a3\u221aw_i / \u03a3\u221aw_i) across spectra.",
+  "github_name": "matchms/matchms",
+  "input_from": "task_002",
+  "inputs": [
+    "AllPositive dataset (95,320 positive ionization mode spectra with InChIKey), filtered to m/z \u2208 [0, 1000] and \u226510 peaks",
+    "Pre-trained Word2Vec model (gensim, CBOW, window-size=500, negative=5, 15 epochs) trained on AllPositive dataset",
+    "Spec2Vec library (Python package) and matchms \u22650.6.0 for spectrum document conversion and word embedding lookup"
+  ],
+  "keywords": [
+    "mass spectrometry fragmentation",
+    "spectral similarity scoring",
+    "untargeted metabolomics",
+    "metabolite identification",
+    "lc-ms/ms",
+    "word embeddings",
+    "natural language processing",
+    "molecular networks",
+    "database searching",
+    "structural annotation",
+    "cosine similarity",
+    "ms2 spectra"
+  ],
+  "landmark_outputs": [
+    "spectrum_embeddings.npy",
+    "missing_fraction_per_spectrum.csv",
+    "coverage_vs_corpus_size.csv",
+    "coverage_curve.png",
+    "coverage_summary_metrics.json"
+  ],
+  "linked_result_ids": [
+    "result_009",
+    "result_047",
+    "result_048"
+  ],
+  "methodology_summary": [
+    "Load AllPositive dataset (95,320 spectra, pre-filtered to m/z \u2208 [0, 1000], \u226510 peaks) and pre-trained Word2Vec model (15 epochs, CBOW, window=500, negative=5).",
+    "Convert each spectrum to a document: represent peaks as 'peak@xxx.xx' words (2-decimal binning) and add neutral losses (5.0\u2013200.0 Da) as 'loss@xxx.xx' words.",
+    "Normalize peak intensities to maximum = 1 per spectrum; compute missing fraction as 1 \u2212 (\u03a3\u221aw_i for words in model vocabulary) / (\u03a3\u221aw_i for all words).",
+    "Aggregate missing-fraction statistics across all spectra and compute mean coverage (1 \u2212 mean missing fraction).",
+    "Vary effective corpus size by progressively adding spectra in order and recompute coverage metrics at each step to generate a corpus-size scaling curve.",
+    "Validation: verify that final mean coverage reaches \u226597% when corpus includes all 95,320 spectra, matching the reported 97% peak coverage for the AllPositive 15-epoch model; confirm no missing-fraction value exceeds the recommended threshold of 0.05 for \u226595% of spectra.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1008724)"
+  ],
+  "missing_information": [
+    "Exact formula or implementation reference for computing missing-fraction statistic (1 \u2212 \u03a3\u221aw_i / \u03a3\u221aw_i) and definition of w_i weighting scheme",
+    "Specific corpus size sampling strategy (which intermediate corpus sizes were tested to generate the coverage curve toward 97% coverage)",
+    "Location and format of reported 97% peak coverage curve (whether in Figure G of S3 Text, a supplementary table, or main figure)",
+    "Detailed definition of how peak weights (w_i) are computed from spectra (intensity-based, frequency-based, or other metric)"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/library_matching_results"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the fraction of peak coverage achieved by a Spec2Vec Word2Vec model vary as a function of training corpus size, and can a 97% coverage threshold be reproduced with the AllPositive dataset trained for 15 epochs?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "intro",
+    "results",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "spectral-peak-word-embedding-representation",
+    "word2vec-model-inference-unknown-word-handling",
+    "mass-spectral-missing-word-fraction-computation",
+    "corpus-size-coverage-scaling-analysis",
+    "neutral-loss-extraction-and-weighting",
+    "peak-intensity-normalization-and-weighted-aggregation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_spec2vec",
+  "spine_condition_ids": [
+    "COND_SPEC2VEC_UNIQUEINCHIKEY",
+    "COND_SPEC2VEC_ALLPOSITIVE",
+    "COND_COSINE_ON_SPEC2VEC_PROCESSED",
+    "COND_NEG_SAMPLING_TRAINING",
+    "COND_NO_NEG_SAMPLING_TRAINING",
+    "COND_LIBRARY_MATCHING_ALLPOSITIVE"
+  ],
+  "spine_entity_ids": [
+    "SPEC2VEC_SYSTEM",
+    "ALLPOSITIVE_DATASET",
+    "UNIQUEINCHIKEYS_DATASET",
+    "MISSING_FRACTION",
+    "COND_SPEC2VEC_UNIQUEINCHIKEY",
+    "COND_SPEC2VEC_ALLPOSITIVE",
+    "COND_COSINE_ON_SPEC2VEC_PROCESSED",
+    "COND_NEG_SAMPLING_TRAINING",
+    "COND_NO_NEG_SAMPLING_TRAINING",
+    "COND_LIBRARY_MATCHING_ALLPOSITIVE",
+    "RESULT_SPEC2VEC_BETTER_STRUCTURAL_CORR",
+    "RESULT_SPEC2VEC_BETTER_LIBRARY_MATCHING",
+    "RESULT_ALLPOSITIVE_PEAK_COVERAGE",
+    "RESULT_SPEC2VEC_SCALABLE",
+    "RESULT_COSINE_ON_SPEC2VEC_DATA_LOWER",
+    "METRIC_TANIMOTO_TOP01PCT_SPEC2VEC",
+    "PEAK_FILTERING_COSINE",
+    "PEAK_FILTERING_SPEC2VEC",
+    "SPEC2VEC_PACKAGE"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics",
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "model-inference",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": null,
+  "task_description": "Compute the missing-fraction statistic across the AllPositive dataset (95,320 spectra) using a Spec2Vec Word2Vec model trained on 15 epochs, measuring the fraction of weighted spectrum intensity not represented in the model as corpus size varies, and reproduce the reported 97% peak coverage result.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "AllPositive LC-MS dataset (95,320 spectra, filtered m/z \u2208 [0, 1000], \u226510 peaks)",
+      "port_id": "allpositive_dataset",
+      "resolved_via": null,
+      "source": "task_002/library_matching_results",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-trained Spec2Vec Word2Vec model (15 epochs, trained on AllPositive)",
+      "port_id": "word2vec_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spec2Vec and matchms Python packages",
+      "port_id": "spec2vec_library",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Compute the missing-fraction coverage statistic across AllPositive spectra as a function of training epoch (1\u201315) for the Word2Vec model and verify reproduction of the 97% peak coverage result.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Missing-fraction statistics per spectrum (CSV)",
+      "port_id": "missing_fraction_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Coverage-vs-corpus-size curve (PNG)",
+      "port_id": "coverage_curve",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Coverage summary metrics and validation (JSON)",
+      "port_id": "summary_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "spectral-library-matching",
+    "molecular-networking",
+    "tandem-ms",
+    "machine-learning",
+    "natural-language-processing",
+    "cosine-similarity-scoring"
+  ],
+  "title": "Analyze missing-fraction metric as a function of training corpus size using the AllPositive dataset",
+  "tools": [
+    "Spec2Vec",
+    "Word2Vec",
+    "matchms",
+    "gensim",
+    "NumPy",
+    "Numba",
+    "Pandas"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Missing-fraction statistics table (CSV) with columns: spectrum_id, missing_fraction, coverage (1 \u2212 missing_fraction), cumulative_corpus_size, Coverage-vs-corpus-size curve (PNG/PDF) showing mean peak/loss coverage increasing from 0 to 97% as corpus size grows to 95,320 spectra, Summary metrics JSON: mean_missing_fraction, median_missing_fraction, final_coverage_percent, spectra_with_coverage_above_95_percent."
+  ],
+  "workflow_description": "1. Load the AllPositive dataset (95,320 spectra) from Zenodo (10.5281/zenodo.3978118) and the pre-trained Spec2Vec Word2Vec model trained on 15 epochs (zenodo.org/record/4173596). 2. For each spectrum, convert peaks to words with format 'peak@xxx.xx' (2-decimal binning) and add neutral losses (5.0\u2013200.0 Da) as 'loss@xxx.xx' words. 3. Normalize peak intensities to maximum = 1 for each spectrum. 4. For each spectrum, compute the missing fraction as: missing_fraction = 1 \u2212 (\u03a3\u221aw_i for words in model) / (\u03a3\u221aw_i for all words), where w_i is peak intensity. 5. Aggregate missing-fraction statistics across all spectra and compute the proportion of peaks with known word embeddings (coverage = 1 \u2212 mean missing fraction). 6. Vary effective corpus size by progressively adding spectra and recompute coverage at each step to generate a coverage-vs-corpus-size curve. 7. Compare the final coverage result (97% for AllPositive at 15 epochs) against the computed mean coverage and verify convergence."
+}

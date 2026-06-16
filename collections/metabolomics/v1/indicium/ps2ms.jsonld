@@ -1,0 +1,2631 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/chemical-structure-featurization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/confidence-score-extraction-from-neural-networks",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/confidence-score-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/deep-learning-model-inference",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/feature-normalization-standardization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-data-preprocessing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-descriptor-extraction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/nps-classification-prediction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/nps-structural-diversity-stratification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/smiles-parsing-and-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-feature-vectorization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/statistical-distribution-analysis-across-cohorts",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/structural-similarity-calculation-fingerprint-based",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/tensor-encoding-deep-learning",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "PS\u00b2MS is a repository for an NYCU JHHLab NPS detection project.",
+      "asserted_by": "doi:10.1021/acs.analchem.3c05019",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_domain_nps"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.3c05019",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "PS\u00b2MS is a deep learning-based prediction system for detecting novel new psychoactive substances using mass spectrometry.",
+      "asserted_by": "doi:10.1021/acs.analchem.3c05019",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_mass_spectrometry"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.3c05019",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS, an AI-powered predictive system designed specifically to address the limitations of identifying the emergence of unidentified novel illicit drugs... When the mass spectrum of an analyte does not match any known reference, PS2MS simultaneously examines the chemical fingerprint and mass spectrum against the putative NPS database using integrated metrics to deduce possible identities.",
+      "asbval:note": "The research question directly aligns with the paper's core objective and methodology.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Can the PS\u00b2MS deep learning system successfully predict and identify new psychoactive substances from mass spectrometry data when applied to test inputs?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:26.150971+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we introduce PS2MS, an AI-powered predictive system, designed specifically for this purpose... PS2MS builds a supplementary synthetic NPS database by enumerating possible derivatives based on the core structure of a preselected illicit drug.",
+      "asbval:note": "PS2MS is the primary system described throughout the paper and is the subject of the study.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PS2MS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:26.150971+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system subsequently yields a list of potential NPS identities for the analyte... The integrated similarity metric between the analyte and enumerated compounds in the NPS database based on the mass spectrum and fingerprint are calculated, summarized, and ranked.",
+      "asbval:note": "The paper produces ranked lists of potential NPS identities with similarity scores (SMSF scores), but does not explicitly describe outputs as a 'table with spectrum identifiers' or use the term 'confidence scores.' The outputs are ranked predictions with similarity metrics rather than explicitly formatted classification tables.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "NPS classification predictions table with spectrum identifiers, predicted compound classes, and confidence scores per prediction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:26.150971+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card's framing as 'reproduce' predictions suggests running the model on new test data, but the paper primarily validates PS2MS on known cathinone derivatives and real-world eutylone samples. The card does not specify whether it refers to reproducing the paper's validation experiments or applying the system to entirely new unknown substances.",
+        "The card's expected output description ('NPS classification predictions table') is somewhat generic and does not capture the paper's specific emphasis on ranking derivatives by SMSF similarity scores and identifying isomers as a key challenge."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:26.150971+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Directed message passing neural networks (D-MPNN18) operate on molecular graphs based on chemical structures in the simplified molecular input line entry system (SMILES19) notation to build neural representations of molecules for property prediction including mass spectra.",
+      "asbval:note": "Paper mentions SMILES as a representation format used in related work (D-MPNN), but PS2MS itself uses extended circular fingerprints (ECFPs) and DeepEI for fingerprint generation from mass spectra, not SMILES-to-spectrum encoding. The paper states: 'neural electron\u2013ionization mass spectrometry (NEIMS) utilizes neural networks to convert chemical structure representations (i.e., extended circular fingerprints; ECFPs) into mass spectra'. PS2MS does not directly encode SMILES to mass spectra; instead it uses NEIMS (trained on NIST/SWGDRUG) to predict spectra from enumerated structures, and DeepEI to predict fingerprints from observed spectra.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How are SMILES representations of NPS chemical structures converted into the encoded feature format required as input for the PS2MS deep learning model?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:36.237330+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "RDKit is not mentioned anywhere in the paper. The paper uses SCScore (neural-network-based synthesis complexity scoring), NEIMS (for mass spectrum prediction), and DeepEI (for fingerprint prediction from spectra). No molecular toolkit like RDKit is explicitly named.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:36.237330+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "PS2MS does produce feature representations (mass spectra and fingerprints), but the paper does not describe them as NumPy arrays or HDF5 format, nor does it detail the exact shape or encoding pipeline. The paper focuses on NEIMS predicting mass spectra and DeepEI predicting fingerprints, which are then combined via SMSF metric, but does not describe a 'SMILES-to-encoded-features' module as the card implies.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Encoded feature matrix (NumPy array or HDF5 format) with shape [n_compounds, n_features] ready for PS2MS model input",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:36.237330+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card frames the task as reconstructing a 'SMILES-to-mass-spectrum feature encoding module', but PS2MS does not perform direct SMILES-to-spectrum encoding. Instead, it: (1) enumerates derivatives from a template structure, (2) uses NEIMS to predict mass spectra from those enumerated structures, and (3) uses DeepEI to infer fingerprints from observed spectra of unknowns. The encoding direction is reversed for unknowns (spectrum \u2192 fingerprint via DeepEI).",
+        "The card's focus on SMILES representation is not central to PS2MS's workflow. PS2MS uses structural enumeration via functional group replacement and filtering (SCScore, drug-like rules), not SMILES parsing or RDKit-based feature extraction.",
+        "The card implies a single 'feature encoding module' that converts SMILES to a matrix format, but PS2MS uses two separate deep learning models (NEIMS and DeepEI) for different purposes and does not describe a unified encoding pipeline."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:36.237330+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the SMSF (integrated similarity metric based on mass spectrum and fingerprint) to prioritize derivatives... The system subsequently yields a list of potential NPS identities for the analyte",
+      "asbval:note": "Paper does evaluate PS2MS prediction scores (SMSF metric) across different compound types (cathinone vs. noncathinone, isomers, real-world samples). However, the paper does NOT explicitly stratify analysis by 'structural novelty category' as a primary variable. The paper evaluates performance on known cathinones, noncathinones, and isomers, but does not systematically categorize or analyze structural novelty as an independent variable with stratified confidence metrics.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How do prediction confidence scores from the PS2MS deep learning model vary across structurally diverse or novel NPS analogues in the evaluation dataset?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:51.532367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper reports SMSF scores and performance metrics (sensitivity, specificity, F1 score, ranking proportions) but does not provide stratified statistical summaries (mean, median, std, quartiles) organized by structural novelty categories. The paper presents individual scores and ranking distributions but not aggregated descriptive statistics stratified by novelty.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Table of prediction confidence score statistics (mean, median, std, min, max, quartiles) stratified by structural novelty category",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:51.532367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper provides histograms, scatter plots, and ranking proportion curves (Figures 3, 4, 5) but does not present box plots or violin plots stratified by structural novelty categories. Visualizations focus on ranking performance and similarity score distributions for specific compounds (e.g., \u03b1-PPP, 4-EMC, Eutylone) rather than novelty-stratified distributions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Visualization (box plot or violin plot) of confidence score distributions across structural novelty strata",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:51.532367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_003/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "Paper uses deep learning models (NEIMS, DeepEI) but does not explicitly name PyTorch or TensorFlow as the implementation framework. The underlying framework for these models is not disclosed in the passages provided.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python deep learning framework (PyTorch or TensorFlow)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:51.532367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_003/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "A compound's fingerprint is a binary sequence composed of 0s and 1s, containing structural information... The fingerprints of all of the derivatives in the NPS database can be easily transformed using their known structure representation during enumeration.",
+      "asbval:note": "Paper uses molecular fingerprints and mentions DeepEI for fingerprint prediction from mass spectra. However, the paper does not explicitly name RDKit or any specific cheminformatics library for fingerprint computation. The paper does not disclose the tool used for generating fingerprints from structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit or similar cheminformatics library for molecular fingerprint computation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:51.532367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_003/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not disclose the visualization libraries used. Figures are presented but no mention of Matplotlib, Seaborn, or any specific plotting library is made in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Matplotlib or Seaborn for visualization",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:51.532367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_003/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Pandas or any specific data manipulation library. While the system clearly performs data aggregation and filtering, the specific tools used are not disclosed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Pandas for tabular data manipulation and aggregation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:51.532367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1021_acs_analchem_3c05019__task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate card proposes a novel analysis (stratified confidence score statistics by structural novelty) that is not explicitly performed in the paper. The paper evaluates PS2MS performance on known cathinones, noncathinones, and isomers, but does not systematically define or stratify by 'structural novelty category' as an independent analytical variable.",
+        "The paper's primary focus is on validating PS2MS as a system for NPS identification (sensitivity, specificity, F1 score, ranking performance) rather than on detailed statistical characterization of confidence scores across novelty strata.",
+        "The expected outputs (stratified statistics table and novelty-stratified box/violin plots) represent a secondary analysis not present in the paper. The paper does provide SMSF scores and ranking distributions but not in the stratified, aggregated format proposed by the card."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:51.532367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-featurization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "Paper uses SMILES notation and deep learning for fingerprint/spectrum prediction, but does NOT explicitly describe converting SMILES to 'fixed-size numerical feature tensors' as a standalone task. The paper mentions SMILES as input format but focuses on the downstream models (NEIMS, DeepEI) rather than the featurization step itself. The card frames featurization as a primary skill; the paper treats it as implicit infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-featurization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert SMILES strings and molecular structures into fixed-size numerical feature tensors compatible with deep learning models for chemical property prediction.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:11.473916+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-featurization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Directed message passing neural networks (D-MPNN) operate on molecular graphs based on chemical structures in the simplified molecular input line entry system (SMILES) notation to build neural representations of molecules for property prediction including mass spectra.",
+      "asbval:note": "Paper mentions SMILES and neural representations but does not explicitly detail the featurization process. The card's framing of 'atomic, topological, and structural information' encoding is conceptually aligned but not explicitly demonstrated in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-featurization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "encodes atomic, topological, and structural information from organic molecules into standardized input formats required by neural networks",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:11.473916+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-featurization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The core of the initial structure, encompassing all heavy atoms and their bonds within the molecule, was maintained, and only the hydrogen atoms within the molecule underwent iterative chemical modification.",
+      "asbval:note": "Paper discusses molecular structure manipulation and representation but does not explicitly frame SMILES-to-tensor conversion as a standalone task. The paper uses SMILES as input notation but focuses on enumeration and deep learning prediction rather than featurization methodology.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-featurization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Convert SMILES strings and molecular structures into fixed-size numerical feature tensors compatible with deep learning models for chemical property prediction.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:11.473916+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-featurization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint... A similarity metric based on the fingerprints of both the analyte and its derivatives can then be readily calculated.",
+      "asbval:note": "Paper explicitly uses fingerprint generation and structural similarity matching (via SMSF metric) as downstream tasks.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "chemical-structure-featurization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When your downstream task is mass spectrum prediction, chemical fingerprint generation, or structural similarity matching.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:11.473916+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-featurization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "RDKit is not mentioned anywhere in the paper. The paper does not name the tool used for SMILES parsing or molecular descriptor extraction. While SMILES notation is mentioned as input format, no specific tool for featurization is identified.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "chemical-structure-featurization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit: Parse, validate, and canonicalize SMILES strings; extract molecular descriptors and structural features",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:11.473916+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-extraction-from-neural-networks/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint... A similarity metric based on the fingerprints of both the analyte and its derivatives can then be readily calculated.",
+      "asbval:note": "Paper uses deep learning models (NEIMS, DeepEI) but does not explicitly extract or report softmax probabilities or prediction uncertainties. Instead, it computes SMSF (integrated similarity metric) as a ranking score. The paper reports similarity scores and ranking performance (RRP, relative ranking performance) rather than model confidence/uncertainty estimates.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "confidence-score-extraction-from-neural-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Extract prediction confidence scores (softmax probabilities, prediction uncertainties) from a trained deep learning model to quantify model certainty across test compounds.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:24.323731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-extraction-from-neural-networks/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The validation of PS2MS was carried out through anonymized testing of known synthetic cathinones, showcasing high specificity and sensitivity. Furthermore, the case study involving eutylone highlighted the challenges associated with closely related isomers.",
+      "asbval:note": "Paper does perform stratification (positive vs. negative samples, cathinone vs. noncathinone) and reports sensitivity/specificity metrics, but does not explicitly stratify by structural novelty or out-of-distribution detection. The isomer challenge is noted but not addressed via confidence-score-based stratification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "confidence-score-extraction-from-neural-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This enables downstream stratification and statistical assessment of prediction reliability, especially for novel or out-of-distribution analogues.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:24.323731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-extraction-from-neural-networks/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention PyTorch or TensorFlow. Deep learning models (NEIMS, DeepEI) are referenced but their implementation framework is not disclosed in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "confidence-score-extraction-from-neural-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PyTorch or TensorFlow",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:24.323731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-extraction-from-neural-networks/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "A compound's fingerprint is a binary sequence composed of 0s and 1s, containing structural information that ensures distinct fingerprints for different compounds... The fingerprints of all of the derivatives in the NPS database can be easily transformed using their known structure representation during enumeration.",
+      "asbval:note": "Paper uses molecular fingerprints and mentions extended circular fingerprints (ECFPs) in context of NEIMS, but does not name RDKit explicitly. Paper does not report using Tanimoto similarity for stratification by structural novelty.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "confidence-score-extraction-from-neural-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit for computing molecular fingerprints (ECFP, Tanimoto similarity) to stratify compounds by structural novelty",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:24.323731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-extraction-from-neural-networks/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Pandas. No evidence of tabular aggregation workflows or confidence-score stratification by novelty class.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "confidence-score-extraction-from-neural-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Pandas for tabular data manipulation and aggregation of confidence scores by structural novelty stratum",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:24.323731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-extraction-from-neural-networks/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Figure 3c. Distribution of different similarity metrics between the true and predicted data for the NIST test set... Figure 4(a) Performance on 20 positive samples. The x-axis represents the similarity score.",
+      "asbval:note": "Paper includes visualizations of similarity score distributions and ranking performance, but does not name Matplotlib or Seaborn. Visualization tools are not explicitly identified.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "confidence-score-extraction-from-neural-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Matplotlib or Seaborn for visualization of confidence score distributions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:24.323731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-extraction-from-neural-networks/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS, an AI-powered predictive system designed specifically to address the limitations of identifying the emergence of unidentified novel illicit drugs... The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "PS2MS is the central system described in the paper and uses deep learning models NEIMS and DeepEI.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "confidence-score-extraction-from-neural-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PS2MS as source deep learning model for NPS detection",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:24.323731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-extraction-from-neural-networks/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The validation of PS2MS was carried out through anonymized testing of known synthetic cathinones, showcasing high specificity and sensitivity... 20 known derivatives of cathinone (i.e., positive samples) and 20 noncathinone (i.e., negative samples).",
+      "asbval:note": "Paper does evaluate PS2MS on test compounds and stratifies by drug class (cathinone vs. noncathinone), but does not explicitly assess confidence variation across structural novelty classes (e.g., training-similar vs. out-of-distribution analogues).",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "confidence-score-extraction-from-neural-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have a trained deep learning model (e.g., PS2MS) and an evaluation dataset of compounds, and you need to assess how prediction confidence varies across structural novelty classes",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:24.323731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-interpretation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By forming Gaussian distributions of similarity scores for cathinone-like and noncathinone-like drugs from SWGDRUG data sets, the threshold was defined at the point where two probability functions intersect. We found that a similarity threshold of 0.55 can effectively differentiate between similar and dissimilar substances",
+      "asbval:note": "Paper does apply thresholds to filter predictions (SMSF score \u2265 0.55), but the mechanism is threshold-based filtering of similarity scores rather than model confidence probabilities. The threshold is derived from Gaussian distributions of similarity metrics, not from standard confidence/probability outputs. The concept is functionally similar but the terminology and mechanism differ from typical 'confidence score' interpretation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "confidence-score-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Interpret and apply confidence thresholds to deep learning model predictions for NPS classification from mass spectrometry data. This skill filters predictions by model confidence to assign reliable NPS class labels and exclude low-confidence matches.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:41.950631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-interpretation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint... A similarity metric based on the fingerprints of both the analyte and its derivatives can then be readily calculated.",
+      "asbval:note": "Paper describes inference on mass spectrometry spectra and outputs predictions, but outputs are similarity scores (SMSF) rather than per-class probabilities or confidence scores in the traditional sense. The filtering mechanism uses similarity thresholds rather than confidence probabilities.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "confidence-score-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "After executing forward inference on preprocessed mass spectrometry spectra with a deep learning model (e.g., PS\u00b2MS), when you have per-spectrum predictions with associated confidence scores or per-class probabilities.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:41.950631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-interpretation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "[SUBSTRING-MATCH for PS2MS | role: primary system for NPS identification from mass spectrometry]",
+      "asbval:note": "PS2MS (or PS\u00b2MS with superscript) is the primary system described throughout the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "confidence-score-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].name",
+      "asbval:target_claim_text": "PS\u00b2MS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:41.950631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-interpretation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS builds a supplementary synthetic NPS database by enumerating possible derivatives based on the core structure of a preselected illicit drug. The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively. The integrated similarity metric between the analyte and enumerated compounds in the NPS database based on the mass spectrum and fingerprint are calculated, summarized, and ranked.",
+      "asbval:note": "PS2MS outputs similarity scores (SMSF) and ranked predictions, not 'confidence scores' in the traditional probabilistic sense. It is a ranking system that outputs similarity metrics rather than class probabilities or confidence scores.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "confidence-score-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Deep learning model that outputs NPS classification predictions and confidence scores from preprocessed mass spectrometry spectra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:41.950631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-interpretation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database",
+      "asbval:note": "NEIMS is explicitly named and used in the system.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "confidence-score-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].name",
+      "asbval:target_claim_text": "NEIMS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:41.950631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-interpretation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To facilitate a direct comparison with the mass spectrum of the unknown analyte by using EI-MS, we employed NEIMS to predict the mass spectrum of all derivatives within our synthetic NPS database.",
+      "asbval:note": "NEIMS is used to predict mass spectra for database compounds and is integrated into the similarity scoring via SMSF metric.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "confidence-score-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].role",
+      "asbval:target_claim_text": "Generates predicted mass spectra for synthetic NPS database compounds; integrated into PS\u00b2MS similarity scoring",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:41.950631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-interpretation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "DeepEI is explicitly named and used in the system.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "confidence-score-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[2].name",
+      "asbval:target_claim_text": "DeepEI",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:41.950631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-interpretation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint... A similarity metric based on the fingerprints of both the analyte and its derivatives can then be readily calculated... the integration of cosine similarity and Jaccard similarity led to improved accuracy... We denote the best-performing integrated similarity metric (i.e., a weighted sum of the mass spectrum and fingerprint similarity scores) as SMSF",
+      "asbval:note": "DeepEI predicts fingerprints and is integrated into SMSF calculation for ranking.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "confidence-score-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[2].role",
+      "asbval:target_claim_text": "Predicts chemical fingerprints of unknown analytes and database compounds; used in integrated similarity score (SMSF) calculation for ranking NPS candidates",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:41.950631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-model-inference/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint... A similarity metric based on the fingerprints of both the analyte and its derivatives can then be readily calculated.",
+      "asbval:note": "Paper describes inference on preprocessed MS data using pre-trained deep learning models (NEIMS, DeepEI) to generate predictions and similarity scores without retraining.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "deep-learning-model-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Execute forward inference pass on preprocessed mass spectrometry data using a pre-trained deep learning model to generate predictions with confidence scores.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:58.020513+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-model-inference/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS, an AI-powered predictive system, designed specifically for this purpose... The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database",
+      "asbval:note": "PS2MS is the primary system described in the paper for inference on MS data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "deep-learning-model-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PS2MS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:58.020513+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-model-inference/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we employed NEIMS to predict the mass spectrum of all derivatives within our synthetic NPS database... The retrained NEIMS demonstrated comparable performance when tested on a mixture of both NIST and SWGDRUG data sets",
+      "asbval:note": "NEIMS is used for mass spectrum prediction during inference on the synthetic NPS database.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "deep-learning-model-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "NEIMS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:58.020513+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-model-inference/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint, all without the need for explicit structure information.",
+      "asbval:note": "DeepEI is used for fingerprint prediction from unknown analyte mass spectra during inference.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "deep-learning-model-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DeepEI",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:58.020513+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-model-inference/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not specify which deep learning framework (PyTorch or TensorFlow) is used for model implementation or inference. The paper mentions deep learning models but does not name the underlying framework.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "deep-learning-model-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PyTorch or TensorFlow",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:58.020513+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-model-inference/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper contains multiple figures (Figures 1-5) showing results and distributions but does not explicitly name visualization libraries used. No mention of Matplotlib, Seaborn, or any specific visualization tool in the passages provided.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "deep-learning-model-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Matplotlib or Seaborn for visualization",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:58.020513+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-model-inference/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When the mass spectrum of an analyte does not match any established reference spectra during the conventional screening procedure, PS2MS builds a supplementary synthetic NPS database... The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "System applies pre-trained models to generate predictions (mass spectra, fingerprints, similarity scores) without model retraining.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "deep-learning-model-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "applies learned model weights to new inputs to produce classification results and per-class probability distributions without retraining",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:58.020513+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-model-inference/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The integrated similarity metric between the analyte and enumerated compounds in the NPS database based on the mass spectrum and fingerprint are calculated, summarized, and ranked. The system subsequently yields a list of potential NPS identities for the analyte",
+      "asbval:note": "System generates ranked predictions with similarity scores (confidence metrics) for unknown analytes.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "deep-learning-model-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "classify unknown compounds or generate prediction confidence scores for structural novelty analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:17:58.020513+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-normalization-standardization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss feature normalization or standardization as a preprocessing step. The paper focuses on enumeration of NPS derivatives, mass spectrum prediction using NEIMS and DeepEI, and similarity metric calculation. No mention of normalizing/standardizing input features before feeding them to deep learning models.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "feature-normalization-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Normalize or standardize encoded molecular features to match the numerical scale and distribution expected by a deep learning model's input layer. This ensures feature values fall within the model's training range, preventing saturation or numerical instability during inference.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:11.708063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-normalization-standardization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "RDKit is not mentioned anywhere in the paper. The paper uses SMILES notation (passage [3]: 'simplified molecular input line entry system (SMILES)') but does not name RDKit as the tool for parsing SMILES or extracting structural features.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "feature-normalization-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit: Parse and validate SMILES to generate canonical molecule objects and extract structural features that are then encoded and normalized",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:11.708063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-normalization-standardization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "NumPy is not mentioned in the paper. No discussion of vectorized normalization operations on feature matrices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "feature-normalization-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "NumPy: Perform vectorized normalization/standardization operations on the feature matrix",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:11.708063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-normalization-standardization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "HDF5 is not mentioned in the paper. No discussion of data storage formats for feature matrices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "feature-normalization-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HDF5: Store and read normalized feature matrices in efficient binary format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:11.708063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-normalization-standardization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "The paper does use deep learning models (NEIMS and DeepEI) and works with molecular structures via SMILES notation, but the paper does not describe or discuss feature normalization/standardization as a preprocessing step. The actual workflow described focuses on enumeration, filtering, and direct prediction without explicit mention of feature normalization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "feature-normalization-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "After extracting and encoding molecular descriptors and structural features (atom types, bond connectivity, graph topology) from SMILES strings into a fixed-size numerical tensor, before passing the feature matrix to the PS2MS deep learning model for NPS prediction.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:11.708063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-preprocessing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint, all without the need for explicit structure information. A similarity metric based on the fingerprints of both the analyte and its derivatives can then be readily calculated.",
+      "asbval:note": "Paper describes fingerprint generation from mass spectra and uses NEIMS/DeepEI for spectrum prediction, but does not explicitly detail normalization or vectorization preprocessing steps. The paper focuses on spectrum prediction and matching rather than preprocessing raw spectra for model input.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Prepare raw or processed mass spectrometry spectra for deep learning inference by normalizing intensities and converting m/z\u2013intensity pairs into vectorized feature representations.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:20.814628+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-preprocessing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS builds a supplementary synthetic NPS database by enumerating possible derivatives based on the core structure of a preselected illicit drug. The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "PS\u00b2MS is confirmed as the target system that processes spectra and fingerprints.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "ensuring compatibility with downstream prediction systems like PS\u00b2MS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:20.814628+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-preprocessing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS, an AI-powered predictive system, designed specifically for this purpose. When the mass spectrum of an analyte, retrieved via GC/EI-MS, does not match any established reference spectra during the conventional screening procedure, PS2MS builds a supplementary synthetic NPS database by enumerating possible derivatives based on the core structure of a preselected illicit drug.",
+      "asbval:note": "PS\u00b2MS confirmed as the primary system for NPS identification and prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PS\u00b2MS - Target deep learning prediction system that consumes preprocessed spectra to infer NPS class labels and confidence scores",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:20.814628+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-preprocessing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we employed NEIMS to predict the mass spectrum of all derivatives within our synthetic NPS database. As the original NEIMS was initially trained solely using spectra from the NIST library, which covered a broader range of chemicals yet with only a small fraction dedicated to drugs, its performance significantly declined when tested with spectra of illicit drugs in our experiments.",
+      "asbval:note": "NEIMS is confirmed as the spectrum prediction model used within PS\u00b2MS.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "NEIMS - Generates predicted mass spectra for synthetic NPS database compounds; output spectra may require equivalent preprocessing",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:20.814628+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-preprocessing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint, all without the need for explicit structure information.",
+      "asbval:note": "DeepEI confirmed as the fingerprint prediction model that converts mass spectra to fingerprints.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DeepEI - Predicts chemical fingerprints from mass spectra; interacts with preprocessed spectrum representations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:20.814628+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-preprocessing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Conventionally, illicit drugs are identified using mass spectrometry (MS)-based methods. Various techniques, such as high-performance liquid chromatography (HPLC), gas chromatography (GC), mass spectrometry (MS), ion-mobility spectrometry, Raman spectroscopy, and nuclear magnetic resonance (NMR) spectroscopy, are used to accurately detect illegal drugs present in the system. Among these techniques, gas chromatography/electron impact (GC/EI)-MS is one of the most widely used techniques for identifying illicit drugs.",
+      "asbval:note": "Paper focuses specifically on GC/EI-MS, not LC-MS or direct infusion MS. The scope claim mentions LC-MS and direct infusion but the paper is optimized for GC/EI-MS only.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have raw mass spectra or processed feature matrices from liquid chromatography\u2013mass spectrometry (LC-MS) or direct infusion MS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:20.814628+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-preprocessing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not describe specific tokenization or normalization rules for PS\u00b2MS input preprocessing. The paper discusses spectrum matching and fingerprint generation but not the detailed preprocessing pipeline for raw spectra.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "mass-spectrometry-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input spectra are in a format native to MS instruments or databases but do not yet conform to the tokenization and normalization rules required by PS\u00b2MS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:20.814628+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-descriptor-extraction/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Directed message passing neural networks (D-MPNN18) operate on molecular graphs based on chemical structures in the simplified molecular input line entry system (SMILES19) notation to build neural representations of molecules for property prediction including mass spectra.",
+      "asbval:note": "Paper mentions SMILES notation and neural representations for molecular property prediction, but does NOT explicitly describe extracting atom types, bond connectivity, and graph topology into fixed-size tensors. The paper uses NEIMS (which takes ECFPs\u2014extended circular fingerprints) and DeepEI (which converts mass spectra to fingerprints), not explicit graph-to-tensor conversion. The card's framing of 'fixed-size numerical tensors' and 'atom types, bond connectivity, graph topology' extraction is not directly supported; the paper's actual approach uses fingerprints and pre-trained models rather than explicit feature engineering from SMILES.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-descriptor-extraction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Extract atom types, bond connectivity, and graph topology features from canonical molecular structures to create fixed-size numerical tensors for deep learning input. This skill bridges chemical structure representation (SMILES) to machine-learning-ready feature matrices required",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:36.614991+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-descriptor-extraction/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "RDKit is not mentioned anywhere in the paper. The paper uses SMILES notation (passage 3) but does not name RDKit as the tool for parsing or feature extraction. The paper focuses on NEIMS and DeepEI for spectrum/fingerprint prediction, and SCScore for synthesis difficulty assessment. No evidence of RDKit usage in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "molecular-descriptor-extraction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit: Parse and validate SMILES strings into canonical molecule objects; extract atom types, bond connectivity, and graph topology; compute molecular descriptors",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:36.614991+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-descriptor-extraction/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "PS2MS does use deep learning models (NEIMS, DeepEI) that require numerical input, but the paper does not describe converting SMILES to fixed-size tensors. Instead, NEIMS takes ECFPs (extended circular fingerprints) as input (passage 3: 'extended circular fingerprints; ECFPs'), and DeepEI converts mass spectra to fingerprints. The actual input format and tensor construction are not detailed in the passages provided.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-descriptor-extraction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have validated SMILES strings or canonical molecule objects from RDKit and need to convert them into the fixed-size numerical tensor format expected by a deep learning model (e.g., PS2MS).",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:36.614991+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-classification-prediction/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS builds a supplementary synthetic NPS database by enumerating possible derivatives based on the core structure of a preselected illicit drug. The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively. The integrated similarity metric between the analyte and enumerated compounds in the NPS database based on the mass spectrum and fingerprint are calculated, summarized, and ranked. The system subsequently yields a list of potential NPS identities for the analyte.",
+      "asbval:note": "Core research question is directly supported by the paper's description of PS2MS functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "nps-classification-prediction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Apply the PS\u00b2MS deep learning system to predict and classify unknown mass spectra against a synthetic database of new psychoactive substance (NPS) derivatives, generating ranked similarity scores and potential NPS identities.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:47.473252+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-classification-prediction/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database",
+      "asbval:note": "NEIMS role confirmed in paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "nps-classification-prediction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "NEIMS \u2014 Generates predicted mass spectra for all NPS derivatives in the synthetic database",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:47.473252+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-classification-prediction/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint, all without the need for explicit structure information.",
+      "asbval:note": "DeepEI role confirmed for fingerprint prediction from mass spectra.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "nps-classification-prediction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DeepEI \u2014 Predicts chemical fingerprints for the unknown analyte and all synthetic database compounds",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:47.473252+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-classification-prediction/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS builds a supplementary synthetic NPS database by enumerating possible derivatives based on the core structure of a preselected illicit drug.",
+      "asbval:note": "Enumeration process is a core component of PS2MS system.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "nps-classification-prediction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PS\u00b2MS Enumeration \u2014 Generates synthetic NPS database by enumerating possible derivatives based on core drug structure",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:47.473252+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-classification-prediction/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "RDKit is not mentioned anywhere in the provided passages. The paper discusses fingerprints and molecular structure manipulation but does not name RDKit as the tool used for these operations.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "nps-classification-prediction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit \u2014 Chemistry toolkit used for molecular structure manipulation and fingerprint calculations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:47.473252+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-classification-prediction/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS, an AI-powered predictive system, designed specifically for this purpose.",
+      "asbval:note": "PS2MS is the main system described in the paper. GitHub repo cannot be verified from passages but is plausible given the paper's authorship and DOI.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "nps-classification-prediction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PS2MS (as a tool entry with repo github.com/jhhung/PS2MS)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:47.473252+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-classification-prediction/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When the mass spectrum of an analyte, retrieved via GC/EI-MS, does not match any established reference spectra during the conventional screening procedure, PS2MS builds a supplementary synthetic NPS database by enumerating possible derivatives based on the core structure of a preselected illicit drug.",
+      "asbval:note": "Scope aligns with paper's stated use case.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "nps-classification-prediction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When to use: You have acquired a mass spectrum from an unknown suspected illicit drug analyte and need to compare it against a synthetic NPS database to rank candidate identities by similarity.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:47.473252+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-classification-prediction/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When the mass spectrum of an analyte, retrieved via GC/EI-MS, does not match any established reference spectra during the conventional screening procedure, PS2MS builds a supplementary synthetic NPS database",
+      "asbval:note": "Paper explicitly states PS2MS is for cases where analyte does NOT match reference spectra, implying standard matching should be used first.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "nps-classification-prediction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: The input analyte is a known, structurally characterized compound already in a reference spectral library \u2014 use standard spectral matching instead.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:47.473252+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-classification-prediction/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS builds a supplementary synthetic NPS database by enumerating possible derivatives based on the core structure of a preselected illicit drug.",
+      "asbval:note": "Paper confirms enumeration is a prerequisite step in the PS2MS workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "nps-classification-prediction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: You do not have a pre-enumerated synthetic NPS database specific to your suspected core drug structure \u2014 you must first run the enumeration step.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:18:47.473252+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-structural-diversity-stratification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint... A similarity metric based on the fingerprints of both the analyte and its derivatives can then be readily calculated.",
+      "asbval:note": "Paper uses fingerprints for similarity-based matching and ranking of derivatives, but does NOT perform stratification by structural novelty relative to training data, nor does it aggregate confidence scores by novelty stratum. The paper evaluates performance on known cathinones vs. noncathinones and real-world samples, but not via the proposed stratification-by-training-distance methodology. The research question describes a novel analytical approach not demonstrated in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "nps-structural-diversity-stratification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Stratify novel psychoactive substance (NPS) evaluation compounds by structural similarity to training data using molecular fingerprints, then aggregate prediction confidence scores by novelty stratum to assess how PS2MS model performance varies across structurally diverse or nove",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:00.369033+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-structural-diversity-stratification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention RDKit. Paper uses fingerprints (via DeepEI model to predict fingerprints from mass spectra, and known structures to compute fingerprints during enumeration), but does not explicitly name RDKit as the tool. No evidence of RDKit use or ECFP/Morgan fingerprint computation in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "nps-structural-diversity-stratification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit \u2014 Compute molecular fingerprints (ECFP, Morgan) and Tanimoto similarity for stratifying compounds by structural novelty",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:00.369033+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-structural-diversity-stratification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention PyTorch or TensorFlow. Paper references NEIMS and DeepEI as deep learning models but does not specify the framework used to implement or deploy them. No evidence of explicit confidence score extraction (softmax probabilities or uncertainty estimates) in the paper; instead, the paper uses SMSF similarity scores and ranking.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "nps-structural-diversity-stratification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PyTorch or TensorFlow \u2014 Load the trained PS2MS deep learning model and extract prediction confidence scores (softmax probabilities or uncertainty estimates)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:00.369033+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-structural-diversity-stratification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Pandas. While the paper organizes and reports results (e.g., Figure 4, Figure 5), there is no explicit mention of Pandas for data organization or aggregation by novelty stratum.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "nps-structural-diversity-stratification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Pandas \u2014 Organize evaluation compounds, fingerprints, similarity scores, and confidence metrics in tabular form; aggregate and group statistics by novelty stratum",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:00.369033+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-structural-diversity-stratification/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Matplotlib or Seaborn. Paper includes figures (e.g., Figure 4, Figure 5) showing similarity score distributions and ranking performance, but does not explicitly name the visualization library used, nor does it stratify by structural novelty relative to training data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "nps-structural-diversity-stratification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Matplotlib or Seaborn \u2014 Generate box plots and violin plots visualizing confidence score distributions stratified by structural novelty category",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:00.369033+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-structural-diversity-stratification/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not produce stratified confidence distributions by novelty. Paper shows SMSF similarity score distributions (Figures 4b, 4c, 5b) and ranking performance curves, but not stratified by structural distance from training data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "nps-structural-diversity-stratification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Confidence score distributions stratified by structural novelty category, visualized as box plots or violin plots",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:00.369033+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-structural-diversity-stratification/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not employ this stratification-by-training-distance methodology. Paper uses fingerprints for matching analytes to enumerated derivatives and for computing SMSF scores, but does not stratify evaluation compounds by similarity to training data or aggregate confidence by novelty stratum.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "nps-structural-diversity-stratification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "Compute molecular fingerprints for all training and evaluation compounds; calculate pairwise Tanimoto similarity between each evaluation compound and the training set; stratify evaluation compounds into novelty bins (e.g., high/medium/low similarity to training data); aggregate p",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:00.369033+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-and-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The core of the initial structure, encompassing all heavy atoms and their bonds within the molecule, was maintained... The R-group of each functional group was concatenated with the atom connected to the hydrogen slated for replacement, serving as a chemical modification... The fingerprints of all of the derivatives in the NPS database can be easily transformed using their known structure representation during enumeration.",
+      "asbval:note": "Paper uses SMILES notation (mentioned in passage 3: 'simplified molecular input line entry system (SMILES)') and performs structure enumeration and modification, but does NOT explicitly name RDKit as the tool for SMILES parsing. Paper mentions using SMILES for molecular graph representation but does not detail RDKit-specific validation or canonicalization steps. The paper focuses on derivative enumeration and filtering, not on SMILES parsing validation as a standalone task.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "smiles-parsing-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert SMILES strings representing chemical structures into validated canonical molecule objects using RDKit, ensuring structural correctness before downstream feature encoding. This is a foundational step in computational chemistry workflows where chemical identity must be unam",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:15.268825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-and-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "RDKit is not mentioned anywhere in the paper. The paper uses SMILES notation (passage 3 mentions 'simplified molecular input line entry system (SMILES)') but does not name RDKit as the tool for parsing or validation. The paper mentions SCScore for synthesis difficulty assessment, NEIMS and DeepEI for spectrum/fingerprint prediction, but no SMILES parsing tool is explicitly named.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "smiles-parsing-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:15.268825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-and-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The core of the initial structure, encompassing all heavy atoms and their bonds within the molecule, was maintained... A compound's fingerprint is a binary sequence composed of 0s and 1s, containing structural information that ensures distinct fingerprints for different compounds. Each compound possesses a unique fingerprint, which can be derived by converting its structural representation.",
+      "asbval:note": "Paper performs SMILES-based structure manipulation and fingerprint generation from structural representations, but does not name the specific tool used. The functional role (structure parsing and descriptor extraction) is present in the paper's workflow, but the tool identity is not disclosed. Paper likely uses an unspecified cheminformatics library for this purpose, not necessarily RDKit.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "smiles-parsing-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools (functional role)",
+      "asbval:target_claim_text": "Tool for parsing SMILES and extracting molecular descriptors/structural features",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:15.268825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-and-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "Paper confirms that chemical structures (derived from SMILES enumeration) are used as input to NEIMS for mass spectrum prediction, supporting the claim that structure parsing precedes spectrum prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "smiles-parsing-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope (downstream use: mass spectrum prediction)",
+      "asbval:target_claim_text": "SMILES parsing is a foundational step before mass spectrum prediction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:15.268825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-and-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The fingerprints of all of the derivatives in the NPS database can be easily transformed using their known structure representation during enumeration... A compound's fingerprint is a binary sequence composed of 0s and 1s, containing structural information that ensures distinct fingerprints for different compounds. Each compound possesses a unique fingerprint, which can be derived by converting its structural representation.",
+      "asbval:note": "Paper confirms that structural representations (SMILES-derived) are converted into fingerprints, supporting the claim that structure parsing precedes fingerprint generation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "smiles-parsing-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope (downstream use: fingerprint generation)",
+      "asbval:target_claim_text": "SMILES parsing is a foundational step before fingerprint generation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:15.268825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-and-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Directed message passing neural networks (D-MPNN) operate on molecular graphs based on chemical structures in the simplified molecular input line entry system (SMILES) notation to build neural representations of molecules for property prediction including mass spectra.",
+      "asbval:note": "Paper explicitly mentions SMILES notation as a representation format for chemical structures in the context of NPS derivative enumeration and neural network processing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "smiles-parsing-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope (input format: SMILES strings)",
+      "asbval:target_claim_text": "Input is SMILES strings for candidate novel psychoactive substance structures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:15.268825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectrum-feature-vectorization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint, all without the need for explicit structure information.",
+      "asbval:note": "Paper describes spectrum-to-fingerprint conversion via DeepEI and mass spectrum prediction via NEIMS, but does not explicitly detail the tokenization or vectorization preprocessing steps. The paper assumes spectra are already in a format suitable for model input (m/z and intensity pairs) but does not describe the normalization schema or fixed-format feature matrix construction that the card claims.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectrum-feature-vectorization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert raw mass spectrometry spectra into tokenized numerical vectors suitable for deep learning inference by normalizing m/z and intensity pairs according to model input schema.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:31.477136+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectrum-feature-vectorization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "Paper confirms that spectra are input to deep learning models (NEIMS, DeepEI) but does not detail the vectorization or tokenization preprocessing pipeline. The paper focuses on model outputs (predicted spectra, fingerprints) rather than input preparation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectrum-feature-vectorization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Convert raw mass spectrometry spectra into tokenized numerical vectors suitable for deep learning inference",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:31.477136+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectrum-feature-vectorization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS builds a supplementary synthetic NPS database by enumerating possible derivatives based on the core structure of a preselected illicit drug. The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "PS\u00b2MS is confirmed as the target system that processes spectra for NPS identification. The paper confirms it receives mass spectra as input.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectrum-feature-vectorization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PS\u00b2MS \u2014 Target deep learning system that receives vectorized spectra as input for NPS classification inference",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:31.477136+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectrum-feature-vectorization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we employed NEIMS to predict the mass spectrum of all derivatives within our synthetic NPS database. As the original NEIMS was initially trained solely using spectra from the NIST library, which covered a broader range of chemicals yet with only a small fraction dedicated to drugs, its performance significantly declined when tested with spectra of illicit drugs in our experiments.",
+      "asbval:note": "NEIMS is confirmed to generate predicted mass spectra for the NPS database. However, the paper does not explicitly state that these predicted spectra are 'themselves vectorized for fingerprint comparison'\u2014that role is attributed to DeepEI, which converts spectra to fingerprints. The card's claim conflates NEIMS's role (spectrum prediction) with fingerprint generation (DeepEI's role).",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectrum-feature-vectorization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "NEIMS \u2014 Generates predicted mass spectra for synthetic NPS database compounds; used in PS\u00b2MS pipeline to create reference spectra that are themselves vectorized for fingerprint comparison",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:31.477136+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectrum-feature-vectorization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint, all without the need for explicit structure information. A similarity metric based on the fingerprints of both the analyte and its derivatives can then be readily calculated.",
+      "asbval:note": "DeepEI is confirmed to convert mass spectra to fingerprints and these fingerprints are used in similarity scoring (SMSF metric).",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectrum-feature-vectorization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DeepEI \u2014 Predicts chemical fingerprints from vectorized spectra; processes the same m/z\u2013intensity inputs to extract fingerprint features used in similarity scoring",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:31.477136+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectrum-feature-vectorization/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "GitHub repository URL not mentioned in paper passages. Cannot verify from provided text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "spectrum-feature-vectorization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[canonical_url]",
+      "asbval:target_claim_text": "https://github.com/jhhung/PS2MS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:31.477136+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectrum-feature-vectorization/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we obtained mass spectrum data from the Scientific Working Group for the Analysis of Seized Drugs (SWGDRUG) for training and testing NEIMS. We then meticulously sampled, partitioned, and subsequently retrained NEIMS.",
+      "asbval:note": "Paper does not specify version numbers for NEIMS, DeepEI, or PS\u00b2MS, so null is appropriate.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectrum-feature-vectorization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[version_used]",
+      "asbval:target_claim_text": "version_used: null",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:31.477136+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-analysis-across-cohorts/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "While fingerprint-based identification alone did not exhibit superior effectiveness compared to spectrum-based identification... we explored various combinations of these metrics and evaluated them using the relative ranking performance (RRP)... Utilizing SMSF as the metric to guide the prioritization of matching derivatives led to further enhancement in performance. In the NIST and SWGDRUG data sets, over 90% and 85% of the test substances, respectively, ranked within the top 20 predictions",
+      "asbval:note": "Paper does evaluate model outputs across different cohorts (NIST vs SWGDRUG datasets, cathinone vs noncathinone, positive vs negative samples) and reports distributional statistics (ranking performance, sensitivity/specificity by class). However, the paper does not explicitly stratify by 'structural novelty' or use confidence score distributions as the primary analysis method. Instead, it uses ranking metrics (RRP) and similarity scores (SMSF). The stratification is by compound class/dataset type rather than by a continuous structural novelty variable.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "statistical-distribution-analysis-across-cohorts",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Stratify a model's prediction outputs (confidence scores, uncertainties) by a categorical grouping variable (e.g., structural novelty, compound class) and compute and visualize distributional statistics to reveal how model behavior varies across cohorts.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:48.264607+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-analysis-across-cohorts/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Among the 3 false negatives (i.e., MPHP, 4-CL-\u03b1-PVP, and TH-PVP), despite their correct predictions being at high ranks (see Figure 4a), they did not surpass the similarity threshold. The highest similarities of the three false negatives are 0.548, 0.525, and 0.509, respectively... The two false positives PS2MS predicted, MAPDB and MMA, are both amphetamine-like drugs and show highly similar features with cathinone",
+      "asbval:note": "Paper does identify systematic prediction failures (false negatives/positives) and notes that structurally similar compounds (amphetamine-like drugs vs cathinone) show degraded discrimination. However, the analysis is not framed as 'confidence degradation across out-of-distribution subsets' but rather as threshold-based classification failures and isomer confusion.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "statistical-distribution-analysis-across-cohorts",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill enables detection of systematic prediction bias or confidence degradation in out-of-distribution or novel compound subsets.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:48.264607+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-analysis-across-cohorts/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs the DeepEI deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint... A similarity metric based on the fingerprints of both the analyte and its derivatives can then be readily calculated... we explored various combinations of these metrics and evaluated them using the relative ranking performance (RRP)",
+      "asbval:note": "Paper uses deep learning models (NEIMS, DeepEI) and evaluates on heterogeneous datasets (NIST, SWGDRUG, real-world samples). However, the 'prediction scores' are similarity metrics (cosine, Jaccard, SMSF) and ranking performance (RRP), not softmax probabilities or explicit uncertainty estimates.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "statistical-distribution-analysis-across-cohorts",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have prediction scores (softmax probabilities, uncertainties) from a trained deep learning model evaluated on a heterogeneous dataset",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:48.264607+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-analysis-across-cohorts/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "A compound's fingerprint is a binary sequence composed of 0s and 1s, containing structural information that ensures distinct fingerprints for different compounds... The fingerprints of all of the derivatives in the NPS database can be easily transformed using their known structure representation during enumeration.",
+      "asbval:note": "Paper uses molecular fingerprints for stratification and matching, but does not explicitly name RDKit. The paper states fingerprints are computed but does not specify the tool. RDKit is a standard tool for this function, but the paper's actual implementation tool is not named.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "statistical-distribution-analysis-across-cohorts",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit: Compute molecular fingerprints (ECFP) and Tanimoto similarity for structural stratification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:48.264607+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-analysis-across-cohorts/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention PyTorch, TensorFlow, or any deep learning framework. The paper uses NEIMS and DeepEI models but does not specify the implementation framework or how model weights are loaded.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "statistical-distribution-analysis-across-cohorts",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PyTorch or TensorFlow: Load trained model weights and extract prediction confidence scores (softmax probabilities, logits) from the deep learning model",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:48.264607+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-analysis-across-cohorts/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Pandas. While the paper computes stratified statistics (sensitivity, specificity, F1 score by cohort), the tool used for aggregation is not specified.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "statistical-distribution-analysis-across-cohorts",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Pandas: Aggregate confidence scores by cohort membership and compute stratified summary statistics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:48.264607+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-analysis-across-cohorts/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Figure 3c. Distribution of different similarity metrics between the true and predicted data for the NIST test set... Figure 4b. Among the enumerated cathinones, the similarity score distributions for the cathinone-like drug \u03b1-PPP... Figure 5b. Distribution of the most similar similarity scores for one sample of Eutylone.",
+      "asbval:note": "Paper does generate distribution visualizations (Figures 3c, 4b, 5b show distributions of similarity scores across cohorts). However, the paper does not specify whether Matplotlib or Seaborn was used, nor does it explicitly show box plots or violin plots\u2014the figures appear to be histograms or scatter plots of similarity score distributions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "statistical-distribution-analysis-across-cohorts",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Matplotlib or Seaborn: Generate box plots and violin plots for cohort-wise distribution visualization",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:19:48.264607+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/structural-similarity-calculation-fingerprint-based/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "PS2MS employs molecular fingerprints27,28 to further facilitate the screening of the analyte's potential identity. A compound's fingerprint is a binary sequence composed of 0s and 1s, containing structural information that ensures distinct fingerprints for different compounds.",
+      "asbval:note": "Paper uses fingerprints (DeepEI model to convert mass spectrum to fingerprint) for compound identification and matching, but does NOT explicitly perform pairwise structural similarity stratification by novelty relative to training data. The fingerprint role in PS2MS is to match unknown analytes against enumerated derivatives, not to stratify evaluation sets by training-set distance. The paper does not discuss ECFP or Tanimoto similarity explicitly for novelty stratification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "structural-similarity-calculation-fingerprint-based",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute pairwise structural similarity between compounds using molecular fingerprints (e.g., ECFP, Tanimoto) to stratify evaluation sets by novelty relative to training data.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:09.638347+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/structural-similarity-calculation-fingerprint-based/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not investigate or report whether model confidence (e.g., SMSF scores) correlates with structural distance from training compounds. The paper validates PS2MS on known cathinones and real-world eutylone samples but does not stratify results by structural novelty or analyze confidence-distance relationships.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "structural-similarity-calculation-fingerprint-based",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "assessing whether a deep learning model's confidence varies predictably with structural distance from known compounds",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:09.638347+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/structural-similarity-calculation-fingerprint-based/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention RDKit. Fingerprints are generated using DeepEI (a deep learning model), not RDKit. The paper states: 'PS2MS employs the DeepEI30 deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint.' Fingerprints of enumerated derivatives are 'easily transformed using their known structure representation during enumeration' but the specific tool (RDKit vs. other cheminformatics library) is not named.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "structural-similarity-calculation-fingerprint-based",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit: Compute molecular fingerprints (e.g., ECFP) and Tanimoto similarity scores from SMILES or SDF structures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:09.638347+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/structural-similarity-calculation-fingerprint-based/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Pandas. While the paper does aggregate and report similarity scores (SMSF), it does not explicitly use Pandas or discuss tabular data manipulation tools. No evidence of novelty-stratum aggregation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "structural-similarity-calculation-fingerprint-based",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Pandas: Tabular data manipulation, aggregation of similarity scores and statistics by novelty stratum",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:09.638347+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/structural-similarity-calculation-fingerprint-based/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The distribution of metrics used to match between the predicted and true spectra is depicted in Figure 3c.",
+      "asbval:note": "Paper does visualize similarity score distributions (Figure 3c, 4b, 4c, 5b) but does not explicitly name Matplotlib or Seaborn. Visualizations are present but tool attribution is not stated. No explicit stratification by novelty categories is shown.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "structural-similarity-calculation-fingerprint-based",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Matplotlib or Seaborn: Visualize similarity distributions and prediction metrics across novelty categories using box plots and violin plots",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:09.638347+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/structural-similarity-calculation-fingerprint-based/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "Paper uses deep learning models (NEIMS, DeepEI) to generate predictions and confidence scores (SMSF), but does not explicitly mention PyTorch or TensorFlow. The paper does not discuss extracting confidence scores stratified by novelty; instead, it reports SMSF scores for all test compounds without novelty-based stratification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "structural-similarity-calculation-fingerprint-based",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PyTorch or TensorFlow: Load and run the deep learning model (e.g., PS2MS) to extract prediction confidence scores for compounds in each novelty stratum",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:09.638347+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/structural-similarity-calculation-fingerprint-based/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The fingerprints of all of the derivatives in the NPS database can be easily transformed using their known structure representation during enumeration. However, since the structure of the analyte is absent, PS2MS employs the DeepEI30 deep learning model to convert the analyte's mass spectrum into its corresponding fingerprint.",
+      "asbval:note": "Paper uses fingerprints but does not name RDKit or any specific cheminformatics library. Fingerprints are derived from structure representations during enumeration (method unspecified) and from mass spectra via DeepEI (a neural network, not a traditional cheminformatics tool). The functional role (fingerprint computation) is present but the specific tool is not identified.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "structural-similarity-calculation-fingerprint-based",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[RDKit or similar cheminformatics library]",
+      "asbval:target_claim_text": "RDKit or similar cheminformatics library for molecular fingerprint computation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:09.638347+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/structural-similarity-calculation-fingerprint-based/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper contains multiple figures with similarity distributions and ranking performance plots but does not explicitly name Matplotlib, Seaborn, or any visualization library. Tool attribution cannot be confirmed from the text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "structural-similarity-calculation-fingerprint-based",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[Matplotlib or Seaborn for visualization]",
+      "asbval:target_claim_text": "Matplotlib or Seaborn for visualization",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:09.638347+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tensor-encoding-deep-learning/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database and the structure representations (i.e., fingerprints) of the unidentified analyte, respectively.",
+      "asbval:note": "Paper uses SMILES and molecular structures as inputs to deep learning models (NEIMS, DeepEI), but does not explicitly describe a 'tensor encoding' step. The paper mentions 'extended circular fingerprints (ECFPs)' and 'simplified molecular input line entry system (SMILES)' as chemical structure representations fed to neural networks, but the specific tensor encoding process is not detailed in the passages provided. The functional goal (converting structures to neural network inputs) is present, but the explicit 'tensor encoding' methodology is not described.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "tensor-encoding-deep-learning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert parsed molecular structures (SMILES, canonical molecule objects, or extracted descriptors) into fixed-size numerical tensor representations compatible with deep learning model input layers.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:28.404784+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tensor-encoding-deep-learning/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The system leverages two deep learning models, NEIMS and DeepEI, to predict the mass spectrum of the enumerated substances in the NPS database... neural networks to convert chemical structure representations (i.e., extended circular fingerprints; ECFPs) into mass spectra",
+      "asbval:note": "Paper confirms NEIMS and DeepEI are used for mass spectrum and fingerprint prediction from chemical structures. However, the paper does not explicitly state that RDKit is used to create SMILES or molecule objects, nor does it detail the tensor encoding step. The paper mentions ECFPs as structure representations but does not describe how SMILES \u2192 tensor conversion occurs.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "tensor-encoding-deep-learning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have validated SMILES strings or RDKit molecule objects representing chemical structures and need to feed them into a pre-trained deep learning model (such as PS2MS, NEIMS, or DeepEI) that expects fixed-size numerical tensor inputs.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:28.404784+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tensor-encoding-deep-learning/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "RDKit is not mentioned anywhere in the provided passages. The paper discusses SMILES notation, molecular structures, and fingerprints (ECFPs), but does not name RDKit as the tool used for parsing or validation. The paper mentions 'simplified molecular input line entry system (SMILES)' and 'extended circular fingerprints (ECFPs)' but does not specify which software library (RDKit or alternative) performs the conversion.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "tensor-encoding-deep-learning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit: Parse, validate, and extract molecular descriptors and structural features (atom types, bond connectivity, graph topology) from SMILES strings into canonical molecule objects required by the tensor encoder",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:28.404784+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tensor-encoding-deep-learning/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "neural networks to convert chemical structure representations (i.e., extended circular fingerprints; ECFPs) into mass spectra, enabling researchers to expand the libraries with compounds with known structures. Directed message passing neural networks (D-MPNN) operate on molecular graphs based on chemical structures in the simplified molecular input line entry system (SMILES) notation",
+      "asbval:note": "Paper confirms that chemical structures (SMILES, ECFPs, molecular graphs) are converted into numerical representations for neural network input. However, the paper does not explicitly describe the output as 'fixed-size numerical tensors' \u2014 it discusses ECFPs and D-MPNN graph representations but does not detail tensor dimensionality or standardization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "tensor-encoding-deep-learning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Fixed-size numerical tensor representations compatible with deep learning model input layers",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:28.404784+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tensor-encoding-deep-learning/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages insufficient to judge. The paper describes the use of NEIMS and DeepEI for converting structures to spectra/fingerprints, but does not detail the internal tensor standardization, normalization, or dimensionality-matching procedures within those models.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "tensor-encoding-deep-learning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "Standardizing feature dimensions and value ranges for neural network compatibility",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:20:28.404784+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-featurization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "chemical-structure-featurization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-extraction-from-neural-networks/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "confidence-score-extraction-from-neural-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.125,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/confidence-score-interpretation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "confidence-score-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.625,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-model-inference/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "deep-learning-model-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-normalization-standardization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "feature-normalization-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-preprocessing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "mass-spectrometry-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5714285714285714,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-descriptor-extraction/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 3,
+      "asbval:target_artifact_id": "molecular-descriptor-extraction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-classification-prediction/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "nps-classification-prediction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.875,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/nps-structural-diversity-stratification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "nps-structural-diversity-stratification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-and-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "smiles-parsing-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.3333333333333333,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectrum-feature-vectorization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "spectrum-feature-vectorization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.42857142857142855,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-analysis-across-cohorts/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "statistical-distribution-analysis-across-cohorts",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/structural-similarity-calculation-fingerprint-based/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "structural-similarity-calculation-fingerprint-based",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tensor-encoding-deep-learning/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "tensor-encoding-deep-learning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "PS\u00b2MS is a repository for an NYCU JHHLab NPS detection project.",
+      "asbval:note": "substring_in_paper=false; text adds 'PS\u00b2MS is a' framing and 'NYCU JHHLab' identifier which are consistent with source but not directly verified in paper text",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:source_excerpt": "Repository for NYCU JHHLab NPS detection project.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:10.197354+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "PS\u00b2MS is a deep learning-based prediction system for detecting novel new psychoactive substances using mass spectrometry.",
+      "asbval:note": "substring_in_paper=false; text accurately paraphrases the source excerpt (appears to be a title), but verification requires confirmation that this describes PS\u00b2MS specifically",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c05019",
+      "asbval:source_excerpt": "A Deep Learning-Based Prediction System for Detecting Novel New Psychoactive Substances Using Mass Spectrometry",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:15:10.197354+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_ps2ms#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_sys_ps2ms",
+      "title": "PS2MS",
+      "identifier": "urn:asb:spine:sys_ps2ms"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_domain_nps",
+      "title": "NPS",
+      "identifier": "urn:asb:spine:domain_nps"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_mass_spectrometry",
+      "title": "Mass Spectrometry",
+      "identifier": "urn:asb:spine:tool_mass_spectrometry"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_component_deep_learning",
+      "title": "Deep Learning Predictor",
+      "identifier": "urn:asb:spine:component_deep_learning"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_pub_ps2ms_paper",
+      "title": "PS2MS Publication",
+      "identifier": "urn:asb:spine:pub_ps2ms_paper"
+    }
+  ]
+}

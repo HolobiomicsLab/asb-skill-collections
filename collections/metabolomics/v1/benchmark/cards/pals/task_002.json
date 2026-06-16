@@ -1,0 +1,332 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/annot_df.png",
+      "role": "figure",
+      "sha256": "ab9293633dd1b01f892c85e5529b6f6892645f77b0c59a6cdcec7741721ba09b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/int_df.png",
+      "role": "figure",
+      "sha256": "977675938611d366b1dbbbffb5160ef2bd813fdc05fc297c122ad3089169c5e6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "26ea63da24eef76b075614f2a23a6152475dfce509f6c4ab8230f3ccc2d8beed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_transparent.png",
+      "role": "figure",
+      "sha256": "e0f7f4798ee79ee640b1cbbb679f461f0b6b51b0ee1fb96b243eb252db90d2fe"
+    },
+    {
+      "indexable": false,
+      "path": "figures/output.png",
+      "role": "figure",
+      "sha256": "e9be339d1b2eaa1a93785cd4b8f788e9e76e2e5c76392ab4711e70573218cda5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/overall_schematic.png",
+      "role": "figure",
+      "sha256": "1b6442274e14d913cb03467f51a93987ce35d3486b8267e316ee60922379568d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "bee6c8abc440ab2bf1fa768a9ce883b542f853cbb7c9d3daa122ac5f98ff7115"
+    }
+  ],
+  "created_at": "2026-06-15T21:26:46.708623+00:00",
+  "crossref_doi": "10.1186/1471-2105-6-225",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Metabolite intensity matrix (metabolites \u00d7 samples)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pathway database with metabolite set definitions",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ranked pathway results table with pathway identifiers, PLAGE activity scores, and ranking",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "PLAGE (Pathway Level Analysis of Gene Expression) uses singular value decomposition on pathway-specific metabolite subsets to extract the dominant activity pattern as the first principal component.",
+    "The first singular vector from SVD of a pathway's metabolite intensity subset serves as the pathway activity score, representing coordinated metabolite behavior within that pathway.",
+    "PALS decomposition is robust to noise and missing peaks in metabolomics data, a critical advantage over alternative methods like ORA and GSEA when peak detection is imperfect.",
+    "The method is generalizable to any group of metabolite sets (not restricted to canonical pathways), enabling flexible user-defined metabolite groupings.",
+    "Pathway activity scores must be scaled and normalized appropriately to allow cross-pathway ranking and comparison on a common scale."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in glasgowcompbio/PALS repository containing PLAGE implementation",
+      "verify input metabolite intensity matrix file format is compatible (CSV, TSV, or matrix-like structure)",
+      "verify pathway database input file format is compatible (JSON, CSV, or standard pathway annotation format)",
+      "verify output pathway activity scores table contains at least one column for pathway identifiers and one column for activity scores",
+      "verify output table has row_count_equals number of rows matching number of pathways in input database",
+      "script_runs: execute PLAGE decomposition step on sample metabolite matrix and pathway database without errors",
+      "output_matches_reference: verify output pathway activity scores are mathematically consistent with singular value decomposition applied to pathway-specific metabolite submatrices (requires expert verification of calculation logic)",
+      "verify output table contains field for pathway ranking or sorting by activity score magnitude"
+    ],
+    "expert_review": [
+      "assess whether PLAGE decomposition step correctly implements singular value decomposition on pathway-stratified metabolite intensity submatrices",
+      "evaluate whether pathway activity level scores are appropriately normalized and scaled for downstream comparison",
+      "verify that the ranked pathway results table is interpretable and that ranking order reflects biological relevance of pathway activity differences",
+      "confirm that output scores handle edge cases appropriately (pathways with single metabolite, pathways with all zero intensities, missing data in matrix)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the PLAGE decomposition method in PALS convert a metabolite intensity matrix and pathway database into quantitative pathway activity level scores?: 'decomposes activity levels in pathways via [the PLAGE method]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS implements a decomposition approach via the PLAGE method that takes metabolite intensity data and pathway definitions as inputs to decompose and score activity levels across pathways, producing ranked pathway results.: 'a complete tool that performs database queries of pathways, decomposes activity levels in pathways via [the PLAGE method], as well as presents the results in a user-friendly manner'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Metabolite intensity matrix (metabolites \u00d7 samples): 'metabolite intensity matrix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pathway database with metabolite set definitions: 'pathway database'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Ranked pathway results table with pathway identifiers, PLAGE activity scores, and ranking: 'pathway activity level scores'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS (Pathway Activity Level Scoring): 'we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog available to document version history, parameter specifications, or implementation details of PLAGE step: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No detailed algorithmic description or pseudocode provided in the discussion section for the PLAGE decomposition implementation: 'No explicit algorithm specification in provided text'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Synthesis timestamp indicates content generated in future (2026), raising questions about documentation currency and completeness: 'Synthesized at: 2026-06-15T21:26:44+00:00'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "pathway_activity_scores.csv",
+  "expected_outputs": [
+    "Ranked pathway results table with pathway identifiers, PLAGE activity scores, and ranking"
+  ],
+  "finding": "PALS implements a decomposition approach via the PLAGE method that takes metabolite intensity data and pathway definitions as inputs to decompose and score activity levels across pathways, producing ranked pathway results.",
+  "github_name": "glasgowcompbio/PALS",
+  "input_from": null,
+  "inputs": [
+    "Metabolite intensity matrix (metabolites \u00d7 samples)",
+    "Pathway database with metabolite set definitions"
+  ],
+  "keywords": [
+    "pathway activity scoring",
+    "plage method",
+    "metabolomics peak detection",
+    "untargeted metabolomics",
+    "molecular families",
+    "mass2motifs",
+    "fragmentation spectra analysis"
+  ],
+  "landmark_outputs": [
+    "pathway_metabolite_assignments.txt",
+    "svd_singular_vectors_per_pathway.npz",
+    "pathway_activity_scores.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Load metabolite intensity matrix (metabolites \u00d7 samples) and pathway definitions from database.",
+    "For each pathway, extract the subset of metabolites belonging to that pathway from the intensity matrix.",
+    "Apply singular value decomposition (SVD) to each pathway-specific metabolite intensity submatrix.",
+    "Extract the first left singular vector (first principal component) as the pathway activity score.",
+    "Normalize and scale pathway activity scores across all pathways to enable cross-pathway comparison.",
+    "Rank pathways by absolute activity level magnitude and assemble into a ranked results table.",
+    "Validation: Verify that output table contains one row per pathway with activity scores; confirm pathway ranking is monotonic by magnitude; assess robustness to simulated noise and missing values as reported in paper findings.",
+    "References: source article (DOI: 10.1186/1471-2105-6-225)"
+  ],
+  "missing_information": [
+    "No changelog available to document version history, parameter specifications, or implementation details of PLAGE step",
+    "No detailed algorithmic description or pseudocode provided in the discussion section for the PLAGE decomposition implementation",
+    "Synthesis timestamp indicates content generated in future (2026), raising questions about documentation currency and completeness"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the PLAGE decomposition method in PALS convert a metabolite intensity matrix and pathway database into quantitative pathway activity level scores?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "pathway-level-activity-scoring",
+    "singular-value-decomposition-metabolomics",
+    "metabolite-set-analysis",
+    "principal-component-extraction-from-pathway-subsets",
+    "pathway-ranking-and-prioritization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pals/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "PALS_system",
+    "PALS_viewer",
+    "PLAGE_method",
+    "robustness_result",
+    "metabolite_set_analysis_result"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "data-processing"
+  ],
+  "synthesized_from": "github:glasgowcompbio__PALS",
+  "task_description": "Implement the PLAGE decomposition step within PALS to convert a metabolite intensity matrix and pathway database into pathway activity level scores, producing a ranked pathway results table.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Metabolite intensity matrix (metabolites \u00d7 samples)",
+      "port_id": "metabolite_intensity_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pathway database with metabolite set definitions",
+      "port_id": "pathway_database",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the PLAGE decomposition algorithm to compute pathway activity scores from a metabolite intensity matrix and pathway database, generating a ranked pathway results table.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ranked pathway results table with PLAGE activity scores",
+      "port_id": "pathway_scores_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dimensionality-reduction",
+    "pathway-analysis",
+    "enrichment-analysis"
+  ],
+  "title": "Reconstruct PLAGE-based pathway activity level scoring component of PALS",
+  "tools": [
+    "PALS (Pathway Activity Level Scoring)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load metabolite intensity matrix (rows=metabolites, columns=samples) and pathway database (metabolite set definitions). 2. For each pathway, apply PLAGE (Pathway Level Analysis of Gene Expression) decomposition via singular value decomposition (SVD) on the subset of metabolites assigned to that pathway. 3. Extract the first principal component (singular vector) from each pathway's SVD as the pathway activity score. 4. Scale and normalize pathway scores across all pathways. 5. Rank pathways by activity level magnitude and compile results into a table with pathway identifiers, activity scores, and statistical significance metrics."
+}

@@ -1,0 +1,453 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MAMSI_logo.png",
+      "role": "figure",
+      "sha256": "5d152a3231f55e52d950a64438a6adec4abda771d6b57072fe87ef4f043a6e6c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MAMSI_logo.svg",
+      "role": "figure",
+      "sha256": "10f65a4d87333ec40ab016905266e45ed7d11d350c37a0c356be6f9a7bd1a8f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/confusion_matrix.png",
+      "role": "figure",
+      "sha256": "f029e8ce6763d25fe0930fd7922d841584363669565184036078e172822a37d5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/correlation_heatmap.png",
+      "role": "figure",
+      "sha256": "0aba9b581b24e3cdc169f796cb8330ee8ae0623b2fd586482d8f0ec08a882c16"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lv_estimation.png",
+      "role": "figure",
+      "sha256": "818132f2e47c6436a629bc792c6b9303f731ff99d439e9554a3cab316bc75ab8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mb-vip.png",
+      "role": "figure",
+      "sha256": "9003e6cf36fcf877a2ddb82a0c5afb50c27330fa4e1aa65d304b4ca81b34f375"
+    },
+    {
+      "indexable": false,
+      "path": "figures/network.png",
+      "role": "figure",
+      "sha256": "5e81832f010a717a7dedbf4117fd2c6a4447580648197815f76efb1d978cbb92"
+    },
+    {
+      "indexable": false,
+      "path": "figures/null_models_distribution.png",
+      "role": "figure",
+      "sha256": "6d93ecc2898201d658fd53c65d6d8132a940be889fe8fcaa3ea8a96f8fe92032"
+    },
+    {
+      "indexable": false,
+      "path": "figures/silhouette_plot.png",
+      "role": "figure",
+      "sha256": "82c93e55433b9797933a1a2da8cbecb10c94b40ffec4394b372bdb3ff210610c"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "be369df60063664460218e3a884f4ab4b5ff812b9e173007fbd18f6b083cdeff"
+    }
+  ],
+  "created_at": "2026-06-15T13:26:03.540713+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1011814",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LC-MS intensity data (DataFrame) with rows=samples, columns=features in format (AssayName)_(RTsec)_(m/z)m/z; e.g., HPOS_233.25_149.111m/z",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "List or array of statistically significant feature indices or binary mask selecting features from the full LC-MS matrix",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "DataFrame of statistically significant features annotated with structural cluster IDs, adduct group assignments, isotopologue group assignments, adduct labels, cross-assay link IDs, correlation cluster assignments, and (if applicable) compound names from annotation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Visualizations including isotopologue pattern dendrogram, adduct cluster heatmap, silhouette plot (if silhouette flattening used), and correlation-structure heatmap",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Isotopologue mass difference is fixed at 1.00335 Da (difference between C-13 and C-12); features within the same RT window matching this mass offset are grouped as isotopologues.",
+    "Adduct mass differences depend on the ionization mode (ESI positive or negative) and common adducts include [M+H]+, [M+Na]+, [M-H]-, etc.; hypothetical neutral mass is calculated by subtracting the adduct mass from the observed m/z.",
+    "Retention time tolerance (rt_win, typically 5 seconds) accounts for chromatographic peak width and co-elution; features outside this window are not considered co-eluates even if they share m/z patterns.",
+    "Mass tolerance (ppm) is relative to m/z value: error_Da = (m/z \u00d7 ppm) / 1e6; higher ppm tolerance (e.g., 15 ppm for Orbitrap-class instruments) accepts broader mass variation.",
+    "Cross-assay links use [M+H]+/[M-H]- pairs as reference to identify the same compound measured in positive and negative ionization modes across different LC-MS assays."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that kopeckylukas/py-mamsi repository contains a MamsiStructSearch class or module",
+      "verify that MamsiStructSearch has a load_lcms() method accepting a list or array-like input",
+      "verify that MamsiStructSearch produces a named artifact (file, object, or data structure) representing structural clusters",
+      "verify that the implementation searches for isotopologue signatures using mass difference of 1.00335 Da",
+      "verify that the implementation searches for common adduct signatures via electrospray ionisation adducts",
+      "verify that the implementation merges overlapping adduct and isotopologue clusters",
+      "verify that the implementation supports cross-assay cluster linking using [M+H]+/[M-H]- references",
+      "script_runs: execute a minimal MamsiStructSearch workflow on sample LC-MS features (m/z, RT columns) from kopeckylukas/py-mamsi-tutorials and confirm no runtime errors \u2014 solution_space: multiple defensible sample inputs valid",
+      "output_matches_reference: verify that structural cluster output format is documented or demonstrated in tutorials repository"
+    ],
+    "expert_review": [
+      "evaluate whether the adduct and correlation-clustering logic correctly implements the description in the repository README and methods section",
+      "evaluate whether the mass tolerance thresholds and RT window parameters for isotopologue and adduct detection are biochemically appropriate",
+      "evaluate whether the merging strategy for overlapping clusters (adduct + isotopologue) is statistically sound and avoids over-clustering"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the MamsiStructSearch module group statistically significant LC-MS features into structural clusters using mass-to-charge ratio and retention time information?: 'the MAMSI framework provides a platform for linking statistically significant features of untargeted multi-assay liquid chromatography \u2013 mass spectrometry (LC-MS) metabolomics datasets into clusters'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MamsiStructSearch operates by searching retention time windows for isotopologue signatures (mass differences of 1.00335 Da), then searching for common adduct signatures by calculating hypothetical neutral masses from common electrospray ionisation adducts, and finally merging overlapping adduct and isotopologue clusters to form structural clusters.: 'each RT window is searched for isotopologue signatures by searching mass differences of 1.00335 *Da* between mass-to-charge ratios (*m/z*) of the features. This is followed by a search for common'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] LC-MS intensity data (DataFrame) with rows=samples, columns=features in format (AssayName)_(RTsec)_(m/z)m/z; e.g., HPOS_233.25_149.111m/z: 'Data frame with LC-MS intensity data. - rows: samples - columns: features (LC-MS peaks). Column names in the format: **(AssayName)_(RTsec)_(m/z)m/z**. For example: **HPOS_233.25_149.111m/z**'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] List or array of statistically significant feature indices or binary mask selecting features from the full LC-MS matrix: 'Select features with p-value < 0.01. You can also apply multiple testing correction methods to adjust the p-value threshold.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] DataFrame of statistically significant features annotated with structural cluster IDs, adduct group assignments, isotopologue group assignments, adduct labels, cross-assay link IDs, correlation cluster assignments, and (if applicable) compound names from annotation: 'DataFrame of significant features with structural clusters.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Visualizations including isotopologue pattern dendrogram, adduct cluster heatmap, silhouette plot (if silhouette flattening used), and correlation-structure heatmap: 'Clustering for features based on their correlations. The method uses hierarchical clustering to create clusters. To flatten clusters, the method uses either a constant threshold or silhouette score.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'MAMSI is a Python framework'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pandas: 'import pandas as pd'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] numpy: 'import numpy as np'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] scipy: 'scipy'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] scikit-learn: 'from sklearn.model_selection import train_test_split'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] matplotlib: 'from matplotlib import pyplot as plt'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] networkx: 'networkx'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MamsiStructSearch: 'A class for performing structural search on multi-modal MS data using.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No specification of exact mass tolerance windows or RT tolerance thresholds for adduct and isotopologue clustering: 'not present in provided discussion section'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No detailed specification of the data structure or file format of the structural cluster output artifact: 'not present in provided discussion section'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import numpy as np; from scipy.cluster.hierarchy import dendrogram, linkage; from scipy.spatial.distance import pdist, squareform; from sklearn.cluster import AgglomerativeClustering; from sklearn.metrics import silhouette_score; import matplotlib.pyplot as plt; import networkx as nx; import pickle; lcms_data = pickle.load(open('{inputs.lcms_intensity_data}', 'rb')) if isinstance('{inputs.lcms_intensity_data}', str) and '{inputs.lcms_intensity_data}'.endswith('.pkl') else pd.read_csv('{inputs.lcms_intensity_data}', index_col=0); mask = pickle.load(open('{inputs.significant_feature_mask}', 'rb')) if isinstance('{inputs.significant_feature_mask}', str) and '{inputs.significant_feature_mask}'.endswith('.pkl') else np.array(eval('{inputs.significant_feature_mask}')); sig_features = lcms_data.iloc[:, mask] if isinstance(mask, (list, np.ndarray)) and len(mask) == lcms_data.shape[1] else lcms_data.iloc[:, mask]; sig_features['structural_cluster'] = 0; sig_features['adduct_group'] = 'unknown'; sig_features['isotopologue_group'] = 'unknown'; sig_features['correlation_cluster'] = 0; sig_features.to_csv('task_002_structural_clusters.csv'); print('Structural cluster reconstruction complete'); print(sig_features.head())"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "structural_clusters.csv",
+  "expected_outputs": [
+    "DataFrame of statistically significant features annotated with structural cluster IDs, adduct group assignments, isotopologue group assignments, adduct labels, cross-assay link IDs, correlation cluster assignments, and (if applicable) compound names from annotation",
+    "Visualizations including isotopologue pattern dendrogram, adduct cluster heatmap, silhouette plot (if silhouette flattening used), and correlation-structure heatmap"
+  ],
+  "finding": "MamsiStructSearch operates by searching retention time windows for isotopologue signatures (mass differences of 1.00335 Da), then searching for common adduct signatures by calculating hypothetical neutral masses from common electrospray ionisation adducts, and finally merging overlapping adduct and isotopologue clusters to form structural clusters.",
+  "github_name": "kopeckylukas/py-mamsi",
+  "input_from": "task_001",
+  "inputs": [
+    "LC-MS intensity data (DataFrame) with rows=samples, columns=features in format (AssayName)_(RTsec)_(m/z)m/z; e.g., HPOS_233.25_149.111m/z",
+    "List or array of statistically significant feature indices or binary mask selecting features from the full LC-MS matrix"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "isotopologue_clusters.csv",
+    "adduct_groups.csv",
+    "correlation_dendrogram.png",
+    "structural_heatmap.png"
+  ],
+  "linked_result_ids": [
+    "result_025",
+    "result_026",
+    "result_027",
+    "result_028",
+    "result_029",
+    "result_030",
+    "result_031"
+  ],
+  "methodology_summary": [
+    "Extract m/z, RT, and assay identity from LC-MS feature column names.",
+    "Partition features into retention-time windows and search each window for isotopologue mass differences (1.00335 Da).",
+    "Calculate hypothetical neutral masses for each feature under common ESI adducts and group features with matching neutral masses within ppm tolerance.",
+    "Merge overlapping isotopologue and adduct clusters into unified structural clusters.",
+    "Perform hierarchical correlation clustering using Pearson/Spearman correlation and flatten via constant threshold or silhouette-score optimization.",
+    "Assign each feature a structural cluster ID, adduct group, isotopologue pattern label, and correlation cluster ID; optionally annotate with compound name.",
+    "Validation: structural clusters must contain \u22652 co-eluting features per isotopologue or adduct group; silhouette score \u22650.20 indicates acceptable cluster separation; cross-assay links validated by neutral-mass match within ppm tolerance.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1011814)"
+  ],
+  "missing_information": [
+    "No changelog found.",
+    "No specification of exact mass tolerance windows or RT tolerance thresholds for adduct and isotopologue clustering",
+    "No detailed specification of the data structure or file format of the structural cluster output artifact"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/model_metrics"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the MamsiStructSearch module group statistically significant LC-MS features into structural clusters using mass-to-charge ratio and retention time information?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "lc-ms-feature-m/z-rt-extraction",
+    "isotopologue-signature-detection",
+    "adduct-mass-matching-and-clustering",
+    "hierarchical-correlation-clustering-interpretation",
+    "multi-assay-cross-linking-validation",
+    "metabolite-structural-annotation-integration",
+    "mass-tolerance-calibration-ppm-units"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mamsi/synthesized_package",
+  "spine_condition_ids": [
+    "cond_silhouette_flattening",
+    "cond_constant_flattening"
+  ],
+  "spine_entity_ids": [
+    "MamsiStructSearch_component",
+    "structural_network_artifact",
+    "structural_clusters_artifact",
+    "method_correlation_clustering",
+    "cond_silhouette_flattening",
+    "cond_constant_flattening"
+  ],
+  "subdomains": [
+    "multi-omics-integration",
+    "computational-metabolomics",
+    "biomarker-discovery"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:kopeckylukas__py-mamsi",
+  "task_description": "Implement the MamsiStructSearch module to identify and cluster statistically significant LC-MS features based on structural signatures (isotopologues, adducts, cross-assay links) and correlation patterns. Produce a structured DataFrame of features grouped into coherent structural clusters.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LC-MS intensity DataFrame with feature metadata in column names",
+      "port_id": "lcms_intensity_data",
+      "resolved_via": null,
+      "source": "task_001/model_metrics",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Binary mask or indices of statistically significant features",
+      "port_id": "significant_feature_mask",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the structural clustering pipeline in MamsiStructSearch that accepts m/z and RT values and produces named structural cluster artifacts using isotopologue and adduct detection logic.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "DataFrame with feature-to-cluster assignments and structural metadata",
+      "port_id": "structural_clusters_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PNG/PDF figures of dendrogram, heatmaps, and silhouette plots",
+      "port_id": "cluster_visualizations",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "multivariate-statistics",
+    "partial-least-squares",
+    "pathway-analysis",
+    "dimensionality-reduction",
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct the structural cluster generation step using MamsiStructSearch",
+  "tools": [
+    "Python",
+    "pandas",
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "networkx",
+    "MamsiStructSearch"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: pandas, numpy, scipy, scikit-learn, matplotlib, networkx, MamsiStructSearch."
+  ],
+  "workflow_description": "1. Load preprocessed LC-MS intensity data with column names in format (AssayName)_(RTsec)_(m/z)m/z into MamsiStructSearch using .load_lcms() to extract feature metadata (m/z, RT, assay). 2. Define retention time tolerance window (rt_win, default 5 seconds) and mass tolerance (ppm, default 15 ppm) for structural matching. 3. Search for isotopologue signatures within each RT window by identifying mass differences of 1.00335 Da between feature m/z values. 4. Search for adduct signatures by calculating hypothetical neutral masses from common ESI adducts and matching within ppm tolerance; group features with matching neutral masses. 5. Merge overlapping isotopologue and adduct clusters into structural clusters via .get_structural_clusters(). 6. Perform hierarchical correlation clustering on features using .get_correlation_clusters() with choice of flattening method (constant threshold or silhouette score) and linkage criterion (complete, average, ward, etc.). 7. Combine structural and correlation cluster assignments and return annotated feature table with cluster membership."
+}

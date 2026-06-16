@@ -1,0 +1,459 @@
+schema_version: 0.1.0
+workflow_id: coll_spectra_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: This vignette describes the MsBackend virtual class API and illustrates
+    how to create a new backend class (MsBackendTest) for the Spectra package that
+    represents and provides mass spectrometry data.
+  pseudo_abstract: "Reproduces 3 reported results: The spectraData() implementation\
+    \ for MsBackendTest uses fillCoreSpectraVariables() to ensure that all core spectra\
+    \ variables are returned, filling missing ones with NA values even when only user-supplied\
+    \ variables like msLevel and rtime are stored. The mz<- replacement method uses\
+    \ the efficient is.unsorted() implementation for NumericList rather than vapply,\
+    \ and raises a stop error when any spectrum has unsorted m/z values: 'if (any(is.unsorted(value)))\
+    \ stop(\"m/z values need to be increasingly sorted within each spectrum\")' Pre-populating\
+    \ @spectraVars with all core spectra variables increases memory footprint because\
+    \ all variables, including those with only missing values, must be stored in the\
+    \ object, whereas on-the-fly initialization via fillCoreSpectraVariables() avoids\
+    \ storing empty columns but may be less efficient for data extraction. Reconstructs\
+    \ 2 described mechanisms (described in the paper but not separately evaluated\
+    \ there): MsBackendTest requires implementation of 9 required accessor methods\
+    \ (spectraData, spectraVariables, backendInitialize, peaksData, extractByIndex,\
+    \ backendMerge, intensity, mz, spectraNames) plus 7 data replacement methods ($<-,\
+    \ spectraData<-, intensity<-, mz<-, peaksData<-, selectSpectraVariables, dataStorage<-,\
+    \ spectraNames<-) with specific signatures. The class uses three slots: spectraVars\
+    \ (data.frame), mz (NumericList), and intensity (NumericList), where each row\
+    \ in spectraVars represents one spectrum and corresponding elements in mz/intensity\
+    \ lists contain peak data. MsBackendMzR's backendParallelFactor() returns a factor\
+    \ based on dataStorage file names to split the backend for parallel or serial\
+    \ processing. Chunk-wise processing via this splitting reduces memory demand because\
+    \ only the peak data of the current chunk\u2014not all spectra\u2014needs to be\
+    \ realized in memory during operations."
+  research_questions:
+  - What are the required method signatures and implementations needed to create a
+    complete MsBackendTest class that extends MsBackend and provides full read-write
+    access to mass spectrometry spectral data?
+  - Does the spectraData() method on a MsBackendTest instance correctly return all
+    core spectra variables with NA values when only user-supplied spectra variables
+    are stored in the backend?
+  - Does the mz<- replacement method for MsBackendTest correctly validate that m/z
+    values are increasingly sorted within each spectrum, and does it use an efficient
+    vectorised is.unsorted() implementation on NumericList objects rather than vapply?
+  - Does pre-populating the @spectraVars data frame with all core spectra variable
+    columns consume more memory than adding missing columns on-the-fly during spectraData()
+    calls?
+  - How does the backendParallelFactor() method for MsBackendMzR enable chunk-wise
+    splitting of backend data during parallel processing, and what is the memory advantage
+    of processing spectra in chunks rather than loading all peak data into memory
+    at once?
+  methods_summary: 'Define S4 class MsBackendTest extending MsBackend with typed slots
+    for spectraVars, mz, and intensity data Implement core accessor methods (spectraData,
+    spectraVariables, peaksData, intensity, mz, spectraNames) following DataFrame/NumericList
+    conventions Implement backend lifecycle methods (backendInitialize) and collection
+    operations (extractByIndex, backendMerge, [) Implement data replacement methods
+    (intensity<-, mz<-, spectraData<-) ensuring m/z values remain sorted Validation:
+    class instantiation succeeds, all required methods execute without error, output
+    types match API contract (DataFrame, NumericList, character vector) Define a MsBackendTest
+    class extending the virtual MsBackend with slots for user-supplied variables and
+    peak data Implement required accessor methods (spectraData, spectraVariables,
+    peaksData, intensity, mz, extractByIndex) according to the MsBackend API Invoke
+    fillCoreSpectraVariables() within spectraData() to populate missing core spectra
+    variables with NA Return a DataFrame containing both user-supplied and filled
+    core variables Validation: verify that spectraData() output contains all expected
+    core spectra variables and user-supplied variables are preserved with NA values
+    for missing core columns Retrieve MsBackendTest implementation from the Spectra
+    package repository. Extract and inspect the mz<- replacement method code to verify
+    vectorised is.unsorted() usage on NumericList input. Test assignment of correctly
+    sorted m/z values and confirm no error is raised. Test assignment of unsorted
+    m/z values and confirm an appropriate error is raised. Validation: method correctly
+    detects unsorted input via is.unsorted() and rejects invalid m/z assignments while
+    accepting valid sorted assignments. Instantiate MsBackendTest with all core spectra
+    variables pre-populated in @spectraVars slot. Instantiate a second MsBackendTest
+    with minimal @spectraVars and allow fillCoreSpectraVariables() to populate columns
+    during spectraData() call. Measure R object memory footprint using object.size()
+    before and after each spectraData() invocation. Record wall-clock execution time
+    for spectraData() on both variants using system.time(). Validation: Compare memory
+    sizes and document the percentage overhead and latency difference; confirm both
+    variants produce identical DataFrame output from spectraData(). Define S4 class
+    extending MsBackend with slots for spectra variables, m/z, and intensity data
+    Implement backendInitialize() to load raw MS data files and populate dataStorage
+    metadata Implement backendParallelFactor() to extract unique file paths from dataStorage
+    and return a grouping factor Implement peaksData() to extract and return m/z and
+    intensity matrices with index-based subsetting support Benchmark memory consumption:
+    measure peak-data memory footprint for whole-load versus chunk-wise splitting
+    approaches Validation: memory usage in chunk-wise approach is statistically lower
+    than whole-load approach; factor correctly groups all spectra by source file'
+  domain: bioinformatics
+  techniques:
+  - feature-detection
+  - spectral-library-matching
+  claims:
+  - claim_text: The Spectra package defines an efficient infrastructure for storing
+      and handling mass spectrometry spectra and functionality to subset, process,
+      visualize and compare spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The Spectra package separates the code for the analysis of MS data
+      from the code needed to import, represent and provide the data.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: Each Spectra object contains an implementation of a MsBackend within
+      its @backend slot which provides the MS data to the Spectra object.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The MsBackend virtual class defines the API that new backend classes
+      need to implement in order to be used with the Spectra object.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: This separation allows to define new, alternative, data representations
+      and integrate them seamlessly into a Spectra-based data analysis workflow.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: One Spectra object is supposed to contain MS spectral data of multiple
+      MS spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: m/z values within each spectrum are expected to be sorted increasingly.
+    claim_type: finding
+    speculative: false
+  - claim_text: Missing values (NA) for m/z values are not supported.
+    claim_type: finding
+    speculative: false
+  - claim_text: Properties of a spectrum are called spectra variables.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: Each backend must provide a minimum required set of core spectra variables
+      listed by the coreSpectraVariables() function.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: dataStorage and dataOrigin are special spectra variables that define
+      where the data is stored and from where the data derived.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: Both dataStorage and dataOrigin must be of type character and need
+      to be defined by the backend.
+    claim_type: finding
+    speculative: false
+    entity_id: datastorage_variable
+  - claim_text: MsBackend implementations can represent purely read-only data resources
+      where only data accessor methods need to be implemented but not data replacement
+      methods.
+    claim_type: finding
+    speculative: false
+    entity_id: msbackend_virtual_class
+  - claim_text: Whether a backend is read-only can be set with the @readonly slot
+      of the virtual MsBackend class.
+    claim_type: finding
+    speculative: false
+    entity_id: msbackend_virtual_class
+  - claim_text: The default value for @readonly is FALSE, requiring all data replacement
+      methods to be implemented.
+    claim_type: finding
+    speculative: false
+  - claim_text: For read-only backends (@readonly = TRUE) only the methods in the
+      Required methods section need to be implemented.
+    claim_type: finding
+    speculative: false
+  - claim_text: The MsBackendMzR backend allows changing spectra variables but not
+      the peaks data (m/z and intensity values).
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: Backends for purely read-only resources could extend the MsBackendCached
+      from the Spectra package to enable support for modifying or adding spectra variables.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The Spectra package splits the backend based on a defined factor and
+      processes each in parallel for parallel processing.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The default implementation for backendParallelFactor() returns an
+      empty factor, not suggesting any preferred splitting.
+    claim_type: finding
+    speculative: false
+    entity_id: backendparallelfactor_method
+  - claim_text: The backendParallelFactor() for MsBackendMzR returns a factor based
+      on the data files the data is stored in.
+    claim_type: finding
+    speculative: false
+    entity_id: msbackend_mzr
+  - claim_text: Chunk-wise processing can reduce the memory demand for operations
+      because only the peak data of the current chunk needs to be realized in memory.
+    claim_type: finding
+    speculative: false
+  - claim_text: The spectraData() method should return the full spectra data within
+      a backend as a DataFrame object.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: Each row in the DataFrame returned by spectraData() should represent
+      one spectrum and each column a spectra variable.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: Columns mz and intensity (if requested) must contain each a NumericList
+      with the m/z and intensity values of the spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The DataFrame returned by spectraData() must provide values for all
+      requested spectra variables of the backend including the core spectra variables.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The spectraVariables() method should return a character vector with
+      the names of all available spectra variables of the backend.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: Each MsBackend class must provide the core spectra variables in the
+      correct data type.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: Core spectra variables can be NA with the exception of the spectra
+      variable dataStorage.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The backendInitialize() method is expected to be called after creating
+      an instance of the backend class and should prepare the backend.
+    claim_type: finding
+    speculative: false
+    entity_id: backendinitialize_method
+  - claim_text: During backendInitialize() the special spectra variables dataStorage
+      and dataOrigin are usually set.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The peaksData() method extracts the MS peaks data from a backend,
+      including the m/z and intensity values of each MS peak of a spectrum.
+    claim_type: finding
+    speculative: false
+    entity_id: peaksdata_method
+  - claim_text: peaksData() is expected to return a List of numerical matrices with
+      columns being the requested peaks variables of one spectrum.
+    claim_type: finding
+    speculative: false
+    entity_id: peaksdata_method
+  - claim_text: Backends must provide at least mz and intensity as peaks variables.
+    claim_type: finding
+    speculative: false
+    entity_id: intensity_method
+  - claim_text: The extractByIndex() and [ methods allow to subset MsBackend objects.
+    claim_type: finding
+    speculative: false
+    entity_id: msbackend_virtual_class
+  - claim_text: Subsetting with extractByIndex() and [ must support duplication and
+      extraction in any arbitrary order.
+    claim_type: finding
+    speculative: false
+    entity_id: extractbyindex_method
+  - claim_text: extractByIndex() only supports to subset with an integer index while
+      [ should support to subset by indices or logical vectors.
+    claim_type: finding
+    speculative: false
+    entity_id: extractbyindex_method
+  - claim_text: An error should be thrown if indices are out of bounds but the method
+      should support returning an empty backend with [integer()].
+    claim_type: finding
+    speculative: false
+  - claim_text: The backendMerge() method merges MsBackend objects of the same type
+      into a single instance.
+    claim_type: finding
+    speculative: false
+    entity_id: msbackend_virtual_class
+  - claim_text: The intensity() method extracts the intensity values for each spectrum
+      in the backend as a NumericList.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The mz() method extracts the m/z values for each spectrum in the backend
+      as a NumericList.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The m/z values are expected to be ordered increasingly for each element
+      (spectrum).
+    claim_type: finding
+    speculative: false
+  - claim_text: The spectraNames() method can be used to extract optional names or
+      IDs for individual spectra of a backend, or NULL if not set.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The $<- method should allow to replace values for spectra variables
+      or to add additional spectra variables to the backend.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: With the $<- method, the length() of value must match the number of
+      spectra represented by the backend.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The spectraData<- method should allow to replace the data within a
+      backend by taking a DataFrame with the full data as input value.
+    claim_type: finding
+    speculative: false
+    entity_id: spectradata_method
+  - claim_text: The spectraData<- method is expected to replace the full data within
+      the backend including all spectra variables and peak data.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The number of spectra before and after calling spectraData<- method
+      on an object has to be the same.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The intensity<- method should allow to replace only the values of
+      the intensities but must not change the number of intensities per spectrum.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The mz<- method should allow to replace the m/z values of all spectra
+      in a backend.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: m/z values within each spectrum need to be increasingly ordered when
+      using the mz<- method.
+    claim_type: finding
+    speculative: false
+  - claim_text: The peaksData<- method should allow to replace the peaks data (m/z
+      and intensity values) of all spectra in a backend.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The peaksData<- method should support changing the number of peaks
+      per spectrum such as due to filtering.
+    claim_type: finding
+    speculative: false
+    entity_id: peaksdata_method
+  - claim_text: The selectSpectraVariables() function should allow to reduce the information
+      within the backend to the selected spectra variables.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The selectSpectraVariables() is equivalent to a subset by columns
+      or variables.
+    claim_type: finding
+    speculative: false
+    entity_id: selectspectravariables_method
+  - claim_text: The $ method is expected to extract a single spectra variable from
+      a backend.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: Each MsBackend must support extracting the core spectra variables
+      with the $ method even if no data might be available for that variable.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The $ method should check if the requested spectra variable is available
+      and should throw an error otherwise.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The peaksVariables() is expected to return a character vector with
+      the names of the peaks variables available in the backend.
+    claim_type: finding
+    speculative: false
+  - claim_text: The default implementation for peaksVariables() returns c("mz", "intensity")
+      for MsBackend.
+    claim_type: finding
+    speculative: false
+    entity_id: msbackend_virtual_class
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - Data can be loaded from raw MS data files or referenced via database connections
+    instead of loading directly in backendInitialize()
+  - Backends can use MsBackendCached for read-only resources to cache modified spectra
+    variables without propagating to underlying data
+  - Data can be initialized with data.frame by columns or as complete DataFrame with
+    optional data parameter
+  substitution_constraints:
+  - Read-only backends do not need to implement data replacement methods, only accessor
+    methods
+  - All MsBackend implementations must provide core spectra variables with correct
+    data types
+  - m/z values must be increasingly sorted within each spectrum
+  - Length of replacement values must match the number of spectra in the backend
+  - Peak data replacement lengths must match the number of peaks per spectrum
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 'Validation report documenting mz<- method correctness: confirmation of vectorised
+    is.unsorted() usage, successful assignment of sorted m/z values, and error raised
+    on unsorted input'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Numeric comparison table with columns: backend_variant, initial_object_size_bytes,
+    post_spectraData_size_bytes, memory_increase_bytes, spectraData_execution_time_seconds'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: R script implementing backendParallelFactor() method that returns a factor
+    grouping spectra by dataStorage file name
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Memory benchmark report (CSV or text) comparing peak-data memory demand for
+    chunk-wise splitting versus whole-load approach
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Performance comparison visualization (plot or figure) showing memory usage
+    reduction percentage across different dataset sizes
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

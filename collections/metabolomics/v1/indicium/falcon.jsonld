@@ -1,0 +1,534 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/command-line-tool-execution",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/distance-matrix-clustering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/feature-hashing-vectorization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/feature-vector-similarity-search-preparation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/high-dimensional-data-indexing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/high-resolution-mass-spectrometry-data-preprocessing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ms-ms-spectrum-pairwise-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ms-spectrum-similarity-grouping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/nearest-neighbor-index-querying",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/python-package-installation-and-dependency-management",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/sparse-distance-matrix-construction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-clustering-density-based",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-dimensionality-reduction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-binning-and-normalization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-cluster-assignment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-similarity-nearest-neighbor-indexing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-vector-serialization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-vector-similarity-searching",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/tandem-mass-spectrum-clustering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The falcon spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.",
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_falcon_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "High-resolution spectra are binned and converted to low-dimensional vectors using feature hashing.",
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spectrum vectors are used to construct nearest neighbor indexes for fast similarity searching.",
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Nearest neighbor indexes are used to efficiently compute a sparse pairwise distance matrix without exhaustively comparing all spectra.",
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Density-based clustering is performed to group similar spectra into clusters.",
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The falcon software is available as open-source under the BSD license.",
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_falcon_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "falcon requires Python 3.8+ and is available on the Linux and OSX platforms.",
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_falcon_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "falcon can be installed via pip with the command: pip install falcon-ms spectrum-utils==0.3.5",
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_falcon_system"
+        },
+        {
+          "id": "asb:spine_tool_falcon_ms"
+        },
+        {
+          "id": "asb:spine_tool_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The primary citation for falcon is Bittremieux et al. (2021) in Rapid Communications in Mass Spectrometry.",
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_falcon_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1002/rcm.9153",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_falcon#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:feature-vector-similarity-search-preparation--EDAM:operation_3501",
+      "subject_id": "asb.skill:feature-vector-similarity-search-preparation",
+      "subject_label": "feature-vector-similarity-search-preparation",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_3501",
+      "object_label": "Spectral database search",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.1429
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:ms-ms-spectrum-pairwise-comparison--EDAM:operation_3860",
+      "subject_id": "asb.skill:ms-ms-spectrum-pairwise-comparison",
+      "subject_label": "ms-ms-spectrum-pairwise-comparison",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_3860",
+      "object_label": "Spectrum calculation",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.2
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:ms-spectrum-similarity-grouping--EDAM:operation_3860",
+      "subject_id": "asb.skill:ms-spectrum-similarity-grouping",
+      "subject_label": "ms-spectrum-similarity-grouping",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_3860",
+      "object_label": "Spectrum calculation",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.2
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:spectrum-vector-serialization--EDAM:operation_3860",
+      "subject_id": "asb.skill:spectrum-vector-serialization",
+      "subject_label": "spectrum-vector-serialization",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_3860",
+      "object_label": "Spectrum calculation",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.25
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:tandem-mass-spectrum-clustering--EDAM:operation_3694",
+      "subject_id": "asb.skill:tandem-mass-spectrum-clustering",
+      "subject_label": "tandem-mass-spectrum-clustering",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_3694",
+      "object_label": "Mass spectrum visualisation",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.4
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_falcon_system",
+      "title": "falcon",
+      "identifier": "urn:asb:spine:falcon_system"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_arch_binning_hashing",
+      "title": "Spectrum Binning and Feature Hashing Layer",
+      "identifier": "urn:asb:spine:arch_binning_hashing",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_arch_nn_index",
+      "title": "Nearest Neighbor Index Construction Layer",
+      "identifier": "urn:asb:spine:arch_nn_index",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_arch_sparse_distance_matrix",
+      "title": "Sparse Pairwise Distance Matrix Computation Layer",
+      "identifier": "urn:asb:spine:arch_sparse_distance_matrix",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_arch_density_clustering",
+      "title": "Density-Based Clustering Layer",
+      "identifier": "urn:asb:spine:arch_density_clustering",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_falcon_ms",
+      "title": "falcon-ms",
+      "identifier": "urn:asb:spine:tool_falcon_ms"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_spectrum_utils",
+      "title": "spectrum-utils",
+      "identifier": "urn:asb:spine:tool_spectrum_utils"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_pub_bittremieux2021",
+      "title": "Bittremieux et al. 2021 RCM",
+      "identifier": "urn:asb:spine:pub_bittremieux2021"
+    }
+  ]
+}

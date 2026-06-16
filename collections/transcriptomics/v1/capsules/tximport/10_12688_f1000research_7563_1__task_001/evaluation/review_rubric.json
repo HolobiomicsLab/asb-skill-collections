@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 'tx2gene.gencode.v27.csv' exists in tximportData package"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify six salmon quant.sf.gz sample files exist in tximportData package"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "counts matrix dimensions are consistent with gene count (rows) \u00d7 sample count (c"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "abundance matrix dimensions are consistent with gene count (rows) \u00d7 sample count"
+    },
+    {
+      "id": "pf_006",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "length matrix dimensions are consistent with gene count (rows) \u00d7 sample count (c"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify counts matrix contains non-negative numeric values"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify abundance matrix contains non-negative numeric values"
+    },
+    {
+      "id": "pf_009",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify length matrix contains positive numeric values"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file 'tx2gene.gencode.v27.csv' exists in tximportData package",
+      "verify six salmon quant.sf.gz sample files exist in tximportData package",
+      "script_runs: tximport function executes without error on the six salmon samples with tx2gene mapping",
+      "output_matches_reference: counts matrix dimensions are consistent with gene count (rows) \u00d7 sample count (columns)",
+      "output_matches_reference: abundance matrix dimensions are consistent with gene count (rows) \u00d7 sample count (columns)",
+      "output_matches_reference: length matrix dimensions are consistent with gene count (rows) \u00d7 sample count (columns)",
+      "verify counts matrix contains non-negative numeric values",
+      "verify abundance matrix contains non-negative numeric values",
+      "verify length matrix contains positive numeric values"
+    ],
+    "expert_review": [
+      "verify that the three returned matrices (counts, abundance, length) are biologically plausible for RNA-seq transcript aggregation, robust to parameter choices",
+      "verify that length-corrected counts appropriately account for differential isoform usage across samples"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

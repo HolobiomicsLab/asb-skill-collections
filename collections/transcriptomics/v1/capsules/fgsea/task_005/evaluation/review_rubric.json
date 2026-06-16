@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in fgsea package: examplePathways (R data object)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in fgsea package: exampleRanks (R data object)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "data.frame"
+    },
+    {
+      "id": "pf_006",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "data.frame"
+    },
+    {
+      "id": "pf_007",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "median or mean P-value from eps=0 run is strictly less than median or mean P-val"
+    },
+    {
+      "id": "pf_008",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "both fgsea runs return results for identical set of pathways (same number of row"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in fgsea package: examplePathways (R data object)",
+      "verify file exists in fgsea package: exampleRanks (R data object)",
+      "script_runs: load examplePathways and exampleRanks in R and execute fgsea(examplePathways, exampleRanks, eps=0) without errors",
+      "script_runs: load examplePathways and exampleRanks in R and execute fgsea(examplePathways, exampleRanks, eps=1e-10) without errors",
+      "output_matches_reference: fgsea with eps=0 returns data.frame or list with named column 'pval' (or 'padj') for each pathway",
+      "output_matches_reference: fgsea with eps=1e-10 returns data.frame or list with named column 'pval' (or 'padj') for each pathway",
+      "value_in_range: median or mean P-value from eps=0 run is strictly less than median or mean P-value from eps=1e-10 run across same pathways (robust to ordering; parameter-sensitive to choice of aggregation statistic)",
+      "row_count_equals: both fgsea runs return results for identical set of pathways (same number of rows, same pathway names)"
+    ],
+    "expert_review": [
+      "Assess whether reported P-values from eps=0 run are substantively more precise (lower variance, finer granularity) than eps=1e-10 lower-bound estimates, as claimed for adaptive multi-level split scheme",
+      "Evaluate whether precision improvement is consistent across pathways of different sizes and effect magnitudes, or only in specific subsets",
+      "Judge whether the comparison demonstrates the correctness and practical benefit of the adaptive multi-level split Monte Carlo implementation versus the fixed eps truncation"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

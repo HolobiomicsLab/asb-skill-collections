@@ -1,0 +1,303 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "61c25057155c1430411fe3475fe97c58740387204bdcd4ae241d3da464979019"
+    }
+  ],
+  "created_at": "2026-06-15T19:28:53.814125+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "bioRxiv preprint 739011 (Huidong Chen et al.) \u2014 clustering benchmark results table or supplementary file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured TSV table with methods as rows, datasets as columns, and clustering accuracy metrics (NMI, ARI, or purity) as cell values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary statistics (mean, median accuracy per method; per-dataset ranking) demonstrating SnapATAC superiority and chromVAR kmers+PCA as best chromVAR variant",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Clustering quality in chromatin accessibility studies is typically measured by normalized mutual information (NMI), adjusted Rand index (ARI), or purity; higher values indicate better separation of known cell/sample types.",
+    "chromVAR kmers+PCA is a specific configuration combining k-mer annotations with principal component analysis dimensionality reduction, distinct from chromVAR with motif-based annotations.",
+    "SnapATAC is a competing single-cell ATAC-seq analysis method that uses a different algorithmic approach (approximate nearest neighbor graphs) and is documented to outperform chromVAR on clustering benchmarks.",
+    "Benchmark tables in bioinformatics preprints typically report metrics across multiple datasets (cell types, organisms, or peak-calling strategies) to demonstrate generalization; missing datasets in the table must be noted.",
+    "The bioRxiv accession 739011 is a publicly deposited preprint version; the benchmark results may differ from a later peer-reviewed publication if one exists."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that a TSV table file exists in bioRxiv preprint 739011 (Chen et al.) or its supplementary materials containing clustering accuracy metrics",
+      "file_format_is TSV with columns for method name, dataset identifier, and clustering accuracy metric (e.g., ARI, NMI, or purity score)",
+      "verify that the table row_count_equals at least 3 for chromVAR variants (including kmers+PCA variant) and at least 1 row for SnapATAC, across at least 2 datasets",
+      "value_in_range: clustering accuracy scores are between 0 and 1 (or 0\u2013100 if percentage-scaled); no canonical answer for absolute thresholds since multiple accuracy metrics exist",
+      "verify that SnapATAC row values are numerically greater than or equal to baseline chromVAR rows for the same dataset (robust to metric choice if direction is consistent)",
+      "verify that chromVAR kmers+PCA variant row has the highest or tied-highest accuracy among all chromVAR variants for each dataset, parameter-sensitive to which datasets are included"
+    ],
+    "expert_review": [
+      "confirm that the retrieved table matches the summary statement 'SnapATAC outperforms chromVAR for clustering' by inspecting whether SnapATAC values exceed chromVAR baseline across all reported datasets",
+      "confirm that the retrieved table supports 'kmers+PCA is the best chromVAR variant' by verifying that kmers+PCA consistently achieves equal or superior clustering accuracy versus other chromVAR approaches (e.g., plain chromVAR, chromVAR+other feature engineering)",
+      "assess whether the table structure and metric definitions are consistent with standard clustering evaluation practice (e.g., higher values indicate better clustering, metric is invariant to label permutation)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does SnapATAC's clustering performance compare to chromVAR variants (especially kmers+PCA) according to the Huidong Chen et al. benchmark study?: 'For a paper evaluating chromVAR and other methods as a method for enabling clustering of single cells, see [the preprint from Huidong Chen et al](https://www.biorxiv.org/content/10.1101/739011v1).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SnapATAC outperforms chromVAR for clustering tasks evaluated in the Huidong Chen et al. paper, while kmers+PCA is the best chromVAR variant for clustering.: 'Using kmers + PCA appears to be the best variant of chromVAR for clustering, but newer methods such as SnapATAC outperform chromVAR for the clustering tasks evaluated in the paper.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] bioRxiv preprint 739011 (Huidong Chen et al.) \u2014 clustering benchmark results table or supplementary file: 'bioRxiv 739011'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Structured TSV table with methods as rows, datasets as columns, and clustering accuracy metrics (NMI, ARI, or purity) as cell values: 'structured TSV table of method-by-dataset clustering metrics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Summary statistics (mean, median accuracy per method; per-dataset ranking) demonstrating SnapATAC superiority and chromVAR kmers+PCA as best chromVAR variant: 'summary statistics showing SnapATAC outperforms chromVAR for clustering while chromVAR+kmers+PCA is the best chromVAR variant'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SnapATAC: 'newer methods such as SnapATAC outperform chromVAR for the clustering tasks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] chromVAR: 'chromVAR is an R package for the analysis of sparse chromatin accessibility'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'chromVAR is an R package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "curl -s https://www.biorxiv.org/content/10.1101/739011v1 -o preprint.html && python3 << 'EOF'\nimport pandas as pd\nimport sys\n\n# Read the input benchmark file\ninput_file = '{inputs.preprint_benchmark_file}'\n\ntry:\n    # Try to read as CSV/TSV\n    df = pd.read_csv(input_file, sep=None, engine='python')\nexcept:\n    try:\n        # Try as Excel\n        df = pd.read_excel(input_file)\n    except:\n        print('Error: Could not parse input file', file=sys.stderr)\n        sys.exit(1)\n\n# Extract methods and datasets\nmethods = df.iloc[:, 0].values if len(df) > 0 else []\ndatasets = df.columns[1:] if len(df.columns) > 1 else []\n\n# Build output matrix\noutput_df = df.copy()\noutput_df.to_csv('clustering_benchmark_summary.tsv', sep='\\t', index=False)\n\n# Calculate summary statistics\nif len(df.columns) > 1:\n    numeric_cols = df.iloc[:, 1:].apply(pd.to_numeric, errors='coerce')\n    stats = pd.DataFrame({\n        'Method': methods,\n        'Mean_Accuracy': numeric_cols.mean(axis=1),\n        'Median_Accuracy': numeric_cols.median(axis=1)\n    })\n    stats.to_csv('clustering_summary_statistics.tsv', sep='\\t', index=False)\n    print('Summary statistics written to clustering_summary_statistics.tsv')\n\nprint('Clustering benchmark table written to clustering_benchmark_summary.tsv')\nEOF"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "clustering_benchmark_metrics.tsv",
+  "expected_outputs": [
+    "Structured TSV table with methods as rows, datasets as columns, and clustering accuracy metrics (NMI, ARI, or purity) as cell values",
+    "Summary statistics (mean, median accuracy per method; per-dataset ranking) demonstrating SnapATAC superiority and chromVAR kmers+PCA as best chromVAR variant"
+  ],
+  "finding": "SnapATAC outperforms chromVAR for clustering tasks evaluated in the Huidong Chen et al. paper, while kmers+PCA is the best chromVAR variant for clustering.",
+  "github_name": "r3fang/SnapATAC",
+  "input_from": "task_002",
+  "inputs": [
+    "bioRxiv preprint 739011 (Huidong Chen et al.) \u2014 clustering benchmark results table or supplementary file"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "raw_benchmark_table_extracted.txt",
+    "clustering_metrics_matrix.tsv",
+    "method_summary_statistics.tsv"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_004",
+    "result_011"
+  ],
+  "methodology_summary": [
+    "Locate and download the Huidong Chen et al. bioRxiv 739011 preprint and identify the clustering benchmark results table or supplementary data file.",
+    "Extract clustering accuracy metrics (NMI, ARI, purity, or equivalent) for chromVAR kmers+PCA, SnapATAC, and all other methods across each reported dataset.",
+    "Construct a method-by-dataset matrix where rows are methods (chromVAR kmers+PCA, SnapATAC, others), columns are datasets, and cells contain accuracy scores.",
+    "Calculate summary statistics per method: mean accuracy, median accuracy, and per-dataset rank order to quantify relative performance.",
+    "Validation: Verify that the table confirms the two key findings: (1) SnapATAC achieves higher mean clustering accuracy than chromVAR variants, and (2) chromVAR kmers+PCA achieves higher accuracy than other chromVAR configurations (motifs, cis-regions, etc.)."
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "genomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does SnapATAC's clustering performance compare to chromVAR variants (especially kmers+PCA) according to the Huidong Chen et al. benchmark study?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "clustering-accuracy-metric-extraction",
+    "benchmark-table-parsing-and-aggregation",
+    "method-comparison-statistical-summarization",
+    "atac-seq-clustering-performance-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_chromvar/synthesized_package",
+  "spine_condition_ids": [
+    "cond_kmer_clustering",
+    "cond_snapatac_clustering"
+  ],
+  "spine_entity_ids": [
+    "chromVAR_system",
+    "arch_pipeline",
+    "tool_SnapATAC",
+    "cond_kmer_clustering",
+    "cond_snapatac_clustering",
+    "result_kmer_pca_best_chromvar",
+    "result_snapatac_outperforms",
+    "result_norm_not_recommended",
+    "result_chromvar_complementary"
+  ],
+  "subdomains": [
+    "gene-regulation",
+    "functional-genomics"
+  ],
+  "subtask_categories": [
+    "information-extraction",
+    "data-processing",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:GreenleafLab__chromVAR",
+  "task_description": "Retrieve the clustering accuracy benchmark table from the Huidong Chen et al. preprint (bioRxiv 739011) comparing chromVAR kmers+PCA, SnapATAC, and other methods across datasets, and produce a structured TSV summary showing method-by-dataset clustering metrics with performance rankings.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "bioRxiv 739011 clustering results",
+      "port_id": "preprint_benchmark_file",
+      "resolved_via": null,
+      "source": "task_002/variability_table",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Retrieve and reproduce the clustering accuracy benchmark table from Huidong Chen et al. (bioRxiv 739011) comparing chromVAR variants and SnapATAC across datasets as a structured TSV.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "method-by-dataset clustering accuracy TSV",
+      "port_id": "clustering_metrics_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "per-method and per-dataset performance summary",
+      "port_id": "summary_statistics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dimensionality-reduction",
+    "clustering",
+    "enrichment-analysis"
+  ],
+  "title": "Reproduce the clustering performance comparison: kmers+PCA vs SnapATAC on single-cell ATAC-seq",
+  "tools": [
+    "SnapATAC",
+    "chromVAR",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: SnapATAC, Structured TSV table with methods as rows, datasets as columns, and clustering accuracy metrics (NMI, ARI, or purity) as cell values, Summary statistics (mean, median accuracy per method; per-dataset ranking) demonstrating SnapATAC superiority and chromVAR kmers+PCA as best chromVAR variant."
+  ],
+  "workflow_description": "1. Access the bioRxiv preprint 739011 (Chen et al.) and locate the clustering benchmark results table or supplementary data. 2. Extract clustering accuracy metrics (e.g., NMI, ARI, or purity scores) for chromVAR kmers+PCA and SnapATAC variants across all reported datasets. 3. Identify the best-performing chromVAR variant (kmers+PCA) and document relative performance versus SnapATAC baseline. 4. Compile method-by-dataset matrix into a TSV table with rows as methods, columns as datasets, and cells as accuracy scores. 5. Calculate summary statistics (mean, median, rank) for each method across datasets to quantify the finding that SnapATAC outperforms chromVAR overall while chromVAR kmers+PCA is superior to other chromVAR configurations."
+}

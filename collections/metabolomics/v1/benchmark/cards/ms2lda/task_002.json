@@ -1,0 +1,438 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/CompMetabolomics_logo.jpg",
+      "role": "figure",
+      "sha256": "f8957fd9b57a80dd3cf4adb35dc6f69768ae8cb52d1685113a7dd48e0244d3b4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_LOGO_black.jpg",
+      "role": "figure",
+      "sha256": "638333f028ef0320582849d948a9d4cb346bbcf7556f0281a833c363a284e1a8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_LOGO_white.jpg",
+      "role": "figure",
+      "sha256": "3d41cf59a641ab5aa51498ec33ef00e7e3c172089d241d7e00accdc4b0308035"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_Workflow.jpg",
+      "role": "figure",
+      "sha256": "1e3133105398930f4ee8670c1cc71d706596e0a8e22b0d8c2a53228be35238ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/WUR_RGB_standard_2021.png",
+      "role": "figure",
+      "sha256": "7779dfcd978f747157e0b0efdeebdfc22a4fa04b73f5255d72e11c659e1db5dd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/WUR_logo.jpg",
+      "role": "figure",
+      "sha256": "8b323663b087d687a8ee0280d7b5938d357bfd3835a7b0ee54447a5188d53939"
+    },
+    {
+      "indexable": false,
+      "path": "figures/pnas.jpg",
+      "role": "figure",
+      "sha256": "5c33b1f48d700c729500ba3e037a48af48799939263339ee9dce43fe81bdf649"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3e5d9784f09bc9c1236c177bd1cf1a004e1f9f304c789693f9e43491bd40fb3f"
+    }
+  ],
+  "created_at": "2026-06-15T21:44:19.295434+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Preprocessed bag-of-fragments corpus (as a Python corpus object or serialized format compatible with MS2LDA.modeling)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Model hyperparameters: number of topics (n_motifs), training iterations (n_iterations), alpha hyperparameter, beta hyperparameter",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Trained LDA model binary artifact (ms2lda.bin)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Discovered Mass2Motifs in JSON format with fragment and neutral-loss probabilities (motifset.json)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Training convergence curve visualization (convergence_curve.png)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "LDA hyperparameters (alpha controls topic sparsity, beta controls topic-word sparsity) must be tuned for spectral fragmentation patterns; typical alpha is document-length-normalized, beta is uniform or learned.",
+    "Mass2Motifs represent latent topics of co-occurring fragment ions and neutral losses; each motif is a probability distribution over all possible m/z values observed in the corpus.",
+    "Convergence is typically assessed via the LDA log-likelihood or perplexity on held-out data; models are considered converged when objective stabilizes across iterations.",
+    "The bag-of-fragments representation treats each spectrum as an unordered collection of fragment masses and neutral losses, losing spatial/temporal peak information but enabling topic modeling.",
+    "Serialization to JSON and pickle ensures portability: pickle preserves the full LDA state for downstream inference, while JSON makes motifsets human-readable and compatible with visualization and MotifDB comparison."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify file ms2lda.bin exists in expected_outputs",
+      "Verify file motifset.json exists in expected_outputs",
+      "Verify ms2lda.bin file_format_is binary or serialized model artifact",
+      "Verify motifset.json file_format_is valid JSON",
+      "Verify motifset.json contains_substring 'motif' (case-insensitive) indicating motif structure presence",
+      "Verify script_runs without error when LDA inference module is invoked on bag-of-fragments corpus input",
+      "Verify row_count_equals or field_present: motifset.json contains at least one motif entry with required fields (no canonical answer for exact schema without implementation details)"
+    ],
+    "expert_review": [
+      "Expert review of LDA hyperparameter choices (alpha, beta, number of topics/motifs) for appropriateness to mass spectrometry fragmentation context",
+      "Expert review of motif interpretability: do learned motifs correspond to known or chemically plausible fragmentation patterns",
+      "Expert review of convergence diagnostics: assess whether LDA inference reached stable solution (perplexity, topic coherence, or equivalent convergence metric)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MS2LDA apply Latent Dirichlet Allocation to a bag-of-fragments corpus to infer Mass2Motifs from mass spectrometry fragmentation patterns?: 'MS2LDA is an advanced tool designed for unsupervised substructure discovery in mass spectrometry data, utilizing topic modeling'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns, learning Mass2Motifs that describe recurring fragmentation patterns from processed spectra.: 'Apply LDA to the processed spectra \u2192 Learn Mass2Motifs that describe recurring fragmentation patterns'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Preprocessed bag-of-fragments corpus (as a Python corpus object or serialized format compatible with MS2LDA.modeling): 'Convert MS/MS spectra into a bag-of-fragments format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Model hyperparameters: number of topics (n_motifs), training iterations (n_iterations), alpha hyperparameter, beta hyperparameter: '--n_topics INTEGER     Number of topics (Mass2Motifs) to infer'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Trained LDA model binary artifact (ms2lda.bin): 'ms2lda.bin              # Binary dump of the trained LDA model'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Discovered Mass2Motifs in JSON format with fragment and neutral-loss probabilities (motifset.json): 'motifset.json           # Discovered Mass2Motifs in JSON format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Training convergence curve visualization (convergence_curve.png): 'convergence_curve.png   # Training convergence plot'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MS2LDA: 'MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Latent Dirichlet Allocation (LDA): 'Apply LDA to the processed spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'Configure the Python environment (set PYTHONPATH, activate conda, etc.)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of exact LDA hyperparameters (number of motifs/topics, alpha, beta, number of iterations, convergence threshold) for the training step: 'All notable changes to this project will be documented in this file.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of serialization format or schema for ms2lda.bin (pickle, joblib, custom binary, etc.) or motifset.json structure: 'All notable changes to this project will be documented in this file.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No reference to a concrete bag-of-fragments corpus file, accession, or deposit that serves as the canonical input for training step validation: 'All notable changes to this project will be documented in this file.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of expected dimensionality, cardinality, or content structure of motifset.json (e.g., number of motifs, fields per motif, probability distribution format): 'All notable changes to this project will be documented in this file.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pickle, json, numpy as np; from sklearn.decomposition import LatentDirichletAllocation; import matplotlib.pyplot as plt; corpus = pickle.load(open('{inputs.corpus_obj}', 'rb')); params = json.load(open('{inputs.lda_params}', 'r')); model = LatentDirichletAllocation(n_components=params['n_motifs'], n_iter=params['n_iterations'], alpha=params.get('alpha', 0.1), beta=params.get('beta', 0.01), random_state=42); model.fit(corpus['X']); pickle.dump(model, open('ms2lda.bin', 'wb')); motifs = {str(i): {'fragments': dict(zip(corpus.get('feature_names', [f'frag_{j}' for j in range(corpus['X'].shape[1])]), model.components_[i].tolist()))} for i in range(params['n_motifs'])}; json.dump(motifs, open('motifset.json', 'w')); plt.figure(); plt.plot(model.bound_); plt.xlabel('Iteration'); plt.ylabel('Log-likelihood'); plt.savefig('convergence_curve.png'); plt.close()"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ms2lda.bin",
+  "expected_outputs": [
+    "Trained LDA model binary artifact (ms2lda.bin)",
+    "Discovered Mass2Motifs in JSON format with fragment and neutral-loss probabilities (motifset.json)",
+    "Training convergence curve visualization (convergence_curve.png)"
+  ],
+  "finding": "MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns, learning Mass2Motifs that describe recurring fragmentation patterns from processed spectra.",
+  "github_name": "vdhooftcompmet/MS2LDA",
+  "input_from": "task_001",
+  "inputs": [
+    "Preprocessed bag-of-fragments corpus (as a Python corpus object or serialized format compatible with MS2LDA.modeling)",
+    "Model hyperparameters: number of topics (n_motifs), training iterations (n_iterations), alpha hyperparameter, beta hyperparameter"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "convergence_curve.png",
+    "motifset.json"
+  ],
+  "linked_result_ids": [
+    "result_009",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_014",
+    "result_015",
+    "result_032",
+    "result_033",
+    "result_035"
+  ],
+  "methodology_summary": [
+    "Load preprocessed corpus containing bag-of-fragments representations of preprocessed MS/MS spectra",
+    "Initialize LDA model with specified topic count (n_motifs), hyperparameters (alpha, beta), and iteration limit (n_iterations)",
+    "Train LDA inference on corpus, iteratively updating topic-fragment and spectrum-topic distributions",
+    "Monitor and record convergence metrics (log-likelihood or perplexity) across training iterations",
+    "Extract learned Mass2Motif distributions (topic-fragment probability maps) from converged model",
+    "Serialize trained model state to pickle binary (ms2lda.bin) and motifset to JSON schema (motifset.json)",
+    "Validation: convergence curve shows stable or decreasing objective; motifset contains all n_motifs with non-zero fragment probabilities; model and motifset files are non-empty and deserializable"
+  ],
+  "missing_information": [
+    "No specification of exact LDA hyperparameters (number of motifs/topics, alpha, beta, number of iterations, convergence threshold) for the training step",
+    "No specification of serialization format or schema for ms2lda.bin (pickle, joblib, custom binary, etc.) or motifset.json structure",
+    "No reference to a concrete bag-of-fragments corpus file, accession, or deposit that serves as the canonical input for training step validation",
+    "No specification of expected dimensionality, cardinality, or content structure of motifset.json (e.g., number of motifs, fields per motif, probability distribution format)"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MS2LDA apply Latent Dirichlet Allocation to a bag-of-fragments corpus to infer Mass2Motifs from mass spectrometry fragmentation patterns?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "lda-model-training-convergence",
+    "fragmentation-motif-learning",
+    "probabilistic-topic-modeling-mass-spectrometry",
+    "mass2motif-parameter-optimization",
+    "spectral-corpus-representation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ms2lda/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS-MS2LDA",
+    "ARCH-PIPELINE",
+    "COMP-PREPROCESSING",
+    "COMP-MODELING",
+    "ARTIFACT-MOTIFSET",
+    "ARTIFACT-LDA-MODEL",
+    "TOOL-MGF",
+    "TOOL-MZML",
+    "TOOL-MSP",
+    "DATASET-ZENODO",
+    "REF-PNAS2016",
+    "REF-BIORXIV2025"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics",
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:vdhooftcompmet__MS2LDA",
+  "task_description": "Train a Latent Dirichlet Allocation (LDA) model on a preprocessed bag-of-fragments corpus to infer Mass2Motifs, then serialize the trained model and discovered motif set to ms2lda.bin and motifset.json respectively.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Preprocessed bag-of-fragments corpus",
+      "port_id": "corpus_obj",
+      "resolved_via": null,
+      "source": "task_001/corpus",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LDA hyperparameters (n_motifs, n_iterations, alpha, beta)",
+      "port_id": "lda_params",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the LDA inference pipeline to train on a bag-of-fragments corpus and serialize the learned model and motif set as ms2lda.bin and motifset.json.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained LDA model binary (ms2lda.bin)",
+      "port_id": "lda_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Discovered Mass2Motifs (motifset.json)",
+      "port_id": "motifset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Training convergence curve (convergence_curve.png)",
+      "port_id": "convergence_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction",
+    "machine-learning",
+    "molecular-networking",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct the LDA model training step that produces a trained MS2LDA model artifact from bag-of-fragments input",
+  "tools": [
+    "MS2LDA",
+    "Latent Dirichlet Allocation (LDA)",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Trained LDA model binary artifact (ms2lda.bin), Discovered Mass2Motifs in JSON format with fragment and neutral-loss probabilities (motifset.json), Training convergence curve visualization (convergence_curve.png)."
+  ],
+  "workflow_description": "1. Load the preprocessed bag-of-fragments corpus (generated by the Preprocessing module) in the format expected by MS2LDA.modeling. 2. Initialize an LDA model with specified hyperparameters (alpha, beta) and the desired number of topics (n_motifs). 3. Train the LDA model on the corpus for the specified number of iterations (n_iterations), recording convergence metrics. 4. Extract the learned Mass2Motif distributions (topic-fragment associations) from the trained model. 5. Serialize the trained LDA model to ms2lda.bin using Python pickle. 6. Serialize the discovered motifset (Mass2Motifs with fragment/loss probabilities) to motifset.json in the MS2LDA JSON schema. 7. Generate and save the convergence curve (convergence_curve.png) showing LDA objective or likelihood across iterations as a quality assurance artifact."
+}

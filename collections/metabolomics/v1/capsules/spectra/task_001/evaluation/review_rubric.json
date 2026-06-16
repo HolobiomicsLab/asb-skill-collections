@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that MsBackendTest class definition file exists in github:rformassspectrometry__Spectra repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is R script or documentation file containing class definition"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that MsBackendTest extends MsBackend (check class inheritance declaration)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present in MsBackendTest class definition for all required slots: spectraVars, mz, intensity"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that methods spectraData, spectraVariables, backendInitialize, peaksData, extractByIndex, backendMerge, intensity, mz, spectraNames are defined in or inherited by MsBackendTest"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: load MsBackendTest class definition and instantiate object without error"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that spectraData() method returns S4Vectors DataFrame object"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that spectraVariables() method returns character vector"
+    },
+    {
+      "id": "pf_009",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that peaksData() method returns list-like structure with m/z and intensity matrices"
+    },
+    {
+      "id": "pf_010",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that intensity() and mz() methods return NumericList objects"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that MsBackendTest class definition file exists in github:rformassspectrometry__Spectra repository",
+      "verify file_format_is R script or documentation file containing class definition",
+      "verify that MsBackendTest extends MsBackend (check class inheritance declaration)",
+      "verify field_present in MsBackendTest class definition for all required slots: spectraVars, mz, intensity",
+      "verify that methods spectraData, spectraVariables, backendInitialize, peaksData, extractByIndex, backendMerge, intensity, mz, spectraNames are defined in or inherited by MsBackendTest",
+      "verify script_runs: load MsBackendTest class definition and instantiate object without error",
+      "verify that spectraData() method returns S4Vectors DataFrame object",
+      "verify that spectraVariables() method returns character vector",
+      "verify that peaksData() method returns list-like structure with m/z and intensity matrices",
+      "verify that intensity() and mz() methods return NumericList objects"
+    ],
+    "expert_review": [
+      "confirm that MsBackendTest implementation correctly satisfies the MsBackend virtual class contract for all required accessor methods",
+      "confirm that data replacement method implementations (if present) are semantically correct for modifying spectra data",
+      "confirm that backendMerge() correctly combines multiple MsBackendTest instances without data loss or corruption",
+      "confirm that extractByIndex() correctly subsets backend while maintaining data integrity and proper indexing",
+      "confirm that m/z values in peaksData output are sorted increasingly as required by specification"
+    ]
+  },
+  "max_score": 10.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

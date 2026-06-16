@@ -1,0 +1,161 @@
+# SciTask Card: Reproduce fgsea enrichment analysis on examplePathways and exampleRanks with default parameters
+
+- Task ID: `task_001`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T19:18:01.563888+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_fgsea/synthesized_package`
+- Domain: `bioinformatics`
+- Subtask categories: `data-analysis`, `statistical-analysis`, `visualization`
+- GitHub: `alserglab/fgsea`
+
+## Classification
+
+- Task kind: `reproduction`
+- Article type: `software-tool`
+- Primary domain: `bioinformatics`
+- Subdomains: `functional-genomics`, `multi-omics-integration`
+- Techniques: `enrichment-analysis`, `pathway-analysis`, `statistical-analysis`, `false-discovery-rate-correction`
+
+## Research Question
+Can the fgsea package calculate gene set enrichment analysis results on preranked gene lists with arbitrarily low P-values using its default parameters?
+
+## Connected Finding
+fgsea is an R-package for fast preranked gene set enrichment analysis (GSEA) that enables quick and accurate calculation of arbitrarily low GSEA P-values for gene set collections.
+
+## Task Description
+Run fgsea() on bundled examplePathways and exampleRanks with default parameters (eps=1e-10), generate the enrichment result table, create an enrichment plot for the Programmed_Cell_Death pathway, and produce a GSEA table visualization for top-ranked pathways.
+
+## Inputs
+- examplePathways: bundled list of mouse Reactome gene set pathways
+- exampleRanks: bundled gene-level ranking statistics (t-statistics or log-fold-change)
+
+## Expected Outputs
+- fgseaRes: data.table with columns pathway, pval, padj, ES, NES, size, leadingEdge sorted by p-value
+- enrichment_plot_programmed_cell_death.png: ggplot2 enrichment curve showing running sum of ES for 5991130_Programmed_Cell_Death pathway
+- gsea_table_top_pathways.png: heatmap-style table visualization of top 20 pathways (10 up, 10 down) with running sum curves
+
+## Landmark Outputs
+
+- `fgseaRes_sorted.csv`
+- `enrichment_plot_programmed_cell_death.png`
+- `top_pathways_list.txt`
+- `gsea_table_top_pathways.png`
+
+## Tools
+- fgsea
+- R
+- data.table
+- ggplot2
+
+## Skills
+- gene-set-enrichment-analysis
+- pathway-enrichment-statistical-ranking
+- gene-expression-ranking-preparation
+- gsea-result-interpretation-visualization
+- multiple-testing-correction-visualization
+
+## Workflow Description
+1. Load the fgsea package along with data.table and ggplot2 libraries. 2. Load examplePathways and exampleRanks bundled datasets and set random seed to 42. 3. Run fgsea() with pathways=examplePathways, stats=exampleRanks, minSize=15, maxSize=500, and default eps=1e-10. 4. Sort the resulting fgseaRes table by pval and display the top enriched pathways. 5. Generate an enrichment plot for the 5991130_Programmed_Cell_Death pathway using plotEnrichment() with exampleRanks. 6. Identify top 10 upregulated pathways (ES > 0) and top 10 downregulated pathways (ES < 0) ordered by p-value. 7. Create a GSEA table plot using plotGseaTable() with the combined top pathways, exampleRanks, fgseaRes, and gseaParam=0.5.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/geseca-spatial-top.png` | figure | False |
+| `figures/geseca-vignette-score-toy-example.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Data Deposits
+
+| Kind | Accession | URL | Evidence |
+|---|---|---|---|
+| geo_series | `GSE200250` | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200250 | sider a time course data of Th2 activation from the dataset GSE200250.  First, let prepare the dataset. We load it from Gene Expr |
+| geo_series | `GSE116240` | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240 | ges(library(Seurat)) ```  As an example dataset we will use GSE116240 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1162 |
+| geo_series | `GSE14308` | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14308 | exampleExpressionMatrix` - numeric expression matrix of the GSE14308 dataset. Rows correspond to genes (ENTREZID is used as iden |
+
+## Missing Information
+- No changelog available to track version history, breaking changes, or reproducibility constraints for the fgsea package used
+
+## Domain Knowledge
+- GSEA p-values are estimated via adaptive multi-level split Monte-Carlo scheme; default eps=1e-10 sets a lower bound for p-value estimation accuracy.
+- Enrichment score (ES) reflects the magnitude and direction of pathway regulation; positive ES indicates upregulation, negative ES indicates downregulation.
+- Leading edge identifies the subset of genes in a pathway that drive the enrichment signal, ranked by their position in the gene list.
+- Gene sets must satisfy minSize and maxSize filtering thresholds (here 15–500 genes) to avoid statistical artifacts from very small or large pathways.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: data.table, ggplot2, fgseaRes: data.table with columns pathway, pval, padj, ES, NES, size, leadingEdge sorted by p-value, enrichment_plot_programmed_cell_death.png: ggplot2 enrichment curve showing running sum of ES for 5991130_Programmed_Cell_Death pathway, gsea_table_top_pathways.png: heatmap-style table visualization of top 20 pathways (10 up, 10 down) with running sum curves.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] Can the fgsea package calculate gene set enrichment analysis results on preranked gene lists with arbitrarily low P-values using its default parameters?: 'This package allows to quickly and accurately calculate arbitrarily low GSEA P-values for a collection of gene sets.'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] fgsea is an R-package for fast preranked gene set enrichment analysis (GSEA) that enables quick and accurate calculation of arbitrarily low GSEA P-values for gene set collections.: '`fgsea` is an R-package for fast preranked gene set enrichment analysis (GSEA). This package allows to quickly and accurately calculate arbitrarily low GSEA P-values for a collection of gene sets.'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [other] examplePathways: bundled list of mouse Reactome gene set pathways: 'data(examplePathways)'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [other] exampleRanks: bundled gene-level ranking statistics (t-statistics or log-fold-change): 'data(exampleRanks)'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [other] fgseaRes: data.table with columns pathway, pval, padj, ES, NES, size, leadingEdge sorted by p-value: 'The resulting table contains enrichment scores and p-values'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [other] enrichment_plot_programmed_cell_death.png: ggplot2 enrichment curve showing running sum of ES for 5991130_Programmed_Cell_Death pathway: 'plotEnrichment(examplePathways[["5991130_Programmed_Cell_Death"]], exampleRanks) + labs(title="Programmed Cell Death")'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [other] gsea_table_top_pathways.png: heatmap-style table visualization of top 20 pathways (10 up, 10 down) with running sum curves: 'plotGseaTable(examplePathways[topPathways], exampleRanks, fgseaRes, gseaParam=0.5)'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [methods] fgsea: '`fgsea` is an R-package for fast preranked gene set enrichment analysis (GSEA)'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [methods] R: 'R-package for fast preranked gene set enrichment analysis'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [methods] data.table: 'library(data.table)'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [methods] ggplot2: 'library(ggplot2)'
+- `ev_012` from `agent2_synthesis` (agent2_traced): [discussion] No changelog available to track version history, breaking changes, or reproducibility constraints for the fgsea package used: 'No changelog found.'
+
+## Evaluation Strategy
+### Direct Checks
+- verify file exists in fgsea package: examplePathways (list or data.frame format)
+- verify file exists in fgsea package: exampleRanks (named numeric vector or data.frame format)
+- script_runs: R script executing fgsea(examplePathways, exampleRanks, eps=1e-10) completes without error
+- field_present: result table contains columns 'pathway', 'pval', 'padj', 'ES', 'NES'
+- row_count_equals: result table has at least 1 row (at least one pathway analyzed)
+- file_exists: enrichment plot PNG/PDF for pathway '5991130_Programmed_Cell_Death' generated
+- file_exists: GSEA table for top pathways (by adjusted p-value) generated as CSV or TSV
+- value_in_range: all 'pval' values in result table are numeric and >= 0
+- value_in_range: all 'padj' values in result table are numeric and >= 0
+- contains_substring: result table pathway column contains '5991130_Programmed_Cell_Death' (if pathway is named in examplePathways)
+
+### Expert Review
+- verify NES (normalized enrichment score) magnitudes and signs are biologically plausible for the pathways tested
+- verify enrichment plot for '5991130_Programmed_Cell_Death' displays running enrichment score, gene positions, and phenotype labels in standard GSEA format
+- verify top pathways by adjusted p-value are ranked consistently with statistical significance (lower adjusted p-value = higher ranking)
+- verify adaptive Monte-Carlo p-value estimation with eps=1e-10 produces p-values of appropriate precision (no artificial floor effects)
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Execution Profile
+- **Compute tier:** trivial
+
+## Methodology Summary
+1. Load fgsea package and bundled example datasets (examplePathways, exampleRanks).
+2. Execute fgsea() with preranked gene statistics, pathway collection, and default P-value estimation bounds (eps=1e-10, minSize=15, maxSize=500).
+3. Sort results by p-value and extract top upregulated and downregulated pathways.
+4. Generate enrichment curve visualization for a single pathway using plotEnrichment().
+5. Create multi-pathway GSEA table heatmap using plotGseaTable() to display running enrichment sums and statistical significance across selected pathways.
+6. Validation: fgsea result table must contain pathways with computed pval, padj, ES, and NES fields; enrichment plots must display running sum curves; GSEA table must render top 20 pathways (10 up, 10 down) with gseaParam=0.5.
+7. References: GSE200250 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200250); GSE116240 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240); GSE14308 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14308)
+
+## Workflow Ports
+
+**Inputs:**
+
+- `example_pathways` — Example Reactome pathways list
+- `example_ranks` — Example gene ranking statistics
+
+**Outputs:**
+
+- `fgsea_result_table` — FGSEA enrichment results table with p-values and statistics
+- `enrichment_plot_pcd` — Enrichment curve plot for Programmed_Cell_Death pathway
+- `gsea_table_plot` — GSEA table visualization of top pathways
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:alserglab__fgsea`
+- **Synthesized at:** 2026-06-15T19:26:40+00:00
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

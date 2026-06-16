@@ -1,0 +1,523 @@
+{
+ "schema": "asb-skill-task-links/1.0",
+ "links": {
+  "archr/task_001": {
+   "tool": "archr",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the paired scATAC-seq and scRNA-seq multiome analysis pipeline in ArchR",
+   "skills": [
+    "multiome-data-ingestion-paired-modalities",
+    "iterative-lsi-dimensionality-reduction",
+    "cross-modality-embedding-integration",
+    "atac-seq-feature-matrix-construction",
+    "rna-seq-expression-alignment-across-cells"
+   ]
+  },
+  "archr/task_002": {
+   "tool": "archr",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct trajectory analysis using Monocle3 and Slingshot dispatch in ArchR",
+   "skills": [
+    "trajectory-inference-method-selection",
+    "monocle3-trajectory-embedding",
+    "slingshot-trajectory-embedding",
+    "single-cell-atac-seq-dimensionality-reduction"
+   ]
+  },
+  "archr/task_003": {
+   "tool": "archr",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct peak matrix export for STREAM compatibility via exportPeakMatrixForSTREAM",
+   "skills": [
+    "scatac-seq-peak-matrix-export",
+    "archr-project-manipulation",
+    "stream-trajectory-data-formatting",
+    "single-cell-chromatin-data-handling"
+   ]
+  },
+  "champ/task_001": {
+   "tool": "champ",
+   "task_kind": "reproduction",
+   "title": "Reproduce the pre-filter probe counts for 450K and EPIC arrays in champ.load()",
+   "skills": [
+    "dna-methylation-array-data-import",
+    "illumina-450k-epic-dataset-loading",
+    "methylation-probe-count-validation",
+    "r-package-champ-usage"
+   ]
+  },
+  "champ/task_002": {
+   "tool": "champ",
+   "task_kind": "reproduction",
+   "title": "Reproduce the detection p-value and beadcount filter thresholds applied by champ.filter()",
+   "skills": [
+    "dna-methylation-quality-control",
+    "probe-detection-pvalue-filtering",
+    "bead-count-threshold-filtering",
+    "illumina-methylation-array-preprocessing",
+    "450k-array-data-processing"
+   ]
+  },
+  "champ/task_003": {
+   "tool": "champ",
+   "task_kind": "reproduction",
+   "title": "Reproduce the EPICSimData DMR count result using champ.DMR()",
+   "skills": [
+    "dmr-detection-bumphunter",
+    "epic-array-simulation-benchmark",
+    "methylation-region-identification"
+   ]
+  },
+  "champ/task_004": {
+   "tool": "champ",
+   "task_kind": "reproduction",
+   "title": "Reproduce the absence of differential methylation blocks in EPICSimData using champ.Block()",
+   "skills": [
+    "dna-methylation-block-detection-analysis",
+    "illumina-array-data-processing-epic",
+    "interactive-visualization-interpretation-methylation-results",
+    "simulation-dataset-validation-benchmarking"
+   ]
+  },
+  "champ/task_005": {
+   "tool": "champ",
+   "task_kind": "reproduction",
+   "title": "Reproduce the SVD maximum components cap of 20 reported by champ.SVD()",
+   "skills": [
+    "methylation-batch-effect-detection",
+    "singular-value-decomposition-interpretation",
+    "random-matrix-theory-application"
+   ]
+  },
+  "chromvar/task_001": {
+   "tool": "chromvar",
+   "task_kind": "reproduction",
+   "title": "Reproduce chromVAR core deviation computation on example ATAC-seq data",
+   "skills": [
+    "chromatin-accessibility-bias-correction",
+    "motif-peak-overlap-matching",
+    "single-cell-chromatin-sample-filtering",
+    "gc-content-bias-calculation",
+    "background-peak-selection-normalization",
+    "deviation-score-computation-and-interpretation"
+   ]
+  },
+  "chromvar/task_002": {
+   "tool": "chromvar",
+   "task_kind": "reproduction",
+   "title": "Reproduce variability ranking of JASPAR motifs across GM and H1 cell lines",
+   "skills": [
+    "chromatin-accessibility-variability-ranking",
+    "differential-chromatin-accessibility-analysis-between-cell-types",
+    "z-score-based-statistical-testing",
+    "bootstrap-confidence-interval-computation"
+   ]
+  },
+  "chromvar/task_003": {
+   "tool": "chromvar",
+   "task_kind": "reproduction",
+   "title": "Reproduce the finding that 7-mers yield higher variability than 6-mers in chromVAR kmer analysis",
+   "skills": [
+    "kmer-annotation-matrix-assembly",
+    "chromatin-accessibility-deviation-computation",
+    "variability-score-comparison-across-parameter-sets",
+    "bias-corrected-z-score-interpretation",
+    "genome-sequence-matching-for-nucleotide-patterns"
+   ]
+  },
+  "chromvar/task_004": {
+   "tool": "chromvar",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the annotation synergy and correlation computation between chromVAR annotation sets",
+   "skills": [
+    "motif-annotation-correlation-analysis",
+    "chromatin-accessibility-deviation-computation",
+    "kmer-motif-synergy-assessment",
+    "sparse-matrix-subset-indexing",
+    "transcription-factor-cooperative-binding-detection"
+   ]
+  },
+  "chromvar/task_005": {
+   "tool": "chromvar",
+   "task_kind": "reproduction",
+   "title": "Reproduce the clustering performance comparison: kmers+PCA vs SnapATAC on single-cell ATAC-seq",
+   "skills": [
+    "clustering-accuracy-metric-extraction",
+    "benchmark-table-parsing-and-aggregation",
+    "method-comparison-statistical-summarization",
+    "atac-seq-clustering-performance-interpretation"
+   ]
+  },
+  "cooltools/task_001": {
+   "tool": "cooltools",
+   "task_kind": "reproduction",
+   "title": "Reproduce the adaptive coarse-graining utility integration into cooltools.lib",
+   "skills": [
+    "python-package-api-interface-design",
+    "library-module-organization-and-accessibility",
+    "sphinx-documentation-generation-and-api-reference-inclusion",
+    "pytest-unit-test-execution-and-coverage-reporting",
+    "pep8-code-style-compliance-verification",
+    "editable-development-mode-installation-and-verification"
+   ]
+  },
+  "cooltools/task_002": {
+   "tool": "cooltools",
+   "task_kind": "reproduction",
+   "title": "Reproduce the per-bin sequencing depth calculation using cooltools.coverage",
+   "skills": [
+    "hi-c-coverage-track-computation",
+    "cooler-file-format-handling",
+    "bin-level-sequencing-depth-calculation",
+    "bedgraph-file-export",
+    "cis-contact-frequency-analysis"
+   ]
+  },
+  "cooltools/task_003": {
+   "tool": "cooltools",
+   "task_kind": "reproduction",
+   "title": "Reproduce the insulation score and TAD boundary annotation using cooltools.insulation",
+   "skills": [
+    "hi-c-insulation-score-calculation",
+    "boundary-detection-thresholding",
+    "cooler-file-format-handling",
+    "genomic-coordinate-conversion",
+    "bed-format-generation-from-dataframe",
+    "numeric-range-validation-bioinformatics"
+   ]
+  },
+  "cooltools/task_004": {
+   "tool": "cooltools",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the P(s) smoothing pipeline using logbin_expected",
+   "skills": [
+    "contact-distance-binning-logarithmic",
+    "contact-frequency-smoothing-log-space",
+    "hi-c-expected-value-calculation",
+    "python-pandas-data-manipulation",
+    "tsv-file-io-and-formatting"
+   ]
+  },
+  "cooltools/task_005": {
+   "tool": "cooltools",
+   "task_kind": "reproduction",
+   "title": "Reproduce the compartment saddle plot using cooltools.digitize and cooltools.saddle",
+   "skills": [
+    "eigenvector-digitization-into-compartment-bins",
+    "saddle-matrix-computation-from-binned-tracks",
+    "compartment-strength-quantification",
+    "cooler-file-loading-and-querying",
+    "contact-frequency-aggregation-by-genomic-feature"
+   ]
+  },
+  "hicpro/task_001": {
+   "tool": "hicpro",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the bowtie2-based read alignment stage of the HiC-Pro pipeline",
+   "skills": [
+    "dependency-installation-and-verification",
+    "system-path-configuration-and-environment-setup",
+    "bioinformatics-tool-version-compatibility-assessment",
+    "makefile-based-build-system-configuration"
+   ]
+  },
+  "hicpro/task_002": {
+   "tool": "hicpro",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the SAM processing stage that filters and sorts aligned Hi-C reads",
+   "skills": [
+    "python-environment-management",
+    "dependency-resolution-and-validation",
+    "hi-c-matrix-normalization-pipeline-setup",
+    "module-import-and-api-verification"
+   ]
+  },
+  "hicpro/task_003": {
+   "tool": "hicpro",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the ICE normalization stage that balances a Hi-C contact matrix",
+   "skills": [
+    "binary-path-detection-and-validation",
+    "system-dependency-version-checking",
+    "configuration-file-generation-and-templating",
+    "shell-environment-variable-resolution",
+    "hpc-cluster-scheduler-configuration"
+   ]
+  },
+  "hicpro/task_004": {
+   "tool": "hicpro",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the config-system.txt generation step performed during HiC-Pro installation",
+   "skills": [
+    "conda-environment-creation-and-management",
+    "python-dependency-version-resolution",
+    "r-package-installation-verification",
+    "bioinformatics-tool-binary-path-resolution",
+    "software-environment-containerization-setup"
+   ]
+  },
+  "juicer/task_001": {
+   "tool": "juicer",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Juicer Hi-C Processing Pipeline from FASTQ to Hi-C Map",
+   "skills": [
+    "hi-c-fastq-read-preprocessing",
+    "genome-alignment-and-contact-matrix-construction",
+    "hi-c-normalization-and-bias-correction",
+    "hi-c-map-artifact-validation",
+    "juicer-pipeline-configuration-and-execution"
+   ]
+  },
+  "juicer/task_002": {
+   "tool": "juicer",
+   "task_kind": "reproduction",
+   "title": "Reproduce the ENCODE Hi-C Uniform Processing Pipeline Output Using the Juicer-Based ENCODE Workflow",
+   "skills": [
+    "hi-c-fastq-to-contact-map-pipeline",
+    "hic-map-format-validation",
+    "checksum-verification-for-reproducibility",
+    "encode-hic-pipeline-execution",
+    "kilobase-resolution-contact-map-analysis"
+   ]
+  },
+  "juicer/task_003": {
+   "tool": "juicer",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct Feature Annotation on a Hi-C Map Using Juicer Command Line Tools",
+   "skills": [
+    "hic-contact-map-feature-annotation",
+    "genomic-loop-call-interpretation",
+    "chromatin-domain-boundary-detection",
+    "juicer-cli-tool-execution",
+    "kilobase-resolution-genomics-analysis"
+   ]
+  },
+  "macs/task_001": {
+   "tool": "macs",
+   "task_kind": "reproduction",
+   "title": "Reproduce the CTCF ChIP-Seq peak-calling result using MACS3 callpeak on single-end BED input",
+   "skills": [
+    "chip-seq-read-alignment-filtering",
+    "fragment-length-estimation-cross-correlation",
+    "chip-seq-signal-pileup-extension",
+    "local-background-estimation-multiple-scales",
+    "poisson-statistical-enrichment-testing",
+    "narrow-peak-calling-score-threshold"
+   ]
+  },
+  "macs/task_002": {
+   "tool": "macs",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the manual callpeak pipeline: pileup, local-lambda, bdgcmp scoring, and bdgpeakcall",
+   "skills": [
+    "chip-seq-peak-calling-workflow",
+    "bedgraph-file-format-manipulation",
+    "fragment-length-prediction-and-extension",
+    "local-background-bias-estimation",
+    "poisson-test-statistical-scoring",
+    "duplicate-read-filtering-and-normalization",
+    "macs3-subcommand-chaining"
+   ]
+  },
+  "macs/task_003": {
+   "tool": "macs",
+   "task_kind": "reproduction",
+   "title": "Reproduce the genome-background lambda and normalization multiplier metrics for the CTCF tutorial run",
+   "skills": [
+    "fragment-length-estimation-from-read-pairs",
+    "bedpe-format-handling",
+    "narrow-peak-coordinate-validation",
+    "poisson-statistical-enrichment-testing"
+   ]
+  },
+  "methylkit/task_001": {
+   "tool": "methylkit",
+   "task_kind": "reproduction",
+   "title": "Reproduce differential methylation analysis using calculateDiffMeth on example CpG files",
+   "skills": [
+    "dna-methylation-differential-analysis",
+    "cpg-base-filtering-by-statistical-threshold",
+    "methylation-object-merging-and-union",
+    "methylation-hyper-hypo-classification"
+   ]
+  },
+  "methylkit/task_002": {
+   "tool": "methylkit",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the methylRawListDB tabix-backed storage pipeline for memory-efficient sample loading",
+   "skills": [
+    "dna-methylation-file-format-handling",
+    "methylkit-database-mode-configuration",
+    "tabix-index-validation-and-inspection",
+    "bisulfite-sequencing-data-loading"
+   ]
+  },
+  "methylkit/task_003": {
+   "tool": "methylkit",
+   "task_kind": "reproduction",
+   "title": "Reproduce sample clustering and PCA outputs from the methylBase object",
+   "skills": [
+    "methylation-data-clustering",
+    "principal-component-analysis-visualization",
+    "hierarchical-dendrogram-interpretation",
+    "sample-similarity-assessment-from-methylation",
+    "epigenetic-sample-stratification"
+   ]
+  },
+  "methylkit/task_004": {
+   "tool": "methylkit",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct overdispersion-corrected differential methylation using dataSim and calculateDiffMeth with overdispersion='MN'",
+   "skills": [
+    "dna-methylation-differential-analysis",
+    "overdispersion-correction-application",
+    "statistical-test-comparison",
+    "simulation-based-validation",
+    "methylbase-object-handling"
+   ]
+  },
+  "methylkit/task_005": {
+   "tool": "methylkit",
+   "task_kind": "reproduction",
+   "title": "Reproduce genomation-based annotation of differentially methylated bases with refseq and CpG island BED files",
+   "skills": [
+    "dna-methylation-differential-analysis",
+    "genomic-feature-annotation-overlap",
+    "cpg-island-feature-classification",
+    "methylation-region-genomic-context-assignment",
+    "statistical-overlap-proportion-reporting"
+   ]
+  },
+  "seacr/task_001": {
+   "tool": "seacr",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the SEACR peak-calling tool from its public GitHub repository",
+   "skills": [
+    "repository-cloning-and-dependency-verification",
+    "shell-script-executability-validation",
+    "bedgraph-format-parsing-and-validation",
+    "peak-calling-output-interpretation",
+    "end-to-end-bioinformatics-pipeline-testing"
+   ]
+  },
+  "snapatac2/task_001": {
+   "tool": "snapatac2",
+   "task_kind": "reproduction",
+   "title": "Reproduce the scalability benchmark of spectral embedding to 10M+ cells",
+   "skills": [
+    "spectral-embedding-scalability-benchmarking",
+    "large-scale-single-cell-matrix-loading",
+    "computational-complexity-validation",
+    "memory-profiling-and-monitoring",
+    "cosine-similarity-metric-application",
+    "compressed-sparse-row-matrix-handling"
+   ]
+  },
+  "snapatac2/task_002": {
+   "tool": "snapatac2",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the BAM-to-fragment-file preprocessing step using pp.make_fragment_file",
+   "skills": [
+    "bam-to-fragment-file-conversion",
+    "fragment-file-validation",
+    "chromatin-accessibility-quantification",
+    "barcode-fragment-mapping",
+    "bam-file-coordinate-sorting-verification"
+   ]
+  },
+  "snapatac2/task_003": {
+   "tool": "snapatac2",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct tile-matrix generation with paired-insertion counting strategy using pp.add_tile_matrix",
+   "skills": [
+    "fragment-based-count-matrix-generation",
+    "paired-insertion-counting-strategy",
+    "anndata-backed-object-manipulation",
+    "sparse-matrix-validation"
+   ]
+  },
+  "snapatac2/task_004": {
+   "tool": "snapatac2",
+   "task_kind": "reproduction",
+   "title": "Reproduce the end-to-end ATAC-seq analysis pipeline on the pbmc10k_multiome dataset",
+   "skills": [
+    "single-cell-atac-fragment-import-processing",
+    "tile-matrix-generation-counting-strategy-selection",
+    "spectral-embedding-dimension-reduction-parameters",
+    "leiden-clustering-resolution-optimization",
+    "peak-calling-pseudo-bulk-aggregation",
+    "cluster-umap-layout-reproducibility-benchmarking"
+   ]
+  },
+  "snapatac2/task_005": {
+   "tool": "snapatac2",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct motif enrichment analysis using tl.motif_enrichment with the CIS-BP dataset",
+   "skills": [
+    "motif-enrichment-statistical-testing",
+    "atac-seq-peak-annotation",
+    "differential-accessibility-interpretation",
+    "motif-database-query-and-matching",
+    "single-cell-epigenomics-peak-analysis"
+   ]
+  },
+  "tobias/task_001": {
+   "tool": "tobias",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Tn5 insertion bias correction step within the TOBIAS ATAC-seq footprinting pipeline",
+   "skills": [
+    "tn5-insertion-bias-correction",
+    "atac-seq-signal-normalization",
+    "bam-to-bigwig-conversion",
+    "chromatin-accessibility-quantification"
+   ]
+  },
+  "tobias/task_002": {
+   "tool": "tobias",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the footprint scoring step that converts bias-corrected ATAC-seq signal into per-base footprint scores",
+   "skills": [
+    "atac-seq-footprint-scoring",
+    "bigwig-signal-processing",
+    "transcription-factor-binding-depletion-quantification",
+    "genomic-region-annotation-integration"
+   ]
+  },
+  "tobias/task_003": {
+   "tool": "tobias",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the transcription factor occupancy prediction step that classifies TF binding from footprint scores at motif sites",
+   "skills": [
+    "atac-seq-footprint-scoring",
+    "transcription-factor-motif-matching",
+    "chromatin-accessibility-occupancy-prediction",
+    "tf-binding-site-classification"
+   ]
+  },
+  "tobias/task_004": {
+   "tool": "tobias",
+   "task_kind": "analysis",
+   "title": "Analyze the distribution of Tn5 insertion events around known transcription factor binding sites from a public ATAC-seq dataset",
+   "skills": [
+    "atac-seq-bam-read-alignment-processing",
+    "transcription-factor-motif-genomic-coordinate-annotation",
+    "tn5-insertion-position-extraction-and-counting",
+    "nucleotide-footprint-pattern-recognition",
+    "chromatin-accessibility-binding-status-classification",
+    "positional-distribution-profile-aggregation-and-visualization"
+   ]
+  },
+  "tobias/task_005": {
+   "tool": "tobias",
+   "task_kind": "extension",
+   "title": "Extend TOBIAS footprinting to an ATAC-seq dataset deposited in GEO and report TF differential occupancy across two conditions",
+   "skills": [
+    "atac-seq-tn5-bias-correction",
+    "transcription-factor-footprint-scoring",
+    "differential-tf-occupancy-analysis",
+    "motif-site-occupancy-comparison",
+    "chromatin-accessibility-footprint-visualization"
+   ]
+  }
+ }
+}

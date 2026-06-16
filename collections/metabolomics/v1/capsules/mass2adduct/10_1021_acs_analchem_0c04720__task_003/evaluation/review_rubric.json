@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:kbseah__mass2adduct containing pointsAdducts() function implementation"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "generated scatter plot contains red-colored points representing adduct ions and "
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output figure in standard graphics format (PNG, PDF, or R graphics object)",
+      "value": "PDF"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:kbseah__mass2adduct containing pointsAdducts() function implementation",
+      "script_runs: execute pointsAdducts(d, d.diff.annot.cor.Na, which=\"adduct\", signif=TRUE, pch=20, cex=0.5, col=\"red\") on a correlation-filtered massdiff object subset to Na adduct matches without error",
+      "output_matches_reference: generated scatter plot contains red-colored points representing adduct ions and blue-colored points representing parent ions, with overlapping regions visible (robust to exact pixel coordinates, parameter-sensitive to point size and transparency settings)",
+      "file_format_is: output figure in standard graphics format (PNG, PDF, or R graphics object)"
+    ],
+    "expert_review": [
+      "visual assessment that red/blue overlap pattern in scatter plot is consistent with reported paper findings regarding adduct-parent ion co-localization",
+      "confirmation that pointsAdducts() correctly interprets the which=\"adduct\" parameter to distinguish adduct from parent ion populations",
+      "assessment that signif=TRUE filtering parameter appropriately restricts display to statistically significant correlation pairs"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

@@ -1,0 +1,454 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/geseca-spatial-top.png",
+      "role": "figure",
+      "sha256": "e7504e6c8aae4c35620459ba9fdc033e69ef31f16969b25f9a09eef84d77ca24"
+    },
+    {
+      "indexable": false,
+      "path": "figures/geseca-vignette-score-toy-example.png",
+      "role": "figure",
+      "sha256": "9481b44ce8ef679fed4cbd921cf96eb1f7cb386e173a57e415900e90f063d029"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "f2268172ed8b77a932469afaeb28d0611cb1e3160ebbe722394a4b0fad3d6772"
+    }
+  ],
+  "created_at": "2026-06-15T19:18:01.563888+00:00",
+  "crossref_doi": null,
+  "data_accessions": [
+    {
+      "accession": "GSE200250",
+      "evidence_span": "sider a time course data of Th2 activation from the dataset GSE200250.  First, let prepare the dataset. We load it from Gene Expr",
+      "kind": "geo_series",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200250"
+    },
+    {
+      "accession": "GSE116240",
+      "evidence_span": "ges(library(Seurat)) ```  As an example dataset we will use GSE116240 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1162",
+      "kind": "geo_series",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240"
+    },
+    {
+      "accession": "GSE14308",
+      "evidence_span": "exampleExpressionMatrix` - numeric expression matrix of the GSE14308 dataset. Rows correspond to genes (ENTREZID is used as iden",
+      "kind": "geo_series",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14308"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GSE116240 Seurat object (single-cell RNA-seq from aortic CD45+ cells and foam cells)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "KEGG_LEGACY pathway collection from MSigDB (human species)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GESECA enrichment results table with pathway names, scores (pctEvar or similar), p-values, and adjusted p-values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reduction plots (tSNE or UMAP) showing co-regulation scores for KEGG_LEISHMANIA_INFECTION and KEGG_LYSOSOME pathways colored by cell type annotation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report confirming KEGG_LEISHMANIA_INFECTION association with non-foamy intimal macrophages and KEGG_LYSOSOME specificity to intimal foamy macrophages",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "GESECA scores measure co-regulation of gene sets without explicit sample annotation by summing squared column sums of centered gene expression within each pathway, analogous to explained variance in PCA.",
+    "Reverse PCA (rev.pca=TRUE) extracts feature loadings where rows are genes and columns are principal components derived from cell variation, enabling pathway analysis on reduced sample space while preserving gene-level interpretability.",
+    "SCTransform normalization with variable.features.n=10000 stabilizes variance heterogeneity in scRNA-seq and establishes a gene universe; GESECA pathways must use identical gene identifiers.",
+    "KEGG_LEGACY pathways use gene symbols as identifiers; msigdbr must specify species='human' for human datasets (GSE116240 is human ovarian/aortic tissue, not mouse).",
+    "Pathway specificity to cell types is validated visually via tSNE/UMAP reduction plots colored by cell-type annotation, where high co-regulation scores should concentrate in expected cell populations (e.g., KEGG_LYSOSOME in foamy macrophages with high lysosomal content)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: GSE116240 dataset accessible via GEOquery at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240",
+      "verify script_runs: R script loads GSE116240 data using GEOquery::getGEO() without errors",
+      "verify script_runs: Seurat SCTransform normalization completes on GSE116240 expression matrix",
+      "verify script_runs: fgsea::geseca() executes with KEGG_LEGACY pathway collection and GSE116240 SCTransform-normalized data without errors",
+      "verify output_matches_reference: KEGG_LEISHMANIA_INFECTION pathway appears in geseca results table with non-foamy intimal macrophage cell type assignment",
+      "verify output_matches_reference: KEGG_LYSOSOME pathway appears in geseca results table with foamy macrophage cell type assignment",
+      "verify field_present: geseca output table contains columns for pathway name, cell type annotation, and enrichment statistic"
+    ],
+    "expert_review": [
+      "confirm that KEGG_LEISHMANIA_INFECTION association with non-foamy intimal macrophages is biologically plausible given known pathogen-response gene signatures",
+      "confirm that KEGG_LYSOSOME specificity to intimal foamy macrophages is consistent with lipid catabolism and foam cell biology",
+      "assess whether SCTransform normalization parameters and geseca settings (minSize, maxSize, other hyperparameters) are appropriate for single-cell RNA-seq data and KEGG_LEGACY pathway collection",
+      "evaluate whether cell type annotations in GSE116240 are sufficiently granular and accurate to support macrophage subtype-specific enrichment claims"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the fgsea package enable accurate and rapid calculation of gene set enrichment P-values across arbitrarily low thresholds?: 'This package allows to quickly and accurately calculate arbitrarily low GSEA P-values for a collection of gene sets.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] P-value estimation in fgsea is based on an adaptive multi-level split Monte-Carlo scheme.: 'P-value estimation is based on an adaptive multi-level split Monte-Carlo scheme.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GSE116240 Seurat object (single-cell RNA-seq from aortic CD45+ cells and foam cells): 'obj <- readRDS(url(\"https://alserglab.wustl.edu/files/fgsea/GSE116240.rds\"))'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] KEGG_LEGACY pathway collection from MSigDB (human species): 'pathwaysDF <- msigdbr(species=\"mouse\", collection=\"C2\", subcollection = \"CP:KEGG_LEGACY\")\npathways <- split(pathwaysDF$gene_symbol, pathwaysDF$gs_name)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GESECA enrichment results table with pathway names, scores (pctEvar or similar), p-values, and adjusted p-values: 'gesecaRes <- geseca(pathways, E, minSize = 5, maxSize = 500, center = FALSE, eps=1e-100)\n\nhead(gesecaRes, 10)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Reduction plots (tSNE or UMAP) showing co-regulation scores for KEGG_LEISHMANIA_INFECTION and KEGG_LYSOSOME pathways colored by cell type annotation: 'plotCoregulationProfileReduction(pathways[topPathways], obj,\n                                       title=titles,\n                                       reduction=\"tsne\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Verification report confirming KEGG_LEISHMANIA_INFECTION association with non-foamy intimal macrophages and KEGG_LYSOSOME specificity to intimal foamy macrophages: 'We can see that inflammatory pathways (e.g. KEGG_LEISHMANIA_INFECTION) are more associated with the non-foamy intimal macrophages, which was one of the main points of the Kim et al. Another pathway'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: '`fgsea` is an R-package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] fgsea: 'library(fgsea)\ngeseca(pathways, E, minSize = 5, maxSize = 500, center = FALSE, eps=1e-100)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Seurat: 'suppressMessages(library(Seurat))\nobj <- readRDS(url(\"https://alserglab.wustl.edu/files/fgsea/GSE116240.rds\"))'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] msigdbr: 'library(msigdbr)\npathwaysDF <- msigdbr(species=\"mouse\", collection=\"C2\", subcollection = \"CP:KEGG_LEGACY\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] ggplot2: 'library(ggplot2)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] data.table: 'library(data.table)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog available for reproducibility tracking: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(Seurat); library(fgsea); library(msigdbr); library(ggplot2); library(data.table); seurat_obj <- readRDS('{inputs.seurat_obj}'); kegg_pathways <- readRDS('{inputs.kegg_pathways}'); seurat_obj <- SCTransform(seurat_obj, variable.features.n = 10000, verbose = FALSE); seurat_obj <- RunPCA(seurat_obj, npcs = 50, verbose = FALSE); pca_loadings <- seurat_obj@reductions$pca@feature.loadings; geseca_results <- fgsea::fgsea(pathways = kegg_pathways, stats = rowMeans(pca_loadings), minSize = 5, maxSize = 500, eps = 1e-100, centerScores = FALSE); geseca_results <- as.data.frame(geseca_results); geseca_results$padj <- p.adjust(geseca_results$pval, method = 'BH'); write.csv(geseca_results, 'geseca_enrichment_results.csv', row.names = FALSE); seurat_obj <- RunTSNE(seurat_obj, reduction = 'pca', dims = 1:50, verbose = FALSE); pathway_scores <- data.frame(t(pca_loadings)); pathway_scores$cell_type <- seurat_obj$cell_type; pathway_scores$barcode <- rownames(pathway_scores); tsne_coords <- as.data.frame(seurat_obj@reductions$tsne@cell.embeddings); tsne_coords$barcode <- rownames(tsne_coords); tsne_coords$KEGG_LEISHMANIA_INFECTION <- pathway_scores[match(tsne_coords$barcode, pathway_scores$barcode), 'KEGG_LEISHMANIA_INFECTION']; tsne_coords$KEGG_LYSOSOME <- pathway_scores[match(tsne_coords$barcode, pathway_scores$barcode), 'KEGG_LYSOSOME']; tsne_coords$cell_type <- pathway_scores[match(tsne_coords$barcode, pathway_scores$barcode), 'cell_type']; p1 <- ggplot(tsne_coords, aes(x=tSNE_1, y=tSNE_2, color=KEGG_LEISHMANIA_INFECTION, shape=cell_type)) + geom_point(size=2) + ggtitle('KEGG_LEISHMANIA_INFECTION Score by tSNE') + theme_minimal(); p2 <- ggplot(tsne_coords, aes(x=tSNE_1, y=tSNE_2, color=KEGG_LYSOSOME, shape=cell_type)) + geom_point(size=2) + ggtitle('KEGG_LYSOSOME Score by tSNE') + theme_minimal(); ggsave('pathway_tsne_leishmania.pdf', p1); ggsave('pathway_tsne_lysosome.pdf', p2); validation_report <- paste('KEGG_LEISHMANIA_INFECTION mean score (non-foamy intimal macrophages):', mean(tsne_coords[tsne_coords$cell_type == 'Intimal non-foamy', 'KEGG_LEISHMANIA_INFECTION'], na.rm=TRUE), '\\n', 'KEGG_LYSOSOME mean score (foamy intimal macrophages):', mean(tsne_coords[tsne_coords$cell_type == 'Intimal foamy', 'KEGG_LYSOSOME'], na.rm=TRUE)); writeLines(validation_report, 'verification_report.txt'); cat('Analysis complete.\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "geseca_kegg_results.csv",
+  "expected_outputs": [
+    "GESECA enrichment results table with pathway names, scores (pctEvar or similar), p-values, and adjusted p-values",
+    "Reduction plots (tSNE or UMAP) showing co-regulation scores for KEGG_LEISHMANIA_INFECTION and KEGG_LYSOSOME pathways colored by cell type annotation",
+    "Verification report confirming KEGG_LEISHMANIA_INFECTION association with non-foamy intimal macrophages and KEGG_LYSOSOME specificity to intimal foamy macrophages"
+  ],
+  "finding": "P-value estimation in fgsea is based on an adaptive multi-level split Monte-Carlo scheme.",
+  "github_name": "alserglab/fgsea",
+  "input_from": "task_002",
+  "inputs": [
+    "GSE116240 Seurat object (single-cell RNA-seq from aortic CD45+ cells and foam cells)",
+    "KEGG_LEGACY pathway collection from MSigDB (human species)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "seurat_annotated.rds",
+    "feature_loadings_matrix.csv",
+    "geseca_enrichment_table.csv",
+    "kegg_leishmania_infection_plot.png",
+    "kegg_lysosome_plot.png"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_017",
+    "result_031"
+  ],
+  "methodology_summary": [
+    "Load GSE116240 Seurat object and annotate cell clusters into macrophage subtypes (Adventitial, Intimal non-foamy, Intimal foamy, ISG+).",
+    "Apply SCTransform normalization with 10,000 variable features to stabilize variance and define gene universe.",
+    "Run reverse PCA (npcs=50) on SCTransform-normalized expression to extract feature loadings matrix, reducing sample dimensionality while preserving gene-level signals.",
+    "Load KEGG_LEGACY pathways from MSigDB and run GESECA with minSize=5, maxSize=500, center=FALSE, eps=1e-100 to compute gene-set co-regulation scores and empirical p-values.",
+    "Generate tSNE/UMAP reduction plots showing pathway scores by cell type and verify that KEGG_LEISHMANIA_INFECTION localizes to non-foamy intimal macrophages and KEGG_LYSOSOME to foamy intimal macrophages.",
+    "Validation: pathway-cell-type associations are confirmed when pathway score distributions show statistically significant separation (visual inspection or Mann-Whitney U test, p<0.05) between target and non-target cell types, and signals match published biology (Kim et al. findings on inflammatory vs. lysosomal programs).",
+    "References: GSE200250 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200250); GSE116240 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240); GSE14308 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14308)"
+  ],
+  "missing_information": [
+    "No changelog available for reproducibility tracking"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/geseca_results"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the fgsea package enable accurate and rapid calculation of gene set enrichment P-values across arbitrarily low thresholds?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "single-cell-rna-seq-quality-control-and-normalization",
+    "seurat-workflow-orchestration-for-scRNAseq",
+    "dimensionality-reduction-via-reverse-pca",
+    "gene-set-coregulation-analysis",
+    "pathway-cell-type-association-validation",
+    "reduction-plot-interpretation-and-visualization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_fgsea/synthesized_package",
+  "spine_condition_ids": [
+    "cond_geseca_quick_run",
+    "cond_geseca_full_matrix",
+    "cond_geseca_pca_reduced",
+    "cond_geseca_scrna_kegg",
+    "cond_geseca_spatial_visium",
+    "cond_geseca_xenium_ovarian"
+  ],
+  "spine_entity_ids": [
+    "geseca_system",
+    "geseca_func",
+    "geseca_score",
+    "tool_seurat",
+    "tool_sctransform",
+    "dataset_gse116240",
+    "dataset_kegg_legacy",
+    "pathway_programmed_cell_death",
+    "pathway_kegg_leishmania",
+    "pathway_kegg_lysosome",
+    "pathway_cell_cycle",
+    "cond_geseca_full_matrix",
+    "cond_geseca_pca_reduced",
+    "cond_geseca_scrna_kegg",
+    "cond_geseca_spatial_visium",
+    "cond_geseca_xenium_ovarian",
+    "cond_geseca_quick_run",
+    "result_cell_cycle_pval",
+    "result_cell_cycle_mitotic_pval",
+    "result_pca_reduced_similar",
+    "result_leishmania_non_foamy",
+    "result_lysosome_foamy",
+    "metric_cell_cycle_pctEvar"
+  ],
+  "subdomains": [
+    "functional-genomics",
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "statistical-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:alserglab__fgsea",
+  "task_description": "Load GSE116240 single-cell RNA-seq aortic CD45+ cell data via Seurat, normalize with SCTransform, reduce dimensionality via reverse PCA, run GESECA analysis with KEGG_LEGACY pathways, and verify pathway-cell-type associations: KEGG_LEISHMANIA_INFECTION with non-foamy intimal macrophages and KEGG_LYSOSOME with intimal foamy macrophages. Output enrichment results table and spatial/reduction plots showing pathway localization.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GSE116240 Seurat object with scRNA-seq expression data",
+      "port_id": "seurat_obj",
+      "resolved_via": null,
+      "source": "task_002/geseca_results",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "KEGG_LEGACY pathway collection from MSigDB",
+      "port_id": "kegg_pathways",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Load GSE116240 scRNA-seq data via Seurat/SCTransform, execute geseca() with KEGG_LEGACY pathways, and validate pathway enrichment specificity across intimal macrophage subtypes.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GESECA enrichment table with p-values and scores",
+      "port_id": "geseca_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Reduction plots showing pathway scores by cell type",
+      "port_id": "reduction_plots",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pathway-cell-type association verification",
+      "port_id": "verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "enrichment-analysis",
+    "pathway-analysis",
+    "statistical-analysis",
+    "false-discovery-rate-correction"
+  ],
+  "title": "Reproduce GESECA scRNA-seq analysis on GSE116240 atherosclerosis data with KEGG_LEGACY pathways",
+  "tools": [
+    "R",
+    "fgsea",
+    "Seurat",
+    "msigdbr",
+    "ggplot2",
+    "data.table"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Seurat, msigdbr, ggplot2, data.table, GESECA enrichment results table with pathway names, scores (pctEvar or similar), p-values, and adjusted p-values, Reduction plots (tSNE or UMAP) showing co-regulation scores for KEGG_LEISHMANIA_INFECTION and KEGG_LYSOSOME pathways colored by cell type annotation, Verification report confirming KEGG_LEISHMANIA_INFECTION association with non-foamy intimal macrophages and KEGG_LYSOSOME specificity to intimal foamy macrophages."
+  ],
+  "workflow_description": "1. Load GSE116240 Seurat object from URL and annotate cell clusters with macrophage subtypes (Adventitial MF, Intimal non-foamy MF, Intimal foamy MF, ISG+ MF, etc.) using RenameIdents. 2. Apply SCTransform normalization with variable.features.n=10000 to stabilize variance and select genes for universe. 3. Run reverse PCA (rev.pca=TRUE) on SCTransform-normalized matrix with npcs=50, extracting feature loadings matrix E. 4. Load KEGG_LEGACY pathways from MSigDB using msigdbr for human species. 5. Run geseca(pathways, E, minSize=5, maxSize=500, center=FALSE, eps=1e-100) on reduced feature space, producing enrichment scores and p-values. 6. Extract top-ranked pathways and generate plotCoregulationProfileReduction plots (reduction='tsne') to visualize pathway scores by cell type, confirming KEGG_LEISHMANIA_INFECTION prominence in non-foamy intimal macrophages and KEGG_LYSOSOME in foamy intimal macrophages."
+}

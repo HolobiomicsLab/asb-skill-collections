@@ -1,36 +1,60 @@
 ---
 name: scientific-task-formulation
-description: 'Use when you have tandem MS/MS spectra from natural product samples annotated by multiple orthogonal tools (GNPS, ISDB-LOTUS, Sirius 6) and need a single, ranked decision output that reconciles conflicting or uncertain identifications. Specifically: when you hold a .mgf file, quantitative .'
+description: Use when you are starting a new mass spectrometry analysis task or feature request where the problem scope is unclear, the tool chain (e.g., OpenMS + Python + KNIME integration) is not yet selected, or acceptance criteria (code quality, test coverage, documentation) have not been established.
 license: CC-BY-4.0
 metadata:
-  edam_operation: http://edamontology.org/operation_3633
+  edam_operation: http://edamontology.org/operation_3801
   edam_topics:
-  - http://edamontology.org/topic_3172
+  - http://edamontology.org/topic_3520
   - http://edamontology.org/topic_0121
+  - http://edamontology.org/topic_3172
   - http://edamontology.org/topic_3174
+  - http://edamontology.org/topic_0091
   - http://edamontology.org/topic_3050
   - http://edamontology.org/topic_3372
   - http://edamontology.org/topic_3572
   tools:
+  - OpenMS
+  - KNIME
+  - Python
   - GitHub
+  - TOPPTools
+  - pyOpenMS
+  - TOPPView
   - GNPS (Global Natural Products Social Molecular Networking)
   - ISDB-LOTUS
   - Sirius 6
   - MatchMS
   - MZmine
+  - MZmine 2
+  - mzmine2
+  - mzmine (current)
   - npanalyst
   - forward_train.py
   - forward_evaluate_pipeline.py
   - analysis_pipeline.py
   - Conda / Mamba
+  - SIRIUS
+  - CSI:FingerID
+  - CANOPUS
+  - MSNovelist
+  - ZODIAC
 derived_from:
+- doi: 10.1074/mcp.M113.031278
+  title: featurefindermetab
+- doi: 10.1289/EHP7722
+  title: ''
 - doi: 10.1002/cmtd.202400088
-  title: ms2decide
+  title: ''
+- doi: 10.1186/1471-2105-11-395
+  title: ''
 - doi: 10.1021/acscentsci.1c01108
   title: ''
 - doi: 10.1021/acs.analchem.2c02093
   title: ''
 - doi: 10.1021/acs.analchem.5c03730
+  title: ''
+- doi: 10.1038/s41592-019-0344-8
   title: ''
 evidence_spans: []
 claims: []
@@ -44,12 +68,18 @@ provenance:
   - build: coll_bindiscover
     doi: 10.1186/s13321-023-00734-8
     title: bindiscover
+  - build: coll_featurefindermetab
+    doi: 10.1074/mcp.M113.031278
+    title: featurefindermetab
   - build: coll_hexpmetdb
     doi: 10.1289/EHP7722
     title: HExpMetDB
   - build: coll_ms2decide
     doi: 10.1002/cmtd.202400088
     title: ms2decide
+  - build: coll_mzmine2
+    doi: 10.1186/1471-2105-11-395
+    title: mzmine2
   - build: coll_np_analyst
     doi: 10.1021/acscentsci.1c01108
     title: NP Analyst
@@ -59,7 +89,10 @@ provenance:
   - build: coll_rtmsecho
     doi: 10.1021/acs.analchem.5c03730
     title: rtmsecho
-  dedup_kept_from: coll_ms2decide
+  - build: coll_sirius
+    doi: 10.1038/s41592-019-0344-8
+    title: sirius
+  dedup_kept_from: coll_featurefindermetab
 schema_version: 0.2.0
 ---
 
@@ -67,76 +100,61 @@ schema_version: 0.2.0
 
 ## Summary
 
-Formulate and scope a reproducible scientific task by integrating multisource annotations (GNPS, ISDB-LOTUS, Sirius) and applying decision theory to rank natural product identifications from tandem mass spectrometry data. This skill bridges expert knowledge elicitation with computational annotation aggregation to prioritize compounds in discovery workflows.
+Formulate a well-scoped research question and methodological workflow for mass spectrometry data analysis by defining clear objectives, selecting appropriate tools (e.g., OpenMS, KNIME), and establishing acceptance criteria (unit tests, functional tests, documentation) before implementation.
 
 ## When to use
 
-You have tandem MS/MS spectra from natural product samples annotated by multiple orthogonal tools (GNPS, ISDB-LOTUS, Sirius 6) and need a single, ranked decision output that reconciles conflicting or uncertain identifications. Specifically: when you hold a .mgf file, quantitative .csv table, and at least two completed annotation sets, and the annotations disagree or have low confidence individually.
+You are starting a new mass spectrometry analysis task or feature request where the problem scope is unclear, the tool chain (e.g., OpenMS + Python + KNIME integration) is not yet selected, or acceptance criteria (code quality, test coverage, documentation) have not been established. Particularly relevant when contributing new analysis algorithms or workflows to a large scientific software project.
 
 ## When NOT to use
 
-- Input annotations come from a single tool only (K_estimation requires multi-tool agreement to compute meaningful similarity scores).
-- Sirius 6 output file contains redundant feature mappings in 'mappingFeatureId' column (will raise 'DataFrame index must be unique' error; must be cleaned before use).
-- No internet connectivity available (GNPS and ISDB-LOTUS access required).
-- Mass spectrometry data is already feature-matched and ranked by another method; re-ranking may introduce inconsistency.
+- The task scope is already fully defined and validated (e.g., existing algorithm with clear parameters and test suite)
+- You are implementing a routine analysis on data with a known, proven workflow (no novel methodology formulation needed)
+- The input data or output expectations are so ambiguous that formulation itself cannot proceed without external domain expertise or stakeholder input
 
 ## Inputs
 
-- quantitative data table (.csv format, e.g., MZmine FBMN export)
-- tandem mass spectrometry data (.mgf file)
-- Sirius 6 annotation file (structure_identifications.tsv)
-- GNPS credentials (username, password, email)
-- ionization mode selection (POS or NEG)
-- mass tolerance parameter (<0.5 Da)
+- Research question or analysis objective (text)
+- Input data format specification (e.g., mzML, mzXML, mzIdentXML)
+- Available computational resources and target platforms (Windows/macOS/Linux)
 
 ## Outputs
 
-- filtered and ranked .tsv file (K_estimation output) with K-values and unified annotations
-- optional: empty.tsv report (empty annotations from iterative GNPS analog search)
+- Formulated task specification document
+- Selected tool and library components (OpenMS, Python, KNIME, etc.)
+- Workflow step sequence (ordered list)
+- Acceptance criteria checklist (unit tests, functional tests, documentation, coding conventions, Python bindings if applicable)
 
 ## How to apply
 
-Invoke K_estimation() to aggregate annotations via decision theory: (1) provide GNPS credentials and specify strict or iterative weighted analog search (iterative can run 27 jobs over ~3 hours); (2) supply quantitative table (.csv) and MS/MS data (.mgf, preferably from MZmine >2.53 FBMN export); (3) select ionization mode (POS/NEG) and mass tolerance (<0.5 Da, default 0.02) for ISDB-LOTUS; (4) provide Sirius 6 structure_identifications.tsv and choose confidence score type (exact or approximate); (5) the function computes tanimoto-based similarity between tool pairs, applies default values (0.7 for missing GNPS–Sirius matches, 0.5 for failed Sirius annotations), and exports ranked .tsv output sorted by K-values. Zero ISDB-LOTUS matches are treated as meaningful novelty signals, not failures.
+Begin by formulating a clear research question aligned with your scientific objective (e.g., 'quantify peptides using label-free or SILAC protocols'). Identify the required input data formats (mzML, mzXML, mzIdentXML, etc.) and desired output (quantitation tables, identifications). Select tool components from the OpenMS ecosystem (C++ library, TOPPTools, pyOpenMS Python bindings, KNIME nodes) that cover your workflow. Document the required workflow steps (e.g., spectrum preprocessing, peptide identification, quantitation) and establish acceptance criteria: unit tests and functional tests for correctness, Python bindings if algorithm exposure is needed, and proper documentation (inline code comments, method descriptions). Before opening a pull request, verify adherence to coding conventions and completion of all test and documentation requirements.
 
 ## Related tools
 
-- **GNPS (Global Natural Products Social Molecular Networking)** (spectral library search and feature-based molecular networking; supports both strict (0.02 Da tolerance, 0.001 threshold) and iterative weighted analog search modes) — https://ccms-ucsd.github.io/GNPSDocumentation/librarysearch/
-- **ISDB-LOTUS** (spectral matching and structure annotation via CFM-ID 4.0 using MatchMS library; applied with user-specified ionization mode and mass tolerance) — https://zenodo.org/records/8287341
-- **Sirius 6** (de novo structure annotation with confidence scoring (exact or approximate modes); outputs structure_identifications.tsv for input to K_estimation) — https://v6.docs.sirius-ms.io/
-- **MatchMS** (spectral library matching backend for ISDB-LOTUS comparisons)
-- **MZmine** (feature extraction and quantification; FBMN module produces .csv and .mgf exports compatible with K_estimation (version >2.53 recommended))
-
-## Examples
-
-```
-from ms2decide.K_estimation import K_estimation
-K_estimation()
-```
+- **OpenMS** (Core C++ library providing LC-MS data management, analysis algorithms, and infrastructure for rapid tool development) — https://github.com/OpenMS/OpenMS
+- **TOPPTools** (Pre-built ready-to-use analysis tools for proteomics and metabolomics data processing and mining) — https://github.com/OpenMS/OpenMS
+- **pyOpenMS** (Python bindings to OpenMS C++ API enabling rapid algorithm development and integration into Python workflows) — https://github.com/OpenMS/OpenMS
+- **KNIME** (Workflow engine for integrating and orchestrating OpenMS TOPPTools and analyses)
+- **TOPPView** (1D, 2D, and 3D visualization tool for LC-MS data exploration and validation) — https://github.com/OpenMS/OpenMS
 
 ## Evaluation signals
 
-- Output .tsv file is successfully generated and contains a 'K' column with numeric values ranked by certainty.
-- All three annotation sources (GNPS, ISDB-LOTUS, Sirius) appear as columns in the output; missing annotations have been filled with documented default values (0.7 or 0.5).
-- Tanimoto similarity scores between tool pairs are computed and fall within [0, 1] range; check that at least one inter-tool similarity is present (not all defaults).
-- Feature count in output matches input feature count unless user-specified filtering was applied; verify no rows were dropped unexpectedly.
-- When iterative GNPS search is used, optional empty.tsv report can be inspected to confirm empty annotation signals are preserved separately.
+- Research question is explicit, measurable, and aligned with supported MS workflows (label-free, SILAC, iTRAQ, TMT, SRM, SWATH, DIA, or targeted protocols)
+- Input/output data formats are specified and supported by OpenMS (mzML, mzXML, mzIdentXML, pepXML, mzTab, etc.)
+- All workflow steps are documented, each with a designated tool component (OpenMS C++, TOPPTool, pyOpenMS, or KNIME node)
+- Acceptance criteria include passing unit tests, functional tests, and adherence to OpenMS coding conventions; Python bindings are documented if algorithm exposure is needed
+- Task specification can be traced to a corresponding issue or pull request in https://github.com/OpenMS/OpenMS with evidence of maintainer assignment and severity classification
 
 ## Limitations
 
-- When GNPS or Sirius fails to annotate, default tanimoto values (0.7 for GNPS–Sirius missing pairs; 0.5 for failed Sirius confidence) are assigned, reducing signal specificity for those features.
-- Strict ISDB-LOTUS library search (0.02 Da) may miss isobars and isomers; zero matches are treated as novelty rather than failure, which may conflate unknown compounds with truly novel ones.
-- Iterative weighted GNPS analog search launches 27 jobs and can require up to 3 hours; strict mode (single job) is faster but less sensitive.
-- Redundant feature IDs in Sirius structure_identifications.tsv cause DataFrame uniqueness errors; manual inspection and cleaning of the input file is required before processing.
-- No changelog is available in the repository, limiting reproducibility tracking across versions.
+- The formulation process relies on internal OpenMS maintainer expertise to assign severity and assess blockers; no automated heuristic was detected to validate finding strength in the provided source materials
+- No changelog or version compatibility constraints were mentioned in the source material, so long-term maintenance and backward-compatibility implications must be clarified separately
+- Task formulation in OpenMS assumes familiarity with mass spectrometry concepts, file formats (mzML, mzXML, etc.), and quantitation protocols; domain expertise is not generated by this skill
 
 ## Evidence
 
-- [readme] The K_estimation function: - Integrates annotation data from multiple sources: GNPS, ISDB-LOTUS, and Sirius.: "Integrates annotation data from multiple sources: GNPS, ISDB-LOTUS, and Sirius."
-- [readme] MS2DECIDE is a Python library that leverages decision theory to assist chemists in natural products multiannotation and prioritization.: "MS2DECIDE is a Python library that leverages decision theory to assist chemists in natural products multiannotation and prioritization."
-- [readme] By gathering insights from domain experts and modeling their intuition, the library offers a structured, data-driven approach to interpreting multiannotated tandem mass spectrometry data.: "By gathering insights from domain experts and modeling their intuition, the library offers a structured, data-driven approach to interpreting multiannotated tandem mass spectrometry data."
-- [readme] Ensure that your input files follow the required format (.csv for quantitative data, .mgf for mass spectrometry data). If you use the export file module of MZmine (>2.53) for FBMN, the format will be accepted.: "Ensure that your input files follow the required format (.csv for quantitative data, .mgf for mass spectrometry data). If you use the export file module of MZmine (>2.53) for FBMN, the format will be"
-- [readme] Choose the type of GNPS library search: strict: Uses a typical mass difference tolerance of 0.02 Da and threshold value of 0.001. iterative: for iterative weighted analog search (can take up to three hours).: "Choose the type of GNPS library search: strict: Uses a typical mass difference tolerance of 0.02 Da and threshold value of 0.001. iterative: for iterative weighted analog search (can take up to three"
-- [readme] ISDB-LOTUS annotation is performed using the function isdb_res = get_cfm_annotation(mgf, ISDBtol). During the process, the user will be prompted to choose: Ionization mode: Specify the ionization mode for annotation (POS for positive, NEG for negative). Mass tolerance: Provide a mass tolerance value less than 0.5 (default: 0.02).: "During the process, the user will be prompted to choose: Ionization mode: Specify the ionization mode for annotation (POS for positive, NEG for negative). Mass tolerance: Provide a mass tolerance"
-- [readme] In scenarios where there is no match with GNPS or no match with Sirius, the tanimoto between GNPS and Sirius cannot be calculated. Hence, a default value of 0.7 was assigned to T_gs and T_gi in these instances.: "In scenarios where there is no match with GNPS or no match with Sirius, the tanimoto between GNPS and Sirius cannot be calculated. Hence, a default value of 0.7 was assigned to T_gs and T_gi in these"
-- [readme] Sirius annotations were performed in batch mode by using Sirius 6. we utilized the Confidence Approximate score. Unfortunately, in some cases, Sirius was not able to propose an annotation. To remedy, we associated a value of 0.5 to Sirius matching score.: "Unfortunately, in some cases, Sirius was not able to propose an annotation. To remedy, we associated a value of 0.5 to Sirius matching score."
-- [readme] For ISDB-LOTUS, since a strict library search was applied (0.02 Da), we considered a zero answer as an important information regarding our definition of novelty.: "For ISDB-LOTUS, since a strict library search was applied (0.02 Da), we considered a zero answer as an important information regarding our definition of novelty."
+- [methods] Before you open the pull request, make sure you adhere to our coding conventions and have unit tests and functional tests as well as proper documentation and Python bindings: "Before you open the pull request, make sure you adhere to [our coding conventions] and have [unit tests and functional tests] as well as [proper documentation] and have Python bindings — nanobind"
+- [readme] OpenMS is an open-source software C++ library for LC-MS data management and analyses offering infrastructure for rapid tool development: "OpenMS is an open-source software C++ library for LC-MS data management and analyses. It offers an infrastructure for rapid development of mass spectrometry-related software."
+- [readme] OpenMS offers analyses for various quantitation protocols including label-free, SILAC, iTRAQ, TMT, SRM, SWATH: "OpenMS offers analyses for various quantitation protocols, including label-free quantitation, SILAC, iTRAQ, TMT, SRM, SWATH, etc."
+- [readme] OpenMS supports easy integration into workflow engines like KNIME via the TOPPTools concept and unified parameter handling: "It supports easy integration of OpenMS built tools into workflow engines like nextflow, KNIME, Galaxy, and TOPPAS via the TOPPTools concept and a unified parameter handling via a 'common tool"
+- [other] The severity is usually assigned by OpenMS maintainers and used internally to indicate if a bug is a blocker for a new release: "The severity is usually assigned by OpenMS maintainers and used internally to e.g. indicate if a bug is a blocker for a new release."

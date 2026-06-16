@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:GreenleafLab__ArchR repository is accessible and contains ArchR package source code"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that ArchR package documentation or vignettes include functions importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, and addCombinedDims"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the R script output includes a ArchRProject object or SummarizedExperiment with dimensionality-reduction slots populated (e.g., containing LSI or combined embedding matrices)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the combined embedding produced has multiple dimensions (parameter-sensitive: exact dimensionality may vary by LSI iteration count, but must be \u2265 2)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:GreenleafLab__ArchR repository is accessible and contains ArchR package source code",
+      "verify that ArchR package documentation or vignettes include functions importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, and addCombinedDims",
+      "script_runs: execute a minimal R script that loads ArchR, calls importFeatureMatrix on a test scRNA-seq matrix, calls addGeneExpressionMatrix on a test ArchRProject with paired scATAC-seq data, calls addIterativeLSI, and calls addCombinedDims without errors",
+      "verify that the R script output includes a ArchRProject object or SummarizedExperiment with dimensionality-reduction slots populated (e.g., containing LSI or combined embedding matrices)",
+      "verify that the combined embedding produced has multiple dimensions (parameter-sensitive: exact dimensionality may vary by LSI iteration count, but must be \u2265 2)"
+    ],
+    "expert_review": [
+      "assess whether the joint reduced-dimension embedding produced by addCombinedDims meaningfully integrates information from both scATAC-seq and scRNA-seq modalities (e.g., by examining correlation structure, variance explained, or cross-modality clustering concordance)",
+      "evaluate whether the paired multiome workflow as implemented follows best practices for joint dimensionality reduction in the scATAC-seq and scRNA-seq literature"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

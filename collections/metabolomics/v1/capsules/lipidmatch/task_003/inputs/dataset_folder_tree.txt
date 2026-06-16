@@ -1,0 +1,21 @@
+  figures/LipidMatch_Icon2.png
+  figures/LipidMatch_Icon3.png
+  figures/LipidMatch_Icon4.png
+  figures/LipidPioneer_Icon.png
+  figures/LipidPioneer_Icon2.png
+  figures/adwaita.png
+  figures/ambiance.png
+  figures/aqua.png
+  figures/arrowStyles.png
+  figures/baghira.png
+  figures/browse.png
+  figures/browseTree.png
+  figures/bwidget.png
+  figures/config.png
+  figures/dirViewer.png
+  figures/dust.png
+  figures/dustSand.png
+  figures/embeddedWindows.png
+  figures/embeddedWindows_tile.png
+  figures/scatterplot3d.png
+paper.md

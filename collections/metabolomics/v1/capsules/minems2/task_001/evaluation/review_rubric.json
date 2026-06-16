@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: ms2Lib object for Penicillium nordicum (51 MS/MS spectra) is loadable from github:odisce__mineMS2"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: GNPS extracted components dataset with precursor m/z values 370.1283 and 404.0891 for component 8"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "pattern P70 achieves F1-score of 1.0 for component 8 (byte-for-byte exact numeri"
+    },
+    {
+      "id": "pf_005",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "all other top-5 patterns have recall=1.0 (exact match)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "all other top-5 patterns (excluding P70) have precision < 1.0 (multiple defensib"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: ms2Lib object for Penicillium nordicum (51 MS/MS spectra) is loadable from github:odisce__mineMS2",
+      "verify file exists: GNPS extracted components dataset with precursor m/z values 370.1283 and 404.0891 for component 8",
+      "script_runs: findPatternsExplainingComponents(pnordicum.ms2Lib, gnps_components, metric=c('recall','precision','size'), top=5) executes without error",
+      "output_matches_reference: pattern P70 achieves F1-score of 1.0 for component 8 (byte-for-byte exact numeric match or robust to floating-point precision \u2264 1e-6)",
+      "value_in_range: all other top-5 patterns have recall=1.0 (exact match)",
+      "value_in_range: all other top-5 patterns (excluding P70) have precision < 1.0 (multiple defensible thresholds for 'lower precision')"
+    ],
+    "expert_review": [
+      "Assess whether F1-score=1.0 for pattern P70 on component 8 represents a chemically meaningful and reproducible result given the Penicillium nordicum secondary metabolite dataset",
+      "Evaluate whether the differential recall (all 1.0) and precision (P70=1.0, others <1.0) pattern across top-5 patterns is consistent with expected mineMS2 behavior on GNPS-coupled molecular networks"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

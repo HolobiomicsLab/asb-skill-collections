@@ -1,0 +1,19 @@
+name: mzmine
+slug: mzmine
+evidence_spans:
+- mzmine is an open-source software for mass spectrometry data processing
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+derived_from:
+- doi: 10.1038/s41467-021-23953-9
+  title: iimn
+- doi: 10.1186/s12859-017-1744-3
+  title: lipidmatch
+- doi: 10.1186/1471-2105-11-395
+  title: mzmine2
+- doi: 10.1038/s41587-023-01690-2
+  title: mzmine3
+source_repos:
+- GarrettLab-UF/LipidMatch
+- mzmine/mzmine
+- mzmine/mzmine2
+schema_version: 0.2.0

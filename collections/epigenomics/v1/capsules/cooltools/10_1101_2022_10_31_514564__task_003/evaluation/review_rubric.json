@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that input cooler file exists and is readable in cooler format"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output insulation score table file exists"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output BED file exists"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "insulation score table is TSV or CSV with numeric columns",
+      "value": "TSV"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "BED file conforms to standard BED format (tab-delimited, chrom, chromStart, chro"
+    },
+    {
+      "id": "pf_006",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "insulation score table contains per-bin score column"
+    },
+    {
+      "id": "pf_007",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "BED file contains boundary call coordinates"
+    },
+    {
+      "id": "pf_008",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "insulation scores are numeric and within expected range (no NaN values in output"
+    },
+    {
+      "id": "pf_009",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "number of rows in insulation score table matches number of bins in input cooler "
+    },
+    {
+      "id": "pf_010",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that input cooler file exists and is readable in cooler format",
+      "verify output insulation score table file exists",
+      "verify output BED file exists",
+      "file_format_is: insulation score table is TSV or CSV with numeric columns",
+      "file_format_is: BED file conforms to standard BED format (tab-delimited, chrom, chromStart, chromEnd, and optional fields)",
+      "field_present: insulation score table contains per-bin score column",
+      "field_present: BED file contains boundary call coordinates",
+      "value_in_range: insulation scores are numeric and within expected range (no NaN values in output, or NaN handling is documented)",
+      "row_count_equals: number of rows in insulation score table matches number of bins in input cooler file",
+      "script_runs: cooltools.insulation function executes without error on the input cooler file"
+    ],
+    "expert_review": [
+      "insulation score values are biologically plausible for Hi-C contact matrices (expert judgment required on typical insulation score distribution for this data type)",
+      "boundary calls in BED file correspond to expected topologically associating domain (TAD) boundaries or domain insulation patterns",
+      "parameter choices (window size, distance threshold) are appropriate for the resolution and scale of the input cooler file"
+    ]
+  },
+  "max_score": 10.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

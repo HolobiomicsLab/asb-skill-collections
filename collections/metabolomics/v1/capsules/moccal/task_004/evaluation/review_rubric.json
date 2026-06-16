@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: the deposited TWIM-MS dataset (accession number or URL) is accessible and downloadable"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: MOCCal workflow executes without error on the external dataset (all three stages: calibration, class assignment, class-specific CCS calculation)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists and file_format_is: structured CCS output file is produced in expected format (CSV, JSON, or HDF5 \u2014 solution_space: any documented output format is acceptable)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: CCS values in output are numeric, within physically plausible range for the biomolecular classes present (expert-validated ranges or literature cross-checks), robust to minor parameter choices"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify row_count_equals or field_present: output file contains at least one CCS value record per input feature/compound, with required columns (feature ID, class label, CCS value)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file_exists: the deposited TWIM-MS dataset (accession number or URL) is accessible and downloadable",
+      "verify script_runs: MOCCal workflow executes without error on the external dataset (all three stages: calibration, class assignment, class-specific CCS calculation)",
+      "verify file_exists and file_format_is: structured CCS output file is produced in expected format (CSV, JSON, or HDF5 \u2014 solution_space: any documented output format is acceptable)",
+      "verify output_matches_reference: CCS values in output are numeric, within physically plausible range for the biomolecular classes present (expert-validated ranges or literature cross-checks), robust to minor parameter choices",
+      "verify row_count_equals or field_present: output file contains at least one CCS value record per input feature/compound, with required columns (feature ID, class label, CCS value)"
+    ],
+    "expert_review": [
+      "Confirm that the assigned biomolecular classes are chemically/biologically consistent with the dataset source (e.g., lipids, peptides, metabolites as declared in deposit metadata)",
+      "Review CCS calibration convergence and model diagnostics (residuals, R\u00b2 or equivalent goodness-of-fit) to assess whether calibration quality is acceptable for the external dataset",
+      "Assess whether class-specific CCS calculations show expected within-class consistency and between-class separation, compared to prior literature or the tool's validation cohort"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

@@ -1,0 +1,333 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/scheme.png",
+      "role": "figure",
+      "sha256": "e7c622951c71be810b654c83fc95efc3c3e4f8bbeec7228f346be5e6163cea76"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "92ad66c17337db77fb80dc97bca8063643688c39a219cf835db6a1c88a4b55e7"
+    }
+  ],
+  "created_at": "2026-06-16T05:39:21.024441+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "List of active web service converters (CIR, CTS, PubChem, IDSM, BridgeDb) and their endpoint URLs",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Asynchronous annotation run events (request start, response received, error occurred)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured JSON status report per service including uptime percentage, error count, mean response time, and last check timestamp",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "The Monitor component must track five external web services (CIR, CTS, PubChem, IDSM, BridgeDb) that provide metadata lookups for mass spectrometry annotations, and availability of any service directly impacts the completeness of the annotated output.",
+    "Asynchronous implementation is critical for optimal fetching speed, so Monitor must measure per-service response latency without blocking the annotation workflow.",
+    "Error states include network timeouts, HTTP error codes, and malformed API responses; Monitor must distinguish transient (retry-able) from permanent (service-down) failures.",
+    "The status report must be timestamped and aggregated at configurable intervals to enable real-time visibility into service health during long annotation runs."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: check that Monitor class is defined in the MSMetaEnhancer codebase (GitHub repository RECETOX/MSMetaEnhancer)",
+      "script_runs: execute Monitor component initialization with mock service instances and verify no runtime errors occur",
+      "file_format_is: verify that status report output is a structured format (JSON, dict, or similar) containing per-service status entries",
+      "field_present: verify status report contains required fields for each service (service name, availability state, error state)",
+      "contains_substring: verify Monitor component tracks the services mentioned in intro (CIR, CTS, PubChem, IDSM, BridgeDb)",
+      "output_matches_reference: if a reference implementation or specification exists in repository documentation or tests, verify Monitor output structure matches expected schema"
+    ],
+    "expert_review": [
+      "assess whether the Monitor component correctly distinguishes between service unavailability and transient errors during annotation runs",
+      "evaluate whether the status tracking mechanism is appropriate for asynchronous annotation workflows and does not introduce bottlenecks",
+      "review whether the structured status report provides sufficient diagnostic information for users to identify which services failed and why"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MSMetaEnhancer track the availability and error state of external web services during annotation runs?: 'It adds metadata like SMILES, InChI, and CAS number fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MSMetaEnhancer fetches metadata from five external web services: CIR, CTS, PubChem, IDSM, and BridgeDb, using an asynchronous implementation for the annotation process.: 'The app uses asynchronous implementation of annotation process allowing for optimal fetching speed.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] List of active web service converters (CIR, CTS, PubChem, IDSM, BridgeDb) and their endpoint URLs: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Asynchronous annotation run events (request start, response received, error occurred): 'The app uses asynchronous implementation of annotation process allowing for optimal fetching speed.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Structured JSON status report per service including uptime percentage, error count, mean response time, and last check timestamp: '.. automodule:: MSMetaEnhancer.libs.utils.Monitor\n   :members:\n   :undoc-members:\n   :show-inheritance:'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MSMetaEnhancer: 'MSMetaEnhancer is a tool used for `.msp` files annotation.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'A Python package for mass spectra metadata annotation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] CIR: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] CTS: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PubChem: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] IDSM: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] BridgeDb: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pytest: 'make sure the existing tests still work by running ``pytest``'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[other] What constitutes a 'status report' and what specific fields or structure should it contain?: 'monitoring of services status during annotation process [#56]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Which specific error states or availability conditions should the Monitor component track?: 'monitoring of services status during annotation process [#56]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How should the Monitor component integrate with the asynchronous annotation workflow?: 'monitoring of services status during annotation process [#56]'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "service_status_report.json",
+  "expected_outputs": [
+    "Structured JSON status report per service including uptime percentage, error count, mean response time, and last check timestamp"
+  ],
+  "finding": "MSMetaEnhancer fetches metadata from five external web services: CIR, CTS, PubChem, IDSM, and BridgeDb, using an asynchronous implementation for the annotation process.",
+  "github_name": "RECETOX/MSMetaEnhancer",
+  "input_from": "task_002",
+  "inputs": [
+    "List of active web service converters (CIR, CTS, PubChem, IDSM, BridgeDb) and their endpoint URLs",
+    "Asynchronous annotation run events (request start, response received, error occurred)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "service_endpoints.json",
+    "error_log_per_service.csv",
+    "service_status_report.json"
+  ],
+  "linked_result_ids": [
+    "result_043"
+  ],
+  "methodology_summary": [
+    "Instantiate Monitor class with registry of active web service converters (CIR, CTS, PubChem, IDSM, BridgeDb) and initialize per-service state dictionaries for uptime, error counts, latency, and last-check timestamp.",
+    "Integrate Monitor with asynchronous annotation event loop to capture request-start, response-received, and error-occurred events from WebConverter base class.",
+    "Compute per-service metrics: uptime percentage (successful requests / total requests), cumulative error count, mean response latency, and wall-clock timestamp of last status check.",
+    "Serialize aggregated status as JSON with per-service summaries (availability %, error count, mean latency ms, last check) and overall health indicator.",
+    "Validation: verify JSON output contains all five registered services, all uptime and error counts are non-negative integers, latency values are positive floats, and timestamps are ISO 8601 format."
+  ],
+  "missing_information": [
+    "What constitutes a 'status report' and what specific fields or structure should it contain?",
+    "Which specific error states or availability conditions should the Monitor component track?",
+    "How should the Monitor component integrate with the asynchronous annotation workflow?"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MSMetaEnhancer track the availability and error state of external web services during annotation runs?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "web-service-health-monitoring",
+    "asynchronous-event-aggregation",
+    "error-state-tracking-across-microservices",
+    "api-response-latency-measurement",
+    "json-structured-reporting"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_msmetaenhancer/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "ARCH_ANNOTATION_PIPELINE",
+    "COMP_MONITOR"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:RECETOX__MSMetaEnhancer",
+  "task_description": "Implement the Monitor component to track availability and error state of external web services (CIR, CTS, PubChem, IDSM, BridgeDb) during annotation runs. Produce a structured JSON status report per service including uptime, error counts, and response times.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Registered web service converters and endpoints",
+      "port_id": "service_registry",
+      "resolved_via": null,
+      "source": "task_002/job_enumeration",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Event stream from annotation run (request/response/error events)",
+      "port_id": "annotation_events",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Design and implement a Monitor component that independently tracks service availability, request errors, and response timeouts for CIR, CTS, PubChem, IDSM, and BridgeDb, outputting a structured status report per service.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Service availability and error status report (JSON)",
+      "port_id": "status_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "metabolite-identification"
+  ],
+  "title": "Reconstruct the Monitor-based service status tracking during annotation",
+  "tools": [
+    "MSMetaEnhancer",
+    "Python",
+    "CIR",
+    "CTS",
+    "PubChem",
+    "IDSM",
+    "BridgeDb",
+    "pytest"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: pytest, Structured JSON status report per service including uptime percentage, error count, mean response time, and last check timestamp."
+  ],
+  "workflow_description": "1. Design the Monitor class to register available web services (CIR, CTS, PubChem, IDSM, BridgeDb) and initialize per-service state trackers for uptime, error counts, and latency. 2. Implement asynchronous service health-check methods that probe each web converter's endpoint and record HTTP status codes and response times. 3. Add error-logging callbacks to the WebConverter base class to capture failed requests (timeouts, invalid responses, API errors) and route them to Monitor for aggregation. 4. Create a status-aggregation method that computes per-service metrics (availability percentage, total errors, mean latency) at configurable intervals. 5. Serialize the aggregated status to a JSON report file with timestamp, per-service summary, and overall health state. 6. Validate the report structure, verify all registered services are present, and confirm error and uptime counts are non-negative."
+}

@@ -1,0 +1,287 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "dc86550c053bb49dc462ac43c834959a9182e65c94abdf4e662068621a7f1919"
+    }
+  ],
+  "created_at": "2026-06-15T14:05:17.730493+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Molecular structures in SMILES format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "BAM biotransformation rules from codebase",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured file mapping input structures to biotransformation product candidates",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "SMILES strings encode chemical connectivity and stereochemistry; validation via canonical form ensures proper parsing.",
+    "Biotransformation rules are typically encoded as reaction SMARTS patterns mapping reactant substructures to product scaffolds.",
+    "Rule application generates multiple products per parent structure; deduplication avoids redundant candidates before downstream networking.",
+    "Parent\u2013product traceability (storing rule ID and transformation metadata) is essential for interpreting and validating putative annotations downstream."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the BAM codebase (github:HassounLab__BAM) contains a biotransformation rules module or file",
+      "verify that the module accepts molecular structures in SMILES format as input",
+      "verify that the module produces a structured output file (CSV, JSON, or TSV format) containing transformed structures",
+      "script_runs: execute the biotransformation rule-application function on a test set of 5\u201310 SMILES strings and confirm no runtime errors occur",
+      "verify that output file contains at least one column for input SMILES and at least one column for output/transformed SMILES",
+      "verify output_matches_reference: compare a sample of rule-applied transformations against documented biotransformation rules in the repository documentation or codebase comments (if available)"
+    ],
+    "expert_review": [
+      "assess whether the biotransformation rules applied are chemically and metabolically plausible for the input structures tested",
+      "assess whether the transformed structures follow valid chemical valence and bonding rules",
+      "assess whether the rule-application logic correctly encodes the intended biotransformation pathways (e.g., oxidation, conjugation, phase I/II metabolism)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the BAM method apply biotransformation rules to generate candidate molecular structures from input molecules?: 'code to implement the biotransformation-based annotation method (**BAM**)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] BAM is implemented as a method that uses biotransformation rules and global molecular networking for molecular structure discovery from untargeted metabolomics data.: 'Molecular structure discovery from untargeted metabolomics data using biotransformation rules and global molecular networking'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Molecular structures in SMILES format: 'given a set of input molecular structures (SMILES)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] BAM biotransformation rules from codebase: 'encoded biotransformation rules from the BAM codebase'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Structured file mapping input structures to biotransformation product candidates: 'generate candidate transformed structures as a structured output file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] RDKit: 'standard library for parsing and manipulating SMILES and chemical structures'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] HassounLab/BAM: 'HassounLab/BAM'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting the biotransformation rules component, versioning, or recent modifications: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import rdkit; from rdkit import Chem; import json; smiles_file='{inputs.input_smiles}'; rules_file='{inputs.bam_rules}'; results=[]; smiles_data=open(smiles_file).readlines(); rules_data=json.load(open(rules_file)); [results.append({'input': s.strip(), 'products': [Chem.MolToSmiles(Chem.MolFromSmiles(s.strip())) for rule in rules_data for _ in [1] if Chem.MolFromSmiles(s.strip()) is not None], 'rule_metadata': rules_data}) for s in smiles_data if s.strip()]; json.dump(results, open('biotransformation_products.json', 'w'), indent=2)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "transformed_structures.json",
+  "expected_outputs": [
+    "Structured file mapping input structures to biotransformation product candidates"
+  ],
+  "finding": "BAM is implemented as a method that uses biotransformation rules and global molecular networking for molecular structure discovery from untargeted metabolomics data.",
+  "github_name": "HassounLab/BAM",
+  "input_from": "task_001",
+  "inputs": [
+    "Molecular structures in SMILES format",
+    "BAM biotransformation rules from codebase"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "validated_smiles.csv",
+    "biotransformation_rules_summary.txt",
+    "raw_products.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load and validate input SMILES using RDKit chemistry library.",
+    "Access and parse biotransformation rules from the BAM codebase.",
+    "Apply each rule to every input structure, generating candidate products.",
+    "Deduplicate and track parent\u2013product relationships with rule metadata.",
+    "Serialize results as structured JSON/CSV output file.",
+    "Validation: Verify that all input structures have been processed, no invalid SMILES are output, and parent\u2013product links are traceable."
+  ],
+  "missing_information": [
+    "No changelog documenting the biotransformation rules component, versioning, or recent modifications"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the BAM method apply biotransformation rules to generate candidate molecular structures from input molecules?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "smiles-parsing-validation",
+    "biotransformation-rule-encoding",
+    "biotransformation-rule-application",
+    "parent-product-relationship-tracking",
+    "chemical-structure-deduplication"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_bam/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp_biotransformation_rules",
+    "comp_global_molecular_networking",
+    "tool_bam_codebase"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:HassounLab__BAM",
+  "task_description": "Implement the biotransformation-rules component from the BAM codebase and apply encoded biotransformation rules to a set of input molecular structures (SMILES format) to generate candidate transformed structures. Output the results as a structured file mapping each input structure to its biotransformation products.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Molecular structures in SMILES format",
+      "port_id": "input_smiles",
+      "resolved_via": null,
+      "source": "task_001/structure_predictions",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "BAM biotransformation rules from codebase",
+      "port_id": "bam_rules",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Apply biotransformation rules from the BAM codebase to input molecular structures (SMILES) and generate candidate transformed structures in a structured output file.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structured file mapping input structures to biotransformation products",
+      "port_id": "transformed_structures",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "metabolite-identification",
+    "network-annotation-propagation",
+    "database-annotation",
+    "high-resolution-ms"
+  ],
+  "title": "Reconstruct the Biotransformation Rules Application Module",
+  "tools": [
+    "RDKit",
+    "HassounLab/BAM"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load input molecular structures in SMILES format from the provided dataset. 2. Parse and validate each SMILES string using RDKit to ensure chemical validity. 3. Access the biotransformation rules encoded in the BAM codebase and configure the rule application engine. 4. Apply each biotransformation rule to every input structure, generating candidate product structures according to the rule definitions. 5. Collect and deduplicate the transformed structures, maintaining parent\u2013product relationships. 6. Serialize the results as a structured output file (JSON or CSV) containing original SMILES, applied rule identifier, product SMILES, and transformation metadata."
+}

@@ -1,0 +1,369 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/plot.png",
+      "role": "figure",
+      "sha256": "ba6d3a60b34b53a705579d734565afcbc9faa51a9dc5235c4df1a292e495e938"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "748a58f5d390730031e4f80fa29fde8a534efd3a869c8c5a2a856ff536b0f05c"
+    }
+  ],
+  "created_at": "2026-06-16T07:28:47.137382+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "mzML file (e.g., BSA1.mzML.gz) to populate the SQLite database",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "pymzML Reader-compatible mzML file path to iterate spectra during database creation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SQLite database file (.db) populated with spectrum ID and XML element string pairs in Spectra table",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verified Spectrum or Chromatogram object retrieved by integer key from SQLiteDatabase instance",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Confirmed FileInterface._open correctly detects .db file extensions and instantiates SQLiteDatabase handler",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "SQLiteDatabase wrapper must implement both __getitem__ (random access by spectrum ID) and read (sequential iteration) to be compatible with pymzML's run.Reader and file_interface expectations.",
+    "Spectrum and Chromatogram objects are instantiated by parsing XML elements retrieved from the database and checking the element tag for 'spectrum' or 'chromatogram' keywords before object construction.",
+    "FileInterface._open registration requires detecting file path extension (.db) and instantiating the custom handler class with path and encoding parameters to be integrated into the pymzML parsing pipeline.",
+    "The Spectra table must store both spectrum ID (INT) and the full XML representation as a string to enable reconstruction of spec.Spectrum and spec.Chromatogram objects on retrieval.",
+    "Sequential read() method must track current_spectrum_id state and increment it after each call to simulate file-like behavior for iterparse compatibility."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in pymzML repository at path matching 'tests/data/BSA1.mzML.gz' or equivalent test dataset",
+      "file_format_is: SQLite database file (.db extension) created by implementation",
+      "script_runs: Python script instantiating SQLiteDatabase class with __init__, __getitem__, get_spectrum_count, and read methods without errors",
+      "field_present: SQLiteDatabase instance has callable methods __init__, __getitem__, get_spectrum_count, read",
+      "output_matches_reference: Spectrum or Chromatogram object returned from db[integer_key] is of pymzML spec.Spectrum or spec.Chromatogram type",
+      "value_in_range: get_spectrum_count() returns non-negative integer matching actual record count in spectra table",
+      "contains_substring: FileInterface registration includes conditional branch detecting .db file extension and routing to SQLiteDatabase class",
+      "script_runs: pymzml.run.Reader instantiated on populated SQLite database file returns reader object without exception, robust to parameter choices in table schema"
+    ],
+    "expert_review": [
+      "Verify that __getitem__ random-access implementation correctly maps integer keys to spectrum records without data corruption or misalignment",
+      "Verify that read() sequential iteration method properly yields all Spectrum/Chromatogram objects in database order matching stored sequence",
+      "Verify that spectrum/chromatogram objects returned from database query contain expected metadata fields (m/z, intensity, scan number, MS level) matching mzML source",
+      "Verify that FileInterface registration does not conflict with existing file type handlers and correctly dispatches SQLiteDatabase on .db extension"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does one implement a custom SQLiteDatabase class that integrates with pymzML's FileInterface to enable random-access retrieval of Spectrum and Chromatogram objects from a SQLite database indexed by spectrum ID?: 'a new class needs to be written, which implements a `read` and a `__getitem__` function'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The SQLiteDatabase implementation requires four core components: (1) __init__ accepting a database path and establishing a sqlite3 connection, (2) __getitem__ executing SQL queries to fetch spectrum XML by key and returning Spectrum or Chromatogram objects, (3) get_spectrum_count executing a COUNT query to report total spectra, and (4) read returning spectrum XML sequentially for iteration; registration in FileInterface._open via an elif condition for .db file extensions enables pymzML.run.Reader to transparently access the database.: 'class SQLiteDatabase(object):\n\t\tdef __init__(self, path):\n\t\t\tconnection = sqlite3.connect(path)\n\t\t\tself.cursor = connection.cursor()\n\t\tdef __getitem__(self, key):\n\t\t\tself.cursor.execute('SELECT *'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mzML file (e.g., BSA1.mzML.gz) to populate the SQLite database: 'At first, a database with a specific layout needs to be created. Here, we use a single mzML file and store each spectrum in a table with 2 columns'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pymzML Reader-compatible mzML file path to iterate spectra during database creation: 'Run = Reader(os.path.abspath(mzml_path))'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SQLite database file (.db) populated with spectrum ID and XML element string pairs in Spectra table: 'def create_database_from_file(db_name, mzml_path):\n        conn = sqlite3.connect(db_name+'.db')\n        Run = Reader(os.path.abspath(mzml_path))\n        with conn:\n            cursor ='"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Verified Spectrum or Chromatogram object retrieved by integer key from SQLiteDatabase instance: 'my_spec = db[unique_id]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Confirmed FileInterface._open correctly detects .db file extensions and instantiates SQLiteDatabase handler: 'elif path.endswith('db'):\n            from SQLiteConnector import SQLiteDatabase\n            self.file_handler = SQLiteDatabase(path, encoding)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] sqlite3: 'import sqlite3'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'import sqlite3\n    import os\n    from pymzml import spec'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pymzML: 'In order to make pymzML accept other kinds of mzML data (e.g databases), one can implement an own wrapper'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] xml.etree.ElementTree: 'import xml.etree.ElementTree as et'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, bug fixes, or feature additions available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sqlite3; import pymzml; from xml.etree import ElementTree as ET; import gzip; reader = pymzml.run.Reader('{inputs.mzml_file}'); conn = sqlite3.connect('{task_id}.db'); cursor = conn.cursor(); cursor.execute('CREATE TABLE IF NOT EXISTS Spectra (ID INTEGER PRIMARY KEY, xml TEXT)'); spec_count = 0; [cursor.execute('INSERT INTO Spectra (ID, xml) VALUES (?, ?)', (spec.ID, ET.tostring(spec.xmlElement, encoding='unicode'))) for spec in reader]; conn.commit(); result_count = cursor.execute('SELECT COUNT(*) FROM Spectra').fetchone()[0]; print(f'Database created: {task_id}.db with {result_count} spectra'); class SQLiteDatabase: \n def __init__(self, db_path): self.conn = sqlite3.connect(db_path); self.current_idx = 0\n def __getitem__(self, key): row = self.conn.execute('SELECT xml FROM Spectra WHERE ID = ?', (key,)).fetchone(); return ET.fromstring(row[0]) if row else None\n def get_spectrum_count(self): return self.conn.execute('SELECT COUNT(*) FROM Spectra').fetchone()[0]\n def read(self): row = self.conn.execute('SELECT xml FROM Spectra ORDER BY ID LIMIT 1 OFFSET ?', (self.current_idx,)).fetchone(); self.current_idx += 1; return ET.fromstring(row[0]) if row else None; db = SQLiteDatabase('{task_id}.db'); print(f'Spectrum count: {db.get_spectrum_count()}'); test_spec = db[1]; print(f'Retrieved spectrum: {test_spec.tag if test_spec is not None else \"None\"}'); conn.close()"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "test.db",
+  "expected_outputs": [
+    "SQLite database file (.db) populated with spectrum ID and XML element string pairs in Spectra table",
+    "Verified Spectrum or Chromatogram object retrieved by integer key from SQLiteDatabase instance",
+    "Confirmed FileInterface._open correctly detects .db file extensions and instantiates SQLiteDatabase handler"
+  ],
+  "finding": "The SQLiteDatabase implementation requires four core components: (1) __init__ accepting a database path and establishing a sqlite3 connection, (2) __getitem__ executing SQL queries to fetch spectrum XML by key and returning Spectrum or Chromatogram objects, (3) get_spectrum_count executing a COUNT query to report total spectra, and (4) read returning spectrum XML sequentially for iteration; registration in FileInterface._open via an elif condition for .db file extensions enables pymzML.run.Reader to transparently access the database.",
+  "github_name": "pymzml/pymzML",
+  "input_from": "task_004",
+  "inputs": [
+    "mzML file (e.g., BSA1.mzML.gz) to populate the SQLite database",
+    "pymzML Reader-compatible mzML file path to iterate spectra during database creation"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "test.db",
+    "spectrum_count_verified.txt",
+    "random_access_retrieval_verified.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_004",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_015",
+    "result_016",
+    "result_018",
+    "result_019",
+    "result_020",
+    "result_021",
+    "result_022"
+  ],
+  "methodology_summary": [
+    "Parse source mzML file using pymzML.run.Reader and iterate through all spectra.",
+    "Create SQLite database with Spectra table (ID INT, xml TEXT) and insert spectrum ID and XML string pairs via parameterized INSERT statements.",
+    "Implement SQLiteDatabase class with __init__ establishing sqlite3 connection, __getitem__ executing SELECT queries and parsing XML to Spectrum/Chromatogram objects, get_spectrum_count returning COUNT(*) result, and read returning sequential element strings.",
+    "Register SQLiteDatabase in FileInterface._open by adding elif statement to detect .db extension and instantiate wrapper.",
+    "Validation: Verify random access by calling db[key] returns a valid Spectrum or Chromatogram object; verify spectrum count matches source mzML file; confirm sequential read() increments current_spectrum_id and returns XML strings."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, bug fixes, or feature additions available"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does one implement a custom SQLiteDatabase class that integrates with pymzML's FileInterface to enable random-access retrieval of Spectrum and Chromatogram objects from a SQLite database indexed by spectrum ID?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "abstract",
+    "methods"
+  ],
+  "skills": [
+    "database-schema-design-and-implementation",
+    "sqlite-query-execution-and-cursor-management",
+    "xml-element-parsing-and-object-serialization",
+    "pymzml-spectrum-object-instantiation",
+    "file-handler-interface-integration-and-registration",
+    "random-access-and-sequential-iteration-pattern-implementation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pymzml/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "pymzml_system",
+    "comp_run_reader",
+    "comp_spec_spectrum",
+    "comp_spec_chromatogram",
+    "comp_msdata",
+    "comp_file_interface",
+    "comp_plot_factory",
+    "comp_regex_patterns",
+    "comp_sqlite_connector",
+    "tool_pymzml",
+    "tool_sqlite3",
+    "dataset_benchmark_files",
+    "arch_file_access_layer",
+    "arch_igzip_format",
+    "artifact_sqlite_db",
+    "artifact_indexed_gz_file"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:pymzML__pymzML",
+  "task_description": "Implement a SQLiteDatabase wrapper class with __init__, __getitem__, get_spectrum_count, and read methods to enable pymzML's run.Reader to retrieve Spectrum and Chromatogram objects by integer key from a populated SQLite database, then register the wrapper in FileInterface._open for .db file detection.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "mzML file to populate SQLite database",
+      "port_id": "mzml_file",
+      "resolved_via": null,
+      "source": "task_004/file_handler",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement a SQLiteDatabase class with required methods, register it in FileInterface for .db files, and verify run.Reader can retrieve spectra by integer key from the database.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SQLite database file with Spectra table",
+      "port_id": "sqlite_db",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Retrieved Spectrum or Chromatogram object by key",
+      "port_id": "spectrum_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "quality-control"
+  ],
+  "title": "Implement the SQLiteDatabase custom file-class connector and verify spectrum retrieval via the pymzml run.Reader interface",
+  "tools": [
+    "sqlite3",
+    "Python",
+    "pymzML",
+    "xml.etree.ElementTree"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Create a SQLite database from an mzML file by parsing each spectrum using pymzML.run.Reader and storing the spectrum ID and XML string representation in a Spectra table with two columns (ID INT, xml TEXT). 2. Implement the SQLiteDatabase class with __init__ to establish a sqlite3 connection and cursor, __getitem__ to execute SELECT queries on the Spectra table and return parsed Spectrum or Chromatogram objects using xml.etree.ElementTree.XML parsing, get_spectrum_count to return the total row count from the Spectra table via SELECT COUNT(*), and read to sequentially return XML element strings by current_spectrum_id. 3. Modify FileInterface._open to add an elif statement checking for .db file endings and instantiate SQLiteDatabase(path, encoding) as the file_handler. 4. Verify random access by calling db[unique_id] and confirming a Spectrum or Chromatogram object is returned. 5. Verify sequential iteration by calling iter(et.iterparse(SQLiteDatabase('test.db'))) and iterating through results."
+}

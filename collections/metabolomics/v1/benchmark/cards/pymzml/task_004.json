@@ -1,0 +1,375 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/plot.png",
+      "role": "figure",
+      "sha256": "ba6d3a60b34b53a705579d734565afcbc9faa51a9dc5235c4df1a292e495e938"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "748a58f5d390730031e4f80fa29fde8a534efd3a869c8c5a2a856ff536b0f05c"
+    }
+  ],
+  "created_at": "2026-06-16T07:28:47.137382+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "File path to mzML file (uncompressed, standard gzip, or indexed gzip format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "File path to SQLite database file containing spectra table",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Encoding parameter for text file handling (e.g., UTF-8)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "File handler instance (IndexedGzip, StandardGzip, StandardMzml, or SQLiteDatabase) correctly instantiated for the input file type",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test report documenting correct dispatch to each of the four handler classes with passing assertions",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Indexed gzip files are compressed mzML files with embedded random-access indices that allow seeking without full decompression, whereas standard gzip requires sequential reading.",
+    "The `__getitem__` method enables random access to spectra by ID; the `read` method enables sequential iteration, and both must be implemented by custom file handler wrappers.",
+    "SQLiteDatabase wrapper must instantiate a sqlite3 connection and implement cursor queries to retrieve spectrum XML elements by ID, then parse them back into Spectrum or Chromatogram objects.",
+    "File extension-based dispatch (.gz, .db, default .mzML) is the primary routing mechanism in `_open`, with optional content inspection for gzip type determination.",
+    "The encoding parameter (typically UTF-8) must be passed consistently to all file handler constructors to ensure correct XML parsing across different file types."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: github:pymzML__pymzML repository contains FileInterface class definition",
+      "verify file_exists: _open method is present in FileInterface class",
+      "verify contains_substring: _open method implementation contains conditional dispatch logic (if/elif statements) checking file extension",
+      "verify contains_substring: _open method contains references to IndexedGzip handler class",
+      "verify contains_substring: _open method contains references to StandardGzip handler class",
+      "verify contains_substring: _open method contains references to StandardMzml handler class",
+      "verify contains_substring: _open method contains references to SQLiteDatabase handler class",
+      "script_runs: instantiate FileInterface and call _open with test file having .mzML.gz extension, verify returns IndexedGzip instance",
+      "script_runs: instantiate FileInterface and call _open with test file having .mzML extension, verify returns StandardMzml instance",
+      "script_runs: instantiate FileInterface and call _open with test file having .db extension, verify returns SQLiteDatabase instance",
+      "script_runs: instantiate FileInterface and call _open with test file having .gz extension (non-mzML), verify returns StandardGzip instance",
+      "output_matches_reference: dispatch decision for each file extension matches documented handler mapping in pymzML codebase (multiple defensible approaches to content inspection logic are valid)"
+    ],
+    "expert_review": [
+      "Verify that content inspection logic (beyond extension checking) correctly disambiguates between handler types when file extensions are ambiguous or misleading",
+      "Confirm that the dispatch mechanism is robust to edge cases (empty files, corrupted headers, missing extensions) and fails gracefully",
+      "Review whether the handler class resolution prioritizes file extension or content inspection in a manner consistent with pymzML design philosophy"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does the FileInterface._open method conditionally dispatch file handlers based on file extension and indexed gzip detection to support multiple mzML file formats?: 'def _open(self, path):\n\t\tif path.endswith('.gz'):\n\t\t\tif self._indexed_gzip(path):\n\t\t\t\tself.file_handler = indexedGzip.IndexedGzip(path, self.encoding)\n\t\t\telse:\n\t\t\t\tself.file_handler ='"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The _open method implements conditional dispatch by first checking if the path ends with '.gz' and then inspecting whether it is an indexed gzip file; if indexed it instantiates IndexedGzip, otherwise StandardGzip; for '.db' extensions it instantiates SQLiteDatabase; for all other paths it defaults to StandardMzml.: 'if path.endswith('.gz'):\n\t\t\tif self._indexed_gzip(path):\n\t\t\t\tself.file_handler = indexedGzip.IndexedGzip(path, self.encoding)\n\t\t\telse:\n\t\t\t\tself.file_handler = standardGzip.StandardGzip(path,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] File path to mzML file (uncompressed, standard gzip, or indexed gzip format): 'path (str): path to the mzml file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] File path to SQLite database file containing spectra table: 'elif path.endswith('db'):\n            from SQLiteConnector import SQLiteDatabase'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Encoding parameter for text file handling (e.g., UTF-8): 'standardMzml.StandardMzml(path, self.encoding)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] File handler instance (IndexedGzip, StandardGzip, StandardMzml, or SQLiteDatabase) correctly instantiated for the input file type: 'Returns: file_handler: instance of :py:class:`~pymzml.file_classes.standardGzip.StandardGzip`, :py:class:`~pymzml.file_classes.indexedGzip.IndexedGzip` or'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Test report documenting correct dispatch to each of the four handler classes with passing assertions: 'add your new elif statement here'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pymzML: 'In order to make pymzML accept other kinds of mzML data (e.g databases), one can implement an own wrapper'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'import sqlite3\n    import os\n    from pymzml import spec'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] sqlite3: 'import sqlite3'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] xml.etree.ElementTree: 'import xml.etree.ElementTree as et'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting implementation details, interface changes, or version history for the _open method dispatch logic: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "pytest",
+      "-v",
+      "--tb=short",
+      "-k",
+      "test_file_interface_dispatch"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "file_interface_open_method.py",
+  "expected_outputs": [
+    "File handler instance (IndexedGzip, StandardGzip, StandardMzml, or SQLiteDatabase) correctly instantiated for the input file type",
+    "Test report documenting correct dispatch to each of the four handler classes with passing assertions"
+  ],
+  "finding": "The _open method implements conditional dispatch by first checking if the path ends with '.gz' and then inspecting whether it is an indexed gzip file; if indexed it instantiates IndexedGzip, otherwise StandardGzip; for '.db' extensions it instantiates SQLiteDatabase; for all other paths it defaults to StandardMzml.",
+  "github_name": "pymzml/pymzML",
+  "input_from": "task_002",
+  "inputs": [
+    "File path to mzML file (uncompressed, standard gzip, or indexed gzip format)",
+    "File path to SQLite database file containing spectra table",
+    "Encoding parameter for text file handling (e.g., UTF-8)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "handler_dispatch_matrix.csv",
+    "test_indexed_gzip_handler.log",
+    "test_standard_gzip_handler.log",
+    "test_standard_mzml_handler.log",
+    "test_sqlite_handler.log",
+    "spectrum_retrieval_integration_test.log"
+  ],
+  "linked_result_ids": [
+    "result_010",
+    "result_015",
+    "result_024"
+  ],
+  "methodology_summary": [
+    "Define `_open` method with path and encoding parameters.",
+    "Implement conditional dispatch: inspect file extension (.gz, .db, or default) and call optional indexed-gzip check for .gz files.",
+    "Instantiate correct handler class (IndexedGzip, StandardGzip, StandardMzml, or SQLiteDatabase) with path and encoding arguments.",
+    "Return the instantiated handler object to the caller.",
+    "Validation: Unit test each dispatch branch with representative file paths (uncompressed mzML, standard .mzML.gz, indexed .mzML.gz, .db) and assert handler type is correct; integration test by passing handler to Reader and verifying spectrum retrieval succeeds."
+  ],
+  "missing_information": [
+    "No changelog documenting implementation details, interface changes, or version history for the _open method dispatch logic"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the FileInterface._open method conditionally dispatch file handlers based on file extension and indexed gzip detection to support multiple mzML file formats?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "abstract",
+    "methods"
+  ],
+  "skills": [
+    "file-format-detection-by-extension",
+    "polymorphic-class-dispatch-in-python",
+    "file-handler-instantiation-and-lifecycle",
+    "unit-testing-conditional-branches",
+    "mzml-data-access-abstraction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pymzml/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp_file_interface",
+    "comp_standard_mzml",
+    "comp_standard_gzip",
+    "comp_indexed_gzip",
+    "comp_sqlite_connector",
+    "dataset_bsa1",
+    "dataset_dta_example",
+    "dataset_benchmark_files",
+    "dataset_custom_ids_mzml",
+    "arch_file_access_layer",
+    "arch_igzip_format",
+    "artifact_indexed_gz_file"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:pymzML__pymzML",
+  "task_description": "Implement the `_open` method in `FileInterface` to conditionally dispatch file handling to `IndexedGzip`, `StandardGzip`, `StandardMzml`, or `SQLiteDatabase` based on file extension, and verify each dispatch branch correctly instantiates the appropriate handler class.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "File path to mzML or SQLite database file",
+      "port_id": "file_path",
+      "resolved_via": null,
+      "source": "task_002/indexed_gz_file",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Character encoding for text file handling",
+      "port_id": "encoding",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the FileInterface._open method with conditional logic to dispatch to the correct file handler class based on file extension and indexed gzip detection.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Instantiated file handler object (IndexedGzip, StandardGzip, StandardMzml, or SQLiteDatabase)",
+      "port_id": "file_handler",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Test report verifying correct handler instantiation for each file type",
+      "port_id": "dispatch_test_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "quality-control"
+  ],
+  "title": "Reconstruct the FileInterface dispatch logic for routing mzML file types to their respective handler classes",
+  "tools": [
+    "pymzML",
+    "Python",
+    "sqlite3",
+    "xml.etree.ElementTree"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Define the `_open` method signature in `FileInterface` to accept a file path parameter. 2. Implement conditional logic to inspect file extension: if path ends with '.gz', check indexed gzip status and dispatch to `IndexedGzip` or `StandardGzip` accordingly; if path ends with '.db', instantiate `SQLiteDatabase`; otherwise, instantiate `StandardMzml`. 3. For each conditional branch, instantiate the appropriate file handler class with the path and encoding parameters. 4. Unit test each dispatch branch by calling `_open` with mock files of each type (.mzML, .mzML.gz with index, .mzML.gz without index, .db) and verify the returned handler is an instance of the expected class. 5. Integration test by passing dispatched handlers to downstream Reader operations to confirm correct spectrum retrieval."
+}

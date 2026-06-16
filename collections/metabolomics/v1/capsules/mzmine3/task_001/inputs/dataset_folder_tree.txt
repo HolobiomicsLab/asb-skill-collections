@@ -1,0 +1,20 @@
+  figures/CV.png
+  figures/MZmine_IIMN_logo_RGB.png
+  figures/anova_test.png
+  figures/logo300_mzmine.png
+  figures/logo300_mzmine_light.png
+  figures/logo300_mzmine_white.png
+  figures/logo300_mzwizard.png
+  figures/logo300_mzwizard_light.png
+  figures/logo300_mzwizard_white.png
+  figures/logo_mzmine.svg
+  figures/logo_mzmine_light.svg
+  figures/logo_mzmine_white.svg
+  figures/logo_mzwizard.svg
+  figures/logo_mzwizard_light.svg
+  figures/logo_mzwizard_white.svg
+  figures/logratio.png
+  figures/mac_installer_background.png
+  figures/mac_installer_background@2x.png
+  figures/mzmine-fbmn.png
+paper.md

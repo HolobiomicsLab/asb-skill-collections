@@ -1,0 +1,138 @@
+schema_version: 0.1.0
+workflow_id: coll_mzmine2_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+narrative:
+  tagline: MZmine 2 is an open-source software framework for mass-spectrometry data
+    processing designed to provide user-friendly, flexible, and easily extendable
+    tools for the complete MS data analysis workflow.
+  pseudo_abstract: MZmine 2 is presented as an open-source software platform for mass-spectrometry
+    data processing. The project aims to deliver a comprehensive suite of modules
+    that cover the entire MS data analysis workflow, with emphasis on user-friendliness,
+    flexibility, and extensibility to accommodate diverse analytical needs in mass
+    spectrometry research.
+  research_questions:
+  - The goals of the project is to provide a user-friendly, flexible and easily extendable
+    software with a complete set of modules covering the entire MS data analysis workflow.
+  methods_summary: ''
+  domain: bioinformatics
+  techniques: []
+  claims:
+  - claim_text: MZmine 2 aims to provide user-friendly, flexible and easily extendable
+      software with a complete set of modules covering the entire MS data analysis
+      workflow
+    claim_type: finding
+    evidence_step: task_001
+    speculative: false
+  - claim_text: All development of MZmine now happens in a new repository called mzmine3.
+    claim_type: finding
+    speculative: false
+    entity_id: mzmine3_system
+  - claim_text: The mzmine2 repository serves only as a reference to the old MZmine
+      2.
+    claim_type: finding
+    speculative: false
+    entity_id: mzmine2_system
+  - claim_text: MZmine 2 is an open-source software for mass-spectrometry data processing.
+    claim_type: finding
+    speculative: false
+    entity_id: mzmine2_system
+  - claim_text: MZmine 2 was succeeded by mzmine.
+    claim_type: finding
+    speculative: false
+    entity_id: mzmine2_system
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 'figure: figures/DBCustomIcon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/DBLipidsIcon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/DBOnlineIcon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/DBSpectraIcon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/KMDIcon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/MZmine_logo_CMYK.jpg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/MZmine_logo_CMYK.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/MZmine_logo_RGB.jpg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/MZmine_logo_RGB.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/MZmine_logo_black.jpg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/MZmine_logo_black.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/MZmine_logo_white.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/RKMIcon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/annotationsicon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/arrowdownicon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/arrowupicon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/axesicon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/bgicon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/blocksizeicon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/btnAccept.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

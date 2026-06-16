@@ -1,0 +1,202 @@
+schema_version: 0.1.0
+workflow_id: coll_mzpeak_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: This work presents prototype implementations of the mzPeak mass spectrometry
+    data format across three programming languages, with a draft specification document
+    available for compliance validation.
+  pseudo_abstract: 'Reproduces 1 reported result: A draft mzPeak specification document
+    is publicly available at https://hupo-psi.github.io/mzPeak-specification/ against
+    which Rust implementation output can be validated for compliance. Analyses 1 derived
+    result: Three independent mzPeak reader implementations exist: a Rust library,
+    a Python implementation using pyarrow, and an R implementation using arrow, all
+    capable of reading mzPeak files. Reconstructs 3 described mechanisms (described
+    in the paper but not separately evaluated there): The Rust implementation at the
+    repository root includes command-line tools capable of converting existing mass
+    spectrometry data formats into the mzPeak format, operating as a library for both
+    reading and writing mzPeak files. The Python implementation provides a complete
+    re-implementation for reading mzPeak files using the pyarrow library, enabling
+    conversion of mzPeak spectrum data into structured tabular artifacts compatible
+    with the PyData stack. The R implementation provides a complete re-implementation
+    for reading mzPeak files using the arrow package, enabling loading of valid mzPeak
+    files into structured tabular format.'
+  research_questions:
+  - What are the input formats supported by the Rust command-line converter tool in
+    the mzpeak_prototyping repository, and what is the mechanism by which it converts
+    them into mzPeak output?
+  - How does the Python implementation using pyarrow enable reading of mzPeak files
+    into a structured tabular format?
+  - How does the R implementation using the arrow package read and parse a valid mzPeak
+    file into a structured tabular representation of spectrum data?
+  - Do the Rust, Python/pyarrow, and R/arrow implementations of mzPeak file readers
+    produce field-level agreement when loading the same input file?
+  - Does the Rust implementation of mzPeak produce files that conform to all mandatory
+    fields and structural elements defined in the published mzPeak specification?
+  methods_summary: "Obtain the Rust implementation from github.com/mobiusklein/mzpeak_prototyping.\
+    \ Compile the command-line converter tool using Rust's cargo build system. Run\
+    \ the converter with mzML input file and specify the mzPeak output file path.\
+    \ Validate: output file is generated in valid mzPeak binary format matching the\
+    \ draft specification structure. References: source article (DOI: 10.1021/acs.jproteome.5c00435)\
+    \ Access the Python mzPeak reader implementation from the mobiusklein/mzpeak_prototyping\
+    \ repository. Load the mzPeak binary file using the Python reader module with\
+    \ pyarrow as the backing table library. Convert the in-memory spectrum data structure\
+    \ to a pandas DataFrame or pyarrow Table. Serialize the tabular data to Parquet\
+    \ format for structured output and downstream interoperability. Validation: verify\
+    \ that the output Parquet file contains all spectrum records with correctly parsed\
+    \ m/z and intensity columns and matches the row count of the source mzPeak file.\
+    \ References: source article (DOI: 10.1021/acs.jproteome.5c00435) Access the R\
+    \ implementation in the mobiusklein/mzpeak_prototyping repository. Load the arrow\
+    \ R package for mzPeak file I/O. Invoke the R read function to load a valid mzPeak\
+    \ file into memory. Convert the in-memory representation to a structured data\
+    \ frame with spectrum fields. Validation: Output contains spectrum records with\
+    \ expected schema (m/z, intensity, metadata fields) and row count \u2265 1. References:\
+    \ source article (DOI: 10.1021/acs.jproteome.5c00435) Load and parse mzPeak file\
+    \ using Rust library reader; export tabular spectrum output to standardized CSV\
+    \ format. Load and parse identical mzPeak file using Python/pyarrow reader implementation;\
+    \ export tabular spectrum output to standardized CSV format. Load and parse identical\
+    \ mzPeak file using R/arrow reader implementation; export tabular spectrum output\
+    \ to standardized CSV format. Perform field-by-field comparison of three CSV outputs:\
+    \ verify field names match, data types agree, row counts are identical, and numerical\
+    \ values are consistent across implementations. Validation: Generate consistency\
+    \ report confirming all three implementations produce identical field structure\
+    \ and values; flag any discrepancies in field presence, type, or numerical content\
+    \ as implementation divergences. References: source article (DOI: 10.1021/acs.jproteome.5c00435)\
+    \ Retrieve the draft mzPeak specification document from the published HUPO-PSI\
+    \ living specification URL. Extract the list of mandatory fields and required\
+    \ structural elements from the specification. Obtain a reference mzPeak file generated\
+    \ by the Rust implementation. Parse the file using Rust library reading functionality\
+    \ and examine its structure. Cross-reference all mandatory fields and structural\
+    \ elements against the parsed file. Validation: compliance is achieved when all\
+    \ mandatory fields listed in the specification are present in the mzPeak file\
+    \ with correct structural nesting and data types. References: source article (DOI:\
+    \ 10.1021/acs.jproteome.5c00435)"
+  domain: bioinformatics
+  techniques:
+  - feature-detection
+  - quality-control
+  claims:
+  - claim_text: The mzPeak file format was initially described in a peer-reviewed
+      publication.
+    claim_type: finding
+    speculative: false
+    entity_id: mzPeak_format
+  - claim_text: The mzPeak format was presented at the HUPO conference in Toronto,
+      Canada on November 11, 2025.
+    claim_type: finding
+    speculative: false
+    entity_id: mzPeak_format
+  - claim_text: The mzPeak name is currently held in trust by the OpenMS Inc.
+    claim_type: finding
+    speculative: false
+    entity_id: mzPeak_format
+  - claim_text: This project is a work in progress with no stability guaranteed.
+    claim_type: finding
+    speculative: false
+  - claim_text: The primary mzPeak implementation is written in Rust and includes
+      a library for reading and writing mzPeak files.
+    claim_type: finding
+    speculative: false
+    entity_id: mzPeak_format
+  - claim_text: The Rust implementation includes command line tools for converting
+      existing formats into mzPeak.
+    claim_type: finding
+    speculative: false
+    entity_id: mzPeak_format
+  - claim_text: A separate Python implementation exists in the `python/` directory.
+    claim_type: finding
+    speculative: false
+    entity_id: mzPeak_format
+  - claim_text: The Python implementation uses `pyarrow` and the PyData stack for
+      reading mzPeak files.
+    claim_type: finding
+    speculative: false
+    entity_id: mzPeak_format
+  - claim_text: The Python implementation does not currently support writing mzPeak
+      files.
+    claim_type: finding
+    speculative: false
+    entity_id: mzPeak_format
+  - claim_text: An R implementation exists in the `R/` directory for reading mzPeak
+      files.
+    claim_type: finding
+    speculative: false
+    entity_id: mzPeak_format
+  - claim_text: A draft specification document for the mzPeak format is available
+      online.
+    claim_type: finding
+    speculative: false
+    entity_id: mzPeak_format
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Structured tabular artifact (Parquet or CSV file) containing parsed spectrum
+    data with annotated columns (m/z values, intensities, spectrum metadata)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Structured tabular artifact (R data frame) containing spectrum data fields
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Rust implementation spectrum table (CSV format)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Python/pyarrow implementation spectrum table (CSV format)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: R/arrow implementation spectrum table (CSV format)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Cross-implementation consistency report documenting field-level agreement
+    and any divergences
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Compliance report verifying presence/absence of all mandatory fields and structural
+    elements
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

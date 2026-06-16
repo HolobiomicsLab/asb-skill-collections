@@ -1,0 +1,352 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/rawRcolor.png",
+      "role": "figure",
+      "sha256": "7f96efa494c9babadf50d520c8a41ddcf44591ccd6bebbc8c94c3103e0ce6279"
+    },
+    {
+      "indexable": false,
+      "path": "figures/rawRcolor10%.png",
+      "role": "figure",
+      "sha256": "4b9bbc76e4a1173733a19520ba333306a1b574f23e10329200d75cb7cc38f6b4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/rawrr_logo.png",
+      "role": "figure",
+      "sha256": "64b1ae205a2a034f841965ceff48fe7fea2e62291b93fc6d8611bc912b48e59e"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "da445fe2ae38dbc84cf4d22b95cf5bc6f84e325c39ee134c9d6c6f38268d4daa"
+    }
+  ],
+  "created_at": "2026-06-15T13:24:57.919119+00:00",
+  "crossref_doi": "10.1021/acs.jproteome.0c00866",
+  "data_accessions": [
+    {
+      "accession": "MSV000086542",
+      "evidence_span": "ate of 300 nl/min. The file is part of the MassIVE dataset [MSV000086542](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw mass spectrometry file 20181113_010_autoQC01.raw from MassIVE dataset MSV000086542 (MD5: a1f5df9627cf9e0d51ec1906776957ab)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Extracted spectrum object (rawrrSpectrum) containing 119 data items for scan 9594 including m/z array, intensity array, resolving power, AGC target, and injection time metadata",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation report confirming resolving power = 30,000 at 200 m/z, AGC injection time = 2.8 ms, and all y-ion signal intensities are tens to hundreds counts above noise baseline",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Orbitrap mass analyzers employ Fourier-transform detection with resolving power defined as m/z divided by mass spectral peak width (FWHM); for this Q Exactive HF, resolving power = 30,000 at 200 m/z is a hardware specification.",
+    "AGC (automatic gain control) target of 100,000 ions in the C-trap with injection time of 2.8 ms indicates rapid ion accumulation relative to the maximum allowed injection time of 55 ms.",
+    "Centroiding is a data reduction step applied during instrument acquisition that converts profile (continuous) spectra to centroid (discrete peak) format, with lock mass correction refining m/z calibration.",
+    "Y-ions are fragment ions derived from cleavage of peptide backbone adjacent to the N-terminus; for doubly protonated LGGNEQVTR (precursor m/z 487.2567), theoretical y-ion m/z values can be computed from amino acid composition.",
+    "Signal-to-noise ratio in centroided spectra is typically assessed as peak intensity versus local baseline; values of tens to hundreds counts above noise represent high-quality tandem MS data suitable for peptide sequencing."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that MassIVE dataset MSV000086542 contains file 20181113_010_autoQC01.raw and is accessible",
+      "script_runs: execute rawrr::readSpectrum(rawfile, scan=9594) on the downloaded raw file without errors",
+      "field_present: verify that spectrum object for scan 9594 contains fields for resolving power, AGC injection time, m/z values, and intensity values",
+      "value_in_range: resolving power reported for scan 9594 equals 30000 (or within \u00b15% tolerance)",
+      "value_in_range: AGC injection time for scan 9594 equals 2.8 ms (or within \u00b10.1 ms tolerance)",
+      "output_matches_reference: y-ion signals in scan 9594 spectrum are numeric values, extractable, and comparable to baseline noise level (no canonical answer for 'tens to hundreds above noise' without reference noise floor value provided in article)"
+    ],
+    "expert_review": [
+      "Assess whether extracted y-ion signals from scan 9594 are qualitatively 'several tens to hundreds above the noise level' by visual inspection of intensity distribution and peak heights relative to baseline",
+      "Verify that resolving power value of 30000 at 200 m/z is consistent with Orbitrap FTMS instrument specifications for Q Exactive HF",
+      "Confirm that AGC injection time of 2.8 ms aligns with reasonable acquisition settings for FTMS analysis"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does rawrr::readSpectrum successfully extract scan 9594 from the raw file with reported Orbitrap parameters (resolving power of 30,000 at 200 m/z and AGC injection time of 2.8 ms) and signal-to-noise characteristics consistent with high-quality peptide fragmentation?: 'The scan was acquired on an Orbitrap detector including lock mass correction and using a transient of 64 ms (equal to a resolving power of 30'000 at 200 m/z) and an AGC target of 1e5 elementary'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Scan 9594 was successfully extracted using rawrr::readSpectrum, confirming resolving power of 30,000 at 200 m/z and AGC injection time of 2.8 ms (~5% of maximum 55 ms); all y-ion signals for LGGNEQVTR++ peptide are several tens to hundreds of times above the noise level, demonstrating high spectral quality.: 'all y-ion signals are several ten or even hundred folds above the noise estimate'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw mass spectrometry file 20181113_010_autoQC01.raw from MassIVE dataset MSV000086542 (MD5: a1f5df9627cf9e0d51ec1906776957ab): 'The file is part of the MassIVE dataset [MSV000086542](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542) and can be obtained through the [FTP download'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Extracted spectrum object (rawrrSpectrum) containing 119 data items for scan 9594 including m/z array, intensity array, resolving power, AGC target, and injection time metadata: 'In total, the API provides `r length(S[[1]])` data items for this particular scan'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Validation report confirming resolving power = 30,000 at 200 m/z, AGC injection time = 2.8 ms, and all y-ion signal intensities are tens to hundreds counts above noise baseline: 'the C-trap managed to collect the defined 100,000 charges within 2.8 ms, corresponding to only ~`r format((2.8/55)*100, digits = 1)`% of the maximum injection time of 55 ms'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] rawrr: 'Specifically, `R` functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled `C#` wrapper methods using a system call'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] RawFileReader: 'Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The article does not define or provide a reference noise floor or baseline intensity threshold against which to measure whether y-ion signals are 'several tens to hundreds above the noise level': 'N/A \u2014 absence of quantitative noise definition in provided section text'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The article text provided does not report the actual numeric values for resolving power, AGC injection time, or y-ion intensities for scan 9594; these must be retrieved from the raw file via rawrr API execution: 'N/A \u2014 task assumes data extraction from external artifact (MSV000086542/20181113_010_autoQC01.raw)'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(rawrr); spec <- readSpectrum('{inputs.raw_file_mzxml}', scan=9594); cat('Spectrum object extracted for scan 9594\\n'); cat('Resolving power:', spec$resolution, '\\n'); cat('AGC injection time (ms):', spec$AGC_target, '\\n'); cat('m/z array length:', length(spec$mz), '\\n'); cat('Intensity array length:', length(spec$intensity), '\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [
+      "Thermo Fisher Scientific RawFileReader"
+    ],
+    "compute_tier": "light",
+    "open_source_alternatives": [
+      {
+        "closed": "Thermo Fisher RawFileReader",
+        "expected_divergence": "",
+        "oss": "ThermoRawFileParser"
+      }
+    ]
+  },
+  "expected_artifact_name": "scan_9594_validation_report.txt",
+  "expected_outputs": [
+    "Extracted spectrum object (rawrrSpectrum) containing 119 data items for scan 9594 including m/z array, intensity array, resolving power, AGC target, and injection time metadata",
+    "Validation report confirming resolving power = 30,000 at 200 m/z, AGC injection time = 2.8 ms, and all y-ion signal intensities are tens to hundreds counts above noise baseline"
+  ],
+  "finding": "Scan 9594 was successfully extracted using rawrr::readSpectrum, confirming resolving power of 30,000 at 200 m/z and AGC injection time of 2.8 ms (~5% of maximum 55 ms); all y-ion signals for LGGNEQVTR++ peptide are several tens to hundreds of times above the noise level, demonstrating high spectral quality.",
+  "github_name": "fgcz/MsBackendRawFileReader",
+  "input_from": null,
+  "inputs": [
+    "Raw mass spectrometry file 20181113_010_autoQC01.raw from MassIVE dataset MSV000086542 (MD5: a1f5df9627cf9e0d51ec1906776957ab)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectrum_9594_raw.csv",
+    "instrumental_metadata_9594.json"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_016",
+    "result_020",
+    "result_021",
+    "result_022",
+    "result_023",
+    "result_024",
+    "result_026",
+    "result_027",
+    "result_040",
+    "result_041"
+  ],
+  "methodology_summary": [
+    "Load raw file 20181113_010_autoQC01.raw (Thermo Fisher Q Exactive HF, Orbitrap FTMS) from MassIVE MSV000086542.",
+    "Call rawrr::readSpectrum(scan=9594) to invoke C# wrapper and RawFileReader API, returning centroided spectrum object with 119 metadata items.",
+    "Extract instrumental parameters (resolving power at 200 m/z, AGC target, injection time) from spectrum metadata and verify against reported hardware specifications.",
+    "Parse m/z and intensity arrays; identify y-ion fragments by theoretical m/z matching for peptide LGGNEQVTR.",
+    "Compute signal-to-noise ratio for each y-ion relative to local baseline and confirm all exceed tens-to-hundreds counts above noise.",
+    "Validation: Confirm resolving power = 30,000, injection time = 2.8 ms, and all y-ion SNR \u2265 10:1 (tens of counts above baseline for high-quality MS/MS data).",
+    "References: source article (DOI: 10.1021/acs.jproteome.0c00866); MSV000086542 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542)"
+  ],
+  "missing_information": [
+    "The article does not define or provide a reference noise floor or baseline intensity threshold against which to measure whether y-ion signals are 'several tens to hundreds above the noise level'",
+    "The article text provided does not report the actual numeric values for resolving power, AGC injection time, or y-ion intensities for scan 9594; these must be retrieved from the raw file via rawrr API execution"
+  ],
+  "parameters": [],
+  "primary_domain": "proteomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does rawrr::readSpectrum successfully extract scan 9594 from the raw file with reported Orbitrap parameters (resolving power of 30,000 at 200 m/z and AGC injection time of 2.8 ms) and signal-to-noise characteristics consistent with high-quality peptide fragmentation?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "results",
+    "discussion"
+  ],
+  "skills": [
+    "orbitrap-spectrum-extraction-from-raw-files",
+    "instrumental-parameter-validation-mass-spectrometry",
+    "y-ion-signal-detection-and-noise-assessment",
+    "mass-spectrometry-metadata-interpretation",
+    "spectral-quality-assurance-proteomics"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_rawrr/synthesized_package",
+  "spine_condition_ids": [
+    "cond_benchmark_rawrr",
+    "cond_scan9594"
+  ],
+  "spine_entity_ids": [
+    "sys_rawrr",
+    "comp_rawrr_exe",
+    "tool_readspectrum",
+    "ds_autoqc01",
+    "ds_msv000086542",
+    "comp_orbitrap",
+    "comp_lggneqvtr",
+    "cond_benchmark_rawrr",
+    "cond_scan9594",
+    "result_agc_injection",
+    "result_resolving_power",
+    "result_sn_yions",
+    "result_benchmark_throughput",
+    "result_no_conversion_needed",
+    "result_orbitrap_sn_formula"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:fgcz__rawrr",
+  "task_description": "Extract scan 9594 from the raw LC-MS file 20181113_010_autoQC01.raw using rawrr::readSpectrum and validate the reported instrumental parameters (resolving power 30,000 at 200 m/z, AGC injection time 2.8 ms) and y-ion signal quality (tens to hundreds above noise floor).",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw LC-MS file from MassIVE MSV000086542",
+      "port_id": "raw_file_mzxml",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Extract scan 9594 from 20181113_010_autoQC01.raw using rawrr::readSpectrum and validate reported Orbitrap parameters and signal-to-noise ratios against extracted data.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Extracted rawrrSpectrum for scan 9594 with metadata",
+      "port_id": "spectrum_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Instrumental parameters and y-ion quality validation report",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control"
+  ],
+  "title": "Reproduce the Orbitrap scan 9594 LGGNEQVTR++ PRM spectrum metadata and y-ion S/N characterisation",
+  "tools": [
+    "rawrr",
+    "RawFileReader"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Extracted spectrum object (rawrrSpectrum) containing 119 data items for scan 9594 including m/z array, intensity array, resolving power, AGC target, and injection time metadata."
+  ],
+  "workflow_description": "1. Load the raw file 20181113_010_autoQC01.raw from MassIVE dataset MSV000086542. 2. Invoke rawrr::readSpectrum with scan=9594 to extract spectral data via the compiled C# wrapper and RawFileReader API. 3. Parse the returned rawrrSpectrum object to retrieve instrument metadata including resolving power, AGC target, and injection time. 4. Extract m/z and intensity arrays from the centroided spectrum data. 5. Identify y-ion signals by matching observed m/z values to theoretical y-fragment m/z of the precursor peptide (LGGNEQVTR/2). 6. Calculate signal-to-noise ratio for each y-ion by comparing peak intensity to local baseline noise and verify all y-ions exceed tens to hundreds counts above noise floor."
+}

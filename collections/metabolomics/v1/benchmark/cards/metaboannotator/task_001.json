@@ -1,0 +1,426 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MetaboAnnotatoR.jpeg",
+      "role": "figure",
+      "sha256": "7581280c2f229e63ffef877fb14954a2b892a821bc2ef16311e9cb49721a1168"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b329d5cb032d2f7b1bdbe9c972021138eb0f4425c5e272b57e78a796bd4d422e"
+    }
+  ],
+  "created_at": "2026-06-15T12:33:51.764194+00:00",
+  "crossref_doi": "10.1021/acs.analchem.1c03032",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "targetTable.csv \u2014 feature table containing the six features to annotate",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "xcmsSet (xset) object \u2014 peak-picked LC-MS data processed with xcms",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "RAMClustR (RC) object \u2014 pseudo-MS/MS spectra derived from RAMClustR processing",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LipidPos fragment library \u2014 ion fragment database for lipid annotation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Annotation results table listing feature IDs, candidate lipid identities, and matching scores, with three features annotated and LPC(14:0) as rank-1 for feature 3",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ranked candidate annotations for each of the six features",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MetaboAnnotatoR performs all-ion fragmentation (AIF) metabolite annotation by matching observed fragment ions against curated ion fragment databases such as LipidPos, ranking candidates by cosine similarity or related matching scores.",
+    "The annotateRC function requires three synchronized data objects: an xcms peak table (peak m/z, retention time, and intensity), a RAMClustR object containing pseudo-MS/MS spectra (clustered fragment ions per feature), and a specified fragment library.",
+    "LipidPos is a lipid-specific fragment ion database; using it biases results toward lipid hits and may exclude non-lipid metabolites even if they match better in other libraries.",
+    "Rank-1 annotation status means the candidate ranked highest by the matching algorithm; this does not guarantee correctness without manual verification of matched ion patterns.",
+    "The reported benchmark result (three of six features annotated, LPC(14:0) rank-1 for feature 3) serves as the reproducibility target and should be matched exactly by the annotateRC run."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file targetTable.csv exists in the repository",
+      "verify file_format_is targetTable.csv a valid CSV with at least 6 rows (features)",
+      "verify that xcmsSet (xset) object file exists in the repository or is loadable from the package",
+      "verify that RAMClustR (RC) object file exists in the repository or is loadable from the package",
+      "verify that LipidPos library files are present or accessible within the MetaboAnnotatoR package",
+      "script_runs: annotateRC function executes without error when called on targetTable.csv, xset, RC, and LipidPos libraries",
+      "output_matches_reference: annotateRC produces exactly 3 annotated features (no more, no fewer)",
+      "output_matches_reference: feature 3 is assigned LPC(14:0) as the rank-1 (top-ranked) annotation",
+      "value_in_range: annotation confidence/score for the three features meets expected thresholds (requires parameter-sensitive specification of score cutoff)"
+    ],
+    "expert_review": [
+      "Assess whether the three annotated features and their ranked assignments are chemically and metabolomically plausible given the input xcms peak-picking and RAMClustR pseudo-MS/MS spectra",
+      "Verify that LPC(14:0) assignment to feature 3 is consistent with expected fragment ion patterns and mass accuracy for a lipid of that composition",
+      "Confirm that the four unannotated features represent genuine metabolites or artifacts that appropriately fall below the annotation threshold"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Does the annotateRC function successfully annotate three out of six features from the targetTable.csv using xcmsSet and RAMClustR objects with LipidPos libraries?: 'Three out of the six features were annotated with to a lipid.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] When annotateRC is applied to six lipidomics features using the LipidPos library, three features receive lipid annotations, with LPC(14:0) assigned as the rank 1 annotation for feature 3 (468.3095 m/z, 82.92009 s).: 'Three out of the six features were annotated with to a lipid.\n\nThe rank 1 annotation is LPC(14:0).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] targetTable.csv \u2014 feature table containing the six features to annotate: 'There is an example feature table in MetaboAnnotatoR (*targetTable.csv*)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] xcmsSet (xset) object \u2014 peak-picked LC-MS data processed with xcms: 'a processed dataset composed of two objects: RAMClustR (object containing the pseudo-MS/MS spectra) and an XCMS object containing the peak-picked data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] RAMClustR (RC) object \u2014 pseudo-MS/MS spectra derived from RAMClustR processing: 'a processed dataset composed of two objects: RAMClustR (object containing the pseudo-MS/MS spectra) and an XCMS object containing the peak-picked data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidPos fragment library \u2014 ion fragment database for lipid annotation: 'the fragment libraries need to be specified'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Annotation results table listing feature IDs, candidate lipid identities, and matching scores, with three features annotated and LPC(14:0) as rank-1 for feature 3: 'Three out of the six features were annotated with to a lipid'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Ranked candidate annotations for each of the six features: 'It is also possible to inspect if there were other candidate annotations for a given feature'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MetaboAnnotatoR: 'MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'To install this package, start R (version \"4.5.0\" or higher)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] xcms: 'An example of feature annotation using LC-MS AIF chromatograms processed using xcms and RamClustR packages'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] RamClustR: 'An example of feature annotation using LC-MS AIF chromatograms processed using xcms and RamClustR packages'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No documentation of version history, changes, or updates to MetaboAnnotatoR: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(MetaboAnnotatoR); library(xcms); library(RAMClustR); targetTable <- read.csv('{inputs.target_table}'); load('{inputs.xcms_object}'); load('{inputs.rc_object}'); lipidLib <- readRDS('{inputs.lipid_library}'); results <- annotateRC(targetTable, xset, RC, lipidLib); print(results); write.csv(results, 'annotation_results_{task_id}.csv', row.names=FALSE)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "annotation_results.csv",
+  "expected_outputs": [
+    "Annotation results table listing feature IDs, candidate lipid identities, and matching scores, with three features annotated and LPC(14:0) as rank-1 for feature 3",
+    "Ranked candidate annotations for each of the six features"
+  ],
+  "finding": "When annotateRC is applied to six lipidomics features using the LipidPos library, three features receive lipid annotations, with LPC(14:0) assigned as the rank 1 annotation for feature 3 (468.3095 m/z, 82.92009 s).",
+  "github_name": "gggraca/MetaboAnnotatoR",
+  "input_from": null,
+  "inputs": [
+    "targetTable.csv \u2014 feature table containing the six features to annotate",
+    "xcmsSet (xset) object \u2014 peak-picked LC-MS data processed with xcms",
+    "RAMClustR (RC) object \u2014 pseudo-MS/MS spectra derived from RAMClustR processing",
+    "LipidPos fragment library \u2014 ion fragment database for lipid annotation"
+  ],
+  "keywords": [
+    "metabolite annotation",
+    "lc-ms all-ion fragmentation",
+    "centroid mode",
+    "pseudo-ms/ms spectra",
+    "lipidomics",
+    "esi+ ionisation",
+    "feature table",
+    "fragment databases",
+    "peak-picking",
+    "library matching"
+  ],
+  "landmark_outputs": [
+    "annotated_features_summary.txt",
+    "feature_3_ranked_candidates.csv",
+    "annotation_results.csv"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_019",
+    "result_020",
+    "result_021"
+  ],
+  "methodology_summary": [
+    "Load the targetTable.csv feature list and the pre-computed xcmsSet and RAMClustR objects.",
+    "Specify the LipidPos fragment ion library as the annotation database.",
+    "Execute the annotateRC function to compute fragment-ion matching scores and rank candidate lipid identities.",
+    "Extract ranked annotation results for all six features.",
+    "Validation: Verify that exactly three features receive lipid annotations and that feature 3's top-ranked candidate is LPC(14:0).",
+    "References: source article (DOI: 10.1021/acs.analchem.1c03032)"
+  ],
+  "missing_information": [
+    "No documentation of version history, changes, or updates to MetaboAnnotatoR"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the annotateRC function successfully annotate three out of six features from the targetTable.csv using xcmsSet and RAMClustR objects with LipidPos libraries?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "metabolite-identifier-mapping-to-lipids",
+    "fragment-ion-database-matching",
+    "pseudo-ms-ms-spectra-ranking-and-curation",
+    "xcms-ramclustr-data-object-integration",
+    "annotation-candidate-comparative-scoring"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_metaboannotator/synthesized_package",
+  "spine_condition_ids": [
+    "COND-001"
+  ],
+  "spine_entity_ids": [
+    "ARCH-001",
+    "COMP-001",
+    "COMP-006",
+    "TOOL-002",
+    "DS-002",
+    "COND-001",
+    "RES-001",
+    "RES-002",
+    "COMP-009"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:gggraca__MetaboAnnotatoR",
+  "task_description": "Run the annotateRC function on six features from targetTable.csv against xcmsSet and RAMClustR objects using LipidPos fragment libraries, and reproduce the reported result of three annotated features with LPC(14:0) ranked first for feature 3.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature table with six features to annotate",
+      "port_id": "target_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "XCMS peak-picked data object",
+      "port_id": "xcms_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "RAMClustR pseudo-MS/MS spectra object",
+      "port_id": "rc_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LipidPos fragment ion library",
+      "port_id": "lipid_library",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute annotateRC on the bundled targetTable.csv, xset, and RC objects using LipidPos libraries and verify that exactly three of six features are annotated with LPC(14:0) as rank-1 for feature 3.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Annotation results with ranked candidates and lipid identities",
+      "port_id": "annotation_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-feature ranked candidate annotation list",
+      "port_id": "ranked_candidates",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "database-annotation",
+    "metabolite-identification",
+    "clustering"
+  ],
+  "title": "Reproduce the lipid annotation results for six ESI+ features using annotateRC with LipidPos libraries",
+  "tools": [
+    "MetaboAnnotatoR",
+    "R",
+    "xcms",
+    "RamClustR"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Annotation results table listing feature IDs, candidate lipid identities, and matching scores, with three features annotated and LPC(14:0) as rank-1 for feature 3, Ranked candidate annotations for each of the six features."
+  ],
+  "workflow_description": "1. Load the targetTable.csv feature table and the pre-processed xcmsSet (xset) and RAMClustR (RC) objects into R. 2. Configure the LipidPos fragment libraries as the annotation database source. 3. Execute the annotateRC function to match fragment ions from the six features against the LipidPos library. 4. Retrieve and rank candidate annotations by matching score for each feature. 5. Verify that three of six features received lipid annotations and confirm LPC(14:0) appears as the rank-1 candidate for feature 3."
+}

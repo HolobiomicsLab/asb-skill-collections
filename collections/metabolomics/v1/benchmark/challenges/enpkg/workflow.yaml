@@ -1,0 +1,105 @@
+schema_version: 0.1.0
+workflow_id: coll_enpkg_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: ENPKG is a computational workflow for processing and integrating data into
+    knowledge graphs through installation, setup, and execution stages. The workflow
+    transforms raw input into annotated outputs ready for knowledge-graph integration.
+  pseudo_abstract: 'The ENPKG full workflow describes a structured process comprising
+    three primary operational stages: installation, setup, and execution. The workflow
+    guide covers installation and environment setup procedures as foundational steps,
+    followed by end-to-end pipeline execution that processes sample datasets and produces
+    annotated outputs suitable for knowledge-graph integration.'
+  research_questions:
+  - What are the conda and pip dependencies and installation procedures required to
+    establish a functional ENPKG environment?
+  - What is the complete computational workflow executed by ENPKG from raw input data
+    to final knowledge-graph-ready annotated outputs?
+  methods_summary: 'Clone the enpkg/enpkg_full repository to a local working directory.
+    Extract the conda environment specification (environment.yml or equivalent) from
+    the repository. Create and activate a new conda environment using the declared
+    dependency manifest. Install all pinned Python packages and external dependencies
+    via conda and pip. Validation: Verify all declared packages are present at the
+    correct pinned versions and that core ENPKG modules can be imported without error.
+    References: source article (DOI: 10.1021/acscentsci.3c00800) Install ENPKG full
+    workflow from repository and configure the computational environment with all
+    required dependencies. Prepare and validate input dataset (spectral data and sample
+    metadata) in the workflow''s expected directory structure. Execute the ENPKG orchestrator,
+    which automatically chains feature detection, spectral matching, molecular networking,
+    and knowledge-graph annotation. Monitor execution logs and verify successful completion
+    of all pipeline stages. Validation: Confirm that all expected output files (annotated
+    features, knowledge-graph triples, spectral matches) exist, are non-empty, conform
+    to output schema, and contain molecular annotations with confidence scores for
+    test dataset samples. References: source article (DOI: 10.1021/acscentsci.3c00800)'
+  domain: cheminformatics
+  techniques:
+  - machine-learning
+  - database-annotation
+  - dereplication
+  - molecular-networking
+  - deep-learning
+  - in-silico-fragmentation
+  claims:
+  - claim_text: ENPKG is a computational workflow for which a scientific paper exists.
+    claim_type: finding
+    speculative: false
+  - claim_text: The ENPKG workflow guide covers installation, setup, and execution.
+    claim_type: finding
+    speculative: false
+    entity_id: enpkg_full_system
+  - claim_text: The ENPKG full workflow is a computational workflow that can be explored
+      by users.
+    claim_type: finding
+    speculative: false
+    entity_id: enpkg_full_system
+  - claim_text: The ENPKG scientific paper contains insights and methodologies that
+      power the workflow.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: mixed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 2-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Installed conda environment with all ENPKG dependencies at pinned versions
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Environment verification report listing all installed packages and versions
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Annotated feature table with molecular identifications and confidence scores
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Knowledge-graph output files in standardized format (RDF triples or equivalent)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Spectral library matches and molecular network visualization outputs
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

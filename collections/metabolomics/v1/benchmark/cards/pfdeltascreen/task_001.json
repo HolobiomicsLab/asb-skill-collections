@@ -1,0 +1,284 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/logo.jpg",
+      "role": "figure",
+      "sha256": "71bce88a8c368752824edde4511954dd9c5403b3e20a4bc993ddcbf0120ee7f8"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "4edf5fbad132b38a70dc2febd2892a1258d4ccc00edde341d64a0c786a44a59e"
+    }
+  ],
+  "created_at": "2026-06-15T12:20:13.915230+00:00",
+  "crossref_doi": "10.1007/s00216-023-05070-2",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "centroided mzML file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "feature list with m/z, retention time, and intensity values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Centroiding is a preprocessing step that converts profile-mode MS data into discrete m/z\u2013intensity pairs; pyOpenMS expects centroided input for FeatureFinderCentroided.",
+    "Feature detection identifies groups of consecutive MS scans sharing similar m/z values and intensity patterns, forming 2D peaks in the m/z\u2013retention time plane.",
+    "The output feature list must include at least three attributes per feature: monoisotopic m/z, elution time (retention time), and integrated or apex intensity.",
+    "mzML is a standardized, vendor-neutral XML format for mass spectrometry data that encodes spectral metadata, scan order, and peak data in a machine-readable structure."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:JonZwe__PFAScreen (PFAScreen repository)",
+      "verify script_runs: execute pyOpenMS feature detection module on a centroided mzML input file without errors",
+      "verify output_matches_reference: feature list output contains required columns (m/z, retention time, intensity)",
+      "verify file_format_is: output feature list is in a structured format (CSV, featureXML, or pandas DataFrame serialization)",
+      "verify row_count_equals: feature list contains at least one detected feature (row_count > 0) for non-empty input mzML",
+      "verify value_in_range: detected m/z values fall within physically plausible range (50\u20132000 m/z, parameter-sensitive to instrument and sample)",
+      "verify value_in_range: retention time values are non-negative and monotonically increasing or clustered (parameter-sensitive to LC gradient)",
+      "verify value_in_range: intensity values are positive numbers (>0)"
+    ],
+    "expert_review": [
+      "assess whether pyOpenMS centroid detection parameters (peak picking, feature linking thresholds) are appropriate for the analyte class and instrument resolution reported in the article",
+      "assess whether detected feature m/z accuracy and retention time precision meet expected HRMS performance for PFAS screening",
+      "assess whether feature list completeness (number and identity of true features) is reasonable by comparison to literature or reference standards for similar LC-HRMS PFAS methods"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does pyOpenMS ingest centroided mzML files and produce a feature list with m/z, retention time, and intensity values?: 'pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PF\u0394Screen uses pyOpenMS (Python interface to the C++ OpenMS library) to perform feature detection in MS raw data, accepting vendor-independent centroided mzML format files as input for automated feature extraction.: 'pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data. Raw mass spectrometric data can be included vendor-independently in the mzML format (data-dependent'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] centroided mzML file: 'pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] feature list with m/z, retention time, and intensity values: 'pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'PF\u0394Screen is an open-source Python based non-target screening software tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] pyOpenMS: 'pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] OpenMS: 'pyOpenMS (Python interface to the C++ OpenMS library)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting pyOpenMS feature detection implementation history, parameter defaults, or version constraints: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pyopenms as oms; exp = oms.MSExperiment(); oms.MzMLFile().load('{inputs.centroided_mzml}', exp); finder = oms.FeatureFinderCentroided(); features = oms.FeatureMap(); finder.run(exp, features); out = oms.MzTabFile(); out.store('{task_id}_features.mzTab', features); print(f'Detected {len(features)} features'); [print(f'Feature: m/z={f.getMZ():.4f}, rt={f.getRT():.2f}, intensity={f.getIntensity():.2f}') for f in features[:min(5, len(features))]]"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "features.mzTab",
+  "expected_outputs": [
+    "feature list with m/z, retention time, and intensity values"
+  ],
+  "finding": "PF\u0394Screen uses pyOpenMS (Python interface to the C++ OpenMS library) to perform feature detection in MS raw data, accepting vendor-independent centroided mzML format files as input for automated feature extraction.",
+  "github_name": "JonZwe/PFAScreen",
+  "input_from": null,
+  "inputs": [
+    "centroided mzML file"
+  ],
+  "keywords": [
+    "pfas screening",
+    "non-target hrms",
+    "lc-hrms",
+    "gc-hrms",
+    "feature detection",
+    "kendrick mass defect analysis",
+    "fragment mass differences",
+    "ms2 diagnostics",
+    "esi ionization",
+    "apci ionization",
+    "untargeted metabolomics"
+  ],
+  "landmark_outputs": [
+    "raw_spectrum_count.txt",
+    "features.mzTab"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_010",
+    "result_011"
+  ],
+  "methodology_summary": [
+    "Load centroided mzML file into pyOpenMS MSExperiment object.",
+    "Run pyOpenMS FeatureFinderCentroided algorithm to detect 2D features across m/z and retention time dimensions.",
+    "Extract feature attributes (m/z, retention time, intensity) from the detected feature container.",
+    "Serialize detected features to mzTab format.",
+    "Validation: Verify that output file contains at least one feature row with non-null m/z, retention time, and intensity fields; confirm file format conforms to mzTab specification.",
+    "References: source article (DOI: 10.1007/s00216-023-05070-2)"
+  ],
+  "missing_information": [
+    "No changelog documenting pyOpenMS feature detection implementation history, parameter defaults, or version constraints"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does pyOpenMS ingest centroided mzML files and produce a feature list with m/z, retention time, and intensity values?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "centroided-ms-feature-detection",
+    "mzml-file-parsing",
+    "chromatographic-feature-extraction",
+    "mass-spectrometry-feature-table-construction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pfdeltascreen/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "PFDeltaScreen_System",
+    "pyOpenMS_Tool",
+    "mzML_Dataset",
+    "PFAS_Prioritization_Architecture",
+    "CustomFeatureList_Artifact",
+    "PFDeltaScreen_Publication"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:JonZwe__PFAScreen",
+  "task_description": "Use pyOpenMS to ingest a centroided mzML file and detect MS features, producing a feature list with m/z, retention time, and intensity values.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "centroided mzML file",
+      "port_id": "centroided_mzml",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement pyOpenMS-based feature detection to convert centroided mzML files into feature lists containing m/z, retention time, and intensity values.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "detected features with m/z, retention time, intensity",
+      "port_id": "feature_list",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "high-resolution-ms",
+    "chemical-class-annotation",
+    "database-annotation",
+    "quality-control"
+  ],
+  "title": "Reconstruct the mzML feature detection step using pyOpenMS",
+  "tools": [
+    "Python",
+    "pyOpenMS",
+    "OpenMS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load centroided mzML file using pyOpenMS MSExperiment reader. 2. Apply feature detection algorithm via pyOpenMS FeatureFinderCentroided to identify MS features across the mass and time dimensions. 3. Extract detected features with m/z, retention time, and intensity attributes. 4. Write feature list to output file in structured tabular format (mzTab or CSV)."
+}

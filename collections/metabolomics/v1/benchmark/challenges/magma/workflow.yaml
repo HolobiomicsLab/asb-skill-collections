@@ -1,0 +1,192 @@
+schema_version: 0.1.0
+workflow_id: coll_magma_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: MAGMa is a chemo-informatics platform for metabolite identification and
+    biochemical network reconstruction, comprising five named subproject components
+    (emetabolomics_site, job, joblauncher, pubchem, and magmaweb) with embedded CI/CD
+    status badges for Travis CI, Landscape.io, Coveralls, Docker Hub, and Zenodo.
+  pseudo_abstract: 'The eMetabolomics project develops chemo-informatics based methods
+    for metabolite identification and biochemical network reconstruction in an integrative
+    metabolomics data analysis workflow. MAGMa (Ms Annotation based on in silico Generated
+    Metabolites) is the project''s core system, composed of five named subproject
+    components: emetabolomics_site (website), job (calculation engine), joblauncher
+    (webservice for job execution), pubchem (data processing), and magmaweb (results
+    interface). The MAGMa joblauncher subproject functions as a webservice to execute
+    jobs, serving as the interface for triggering MAGMa calculations. The system employs
+    in silico generation of metabolites as part of the integrative metabolomics data
+    analysis workflow. The MAGMa GitHub repository embeds five badge endpoints linking
+    to live project status pages: Travis CI (build status), Landscape.io (code health),
+    Coveralls (test coverage), Docker Hub (container readiness), and Zenodo (DOI archival).
+    The project subcomponents can be deployed as separate containerized services.'
+  research_questions:
+  - What are the named subproject components that comprise the MAGMa system architecture,
+    and what are their designated roles?
+  - What are the current build, code quality, test coverage, deployment, and archival
+    status indicators reported by the badge endpoints referenced in the MAGMa project
+    README?
+  - What are the HTTP endpoints, request/response schemas, and authentication mechanisms
+    exposed by the joblauncher webservice component in the MAGMa project?
+  - What is the chemo-informatics workflow that MAGMa uses to generate candidate metabolites
+    in silico?
+  - What are the distinct architectural components of the MAGMa system that need to
+    be containerized and orchestrated as separate microservices?
+  methods_summary: 'Access the NLeSC/MAGMa GitHub repository via provided URL. Enumerate
+    and locate named subproject directories and configuration files (emetabolomics_site,
+    job, joblauncher, pubchem, magmaweb). Extract functional role and source path
+    for each component via documentation scanning and code inspection. Compile structured
+    manifest cataloging component name, role, and path. Validation: manifest file
+    exists, contains all five named components, each with a non-empty name, role description,
+    and file path entry. Access the MAGMa GitHub repository and retrieve the README
+    file. Parse the README to extract all badge endpoint URLs (Travis CI, Coveralls,
+    Landscape.io, Docker Hub, Zenodo). Query each badge endpoint and extract the current
+    status value or metric reported. Organize results into a structured table with
+    badge name, endpoint URL, status value, and retrieval timestamp. Validation: Verify
+    that the output table contains at least four badge entries with non-empty status
+    values and valid endpoint URLs. Clone the NLeSC/MAGMa repository and locate joblauncher
+    source files. Parse HTTP route definitions and endpoint handlers to extract paths,
+    methods, and parameter names. Analyze function signatures and type hints to infer
+    request and response payload schemas. Map extracted metadata into OpenAPI 3.0
+    format with complete endpoint documentation. Validation: OpenAPI specification
+    is structurally valid JSON/YAML and all joblauncher endpoints are present and
+    accurately documented. Retrieve the MAGMa source repository from GitHub and navigate
+    to the job subproject directory. Perform static analysis of Python/source files
+    to identify metabolite generation entry points and function signatures. Trace
+    call chains and data flow through fragmentation, enumeration, and property-filtering
+    modules. Extract transformation logic, parameter definitions, and decision points
+    that govern metabolite candidate generation. Construct a directed acyclic graph
+    representation as JSON, annotating nodes with function identifiers and algorithm
+    names. Validation: Verify that the generated flowchart covers the complete path
+    from input parent structure to output candidate metabolite set, with all major
+    computational steps and data dependencies explicitly documented. Scan NLeSC/MAGMa
+    repository for existing Dockerfiles, build configuration, and service architecture
+    documentation. Identify the four service components (magmaweb, joblauncher, job,
+    pubchem) and their runtime dependencies. Extract port bindings, environment variables,
+    and data volume requirements from existing build artifacts and documentation.
+    Author docker-compose.yml with service definitions, networks, volume bindings,
+    and dependency ordering. Validate docker-compose syntax and test multi-service
+    startup workflow. Validation: docker-compose config returns no errors, all four
+    services can be started with docker-compose up, and inter-service networking is
+    verified via service health checks.'
+  domain: metabolomics
+  techniques:
+  - in-silico-fragmentation
+  - metabolite-identification
+  - database-annotation
+  - spectral-library-matching
+  claims:
+  - claim_text: The eMetabolomics project is funded by the Netherlands eScience Center.
+    claim_type: finding
+    speculative: false
+    entity_id: eMetabolomics_Project
+  - claim_text: The eMetabolomics project is carried out at Wageningen University
+      and the Netherlands eScience Center.
+    claim_type: finding
+    speculative: false
+    entity_id: eMetabolomics_Project
+  - claim_text: The eMetabolomics project collaborates with the Netherlands Metabolomics
+      Centre.
+    claim_type: finding
+    speculative: false
+    entity_id: eMetabolomics_Project
+  - claim_text: The project develops chemo-informatics based methods for metabolite
+      identification.
+    claim_type: finding
+    speculative: false
+  - claim_text: The project develops methods for biochemical network reconstruction
+      in an integrative metabolomics data analysis workflow.
+    claim_type: finding
+    speculative: false
+  - claim_text: MAGMa is an abbreviation for 'Ms Annotation based on in silico Generated
+      Metabolites'.
+    claim_type: finding
+    speculative: false
+    entity_id: MAGMa_System
+  - claim_text: emetabolomics_site is a subproject that provides the eMetabolomics
+      website.
+    claim_type: finding
+    speculative: false
+    entity_id: eMetabolomics_Project
+  - claim_text: The job subproject runs MAGMa calculation.
+    claim_type: finding
+    speculative: false
+    entity_id: MAGMa_System
+  - claim_text: The joblauncher subproject is a webservice to execute jobs.
+    claim_type: finding
+    speculative: false
+    entity_id: MAGMa_JobLauncher_Component
+  - claim_text: Contributions to the eMetabolomics project can be made via Github
+      issue or pull request.
+    claim_type: finding
+    speculative: false
+    entity_id: MAGMa_System
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 'Structured table (CSV or JSON) recording badge status values with columns:
+    badge_name, endpoint_url, status_value, retrieval_timestamp'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: OpenAPI 3.0 specification document (JSON or YAML) describing joblauncher HTTP
+    API contract
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Structured flowchart or annotated call-graph JSON file documenting the in
+    silico metabolite generation workflow, including function names, transformation
+    logic, and data flow edges
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: docker-compose.yml file defining four services (magmaweb, joblauncher, job,
+    pubchem) with networks, volumes, environment variables, and service dependencies
+    fully configured
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Service configuration documentation (README or inline comments in docker-compose.yml)
+    describing port mappings, environment setup, and inter-service communication
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

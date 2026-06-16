@@ -1,0 +1,283 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Rplot001.jpg",
+      "role": "figure",
+      "sha256": "79259d0fa68ec36cfa387ea2b9948e1a8f0a42239143735eeae01a80ab72da72"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d8ab23ebaf3bf6459087e91d56055beef2ca5b026fc08b4cf749c6c400b5330d"
+    }
+  ],
+  "created_at": "2026-06-15T13:20:51.739319+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "example.tsv file from mzQuality package (extdata/example.tsv)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SummarizedExperiment object with rowData, colData, and assays including 'ratio'",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "The mzQuality input format requires six mandatory columns (aliquot, compound, area, type, injection_time, batch) plus optional concentration column for calibration samples.",
+    "The 'ratio' assay is computed as the compound area normalized by internal standard (area_is) to account for injection variability in mass spectrometry measurements.",
+    "A SummarizedExperiment object stores features as rows, samples as columns, and numeric matrices as assays, with associated rowData and colData metadata frames.",
+    "Missing concentrations in study samples (non-calibration rows) must be explicitly marked as NA, not omitted, to preserve sample integrity in the experiment object.",
+    "The readData function performs column presence and data-type validation before passing cleaned data to buildExperiment for object construction."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file example.tsv exists in package or accessible repository",
+      "verify readData function runs without error on example.tsv as input",
+      "verify buildExperiment function runs without error given readData output and documented column mappings",
+      "verify output object is of class SummarizedExperiment",
+      "verify output object contains 'ratio' assay (verify assays(output) contains key 'ratio')",
+      "verify output object contains non-empty rowData slot",
+      "verify output object contains non-empty colData slot",
+      "verify output object structure has three expected slots: rowData, colData, assays (robust to parameter choices)"
+    ],
+    "expert_review": [
+      "verify that the 'ratio' assay contains biologically plausible values for metabolomics ratio data",
+      "verify that rowData annotations (compound identifiers, metadata) align with expected metabolomics quality control metadata",
+      "verify that colData annotations (sample identifiers, types, batch information) align with documented column mappings"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does the buildExperiment function correctly construct a SummarizedExperiment object with a computed ratio assay when given a data frame with specified column mappings for compounds, samples, and internal standards?: 'The `buildExperiment` function allows you to create a *SummarizedExperiment* object from a data frame by specifying the following columns: `compoundColumn`, `aliquotColumn`, `primaryAssay`,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The buildExperiment function constructs a SummarizedExperiment object from a data frame by mapping user-specified columns to compound names, sample names, primary assay (compound area), secondary assay (internal standard area), and sample types. The function automatically calculates the compound/internal standard ratio for each sample and stores it in the 'ratio' assay, with the ratio computed as primary assay divided by secondary assay (or set to primary assay if secondary assay is not provided).: 'The `buildExperiment` function will automatically calculate the compound / Internal Standard ratio for each sample and store it in the `ratio` assay. Note that if the `secondaryAssay` column is not'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] example.tsv file from mzQuality package (extdata/example.tsv): 'file <- system.file(\"extdata/example.tsv\", package = \"mzQuality\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] SummarizedExperiment object with rowData, colData, and assays including 'ratio': 'The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] mzQuality: 'library(mzQuality)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] R: 'library(mzQuality)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] SummarizedExperiment: 'The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mzQuality); library(SummarizedExperiment); data <- readData('{inputs.example_tsv}'); se <- buildExperiment(data, aliquot='aliquot', compound='compound', area='area', type='type', injection_time='injection_time', batch='batch', concentration='concentration'); stopifnot(!is.null(rowData(se)), !is.null(colData(se)), 'ratio' %in% names(assays(se))); print(se)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "SummarizedExperiment object with rowData, colData, and assays including 'ratio'"
+  ],
+  "finding": "The buildExperiment function constructs a SummarizedExperiment object from a data frame by mapping user-specified columns to compound names, sample names, primary assay (compound area), secondary assay (internal standard area), and sample types. The function automatically calculates the compound/internal standard ratio for each sample and stores it in the 'ratio' assay, with the ratio computed as primary assay divided by secondary assay (or set to primary assay if secondary assay is not provided).",
+  "github_name": "hankemeierlab/mzQuality",
+  "input_from": null,
+  "inputs": [
+    "example.tsv file from mzQuality package (extdata/example.tsv)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "cleaned_data_frame.tsv",
+    "se_object.rds"
+  ],
+  "linked_result_ids": [
+    "result_009",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_021",
+    "result_022"
+  ],
+  "methodology_summary": [
+    "Load example.tsv from mzQuality package using readData function with built-in column validation.",
+    "Map required columns (aliquot, compound, area, type, injection_time, batch) and optional concentration column to data frame.",
+    "Call buildExperiment to construct a SummarizedExperiment object with features (compounds) as rows and samples (aliquots) as columns.",
+    "Verify SummarizedExperiment structure: rowData contains compound identifiers, colData contains sample metadata, and assays include the computed ratio (area / area_is).",
+    "Validation: SummarizedExperiment object can be created without errors, contains non-empty rowData and colData frames, and ratio assay is present and numeric."
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the buildExperiment function correctly construct a SummarizedExperiment object with a computed ratio assay when given a data frame with specified column mappings for compounds, samples, and internal standards?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "metabolomics-data-input-validation",
+    "summarized-experiment-object-construction",
+    "chromatographic-assay-ratio-computation",
+    "bioconductor-object-structure-inspection",
+    "tab-delimited-metabolomics-file-parsing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mzquality/synthesized_package",
+  "spine_condition_ids": [
+    "cond_with_calibration_lines"
+  ],
+  "spine_entity_ids": [
+    "comp_summarized_experiment",
+    "tool_readData",
+    "tool_buildExperiment",
+    "dataset_example_tsv",
+    "comp_ratio_assay",
+    "comp_ratio_corrected_assay",
+    "cond_with_calibration_lines"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:hankemeierlab__mzQuality",
+  "task_description": "Load the example.tsv file using readData, then construct a SummarizedExperiment object via buildExperiment with documented column mappings (aliquot, compound, area, type, injection_time, batch, concentration) to produce an experiment object containing the 'ratio' assay. Verify object structure including rowData, colData, and assays.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "example.tsv file from mzQuality package",
+      "port_id": "example_tsv",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Load example.tsv using readData and buildExperiment with documented column mappings, then verify the resulting SummarizedExperiment object contains correct rowData, colData, and a computed 'ratio' assay.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SummarizedExperiment object with assays and metadata",
+      "port_id": "experiment_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control",
+    "feature-detection",
+    "lc-ms",
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct the buildExperiment SummarizedExperiment construction step from a tab-delimited input file",
+  "tools": [
+    "mzQuality",
+    "R",
+    "SummarizedExperiment"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: SummarizedExperiment, SummarizedExperiment object with rowData, colData, and assays including 'ratio'."
+  ],
+  "workflow_description": "1. Load the example.tsv file from the mzQuality package using readData, which performs basic column validation and data integrity checks. 2. Call buildExperiment on the resulting data frame, specifying column mappings for aliquots (samples), compounds (features), and assay values (area under the curve). 3. Inspect the returned SummarizedExperiment object to confirm presence of rowData (compound metadata), colData (sample metadata), and assays (including the computed 'ratio' assay derived from compound and internal standard areas)."
+}

@@ -1,0 +1,296 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/falcon_how.png",
+      "role": "figure",
+      "sha256": "9007c99deda36a28155954597b73094c65fc9abbb8fb41978a78d85320c065a3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/falcon_logo.png",
+      "role": "figure",
+      "sha256": "4dc5b75966382006308757c54f59ec43e5b578b1bfc5a4e831744cb003331e27"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3ae694c2452a22f92eb602bd988837ce6b0d867daaa891cf09b4a14eff8d833f"
+    }
+  ],
+  "created_at": "2026-06-16T07:27:43.705003+00:00",
+  "crossref_doi": "10.1002/rcm.9153",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "High-resolution MS/MS spectra in mzML, mzXML, or MGF format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Matrix of low-dimensional hashed feature vectors (one vector per spectrum)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Feature hashing is a dimensionality-reduction technique that converts sparse, high-dimensional spectral data (m/z bins) into fixed-size dense or sparse vectors via hash functions, enabling efficient similarity searching without storing the original spectral resolution.",
+    "Spectral binning discretizes the continuous m/z range into discrete bins; the choice of bin width affects the trade-off between spectral resolution and computational efficiency.",
+    "Low-dimensional hashed vectors enable fast approximate nearest-neighbor search algorithms (e.g., locality-sensitive hashing, LSH) that scale to millions of spectra without exhaustive pairwise comparisons.",
+    "Intensity normalization (e.g., TIC, L2-norm) is essential before hashing to ensure comparable vector representations across spectra with different total intensities."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that falcon repository (github:bittremieux-lab__falcon or https://github.com/bittremieux/falcon) is accessible and contains implementation code for the feature hashing stage",
+      "verify that the hashed feature vector matrix output has file_exists and format_is (numeric matrix, e.g., .npy, .csv, or .h5)",
+      "verify that the output matrix row_count_equals the number of input spectra",
+      "verify that the output matrix column_count_equals the hash dimension parameter (no canonical answer \u2014 depends on implementation choice)",
+      "verify script_runs: the binning and hashing transformation executes without runtime errors on a provided test spectrum file",
+      "verify that output values are in valid range for hashed feature vectors (e.g., non-negative integers or floats within [0, 1] depending on normalization; parameter-sensitive to hashing scheme)",
+      "verify that the implementation uses feature hashing as the mechanism (robust to parameter choices in hash table size and bin width)"
+    ],
+    "expert_review": [
+      "confirm that the binning strategy (bin width, mass range) is appropriate for typical high-resolution MS/MS spectra and consistent with stated method",
+      "confirm that the feature hashing implementation correctly maps m/z\u2013intensity pairs into fixed-dimensional vectors without collision artifacts or information loss that would degrade downstream clustering",
+      "confirm that vector normalization or scaling (if applied) is suitable for nearest neighbor distance computations"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How are high-resolution MS/MS spectra transformed into low-dimensional vector representations suitable for nearest neighbor indexing?: 'First, high-resolution spectra are binned and converted to low-dimensional vectors using feature hashing.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] High-resolution spectra are binned and converted to low-dimensional vectors using feature hashing as the initial transformation step.: 'First, high-resolution spectra are binned and converted to low-dimensional vectors using feature hashing.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] High-resolution MS/MS spectra in mzML, mzXML, or MGF format: 'high-resolution spectra are binned and converted to low-dimensional vectors using feature hashing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Matrix of low-dimensional hashed feature vectors (one vector per spectrum): 'high-resolution spectra are binned and converted to low-dimensional vectors using feature hashing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] falcon: 'The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] spectrum-utils==0.3.5: 'pip install falcon-ms spectrum-utils==0.3.5'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python 3.8+: '_falcon_ requires Python 3.8+ and is available on the Linux and OSX platforms.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific binning parameters (bin width, mass tolerance) for the high-resolution spectrum binning stage are not documented in the provided section text: 'No verbatim evidence available in section text; information absent from provided material'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Hash dimension and hash function algorithm details for the feature hashing transformation are not specified in the provided section text: 'No verbatim evidence available in section text; information absent from provided material'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Normalization or scaling applied to hashed feature vectors is not described in the provided section text: 'No verbatim evidence available in section text; information absent from provided material'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import spectrum_utils.spectrum as sus; import spectrum_utils.utils as suu; import numpy as np; from scipy.sparse import csr_matrix; import hashlib; spectra = suu.load_spectra('{inputs.raw_spectra}'); bin_width = 0.1; n_features = 10000; hashed_vectors = []; \nfor spec in spectra:\n  mz, intensity = spec.mz, spec.intensity; binned = np.zeros(int((mz[-1] - mz[0]) / bin_width) + 1);\n  for m, i in zip(mz, intensity):\n    idx = int((m - mz[0]) / bin_width); binned[idx] += i\n  binned = binned / (np.sum(binned) + 1e-10); hashed = np.zeros(n_features);\n  for i, val in enumerate(binned):\n    if val > 0: h = int(hashlib.md5(str(i).encode()).hexdigest(), 16) % n_features; hashed[h] += val\n  hashed_vectors.append(hashed)\nX = np.array(hashed_vectors); np.save('hashed_spectra_matrix.npy', X); print(f'Output shape: {X.shape}')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "hashed_feature_vectors.npz",
+  "expected_outputs": [
+    "Matrix of low-dimensional hashed feature vectors (one vector per spectrum)"
+  ],
+  "finding": "High-resolution spectra are binned and converted to low-dimensional vectors using feature hashing as the initial transformation step.",
+  "github_name": "bittremieuxlab/falcon",
+  "input_from": null,
+  "inputs": [
+    "High-resolution MS/MS spectra in mzML, mzXML, or MGF format"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "binned_spectra.csv",
+    "hashed_feature_vectors.npz"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load high-resolution MS/MS spectra from standard mass spectrometry file formats.",
+    "Discretize m/z values into uniform bins and aggregate intensities within each bin.",
+    "Normalize binned intensity vectors (e.g., by total ion current or L2-norm).",
+    "Apply feature hashing to map binned vectors to fixed-size low-dimensional representations.",
+    "Validation: Confirm output is a dense or sparse matrix with one row per input spectrum and consistent vector dimensionality across all spectra.",
+    "References: source article (DOI: 10.1002/rcm.9153)"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "Specific binning parameters (bin width, mass tolerance) for the high-resolution spectrum binning stage are not documented in the provided section text",
+    "Hash dimension and hash function algorithm details for the feature hashing transformation are not specified in the provided section text",
+    "Normalization or scaling applied to hashed feature vectors is not described in the provided section text"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How are high-resolution MS/MS spectra transformed into low-dimensional vector representations suitable for nearest neighbor indexing?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "spectrum-binning-and-normalization",
+    "feature-hashing-vectorization",
+    "high-resolution-mass-spectrometry-data-preprocessing",
+    "spectral-dimensionality-reduction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_falcon/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "falcon_system",
+    "arch_binning_hashing",
+    "arch_nn_index",
+    "arch_sparse_distance_matrix",
+    "arch_density_clustering",
+    "tool_falcon_ms",
+    "tool_spectrum_utils"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:bittremieux-lab__falcon",
+  "task_description": "Implement the feature-hashing binning stage of falcon: convert high-resolution MS/MS spectra into low-dimensional hashed feature vectors. Output a matrix of hashed spectrum vectors suitable for nearest-neighbor indexing.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "High-resolution MS/MS spectra",
+      "port_id": "raw_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the feature hashing transformation stage that bins high-resolution MS/MS spectra and outputs low-dimensional hashed feature vectors.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Matrix of low-dimensional hashed feature vectors",
+      "port_id": "hashed_feature_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "tandem-ms",
+    "spectral-library-matching"
+  ],
+  "title": "Reconstruct the Spectrum Binning and Feature Hashing Layer of the falcon pipeline",
+  "tools": [
+    "falcon",
+    "spectrum-utils==0.3.5",
+    "Python 3.8+"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load high-resolution MS/MS spectra in mzML or mzXML format. 2. Bin spectra across the m/z range and normalize intensities. 3. Apply feature hashing to convert binned spectra into fixed-size low-dimensional vectors. 4. Output the resulting hashed feature matrix in a dense or sparse numerical format (e.g., NumPy array, SciPy sparse matrix, or CSV)."
+}

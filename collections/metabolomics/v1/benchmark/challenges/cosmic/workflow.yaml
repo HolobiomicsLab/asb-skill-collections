@@ -1,0 +1,184 @@
+schema_version: 0.1.0
+workflow_id: coll_cosmic_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: implicit
+  orchestration_planning: dynamic
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: SIRIUS is a Java-based software framework for LC-MS/MS metabolite analysis
+    that integrates multiple web service components including CSI:FingerID, CANOPUS,
+    and MSNovelist. The paper documents the framework architecture and confirms that
+    the Build and Publish CI workflow for the SIRIUS release branch executes successfully.
+  pseudo_abstract: 'Reproduces 1 reported result: The Build and Publish workflow for
+    sirius-ms/sirius is configured to run on the release branch and is accessible
+    via a status badge in the README. Reconstructs 4 described mechanisms (described
+    in the paper but not separately evaluated there): SIRIUS is implemented as a Java-based
+    software framework designed to accept LC-MS/MS data as input for downstream analysis.
+    CSI:FingerID is a SIRIUS web service component that processes spectrum queries
+    as part of the integrated LC-MS/MS analysis framework. CANOPUS is offered as a
+    web service component within the SIRIUS framework for academic research and education
+    use, enabling remote submission of queries for compound-class annotation. MSNovelist
+    is offered as a web service component within the SIRIUS framework alongside CSI:FingerID
+    and CANOPUS for scientific analysis.'
+  research_questions:
+  - How does SIRIUS ingest and parse LC-MS/MS data into a structured representation
+    within its Java framework?
+  - How does the CSI:FingerID web service accept a parsed mass spectrum query and
+    return a molecular fingerprint prediction?
+  - What is the mechanism by which CANOPUS accepts a fingerprint or spectrum query
+    and returns a structured compound-class annotation result?
+  - How does the MSNovelist web service endpoint accept a query input and return de-novo
+    generated candidate structures?
+  - Does the GitHub Actions 'Build and Publish' workflow on the release branch of
+    the sirius-ms/sirius repository execute successfully and produce a passing build
+    status?
+  methods_summary: 'Load raw LC-MS/MS data files into SIRIUS Java framework Parse
+    and extract spectral metadata (precursor m/z, retention time, collision energy,
+    fragment assignments) Construct hierarchical spectrum objects with indexed MS1
+    and MS/MS data Validate spectral quality (non-zero ion counts, valid mass ranges,
+    metadata completeness) Validation: All input spectra successfully parsed with
+    no missing mandatory metadata fields and ion counts verified as non-zero Prepare
+    MS/MS spectrum metadata and fragment peak list Format spectrum query according
+    to CSI:FingerID API specification Submit HTTP POST request to CSI:FingerID web
+    service endpoint Parse JSON response to extract fingerprint prediction and confidence
+    metrics Validation: Verify response JSON contains fingerprint prediction data
+    with non-empty bit vector or scored features Prepare fingerprint or spectrum input
+    in CANOPUS-compatible format Submit query to CANOPUS web service endpoint Retrieve
+    structured compound-class annotation response Parse and validate annotation fields
+    (class, confidence) Validation: Response contains predicted compound class and
+    confidence score fields Format query with molecular m/z and optional MS/MS spectrum
+    data Submit query to MSNovelist web service REST endpoint Retrieve and parse JSON
+    response containing ranked candidate structures Serialize candidates with scores
+    and metadata to output file Validation: Verify that output file contains at least
+    one ranked candidate structure with valid SMILES notation and associated score
+    Access the sirius-ms/sirius repository via GitHub and locate the release branch.
+    Review the distribute.yaml workflow configuration to identify build triggers and
+    pipeline stages. Trigger the workflow by creating a release tag or pushing to
+    the release branch according to distribute.yaml trigger conditions. Monitor the
+    GitHub Actions interface until the workflow run completes. Validation: Confirm
+    the workflow run status displays ''passed'' and the README build badge shows a
+    passing status indicator (green badge with ''passing'' or ''success'' label).'
+  domain: cheminformatics
+  techniques:
+  - in-silico-fragmentation
+  - machine-learning
+  - metabolite-identification
+  - deep-learning
+  - database-annotation
+  - high-resolution-ms
+  claims:
+  - claim_text: SIRIUS is licensed under AGPL v3.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: The current version of SIRIUS is 6.3.7.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: SIRIUS is a java-based software framework.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: SIRIUS is used for the analysis of LC-MS/MS data of metabolites.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: SIRIUS methods are offered to the scientific community as freely available
+      resources.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: Redistribution of SIRIUS methods in whole or in part for commercial
+      purposes is prohibited.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: "SIRIUS web services are hosted by the B\xF6cker group."
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: SIRIUS web services are for academic research and education use only.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: CSI:FingerID is one of the SIRIUS web services.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: CANOPUS is one of the SIRIUS web services.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: MSNovelist is one of the SIRIUS web services.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: Bright Giant GmbH provides licenses and services for non-academic
+      SIRIUS users.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: Users of SIRIUS tools are asked to cite corresponding papers in resulting
+      publications.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints:
+  - Commercial redistribution of methods is prohibited
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Structured compound-class annotation result from CANOPUS (JSON or tabular
+    format containing predicted classes and confidence scores)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Structured file containing ranked list of de-novo generated candidate structures
+    with scores and metadata
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Screenshot or JSON report of GitHub Actions workflow run showing passing status
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: README badge screenshot or URL confirming build badge displays passing status
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

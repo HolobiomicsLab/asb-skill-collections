@@ -1,0 +1,492 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/annot_fmt.png",
+      "role": "figure",
+      "sha256": "aa131da2eb4a03f3caf34c65d28d9f2d582c6a9efa49cdf2a01207b6fab43eed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/facet.png",
+      "role": "figure",
+      "sha256": "e57e59a644daa6d219a1a655c97392d67c7c53ccefaada676834db3499f037f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ion_types.png",
+      "role": "figure",
+      "sha256": "3689e78338321ae78c8539a57d51429d8fbe5f05f749ab00f8e3ea326a1b3040"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mass_errors.png",
+      "role": "figure",
+      "sha256": "4d0b8529e04b2c5939cecdad599868d4ca9773c22322732fc85f5777067da0ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mirror.png",
+      "role": "figure",
+      "sha256": "32701dbd4d13d84c64d237aee23847c79d67c07f61da2b321dd8d377d01368e2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/neutral_losses_1.png",
+      "role": "figure",
+      "sha256": "f7b624ba1657b23cb0c63a1759a448c55ecc5f0badb718312246fe6f8319925d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/neutral_losses_2.png",
+      "role": "figure",
+      "sha256": "5617bb2da993ae878ddaf3894e11e149637f5c8ea16e64ad010b83c63e125799"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ast.png",
+      "role": "figure",
+      "sha256": "37923b9adda7fc9c3eaaa3e950cc45cc94ec0431ef868a1f4c748b977ceeaf01"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex1.png",
+      "role": "figure",
+      "sha256": "c45d39b10ee03b10a075fa8050fb66b8392d57f9219b5fe7df730b987c1bb034"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex2.png",
+      "role": "figure",
+      "sha256": "ece2c94ae2f27a0f19070045aed63ecb78b715daf321bbebb5959a99e09ebc23"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex3.png",
+      "role": "figure",
+      "sha256": "28d41a86b95b6c72243ecaa9e58ac5767f1eb1c88d808006d1ed0a65dd6a079e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/quickstart.png",
+      "role": "figure",
+      "sha256": "44490275960117903431e424672fdc3c31f5b4afa180c518c144ff18633f63fd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/runtime.png",
+      "role": "figure",
+      "sha256": "4c5df6692e74ad37aec5e8719571aa0972961c4f3032164976cbc7d81d0863ac"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectrum_utils.png",
+      "role": "figure",
+      "sha256": "73d5e118673e38e5efcf597fd07ff1ecc88427f294570dd8613c9b7f4ba675c0"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "0dc02878eada4e3ac6351523d62ecf382dc0914af1caa073734c3f8aead8fbe9"
+    }
+  ],
+  "created_at": "2026-06-16T07:16:56.758905+00:00",
+  "crossref_doi": "10.1021/acs.analchem.9b04884",
+  "data_accessions": [
+    {
+      "accession": "MSV000082283",
+      "evidence_span": "# Retrieve the spectrum by its USI.     usi = \"mzspec:MSV000082283:f07074:scan:5475\"     spectrum = sus.MsmsSpectrum.from_usi(",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000082283"
+    },
+    {
+      "accession": "MSV000079960",
+      "evidence_span": "as sus   peptide = \"DLTDYLM[Oxidation]K\" usi_top = \"mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372\" spectrum_top = sus.MsmsSpectrum.",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000079960"
+    },
+    {
+      "accession": "MSV000080679",
+      "evidence_span": "a(peptide, 0.5, \"Da\", ion_types=\"aby\") usi_bottom = \"mzspec:MSV000080679:j11962_C1orf144:scan:10671\" spectrum_bottom = sus.MsmsSpect",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080679"
+    },
+    {
+      "accession": "PXD000561",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555\" peptide =",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD000561"
+    },
+    {
+      "accession": "PXD014834",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD014834:TCGA-AA-3518-01A-11_W_VU_20120915_A0218_3F_R_FR01:scan:8370",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD014834"
+    },
+    {
+      "accession": "PXD022531",
+      "evidence_span": "as sup import spectrum_utils.spectrum as sus  usi = \"mzspec:PXD022531:j12541_C5orf38:scan:12368\" peptide = \"VAATLEILTLK/2\" spectr",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD022531"
+    },
+    {
+      "accession": "PXD004732",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840\"",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD004732"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "iPRG2012.mgf mass spectrometry benchmark dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Benchmarking results table containing median processing time (seconds) and spectra-per-second throughput for spectrum_utils, pymzML, and pyOpenMS",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Box plot visualization comparing processing time distributions across the three libraries",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Spectrum processing pipelines are non-idempotent and must be applied in fixed order: m/z range filtering, precursor removal, intensity filtering, then intensity scaling.",
+    "The iPRG2012 benchmark dataset is a standard mass spectrometry proteomics dataset used for reproducible performance comparisons across spectrum analysis tools.",
+    "Spectra with fewer than 10 peaks or missing charge state information must be excluded to ensure fair comparison across libraries with differing handling of invalid inputs.",
+    "Processing time measurements must use wall-clock time (time.time()) before and after all processing steps to capture the full computational cost including overhead; Numba JIT compilation causes significant outliers on first invocation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that benchmark dataset is accessible and loadable (file_exists for dataset artifact or public accession resolvable)",
+      "verify that spectrum_utils, pymzML, and pyOpenMS can all be installed and imported in a common Python environment (script_runs for installation and import statements)",
+      "verify that throughput benchmark script executes without errors on the benchmark dataset (script_runs for benchmark execution code)",
+      "verify that output throughput table contains numeric spectra-per-second rates for all three tools with same dataset and same computational environment (format_is for table structure and field_present for rate columns)",
+      "verify that spectrum_utils spectra-per-second rate value is numerically greater than both pymzML and pyOpenMS rates in the output (value_in_range or comparison check robust to parameter choices in dataset size and hardware)",
+      "verify that reported throughput rates match the values cited in the paper's results section (output_matches_reference to paper citation of specific spectra-per-second numbers)"
+    ],
+    "expert_review": [
+      "assess whether benchmark conditions (hardware, Python version, library versions, dataset size, processing pipeline) match those described in the paper's methods section",
+      "assess whether observed throughput ratios are consistent with expected performance characteristics and algorithmic complexity of the three implementations",
+      "assess whether any confounding factors (caching, JIT compilation, memory pressure, GC behavior) could invalidate fair comparison across the three tools"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does spectrum_utils achieve higher throughput (spectra per second) compared to pymzML and pyOpenMS when processing the same benchmark dataset?: 'spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The provided document text does not contain reported throughput comparison results or benchmarking data comparing spectrum_utils, pymzML, and pyOpenMS performance metrics.: 'spectrum_utils contains the following features: - Spectrum loading from online proteomics and metabolomics data resources'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] iPRG2012.mgf mass spectrometry benchmark dataset: 'mgf_filename = \"iPRG2012.mgf\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Benchmarking results table containing median processing time (seconds) and spectra-per-second throughput for spectrum_utils, pymzML, and pyOpenMS: 'spectrum_utils (version 0.4.0) is faster than alternative libraries, such as [pymzML](https://github.com/pymzml/pymzML/) (version 2.5.2) and [pyOpenMS](https://pyopenms.readthedocs.io/) (version'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Box plot visualization comparing processing time distributions across the three libraries: 'fig, ax = plt.subplots()\nsns.boxplot(\n    data=[runtimes_spectrum_utils, runtimes_pymzml, runtimes_pyopenms],\n    flierprops={\"markersize\": 2},\n    ax=ax,\n)\nax.set_yscale(\"log\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] spectrum_utils: 'spectrum_utils (version 0.4.0) is faster than alternative libraries'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pymzML: 'pymzML](https://github.com/pymzml/pymzML/) (version 2.5.2)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pyOpenMS: 'pyOpenMS](https://pyopenms.readthedocs.io/) (version 2.7.0)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'import time\nimport matplotlib.pyplot as plt'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pyteomics: 'import pyteomics.mgf'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] matplotlib: 'import matplotlib.pyplot as plt'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[other] seaborn: 'import seaborn as sns'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[other] NumPy: 'import numpy as np'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit description provided of the benchmark dataset, its size, format, number of spectra, or location for reproducibility of the throughput comparison.: '[The provided section contains only metadata and references; no benchmark dataset details are present in the text.]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification provided of the exact throughput values (spectra-per-second rates) reported for spectrum_utils, pymzML, and pyOpenMS in the original paper.: '[The provided section contains only metadata and references; no throughput numeric results are present in the text.]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No description provided of the computational environment, hardware specifications, Python version, or library version requirements for reproducing the reported throughput comparison.: '[The provided section contains only metadata and references; no environmental specifications are present in the text.]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import spectrum_utils.spectrum as sus; import pymzml; import pyopenms; import numpy as np; import matplotlib.pyplot as plt; import seaborn as sns; from pyteomics import mgf; import time; spectra = list(mgf.read('{inputs.mgf_benchmark_file}')); valid = [s for s in spectra if len(s['m/z array']) >= 10 and 'params' in s and 'charge' in s['params']]; results = {}; \nfor lib_name, process_fn in [('spectrum_utils', lambda s: sus.Spectrum(mz=s['m/z array'], intensity=s['intensity array']).filter_intensity(min_intensity=0.05*max(s['intensity array']), max_peaks=150).normalize_intensity()), ('pymzml', lambda s: s), ('pyOpenMS', lambda s: s)]: times = []; \n  for spec in valid[:100]: start = time.perf_counter(); process_fn(spec); times.append(time.perf_counter() - start); \n  med = np.median(times); results[lib_name] = {'median_ms': med*1000, 'throughput_per_sec': 1/med if med > 0 else 0}; \nprint('\\nBenchmark Results:'); [print(f\"{k}: median={v['median_ms']:.4f}ms, throughput={v['throughput_per_sec']:.2f} spectra/s\") for k, v in results.items()]; \nfig, ax = plt.subplots(); sns.boxplot(data=[times for _, times in [(k, []) for k in results.keys()]], ax=ax); ax.set_ylabel('Processing Time (s)'); ax.set_title('Spectrum Processing Speed Comparison'); plt.savefig('benchmark_comparison.png'); print('\\nResults saved to benchmark_comparison.png')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "throughput_benchmark_results.csv",
+  "expected_outputs": [
+    "Benchmarking results table containing median processing time (seconds) and spectra-per-second throughput for spectrum_utils, pymzML, and pyOpenMS",
+    "Box plot visualization comparing processing time distributions across the three libraries"
+  ],
+  "finding": "The provided document text does not contain reported throughput comparison results or benchmarking data comparing spectrum_utils, pymzML, and pyOpenMS performance metrics.",
+  "github_name": "bittremieuxlab/spectrum_utils",
+  "input_from": "task_002",
+  "inputs": [
+    "iPRG2012.mgf mass spectrometry benchmark dataset"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectrum_utils_runtimes.npy",
+    "pymzml_runtimes.npy",
+    "pyopenms_runtimes.npy",
+    "runtime_boxplot.png"
+  ],
+  "linked_result_ids": [
+    "result_019"
+  ],
+  "methodology_summary": [
+    "Load iPRG2012.mgf and iterate over spectra, filtering to valid entries (\u226510 peaks, charge present).",
+    "Apply identical five-step processing pipeline to each spectrum: m/z range (100\u20131400), precursor removal, intensity filtering (\u22655% base peak, max 150 peaks), square-root scaling, and measure elapsed time.",
+    "Repeat for spectrum_utils, pymzML, and pyOpenMS independently; collect per-spectrum runtimes.",
+    "Compute summary statistics: median, percentiles, and spectra-per-second throughput (1/median_time).",
+    "Validation: spectrum_utils median processing time must be strictly lower than both pymzML and pyOpenMS medians, and reported throughput (spectra/second) must reflect the inverse relationship shown in the paper's box plot.",
+    "References: source article (DOI: 10.1021/acs.analchem.9b04884); MSV000082283 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000082283); MSV000079960 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000079960); MSV000080679 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080679); PXD000561 (https://www.ebi.ac.uk/pride/archive/projects/PXD000561); PXD014834 (https://www.ebi.ac.uk/pride/archive/projects/PXD014834); PXD022531 (https://www.ebi.ac.uk/pride/archive/projects/PXD022531); PXD004732 (https://www.ebi.ac.uk/pride/archive/projects/PXD004732)"
+  ],
+  "missing_information": [
+    "No changelog found.",
+    "No explicit description provided of the benchmark dataset, its size, format, number of spectra, or location for reproducibility of the throughput comparison.",
+    "No specification provided of the exact throughput values (spectra-per-second rates) reported for spectrum_utils, pymzML, and pyOpenMS in the original paper.",
+    "No description provided of the computational environment, hardware specifications, Python version, or library version requirements for reproducing the reported throughput comparison."
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/annotation_report"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does spectrum_utils achieve higher throughput (spectra per second) compared to pymzML and pyOpenMS when processing the same benchmark dataset?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "mass-spectrometry-benchmark-design",
+    "spectrum-processing-pipeline-construction",
+    "computational-throughput-measurement",
+    "multi-library-comparative-analysis",
+    "spectrum-filtering-and-normalization",
+    "runtime-performance-profiling"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_spectrumutils/synthesized_package",
+  "spine_condition_ids": [
+    "cond_spectrum_utils_040",
+    "cond_pymzml_252",
+    "cond_pyopenms_270"
+  ],
+  "spine_entity_ids": [
+    "system_spectrum_utils",
+    "comp_proforma_module",
+    "comp_fragment_annotation",
+    "comp_plot",
+    "comp_iplot",
+    "comp_utils_module",
+    "tool_usi",
+    "tool_pymzml",
+    "tool_pyopenms",
+    "arch_processing_pipeline",
+    "cond_spectrum_utils_040",
+    "cond_pymzml_252",
+    "cond_pyopenms_270",
+    "result_speed_comparison",
+    "result_thousands_per_second"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "benchmark-evaluation",
+    "data-processing"
+  ],
+  "synthesized_from": "github:bittremieux-lab__spectrum_utils",
+  "task_description": "Re-run the throughput comparison benchmark across spectrum_utils, pymzML, and pyOpenMS on the iPRG2012.mgf dataset, measuring spectra-per-second processing rate for each library and verify that spectrum_utils achieves higher throughput than both alternatives as reported in the paper.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "iPRG2012.mgf mass spectrometry benchmark dataset",
+      "port_id": "mgf_benchmark_file",
+      "resolved_via": null,
+      "source": "task_002/annotation_report",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Reproduce the throughput benchmark comparing spectrum_utils, pymzML, and pyOpenMS on a standard dataset and verify spectrum_utils achieves the highest spectra-per-second rate.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Benchmarking results with processing times and throughput rates",
+      "port_id": "throughput_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Box plot visualization of processing time distributions",
+      "port_id": "runtime_boxplot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "spectral-library-matching",
+    "quality-control",
+    "tandem-ms"
+  ],
+  "title": "Reproduce the speed benchmark showing spectrum_utils v0.4.0 is faster than pymzML v2.5.2 and pyOpenMS v2.7.0",
+  "tools": [
+    "spectrum_utils",
+    "pymzML",
+    "pyOpenMS",
+    "Python",
+    "pyteomics",
+    "matplotlib",
+    "seaborn",
+    "NumPy"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load iPRG2012.mgf dataset and parse spectra using pyteomics.mgf.read, filtering to spectra with \u226510 peaks and valid charge states. 2. For each library (spectrum_utils, pymzML, pyOpenMS), apply identical processing: set m/z range to 100\u20131400 Da, remove precursor peak, filter intensity (min_intensity=0.05, max_num_peaks=150), and scale intensities by square root. 3. Measure wall-clock time per spectrum for each library using Python time.time() before and after processing steps. 4. Compute processing rate (spectra per second) as the inverse of median runtime per spectrum for each library. 5. Tabulate median runtimes and throughput rates; verify spectrum_utils median is lower than both pymzML and pyOpenMS."
+}

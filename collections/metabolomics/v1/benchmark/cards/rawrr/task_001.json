@@ -1,0 +1,382 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/rawRcolor.png",
+      "role": "figure",
+      "sha256": "7f96efa494c9babadf50d520c8a41ddcf44591ccd6bebbc8c94c3103e0ce6279"
+    },
+    {
+      "indexable": false,
+      "path": "figures/rawRcolor10%.png",
+      "role": "figure",
+      "sha256": "4b9bbc76e4a1173733a19520ba333306a1b574f23e10329200d75cb7cc38f6b4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/rawrr_logo.png",
+      "role": "figure",
+      "sha256": "64b1ae205a2a034f841965ceff48fe7fea2e62291b93fc6d8611bc912b48e59e"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "da445fe2ae38dbc84cf4d22b95cf5bc6f84e325c39ee134c9d6c6f38268d4daa"
+    }
+  ],
+  "created_at": "2026-06-15T13:24:57.919119+00:00",
+  "crossref_doi": "10.1021/acs.jproteome.0c00866",
+  "data_accessions": [
+    {
+      "accession": "MSV000086542",
+      "evidence_span": "ate of 300 nl/min. The file is part of the MassIVE dataset [MSV000086542](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Public raw file 20181113_010_autoQC01.raw from MassIVE MSV000086542",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "iRT peptide standard reference m/z values and retention time scores",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Linear regression model summary with R-squared value \u22650.99",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Table of extracted retention times (rtFittedAPEX) matched to iRT peptide scores",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "iRT peptides are widely used internal standards for retention-time normalization and calibration across LC-MS experiments; their m/z and expected iRT scores are known and publicly documented.",
+    "The Q Exactive HF in this dataset records Fourier-transformed Orbitrap mass spectra (FTMS) with centroiding applied, meaning the raw file contains processed (not raw profile-mode) intensity data.",
+    "Retention-time linearity (R\u00b2 \u22650.99) is the gold standard for validating robust LC separation and instrument calibration; deviation suggests gradient drift or column contamination.",
+    "rawrr::readChromatogram() with type='xic' and tol=10 extracts summed extracted-ion chromatograms within the specified mass tolerance window, which must be large enough to capture all isotopologue variants of the target peptide.",
+    "The rawrrChromatogram object stores fitted intensity traces that must be peak-fitted to locate the apex (maximum intensity point), whose scan number is then mapped back to the spectrum metadata to recover exact retention time."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that 20181113_010_autoQC01.raw is accessible from MassIVE dataset MSV000086542",
+      "script_runs: execute rawrr::readSpectrum() on the deposited file to extract spectral data for iRT peptide precursors",
+      "script_runs: execute rawrr::readChromatogram() with mass tolerance and iRT m/z values to retrieve extracted ion chromatograms",
+      "format_is: verify that readChromatogram output is a rawrrChromatogram object containing fitted intensity traces with retention time annotations",
+      "script_runs: fit linear regression model rtFittedAPEX ~ iRTscore using extracted retention times from chromatogram peaks",
+      "value_in_range: R-squared value from regression model equals 0.9999 (or within \u00b10.0001, robust to numerical precision in floating-point computation)"
+    ],
+    "expert_review": [
+      "Verify that iRT peptide m/z values and expected retention times used in the analysis are correct for the iRT standard mixture",
+      "Assess whether retention time extraction method (maximum of fitted intensity traces) is appropriate for the reported R-squared claim",
+      "Evaluate whether R-squared = 0.9999 is consistent with reported claim of 'highly linear RT behavior' and represents a meaningful fit quality for LC-MS calibration"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does the linear regression model fitted to iRT peptide retention times (rtFittedAPEX ~ iRTscore) demonstrate highly linear RT behavior as indicated by R-squared value?: 'The corresponding R-squared indicates that the RTs behave highly linear.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The fitted iRT regression model shows R-squared indicating highly linear retention time behavior across the 11 iRT peptides extracted from the 20181113_010_autoQC01.raw file.: 'The corresponding R-squared indicates that the RTs behave highly linear. This is expected since the iRT peptides were separated on a 20 min linear gradient'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Public raw file 20181113_010_autoQC01.raw from MassIVE MSV000086542: 'The file is part of the MassIVE dataset [MSV000086542]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] iRT peptide standard reference m/z values and retention time scores: 'The analyzed sample consisted of the iRT peptide mix (Biognosys) in a tryptic BSA digest'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Linear regression model summary with R-squared value \u22650.99: 'The corresponding R-squared indicates that the RTs behave highly linear'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Table of extracted retention times (rtFittedAPEX) matched to iRT peptide scores: 'we extract the RTs at the maximum of the fitted intensity traces stored in the `rawrrChromatogram` object and fit a linear model'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] rawrr: 'rawrr::readSpectrum'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] RawFileReader: 'The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific iRT peptide m/z values and their expected retention times used for chromatogram extraction and regression are not provided in the discussion section: 'No explicit mention of iRT peptide reference values in the provided discussion text'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The exact linear regression formula, including any intercept or slope values, is not reported in the discussion section: 'No quantitative regression coefficients stated in the provided discussion text'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The method for peak detection and retention time extraction from fitted chromatogram traces is not detailed in the discussion section: 'No algorithmic details about chromatogram peak fitting or RT extraction provided in the discussion text'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(rawrr); raw <- readRawFile('{inputs.raw_file}'); header <- readFileHeader(raw); irt_ref <- read.csv('{inputs.irt_reference}'); chrom_list <- lapply(irt_ref$mz, function(mz) readChromatogram(raw, mass=mz, type='xic', tol=10)); rt_fitted <- sapply(chrom_list, function(c) c$rtFittedAPEX[which.max(c$intensity)]); model <- lm(rt_fitted ~ irt_ref$iRTscore); summary(model); cat('R-squared:', summary(model)$r.squared, '\\n'); write.csv(data.frame(iRTscore=irt_ref$iRTscore, rtFittedAPEX=rt_fitted), 'irt_retention_times.csv', row.names=FALSE)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [
+      "Thermo Fisher Scientific RawFileReader"
+    ],
+    "compute_tier": "light",
+    "open_source_alternatives": [
+      {
+        "closed": "Thermo Fisher RawFileReader",
+        "expected_divergence": "",
+        "oss": "ThermoRawFileParser"
+      }
+    ]
+  },
+  "expected_artifact_name": "irt_linear_regression_summary.txt",
+  "expected_outputs": [
+    "Linear regression model summary with R-squared value \u22650.99",
+    "Table of extracted retention times (rtFittedAPEX) matched to iRT peptide scores"
+  ],
+  "finding": "The fitted iRT regression model shows R-squared indicating highly linear retention time behavior across the 11 iRT peptides extracted from the 20181113_010_autoQC01.raw file.",
+  "github_name": "fgcz/MsBackendRawFileReader",
+  "input_from": null,
+  "inputs": [
+    "Public raw file 20181113_010_autoQC01.raw from MassIVE MSV000086542",
+    "iRT peptide standard reference m/z values and retention time scores"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "rawfile_header_metadata.txt",
+    "irt_extracted_chromatograms.csv",
+    "irt_retention_times_fitted.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_011",
+    "result_013",
+    "result_016",
+    "result_028",
+    "result_029",
+    "result_030",
+    "result_031",
+    "result_032"
+  ],
+  "methodology_summary": [
+    "Retrieve the public raw LC-MS file 20181113_010_autoQC01.raw from MassIVE (MSV000086542) and verify file integrity.",
+    "Read file header metadata using rawrr::readFileHeader() to confirm instrument configuration and run time range.",
+    "Extract precursor m/z chromatograms for known iRT peptides using rawrr::readChromatogram() with type='xic', mass tolerance 10 ppm, and MS-level filter.",
+    "Fit intensity traces within each rawrrChromatogram object to identify retention time at peak maximum (rtFittedAPEX) for each iRT standard.",
+    "Construct and fit linear regression model lm(rtFittedAPEX ~ iRTscore) using extracted retention times and reference iRT scores.",
+    "Validation: Report R-squared value; confirm R\u00b2 \u2265 0.99 to establish highly linear retention-time behavior as reported in the paper.",
+    "References: source article (DOI: 10.1021/acs.jproteome.0c00866); MSV000086542 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542)"
+  ],
+  "missing_information": [
+    "The specific iRT peptide m/z values and their expected retention times used for chromatogram extraction and regression are not provided in the discussion section",
+    "The exact linear regression formula, including any intercept or slope values, is not reported in the discussion section",
+    "The method for peak detection and retention time extraction from fitted chromatogram traces is not detailed in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "proteomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the linear regression model fitted to iRT peptide retention times (rtFittedAPEX ~ iRTscore) demonstrate highly linear RT behavior as indicated by R-squared value?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "results",
+    "discussion"
+  ],
+  "skills": [
+    "retention-time-extraction-from-raw-spectra",
+    "iRT-peptide-calibration-and-scoring",
+    "linear-regression-fitting-for-chromatography",
+    "mass-spectrometry-precursor-identification",
+    "extracted-ion-chromatogram-processing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_rawrr/synthesized_package",
+  "spine_condition_ids": [
+    "cond_benchmark_rawrr",
+    "cond_irt_regression"
+  ],
+  "spine_entity_ids": [
+    "sys_rawrr",
+    "comp_rawrr_exe",
+    "tool_readspectrum",
+    "ds_autoqc01",
+    "ds_msv000086542",
+    "comp_irt_peptides",
+    "cond_benchmark_rawrr",
+    "cond_irt_regression",
+    "result_rsquared_irt",
+    "result_agc_injection",
+    "result_benchmark_throughput",
+    "result_no_conversion_needed"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:fgcz__rawrr",
+  "task_description": "Extract retention times for iRT peptides from the public raw file 20181113_010_autoQC01.raw (MassIVE MSV000086542) using rawrr::readSpectrum, fit a linear regression model (rtFittedAPEX ~ iRTscore), and report the R-squared value to confirm highly linear retention-time behavior.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "20181113_010_autoQC01.raw from MassIVE MSV000086542",
+      "port_id": "raw_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "iRT peptide standards with m/z and expected RT scores",
+      "port_id": "irt_reference",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Extract iRT peptide retention times from 20181113_010_autoQC01.raw using rawrr, fit a linear regression model (rtFittedAPEX ~ iRTscore), and validate the reported R-squared value confirming linear RT behavior.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Linear regression summary with R-squared",
+      "port_id": "regression_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Extracted retention times matched to iRT scores",
+      "port_id": "rt_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control"
+  ],
+  "title": "Reproduce the iRT peptide retention time regression R-squared result from rawrr readSpectrum output",
+  "tools": [
+    "rawrr",
+    "RawFileReader"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Linear regression model summary with R-squared value \u22650.99, Table of extracted retention times (rtFittedAPEX) matched to iRT peptide scores."
+  ],
+  "workflow_description": "1. Download and verify the public raw file 20181113_010_autoQC01.raw from MassIVE dataset MSV000086542 (MD5: a1f5df9627cf9e0d51ec1906776957ab). 2. Load the raw file metadata using rawrr::readFileHeader() to confirm instrument type (Q Exactive HF) and run parameters. 3. Extract precursor m/z values and retention times for known iRT peptide standards using rawrr::readChromatogram() with mass tolerance 10 ppm and XIC filter. 4. Fit intensity traces stored in rawrrChromatogram objects to extract retention times at maximum intensity (rtFittedAPEX). 5. Construct a linear regression model lm(rtFittedAPEX ~ iRTscore) using annotated iRT reference scores and report R-squared value."
+}

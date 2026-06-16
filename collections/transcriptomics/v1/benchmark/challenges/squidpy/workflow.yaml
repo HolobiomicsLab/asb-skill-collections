@@ -1,0 +1,409 @@
+schema_version: 0.1.0
+workflow_id: coll_squidpy_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: Squidpy is a Python toolkit for scalable analysis and visualization of
+    spatial molecular data, building on scanpy and anndata to provide streamlined
+    APIs for spatial statistics, feature extraction, and interactive exploration.
+  pseudo_abstract: Squidpy enables comprehensive analysis of spatial single-cell data
+    through modular and scalable workflows. The toolkit provides core functionality
+    for constructing and analyzing spatial neighbor graphs via spatial_neighbors,
+    computing neighborhood enrichment statistics through nhood_enrichment, and detecting
+    spatially variable genes using sepal. Image analysis capabilities are supported
+    through lazy dask-backed computation in calculate_image_features on the ImageContainer.
+    The package integrates with standard AnnData workflows and supports multiple spatial
+    omics platforms including Visium, Vizgen, and Nanostring through dedicated reader
+    functions. Additionally, Squidpy exposes extensible graph construction mechanisms
+    through GraphBuilder and GraphBuilderCSR base classes, enabling custom implementations
+    such as approximate nearest-neighbor backends while maintaining compatibility
+    with built-in postprocessors and multi-library support.
+  research_questions:
+  - Does squidpy.gr.spatial_neighbors correctly construct and store a CSR graph in
+    an AnnData object with expected keys and structure when applied to a bundled example
+    dataset?
+  - How does the PynndescentKNNBuilder class implement graph construction by subclassing
+    GraphBuilderCSR and integrating pynndescent as its nearest-neighbor backend?
+  - Does squidpy's nhood_enrichment function correctly compute and store neighborhood
+    enrichment scores in an AnnData object when applied to spatial data with a pre-built
+    neighbor graph?
+  - Does squidpy.gr.sepal successfully compute spatial statistics and attach gene
+    ranking scores to an AnnData object with the expected field names when applied
+    to spatial transcriptomics datasets?
+  - Does squidpy's im.calculate_image_features function support lazy computation via
+    dask, and does it correctly materialize computed features into the AnnData object
+    while preserving intermediate computations as dask arrays?
+  methods_summary: "Install squidpy package and its dependencies (scanpy, anndata,\
+    \ scipy) using pip or environment manager. Load a bundled example dataset from\
+    \ squidpy.datasets (e.g., visium or imc) into an AnnData object. Execute squidpy.gr.spatial_neighbors\
+    \ on the AnnData object to construct the spatial graph using coordinate data.\
+    \ Verify that adjacency and distance matrices are stored as CSR sparse matrices\
+    \ in adata.obsp with correct shape, sparsity, and dtype. Validate diagonal properties:\
+    \ distance matrix has zero diagonal; adjacency matrix diagonal is set according\
+    \ to the set_diag parameter. Validation: confirm that both matrices have identical\
+    \ sparsity structure, shape equals (n_obs, n_obs), and the graph is ready for\
+    \ downstream spatial analysis. References: source article (DOI: 10.1038/s41592-021-01358-2)\
+    \ Install pynndescent and create PynndescentKNNBuilder subclass of GraphBuilderCSR\
+    \ with configurable n_neighs parameter. Instantiate NNDescent model on input coordinates\
+    \ with Euclidean metric and query for k-nearest neighbors. Flatten k\xD7n_obs\
+    \ indices and distances into 1D arrays and construct CSR adjacency matrix (float32)\
+    \ and distance matrix (float64) with matching sparsity patterns. Set diagonal\
+    \ elements: adj diagonal to 1.0 (if set_diag) or existing value, dst diagonal\
+    \ to 0.0. Validation: verify output matrices are CSR format, shapes are (n_obs,\
+    \ n_obs), sparsity patterns match, and diagonals are correctly set. References:\
+    \ source article (DOI: 10.1038/s41592-021-01358-2) Load Visium example dataset\
+    \ containing spatial coordinates and cell-type annotations. Construct spatial\
+    \ neighbor graph using radius-based neighborhood detection on spatial coordinates.\
+    \ Compute neighborhood enrichment by comparing observed co-occurrence of annotated\
+    \ cell types in spatial neighborhoods against shuffled distributions. Store enrichment\
+    \ statistics in AnnData.uns dictionary under 'nhood_enrichment' key. Validation:\
+    \ verify that the enrichment matrix exists in .uns, has expected dimensions [n_categories,\
+    \ n_categories], and contains numeric enrichment scores. References: source article\
+    \ (DOI: 10.1038/s41592-021-01358-2) Load a bundled spatial dataset (slideseqv2\
+    \ or merfish) via squidpy.datasets into an AnnData container. Execute squidpy.gr.sepal\
+    \ on the loaded AnnData object to compute gene-level spatial enrichment scores\
+    \ and rankings. Extract and inspect output fields from AnnData .var, .uns, and\
+    \ .obsm slots to identify sepal-specific columns and matrices. Validate field\
+    \ names, data types, array dimensions, and absence of unexpected NaN/inf values\
+    \ against squidpy's expected schema. Validation: Confirm that all sepal output\
+    \ fields are present with correct dimensionality and no missing or corrupted values;\
+    \ generate a structured verification report. References: source article (DOI:\
+    \ 10.1038/s41592-021-01358-2) Load spatial coordinates and image file into squidpy.im.ImageContainer\
+    \ and link to AnnData object. Enable dask lazy computation mode in im.calculate_image_features\
+    \ to defer actual pixel-level calculations. Extract image features across specified\
+    \ scales or layers, storing intermediate results as dask arrays in memory. Explicitly\
+    \ collect and materialize dask arrays into AnnData.obsm or AnnData.var slots.\
+    \ Validation: Confirm all requested features are present in the output AnnData\
+    \ object, intermediate computation arrays remained as dask objects before collection,\
+    \ and no data loss occurred during materialization. References: source article\
+    \ (DOI: 10.1038/s41592-021-01358-2)"
+  domain: bioinformatics
+  techniques:
+  - clustering
+  - dimensionality-reduction
+  - machine-learning
+  - statistical-analysis
+  claims:
+  - claim_text: Squidpy provides streamlined APIs for feature extraction, spatial
+      statistics, and interactive exploration of tissue sections together with microscopy
+      images.
+    claim_type: finding
+    evidence_step: task_005
+    speculative: false
+    source_task_kind: analysis
+    entity_id: squidpy_system
+  - claim_text: Squidpy is the scverse toolkit for scalable analysis and visualization
+      of spatial molecular data.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy requires Python version >= 3.11 to run.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy can be installed via PyPI using pip install squidpy.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy can be installed via Conda using conda install -c conda-forge
+      squidpy.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy can be installed from GitHub using pip install git+https://github.com/scverse/squidpy@main.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy provides tools to build and analyze the neighborhood graph
+      from spatial coordinates.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy enables computation of spatial statistics for cell-types and
+      genes.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy can efficiently store, analyze and visualize large tissue
+      images by leveraging scikit-image.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy's original napari-plugin has been moved to napari-spatialdata.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: The Squidpy interactive module has been removed.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: napari-spatialdata is recommended as a replacement for Squidpy's deprecated
+      napari plugin.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy version 1.0.0 was released on 2021-02-20.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy version 1.6.2 was released on 2024-11-12.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.1.1, Squidpy allowed defining cylindrical shells in spatial_neighbors
+      by using the radius argument.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.2.0, Squidpy added spatial_scatter and spatial_segment
+      functions to statically plot spatial omics data.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Hatch is a Python project manager that manages virtual environments
+      separately for development, testing and building documentation.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_hatch
+  - claim_text: Hatch allows running tests locally in different environments, such
+      as different python versions.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_hatch
+  - claim_text: Hatch allows running tasks defined in pyproject.toml.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_hatch
+  - claim_text: Squidpy uses pre-commit to enforce consistent code-styles.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy uses pytest for automated testing.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy uses sphinx with myst extension to allow writing documentation
+      in markdown.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy documentation uses Numpy-style docstrings through the napoleon
+      extension.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.3.0, Squidpy added var_by_distance function to calculate
+      distances to anchor points and store results in a design matrix.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.6.0, mask_graph was added to mask a spatial graph based
+      on shapely.Polygon or shapely.MultiPolygon.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.6.2, a new function sliding_window was added for creating
+      sliding window assignments.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy is part of the scverse project and is fiscally sponsored by
+      NumFOCUS.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: The manuscript describing Squidpy was published by Palla, Spitzer
+      et al. in Nature Methods in 2022.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy provides the graph module with functions for spatial neighbor
+      analysis including spatial_neighbors, spatial_neighbors_knn, spatial_neighbors_radius,
+      spatial_neighbors_delaunay, and spatial_neighbors_grid.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy provides image processing functions including im.process,
+      im.segment, im.calculate_image_features, and im.SegmentationModel.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy provides plotting functions including pl.spatial_scatter,
+      pl.spatial_segment, pl.nhood_enrichment, pl.centrality_scores, pl.interaction_matrix,
+      pl.ligrec, pl.ripley, pl.co_occurrence, pl.extract, and pl.var_by_distance.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy provides reading functions for visium, vizgen, and nanostring
+      file formats.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy provides tools functions including tl.sliding_window and tl.var_by_distance.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy provides dataset functions for accessing example datasets
+      including four_i, imc, seqfish, merfish, mibitof, slideseqv2, sc_mouse_cortex,
+      and various visium datasets.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: Squidpy exposes GraphBuilder and GraphBuilderCSR as base classes for
+      custom graph builders.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.0.1, Squidpy fixed complex handling in the ligrec function.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.0.1, Squidpy re-implemented the interaction_matrix function.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.1.0, Squidpy added the sepal function.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.1.0, Squidpy replaced moran with spatial_autocorr, which
+      implements both Moran's I and Geary's C.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.1.0, Squidpy added the option to compute graphs from
+      Delaunay triangulation in spatial_neighbors.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.1.0, Squidpy added lazy computation using dask for the
+      im module.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.1.0, Squidpy replaced ripley_k with ripley function.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: 'In version 1.1.0, Squidpy added three new example datasets: merfish,
+      mibitof, and slideseqv2.'
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.2.0, Squidpy added read.visium, read.vizgen and read.nanostring
+      functions to read Visium, Vizgen and Nanostring files.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.2.0, Squidpy added library_key in spatial_neighbors to
+      support building graphs across multiple slides.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.2.3, Squidpy fixed ligrec from pandas update.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.3.0, Squidpy added percentile option to spatial_neighbors
+      to filter neighbor graph using percentile of distances threshold.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.3.1, Squidpy deprecated napari.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.4.0, Squidpy fixed building graph in knn and delaunay
+      mode.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  - claim_text: In version 1.5.0, Squidpy fixed the reading of 10x formatted mtx files.
+    claim_type: finding
+    speculative: false
+    entity_id: squidpy_system
+  speculative: false
+  task_openness: open
+  method_alternatives:
+  - pynndescent as alternative to scikit-learn NearestNeighbors for kNN graph construction
+  substitution_constraints:
+  - pynndescent must be installed in the same environment as Squidpy
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: CSR sparse adjacency matrix (adj) of shape (n_obs, n_obs) with float32 dtype
+    and binary indicator values
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: CSR sparse distance matrix (dst) of shape (n_obs, n_obs) with float64 dtype
+    containing pairwise Euclidean distances
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Validation report confirming matrix shape, sparsity consistency, diagonal
+    correctness, and CSR format validity
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Enrichment score matrix stored in AnnData.uns['nhood_enrichment']
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: NhoodEnrichmentResult object containing enrichment statistics
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: AnnData object with sepal results (gene rankings and spatial enrichment scores)
+    stored in .var, .uns, or .obsm
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification report listing field names, data types, array shapes, and confirmation
+    of successful computation
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: AnnData object with computed image features stored in obsm or var slots
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification log or report showing dask array status before and after materialization
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

@@ -1,0 +1,164 @@
+# SciTask Card: Reproduce the EPICSimData DMR count result using champ.DMR()
+
+- Task ID: `task_003`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T19:16:49.189128+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_champ/synthesized_package`
+- Domain: `bioinformatics`
+- Subtask categories: `data-analysis`, `benchmark-evaluation`
+- GitHub: `YuanTian1991/ChAMP`
+- Input from: `task_001`
+
+## Classification
+
+- Task kind: `reproduction`
+- Article type: `software-tool`
+- Primary domain: `genomics`
+- Subdomains: `gene-regulation`, `biomarker-discovery`
+- Techniques: `batch-correction`, `differential-abundance-analysis`, `normalization`, `quality-control`, `statistical-analysis`
+- Keywords: `dna methylation` · `illumina beadarray` · `450k array` · `epic array` · `differentially methylated positions` · `differentially methylated regions` · `type-ii probe normalization` · `batch effect correction` · `gene set enrichment analysis` · `quality control` · `normalization methods` · `idat files` · `beta values`
+
+## Research Question
+When champ.DMR() is applied to the EPIC simulation dataset using bumphunter-based detection, how many differentially methylated regions are identified?
+
+## Connected Finding
+The EPIC simulation dataset contains fewer than 5000 DMRs (approximately 4700+) because some simulated DMRs contain only 1-2 CpGs, which are not regarded as DMRs in champ.DMR() function.
+
+## Task Description
+Load the EPICSimData simulation dataset and run champ.DMR() to detect differentially methylated regions (DMRs), verifying that the detected DMR count falls within the expected range (~4700+) as reported for bumphunter-based simulation.
+
+## Inputs
+- EPICSimData (EPIC simulation dataset)
+
+## Expected Outputs
+- DMR detection results table with genomic coordinates and statistical metrics
+- DMR count (integer, expected ~4700+)
+
+## Expected Output File
+
+- `dmr_results.csv`
+
+## Landmark Outputs
+
+- `epic_sim_data_loaded.rda`
+- `dmr_detection.log`
+- `dmr_results.csv`
+
+## Tools
+- ChAMP
+- Bumphunter
+
+## Skills
+- dna-methylation-array-data-loading
+- dmr-detection-bumphunter
+- epic-array-simulation-benchmark
+- methylation-region-identification
+
+## Workflow Description
+1. Load EPICSimData simulation dataset using data(EPICSimData) in R. 2. Execute champ.DMR() function on the loaded EPIC simulation data to detect differentially methylated regions using the bumphunter-based method. 3. Extract and count the number of detected DMRs from the function output. 4. Verify that the DMR count is within the expected range of approximately 4700 or higher, consistent with bumphunter simulation benchmarks.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/CNAimage.jpg` | figure | False |
+| `figures/CNAtext.jpg` | figure | False |
+| `figures/DMR.jpg` | figure | False |
+| `figures/DMRdistributionplot.png` | figure | False |
+| `figures/DMRoutput.jpg` | figure | False |
+| `figures/MVP1.jpg` | figure | False |
+| `figures/MVP2.jpg` | figure | False |
+| `figures/MVP3.jpg` | figure | False |
+| `figures/checkBMIQ.jpg` | figure | False |
+| `figures/densityPlot.jpg` | figure | False |
+| `figures/failedProbes.jpg` | figure | False |
+| `figures/lasso.jpg` | figure | False |
+| `figures/logo4.jpg` | figure | False |
+| `figures/mdsPlot.jpg` | figure | False |
+| `figures/probeFeatures.jpg` | figure | False |
+| `figures/radius.jpg` | figure | False |
+| `figures/rawSampleCluster.jpg` | figure | False |
+| `figures/sampleSheetexample.jpg` | figure | False |
+| `figures/studyInfo.jpg` | figure | False |
+| `figures/studyInfo.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Data Deposits
+
+| Kind | Accession | URL | Evidence |
+|---|---|---|---|
+| geo_series | `GSE40279` | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE40279 | lot looks not complicated. Below we used another plot from [GSE40279](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE4027 |
+
+## Missing Information
+- No changelog or version-specific reproducibility notes found in the discussion section
+- Exact expected DMR count threshold or reference value for bumphunter-based EPIC simulation is not stated in the provided document sections
+
+## Domain Knowledge
+- ChAMP's champ.DMR() function integrates multiple DMR detection algorithms including Bumphunter, and the choice of algorithm affects the number and genomic distribution of detected regions.
+- EPICSimData is a pre-generated simulation dataset distributed with ChAMPdata that enables reproducible benchmarking of DMR detection methods without requiring raw IDAT files.
+- Bumphunter-based DMR detection in the EPIC simulation context is known to yield approximately 4700+ regions, providing a quantitative benchmark for validation.
+- DMR detection sensitivity and specificity depend on normalization method, Type-2 probe correction (if applied), and statistical thresholds used in the champ.DMR() call.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: DMR count (integer, expected ~4700+).
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [other] When champ.DMR() is applied to the EPIC simulation dataset using bumphunter-based detection, how many differentially methylated regions are identified?: 'In this 16 sample dataset, we simulated 8 samples are control and 8 sample as case, samples are marked in pd of EPICSimData object. In this data, we randomly choose 5000 regions from clusterMaker()'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [other] The EPIC simulation dataset contains fewer than 5000 DMRs (approximately 4700+) because some simulated DMRs contain only 1-2 CpGs, which are not regarded as DMRs in champ.DMR() function.: 'So there should have less than 5000 DMRs (4700+) in this data set, because some simulated DMRs contains only 1-2 CpGs, they will not be regarded as DMR in champ.DMR() function.'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [methods] EPICSimData (EPIC simulation dataset): 'For the EPIC Simulation Data Set, user may use following code to load it: data(EPICSimData)'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [methods] DMR detection results table with genomic coordinates and statistical metrics: 'For the identification of Differentially Methylated Regions (DMRs), ChAMP offers the new Probe Lasso method, in addition to previous DMR detection functions Bumphunter and DMRcate'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [methods] DMR count (integer, expected ~4700+): 'For the identification of Differentially Methylated Regions (DMRs), ChAMP offers the new Probe Lasso method, in addition to previous DMR detection functions Bumphunter and DMRcate'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [intro] ChAMP: 'ChAMP package is designed for conduct DNA methylation array analysis, providing service from data loading, to final gene set enrichment analysis'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [intro] Bumphunter: 'previous DMR detection functions Bumphunter and DMRcate'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [discussion] No changelog or version-specific reproducibility notes found in the discussion section: 'No changelog found.'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [discussion] Exact expected DMR count threshold or reference value for bumphunter-based EPIC simulation is not stated in the provided document sections: 'No changelog found.'
+
+## Evaluation Strategy
+### Direct Checks
+- verify file EPICSimData is loadable via R command data(EPICSimData) within the ChAMP package environment
+- verify champ.DMR() function exists and is callable in the loaded ChAMP package
+- verify script_runs: R script executing data(EPICSimData); dmr_result <- champ.DMR(EPICSimData, method='bumphunter') completes without error
+- verify output_matches_reference: the number of detected DMRs returned by champ.DMR() with bumphunter method falls in the range of approximately 4700 or higher, as reported for bumphunter-based simulation (exact boundary parameter-sensitive; multiple defensible thresholds near 4700 defensible)
+- verify the dmr_result object contains a structured field or slot reporting total DMR count as a single numeric value
+
+### Expert Review
+- expert review of whether the DMR detection result is biologically plausible and consistent with stated bumphunter simulation benchmark
+- expert review of whether champ.DMR() with method='bumphunter' on EPICSimData produces output structure and semantics expected for DMR detection (regions properly defined, statistical support present)
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load EPICSimData from ChAMPdata using data() function in R environment
+2. Execute champ.DMR() on loaded EPIC simulation data with bumphunter algorithm selected
+3. Parse and tabulate detected DMR results with genomic coordinates and p-values
+4. Count total number of DMRs in output table
+5. Validation: Verify DMR count is within expected range of ~4700+, consistent with reported bumphunter simulation benchmark
+6. References: GSE40279 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE40279)
+
+## Workflow Ports
+
+**Inputs:**
+
+- `epic_sim_data` — EPICSimData simulation dataset ← `task_001/loaded_450k_object`
+
+**Outputs:**
+
+- `dmr_results` — DMR detection results table
+- `dmr_count` — Total number of detected DMRs
+
+**Used:** `urn:asb:port:task_001/loaded_450k_object`
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:YuanTian1991__ChAMP`
+- **Synthesized at:** 2026-06-15T19:25:01+00:00
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

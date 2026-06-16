@@ -1,0 +1,452 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "metabodirect.pdf",
+      "role": "main_article",
+      "sha256": "8b88de575218bd9c0507dd4d2410cefdbd5f220f618fd3cee717387b195945ea"
+    }
+  ],
+  "created_at": "2026-06-15T08:03:26.683093+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Filtered peak list CSV containing peak identifiers, m/z values, assigned molecular formulas, compound class, and normalized intensities from preprocessing step",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reference biochemical transformation key containing predefined masses of common metabolic reactions, optionally user-specific for analyzed system",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Edge CSV file(s) per sample containing source peak m/z, target peak m/z, mass difference, transformation type (biotic/abiotic), and ppm error",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Node CSV file containing all detected peaks with m/z, molecular formula, compound class, and sample presence",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Transformation statistics CSV reporting number of transformations occurring per sample and transformation frequency",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Network visualization files and statistics tables exported as CSV and bar plots",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Mass-difference networks represent chemical transformations as edges connecting detected peaks (nodes) via their m/z differences; a 1 ppm mass tolerance threshold filters out spurious matches unlikely to occur by chance.",
+    "Biochemical transformation keys are curated reference lists of common metabolic reaction masses (e.g., +16 for oxidation, \u22122 for dehydration); transformations can be classified as biotic (enzyme-catalyzed) or abiotic (spontaneous/photochemical) based on biochemical context.",
+    "FT-ICR MS produces exact m/z measurements with sub-ppm resolution; the 1 ppm error cutoff exploits this high mass accuracy to confidently assign chemical transformations to mass differences.",
+    "Cytoscape edge and node CSV files follow a standard format (edge lists with source, target, and attributes; node lists with identifiers and properties); proper formatting enables automated network visualization and topological analysis.",
+    "Peak intensity normalization in the preprocessing step must be applied consistently before mass-difference calculations to ensure reproducible transformation detection across samples with different ionization efficiencies."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that input file contains at least 2 columns: m/z and assigned molecular formula (field_present)",
+      "verify that the standalone script accepts a peak list file as command-line argument or config parameter (script_runs)",
+      "verify that the script computes pairwise mass differences and outputs a numeric matrix or edge list (output_matches_reference: check against Example transformation network data in bacterium-phage dataset OSF deposit https://doi.org/10.17605/OSF.IO/XFHZ9)",
+      "verify that output node/edge list file is in Cytoscape-compatible format (.sif, .gml, or edge-attribute table; format_is)",
+      "verify that file_exists for output node list and edge list artifacts",
+      "verify that transformation matching correctly retrieves entries from reference transformation table (no canonical answer\u2014multiple valid transformation databases may apply; expert_review required for chemistry accuracy)",
+      "verify that script completes without error on bacterium-phage dataset (40 samples, average 495 peaks with assigned formula per sample) in parameter-sensitive runtime (expected sub-minute based on reported ~36 s for main pipeline steps without KEGG mapping)",
+      "verify that rows in output edge list contain at minimum: source_mass, target_mass, mass_difference, transformation_name fields (row_count_equals and field_present)"
+    ],
+    "expert_review": [
+      "Assess whether mass-difference matching algorithm correctly resolves ambiguous transformations (multiple biochemically valid transformations at same \u0394m/z)",
+      "Evaluate whether the standalone implementation preserves the transformation network generation logic reported for bacterium-phage results (Fig. 3B shows lignin\u2013protein interaction clusters; expert should verify those patterns reproduce from script output)",
+      "Review whether edge weights (if present) accurately reflect transformation abundance or frequency across samples, consistent with Fig. 3A heatmap methodology",
+      "Confirm that script output is suitable for direct import into Cytoscape without manual curation or format conversion"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does MetaboDirect construct biochemical transformation networks from FT-ICR MS peak data, and what are the input requirements and output formats for this mass-difference network generation step?: 'The last step of MetaboDirect produces molecular transformation networks for each of the samples. These networks are generated ab initio from the masses that are determined through high-resolution'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] MetaboDirect generates transformation networks ab initio from high-resolution mass spectrometry data by identifying chemically transformed species using clearly defined mass differences, with the networks designed to quantify differences in microbial metabolic pathways and identify hub metabolites involved in many reactions.: 'These networks are generated ab initio from the masses that are determined through high-resolution mass spectrometry and are based on the fact that the ultra-high mass accuracy of the method allows'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Filtered peak list CSV containing peak identifiers, m/z values, assigned molecular formulas, compound class, and normalized intensities from preprocessing step: 'This pre-processing step generates several .csv files containing the list of filtered peaks with their respective thermodynamic and molecular indices and the normalized and unnormalized intensities'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Reference biochemical transformation key containing predefined masses of common metabolic reactions, optionally user-specific for analyzed system: 'comparing them to the list of pre-defined masses of common metabolic reactions (biochemical transformations key)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Edge CSV file(s) per sample containing source peak m/z, target peak m/z, mass difference, transformation type (biotic/abiotic), and ppm error: 'The results are exported as .csv \"edge\" files containing the potential transformations occurring between the masses in each sample.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Node CSV file containing all detected peaks with m/z, molecular formula, compound class, and sample presence: 'nodes represent peaks detected in the different samples and edges represent the putative chemical transformations happening between the nodes'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Transformation statistics CSV reporting number of transformations occurring per sample and transformation frequency: 'Additional files with the number of transformations occurring per sample are also generated.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Network visualization files and statistics tables exported as CSV and bar plots: 'network statistics will be calculated and reported as .csv tables and bar plots'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MetaboDirect: 'Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Cytoscape: 'Networks are then constructed using Cytoscape [79] and colored based on their molecular class.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] No explicit specification of which reference transformation table (e.g., KEGG database, custom in-house library, or published biochemical transformation catalog) should be used for mass-difference matching in the standalone module: 'calculation of mass-based chemical transformations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] No documented mass tolerance (ppm or Da) for matching observed mass differences to reference transformation masses: 'mass-based chemical transformations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] No description of how the script handles or filters transformations with multiple equally plausible biochemical identities at the same observed mass difference: 'transformation networks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] No specification of input file format requirements (column headers, delimiter, data type for m/z and formula columns, row order): 'The pipeline accepts peak abundance and assigned molecular formula data produced after an initial processing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] No documented output schema or example node/edge list file showing expected column names, data types, and edge weight definitions for Cytoscape import: 'transformation networks'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "metabolodirect.network",
+      "--peaks",
+      "{inputs.filtered_peak_list}",
+      "--transformations",
+      "{inputs.transformation_key}",
+      "--ppm-tolerance",
+      "1",
+      "--output-dir",
+      "network_output_{task_id}"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "transformation_networks_edges.csv",
+  "expected_outputs": [
+    "Edge CSV file(s) per sample containing source peak m/z, target peak m/z, mass difference, transformation type (biotic/abiotic), and ppm error",
+    "Node CSV file containing all detected peaks with m/z, molecular formula, compound class, and sample presence",
+    "Transformation statistics CSV reporting number of transformations occurring per sample and transformation frequency",
+    "Network visualization files and statistics tables exported as CSV and bar plots"
+  ],
+  "finding": "MetaboDirect generates transformation networks ab initio from high-resolution mass spectrometry data by identifying chemically transformed species using clearly defined mass differences, with the networks designed to quantify differences in microbial metabolic pathways and identify hub metabolites involved in many reactions.",
+  "github_name": "Coayala/MetaboDirect",
+  "input_from": "task_002",
+  "inputs": [
+    "Filtered peak list CSV containing peak identifiers, m/z values, assigned molecular formulas, compound class, and normalized intensities from preprocessing step",
+    "Reference biochemical transformation key containing predefined masses of common metabolic reactions, optionally user-specific for analyzed system"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "pairwise_mass_differences.csv",
+    "matched_transformations_raw.csv",
+    "transformation_classifications_filtered.csv",
+    "cytoscape_nodes.csv",
+    "transformation_frequency_per_sample.csv",
+    "network_statistics.csv"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_025",
+    "result_036",
+    "result_037",
+    "result_043"
+  ],
+  "methodology_summary": [
+    "Load filtered peak list and reference biochemical transformation key into memory",
+    "Calculate all pairwise mass differences between detected peaks within each sample",
+    "Match mass differences to reference transformation key, retaining matches with \u22641 ppm error tolerance",
+    "Classify matched transformations as biotic or abiotic based on prior biochemical categorization",
+    "Generate node CSV (peaks with m/z, formula, compound class) and edge CSV files (transformations with source, target, type, error) formatted for Cytoscape",
+    "Compute and export transformation summary statistics (count per sample, frequency distribution) as CSV tables and bar plots",
+    "Validation: verify edge files contain no transformations with mass error >1 ppm, confirm all nodes reference detected peaks in input list, and confirm all transformations are classified (biotic or abiotic)"
+  ],
+  "missing_information": [
+    "No explicit specification of which reference transformation table (e.g., KEGG database, custom in-house library, or published biochemical transformation catalog) should be used for mass-difference matching in the standalone module",
+    "No documented mass tolerance (ppm or Da) for matching observed mass differences to reference transformation masses",
+    "No description of how the script handles or filters transformations with multiple equally plausible biochemical identities at the same observed mass difference",
+    "No specification of input file format requirements (column headers, delimiter, data type for m/z and formula columns, row order)",
+    "No documented output schema or example node/edge list file showing expected column names, data types, and edge weight definitions for Cytoscape import"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MetaboDirect construct biochemical transformation networks from FT-ICR MS peak data, and what are the input requirements and output formats for this mass-difference network generation step?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "intro",
+    "results",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "mass-difference-network-construction",
+    "biochemical-transformation-matching",
+    "ppm-error-tolerance-filtering",
+    "peak-pairwise-comparison",
+    "transformation-classification-biotic-abiotic",
+    "cytoscape-edge-node-file-formatting",
+    "mass-spectrometry-molecular-formula-handling"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_metabodirect",
+  "spine_condition_ids": [
+    "Cond_Benchmark_40samples",
+    "Cond_Benchmark_120samples",
+    "Cond_PhageDataset_MainOnly",
+    "Cond_SphagnumDataset_MainOnly",
+    "Cond_Sphagnum_Inoculated",
+    "Cond_Sphagnum_Control",
+    "Cond_PhageDataset_WithKEGG"
+  ],
+  "spine_entity_ids": [
+    "MetaboDirect",
+    "MetaboDirect_Pipeline_Architecture",
+    "Step_DataPreprocessing",
+    "Step_DataDiagnostics",
+    "Step_DataExploration",
+    "Step_ChemodiversityAnalysis",
+    "Step_StatisticalAnalysis",
+    "Step_TransformationNetworks",
+    "TransformationNetwork_GeneratedArtifact",
+    "TestNormalization_Script",
+    "Cytoscape",
+    "Cond_Sphagnum_Inoculated",
+    "Cond_Sphagnum_Control",
+    "Cond_PhageDataset_MainOnly",
+    "Cond_PhageDataset_WithKEGG",
+    "Cond_SphagnumDataset_MainOnly",
+    "Metric_Runtime_40samples",
+    "Metric_Runtime_120samples",
+    "Metric_Runtime_PhageMain",
+    "Metric_Runtime_SphagnumMain",
+    "Metric_PhageDataset_AvgFormulas",
+    "Metric_SphagnumDataset_AvgFormulas",
+    "Result_PhageChemodiversity",
+    "Result_MetaboDirect_AutomationAdvantage",
+    "Result_MetaboDirect_UniqueNetworkGeneration"
+  ],
+  "subdomains": [
+    "microbiome-metabolomics",
+    "environmental-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction",
+    "visualization"
+  ],
+  "synthesized_from": null,
+  "task_description": "Implement a standalone mass-difference network construction module that accepts a filtered peak list with assigned molecular formulas and reference biochemical transformation keys, computes pairwise mass differences with 1 ppm error tolerance, matches them to known transformations, and outputs Cytoscape-compatible node and edge CSV files.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Filtered peak list with m/z, molecular formula, and compound class",
+      "port_id": "filtered_peak_list",
+      "resolved_via": null,
+      "source": "task_002/phage_runtime",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Reference biochemical transformation key with predefined metabolic reaction masses",
+      "port_id": "transformation_key",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the mass-difference network construction module to compute pairwise mass differences between molecular formulas, match them to biochemical transformations, and output node/edge lists for Cytoscape import.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Edge CSV files per sample with transformation details",
+      "port_id": "edge_files",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Node CSV file with peak metadata",
+      "port_id": "node_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Transformation statistics and summary plots",
+      "port_id": "transformation_stats",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "direct-infusion-ms",
+    "high-resolution-ms",
+    "feature-detection",
+    "metabolite-identification",
+    "multivariate-statistics",
+    "molecular-networking"
+  ],
+  "title": "Reconstruct the per-sample molecular transformation network generation step of the MetaboDirect pipeline",
+  "tools": [
+    "MetaboDirect",
+    "Cytoscape"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load filtered peak list (CSV with m/z values and molecular formulas) and reference biochemical transformation key containing predefined masses of common metabolic reactions. 2. Calculate all pairwise mass differences between detected peaks in each sample. 3. Match each mass difference to the reference biochemical transformation key, retaining transformations with mass error \u22641 ppm against reference values. 4. Classify matched transformations as biotic or abiotic based on prior categorization. 5. Generate edge CSV files containing putative transformations (source peak m/z, target peak m/z, transformation type, error) for each sample. 6. Generate node CSV file with all detected peaks, their m/z values, molecular formulas, and compound class assignments. 7. Output transformation statistics (count per sample, transformation frequency distribution) as summary CSV and bar plots. 8. Prepare node and edge files formatted for Cytoscape import."
+}

@@ -1,0 +1,258 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/mwang87/MassQueryLanguage",
+      "locator_id": "gh_mwang87_massquerylanguage",
+      "locator_kind": "github",
+      "name": "mwang87/MassQueryLanguage",
+      "prose": "mwang87/MassQueryLanguage GitHub repository (public source)",
+      "score": 0.3333,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "86f1f18716ef9724c59f6fbd75d53073365a11adffc8bd11d124820af696b93d"
+    }
+  ],
+  "created_at": "2026-06-16T05:33:53.849924+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "mwang87/MassQueryLanguage GitHub repository (public source)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured pass/fail report documenting package-level integration test execution status and per-test outcomes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MassQL is a domain-specific language for mass spectrometry query expression designed around four principles: expressiveness (capture complex MS patterns), precision (unambiguous specification), scalability (single spectrum to entire repositories), and readability (communication-friendly syntax).",
+    "Package-level integration tests differ from unit tests in scope: they validate the entire published package against real or representative MS data workflows, not isolated function behavior.",
+    "CI workflows (GitHub Actions YAML) define reproducible test environments and success criteria; test-package.yml is the canonical definition of what constitutes a passing package release state."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:mwang87__MassQueryLanguage repository is publicly accessible and contains test-package.yml in .github/workflows/ directory",
+      "verify file_exists: test-package.yml at path .github/workflows/test-package.yml in the repository",
+      "verify script_runs: execute test-package.yml workflow using GitHub Actions CLI or local CI runner against the published MassQL package without errors",
+      "verify output_matches_reference: the workflow execution produces a structured pass/fail report (JSON, YAML, or plain text) with at least one test result field indicating overall pass or fail status",
+      "verify file_format_is: the generated report is in a machine-readable format (JSON, YAML, CSV, or plaintext with parseable structure)",
+      "verify contains_substring: the final report output contains explicit pass/fail indicators (e.g. 'PASSED', 'FAILED', 'success: true', or equivalent status token) \u2014 multiple defensible output formats acceptable"
+    ],
+    "expert_review": [
+      "confirm that all integration tests in test-package.yml are semantically appropriate for validating core MassQL package functionality (query parsing, execution, result serialization) and not redundant with unit tests",
+      "assess whether the reported passing badge state (if claimed in repository README or CI status page) aligns with the observed workflow execution result"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the MassQL package pass its periodic integration test suite as indicated by the test-package.yml CI workflow?: '[![Periodic Testing of Package](https://github.com/mwang87/MassQueryLanguage/actions/workflows/test-package.yml/badge.svg)](https://github.com/mwang87/MassQueryLanguage/actions/workflows/test-package.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The MassQL repository includes a periodic package-testing CI workflow (test-package.yml) distinct from unit tests, as indicated by the badge link in the project documentation.: '[![Periodic Testing of Package](https://github.com/mwang87/MassQueryLanguage/actions/workflows/test-package.yml/badge.svg)](https://github.com/mwang87/MassQueryLanguage/actions/workflows/test-package.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] mwang87/MassQueryLanguage GitHub repository (public source): 'https://github.com/mwang87/MassQueryLanguage'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Structured pass/fail report documenting package-level integration test execution status and per-test outcomes: 'collecting a structured pass/fail report distinct from the unit tests'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MassQL: 'The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found in the discussion section: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The exact location and format of test-package.yml workflow definition is not specified in the provided section text: 'Source: github:mwang87__MassQueryLanguage'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No reference to the structure, output format, or expected results of the package-level integration tests is provided in the discussion section: 'Source: github:mwang87__MassQueryLanguage'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "test_report.json",
+  "expected_outputs": [
+    "Structured pass/fail report documenting package-level integration test execution status and per-test outcomes"
+  ],
+  "finding": "The MassQL repository includes a periodic package-testing CI workflow (test-package.yml) distinct from unit tests, as indicated by the badge link in the project documentation.",
+  "github_name": "mwang87/MassQueryLanguage",
+  "input_from": null,
+  "inputs": [
+    "mwang87/MassQueryLanguage GitHub repository (public source)"
+  ],
+  "keywords": [
+    "mass spectrometry querying",
+    "domain-specific language",
+    "sql-inspired",
+    "spectrum pattern matching",
+    "ms data repository",
+    "natural language query"
+  ],
+  "landmark_outputs": [
+    "test-package.yml",
+    "test_execution.log",
+    "test_report.json"
+  ],
+  "linked_result_ids": [
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Retrieve the published MassQL source code from the mwang87/MassQueryLanguage GitHub repository.",
+    "Parse the test-package.yml CI workflow file to identify integration test targets, commands, and acceptance criteria.",
+    "Execute the integration test suite in a clean environment matching the CI specification.",
+    "Capture structured test results (pass/fail status, execution time, error messages) for each test case.",
+    "Validation: All tests specified in test-package.yml pass without error, and the structured report documents 100% completion of the test matrix."
+  ],
+  "missing_information": [
+    "No changelog found in the discussion section",
+    "The exact location and format of test-package.yml workflow definition is not specified in the provided section text",
+    "No reference to the structure, output format, or expected results of the package-level integration tests is provided in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the MassQL package pass its periodic integration test suite as indicated by the test-package.yml CI workflow?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "ci-workflow-execution",
+    "package-integration-testing",
+    "test-result-parsing-and-reporting",
+    "github-repository-operations"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_massql/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "massql_system",
+    "unit_testing_workflow",
+    "package_testing_workflow"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:mwang87__MassQueryLanguage",
+  "task_description": "Execute the MassQL package-level integration test suite (test-package.yml CI workflow) against the published repository and produce a structured pass/fail report documenting test execution status, distinct from unit test results.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MassQL GitHub repository source",
+      "port_id": "github_repo",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the test-package.yml CI workflow against the published MassQL package and generate a structured pass/fail report for package-level integration tests.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Package integration test pass/fail report",
+      "port_id": "test_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "natural-language-processing"
+  ],
+  "title": "Reproduce periodic package-testing CI workflow pass/fail results for MassQL",
+  "tools": [
+    "MassQL"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Structured pass/fail report documenting package-level integration test execution status and per-test outcomes."
+  ],
+  "workflow_description": "1. Clone the mwang87/MassQueryLanguage repository from GitHub. 2. Inspect and parse the test-package.yml CI workflow definition to identify integration test targets and success criteria. 3. Execute the package-level integration tests specified in test-package.yml using the appropriate test runner (e.g., pytest or GitHub Actions runner environment). 4. Collect structured test results including pass/fail status for each test case, execution time, and error logs. 5. Generate a structured pass/fail report (JSON or CSV format) documenting overall test suite status and individual test outcomes."
+}

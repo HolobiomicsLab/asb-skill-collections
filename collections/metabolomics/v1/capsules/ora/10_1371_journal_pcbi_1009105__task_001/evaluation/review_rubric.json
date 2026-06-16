@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: src/reproducible_simulations.ipynb in repository github:cwieder__metabolomics-ORA"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "src/reproducible_simulations.ipynb"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify notebook completes without exceptions or missing dependencies"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify notebook produces at least one figure or table output artifact"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: src/reproducible_simulations.ipynb in repository github:cwieder__metabolomics-ORA",
+      "file_format_is: src/reproducible_simulations.ipynb is a valid Jupyter notebook (.ipynb)",
+      "script_runs: Jupyter notebook executes without errors using Python 3.8",
+      "verify notebook completes without exceptions or missing dependencies",
+      "verify notebook produces at least one figure or table output artifact"
+    ],
+    "expert_review": [
+      "outputs (figures and tables) match in content and visual structure those reported in DOI:10.1371/journal.pcbi.1009105",
+      "numerical results in simulation outputs are consistent with the article's reported pitfalls and best-practice demonstrations for ORA in metabolomics"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

@@ -1,0 +1,1 @@
+{"result_id": "result_005", "summary": "Version 1.0.0 included a feature to add release and semantic release.", "result_type": "minor", "claim_ids": ["claim_011"], "support_status": "not_evaluated", "linked_task_ids": ["task_001", "task_002"], "linked_eval_check_ids": [], "task_relevance": "task_linked"}

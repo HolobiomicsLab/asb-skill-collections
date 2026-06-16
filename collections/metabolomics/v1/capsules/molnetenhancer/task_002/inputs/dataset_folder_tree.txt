@@ -1,0 +1,14 @@
+  figures/ChemicalClassScoreMapped.png
+  figures/ChemicalClassesMapped.png
+  figures/DereplicatorJobID.png
+  figures/DownloadCulsteredMGF.png
+  figures/Export_MS2LDA_Summary.jpg
+  figures/GNPSJobID.png
+  figures/ImportEdges.png
+  figures/ImportNodes.png
+  figures/MS2LDAJobID.png
+  figures/Mass2Motif_2_Network_Parameters.png
+  figures/MotifsMappedEdges.png
+  figures/MotifsMappedNodes.jpg
+  figures/NAPJobID.png
+paper.md

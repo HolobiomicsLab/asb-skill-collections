@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in github:JonZwe__PFAScreen repository containing KMD calculation implementation"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify KMD module accepts a feature list as input (file or data structure with m/z and intensity fields)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify KMD module returns grouped or flagged features with at least one output field indicating homologous series membership or KMD cluster assignment"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output contains KMD values (numeric, robust to rounding within \u00b10.01 Da)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify features are grouped or flagged by KMD values with homologous series labels or cluster identifiers"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in github:JonZwe__PFAScreen repository containing KMD calculation implementation",
+      "verify KMD module accepts a feature list as input (file or data structure with m/z and intensity fields)",
+      "verify KMD module returns grouped or flagged features with at least one output field indicating homologous series membership or KMD cluster assignment",
+      "script_runs: KMD filter executes without error on a test feature list with \u226510 features spanning m/z 200\u20131200",
+      "verify output contains KMD values (numeric, robust to rounding within \u00b10.01 Da)",
+      "verify features are grouped or flagged by KMD values with homologous series labels or cluster identifiers"
+    ],
+    "expert_review": [
+      "assess whether KMD calculation follows established mass defect formulae for PFAS homolog detection (expert judgment on correctness of Kendrick mass basis and defect computation)",
+      "evaluate whether grouping/flagging threshold for homologous series is chemically defensible and documented",
+      "review whether output interpretation and labeling of PFAS series are consistent with literature conventions for KMD-based PFAS screening"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

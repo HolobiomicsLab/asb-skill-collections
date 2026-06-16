@@ -1,0 +1,2 @@
+  figures/methylKit_logo.png
+paper.md

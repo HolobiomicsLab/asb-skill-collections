@@ -1,16 +1,27 @@
 name: GNPS
 slug: gnps
 evidence_spans:
+- mass spectral molecular networks created through the Global Natural Products Social Molecular Networking (GNPS) platform
+- mass spectral molecular networks created through the Global Natural Products Social Molecular Networking (GNPS)
+- GNPS molecular networking
 - The GNPS library can be download from https://gnps.ucsd.edu/ProteoSAFe/libraries.jsp
 - the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
-- MS2 spectra in specific GNPS data sets
 derived_from:
+- doi: 10.3390/metabo9070144
+  title: molnetenhancer
+- doi: 10.1038/s41587-020-0700-3
+  title: Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
 - doi: 10.1371/journal.pcbi.1008920
   title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+- doi: 10.1186/1471-2105-6-225
+  title: Pathway level analysis of gene expression using singular value decomposition
 source_repos:
 - QizhiSu/mspcompiler
+- bittremieux/GNPS_GC
+- glasgowcompbio/PALS
 - https://github.com/NPLinker/nplinker
+- madeleineernst/pyMolNetEnhancer
 schema_version: 0.2.0

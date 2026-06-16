@@ -1,0 +1,1 @@
+{"result_id": "result_033", "summary": "Squidpy exposes GraphBuilder and GraphBuilderCSR as base classes for custom graph builders.", "result_type": "minor", "claim_ids": ["claim_035"], "support_status": "not_evaluated", "linked_task_ids": ["task_002"], "linked_eval_check_ids": [], "task_relevance": "task_linked"}

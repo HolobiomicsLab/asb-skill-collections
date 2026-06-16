@@ -1,0 +1,137 @@
+schema_version: 0.1.0
+workflow_id: coll_specxplore_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: specXplore is a Python dashboard tool for interactive exploration of LC-MS/MS
+    spectral data, combining t-SNE embeddings based on ms2deepscore similarities with
+    interactive visualizations including network views and heatmaps.
+  pseudo_abstract: 'specXplore operates through a two-stage workflow: first, users
+    process raw spectral data in Jupyter notebooks using the specXplore importing
+    pipeline to generate a serialized session data object saved to disk; second, this
+    saved session object is loaded into a specXplore dashboard instance for interactive
+    visual exploration. The system implements a t-SNE embedding component that computes
+    a 2-D overview representation from ms2deepscore-derived mass spectral similarities,
+    serving as the foundation for the interactive dashboard visualizations including
+    network views, similarity heatmaps, and fragmentation overview maps.'
+  research_questions:
+  - What is the input format and processing pipeline architecture for converting raw
+    LC-MS/MS spectral data into a serialized specXplore session data object in the
+    importing stage?
+  - How does the specXplore dashboard session instance initialize and become accessible
+    after loading a saved session data object from disk?
+  - How does specXplore compute a t-SNE embedding from ms2deepscore similarity scores
+    to generate a 2-D overview representation of mass spectral data?
+  methods_summary: "Initialize Python environment and Jupyter notebook with specXplore\
+    \ importing pipeline module. Load raw LC-MS/MS spectral data files into memory\
+    \ using specXplore's data import functions. Parse and normalize spectral records\
+    \ to extract peaks, intensities, and metadata. Apply importing pipeline processing\
+    \ steps to construct the session data object. Serialize the session object to\
+    \ disk in a format compatible with specXplore dashboard consumers. Validation:\
+    \ confirm session file exists, contains expected data structures (spectral arrays,\
+    \ embeddings, metadata), and can be deserialized without error by downstream dashboard\
+    \ application. Load specXplore session data object from disk using Python serialization/deserialization\
+    \ Instantiate the fixed dashboard-session architecture layer with the loaded object\
+    \ Verify initialization completion and absence of runtime errors Confirm interactive\
+    \ application accessibility and responsiveness Validation: Dashboard session initializes\
+    \ without errors and the interactive application is accessible for user interaction\
+    \ Load the specXplore session data object containing processed spectral features\
+    \ and precomputed ms2deepscore pairwise similarity scores. Convert ms2deepscore\
+    \ similarities to distance metric (e.g., 1 \u2212 similarity or equivalent dissimilarity\
+    \ representation) as required by t-SNE. Execute t-SNE algorithm with the ms2deepscore\
+    \ distance matrix as input to compute 2-D embedding coordinates for each spectrum.\
+    \ Export the t-SNE coordinates (spectrum identifier, x-coordinate, y-coordinate)\
+    \ to a structured file. Validation: Confirm that the output file contains one\
+    \ row per spectrum with valid numeric coordinates in the 2-D embedding space and\
+    \ matches the spectrum count from the input session data object."
+  domain: metabolomics
+  techniques:
+  - spectral-library-matching
+  - dimensionality-reduction
+  - deep-learning
+  claims:
+  - claim_text: SpecXplore is a python dashboard tool for adjustable LC-MS/MS spectral
+      data exploration.
+    claim_type: finding
+    speculative: false
+    entity_id: specXplore_system
+  - claim_text: SpecXplore uses a t-SNE embedding to serve as an overview representation
+      of mass spectral similarities.
+    claim_type: finding
+    speculative: false
+    entity_id: specXplore_system
+  - claim_text: SpecXplore's t-SNE embedding is based on ms2deepscore.
+    claim_type: finding
+    speculative: false
+    entity_id: specXplore_system
+  - claim_text: SpecXplore includes network views, similarity heatmaps, and fragmentation
+      overview maps.
+    claim_type: finding
+    speculative: false
+    entity_id: specXplore_system
+  - claim_text: The specXplore workflow is separated into two stages.
+    claim_type: finding
+    speculative: false
+    entity_id: specXplore_system
+  - claim_text: In the first stage of the specXplore workflow, the user processes
+      spectral data to create a specxplore session data object.
+    claim_type: finding
+    speculative: false
+    entity_id: specXplore_system
+  - claim_text: Spectral data processing for specXplore is done in interactive Jupyter
+      notebooks using the specXplore importing pipeline.
+    claim_type: finding
+    speculative: false
+    entity_id: specXplore_system
+  - claim_text: The specXplore importing pipeline produces a specXplore session data
+      object that is saved to the hard drive.
+    claim_type: finding
+    speculative: false
+    entity_id: specXplore_system
+  - claim_text: The specXplore session data object can be fed directly into a specxplore
+      dashboard session instance for visual exploration.
+    claim_type: finding
+    speculative: false
+    entity_id: specXplore_system
+  speculative: false
+  task_openness: open
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Dashboard session instance status report confirming initialization success
+    and application accessibility
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 2-D t-SNE coordinate file mapping spectrum identifiers to (x, y) positions
+    in embedding space
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

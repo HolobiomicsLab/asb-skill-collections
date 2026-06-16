@@ -1,0 +1,284 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "bc84382d8d1ba2f5b768ba328a98b08d8b11d8cb516228cc0860e018d124e931"
+    }
+  ],
+  "created_at": "2026-06-16T07:34:22.306994+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MS-DIAL lipid identification export file (CSV or tabular format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "TOML-formatted options file with LipoCLEAN configuration parameters",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Filtered lipid identification table with quality-assessed lipid assignments",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "LipoCLEAN applies machine learning to assess quality and confidence of lipid assignments produced by MS-DIAL mass spectrometry analysis.",
+    "TOML configuration files must reference the correct MS-DIAL version (4 or 5) to ensure compatibility with the expected input format and default model parameters.",
+    "The tool accepts MS-DIAL-formatted lipid identification exports and outputs a filtered set of lipid identifications ranked by predicted quality.",
+    "LipoCLEAN is distributable as an executable, Python package, or Docker container, allowing deployment flexibility across computational environments."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: the TOML-formatted options file passed as input to the CLI",
+      "verify file exists: the MS-DIAL export artifact (input dataset or reference file) referenced in the TOML config",
+      "script_runs: LipoCLEAN CLI invocation with TOML config file completes without non-zero exit code",
+      "file_exists: at least one output artifact is produced by the tool (file, report, or structured record); exact output format and naming convention should be confirmed from tool documentation or repository README",
+      "robust to parameter choices: the TOML config can specify different MS-DIAL versions (4 or 5 per EnrichedIndex) and tool should handle version-specific defaults"
+    ],
+    "expert_review": [
+      "Verify that the output artifact(s) produced by LipoCLEAN are scientifically plausible quality-filtered lipid identifications (e.g., records retain expected fields, filtering logic is applied, no data corruption)",
+      "Confirm that the TOML configuration was correctly parsed and applied by inspecting output metadata or logs for parameter echo"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the LipoCLEAN command-line tool accept configuration input and what file format is required to specify MS-DIAL export locations?: 'All options, including the location of MS-DIAL export files to analyze, are given to the tool in a TOML formatted text file.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipoCLEAN accepts all configuration options, including MS-DIAL export file locations, through a TOML-formatted text file that can be generated from default templates for MS-DIAL 4 or 5 using command-line arguments.: 'All options, including the location of MS-DIAL export files to analyze, are given to the tool in a TOML formatted text file. Default options files for MS-DIAL 4 and 5 can be obtained using the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MS-DIAL lipid identification export file (CSV or tabular format): 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TOML-formatted options file with LipoCLEAN configuration parameters: 'all options are given to the tool in a TOML formatted text file. Default options files for MS-DIAL 4 and 5 can be obtained'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Filtered lipid identification table with quality-assessed lipid assignments: 'A machine learning based quality filter for lipid identifications from MS-DIAL'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipoCLEAN: 'LipoCLEAN is a command line tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MS-DIAL: 'quality filter for lipid identifications from MS-DIAL'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, breaking changes, or feature additions is available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "lipoclean",
+      "{inputs.toml_config}"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "filtered_lipids.csv",
+  "expected_outputs": [
+    "Filtered lipid identification table with quality-assessed lipid assignments"
+  ],
+  "finding": "LipoCLEAN accepts all configuration options, including MS-DIAL export file locations, through a TOML-formatted text file that can be generated from default templates for MS-DIAL 4 or 5 using command-line arguments.",
+  "github_name": "stavis1/LipoCLEAN",
+  "input_from": null,
+  "inputs": [
+    "MS-DIAL lipid identification export file (CSV or tabular format)",
+    "TOML-formatted options file with LipoCLEAN configuration parameters"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "toml_config_prepared.toml",
+    "lipoclean_execution.log"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_005",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Prepare TOML configuration file with LipoCLEAN options, specifying MS-DIAL version and input dataset path.",
+    "Invoke LipoCLEAN command-line interface with the TOML configuration as the primary argument.",
+    "Capture tool output and error streams to verify successful execution.",
+    "Validation: Confirm tool exits with status code 0, output file exists and contains quality-scored lipid identifications in the expected tabular format."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, breaking changes, or feature additions is available"
+  ],
+  "parameters": [],
+  "primary_domain": "lipidomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the LipoCLEAN command-line tool accept configuration input and what file format is required to specify MS-DIAL export locations?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "lipid-identification-quality-filtering",
+    "toml-configuration-file-preparation",
+    "command-line-tool-execution",
+    "ms-dial-export-format-handling",
+    "machine-learning-model-application-to-lipidomics"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_lipoclean/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "lipoclean_system",
+    "msdial_tool",
+    "toml_config",
+    "lipoclean_cli",
+    "ml_quality_filter"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "lipidomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "tool-execution"
+  ],
+  "synthesized_from": "github:stavis1__LipoCLEAN",
+  "task_description": "Run the LipoCLEAN command-line tool with a TOML-formatted configuration file pointing to an MS-DIAL export, and verify that the tool executes successfully and produces filtered lipid identification output.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MS-DIAL lipid identification export",
+      "port_id": "msdial_export",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "TOML configuration file",
+      "port_id": "toml_config",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute LipoCLEAN with a TOML configuration file pointing to MS-DIAL export data and confirm successful completion without errors.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Quality-filtered lipid identifications",
+      "port_id": "filtered_lipids",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "quality-control",
+    "metabolite-identification"
+  ],
+  "title": "Reconstruct LipoCLEAN CLI invocation using a TOML options file to filter MS-DIAL lipid identifications",
+  "tools": [
+    "LipoCLEAN",
+    "MS-DIAL"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Prepare a TOML-formatted options file referencing an MS-DIAL lipid identification dataset, using default options for MS-DIAL version 4 or 5 as applicable. 2. Invoke the LipoCLEAN command-line interface with the TOML configuration file as input. 3. Capture and validate the tool's output, confirming successful execution and presence of filtered lipid identifications."
+}

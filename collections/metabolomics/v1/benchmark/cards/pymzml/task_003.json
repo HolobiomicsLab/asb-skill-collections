@@ -1,0 +1,264 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/plot.png",
+      "role": "figure",
+      "sha256": "ba6d3a60b34b53a705579d734565afcbc9faa51a9dc5235c4df1a292e495e938"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "748a58f5d390730031e4f80fa29fde8a534efd3a869c8c5a2a856ff536b0f05c"
+    }
+  ],
+  "created_at": "2026-06-16T07:28:47.137382+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "igzip-compressed file with embedded index in header (e.g., Moby Dick compressed with igzip)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Retrieved item content (text or binary) corresponding to the requested integer index",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Igzip is an indexed gzip format that embeds a seek table in the file header to enable rapid random access without decompressing the entire archive.",
+    "The __getitem__ method in Python enables bracket-notation access (e.g., obj[key]) and is the standard interface for indexed retrieval in custom container classes.",
+    "Binary file seeking requires precise byte-offset calculation; an embedded index maps logical item IDs to physical byte positions in the compressed stream.",
+    "Sequential read functions must track state (current position) across calls to implement iteration semantics compatible with Python's iterator protocol."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in github:pymzML__pymzML repository at path containing GSGR class implementation",
+      "script_runs: execute Python code instantiating GSGR class with igzip-compressed Moby Dick file and calling bracket notation to retrieve chapter by integer index",
+      "output_matches_reference: retrieved chapter text byte-for-byte matches expected content from authoritative Moby Dick source (e.g., Project Gutenberg or referenced deposit)",
+      "verify file_format_is: igzip header in input file contains valid index structure readable by GSGR.read()",
+      "value_in_range: integer index parameter passed to bracket notation is within valid range [0, chapter_count)"
+    ],
+    "expert_review": [
+      "Confirm that GSGR.__getitem__() implementation correctly decodes igzip index structure and performs random access seek to correct file offset",
+      "Validate that retrieved chapter text is semantically complete and intact (no truncation, corruption, or missing sections)",
+      "Review that igzip index parsing logic handles edge cases (first chapter, last chapter, boundary offsets)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does the GSGR class read indexed gzip files by parsing the igzip header comment field to retrieve the index-to-offset mapping, and then use that mapping to access specific blocks by integer key?: 'In order to access the chapter in the compressed file, one simply needs to initialize the GSGR with the path to the created file and can access the chapters conveniently by the python bracket'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The GSGR class is initialized with a path to an indexed gzip file and supports bracket notation access (e.g., my_Reader.read_block(chap_num)) to retrieve blocks by integer index, with the index-to-offset mapping stored in the gzip header comment field as: ID bytes (2), VERSION (1), IDXLEN (1), OFFSETLEN (1), followed by index/offset pairs terminated with a zero byte.: 'This field is then used to save the Uniq IDs, version, index/offset length and is terminated with a zero byte, like described in the following: +-----+-----+---------+--------+-----------+ | ID1 |'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] igzip-compressed file with embedded index in header (e.g., Moby Dick compressed with igzip): 'a database with a specific layout needs to be created. Here, we use a single mzML file and store each spectrum in a table with 2 columns, one for the identifier and one for the xml element of the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Retrieved item content (text or binary) corresponding to the requested integer index: 'Retrieve a specific spectrum from your database db = SQLiteDatabase('test.db') unique_id = 5 my_spec = db[unique_id]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'import sqlite3\n    import os\n    from pymzml import spec'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] xml.etree.ElementTree: 'import xml.etree.ElementTree as et'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting GSGR class development, version history, or API stability is available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import gzip, struct, sys; f = open('{inputs.compressed_file}', 'rb'); header = f.read(1024); index_size = struct.unpack('>I', header[:4])[0]; index_data = header[4:4+index_size]; index = dict((i, struct.unpack('>Q', index_data[i*8:(i+1)*8])[0]) for i in range(index_size//8)); class GSGR:\n    def __init__(self, fh, idx):\n        self.fh = fh\n        self.idx = idx\n    def __getitem__(self, key):\n        if key not in self.idx:\n            raise KeyError(f'Index {key} not found')\n        offset = self.idx[key]\n        self.fh.seek(offset)\n        return gzip.GzipFile(fileobj=self.fh).read()\n\nhandler = GSGR(f, index); print(handler[0][:100])"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Retrieved item content (text or binary) corresponding to the requested integer index"
+  ],
+  "finding": "The GSGR class is initialized with a path to an indexed gzip file and supports bracket notation access (e.g., my_Reader.read_block(chap_num)) to retrieve blocks by integer index, with the index-to-offset mapping stored in the gzip header comment field as: ID bytes (2), VERSION (1), IDXLEN (1), OFFSETLEN (1), followed by index/offset pairs terminated with a zero byte.",
+  "github_name": "pymzml/pymzML",
+  "input_from": "task_002",
+  "inputs": [
+    "igzip-compressed file with embedded index in header (e.g., Moby Dick compressed with igzip)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "index_dict.json",
+    "item_retrieval_test.txt"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_011",
+    "result_012",
+    "result_014",
+    "result_029",
+    "result_030",
+    "result_031"
+  ],
+  "methodology_summary": [
+    "Open and read the igzip file header to extract the embedded index table.",
+    "Parse the index into a dictionary structure mapping integer item IDs to byte offsets.",
+    "Implement __getitem__ to look up the offset for a given key, seek to that position, and decompress the item.",
+    "Implement a read method to support sequential access by maintaining current item state.",
+    "Validation: Verify that bracket-notation access (e.g., handler[5]) returns the correct decompressed item content matching the index entry."
+  ],
+  "missing_information": [
+    "No changelog documenting GSGR class development, version history, or API stability is available"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the GSGR class read indexed gzip files by parsing the igzip header comment field to retrieve the index-to-offset mapping, and then use that mapping to access specific blocks by integer key?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "abstract",
+    "methods"
+  ],
+  "skills": [
+    "compressed-file-header-parsing",
+    "random-access-index-implementation",
+    "binary-stream-seeking-and-decompression",
+    "python-class-design-with-dunder-methods",
+    "file-handler-interface-integration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pymzml/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp_run_reader",
+    "comp_gsgr",
+    "dataset_moby_dick",
+    "arch_file_access_layer",
+    "arch_igzip_format",
+    "artifact_indexed_gz_file"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:pymzML__pymzML",
+  "task_description": "Implement a custom file handler class (GSGR) that reads an igzip-compressed index from a file header and enables bracket-notation random access to retrieve individual items (e.g., chapters) by integer index, returning the decompressed content as output.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "igzip-compressed file with embedded index",
+      "port_id": "compressed_file",
+      "resolved_via": null,
+      "source": "task_002/indexed_gz_file",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the GSGR class to parse the igzip header, extract the index-to-offset mapping, and retrieve individual chapters by integer index using bracket notation.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Decompressed item content retrieved by integer index",
+      "port_id": "item_content",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "quality-control"
+  ],
+  "title": "Reconstruct the GSGR indexed gzip reader for random-access chapter retrieval from the Moby Dick igz file",
+  "tools": [
+    "pymzML",
+    "Python",
+    "xml.etree.ElementTree"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Parse the igzip file header to extract and decode the embedded index metadata into a dictionary mapping integer indices to byte offsets. 2. Implement a __getitem__ method that accepts an integer key, queries the index dictionary for the corresponding offset, seeks to that position in the compressed stream, and decompresses only the requested item. 3. Optionally implement a read method for sequential iteration by tracking the current item ID and incrementing it on each call. 4. Test random access by instantiating the handler with a compressed file path and retrieving a specific item using bracket notation (e.g., handler[5])."
+}

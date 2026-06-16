@@ -1,0 +1,1 @@
+{"result_id": "result_003", "summary": "ArchR now directly supports monocle3-based trajectory analysis. ArchR now directly supports Slingshot-based trajectory analysis.", "result_type": "minor", "claim_ids": ["claim_006", "claim_007"], "support_status": "not_evaluated", "linked_task_ids": ["task_002"], "linked_eval_check_ids": [], "task_relevance": "task_linked"}

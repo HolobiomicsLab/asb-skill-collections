@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:Nextflow4Metabolomics/nextflow4ms-dial repository root"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify nextflow executable version is \u226522.10.0 via 'nextflow -v'"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify Singularity is installed and functional via 'singularity --version'"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "a public .mzML LC-MS dataset (input file or persistent accession/URL)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "expected output directory structure produced by MS-DIAL processing step"
+    },
+    {
+      "id": "pf_007",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "final MSFLO output artifact (format and naming convention to be confirmed agains"
+    },
+    {
+      "id": "pf_008",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "workflow execution log contains no 'ERROR' or 'FAILED' status indicators",
+      "value": "ERROR"
+    },
+    {
+      "id": "pf_009",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "nextflow.log"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:Nextflow4Metabolomics/nextflow4ms-dial repository root",
+      "verify nextflow executable version is \u226522.10.0 via 'nextflow -v'",
+      "verify Singularity is installed and functional via 'singularity --version'",
+      "file_exists: a public .mzML LC-MS dataset (input file or persistent accession/URL)",
+      "script_runs: nextflow workflow invocation command with -profile singularity completes without fatal errors, robust to reasonable resource allocation parameter choices",
+      "file_exists: expected output directory structure produced by MS-DIAL processing step",
+      "file_exists: final MSFLO output artifact (format and naming convention to be confirmed against workflow definition)",
+      "contains_substring: workflow execution log contains no 'ERROR' or 'FAILED' status indicators",
+      "contains_substring: workflow completion message or success flag in .nextflow.log or equivalent execution report"
+    ],
+    "expert_review": [
+      "Verify that output files (.mzML processed data, MS-DIAL feature table, MSFLO statistical results) are scientifically plausible for the input LC-HRMS dataset (e.g., reasonable peak count, mass accuracy, retention time range, feature intensity distribution)",
+      "Assess whether workflow output schema and column names conform to MS-DIAL and MSFLO standard conventions",
+      "Confirm that containerized MS-DIAL and MSFLO versions embedded in Singularity image are compatible with the workflow configuration and produce metabolomics results consistent with standalone tool documentation"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

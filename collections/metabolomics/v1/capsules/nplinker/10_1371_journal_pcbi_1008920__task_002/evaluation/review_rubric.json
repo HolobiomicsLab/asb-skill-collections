@@ -1,0 +1,132 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: NPLinker repository at https://github.com/sdrogers/nplinker or Zenodo deposit http://doi.org/10.5281/zenodo.4680579"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify input dataset exists: GNPS training set with 4138 spectra (accessible via GNPS public library or supplementary data S1 Data)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify input dataset exists: MIBiG-GNPS paired dataset with 2966 validated BGC-spectrum links from S1 Data"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "file_exists and file_format_is: IOKR model checkpoint or serialized object (e.g., pickle, joblib, HDF5) produced after training"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output score vector is numeric array or table (CSV/TSV) with one score per pair,",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_008",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output score table has exactly 2966 rows (one per BGC-spectrum pair)",
+      "value": 2966
+    },
+    {
+      "id": "pf_009",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "score table includes spectrum identifier, BGC identifier, and IOKR score columns",
+      "value": [
+        "s"
+      ]
+    },
+    {
+      "id": "pf_010",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "IOKR scores are continuous values; robust to parameter choices (no exact byte-fo"
+    },
+    {
+      "id": "pf_011",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "reproduce histogram plot from S2 Fig showing IOKR score distribution with valida"
+    },
+    {
+      "id": "pf_012",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "0.0105"
+    },
+    {
+      "id": "pf_013",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "0.1208"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: NPLinker repository at https://github.com/sdrogers/nplinker or Zenodo deposit http://doi.org/10.5281/zenodo.4680579",
+      "verify input dataset exists: GNPS training set with 4138 spectra (accessible via GNPS public library or supplementary data S1 Data)",
+      "verify input dataset exists: MIBiG-GNPS paired dataset with 2966 validated BGC-spectrum links from S1 Data",
+      "script_runs: IOKR model training pipeline on GNPS 4138-spectrum training set with default or specified kernel parameters completes without error",
+      "file_exists and file_format_is: IOKR model checkpoint or serialized object (e.g., pickle, joblib, HDF5) produced after training",
+      "script_runs: IOKR scoring script applied to 2966 MIBiG-GNPS BGC-spectrum pairs produces score matrix with shape (2966,) or equivalent",
+      "file_format_is: output score vector is numeric array or table (CSV/TSV) with one score per pair, no missing values",
+      "row_count_equals: output score table has exactly 2966 rows (one per BGC-spectrum pair)",
+      "field_present: score table includes spectrum identifier, BGC identifier, and IOKR score columns",
+      "value_in_range: IOKR scores are continuous values; robust to parameter choices (no exact byte-for-byte match required, kernel and fingerprint function choices may produce slightly different score distributions)",
+      "output_matches_reference: reproduce histogram plot from S2 Fig showing IOKR score distribution with validated-link positions marked; check that validated-link positions are visibly enriched at higher scores relative to all-link distribution (no canonical answer for exact bin edges, but visual enrichment pattern must match figure)",
+      "output_matches_reference: reproduce summary statistics from Table 3 or results text: mean IOKR score for all links \u2248 0.0105, mean for validated links \u2248 0.0364, p-value \u2248 1.7968 \u00d7 10\u207b\u2079 (robust to small numerical precision differences)",
+      "output_matches_reference: reproduce top-n accuracy metrics from Table 3 (top-1: 0.1208, top-5: 0.1708, top-10: 0.1870, top-20: 0.2121, top-200: 0.2946, AUC: 0.6534), parameter-sensitive to model hyperparameters and kernel choice"
+    ],
+    "expert_review": [
+      "verify that IOKR kernel function (Probability Product Kernel applied to molecular fingerprints) is correctly instantiated and hyperparameters match published method description in Methods or supplementary text",
+      "verify that molecular fingerprint representation (type and dimensionality, e.g. Morgan, MACCS, or other) matches the published protocol",
+      "verify that training set of 4138 spectra is correctly filtered (denoising step, peak filtering to training-set peaks only) before IOKR model training",
+      "verify that scoring procedure correctly handles the 2966 MIBiG-GNPS pairs: each spectrum is matched against candidate set of BGC structures with MIBiG homology assignment",
+      "expert assessment: enrichment of validated links in high-scoring region is statistically significant and visually consistent with S2 Fig distribution shape and marked positions",
+      "expert assessment: IOKR score distribution shape, spread, and skewness are reasonable and consistent with reported mean and standard deviation estimates"
+    ]
+  },
+  "max_score": 13.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

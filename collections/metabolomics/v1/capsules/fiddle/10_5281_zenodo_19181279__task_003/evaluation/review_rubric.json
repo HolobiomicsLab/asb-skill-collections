@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "train_rescore.py"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "a checkpoint file is created in the expected output directory after training"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "checkpoint file is in PyTorch .pt or .pth format and is loadable"
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "load checkpoint and verify it contains both 'formula_encoder_state_dict' and 're",
+      "value": "formula_encoder_state_dict"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_009",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that train_rescore.py exists in the repository root or running_scripts/ directory",
+      "script_runs: execute train_rescore.py with a minimal configuration (e.g., single epoch, small batch size on a subset of data) and verify it completes without runtime errors",
+      "file_exists: verify that a checkpoint file is created in the expected output directory after training",
+      "file_format_is: verify that checkpoint file is in PyTorch .pt or .pth format and is loadable",
+      "contains_substring: load checkpoint and verify it contains both 'formula_encoder_state_dict' and 'rescore_head_state_dict' keys",
+      "expert_review: verify that TCN spectrum encoder parameters remain frozen (weights unchanged) throughout training by comparing encoder weights before and after training",
+      "expert_review: verify that FormulaEncoder and RescoreHead parameters are trainable (gradients flow) during training",
+      "expert_review: verify that BCE (binary cross-entropy) loss is applied during training by inspecting loss computation in train_rescore.py source code",
+      "expert_review: verify that checkpoints are saved only when formula_acc (with H) improves by checking training logs or checkpoint save conditions in code"
+    ],
+    "expert_review": [
+      "Confirm that the rescore model architecture correctly implements a Siamese design with frozen TCN encoder, element-wise product (z_spec \u2299 z_form), and scalar logit output",
+      "Verify that formula_acc metric is computed correctly (accuracy including hydrogen atom prediction) and that improvement-based checkpoint saving logic is correctly implemented",
+      "Inspect train_rescore.py source to confirm BCE loss is used for binary classification (positive/negative candidate pairs) rather than alternatives",
+      "Validate that the frozen TCN encoder prevents gradient updates to spectrum encoder weights by inspecting require_grad flags in code"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

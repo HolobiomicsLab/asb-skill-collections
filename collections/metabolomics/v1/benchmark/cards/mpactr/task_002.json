@@ -1,0 +1,366 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon.png",
+      "role": "figure",
+      "sha256": "a6f2ba245b962dd9dce35fa3a33fad06e189291254408b29c47184676f5cd9b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/expected_treemap.png",
+      "role": "figure",
+      "sha256": "4b821d08588485dba42f8f9167bb98b1c6128ea4a3e9c855e1ffa5985f7135c4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-96x96.png",
+      "role": "figure",
+      "sha256": "56213353c3a08f75c961592d769f2fb9fcf5af8338c9c27b4dc98ae2803238e3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon.svg",
+      "role": "figure",
+      "sha256": "09ee9737d1318e360e84eea3f2aadabd84cbd2380f3a2fb6503bc136efdc2b8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "405445d48a6b5f5799ebb942153a1b2ec73e7e345d161be3fe178d2c7fa3b51a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-192x192.png",
+      "role": "figure",
+      "sha256": "fc9b2c94db30b485e2aaaa0d1a75d018fd85f7982e2675b1cc52ccb8eb1017d2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-512x512.png",
+      "role": "figure",
+      "sha256": "293ad15edfd27f20182b01a95ae80c53a712f9d30d3c768646df15bc9cd823b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ea07ad29b19e5bb5d99f7d63e1b97e69a8a6ec55aba910b23a7c97830a26bc5d"
+    }
+  ],
+  "created_at": "2026-06-15T13:36:30.070661+00:00",
+  "crossref_doi": "10.1021/acs.analchem.2c04632",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "cultures_peak_table.csv \u2014 Progenesis-format peak table with columns: compound, m/z, retention time (min), raw abundance for each sample injection",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "cultures_metadata.csv \u2014 sample metadata table with columns: Injection, Sample_Code, Biological_Group (minimum required); example contains solvent blanks, media blanks, and biological replicates",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "qc_summary data.table with rows corresponding to input compounds and columns: compound ID, status (indicating which filter each ion failed or if the ion passed all applied filters)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Mispicked ions are isotopic patterns incorrectly split during peak-picking that can be identified by similarity in retention time and mass and merged using sum aggregation.",
+    "Solvent and media blanks are negative controls whose feature abundances above a relative threshold (e.g., 0.01 or 1%) should be removed to eliminate carryover and background contamination from experimental samples.",
+    "Coefficient of variation (CV) threshold of 0.2 (20%) is used to identify and flag non-reproducible compounds between technical replicates; ions exceeding this threshold indicate inconsistent detection.",
+    "The qc_summary() function returns a structured record of each input compound's fate across all applied filters, enabling visualization and interpretation of which quality control step removed which features."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: cultures_peak_table.csv (from mpactr package example_path)",
+      "verify file exists: cultures_metadata.csv (from mpactr package example_path)",
+      "script_runs: R script that loads mpactr library, imports cultures datasets via import_data(), applies filter_mispicked_ions(merge_peaks = TRUE, merge_method = \"sum\"), filter_group(group_to_remove = \"Solvent_Blank\"), and filter_cv(cv_threshold = 0.2) sequentially, then calls qc_summary() on the resulting object",
+      "output_matches_reference: returned data.table has field names matching vignette description (exact field names require expert review of vignette)",
+      "value_in_range: row count of qc_summary() output data.table is positive and less than or equal to number of unique compounds in filtered input"
+    ],
+    "expert_review": [
+      "verify that qc_summary() output data.table field structure and semantics (compound ID column, pass/fail status columns per filter) align with published vignette documentation",
+      "confirm that pass/fail status values are consistent with the three filter criteria (mispicked, group, CV threshold 0.2) applied in sequence",
+      "validate that the row count reflects correct filtering logic: compounds should only appear if they survive all three filters or are properly marked as failed at each stage"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] What is the structure and content of the data.table returned by qc_summary() when applied to a fully-filtered mpactr object?: 'A data.table reporting the compound id (`compounds`) and if it failed or passed filtering. If the ion failed filtering, its status will report the name of the filter it failed.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The qc_summary() function returns a data.table with compound IDs and filtering status for each ion, where passing ions are marked as passed and failing ions report the name of the filter they failed.: 'A data.table reporting the compound id (`compounds`) and if it failed or passed filtering. If the ion failed filtering, its status will report the name of the filter it failed.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] cultures_peak_table.csv \u2014 Progenesis-format peak table with columns: compound, m/z, retention time (min), raw abundance for each sample injection: 'import_data(example_path(\"cultures_peak_table.csv\"), example_path(\"cultures_metadata.csv\"), format = \"Progenesis\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] cultures_metadata.csv \u2014 sample metadata table with columns: Injection, Sample_Code, Biological_Group (minimum required); example contains solvent blanks, media blanks, and biological replicates: 'example_path(\"cultures_metadata.csv\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] qc_summary data.table with rows corresponding to input compounds and columns: compound ID, status (indicating which filter each ion failed or if the ion passed all applied filters): 'This function returns a `data.table` reporting the ion status for each input ion. This includes which filter each ion failed or passed, or if the ion passed all applied filters.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mpactr: 'library(mpactr)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'This table can be used for a variety of analyses that can be conducted in R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] data.table: 'library(data.table)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mpactr); library(data.table); peak_table <- read.csv('{inputs.peak_table}'); metadata <- read.csv('{inputs.metadata}'); obj <- mpactr::create_mpactr_object(peak_table, metadata, format='progenesis'); obj <- mpactr::merge_isotopes(obj, rt_window=0.5, mz_window=0.01); obj <- mpactr::filter_contamination(obj, solvent_blank_threshold=0.01, media_blank_threshold=0.01); obj <- mpactr::filter_cv(obj, cv_threshold=0.2); qc_result <- mpactr::qc_summary(obj); fwrite(qc_result, 'qc_summary_output.csv'); cat('QC summary extracted with', nrow(qc_result), 'compounds\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "qc_summary.csv",
+  "expected_outputs": [
+    "qc_summary data.table with rows corresponding to input compounds and columns: compound ID, status (indicating which filter each ion failed or if the ion passed all applied filters)"
+  ],
+  "finding": "The qc_summary() function returns a data.table with compound IDs and filtering status for each ion, where passing ions are marked as passed and failing ions report the name of the filter they failed.",
+  "github_name": "mums2/mpactr",
+  "input_from": "task_001",
+  "inputs": [
+    "cultures_peak_table.csv \u2014 Progenesis-format peak table with columns: compound, m/z, retention time (min), raw abundance for each sample injection",
+    "cultures_metadata.csv \u2014 sample metadata table with columns: Injection, Sample_Code, Biological_Group (minimum required); example contains solvent blanks, media blanks, and biological replicates"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "filtered_data_post_mispicked.rds",
+    "filtered_data_post_solvent_blank.rds",
+    "filtered_data_post_media_blank.rds",
+    "filtered_data_post_cv.rds"
+  ],
+  "linked_result_ids": [
+    "result_015",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_005",
+    "result_047",
+    "result_048"
+  ],
+  "methodology_summary": [
+    "Load peak table and metadata into mpactr object using Progenesis format parser.",
+    "Identify and merge mispicked isotopic patterns using retention-time and mass similarity windows with sum-based peak merging.",
+    "Remove solvent blank contamination by filtering features above 1% relative abundance in solvent blank samples.",
+    "Remove media blank features above 1% relative abundance threshold to eliminate background components.",
+    "Flag non-reproducible compounds by computing coefficient of variation across technical replicates and removing those exceeding the 0.2 threshold.",
+    "Extract and validate qc_summary() output reporting compound ID and pass/fail status for each filter step.",
+    "Validation: Verify that the qc_summary data.table contains all input compounds as rows, includes a 'status' field documenting filter outcomes (passed all filters, or named filter failed), and row count is consistent with the filtered feature count reported by the vignette.",
+    "References: source article (DOI: 10.1021/acs.analchem.2c04632)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/failed_ions_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the structure and content of the data.table returned by qc_summary() when applied to a fully-filtered mpactr object?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods",
+    "abstract"
+  ],
+  "skills": [
+    "tandem-ms-feature-table-import-and-parsing",
+    "mispicked-ion-detection-and-merging",
+    "blank-contamination-filtering",
+    "technical-replicate-reproducibility-assessment",
+    "filter-status-data-structure-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mpactr/synthesized_package",
+  "spine_condition_ids": [
+    "cond_default_reference_semantics",
+    "cond_deep_copy_semantics",
+    "cond_full_filter_pipeline"
+  ],
+  "spine_entity_ids": [
+    "mpactr_system",
+    "filter_pipeline_artifact",
+    "comp_import_data",
+    "comp_filter_mispicked",
+    "comp_filter_group",
+    "comp_filter_cv",
+    "comp_filter_summary",
+    "comp_qc_summary",
+    "comp_get_peak_table",
+    "comp_get_raw_data",
+    "comp_get_group_averages",
+    "tool_data_table",
+    "dataset_cultures",
+    "dataset_PTY087I2",
+    "cond_default_reference_semantics",
+    "cond_deep_copy_semantics",
+    "cond_full_filter_pipeline",
+    "result_ions_remaining_cultures",
+    "result_reference_semantics_inplace",
+    "result_biological_group_cor_matches_technical"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:mums2__mpactr",
+  "task_description": "Run qc_summary() on a fully-filtered mpactr object (cultures dataset filtered for mispicked ions, group contamination, and low coefficient of variation) to produce a data.table reporting compound IDs and their pass/fail status across all applied filters. Verify the output structure matches the documented vignette specification.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Progenesis-format peak table with compound, m/z, retention time, and raw abundances",
+      "port_id": "peak_table",
+      "resolved_via": null,
+      "source": "task_001/failed_ions_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample metadata with Injection, Sample_Code, and Biological_Group columns",
+      "port_id": "metadata",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute qc_summary() on a filtered cultures dataset and verify the returned data.table contains correct compound IDs and pass/fail status fields per the vignette specification.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "data.table reporting compound ID and pass/fail status per filter",
+      "port_id": "qc_summary_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "quality-control",
+    "clustering",
+    "correlation-analysis"
+  ],
+  "title": "Reproduce qc_summary() output table for all input ions after full filter pipeline",
+  "tools": [
+    "mpactr",
+    "R",
+    "data.table"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: qc_summary data.table with rows corresponding to input compounds and columns: compound ID, status (indicating which filter each ion failed or if the ion passed all applied filters)."
+  ],
+  "workflow_description": "1. Import cultures_peak_table.csv and cultures_metadata.csv using mpactr::import_data() with format='Progenesis'. 2. Apply filter_mispicked_ions() with merge_peaks=TRUE and merge_method='sum' to identify and merge isotopic pattern splitting artifacts. 3. Apply filter_group() to remove Solvent_Blank contaminant features above relative abundance threshold of 0.01. 4. Apply filter_group() to remove Media blank features above relative abundance threshold of 0.01. 5. Apply filter_cv() with cv_threshold=0.2 to flag non-reproducible compounds across technical replicates. 6. Call qc_summary() on the fully-filtered mpactr object to extract the data.table containing compound IDs and filter status (passed, failed per filter, or passed all filters)."
+}

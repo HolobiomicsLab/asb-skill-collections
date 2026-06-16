@@ -1,0 +1,163 @@
+# SciTask Card: Reconstruct the ConverterBuilder automatic service discovery and Job enumeration mechanism
+
+- Task ID: `task_002`
+- Schema version: `0.18.0`
+- Created at: `2026-06-16T05:39:21.024441+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_msmetaenhancer/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-processing`, `information-extraction`, `benchmark-evaluation`
+- GitHub: `RECETOX/MSMetaEnhancer`
+- Quality: Score 2/5 — Coherent: false, placeholder, 5 grounding failures
+
+## Classification
+
+- Task kind: `component_reconstruction`
+- Article type: `software-tool`
+- Primary domain: `cheminformatics`
+- Subdomains: `computational-metabolomics`
+- Techniques: `database-annotation`, `metabolite-identification`
+
+## Research Question
+How does the ConverterBuilder component automatically discover and instantiate all available converter classes to create a complete set of source-to-target conversion Job objects?
+
+## Connected Finding
+MSMetaEnhancer fetches metadata from multiple external services (CIR, CTS, PubChem, IDSM, and BridgeDb), which serve as the underlying converters that the ConverterBuilder must discover and instantiate into Job objects.
+
+## Task Description
+Implement the ConverterBuilder component that automatically discovers all available WebConverter and ComputeConverter subclasses from the MSMetaEnhancer package and instantiates the complete set of Job objects representing all supported source→target conversion pairs. Verify the enumerated jobs match the conversion functions defined in each converter class.
+
+## Inputs
+- MSMetaEnhancer source code package including libs/converters/web/ and libs/converters/compute/ directories
+- WebConverter and ComputeConverter base class definitions with conversion specifications
+
+## Expected Outputs
+- Enumerated list of Job objects (source_attribute, target_attribute, converter_name) representing all supported conversions
+- Test report (pytest output) verifying discovered jobs match converter-defined conversion methods
+- ConverterBuilder instantiation log or manifest showing all discovered converter classes and their conversion counts
+
+## Expected Output File
+
+- `converter_jobs_manifest.json`
+
+## Landmark Outputs
+
+- `discovered_converters.txt`
+- `converter_conversions_list.csv`
+- `pytest_output.log`
+
+## Tools
+- pytest
+- Python
+- MSMetaEnhancer
+
+## Skills
+- python-class-discovery-reflection
+- converter-job-enumeration-and-mapping
+- asynchronous-converter-instantiation
+- dynamic-method-signature-introspection
+- converter-specification-validation
+
+## Workflow Description
+1. Scan the MSMetaEnhancer.libs.converters.web and MSMetaEnhancer.libs.converters.compute package directories to dynamically discover all converter class definitions. 2. For each discovered converter subclass, instantiate the class with appropriate initialization arguments (session for WebConverters, no arguments for ComputeConverters). 3. Introspect each instantiated converter to extract the conversions list defined in its __init__ method, which specifies (source_attr, target_attr, conversion_method) tuples. 4. Generate Job objects as (source_attribute, target_attribute, converter_name) tuples for each conversion specification. 5. Aggregate all Job objects into a master enumeration and validate that the list is non-empty and contains expected converter-specific conversions. 6. Run pytest on the ConverterBuilder test suite to verify that discovered jobs match expected conversion function signatures across all available services.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/scheme.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No explicit specification of which WebConverter and ComputeConverter subclasses are expected to be discovered
+- No description of the structure or interface of the Job class or object
+- No specification of the exact format or naming convention for converter classes that should be auto-discovered
+
+## Domain Knowledge
+- MSMetaEnhancer defines converters as subclasses of WebConverter (for API services) or ComputeConverter (for local computation), each declaring conversions as a list of (source_attr, target_attr, method_name) tuples in __init__.
+- The ConverterBuilder must handle both synchronous initialization for ComputeConverters and session-based initialization for WebConverters to properly instantiate the full converter suite.
+- Job objects represent a bounded conversion task from one metadata attribute to another; they form the atomic units of the annotation workflow and must be enumerable before execution.
+- Dynamic method creation in converters generates conversion methods like compound_name_to_inchi() from the conversions list; ConverterBuilder discovery must validate that all declared conversions correspond to actual callable methods.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: pytest, Enumerated list of Job objects (source_attribute, target_attribute, converter_name) representing all supported conversions, Test report (pytest output) verifying discovered jobs match converter-defined conversion methods, ConverterBuilder instantiation log or manifest showing all discovered converter classes and their conversion counts.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] How does the ConverterBuilder component automatically discover and instantiate all available converter classes to create a complete set of source-to-target conversion Job objects?: 'It adds metadata like SMILES, InChI, and CAS number fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb.'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] MSMetaEnhancer fetches metadata from multiple external services (CIR, CTS, PubChem, IDSM, and BridgeDb), which serve as the underlying converters that the ConverterBuilder must discover and instantiate into Job objects.: 'It adds metadata like SMILES, InChI, and CAS number fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb.'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [methods] MSMetaEnhancer source code package including libs/converters/web/ and libs/converters/compute/ directories: 'Converter Builder: Automatically discovers and instantiates available converters; Manages both web and compute converters'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [methods] WebConverter and ComputeConverter base class definitions with conversion specifications: 'Base Converter Classes: Converter: Abstract base class for all converters; WebConverter: Base class for web-based API services; ComputeConverter: Base class for local computation services'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [methods] Enumerated list of Job objects (source_attribute, target_attribute, converter_name) representing all supported conversions: 'Job System: Job: Represents a conversion task (source → target using specific converter); Jobs are defined as tuples: (source_attribute, target_attribute, converter_name)'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [methods] Test report (pytest output) verifying discovered jobs match converter-defined conversion methods: 'make sure the existing tests still work by running ``pytest``'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [methods] ConverterBuilder instantiation log or manifest showing all discovered converter classes and their conversion counts: 'Converter Builder: Automatically discovers and instantiates available converters'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [methods] pytest: 'make sure the existing tests still work by running ``pytest``'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [methods] Python: 'Create a new Python file in `MSMetaEnhancer/libs/converters/web/` named after your service'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [methods] MSMetaEnhancer: 'Converter Builder: Automatically discovers and instantiates available converters'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [discussion] No explicit specification of which WebConverter and ComputeConverter subclasses are expected to be discovered: 'passed `multidict` instead of `frozendict` to `aiohttp.ClientSession.post` (required by package)'
+- `ev_012` from `agent2_synthesis` (agent2_traced): [discussion] No description of the structure or interface of the Job class or object: 'take only first result when there are multiple hits in CIR conversions'
+- `ev_013` from `agent2_synthesis` (agent2_traced): [discussion] No specification of the exact format or naming convention for converter classes that should be auto-discovered: 'support `ISOMERIC_SMILES` and `CANONICAL_SMILES` in PubChem instead of generic `SMILES`'
+
+## Evaluation Strategy
+### Direct Checks
+- verify file exists: MSMetaEnhancer source code repository contains ConverterBuilder class definition
+- script_runs: instantiate ConverterBuilder and execute automatic discovery of all WebConverter and ComputeConverter subclasses without errors
+- output_matches_reference: generated Job list (source → target conversion pairs) can be enumerated from discovered converters
+- verify field_present: each Job object in enumerated list contains source identifier, target identifier, and reference to conversion function
+- script_runs: call get_conversion_functions on instantiated converter objects and verify returned functions match Job specifications, robust to order of discovery
+
+### Expert Review
+- verify that all converter subclasses discovered by ConverterBuilder are legitimate WebConverter or ComputeConverter implementations (no false positives from parent or abstract classes)
+- verify that Job enumeration is complete: no supported converter classes are overlooked by the discovery mechanism
+- verify that conversion function references in Job objects are callable and semantically correspond to declared source→target pairs
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Execution Profile
+- **Compute tier:** trivial
+
+## Methodology Summary
+1. Dynamically discover all converter class definitions in the web and compute converter packages using Python module introspection.
+2. Instantiate each discovered converter class with appropriate initialization parameters (session for web, no args for compute).
+3. Extract the conversions tuple list from each converter's __init__ method via attribute inspection.
+4. Transform each conversion tuple into a Job object and aggregate into a master enumeration.
+5. Validate that all declared conversion methods are callable and match their specifications.
+6. Validation: Run pytest on ConverterBuilder tests to confirm that the enumerated job list matches the expected set of conversions for all registered services.
+
+## Workflow Ports
+
+**Inputs:**
+
+- `converter_source_code` — MSMetaEnhancer converters package
+- `web_compute_base_classes` — WebConverter and ComputeConverter base class definitions
+
+**Outputs:**
+
+- `job_enumeration` — Complete list of Job objects (source, target, converter_name tuples)
+- `test_report` — pytest output validating discovered jobs against converter specifications
+- `builder_manifest` — ConverterBuilder instantiation manifest with discovered converters and conversion counts
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:RECETOX__MSMetaEnhancer`
+- **Synthesized at:** 2026-06-16T05:45:31+00:00
+
+## Extraction Quality
+- Score: 2/5
+- Coherent: false
+- Placeholder detected: true
+- Groundedness failures (5):
+  - inputs[0]: evidence_span not found in section 'methods' (value='MSMetaEnhancer source code package including libs/converters', span='Converter Builder: Automatically discovers and instantiates ')
+  - inputs[1]: evidence_span not found in section 'methods' (value='WebConverter and ComputeConverter base class definitions wit', span='Base Converter Classes: Converter: Abstract base class for a')
+  - expected_outputs[0]: evidence_span not found in section 'methods' (value='Enumerated list of Job objects (source_attribute, target_att', span='Job System: Job: Represents a conversion task (source → targ')
+  - research_question and finding are semantically misaligned: research_question asks about ConverterBuilder's discovery/instantiation mechanism, but evidence_span discusses MSMetaEnhancer's metadata fetching from external services (CIR, CTS, PubChem, IDSM, BridgeDb) — these are distinct concerns
+  - finding's inference that external services 'serve as the underlying converters' is not supported by the evidence_span, which only describes metadata fetching, not converter architecture
+- Notes: This card exhibits a fundamental coherence failure: the research_question targets ConverterBuilder's class discovery and instantiation mechanism, while the evidence_span discusses MSMetaEnhancer's metadata enrichment capabilities via external REST services. The finding then attempts to bridge these by inferring that external services 'are' the converters ConverterBuilder discovers — but this causal link is nowhere present in the evidence. The task is well-designed and detailed (workflow, evaluation strategy, domain knowledge are solid), but it is entirely disconnected from its stated research question and finding. Either: (1) the research_question should be reframed to ask about metadata enrichment from external services, (2) the evidence_span should cite actual passages describing converter class discovery, or (3) the task should be split into two separate cards. Additionally, missing_information entries cite evidence_spans that are implementation details unrelated to the stated missing information, suggesting these were auto-populated without careful review.
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

@@ -1,21 +1,25 @@
 ---
 name: mass-spectrometry-adduct-annotation
-description: Use when you have mass spectrometry data from derivatized metabolite samples and need to automatically predict and validate the ion forms (e.g., [M+matrix_adduct]+) produced by a specific derivatizing matrix.
+description: Use when you have preprocessed MS/MS spectra with measured precursor m/z values but the ionization adduct type is unknown or ambiguous—particularly in metabolomics workflows where multiple adducts co-occur or in de novo formula annotation without access to curated spectral databases.
 license: CC-BY-4.0
 metadata:
-  edam_operation: http://edamontology.org/operation_3282
+  edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121
-  - http://edamontology.org/topic_3172
-  - http://edamontology.org/topic_0602
+  - http://edamontology.org/topic_3370
   tools:
-  - RDKit
-  - Met-ID
+  - MIST
+  - MIST-CF
+  - SIRIUS
+  - SCARF
 derived_from:
-- doi: 10.1021/acs.analchem.5c00633
-  title: metid
+- doi: 10.1021/acs.jcim.3c01082
+  title: mistcf
 evidence_spans:
-- Powered by RDKit
+- an extension of MIST for annotating MS1 precursor masses from MS/MS data
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v1
@@ -24,7 +28,10 @@ provenance:
   - build: coll_metid
     doi: 10.1021/acs.analchem.5c00633
     title: metid
-  dedup_kept_from: coll_metid
+  - build: coll_mistcf
+    doi: 10.1021/acs.jcim.3c01082
+    title: mistcf
+  dedup_kept_from: coll_mistcf
 schema_version: 0.2.0
 ---
 
@@ -32,59 +39,69 @@ schema_version: 0.2.0
 
 ## Summary
 
-Automated prediction and annotation of ion adducts produced by derivatizing matrices in mass spectrometry imaging, extending beyond common [M+H]+ and [M-H]− forms to support novel chemical matrices like FMP-10 and TAHS. This skill enables high-throughput metabolite identification by correctly mapping observed m/z peaks to their corresponding adduct forms.
+Rank and assign ionization adducts (e.g., [M+H]+, [M+Na]+, [M+K]+) to unknown precursor m/z values in tandem MS/MS spectra using a neural network energy-based scoring model. This skill is essential when precursor mass alone is ambiguous across multiple possible adduct types and chemical formulas.
 
 ## When to use
 
-Use this skill when you have mass spectrometry data from derivatized metabolite samples and need to automatically predict and validate the ion forms (e.g., [M+matrix_adduct]+) produced by a specific derivatizing matrix. This is especially critical when working with non-standard matrices beyond [M+H]+ in positive mode or [M-H]− in negative mode, or when manual expert annotation is infeasible in high-throughput studies.
+Apply this skill when you have preprocessed MS/MS spectra with measured precursor m/z values but the ionization adduct type is unknown or ambiguous—particularly in metabolomics workflows where multiple adducts co-occur or in de novo formula annotation without access to curated spectral databases. MIST-CF's multi-adduct support (beyond [M+H]+ alone) is most valuable when working with positive-mode spectra that may contain sodium, potassium, or other common adducts.
 
 ## When NOT to use
 
-- Input data is limited to common [M+H]+ or [M-H]− ions without need for matrix-specific adduct prediction
-- Derivatizing matrix composition and ionization behavior are not documented or cannot be parameterized in a configuration file
-- Manual expert annotation is already complete and no high-throughput automation is required
+- Spectrum is already annotated with a high-confidence adduct from MS1 isotope pattern or prior orthogonal measurement; use direct formula search instead.
+- Negative-mode spectra or exotic adducts (e.g., [M−H]−, [M+Cl]−) not covered by the model training regime; MIST-CF is currently limited to positive-mode adducts only.
+- Input is a feature matrix or pre-aggregated spectral library; this skill operates on individual, peak-resolved MS/MS spectra.
 
 ## Inputs
 
-- Mass spectrometry imaging data (m/z values and intensities)
-- Metabolite structure database or known chemical standards
-- Derivatizing matrix configuration (composition, ionization parameters, expected adduct forms)
-- MS2 spectra from chemical standards (optional, for validation)
+- MS/MS spectrum (mgf or mzML format): list of fragment m/z–intensity pairs
+- precursor m/z value (float, typically 100–2000)
+- instrument type (covariate: e.g., Orbitrap, Q-TOF)
 
 ## Outputs
 
-- Adduct annotations mapping observed m/z peaks to molecular ions and their characteristic adduct forms
-- Confidence scores or validation metrics comparing predictions against ground-truth adducts
-- Annotated metabolite identifications with ion type assignments (e.g., [M+matrix_adduct]+)
+- ranked list of candidate (chemical_formula, adduct_type, energy_score) tuples
+- top-1, top-3, top-k accuracy metrics (per spectrum and aggregated)
+- comparison table: MIST-CF vs. SIRIUS top-k accuracy on benchmark dataset
 
 ## How to apply
 
-First, register your derivatizing matrix in Met-ID's configuration system by creating a configuration file or plugin module specifying the matrix composition, ionization behavior, and expected adduct forms (e.g., TAHS or other documented reagents). Next, run Met-ID on a test set of metabolites with known derivatization behavior using the newly registered matrix. Parse Met-ID's output to extract predicted adduct annotations and verify that they match the expected ion forms produced by your matrix. Finally, compare the predicted adducts against ground-truth or literature-reported adducts for your test metabolites using RDKit-powered structure analysis to confirm that the matrix configuration correctly recognizes and applies the derivatizing chemistry.
+Load the preprocessed MS/MS spectrum and its precursor m/z value into the MIST-CF formula transformer model. The model internally generates candidate chemical formulas using a dynamic programming algorithm (SIRIUS decomposition) for that precursor mass, then scores each candidate formula–adduct pair by computing the agreement (energy-based score) between the predicted spectrum and observed fragment intensities. The model learns this scoring function in a data-dependent fashion from training spectra rather than using hardcoded fragmentation rules. Evaluate ranking by computing top-1, top-3, and top-k accuracy: check how often the true formula and adduct combination appear in the model's ranked list. Compare your top-k accuracy against a SIRIUS baseline to validate the improvement from end-to-end learning.
 
 ## Related tools
 
-- **Met-ID** (Core software platform that automates metabolite identification in mass spectrometry imaging with extensible support for multiple derivatizing matrices and adduct form prediction via RDKit-powered structure analysis) — https://github.com/pbjarterot/Met-ID
-- **RDKit** (Cheminformatics engine used by Met-ID to parse molecular structures, predict ionization behavior, and compute expected adduct forms for registered derivatizing matrices)
+- **MIST-CF** (primary neural-network model for energy-based adduct and formula ranking; implements formula transformer architecture with sinusoidal embeddings and multi-adduct scoring) — https://github.com/samgoldman97/mist-cf
+- **SIRIUS** (formula enumeration backend (SIRIUS decomp); generates candidate formulas for a given precursor m/z via dynamic programming; used as baseline for performance comparison) — https://bio.informatik.uni-jena.de/software/sirius/
+- **SCARF** (prior work that developed sinusoidal formula embeddings; embeddings are reused in MIST-CF to represent chemical formula candidates) — https://arxiv.org/abs/2303.06470
+
+## Examples
+
+```
+. quickstart/run_model.sh
+```
 
 ## Evaluation signals
 
-- Predicted adduct annotations match ground-truth or literature-reported adducts for test metabolites with ≥90% accuracy
-- Output adduct forms conform to the registered matrix configuration (e.g., [M+matrix_adduct]+ for the specified matrix)
-- MS2 spectra from unknown compounds show characteristic fragmentation patterns consistent with the assigned adduct type when compared to standards
-- No spurious adduct assignments occur; all predicted ions have documented ionization pathways for the registered derivatizing matrix
-- Validation metrics (e.g., cosine similarity between predicted and observed MS2 spectra) fall within expected ranges for your matrix chemistry
+- Top-1 accuracy (does the model rank the true formula–adduct pair first?) should exceed SIRIUS baseline by ≥5–10 percentage points on benchmark datasets like NPLIB1 or CASMI 2022.
+- Top-k accuracy curves (k=1,3,5,10) should be monotonic and plateau; inspect for unexpected drops indicating systematic failure modes.
+- Per-adduct accuracy breakdown (e.g., [M+H]+ vs. [M+Na]+ vs. [M+K]+) should show balanced performance across adduct types; large gaps suggest class imbalance in training data.
+- Spectrum-level agreement between predicted fragments and observed intensities (energy score) should correlate with ranking correctness: high-scoring candidates should match ground truth more often.
+- Model output ranking should not collapse to a single candidate with probability ≈1.0 (overfitting); calibrated soft rankings across top-k candidates indicate healthy uncertainty.
 
 ## Limitations
 
-- Met-ID is under active development and database files may require manual removal and reinstallation when updating versions (on Windows: 'com.farmbio.metid' folder in AppData/Roaming; on macOS: Library/Application Support; similar paths on Linux)
-- Some macOS functionality issues with adding functional groups are noted and under active development
-- Adduct prediction accuracy depends critically on accurate parameterization of matrix composition and ionization behavior; undocumented or poorly characterized matrices may not be reliably extended
-- The base version includes MS2 spectra only for FMP-10-derivatized standards collected on FT-ICR instruments; other matrix-specific spectral libraries must be user-generated
+- MIST-CF operates in positive-mode only; negative-mode spectra ([M−H]−, [M+Cl]−) require model retraining or a separate negative-mode checkpoint.
+- Ranking performance depends heavily on training set composition: models trained on NPLIB1 (natural products) may underperform on synthetic or pharmaceutical spectra with different fragmentation patterns.
+- The model requires SIRIUS decomp to enumerate candidate formulas first; enumeration speed and completeness are inherited from SIRIUS's dynamic programming algorithm and may struggle with very high or very low m/z ranges.
+- Adduct type coverage is limited to common adducts observed during training; exotic adducts (e.g., [M+2Na]2+, [M+NH4]+) not represented in the training set will not be ranked.
+- Ground-truth formula–adduct pairs must be known during evaluation; if ground truth is uncertain or multimodal (multiple plausible annotations for one spectrum), accuracy metrics become less reliable.
 
 ## Evidence
 
-- [readme] Met-ID has a particular focus on derivatizing matrices leading to other ions than the common [M+H]+ in positive mode and [M-H]− in negative mode: "Met-ID has a particular focus on derivatizing matrices leading to other ions than the common [M+H]+ in positive mode and [M-H]− in negative mode"
-- [other] Met-ID has been designed with extensibility in mind to support any derivatizing matrix, not limited to FMP-10: "Met-ID is extendable to use any derivatizing matrix with the tools to do local version changes right from inside the software"
-- [other] Create a configuration for a second derivatizing matrix, specifying composition, ionization, and expected adducts: "Create a configuration file or plugin module for the second derivatizing matrix (TAHS or similar publicly documented reagent), specifying the matrix composition, ionization behavior, and expected"
-- [other] Verify adduct annotations match expected ions and compare against ground truth: "Compare predicted adducts against ground truth or literature-reported adducts for the test metabolites to confirm correct recognition and application"
-- [readme] Manual metabolite identification in high-throughput studies is not feasible: "most of this is done manually by experts which in the world of high throughput studies is not feasable"
+- [readme] MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach, without referencing any spectrum databases: "MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach, without referencing any spectrum databases"
+- [readme] Instead of computing fragmentation trees, MIST-CF adopts a formula transformer neural network architecture and learns in a data dependent fashion: "Instead of computing fragmentation trees, MIST-CF adopts a formula transformer neural network architecture and learns in a data dependent fashion"
+- [readme] Considering multiple adduct types beyond [M+H]+ (still only positive mode): "Considering multiple adduct types beyond [M+H]+ (still only positive mode)"
+- [readme] Utilize the dynamic programming algorithm implemented by SIRIUS, SIRIUS decomp, which is provided as an independent module: "To list out all potential formulae for an observed MS1 mass, we utilize the dynamic programming algorithm implemented by SIRIUS, `SIRIUS decomp`, which is provided as an independent module"
+- [other] Evaluate ranking performance by computing top-1, top-3, and top-k accuracy metrics for formula and adduct predictions: "Evaluate ranking performance by computing top-1, top-3, and top-k accuracy metrics for formula and adduct predictions"
+- [other] Compare MIST-CF top-k accuracy results against SIRIUS baseline predictions on the same dataset: "Compare MIST-CF top-k accuracy results against SIRIUS baseline predictions on the same dataset"
+- [readme] Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees): "Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)"
+- [readme] This model may be less performant than the model trained on the commercial NIST20 Library (particularly for Orbitrap or higher resolution data): "This model may be less performant than the model trained on the commercial NIST20 Library (particularly for Orbitrap or higher resolution data)"

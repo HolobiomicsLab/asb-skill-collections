@@ -1,0 +1,342 @@
+schema_version: 0.1.0
+workflow_id: coll_mass2adduct_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: mass2adduct is an R package that identifies and visualizes molecular adducts
+    in mass spectrometry imaging data by computing pairwise mass differences, matching
+    them to known chemical transformations, and enabling spatial correlation analysis.
+  pseudo_abstract: 'Reproduces 1 reported result: The mass2adduct package implements
+    a pipeline that computes mass difference objects, builds histograms of those differences,
+    matches them to known adducts using adductMatch(), and ranks results with topAdducts()
+    to identify the most abundant adducts. Analyses 1 derived result: The pointsAdducts()
+    function generates a scatter plot that highlights adduct ions in red and parent
+    ions in contrasting colors, enabling visual identification of the red/blue overlap
+    pattern between sodium adducts and their corresponding parent ions. Reconstructs
+    1 described mechanism (described in the paper but not separately evaluated there):
+    The corrPairsMSI() function performs a two-tailed Pearson correlation test on
+    each pair of peaks in the massdiff object to assess spatial correlation between
+    parent and adduct ions. Extends the paper in 1 task beyond its reported scope:
+    The mass2adduct package provides cardinal2msimat() for converting Cardinal MSI
+    data objects to the msimat format compatible with the massdiff() and adductMatch()
+    pipeline.'
+  research_questions:
+  - What is the complete computational workflow for detecting and ranking molecular
+    adducts in mass spectrometry imaging data using the mass2adduct package?
+  - How does the corrPairsMSI() function compute pairwise correlations between ion
+    pairs in mass spectrometry imaging data with statistical correction?
+  - How can sodium adduct ions be visually distinguished from their parent ions in
+    mass spectrometry imaging data?
+  - Can mass2adduct's massdiff() and adductMatch() pipeline successfully process MSI
+    data converted from Cardinal's MSProcessedImagingExperiment or MSContinuousImagingExperiment
+    objects using the cardinal2msimat() function?
+  methods_summary: "Load preprocessed MSI data from CSV into msimat object Compute\
+    \ all pairwise mass differences using massdiff() to identify potential adduct\
+    \ pairs Generate mass difference histogram using hist() to visualize distribution\
+    \ of observed mass differences Match histogram peaks to known chemical transformations\
+    \ using adductMatch() with adducts reference dataset, reporting counts and quantiles\
+    \ Rank mass differences by occurrence using topAdducts() and annotate with known\
+    \ adduct matches Validation: Verify that topAdducts() output includes counts,\
+    \ quantiles, and adduct name matches for top-ranked mass differences; confirm\
+    \ massdiff object subset excludes ion pairs without matched adducts References:\
+    \ source article (DOI: 10.1021/acs.analchem.0c04720) Load MSI intensity matrix\
+    \ from CSV and construct msimat object for downstream analysis. Generate all pairwise\
+    \ mass differences between observed m/z peaks to identify potential adduct candidates.\
+    \ Annotate ion pairs by matching observed mass differences to known chemical adducts\
+    \ using adducts2 reference set. Compute Pearson correlation coefficients between\
+    \ parent and adduct ion intensity profiles across pixels using corrPairsMSI().\
+    \ Apply Bonferroni multiple-testing correction to assess statistical significance\
+    \ of spatial correlations at family-wise error rate. Validation: Output massdiff\
+    \ data frame contains non-null Estimate, P.value, and Significance columns for\
+    \ all annotated pairs; Bonferroni-corrected p-values are \u2264 0.05 for rows\
+    \ marked Significance=TRUE. References: source article (DOI: 10.1021/acs.analchem.0c04720)\
+    \ Subset correlation-filtered massdiff object to sodium adduct matches only Load\
+    \ preprocessed MSI data matrix and annotated massdiff object into R/mass2adduct\
+    \ environment Overlay adduct ion peaks as red filled points (pch=20) using pointsAdducts(which='adduct')\
+    \ Overlay parent ion peaks as blue circle outlines (pch=1) using pointsAdducts(which='parent')\
+    \ Validation: confirm visual output shows characteristic red/blue overlap pattern\
+    \ indicating ions with dual parent-adduct roles in the same sample References:\
+    \ source article (DOI: 10.1021/acs.analchem.0c04720) Load a Cardinal imaging experiment\
+    \ object (MSProcessedImagingExperiment or MSContinuousImagingExperiment) into\
+    \ R. Convert the Cardinal object to msimat format using cardinal2msimat() function\
+    \ to produce a peak-intensity matrix with m/z column names. Compute all pairwise\
+    \ mass differences using massdiff(), producing a three-column data.frame (parent\
+    \ m/z, adduct m/z, mass difference). Match each mass difference to the closest\
+    \ entry in a reference adduct database using adductMatch() with built-in or custom\
+    \ adduct table. Validation: verify that the output object is a data.frame with\
+    \ columns A, B, diff, and matches; confirm that at least one ion pair matches\
+    \ to a known adduct; inspect matches column for non-NA entries indicating successful\
+    \ mapping to the reference database. References: source article (DOI: 10.1021/acs.analchem.0c04720)"
+  domain: metabolomics
+  techniques:
+  - adduct-detection
+  - mass-spectrometry-imaging
+  - maldi
+  - metabolite-identification
+  - feature-detection
+  claims:
+  - claim_text: In mass spectrometry imaging, adducts can form between target molecules
+      such as metabolites and other substances such as matrix or salt ions.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_ADDUCTS_DATASET
+  - claim_text: The mass2adduct package accompanies Janda et al. (2021).
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MASS2ADDUCT
+  - claim_text: Each peak in a mass spectrum represents ions of a given mass/charge
+      ratio (m/z) that have been detected by the instrument.
+    claim_type: finding
+    speculative: false
+  - claim_text: In mass2adduct documentation, the term 'mass peak' is used to refer
+      to both the ions themselves and to their nominal m/z values.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MASS2ADDUCT
+  - claim_text: A chemical transformation refers agnostically to the chemical difference
+      between two ions.
+    claim_type: finding
+    speculative: false
+    entity_id: CONCEPT_CHEMICAL_TRANSFORMATION
+  - claim_text: The abbreviation 'massdiff' refers to 'mass difference' and denotes
+      the absolute difference in m/z values between two mass peaks.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_MASSDIFF_FN
+  - claim_text: An adduct refers specifically to a transformation caused by the addition
+      of a chemical moiety, often during the MSI procedure.
+    claim_type: finding
+    speculative: false
+  - claim_text: The precursor to an adduct is called the parent ion or parent molecule.
+    claim_type: finding
+    speculative: false
+  - claim_text: The mass2adduct analysis looks at pairs of peaks and attempts to match
+      their massdiffs to known chemical transformations to find adducts derived from
+      the chemical matrix used for MALDI-MSI.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MASS2ADDUCT
+  - claim_text: Raw MSI data are exported as plain-text CSV files from standard MSI
+      software such as SCiLS or MSiReader.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_SCILS
+  - claim_text: In the mass2adduct CSV format, columns represent mass peaks with m/z
+      values as column names, and rows represent pixels.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MASS2ADDUCT
+  - claim_text: Entries in the mass2adduct data table represent intensity values for
+      a given peak and pixel.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MASS2ADDUCT
+  - claim_text: The cardinal2msimat() function can convert data objects in MSProcessedImagingExperiment
+      or MSContinuousImagingExperiment formats to mass2adduct's msimat format.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MASS2ADDUCT
+  - claim_text: Cardinal version 2.2 or higher is required for use with mass2adduct.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MASS2ADDUCT
+  - claim_text: The default plot method for an msimat object displays a mass spectrum
+      with vertical lines representing the total intensity of each peak.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MSIMAT
+  - claim_text: The massdiff function returns an object of classes data.frame and
+      massdiff.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_MASSDIFF_FN
+  - claim_text: In the massdiff output, column A represents the parent ion peak mass.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_MASSDIFF_FN
+  - claim_text: In the massdiff output, column B represents the putative adduct ion
+      peak mass (higher than A).
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_MASSDIFF_FN
+  - claim_text: In the massdiff output, column diff is the difference between A and
+      B.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_MASSDIFF_FN
+  - claim_text: Common chemical transformations are more often encountered than background
+      noise in mass difference distributions.
+    claim_type: finding
+    speculative: true
+  - claim_text: The mass2adduct package includes two built-in datasets called adducts
+      and adducts2 that list biologically-relevant chemical species.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MASS2ADDUCT
+  - claim_text: Users can create custom adduct tables with the same three columns
+      as the built-in adducts dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_ADDUCTS_DATASET
+  - claim_text: Interesting transformations or adducts will appear as peaks in a histogram
+      of mass difference values.
+    claim_type: finding
+    speculative: true
+    entity_id: COMP_ADDUCTS_DATASET
+  - claim_text: The background of likely non-meaningful mass differences is not uniformly
+      distributed but instead has peaks at integer values.
+    claim_type: finding
+    speculative: false
+  - claim_text: Chemical masses themselves are close to integer values, hence the
+      differences between them should be too.
+    claim_type: finding
+    speculative: false
+  - claim_text: The adductMatch function looks for known adducts by finding the closest-matching
+      bin in the mass difference histogram.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_ADDUCTS_DATASET
+  - claim_text: adductMatch reports the number of counts for each mass difference
+      and the quantile.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_ADDUCTMATCH
+  - claim_text: Quantile values in adductMatch are usually quite high because the
+      majority of mass differences have zero to few counts.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_ADDUCTMATCH
+  - claim_text: The topAdducts function ranks mass differences by their occurrences
+      in descending order and reports matches to known adducts.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_ADDUCTS_DATASET
+  - claim_text: The histogram method bins massdiff values into bins of fixed width.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_MASSDIFF_FN
+  - claim_text: The mass resolution of a mass spectrometer varies with the mass.
+    claim_type: finding
+    speculative: false
+  - claim_text: adductMatch can be applied to a massdiff object to add a matches column
+      listing the closest-matching adduct for each ion pair.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MASSDIFF_OBJ
+  - claim_text: The object produced by adductMatch is a subset of the original massdiff
+      object, as ion pairs without a matching adduct are excluded.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MASSDIFF_OBJ
+  - claim_text: corrPairsMSI performs a correlation test on each pair of peaks in
+      a massdiff object.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MASSDIFF_OBJ
+  - claim_text: corrPairsMSI uses the two-tailed Pearson method by default for correlation
+      testing.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MASSDIFF_OBJ
+  - claim_text: The how=parallel option can speed up corrPairsMSI processing on computers
+      with multiple processors.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_CORRPAIRSMSI
+  - claim_text: The ncores parameter in corrPairsMSI specifies the number of processors
+      to use.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_CORRPAIRSMSI
+  - claim_text: corrPairsMSIchunks can be used instead of corrPairsMSI for larger
+      datasets to avoid running out of memory.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_CORRPAIRSMSI
+  - claim_text: corrPairsMSIchunks splits the job into chunks that fit within a specified
+      memory limit.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_CORRPAIRSMSI_CHUNKS
+  - claim_text: Using corrPairsMSIchunks results in more overhead and less speed compared
+      to corrPairsMSI.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_CORRPAIRSMSI
+  - claim_text: Correlation test results in corrPairsMSI output include Estimate (correlation
+      coefficient), P.value, and Significance.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MASSDIFF_OBJ
+  - claim_text: The Significance column in corrPairsMSI output indicates whether the
+      p-value is below the threshold after Bonferroni correction.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_CORRPAIRSMSI
+  - claim_text: Raw p-values are reported in corrPairsMSI output without Bonferroni
+      correction for user-conducted analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_CORRPAIRSMSI
+  - claim_text: The pointsAdducts function annotates the original mass spectrum using
+      a massdiff object to mark peaks in different colors.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MASSDIFF_OBJ
+  - claim_text: Some adduct ions may themselves be parents of further adducts.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_ADDUCTS_DATASET
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - Pearson correlation test
+  - parallel processing
+  substitution_constraints:
+  - Cardinal version 2.2+ is required
+  - 'Custom adduct tables must follow the same format with three columns: name, formula,
+    mass'
+instructions: Reproduce the 4-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Annotated mass spectrum plot with parent ions marked as blue circle outlines
+    and adduct ions marked as red filled points, showing overlap indicating ions with
+    dual roles
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Annotated massdiff object (data.frame with columns A, B, diff, and matches)
+    containing ion pairs matched to known adducts
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

@@ -1,0 +1,2513 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "extension",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/ci-cd-workflow-adaptation-to-organization-standards",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/documentation-and-metadata-modernization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/feature-to-metabolite-network-propagation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/functional-module-inference-from-networks",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-to-charge-tolerance-matching",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolic-network-mapping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolomics-functional-prediction-workflow-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/package-installation-verification-and-testing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/python-package-migration-and-refactoring",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/repository-structure-standardization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/untargeted-metabolomics-feature-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Mummichog leverages the organization of metabolic networks to predict functional activity directly from feature tables.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Mummichog can predict functional activity by bypassing metabolite identification.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The last version of Mummichog 2 is under branch mummichog-2.7.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_mummichog2"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Mummichog version 3 is under development.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Mummichog project has been moved to the new organization at https://github.com/metabolomics-cloud.",
+      "@type": "asb:Claim",
+      "source_task_kind": "extension",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Mummichog project move follows examples from https://scverse.org/.",
+      "@type": "asb:Claim",
+      "source_task_kind": "extension",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment)... mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites... The algorithms were experimentally validated on the activation of innate immune cells.",
+      "asbval:note": "Paper describes 'mummichog' (lowercase), not 'Mummichog 3'. The version number '3' is not mentioned anywhere in the paper. The core functionality (feature table input, network mapping without upfront identification) is accurate and well-supported.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does Mummichog 3 accept untargeted metabolomics feature tables as input and predict functional activity by mapping features onto metabolic networks without requiring metabolite identification?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:30.039680+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of Python as the implementation language in any passage. The paper states 'The mummichog software is available at http://atcg.googlecode.com' but does not specify the programming language used.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:30.039680+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In return, the predicted metabolites in these significant modules (and similarly for pathways) are more likely to be true, and they form the 'activity network' for this particular experiment... Mummichog collects these metabolites, and look up all their isotopic derivatives and adducts in [reference list]. A confidence rating system is applied to filter for qualified metabolites... All the qualified metabolites carry over their connections in the reference metabolic network, and form the 'activity network' for this specific experiment.",
+      "asbval:note": "The paper explicitly describes output as activity networks mapping predicted metabolites to modules and pathways, with statistical significance reporting.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Functional activity prediction report mapping features to metabolic network modules and pathways",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:30.039680+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We present a set of computational algorithms which, by leveraging the collective power of metabolic pathways and networks, predict functional activity directly from spectral feature tables without a priori identification of metabolites.",
+      "asbval:note": "The paper describes the mummichog pipeline and algorithms, but does not use version designation 'Mummichog 3'. The paper is from 2013 and refers to the tool simply as 'mummichog'.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title_concept",
+      "asbval:target_claim_text": "Reconstruct the metabolic network-based feature-table analysis pipeline in Mummichog 3",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:30.039680+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate card references 'Mummichog 3' but the paper describes 'mummichog' without version number. This appears to be a version conflation by the extractor.",
+        "The card claims Python as a tool, but the paper provides no information about implementation language. This may be an assumption by the extractor not grounded in the paper.",
+        "The research question accurately captures the core methodology but adds a version number not present in the source material."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:30.039680+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software implementation of our approach is named mummichog",
+      "asbval:note": "Paper describes Mummichog (version 1, 2013), not Mummichog 3. Paper does not mention GitHub organization, metabolomics-cloud, or repository migration. The card describes a software engineering/DevOps task (repository migration, packaging, CI/CD conformance) that is entirely absent from the paper. The paper only documents the original algorithm and its application.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Extend Mummichog 3 to incorporate the metabolomics-cloud GitHub organization project structure",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:45.161387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper contains no discussion of Mummichog 3, GitHub organization migration, metabolomics-cloud, repository relocation, or installation verification procedures. The paper is a 2013 methods paper describing the original Mummichog algorithm and its validation on biological data. No software engineering or DevOps tasks are mentioned.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Has the Mummichog 3 codebase been successfully relocated to the metabolomics-cloud GitHub organization and verified to install and function correctly in its new location?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:45.161387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss repository migration, package metadata, configuration standards, or organization-level documentation conformance. The paper only mentions 'The mummichog software is available at http://atcg.googlecode.com' (passage 8), indicating the original distribution location, not a metabolomics-cloud organization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Migrated Mummichog 3 repository at metabolomics-cloud/mummichog with updated package metadata, configuration, and documentation conforming to organization standards",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:45.161387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss pip installation, clean Python environments, or installation verification logs. No modern packaging infrastructure is described.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Installation verification log confirming successful pip install from the new repository location in a clean Python environment",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:45.161387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites",
+      "asbval:note": "Paper describes functional workflows (feature table input, functional activity prediction via module/pathway analysis) but does not describe automated functional test results, test suites, or verification logs. The paper validates the algorithm on biological data (moDC, urine, yeast) but not via formal test infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Functional test results demonstrating that core Mummichog workflows (feature table loading, functional activity prediction) execute correctly",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:45.161387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss migration reports, conformance changes, breaking changes, or deprecations. These are software engineering artifacts not present in a methods paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Migration report documenting conformance changes applied, verification test outcomes, and any breaking changes or deprecations introduced",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:45.161387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not explicitly state the programming language used to implement Mummichog. The paper describes algorithms and validation but does not specify implementation language. While the software is available at a code repository (atcg.googlecode.com), the paper does not confirm Python as the implementation language.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:45.161387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate card describes a software engineering / DevOps task (repository migration, packaging, CI/CD conformance) that is entirely orthogonal to the paper's scope. The paper is a 2013 computational methods paper describing the Mummichog algorithm for predicting metabolic network activity from untargeted LC/MS data.",
+        "The card references 'Mummichog 3', but the paper describes the original Mummichog (version 1, 2013). No version history or future versions are discussed in the paper.",
+        "The card's focus on 'metabolomics-cloud GitHub organization project structure' and 'organization standards' suggests a modern software infrastructure task that post-dates the paper by a decade or more.",
+        "The expected outputs (installation logs, migration reports, pip install verification) are DevOps/CI artifacts, not scientific research outputs. They do not align with the paper's contribution (algorithm design and biological validation).",
+        "The paper's only mention of software distribution is: 'The mummichog software is available at http://atcg.googlecode.com' (passage 8), indicating a Google Code repository, not a GitHub organization."
+      ],
+      "asbval:n_drift_notes": 5,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:45.161387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper (Li et al. 2013) is a computational metabolomics methods paper describing the mummichog algorithm for predicting network activity from untargeted metabolomics data. It contains no discussion of CI/CD workflows, GitHub Actions, package migration, or software engineering practices related to repository relocation. The paper focuses entirely on algorithmic development and biological validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ci-cd-workflow-adaptation-to-organization-standards",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Audit and migrate a Python package's continuous integration and deployment workflows to conform to an organization's established conventions, ensuring the relocated codebase installs and runs correctly in its new repository home.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:02.830788+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No CI/CD, GitHub Actions, or workflow migration content appears in the paper. The paper describes mummichog as a computational method with software availability noted ('The mummichog software is available at http://atcg.googlecode.com' in passage [8]), but does not discuss CI/CD practices or organizational standards.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ci-cd-workflow-adaptation-to-organization-standards",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Audit and migrate a Python package's continuous integration and deployment workflows to conform to an organization's established conventions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:02.830788+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not explicitly state that mummichog is implemented in Python. While the paper describes computational algorithms and software implementation, the programming language is not mentioned in any of the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ci-cd-workflow-adaptation-to-organization-standards",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:02.830788+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of pip or any Python package management tools appears in the paper. The paper does not discuss package installation methods.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ci-cd-workflow-adaptation-to-organization-standards",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:02.830788+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of GitHub Actions, GitHub, or any CI/CD platforms appears in the paper. The paper was published in 2013, predating widespread adoption of GitHub Actions (introduced in 2019).",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ci-cd-workflow-adaptation-to-organization-standards",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub Actions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:02.830788+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software implementation of our approach is named mummichog (mummichog is an American Indian term for by groups, also name of a small fish which live by groups)... The mummichog software is available at http://atcg.googlecode.com.",
+      "asbval:note": "The paper describes 'mummichog' (not 'Mummichog 3'). The version number '3' is not mentioned in the paper. The paper presents the original mummichog software, not a third version. The software is hosted on Google Code (http://atcg.googlecode.com), not on GitHub at the metabolomics-cloud organization as the card suggests.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "ci-cd-workflow-adaptation-to-organization-standards",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Mummichog 3",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:02.830788+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper (Li et al. 2013) describes computational algorithms for predicting metabolic network activity from untargeted metabolomics data. It does not address software package migration, GitHub organization standards, metadata auditing, or CI/CD workflows. The paper is a methods paper focused on the mummichog algorithm itself, not on software engineering practices or package modernization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "documentation-and-metadata-modernization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Audit and adapt a scientific Python package's metadata, configuration files, and documentation to conform to organizational standards (e.g., metabolomics-cloud conventions) when relocating to a new GitHub organization.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:14.410340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes the original mummichog algorithm and its application to immune cell metabolomics (2013). It does not discuss Mummichog 3, GitHub organization migration, setup.py, pyproject.toml, requirements.txt, or CI/CD workflows. The paper states 'The mummichog software is available at http://atcg.googlecode.com' (passage [8]), indicating early-stage distribution via Google Code, not a mature GitHub-based package with organizational standards.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "documentation-and-metadata-modernization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "A mature scientific package (e.g., Mummichog 3) is being migrated to a new GitHub organization that enforces standardized project structure, and the current setup.py, pyproject.toml, requirements.txt, .github workflows, and module naming do not yet conform to the target organizat",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:14.410340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention setuptools, pyproject.toml, or Python packaging infrastructure. The software distribution method mentioned is a Google Code repository (passage [8]).",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "documentation-and-metadata-modernization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python setuptools / pyproject.toml",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:14.410340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention GitHub, GitHub Actions, or CI/CD workflows. The original distribution was via Google Code (passage [8]), predating GitHub Actions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "documentation-and-metadata-modernization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub Actions / .github/workflows",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:14.410340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention virtualenv or Python environment management tools.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "documentation-and-metadata-modernization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "virtualenv",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:14.410340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention scverse.org or reference any exemplar project structures for organizing scientific Python packages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "documentation-and-metadata-modernization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "scverse.org project structure",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:14.410340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we report a novel approach of predicting network activity from untargeted metabolomics without upfront identification of metabolites... if a list of significant spectral features reflects a biological activity, the true metabolites they represent should show enrichment on a local structure in the metabolic network [22], while the falsely matched metabolites are distributed more randomly.",
+      "asbval:note": "Core research question is directly supported by paper's stated goal and methodology.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "feature-to-metabolite-network-propagation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Map untargeted metabolomics feature m/z values onto a metabolic network and propagate signal through connected nodes to infer functional activity and pathway involvement without explicit metabolite identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:24.947866+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "metabolite identification forms the bottleneck of untargeted metabolomics... we report a novel approach of predicting network activity from untargeted metabolomics without upfront identification of metabolites, thus greatly accelerating the work flow.",
+      "asbval:note": "Paper explicitly identifies metabolite identification as bottleneck and proposes network-based bypass.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "feature-to-metabolite-network-propagation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill bypasses the bottleneck of compound annotation by leveraging network topology to predict metabolic function directly from feature tables.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:24.947866+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software implementation of our approach is named mummichog (mummichog is an American Indian term for by groups, also name of a small fish which live by groups).",
+      "asbval:note": "Paper describes 'mummichog' (no version number specified). Card claims 'Mummichog 3' but paper does not specify version. The tool is confirmed present and used for the stated purpose (network-based functional prediction from m/z features), but version number cannot be verified from passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "feature-to-metabolite-network-propagation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Mummichog 3",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:24.947866+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mummichog software is available at http://atcg.googlecode.com.",
+      "asbval:note": "Paper provides a different repository URL (http://atcg.googlecode.com, a Google Code repository from 2013). The card URL (github.com/metabolomics-cloud/mummichog) is not mentioned in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "feature-to-metabolite-network-propagation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Mummichog repo: https://github.com/metabolomics-cloud/mummichog",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:24.947866+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'metDataModel' or any tool by this name appears in the paper passages. This tool is not referenced in the mummichog paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "feature-to-metabolite-network-propagation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "metDataModel - Data model for structuring metabolomics annotations and compound metadata for use by Mummichog",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:24.947866+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'JMS' tool appears in the paper. The paper does mention 'apLCMS program' for feature extraction and quantification (passage 9), but this is not the same as JMS.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "feature-to-metabolite-network-propagation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "JMS - Companion tool for pre-processing and annotating feature datasets before input to Mummichog",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:24.947866+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No tool named 'mass2chem' is mentioned in the paper. While the paper discusses m/z-to-metabolite matching and adduct handling (e.g., 'The m/z - metabolite matching considers all common isotopic derivatives and adducts'), no specific tool by this name is referenced.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "feature-to-metabolite-network-propagation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mass2chem - Utilities for interpreting mass spectrometry data, m/z-to-neutral-mass conversion, and adduct calculation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:24.947866+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "From user input, mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment).",
+      "asbval:note": "Paper confirms input is feature table with m/z and statistical significance; metabolite identification is not required upfront.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "feature-to-metabolite-network-propagation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have an untargeted metabolomics feature table (m/z, retention time, p-value from statistical test) but lack comprehensive metabolite identifications or MS/MS annotations.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:24.947866+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "mummichog computes significant pathways and modules and the activity network... Both the module analysis and pathway analysis above serve as a framework to estimate the significance of functional activities.",
+      "asbval:note": "Paper explicitly describes module and pathway analysis as outputs to predict functional activity.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "feature-to-metabolite-network-propagation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You want to predict which metabolic pathways and functional modules are active in your samples despite feature-level ambiguity.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:24.947866+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we report a novel approach of predicting network activity from untargeted metabolomics without upfront identification of metabolites, thus greatly accelerating the work flow. This is possible because the collective power in metabolic networks helps resolve the ambiguity in metabolite prediction.",
+      "asbval:note": "Core research question is directly supported by abstract and introduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "functional-module-inference-from-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Infer metabolic functional activity and pathway membership directly from untargeted metabolomics feature tables by mapping m/z values onto a metabolic network graph and propagating signals through connected nodes, without requiring explicit metabolite identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:41.095268+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "mummichog searches for all modules that can be built on user input data, and compute their activity scores... The statistical significance of modules based on user data is calculated on the null distribution.",
+      "asbval:note": "Module and pathway analysis methodology directly supports this claim.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "functional-module-inference-from-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This approach predicts which metabolic modules and pathways are active in a sample based on the spatial organization of detected features within the network.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:41.095268+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software implementation of our approach is named mummichog... The mummichog software is available at http://atcg.googlecode.com.",
+      "asbval:note": "Paper describes 'mummichog' (no version number specified). Card claims 'Mummichog 3' but paper does not specify version 3. The tool is confirmed present but version number cannot be verified from passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "functional-module-inference-from-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Mummichog 3",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:41.095268+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'metDataModel' or similar data model framework by that name in any passage. Paper references KEGG, UCSD Recon1, Edinburgh human metabolic network, and BioCyc as metabolic models, but not 'metDataModel'.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "functional-module-inference-from-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "metDataModel",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:41.095268+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'JMS' tool in any passage. Paper does not reference a tool by this name for annotation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "functional-module-inference-from-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "JMS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:41.095268+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'mass2chem' utility library in any passage. Paper discusses m/z-to-metabolite matching and isotopic derivatives/adducts but does not name this specific tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "functional-module-inference-from-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mass2chem",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:41.095268+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The LC/MS data were processed with apLCMS program [25] for feature extraction and quantification.",
+      "asbval:note": "Tool is mentioned in methods section but not in the candidate card's tools list. This is a supporting tool used in the workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "functional-module-inference-from-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "apLCMS program for feature extraction and quantification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:41.095268+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "From user input, mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment).",
+      "asbval:note": "Input requirements match the scope description.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "functional-module-inference-from-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have an untargeted metabolomics feature table (m/z and retention time columns) and a statistical test result (p-value) per feature",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:41.095268+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reference metabolic network model contains both metabolites and enzymes... The genome-scale human metabolic network in mummichog is based on KEGG [38], UCSD Recon1 [15] and Edinburgh human metabolic network [16].",
+      "asbval:note": "Paper confirms metabolic network models are required and describes their structure (metabolites, reactions, pathways), but does not specify JSON format as the input format.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "functional-module-inference-from-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have access to a metabolic network model (in JSON format with pathways, reactions, and compounds including chemical formulas)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:41.095268+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "From the m/z features in [significant list], mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites... The m/z - metabolite matching considers all common isotopic derivatives and adducts.",
+      "asbval:note": "Core research question is directly supported by the paper's description of mummichog's m/z-to-metabolite matching and network-based functional inference without upfront metabolite identification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-to-charge-tolerance-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Map untargeted metabolomics feature m/z values to metabolic network nodes by matching observed mass-to-charge ratios against theoretical compound masses within a specified tolerance window. This enables feature-level functional inference without requiring explicit metabolite iden",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:55.178005+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software implementation of our approach is named mummichog... The mummichog software is available at http://atcg.googlecode.com.",
+      "asbval:note": "Paper describes 'mummichog' (no version number specified in text). Card claims 'Mummichog 3' but paper does not specify version. The tool name and function match, but version is not confirmed in passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-to-charge-tolerance-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Mummichog 3",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:55.178005+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Tool 'mass2chem' is not mentioned anywhere in the paper passages. No equivalent tool performing mass calculation utilities is named.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "mass-to-charge-tolerance-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mass2chem",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:55.178005+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Tool 'JMS' is not mentioned in the paper passages. Paper does mention tandem mass spectrometry (MS/MS) for metabolite identification validation, but no tool named JMS is referenced.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "mass-to-charge-tolerance-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "JMS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:55.178005+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Tool 'metDataModel' is not mentioned in the paper passages. No data model framework by this name is referenced.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "mass-to-charge-tolerance-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "metDataModel",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:55.178005+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The m/z - metabolite matching considers all common isotopic derivatives and adducts.",
+      "asbval:note": "Paper performs mass calculation and isotopic/adduct handling within mummichog itself, not via a separate 'mass2chem' tool. The function exists but is integrated into mummichog, not a separate utility.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-to-charge-tolerance-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mass2chem - role: Common utilities for interpreting mass spectrometry data and managing compound mass calculations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:55.178005+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our goal is to predict biological activity in a network of metabolites directly from the feature table, bypassing the bottleneck of metabolite identification... each spectral feature can match to several metabolite candidates... mummichog computes all possibly matched metabolites, and searches the reference metabolic network",
+      "asbval:note": "Scope is well-supported by the paper's description of mummichog's core functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-to-charge-tolerance-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Map untargeted metabolomics feature m/z values to metabolic network nodes by matching observed mass-to-charge ratios against theoretical compound masses within a specified tolerance window.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:55.178005+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We present a set of computational algorithms which, by leveraging the collective power of metabolic pathways and networks, predict functional activity directly from spectral feature tables without a priori identification of metabolites.",
+      "asbval:note": "Directly stated in abstract.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-to-charge-tolerance-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "This enables feature-level functional inference without requiring explicit metabolite identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:22:55.178005+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolic-network-mapping/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we report a novel approach of predicting network activity from untargeted metabolomics without upfront identification of metabolites, thus greatly accelerating the work flow... Our goal is to predict biological activity in a network of metabolites directly from the feature table, bypassing the bottleneck of metabolite identification",
+      "asbval:note": "Core research question is directly supported by abstract and introduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolic-network-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Map untargeted metabolomics feature table m/z values onto a metabolic network structure to predict functional activity and pathway involvement without requiring explicit metabolite identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:07.160748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolic-network-mapping/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "there is collective power in the organization of metabolic networks, which can be leveraged when the two steps are unified under one theoretical framework... if a list of significant spectral features reflects a biological activity, the true metabolites they represent should show enrichment on a local structure in the metabolic network",
+      "asbval:note": "Network-based inference of modules from features is explicitly described.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolic-network-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This approach leverages network organization to infer functional modules directly from feature-level data.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:07.160748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolic-network-mapping/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software implementation of our approach is named mummichog... mummichog requires two lists of m/z features, the significant list... and the reference list... mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites.",
+      "asbval:note": "Paper describes 'mummichog' (no version number specified). Card claims 'Mummichog 3' but paper does not specify version. The tool name is confirmed but version is not stated in passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolic-network-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Mummichog 3",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:07.160748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolic-network-mapping/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'metDataModel' or any data model library by that name in any passage. Tool is not referenced in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolic-network-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "metDataModel",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:07.160748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolic-network-mapping/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'JMS' tool in any passage. Tool is not referenced in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolic-network-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "JMS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:07.160748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolic-network-mapping/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'mass2chem' tool in any passage. Tool is not referenced in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolic-network-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mass2chem",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:07.160748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolic-network-mapping/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites... The activity score should reflect both the enrichment of 'input metabolites' and the modularity.",
+      "asbval:note": "Mummichog does perform m/z-to-metabolite mapping and functional activity prediction. However, paper does not explicitly describe 'signal propagation' as a mechanism; instead it uses permutation-based statistical testing and module activity scoring. The functional description is partially aligned but not fully accurate to the paper's actual algorithm.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolic-network-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Mummichog role: Core Python package that performs metabolic network initialization, m/z-to-node mapping, signal propagation, and functional activity prediction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:07.160748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolic-network-mapping/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "From user input, mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment)... mummichog searches the reference metabolic network for all the modules that can be formed by these tentative metabolites.",
+      "asbval:note": "Input requirements and output (pathway/module prediction) are accurately described.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolic-network-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have an untargeted metabolomics feature table (with m/z, retention time, and statistical significance values) and want to predict which metabolic pathways and functional modules are active in your sample",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:07.160748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolic-network-mapping/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not discuss requirements for chemical formulas or neutral mass specifications in the metabolic model. This is a technical constraint claim that cannot be verified from the provided text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "metabolic-network-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Your metabolic model lacks chemical formulas for compounds \u2014 you must either supply formulas or use a model with complete compound definitions and correct neutral masses (not salt formats).",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:07.160748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software implementation of our approach is named mummichog (mummichog is an American Indian term for by groups, also name of a small fish which live by groups).",
+      "asbval:note": "Paper describes mummichog (version not specified, likely v1 from 2013) and its core workflows on metabolomics datasets. The card claims validation of 'Mummichog 3' migration to a new GitHub organization. The paper does not discuss version 3, GitHub migration, organizational standards, or CI/CD workflows\u2014these are modern software engineering concerns not addressed in the 2013 paper. The paper validates mummichog's functional prediction on real metabolomics data (moDC, urine, yeast), which aligns with the 'executes core workflows correctly' aspect, but the migration/organizational context is entirely absent from the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolomics-functional-prediction-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verify that a metabolomics functional prediction package (specifically Mummichog 3) has been successfully migrated to a new GitHub organization, conforms to organizational standards, and executes core workflows correctly on representative metabolomics datasets.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:21.639369+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software implementation of our approach is named mummichog... From user input, mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment)... mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites.",
+      "asbval:note": "Paper describes mummichog (version unspecified, not version 3) and its core functional prediction workflow. The paper does not mention version 3 or GitHub organization. The functional role description matches the paper's description of mummichog's core algorithm.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolomics-functional-prediction-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Mummichog 3 \u2014 Core metabolomics functional prediction package being validated; leverages metabolic network organization to predict functional activity from feature tables without metabolite identification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:21.639369+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "metDataModel is not mentioned anywhere in the paper. The paper does not discuss a data model tool by this name or any tool for structuring annotation from authentic standards for Mummichog input.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolomics-functional-prediction-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "metDataModel \u2014 Data model for structuring metabolomics annotation from authentic standards and MS/MS; ensures consistent annotation format for Mummichog input",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:21.639369+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "JMS is not mentioned in the paper. The paper does not discuss a tool called JMS or any annotation tool that generates JSON-format annotation tables for Mummichog input.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolomics-functional-prediction-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "JMS \u2014 Performs annotation on metabolomics datasets; generates annotation tables (JSON format) used as optional input to Mummichog",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:21.639369+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss Python virtualenv, pip installation, or modern package management practices. The paper only states 'The mummichog software is available at http://atcg.googlecode.com' (passage 8), indicating distribution via Google Code, not GitHub or pip.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolomics-functional-prediction-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python 3 virtualenv \u2014 Isolates package installation testing in a clean environment to verify pip install correctness without external dependencies",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:21.639369+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention pytest, unittest, or any automated test framework. The paper validates mummichog through manual application to three case studies (moDC, human urine, yeast), not through a formal test suite.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolomics-functional-prediction-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest / unittest \u2014 Runs core Mummichog test suite to validate functional prediction workflows on representative metabolomics data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:21.639369+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss GitHub, package migration, organizational relocation, or modern software engineering practices. The paper is from 2013 and describes the initial development and validation of mummichog, not a migration scenario.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolomics-functional-prediction-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "A Python-based metabolomics analysis package has been relocated to a new GitHub organization (e.g., metabolomics-cloud) and you need to confirm that the migration preserved package integrity, installation, and runtime correctness.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:21.639369+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper (Li et al. 2013) describes mummichog as a computational method for metabolomics analysis published in PLOS Computational Biology. It does not discuss package migration, relocation, GitHub organization changes, CI/CD workflows, or installation verification procedures. The paper is a scientific methods paper, not a software engineering/DevOps task card.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-installation-verification-and-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verify that a relocated or migrated Python package installs correctly in a clean environment and executes core functionality without errors.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:36.915163+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not address package migration, GitHub organization changes, or production readiness workflows. The scope describes a DevOps/software engineering task entirely absent from the scientific paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-installation-verification-and-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Verify that a relocated or migrated Python package installs correctly in a clean environment and executes core functionality without errors. This skill bridges codebase migration (e.g., to a new GitHub organization) and production readiness.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:36.915163+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention Python pip, package managers, or installation procedures. The paper focuses on the mummichog algorithm and its application to metabolomics data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-installation-verification-and-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python pip",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:36.915163+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention virtualenv, virtual environments, or isolated Python environments. These are DevOps/software engineering concepts not addressed in the scientific paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-installation-verification-and-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "virtualenv",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:36.915163+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software implementation of our approach is named mummichog (mummichog is an American Indian term for by groups, also name of a small fish which live by groups).",
+      "asbval:note": "The paper describes mummichog as a software tool for metabolomics analysis. However, the paper does not specify 'version 3' \u2014 it is the original 2013 publication introducing mummichog. The paper states 'The mummichog software is available at http://atcg.googlecode.com' (passage 8), indicating an early release, not version 3. The tool exists and is used for functional prediction, but the version claim is unsupported.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "package-installation-verification-and-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mummichog (version 3)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:36.915163+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention pytest, unittest, or automated test frameworks. The paper validates mummichog by applying it to three case studies (moDC immune cells, human urine, yeast mutants) and comparing predictions to manual annotations, but does not describe a formal test suite or testing framework.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-installation-verification-and-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest or unittest",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:36.915163+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mummichog software is available at http://atcg.googlecode.com.",
+      "asbval:note": "The paper provides a different repository URL (http://atcg.googlecode.com, a Google Code repository from 2013). The card claims the repo is on GitHub under 'metabolomics-cloud' organization, but the paper does not mention GitHub or that organization. This appears to be a later migration not documented in the original paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-installation-verification-and-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[mummichog].repo",
+      "asbval:target_claim_text": "https://github.com/metabolomics-cloud/mummichog",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:36.915163+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes mummichog as a computational tool for metabolomics analysis but contains no discussion of package migration, GitHub organization relocation, CI/CD workflows, or organizational standards adaptation. The paper is about the scientific algorithm and its application, not software engineering practices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "python-package-migration-and-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Migrate a Python package to a new GitHub organization while conforming to organizational standards, verifying installation and functionality in the new location.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:49.822443+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No evidence in the paper for package migration workflows, GitHub organization standards, or refactoring practices. The paper mentions 'The mummichog software is available at http://atcg.googlecode.com' (passage [8]) but does not discuss migration or organizational relocation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "python-package-migration-and-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Migrate a Python package to a new GitHub organization while conforming to organizational standards, verifying installation and functionality in the new location.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:49.822443+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention setuptools, pip, or package installation procedures. It describes mummichog as a software tool but does not document its build or installation infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "python-package-migration-and-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python setuptools / pip for package building, installation verification, and dependency resolution",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:49.822443+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper contains no mention of GitHub Actions, CI/CD workflows, or continuous integration practices. The software availability is mentioned only as a URL.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "python-package-migration-and-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub Actions (CI/CD workflows) for automated testing and validation of package installation and functionality post-migration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:49.822443+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention pytest or any test framework. Testing is described only in the context of validating the algorithm on biological data (moDC, urine, yeast datasets), not unit testing infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "python-package-migration-and-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest or equivalent test framework for execution of core functionality tests",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:49.822443+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software implementation of our approach is named mummichog",
+      "asbval:note": "The paper confirms mummichog is a software tool but does not explicitly state it is written in Python. The evidence span provided in the card ('Mummichog is a Python program...') does not appear verbatim in the passages. The paper describes mummichog as a computational algorithm implementation but does not specify the programming language.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "python-package-migration-and-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python as a tool with evidence span 'Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics'",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:49.822443+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-structure-standardization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper is a 2013 computational metabolomics methods paper describing mummichog algorithm and its application to immune cell metabolomics. It contains no discussion of Python package refactoring, repository standardization, CI/CD workflows, GitHub organization migration, or software engineering practices for code relocation. The research question describes a software engineering task unrelated to the paper's scientific content.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "repository-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Audit and refactor a scientific Python package to conform to organizational standards (configuration files, module naming, CI/CD workflows, metadata) and verify correct installation and functionality in its new location.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:59.355212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-structure-standardization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes computational algorithms for metabolomics analysis (mummichog), not software engineering practices. No discussion of repository structure standardization, GitHub organization migration, or CI/CD workflows appears in any passage.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "repository-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Audit and refactor a scientific Python package to conform to organizational standards (configuration files, module naming, CI/CD workflows, metadata) and verify correct installation and functionality in its new location.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:59.355212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-structure-standardization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention setuptools, setup.py, pyproject.toml, or Python package configuration tools. The paper states 'The mummichog software is available at http://atcg.googlecode.com' but provides no details on packaging infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "repository-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python setuptools",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:59.355212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-structure-standardization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention pip or package installation procedures. No discussion of dependency management or installation testing appears in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "repository-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:59.355212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-structure-standardization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention GitHub Actions, CI/CD workflows, or any continuous integration infrastructure. The software is hosted at 'http://atcg.googlecode.com' (Google Code, not GitHub), and no modern CI/CD systems are discussed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "repository-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub Actions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:59.355212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-structure-standardization/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention pytest, unittest, or automated testing frameworks. Testing is described only in the context of validating mummichog's predictions against published datasets and tandem mass spectrometry confirmation, not unit testing infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "repository-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest or unittest",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:23:59.355212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we present a set of computational algorithms which, by leveraging the collective power of metabolic pathways and networks, predict functional activity directly from spectral feature tables without a priori identification of metabolites",
+      "asbval:note": "Core research question is directly stated in abstract and introduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Map untargeted metabolomics feature tables (m/z, retention time, statistical significance) onto metabolic networks to predict functional pathway activity without requiring explicit metabolite identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:24:09.297553+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "if a list of significant spectral features reflects a biological activity, the true metabolites they represent should show enrichment on a local structure in the metabolic network, while the falsely matched metabolites are distributed more randomly",
+      "asbval:note": "Network-level enrichment logic is core to the method.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill leverages network-level propagation of feature signals to infer active metabolic modules and pathways directly from feature-level data.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:24:09.297553+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software implementation of our approach is named mummichog",
+      "asbval:note": "Paper names tool as 'mummichog' without version number. Card specifies 'Mummichog 3' but paper does not mention version 3. Paper is from 2013 and describes the original mummichog implementation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Mummichog 3",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:24:09.297553+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mummichog software is available at http://atcg.googlecode.com",
+      "asbval:note": "Paper provides different repository URL (http://atcg.googlecode.com, a Google Code repository from 2013). Card URL is a modern GitHub location, likely a later migration, but not verified in paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Mummichog repo: https://github.com/metabolomics-cloud/mummichog",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:24:09.297553+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "From user input, mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment)... mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites",
+      "asbval:note": "Role description matches paper's description of mummichog functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Mummichog role: Core Python program that accepts feature tables and metabolic models, performs network-based propagation, and outputs functional activity predictions without metabolite identification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:24:09.297553+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'metDataModel' or any tool by that name in the paper passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "metDataModel",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:24:09.297553+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'JMS' tool in the paper passages. Paper does not discuss a separate metabolite annotation tool named JMS.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "JMS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:24:09.297553+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'mass2chem' tool in the paper passages. Paper discusses adduct/isotope handling but does not name a separate utility by this name.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mass2chem",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:24:09.297553+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "After ionized molecules are scanned in the spectrometer, the spectral peaks are extracted, quantified and aligned into a feature table. At this point, each feature is identified by a mass-to-charge ratio (m/z) and retention time in chromatography, but its chemical identity is not known.",
+      "asbval:note": "Scope description aligns with paper's description of untargeted metabolomics workflow and the problem mummichog solves.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have a feature table from untargeted metabolomics (with m/z, retention time, and p-values from differential abundance testing) but lack or wish to bypass metabolite annotation.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:24:09.297553+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our goal is to predict biological activity in a network of metabolites directly from the feature table, bypassing the bottleneck of metabolite identification",
+      "asbval:note": "Scope aligns with paper's stated goal.",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You want to predict which metabolic pathways and functional modules are active based on the spatial organization of features within known metabolic networks, rather than identifying individual compounds.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:24:09.297553+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "ci-cd-workflow-adaptation-to-organization-standards",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "documentation-and-metadata-modernization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "feature-to-metabolite-network-propagation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "functional-module-inference-from-networks",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "mass-to-charge-tolerance-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolic-network-mapping/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "metabolic-network-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.375,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "metabolomics-functional-prediction-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "package-installation-verification-and-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "python-package-migration-and-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-structure-standardization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "repository-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5555555555555556,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:source_excerpt": "Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:14.900220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Mummichog leverages the organization of metabolic networks to predict functional activity directly from feature tables.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:source_excerpt": "It leverages the organization of metabolic networks to predict functional activity directly from feature tables,",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:14.900220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Mummichog can predict functional activity by bypassing metabolite identification.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:source_excerpt": "bypassing metabolite identification.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:14.900220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The last version of Mummichog 2 is under branch mummichog-2.7.",
+      "asbval:note": "Text says 'last version' but source says 'last of version' \u2014 minor wording difference that could imply different meanings",
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:source_excerpt": "The last of version 2 is under branch mummichog-2.7.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:14.900220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Mummichog version 3 is under development.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:source_excerpt": "This is version 3 under development.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:14.900220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The Mummichog project has been moved to the new organization at https://github.com/metabolomics-cloud.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:source_excerpt": "Project is moved to new organization https://github.com/metabolomics-cloud",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_006",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:14.900220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The Mummichog project move follows examples from https://scverse.org/.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1371-journal-pcbi-1003123",
+      "asbval:source_excerpt": "to follow examples of https://scverse.org/",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_007",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:20:14.900220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_mummichog#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "implicit",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_mummichog3",
+      "title": "Mummichog 3",
+      "identifier": "urn:asb:spine:mummichog3"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_mummichog2",
+      "title": "Mummichog 2",
+      "identifier": "urn:asb:spine:mummichog2"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_metabolic-network-prediction",
+      "title": "Metabolic Network-Based Functional Prediction",
+      "identifier": "urn:asb:spine:metabolic-network-prediction",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_feature-table-input",
+      "title": "Feature Table Input",
+      "identifier": "urn:asb:spine:feature-table-input"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_metabolomics-cloud-org",
+      "title": "metabolomics-cloud GitHub Organization",
+      "identifier": "urn:asb:spine:metabolomics-cloud-org"
+    }
+  ]
+}

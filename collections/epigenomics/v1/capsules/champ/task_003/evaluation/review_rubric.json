@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file EPICSimData is loadable via R command data(EPICSimData) within the ChAMP package environment"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify champ.DMR() function exists and is callable in the loaded ChAMP package"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: R script executing data(EPICSimData); dmr_result <- champ.DMR(EPICSimData, method='bumphunter') completes without error"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: the number of detected DMRs returned by champ.DMR() with bumphunter method falls in the range of approximately 4700 or higher, as reported for bumphunter-based simulation (exact boundary parameter-sensitive; multiple defensible thresholds near 4700 defensible)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify the dmr_result object contains a structured field or slot reporting total DMR count as a single numeric value"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file EPICSimData is loadable via R command data(EPICSimData) within the ChAMP package environment",
+      "verify champ.DMR() function exists and is callable in the loaded ChAMP package",
+      "verify script_runs: R script executing data(EPICSimData); dmr_result <- champ.DMR(EPICSimData, method='bumphunter') completes without error",
+      "verify output_matches_reference: the number of detected DMRs returned by champ.DMR() with bumphunter method falls in the range of approximately 4700 or higher, as reported for bumphunter-based simulation (exact boundary parameter-sensitive; multiple defensible thresholds near 4700 defensible)",
+      "verify the dmr_result object contains a structured field or slot reporting total DMR count as a single numeric value"
+    ],
+    "expert_review": [
+      "expert review of whether the DMR detection result is biologically plausible and consistent with stated bumphunter simulation benchmark",
+      "expert review of whether champ.DMR() with method='bumphunter' on EPICSimData produces output structure and semantics expected for DMR detection (regions properly defined, statistical support present)"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

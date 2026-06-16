@@ -1,0 +1,446 @@
+schema_version: 0.1.0
+workflow_id: coll_salmon_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: Salmon 2.0 is a from-scratch Rust rewrite of the widely-used salmon RNA-seq
+    quantification tool, maintaining the same workflow and output formats while achieving
+    quantitative parity with the C++ 1.12.0 release on both simulated and real data.
+  pseudo_abstract: "This work describes salmon 2.0, a complete Rust port of salmon\
+    \ that preserves the familiar index \u2192 quant workflow and downstream-compatible\
+    \ output formats. On a byte-identical reference index, salmon 2.0 achieves per-transcript\
+    \ Pearson correlations of 0.99854 (NumReads) and 0.99897 (TPM) with C++ salmon\
+    \ 1.12.0 on real short-read data (GEUVADIS ERR188044), with per-read mapping agreement\
+    \ at 99.83%. After fixing a genuine k-mer-orientation bug in pufferfish's SSHash\
+    \ streaming lookup (which affected C++ salmon 1.11.4), both implementations achieve\
+    \ 85.55% mapping rate on yeast benchmark data (ERR458493), matching within 1 read\
+    \ and reaching 0.99854 NumReads Pearson correlation. The ~0.19% total-count difference\
+    \ on byte-identical indices is attributable to default chain pruning thresholds:\
+    \ C++ salmon applies orphanChainSubThresh=0.95 and postMergeChainSubThresh=0.9\
+    \ before alignment, while salmon 2.0 defaults both to 0.0, accounting for ~80%\
+    \ of the 62.8k-read mapping-count gap; matching these thresholds brings the tools\
+    \ to 92.038% agreement. The Rust port also documents the writeMappings SAM-output\
+    \ mechanism, which requires explicit buffer flushing to prevent record loss when\
+    \ the output stream is closed."
+  research_questions:
+  - How closely do the quantification results (NumReads and TPM) from salmon 2.0 (Rust
+    rewrite) agree with salmon 1.12.0 (C++ version) when run in selective-alignment
+    mode on the same dataset and index?
+  - Does the Rust port of salmon achieve equivalent mapping rates and correlation
+    metrics to C++ salmon 1.11.4 after the pufferfish SSHash streaming orientation
+    bug is fixed?
+  - Does applying C++ salmon 1.12.0's chain score thresholds (orphanChainSubThresh=0.95,
+    postMergeChainSubThresh=0.9) to the Rust salmon port on ERR188044 reduce the mapping
+    count gap and confirm that ~80% of the discrepancy is attributable to the orphan/post-merge
+    pruning default difference?
+  - Does the mapping rate and NumReads Pearson correlation remain stable when the
+    Rust mapper uses alternative seed representations (sparse fixed-k anchors, reference
+    k-mer variants) instead of the default unitig-constrained approach?
+  - How does the writeMappings flush bug in SAM output streaming affect record completeness,
+    and what is the mechanism by which flushing the ostream buffer before close ensures
+    all mapped reads appear in the output file?
+  methods_summary: "Prepare a cleaned GRCh38 cDNA FASTA with deterministic non-ACGT\
+    \ replacement to ensure byte-identical indices across both salmon versions. Build\
+    \ a selective-alignment index using salmon 2.0 (Rust) with default parameters\
+    \ (k-mer length, threads, no special decoy handling unless documented). Build\
+    \ an identical index using C++ salmon 1.12.0 from the same cleaned FASTA with\
+    \ matching parameters. Quantify ERR188044 paired-end reads (36.35M, 76 bp) using\
+    \ salmon 2.0 in selective-alignment mode with auto-detect library type (-l A),\
+    \ no bias correction, and Rust-default chain-pruning thresholds (orphanChainSubThresh=0.0,\
+    \ postMergeChainSubThresh=0.0). Quantify the same reads using C++ salmon 1.12.0\
+    \ with identical mapping settings (-l A, no bias) and C++ defaults (orphanChainSubThresh=0.95,\
+    \ postMergeChainSubThresh=0.9). Extract NumReads and TPM per transcript from both\
+    \ quant.sf files and compute Pearson correlations; compute total assigned NumReads\
+    \ difference as (Rust total \u2212 C++ total) / C++ total \xD7 100%. Compare unmapped_names.txt\
+    \ files from both runs, extracting only fully-unmapped reads (code 'u'), and compute\
+    \ per-read mapping agreement as the fraction of reads on which both tools agree\
+    \ (mapped or unmapped). Validation: Pearson correlations for NumReads and TPM\
+    \ must both exceed 0.998 (reported 0.99854 and 0.99897); per-read mapping agreement\
+    \ must reach \u226599.8% (reported 99.83%); total NumReads difference must stay\
+    \ within \xB10.5% (reported \u22120.19%). References: source article (DOI: 10.1038/nmeth.4197);\
+    \ ERR458493 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR458493); ERR188044 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR188044)\
+    \ Acquire ERR458493 single-end reads and Ensembl R64-1-1 cDNA reference. Build\
+    \ salmon index from reference using default parameters. Quantify reads with C++\
+    \ salmon 1.11.4 (pre-fix) in selective-alignment mode (-l U, no bias, writeMappings\
+    \ enabled), extract mapping rate and quant.sf abundance table. Apply pufferfish\
+    \ commit 5dce7f4 (SSHash streaming orientation correction) and re-quantify with\
+    \ identical parameters; compare mapping rate and quant.sf to pre-fix run. Quantify\
+    \ reads using Rust salmon port with identical parameters; extract mapping rate\
+    \ and quant.sf. Compute NumReads and EffectiveLength Pearson correlations between\
+    \ C++ post-fix and Rust outputs. Cross-validate strand and locus placement of\
+    \ discordant reads (e.g., ERR458493.850) using SAM writeMappings output to confirm\
+    \ orientation fix causation. Validation: C++ pre-fix mapping rate = 83.48% \xB1\
+    \ 1 read, C++ post-fix = 85.55% \xB1 1 read matching Rust, NumReads Pearson \u2265\
+    \ 0.998, EffectiveLength Pearson \u2265 0.999. References: source article (DOI:\
+    \ 10.1038/nmeth.4197); ERR458493 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR458493);\
+    \ ERR188044 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR188044) Obtain a byte-identical\
+    \ reference index (GRCh38 cDNA, 193,759 transcripts) and GEUVADIS ERR188044 paired-end\
+    \ reads (36.35M, 76 bp). Execute salmon 2.0 quant on ERR188044 with selective\
+    \ alignment enabled, chain-pruning parameters set to C++ salmon 1.12.0 defaults\
+    \ (orphanChainSubThresh=0.95, postMergeChainSubThresh=0.9), and no bias correction.\
+    \ Extract and tabulate mapping outcomes: total mapped reads, mapping rate (%),\
+    \ per-read agreement with C++ baseline, Rust-only and C++-only read counts, NumReads\
+    \ and TPM Pearson correlations. Re-align boundary-case reads (those mapped by\
+    \ one tool but not the other) using minimap2 full Smith-Waterman to classify each\
+    \ as strong/weak/unaligned, assessing the symmetry and genuine-alignment quality\
+    \ of the residual disagreement. Validation: Rust mapping rate \u226592.03% (within\
+    \ 0.02% of C++ 1.12.0 baseline 92.011%); residual per-read disagreement <20,000\
+    \ reads; per-read mapping agreement \u226599.8%; NumReads Pearson \u22650.998.\
+    \ References: source article (DOI: 10.1038/nmeth.4197); ERR458493 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR458493);\
+    \ ERR188044 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR188044) Load GEUVADIS ERR188044\
+    \ (36.35M paired-end 76 bp reads) and byte-identical GRCh38 cDNA reference index\
+    \ (193,759 transcripts). Execute salmon 2.0 Rust mapper in selective-alignment\
+    \ mode with default seed representation (libType A, no bias, multi-threaded) and\
+    \ record mapping rate and NumReads per transcript. Re-run salmon mapper three\
+    \ times, each with an alternative seed representation (sparse fixed-k anchors,\
+    \ reference-extended MEMs, unitig-constrained uni-MEMs), recording mapping rate\
+    \ and per-transcript NumReads. Calculate Pearson correlation coefficient between\
+    \ NumReads vectors from each variant and the baseline default. Validation: confirm\
+    \ all variants achieve mapping rate within \u22640.01% of baseline and Pearson\
+    \ r \u2265 0.99999995 for NumReads, establishing seed granularity was not the\
+    \ root cause of prior C++ vs. Rust mapping discrepancies. References: source article\
+    \ (DOI: 10.1038/nmeth.4197); ERR458493 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR458493);\
+    \ ERR188044 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR188044) Inspect salmon\
+    \ C++ source code to locate ostream_sink_mt initialization in QuantOptionsUtils.cpp\
+    \ where force_flush is set to false. Modify the sink configuration to enable force_flush\
+    \ = true, ensuring all buffered mapping records are written to disk before stream\
+    \ closure. Rebuild salmon from the modified source code. Execute salmon index\
+    \ on the Ensembl R64-1-1 reference transcriptome. Run salmon quant in selective-alignment\
+    \ mode with --writeMappings flag on ERR458493 test reads. Extract the SAM record\
+    \ count (grep '^[^@]' output.sam | wc -l) and compare against the NumReads field\
+    \ in the generated quant.sf file. Validation: SAM record count must equal the\
+    \ reported NumReads in quant.sf, confirming no records were lost to buffer truncation.\
+    \ References: source article (DOI: 10.1038/nmeth.4197); ERR458493 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR458493);\
+    \ ERR188044 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR188044)"
+  domain: transcriptomics
+  techniques:
+  - quantitative-structure-activity
+  - statistical-analysis
+  claims:
+  - claim_text: Salmon 2.0 is a from-scratch Rust rewrite of the previous C++ salmon
+      implementation.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: "Salmon 2.0 maintains the same workflow of salmon index \u2192 salmon\
+      \ quant \u2192 quant.sf."
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: The index format changed in salmon 2.0, requiring users to rebuild
+      their indices.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: Salmon 2.0 cannot read C++ (pufferfish) indices from the previous
+      version.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: Single-cell quantification functionality has been removed from salmon
+      and moved to the alevin-fry ecosystem.
+    claim_type: finding
+    speculative: false
+    entity_id: alevin_fry
+  - claim_text: The final C++ release of salmon is version 1.12.0.
+    claim_type: finding
+    speculative: false
+  - claim_text: On clean/simulated data, C++ salmon and the Rust port both mapped
+      100% of sample_data with counts Pearson r = 0.99998.
+    claim_type: finding
+    speculative: false
+  - claim_text: The Rust port mapped approximately 2% more reads than C++ salmon on
+      real short reads.
+    claim_type: finding
+    speculative: false
+  - claim_text: C++ salmon mapping rate on yeast reads was 83.48% before the pufferfish
+      fix.
+    claim_type: finding
+    speculative: false
+    entity_id: pufferfish
+  - claim_text: Rust port mapping rate on yeast reads was 85.55%.
+    claim_type: finding
+    speculative: false
+    entity_id: metric_rust_mapping_rate_yeast
+  - claim_text: After the pufferfish fix, C++ salmon mapping rate increased to 85.55%.
+    claim_type: finding
+    speculative: false
+    entity_id: pufferfish
+  - claim_text: The difference turned out to be a genuine bug in C++ salmon's pufferfish
+      SSHash k-mer lookup.
+    claim_type: finding
+    speculative: false
+    entity_id: pufferfish
+  - claim_text: The pufferfish orientation bug was introduced in the SSHash index
+      refactor at salmon version 1.11.0 or later.
+    claim_type: finding
+    speculative: false
+    entity_id: pufferfish
+  - claim_text: Pre-1.11 pufferfish using BooPHF is not affected by the orientation
+      bug.
+    claim_type: finding
+    speculative: false
+    entity_id: pufferfish
+  - claim_text: On a byte-identical index, per-read mapping agreement between C++
+      1.12.0 and Rust is 99.83%.
+    claim_type: finding
+    speculative: false
+    entity_id: metric_per_read_agreement_human
+  - claim_text: NumReads Pearson correlation between C++ 1.12.0 and Rust is 0.99854
+      on a byte-identical index.
+    claim_type: finding
+    speculative: false
+    entity_id: metric_numreads_pearson_yeast
+  - claim_text: TPM Pearson correlation between C++ 1.12.0 and Rust is 0.99897.
+    claim_type: finding
+    speculative: false
+    entity_id: metric_tpm_pearson_human
+  - claim_text: "Total assigned NumReads difference between C++ and Rust is \u2212\
+      0.19%."
+    claim_type: finding
+    speculative: false
+    entity_id: metric_numreads_diff_human
+  - claim_text: C++ 1.12.0 mapped 33,446,029 reads (92.011%) on GEUVADIS ERR188044.
+    claim_type: finding
+    speculative: false
+    entity_id: dataset_err188044
+  - claim_text: Rust mapped 33,508,687 reads (92.184%) on GEUVADIS ERR188044.
+    claim_type: finding
+    speculative: false
+    entity_id: dataset_err188044
+  - claim_text: Rust maps 62,812 reads that C++ leaves fully unmapped.
+    claim_type: finding
+    speculative: false
+  - claim_text: C++ maps only 154 reads that Rust doesn't map.
+    claim_type: finding
+    speculative: false
+  - claim_text: Approximately 80% of the 62.8k mapping gap is due to chain-sub-optimality
+      default difference.
+    claim_type: finding
+    speculative: false
+  - claim_text: C++ salmon uses orphanChainSubThresh = 0.95 and postMergeChainSubThresh
+      = 0.9 by default.
+    claim_type: finding
+    speculative: false
+  - claim_text: Rust port defaults orphanChainSubThresh and postMergeChainSubThresh
+      to 0.0 (off).
+    claim_type: finding
+    speculative: false
+  - claim_text: Re-running Rust with C++ thresholds (0.95/0.9) brings mapping to 33,455,950
+      (92.038%).
+    claim_type: finding
+    speculative: false
+  - claim_text: Selective-alignment quantification reproduces C++ salmon to per-transcript
+      Pearson approximately 0.999.
+    claim_type: finding
+    speculative: false
+  - claim_text: Index construction is faster in salmon 2.0 compared to the C++ version.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: Peak memory is lower in salmon 2.0 compared to the C++ version.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: Salmon 2.0 ships as a single portable binary with no Boost, CMake,
+      or system libraries required.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: Salmon 2.0 includes a new alignment-free --sketch mode for pseudoalignment.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: Salmon 2.0 is licensed under BSD-3-Clause license.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: Salmon results files (quant.sf, cmd_info.json, lib_format_counts.json,
+      aux_info/meta_info.json) are unchanged between versions.
+    claim_type: finding
+    speculative: false
+    entity_id: quant_sf
+  - claim_text: The Rust port (based on piscem-rs) was unaffected by the pufferfish
+      k-mer orientation bug.
+    claim_type: finding
+    speculative: false
+    entity_id: piscem_rs
+  - claim_text: The pufferfish orientation bug caused incorrect placement of reads
+      with single non-canonical k-mers.
+    claim_type: finding
+    speculative: false
+    entity_id: pufferfish
+  - claim_text: The --writeMappings flag in C++ salmon was silently dropping SAM records
+      due to buffer flushing issues.
+    claim_type: finding
+    speculative: false
+    entity_id: write_mappings
+  - claim_text: Commit 5dce7f4 in pufferfish fixed the k-mer orientation bug in the
+      streaming lookup.
+    claim_type: finding
+    speculative: false
+    entity_id: pufferfish
+  - claim_text: The dataset ERR458493 contains 1,093,957 single-end 51 bp yeast reads.
+    claim_type: finding
+    speculative: false
+    entity_id: dataset_err458493
+  - claim_text: The reference used for yeast benchmarking contains 6,612 transcripts
+      from Ensembl R64-1-1 cDNA.
+    claim_type: finding
+    speculative: false
+    entity_id: ref_ensembl_r64
+  - claim_text: NumReads Pearson correlation between C++ and Rust on confidently mapped
+      transcripts is 0.9989.
+    claim_type: finding
+    speculative: false
+    entity_id: metric_numreads_pearson_yeast
+  - claim_text: EffectiveLength Pearson correlation between C++ and Rust is 0.9996.
+    claim_type: finding
+    speculative: false
+    entity_id: metric_effectivelength_pearson_yeast
+  - claim_text: The ~2.8% total-count gap on mismatched indices was entirely due to
+      per-index random N-replacement of ~100k non-ACGT bases.
+    claim_type: finding
+    speculative: false
+  - claim_text: Approximately 20% (~17k) of the mapping gap is due to benign symmetric
+      tie-break/chaining residual.
+    claim_type: finding
+    speculative: false
+  - claim_text: The GEUVADIS ERR188044 dataset contains 36.35M paired-end 76bp reads.
+    claim_type: finding
+    speculative: false
+    entity_id: dataset_err188044
+  - claim_text: Code contributions to salmon must use conventional commits format.
+    claim_type: finding
+    speculative: false
+  - claim_text: Code contributed to salmon is licensed under GPLv3 with permission
+      for re-licensing under BSD 3-clause.
+    claim_type: finding
+    speculative: false
+  - claim_text: Pull requests to salmon should be made to the develop branch, not
+      the master branch.
+    claim_type: finding
+    speculative: false
+  - claim_text: Salmon 2.0 detects and rejects attempts to read C++ indices with a
+      clear error message.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: The canonical salmon citation is Patro et al. (2017) in Nature Methods.
+    claim_type: finding
+    speculative: false
+  - claim_text: Salmon 2.0 can be installed via prebuilt binaries for x86-64 and aarch64
+      Linux and macOS.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: Salmon 2.0 can be installed via cargo with Rust 1.91 or later.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_2_0
+  - claim_text: The new --sketch mode is competitive in accuracy with dedicated pseudoaligners.
+    claim_type: finding
+    speculative: false
+    entity_id: sketch_mode
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - minimap2 full Smith-Waterman as alternative to selective alignment for validation
+  - sparse fixed-k anchors, reference-extended MEMs, or unitig-constrained uni-MEMs
+    instead of piscem-rs MEM extraction
+  - C++ salmon (legacy) as alternative for reproducibility of older results
+  - Dedicated pseudoaligners as alternatives to sketch mode
+  substitution_constraints:
+  - preMergeChainSubThresh cannot be separately CLI-set in Rust port; uses loss-less
+    ref-distance early-break instead of salmon's 0.75 pre-alignment prune
+  - cf1-rs cDBG builder does not expose bloom-filter size configuration unlike C++
+    salmon
+  - salmon 2.0 cannot read C++ (pufferfish) indices and requires index rebuild
+  - salmon alevin is removed; users must migrate to alevin-fry ecosystem
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Salmon quantification output directory (quant.sf, aux_info/, lib_format_counts.json)
+    for ERR188044 with orphanChainSubThresh=0.95 and postMergeChainSubThresh=0.9
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Mapping statistics summary table: total mapped reads, mapping rate (%), per-read
+    agreement with C++ 1.12.0, Rust-only and C++-only read counts, NumReads and TPM
+    Pearson correlations'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Classification of residual boundary-case reads (Rust-only, C++-only) by minimap2
+    full Smith-Waterman alignment quality (strong/weak/unaligned)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Mapping rate (%) for default seed representation
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Mapping rate and NumReads Pearson r for sparse fixed-k anchor variant
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Mapping rate and NumReads Pearson r for reference-extended MEM variant
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Mapping rate and NumReads Pearson r for unitig-constrained uni-MEM variant
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Summary table with per-variant mapping rate and Pearson r values
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Modified QuantOptionsUtils.cpp with force_flush = true on ostream_sink_mt
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: SAM file containing all mapped read records without truncation or buffer loss
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification report confirming SAM record count equals reported NumReads in
+    quant.sf
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

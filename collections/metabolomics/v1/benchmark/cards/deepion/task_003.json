@@ -1,0 +1,369 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "7607c6777b95e3eff14bdad49bdc4d35f76ff1d9abe68daba44ca1bb8db0eceb"
+    }
+  ],
+  "created_at": "2026-06-15T13:51:25.323491+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "512-dimensional representation vectors from paired ResNet18 encoders",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Original ion images and their augmented versions (from Data Augmentation module)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Trained Projection module weights and biases",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Trained Prediction module weights and biases",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Contrastive loss values per batch or epoch",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Final learned representations for ion images after contrastive training",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Contrastive learning maximizes agreement between representations of augmented views of the same sample while pushing apart representations from different samples, preventing the encoder from learning trivial constant solutions.",
+    "A Projection module typically maps high-dimensional encoder outputs to a lower-dimensional space via a learnable MLP, making the contrastive loss computation more effective and stable.",
+    "A Prediction module adds an additional MLP head after projection, creating asymmetry between the two branches (stop-gradient on one path) to prevent trivial convergence where the network learns identical representations for all inputs.",
+    "For ion image data in mass spectrometry, preventing representation collapse is critical because collapsed embeddings lose discriminative power needed to distinguish co-localized ions (COL mode) or isotope relationships (ISO mode).",
+    "Contrastive loss functions (e.g., NT-Xent, SimCLR) require careful temperature scaling and batch composition to balance positive pair attraction against negative pair repulsion without dominating gradients."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that implementation includes a Projection module that processes 512-D encoder outputs",
+      "verify that implementation includes a Prediction module that processes 512-D encoder outputs",
+      "verify that contrastive loss function is implemented and applied to encoder outputs",
+      "verify that contrastive loss computes similarity between augmented pairs from the same original ion image",
+      "verify that the combined Projection + Prediction architecture prevents dimensional collapse in learned representations (parameter-sensitive: requires inspection of loss trajectory and final representation statistics)",
+      "script_runs: execute the Projection and Prediction modules on sample 512-D vectors and confirm no runtime errors",
+      "script_runs: execute the contrastive loss computation on paired augmented representations and confirm output is a scalar loss value"
+    ],
+    "expert_review": [
+      "assess whether the Projection and Prediction module architecture design follows established contrastive learning best practices (e.g., SimCLR, BYOL) to avoid solution collapse",
+      "assess whether the contrastive loss formulation (e.g., NT-Xent, cosine similarity weighting) is appropriate for ion image representation learning",
+      "assess whether the integration of Projection and Prediction modules with the ResNet18 encoder outputs is mathematically and computationally sound"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How do the Projection and Prediction modules operate on 512-dimensional encoder outputs to prevent representation collapse during contrastive learning of ion images?: 'Projection module and Prediction module are used to avoid collapsing solutions during the optimization process of maximizing the similarity between two augmentations from a same image'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The Projection and Prediction modules process the 512-dimensional representation vectors output by the ResNet18-based encoders to avoid collapsing solutions while optimizing for maximized similarity between augmentations of the same ion image using contrastive loss.: 'Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters, then output two 512-dimensional representation vectors. (3) Projection module and Prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] 512-dimensional representation vectors from paired ResNet18 encoders: 'Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters, then output two 512-dimensional representation vectors'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Original ion images and their augmented versions (from Data Augmentation module): 'The original ion image is first imported into the data augmentation module \"T\" to generate two augmented images'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Trained Projection module weights and biases: 'Projection module and Prediction module are used to avoid collapsing solutions during the optimization process'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Trained Prediction module weights and biases: 'Projection module and Prediction module are used to avoid collapsing solutions during the optimization process'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Contrastive loss values per batch or epoch: 'A contrastive loss is employed'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Final learned representations for ion images after contrastive training: 'A contrastive loss is employed to maximize similarity between augmentations of the same image'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ResNet18: 'Two augmented images are propagated through a pair of ResNet18-based encoders'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting implementation details, architectural choices, or validation results for the Projection and Prediction modules: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import torch; import torch.nn as nn; from torchvision.models import resnet18; print('Task 003: Projection and Prediction modules with contrastive loss'); encoder = resnet18(pretrained=False); print('ResNet18 encoder loaded'); projection = nn.Sequential(nn.Linear(512, 2048), nn.ReLU(), nn.Linear(2048, 128)); prediction = nn.Sequential(nn.Linear(128, 2048), nn.ReLU(), nn.Linear(2048, 128)); print('Projection and Prediction modules initialized'); print('Modules ready for contrastive training on encoder outputs from:', '{inputs.encoder_vectors}'); print('Augmented images available from:', '{inputs.augmented_images}')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "contrastive_loss_training.csv",
+  "expected_outputs": [
+    "Trained Projection module weights and biases",
+    "Trained Prediction module weights and biases",
+    "Contrastive loss values per batch or epoch",
+    "Final learned representations for ion images after contrastive training"
+  ],
+  "finding": "The Projection and Prediction modules process the 512-dimensional representation vectors output by the ResNet18-based encoders to avoid collapsing solutions while optimizing for maximized similarity between augmentations of the same ion image using contrastive loss.",
+  "github_name": "gankLei-X/DeepION",
+  "input_from": "task_002",
+  "inputs": [
+    "512-dimensional representation vectors from paired ResNet18 encoders",
+    "Original ion images and their augmented versions (from Data Augmentation module)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "projection_module_weights.pth",
+    "prediction_module_weights.pth",
+    "contrastive_loss_per_epoch.csv",
+    "learned_embeddings.npy"
+  ],
+  "linked_result_ids": [
+    "result_012",
+    "result_014"
+  ],
+  "methodology_summary": [
+    "Load 512-dimensional encoder outputs from paired ResNet18 networks processing augmented ion image pairs.",
+    "Pass encoder outputs through a learnable Projection module to map to a contrastive learning space.",
+    "Pass projected vectors through a learnable Prediction module to introduce asymmetry and prevent solution collapse.",
+    "Compute contrastive loss (e.g., NT-Xent or SimCLR loss) between predictions of augmented pairs, maximizing similarity within pairs and minimizing across pairs.",
+    "Optimize Projection and Prediction module parameters via backpropagation while maintaining encoder representations.",
+    "Validation: contrastive loss converges to a stable minimum and learned representations preserve ion-image-specific structure (verified by downstream clustering or classification performance on COL/ISO modes)."
+  ],
+  "missing_information": [
+    "No changelog documenting implementation details, architectural choices, or validation results for the Projection and Prediction modules"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How do the Projection and Prediction modules operate on 512-dimensional encoder outputs to prevent representation collapse during contrastive learning of ion images?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "contrastive-learning-loss-implementation",
+    "neural-network-projection-module-design",
+    "representation-collapse-prevention",
+    "ion-image-embedding-optimization",
+    "encoder-output-dimension-reduction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_deepion/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "module_encoder",
+    "module_projection",
+    "module_prediction",
+    "loss_contrastive"
+  ],
+  "subdomains": [
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "data-processing"
+  ],
+  "synthesized_from": "github:BioNet-XMU__DeepION",
+  "task_description": "Implement the Projection and Prediction modules to process 512-dimensional encoder outputs and apply contrastive loss to maximize similarity between augmentations of the same ion image, preventing collapse of learned representations.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "512-dimensional representation vectors from paired encoders",
+      "port_id": "encoder_vectors",
+      "resolved_via": null,
+      "source": "task_002/representation_vectors",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Augmented ion image pairs from Data Augmentation module",
+      "port_id": "augmented_images",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement Projection and Prediction modules that process 512-D encoder outputs to prevent collapse and apply contrastive loss maximizing similarity between augmented ion image pairs.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained Projection module",
+      "port_id": "projection_module",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained Prediction module",
+      "port_id": "prediction_module",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Contrastive loss trajectory",
+      "port_id": "contrastive_loss",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Learned ion image representations after contrastive training",
+      "port_id": "final_representations",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "deep-learning"
+  ],
+  "title": "Reconstruct the Projection and Prediction Modules with Contrastive Loss",
+  "tools": [
+    "ResNet18"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Trained Projection module weights and biases, Trained Prediction module weights and biases, Contrastive loss values per batch or epoch."
+  ],
+  "workflow_description": "1. Load 512-dimensional representation vectors output from the paired ResNet18 encoders for augmented ion image pairs. 2. Apply the Projection module to transform encoder outputs into a lower-dimensional projection space suitable for contrastive learning. 3. Apply the Prediction module to generate prediction outputs from the projection space, introducing an asymmetry to avoid trivial solutions. 4. Compute contrastive loss between projections/predictions of augmented image pairs, maximizing similarity for the same ion image while minimizing similarity across different images. 5. Backpropagate loss through the Projection and Prediction modules to update their learnable parameters while keeping encoder weights frozen or jointly optimized as specified."
+}

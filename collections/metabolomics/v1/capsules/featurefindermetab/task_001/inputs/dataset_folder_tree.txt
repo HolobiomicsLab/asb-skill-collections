@@ -1,0 +1,21 @@
+  figures/AxisWidget.png
+  figures/ColorSelector.png
+  figures/DeMeanderize.png
+  figures/ExperimentalSettings.png
+  figures/HistogramWidget.png
+  figures/INIFileEditor.png
+  figures/Kernel.png
+  figures/Kernel_DataPoints.png
+  figures/MetaDataBrowser.png
+  figures/OpenMS_75x55_transparent.png
+  figures/background.png
+  figures/category.png
+  figures/example_header.png
+  figures/example_wizard.png
+  figures/logo.drawio.svg
+  figures/openms_logo_corner_small.png
+  figures/openms_logo_corner_transparent.png
+  figures/openms_logo_large_transparent.png
+  figures/openms_logo_small_transparent.png
+  figures/splash.png
+paper.md

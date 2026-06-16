@@ -1,0 +1,2895 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/alternative-splicing-event-comparison-across-conditions",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/alternative-splicing-event-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/differential-splicing-statistical-testing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/gtf-file-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/isoform-structure-annotation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/local-splicing-event-detection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/psi-calculation-from-isoform-abundance",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/psi-matrix-loading-and-normalization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/splicing-matrix-normalization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/transcript-event-extraction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/transcript-expression-quantification-handling",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/transcript-quantification-integration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/uncertainty-aware-significance-assessment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SUPPA performs fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_diffSplicing"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SUPPA2 was published in Genome Biology in 2018.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SUPPA2_system"
+        },
+        {
+          "id": "asb:spine_comp_diffSplicing"
+        },
+        {
+          "id": "asb:spine_pub_suppa2_2018"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Transcript quantification can be leveraged for fast computation of alternative splicing profiles.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_salmon_kallisto"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A short SUPPA tutorial on an example dataset is available on GitHub.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SUPPA has command and subcommand structure.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_arch_commandSubcommand"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SUPPA includes functionality for generation of transcript events and local alternative splicing events.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SUPPA includes functionality for PSI calculation for Transcripts and Events.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_psiCalculation"
+        },
+        {
+          "id": "asb:spine_metric_psi"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SUPPA is distributed under the MIT license.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
+      "asbval:note": "SUPPA2 is the primary tool discussed throughout the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:39.856115+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention a 'generateEvents' subcommand or describe the specific file formats (ioe, ioi, gtf) as outputs from such a command. The paper focuses on differential splicing analysis, PSI calculation, and clustering, not on the internal command structure for generating event indices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What are the three distinct output file artifacts produced by the SUPPA2 generateEvents subcommand when parsing a genome annotation GTF file?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:39.856115+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention 'ioe' files or this specific file format. While the paper discusses PSI values and event definitions, it does not describe the internal file formats used by SUPPA2 for storing event indices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "ioe file (index of events) mapping transcripts to events",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:39.856115+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention 'ioi' files or this specific file format. While isoforms are discussed in the context of transcript quantification, the paper does not describe this particular output file type.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "ioi file (index of isoforms) mapping events to isoforms",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:39.856115+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper mentions GTF files as input (e.g., 'Ensembl (version 75, without pseudogenes)') but does not describe GTF as an output file format from SUPPA2 or discuss a 'generateEvents' command that produces GTF output.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "gtf file containing local alternative splicing events",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:39.856115+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate card asks about a specific SUPPA2 subcommand ('generateEvents') and its file outputs (ioe, ioi, gtf). The paper does not document SUPPA2's command-line interface or internal file formats at this level of detail.",
+        "The paper focuses on the scientific validation and application of SUPPA2 (differential splicing analysis, clustering, experimental validation) rather than on the software's command structure or file format specifications.",
+        "The card appears to be asking for technical documentation of SUPPA2's command-line tools, which is beyond the scope of this peer-reviewed research paper."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:39.856115+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
+      "asbval:note": "The paper explicitly describes SUPPA2's core function of computing PSI values from transcript quantification. The research question accurately captures this functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does SUPPA2 compute PSI (Percent Spliced In) values from transcript quantification data and event definitions to produce a PSI matrix?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:52.224475+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
+      "asbval:note": "SUPPA2 is the primary tool discussed throughout the paper. [SUBSTRING-MATCH for SUPPA2 | role: differential splicing analysis tool]",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:52.224475+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
+      "asbval:note": "The paper describes PSI computation across multiple samples and events. PSI values are proportions/percentages (range [0,1]) representing splicing inclusion levels. The paper discusses PSI values as the primary quantitative output used in downstream analyses.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "PSI (Percent Spliced In) matrix file with events as rows and samples as columns, values in range [0, 1]",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:52.224475+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card focuses narrowly on the PSI calculation step from transcript quantification and event definitions. The paper discusses this as part of a broader differential splicing analysis pipeline, but the PSI computation itself is well-documented in the Methods section.",
+        "The card does not mention downstream analyses (differential splicing testing, clustering) that SUPPA2 performs after PSI calculation, which is appropriate for a task focused on the PSI matrix generation step."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:52.224475+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions... Given the observed \u0394PSI and Econd values for an event between conditions, its significance is calculated from the comparison with the \u0394PSI distribution between replicates for events with Erep values in the neighborhood of the observed Econd.",
+      "asbval:note": "The paper explicitly describes the mathematical framework for computing \u0394PSI and p-values from PSI matrices and transcript abundance (TPM) data across conditions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does the SUPPA2 diffSplice subcommand compute differential splicing statistics (delta PSI and p-values) from per-condition PSI matrices and transcript expression data?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:54:01.790768+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
+      "asbval:note": "SUPPA2 is the primary tool described throughout the paper for differential splicing analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:54:01.790768+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... The description of the uncertainty in terms of transcript abundances, given in transcripts per million (TPM) units, rather than read counts provides several advantages.",
+      "asbval:note": "The paper describes that SUPPA2 computes PSI values, \u0394PSI values, and p-values, and the methods section details the mathematical computation of these statistics. However, the paper does not explicitly specify the exact output file format (TSV/CSV) or confirm all column names (event_id, dpsi, pvalue, per-condition mean PSI). The paper discusses these metrics conceptually but does not provide a sample output table structure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Differential splicing results table (TSV/CSV) with columns: event_id, dpsi, pvalue, and per-condition mean PSI values",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:54:01.790768+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate card focuses specifically on the 'diffSplice subcommand' but the paper does not explicitly name or describe a subcommand with that exact name. The paper describes SUPPA2's differential splicing analysis functionality but does not detail command-line interface specifics.",
+        "The card's framing as 'reconstructing a command' suggests a practical tutorial or workflow task, whereas the paper is a methods paper describing the algorithm and validation. The paper does not provide explicit command-line examples or usage instructions for the diffSplice subcommand."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:54:01.790768+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions... Given the observed \u0394PSI and Econd values for an event between conditions, its significance is calculated from the comparison with the \u0394PSI distribution between replicates for events with Erep values in the neighborhood of the observed Econd.",
+      "asbval:note": "Core research question is directly supported by the paper's methodology section describing SUPPA2's differential splicing computation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "alternative-splicing-event-comparison-across-conditions",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute differential splicing statistics (\u0394PSI and p-values) across biological conditions by consuming per-condition PSI matrices and transcript expression quantification. This skill applies SUPPA2's uncertainty-aware statistical framework to identify significant changes in exon ",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:17.182255+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
+      "asbval:note": "SUPPA2 is the primary tool described throughout the paper for differential splicing analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "alternative-splicing-event-comparison-across-conditions",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:17.182255+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
+      "asbval:note": "Repository URL is explicitly stated in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "alternative-splicing-event-comparison-across-conditions",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].repo",
+      "asbval:target_claim_text": "https://github.com/comprna/SUPPA",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:17.182255+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... Given the observed \u0394PSI and Econd values for an event between conditions, its significance is calculated from the comparison with the \u0394PSI distribution between replicates",
+      "asbval:note": "Paper confirms SUPPA2 computes \u0394PSI and p-values for differential splicing, but does not explicitly mention a 'diffSplice subcommand' by that name. The paper describes the differential splicing functionality but does not document specific command-line subcommand names.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "alternative-splicing-event-comparison-across-conditions",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Computes \u0394PSI and p-values for differential splicing analysis via the diffSplice subcommand",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:17.182255+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 can work with multiple replicates per condition and with multiple conditions.",
+      "asbval:note": "Paper explicitly states SUPPA2 works with multiple replicates per condition and multiple conditions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "alternative-splicing-event-comparison-across-conditions",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - input requirement: PSI matrices",
+      "asbval:target_claim_text": "Input data includes per-condition PSI matrices calculated independently for two or more biological conditions, each with two or more replicate samples",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:17.182255+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... where TPMa,r indicates the abundance of transcript a in replicate r in transcripts per million (TPM) units.",
+      "asbval:note": "Paper confirms transcript quantification (in TPM units) is required as input.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "alternative-splicing-event-comparison-across-conditions",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - input requirement: transcript expression quantification",
+      "asbval:target_claim_text": "Input data includes transcript expression quantification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:17.182255+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 exploits the between-replicate variability to test for significance... This biological variability provides information on the uncertainty of the PSI estimates.",
+      "asbval:note": "Paper confirms that SUPPA2 relies on between-replicate variability to estimate uncertainty and test significance.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "alternative-splicing-event-comparison-across-conditions",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - when NOT to use: unpaired or insufficient replicates",
+      "asbval:target_claim_text": "Input data is unpaired or lacks proper replicate structure (fewer than 2 replicates per condition); SUPPA2 requires replicates to estimate the null distribution of \u0394PSI.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:17.182255+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions.",
+      "asbval:note": "Implicit support: paper emphasizes multiple replicates and conditions are required for SUPPA2's methodology.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "alternative-splicing-event-comparison-across-conditions",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - when NOT to use: single sample per condition",
+      "asbval:target_claim_text": "You have only a single sample per condition or single-condition data; differential analysis requires at least two conditions with replicates.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:17.182255+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 currently implements two density-based clustering methods: DBSCAN and OPTICS... These methods generally involve the analysis of either transcript isoforms, clusters of splice junctions, alternative splicing events, or exonic regions.",
+      "asbval:note": "Paper describes SUPPA2 as computing PSI values from transcript quantification and analyzing alternative splicing events (SE, A5/A3, RI, MX), but does NOT explicitly describe a GTF parsing or event definition file generation step (ioe, ioi, gtf files). The paper focuses on differential splicing analysis using pre-computed PSI values, not on the upstream GTF parsing task. The card describes a preprocessing step that is not detailed in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "alternative-splicing-event-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Parse a genome annotation GTF file to extract and define alternative splicing events (exon skipping, intron retention, alternative splice sites, etc.) and generate indexed event definition files (ioe, ioi, gtf) for downstream PSI quantification and differential splicing analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:29.171359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
+      "asbval:note": "SUPPA2 is confirmed as the primary tool in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "alternative-splicing-event-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:29.171359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not describe SUPPA2 parsing GTF files or generating ioe/ioi/gtf event definition files. The paper states 'SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events' but assumes PSI values are already calculated. No mention of generateEvents subcommand or GTF parsing functionality in provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "alternative-splicing-event-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Parses GTF annotation and generates event definition files (ioe, ioi, gtf) via generateEvents subcommand",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:29.171359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These methods generally involve the analysis of either transcript isoforms, clusters of splice junctions, alternative splicing events, or exonic regions... SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
+      "asbval:note": "Paper confirms SUPPA2 analyzes alternative splicing events (SE, A5/A3, RI, MX) and computes PSI values, but the scope describes GTF parsing as a prerequisite step. The paper does not describe SUPPA2 as performing GTF parsing or event definition generation; it assumes these inputs are already prepared. The card's scope describes a preprocessing task not documented in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "alternative-splicing-event-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have a GTF genome annotation and need to identify all local alternative splicing events (SE, RI, A5/A3, MX, AF/AL) or transcript-level isoform events for a given gene set, prior to quantifying PSI values across samples or performing differential splicing analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:29.171359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The simplicity and modular architecture of SUPPA2 also makes it a very convenient tool in multiple contexts, as PSI values from other methods and for other event types, like complex events, or data types, like transcripts, can be used in SUPPA2 for differential splicing analysis or for clustering across conditions.",
+      "asbval:note": "Paper confirms SUPPA2 can accept pre-computed PSI values from other sources, supporting the claim that pre-computed event definitions can be used directly.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "alternative-splicing-event-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - When NOT to use",
+      "asbval:target_claim_text": "You already have pre-computed event definition files (ioe/ioi) from a prior analysis and only need to proceed to PSI quantification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:29.171359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not describe GTF files as input to SUPPA2. The paper states SUPPA2 uses 'transcript quantification to compute inclusion values (PSI)' and references transcript abundance from Salmon quantification, not GTF parsing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "alternative-splicing-event-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "GTF genome annotation file (with exon feature lines containing gene_id and transcript_id attributes)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:29.171359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention ioe, ioi, or gtf output files. The paper describes SUPPA2 outputs as differential splicing results, clustering results, and PSI values, not event definition files.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "alternative-splicing-event-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "outputs",
+      "asbval:target_claim_text": "ioe file (indexed event definition file), ioi file, gtf file",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:29.171359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 extends this principle to measure differential splicing between conditions by exploiting the variability between biological replicates to determine the uncertainty in the PSI values... The significance of an observed \u0394PSI value between conditions will depend on where in the distribution of the uncertainty it falls.",
+      "asbval:note": "Core research question is directly supported by paper's description of SUPPA2's uncertainty-aware differential splicing methodology.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "differential-splicing-statistical-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Statistical testing of differential splicing across multiple conditions by computing per-event \u0394PSI (delta percent-spliced-in) values and their significance from PSI matrices and transcript expression data. This skill quantifies the magnitude and statistical significance of splic",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:43.395336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
+      "asbval:note": "Paper confirms SUPPA2 computes differential splicing statistics from PSI matrices and expression data with uncertainty-aware methods. However, the paper does not explicitly name a 'diffSplice subcommand'\u2014it describes the general functionality. The subcommand name cannot be verified from these passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "differential-splicing-statistical-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2 implements diffSplice subcommand for computing differential splicing statistics with uncertainty-aware p-values from PSI matrices and expression data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:43.395336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
+      "asbval:note": "Repository URL is verbatim in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "differential-splicing-statistical-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2 repository: https://github.com/comprna/SUPPA",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:43.395336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions... SUPPA2 estimates the uncertainty of \u0394PSI values as a function of the expression of transcripts involved in the event, taking into account all events genome-wide to test the significance of an observed \u0394PSI.",
+      "asbval:note": "Paper explicitly states SUPPA2 works with multiple replicates per condition and multiple conditions, and uses transcript expression to estimate uncertainty.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "differential-splicing-statistical-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use this skill when you have PSI (percent-spliced-in) matrices for multiple samples grouped into two or more biological conditions, along with corresponding transcript expression quantification, and need to identify events or transcripts with statistically significant changes in ",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:43.395336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 exploits the between-replicate variability to test for significance... To illustrate our approach and to evaluate the dynamic range of SUPPA2 we used it to analyze RNA-seq data obtained after the double knockdown of TRA2A and TRA2B splicing regulators compared with controls [17] (Fig. 1a). The differences in PSI value for each event between biological replicates are higher at low expression, in agreement with the expected higher variability at low read count. This biological variability provides information on the uncertainty of the PSI estimates.",
+      "asbval:note": "Paper confirms that biological replicates are essential for SUPPA2's uncertainty estimation methodology.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "differential-splicing-statistical-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input samples lack clear biological replicates (\u22652 per condition required for uncertainty estimation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:43.395336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions...",
+      "asbval:note": "Paper indicates SUPPA2 requires per-sample PSI values as input, not pre-computed statistics.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "differential-splicing-statistical-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "PSI matrices already contain pre-computed differential statistics rather than raw per-sample values",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:43.395336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions.",
+      "asbval:note": "Paper confirms SUPPA2 requires condition grouping and multiple conditions for its analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "differential-splicing-statistical-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Study design involves only single time points or unpaired samples without condition grouping",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:43.395336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gtf-file-parsing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 relies on genome annotation to define events",
+      "asbval:note": "Paper confirms SUPPA2 operates on genome annotation to define splicing events. GTF parsing is a prerequisite step for event generation, consistent with the research question.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gtf-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Parse a genome annotation GTF file to extract transcript structures, exon coordinates, and gene\u2013transcript relationships for downstream alternative splicing event generation.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:55.156585+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gtf-file-parsing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 enables cost-effective use of RNA sequencing for the robust and streamlined analysis of differential splicing across multiple biological conditions",
+      "asbval:note": "Paper describes SUPPA2 as enabling streamlined analysis of differential splicing, which requires prior decomposition of transcript isoforms into events.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gtf-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill is essential for initializing splicing analysis workflows that require systematic decomposition of transcript isoforms into discrete AS events.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:55.156585+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gtf-file-parsing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 is available at https://github.com/comprna/SUPPA",
+      "asbval:note": "SUPPA2 is confirmed as the primary tool in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gtf-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2 is the tool used",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:55.156585+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gtf-file-parsing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 relies on genome annotation to define events",
+      "asbval:note": "Paper confirms SUPPA2 operates on genome annotation and generates alternative splicing events, but does not explicitly name the 'generateEvents' subcommand or mention specific output file formats (ioe, ioi). The functional role of parsing GTF and generating events is supported, but the specific command name and file format details are not verified in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "gtf-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Parses GTF exon features and generates indexed ioe, ioi, and local-event GTF files via the generateEvents subcommand",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:55.156585+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gtf-file-parsing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... exon-cassette (SE; 48.71%) and alternative splice site (A5/A3; 37.71%) events are the most frequent events in humans compared to mutual exclusion (6.22%) or intron-retention (7.36%)",
+      "asbval:note": "Paper explicitly discusses PSI computation and multiple event types (SE, A5/A3, mutual exclusion, intron retention), confirming the use case.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gtf-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When to use: You have a GTF-formatted genome annotation file and need to generate alternative splicing events (exon skipping, intron retention, alternative splice sites, mutually exclusive exons) or transcript-isoform inclusion levels (PSIs).",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:55.156585+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gtf-file-parsing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not discuss ioe/ioi file formats or when NOT to use GTF parsing. Insufficient information to validate this negative use case.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "gtf-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: Input annotation is already an indexed event catalog (ioe/ioi files); re-parsing would be redundant.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:55.156585+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gtf-file-parsing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not discuss GTF attribute requirements or preprocessing steps. Insufficient information to validate this constraint.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "gtf-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: GTF file lacks gene_id or transcript_id attributes in the ninth column; preprocessing is required before parsing.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:55:55.156585+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/isoform-structure-annotation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 currently implements two density-based clustering methods: DBSCAN and OPTICS... Clustering is performed only with events that change significantly in at least one pair of adjacent conditions.",
+      "asbval:note": "Paper describes SUPPA2's core function as computing PSI values from transcript quantification and analyzing differential splicing across conditions. However, the paper does NOT explicitly describe a 'generateEvents' subcommand or the production of 'ioi', 'ioe', 'gtf' artifact files. The paper focuses on differential splicing analysis and clustering, not on the upstream event generation step from GTF. The Methods section mentions that SUPPA2 'uses transcript quantification to compute inclusion values (PSI) of alternative splicing events' but does not detail GTF parsing or event definition generation. This appears to be a task card describing a preprocessing step that is not the focus of this paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "isoform-structure-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Reconstruct transcript isoform structures and local alternative splicing events from a genome annotation GTF file using SUPPA2's generateEvents subcommand, producing three indexed artifact files (ioi, ioe, gtf) that map transcripts to events and define splicing coordinates for do",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:07.172547+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/isoform-structure-annotation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
+      "asbval:note": "SUPPA2 is confirmed present in the paper and is used for alternative splicing analysis. However, the paper's primary focus is on differential splicing analysis (computing \u0394PSI, statistical testing, clustering) rather than on GTF-to-event generation. The paper does not describe or name a 'generateEvents' subcommand. The paper states SUPPA2 'relies on genome annotation to define events' (passage 8) but does not detail the event generation workflow from GTF files. The tool is used for a different primary function (differential splicing) than the card claims (event generation from GTF).",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "isoform-structure-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2 with role: Generates transcript isoform structures and local alternative splicing event definitions from GTF annotation via generateEvents subcommand",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:07.172547+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/isoform-structure-annotation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Alternative splicing is related to a change in the relative abundance of transcript isoforms produced from the same gene... These methods generally involve the analysis of either transcript isoforms [4\u20137], clusters of splice junctions [8, 9], alternative splicing events [10, 11], or exonic regions [12]. Relative abundances of the splicing events or transcript isoforms are generally described in terms of a percentage or proportion spliced-in (PSI)... exon-cassette (SE; 48.71%) and alternative splice site (A5/A3; 37.71%) events are the most frequent events in humans compared to mutual exclusion (6.22%) or intron-retention (7.36%)",
+      "asbval:note": "The paper discusses alternative splicing event types (exon skipping/cassette, alternative splice sites, intron retention, mutual exclusion) and PSI quantification. However, the paper's scope is differential splicing analysis across conditions, not the upstream task of generating event definitions from GTF. The paper assumes PSI values are already calculated and focuses on testing for significant differences. The card describes a preprocessing/annotation step; the paper describes a downstream analysis step.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "isoform-structure-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have a GTF genome annotation and need to catalog all transcript isoforms and local alternative splicing event variants (exon skipping, intron retention, alternative splice sites, mutually exclusive exons, alternative first/last exons) before quantifying their inclusion l",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:07.172547+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/isoform-structure-annotation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of 'ioi', 'ioe', or 'gtf' output files in any passage. The paper does not describe SUPPA2's output file formats or naming conventions for event annotation artifacts.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "isoform-structure-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "producing three indexed artifact files (ioi, ioe, gtf)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:07.172547+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/isoform-structure-annotation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Although SUPPA2 relies on genome annotation to define events, poorly annotated genomes can be improved and extended before analysis by SUPPA2.",
+      "asbval:note": "Paper confirms SUPPA2 relies on genome annotation but does not specify GTF format, exon features, or required attributes (gene_id, transcript_id). The statement is too general to confirm the specific input format and requirements claimed in the card.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "isoform-structure-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input is a GTF genome annotation file (exon features with gene_id and transcript_id tags required)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:07.172547+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/local-splicing-event-detection/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 currently implements two density-based clustering methods: DBSCAN and OPTICS... Clustering is performed only with events that change significantly in at least one pair of adjacent conditions.",
+      "asbval:note": "Paper confirms SUPPA2 computes PSI from alternative splicing events and performs differential splicing analysis. GTF parsing is implicit in the workflow (transcript quantification from annotation).",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "local-splicing-event-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Detect and catalog local alternative splicing (AS) events from genome annotation GTF files, generating indexed event definitions and isoform mappings that serve as inputs for PSI quantification and differential splicing analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:23.004468+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/local-splicing-event-detection/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Since exon-cassette (SE; 48.71%) and alternative splice site (A5/A3; 37.71%) events are the most frequent events in humans compared to mutual exclusion (6.22%) or intron-retention (7.36%)... we decided to match SE and A5/A3 events across all four methods.",
+      "asbval:note": "Paper explicitly identifies SE (exon skipping), A5/A3 (alternative splice sites), MX (mutual exclusion), and RI (intron retention) events. AF/AL (alternative first/last exons) not explicitly mentioned in passages but consistent with event type coverage.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "local-splicing-event-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "identifies standard splicing variations (exon skipping, intron retention, alternative splice sites, mutually exclusive exons, and alternative first/last exons) at single-event resolution",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:23.004468+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/local-splicing-event-detection/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
+      "asbval:note": "SUPPA2 is the primary tool discussed throughout the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "local-splicing-event-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:23.004468+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/local-splicing-event-detection/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
+      "asbval:note": "Repository URL confirmed in paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "local-splicing-event-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].repo",
+      "asbval:target_claim_text": "https://github.com/comprna/SUPPA",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:23.004468+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/local-splicing-event-detection/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events... SUPPA2 relies on genome annotation to define events... The simplicity and modular architecture of SUPPA2 also makes it a very convenient tool in multiple contexts, as PSI values from other methods and for other event types, like complex events, or data types, like transcripts, can be used in SUPPA2 for differential splicing analysis or for clustering across conditions.",
+      "asbval:note": "Paper confirms SUPPA2 detects SE, A5/A3, MX, RI event types and relies on genome annotation. However, specific output file formats (ioe/ioi/gtf) are not mentioned in the provided passages. The paper focuses on PSI computation and differential splicing rather than detailed event indexing output formats.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "local-splicing-event-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Parses GTF exon features, detects local AS event types (SE, A5/A3, MX, RI, AF/AL), and generates indexed ioe/ioi/gtf outputs",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:23.004468+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/local-splicing-event-detection/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 relies on genome annotation to define events... RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon. Reads were mapped to the human (hg19) or mouse (mm10) genomes using TopHat.",
+      "asbval:note": "Paper confirms SUPPA2 works with genome annotation (GTF-like) to define events for downstream analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "local-splicing-event-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have a GTF annotation file and need to systematically extract all local alternative splicing event coordinates",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:23.004468+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... where TPMa,r indicates the abundance of transcript a in replicate r in transcripts per million (TPM) units.",
+      "asbval:note": "Research question directly supported by paper's core methodology.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "psi-calculation-from-isoform-abundance",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Calculate Percent Spliced In (PSI) values for alternative splicing events by aggregating transcript abundance quantifications (TPM or counts) according to event-specific transcript definitions. This enables fast, genome-wide profiling of splicing inclusion levels across samples.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:37.683469+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
+      "asbval:note": "SUPPA2 is the primary tool presented in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "psi-calculation-from-isoform-abundance",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:37.683469+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
+      "asbval:note": "Repository URL confirmed in paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "psi-calculation-from-isoform-abundance",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].repo",
+      "asbval:target_claim_text": "https://github.com/comprna/SUPPA",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:37.683469+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
+      "asbval:note": "Paper confirms PSI computation from transcript abundances, but does not explicitly name subcommands 'psiPerEvent' and 'psiPerIsoform' in the provided passages. The paper describes the PSI calculation methodology but specific subcommand names are not mentioned in the extracted text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "psi-calculation-from-isoform-abundance",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Computes PSI values by aggregating transcript abundances according to event structure; executes psiPerEvent and psiPerIsoform subcommands",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:37.683469+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31]... SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
+      "asbval:note": "Paper confirms use of Salmon for transcript quantification and SUPPA2 for PSI computation. However, the paper does not explicitly mention 'ioe' or 'ioi' format file specifications in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "psi-calculation-from-isoform-abundance",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - When to use",
+      "asbval:target_claim_text": "You have transcript-level abundance estimates (from Salmon, kallisto, or similar) and a set of defined alternative splicing events (in ioe or ioi format), and you need to compute event-level or isoform-level inclusion ratios (PSI) to quantify splicing patterns across multiple sam",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:37.683469+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not contain explicit discussion of a 'diffSplice' subcommand or guidance on when to skip PSI calculation. The paper discusses differential splicing analysis but does not clarify whether PSI calculation is mandatory or optional for that workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "psi-calculation-from-isoform-abundance",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - When NOT to use (differential splicing without PSI)",
+      "asbval:target_claim_text": "Your goal is differential splicing analysis without intermediate PSI matrix generation \u2014 use diffSplice subcommand directly instead.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:37.683469+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
+      "asbval:note": "The paper describes PSI computation and use across multiple conditions/samples. The concept of loading and normalizing PSI matrices is implicit in the workflow described.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "psi-matrix-loading-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Load PSI (percent-spliced-in) matrix files computed across multiple conditions and normalize transcript expression values to prepare for differential splicing analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:48.199495+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The description of the uncertainty in terms of transcript abundances, given in transcripts per million (TPM) units, rather than read counts provides several advantages. These include speed, as there is no need to store or go back to read information, as well as interpretability and application range, as transcript abundances are already normalized for transcript length and remain stable at different library sizes.",
+      "asbval:note": "Paper explicitly discusses normalization of transcript expression using TPM units for differential splicing analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "psi-matrix-loading-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "normalize transcript expression values to prepare for differential splicing analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:48.199495+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
+      "asbval:note": "SUPPA2 is the primary tool discussed throughout the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "psi-matrix-loading-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:48.199495+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
+      "asbval:note": "Paper confirms SUPPA2 computes PSI values and performs differential splicing analysis, but does not explicitly name the subcommands 'psiPerEvent', 'psiPerIsoform', or 'diffSplice'. The paper states 'SUPPA2 uses transcript quantification to compute inclusion values (PSI)' and describes differential splicing computation, but the specific subcommand names are not mentioned in the provided passages. The functional role is correct but the specific command names cannot be verified from these passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "psi-matrix-loading-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Generates PSI matrices via psiPerEvent/psiPerIsoform and consumes aligned, normalized PSI and expression matrices in the diffSplice subcommand to compute differential splicing statistics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:48.199495+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
+      "asbval:note": "Paper confirms PSI matrix generation across multiple conditions, but does not explicitly name the subcommands 'psiPerEvent' or 'psiPerIsoform' in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "psi-matrix-loading-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have generated PSI matrices for alternative splicing events or transcripts across two or more biological conditions using SUPPA's psiPerEvent or psiPerIsoform subcommand",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:48.199495+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "differential splicing is given in terms of the difference of these relative abundances, or \u0394PSI, between conditions. PSI values estimated from RNA-seq data have shown a good agreement with independent experimental measurements, and the magnitude of \u0394PSI represents a good indicator of biological relevance.",
+      "asbval:note": "Paper explicitly discusses \u0394PSI and p-values as outputs of differential splicing analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "psi-matrix-loading-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "differential splicing statistics (\u0394PSI and p-values)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:48.199495+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions",
+      "asbval:note": "Paper confirms that PSI computation from transcript quantification is a prerequisite step before differential splicing analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "psi-matrix-loading-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - When NOT to use",
+      "asbval:target_claim_text": "PSI matrices have not yet been computed from transcript quantification data; use psiPerEvent or psiPerIsoform first.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:48.199495+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions.",
+      "asbval:note": "Paper emphasizes multiple replicates per condition as a requirement for SUPPA2 analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "psi-matrix-loading-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - When NOT to use",
+      "asbval:target_claim_text": "You are working with a single condition with no replicates; differential splicing analysis requires \u22652 replicates per condition.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:56:48.199495+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/splicing-matrix-normalization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
+      "asbval:note": "Core functionality of SUPPA2 is explicitly stated in Methods section.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "splicing-matrix-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute PSI (Percent Spliced In) values from transcript quantification data and alternative splicing event definitions to produce a normalized inclusion-level matrix.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:01.304491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/splicing-matrix-normalization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The description of the uncertainty in terms of transcript abundances, given in transcripts per million (TPM) units, rather than read counts provides several advantages. These include speed, as there is no need to store or go back to read information, as well as interpretability and application range, as transcript abundances are already normalized for transcript length and remain stable at different library sizes.",
+      "asbval:note": "Paper describes how SUPPA2 transforms transcript abundances (TPM) into normalized, comparable metrics across samples.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "splicing-matrix-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill transforms raw transcript abundances into event-level splicing profiles that are comparable across samples and conditions.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:01.304491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/splicing-matrix-normalization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
+      "asbval:note": "Paper confirms SUPPA2 computes PSI from transcript quantification and event definitions. However, the specific subcommands 'psiPerEvent' and 'psiPerIsoform' are not mentioned in the provided passages. The core functionality is confirmed but the specific command names cannot be verified from these excerpts.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "splicing-matrix-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2 - Computes PSI values from transcript quantification and event definitions; provides psiPerEvent and psiPerIsoform subcommands for matrix calculation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:01.304491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/splicing-matrix-normalization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31].",
+      "asbval:note": "Paper explicitly uses Salmon for transcript quantification that feeds into SUPPA2 analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "splicing-matrix-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Salmon - Upstream tool: generates transcript-level quantification (TPM/counts) used as input to PSI calculation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:01.304491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/splicing-matrix-normalization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Kallisto is not mentioned anywhere in the provided passages. While the paper mentions Salmon and other transcript quantification methods, kallisto is not explicitly referenced as a tool used with SUPPA2 in these excerpts.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "splicing-matrix-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "kallisto - Upstream tool: generates transcript-level quantification (TPM/counts) used as input to PSI calculation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:01.304491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/splicing-matrix-normalization/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
+      "asbval:note": "Paper confirms the use case for transcript quantification input and PSI computation for alternative splicing events. Salmon is confirmed as a quantification tool, but kallisto is not mentioned in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "splicing-matrix-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have transcript-level quantification (TPM or counts from Salmon/kallisto) and need to quantify the inclusion level of specific alternative splicing events",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:01.304491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/splicing-matrix-normalization/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
+      "asbval:note": "Paper clearly states SUPPA2 requires transcript quantification (not exon-level counts) as input.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "splicing-matrix-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "If you only have exon-level read counts (not transcript-level quantification)\u2014SUPPA2 requires transcript-level (isoform) abundances to calculate proper PSI values.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:01.304491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/splicing-matrix-normalization/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Although SUPPA2 relies on genome annotation to define events, poorly annotated genomes can be improved and extended before analysis by SUPPA2.",
+      "asbval:note": "Paper confirms SUPPA2 relies on genome annotation/event definitions to define alternative splicing events.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "splicing-matrix-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "If you have no event definition file and cannot generate one from a GTF annotation\u2014SUPPA2 requires explicit mapping of which transcripts define each event",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:01.304491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-event-extraction/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 enables cost-effective use of RNA sequencing for the robust and streamlined analysis of differential splicing across multiple biological conditions.",
+      "asbval:note": "The paper describes SUPPA2's core function of computing PSI values from transcript quantification and analyzing differential splicing across conditions. The GTF parsing and ioe/ioi file generation are standard preprocessing steps for SUPPA2 documented in methods.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-event-extraction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Extract alternative splicing events and transcript isoforms from genome annotation GTF files to produce indexed event definitions (ioe, ioi) and local event coordinates (gtf). This step is essential for downstream PSI calculation and differential splicing analysis across multiple",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:12.947120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-event-extraction/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "[SUBSTRING-MATCH for SUPPA2 | role: differential splicing analysis tool]",
+      "asbval:note": "SUPPA2 is the primary tool discussed throughout the paper for analyzing alternative splicing events.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-event-extraction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:12.947120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-event-extraction/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events... The simplicity and modular architecture of SUPPA2 also makes it a very convenient tool in multiple contexts, as PSI values from other methods and for other event types, like complex events, or data types, like transcripts, can be used in SUPPA2",
+      "asbval:note": "The paper confirms SUPPA2 works with transcript quantification and alternative splicing events, but does not explicitly name the ioe, ioi, or gtf file formats in the provided passages. The paper states 'SUPPA2 uses transcript quantification to compute inclusion values (PSI)' and mentions it can work with 'PSI values from other methods', suggesting it accepts pre-computed inputs rather than necessarily generating these specific artifact files itself. The Methods section references transcript quantification via Salmon but does not detail GTF parsing or ioe/ioi generation in the provided excerpts.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "transcript-event-extraction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "parses GTF annotation and generates ioe, ioi, and gtf artifacts for transcript and local alternative splicing event definitions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:12.947120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-event-extraction/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 enables cost-effective use of RNA sequencing for the robust and streamlined analysis of differential splicing across multiple biological conditions.",
+      "asbval:note": "The scope aligns with the paper's central claim that SUPPA2 performs differential splicing analysis across multiple conditions using transcript quantification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-event-extraction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Extract alternative splicing events and transcript isoforms from genome annotation GTF files to produce indexed event definitions (ioe, ioi) and local event coordinates (gtf). This step is essential for downstream PSI calculation and differential splicing analysis across multiple",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:12.947120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-event-extraction/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31]... Although SUPPA2 relies on genome annotation to define events, poorly annotated genomes can be improved and extended before analysis by SUPPA2.",
+      "asbval:note": "The paper confirms SUPPA2 relies on genome annotation to define events and uses Ensembl transcripts, but does not explicitly detail GTF file format requirements or the specific gene_id/transcript_id attributes in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "transcript-event-extraction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "genome annotation GTF file (exon features with gene_id and transcript_id attributes)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:12.947120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-event-extraction/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The provided passages do not mention ioe, ioi, or gtf output file formats by name. The paper discusses PSI values, event definitions, and clustering results, but does not explicitly reference these specific artifact file types in the excerpts provided.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "transcript-event-extraction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "outputs",
+      "asbval:target_claim_text": "ioe file (index of events with transcript-to-event mappings)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:12.947120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
+      "asbval:note": "Paper explicitly describes SUPPA2 consuming transcript quantification (TPM units) to compute PSI values for differential splicing analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-expression-quantification-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Process and normalize transcript abundance quantification files to serve as input for PSI (percent-spliced-in) calculations and downstream differential splicing analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:27.860549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
+      "asbval:note": "Paper describes the workflow from transcript quantification \u2192 PSI calculation \u2192 differential splicing analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-expression-quantification-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill bridges transcript-level expression data with isoform-centric alternative splicing quantification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:27.860549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31]... We used RSEM [39] to simulate sequencing reads",
+      "asbval:note": "Paper confirms Salmon and RSEM are used as quantification tools. Kallisto is not explicitly mentioned in the passages, though it is a standard tool in the field. Evidence supports Salmon and RSEM but not Kallisto.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "transcript-expression-quantification-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have transcript abundance estimates from RNA-seq quantification tools (e.g., Salmon, Kallisto, RSEM)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:27.860549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
+      "asbval:note": "Directly stated in methods section.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-expression-quantification-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "need to compute PSI values for alternative splicing events or transcript isoforms",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:27.860549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions.",
+      "asbval:note": "Paper explicitly states SUPPA2 handles multiple replicates and conditions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-expression-quantification-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "preparing expression data for differential splicing analysis across multiple conditions with replicates",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:27.860549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... where a indicates the two or more transcripts describing the event, and TPMa,r indicates the abundance of transcript a in replicate r in transcripts per million (TPM) units.",
+      "asbval:note": "Paper clearly shows SUPPA2 requires transcript-level (isoform-level) abundances, not gene-level aggregates.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-expression-quantification-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Expression quantification files are already aggregated to gene level (not transcript level) \u2014 SUPPA requires isoform-resolution abundance",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:27.860549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The simplicity and modular architecture of SUPPA2 also makes it a very convenient tool in multiple contexts, as PSI values from other methods and for other event types, like complex events, or data types, like transcripts, can be used in SUPPA2 for differential splicing analysis or for clustering across conditions.",
+      "asbval:note": "Paper states SUPPA2 can accept pre-computed PSI values from other methods for downstream differential analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-expression-quantification-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input data are pre-computed PSI values rather than raw transcript abundances \u2014 skip directly to differential analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:27.860549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges",
+      "asbval:note": "Tool name confirmed throughout paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-expression-quantification-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2 (name)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:27.860549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
+      "asbval:note": "Repository URL confirmed in paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-expression-quantification-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2 repo: https://github.com/comprna/SUPPA",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:27.860549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 estimates the uncertainty of \u0394PSI values as a function of the expression of transcripts involved in the event, taking into account all events genome-wide to test the significance of an observed \u0394PSI",
+      "asbval:note": "Paper explicitly describes SUPPA2's role in consuming transcript quantification, computing PSI, and performing uncertainty-aware differential splicing analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-expression-quantification-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2 role: Consumes transcript expression quantification to calculate PSI values and perform differential splicing analysis with uncertainty-aware statistics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:27.860549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-quantification-integration/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... where TPMa,r indicates the abundance of transcript a in replicate r in transcripts per million (TPM) units.",
+      "asbval:note": "Paper explicitly describes SUPPA2's use of transcript quantification (TPM) to compute PSI values for alternative splicing events.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-quantification-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Integrate transcript abundance quantification (TPM or counts from Salmon/kallisto) with SUPPA2 event definitions to compute PSI (Percent Spliced In) values across samples.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:41.069666+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-quantification-integration/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions...",
+      "asbval:note": "Paper describes aggregation of transcript abundances into event-level PSI values.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-quantification-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill bridges isoform-level expression data to alternative splicing event-level analysis by aggregating transcript abundances according to event structure.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:41.069666+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-quantification-integration/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
+      "asbval:note": "Paper confirms SUPPA2 computes PSI values from transcript quantification, but does not explicitly name the subcommands 'psiPerEvent' and 'psiPerIsoform' in the provided passages. The paper describes the mathematical methodology but not the specific command-line interface names.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "transcript-quantification-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2 - Executes psiPerEvent and psiPerIsoform subcommands to aggregate transcript abundances into PSI values for alternative splicing events and transcripts",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:41.069666+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-quantification-integration/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31].",
+      "asbval:note": "Paper explicitly uses Salmon for transcript quantification. Also mentioned in Methods: 'For the simulation we used the quantification of RefSeq transcripts for the three control samples from [17] (GSE59335) with Salmon [31] as theoretical abundances'.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-quantification-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Salmon - Produces transcript-level quantification output (TPM) used as input to PSI calculation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:41.069666+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-quantification-integration/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "kallisto is not mentioned anywhere in the provided passages. The paper uses Salmon for transcript quantification but does not reference kallisto as an alternative or compatible tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "transcript-quantification-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "kallisto - Produces transcript-level quantification output (TPM or counts) used as input to PSI calculation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:41.069666+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-quantification-integration/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31].",
+      "asbval:note": "Paper confirms Salmon is used for transcript quantification and SUPPA2 uses this for PSI calculation. However, kallisto is not mentioned in the paper, and the specific file formats (ioe/ioi) and generateEvents step are not explicitly discussed in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "transcript-quantification-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have transcript quantification output (TPM or raw counts) from a pseudo-aligner (Salmon or kallisto) and an ioe/ioi event definition file from SUPPA2's generateEvents step",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:41.069666+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-quantification-integration/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 enables cost-effective use of RNA sequencing for the robust and streamlined analysis of differential splicing across multiple biological conditions... SUPPA2 is also able to analyze multiple conditions by computing the pairwise differential splicing between conditions, and can detect groups of events with similar splicing patterns across conditions using density-based clustering",
+      "asbval:note": "Paper explicitly describes SUPPA2's use of PSI values for differential splicing analysis and clustering across multiple conditions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "transcript-quantification-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "calculate PSI values\u2014the relative inclusion level of alternative splicing events\u2014across multiple samples for downstream differential splicing or clustering analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:41.069666+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 extends this principle to measure differential splicing between conditions by exploiting the variability between biological replicates to determine the uncertainty in the PSI values... The significance of an observed \u0394PSI value between conditions will depend on where in the distribution of the uncertainty it falls... SUPPA2 estimates the significance considering the distribution between replicates for all events with similar transcript abundance; hence, it provides a lower bound for significant |\u0394PSI| values that vary with the expression of the transcripts describing the event",
+      "asbval:note": "Core research question is directly supported by passage 3 and the Methods section (passage 8-9) which describes the empirical cumulative density function approach.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "uncertainty-aware-significance-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Assess statistical significance of differential splicing events by comparing observed changes (\u0394PSI) against the distribution of within-replicate variation, accounting for transcript expression uncertainty. This method provides calibrated p-values that reflect biological noise ra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:52.858244+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
+      "asbval:note": "SUPPA2 is the primary tool described throughout the paper for differential splicing analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "uncertainty-aware-significance-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SUPPA2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:52.858244+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
+      "asbval:note": "Repository URL confirmed in paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "uncertainty-aware-significance-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].repo",
+      "asbval:target_claim_text": "https://github.com/comprna/SUPPA",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:52.858244+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions... Given the observed \u0394PSI and Econd values for an event between conditions, its significance is calculated from the comparison with the \u0394PSI distribution between replicates",
+      "asbval:note": "The paper describes SUPPA2 computing \u0394PSI and p-values from PSI matrices and expression data, but does not explicitly name a 'diffSplice subcommand'. The paper refers to 'differential splicing analysis' as a general function but does not document specific subcommand names in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "uncertainty-aware-significance-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Computes differential splicing statistics (\u0394PSI and uncertainty-aware p-values) from PSI matrices and expression data via the diffSplice subcommand",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:52.858244+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions. Additionally, SUPPA2 estimates the uncertainty of \u0394PSI values as a function of the expression of transcripts involved in the event, taking into account all events genome-wide to test the significance of an observed \u0394PSI",
+      "asbval:note": "Scope statement is well-supported by the paper's description of SUPPA2's capabilities.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "uncertainty-aware-significance-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope (inputs requirement: replicates per condition)",
+      "asbval:target_claim_text": "You have PSI matrices for two or more conditions with replicates per condition, and you need to determine which alternative splicing events show significant changes between conditions while accounting for measurement uncertainty that scales with transcript expression levels.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:52.858244+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions... SUPPA2 estimates the uncertainty of \u0394PSI values as a function of the expression of transcripts involved in the event, taking into account all events genome-wide",
+      "asbval:note": "The requirement for replicates is implicit in the method's design, which exploits 'variability between biological replicates' (passage 3). The paper does not explicitly state a minimum of 2 replicates, but the methodology requires replicate structure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "uncertainty-aware-significance-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope (when NOT to use: unpaired samples)",
+      "asbval:target_claim_text": "Samples are unpaired or replicate structure is unclear \u2014 the method requires at least 2 replicates per condition to estimate within-condition variance",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:52.858244+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions... where r = 1,..,|Rc| runs over the replicates in each condition",
+      "asbval:note": "The method explicitly requires per-sample PSI values and per-replicate expression (TPM) values to compute the within-replicate distribution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "uncertainty-aware-significance-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope (when NOT to use: aggregated PSI)",
+      "asbval:target_claim_text": "Input PSI values are already aggregated across replicates \u2014 the method requires individual per-sample PSI and expression values",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:52.858244+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the distribution between conditions, the \u0394PSI values are calculated as the difference of the means in the two conditions",
+      "asbval:note": "The method is inherently comparative and requires at least two conditions to compute \u0394PSI.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "uncertainty-aware-significance-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope (when NOT to use: single condition)",
+      "asbval:target_claim_text": "You only have a single biological condition \u2014 differential analysis requires two or more distinct conditions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:57:52.858244+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "alternative-splicing-event-comparison-across-conditions",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.875,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "alternative-splicing-event-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2857142857142857,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "differential-splicing-statistical-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8571428571428571,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gtf-file-parsing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "gtf-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7142857142857143,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/isoform-structure-annotation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "isoform-structure-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/local-splicing-event-detection/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "local-splicing-event-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8333333333333334,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "psi-calculation-from-isoform-abundance",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "psi-matrix-loading-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/splicing-matrix-normalization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "splicing-matrix-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-event-extraction/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "transcript-event-extraction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 10,
+      "asbval:target_artifact_id": "transcript-expression-quantification-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.9,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/transcript-quantification-integration/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "transcript-quantification-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7142857142857143,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "uncertainty-aware-significance-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.875,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SUPPA performs fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:source_excerpt": "Fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:20.198790+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SUPPA2 was published in Genome Biology in 2018.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:source_excerpt": "SUPPA2: fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions](https://www.ncbi.nlm.nih.gov/pubmed/29571299). Genome Biol. 2018",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:20.198790+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Transcript quantification can be leveraged for fast computation of alternative splicing profiles.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:source_excerpt": "Leveraging transcript quantification for fast computation of alternative splicing profiles",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:20.198790+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "A short SUPPA tutorial on an example dataset is available on GitHub.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:source_excerpt": "Read our [short SUPPA tutorial on an example dataset",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:20.198790+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SUPPA has command and subcommand structure.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:source_excerpt": "Command and subcommand structure",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:20.198790+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SUPPA includes functionality for generation of transcript events and local alternative splicing events.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:source_excerpt": "Generation of transcript events and local alternative splicing events",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_006",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:20.198790+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SUPPA includes functionality for PSI calculation for Transcripts and Events.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:source_excerpt": "PSI calculation for Transcripts and Events",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_007",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:20.198790+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SUPPA is distributed under the MIT license.",
+      "asbval:note": "Source excerpt is from metadata/config file (license_spdx field) rather than paper text; substring_in_paper=false suggests this may not be directly stated in the paper body",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13059-018-1417-1",
+      "asbval:source_excerpt": "license_spdx\": \"MIT\"",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_008",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T17:53:20.198790+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_suppa2#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SUPPA2_system",
+      "title": "SUPPA2",
+      "identifier": "urn:asb:spine:SUPPA2_system"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_generateEvents",
+      "title": "generateEvents",
+      "identifier": "urn:asb:spine:comp_generateEvents"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_psiCalculation",
+      "title": "PSI Calculation",
+      "identifier": "urn:asb:spine:comp_psiCalculation"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_diffSplicing",
+      "title": "Differential Splicing Analysis",
+      "identifier": "urn:asb:spine:comp_diffSplicing"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_arch_commandSubcommand",
+      "title": "Command-Subcommand Architecture",
+      "identifier": "urn:asb:spine:arch_commandSubcommand",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_artifact_ioi",
+      "title": "ioi file",
+      "identifier": "urn:asb:spine:artifact_ioi",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_artifact_ioe",
+      "title": "ioe file",
+      "identifier": "urn:asb:spine:artifact_ioe",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_artifact_gtf_local",
+      "title": "GTF for local events",
+      "identifier": "urn:asb:spine:artifact_gtf_local",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_salmon_kallisto",
+      "title": "Transcript Quantification Tool",
+      "identifier": "urn:asb:spine:tool_salmon_kallisto"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_pub_suppa2_2018",
+      "title": "SUPPA2 Publication 2018",
+      "identifier": "urn:asb:spine:pub_suppa2_2018"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_pub_suppa1_2015",
+      "title": "SUPPA1 Publication 2015",
+      "identifier": "urn:asb:spine:pub_suppa1_2015"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_speed",
+      "title": "Speed (Fast computation)",
+      "identifier": "urn:asb:spine:metric_speed"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_accuracy",
+      "title": "Accuracy",
+      "identifier": "urn:asb:spine:metric_accuracy"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_psi",
+      "title": "PSI (Percent Spliced In)",
+      "identifier": "urn:asb:spine:metric_psi"
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "mimenet.pdf",
+      "role": "main_article",
+      "sha256": "94446c8f65eb734a969001c270046abc1728842d6c0b9261c937923c514c9a92"
+    }
+  ],
+  "created_at": "2026-06-15T07:36:08.260853+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1009021",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "IBD (PRISM) microbiome abundance data (OTU/ASV table, relative abundance format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "IBD (PRISM) metabolomic abundance data (LC-MS/MS, both annotated and unannotated metabolites)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Metabolite annotation status (binary flag indicating annotated versus unannotated metabolites)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Scatterplot (PNG/PDF) comparing mean Spearman correlation coefficients for annotated metabolites: x-axis = SCC (MiMeNet trained on all metabolites), y-axis = SCC (MiMeNet trained on annotated metabolites only)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Numeric table (CSV) containing per-metabolite mean SCC values for both training regimes (all metabolites vs. annotated-only) and computed delta",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary statistics: overall mean SCC (all metabolites regime), overall mean SCC (annotated-only regime), mean delta, and 95% CI or standard deviation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Centered log-ratio (CLR) transformation with pseudocount=1 prevents log(0) errors in compositional microbiome-metabolome abundance data; relative abundance inputs (IBD microbes) bypass CLR conversion per protocol.",
+    "Early stopping with patience=40 epochs on validation loss prevents overfitting during MLPNN training when dropout and L2 regularization are applied; optimal architecture for IBD (PRISM) is a single 512-node hidden layer with ReLU activation.",
+    "Spearman correlation coefficient (SCC) is robust to non-linear monotonic relationships and suitable for abundance predictions; mean SCC across test folds serves as the primary performance metric with 95th percentile background threshold to define well-predicted metabolites.",
+    "Annotated metabolites have chemical structure and functional assignment; unannotated metabolites are mass-to-charge-ratio features without confirmed identity. Training on all metabolites may capture co-abundance patterns that improve prediction of annotated metabolites; training on annotated-only baseline isolates signal from known compounds.",
+    "10 iterations of 10-fold cross-validation (100 total model fits) provide robust averaging of SCC values; per-fold hold-out test sets ensure unbiased correlation estimates independent of hyperparameter tuning partition."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that IBD (PRISM) dataset microbiome and metabolome input files are accessible in the MiMeNet repository or cited deposit (Zenodo/GEO/MetaboLights)",
+      "script_runs: execute MiMeNet training pipeline with configuration parameter 'train_on_all_metabolites=True' on IBD (PRISM) dataset and verify no runtime errors",
+      "script_runs: execute MiMeNet training pipeline with configuration parameter 'train_on_all_metabolites=False' (annotated only) on IBD (PRISM) dataset and verify no runtime errors",
+      "output_matches_reference: mean Spearman correlation on annotated metabolites for all-metabolites model is between 0.45 and 0.50 (robust to minor numerical precision differences), matching Fig 2D\u20132F context or SI Table",
+      "output_matches_reference: mean Spearman correlation on annotated metabolites for annotated-only model is lower than all-metabolites model, with delta (improvement) reported in Fig 2D\u20132F or supplementary materials",
+      "file_format_is: scatterplot output file (PNG/PDF/SVG) exists and contains two-dimensional visualization of prediction correlations across annotated metabolites for both training conditions",
+      "contains_substring: Fig 2D\u20132F caption or associated text explicitly states numeric mean correlation values and/or delta improvements for annotated metabolites across the two training regimes"
+    ],
+    "expert_review": [
+      "assess whether the reported improvement in mean Spearman correlation when including unannotated metabolites during training is biologically plausible and consistent with the stated hypothesis that shared information across metabolites improves prediction",
+      "evaluate whether the comparison controls for confounding factors (network architecture, hyperparameters, cross-validation scheme, random seed) between the two training conditions to isolate the effect of metabolite set composition",
+      "determine whether the annotated metabolite set is clearly defined and reproducibly extracted from the input metabolomic data, and verify no data leakage or label contamination between conditions"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does training MiMeNet on all metabolites (annotated + unannotated) improve prediction accuracy for annotated metabolites compared to training only on annotated metabolites?: 'by training on the entire set of metabolites, the number of well-predicted metabolites for the annotated set increased from 333 to 366. Additionally, the SCCs of the annotated metabolites'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Training MiMeNet on all metabolites improved mean Spearman correlation coefficients for annotated metabolites from 0.259 to 0.309 (P < 10\u221247), with well-predicted metabolites increasing from 333 to 366 out of 466 annotated metabolites in the IBD (PRISM) dataset.: 'by training on the entire set of metabolites, the number of well-predicted metabolites for the annotated set increased from 333 to 366. Additionally, the SCCs of the annotated metabolites'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] IBD (PRISM) microbiome abundance data (OTU/ASV table, relative abundance format): 'The first dataset was taken from a published study of patients with inflammatory bowel disease (IBD). It includes one cohort from the Prospective Registry (PRISM), which enrolled patients with a'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] IBD (PRISM) metabolomic abundance data (LC-MS/MS, both annotated and unannotated metabolites): 'A total of 201 microbial species and 8848 metabolites were identified for the IBD (PRISM) and IBD (External) datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Metabolite annotation status (binary flag indicating annotated versus unannotated metabolites): 'trained only on the annotated metabolites'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Scatterplot (PNG/PDF) comparing mean Spearman correlation coefficients for annotated metabolites: x-axis = SCC (MiMeNet trained on all metabolites), y-axis = SCC (MiMeNet trained on annotated metabolites only): 'Scatterplot of mean predicted Spearman's correlation over 10 iterations of 10-fold cross-validation for each metabolite between MiMeNet'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Numeric table (CSV) containing per-metabolite mean SCC values for both training regimes (all metabolites vs. annotated-only) and computed delta: 'mean SCC and (B) mean PCC values of the members within the module'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Summary statistics: overall mean SCC (all metabolites regime), overall mean SCC (annotated-only regime), mean delta, and 95% CI or standard deviation: 'the predictive performance of a model is measured by the average Spearman correlation coefficients (SCCs) between the predicted and the observed abundances'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[results] MiMeNet: 'MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome based on a microbiome'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] neural networks: 'An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] ADAM optimizer: 'MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python (scikit-learn, seaborn, or matplotlib for visualization): 'using Seaborn's clustermap function in Python'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion states that MiMeNet prediction on annotated metabolites 'benefited from including tasks of predicting the rest of the unannotated metabolites' but does not provide the exact numeric correlation values or deltas for annotated metabolites in the two training scenarios.: 'Indeed, our results of the IBD data demonstrated that the MiMeNet prediction on the set of the annotated metabolites benefited from including tasks of predicting the rest of the unannotated'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion acknowledges that 'not all metabolites may be associated with microbes, some metabolites will have lower prediction correlations, which resulted in an overall lower mean correlation' but does not specify what fraction of the annotated metabolite set falls into this category or how this affects the comparison.: 'We note that since not all metabolites may be associated with microbes, some metabolites will have lower prediction correlations, which resulted in an overall lower mean correlation across all'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The section references Fig 2D\u20132F to support the claim about improved prediction of annotated metabolites when training on all metabolites, but the referenced figure images and their numeric legends are not included in the provided discussion text.: 'Indeed, our results of the IBD data demonstrated that the MiMeNet prediction on the set of the annotated metabolites benefited from including tasks of predicting the rest of the unannotated'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "scc_comparison_all_vs_annotated.csv",
+  "expected_outputs": [
+    "Scatterplot (PNG/PDF) comparing mean Spearman correlation coefficients for annotated metabolites: x-axis = SCC (MiMeNet trained on all metabolites), y-axis = SCC (MiMeNet trained on annotated metabolites only)",
+    "Numeric table (CSV) containing per-metabolite mean SCC values for both training regimes (all metabolites vs. annotated-only) and computed delta",
+    "Summary statistics: overall mean SCC (all metabolites regime), overall mean SCC (annotated-only regime), mean delta, and 95% CI or standard deviation"
+  ],
+  "finding": "Training MiMeNet on all metabolites improved mean Spearman correlation coefficients for annotated metabolites from 0.259 to 0.309 (P < 10\u221247), with well-predicted metabolites increasing from 333 to 366 out of 466 annotated metabolites in the IBD (PRISM) dataset.",
+  "github_name": "biobakery/melonnpan",
+  "input_from": "task_001",
+  "inputs": [
+    "IBD (PRISM) microbiome abundance data (OTU/ASV table, relative abundance format)",
+    "IBD (PRISM) metabolomic abundance data (LC-MS/MS, both annotated and unannotated metabolites)",
+    "Metabolite annotation status (binary flag indicating annotated versus unannotated metabolites)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "clr_transformed_ibd_features.csv",
+    "model_fold_predictions_all_metabolites.csv",
+    "model_fold_predictions_annotated_only.csv",
+    "per_metabolite_scc_all.csv",
+    "per_metabolite_scc_annotated.csv"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_005",
+    "result_013",
+    "result_034",
+    "result_035"
+  ],
+  "methodology_summary": [
+    "Load and preprocess IBD (PRISM) microbiome and metabolomic data: apply centered log-ratio transformation (pseudocount=1), filter features <10% prevalence, segregate annotated from unannotated metabolites.",
+    "Partition data into 10 iterations of 10-fold cross-validation; for each fold, reserve 10% for testing, allocate 80% to training and 20% to validation.",
+    "Train two parallel MiMeNet MLPNN models per fold using identical architecture (1 hidden layer, 512 nodes, ReLU, L2 \u03bb=0.001, dropout=0.5, ADAM optimizer, MSE loss): one predicting all metabolites, one predicting annotated metabolites only.",
+    "Apply early stopping on validation loss (patience=40 epochs) to select final model weights for each fold; evaluate on held-out test set.",
+    "Calculate Spearman correlation coefficient (SCC) between predicted and observed abundance for each annotated metabolite; aggregate across 100 runs (10 iterations \u00d7 10 folds) to obtain mean SCC per metabolite for each training regime.",
+    "Generate scatterplot comparing mean SCCs and compute per-metabolite delta; calculate overall mean SCC, delta, and 95% confidence intervals.",
+    "Validation: mean SCC on annotated metabolites when training on all metabolites must be \u2265 mean SCC when training on annotated-only, confirming that unannotated metabolites provide shared signal; per-metabolite deltas are visualized to identify metabolites with largest performance gains from multi-task learning.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1009021)"
+  ],
+  "missing_information": [
+    "The discussion states that MiMeNet prediction on annotated metabolites 'benefited from including tasks of predicting the rest of the unannotated metabolites' but does not provide the exact numeric correlation values or deltas for annotated metabolites in the two training scenarios.",
+    "The discussion acknowledges that 'not all metabolites may be associated with microbes, some metabolites will have lower prediction correlations, which resulted in an overall lower mean correlation' but does not specify what fraction of the annotated metabolite set falls into this category or how this affects the comparison.",
+    "The section references Fig 2D\u20132F to support the claim about improved prediction of annotated metabolites when training on all metabolites, but the referenced figure images and their numeric legends are not included in the provided discussion text."
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/benchmark_results"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does training MiMeNet on all metabolites (annotated + unannotated) improve prediction accuracy for annotated metabolites compared to training only on annotated metabolites?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "results",
+    "methods",
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "microbe-metabolite-feature-selection-by-annotation-status",
+    "neural-network-hyperparameter-tuning-for-regression",
+    "spearman-correlation-coefficient-calculation-cross-validation",
+    "feature-attribution-score-interpretation-neural-networks",
+    "multi-regime-model-performance-comparison-visualization",
+    "data-transformation-centered-log-ratio-with-pseudocounts"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_mimenet",
+  "spine_condition_ids": [
+    "cond_mimenet_IBD_PRISM",
+    "cond_linear_IBD_PRISM",
+    "cond_mimenet_CF",
+    "cond_linear_CF",
+    "cond_mimenet_soil",
+    "cond_linear_soil",
+    "ElasticNet_baseline",
+    "CCA_baseline",
+    "cond_mimenet_IBD_external",
+    "cond_annotated_only"
+  ],
+  "spine_entity_ids": [
+    "MiMeNet",
+    "MLPNN_architecture",
+    "feature_attribution_layer",
+    "generated_interaction_network",
+    "IBD_PRISM_dataset",
+    "IBD_external_dataset",
+    "cystic_fibrosis_dataset",
+    "soil_dataset",
+    "ElasticNet_baseline",
+    "CCA_baseline",
+    "cond_mimenet_IBD_PRISM",
+    "cond_mimenet_CF",
+    "cond_mimenet_soil",
+    "cond_linear_IBD_PRISM",
+    "cond_linear_CF",
+    "cond_linear_soil",
+    "cond_mimenet_IBD_external",
+    "cond_annotated_only",
+    "metric_scc_mimenet_IBD_PRISM",
+    "metric_scc_linear_IBD_PRISM",
+    "metric_scc_mimenet_CF",
+    "metric_scc_linear_CF",
+    "metric_scc_mimenet_soil",
+    "metric_scc_linear_soil",
+    "metric_wellpred_mimenet_IBD_PRISM",
+    "metric_wellpred_linear_IBD_PRISM",
+    "metric_wellpred_mimenet_CF",
+    "metric_wellpred_linear_CF",
+    "metric_wellpred_mimenet_soil",
+    "metric_wellpred_linear_soil",
+    "result_mimenet_outperforms_linear",
+    "result_guilt_by_association",
+    "result_external_validation",
+    "well_predicted_threshold"
+  ],
+  "subdomains": [
+    "microbiome-metabolomics",
+    "artificial-intelligence",
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "data-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": null,
+  "task_description": "Train MiMeNet neural network models on the IBD (PRISM) dataset using two distinct metabolite feature sets \u2014 all metabolites (annotated + unannotated) versus annotated metabolites only \u2014 and compare mean Spearman correlation coefficients on annotated metabolites to quantify the performance differential.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "IBD (PRISM) microbiome relative abundance table",
+      "port_id": "ibd_microbiome_ra",
+      "resolved_via": null,
+      "source": "task_001/benchmark_results",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "IBD (PRISM) metabolomic data (all metabolites, annotated + unannotated)",
+      "port_id": "ibd_metabolome_all",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Binary vector indicating annotated metabolites in IBD (PRISM) dataset",
+      "port_id": "metabolite_annotation_flags",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Reproduce the multivariate learning comparison showing quantitative improvements in annotated metabolite prediction when MiMeNet is trained on all versus only annotated metabolites.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Scatterplot comparing mean SCC by training regime",
+      "port_id": "scc_comparison_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-metabolite SCC and delta values (CSV)",
+      "port_id": "per_metabolite_scc_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Overall mean SCC, delta, and confidence intervals",
+      "port_id": "summary_statistics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "deep-learning",
+    "machine-learning",
+    "random-forest",
+    "correlation-analysis",
+    "clustering"
+  ],
+  "title": "Analyze the benefit of multivariate (annotated + unannotated) training versus annotated-only training for metabolite prediction",
+  "tools": [
+    "MiMeNet",
+    "neural networks",
+    "ADAM optimizer",
+    "Python (scikit-learn, seaborn, or matplotlib for visualization)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Numeric table (CSV) containing per-metabolite mean SCC values for both training regimes (all metabolites vs. annotated-only) and computed delta."
+  ],
+  "workflow_description": "1. Load IBD (PRISM) microbiome and metabolomic data, apply centered log-ratio transformation with pseudocount of 1, and filter features present in <10% of samples. 2. Split data into training (80%) and validation (20%) sets, then perform 10 iterations of 10-fold cross-validation. 3. For each iteration-fold, train a separate MiMeNet MLPNN model (using optimal hyperparameters: 512-node single hidden layer, L2 penalty \u03bb=0.001, dropout=0.5, ReLU activation) on the complete feature set (all metabolites), using ADAM optimizer and mean squared error loss with early stopping (patience=40 epochs). 4. In parallel, train an identically configured MiMeNet model using only annotated metabolites as outputs. 5. Evaluate both models on the held-out test fold; calculate Spearman correlation coefficient (SCC) between predicted and observed abundance for each annotated metabolite across all 100 model runs (10 iterations \u00d7 10 folds). 6. Compute mean SCC per annotated metabolite for each training regime and generate scatterplot comparing the two conditions; calculate per-metabolite delta (SCC_all \u2212 SCC_annotated_only) and overall mean delta."
+}

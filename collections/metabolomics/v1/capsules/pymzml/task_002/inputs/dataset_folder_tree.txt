@@ -1,0 +1,2 @@
+  figures/plot.png
+paper.md

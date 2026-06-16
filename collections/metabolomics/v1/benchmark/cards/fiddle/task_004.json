@@ -1,0 +1,369 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://doi.org/10.5281/zenodo.19181279",
+      "locator_id": "enrich_zenodo_record_19181279",
+      "locator_kind": "zenodo_record",
+      "name": "josiehong/FIDDLE: v2.0.0",
+      "prose": "Trained FIDDLE v2.0.0 model checkpoint (from zenodo.org/record/19181279)",
+      "score": 0.2727,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/fiddle_logo.png",
+      "role": "figure",
+      "sha256": "b3a240b5acc490ee66008501fdba7b3e6231f1d2011c98a1f94d2170004424e6"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "f65164b799de86c48e2278fd20a124cd91aabf04f75b2d43697befed3cd34928"
+    }
+  ],
+  "created_at": "2026-06-16T07:03:35.842382+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Trained FIDDLE v2.0.0 model checkpoint (from zenodo.org/record/19181279)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Caffeine (C8H10N4O2) MS/MS spectra from GNPS public library",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "test_caffeine.py inference script",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured output file (CSV or JSON) with scored molecular formula candidates for caffeine, ranked by prediction score",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "FIDDLE v2.0.0 implements a Siamese architecture in its rescore model for improved formula candidate ranking from MS/MS spectra.",
+    "The msfiddle Python API provides both CLI and programmatic interfaces for inference on mass spectrometry data.",
+    "Molecular formula prediction requires matching observed fragmentation patterns against candidate formulas using deep learning embeddings.",
+    "GNPS (Global Natural Products Social Molecular Networking) spectra are standardized and publicly available for benchmarking metabolite identification methods."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file test_caffeine.py exists in github:JosieHong__FIDDLE repository",
+      "verify file_format_is CSV or TSV for the inference output produced by test_caffeine.py",
+      "script_runs: test_caffeine.py executes without fatal errors against GNPS spectra for caffeine (C8H10N4O2) using v2.0.0 checkpoint",
+      "verify output contains at least one column with formula predictions or scored candidates",
+      "verify output contains at least one row of data (beyond headers) for caffeine compound",
+      "verify field_present: output includes a score, probability, or ranking column for formula candidates"
+    ],
+    "expert_review": [
+      "expert_review: caffeine molecular formula C8H10N4O2 is correctly identified or ranked within top-k predictions by the model",
+      "expert_review: the Siamese rescore architecture (FormulaEncoder + RescoreHead) produces chemically plausible formula rankings compared to ground truth or reference mass spectroscopy data"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the FIDDLE v2.0.0 model with its redesigned Siamese rescore architecture successfully complete inference on GNPS caffeine spectra and produce scored molecular formula candidates?: 'FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The rescore model in FIDDLE v2.0.0 has been redesigned with a Siamese architecture, which is the operative inference architecture for the test.: 'The rescore model has been redesigned (Siamese architecture), see details in [CHANGELOG.md](./CHANGELOG.md).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Trained FIDDLE v2.0.0 model checkpoint (from zenodo.org/record/19181279): 'DOI-10.5281%2Fzenodo.19181279'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Caffeine (C8H10N4O2) MS/MS spectra from GNPS public library: 'inference scripts for caffeine (C8H10N4O2) GNPS spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] test_caffeine.py inference script: 'msfiddle'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Structured output file (CSV or JSON) with scored molecular formula candidates for caffeine, ranked by prediction score: 'FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] msfiddle: 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No specification of the GNPS spectra source (accession ID, dataset identifier, or URL) for caffeine test data: 'inference scripts for caffeine (C8H10N4O2) GNPS spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No documentation of expected output format, column names, or data structure produced by test_caffeine.py: '`test_caffeine.py`: inference scripts for caffeine (C8H10N4O2) GNPS spectra.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No explicit reference to which trained v2.0.0 model checkpoint (Orbitrap or Q-TOF) should be used with test_caffeine.py: '`running_scripts/retrain_031826.sh`: end-to-end retraining script for both Orbitrap and Q-TOF (031826 data).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No ground-truth or reference result file provided for validation of test_caffeine.py output: 'Rescore pipeline (`train_rescore.py`, `run_fiddle.py`, `test_caffeine.py`): `env[:, 0]` (precursor m/z) is zeroed before the spectrum encoder'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "{inputs.inference_script}",
+      "--model_checkpoint",
+      "{inputs.model_checkpoint}",
+      "--spectra",
+      "{inputs.gnps_spectra}",
+      "--output",
+      "caffeine_inference_results.csv"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "caffeine_predictions.csv",
+  "expected_outputs": [
+    "Structured output file (CSV or JSON) with scored molecular formula candidates for caffeine, ranked by prediction score"
+  ],
+  "finding": "The rescore model in FIDDLE v2.0.0 has been redesigned with a Siamese architecture, which is the operative inference architecture for the test.",
+  "github_name": "josiehong/FIDDLE",
+  "input_from": "task_003",
+  "inputs": [
+    "Trained FIDDLE v2.0.0 model checkpoint (from zenodo.org/record/19181279)",
+    "Caffeine (C8H10N4O2) MS/MS spectra from GNPS public library",
+    "test_caffeine.py inference script"
+  ],
+  "keywords": [
+    "molecular formula prediction",
+    "mass spectrometry",
+    "ms/ms spectra",
+    "deep learning",
+    "siamese network",
+    "tandem mass spectrometry"
+  ],
+  "landmark_outputs": [
+    "model_checkpoint.pt",
+    "gnps_caffeine_spectra.mgf",
+    "caffeine_predictions.csv"
+  ],
+  "linked_result_ids": [
+    "result_006",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load the trained FIDDLE v2.0.0 model checkpoint from the zenodo deposit.",
+    "Retrieve caffeine (C8H10N4O2) MS/MS spectra from the GNPS public library.",
+    "Execute test_caffeine.py via the msfiddle Python API to perform inference on the spectra.",
+    "Apply the Siamese rescore architecture to rank molecular formula candidates by prediction score.",
+    "Validation: Output file exists, is a valid CSV or JSON, contains at least one scored formula candidate row, and inference script exits without error."
+  ],
+  "missing_information": [
+    "No specification of the GNPS spectra source (accession ID, dataset identifier, or URL) for caffeine test data",
+    "No documentation of expected output format, column names, or data structure produced by test_caffeine.py",
+    "No explicit reference to which trained v2.0.0 model checkpoint (Orbitrap or Q-TOF) should be used with test_caffeine.py",
+    "No ground-truth or reference result file provided for validation of test_caffeine.py output"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the FIDDLE v2.0.0 model with its redesigned Siamese rescore architecture successfully complete inference on GNPS caffeine spectra and produce scored molecular formula candidates?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "ms-spectra-inference-with-neural-networks",
+    "molecular-formula-prediction-from-fragmentation",
+    "deep-learning-model-checkpoint-loading",
+    "siamese-architecture-scoring"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_fiddle/synthesized_package",
+  "spine_condition_ids": [
+    "cond_orbitrap_expanded",
+    "cond_chimeric_spectra",
+    "cond_noised_spectra",
+    "cond_ablation_components"
+  ],
+  "spine_entity_ids": [
+    "FIDDLE_system",
+    "tool_huggingface_demo",
+    "dataset_gnps_orbitrap",
+    "dataset_gnps_qtof",
+    "cond_chimeric_spectra",
+    "cond_noised_spectra",
+    "cond_ablation_components",
+    "metric_orbitrap_test_size",
+    "result_checkpoint_formula_acc",
+    "compound_caffeine",
+    "tool_run_fiddle"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:JosieHong__FIDDLE",
+  "task_description": "Run the FIDDLE v2.0.0 inference script (test_caffeine.py) against caffeine (C8H10N4O2) spectra from the GNPS public library using the trained model checkpoint, and verify that the script completes successfully and produces a structured output file (CSV or equivalent) containing scored molecular formula candidates.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained FIDDLE v2.0.0 model checkpoint",
+      "port_id": "model_checkpoint",
+      "resolved_via": null,
+      "source": "task_003/best_checkpoint",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Caffeine MS/MS spectra from GNPS",
+      "port_id": "gnps_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "test_caffeine.py script",
+      "port_id": "inference_script",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute test_caffeine.py against GNPS spectra for caffeine using the trained FIDDLE v2.0.0 model and verify that inference completes with structured formula predictions in CSV format.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Scored molecular formula candidates",
+      "port_id": "formula_predictions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "gnps-workflow",
+    "spectral-library-matching",
+    "database-annotation",
+    "metabolite-identification"
+  ],
+  "title": "Reproduce caffeine inference via test_caffeine.py on GNPS spectra",
+  "tools": [
+    "msfiddle"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the trained FIDDLE v2.0.0 model checkpoint from the zenodo deposit (DOI 10.5281/zenodo.19181279). 2. Retrieve caffeine (C8H10N4O2) MS/MS spectra from the GNPS public library. 3. Execute test_caffeine.py using the msfiddle Python API, passing the spectra and model checkpoint as inputs. 4. Capture the inference output containing scored formula predictions with the Siamese rescore architecture applied. 5. Validate that the output is a well-formed structured file (CSV or JSON) with at least one formula candidate ranked by score."
+}

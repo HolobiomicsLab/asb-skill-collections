@@ -1,0 +1,315 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/icon.png",
+      "role": "figure",
+      "sha256": "b619bc21ac9fc6eb922829b05e247dc82431dafcc2edbfb7fb96b28973f281c3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "8f646fc27b0f55e5344aab1222ddf5c7501dc09c1e63a88374ec458469c3a517"
+    },
+    {
+      "indexable": false,
+      "path": "figures/overview.png",
+      "role": "figure",
+      "sha256": "64c35d799814f2073f0f257bda3de8e1e5531ed2cf582746cf802679ea79c4ac"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d554b717bdd475fc6ee7e7806c0af62e7afe83d65c1036c5955f48ca2286277c"
+    }
+  ],
+  "created_at": "2026-06-16T07:39:32.715601+00:00",
+  "crossref_doi": null,
+  "data_accessions": [
+    {
+      "accession": "MSV000091746",
+      "evidence_span": "3d3422d94b1dde95fc0178c>`_ * Use ftp://massive.ucsd.edu/v01/MSV000091746 as the FTP Download Link (not the v07 folder shown in MassI",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000091746"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Peak-picked feature table in HDF5 format (deimos-formatted) containing m/z, drift_time, retention_time, and intensity columns",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Annotated feature table (HDF5) with isotopologue labels including monoisotopic designation, isotope membership count, and C13 mass offsets",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "C13 natural isotope abundance results in discrete mass offsets of approximately 1.003355 Da per substitution, detectable in high-resolution m/z measurements.",
+    "Singly charged monoisotopic species (z=+1) exhibit isotope patterns where the M+1, M+2, etc. peaks correspond to successive C13 substitutions in the molecular formula.",
+    "Isotopic signature quality assessment requires minimum cluster membership (\u22653 peaks) to distinguish true isotope patterns from noise or accidental peak co-elution.",
+    "Drift time and retention time dimensions in the feature table enable spatial coherence filtering to confirm that isotopologues co-localize in both ion mobility and chromatographic space."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that input file exists and is readable HDF5 format",
+      "verify that deimos.isotopes function executes without error on the peak-picked feature table",
+      "verify that output table file exists and is in expected format (CSV or HDF5)",
+      "verify that output table contains at least one row of annotated isotopologue data",
+      "verify that output table contains required columns for isotope annotation (e.g., isotope_offset, parent_mz, charge_state)",
+      "verify that all detected isotope offsets are consistent with C13 mass difference (~1.003 Da) for singly charged species",
+      "verify that output matches structure described in deimos isotope detection documentation \u2014 no canonical answer for exact column names across versions, parameter-sensitive to input peak-picking thresholds"
+    ],
+    "expert_review": [
+      "assess whether detected C13 isotopologue offsets are chemically reasonable and match expected isotope patterns for biological small molecules",
+      "evaluate whether the isotope annotation quality and false-discovery rate are consistent with published deimos validation results",
+      "review whether singly charged species assumption is appropriately applied and documented in output labelling"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does DEIMoS enumerate isotopologue offsets for singly charged species, and what parameters define the m/z tolerance, drift time tolerance, retention time tolerance, and charge constraints used in this detection?: 'To detect C13 isotopologues for singly charged species, we specify an *m/z* delta of 1.003355 Da, a maximum number of isotopic substitutions of 5, and a maximum charge of 1. The search is initially'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] DEIMoS isotope detection enumerates C13 isotopologue offsets by specifying an m/z delta of 1.003355 Da with up to 5 isotopic substitutions for singly charged species, using m/z tolerance, drift time tolerance, and retention time tolerance to constrain the search before applying a maximum m/z error of 50 ppm for final downselection.: 'To detect C13 isotopologues for singly charged species, we specify an *m/z* delta of 1.003355 Da, a maximum number of isotopic substitutions of 5, and a maximum charge of 1. The search is initially'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Peak-picked feature table in HDF5 format (deimos-formatted) containing m/z, drift_time, retention_time, and intensity columns: 'ms1_peaks = deimos.load('example_data_peaks.h5', key='ms1', columns=['mz', 'drift_time', 'retention_time', 'intensity'])'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Annotated feature table (HDF5) with isotopologue labels including monoisotopic designation, isotope membership count, and C13 mass offsets: 'characterized by mass, CCS, tandem mass spectra, and isotopic signature'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] deimos: 'import deimos'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'is a Python application programming interface and command-line tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history available for deimos package: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import deimos; import pandas as pd; import h5py; peaks = pd.read_hdf('{inputs.peaks_h5}'); isotopes = deimos.isotopes.detect(peaks, charge=1, min_cluster_size=3); isotopes.to_hdf('{inputs.peaks_h5}'.replace('.h5', '_annotated.h5'), key='features', mode='w')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "features_with_isotopes.h5",
+  "expected_outputs": [
+    "Annotated feature table (HDF5) with isotopologue labels including monoisotopic designation, isotope membership count, and C13 mass offsets"
+  ],
+  "finding": "DEIMoS isotope detection enumerates C13 isotopologue offsets by specifying an m/z delta of 1.003355 Da with up to 5 isotopic substitutions for singly charged species, using m/z tolerance, drift time tolerance, and retention time tolerance to constrain the search before applying a maximum m/z error of 50 ppm for final downselection.",
+  "github_name": "pnnl/deimos",
+  "input_from": "task_002",
+  "inputs": [
+    "Peak-picked feature table in HDF5 format (deimos-formatted) containing m/z, drift_time, retention_time, and intensity columns"
+  ],
+  "keywords": [
+    "high-dimensional mass spectrometry",
+    "feature detection",
+    "feature alignment",
+    "collision cross section calibration",
+    "isotope detection",
+    "ms/ms spectral deconvolution",
+    "n-dimensional data analysis",
+    "untargeted metabolomics",
+    "multidimensional spectrometry"
+  ],
+  "landmark_outputs": [
+    "isotope_clusters.csv",
+    "isotope_validation_report.txt"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_005",
+    "result_013",
+    "result_014",
+    "result_015"
+  ],
+  "methodology_summary": [
+    "Load peak-picked HDF5 feature table with m/z, drift_time, retention_time, and intensity columns.",
+    "Invoke deimos.isotopes module to enumerate C13 isotopologue mass offsets for charge +1 species by computing pairwise m/z differences and spatial concordance.",
+    "Filter detected isotopic signatures to retain clusters with minimum 3 members.",
+    "Annotate feature table rows with isotopologue identity labels (monoisotopic flag, member index, C13 count) and export to HDF5.",
+    "Validation: Confirm output HDF5 file contains isotope annotation columns; verify all detected isotopic signatures satisfy \u22653-member threshold and mass offset consistency with theoretical C13 shift (1.003355 Da per substitution).",
+    "References: MSV000091746 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000091746)"
+  ],
+  "missing_information": [
+    "No changelog or version history available for deimos package"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/aligned_features"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does DEIMoS enumerate isotopologue offsets for singly charged species, and what parameters define the m/z tolerance, drift time tolerance, retention time tolerance, and charge constraints used in this detection?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "results"
+  ],
+  "skills": [
+    "isotopologue-mass-offset-calculation",
+    "charge-state-specific-peak-matching",
+    "multidimensional-feature-annotation",
+    "hdf5-file-io-operations",
+    "isotopic-signature-validation-and-filtering"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_deimos/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "deimos_system",
+    "arch_pipeline",
+    "comp_alignment",
+    "comp_calibration",
+    "comp_deconvolution",
+    "comp_filters",
+    "comp_grid",
+    "comp_io",
+    "comp_isotopes",
+    "comp_peakpick",
+    "comp_plot",
+    "comp_subset",
+    "comp_utils",
+    "comp_cli",
+    "fmt_hdf5",
+    "dataset_massive_userguide",
+    "dataset_massive_manuscript",
+    "method_ref_alignment",
+    "method_cross_alignment",
+    "method_ccs_singlefield",
+    "result_alignment_confidence"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:pnnl__deimos",
+  "task_description": "Apply DEIMoS isotope detection to a peak-picked HDF5 feature table to identify C13 isotopologue offsets for singly charged species and produce an annotated output table labeling detected isotopologues.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Peak-picked feature table in HDF5 format",
+      "port_id": "peaks_h5",
+      "resolved_via": null,
+      "source": "task_002/aligned_features",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Apply deimos.isotopes.detect() to a peak-picked feature table to identify C13 isotopologue clusters and annotate detected isotopologues with charge state, isotope count, and m/z error in an output dataframe.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Annotated feature table with isotopologue labels",
+      "port_id": "isotope_annotated_features",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "ion-mobility",
+    "feature-detection",
+    "chromatogram-alignment",
+    "mass-spectrometry-imaging"
+  ],
+  "title": "Reconstruct Feature Alignment Across Two Sample Datasets Using Reference-based Alignment",
+  "tools": [
+    "deimos",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load peak-picked feature table from HDF5 file using deimos.load() with columns for m/z, drift_time, retention_time, and intensity. 2. Apply deimos.isotopes to detect C13 isotopologue patterns, computing mass offsets between monoisotopic and isotopically substituted peaks for charge state +1. 3. Filter detected isotopic signatures to retain only those with at least 3 members using a membership threshold criterion. 4. Annotate the feature table with isotopologue labels (monoisotopic designation, isotope count, offset mass) and export as HDF5 with isotope metadata columns."
+}

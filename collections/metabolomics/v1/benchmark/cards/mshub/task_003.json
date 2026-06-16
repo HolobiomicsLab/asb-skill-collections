@@ -1,0 +1,262 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d43e3eff7122e22ce2ba50c0a639965e9b4b462e74cc1df8c3e360477b938251"
+    }
+  ],
+  "created_at": "2026-06-16T05:56:17.861848+00:00",
+  "crossref_doi": "10.1038/s41587-020-0700-3",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Deconvolved spectra from prior auto-deconvolution step (e.g., peak table or MS/MS records in MSP, mzXML, or vendor-compatible format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Molecular network file in GraphML or JSON format containing nodes (spectra/compounds) and edges (spectral similarity or MS/MS fragmentation matches)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "GNPS_GC expects deconvolved spectra in standardized formats (MSP, mzXML, or vendor formats); input must include precursor m/z and fragmentation patterns for each spectrum.",
+    "Molecular network edges typically represent cosine similarity scores or MS/MS fragmentation pattern matches above a configurable threshold; nodes correspond to unique spectra or putative compounds.",
+    "GraphML and JSON are the standard serialization formats for GNPS molecular networks; both preserve node/edge metadata and allow downstream clustering and metabolite annotation.",
+    "Network size and connectivity depend on sample complexity and similarity threshold; GC-MS networks typically span hundreds to thousands of nodes for environmental or biological samples."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the GNPS_GC repository (github:bittremieux__GNPS_GC) is accessible and contains molecular networking implementation code",
+      "verify that the repository contains or documents an API endpoint or script for submitting deconvolved spectra to GNPS_GC",
+      "verify that output file format specification is documented (GraphML or JSON) in the repository README or documentation",
+      "verify that a working example or test dataset with expected network output exists in the repository"
+    ],
+    "expert_review": [
+      "confirmation that the GNPS_GC networking workflow produces valid GraphML/JSON output files with expected graph structure (nodes, edges, metadata)",
+      "validation that network topology and edge annotations (e.g., cosine similarity scores, spectral library matches) are consistent with standard GNPS_GC outputs",
+      "assessment of whether the standalone networking step correctly propagates deconvolved spectral features through to the final network representation without loss or corruption"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does the molecular networking step process deconvolved gas chromatography\u2013mass spectrometry spectra and what network output format does it produce?: 'Auto-deconvolution and molecular networking of gas chromatography\u2013mass spectrometry data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The method integrates auto-deconvolution with molecular networking for gas chromatography\u2013mass spectrometry data, enabling structured network analysis of deconvolved spectra.: 'Auto-deconvolution and molecular networking of gas chromatography\u2013mass spectrometry data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Deconvolved spectra from prior auto-deconvolution step (e.g., peak table or MS/MS records in MSP, mzXML, or vendor-compatible format): 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Molecular network file in GraphML or JSON format containing nodes (spectra/compounds) and edges (spectral similarity or MS/MS fragmentation matches): 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] GNPS_GC: 'bittremieux/GNPS_GC'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting the version, release date, or feature set of the GNPS_GC molecular networking implementation: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No documentation in the provided section text specifying the input format requirements (file type, schema, spectral feature specifications) for deconvolved spectra submission to GNPS_GC: '[UNTRUSTED_DOCUMENT] [/UNTRUSTED_DOCUMENT]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of expected output schema, file naming convention, or network annotation details for the GraphML/JSON result files: '[UNTRUSTED_DOCUMENT] [/UNTRUSTED_DOCUMENT]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No reference to validation datasets, benchmarks, or published network examples that could serve as ground truth for evaluating the networking step output: '[UNTRUSTED_DOCUMENT] [/UNTRUSTED_DOCUMENT]'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "molecular_network.graphml",
+  "expected_outputs": [
+    "Molecular network file in GraphML or JSON format containing nodes (spectra/compounds) and edges (spectral similarity or MS/MS fragmentation matches)"
+  ],
+  "finding": "The method integrates auto-deconvolution with molecular networking for gas chromatography\u2013mass spectrometry data, enabling structured network analysis of deconvolved spectra.",
+  "github_name": "bittremieux/GNPS_GC",
+  "input_from": "task_001",
+  "inputs": [
+    "Deconvolved spectra from prior auto-deconvolution step (e.g., peak table or MS/MS records in MSP, mzXML, or vendor-compatible format)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectra_batch_manifest.txt",
+    "gnps_job_status.log",
+    "molecular_network.graphml"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Prepare deconvolved spectra in GNPS_GC-compatible format (MSP, mzXML, or equivalent).",
+    "Submit spectra batch to GNPS_GC networking pipeline via web portal or API.",
+    "Monitor job execution until network computation completes.",
+    "Retrieve molecular network output in GraphML or JSON serialization.",
+    "Validation: Confirm network file is well-formed (valid graph structure), contains \u22651 node and \u22650 edges, and edge metadata includes similarity scores or match statistics.",
+    "References: source article (DOI: 10.1038/s41587-020-0700-3)"
+  ],
+  "missing_information": [
+    "No changelog documenting the version, release date, or feature set of the GNPS_GC molecular networking implementation",
+    "No documentation in the provided section text specifying the input format requirements (file type, schema, spectral feature specifications) for deconvolved spectra submission to GNPS_GC",
+    "No specification of expected output schema, file naming convention, or network annotation details for the GraphML/JSON result files",
+    "No reference to validation datasets, benchmarks, or published network examples that could serve as ground truth for evaluating the networking step output"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/deconvolved_spectra"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the molecular networking step process deconvolved gas chromatography\u2013mass spectrometry spectra and what network output format does it produce?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "spectral-batch-submission-to-networking-server",
+    "molecular-network-graph-parsing",
+    "gc-ms-spectral-similarity-clustering",
+    "network-topology-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mshub/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_GNPS_GC",
+    "COMP_AUTO_DECONV",
+    "COMP_MOL_NETWORKING",
+    "TOOL_GNPS"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:bittremieux__GNPS_GC",
+  "task_description": "Submit deconvolved gas chromatography\u2013mass spectrometry spectra to GNPS_GC molecular networking and retrieve the resulting network file in GraphML or JSON format.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Deconvolved spectra output",
+      "port_id": "deconvolved_spectra",
+      "resolved_via": null,
+      "source": "task_001/deconvolved_spectra",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Submit deconvolved GC-MS spectra to GNPS_GC and retrieve the resulting molecular network file in GraphML or JSON format.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Molecular network (GraphML/JSON)",
+      "port_id": "network_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "gc-ms",
+    "spectral-deconvolution",
+    "molecular-networking",
+    "feature-detection",
+    "metabolite-identification",
+    "gnps-workflow"
+  ],
+  "title": "Reconstruct the GNPS molecular networking module on deconvolved GC-MS spectra",
+  "tools": [
+    "GNPS_GC"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load deconvolved spectra output (in format compatible with GNPS_GC input specification). 2. Submit spectra batch to GNPS_GC web service or command-line interface with standard networking parameters. 3. Monitor job status until completion. 4. Retrieve and parse the resulting molecular network file (GraphML or JSON format). 5. Validate network structure (node and edge counts, connectivity metrics)."
+}

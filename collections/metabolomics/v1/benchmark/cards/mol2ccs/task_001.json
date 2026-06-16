@@ -1,0 +1,334 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/enveda/ccs-prediction",
+      "locator_id": "gh_enveda_ccs-prediction",
+      "locator_kind": "github",
+      "name": "enveda/ccs-prediction",
+      "prose": "enveda/ccs-prediction repository (pre-trained model checkpoint and code)",
+      "score": 0.3333,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/figure_1.png",
+      "role": "figure",
+      "sha256": "ec9593d5e2bd5f2c3659ac41d3973e4232f7f5f9c61aee36d336fd47d8ed8770"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure_4.png",
+      "role": "figure",
+      "sha256": "0bdedc2eddb80ddc03a823d6ed26539c6cb823d42b9526aa803f75d6c1527431"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure_5.png",
+      "role": "figure",
+      "sha256": "3b6eba801b40e6c642c9a7ba1e99d8f92611bab5f42bf232efc6c3ca12864f44"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "680aeb5b9e2ae88e460cc5e55c212705038edd718d0684f98df1bce42038b685"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:43.788519+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "enveda/ccs-prediction repository (pre-trained model checkpoint and code)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CCS dataset (collision cross section molecular data with ground-truth labels)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Generalizability metrics table (RMSE, MAE, R\u00b2) computed on held-out test data",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Model predictions on test set (molecular identifiers and predicted vs. ground-truth CCS values)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Collision cross section (CCS) is a fundamental property used in ion mobility spectrometry and mass spectrometry-based structural analysis of molecules.",
+    "GNN-based CCS prediction models learn molecular graph representations to generalize across diverse chemical structures; evaluation on held-out test sets measures out-of-distribution robustness.",
+    "Standard regression metrics (RMSE, MAE, R\u00b2) quantify prediction accuracy; reproducibility requires identical preprocessing, train-test splits, and model hyperparameters as the original study.",
+    "The enveda/ccs-prediction repository encodes the exact model architecture, training procedure, and checkpoints; runtime reproducibility depends on matching the computational environment and dependency versions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: enveda/ccs-prediction repository accessible at github.com/enveda/ccs-prediction",
+      "verify file_exists: trained model checkpoint(s) present in repository (e.g., .pt, .pkl, or model directory)",
+      "verify file_exists: CCS dataset or reference to deposited dataset in repository (Zenodo accession, GitHub release, or data/ subdirectory)",
+      "script_runs: execute inference script on held-out test set without errors",
+      "output_matches_reference: computed RMSE value matches reported metric from Engler et al. 2024 (exact value or within tolerance specified in repository documentation)",
+      "output_matches_reference: computed MAE value matches reported metric from Engler et al. 2024 (exact value or within tolerance specified in repository documentation)",
+      "output_matches_reference: computed R\u00b2 value matches reported metric from Engler et al. 2024 (exact value or within tolerance specified in repository documentation)",
+      "format_is: metric output is a structured record (table, .csv, or JSON) containing at minimum fields for RMSE, MAE, R\u00b2 and their values"
+    ],
+    "expert_review": [
+      "verify that reported generalizability metrics (RMSE, MAE, R\u00b2) are scientifically appropriate for CCS prediction task and dataset scale",
+      "assess whether reproduced metrics indicate equivalent model generalizability to original reported results (accounting for computational environment differences, random seeds, hardware variations)",
+      "confirm that held-out test set used for reproduction is equivalent in composition and size to the test set described in Engler et al. 2024 methods"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Can graph neural network models trained for collision cross section prediction generalize effectively to held-out test data?: 'Evaluating the generalizability of graph neural networks for predicting collision cross section'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The paper evaluates the generalizability of graph neural networks for predicting collision cross section, as described in Engler et al. 2024.: 'This repository contains code and data described in detail in our paper (Engler *et al.*, 2024).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] enveda/ccs-prediction repository (pre-trained model checkpoint and code): 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] CCS dataset (collision cross section molecular data with ground-truth labels): 'CCS dataset'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Generalizability metrics table (RMSE, MAE, R\u00b2) computed on held-out test data: 'generalizability of graph neural networks for predicting collision cross section'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Model predictions on test set (molecular identifiers and predicted vs. ground-truth CCS values): 'model inference and metric computation on held-out data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Graph Neural Network (GNN) framework (PyTorch Geometric or equivalent): 'graph neural networks for predicting collision cross section'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] enveda/ccs-prediction repository (model code and pre-trained weights): 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ccs_metrics_and_predictions.csv",
+  "expected_outputs": [
+    "Generalizability metrics table (RMSE, MAE, R\u00b2) computed on held-out test data",
+    "Model predictions on test set (molecular identifiers and predicted vs. ground-truth CCS values)"
+  ],
+  "finding": "The paper evaluates the generalizability of graph neural networks for predicting collision cross section, as described in Engler et al. 2024.",
+  "github_name": "enveda/ccs-prediction",
+  "input_from": null,
+  "inputs": [
+    "enveda/ccs-prediction repository (pre-trained model checkpoint and code)",
+    "CCS dataset (collision cross section molecular data with ground-truth labels)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "model_checkpoint_loaded.log",
+    "test_set_predictions.csv",
+    "generalizability_metrics.json"
+  ],
+  "linked_result_ids": [
+    "result_001"
+  ],
+  "methodology_summary": [
+    "Load pre-trained GNN model checkpoint from enveda/ccs-prediction repository.",
+    "Load and preprocess CCS dataset; partition into train/validation/test splits or load held-out test set.",
+    "Execute GNN inference on test set to generate CCS predictions.",
+    "Compute regression metrics (RMSE, MAE, R\u00b2) on predictions versus ground truth.",
+    "Validation: reported metric values match paper-cited generalizability benchmarks within numerical precision tolerance."
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can graph neural network models trained for collision cross section prediction generalize effectively to held-out test data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "gnn-model-inference-and-prediction",
+    "collision-cross-section-prediction-evaluation",
+    "regression-metric-computation-rmse-mae-r2",
+    "molecular-dataset-partitioning-and-preprocessing",
+    "model-generalizability-assessment"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mol2ccs/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "system_ccs_prediction",
+    "dataset_ccs",
+    "result_generalizability_evaluation"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "benchmark-evaluation",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:enveda__ccs-prediction",
+  "task_description": "Re-run trained GNN model(s) from the enveda/ccs-prediction repository on the CCS dataset to compute and reproduce reported generalizability metrics (RMSE, MAE, R\u00b2) on held-out test data.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-trained GNN model checkpoint",
+      "port_id": "gnn_checkpoint",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CCS dataset with ground-truth labels",
+      "port_id": "ccs_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Run trained GNN models from the enveda/ccs-prediction repository on the CCS dataset and compute generalizability metrics (RMSE, MAE, R\u00b2) to reproduce reported performance values.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Generalizability metrics (RMSE, MAE, R\u00b2)",
+      "port_id": "metrics_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Model predictions on test set",
+      "port_id": "predictions_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "graph-neural-network",
+    "machine-learning",
+    "deep-learning",
+    "transfer-learning"
+  ],
+  "title": "Reproduce GNN generalizability evaluation for CCS prediction across molecular datasets",
+  "tools": [
+    "Graph Neural Network (GNN) framework (PyTorch Geometric or equivalent)",
+    "enveda/ccs-prediction repository (model code and pre-trained weights)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: enveda/ccs-prediction repository (model code and pre-trained weights)."
+  ],
+  "workflow_description": "1. Clone or access the enveda/ccs-prediction repository and load the pre-trained GNN model checkpoint(s). 2. Load the CCS dataset and apply any required preprocessing or standardization consistent with training. 3. Partition data into train/validation/test splits or load the held-out test set as specified in the repository. 4. Execute model inference on the test set using the trained GNN to generate collision cross section predictions. 5. Compute generalizability metrics (RMSE, MAE, R\u00b2) comparing predictions against ground-truth test labels. 6. Aggregate results and tabulate metric values alongside reported baseline values for reproducibility verification."
+}

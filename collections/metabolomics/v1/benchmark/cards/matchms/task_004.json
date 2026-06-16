@@ -1,0 +1,345 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/filtering_sketch.png",
+      "role": "figure",
+      "sha256": "b72d2554247d028e33dee0d42a1eb040032573b862fc43ca167cde0febcfd0ec"
+    },
+    {
+      "indexable": false,
+      "path": "figures/filtering_sketch.svg",
+      "role": "figure",
+      "sha256": "58a4269a740d35d8d8ea58ed8bc1f4f61e19d1540b466256905d7614373565d9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/flowchart_matchms.png",
+      "role": "figure",
+      "sha256": "7bbd4fbc610fef2fc452fba4b81446c3540552e49ae4cd8b878cc5179c4e6a43"
+    },
+    {
+      "indexable": false,
+      "path": "figures/flowchart_matchms.svg",
+      "role": "figure",
+      "sha256": "2573b8128cfad67eb68aa9a92b2a4f0f555d02b009f75928561e94052811f42c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matchms.png",
+      "role": "figure",
+      "sha256": "0a36cd9a0755732e4cc4482bc2d2cf117c3ebd0712695548cf5d232b9fcfffab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matchms_header.png",
+      "role": "figure",
+      "sha256": "c8156aceb8efd57c24089ee39867f6b155b20348487c097e51d80d4b4214cce9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matchms_sketch.png",
+      "role": "figure",
+      "sha256": "8b72a0a8d08fccdcf088e5f3eb106ed6f096a563408e756b53b3797230ce99a6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/peak_filtering.png",
+      "role": "figure",
+      "sha256": "d207f89a349c8e9909c917662d71a83bea7af83a3ef6e97bea57b4b268687e61"
+    },
+    {
+      "indexable": false,
+      "path": "figures/peak_filtering.svg",
+      "role": "figure",
+      "sha256": "886f0cfe19693adce38524c31b5e2ffacaa8964edadd354eb610a3e28204b677"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectra-array-plot-example.png",
+      "role": "figure",
+      "sha256": "6ca909e02db0d0417f5b6c76b06701d17a8ea9a48aa2f9724fb7f56554879867"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectrum-mirror-plot-example.png",
+      "role": "figure",
+      "sha256": "f3fcecb5ce87d074a346d124b767399e26be425170767fede3207f66722759a7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectrum-plot-example.png",
+      "role": "figure",
+      "sha256": "3c07802d868fd79d3840e386c0824e7a56867e74252750ee454f07ac47b8b963"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "5f6a9773399810c354142a89252e4ee4b957308bcfe4e31124a99b8381bba747"
+    }
+  ],
+  "created_at": "2026-06-15T21:14:07.897424+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Preprocessed mass spectra data in a supported matchms format (mzML, mzXML, msp, MGF, or JSON)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pairwise similarity scores matrix from fingerprint-based spectral comparison",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Molecular fingerprints are structural representations used for spectral similarity assessment, distinct from peak-based cosine similarity measures.",
+    "Pairwise similarity matrices output one similarity score per spectrum pair, where the matrix is typically symmetric with diagonal values of 1.0 (self-similarity).",
+    "matchms supports multiple spectral input formats; preprocessing and loading must preserve metadata and peak information required for fingerprint computation.",
+    "Fingerprint-based matching is computationally efficient for large-scale spectral library searches compared to peak-intensity methods."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that matchms package is importable and contains a fingerprint-based similarity module",
+      "verify that preprocessed spectra are available in the matchms repository (check for example datasets or test data files in common formats: .msp, .mgf, .json)",
+      "verify that the fingerprint similarity function executes without runtime errors on a set of \u22652 preprocessed spectra",
+      "verify that the output is a named matrix file (csv, tsv, or numpy format) with row and column count equal to number of input spectra",
+      "verify that all pairwise similarity scores in the output matrix are numeric values in a valid range (typically [0, 1] for similarity measures)",
+      "verify that the matrix is symmetric (or as expected for the specific fingerprint method used) by checking that score[i,j] matches score[j,i] where applicable",
+      "verify that the output file exists and is readable in the declared format"
+    ],
+    "expert_review": [
+      "confirm that the fingerprint similarity measure applied is chemically and computationally appropriate for mass spectrometry spectral comparison",
+      "assess whether the pairwise similarity scores align with known fingerprint-based similarity properties (e.g., identical spectra should yield maximum similarity)",
+      "review that the preprocessing applied to input spectra is consistent with matchms best practices for fingerprint-based workflows"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the operational mechanism by which matchms applies molecular fingerprint-based similarity measures to compare pairs of mass spectra?: 'its ability to apply various pairwise similarity measures for comparing extensive amounts of spectra. This encompasses not only common Cosine-related scores but also molecular fingerprint-based'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Matchms implements molecular fingerprint-based comparisons as one of several pairwise similarity measures available for comparing extensive amounts of spectra, alongside Cosine-related scores and metadata-related assessments.: 'its ability to apply various pairwise similarity measures for comparing extensive amounts of spectra. This encompasses not only common Cosine-related scores but also molecular fingerprint-based'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Preprocessed mass spectra data in a supported matchms format (mzML, mzXML, msp, MGF, or JSON): 'The software supports a range of popular spectral data formats, including mzML, mzXML, msp, metabolomics-USI, MGF, and JSON'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pairwise similarity scores matrix from fingerprint-based spectral comparison: 'apply various pairwise similarity measures for comparing extensive amounts of spectra. This encompasses not only common Cosine-related scores but also molecular fingerprint-based'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] matchms: 'Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'Matchms is a versatile open-source Python package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No explicit documentation of fingerprint-based similarity measures or their API in the provided section text.: 'Section text contains only GitHub version comparison links with no substantive technical content about fingerprint methods.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No concrete location of preprocessed spectra datasets within the matchms repository is specified in the provided section text.: 'Section text does not identify example data files, test datasets, or their repository paths.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No specification of the expected output matrix format, file naming convention, or schema for the pairwise similarity scores file.: 'Section text provides only version links without describing output artifact specifications.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import matchms; from matchms.importing import load_from_msp, load_from_mgf, load_from_json; from matchms.similarity import CosineGreedy; from matchms.filtering import default_filters; import numpy as np; import pandas as pd; spectra = load_from_json('{inputs.preprocessed_spectra}'); spectra = [default_filters(s) for s in spectra]; n = len(spectra); similarity_matrix = np.zeros((n, n)); cos_sim = CosineGreedy(); [[similarity_matrix.__setitem__((i, j), cos_sim.pair(spectra[i], spectra[j])) for j in range(n)] for i in range(n)]; df = pd.DataFrame(similarity_matrix); df.to_csv('pairwise_similarity_matrix.csv', index=False, header=False)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "fingerprint_similarity_matrix.csv",
+  "expected_outputs": [
+    "Pairwise similarity scores matrix from fingerprint-based spectral comparison"
+  ],
+  "finding": "Matchms implements molecular fingerprint-based comparisons as one of several pairwise similarity measures available for comparing extensive amounts of spectra, alongside Cosine-related scores and metadata-related assessments.",
+  "github_name": "matchms/matchms",
+  "input_from": "task_001",
+  "inputs": [
+    "Preprocessed mass spectra data in a supported matchms format (mzML, mzXML, msp, MGF, or JSON)"
+  ],
+  "keywords": [
+    "mass spectrometry",
+    "ms/ms data",
+    "spectral similarity",
+    "cosine score",
+    "molecular fingerprint comparison",
+    "metadata cleaning",
+    "peak filtering",
+    "mzml format",
+    "mgf format",
+    "untargeted metabolomics",
+    "spectral processing",
+    "pairwise similarity measures"
+  ],
+  "landmark_outputs": [
+    "loaded_spectra.pkl",
+    "fingerprint_similarity_matrix.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Load preprocessed mass spectra from a matchms-compatible file format (mzML, mzXML, msp, MGF, or JSON) into memory.",
+    "Apply the molecular fingerprint-based similarity measure available in matchms to compute pairwise similarity scores for all spectra.",
+    "Export the pairwise similarity matrix to a named output file in tabular format.",
+    "Validation: Output matrix is symmetric, contains similarity scores for all spectrum pairs, and matches expected dimensions (N\u00d7N where N is number of spectra)."
+  ],
+  "missing_information": [
+    "No explicit documentation of fingerprint-based similarity measures or their API in the provided section text.",
+    "No concrete location of preprocessed spectra datasets within the matchms repository is specified in the provided section text.",
+    "No specification of the expected output matrix format, file naming convention, or schema for the pairwise similarity scores file."
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the operational mechanism by which matchms applies molecular fingerprint-based similarity measures to compare pairs of mass spectra?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "spectral-fingerprint-similarity-computation",
+    "pairwise-spectral-comparison",
+    "mass-spectrometry-data-format-handling",
+    "similarity-matrix-export"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_matchms/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "matchms_system",
+    "comp_similarity_measures",
+    "comp_cosine_scores",
+    "comp_fingerprint_comparison"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:matchms__matchms",
+  "task_description": "Apply molecular fingerprint-based similarity measures in matchms to a set of preprocessed mass spectra, producing a pairwise similarity scores matrix as a named output file.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Preprocessed mass spectra in matchms-compatible format",
+      "port_id": "preprocessed_spectra",
+      "resolved_via": null,
+      "source": "task_001/cleaned_spectra",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Apply matchms molecular fingerprint-based similarity scoring to preprocessed spectra and generate a named pairwise similarity scores matrix file.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pairwise fingerprint-based similarity scores matrix",
+      "port_id": "fingerprint_similarity_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reconstruct molecular fingerprint-based pairwise comparison with matchms",
+  "tools": [
+    "matchms",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load preprocessed mass spectra from the matchms repository in a supported format (mzML, mzXML, msp, MGF, or JSON). 2. Apply the molecular fingerprint-based similarity measure available in matchms to compute pairwise similarity scores across all spectra. 3. Export the resulting similarity scores matrix to a named output file."
+}

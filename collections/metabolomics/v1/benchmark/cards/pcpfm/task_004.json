@@ -1,0 +1,396 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ee5480be63c91439469b81e562a3617ebc83f50e9c31e6e4ed1a9df64a89838f"
+    }
+  ],
+  "created_at": "2026-06-15T12:44:57.617706+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1011912",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "preferred feature table (TSV from asari processing)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ionization mode (positive or negative) inferred from experiment metadata",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "optional adduct configuration files (JSON) for positive and negative modes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "empCpd.json file containing empirical compound groups with fields: list_of_features, mz, rt, adduct annotations, and isotopologue assignments",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "experiment.json updated with empCpd moniker and metadata",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Empirical compounds group isotopologues (e.g., m+13C3) and in-source adducts (e.g., [M+H]+, [M+Na]+) that represent the same chemical entity and co-elute chromatographically.",
+    "Default khipu tolerances are 5 ppm mass accuracy and 2 seconds retention time window; tighter tolerances reduce false-positive grouping of unrelated features.",
+    "Charge states up to z=3 and common solvent/chromatography-dependent adducts (e.g., [M+HCOO]\u2212 in negative ESI) must be pre-specified or inferred from ionization mode.",
+    "Singleton features (not clustered with any isotopologues or adducts) cannot receive Level 4 formula annotations because their adduct state is ambiguous."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file ARTIFACT-EMPCPD-JSON exists",
+      "verify file_format_is ARTIFACT-EMPCPD-JSON application/json (parse and validate JSON structure)",
+      "verify field_present in ARTIFACT-EMPCPD-JSON for 'list_of_features' (at minimum; robust to schema variants)",
+      "verify field_present in ARTIFACT-EMPCPD-JSON for 'mz' (at minimum; robust to schema variants)",
+      "verify field_present in ARTIFACT-EMPCPD-JSON for 'rt' (at minimum; robust to schema variants)",
+      "verify script_runs: khipu build_empCpds invoked with configurable mz and rt tolerance parameters on input feature table without error"
+    ],
+    "expert_review": [
+      "assess whether empirical compound groupings in ARTIFACT-EMPCPD-JSON are chemically sensible given the input mz/rt tolerances and feature table composition",
+      "evaluate whether the mz/rt tolerance parameters used are appropriate for the LC-MS platform and metabolomics study design"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does the build_empCpds command construct empirical compound groups from a feature table using khipu with configurable mz and retention time tolerances?: 'EmpCpds are groups of associated features, typically isotopes and adducts, that belong to the same tentative compound and co-elute if there is chromatography. The set of adducts and isotopes can be'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The build_empCpds command groups features into empirical compounds by matching isotopes and adducts with configurable mz tolerance (default 5 ppm) and rt tolerance (default 2 seconds), producing a JSON file containing grouped features with their mz and rt values.: 'An example command for building the empCpds is: `pcpfm build_empCpds --table_moniker preferred --empCpd_moniker preferred -i ./my_experiment` ... Options can be provided including:'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] preferred feature table (TSV from asari processing): 'EmpCpds are groups of associated features, typically isotopes and adducts, that belong to the same tentative compound and co-elute if there is chromatography.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] ionization mode (positive or negative) inferred from experiment metadata: 'This command will infer the correct ionization mode for the experiment which will persist through out processing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] optional adduct configuration files (JSON) for positive and negative modes: 'khipu_adducts_pos: a path to .json file containing adduct information for positive mode / khipu_adducts_neg: a path to .json file containing adduct information for negative mode'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] empCpd.json file containing empirical compound groups with fields: list_of_features, mz, rt, adduct annotations, and isotopologue assignments: 'EmpCpds are saved to moniker similar to feature tables.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] experiment.json updated with empCpd moniker and metadata: 'The experiment object will be used throught the processing and store intermediates.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] khipu: 'pre-annotation to group featues to empirical compounds (khipu)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'Python-Centric Pipeline for Metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "khipu.build",
+      "--feature-table",
+      "{inputs.feature_table_preferred}",
+      "--ionization-mode",
+      "{inputs.ionization_mode}",
+      "--adduct-config-pos",
+      "{inputs.adduct_config_pos}",
+      "--adduct-config-neg",
+      "{inputs.adduct_config_neg}",
+      "--output",
+      "empCpd.json",
+      "--validate"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "empCpd.json",
+  "expected_outputs": [
+    "empCpd.json file containing empirical compound groups with fields: list_of_features, mz, rt, adduct annotations, and isotopologue assignments",
+    "experiment.json updated with empCpd moniker and metadata"
+  ],
+  "finding": "The build_empCpds command groups features into empirical compounds by matching isotopes and adducts with configurable mz tolerance (default 5 ppm) and rt tolerance (default 2 seconds), producing a JSON file containing grouped features with their mz and rt values.",
+  "github_name": "shuzhao-li-lab/PythonCentricPipelineForMetabolomics",
+  "input_from": "task_001",
+  "inputs": [
+    "preferred feature table (TSV from asari processing)",
+    "ionization mode (positive or negative) inferred from experiment metadata",
+    "optional adduct configuration files (JSON) for positive and negative modes"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "feature_clustering_assignments.log",
+    "empCpd.json"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_039",
+    "result_040",
+    "result_041",
+    "result_042",
+    "result_049"
+  ],
+  "methodology_summary": [
+    "Load the preferred feature table with m/z, retention time, and intensity columns.",
+    "Apply pairwise feature distance calculations (m/z in ppm, rt in seconds) to identify candidates for grouping within user-specified tolerances.",
+    "Assign isotopologue and adduct labels based on theoretical mass differences and charge patterns, constrained by ionization mode and adduct list.",
+    "Cluster features into empirical compound groups, recording the list of constituent feature IDs and median m/z and rt per group.",
+    "Serialize groups to JSON with all required fields (list_of_features, mz, rt, adduct, isotope annotations) and validate structure.",
+    "Validation: verify empCpd.json is well-formed JSON, contains \u22651 empirical compound group, and each group has non-empty list_of_features, numeric mz, and numeric rt fields.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1011912)"
+  ],
+  "missing_information": [
+    "No changelog or version history found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/processed_feature_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the build_empCpds command construct empirical compound groups from a feature table using khipu with configurable mz and retention time tolerances?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "empirical-compound-construction-from-feature-clustering",
+    "isotope-pattern-and-adduct-assignment",
+    "chromatographic-coelution-detection",
+    "mass-spectrometry-tolerance-calibration",
+    "json-structure-validation-for-metabolomics-data",
+    "ionization-mode-inference-from-acquisition-metadata"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pcpfm/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "ARCH-PREPROCESS",
+    "ARCH-ASSEMBLE",
+    "ARCH-CONVERT",
+    "ARCH-ASARI-STEP",
+    "ARCH-QAQC",
+    "ARCH-BLANK-MASKING",
+    "ARCH-DROP-SAMPLES",
+    "ARCH-NORMALIZE",
+    "ARCH-DROP-MISSING",
+    "ARCH-IMPUTE",
+    "ARCH-BATCH-CORRECT",
+    "ARCH-LOG-TRANSFORM",
+    "ARCH-BUILD-EMPCPDS",
+    "ARCH-L4-ANNOTATE",
+    "ARCH-L1B-ANNOTATE",
+    "ARCH-MAP-MS2",
+    "ARCH-L2-ANNOTATE",
+    "ARCH-L1A-ANNOTATE",
+    "ARCH-OUTPUT",
+    "COMP-KHIPU",
+    "COMP-EMPCPD",
+    "ARTIFACT-FEATURE-TABLE",
+    "ARTIFACT-EMPCPD-JSON"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:shuzhao-li-lab__PythonCentricPipelineForMetabolomics",
+  "task_description": "Build empirical compounds (EmpCpds) from a preferred feature table using khipu with configurable m/z and retention time tolerances. Verify that the output JSON file is produced, is valid JSON, and contains the expected empirical compound group fields (list_of_features, m/z, rt).",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "preferred feature table (TSV from asari processing)",
+      "port_id": "feature_table_preferred",
+      "resolved_via": null,
+      "source": "task_001/processed_feature_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ionization mode (positive or negative)",
+      "port_id": "ionization_mode",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "optional adduct configuration for positive mode (JSON)",
+      "port_id": "adduct_config_pos",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "optional adduct configuration for negative mode (JSON)",
+      "port_id": "adduct_config_neg",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute build_empCpds on a preferred feature table with specified khipu mz/rt tolerances and validate the output JSON artifact contains proper empirical compound structures with feature lists and mz/rt fields.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "empirical compound collection with grouped features and annotations (JSON)",
+      "port_id": "empcpd_json",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "updated experiment metadata with empCpd moniker",
+      "port_id": "experiment_updated",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "tandem-ms",
+    "feature-detection",
+    "database-annotation",
+    "spectral-library-matching",
+    "metabolite-identification"
+  ],
+  "title": "Reconstruct the EmpCpd construction step and verify the empCpd.json output structure",
+  "tools": [
+    "ThermoRawFileParser",
+    "khipu",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: experiment.json updated with empCpd moniker and metadata."
+  ],
+  "workflow_description": "1. Load the preferred feature table (TSV format) from the asari_results subdirectory. 2. Invoke khipu via the build_empCpds command with configurable m/z tolerance (default 5 ppm) and retention time tolerance (default 2 seconds), specifying ionization mode and adduct definitions for the detected polarity. 3. Construct feature groups by clustering features within the specified m/z and rt windows, assigning isotopologue and adduct annotations based on observed mass differences and charge state patterns. 4. Serialize the empirical compound collection to JSON format, including list_of_features, median m/z, median rt, and pre-annotation fields for each group. 5. Validate JSON structure and confirm all required fields are present."
+}

@@ -1,0 +1,10 @@
+name: GNPS_MASST
+slug: gnps-masst
+evidence_spans:
+- The code for the different standalone web applications, which allow users to search one spectrum at a time, can be found in GNPS_MASST
+derived_from:
+- doi: 10.1038/s41564-023-01575-9
+  title: microbemasst
+source_repos:
+- robinschmid/microbe_masst
+schema_version: 0.2.0

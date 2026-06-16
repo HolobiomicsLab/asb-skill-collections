@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file airdpro:cli Docker image exists in build artifact repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file run-cli.sh exists in package inputs or repository root"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file sample vendor mass spectrometry raw file (e.g., .raw, .d, .wiff format) is accessible as input"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "Wine initialization logs contain evidence of .NET Framework download/setup activ",
+      "value": "evidence of"
+    },
+    {
+      "id": "pf_006",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "aird.gz"
+    },
+    {
+      "id": "pf_007",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "if result_wine_startup_time is logged, verify value is >30 min (parameter-sensit"
+    },
+    {
+      "id": "pf_008",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output file format matches Aird specification (robust to compression variant)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file airdpro:cli Docker image exists in build artifact repository",
+      "verify file run-cli.sh exists in package inputs or repository root",
+      "verify file sample vendor mass spectrometry raw file (e.g., .raw, .d, .wiff format) is accessible as input",
+      "script_runs: execute run-cli.sh with sample MS raw file in airdpro:cli container and capture stdout/stderr logs",
+      "contains_substring: Wine initialization logs contain evidence of .NET Framework download/setup activity",
+      "file_exists: verify converted Aird output file (.aird or .aird.gz) is created in expected output directory",
+      "value_in_range: if result_wine_startup_time is logged, verify value is >30 min (parameter-sensitive to container overhead and network conditions)",
+      "file_format_is: verify output file format matches Aird specification (robust to compression variant)"
+    ],
+    "expert_review": [
+      "Examine Wine initialization logs to confirm .NET Framework 4.8 components were downloaded and installed",
+      "Inspect converted Aird output file for structural integrity and compliance with Aird format specification",
+      "Assess whether first-run initialization time documentation aligns with observed >30 min threshold and is reproducible across runs"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

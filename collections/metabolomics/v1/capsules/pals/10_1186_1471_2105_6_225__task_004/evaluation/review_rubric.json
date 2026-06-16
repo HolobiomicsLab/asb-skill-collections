@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that input metabolomics dataset file exists in glasgowcompbio/PALS repository or is a publicly deposited reference dataset with accession or DOI"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that PALS software can be installed and executed from github:glasgowcompbio/PALS source"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that noise injection script produces output files with Gaussian noise applied at each specified level (e.g., SNR = 10, 5, 2, 1) \u2014 file_exists and file_format_is CSV or HDF5"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that peak removal simulation script executes without error and produces degraded datasets with 5%, 10%, 20%, 50% random peak removal \u2014 script_runs and output_matches_reference structure"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that pathway rank-order stability metric (e.g., Spearman correlation or Kendall \u03c4 of top-N pathway scores) is computed for each noise/peak-removal condition relative to clean-data baseline \u2014 value_in_range [0, 1]"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that stability scores decrease monotonically or show expected degradation pattern as noise and peak removal increase \u2014 robust to parameter choices within reasonable noise and removal ranges"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that final summary table contains columns: [noise_level, peak_removal_percent, top_N_pathways_corr, rank_stability_score, pathway_count_affected] with numeric values populated \u2014 field_present and row_count_equals \u2265 number of noise/removal combinations tested"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that input metabolomics dataset file exists in glasgowcompbio/PALS repository or is a publicly deposited reference dataset with accession or DOI",
+      "verify that PALS software can be installed and executed from github:glasgowcompbio/PALS source",
+      "verify that noise injection script produces output files with Gaussian noise applied at each specified level (e.g., SNR = 10, 5, 2, 1) \u2014 file_exists and file_format_is CSV or HDF5",
+      "verify that peak removal simulation script executes without error and produces degraded datasets with 5%, 10%, 20%, 50% random peak removal \u2014 script_runs and output_matches_reference structure",
+      "verify that pathway rank-order stability metric (e.g., Spearman correlation or Kendall \u03c4 of top-N pathway scores) is computed for each noise/peak-removal condition relative to clean-data baseline \u2014 value_in_range [0, 1]",
+      "verify that stability scores decrease monotonically or show expected degradation pattern as noise and peak removal increase \u2014 robust to parameter choices within reasonable noise and removal ranges",
+      "verify that final summary table contains columns: [noise_level, peak_removal_percent, top_N_pathways_corr, rank_stability_score, pathway_count_affected] with numeric values populated \u2014 field_present and row_count_equals \u2265 number of noise/removal combinations tested"
+    ],
+    "expert_review": [
+      "validate that the choice of noise model (Gaussian with specified SNR levels) and peak-removal mechanism (random selection) are appropriate for assessing metabolomics data robustness; confirm alignment with experimental noise profiles in LC-MS/MS data",
+      "assess whether the rank-order stability metric (e.g., Spearman \u03c1 or Kendall \u03c4) and the choice of top-N pathways (N=5, 10, etc.) capture clinically or biologically meaningful shifts in pathway prioritization",
+      "review whether observed stability patterns (e.g., PALS outperforming ORA/GSEA under noise, as claimed in literature) are replicated; interpret any deviations and assess whether they support or contradict the robustness finding"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

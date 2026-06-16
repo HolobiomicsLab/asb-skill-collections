@@ -1,0 +1,311 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b41ca01ee34b6dde0c912eea02dee2daafda73e90db3c861c66ac04bb32144c7"
+    }
+  ],
+  "created_at": "2026-06-15T19:03:30.531922+00:00",
+  "crossref_doi": "10.12688/f1000research.7563.1",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "tximportData salmon_gibbs files with Gibbs sample replicates and transcript-level abundance estimates",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "DGEList object with divided transcript-level counts, library size normalization factors, and overdispersion estimates",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report confirming DGEList structure integrity and presence of count overdispersion estimates",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Inferential replicates (Gibbs samples) from salmon quantification capture uncertainty in transcript abundance estimates and improve accuracy of downstream differential expression analysis.",
+    "The txOut=TRUE parameter in tximport preserves transcript-level output rather than summarizing to gene level, necessary for transcript-level differential expression.",
+    "The divide=TRUE argument in edgeR::DGEListFromTximport applies library size normalization by dividing counts, producing offsets suitable for generalized linear models in edgeR.",
+    "Overdispersion estimation in edgeR requires adequate replication and is critical for valid statistical inference; the DGEList must contain both common and tagwise dispersion estimates."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file tximportData (or equivalent salmon_gibbs inferential replicate output) exists and is loadable",
+      "verify tximport function accepts txOut=TRUE parameter without error",
+      "verify edgeR::DGEListFromTximport function accepts divide=TRUE parameter without error",
+      "verify output object is of class 'DGEList' (format_is DGEList)",
+      "verify DGEList contains 'counts' matrix field (field_present counts)",
+      "verify DGEList contains 'samples' data.frame with sample metadata (field_present samples)",
+      "verify counts matrix dimensions are consistent with input (row_count_equals and column count match transcript/sample structure)",
+      "verify script_runs: complete R code path from tximport(txOut=TRUE) \u2192 edgeR::DGEListFromTximport(divide=TRUE) without error",
+      "verify output_matches_reference: DGEList structure mirrors edgeR documentation for transcript-level DGEList objects created from tximport with divide=TRUE"
+    ],
+    "expert_review": [
+      "confirm that count overdispersion estimates (tagwise.dispersion or common.dispersion fields if present post-estimation) are numerically reasonable and consistent with RNA-seq count variance expectations",
+      "confirm that division of counts by inferential replicate uncertainty (when divide=TRUE is applied) produces a DGEList suitable for proper downstream variance modeling in transcript-level edgeR analysis"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does edgeR::DGEListFromTximport with divide=TRUE process tximport inferential replicates to generate transcript-level divided counts for differential expression analysis?: 'If the `tximport` output contains inferential replicates, then `DGEListFromTximport` will also estimate the count overdispersion that arises from the fact that reads have to assigned to transcripts'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] DGEListFromTximport with divide=TRUE estimates count overdispersion from inferential replicates and produces divided counts suitable for transcript-level differential expression analysis, accounting for the probabilistic assignment of reads to transcripts.: 'If the `tximport` output contains inferential replicates, then `DGEListFromTximport` will also estimate the count overdispersion that arises from the fact that reads have to assigned to transcripts'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] tximportData salmon_gibbs files with Gibbs sample replicates and transcript-level abundance estimates: 'Using a tximport output that includes inferential replicates (salmon_gibbs files from tximportData) with txOut=TRUE'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] DGEList object with divided transcript-level counts, library size normalization factors, and overdispersion estimates: 'call edgeR::DGEListFromTximport with divide=TRUE to produce a DGEList containing divided counts suitable for transcript-level differential expression'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Verification report confirming DGEList structure integrity and presence of count overdispersion estimates: 'Verify the DGEList structure and presence of count overdispersion estimates'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] tximport: 'Imports transcript-level abundance, estimated counts and transcript lengths, and summarizes into matrices for use with downstream statistical analysis packages'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] edgeR: 'use with downstream statistical analysis packages such as edgeR, DESeq2, limma-voom'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] salmon: 'tximport as of version 1.3.9 will import inferential replicates (Gibbs samples or bootstrap samples) from Salmon, Sailfish or kallisto'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is documented for the tximport package or its integration with edgeR::DGEListFromTximport: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(tximport); library(edgeR); files <- list.files('{inputs.salmon_gibbs_tximport}', pattern='quant.sf', recursive=TRUE, full.names=TRUE); names(files) <- basename(dirname(files)); tx2gene <- read.csv(file.path(dirname(files[1]), '..', 'tx2gene.csv')); txi <- tximport(files, type='salmon', tx2gene=tx2gene, txOut=TRUE, importer=read_tsv, ignoreTxVersion=TRUE); dge <- DGEListFromTximport(txi, divide=TRUE); cat('DGEList Object Summary:\\n'); print(dge); cat('\\nLibrary Sizes:\\n'); print(dge$samples); cat('\\nDispersion Estimates Present:\\n'); print(paste('Common dispersion:', !is.null(dge$common.dispersion))); print(paste('Tagwise dispersion:', !is.null(dge$tagwise.dispersion))); saveRDS(dge, 'dge_list_divided.rds'); cat('\\nDGEList saved to dge_list_divided.rds\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "DGEList object with divided transcript-level counts, library size normalization factors, and overdispersion estimates",
+    "Verification report confirming DGEList structure integrity and presence of count overdispersion estimates"
+  ],
+  "finding": "DGEListFromTximport with divide=TRUE estimates count overdispersion from inferential replicates and produces divided counts suitable for transcript-level differential expression analysis, accounting for the probabilistic assignment of reads to transcripts.",
+  "github_name": "thelovelab/tximport",
+  "input_from": "task_001",
+  "inputs": [
+    "tximportData salmon_gibbs files with Gibbs sample replicates and transcript-level abundance estimates"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "tximport_output.rds",
+    "dgelist_object.rds",
+    "dgelis_structure_summary.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_010",
+    "result_034",
+    "result_043",
+    "result_044",
+    "result_045"
+  ],
+  "methodology_summary": [
+    "Load transcript-level abundance and inferential replicates from salmon_gibbs files using tximport with txOut=TRUE.",
+    "Convert tximport output to edgeR DGEList with library size normalization using DGEListFromTximport(divide=TRUE).",
+    "Validate DGEList object structure, count matrix presence, and library size factors.",
+    "Extract and verify presence of common and tagwise dispersion estimates for count overdispersion modeling.",
+    "Validation: DGEList object contains non-empty count matrix, positive library size factors, and both common and tagwise dispersion estimates suitable for transcript-level differential expression analysis.",
+    "References: source article (DOI: 10.12688/f1000research.7563.1)"
+  ],
+  "missing_information": [
+    "No changelog or version history is documented for the tximport package or its integration with edgeR::DGEListFromTximport"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/gene_counts_matrix"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does edgeR::DGEListFromTximport with divide=TRUE process tximport inferential replicates to generate transcript-level divided counts for differential expression analysis?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "transcript-level-abundance-import",
+    "inferential-replicate-handling",
+    "edger-dgeobject-construction",
+    "rna-seq-count-normalization",
+    "overdispersion-estimation-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_tximport/synthesized_package",
+  "spine_condition_ids": [
+    "cond_original_counts_offset",
+    "cond_txout_true",
+    "cond_divided_counts"
+  ],
+  "spine_entity_ids": [
+    "sys_tximport",
+    "tool_salmon",
+    "tool_edger",
+    "ds_tximportdata",
+    "comp_tximport_fn",
+    "comp_dgelistfromtximport",
+    "comp_infreps",
+    "cond_original_counts_offset",
+    "cond_txout_true",
+    "cond_divided_counts",
+    "res_no_offset_warning"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "rna-seq"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:thelovelab__tximport",
+  "task_description": "Import transcript-level abundance data with inferential replicates from salmon_gibbs files using tximport with txOut=TRUE, then call edgeR::DGEListFromTximport with divide=TRUE to produce a DGEList object with divided counts suitable for transcript-level differential expression analysis. Verify DGEList structure and presence of count overdispersion estimates.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "tximport output with transcript-level abundance and inferential replicates",
+      "port_id": "salmon_gibbs_tximport",
+      "resolved_via": null,
+      "source": "task_001/gene_counts_matrix",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Import salmon gibbs inferential replicates with tximport txOut=TRUE, call DGEListFromTximport(divide=TRUE), and verify the DGEList contains divided counts and overdispersion estimates for transcript-level analysis.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "DGEList object with divided transcript-level counts and dispersion estimates",
+      "port_id": "dgelist_divided",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "DGEList structure and overdispersion validation report",
+      "port_id": "verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct DGEListFromTximport with divided counts for edgeR transcript-level DGE",
+  "tools": [
+    "tximport",
+    "edgeR",
+    "salmon"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: DGEList object with divided transcript-level counts, library size normalization factors, and overdispersion estimates, Verification report confirming DGEList structure integrity and presence of count overdispersion estimates."
+  ],
+  "workflow_description": "1. Load tximportData salmon_gibbs files containing transcript-level abundance estimates and Gibbs sample replicates using tximport function with type='salmon' and txOut=TRUE to retain transcript-level output. 2. Pass the tximport output object to edgeR::DGEListFromTximport function with divide=TRUE parameter to divide counts by library size and produce a DGEList containing offset-adjusted transcript-level counts. 3. Inspect the resulting DGEList object structure to verify presence of count matrix, library size factors, and associated metadata. 4. Extract and validate presence of common dispersion and tagwise dispersion estimates within the DGEList to confirm overdispersion modeling readiness."
+}

@@ -1,0 +1,3028 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/ccs-bias-quantification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ccs-library-format-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/collision-cross-section-bias-quantification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/collision-cross-section-measurement-quality-control",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/im-ms-drift-time-correction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/internal-standardization-lipid-mapping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/internal-standardization-with-isotope-labels",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ion-mobility-mass-spectrometry-data-processing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/lipid-class-coverage-assessment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/lipid-class-stratified-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/quality-control-metric-evaluation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/reference-library-alignment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/u13c-labeled-lipid-identification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias in ion mobility-mass spectrometry (IM-MS) analyses.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_mobil_lipid_system"
+        },
+        {
+          "id": "asb:spine_im_ms_platform"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MobiLipid employs a newly established DT CCS N2 library for U13C labeled lipids.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_mobil_lipid_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MobiLipid eliminates the need to measure additional external calibration besides vendor specific calibration requirements by internal standardization.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_mobil_lipid_system"
+        },
+        {
+          "id": "asb:spine_internal_standardization_method"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MobiLipid enhances CCS quality control by providing an R Markdown that integrates into IM-MS lipidomics workflows.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_mobil_lipid_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "CCS bias calculation and correction can be implemented effectively with a low number of lipids detected per lipid class.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The library contains 377 DTCCSN2 values covering 15 lipid classes and 5 different adduct types ([M + H]+, [M + NH4]+, [M + Na]+, [M \u2013 H]\u2212, and [M + HCOO]\u2212)... DTCCSN2 values are in the range 189.4\u2013327.1 \u00c52",
+      "asbval:note": "Paper explicitly describes the DTCCSN2 library structure, lipid class coverage (15 classes), and CCS value ranges.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What is the structure, lipid class coverage, and range of CCS values contained in the DTCCSN2 library for U13C labeled lipids that is distributed with MobiLipid?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:33.745172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1)",
+      "asbval:note": "Paper explicitly states R and RStudio are used for MobiLipid implementation and data processing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:33.745172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The new MobiLipid library contains 377 DTCCSN2 values for 162 U13C-labeled lipids detected at lipid species level across 15 lipid classes... The full DTCCSN2 library for U13C-labeled yeast lipids is provided in the Supporting Information (Table S1).",
+      "asbval:note": "Paper provides the DTCCSN2 library with structure and lipid class coverage details (Table S1 in SI), but the card's framing as a 'validation report' is not explicitly described as an output. The paper presents library curation criteria and quality checks (mass accuracy \u22645 ppm, detection in \u22652 samples, CCS RSD <1%), but does not frame these as a formal 'validation report' output. The library itself and its statistics are documented, but not as a standalone validation report artifact.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Validation report documenting DTCCSN2 library structure, lipid class coverage, CCS value statistics, and conformance to specifications",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:33.745172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card frames the task as 'reproducing' the DTCCSN2 library, but the paper presents the library as already established and curated by the authors. The research question asks about the structure and coverage of the library 'as provided with MobiLipid,' which is descriptive/analytical rather than generative.",
+        "The card does not mention the key methodological requirement: the library was derived from LC-DTIM-MS measurements of U13C-labeled yeast extract (Komagataella phaffii). Reproducing the library would require access to this specific labeled biomass and DTIM-MS instrumentation.",
+        "The card does not specify the curation criteria (mass accuracy \u22645 ppm, detection in \u22652 samples, coelution of adducts, CCS RSD <1%) that were applied to filter the library entries, which are central to understanding the library's quality and reproducibility."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:33.745172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed for each measured data file",
+      "asbval:note": "Research question directly addresses the core functionality of MobiLipid: calculating CCS bias using U13C-labeled internal standards.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does MobiLipid calculate CCS bias in IM-MS lipidomics data using internal standardization with U13C labeled lipids?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:45.257161+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... The correction procedure in MobiLipid is automated using R Markdown",
+      "asbval:note": "Paper explicitly states MobiLipid is implemented in R/R Markdown.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:45.257161+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the mean bias before and after correction relative to library DTCCSN2 values for labeled lipids is computed and reported... MobiLipid plots the CCS bias distribution for each correction function... Figure 3 illustrates the CCSN2 bias before and after correction",
+      "asbval:note": "Paper describes computation and reporting of bias statistics and generation of visualizations (plots/figures) as outputs of MobiLipid.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "CCS bias assessment report containing per-lipid bias values, class-level bias statistics, and visualizations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:45.257161+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card focuses narrowly on 'CCS bias assessment component' but the paper describes MobiLipid as a comprehensive tool that also performs CCS correction (not just assessment). The card omits the correction functionality, which is a major feature.",
+        "The card does not mention the DTCCSN2 library for U13C-labeled lipids, which is central to how MobiLipid operates\u2014this is a significant omission of a key input/resource."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:45.257161+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is a fully automated R Markdown tool utilizing a newly established DTCCSN2 library for U13C-labeled lipids to internally assess CCSN2 bias in IM-MS lipidomics workflows and allow CCS correction",
+      "asbval:note": "Paper explicitly describes MobiLipid as an R Markdown tool with CCS correction functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Reconstruct the CCS bias correction component of the MobiLipid R Markdown workflow",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:54.047930+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mathematics behind the internal standardization in MobiLipid are linear correction functions, based on the derived CCSN2 of U13C-labeled lipids and the deployed reference DTCCSN2 values... The correction procedure in MobiLipid is automated using R Markdown and available on GitHub",
+      "asbval:note": "Paper describes the automated correction workflow using linear correction functions in R Markdown.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does MobiLipid apply CCS bias correction using the automated R Markdown workflow to transform assessed bias measurements into corrected CCS values?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:54.047930+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... The correction procedure in MobiLipid is automated using R Markdown",
+      "asbval:note": "Paper explicitly states MobiLipid runs in R/RStudio environment using R Markdown.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:54.047930+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "corrected CCSN2 values are derived for all lipids within the lipid class\u2013adduct combination, irrespective of their labeling status. Additionally, the mean bias before and after correction relative to library DTCCSN2 values for labeled lipids is computed and reported... the exemplary generated results, including all correction functions, corrected CCSN2 values, and CCSN2 bias before and after correction can be accessed in the Supporting Information (Tables S2\u2013S7)",
+      "asbval:note": "Paper confirms corrected CCS values and bias metadata are generated and reported in tabular format (Supporting Information tables), but does not explicitly specify CSV format\u2014outputs are in supplementary tables (likely Excel or similar tabular format).",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Corrected CCS values in tabular format (CSV or data frame) with original and corrected CCS per lipid, including bias correction metadata",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:54.047930+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "Card focuses narrowly on the CCS bias correction component of MobiLipid workflow. Paper scope is broader: it describes the entire MobiLipid tool including library creation, benchmarking, and correction. The card's focus is a valid subtask within the paper's scope.",
+        "Card does not mention the U13C-labeled lipid library or internal standardization strategy, which are central to how MobiLipid performs correction. The correction functions depend on this library as reference."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:54.047930+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_004/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The functions require a minimum of three labeled lipids as input for each lipid class-adduct combination.",
+      "asbval:note": "Paper states a minimum of 3 lipids is required, but the research question frames this as an open empirical investigation. The paper does test this minimum (3\u20136 lipids) and reports results, but the framing as 'what is the minimum' suggests a discovery question, whereas the paper presents 3 as an established requirement. The paper does explore performance across different lipid counts (3\u20136) in correction functions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_004",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What is the minimum number of lipids per lipid class required to achieve effective CCS bias estimation and correction using the MobiLipid workflow?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:40:04.827378+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_004/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment. Comprehensive documentation of required installations and how to run MobiLipid is provided at https://github.com/FelinaHildebrand/MobiLipid.",
+      "asbval:note": "R and RStudio are explicitly used for MobiLipid implementation and data processing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_004",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:40:04.827378+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_004/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the mean bias before and after correction relative to library DTCCSN2 values for labeled lipids is computed and reported. ... the exemplary generated results, including all correction functions, corrected CCSN2 values, and CCSN2 bias before and after correction can be accessed in the Supporting Information (Tables S2\u2013S7).",
+      "asbval:note": "Paper reports CCS bias metrics and provides tables, but these are presented as exemplary results for a specific dataset (TIM-MS data), not as a systematic analysis of bias quality as a function of lipid count. The paper does generate up to 100 correction functions using 3\u20136 lipids and reports bias distributions, but the primary output is not framed as a summary table of quality metrics indexed by lipid count.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_004",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Summary table of CCS bias estimation quality metrics (e.g., residual error, accuracy) as a function of lipid count per lipid class",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:40:04.827378+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_004/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Figure 3 illustrates the CCSN2 bias before and after correction exemplary of PCs for which a broad coverage was achieved in this work. ... MobiLipid plots the CCS bias distribution for each correction function (corresponding to a unique set of U13C lipids) separately (Figure S8). This plot allows the user to manually inspect the performance of each correction function.",
+      "asbval:note": "Paper provides visualizations (Figures 3, S7, S8) showing CCS bias across different lipid counts (3\u20136 lipids per function), but these are presented as exemplary results for PCs and as diagnostic plots for function quality control, not as a systematic curve or heatmap explicitly designed to show the relationship between lipid count and bias quality across all lipid classes.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_004",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Visualization (curve or heatmap) showing the relationship between number of detected lipids per class and CCS bias estimation quality",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:40:04.827378+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_004/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate card frames the task as an investigative analysis of 'minimum lipids-per-class requirement,' but the paper presents 3 as an established minimum and demonstrates its application rather than deriving it empirically.",
+        "The expected outputs suggest a systematic parametric study (quality metrics as a function of lipid count), but the paper's analysis is presented as an exemplary application to one dataset (TIM-MS yeast extract) with post-hoc inspection of correction function performance.",
+        "The paper does explore 3\u20136 lipids per function and reports bias distributions, but the primary contribution is the MobiLipid tool and its validation on a specific dataset, not a comprehensive sensitivity analysis of lipid count vs. bias quality."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_004",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:40:04.827378+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-bias-quantification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed for each measured data file",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ccs-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Quantify systematic collision cross section (CCS) bias in ion mobility-mass spectrometry lipidomics data by comparing measured CCS values of U13C-labeled internal standards against a validated DT CCS N2 reference library.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:39.640229+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-bias-quantification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is a fully automated R Markdown tool utilizing a newly established DTCCSN2 library for U13C-labeled lipids to internally assess CCSN2 bias in IM-MS lipidomics workflows and allow CCS correction without the need for additional external calibration procedures.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ccs-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill enables internal standardization-based quality control without additional external calibration.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:39.640229+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-bias-quantification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... The correction procedure in MobiLipid is automated using R Markdown and available on GitHub (https://github.com/FelinaHildebrand/MobiLipid).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ccs-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid - R Markdown workflow that automates CCS bias calculation and optional bias correction for IM-MS lipidomics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:39.640229+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-bias-quantification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Comprehensive documentation of required installations and how to run MobiLipid is provided at https://github.com/FelinaHildebrand/MobiLipid.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ccs-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid repo: https://github.com/FelinaHildebrand/MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:39.640229+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-bias-quantification/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ccs-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R - Programming language and environment for loading data, matching to library, computing bias metrics, and generating visualizations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:39.640229+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-bias-quantification/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "ggplot2 is not mentioned in any passage. While R and RStudio are used for visualization, the specific package ggplot2 is not named or confirmed in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ccs-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ggplot2 - R package for generating publication-quality bias distribution visualizations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:39.640229+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-bias-quantification/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "data.table is not mentioned in any passage. While aggregation by lipid class and adduct is performed, the specific R package used is not named.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ccs-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "data.table - R package for efficient aggregation of bias statistics by lipid class and adduct",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:39.640229+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-library-format-parsing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is a fully automated R Markdown tool utilizing a newly established DTCCSN2 library for U13C-labeled lipids to internally assess CCSN2 bias in IM-MS lipidomics workflows",
+      "asbval:note": "Paper describes a CCS library (DTCCSN2) distributed with MobiLipid software for IM-MS lipidomics. The library structure, metadata (lipid classes, adducts, m/z ranges, CCS ranges), and validation criteria are extensively documented.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ccs-library-format-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Extract and validate the structure, metadata, and numeric ranges of a collision cross section (CCS) reference library file distributed with ion mobility\u2013mass spectrometry lipidomics software.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:49.180652+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-library-format-parsing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the new MobiLipid library contains 377 DTCCSN2 values for 162 U13C-labeled lipids detected at lipid species level across 15 lipid classes... including various adducts (i.e., [M + H]+, [M + NH4]+, [M + Na]+, [M \u2013 H]\u2212, [M + HCOO]\u2212) across a mass range of m/z 318.3501\u2013966.9794 and DTCCSN2 values are in the range 189.4\u2013327.1 \u00c52",
+      "asbval:note": "Paper explicitly documents lipid class coverage (15 classes), CCS value ranges, m/z ranges, and adduct types\u2014all elements of library validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ccs-library-format-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill ensures the library's lipid class coverage, CCS value distributions, and measurement conditions are correctly parsed and match documented specifications.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:49.180652+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-library-format-parsing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The full DTCCSN2 library for U13C-labeled yeast lipids is provided in the Supporting Information (Table S1)... MobiLipid is run in the R studio environment. Comprehensive documentation of required installations and how to run MobiLipid is provided at https://github.com/FelinaHildebrand/MobiLipid",
+      "asbval:note": "Paper describes distribution of the DTCCSN2 library with MobiLipid and its use for CCS bias monitoring and correction in IM-MS workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ccs-library-format-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have received or cloned a CCS reference library (such as the DTCCSN2 library for U13C labeled lipids) bundled with lipidomics software and need to verify its integrity, understand its lipid class composition, or extract metadata before using it for CCS bias calculation o",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:49.180652+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-library-format-parsing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... After exporting results, further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1).",
+      "asbval:note": "Paper explicitly uses R and RStudio for data processing, filtering, and validation of IM-MS lipidomics data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ccs-library-format-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (Language for parsing .csv library files, validating numeric ranges, and generating validation reports)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:49.180652+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-library-format-parsing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention data.table or any specific R package for CSV parsing. Passages describe R and RStudio use but do not name the data import/parsing packages employed. Cannot confirm or deny use of data.table specifically.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "ccs-library-format-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "data.table (R package for efficient import, parsing, and inspection of large CCS library .csv files)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:49.180652+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-library-format-parsing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we introduce MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization. MobiLipid utilizes a newly established DT CCS N2 library for uniformly (U) 13 C-labeled lipids",
+      "asbval:note": "MobiLipid is confirmed as the parent tool that distributes and uses the DTCCSN2 library. The library is a core component of MobiLipid.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ccs-library-format-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid (Parent tool that distributes and uses the DTCCSN2 CCS library; this skill verifies the library component)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:41:49.180652+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-bias-quantification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By spiking U\u00b9\u00b3C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed for each measured data file, providing a straightforward approach to achieving constant quality control using lipid class-specific labeled internal standards.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Quantify systematic bias in measured collision cross section (CCS) values relative to a reference library by comparing ion mobility-mass spectrometry measurements of U\u00b9\u00b3C-labeled internal standard lipids against their known theoretical CCS values. This enables detection of instru",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:03.022208+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-bias-quantification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To address this, we introduce MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:03.022208+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-bias-quantification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Comprehensive documentation of required installations and how to run MobiLipid is provided at https://github.com/FelinaHildebrand/MobiLipid.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[MobiLipid].repo",
+      "asbval:target_claim_text": "https://github.com/FelinaHildebrand/MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:03.022208+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-bias-quantification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "This automated open-source R Markdown tool enables internal monitoring and straightforward compensation for CCS N2 biases. It supports lipid class- and adduct-specific CCS corrections... The correction procedure in MobiLipid is automated using R Markdown and available on GitHub.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[MobiLipid].role",
+      "asbval:target_claim_text": "R Markdown workflow that automates CCS bias calculation, generates correction functions, and produces HTML/PDF reports with bias statistics and visualizations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:03.022208+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-bias-quantification/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[R].role",
+      "asbval:target_claim_text": "Statistical computing environment in which the MobiLipid markdown executes bias calculations and rendering",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:03.022208+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-bias-quantification/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid utilizes a newly established DT CCS N2 library for uniformly (U) 13 C-labeled lipids, derived from a U 13 C-labeled yeast extract... The applicability of MobiLipid is demonstrated for trapped IM (TIM)-MS measurements of an unlabeled yeast extract spiked with U 13 C-labeled lipids.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope.when_to_use",
+      "asbval:target_claim_text": "Apply this skill when you have ion mobility-mass spectrometry lipidomics data from samples spiked with U\u00b9\u00b3C-labeled lipid internal standards (fully labeled yeast extract) and want to assess whether measured CCS values systematically deviate from a validated DT CCS N\u2082 reference li",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:03.022208+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-measurement-quality-control/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization. MobiLipid utilizes a newly established DT CCS N2 library for uniformly (U) 13 C-labeled lipids... This automated open-source R Markdown tool enables internal monitoring and straightforward compensation for CCS N2 biases.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-measurement-quality-control",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Assess and correct collision cross section (CCS) bias in ion mobility-mass spectrometry lipidomics data using internal standardization with U13C-labeled lipids and a reference DT CCS N2 library",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:17.120292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-measurement-quality-control/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mathematics behind the internal standardization in MobiLipid are linear correction functions, based on the derived CCSN2 of U13C-labeled lipids and the deployed reference DTCCSN2 values... The functions require a minimum of three labeled lipids as input for each lipid class-adduct combination.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-measurement-quality-control",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "applies class-specific linear correction functions to improve measurement accuracy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:17.120292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-measurement-quality-control/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... This automated open-source R Markdown tool enables internal monitoring and straightforward compensation for CCS N2 biases.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-measurement-quality-control",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid - R Markdown workflow for automated CCS bias assessment and correction via internal standardization",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:17.120292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-measurement-quality-control/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Comprehensive documentation of required installations and how to run MobiLipid is provided at https://github.com/FelinaHildebrand/MobiLipid.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-measurement-quality-control",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid repo: https://github.com/FelinaHildebrand/MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:17.120292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-measurement-quality-control/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-measurement-quality-control",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R - Statistical computing environment and data processing language for executing MobiLipid workflow",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:17.120292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-measurement-quality-control/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "ggplot2 is not mentioned in any passage. While the paper generates CCS bias distribution plots and visualizations (Figures 2, 3, S7, S8), the specific R package used for visualization is not named.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "collision-cross-section-measurement-quality-control",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ggplot2 - R package for generating CCS bias distribution visualizations and violin plots",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:17.120292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-measurement-quality-control/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "data.table is not mentioned in any passage. While the paper performs data filtering and aggregation in R, the specific package used is not identified.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "collision-cross-section-measurement-quality-control",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "data.table - R package for efficient aggregation and manipulation of large IM-MS feature tables",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:17.120292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-measurement-quality-control/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The applicability of MobiLipid is demonstrated for trapped IM (TIM)-MS measurements of an unlabeled yeast extract spiked with U 13 C-labeled lipids.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-measurement-quality-control",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have IM-MS lipidomics data from samples spiked with U13C-labeled internal standards (fully labeled yeast extract)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:17.120292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-measurement-quality-control/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The functions require a minimum of three labeled lipids as input for each lipid class-adduct combination.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-measurement-quality-control",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Lipid class-adduct combinations with fewer than 3 detected U13C-labeled lipids when CCS correction is needed; linear regression requires a minimum of 3 reference points per combination",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:17.120292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/im-ms-drift-time-correction/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization... The mathematics behind the internal standardization in MobiLipid are linear correction functions, based on the derived CCSN2 of U13C-labeled lipids and the deployed reference DTCCSN2 values",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "im-ms-drift-time-correction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Automated assessment and correction of collision cross section (CCS) bias in ion mobility\u2013mass spectrometry analyses using internal U13C-labeled lipid standards and linear regression-based correction functions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:27.182650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/im-ms-drift-time-correction/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is a fully automated R Markdown tool utilizing a newly established DTCCSN2 library for U13C-labeled lipids to internally assess CCSN2 bias in IM-MS lipidomics workflows and allow CCS correction without the need for additional external calibration procedures",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "im-ms-drift-time-correction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "eliminates the need for external calibration beyond vendor-specific requirements by leveraging a DT CCS N2 library",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:27.182650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/im-ms-drift-time-correction/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid utilizes a newly established DT CCS N2 library for uniformly (U) 13 C-labeled lipids, derived from a U 13 C-labeled yeast extract... The applicability of MobiLipid is demonstrated for trapped IM (TIM)-MS measurements of an unlabeled yeast extract spiked with U 13 C-labeled lipids",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "im-ms-drift-time-correction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "samples spiked with U13C-labeled internal standards (fully labeled yeast extract)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:27.182650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/im-ms-drift-time-correction/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The functions require a minimum of three labeled lipids as input for each lipid class-adduct combination",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "im-ms-drift-time-correction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "minimum 3 required for correction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:27.182650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/im-ms-drift-time-correction/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we introduce MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization... MobiLipid is run in the R studio environment",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "im-ms-drift-time-correction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:27.182650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/im-ms-drift-time-correction/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Comprehensive documentation of required installations and how to run MobiLipid is provided at https://github.com/FelinaHildebrand/MobiLipid... The correction procedure in MobiLipid is automated using R Markdown and available on GitHub (https://github.com/FelinaHildebrand/MobiLipid)",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "im-ms-drift-time-correction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid repo: https://github.com/FelinaHildebrand/MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:27.182650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/im-ms-drift-time-correction/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "This automated open-source R Markdown tool enables internal monitoring and straightforward compensation for CCS N2 biases... The correction procedure in MobiLipid is automated using R Markdown... the mean bias before and after correction relative to library DTCCSN2 values for labeled lipids is computed and reported",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "im-ms-drift-time-correction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid role: R Markdown workflow for automated CCS bias calculation and correction; implements linear regression correction functions and generates multi-format reports",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:27.182650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/im-ms-drift-time-correction/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1)",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "im-ms-drift-time-correction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R execution environment for the R Markdown workflow",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:27.182650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/im-ms-drift-time-correction/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not specify the exact R package dependencies required for MobiLipid. While the paper mentions R Markdown, ggplot2 is used for visualization (Figure 3), and data processing is performed, the complete list of required packages is not enumerated in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "im-ms-drift-time-correction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R required packages: htmltools, rmarkdown, data.table, ggplot2, DT, webshot, tcltk, knitr, ggbeeswarm",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:27.182650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed for each measured data file... The mathematics behind the internal standardization in MobiLipid are linear correction functions, based on the derived CCSN2 of U13C-labeled lipids and the deployed reference DTCCSN2 values... The functions require a minimum of three labeled lipids as input for each lipid class-adduct combination.",
+      "asbval:note": "Paper uses DT CCS N2 library (not 'deuterated CCS library'). The card conflates 'deuterated' (D-labeled) with the actual U13C-labeled internal standards and DT CCS N2 reference library. The core function\u2014mapping measured CCS to a reference library using U13C-labeled standards to establish bias correction factors per lipid class\u2013adduct\u2014is correct, but the terminology 'deuterated CCS library' is inaccurate; the library is DT CCS N2 for U13C-labeled lipids, and deuterated standards are used separately for quantification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Map measured ion mobility-mass spectrometry lipid signals to a deuterated CCS library using U13C-labeled internal standards to establish bias correction factors for each lipid class\u2013adduct combination.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:40.518510+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is a fully automated R Markdown tool utilizing a newly established DTCCSN2 library for U13C-labeled lipids to internally assess CCSN2 bias in IM-MS lipidomics workflows and allow CCS correction without the need for additional external calibration procedures.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill enables quality control and systematic bias quantification without requiring external calibration beyond vendor-specific requirements.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:40.518510+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library... The functions require a minimum of three labeled lipids as input for each lipid class-adduct combination.",
+      "asbval:note": "Same issue as research_question: 'deuterated CCS library' is a misnomer. The actual library is DT CCS N2 for U13C-labeled lipids. The functional description is correct.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Map measured ion mobility-mass spectrometry lipid signals to a deuterated CCS library using U13C-labeled internal standards to establish bias correction factors for each lipid class\u2013adduct combination.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:40.518510+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To evaluate the use of the new U13C lipidomics library, experiments were carried out on two different IM-MS platforms... LC-DTIM-MS and LC-TIM-MS measurements were performed using the U13C-labeled lipid yeast extract and its unlabeled version... Comparison of data for unlabeled (monoisotopic) and U13C-labeled lipids revealed a very small systematic shift...",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have (LC-)IM-MS lipidomics data from samples spiked with U13C-labeled yeast extract, measured CCS values for both labeled and unlabeled lipids, and need to quantify systematic CCS bias between your instrument and a reference library before applying bias correction.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:40.518510+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To address this constraint, a stable isotope-labeled biomass, like the yeast strain Komagataella phaffii (also referred to as Pichia pastoris), can be employed... The uniformly (U)13C-labeled yeast extract is a well-established internal standard that covers a broad palette of U13C-labeled lipids...",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Samples lack U13C-labeled internal standards or yeast extract spike-in \u2014 the skill fundamentally depends on labeled lipids to establish library mapping.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:40.518510+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "After curation using these stringent criteria, the new MobiLipid library contains 377 DTCCSN2 values for 162 U13C-labeled lipids detected at lipid species level across 15 lipid classes (AcCa, acylcarnitine; Cer, ceramide; Co, coenzyme; DG, diacylglycerol; HexCer, hexosylceramide; LPC, lysophosphatidylcholine; LPE, lysophosphatidylethanolamine; PA, phosphatidic acid; PC, phosphatidylcholine; PE, phosphatidylethanolamine; PG, phosphatidylglycerol; PI, phosphatidylinositol; PS, phosphatidylserine; SPH, sphingoid base; TG, triacylglycerol)",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Reference library nomenclature does not match your measured lipid naming convention \u2014 lipid class and species must align with DT CCS N2 library entries.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:40.518510+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed for each measured data file... Subsequently, applying all generated functions facilitated the correction of TIMCCSN2 values for both unlabeled and U13C-labeled lipids.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input CCS values are already corrected or transformed \u2014 the skill assumes raw, uncorrected measured CCS as input.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:40.518510+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment. Comprehensive documentation of required installations and how to run MobiLipid is provided at https://github.com/FelinaHildebrand/MobiLipid.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R \u2014 Runtime and implementation language for MobiLipid R Markdown workflow",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:40.518510+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is a fully automated R Markdown tool utilizing a newly established DTCCSN2 library for U13C-labeled lipids to internally assess CCSN2 bias in IM-MS lipidomics workflows and allow CCS correction... The correction procedure in MobiLipid is automated using R Markdown and available on GitHub (https://github.com/FelinaHildebrand/MobiLipid).",
+      "asbval:note": "Paper confirms MobiLipid is an R Markdown tool that automates bias calculation and correction. However, the specific filename 'MobiLipid_CCS-bias-calculation.Rmd' is not mentioned in the passages; the paper only references the GitHub repository without naming the specific .Rmd file. Output format (HTML/PDF reports) is not explicitly stated in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid R Markdown (MobiLipid_CCS-bias-calculation.Rmd) \u2014 Automated workflow that loads measured data, maps to U13C library, calculates CCS bias, and generates HTML/PDF reports",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:40.518510+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "ggplot2 is not mentioned in any of the provided passages. The paper describes visualization outputs (Figures 2, 3, S7, S8) but does not name the specific R visualization package used. Cannot confirm or deny ggplot2 usage from available text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ggplot2 \u2014 Visualization of CCS bias distributions and bias statistics across lipid class\u2013adduct combinations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:40.518510+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "data.table is not mentioned in any of the provided passages. The paper describes data processing and filtering steps but does not name specific R data manipulation packages. Cannot confirm or deny data.table usage from available text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "data.table \u2014 Efficient manipulation and aggregation of large measured lipid datasets and library matching",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:42:40.518510+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-with-isotope-labels/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization. MobiLipid utilizes a newly established DT CCS N2 library for uniformly (U) 13 C-labeled lipids... This automated open-source R Markdown tool enables internal monitoring and straightforward compensation for CCS N2 biases... By applying the CCS correction integrated into the tool for the exemplary data set, the mean absolute CCS N2 biases of 10 lipid classes could be reduced to approximately 0%.",
+      "asbval:note": "Fully supported by abstract and introduction. The paper explicitly describes using U13C-labeled lipids as internal standards to monitor and correct CCS bias without additional external calibration.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-with-isotope-labels",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Use fully labeled isotopic standards (e.g., U13C-labeled lipids) spiked into samples to calculate and correct systematic bias in ion mobility-derived collisional cross section (CCS) measurements without requiring additional external calibration.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:01.213089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-with-isotope-labels/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid utilizes a newly established DT CCS N2 library for uniformly (U) 13 C-labeled lipids, derived from a U 13 C-labeled yeast extract, containing 377 DT CCS N2 values... By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed for each measured data file, providing a straightforward approach to achieving constant quality control",
+      "asbval:note": "Directly supported. The paper establishes a reference library and uses it for quality control via internal standardization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-with-isotope-labels",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This approach enables accurate quality control of IM-MS lipidomics data by leveraging a reference library of isotope CCS values.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:01.213089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-with-isotope-labels/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the measurements, the extracts were dissolved in isopropanol and spiked with deuterated lipid standards... The applicability of MobiLipid is demonstrated for trapped IM (TIM)-MS measurements of an unlabeled yeast extract spiked with U 13 C-labeled lipids.",
+      "asbval:note": "Supported. The paper demonstrates the workflow using spiked samples and compares measured CCS to reference library values.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-with-isotope-labels",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Your IM-MS lipidomics samples have been spiked with fully labeled isotopic internal standards (e.g., U13C yeast lipid extract), and you want to quantify and correct bias in measured CCS values by comparing them to literature or newly established reference CCS values for those sam",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:01.213089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-with-isotope-labels/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "All other IM-MS technologies, including TWIM-MS and TIM-MS, rely solely on external CCS calibration, with calibrants established by DTIM-MS. However, CCS calibrants usually have dissimilar chemical properties to analytes of interest, which poses some challenges for routine 'omics' workflows, including lipidomics... The functions require a minimum of three labeled lipids as input for each lipid class-adduct combination.",
+      "asbval:note": "Supported. Paper identifies the limitation of external calibration and specifies the minimum of 3 lipids per class-adduct combination.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-with-isotope-labels",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "This is particularly useful when vendor-supplied CCS calibration alone is insufficient or when you have limited numbers of detected lipids per class (\u22653 lipids per lipid class\u2013adduct combination) and want to avoid measuring additional external calibration standards.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:01.213089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-with-isotope-labels/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization... This automated open-source R Markdown tool enables internal monitoring and straightforward compensation for CCS N2 biases... The correction procedure in MobiLipid is automated using R Markdown and available on GitHub (https://github.com/FelinaHildebrand/MobiLipid).",
+      "asbval:note": "Fully supported. MobiLipid is explicitly described as an R Markdown tool for automated CCS bias calculation and correction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-with-isotope-labels",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid: R Markdown workflow that automates CCS bias calculation and correction using internal standardization with U13C-labeled lipids",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:01.213089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-with-isotope-labels/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Comprehensive documentation of required installations and how to run MobiLipid is provided at https://github.com/FelinaHildebrand/MobiLipid... The correction procedure in MobiLipid is automated using R Markdown and available on GitHub (https://github.com/FelinaHildebrand/MobiLipid).",
+      "asbval:note": "Directly confirmed in paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-with-isotope-labels",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid repo: https://github.com/FelinaHildebrand/MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:01.213089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-with-isotope-labels/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... After exporting results, further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1)... The mathematics behind the internal standardization in MobiLipid are linear correction functions, based on the derived CCSN2 of U13C-labeled lipids",
+      "asbval:note": "Supported. R/RStudio is used for data processing, linear regression (correction functions), and visualization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "internal-standardization-with-isotope-labels",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R: Statistical computing environment for loading data, performing linear regression, calculating bias metrics, and generating reports",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:01.213089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization. MobiLipid utilizes a newly established DT CCS N2 library for uniformly (U) 13 C-labeled lipids... This automated open-source R Markdown tool enables internal monitoring and straightforward compensation for CCS N2 biases.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Processing and quality control of IM-MS lipidomics data by calculating and correcting collision cross section (CCS) bias using internal standardization with U13C labeled lipid standards",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mathematics behind the internal standardization in MobiLipid are linear correction functions, based on the derived CCSN2 of U13C-labeled lipids and the deployed reference DTCCSN2 values... The functions require a minimum of three labeled lipids as input for each lipid class-adduct combination... the correction procedure can cover the following 10 lipid classes... The correction procedure in MobiLipid is automated using R Markdown",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "automated assessment of systematic CCS deviation and generation of lipid class\u2013adduct-specific correction functions without requiring additional external calibration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we introduce MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization... This automated open-source R Markdown tool",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Comprehensive documentation of required installations and how to run MobiLipid is provided at https://github.com/FelinaHildebrand/MobiLipid... The correction procedure in MobiLipid is automated using R Markdown and available on GitHub (https://github.com/FelinaHildebrand/MobiLipid).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid repo: https://github.com/FelinaHildebrand/MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "This automated open-source R Markdown tool enables internal monitoring and straightforward compensation for CCS N2 biases... The mathematics behind the internal standardization in MobiLipid are linear correction functions, based on the derived CCSN2 of U13C-labeled lipids and the deployed reference DTCCSN2 values... the correction procedure can cover the following 10 lipid classes... the mean bias before and after correction relative to library DTCCSN2 values for labeled lipids is computed and reported.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid role: R Markdown workflow that integrates DTCCSN2 library, performs CCS bias calculation and linear regression\u2013based correction, and generates automated reports",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... further data filtering, evaluation, and visualization was done in the R studio programming environment",
+      "asbval:note": "Paper confirms R is used for MobiLipid execution, data filtering, and visualization, but does not explicitly name data.table, ggplot2, or ggbeeswarm packages in the provided passages. The card claims specific packages that are not mentioned in the extracted text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R role: Statistical computing environment for executing MobiLipid Markdown, data manipulation (data.table), visualization (ggplot2, ggbeeswarm), and linear regression",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RStudio",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment",
+      "asbval:note": "Semantically equivalent: RStudio is the IDE in which MobiLipid (an R Markdown tool) is executed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RStudio role: IDE for editing, rendering, and executing MobiLipid R Markdown files",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The applicability of MobiLipid is demonstrated for trapped IM (TIM)-MS measurements of an unlabeled yeast extract spiked with U 13 C-labeled lipids... an unlabeled and a uniformly 13C-labeled ethanolic yeast (Komagataella phaffii) extract pellet... For the measurements, the extracts were dissolved in isopropanol and spiked with deuterated lipid standards",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have (LC-)IM-MS lipidomics data from samples spiked with U13C labeled internal standards (e.g., fully labeled yeast extract)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By applying the CCS correction integrated into the tool for the exemplary data set, the mean absolute CCS N2 biases of 10 lipid classes could be reduced to approximately 0%... This can deliver significant advantages for maintaining data quality across different IM-MS platforms and for dealing with annotation of diverse lipid classes across different lipidomics applications.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "need to quantify and correct systematic CCS bias before downstream lipid identification or quantification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "other IM technologies rely solely on external CCS calibration, posing challenges due to dissimilar chemical properties between lipids and calibrants... As CCS values of small molecule ions determined by IM-MS technologies like TIM-MS and TWIM-MS are dependent on the external calibration of the instrument the source(s) of CCS bias introduced by the calibration process cannot be easily identified.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "This is appropriate when vendor-specific calibration alone does not account for class-dependent CCS deviations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:15.015182+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-coverage-assessment/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To ensure the quality of the library, only DTCCSN2 values fulfilling the following criteria were included: (1) high mass accuracy (\u22645 ppm error), (2) confirmed detection in at least two samples, (3) confirmed coelution of adducts, and (4) a CCS relative standard deviation <1%. Finally, the resulting DTCCSN2 values were verified by plotting the entries for each lipid class versus the respective m/z values (Figure 1A).",
+      "asbval:note": "Paper describes validation of the DTCCSN2 library itself (quality control during library creation), not a separate task of validating an already-acquired library. The card describes a post-hoc validation workflow, whereas the paper describes the library curation process. The function is related but the scope differs: paper validates during library construction; card proposes validating an external library before use.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "lipid-class-coverage-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validates the structural completeness and CCS value distribution of a collision cross section (CCS) reference library for ion mobility-mass spectrometry lipidomics by verifying lipid class presence, extracting metadata, and confirming numeric ranges against documented specificati",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:32.328159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-coverage-assessment/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is a fully automated R Markdown tool utilizing a newly established DTCCSN2 library for U13C-labeled lipids to internally assess CCSN2 bias in IM-MS lipidomics workflows and allow CCS correction without the need for additional external calibration procedures.",
+      "asbval:note": "MobiLipid uses the DTCCSN2 library for CCS bias assessment and correction, but the paper does not describe a separate validation workflow for verifying library completeness before use. MobiLipid applies the library; it does not validate it as a standalone task.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "lipid-class-coverage-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have acquired a CCS reference library (such as DTCCSN2 for U13C labeled lipids) and need to verify that it contains the expected lipid classes, CCS values are physically plausible for ion mobility data, and coverage matches the library's advertised documentation before u",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:32.328159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-coverage-assessment/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment. Comprehensive documentation of required installations and how to run MobiLipid is provided at https://github.com/FelinaHildebrand/MobiLipid.",
+      "asbval:note": "Paper confirms R is used for MobiLipid implementation and data processing (e.g., 'further data filtering, evaluation, and visualization was done in the R studio programming environment'), but the specific role described in the card (library validation scripting) is not explicitly documented. R is used for CCS correction and bias calculation, not for independent library validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "lipid-class-coverage-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (repo: https://cran.r-project.org/, role: Parsing and validation scripting: load .csv library file, extract and verify metadata, compute CCS distribution statistics, generate validation report)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:32.328159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-coverage-assessment/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid utilizes a newly established DT CCS N2 library for uniformly (U) 13 C-labeled lipids, derived from a U 13 C-labeled yeast extract, containing 377 DT CCS N2 values. This automated open-source R Markdown tool enables internal monitoring and straightforward compensation for CCS N2 biases.",
+      "asbval:note": "MobiLipid provides and uses the DTCCSN2 library, but its primary role is CCS bias monitoring and correction, not library validation. The card describes MobiLipid as a source/distribution tool for validation purposes; the paper describes it as a tool for applying the library to correct CCS biases in experimental data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "lipid-class-coverage-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid (repo: https://github.com/FelinaHildebrand/MobiLipid, role: Source tool that provides and distributes the DTCCSN2 library for U13C labeled lipids; validation confirms library integrity before use in CCS bias calculation workflows)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:32.328159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-stratified-analysis/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid utilizes a newly established DT CCS N2 library for uniformly (U) 13 C-labeled lipids... This automated open-source R Markdown tool enables internal monitoring and straightforward compensation for CCS N2 biases. It supports lipid class- and adduct-specific CCS corrections, requiring only three U 13 C-labeled lipids per lipid class-adduct combination across 10 lipid classes",
+      "asbval:note": "Core research question is directly supported by abstract and methods.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lipid-class-stratified-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Stratify ion mobility-mass spectrometry (IM-MS) lipidomics data by lipid class and adduct type to assess and correct collision cross section (CCS) bias using internal U13C-labeled lipid standards.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:45.128554+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-stratified-analysis/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is a fully automated R Markdown tool utilizing a newly established DTCCSN2 library for U13C-labeled lipids to internally assess CCSN2 bias in IM-MS lipidomics workflows and allow CCS correction without the need for additional external calibration procedures.",
+      "asbval:note": "Paper explicitly states no additional external calibration is needed beyond vendor specs.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lipid-class-stratified-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill enables class-level bias quantification and correction function generation without requiring external calibration beyond vendor specifications.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:45.128554+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-stratified-analysis/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... The correction procedure in MobiLipid is automated using R Markdown and available on GitHub (https://github.com/FelinaHildebrand/MobiLipid).",
+      "asbval:note": "Tool name, role, and repository URL all confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lipid-class-stratified-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid (R Markdown workflow that automates CCS bias assessment and correction by lipid class-adduct combination)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:45.128554+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-stratified-analysis/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1).",
+      "asbval:note": "R is confirmed as the computing environment for MobiLipid execution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lipid-class-stratified-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (Statistical computing environment for executing the MobiLipid R Markdown workflow)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:45.128554+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-stratified-analysis/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "ggplot2 is not mentioned anywhere in the provided passages. While visualizations are generated (Figures 2, 3, S7, S8), the specific R package used for plotting is not named.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "lipid-class-stratified-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ggplot2 (R package for generating class-stratified bias visualizations)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:45.128554+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-stratified-analysis/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "data.table is not mentioned in the provided passages. While data aggregation and stratification by lipid class-adduct is performed, the specific R package used is not named.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "lipid-class-stratified-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "data.table (R package for efficient aggregation and stratification of bias metrics by class-adduct)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:45.128554+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-stratified-analysis/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To evaluate the use of the new U13C lipidomics library, experiments were carried out on two different IM-MS platforms... LC-DTIM-MS and LC-TIM-MS measurements were performed using the U13C-labeled lipid yeast extract and its unlabeled version... Comparison of data for unlabeled (monoisotopic) and U13C-labeled lipids revealed a very small systematic shift... Scrutinizing the DTCCSN2 and TIMCCSN2 values, the mean absolute CCSN2 bias of U13C-labeled lipids between the two IM technologies is 0.78% in positive ionization mode and 0.33% in negative ionization mode... Figure 2 visualizes the CCSN2 bias between the two technologies for all U13C-labeled lipids categorized according to lipid class and the different adducts detected.",
+      "asbval:note": "Scope is directly supported by the experimental design and results.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lipid-class-stratified-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have IM-MS lipidomics data with measured CCS values, samples spiked with U13C-labeled lipid internal standards (e.g., fully labeled yeast extract), and need to evaluate whether systematic CCS bias varies by lipid class-adduct combination",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:45.128554+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-stratified-analysis/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "As MobiLipid is based on an internal standardization strategy, it is applicable to lipidomics workflows performed on different IM-MS technologies. The labeled internal standard can be integrated into IM-MS lipidomics workflows targeting both exploratory and quantitative analysis.",
+      "asbval:note": "Paper confirms MobiLipid is based on internal standardization strategy.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lipid-class-stratified-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Your samples do not contain U13C-labeled internal standards; MobiLipid requires internal standardization and cannot work with external calibration alone.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:45.128554+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-stratified-analysis/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The functions require a minimum of three labeled lipids as input for each lipid class-adduct combination.",
+      "asbval:note": "Minimum requirement of 3 lipids per class-adduct combination is explicitly stated.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lipid-class-stratified-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have fewer than 3 U13C-labeled lipids in a lipid class-adduct combination; CCS correction functions require a minimum of 3 lipids for linear regression.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:45.128554+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-stratified-analysis/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the correction procedure can cover the following 10 lipid classes: Cer, DG, HexCer, LPC, PA, PC, PE, PI, PS, and TG.",
+      "asbval:note": "Paper lists 10 supported lipid classes for correction: Cer, DG, HexCer, LPC, PA, PC, PE, PI, PS, TG. The card's list appears incomplete/truncated and includes 'Co' (coenzyme) which is in the library (377 values across 15 classes) but NOT in the correction procedure (only 10 classes). The card's scope section is cut off mid-sentence.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "lipid-class-stratified-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Your lipid class-adduct combinations are outside the supported set (Cer, Co, DG, HexCer, LPC, LPE, ...)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:43:45.128554+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-metric-evaluation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Figure 2 visualizes the CCSN2 bias between the two technologies for all U13C-labeled lipids categorized according to lipid class and the different adducts detected.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-control-metric-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Systematically evaluate and visualize collision cross section (CCS) bias metrics across lipid classes and adduct combinations to assess the quality of ion mobility-mass spectrometry lipidomics measurements.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:01.741823+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-metric-evaluation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Using a higher number of U13C-labeled lipids to compute the correction functions leads to a more robust correction. However, a few correction functions exhibit subpar performance, which leads to a wider distribution of the CCSN2 bias. While the required minimum of three U13C lipids yielded a good correction performance for most of the correction functions, their performance should be controlled before reporting corrected CCSN2 values.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-control-metric-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill determines whether CCS bias estimation remains acceptable across varying numbers of internal standards and quantifies the trade-off between analytical coverage and correction accuracy.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:01.741823+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-metric-evaluation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed for each measured data file, providing a straightforward approach to achieving constant quality control using lipid class-specific labeled internal standards.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-control-metric-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have measured IM-MS lipidomics data spiked with U13C labeled internal standards and need to assess whether CCS bias remains within acceptable limits for each lipid class-adduct combination.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:01.741823+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-metric-evaluation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The functions require a minimum of three labeled lipids as input for each lipid class-adduct combination.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-control-metric-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use it to determine the minimum number of labeled lipids required per class for reliable CCS bias calculation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:01.741823+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-metric-evaluation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is a fully automated R Markdown tool utilizing a newly established DTCCSN2 library for U13C-labeled lipids to internally assess CCSN2 bias in IM-MS lipidomics workflows and allow CCS correction without the need for additional external calibration procedures.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-control-metric-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid is an R Markdown workflow that automates CCS bias calculation, generates correction functions, and produces quality-control reports with bias metrics visualization and statistical summaries",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:01.741823+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-metric-evaluation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Comprehensive documentation of required installations and how to run MobiLipid is provided at https://github.com/FelinaHildebrand/MobiLipid.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-control-metric-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid repository URL: https://github.com/FelinaHildebrand/MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:01.741823+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-metric-evaluation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-control-metric-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R is used as the programming environment for MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:01.741823+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-library-alignment/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization. MobiLipid utilizes a newly established DT CCS N2 library for uniformly (U) 13 C-labeled lipids... By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed for each measured data file",
+      "asbval:note": "The paper explicitly describes aligning measured lipids to the DT CCS N2 reference library for bias assessment and correction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-library-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Align detected ion mobility-mass spectrometry lipid features to a curated reference library (DT CCS N2) by matching mass-to-charge and retention time identifiers, enabling quantitative bias assessment and correction of collision cross section (CCS) values against theoretical refe",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:11.735376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-library-alignment/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we introduce MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization... This automated open-source R Markdown tool enables internal monitoring and straightforward compensation for CCS N2 biases... The correction procedure in MobiLipid is automated using R Markdown and available on GitHub (https://github.com/FelinaHildebrand/MobiLipid).",
+      "asbval:note": "MobiLipid is confirmed as an R Markdown tool with the exact GitHub repository URL provided.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-library-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid (repo: https://github.com/FelinaHildebrand/MobiLipid) - Automated R Markdown workflow that implements reference library alignment, CCS bias calculation, and optional CCS correction via linear regression for IM-MS lipidomics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:11.735376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-library-alignment/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The correction procedure in MobiLipid is automated using R Markdown and available on GitHub... After exporting results, further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1).",
+      "asbval:note": "Paper confirms R and RStudio are used for data processing and visualization, but does not explicitly name ggplot2, data.table, or DT packages. The paper uses Skyline 23.1.0.268 for targeted lipidomics data processing and PNNL PreProcessor for demultiplexing, not the specific R packages claimed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "reference-library-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (ggplot2, data.table, DT packages) - Core environment for data loading, matching, bias calculation, aggregation, and visualization",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:11.735376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-library-alignment/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed for each measured data file... The applicability of MobiLipid is demonstrated for trapped IM (TIM)-MS measurements of an unlabeled yeast extract spiked with U 13 C-labeled lipids.",
+      "asbval:note": "Paper explicitly describes the use case of spiking U13C-labeled lipids and assessing CCS bias against library values.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-library-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have IM-MS lipidomics data with measured CCS values from samples spiked with U13C labeled internal standards, and you need to assess systematic CCS bias or enable CCS correction by comparing measured lipids against known library entries with validated CCS values.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:11.735376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-library-alignment/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed",
+      "asbval:note": "The paper makes clear that U13C-labeled lipids are required for the bias assessment approach.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-library-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - when NOT to use",
+      "asbval:target_claim_text": "Your samples were not spiked with U13C labeled internal standards\u2014the alignment requires heavy-labeled lipids as anchors for bias calculation.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:11.735376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-library-alignment/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the correction procedure can cover the following 10 lipid classes: Cer, DG, HexCer, LPC, PA, PC, PE, PI, PS, and TG... including various adducts (i.e., [M + H]+, [M + NH4]+, [M + Na]+, [M \u2013 H]\u2212, [M + HCOO]\u2212)",
+      "asbval:note": "Paper specifies limited lipid class and adduct coverage, implying that unmapped classes/adducts would not be corrected.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-library-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - when NOT to use",
+      "asbval:target_claim_text": "Your measured data uses lipid nomenclature or adduct notation not present in the DT CCS N2 library\u2014alignment will fail or produce incomplete matches.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:11.735376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-library-alignment/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the new MobiLipid library contains 377 DTCCSN2 values for 162 U13C-labeled lipids detected at lipid species level across 15 lipid classes... only DTCCSN2 values fulfilling the following criteria were included: (1) high mass accuracy (\u22645 ppm error), (2) confirmed detection in at least two samples, (3) confirmed coelution of adducts, and (4) a CCS relative standard deviation <1%.",
+      "asbval:note": "Paper emphasizes stringent curation criteria for library entries, supporting the claim that library quality is essential.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-library-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - when NOT to use",
+      "asbval:target_claim_text": "You lack a validated CCS reference library with coverage of your analyte lipid classes and adducts\u2014bias assessment becomes unreliable without trusted ground truth.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:11.735376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/u13c-labeled-lipid-identification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid, a novel tool facilitating the CCS quality control of IM-MS lipidomics workflows by internal standardization. MobiLipid utilizes a newly established DT CCS N2 library for uniformly (U) 13 C-labeled lipids... By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed for each measured data file",
+      "asbval:note": "Core research question is directly supported by abstract and methods sections describing the matching of measured CCS values against DTCCSN2 library and bias calculation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "u13c-labeled-lipid-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Identify and validate U\u00b9\u00b3C labeled lipids in ion mobility-mass spectrometry (IM-MS) lipidomics data by matching measured CCS values against a reference DTCCSN2 library and calculating bias to assess data quality.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:28.394212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/u13c-labeled-lipid-identification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is a fully automated R Markdown tool utilizing a newly established DTCCSN2 library for U13C-labeled lipids to internally assess CCSN2 bias in IM-MS lipidomics workflows and allow CCS correction without the need for additional external calibration procedures.",
+      "asbval:note": "Directly stated in conclusion.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "u13c-labeled-lipid-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill enables internal standardization for CCS quality control without requiring external calibration.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:28.394212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/u13c-labeled-lipid-identification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The correction procedure in MobiLipid is automated using R Markdown and available on GitHub (https://github.com/FelinaHildebrand/MobiLipid).",
+      "asbval:note": "Tool name and repository URL confirmed verbatim.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "u13c-labeled-lipid-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid R Markdown at https://github.com/FelinaHildebrand/MobiLipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:28.394212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/u13c-labeled-lipid-identification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MobiLipid is run in the R studio environment... The correction procedure in MobiLipid is automated using R Markdown... the mean bias before and after correction relative to library DTCCSN2 values for labeled lipids is computed and reported.",
+      "asbval:note": "Role description aligns with stated functionality: automated identification, matching, bias calculation, and reporting.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "u13c-labeled-lipid-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MobiLipid role: Automated workflow for U\u00b9\u00b3C lipid identification, library matching, CCS bias calculation, and reporting",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:28.394212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/u13c-labeled-lipid-identification/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "further data filtering, evaluation, and visualization was done in the R studio programming environment (R version 4.3.2 and RStudio 2023.09.1).",
+      "asbval:note": "Paper confirms R and RStudio use for data processing and visualization, but does not explicitly name ggplot2, data.table, or DT packages. The card claims specific packages that are not mentioned in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "u13c-labeled-lipid-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (ggplot2, data.table, DT packages) for data manipulation, visualization, and interactive table generation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:28.394212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/u13c-labeled-lipid-identification/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the measurements, the extracts were dissolved in isopropanol and spiked with deuterated lipid standards... The applicability of MobiLipid is demonstrated for trapped IM (TIM)-MS measurements of an unlabeled yeast extract spiked with U 13 C-labeled lipids.",
+      "asbval:note": "Paper explicitly describes spiking samples with U\u00b9\u00b3C-labeled lipids (yeast extract) as the workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "u13c-labeled-lipid-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have measured CCS values from (LC-)IM-MS samples spiked with U\u00b9\u00b3C labeled internal standards (e.g., fully labeled yeast extract)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:28.394212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/u13c-labeled-lipid-identification/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The library was established using DTIM-MS measurements as a reference method... Specifically, LC-DTIM-MS measurements of a yeast extract dilution series in positive and negative ionization modes served for library generation... only DTCCSN2 values fulfilling the following criteria were included: (1) high mass accuracy (\u22645 ppm error), (2) confirmed detection in at least two samples, (3) confirmed coelution of adducts, and (4) a CCS relative standard deviation <1%.",
+      "asbval:note": "Paper describes data requirements including lipid class, adduct type, and CCS values; mass accuracy and detection criteria align with input requirements.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "u13c-labeled-lipid-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input data must contain lipid class, lipid species, adduct type, and measured CCS value for each detected lipid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:28.394212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/u13c-labeled-lipid-identification/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By spiking U13C-labeled lipids into measured samples and determination of the CCSN2 bias between derived CCS values and the DTCCSN2 library, the extent of the bias can be assessed",
+      "asbval:note": "Paper makes clear that the workflow requires spiked U\u00b9\u00b3C-labeled lipids as internal standards.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "u13c-labeled-lipid-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Do NOT use if samples were not spiked with U\u00b9\u00b3C labeled internal standards",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:28.394212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/u13c-labeled-lipid-identification/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The functions require a minimum of three labeled lipids as input for each lipid class-adduct combination.",
+      "asbval:note": "Paper requires identification of labeled vs. unlabeled lipids and CCS values for the workflow to function.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "u13c-labeled-lipid-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Do NOT use if measured data lacks CCS values or does not include explicit labeling status",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:44:28.394212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-bias-quantification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "ccs-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7142857142857143,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ccs-library-format-parsing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "ccs-library-format-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8333333333333334,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-bias-quantification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "collision-cross-section-bias-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-measurement-quality-control/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "collision-cross-section-measurement-quality-control",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/im-ms-drift-time-correction/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "im-ms-drift-time-correction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8888888888888888,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-lipid-mapping/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 10,
+      "asbval:target_artifact_id": "internal-standardization-lipid-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/internal-standardization-with-isotope-labels/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "internal-standardization-with-isotope-labels",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-mass-spectrometry-data-processing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 11,
+      "asbval:target_artifact_id": "ion-mobility-mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.9090909090909091,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-coverage-assessment/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "lipid-class-coverage-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lipid-class-stratified-analysis/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "lipid-class-stratified-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7777777777777778,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-metric-evaluation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "quality-control-metric-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-library-alignment/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "reference-library-alignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8571428571428571,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/u13c-labeled-lipid-identification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "u13c-labeled-lipid-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.875,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias in ion mobility-mass spectrometry (IM-MS) analyses.",
+      "asbval:note": "Text accurately represents source_excerpt despite substring_in_paper=false; content is verbatim match",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:source_excerpt": "MobiLipid aims to streamline lipidomics workflows by offering a fully\nautomated solution for assessing and correcting collision cross section\n(CCS) bias in ion mobility-mass spectrometry (IM-MS) analyses.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:24.078308+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MobiLipid employs a newly established DT CCS N2 library for U13C labeled lipids.",
+      "asbval:note": "Text accurately captures source_excerpt content (DT CCS N2 library for U13C labeled lipids) despite formatting differences and substring_in_paper=false",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:source_excerpt": "Employing\na newly established <sup>DT</sup>CCS<sub>N2</sub> library for\nU<sup>13</sup>C labeled lipids",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:24.078308+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MobiLipid eliminates the need to measure additional external calibration besides vendor specific calibration requirements by internal standardization.",
+      "asbval:note": "Text accurately represents source_excerpt despite substring_in_paper=false; content is verbatim match",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:source_excerpt": "MobiLipid eliminates the need to measure additional external\ncalibration besides vendor specific calibration requirements by internal\nstandardization.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:24.078308+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MobiLipid enhances CCS quality control by providing an R Markdown that integrates into IM-MS lipidomics workflows.",
+      "asbval:note": "Text attributes tool to 'MobiLipid' but source_excerpt uses 'Our tool'; attribution unclear from excerpt alone",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:source_excerpt": "Our tool enhances CCS quality control by providing a R\nMarkdown that integrates into IM-MS lipidomics workflows",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:24.078308+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "CCS bias calculation and correction can be implemented effectively with a low number of lipids detected per lipid class.",
+      "asbval:note": "Text accurately represents source_excerpt content about low number of lipids per class for CCS bias implementation despite substring_in_paper=false",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01253",
+      "asbval:source_excerpt": "requiring a\nlow number of lipids detected per lipid class for effective\nimplementation of CCS bias calculation and correction.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T12:39:24.078308+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_mobilipid#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "concrete",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_mobil_lipid_system",
+      "title": "MobiLipid",
+      "identifier": "urn:asb:spine:mobil_lipid_system"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_ccs_bias_assessment_component",
+      "title": "CCS Bias Assessment",
+      "identifier": "urn:asb:spine:ccs_bias_assessment_component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_ccs_bias_correction_component",
+      "title": "CCS Bias Correction",
+      "identifier": "urn:asb:spine:ccs_bias_correction_component"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dtccs_n2_library",
+      "title": "DTCCSN2 Library for U13C Labeled Lipids",
+      "identifier": "urn:asb:spine:dtccs_n2_library"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_r_markdown_tool",
+      "title": "R Markdown Workflow",
+      "identifier": "urn:asb:spine:r_markdown_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_im_ms_platform",
+      "title": "Ion Mobility-Mass Spectrometry",
+      "identifier": "urn:asb:spine:im_ms_platform"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_internal_standardization_method",
+      "title": "Internal Standardization",
+      "identifier": "urn:asb:spine:internal_standardization_method"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_ccs_qc_capability",
+      "title": "CCS Quality Control Enhancement",
+      "identifier": "urn:asb:spine:ccs_qc_capability"
+    }
+  ]
+}

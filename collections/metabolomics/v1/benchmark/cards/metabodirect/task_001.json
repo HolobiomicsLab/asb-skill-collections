@@ -1,0 +1,431 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "metabodirect.pdf",
+      "role": "main_article",
+      "sha256": "8b88de575218bd9c0507dd4d2410cefdbd5f220f618fd3cee717387b195945ea"
+    }
+  ],
+  "created_at": "2026-06-15T08:03:26.683093+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MetaboDirect GitHub repository code and documentation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MetaboDirect ReadTheDocs webpage with full pipeline documentation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Published documentation or repositories for UltraMassExplorer, FREDA, MetaboAnalyst, DropMS, and i-van Krevelen",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured comparison table (CSV or TSV format) with rows for each of five tools and columns for analytical features, with binary \u2714/\u2716 entries indicating presence or absence of each feature",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "FT-ICR MS data analysis pipelines typically include filtering (m/z, isotopic, formula error, sample prevalence), normalization, molecular property calculations (NOSC, GFE, AImod, DBE), visualization (Van Krevelen diagrams), and statistical/multivariate ordination methods (PERMANOVA, NMDS, PCA).",
+    "Normalization methods in metabolomics include max, minmax, mean, median, total sum, and zscore; more complex methods like PQN require reference spectrum selection which may not be available for exploratory analysis of complex samples.",
+    "Chemodiversity metrics adapted from ecology (Shannon, Gini-Simpson, Chao1, Rao's quadratic entropy) quantify both abundance-based and functional-trait-based diversity in metabolite composition across samples.",
+    "Mass difference network analysis identifies putative biochemical transformations by comparing m/z differences between detected peaks against a reference biochemical transformation key with \u22641 ppm error tolerance.",
+    "MetaboDirect uniquely generates transformation networks ab initio and requires only a single command line execution, whereas existing tools represent compromises between user-friendliness (web-based GUIs) and customizability (R/Python programming-required tools)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: https://github.com/Coayala/MetaboDirect repository is accessible and contains source code",
+      "file_format_is: MetaboDirect GitHub repository contains Python source files (.py) in expected structure",
+      "contains_substring: MetaboDirect codebase documentation mentions 'Van Krevelen' diagram generation capability",
+      "contains_substring: MetaboDirect codebase documentation mentions 'PERMANOVA' statistical analysis",
+      "contains_substring: MetaboDirect codebase documentation mentions 'NMDS' ordination capability",
+      "contains_substring: MetaboDirect codebase documentation mentions 'normalization' or 'normalize' for peak intensity normalization",
+      "contains_substring: MetaboDirect codebase documentation mentions 'transformation network' or 'mass difference network' construction",
+      "contains_substring: CoreMS GitHub repository (https://github.com/EMSL-Computing/CoreMS) documentation mentions 'Van Krevelen'",
+      "contains_substring: ftmsRanalysis (ftmsRanalysis R package) documentation mentions 'PERMANOVA' capability",
+      "contains_substring: MetaboAnalyst web interface or documentation mentions 'PCA' analysis capability",
+      "file_exists: MetaboDirect User Guide (https://metabodirect.readthedocs.io) is accessible",
+      "contains_substring: MetaboDirect User Guide mentions supported analytical features with binary presence/absence indicators",
+      "output_matches_reference: reconstructed feature comparison table matches structure and binary (\u2714/\u2716) notation of original paper Table 1 \u2014 robust to cell ordering but exact on tool names and feature names"
+    ],
+    "expert_review": [
+      "Verify that the five tools in the reconstructed table match the canonical comparison tools intended by the paper (MetaboDirect, CoreMS, ftmsRanalysis, MetaboAnalyst, UltraMassExplorer) based on context of introduction section",
+      "Verify that the set of analytical features (filtering, normalization, Van Krevelen diagrams, PERMANOVA, NMDS, PCA, transformation networks, chemodiversity) selected for comparison are the most salient and representative features discussed in the paper",
+      "Verify that binary \u2714/\u2716 assignments for each tool-feature pair are consistent with explicit statements in tool documentation and the paper's characterization of each tool's capabilities",
+      "Verify that the comparison table reflects documented limitations (e.g., whether web-based tools restrict customization, whether R-based tools require coding competence) mentioned in the introduction"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Which analytical and visualization features are implemented in MetaboDirect, and how do its capabilities compare to other available FT-ICR MS software tools across key dimensions such as data filtering, statistical analysis, and transformation network generation?: 'Despite the broad availability of software packages for the analysis of FT-ICR MS data, they often incur in a compromise between flexibility/customizability and user-friendliness that we aim to'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MetaboDirect performs all analyses offered by other available software for FT-ICR MS data except raw spectra processing and molecular formula assignment, including Van Krevelen diagrams, molecular composition plots, thermodynamic indices, chemodiversity indices, pairwise comparisons, PERMANOVA, NMDS, PCA, and transformation network construction with customization.: 'As observed in Table 1, MetaboDirect can perform all the analyses offered by the other available software for FT\u2011ICR MS data, except for \"raw spectra processing\" and \"molecular formula assignment\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MetaboDirect GitHub repository code and documentation: 'available to install through the Python Package Index (https:// pypi. org/ proje ct/ metab odire ct/)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MetaboDirect ReadTheDocs webpage with full pipeline documentation: 'The full documentation for the pipeline can be found on its ReadTheDocs webpage: https:// metab odire ct. readt hedocs. io'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Published documentation or repositories for UltraMassExplorer, FREDA, MetaboAnalyst, DropMS, and i-van Krevelen: 'web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29], and DropMS [30]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structured comparison table (CSV or TSV format) with rows for each of five tools and columns for analytical features, with binary \u2714/\u2716 entries indicating presence or absence of each feature: 'The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1): (i) data pre-processing, (ii) data diagnostics, (iii) data exploration, (iv) chemodiversity analysis, (v) statistical'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MetaboDirect: 'The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] UltraMassExplorer: 'web-based applications such as UltraMassExplorer (UME)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] FREDA: 'web-based applications such as UltraMassExplorer (UME) [27], FREDA [28]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MetaboAnalyst: 'web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] DropMS: 'web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29], and DropMS [30]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] i-van Krevelen: 'visualization tools i-van Krevelen [31]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] vegan: 'diversity metrics using functions from the R packages vegan [63]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SYNCSA: 'diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pmartR: 'uses a modified \"spans_procedure\" function from the R package pmartR [51]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] KEGGREST: 'query the KEGG database [59] using the R package KEGGREST [60]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] py4cytoscape: 'It requires the Python dependencies NumPy [40], pandas [41, 42], seaborn [43], py4cytoscape, and matplotlib [44]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No explicit Table 1 comparison table is present in the provided document text; the paper structure mentions features but does not show the actual binary matrix comparing five tools across analytical features.: 'The online version contains supplementary material available at https:// doi. org/ 10. 1186/ s40168\u2011 023\u2011 01476\u20113.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] The exact list of analytical features included in the original Table 1 comparison is not explicitly enumerated in the provided text; features mentioned across methods section (filtering, normalization, Van Krevelen, PERMANOVA, NMDS, PCA, transformation networks) must be inferred.: 'MetaboDirect pipeline consists of six main steps for the analysis of FT-ICR MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_020",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Documentation and feature availability for comparison tools (CoreMS, ftmsRanalysis, MetaboAnalyst, UltraMassExplorer, FREDA, DropMS) is cited via references and links but the specific feature sets are not detailed in the provided discussion section.: 'open-source software such as Formularity [24], most recently CoreMS [25], which provides a comprehensive software framework, or web-based applications such as UltraMassExplorer (UME) [27], FREDA'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_021",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Whether MetaboDirect supports chemodiversity analysis (mentioned in abstract) and which specific diversity metrics (Chao1, Gini-Simpson, Shannon, Rao's quadratic entropy) are supported must be confirmed from codebase inspection.: 'fully automated pipeline capable of easily generating all the figures, plots, and analysis that are commonly used by the scientific community to visualize, analyze, and interpret FT-ICR MS data sets'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "tool_feature_comparison.csv",
+  "expected_outputs": [
+    "Structured comparison table (CSV or TSV format) with rows for each of five tools and columns for analytical features, with binary \u2714/\u2716 entries indicating presence or absence of each feature"
+  ],
+  "finding": "MetaboDirect performs all analyses offered by other available software for FT-ICR MS data except raw spectra processing and molecular formula assignment, including Van Krevelen diagrams, molecular composition plots, thermodynamic indices, chemodiversity indices, pairwise comparisons, PERMANOVA, NMDS, PCA, and transformation network construction with customization.",
+  "github_name": "Coayala/MetaboDirect",
+  "input_from": null,
+  "inputs": [
+    "MetaboDirect GitHub repository code and documentation",
+    "MetaboDirect ReadTheDocs webpage with full pipeline documentation",
+    "Published documentation or repositories for UltraMassExplorer, FREDA, MetaboAnalyst, DropMS, and i-van Krevelen"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "metabodirect_features.txt",
+    "ume_freda_metaboanalyst_dropms_ivankrevel_docs_parsed.txt",
+    "feature_matrix_raw.csv",
+    "tool_feature_comparison.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_025",
+    "result_026",
+    "result_027",
+    "result_028",
+    "result_029",
+    "result_030",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_034",
+    "result_035",
+    "result_036",
+    "result_037",
+    "result_042",
+    "result_044",
+    "result_045"
+  ],
+  "methodology_summary": [
+    "Inspect MetaboDirect codebase (Python/R) and ReadTheDocs documentation to enumerate all implemented analytical features across six pipeline steps.",
+    "Systematically extract feature specifications from source code: filtering thresholds (m/z, isotopic, formula error \u22640.5 ppm, sample prevalence), normalization methods (max, minmax, mean, median, total sum, zscore), molecular indices (NOSC, GFE, AImod, DBE), statistical tests (PERMANOVA, NMDS, PCA), chemodiversity metrics (Shannon, Gini-Simpson, Chao1, Rao's), and transformation network construction.",
+    "Query published documentation for UltraMassExplorer, FREDA, MetaboAnalyst, DropMS, and i-van Krevelen to determine which features each tool supports.",
+    "Cross-reference MetaboDirect dependencies (vegan, SYNCSA, pmartR, KEGGREST, py4cytoscape) to confirm implementation of statistical and network visualization features.",
+    "Construct binary comparison table with tools as rows and features as columns, marking \u2714 for present and \u2716 for absent.",
+    "Validation: Comparison table matches the binary feature matrix reported in the paper's tool comparison figure/table, with all six MetaboDirect pipeline steps and all cited comparison tools represented."
+  ],
+  "missing_information": [
+    "No explicit Table 1 comparison table is present in the provided document text; the paper structure mentions features but does not show the actual binary matrix comparing five tools across analytical features.",
+    "The exact list of analytical features included in the original Table 1 comparison is not explicitly enumerated in the provided text; features mentioned across methods section (filtering, normalization, Van Krevelen, PERMANOVA, NMDS, PCA, transformation networks) must be inferred.",
+    "Documentation and feature availability for comparison tools (CoreMS, ftmsRanalysis, MetaboAnalyst, UltraMassExplorer, FREDA, DropMS) is cited via references and links but the specific feature sets are not detailed in the provided discussion section.",
+    "Whether MetaboDirect supports chemodiversity analysis (mentioned in abstract) and which specific diversity metrics (Chao1, Gini-Simpson, Shannon, Rao's quadratic entropy) are supported must be confirmed from codebase inspection."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Which analytical and visualization features are implemented in MetaboDirect, and how do its capabilities compare to other available FT-ICR MS software tools across key dimensions such as data filtering, statistical analysis, and transformation network generation?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "intro",
+    "results",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "software-feature-inventory-and-comparison",
+    "code-repository-analysis",
+    "ft-icr-ms-analysis-tool-evaluation",
+    "analytical-pipeline-feature-documentation",
+    "cross-platform-software-capability-mapping"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_metabodirect",
+  "spine_condition_ids": [
+    "Cond_PhageType_HP1",
+    "Cond_PhageType_HS2",
+    "Cond_PhageType_Control",
+    "Baseline_MetaboAnalyst_Comparison",
+    "Baseline_PyKrev_Comparison",
+    "Baseline_ftmsRanalysis_Comparison",
+    "Baseline_UME_Comparison"
+  ],
+  "spine_entity_ids": [
+    "MetaboDirect",
+    "MetaboDirect_Pipeline_Architecture",
+    "Step_TransformationNetworks",
+    "TransformationNetwork_GeneratedArtifact",
+    "TestNormalization_Script",
+    "MetaboAnalyst",
+    "ftmsRanalysis",
+    "PyKrev",
+    "Metric_PERMANOVA_PhageType",
+    "Result_MetaboDirect_AutomationAdvantage",
+    "Result_MetaboDirect_UniqueNetworkGeneration",
+    "Baseline_MetaboAnalyst_Comparison",
+    "Baseline_PyKrev_Comparison",
+    "Baseline_ftmsRanalysis_Comparison",
+    "Baseline_UME_Comparison"
+  ],
+  "subdomains": [
+    "microbiome-metabolomics",
+    "environmental-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "information-extraction",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": null,
+  "task_description": "Verify the presence or absence of analytical features (data filtering, normalization methods, visualization types, statistical tests, transformation network analysis) across five FT-ICR MS analysis tools by inspecting the MetaboDirect codebase and documentation, then reconstruct the binary comparison table reported in the paper.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MetaboDirect GitHub repository and code",
+      "port_id": "metabodirect_repo",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Published documentation for comparison tools",
+      "port_id": "comparison_tools_docs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Verify Table 1 feature matrix by inspecting the MetaboDirect repository and documentation to confirm presence/absence of analytical capabilities (filtering, normalization, Van Krevelen diagrams, PERMANOVA, transformation networks, etc.) for each of five comparison tools.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Binary feature comparison table across five tools",
+      "port_id": "feature_comparison_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "direct-infusion-ms",
+    "high-resolution-ms",
+    "feature-detection",
+    "metabolite-identification",
+    "multivariate-statistics",
+    "molecular-networking"
+  ],
+  "title": "Reproduce the feature-comparison table of MetaboDirect versus MetaboAnalyst, PyKrev, ftmsRanalysis, and UME",
+  "tools": [
+    "MetaboDirect",
+    "UltraMassExplorer",
+    "FREDA",
+    "MetaboAnalyst",
+    "DropMS",
+    "i-van Krevelen",
+    "vegan",
+    "SYNCSA",
+    "pmartR",
+    "KEGGREST",
+    "py4cytoscape"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Clone the MetaboDirect GitHub repository and review the main pipeline code structure, function signatures, and command-line argument definitions to identify which analytical features are implemented. 2. Parse the ReadTheDocs documentation and supplementary tables (referenced in methods) to extract the complete list of supported normalization methods, filtering parameters, indices calculated, and statistical tests. 3. For each of the five comparison tools (UltraMassExplorer, FREDA, MetaboAnalyst, DropMS, i-van Krevelen), consult their published documentation or repository READMEs to determine feature support for: m/z filtering, isotopic filtering, formula error filtering, compound class assignment, peak normalization (max, minmax, mean, median, total sum, zscore), Van Krevelen diagrams, thermodynamic indices (NOSC, GFE, AImod, DBE), PERMANOVA analysis, NMDS ordination, PCA analysis, chemodiversity metrics (Shannon, Gini-Simpson, Chao1, Rao's), and transformation networks. 4. Cross-reference MetaboDirect source code for the vegan, SYNCSA, pmartR, KEGGREST, and py4cytoscape dependencies to confirm implementation of each feature. 5. Construct a structured comparison table with binary (\u2714/\u2716) entries matching the paper's reported format, with rows as tools and columns as analytical features."
+}

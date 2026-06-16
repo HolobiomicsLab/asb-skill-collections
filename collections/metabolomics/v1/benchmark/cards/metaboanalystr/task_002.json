@@ -1,0 +1,284 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MetaboAnalystRlogo.png",
+      "role": "figure",
+      "sha256": "0769d8c41a1099d43ff221a8c6012031e5c68bfe38c742a976c67f321e225608"
+    },
+    {
+      "indexable": false,
+      "path": "figures/log_v3.0.png",
+      "role": "figure",
+      "sha256": "e761f4328588a3dfad821dbc130f3237b731ccf593dd698b4374fc33dbc020b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "0f15f48c1a848368f863ecb261941a9f7631d4ad22060171ad0ad4d50b97e444"
+    }
+  ],
+  "created_at": "2026-06-16T06:24:36.065725+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw LC-MS data in mzML format from a public metabolomics repository (MetaboLights or MassIVE accession)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature table with rows as detected metabolite features and columns as samples, including peak intensity values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary statistics report containing feature count, sample count, and peak intensity descriptive statistics (mean, median, SD, min, max)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MetaboAnalystR 4.0 implements a unified workflow that handles raw LC-MS data input through feature detection to quantification in a single pipeline.",
+    "Feature tables in metabolomics have samples as columns and detected metabolite features (peaks) as rows, with intensity values representing peak area or height.",
+    "Summary statistics on peak intensities reveal data quality, dynamic range, and the prevalence of weak versus strong signals across the dataset.",
+    "Public LC-MS datasets deposited in MetaboLights or MassIVE follow standardized formats (mzML, netCDF) to enable reproducible reanalysis."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that MetaboAnalystR package can be loaded and executed against a public LC-MS dataset (e.g., from MetaboLights or MassIVE accession)",
+      "file_exists: check that the output feature table artifact is generated (expected format: CSV, TSV, or R data frame)",
+      "row_count_equals or row_count_in_range: verify the feature table contains at least one feature (row > 0) and at least one sample (column > 0)",
+      "field_present: confirm the output table contains columns for feature identifiers, sample identifiers, and intensity or abundance values",
+      "value_in_range: check that peak intensity summary statistics (mean, median, min, max, standard deviation) are non-negative and finite",
+      "script_runs: verify that the end-to-end LC-MS workflow script executes without fatal errors on the selected public dataset"
+    ],
+    "expert_review": [
+      "assess whether the feature table dimensions and intensity distributions are reasonable for the chosen LC-MS dataset (e.g., consistent with dataset documentation or comparable published analyses)",
+      "evaluate whether peak intensity summary statistics and feature recovery align with expected metabolomic signal characteristics (no anomalously sparse or saturated distributions)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] What are the dimensions and intensity statistics of the feature table produced by the MetaboAnalystR 4.0 LC-MS workflow when applied to a public LC-MS dataset?: 'MetaboAnalystR 4.0: a unified LC-MS workflow for global metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Insufficient evidence provided in the available text to characterize the feature table output (number of features, samples, or intensity statistics).: '_No examples found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw LC-MS data in mzML format from a public metabolomics repository (MetaboLights or MassIVE accession): '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Feature table with rows as detected metabolite features and columns as samples, including peak intensity values: '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Summary statistics report containing feature count, sample count, and peak intensity descriptive statistics (mean, median, SD, min, max): '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MetaboAnalystR: 'MetaboAnalystR 4.0: a unified LC-MS workflow for global metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history or changes in MetaboAnalystR 4.0 relative to previous releases: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "R",
+      "--slave",
+      "-e",
+      "library(MetaboAnalystR); mSet <- InitDataObjects('pihc', 'stat', FALSE); mSet <- Read.MSdata(mSet, '{inputs.raw_lcms_data}'); mSet <- SanityCheckData(mSet); mSet <- ReplaceMin(mSet); mSet <- FilterVariable(mSet, 'iqr', 25); mSet <- Normalization(mSet, 'ColNorm', 'NULL', 'NULL', TRUE); ft <- mSet$dataSet$norm; write.csv(ft, 'feature_table.csv'); stats <- data.frame(feature_count = nrow(ft), sample_count = ncol(ft), intensity_mean = mean(as.matrix(ft), na.rm = TRUE), intensity_median = median(as.matrix(ft), na.rm = TRUE), intensity_sd = sd(as.vector(as.matrix(ft)), na.rm = TRUE), intensity_min = min(as.matrix(ft), na.rm = TRUE), intensity_max = max(as.matrix(ft), na.rm = TRUE)); write.csv(stats, 'summary_statistics.csv', row.names = FALSE); cat('Analysis complete: ', nrow(ft), ' features x ', ncol(ft), ' samples\\n')"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "feature_summary_statistics.csv",
+  "expected_outputs": [
+    "Feature table with rows as detected metabolite features and columns as samples, including peak intensity values",
+    "Summary statistics report containing feature count, sample count, and peak intensity descriptive statistics (mean, median, SD, min, max)"
+  ],
+  "finding": "Insufficient evidence provided in the available text to characterize the feature table output (number of features, samples, or intensity statistics).",
+  "github_name": "xia-lab/MetaboAnalystR",
+  "input_from": "task_001",
+  "inputs": [
+    "Raw LC-MS data in mzML format from a public metabolomics repository (MetaboLights or MassIVE accession)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "raw_feature_table.csv",
+    "feature_summary_statistics.csv"
+  ],
+  "linked_result_ids": [],
+  "methodology_summary": [
+    "Load raw LC-MS spectral data (mzML format) from public metabolomics repositories",
+    "Apply MetaboAnalystR 4.0 unified workflow to detect peaks and quantify feature intensities",
+    "Extract feature table structure and compute summary metrics (row/column counts, intensity statistics)",
+    "Validation: Feature table row count \u2265 100 detected features, column count matching deposited sample count, peak intensity values reported as non-negative numeric ranges"
+  ],
+  "missing_information": [
+    "No changelog documenting version history or changes in MetaboAnalystR 4.0 relative to previous releases"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the dimensions and intensity statistics of the feature table produced by the MetaboAnalystR 4.0 LC-MS workflow when applied to a public LC-MS dataset?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [],
+  "skills": [
+    "lcms-feature-detection-and-quantification",
+    "metabolite-feature-table-interpretation",
+    "peak-intensity-distribution-analysis",
+    "metabolomics-data-format-handling"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_metaboanalystr/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS-001",
+    "COMP-001",
+    "TOOL-001"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:xia-lab__MetaboAnalystR",
+  "task_description": "Execute the MetaboAnalystR 4.0 LC-MS workflow on a public metabolomics dataset and characterize the resulting feature table by reporting sample count, feature count, and peak intensity summary statistics.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw LC-MS data (mzML format)",
+      "port_id": "raw_lcms_data",
+      "resolved_via": null,
+      "source": "task_001/feature_table",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Execute MetaboAnalystR 4.0 on a public LC-MS dataset and report feature table dimensions (rows, columns) and peak intensity summary statistics.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature table with detected metabolites and sample intensities",
+      "port_id": "feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Summary statistics of feature table dimensions and peak intensity distribution",
+      "port_id": "summary_statistics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "database-annotation",
+    "metabolite-identification",
+    "multivariate-statistics",
+    "statistical-analysis"
+  ],
+  "title": "Analyze feature table output produced by the MetaboAnalystR 4.0 LC-MS workflow on a public metabolomics dataset",
+  "tools": [
+    "MetaboAnalystR"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Summary statistics report containing feature count, sample count, and peak intensity descriptive statistics (mean, median, SD, min, max)."
+  ],
+  "workflow_description": "1. Load raw LC-MS data (mzML or equivalent format) from a public repository (MetaboLights or MassIVE) into MetaboAnalystR 4.0. 2. Execute the unified LC-MS workflow to generate a feature detection and quantification table. 3. Extract feature table dimensions (number of rows as features, number of columns as samples) and compute summary statistics on peak intensity values (mean, median, standard deviation, min, max). 4. Compile results into a structured output report."
+}

@@ -279,6 +279,16 @@ def _normalize_access_type(raw: str) -> str:
 # spelling-insensitive against promote.py's `_OA_TIERS`.
 _NORMALIZED_OA_TIERS = {_normalize_access_type(t) for t in _OA_TIERS} | {"green-oa"}
 
+# repo-oa: a tool whose PAPER is non-CC-BY but whose code repository is openly
+# licensed (permissive or copyleft).  Its skills are grounded in the openly-
+# licensed REPO (not the paper) — usage/component skills carrying no paper
+# verbatim — so the redistributable source IS open.  Admitted by the access-tier
+# gate, and OA-exempt in strip-verbatim (it is not in _NON_OA_TIERS, so the
+# per-DOI cap regime never applies).  The specific code SPDX + the cited (non-OA)
+# paper DOI are recorded per-paper in corpus.yaml (`code_license` / `paper_*`).
+_REPO_OA_TIERS = {"repo-oa", "repo-permissive", "repo-copyleft"}
+_NORMALIZED_OA_TIERS = _NORMALIZED_OA_TIERS | _REPO_OA_TIERS
+
 
 def _read_frontmatter(text: str) -> tuple[dict[str, Any], str]:
     """Split a SKILL.md into (frontmatter_dict, body).  Fail-soft to ({}, text)."""

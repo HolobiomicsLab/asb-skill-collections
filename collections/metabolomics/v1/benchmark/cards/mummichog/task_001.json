@@ -1,0 +1,273 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "c6782573db39cfc8a6f1c125ec310f87cb8a4232d88f09ceb3c18adc5234b6ae"
+    }
+  ],
+  "created_at": "2026-06-16T06:18:21.859677+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Untargeted metabolomics feature table (m/z, retention time, intensity across samples)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Functional activity prediction report mapping features to metabolic network modules and pathways",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Mummichog bypasses metabolite identification by directly leveraging metabolic network organization, which allows functional prediction from feature tables alone without compound-level annotation.",
+    "Feature mapping to metabolic networks requires m/z tolerance windows appropriate for the mass spectrometry instrument used (typically \u00b15\u201310 ppm for high-resolution instruments).",
+    "Metabolic networks in Mummichog are organized as graphs where nodes represent metabolites and edges represent biochemical transformations, enabling signal propagation across connected metabolic modules.",
+    "Functional activity prediction relies on aggregating signal evidence from multiple features mapping to a shared metabolic pathway or module, rather than identification of individual metabolites."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the mummichog package can be loaded from metabolomics-cloud/mummichog GitHub repository",
+      "verify that the core pipeline accepts a feature table file (CSV or tabular format) as input",
+      "verify that the pipeline outputs a structured result containing functional activity predictions",
+      "verify that the pipeline executes without requiring a metabolite identification step as an obligatory prerequisite",
+      "verify that the pipeline produces network mapping artifacts (e.g., feature-to-reaction or feature-to-pathway assignments)",
+      "script_runs: execute the main pipeline entry point on a provided test feature table and confirm non-error exit",
+      "file_format_is: output artifact contains structured predictions (JSON, TSV, or similar); no canonical answer for exact output format without specification"
+    ],
+    "expert_review": [
+      "assess whether the fixed architecture layer correctly implements the intended metabolic network topology and mass-neutral loss propagation logic",
+      "assess whether functional activity predictions are scientifically plausible given the input feature masses and network structure",
+      "assess whether the bypass of metabolite identification genuinely preserves predictive power or introduces unacceptable bias",
+      "evaluate the reproducibility and robustness of network mapping results across different feature table subsets"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does Mummichog 3 accept untargeted metabolomics feature tables as input and predict functional activity by mapping features onto metabolic networks without requiring metabolite identification?: 'It leverages the organization of metabolic networks to predict functional activity directly from feature tables, bypassing metabolite identification.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Mummichog is a Python program that leverages the organization of metabolic networks to predict functional activity directly from feature tables, bypassing metabolite identification.: 'Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics. It leverages the organization of metabolic networks to predict functional activity directly from'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Untargeted metabolomics feature table (m/z, retention time, intensity across samples): 'It leverages the organization of metabolic networks to predict functional activity directly from feature tables'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Functional activity prediction report mapping features to metabolic network modules and pathways: 'leverages the organization of metabolic networks to predict functional activity directly from feature tables, bypassing metabolite identification'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting the version history, API changes, or pipeline modifications between Mummichog versions: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Specific schema and format requirements for input feature table (column names, required fields, expected data types): 'N/A'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Specification of output schema, field names, and formats for functional activity predictions and network mappings: 'N/A'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Details of the fixed architecture layer (network construction method, mass tolerance parameters, edge weighting scheme): 'N/A'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Validation results, benchmarks, or test datasets demonstrating pipeline performance and reproducibility: 'N/A'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "functional_activity_predictions.csv",
+  "expected_outputs": [
+    "Functional activity prediction report mapping features to metabolic network modules and pathways"
+  ],
+  "finding": "Mummichog is a Python program that leverages the organization of metabolic networks to predict functional activity directly from feature tables, bypassing metabolite identification.",
+  "github_name": "metabolomics-cloud/mummichog",
+  "input_from": null,
+  "inputs": [
+    "Untargeted metabolomics feature table (m/z, retention time, intensity across samples)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "feature_network_mapping.csv",
+    "pathway_activity_scores.csv",
+    "network_propagation_results.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Load feature table with m/z, retention time, and sample intensity data.",
+    "Initialize metabolic network database and retrieve network structure (nodes = metabolites, edges = reactions).",
+    "Map feature m/z values to metabolic network nodes using mass-to-charge tolerance matching.",
+    "Propagate feature signal intensity through connected network pathways to infer metabolic module activity.",
+    "Aggregate network-level activity signals and generate functional predictions without explicit metabolite identification.",
+    "Validation: Confirm functional activity predictions are generated and network mapping statistics show connectivity across multiple metabolic modules."
+  ],
+  "missing_information": [
+    "No changelog documenting the version history, API changes, or pipeline modifications between Mummichog versions",
+    "Specific schema and format requirements for input feature table (column names, required fields, expected data types)",
+    "Specification of output schema, field names, and formats for functional activity predictions and network mappings",
+    "Details of the fixed architecture layer (network construction method, mass tolerance parameters, edge weighting scheme)",
+    "Validation results, benchmarks, or test datasets demonstrating pipeline performance and reproducibility"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does Mummichog 3 accept untargeted metabolomics feature tables as input and predict functional activity by mapping features onto metabolic networks without requiring metabolite identification?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "metabolic-network-mapping",
+    "feature-to-metabolite-network-propagation",
+    "functional-module-inference-from-networks",
+    "mass-to-charge-tolerance-matching",
+    "untargeted-metabolomics-feature-analysis"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mummichog/synthesized_package",
+  "spine_condition_ids": [
+    "mummichog2"
+  ],
+  "spine_entity_ids": [
+    "mummichog3",
+    "mummichog2",
+    "metabolic-network-prediction",
+    "feature-table-input",
+    "metabolomics-cloud-org"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "data-processing"
+  ],
+  "synthesized_from": "github:shuzhao-li__mummichog",
+  "task_description": "Implement the Mummichog 3 core pipeline to predict functional activity from an untargeted metabolomics feature table by mapping features onto metabolic networks without requiring metabolite identification. Output a functional activity prediction report.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Untargeted metabolomics feature table",
+      "port_id": "feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the Mummichog 3 pipeline that accepts a metabolomics feature table and outputs predicted functional activity by mapping features to metabolic networks without requiring metabolite identification.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Functional activity predictions and network mapping results",
+      "port_id": "activity_predictions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "pathway-analysis",
+    "database-annotation",
+    "metabolite-identification"
+  ],
+  "title": "Reconstruct the metabolic network-based feature-table analysis pipeline in Mummichog 3",
+  "tools": [
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Python."
+  ],
+  "workflow_description": "1. Load the untargeted metabolomics feature table (CSV/TSV format with m/z and retention time columns). 2. Initialize the metabolic network database and retrieve the network structure. 3. Map feature m/z values to metabolic network nodes using mass-to-charge tolerance matching. 4. Propagate feature signals through the metabolic network to infer functional modules and pathways. 5. Aggregate network-level activity scores and generate functional activity predictions without performing explicit metabolite identification. 6. Output functional activity predictions and network mapping statistics."
+}

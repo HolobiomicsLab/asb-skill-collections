@@ -1,0 +1,6 @@
+  figures/features_used.png
+  figures/ms2query_logo.png
+  figures/ms2query_logo.svg
+  figures/worflow_average_ms2deepscore.png
+  figures/workflow_ms2query.png
+paper.md

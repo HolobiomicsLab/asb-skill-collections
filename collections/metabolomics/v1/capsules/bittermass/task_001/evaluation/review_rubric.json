@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:Niv-Lab__BitterPredict1 repository is accessible and contains BitterPredict.m file"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "BitterPredict.m in the repository"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "per-molecule predictions (binary bitter/not-bitter labels) are produced for all "
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:Niv-Lab__BitterPredict1 repository is accessible and contains BitterPredict.m file",
+      "file_exists: BitterPredict.m in the repository",
+      "script_runs: BitterPredict.m executes without error when provided a valid CSV or Excel input file containing required molecular descriptors",
+      "output_matches_reference: per-molecule predictions (binary bitter/not-bitter labels) are produced for all input molecules; no canonical answer for prediction values themselves without reference dataset, but output structure must be complete and non-null for all rows"
+    ],
+    "expert_review": [
+      "verify that the descriptor columns present in the input file match those documented as 'required' by BitterPredict.m (descriptor names and roles are domain-specific chemical/computational knowledge)",
+      "assess whether the binary predictions are internally consistent with the classifier's decision logic as documented in the repository README or code comments"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

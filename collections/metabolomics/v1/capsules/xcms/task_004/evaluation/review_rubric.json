@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at Zenodo doi:10.5281/zenodo.18494293 in mzML format"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify xcms package is installable and contains findChromPeaks, MSWParam, CalibrantMassParam functions"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "calibration difference plot output (PDF, PNG, or SVG format)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at Zenodo doi:10.5281/zenodo.18494293 in mzML format",
+      "verify xcms package is installable and contains findChromPeaks, MSWParam, CalibrantMassParam functions",
+      "script_runs: R script that loads mzML from Zenodo, executes findChromPeaks(MSWParam()), then CalibrantMassParam(method='edgeshift') on first file without errors",
+      "file_exists: calibration difference plot output (PDF, PNG, or SVG format)",
+      "expert_review: calibration difference plot visually matches expected mass calibration artifact patterns for FTICR data"
+    ],
+    "expert_review": [
+      "calibration difference plot interpretation: verify that mass shift magnitudes and distribution are consistent with FTICR instrumental behavior and edgeshift calibration method",
+      "parameter appropriateness: confirm that MSWParam and CalibrantMassParam settings are reasonable for FTICR HAM data characteristics"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

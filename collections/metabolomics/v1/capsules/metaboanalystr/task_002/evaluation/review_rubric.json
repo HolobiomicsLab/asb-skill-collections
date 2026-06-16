@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that MetaboAnalystR package can be loaded and executed against a public LC-MS dataset (e.g., from MetaboLights or MassIVE accession)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the output feature table artifact is generated (expected format: CSV, TSV, or R "
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "row_count_equals or row_count_in_range: verify the feature table contains at least one feature (row > 0) and at least one sample (column > 0)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the output table contains columns for feature identifiers, sample identifiers, a",
+      "value": [
+        "for feature identifiers",
+        "sample identifiers",
+        "and intensity or abundance values"
+      ]
+    },
+    {
+      "id": "pf_005",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "peak intensity summary statistics (mean, median, min, max, standard deviation) a"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that MetaboAnalystR package can be loaded and executed against a public LC-MS dataset (e.g., from MetaboLights or MassIVE accession)",
+      "file_exists: check that the output feature table artifact is generated (expected format: CSV, TSV, or R data frame)",
+      "row_count_equals or row_count_in_range: verify the feature table contains at least one feature (row > 0) and at least one sample (column > 0)",
+      "field_present: confirm the output table contains columns for feature identifiers, sample identifiers, and intensity or abundance values",
+      "value_in_range: check that peak intensity summary statistics (mean, median, min, max, standard deviation) are non-negative and finite",
+      "script_runs: verify that the end-to-end LC-MS workflow script executes without fatal errors on the selected public dataset"
+    ],
+    "expert_review": [
+      "assess whether the feature table dimensions and intensity distributions are reasonable for the chosen LC-MS dataset (e.g., consistent with dataset documentation or comparable published analyses)",
+      "evaluate whether peak intensity summary statistics and feature recovery align with expected metabolomic signal characteristics (no anomalously sparse or saturated distributions)"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

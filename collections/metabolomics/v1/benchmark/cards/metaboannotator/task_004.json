@@ -1,0 +1,282 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MetaboAnnotatoR.jpeg",
+      "role": "figure",
+      "sha256": "7581280c2f229e63ffef877fb14954a2b892a821bc2ef16311e9cb49721a1168"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b329d5cb032d2f7b1bdbe9c972021138eb0f4425c5e272b57e78a796bd4d422e"
+    }
+  ],
+  "created_at": "2026-06-15T12:33:51.764194+00:00",
+  "crossref_doi": "10.1021/acs.analchem.1c03032",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MassBank_example.msp file bundled with MetaboAnnotatoR package",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Per-spectrum CSV library entries with positive/negative ionization mode suffixes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MSP (NIST MS Search) format stores spectral metadata and peak lists; conversion to CSV requires extraction of compound name, precursor m/z, retention time, and peak intensity tuples with proper ionization mode notation.",
+    "Peak-picking noise threshold (0.005) filters spectral peaks below relative intensity 0.5%, while marker peaks threshold (0.1) identifies diagnostic fragment ions representing \u226510% base peak intensity.",
+    "Positive ([M+H]+) and negative ([M-H]\u2212) ionization mode designations must be retained in library entry identifiers to enable correct spectral matching during annotation workflows.",
+    "MassBank is a curated public MS/MS spectral database with standardized metadata; the bundled example subset validates import integrity without requiring external network access."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file 'MassBank_example.msp' exists in package root or data/ directory",
+      "script_runs: execute mspToLib function with inputs={MassBank_example.msp, noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1} without errors",
+      "file_exists: output CSV library file(s) are created with naming pattern matching per-spectrum convention",
+      "file_format_is: output CSV contains expected column headers for MS/MS library format (e.g., precursor_mz, fragment_mz, intensity, or equivalent)",
+      "contains_substring: output filenames or metadata contain ionization mode suffix (e.g., '_pos' or '_neg') for each spectrum entry",
+      "row_count_equals: at least one CSV output row per input spectrum from MassBank_example.msp (robust to parameter choices in noise/threshold range)",
+      "verify output CSV structure is consistent with documented per-spectrum library entry format \u2014 no malformed rows or truncated records"
+    ],
+    "expert_review": [
+      "confirm peak-picking thresholds (noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1) produce chemically reasonable fragment ion lists (e.g., no spurious low-intensity artifacts, retention of true fragment ions)",
+      "assess positive/negative mode suffix assignment accuracy \u2014 verify ionization mode annotations in output match input spectra metadata",
+      "evaluate whether per-spectrum CSV entries conform to MassBank or standard metabolomics library format conventions"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Does the mspToLib function correctly convert MS/MS spectra from .msp library files into individual CSV library entries with appropriate positive/negative ionisation mode suffixes when applied with default peak-picking parameters?: 'Use function *mspToLib* to read and convert the spectra records from the .msp files into library entries (.csv files), which will be stored in the user-defined library directory (*LibDir*). A'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The mspToLib function reads and converts spectra records from .msp files into CSV library entries stored in a user-defined directory, with a 'positive' or 'negative' mode suffix added to each file name to facilitate organisation of custom libraries; occurrence scores are attributed to peaks above mpeaksThres threshold and noise level using default parameters (noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1).: 'Use function *mspToLib* to read and convert the spectra records from the .msp files into library entries (.csv files), which will be stored in the user-defined library directory (*LibDir*). A'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MassBank_example.msp file bundled with MetaboAnnotatoR package: 'There is an example feature table in MetaboAnnotatoR (*targetTable.csv*)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Per-spectrum CSV library entries with positive/negative ionization mode suffixes: 'MS/MS spectrum of D-Pantothenic Acid [M+H]+ adduct from MassBank'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MetaboAnnotatoR: 'MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'To install this package, start R (version \"4.5.0\" or higher)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, updates, or parameter changes: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(MetaboAnnotatoR); msp_file <- system.file('extdata', 'MassBank_example.msp', package='MetaboAnnotatoR'); lib <- mspToLib(msp_file, noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1); write.csv(lib, file='mspToLib_output.csv', row.names=FALSE)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "MassBank_library.csv",
+  "expected_outputs": [
+    "Per-spectrum CSV library entries with positive/negative ionization mode suffixes"
+  ],
+  "finding": "The mspToLib function reads and converts spectra records from .msp files into CSV library entries stored in a user-defined directory, with a 'positive' or 'negative' mode suffix added to each file name to facilitate organisation of custom libraries; occurrence scores are attributed to peaks above mpeaksThres threshold and noise level using default parameters (noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1).",
+  "github_name": "gggraca/MetaboAnnotatoR",
+  "input_from": "task_003",
+  "inputs": [
+    "MassBank_example.msp file bundled with MetaboAnnotatoR package"
+  ],
+  "keywords": [
+    "metabolite annotation",
+    "lc-ms all-ion fragmentation",
+    "centroid mode",
+    "pseudo-ms/ms spectra",
+    "lipidomics",
+    "esi+ ionisation",
+    "feature table",
+    "fragment databases",
+    "peak-picking",
+    "library matching"
+  ],
+  "landmark_outputs": [
+    "parsed_msp_metadata.txt",
+    "peak_lists_extracted.csv",
+    "mode_suffixed_entries.csv"
+  ],
+  "linked_result_ids": [
+    "result_013",
+    "result_016"
+  ],
+  "methodology_summary": [
+    "Load MSP spectral library from MetaboAnnotatoR package bundle.",
+    "Parse spectral records and extract compound metadata (name, m/z, RT) and peak intensity lists.",
+    "Apply noise threshold (0.005) and marker peak threshold (0.1) to filter and rank spectral peaks.",
+    "Append ionization mode suffixes ([M+H]+ or [M-H]\u2212) to library entry identifiers based on precursor charge annotation.",
+    "Export filtered and annotated spectra as per-spectrum CSV rows with mode-suffixed headers.",
+    "Validation: Verify CSV row count matches input spectrum count, mode suffixes are present and consistent, and peak columns are numeric and within 0\u2013100 relative intensity range.",
+    "References: source article (DOI: 10.1021/acs.analchem.1c03032)"
+  ],
+  "missing_information": [
+    "No changelog documenting version history, updates, or parameter changes"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_003/library_entry_csv"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the mspToLib function correctly convert MS/MS spectra from .msp library files into individual CSV library entries with appropriate positive/negative ionisation mode suffixes when applied with default peak-picking parameters?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "spectral-library-format-conversion",
+    "msp-to-csv-parsing",
+    "ionization-mode-annotation",
+    "peak-detection-threshold-application",
+    "library-import-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_metaboannotator/synthesized_package",
+  "spine_condition_ids": [
+    "COND-001"
+  ],
+  "spine_entity_ids": [
+    "ARCH-001",
+    "COMP-003",
+    "DS-003",
+    "DS-004",
+    "COND-001",
+    "RES-002"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:gggraca__MetaboAnnotatoR",
+  "task_description": "Apply the mspToLib function to the bundled MassBank_example.msp file using default peak-picking parameters (noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1) to generate per-spectrum CSV library entries with correct positive/negative mode suffixes, independently validating the spectral library import mechanism.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MassBank example MSP spectral library file",
+      "port_id": "msp_library",
+      "resolved_via": null,
+      "source": "task_003/library_entry_csv",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Apply mspToLib to MassBank_example.msp with default parameters and verify CSV library entries are produced with correct positive/negative mode suffixes.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-spectrum CSV library entries with mode suffixes",
+      "port_id": "csv_library",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "database-annotation",
+    "metabolite-identification",
+    "clustering"
+  ],
+  "title": "Reconstruct the mspToLib conversion step for the bundled MassBank_example.msp file",
+  "tools": [
+    "MetaboAnnotatoR",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the MassBank_example.msp file from the MetaboAnnotatoR package using mspToLib function. 2. Apply default peak-picking parameters: noise threshold of 0.005, marker peaks score of 0.9, and marker peaks threshold of 0.1. 3. Generate per-spectrum CSV library entries with mode-specific suffixes (positive/negative ionization mode designations). 4. Verify output file format and completeness of spectral annotations."
+}

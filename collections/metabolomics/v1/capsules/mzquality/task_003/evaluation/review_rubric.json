@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that batch-corrected experiment object (SummarizedExperiment) exists as input"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for RSDQC values table (tab-delimited or CSV format) computed across all internal standard candidates"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output table contains at least one row per compound with columns for compound identifier, internal standard candidates, and their corresponding RSDQC values"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output table field_present: 'recommended_internal_standard' or equivalent column identifying the internal standard with minimum RSDQC per compound"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference against reported recommendation table location in article (if deposited), or verify table structure is consistent with mzQuality export format"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that batch-corrected experiment object (SummarizedExperiment) exists as input",
+      "verify file_exists for RSDQC values table (tab-delimited or CSV format) computed across all internal standard candidates",
+      "verify that output table contains at least one row per compound with columns for compound identifier, internal standard candidates, and their corresponding RSDQC values",
+      "verify that output table field_present: 'recommended_internal_standard' or equivalent column identifying the internal standard with minimum RSDQC per compound",
+      "verify output_matches_reference against reported recommendation table location in article (if deposited), or verify table structure is consistent with mzQuality export format"
+    ],
+    "expert_review": [
+      "verify that RSDQC calculation methodology matches article description: relative standard deviation computed over batch-corrected QC sample ratios (compound / internal standard) for each candidate pairing",
+      "verify that the lowest RSDQC selection logic is correctly applied per compound (no ties, handling of missing values, numerical precision)",
+      "assess whether batch-correction step (using pooled SQC samples) was applied before RSDQC computation, as stated in article scope"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

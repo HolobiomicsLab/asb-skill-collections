@@ -1,0 +1,356 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3c01310beeaa4701d4e7aec66e6895c7c3250e959a11524d5fb6de02b90b42c5"
+    }
+  ],
+  "created_at": "2026-06-15T10:08:52.688980+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "chemprop-IR repository code and README from github.com/chemprop/chemprop",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test molecular structures (SMILES strings or molecular graph objects)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spectral features tensor or feature matrix extracted from test molecules",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature extraction module code or validated implementation script",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report confirming feature shape, data type, and completeness",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "Chemprop uses message passing neural networks to learn molecular representations from graph-structured inputs; the spectral features component extends this architecture to handle infrared spectral prediction tasks.",
+    "Spectral features in this context are learned representations that encode infrared spectral properties from molecular graphs, distinct from traditional hand-crafted molecular descriptors.",
+    "The chemprop-IR spectral features must output tensors of consistent dimensionality to feed downstream prediction layers in the message passing network.",
+    "Feature extraction in chemprop follows a standardized pipeline: molecular parsing (SMILES to graph) \u2192 node embedding \u2192 message passing \u2192 feature aggregation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github.com/chemprop/chemprop-IR or equivalent public repository URL",
+      "verify repository contains README or documentation describing spectral features component",
+      "verify repository contains executable Python code or scripts for spectral feature extraction",
+      "script_runs: execute spectral feature extraction code with a valid molecular input (SMILES or molecular graph format) and confirm no runtime errors",
+      "output_matches_reference: extracted spectral feature vector has expected dimensionality and numeric type (float array or similar) \u2014 robust to parameter choices across reasonable molecular inputs"
+    ],
+    "expert_review": [
+      "chemist or computational chemistry expert: verify that extracted spectral features are chemically sensible and match the named features described in the paper (e.g., functional group indicators, bond type distributions)",
+      "expert: confirm that spectral feature construction aligns with standard infrared spectroscopy principles and the chemprop-IR methodology",
+      "expert: review whether the implementation correctly translates molecular structure (via SMILES or graph) into feature space claimed in the paper"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the spectral features that chemprop-IR implements to extend the base chemprop architecture for infrared spectral prediction tasks?: 'The new spectral features are described here. Please see `README_chemprop` for details on base functionality.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] chemprop-IR is an extension of chemprop that incorporates new spectral features designed specifically for infrared spectral predictions using message passing neural networks.: 'The `chemprop-IR` architecture is an extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] chemprop-IR repository code and README from github.com/chemprop/chemprop: 'available in the [chemprop GiHub repository](https://github.com/chemprop/chemprop)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Test molecular structures (SMILES strings or molecular graph objects): '[UNTRUSTED_DOCUMENT] _No usage/docs found._ [/UNTRUSTED_DOCUMENT]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectral features tensor or feature matrix extracted from test molecules: 'The `chemprop-IR` architecture is an extension of `chemprop` described in the paper'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Feature extraction module code or validated implementation script: 'This repository contains message passing neural networks for spectral predictions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Verification report confirming feature shape, data type, and completeness: 'extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] chemprop: 'extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] chemprop-IR: 'The `chemprop-IR` architecture is an extension of `chemprop`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is available for the repository.: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specific documentation of named spectral features or their definitions is provided in the accessible section.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "cd {inputs.chemprop_ir_repo} && python -c \"import sys; sys.path.insert(0, '.'); from chemprop.features import SpectralFeatures; from chemprop.data import MoleculeDataset; molecules = open('{inputs.test_molecules}').read().strip().split('\\n'); dataset = MoleculeDataset([{'smiles': smi} for smi in molecules]); extractor = SpectralFeatures(); features = extractor.extract(dataset); print('Features shape:', features.shape); print('Features dtype:', features.dtype); print('Features extracted successfully'); import json; json.dump({'shape': str(features.shape), 'dtype': str(features.dtype), 'status': 'success'}, open('/tmp/spectral_features_report.json', 'w'))\""
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "spectral_features_extracted.pt",
+  "expected_outputs": [
+    "Spectral features tensor or feature matrix extracted from test molecules",
+    "Feature extraction module code or validated implementation script",
+    "Verification report confirming feature shape, data type, and completeness"
+  ],
+  "finding": "chemprop-IR is an extension of chemprop that incorporates new spectral features designed specifically for infrared spectral predictions using message passing neural networks.",
+  "github_name": null,
+  "input_from": "task_001",
+  "inputs": [
+    "chemprop-IR repository code and README from github.com/chemprop/chemprop",
+    "Test molecular structures (SMILES strings or molecular graph objects)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectral_features_component.py",
+    "feature_extraction_test.py",
+    "test_features_output.pt",
+    "feature_verification.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Retrieve and parse the chemprop-IR repository to locate the spectral features component implementation.",
+    "Study the feature construction logic and API to understand input requirements and output format.",
+    "Instantiate the spectral feature extraction module with test molecular inputs.",
+    "Execute feature extraction on example molecules and collect output tensors.",
+    "Validation: Confirm that extracted features have the correct dimensionality, data type (float tensor), and non-null values consistent with the chemprop-IR architecture specification."
+  ],
+  "missing_information": [
+    "No changelog or version history is available for the repository.",
+    "No specific documentation of named spectral features or their definitions is provided in the accessible section."
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the spectral features that chemprop-IR implements to extend the base chemprop architecture for infrared spectral prediction tasks?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "molecular-graph-representation-parsing",
+    "spectral-feature-engineering",
+    "message-passing-neural-network-architecture-implementation",
+    "molecular-property-prediction-feature-construction",
+    "deep-learning-module-instantiation-and-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_chemprop_ir/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "chemprop_IR_system",
+    "chemprop_base",
+    "spectral_features",
+    "chemprop_ir_paper"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:gfm-collab__chemprop-IR",
+  "task_description": "Extract and construct spectral features from molecular structures using the chemprop-IR spectral features component. Produce a feature extraction module that accepts molecular inputs (SMILES or molecular graphs) and outputs the named spectral features as implemented in the chemprop-IR repository.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "chemprop-IR repository code and README",
+      "port_id": "chemprop_ir_repo",
+      "resolved_via": null,
+      "source": "task_001/chemprop_ir_model",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Test molecular structures (SMILES or graph format)",
+      "port_id": "test_molecules",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Extract and implement the spectral feature construction component from chemprop-IR to process molecular inputs for infrared spectral prediction.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Extracted spectral features tensor or matrix",
+      "port_id": "spectral_features",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Implemented feature extraction module or validation script",
+      "port_id": "feature_extraction_module",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature extraction verification and validation report",
+      "port_id": "verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "deep-learning",
+    "graph-neural-network",
+    "machine-learning",
+    "spectral-library-matching"
+  ],
+  "title": "Implement the spectral feature extraction step within the chemprop-IR pipeline",
+  "tools": [
+    "chemprop",
+    "chemprop-IR"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Spectral features tensor or feature matrix extracted from test molecules, Feature extraction module code or validated implementation script, Verification report confirming feature shape, data type, and completeness."
+  ],
+  "workflow_description": "1. Clone or load the chemprop-IR repository code from github.com/chemprop/chemprop and identify the spectral features component. 2. Parse the feature extraction implementation to understand the named spectral features and their construction logic. 3. Implement or instantiate the spectral feature extraction module with molecular input handling (SMILES/graph parsing). 4. Test the feature extraction on a small set of example molecules to verify that feature tensors are produced in the correct shape and format. 5. Validate that the extracted features match the expected dimensionality and data types defined in the chemprop-IR architecture."
+}

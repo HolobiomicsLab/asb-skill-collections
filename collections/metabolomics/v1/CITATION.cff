@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: If you use this collection, please cite it as below.
 title: ASB Metabolomics Skill Collection v1
-abstract: Curated, evidence-grounded skills and software-tool records for computational metabolomics and adjacent mass-spectrometry / NMR / multi-omics analysis, assembled by the AgenticScienceBuilder pipeline from 17 peer-reviewed method papers. Each skill is deduplicated across papers, anchored to verbatim evidence spans, and annotated with EDAM operation/topic IRIs for retrieval.
+abstract: Curated, evidence-grounded skills and software-tool records for computational metabolomics, assembled by the AgenticScienceBuilder pipeline from open-access method papers. Each skill is deduplicated across papers, anchored to verbatim evidence spans, and annotated with EDAM IRIs.
 version: '1'
 date-released: '2026-06-15'
 license: CC-BY-4.0
@@ -24,15 +24,23 @@ references:
 - type: article
   doi: 10.1002/cmtd.202400088
 - type: article
+  doi: 10.1002/rcm.9153
+- type: article
   doi: 10.1007/s00216-023-05070-2
 - type: article
   doi: 10.1016/j.aca.2025.344571
 - type: article
   doi: 10.1021/acs.analchem.0c04720
 - type: article
+  doi: 10.1021/acs.analchem.1c02220
+- type: article
+  doi: 10.1021/acs.analchem.1c02687
+- type: article
   doi: 10.1021/acs.analchem.1c03032
 - type: article
   doi: 10.1021/acs.analchem.1c03592
+- type: article
+  doi: 10.1021/acs.analchem.1c05017
 - type: article
   doi: 10.1021/acs.analchem.2c02093
 - type: article
@@ -52,7 +60,11 @@ references:
 - type: article
   doi: 10.1021/acs.analchem.4c01565
 - type: article
+  doi: 10.1021/acs.analchem.4c04040
+- type: article
   doi: 10.1021/acs.analchem.4c07078
+- type: article
+  doi: 10.1021/acs.analchem.5c00567
 - type: article
   doi: 10.1021/acs.analchem.5c00633
 - type: article
@@ -62,23 +74,77 @@ references:
 - type: article
   doi: 10.1021/acs.analchem.5c04338
 - type: article
+  doi: 10.1021/acs.analchem.9b04884
+- type: article
   doi: 10.1021/acs.jafc.3c09767
 - type: article
   doi: 10.1021/acs.jcim.1c00055
 - type: article
+  doi: 10.1021/acs.jcim.3c01082
+- type: article
+  doi: 10.1021/acs.jnatprod.1c00399
+- type: article
   doi: 10.1021/acs.jproteome.0c00866
+- type: article
+  doi: 10.1021/acs.jproteome.4c00873
 - type: article
   doi: 10.1021/acs.jproteome.5c00435
 - type: article
+  doi: 10.1021/acs.jproteome.8b00717
+- type: article
   doi: 10.1021/acscentsci.1c01108
+- type: article
+  doi: 10.1021/acscentsci.3c00800
 - type: article
   doi: 10.1021/acscentsci.4c01132
 - type: article
+  doi: 10.1021/jasms.4c00364
+- type: article
   doi: 10.1021/jasms.5c00073
+- type: article
+  doi: 10.1038/s41467-018-06082-8
+- type: article
+  doi: 10.1038/s41467-021-23953-9
+- type: article
+  doi: 10.1038/s41467-021-23986-0
+- type: article
+  doi: 10.1038/s41467-023-37446-4
+- type: article
+  doi: 10.1038/s41467-023-39889-1
+- type: article
+  doi: 10.1038/s41467-024-48009-6
+- type: article
+  doi: 10.1038/s41467-025-66060-9
+- type: article
+  doi: 10.1038/s41564-023-01575-9
+- type: article
+  doi: 10.1038/s41587-020-0700-3
+- type: article
+  doi: 10.1038/s41587-021-01045-9
+- type: article
+  doi: 10.1038/s41587-023-01690-2
+- type: article
+  doi: 10.1038/s41589-020-00677-3
+- type: article
+  doi: 10.1038/s41589-020-00724-z
+- type: article
+  doi: 10.1038/s41592-019-0344-8
+- type: article
+  doi: 10.1038/s41592-025-02660-z
 - type: article
   doi: 10.1038/s42255-024-01118-4
 - type: article
+  doi: 10.1074/mcp.M113.031278
+- type: article
+  doi: 10.1093/bioinformatics/btx582
+- type: article
+  doi: 10.1093/bioinformatics/bty046
+- type: article
   doi: 10.1128/mra.00997-24
+- type: article
+  doi: 10.1186/1471-2105-11-395
+- type: article
+  doi: 10.1186/s12859-017-1744-3
 - type: article
   doi: 10.1186/s12859-021-04490-0
 - type: article
@@ -96,9 +162,13 @@ references:
 - type: article
   doi: 10.1186/s13321-025-01051-y
 - type: article
+  doi: 10.1186/s13321-025-01081-6
+- type: article
   doi: 10.1186/s40168-023-01476-3
 - type: article
   doi: 10.1289/EHP7722
+- type: article
+  doi: 10.1371/journal.pcbi.1003123
 - type: article
   doi: 10.1371/journal.pcbi.1008724
 - type: article
@@ -116,8 +186,28 @@ references:
 - type: article
   doi: 10.1371/journal.pone.0306202
 - type: article
+  doi: 10.21105/joss.02411
+- type: article
   doi: 10.21105/joss.03990
+- type: article
+  doi: 10.21105/joss.04494
 - type: article
   doi: 10.21105/joss.08070
 - type: article
+  doi: 10.3389/fbinf.2022.842964
+- type: article
+  doi: 10.3389/fpls.2019.01329
+- type: article
+  doi: 10.3390/metabo11020103
+- type: article
+  doi: 10.3390/metabo12020173
+- type: article
   doi: 10.3390/metabo13070842
+- type: article
+  doi: 10.3390/metabo9070144
+- type: article
+  doi: 10.5281/zenodo.14009575
+- type: article
+  doi: 10.5702/massspectrometry.S0033
+- type: article
+  doi: 10.7554/eLife.70780

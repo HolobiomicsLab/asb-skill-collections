@@ -1,0 +1,118 @@
+schema_version: 0.1.0
+workflow_id: coll_spectripy_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: tight
+  composition_modularity: flat
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: SpectriPy enables seamless integration of Python mass spectrometry packages
+    into R-based Spectra analysis by wrapping Python functionality as R callables.
+  pseudo_abstract: 'SpectriPy is an R package that facilitates cross-language mass
+    spectrometry data analysis by wrapping Python MS library functions into R functions.
+    The package describes two key mechanisms: a cross-language integration layer that
+    exposes Python MS functions as callable R routines, and a minimal Spectra-based
+    R workflow architecture that invokes Python MS package functions through SpectriPy''s
+    wrapper interface. Together, these mechanisms enable users to leverage Python
+    MS libraries within their R-based Spectra mass spectrometry analysis pipelines
+    without requiring direct Python programming.'
+  research_questions:
+  - How does SpectriPy wrap Python mass spectrometry package functionality to enable
+    seamless integration into R-based Spectra analysis workflows?
+  - How does SpectriPy wrap Python MS package functionality to enable seamless integration
+    into R-based Spectra analysis workflows?
+  methods_summary: 'Examine SpectriPy source code to identify how Python MS package
+    functions are wrapped and exposed as R functions Map the data structures and conversion
+    mechanisms between Spectra (R) objects and Python library objects within the same
+    process Document the fixed architecture of the CrossLanguageIntegrationLayer showing
+    function binding, argument marshalling, and return value conversion Design and
+    execute representative interoperability tests combining R Spectra operations with
+    wrapped Python MS library calls Validation: Confirm that wrapped functions execute
+    with correct semantics, proper data interchange, and appropriate error handling
+    Install and load SpectriPy and Spectra packages in R. Load or generate a sample
+    mass spectrometry dataset and instantiate a Spectra object. Identify and invoke
+    a Python MS package function exposed through the SpectriPy wrapper layer. Capture
+    and validate the returned R-native object for type, structure, and content integrity.
+    Validation: function call executes without error, return value is an R object
+    (not NULL), and output type matches wrapper specification.'
+  domain: bioinformatics
+  techniques:
+  - machine-learning
+  - statistical-analysis
+  claims:
+  - claim_text: The SpectriPy package allows integration of Python MS packages into
+      a Spectra-based MS analysis in R.
+    claim_type: finding
+    speculative: false
+    entity_id: SpectriPy
+  - claim_text: SpectriPy achieves seamless integration of Python libraries into R
+      by wrapping Python functionality into R functions.
+    claim_type: finding
+    speculative: false
+    entity_id: SpectriPy
+  - claim_text: The SpectriPy project has reached a stable, usable state and is being
+      actively developed.
+    claim_type: finding
+    speculative: false
+    entity_id: SpectriPy
+  - claim_text: SpectriPy is licensed under the Artistic-2.0 license.
+    claim_type: finding
+    speculative: false
+    entity_id: SpectriPy
+  - claim_text: SpectriPy has been published with DOI 10.21105/joss.08070.
+    claim_type: finding
+    speculative: false
+    entity_id: SpectriPy
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 2-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Architecture diagram or document describing the CrossLanguageIntegrationLayer
+    showing how Python MS package functions are wrapped into R function interfaces
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Technical specification document detailing the function-wrapping mechanism,
+    data marshalling protocol, and type conversion rules between R and Python
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Validation report confirming wrapped Python MS functions execute correctly
+    within R Spectra workflows with correct data interchange
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Execution log or R console output showing successful package load, Spectra
+    object creation, and Python function invocation
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: R object returned from the Python MS package function call (e.g., numeric
+    vector, data frame, or modified Spectra object)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Validation report confirming function call success, output type, and R-native
+    data structure integrity
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

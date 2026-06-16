@@ -1,0 +1,51 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file pyteomics exists after pip installation (package directory or site-packages location)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify no ImportError or ModuleNotFoundError is raised during core module imports"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify each of the five core modules (pyteomics.mass, pyteomics.pepxml, pyteomics.mzid, pyteomics.tandem, pyteomics.auxiliary) is accessible as a Python importable object after installation"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file pyteomics exists after pip installation (package directory or site-packages location)",
+      "script_runs: execute 'python -c \"import pyteomics.mass; import pyteomics.pepxml; import pyteomics.mzid; import pyteomics.tandem; import pyteomics.auxiliary\"' and confirm exit code is 0",
+      "verify no ImportError or ModuleNotFoundError is raised during core module imports",
+      "verify each of the five core modules (pyteomics.mass, pyteomics.pepxml, pyteomics.mzid, pyteomics.tandem, pyteomics.auxiliary) is accessible as a Python importable object after installation"
+    ],
+    "expert_review": [
+      "confirm that installed version of Pyteomics is compatible with the versions of declared dependencies (numpy, lxml, matplotlib, pandas, sqlalchemy, pynumpress) present in the environment"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: input CSV or JSON metabolite set file in repository or test data directory"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: input metabolite set file conforms to documented CSV or JSON schema (field names, required columns present)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: PALS pipeline dispatcher accepts uploaded metabolite set file without errors on test input"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: scored results table structure matches the format of PLAGE outputs for shipped set types (columns: metabolite_id, set_id, score, p_value or equivalent), robust to parameter choices in PLAGE algorithm"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: output table contains at least score and identifier fields for each metabolite set"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: Web application UI or API endpoint documentation mentions support for user-uploaded metabolite sets beyond the three shipped types (pathways, Molecular Families, Mass2Motifs)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: input CSV or JSON metabolite set file in repository or test data directory",
+      "verify file_format_is: input metabolite set file conforms to documented CSV or JSON schema (field names, required columns present)",
+      "verify script_runs: PALS pipeline dispatcher accepts uploaded metabolite set file without errors on test input",
+      "verify output_matches_reference: scored results table structure matches the format of PLAGE outputs for shipped set types (columns: metabolite_id, set_id, score, p_value or equivalent), robust to parameter choices in PLAGE algorithm",
+      "verify field_present: output table contains at least score and identifier fields for each metabolite set",
+      "verify contains_substring: Web application UI or API endpoint documentation mentions support for user-uploaded metabolite sets beyond the three shipped types (pathways, Molecular Families, Mass2Motifs)"
+    ],
+    "expert_review": [
+      "PLAGE scoring results on uploaded metabolite set are statistically sound and consistent with expected behavior on known positive control sets",
+      "Extension maintains robustness to noise and missing peaks (stated PALS advantage) when applied to user-uploaded sets compared to baseline ORA/GSEA",
+      "User-uploaded metabolite set interpretation and scoring are scientifically valid for the metabolomics domain"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

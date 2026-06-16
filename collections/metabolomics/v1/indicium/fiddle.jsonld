@@ -1,0 +1,1393 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/binary-cross-entropy-loss-optimization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/checkpoint-selection-based-on-validation-metric",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/class-imbalance-downsampling-ratio-adjustment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/cross-script-consistency-verification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/cross-spectrum-negative-generation-within-mz-window",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/dataset-preprocessing-and-filtering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/deep-learning-model-checkpoint-loading",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/deep-learning-model-training-with-monitoring",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/formula-accuracy-metric-evaluation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/formula-annotation-capping-by-frequency",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/instrument-metadata-classification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-library-curation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-formula-prediction-from-fragmentation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ms-spectra-inference-with-neural-networks",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/neural-network-encoder-freezing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/rescore-training-data-augmentation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/siamese-architecture-scoring",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/source-code-inspection-for-preprocessing-steps",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectra-annotation-parsing-and-pairing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-feature-engineering-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/state-dict-serialization-and-extraction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/tcn-encoder-input-preprocessing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/train-test-split-verification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_FIDDLE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "FIDDLE research was published in Nature Communications in 2025.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_FIDDLE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A CLI and Python API for FIDDLE is available as msfiddle.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_FIDDLE_system"
+        },
+        {
+          "id": "asb:spine_tool_msfiddle"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The rescore model was redesigned with a Siamese architecture in version 2.0.0.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 2.0.0 was released on 2026-03-23.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "An inference script for caffeine (C8H10N4O2) GNPS spectra was added in version 2.0.0.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_compound_caffeine"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "An end-to-end retraining script for both Orbitrap and Q-TOF was added in version 2.0.0.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_compound_caffeine"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The train_rescore.py trainer freezes the TCN spectrum encoder and trains FormulaEncoder and RescoreHead with BCE loss.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TCN_encoder"
+        },
+        {
+          "id": "asb:spine_formula_encoder"
+        },
+        {
+          "id": "asb:spine_rescore_head"
+        },
+        {
+          "id": "asb:spine_tool_train_rescore"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The FormulaEncoder converts atom-count vectors to 512-dimensional L2-normalised embeddings.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_formula_encoder"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The RescoreHead performs element-wise product of spectrum and formula embeddings to produce a scalar logit.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_rescore_head"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "An environment configuration file for macOS ARM64 (Apple Silicon) setup was added in version 2.0.0.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Docstrings were added across multiple modules in version 2.0.0.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "FDRNet-based reranking was replaced with the Siamese rescore architecture.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_siamese_rescore_arch"
+        },
+        {
+          "id": "asb:spine_fdrnet"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Output CSV columns were renamed from FDR (k) to Rescore (k).",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Precursor m/z is zeroed before the spectrum encoder to prevent the model from learning a mass-based frequency prior.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The FDRNet class was removed from model_tcn.py.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_fdrnet"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The ftms instrument was added to the gnps_orbitrap instrument allowlist.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Orbitrap dataset was expanded to 28,751 training compounds.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Orbitrap dataset was expanded to 3,195 test compounds.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The refine_atom_type function is now extended with atoms present in the predicted formula before calling formula_refinement.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_021",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The refinement search space at training time now matches inference.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_021_evidence",
+      "evidence_for": "claim_021",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_022",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Result export loading in train_tcn_gpus_cl.py was fixed to load from resume_path instead of checkpoint_path.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_022_evidence",
+      "evidence_for": "claim_022",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_023",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Embeddings are L2-normalized before contrastive loss in train_tcn_gpus_cl.py.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_023_evidence",
+      "evidence_for": "claim_023",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_024",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Gradient clipping with max_norm=1.0 was added to train_tcn_gpus_cl.py.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_024_evidence",
+      "evidence_for": "claim_024",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_025",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Division by zero in H/C ratio target was fixed using y[:, 0].clamp(min=1) in train_tcn_gpus_cl.py.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_025_evidence",
+      "evidence_for": "claim_025",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_026",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Checkpoints are saved only when formula_acc (with H) improves.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_026_evidence",
+      "evidence_for": "claim_026",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_027",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Multi-scale feature collection now uses isinstance(layer, TemporalBlock) instead of i % 2 == 0.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_temporal_block"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_027_evidence",
+      "evidence_for": "claim_027",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_028",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.1.0 was released on 2025-08-20.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_028_evidence",
+      "evidence_for": "claim_028",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_029",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Ablation study scripts were added for systematic evaluation of model components.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_029_evidence",
+      "evidence_for": "claim_029",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_030",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A chimeric spectra experiment was added to evaluate robustness to co-eluting compounds.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_030_evidence",
+      "evidence_for": "claim_030",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_031",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A noised spectra experiment was added to evaluate robustness to spectral noise.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_031_evidence",
+      "evidence_for": "claim_031",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_032",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A demo training and evaluation script was added in version 1.1.0.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_032_evidence",
+      "evidence_for": "claim_032",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_033",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.0.0 was released on 2024-11-26.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_033_evidence",
+      "evidence_for": "claim_033",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_034",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.0.0 represented the initial FIDDLE release.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_FIDDLE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_034_evidence",
+      "evidence_for": "claim_034",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_035",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "FIDDLE source code is available on GitHub.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_FIDDLE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_035_evidence",
+      "evidence_for": "claim_035",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_036",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The repository is licensed under Apache 2.0.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_036_evidence",
+      "evidence_for": "claim_036",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_037",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "FIDDLE has a Zenodo record with DOI 10.5281/zenodo.19181279.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_FIDDLE_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_037_evidence",
+      "evidence_for": "claim_037",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_038",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The prepare_augment_rescore.py script caps positives per formula using the --pos_cap parameter.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_prepare_augment_rescore"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_038_evidence",
+      "evidence_for": "claim_038",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_039",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The prepare_augment_rescore.py script generates cross-spectrum negatives within a precursor m/z window specified by --tolerance in ppm.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_prepare_augment_rescore"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_039_evidence",
+      "evidence_for": "claim_039",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_040",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The prepare_augment_rescore.py script downsamples to 1:1 positive:negative ratio.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_prepare_augment_rescore"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_040_evidence",
+      "evidence_for": "claim_040",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_041",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Formula refinement in prepare_augment_rescore.py is parallelised via multiprocessing.Pool.",
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_prepare_augment_rescore"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_041_evidence",
+      "evidence_for": "claim_041",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.19181279",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_fiddle#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "concrete",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_FIDDLE_system",
+      "title": "FIDDLE",
+      "identifier": "urn:asb:spine:FIDDLE_system"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_TCN_encoder",
+      "title": "TCN Spectrum Encoder",
+      "identifier": "urn:asb:spine:TCN_encoder"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_formula_encoder",
+      "title": "FormulaEncoder",
+      "identifier": "urn:asb:spine:formula_encoder"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_rescore_head",
+      "title": "RescoreHead",
+      "identifier": "urn:asb:spine:rescore_head"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_siamese_rescore_arch",
+      "title": "Siamese Rescore Architecture",
+      "identifier": "urn:asb:spine:siamese_rescore_arch",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_fdrnet",
+      "title": "FDRNet",
+      "identifier": "urn:asb:spine:fdrnet"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_temporal_block",
+      "title": "TemporalBlock",
+      "identifier": "urn:asb:spine:temporal_block"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_msfiddle",
+      "title": "msfiddle",
+      "identifier": "urn:asb:spine:tool_msfiddle"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_huggingface_demo",
+      "title": "FIDDLE Hugging Face Demo",
+      "identifier": "urn:asb:spine:tool_huggingface_demo"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_gnps_orbitrap",
+      "title": "GNPS Orbitrap Dataset",
+      "identifier": "urn:asb:spine:dataset_gnps_orbitrap"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_gnps_qtof",
+      "title": "GNPS Q-TOF Dataset",
+      "identifier": "urn:asb:spine:dataset_gnps_qtof"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_orbitrap_expanded",
+      "title": "Expanded Orbitrap Dataset Condition",
+      "identifier": "urn:asb:spine:cond_orbitrap_expanded"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_chimeric_spectra",
+      "title": "Chimeric Spectra Condition",
+      "identifier": "urn:asb:spine:cond_chimeric_spectra"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_noised_spectra",
+      "title": "Noised Spectra Condition",
+      "identifier": "urn:asb:spine:cond_noised_spectra"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_ablation_components",
+      "title": "Model Component Ablation Condition",
+      "identifier": "urn:asb:spine:cond_ablation_components"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_orbitrap_train_size",
+      "title": "Orbitrap Training Set Size",
+      "identifier": "urn:asb:spine:metric_orbitrap_train_size",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_orbitrap_expanded"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_orbitrap_test_size",
+      "title": "Orbitrap Test Set Size",
+      "identifier": "urn:asb:spine:metric_orbitrap_test_size",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_orbitrap_expanded"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_siamese_replaces_fdrnet",
+      "title": "Siamese Architecture Replaces FDRNet",
+      "identifier": "urn:asb:spine:result_siamese_replaces_fdrnet"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_precursor_mz_zeroing",
+      "title": "Precursor m/z Zeroing Prevents Mass-Based Prior",
+      "identifier": "urn:asb:spine:result_precursor_mz_zeroing"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_l2_norm_contrastive",
+      "title": "L2 Normalization and Gradient Clipping Fix",
+      "identifier": "urn:asb:spine:result_l2_norm_contrastive"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_checkpoint_formula_acc",
+      "title": "Checkpoint Saved on Formula Accuracy Improvement",
+      "identifier": "urn:asb:spine:result_checkpoint_formula_acc"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_compound_caffeine",
+      "title": "Caffeine",
+      "identifier": "urn:asb:spine:compound_caffeine"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_prepare_augment_rescore",
+      "title": "prepare_augment_rescore.py",
+      "identifier": "urn:asb:spine:tool_prepare_augment_rescore"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_train_rescore",
+      "title": "train_rescore.py",
+      "identifier": "urn:asb:spine:tool_train_rescore"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_run_fiddle",
+      "title": "run_fiddle.py",
+      "identifier": "urn:asb:spine:tool_run_fiddle"
+    }
+  ]
+}

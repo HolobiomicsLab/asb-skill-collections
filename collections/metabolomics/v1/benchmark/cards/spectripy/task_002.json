@@ -1,0 +1,464 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/rformassspectrometry/SpectriPy",
+      "locator_id": "gh_rformassspectrometry_spectripy",
+      "locator_kind": "github",
+      "name": "rformassspectrometry/SpectriPy",
+      "prose": "SpectriPy R package from RforMassSpectrometry/SpectriPy repository or CRAN/Bioconductor",
+      "score": 0.2857,
+      "side": "input"
+    },
+    {
+      "locator": "https://github.com/rformassspectrometry/Spectra",
+      "locator_id": "gh_rformassspectrometry_spectra",
+      "locator_kind": "github",
+      "name": "rformassspectrometry/Spectra",
+      "prose": "Spectra R package from RforMassSpectrometry/Spectra repository",
+      "score": 0.4,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon.png",
+      "role": "figure",
+      "sha256": "9f598fb87e0015d483f85c1d98f6cbab65a926b49cf1e470b22908f5b4b4dc66"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-96x96.png",
+      "role": "figure",
+      "sha256": "a215fc3e3600e9703711dcae37017c3e3e95f63ee43df14a41c37761cebac0e0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon.svg",
+      "role": "figure",
+      "sha256": "a3959295c1a27709c6d5ddf389bc300368f3952994d6ffa527f793ba216255be"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "926edd81e3e0fbbf05d0b22697b4c04385219463591e0ea2a59798197eb082f0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_100.png",
+      "role": "figure",
+      "sha256": "993a0eba3b4d8b72f1b5b431746d150677432c642ab902b31dbcdc1f70f37f2a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectral_similarity_comparison.png",
+      "role": "figure",
+      "sha256": "7b89f827729cfe569e5e8b9912313de3677e58f710f17ba2b59c03fd7b8d0ff3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-192x192.png",
+      "role": "figure",
+      "sha256": "ecc2b237477fb51f8be73a84fe2765c9aded02659e0442d3b6cd0bc36a40c2d2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-512x512.png",
+      "role": "figure",
+      "sha256": "40dc34ed018411dd74416ebb7874dbe79b8ce5d28db18fca53358f7aad3e9980"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "c10d77fbaa282d4ac498646251323f4c6a71d2710bf4184f3c2bddcfe47eeae8"
+    }
+  ],
+  "created_at": "2026-06-15T13:54:12.165644+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SpectriPy R package from RforMassSpectrometry/SpectriPy repository or CRAN/Bioconductor",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spectra R package from RforMassSpectrometry/Spectra repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sample mass spectrometry dataset (mzML, mzXML, or compatible format) or synthetic MS data",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Execution log or R console output showing successful package load, Spectra object creation, and Python function invocation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "R object returned from the Python MS package function call (e.g., numeric vector, data frame, or modified Spectra object)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation report confirming function call success, output type, and R-native data structure integrity",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "SpectriPy wraps Python MS library functions as R functions, enabling seamless cross-language function calls without requiring direct Python knowledge in the calling R script.",
+    "Spectra objects in R encapsulate mass spectrometry metadata and spectra data in a standardized container compatible with the RforMassSpectrometry ecosystem.",
+    "Cross-language integration via wrapper packages requires that the output object be converted or adapted to R-native data structures (e.g., list, vector, data frame, or Spectra class) to be usable in downstream R analysis.",
+    "A successful wrapper invocation must both execute without error and return a result of the expected type; type validation is essential to verify the wrapper layer correctly mediates Python \u2194 R data exchange."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: SpectriPy package installation succeeds in R environment (script_runs: installation command from github:rformassspectrometry__SpectriPy completes without error)",
+      "verify script_runs: R script that loads SpectriPy library, creates a Spectra object, and calls at least one wrapped Python MS function executes without error",
+      "verify output_matches_reference: returned object from Python MS function call is an R-native object (not raw Python object or serialization artifact)",
+      "verify field_present: R object returned from wrapped Python function call contains at least one expected attribute or field matching the documented Python function output schema"
+    ],
+    "expert_review": [
+      "assess whether the wrapped Python MS function call produces chemically/statistically valid results consistent with the underlying Python package documentation",
+      "evaluate whether the R-native result format correctly preserves semantic meaning and data integrity from the Python function output"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does SpectriPy wrap Python MS package functionality to enable seamless integration into R-based Spectra analysis workflows?: 'By wrapping Python functionality into R functions, *SpectriPy* allows a seamless integration of Python libraries into R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SpectriPy integrates Python MS packages into R by wrapping Python functionality into R functions, enabling their use within Spectra-based MS analysis in R.: 'The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy* allows a seamless'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SpectriPy R package from RforMassSpectrometry/SpectriPy repository or CRAN/Bioconductor: 'The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectra R package from RforMassSpectrometry/Spectra repository: 'integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Sample mass spectrometry dataset (mzML, mzXML, or compatible format) or synthetic MS data: 'integration of Python MS packages into a [*Spectra*]-based MS analysis in R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Execution log or R console output showing successful package load, Spectra object creation, and Python function invocation: 'By wrapping Python functionality into R functions, *SpectriPy* allows a seamless integration of Python libraries into R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R object returned from the Python MS package function call (e.g., numeric vector, data frame, or modified Spectra object): 'By wrapping Python functionality into R functions, *SpectriPy* allows a seamless integration of Python libraries into R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Validation report confirming function call success, output type, and R-native data structure integrity: 'By wrapping Python functionality into R functions, *SpectriPy* allows a seamless integration of Python libraries into R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SpectriPy: 'The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectra: 'integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'integration of Python MS packages into a [*Spectra*]-based MS analysis in R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No concrete code examples, vignettes, or documentation artifacts are referenced in the discussion section: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Synthesis metadata indicates document was generated on 2026-06-15, but no information about the underlying article publication date, article version, or package release version is provided: 'Synthesized at: 2026-06-15T13:54:10+00:00'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(SpectriPy); library(Spectra); cat('SpectriPy and Spectra loaded successfully\\n'); sps <- Spectra('{inputs.ms_data}'); cat('Spectra object created\\n'); result <- SpectriPy::callPythonMSFunction(sps); cat('Python MS function invoked\\n'); print(class(result)); print(str(result)); cat('Validation: function call succeeded, result is R-native object\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "spectripy_integration_example.R",
+  "expected_outputs": [
+    "Execution log or R console output showing successful package load, Spectra object creation, and Python function invocation",
+    "R object returned from the Python MS package function call (e.g., numeric vector, data frame, or modified Spectra object)",
+    "Validation report confirming function call success, output type, and R-native data structure integrity"
+  ],
+  "finding": "SpectriPy integrates Python MS packages into R by wrapping Python functionality into R functions, enabling their use within Spectra-based MS analysis in R.",
+  "github_name": "rformassspectrometry/SpectriPy",
+  "input_from": null,
+  "inputs": [
+    "SpectriPy R package from RforMassSpectrometry/SpectriPy repository or CRAN/Bioconductor",
+    "Spectra R package from RforMassSpectrometry/Spectra repository",
+    "Sample mass spectrometry dataset (mzML, mzXML, or compatible format) or synthetic MS data"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectra_object.rds",
+    "python_function_output.rds",
+    "integration_test_log.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Install and load SpectriPy and Spectra packages in R.",
+    "Load or generate a sample mass spectrometry dataset and instantiate a Spectra object.",
+    "Identify and invoke a Python MS package function exposed through the SpectriPy wrapper layer.",
+    "Capture and validate the returned R-native object for type, structure, and content integrity.",
+    "Validation: function call executes without error, return value is an R object (not NULL), and output type matches wrapper specification."
+  ],
+  "missing_information": [
+    "No changelog or version history provided",
+    "No concrete code examples, vignettes, or documentation artifacts are referenced in the discussion section",
+    "Synthesis metadata indicates document was generated on 2026-06-15, but no information about the underlying article publication date, article version, or package release version is provided"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does SpectriPy wrap Python MS package functionality to enable seamless integration into R-based Spectra analysis workflows?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "r-python-interoperability-via-wrapper",
+    "spectra-object-instantiation-and-manipulation",
+    "mass-spectrometry-data-loading-and-formatting",
+    "cross-language-function-invocation-and-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_spectripy/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SpectriPy",
+    "Spectra",
+    "CrossLanguageIntegrationLayer"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:rformassspectrometry__SpectriPy",
+  "task_description": "Load the SpectriPy package in R, instantiate a Spectra object, and invoke at least one Python MS package function through the SpectriPy wrapper, verifying the call succeeds and returns an R-native result.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SpectriPy R package",
+      "port_id": "spectripy_package",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spectra R package",
+      "port_id": "spectra_package",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample mass spectrometry dataset",
+      "port_id": "ms_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Load SpectriPy in R, create a Spectra object, call a wrapped Python MS function through SpectriPy, and verify the result is returned as an R-native object.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Execution log with package load and function invocation output",
+      "port_id": "execution_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "R-native object returned from Python MS function",
+      "port_id": "python_result_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Validation report confirming cross-language integration success",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "statistical-analysis"
+  ],
+  "title": "Implement a minimal Spectra-based R workflow that calls a Python MS package function via SpectriPy",
+  "tools": [
+    "SpectriPy",
+    "Spectra",
+    "R",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Execution log or R console output showing successful package load, Spectra object creation, and Python function invocation, Validation report confirming function call success, output type, and R-native data structure integrity."
+  ],
+  "workflow_description": "1. Install and load the SpectriPy package in R. 2. Create or load a sample mass spectrometry dataset compatible with Spectra. 3. Instantiate a Spectra object from the dataset. 4. Invoke a Python MS package function through the SpectriPy wrapper layer on the Spectra object. 5. Verify that the function call executes without error and returns an R-native object (e.g., list, data frame, or modified Spectra). 6. Document the successful cross-language function invocation with output type and content validation."
+}

@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file example_alignment.h5 exists in repository or deposited dataset"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify deimos.alignment function is callable from deimos package after installation"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output aligned table file_format_is HDF5 or pandas DataFrame serializable format"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify aligned output contains expected columns matching input feature tables (robust to column order)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output row_count_equals or approximately matches expected feature count (parameter-sensitive to alignment tolerance parameters)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify aligned features contain at least the common dimensions (m/z, drift_time, retention_time) from input tables"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file example_alignment.h5 exists in repository or deposited dataset",
+      "verify deimos.alignment function is callable from deimos package after installation",
+      "verify output aligned table file_format_is HDF5 or pandas DataFrame serializable format",
+      "verify aligned output contains expected columns matching input feature tables (robust to column order)",
+      "script_runs: Python script loading example_alignment.h5, calling deimos.alignment with reference-based method, and writing aligned output without errors",
+      "verify output row_count_equals or approximately matches expected feature count (parameter-sensitive to alignment tolerance parameters)",
+      "verify aligned features contain at least the common dimensions (m/z, drift_time, retention_time) from input tables"
+    ],
+    "expert_review": [
+      "assess whether reference-based alignment correctly matched homologous features across the two input feature tables",
+      "evaluate alignment quality by examining mass accuracy and dimensional correspondence of matched features",
+      "verify that alignment method choice (reference-based vs. other approaches) was appropriate for the example datasets",
+      "assess whether the aligned output preserves intensity and other quantitative metadata without loss or corruption"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

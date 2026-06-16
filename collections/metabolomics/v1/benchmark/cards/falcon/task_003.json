@@ -1,0 +1,305 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/falcon_how.png",
+      "role": "figure",
+      "sha256": "9007c99deda36a28155954597b73094c65fc9abbb8fb41978a78d85320c065a3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/falcon_logo.png",
+      "role": "figure",
+      "sha256": "4dc5b75966382006308757c54f59ec43e5b578b1bfc5a4e831744cb003331e27"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3ae694c2452a22f92eb602bd988837ce6b0d867daaa891cf09b4a14eff8d833f"
+    }
+  ],
+  "created_at": "2026-06-16T07:27:43.705003+00:00",
+  "crossref_doi": "10.1002/rcm.9153",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spectrum vectors in low-dimensional representation (output from feature hashing stage)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Constructed nearest neighbor indexes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sparse pairwise distance matrix",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Nearest neighbor indexes enable sublinear query time by partitioning the vector space, avoiding quadratic complexity of exhaustive all-versus-all spectrum comparisons.",
+    "Sparse distance matrices store only distances between spectra and their nearest neighbors, reducing memory footprint and enabling processing of millions of spectra.",
+    "The distance threshold parameter controls the sparsity of the output matrix\u2014lower thresholds yield sparser matrices but risk missing related spectra.",
+    "Feature-hashed spectrum vectors enable efficient nearest neighbor searching while preserving cosine similarity relationships needed for MS/MS clustering."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that falcon repository at https://github.com/bittremieux/falcon contains implementation of nearest neighbor index querying logic in source files",
+      "verify file_exists: falcon source code contains a module or function responsible for sparse pairwise distance matrix computation using pre-built indexes",
+      "script_runs: execute falcon's nearest neighbor query stage on a test dataset of binned spectrum vectors (output from stage 1) and verify it produces a sparse distance matrix (CSR matrix, edge list, or equivalent sparse format) without exhaustive all-versus-all comparison",
+      "verify output_matches_reference: sparse matrix produced by querying stage contains only a subset of possible pairwise comparisons (row count and non-zero entry count significantly less than would result from dense all-versus-all comparison)",
+      "verify contains_substring: falcon source code or documentation contains explicit reference to 'nearest neighbor', 'index query', 'sparse', or 'distance matrix' in the module implementing this stage"
+    ],
+    "expert_review": [
+      "evaluate whether the sparse distance matrix computation correctly preserves spectrum similarity relationships necessary for downstream density-based clustering (no critical false negatives in neighbor detection)",
+      "assess algorithmic efficiency: confirm that the nearest neighbor index query approach reduces computational complexity compared to exhaustive all-versus-all pairwise distance calculation",
+      "review correctness of index construction and querying logic: verify that the implementation correctly uses the constructed nearest neighbor indexes to retrieve candidate neighbors and compute only those pairwise distances"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How do nearest neighbor indexes enable efficient computation of a sparse pairwise distance matrix for spectrum clustering without exhaustive all-versus-all comparison?: 'The nearest neighbor indexes are used to efficiently compute a sparse pairwise distance matrix without having to exhaustively compare all spectra to each other.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Nearest neighbor indexes are queried to compute a sparse pairwise distance matrix, avoiding exhaustive comparison of all spectra to each other.: 'The nearest neighbor indexes are used to efficiently compute a sparse pairwise distance matrix without having to exhaustively compare all spectra to each other.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectrum vectors in low-dimensional representation (output from feature hashing stage): 'high-resolution spectra are binned and converted to low-dimensional vectors using feature hashing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Constructed nearest neighbor indexes: 'the spectrum vectors are used to construct nearest neighbor indexes for fast similarity searching'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Sparse pairwise distance matrix: 'The nearest neighbor indexes are used to efficiently compute a sparse pairwise distance matrix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] falcon: 'The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python 3.8+: '_falcon_ requires Python 3.8+ and is available on the Linux and OSX platforms.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No detailed algorithm or implementation specifics documented in provided section text: 'Section text contains only metadata references without technical content on nearest neighbor query implementation'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python3",
+      "-c",
+      "import pickle; import numpy as np; from scipy.sparse import csr_matrix; vectors = pickle.load(open('{inputs.spectrum_vectors}', 'rb')); indexes = pickle.load(open('{inputs.nn_indexes}', 'rb')); rows, cols, data = [], [], []; [[[rows.append(i), cols.append(j), data.append(np.linalg.norm(vectors[i] - vectors[j]))] for j in indexes[i]] for i in range(len(vectors))]; sparse_matrix = csr_matrix((data, (rows, cols)), shape=(len(vectors), len(vectors))); pickle.dump(sparse_matrix, open('sparse_pairwise_distance_matrix.pkl', 'wb')); print(f'Sparse matrix: {sparse_matrix.shape}, sparsity: {1 - sparse_matrix.nnz / (sparse_matrix.shape[0] * sparse_matrix.shape[1]):.4f}')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "sparse_distance_matrix.npz",
+  "expected_outputs": [
+    "Sparse pairwise distance matrix"
+  ],
+  "finding": "Nearest neighbor indexes are queried to compute a sparse pairwise distance matrix, avoiding exhaustive comparison of all spectra to each other.",
+  "github_name": "bittremieuxlab/falcon",
+  "input_from": "task_001",
+  "inputs": [
+    "Spectrum vectors in low-dimensional representation (output from feature hashing stage)",
+    "Constructed nearest neighbor indexes"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "query_candidates.csv",
+    "sparse_distance_matrix.npz"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_003",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Load spectrum vectors and nearest neighbor indexes from prior indexing stage.",
+    "Query each spectrum vector against nearest neighbor indexes to retrieve candidate matches within distance threshold.",
+    "Compute pairwise distances only between each spectrum and retrieved candidates.",
+    "Assemble distances into sparse matrix representation for memory efficiency.",
+    "Validation: Verify sparse matrix row and column dimensions match spectrum count; confirm sparsity (non-zero entry ratio) is substantially lower than dense all-versus-all matrix.",
+    "References: source article (DOI: 10.1002/rcm.9153)"
+  ],
+  "missing_information": [
+    "No changelog or version history found",
+    "No detailed algorithm or implementation specifics documented in provided section text"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/hashed_feature_matrix"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How do nearest neighbor indexes enable efficient computation of a sparse pairwise distance matrix for spectrum clustering without exhaustive all-versus-all comparison?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "nearest-neighbor-index-querying",
+    "sparse-distance-matrix-construction",
+    "spectrum-vector-similarity-searching",
+    "ms-ms-spectrum-pairwise-comparison"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_falcon/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "falcon_system",
+    "arch_binning_hashing",
+    "arch_nn_index",
+    "arch_sparse_distance_matrix",
+    "arch_density_clustering",
+    "tool_falcon_ms"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:bittremieux-lab__falcon",
+  "task_description": "Query nearest neighbor indexes constructed from spectrum vectors to compute a sparse pairwise distance matrix for millions of MS/MS spectra without exhaustive all-versus-all comparison.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Low-dimensional spectrum vectors from feature hashing",
+      "port_id": "spectrum_vectors",
+      "resolved_via": null,
+      "source": "task_001/hashed_feature_matrix",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Constructed nearest neighbor indexes",
+      "port_id": "nn_indexes",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the nearest neighbor index query stage that produces a sparse pairwise distance matrix for spectrum pairs without exhaustive all-versus-all comparison.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sparse pairwise distance matrix",
+      "port_id": "sparse_distance_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "tandem-ms",
+    "spectral-library-matching"
+  ],
+  "title": "Reconstruct the Sparse Pairwise Distance Matrix Computation Layer of the falcon pipeline",
+  "tools": [
+    "falcon",
+    "Python 3.8+"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load pre-constructed nearest neighbor indexes and spectrum vector representations from the indexing stage. 2. Query each spectrum vector against the nearest neighbor indexes to retrieve candidate similar spectra within a user-defined distance threshold. 3. Compute pairwise distances only between each spectrum and its retrieved nearest neighbors, building a sparse distance matrix. 4. Export the sparse distance matrix in a format suitable for downstream density-based clustering."
+}

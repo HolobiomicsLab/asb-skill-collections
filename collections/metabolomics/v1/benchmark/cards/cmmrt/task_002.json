@@ -1,0 +1,303 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "26863274c2eafe9b1317e53ccb5fcdebeea2a178bb4c09b0fbeacd8f09fa717a"
+    }
+  ],
+  "created_at": "2026-06-15T12:49:30.022773+00:00",
+  "crossref_doi": "10.1186/s13321-022-00613-8",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SMRT dataset with 80,038 experimental retention times and molecular structures",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Model performance comparison table with mean and median absolute errors for descriptors-only, fingerprints-only, and combined feature models",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Trained regression model weights and architecture specification",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Fingerprints (MACCS166, Extended Connectivity, Path) encode structural patterns as binary or count vectors and typically capture local chemical neighborhoods better than global molecular descriptors for chromatographic retention prediction.",
+    "Mean absolute error (MAE) and median absolute error (MdAE) are both essential metrics for RT prediction; MAE is sensitive to outliers while MdAE is robust, allowing complementary assessment of model reliability.",
+    "Heavily regularized DNNs with cosine annealing warm restarts and stochastic weight averaging are necessary to prevent overfitting on large molecular feature spaces (5,666 descriptors + 2,214 fingerprints) and improve generalization.",
+    "The SMRT dataset contains 80,038 experimental retention times from real liquid chromatography measurements, making it a robust benchmark for comparing feature engineering strategies."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify file exists: constantino-garcia/cmmrt repository is accessible and contains model training code or results",
+      "Verify file_exists: SMRT dataset (80,038 experimental retention times from METLIN) is loaded or referenced in inputs",
+      "Verify file_format_is: alvaDesc-generated feature matrices (5,666 descriptors and 2,214 fingerprints) are present in repository or deposited artifact in standard tabular format (CSV/HDF5/NPZ)",
+      "Verify output_matches_reference: model performance metrics (MAE, RMSE, or correlation) for three feature conditions (descriptors only, fingerprints only, combined) are reported numerically and match deposited results or supplementary tables",
+      "Verify value_in_range: fingerprints-only model achieves lower mean absolute error than descriptors-only model (robust to exact metric choice, but requires consistent baseline)",
+      "Verify contains_substring: repository documentation or paper supplementary materials explicitly report performance comparison across all three feature conditions with numerical values"
+    ],
+    "expert_review": [
+      "Assess whether reported performance differences between fingerprints and descriptors are statistically significant given the reported error bars or confidence intervals",
+      "Evaluate whether the choice of DNN architecture and regularization hyperparameters (cosine annealing, stochastic weight averaging) was applied consistently across all three feature conditions or if architectural differences confound the feature comparison",
+      "Judge whether the experimental design (train/validation/test split, cross-validation strategy, random seed handling) ensures fair comparison across feature types"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Do fingerprints outperform molecular descriptors alone when training machine learning models for retention time prediction on the METLIN SMRT dataset?: 'The models were trained using only the descriptors, only the fingerprints, and both types of features simultaneously. Results suggest that fingerprints tend to perform better.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Fingerprints tend to perform better than descriptors alone across the three feature conditions tested (descriptors only, fingerprints only, and both types combined).: 'The models were trained using only the descriptors, only the fingerprints, and both types of features simultaneously. Results suggest that fingerprints tend to perform better.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SMRT dataset with 80,038 experimental retention times and molecular structures: 'We have trained state-of-the-art machine learning regressors using the 80,038 experimental RTs from the METLIN small molecule dataset (SMRT)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Model performance comparison table with mean and median absolute errors for descriptors-only, fingerprints-only, and combined feature models: 'The models were trained using only the descriptors, only the fingerprints, and both types of features simultaneously. Results suggest that fingerprints tend to perform better.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Trained regression model weights and architecture specification: 'The best results were obtained by a heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] alvaDesc: '5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or versioning information provided for the constantino-garcia/cmmrt repository: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [
+      "alvaDesc"
+    ],
+    "compute_tier": "heavy",
+    "open_source_alternatives": [
+      {
+        "closed": "alvaDesc",
+        "expected_divergence": "",
+        "oss": "RDKit"
+      }
+    ]
+  },
+  "expected_artifact_name": "performance_comparison.csv",
+  "expected_outputs": [
+    "Model performance comparison table with mean and median absolute errors for descriptors-only, fingerprints-only, and combined feature models",
+    "Trained regression model weights and architecture specification"
+  ],
+  "finding": "Fingerprints tend to perform better than descriptors alone across the three feature conditions tested (descriptors only, fingerprints only, and both types combined).",
+  "github_name": "constantino-garcia/cmmrt",
+  "input_from": null,
+  "inputs": [
+    "SMRT dataset with 80,038 experimental retention times and molecular structures"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "descriptors.csv",
+    "fingerprints.csv",
+    "combined_features.csv",
+    "descriptors_model_metrics.json",
+    "fingerprints_model_metrics.json",
+    "combined_model_metrics.json"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_008"
+  ],
+  "methodology_summary": [
+    "Load SMRT dataset with 80,038 experimental retention times and molecular structures.",
+    "Generate 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, Path) using alvaDesc.",
+    "Train heavily regularized DNN with cosine annealing warm restarts and stochastic weight averaging on three feature conditions: descriptors-only, fingerprints-only, and combined.",
+    "Evaluate each model using mean absolute error (MAE) and median absolute error (MdAE) on held-out test set.",
+    "Validation: Confirm that fingerprints-only achieves lower MAE and MdAE than descriptors-only, and comparable or superior performance to combined features, matching reported findings of fingerprint superiority.",
+    "References: source article (DOI: 10.1186/s13321-022-00613-8)"
+  ],
+  "missing_information": [
+    "No changelog or versioning information provided for the constantino-garcia/cmmrt repository"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Do fingerprints outperform molecular descriptors alone when training machine learning models for retention time prediction on the METLIN SMRT dataset?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "molecular-descriptor-fingerprint-generation",
+    "retention-time-prediction-modeling",
+    "deep-neural-network-training-regularization",
+    "feature-condition-comparative-analysis",
+    "regression-error-metric-evaluation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_cmmrt/synthesized_package",
+  "spine_condition_ids": [
+    "cond_descriptors_only",
+    "cond_fingerprints_only",
+    "cond_descriptors_and_fingerprints"
+  ],
+  "spine_entity_ids": [
+    "dataset_smrt",
+    "tool_alvadesc",
+    "component_ecfp",
+    "component_path_fp",
+    "cond_descriptors_only",
+    "cond_fingerprints_only",
+    "cond_descriptors_and_fingerprints",
+    "result_fingerprints_better"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "data-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:constantino-garcia__cmmrt",
+  "task_description": "Train and compare three machine learning models (descriptors-only, fingerprints-only, and combined) on the SMRT dataset using alvaDesc-generated features to verify that fingerprints outperform descriptors for retention time prediction.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SMRT dataset with experimental retention times",
+      "port_id": "smrt_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Train and compare machine learning regressors using the three feature conditions on METLIN SMRT data and report relative model performance metrics to validate that fingerprints outperform descriptors.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Model performance metrics across three feature conditions",
+      "port_id": "performance_comparison",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained DNN model weights and configuration",
+      "port_id": "trained_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "retention-time-prediction",
+    "machine-learning",
+    "metabolite-identification",
+    "database-annotation",
+    "deep-learning"
+  ],
+  "title": "Analyze fingerprints-only vs descriptors-only vs combined feature sets on SMRT retention time prediction",
+  "tools": [
+    "alvaDesc"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Trained regression model weights and architecture specification."
+  ],
+  "workflow_description": "1. Load the SMRT dataset containing 80,038 experimental retention times and molecular structures. 2. Generate 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints) using alvaDesc for all molecules. 3. Split data into training and test sets. 4. Train a heavily regularized deep neural network with cosine annealing warm restarts and stochastic weight averaging using only descriptors; record mean absolute error (MAE) and median absolute error (MdAE). 5. Train the same model architecture using only fingerprints; record MAE and MdAE. 6. Train the same model using both descriptors and fingerprints combined; record MAE and MdAE. 7. Compare performance metrics across all three conditions and verify that fingerprints-only achieves lower error than descriptors-only and comparable or better error than the combined approach."
+}

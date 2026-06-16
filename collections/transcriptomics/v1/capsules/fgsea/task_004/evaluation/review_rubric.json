@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: GSE116240 dataset accessible via GEOquery at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: R script loads GSE116240 data using GEOquery::getGEO() without errors"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: Seurat SCTransform normalization completes on GSE116240 expression matrix"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: fgsea::geseca() executes with KEGG_LEGACY pathway collection and GSE116240 SCTransform-normalized data without errors"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: KEGG_LEISHMANIA_INFECTION pathway appears in geseca results table with non-foamy intimal macrophage cell type assignment"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: KEGG_LYSOSOME pathway appears in geseca results table with foamy macrophage cell type assignment"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: geseca output table contains columns for pathway name, cell type annotation, and enrichment statistic"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: GSE116240 dataset accessible via GEOquery at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240",
+      "verify script_runs: R script loads GSE116240 data using GEOquery::getGEO() without errors",
+      "verify script_runs: Seurat SCTransform normalization completes on GSE116240 expression matrix",
+      "verify script_runs: fgsea::geseca() executes with KEGG_LEGACY pathway collection and GSE116240 SCTransform-normalized data without errors",
+      "verify output_matches_reference: KEGG_LEISHMANIA_INFECTION pathway appears in geseca results table with non-foamy intimal macrophage cell type assignment",
+      "verify output_matches_reference: KEGG_LYSOSOME pathway appears in geseca results table with foamy macrophage cell type assignment",
+      "verify field_present: geseca output table contains columns for pathway name, cell type annotation, and enrichment statistic"
+    ],
+    "expert_review": [
+      "confirm that KEGG_LEISHMANIA_INFECTION association with non-foamy intimal macrophages is biologically plausible given known pathogen-response gene signatures",
+      "confirm that KEGG_LYSOSOME specificity to intimal foamy macrophages is consistent with lipid catabolism and foam cell biology",
+      "assess whether SCTransform normalization parameters and geseca settings (minSize, maxSize, other hyperparameters) are appropriate for single-cell RNA-seq data and KEGG_LEGACY pathway collection",
+      "evaluate whether cell type annotations in GSE116240 are sufficiently granular and accurate to support macrophage subtype-specific enrichment claims"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

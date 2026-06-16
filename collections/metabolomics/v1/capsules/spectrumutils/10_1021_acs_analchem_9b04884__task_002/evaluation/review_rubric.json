@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at public accession mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "annotated peak m/z values and ion type assignments (b or y) are consistent with "
+    },
+    {
+      "id": "pf_004",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "each annotated peak record contains at least 'mz', 'intensity', and 'ion_type' f",
+      "value": [
+        "s"
+      ]
+    },
+    {
+      "id": "pf_005",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "all annotated peak m/z values fall within the valid mass range for the given pre"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at public accession mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372",
+      "script_runs: Python script that imports spectrum_utils.fragment_annotation, loads the spectrum via USI, calls annotate_proforma() with a valid ProForma 2.0 peptidoform string (default ion_types='by'), and returns annotated peaks",
+      "output_matches_reference: annotated peak m/z values and ion type assignments (b or y) are consistent with theoretical fragment masses calculated from the ProForma peptidoform string, within specified fragment tolerance (no canonical answer \u2014 tolerance depends on instrument calibration and user specification)",
+      "field_present: each annotated peak record contains at least 'mz', 'intensity', and 'ion_type' fields",
+      "value_in_range: all annotated peak m/z values fall within the valid mass range for the given precursor and peptide sequence"
+    ],
+    "expert_review": [
+      "verify that ProForma 2.0 specification parsing correctly handles any post-translational modifications (PTMs) present in the input peptidoform string, including Unimod references",
+      "verify that b and y ion peak assignments are chemically plausible given the peptide sequence and spectrum properties (e.g., no spurious assignments at impossible neutral losses)"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

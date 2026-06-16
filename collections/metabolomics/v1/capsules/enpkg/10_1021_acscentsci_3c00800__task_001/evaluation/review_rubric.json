@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file exists: environment.yml or conda specification file in github:enpkg__enpkg_full root or docs/ directory"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file exists: requirements.txt or setup.py or pyproject.toml in github:enpkg__enpkg_full root"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file_format_is: conda environment specification (YAML or JSON) parses without syntax errors"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify script_runs: conda env create -f [environment_spec] completes without unresolved dependency conflicts"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify script_runs: pip install -r [requirements_file] completes without version resolution errors"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file_exists: environment lock file (conda-lock.yml, poetry.lock, or Pipfile.lock) documenting pinned transitive dependencies"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify contains_substring: environment specification includes Python version constraint (e.g., 'python=3.x' or 'python>=3.x')"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify contains_substring: environment specification lists all top-level dependencies named in ENPKG documentation or source imports"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file exists: environment.yml or conda specification file in github:enpkg__enpkg_full root or docs/ directory",
+      "Verify file exists: requirements.txt or setup.py or pyproject.toml in github:enpkg__enpkg_full root",
+      "Verify file_format_is: conda environment specification (YAML or JSON) parses without syntax errors",
+      "Verify script_runs: conda env create -f [environment_spec] completes without unresolved dependency conflicts",
+      "Verify script_runs: pip install -r [requirements_file] completes without version resolution errors",
+      "Verify file_exists: environment lock file (conda-lock.yml, poetry.lock, or Pipfile.lock) documenting pinned transitive dependencies",
+      "Verify contains_substring: environment specification includes Python version constraint (e.g., 'python=3.x' or 'python>=3.x')",
+      "Verify contains_substring: environment specification lists all top-level dependencies named in ENPKG documentation or source imports"
+    ],
+    "expert_review": [
+      "Assess completeness: do all declared dependencies in the specification match actual package imports in enpkg_full source code (no missing transitive deps that would cause import failures)?",
+      "Assess reproducibility: will the specified environment (with pinned versions where present) rebuild consistently across different systems and installation dates?",
+      "Assess documentation alignment: do installation instructions in README or docs match the environment specification provided (no contradictions or outdated step descriptions)?"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

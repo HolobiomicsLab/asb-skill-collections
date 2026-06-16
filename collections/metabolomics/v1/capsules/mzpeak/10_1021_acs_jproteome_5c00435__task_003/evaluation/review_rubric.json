@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:mobiusklein__mzpeak_prototyping/R/ subdirectory"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify arrow R package is installed and loadable"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify a valid mzPeak file artifact is available as input (file_exists and file_format_is mzPeak)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "returned tabular artifact contains at least one named column representing spectr"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output is a structured table format (data.frame or arrow Table equivalent)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "row_count_equals or value_in_range: tabular output contains \u22651 row of spectrum records"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:mobiusklein__mzpeak_prototyping/R/ subdirectory",
+      "verify arrow R package is installed and loadable",
+      "verify a valid mzPeak file artifact is available as input (file_exists and file_format_is mzPeak)",
+      "script_runs: R read operation completes without error",
+      "output_matches_reference: returned tabular artifact contains at least one named column representing spectrum data (field_present)",
+      "verify output is a structured table format (data.frame or arrow Table equivalent)",
+      "row_count_equals or value_in_range: tabular output contains \u22651 row of spectrum records"
+    ],
+    "expert_review": [
+      "verify that the tabular representation correctly preserves all essential spectrum metadata (m/z, intensity, retention time if applicable)",
+      "confirm that the arrow R implementation faithfully deserializes mzPeak binary structure without data loss or corruption",
+      "assess whether the column naming and data types are semantically consistent with mzPeak specification"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

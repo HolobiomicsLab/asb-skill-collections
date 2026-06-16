@@ -1,0 +1,1929 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/computational-throughput-measurement",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/fragment-ion-mass-matching",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/fragment-mass-tolerance-calibration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/intensity-normalization-and-scaling",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/intensity-threshold-noise-filtering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ion-type-assignment-verification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-error-calculation-and-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-benchmark-design",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/modification-notation-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/multi-library-comparative-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/neutral-loss-peak-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peak-annotation-quantification-and-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peak-count-capping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peptide-spectrum-matching-evaluation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peptidoform-representation-and-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/precursor-peak-removal-mass-tolerance",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/proforma-2-0-peptidoform-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/runtime-performance-profiling",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-mz-range-filtering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-peak-annotation-using-proforma",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-array-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-filtering-and-normalization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-peak-to-fragment-mapping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-processing-pipeline-construction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-visualization-and-figure-rendering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/usi-spectrum-retrieval-and-loading",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils enables spectrum loading from online proteomics and metabolomics data resources using the Universal Spectrum Identifier (USI) mechanism.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_usi"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils provides common spectrum processing operations including precursor and noise peak removal, intensity filtering, and intensity scaling optimized for computational efficiency.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_arch_processing_pipeline"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils enables annotating observed spectrum fragments using the ProForma 2.0 specification for modified peptidoforms.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_proforma"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils supports publication-quality, fully customizable spectrum plotting and interactive spectrum plotting.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils uses sphinx to generate its documentation.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils project follows PEP 8 guidelines for Python code style.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils uses black to format and lint Python code.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils uniquely supports the full ProForma 2.0 specification.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_proforma"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Internally, spectrum_utils represents the ProForma 2.0 specification as a formal grammar which is used to create an abstract syntax tree when parsing a ProForma string.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_proforma"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "By default, spectrum_utils annotates peptide b and y ions during fragment ion annotation.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_comp_ion_type_b"
+        },
+        {
+          "id": "asb:spine_comp_ion_type_y"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils supports internal fragment ions which result from two amide bond cleavages and do not contain either terminus.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils supports immonium ions which are internal fragments for individual amino acids formed by a b/y cleavage on the N-terminal side and an a/x cleavage on the C-terminal side.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "By default, no neutral losses are considered in spectrum_utils.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "By default in spectrum_utils, singly-charged b and y peptide fragment ions are annotated with a label in spectrum plots.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils requires Python version 3.8 and above.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils supports Python version 3.8 and above.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils has fastobo as a third-party dependency.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_fastobo"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils has Lark as a third-party dependency.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_lark"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils has Matplotlib as a third-party dependency.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_021",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils has Numba as a third-party dependency.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_numba"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_021_evidence",
+      "evidence_for": "claim_021",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_022",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils has NumPy as a third-party dependency.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_numpy"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_022_evidence",
+      "evidence_for": "claim_022",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_023",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils has Pandas as a third-party dependency.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_023_evidence",
+      "evidence_for": "claim_023",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_024",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils has platformdirs as a third-party dependency.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_024_evidence",
+      "evidence_for": "claim_024",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_025",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils has Pyteomics as a third-party dependency.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_pyteomics"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_025_evidence",
+      "evidence_for": "claim_025",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_026",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils has Vega-Altair as a third-party dependency.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_vega_altair"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_026_evidence",
+      "evidence_for": "claim_026",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_027",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Wout Bittremieux authored a paper titled 'spectrum_utils: A Python package for mass spectrometry data processing and visualization' published in Analytical Chemistry in 2020.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_027_evidence",
+      "evidence_for": "claim_027",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_028",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils processing has been optimized for computational efficiency using NumPy and Numba to process thousands of spectra per second.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_numpy"
+        },
+        {
+          "id": "asb:spine_tool_numba"
+        },
+        {
+          "id": "asb:spine_arch_processing_pipeline"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_028_evidence",
+      "evidence_for": "claim_028",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_029",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils version 0.4.0 is faster than pymzML version 2.5.2 when performing typical spectrum processing tasks.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_pymzml"
+        },
+        {
+          "id": "asb:spine_arch_processing_pipeline"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_029_evidence",
+      "evidence_for": "claim_029",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_030",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils version 0.4.0 is faster than pyOpenMS version 2.7.0 when performing typical spectrum processing tasks.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_pyopenms"
+        },
+        {
+          "id": "asb:spine_arch_processing_pipeline"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_030_evidence",
+      "evidence_for": "claim_030",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_031",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Numba's JIT compilation causes a significant outlier in the initial spectrum_utils method call before subsequent calls can be made very efficiently.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        },
+        {
+          "id": "asb:spine_tool_numba"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_031_evidence",
+      "evidence_for": "claim_031",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_032",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "ProForma Base Level Support includes support for amino acid sequences.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_032_evidence",
+      "evidence_for": "claim_032",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_033",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "ProForma Base Level Support includes support for protein modifications using Unimod and PSI-MOD.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_unimod"
+        },
+        {
+          "id": "asb:spine_tool_psimod"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_033_evidence",
+      "evidence_for": "claim_033",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_034",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "ProForma Base Level Support includes support for N-terminal, C-terminal, and labile modifications.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_034_evidence",
+      "evidence_for": "claim_034",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_035",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "ProForma specification supports unusual amino acids O and U.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_035_evidence",
+      "evidence_for": "claim_035",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_036",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "ProForma specification supports ambiguous amino acids including X, B, and Z.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_036_evidence",
+      "evidence_for": "claim_036",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_037",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "ProForma Top Down Extensions include support for RESID CV/ontology for protein modifications.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_resid"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_037_evidence",
+      "evidence_for": "claim_037",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_038",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "ProForma Cross-Linking Extensions include support for cross-linked peptides using the XL-MOD CV/ontology.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_xlmod"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_038_evidence",
+      "evidence_for": "claim_038",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_039",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "ProForma Glycan Extensions include support for GNO CV/ontology for protein modifications.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_039_evidence",
+      "evidence_for": "claim_039",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_040",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils supports primary peptide fragment ions of types a, b, c, x, y, and z.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_040_evidence",
+      "evidence_for": "claim_040",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_041",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils supports intact precursor ions marked as type p.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_041_evidence",
+      "evidence_for": "claim_041",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_042",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils supports reporter ions from isobaric labeling marked as type r.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_042_evidence",
+      "evidence_for": "claim_042",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_043",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The neutral loss of ammonia (NH3) has a mass difference of 17.026549.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_043_evidence",
+      "evidence_for": "claim_043",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_044",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The neutral loss of water (H2O) has a mass difference of 18.010565.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_044_evidence",
+      "evidence_for": "claim_044",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_045",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The neutral loss of carbon monoxide (CO) has a mass difference of 27.994915.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_045_evidence",
+      "evidence_for": "claim_045",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_046",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The neutral loss of carbon dioxide (CO2) has a mass difference of 43.989829.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_046_evidence",
+      "evidence_for": "claim_046",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_047",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The neutral loss of phosphoric acid (H3PO4) has a mass difference of 97.976896.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_047_evidence",
+      "evidence_for": "claim_047",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_048",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils is freely available as open source under the Apache 2.0 license.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_system_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_048_evidence",
+      "evidence_for": "claim_048",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_049",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The quickstart instructs users to restrict the mass range to 100\u20131400 m/z.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_049_evidence",
+      "evidence_for": "claim_049",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_050",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The quickstart instructs users to scale peak intensities by their square root to de-emphasize overly intense peaks.",
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_050_evidence",
+      "evidence_for": "claim_050",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1021/acs.analchem.9b04884",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_spectrumutils#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "in_memory",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_system_spectrum_utils",
+      "title": "spectrum_utils",
+      "identifier": "urn:asb:spine:system_spectrum_utils"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_msms_spectrum",
+      "title": "MsmsSpectrum",
+      "identifier": "urn:asb:spine:comp_msms_spectrum"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_proforma_module",
+      "title": "spectrum_utils.proforma",
+      "identifier": "urn:asb:spine:comp_proforma_module"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_fragment_annotation",
+      "title": "spectrum_utils.fragment_annotation",
+      "identifier": "urn:asb:spine:comp_fragment_annotation"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_plot",
+      "title": "spectrum_utils.plot",
+      "identifier": "urn:asb:spine:comp_plot"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_iplot",
+      "title": "spectrum_utils.iplot",
+      "identifier": "urn:asb:spine:comp_iplot"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_utils_module",
+      "title": "spectrum_utils.utils",
+      "identifier": "urn:asb:spine:comp_utils_module"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_usi",
+      "title": "Universal Spectrum Identifier (USI)",
+      "identifier": "urn:asb:spine:tool_usi"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_proforma",
+      "title": "ProForma 2.0",
+      "identifier": "urn:asb:spine:tool_proforma"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_numpy",
+      "title": "NumPy",
+      "identifier": "urn:asb:spine:tool_numpy"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_numba",
+      "title": "Numba",
+      "identifier": "urn:asb:spine:tool_numba"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_lark",
+      "title": "Lark",
+      "identifier": "urn:asb:spine:tool_lark"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_matplotlib",
+      "title": "Matplotlib",
+      "identifier": "urn:asb:spine:tool_matplotlib"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_vega_altair",
+      "title": "Vega-Altair",
+      "identifier": "urn:asb:spine:tool_vega_altair"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pyteomics",
+      "title": "Pyteomics",
+      "identifier": "urn:asb:spine:tool_pyteomics"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pymzml",
+      "title": "pymzML",
+      "identifier": "urn:asb:spine:tool_pymzml"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pyopenms",
+      "title": "pyOpenMS",
+      "identifier": "urn:asb:spine:tool_pyopenms"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pyteomics_cythonize",
+      "title": "pyteomics.cythonize",
+      "identifier": "urn:asb:spine:tool_pyteomics_cythonize"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_fastobo",
+      "title": "fastobo",
+      "identifier": "urn:asb:spine:tool_fastobo"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_unimod",
+      "title": "Unimod",
+      "identifier": "urn:asb:spine:tool_unimod"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_psimod",
+      "title": "PSI-MOD",
+      "identifier": "urn:asb:spine:tool_psimod"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_xlmod",
+      "title": "XL-MOD",
+      "identifier": "urn:asb:spine:tool_xlmod"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_gno",
+      "title": "Glycan Naming Ontology (GNO)",
+      "identifier": "urn:asb:spine:tool_gno"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_resid",
+      "title": "RESID",
+      "identifier": "urn:asb:spine:tool_resid"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_arch_processing_pipeline",
+      "title": "Spectrum Processing Pipeline",
+      "identifier": "urn:asb:spine:arch_processing_pipeline",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_spectrum_utils_040",
+      "title": "spectrum_utils v0.4.0 benchmark",
+      "identifier": "urn:asb:spine:cond_spectrum_utils_040"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_cond_pymzml_252",
+      "title": "pymzML v2.5.2 benchmark",
+      "identifier": "urn:asb:spine:cond_pymzml_252"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_cond_pyopenms_270",
+      "title": "pyOpenMS v2.7.0 benchmark",
+      "identifier": "urn:asb:spine:cond_pyopenms_270"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_speed_comparison",
+      "title": "spectrum_utils faster than pymzML and pyOpenMS",
+      "identifier": "urn:asb:spine:result_speed_comparison",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_spectrum_utils_040"
+        },
+        {
+          "id": "asb:spine_cond_pymzml_252"
+        },
+        {
+          "id": "asb:spine_cond_pyopenms_270"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_thousands_per_second",
+      "title": "Thousands of spectra per second processing rate",
+      "identifier": "urn:asb:spine:result_thousands_per_second",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_spectrum_utils_040"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_proforma_full_compliance",
+      "title": "Full ProForma 2.0 compliance",
+      "identifier": "urn:asb:spine:result_proforma_full_compliance"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_neutral_loss_coverage",
+      "title": "Neutral losses increase peak interpretation",
+      "identifier": "urn:asb:spine:result_neutral_loss_coverage"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_msv000082283",
+      "title": "MSV000082283",
+      "identifier": "urn:asb:spine:dataset_msv000082283"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_pxd000561",
+      "title": "PXD000561",
+      "identifier": "urn:asb:spine:dataset_pxd000561"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_pxd014834",
+      "title": "PXD014834",
+      "identifier": "urn:asb:spine:dataset_pxd014834"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_pxd004732",
+      "title": "PXD004732",
+      "identifier": "urn:asb:spine:dataset_pxd004732"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_msv000079960",
+      "title": "MSV000079960",
+      "identifier": "urn:asb:spine:dataset_msv000079960"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_msv000080679",
+      "title": "MSV000080679",
+      "identifier": "urn:asb:spine:dataset_msv000080679"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_pxd022531",
+      "title": "PXD022531",
+      "identifier": "urn:asb:spine:dataset_pxd022531"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ion_type_a",
+      "title": "a",
+      "identifier": "urn:asb:spine:comp_ion_type_a"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ion_type_b",
+      "title": "b",
+      "identifier": "urn:asb:spine:comp_ion_type_b"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ion_type_c",
+      "title": "c",
+      "identifier": "urn:asb:spine:comp_ion_type_c"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ion_type_x",
+      "title": "x",
+      "identifier": "urn:asb:spine:comp_ion_type_x"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ion_type_y",
+      "title": "y",
+      "identifier": "urn:asb:spine:comp_ion_type_y"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ion_type_z",
+      "title": "z",
+      "identifier": "urn:asb:spine:comp_ion_type_z"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ion_type_m",
+      "title": "m",
+      "identifier": "urn:asb:spine:comp_ion_type_m"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ion_type_I",
+      "title": "I",
+      "identifier": "urn:asb:spine:comp_ion_type_I"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ion_type_p",
+      "title": "p",
+      "identifier": "urn:asb:spine:comp_ion_type_p"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ion_type_r",
+      "title": "r",
+      "identifier": "urn:asb:spine:comp_ion_type_r"
+    }
+  ]
+}

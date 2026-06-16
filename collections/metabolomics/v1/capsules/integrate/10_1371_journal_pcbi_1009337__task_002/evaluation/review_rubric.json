@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 10.5281/zenodo.5824504 is accessible and contains RAS and RPS datasets"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify RAS dataset file exists and contains reaction scores for all five cell lines (MCF102A, SKBR3, MCF7, MDAMB231, MDAMB361)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify RPS dataset file exists and contains reaction propensity scores for all five cell lines"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify metabolomics coverage metadata file identifies exactly 81 reactions with full substrate abundance quantification"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that input datasets contain directional change annotations (up/down/no-change) for pairwise comparisons across five cell lines"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "Cohen's kappa concordance values for RASvsRPS comparisons match reported values "
+    },
+    {
+      "id": "pf_008",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "number of reactions with RPSvsRAS concordance score \u22650.2 equals 44 as reported i"
+    },
+    {
+      "id": "pf_009",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "number of reactions with RPSvsFFD concordance score \u22650.2 equals 13 as reported i"
+    },
+    {
+      "id": "pf_010",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that reactions without GPR associations are correctly excluded from RASvsRPS concordance analysis"
+    },
+    {
+      "id": "pf_011",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that reactions missing any substrate metabolomics measurement are excluded from the 81-reaction subset"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file 10.5281/zenodo.5824504 is accessible and contains RAS and RPS datasets",
+      "verify RAS dataset file exists and contains reaction scores for all five cell lines (MCF102A, SKBR3, MCF7, MDAMB231, MDAMB361)",
+      "verify RPS dataset file exists and contains reaction propensity scores for all five cell lines",
+      "verify metabolomics coverage metadata file identifies exactly 81 reactions with full substrate abundance quantification",
+      "verify that input datasets contain directional change annotations (up/down/no-change) for pairwise comparisons across five cell lines",
+      "script_runs: Cohen's kappa computation script completes without error on RAS and RPS input matrices",
+      "output_matches_reference: Cohen's kappa concordance values for RASvsRPS comparisons match reported values in Fig 4A (robust to rounding to 2 decimal places)",
+      "output_matches_reference: number of reactions with RPSvsRAS concordance score \u22650.2 equals 44 as reported in text",
+      "output_matches_reference: number of reactions with RPSvsFFD concordance score \u22650.2 equals 13 as reported in text",
+      "verify that reactions without GPR associations are correctly excluded from RASvsRPS concordance analysis",
+      "verify that reactions missing any substrate metabolomics measurement are excluded from the 81-reaction subset"
+    ],
+    "expert_review": [
+      "Cohen's kappa concordance calculation follows standard definition: (observed agreement \u2212 expected agreement by chance) / (1 \u2212 expected agreement by chance)",
+      "interpretation of Cohen's kappa thresholds (poor <0.2, fair 0.21\u20130.40, moderate 0.41\u20130.60, good 0.61\u20130.80, very good 0.81\u20131.0) aligns with cited references [51]",
+      "directionality of sign changes (up=+1, down=\u22121, no-change=0) is correctly determined from Mann-Whitney U test (p<0.05) and log\u2082 fold-change threshold (\u226520% or \u2264\u221220%) as specified in Material and methods",
+      "statistical tests (Mann-Whitney U for FFD, t-test for RPS) are applied correctly to compare distributions across pairwise cell-line comparisons",
+      "any discrepancies between reproduced and reported kappa values are investigated for potential causes: sampling variability in FFD (10 batches of 100k solutions), RPS sensitivity to kinetic assumptions, or threshold parameter choices"
+    ]
+  },
+  "max_score": 11.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

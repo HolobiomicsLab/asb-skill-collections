@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file exists: locate igzip format specification document or hex dump reference in repository (github:pymzML__pymzML)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file exists: BSA1.mzML.gz test dataset is accessible at tests/data/BSA1.mzML.gz"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Script runs: Python implementation of igzip binary header encoder accepts ID bytes, VERSION, IDXLEN, OFFSETLEN, and index-to-offset pairs as parameters and returns bytes object without error"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Output matches reference: byte-for-byte comparison of generated igzip header structure against documented Moby Dick example hex dump (if hex dump is provided in article or SI)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "File format is: verify generated output is valid gzip file with igzip extension header (magic bytes 1f 8b, extra field flag set, igzip subfield present)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file exists: locate igzip format specification document or hex dump reference in repository (github:pymzML__pymzML)",
+      "Verify file exists: BSA1.mzML.gz test dataset is accessible at tests/data/BSA1.mzML.gz",
+      "Script runs: Python implementation of igzip binary header encoder accepts ID bytes, VERSION, IDXLEN, OFFSETLEN, and index-to-offset pairs as parameters and returns bytes object without error",
+      "Output matches reference: byte-for-byte comparison of generated igzip header structure against documented Moby Dick example hex dump (if hex dump is provided in article or SI)",
+      "File format is: verify generated output is valid gzip file with igzip extension header (magic bytes 1f 8b, extra field flag set, igzip subfield present)"
+    ],
+    "expert_review": [
+      "Verify igzip header structure correctness: expert review that ID bytes, VERSION, IDXLEN, OFFSETLEN fields are encoded in correct byte order (little-endian vs big-endian) per igzip specification",
+      "Verify index-to-offset pair encoding: expert review that offset values are correctly encoded with length specified by OFFSETLEN field",
+      "Verify zero-terminator placement: expert review that header concludes with correct null-terminator byte sequence per igzip format specification"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

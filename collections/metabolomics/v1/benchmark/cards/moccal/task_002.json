@@ -1,0 +1,237 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ac5523bfc6b2e8e2c15a98fe4ed4b07ab6485b85c309b5adad34916ec78564eb"
+    }
+  ],
+  "created_at": "2026-06-15T13:23:47.986392+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Experimental TWIM-MS data in RawDT or UserDT format (arrival times, m/z values, and associated feature metadata)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Table of per-feature class labels with feature identifiers and their assigned biomolecular class",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MOCCal assigns biomolecular class labels to TWIM-MS features without requiring prior feature identification, enabling direct classification from raw arrival-time and m/z measurements.",
+    "TWIM platforms record arrival time (when ions reach the detector) rather than drift time (time spent in the TWIM cell), a distinction critical for interpreting MOCCal's input data.",
+    "Class assignment in MOCCal operates on multi-omic TWIM-MS data, meaning the algorithm must accommodate diverse molecular types (proteins, lipids, metabolites, nucleic acids) with distinct physico-chemical signatures.",
+    "MOCCal performs class assignment as a prerequisite step that enables downstream class-specific CCS calibration calculations, so output label accuracy directly affects calibration quality."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the HinesLab/MOCCal repository is accessible and contains executable code",
+      "verify file_exists: check that example data files (RawDT or UserDT formats) are present in the repository or linked deposits",
+      "script_runs: execute the class-assignment module/function on provided example data without errors",
+      "output_matches_reference: verify that the output table structure contains at least a feature identifier column and a biomolecular class label column",
+      "file_format_is: confirm output is a structured table (CSV, TSV, or DataFrame-exportable format) with no missing required fields",
+      "row_count_equals: verify that the number of rows in output table matches the number of input features in the example data",
+      "field_present: confirm each row contains a valid class label assignment (no null/empty class values)"
+    ],
+    "expert_review": [
+      "assess whether assigned class labels are biochemically plausible for TWIM-MS lipid, protein, metabolite, or other biomolecular classes given the input arrival-time and m/z features",
+      "evaluate whether the class-assignment logic correctly handles the distinction between arrival time (detector readout) and drift time (cell residence time) as described in the tool documentation",
+      "review whether the assignment operates independently of prior feature identification, as claimed in the finding"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MOCCal assign biomolecular class labels to experimental TWIM-MS features without requiring prior feature identification?: 'MOCCal offers class assignment and CCS calculations without need for identifying the features first'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MOCCal performs experimental data biomolecular class assignment as a core functionality alongside CCS calibration and class-specific CCS calculations.: 'Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Experimental TWIM-MS data in RawDT or UserDT format (arrival times, m/z values, and associated feature metadata): 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Table of per-feature class labels with feature identifiers and their assigned biomolecular class: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'MOCCal, or Multi-Omic CCS Calibrator, is a Python application'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting versioning, updates, or modifications to the class-assignment method is available: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "feature_class_assignments.csv",
+  "expected_outputs": [
+    "Table of per-feature class labels with feature identifiers and their assigned biomolecular class"
+  ],
+  "finding": "MOCCal performs experimental data biomolecular class assignment as a core functionality alongside CCS calibration and class-specific CCS calculations.",
+  "github_name": "HinesLab/MOCCal",
+  "input_from": null,
+  "inputs": [
+    "Experimental TWIM-MS data in RawDT or UserDT format (arrival times, m/z values, and associated feature metadata)"
+  ],
+  "keywords": [
+    "traveling-wave ion mobility mass spectrometry",
+    "collision cross section calibration",
+    "multi-omic data analysis",
+    "biomolecular class assignment",
+    "twim-ms",
+    "drift time",
+    "high-dimensional data"
+  ],
+  "landmark_outputs": [
+    "raw_features.csv",
+    "feature_class_assignments.csv"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Load experimental TWIM-MS data from RawDT or UserDT format containing arrival times and m/z values.",
+    "Apply MOCCal's biomolecular class-assignment algorithm to classify each feature based on physico-chemical properties.",
+    "Compile assigned class labels into a tabular format indexed by feature identifier.",
+    "Validation: Output table contains one row per input feature with no missing class assignments and class labels consistent with MOCCal's supported biomolecular ontology (protein, lipid, metabolite, nucleic acid, or other defined classes)."
+  ],
+  "missing_information": [
+    "No changelog documenting versioning, updates, or modifications to the class-assignment method is available"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MOCCal assign biomolecular class labels to experimental TWIM-MS features without requiring prior feature identification?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "ion-mobility-feature-classification",
+    "twim-ms-data-interpretation",
+    "biomolecular-class-label-assignment",
+    "mass-spectrometry-data-table-formatting"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_moccal/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MOCCal_system",
+    "comp_class_assignment",
+    "comp_class_specific_ccs",
+    "tool_twim_ms",
+    "dataset_userdt",
+    "dataset_rawdt"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:HinesLab__MOCCal",
+  "task_description": "Assign biomolecular class labels to experimental TWIM-MS features using MOCCal's class-assignment logic without prior feature identification. Produce a table mapping each feature to its assigned class label.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Experimental TWIM-MS data in RawDT or UserDT format",
+      "port_id": "experimental_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Run MOCCal's class assignment pipeline on example TWIM-MS data and generate a table mapping each feature to its assigned biomolecular class label.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-feature class label assignments",
+      "port_id": "class_assignments",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Implement Biomolecular Class Assignment module operating on unidentified features",
+  "tools": [
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load experimental TWIM-MS data (arrival time and m/z values) from RawDT or UserDT input format. 2. Execute MOCCal's biomolecular class-assignment algorithm to classify each feature based on its physico-chemical properties. 3. Compile assigned class labels into a tabular output indexed by feature identifier, with one row per feature and columns for feature ID and assigned class."
+}

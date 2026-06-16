@@ -1,0 +1,10 @@
+name: PubChem
+slug: pubchem
+evidence_spans:
+- 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
+derived_from:
+- doi: 10.21105/joss.04494
+  title: msmetaenhancer
+source_repos:
+- RECETOX/MSMetaEnhancer
+schema_version: 0.2.0

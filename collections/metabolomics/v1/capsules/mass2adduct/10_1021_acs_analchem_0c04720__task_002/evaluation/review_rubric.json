@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file inst/extdata/msi.csv exists in github:kbseah__mass2adduct repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "msi.csv",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output data frame contains columns 'Estimate', 'P-value', and corrected signific",
+      "value": [
+        "'Estimate'",
+        "'P-value'",
+        "and corrected significance field (e"
+      ]
+    },
+    {
+      "id": "pf_005",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "Estimate values are numeric correlations between -1 and 1"
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "P-value and corrected significance fields contain numeric values between 0 and 1"
+    },
+    {
+      "id": "pf_007",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "corrected P-values are not smaller than uncorrected P-values (Bonferroni correct"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file inst/extdata/msi.csv exists in github:kbseah__mass2adduct repository",
+      "file_format_is: msi.csv is plain-text CSV with semicolon delimiter",
+      "script_runs: R code `library(mass2adduct); d <- msimat(system.file('extdata','msi.csv',package='mass2adduct'),sep=';'); d.diff <- massdiff(d); d.diff.annot.cor <- corrPairsMSI(d.diff)` executes without error",
+      "field_present: output data frame contains columns 'Estimate', 'P-value', and corrected significance field (e.g., 'adj.p' or similar)",
+      "value_in_range: Estimate values are numeric correlations between -1 and 1",
+      "value_in_range: P-value and corrected significance fields contain numeric values between 0 and 1",
+      "output_matches_reference: corrected P-values are not smaller than uncorrected P-values (Bonferroni correction monotonicity check)"
+    ],
+    "expert_review": [
+      "verify that Bonferroni correction was applied correctly: number of comparisons equals number of pairwise mass differences, and adjustment factor is appropriate",
+      "assess whether Pearson correlation coefficients and their significance are biologically sensible given the MSI imaging context and expected spatial colocalization patterns"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

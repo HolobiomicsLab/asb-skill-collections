@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: Python environment with pip and/or conda available"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "github.com"
+    },
+    {
+      "id": "pf_007",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "matchms module namespace contains expected submodules (e.g., 'matchms.importing'",
+      "value": "matchms.importing"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file_exists: Python environment with pip and/or conda available",
+      "script_runs: `pip install matchms` completes without error exit code",
+      "script_runs: `python -c 'import matchms'` executes without ImportError or exception",
+      "script_runs: `conda install -c bioconda matchms` completes without error exit code (if conda/bioconda accessible)",
+      "script_runs: `python -c 'import matchms; print(matchms.__version__)'` returns a non-empty version string",
+      "value_in_range: installed matchms version matches or is compatible with current release tag from github.com/matchms/matchms/releases",
+      "contains_substring: matchms module namespace contains expected submodules (e.g., 'matchms.importing', 'matchms.filtering', 'matchms.similarity')"
+    ],
+    "expert_review": [
+      "Confirm that PyPI package metadata and Bioconda recipe are correctly synchronized and point to the same upstream source",
+      "Assess whether any warnings or deprecation notices emitted during import are acceptable for the current release cycle"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

@@ -1,0 +1,416 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/ArchRProject_Schematic.png",
+      "role": "figure",
+      "sha256": "c5b68d3874a06b2a2a15f82f36e41f268524106ceee19de0648dcd51f0c34e26"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ArchR_FunctionSchematic.png",
+      "role": "figure",
+      "sha256": "47ef6b7783389806d3fc41bd95a5ed0a22bb533eec6d5afce3dd4920e591e183"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ArchR_Logo_Integrated.png",
+      "role": "figure",
+      "sha256": "675418b785007e2ab0b077c291151d301e5862942caa8fc8e6adbd2d7e502a79"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ArchR_Workflow_Horizontal.png",
+      "role": "figure",
+      "sha256": "a7252bf2e53f15cba5691b7fb6dc70886fd99454b8246c8532970c328bd9bab3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Cluster6-Cluster10-Marker-Peaks_1.png",
+      "role": "figure",
+      "sha256": "a5b8269b1cf31e5488c06a2e15a4ff24f6d85931b0cdf36512558d7fbd224fad"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Cluster6-Cluster10-Marker-Peaks_2.png",
+      "role": "figure",
+      "sha256": "eac5e9a6efbc33f8431219ac7d9dd66b8b4623ce44d868125be08b431219194d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Cluster6-Cluster10-Motifs-Down_1.png",
+      "role": "figure",
+      "sha256": "04245faa3075e31b091533463f51cf76a8eb681b8ed35b2f560db266de206c2b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Cluster6-Cluster10-Motifs-Up_1.png",
+      "role": "figure",
+      "sha256": "4a6b9d31e1761785a3cdea0b7356aabfe3de1b61944d0b3fdf6d146ce84e5bec"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Cluster6-Marker-Peaks_1.png",
+      "role": "figure",
+      "sha256": "2836da6f720c32883b4330593b71f5ff0379ec918223eb0c1bcbc86844325e3b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/FRIP-TSS-Enrichment_1.png",
+      "role": "figure",
+      "sha256": "7c8832b9e25ed3ed87ccf35621117a578d84c2c2afd8e885b3ef32eb160185a2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/FRIP-TSS-Enrichment_2.png",
+      "role": "figure",
+      "sha256": "1d188e5c88667c8e64d625dc5df0e8722bd504d406c779f67a60943c9b022eff"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Footprints-Divide-Bias_1.png",
+      "role": "figure",
+      "sha256": "97da51b80be9b93f46b6100cd747c63e14c35ca603e9ccd697ba0811fbf811e1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Frags_vs_TSS.png",
+      "role": "figure",
+      "sha256": "3236afd639b661c226802db166bd3c3f7fee7252168c90f7b03e02ea4c3c7674"
+    },
+    {
+      "indexable": false,
+      "path": "figures/GeneActivityScore_Schematic.png",
+      "role": "figure",
+      "sha256": "d3bd754bb58a24b18b5aad5bf9bcfeb0fce738a88dbb89b86843048ea4887de7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/TSS_vs_FRiP.png",
+      "role": "figure",
+      "sha256": "7d71bdf28e70c23a5dee71c5c89635008710f8ab7c770a587fabb3ea1e828aa7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/UMAP-Samples-Clusters_1.png",
+      "role": "figure",
+      "sha256": "93793aca4a29c82e228f55c2dba082c2058bf003f9943eb2965f730b04f87739"
+    },
+    {
+      "indexable": false,
+      "path": "figures/UMAP-Samples-Clusters_2.png",
+      "role": "figure",
+      "sha256": "d14b92e09a5744183d4bf1a8dff88f8393bb81efdaeb10c555ec11d6fc5d9e3e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/UMAP-Samples-Clusters_3.png",
+      "role": "figure",
+      "sha256": "402c63547d160bdf1b02c46b4ba0f67ac91030b555fa6fcaab51501645bb4991"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-16x16.png",
+      "role": "figure",
+      "sha256": "3c70f4e231ca567f531241610ba759112043b5d0c5d81874ca552d62df8962f0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-32x32.png",
+      "role": "figure",
+      "sha256": "62f3de2f5bdf8d8bc5ec62aed6b6e3d1680b41c92f1cbae02004584177741390"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "80596987a840243e8285d54dc4042b427cbabea36a5c929265a3a60b30d72bdf"
+    }
+  ],
+  "created_at": "2026-06-15T18:08:30.308650+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Prepared ArchR project object with reduced dimensions and cluster assignments",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "User-specified trajectory method selection (monocle3 or Slingshot)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ArchR project object with embedded trajectory result from selected method",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "ArchR trajectory analysis requires a prepared project with computed reduced dimensions and cluster assignments as prerequisites before invoking either trajectory method.",
+    "Monocle3 and Slingshot are mutually exclusive trajectory inference algorithms dispatched conditionally\u2014only one is applied per execution based on user selection, not sequentially.",
+    "Both addMonocleTrajectory and addSlingShotTrajectories return modified ArchR project objects that retain the original data while adding trajectory embedding metadata.",
+    "Trajectory analysis in single-cell ATAC-seq contexts uses reduced-dimension representations to infer pseudo-temporal ordering and developmental paths across cell populations."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:GreenleafLab__ArchR repository contains source code for addMonocleTrajectory function",
+      "verify that github:GreenleafLab__ArchR repository contains source code for addSlingShotTrajectories function",
+      "verify that both functions accept a prepared ArchR project object as input (file_format_is R object or compatible serialization)",
+      "verify that addMonocleTrajectory produces a trajectory embedding object with trajectory-related slots or metadata fields",
+      "verify that addSlingShotTrajectories produces a trajectory embedding object with trajectory-related slots or metadata fields",
+      "script_runs: execute conditional dispatch logic that selects addMonocleTrajectory OR addSlingShotTrajectories based on user parameter, without sequential execution of both",
+      "verify output object class or type indicates valid ArchR project with trajectory information embedded"
+    ],
+    "expert_review": [
+      "assess whether the conditional dispatch mechanism correctly implements mutual exclusivity (one tool invoked, not both) as stated in sub-task scope",
+      "evaluate whether the trajectory embedding output is biologically interpretable and consistent with expected Monocle3 or Slingshot trajectory representation",
+      "review whether the function signatures and parameter handling for addMonocleTrajectory and addSlingShotTrajectories match documented ArchR API"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does ArchR conditionally invoke monocle3 versus Slingshot trajectory analysis functions based on user selection?: 'ArchR now directly supports both monocle3 and Slingshot based trajectory analysis! See updates with getMonocleTrajectories, addMonocleTrajectory, addSlingShotTrajectories'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ArchR implements trajectory analysis through three functions: getMonocleTrajectories and addMonocleTrajectory for Monocle3-based analysis, and addSlingShotTrajectories for Slingshot-based analysis, allowing users to select their preferred trajectory method.: 'See updates with getMonocleTrajectories, addMonocleTrajectory, addSlingShotTrajectories'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Prepared ArchR project object with reduced dimensions and cluster assignments: 'ArchR now directly supports both monocle3 and Slingshot based trajectory analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] User-specified trajectory method selection (monocle3 or Slingshot): 'ArchR now directly supports both monocle3 and Slingshot based trajectory analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ArchR project object with embedded trajectory result from selected method: 'addMonocleTrajectory, addSlingShotTrajectories'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ArchR: 'ArchR is a full-featured R package for processing and analyzing single-cell ATAC-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] monocle3: 'ArchR now directly supports both monocle3 and Slingshot based trajectory analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Slingshot: 'ArchR now directly supports both monocle3 and Slingshot based trajectory analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'ArchR is a full-featured R package for processing and analyzing single-cell ATAC-seq data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version-specific documentation found for the trajectory analysis feature implementation: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(ArchR); library(monocle3); library(slingshot); project <- readRDS('{inputs.archR_project}'); method <- readLines('{inputs.method_selection}'); if (tolower(trimws(method)) == 'monocle3') { project <- addMonocleTrajectory(ArchRProj = project, useImputation = TRUE, groupBy = 'Clusters') } else if (tolower(trimws(method)) == 'slingshot') { project <- addSlingShotTrajectories(ArchRProj = project, groupBy = 'Clusters') } else { stop('Unknown method: ', method) }; saveRDS(project, '{task_id}_trajectory_project.rds'); message('Trajectory analysis complete'); message(paste('Output saved to {task_id}_trajectory_project.rds'))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "ArchR project object with embedded trajectory result from selected method"
+  ],
+  "finding": "ArchR implements trajectory analysis through three functions: getMonocleTrajectories and addMonocleTrajectory for Monocle3-based analysis, and addSlingShotTrajectories for Slingshot-based analysis, allowing users to select their preferred trajectory method.",
+  "github_name": "GreenleafLab/ArchR",
+  "input_from": "task_001",
+  "inputs": [
+    "Prepared ArchR project object with reduced dimensions and cluster assignments",
+    "User-specified trajectory method selection (monocle3 or Slingshot)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [],
+  "linked_result_ids": [
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load a prepared ArchR project with precomputed reduced dimensions and cluster assignments.",
+    "Evaluate the user-specified method selection parameter (Monocle3 or Slingshot).",
+    "Conditionally invoke addMonocleTrajectory or addSlingShotTrajectories on the project based on selection.",
+    "Return the modified ArchR project object containing the trajectory embedding result.",
+    "Validation: confirm the output ArchR project object contains trajectory metadata and is compatible with downstream ArchR analyses."
+  ],
+  "missing_information": [
+    "No changelog or version-specific documentation found for the trajectory analysis feature implementation"
+  ],
+  "parameters": [],
+  "primary_domain": "genomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does ArchR conditionally invoke monocle3 versus Slingshot trajectory analysis functions based on user selection?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "trajectory-inference-method-selection",
+    "archR-project-object-manipulation",
+    "monocle3-trajectory-embedding",
+    "slingshot-trajectory-embedding",
+    "single-cell-atac-seq-dimensionality-reduction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_archr/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "archr_system",
+    "comp_monocle_trajectory",
+    "comp_slingshot_trajectory",
+    "tool_monocle3",
+    "tool_slingshot",
+    "feature_paired_multiome",
+    "feature_trajectory_analysis"
+  ],
+  "subdomains": [
+    "gene-regulation",
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "modeling"
+  ],
+  "synthesized_from": "github:GreenleafLab__ArchR",
+  "task_description": "Implement conditional trajectory analysis on a prepared ArchR project by invoking either addMonocleTrajectory (Monocle3) or addSlingShotTrajectories (Slingshot) based on user selection, producing a trajectory embedding object.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Prepared ArchR project object with reduced dimensions and cluster assignments",
+      "port_id": "archR_project",
+      "resolved_via": null,
+      "source": "task_001/multiome_project",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "User-specified trajectory method selection (monocle3 or Slingshot)",
+      "port_id": "method_selection",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Conditionally apply either addMonocleTrajectory or addSlingShotTrajectories to an ArchR project object based on user choice, producing a trajectory embedding result.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ArchR project object with embedded trajectory result",
+      "port_id": "trajectory_project",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction"
+  ],
+  "title": "Reconstruct trajectory analysis using Monocle3 and Slingshot dispatch in ArchR",
+  "tools": [
+    "ArchR",
+    "monocle3",
+    "Slingshot",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the prepared ArchR project object from input. 2. Evaluate user selection parameter to determine trajectory method (Monocle3 or Slingshot). 3. If Monocle3 selected, invoke addMonocleTrajectory on the ArchR project to compute trajectory embedding using Monocle3 algorithm. 4. If Slingshot selected, invoke addSlingShotTrajectories on the ArchR project to compute trajectory embedding using Slingshot algorithm. 5. Return the modified ArchR project object containing the trajectory embedding result."
+}

@@ -4,6 +4,8 @@ evidence_spans:
 - pyOpenMS (Python interface to the C++ OpenMS library)
 - Processes mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS
 derived_from:
+- doi: 10.1074/mcp.M113.031278
+  title: featurefindermetab
 - doi: 10.1021/acs.jproteome.5c00435
   title: 'mzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format'
 - doi: 10.1007/s00216-023-05070-2
@@ -12,6 +14,7 @@ derived_from:
   title: Rapid Development of Improved Data-Dependent Acquisition Strategies
 source_repos:
 - JonZwe/PFAScreen
+- OpenMS/OpenMS
 - glasgowcompbio/vimms
 - mobiusklein/mzpeak_prototyping
 schema_version: 0.2.0

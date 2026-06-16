@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: downloaded hmdb_compounds.p from https://github.com/glasgowcompbio/vimms-data/raw/main/hmdb_compounds.p"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: output mzML file is valid mzML (XML-based, contains scan elements with m/z and intensity arrays)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: Python script instantiates FullScanController, IndependentMassSpectrometer with KnownChemical objects, and Environment; calls env.run() without error"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: output mzML file is written to disk by Environment.write_mzML()"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: output mzML contains MS1 spectrum entries (scan@msLevel='1') with m/z and intensity data"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: mzML structure (scan count, m/z range ~100\u20131000, spectrum type) is consistent with demo notebook expectations, robust to exact peak intensity variations across reruns"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: downloaded hmdb_compounds.p from https://github.com/glasgowcompbio/vimms-data/raw/main/hmdb_compounds.p",
+      "verify file_format_is: output mzML file is valid mzML (XML-based, contains scan elements with m/z and intensity arrays)",
+      "verify script_runs: Python script instantiates FullScanController, IndependentMassSpectrometer with KnownChemical objects, and Environment; calls env.run() without error",
+      "verify file_exists: output mzML file is written to disk by Environment.write_mzML()",
+      "verify contains_substring: output mzML contains MS1 spectrum entries (scan@msLevel='1') with m/z and intensity data",
+      "verify output_matches_reference: mzML structure (scan count, m/z range ~100\u20131000, spectrum type) is consistent with demo notebook expectations, robust to exact peak intensity variations across reruns"
+    ],
+    "expert_review": [
+      "confirm that sampled KnownChemical objects from HMDB exhibit expected m/z distribution (100\u20131000 range) and chemical diversity representative of metabolomics",
+      "confirm that FullScanController generates MS1-only scans (no fragmentation) with appropriate retention time spacing and realistic ion intensities for the simulated sample",
+      "confirm that mzML output is compatible with standard metabolomics workflows (can be opened by OpenMS, mzmine2, or equivalent peak-picking tools without corruption)"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

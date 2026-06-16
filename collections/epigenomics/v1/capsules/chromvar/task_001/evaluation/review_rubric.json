@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file example_counts exists in chromVAR package"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output object is of class chromVARDeviations"
+    },
+    {
+      "id": "pf_005",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output object contains assay named 'deviations'"
+    },
+    {
+      "id": "pf_006",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output object contains assay named 'z' (z-scores)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output dimensions match input peak count (after filtering) \u00d7 sample count"
+    },
+    {
+      "id": "pf_008",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "deviation scores are numeric and finite (no NaN or Inf values)"
+    },
+    {
+      "id": "pf_009",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "z-scores are numeric and finite (no NaN or Inf values)"
+    },
+    {
+      "id": "pf_010",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "robust to parameter choices: output structure consistent across standard chromVAR parameter settings"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file example_counts exists in chromVAR package",
+      "script_runs: execute chromVAR preprocessing chain (filterSamples, filterPeaks, addGCBias, computeExpectations, getBackgroundPeaks) on example_counts without errors",
+      "script_runs: execute computeDeviations with JASPAR motif annotations on preprocessed object without errors",
+      "verify output object is of class chromVARDeviations",
+      "field_present: verify output object contains assay named 'deviations'",
+      "field_present: verify output object contains assay named 'z' (z-scores)",
+      "verify output dimensions match input peak count (after filtering) \u00d7 sample count",
+      "value_in_range: deviation scores are numeric and finite (no NaN or Inf values)",
+      "value_in_range: z-scores are numeric and finite (no NaN or Inf values)",
+      "robust to parameter choices: output structure consistent across standard chromVAR parameter settings"
+    ],
+    "expert_review": [
+      "inspect whether deviation scores show reasonable magnitude and distribution for JASPAR motif analysis",
+      "assess whether z-scores reflect expected biological signal (positive deviations for accessible motif sites, negative for closed regions)",
+      "evaluate whether sample and peak filtering steps removed expected proportion of low-quality data",
+      "review whether motif match annotations are properly propagated to output object rowData"
+    ]
+  },
+  "max_score": 10.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

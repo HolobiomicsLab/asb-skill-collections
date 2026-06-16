@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the github:bittremieux/GNPS_GC repository is accessible and contains GC-MS dataset files"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for deconvolved spectra output files in the expected format (e.g., .mgf, .msp, or .csv)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for molecular network output files (e.g., GraphML, .json, or network edge/node tables)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: execute the full MSHub auto-deconvolution pipeline on the deposited GC-MS dataset without errors"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: execute the GNPS molecular networking workflow on the auto-deconvolved output without errors"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: compare deconvolved spectra (byte-for-byte or robust to minor parameter choices\u2014solution_space: depends on whether reference spectra are deposited) against the article's reported spectra"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: compare molecular network topology (node count, edge count, connected components) against the reported network in the article or supplementary materials"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the github:bittremieux/GNPS_GC repository is accessible and contains GC-MS dataset files",
+      "verify file_exists for deconvolved spectra output files in the expected format (e.g., .mgf, .msp, or .csv)",
+      "verify file_exists for molecular network output files (e.g., GraphML, .json, or network edge/node tables)",
+      "verify script_runs: execute the full MSHub auto-deconvolution pipeline on the deposited GC-MS dataset without errors",
+      "verify script_runs: execute the GNPS molecular networking workflow on the auto-deconvolved output without errors",
+      "verify output_matches_reference: compare deconvolved spectra (byte-for-byte or robust to minor parameter choices\u2014solution_space: depends on whether reference spectra are deposited) against the article's reported spectra",
+      "verify output_matches_reference: compare molecular network topology (node count, edge count, connected components) against the reported network in the article or supplementary materials"
+    ],
+    "expert_review": [
+      "expert_review: assess whether the reproduced deconvolved spectra match the reported spectra in chemical accuracy (peak m/z values, intensity ratios, fragment assignments) even if not byte-for-byte identical",
+      "expert_review: assess whether the reproduced molecular network exhibits expected biochemical clustering and matches the functional or structural groupings reported in the original study",
+      "expert_review: confirm that parameter choices used in deconvolution and networking are consistent with or justified relative to the methods described in the article"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

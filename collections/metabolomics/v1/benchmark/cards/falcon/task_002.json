@@ -1,0 +1,266 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/falcon_how.png",
+      "role": "figure",
+      "sha256": "9007c99deda36a28155954597b73094c65fc9abbb8fb41978a78d85320c065a3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/falcon_logo.png",
+      "role": "figure",
+      "sha256": "4dc5b75966382006308757c54f59ec43e5b578b1bfc5a4e831744cb003331e27"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3ae694c2452a22f92eb602bd988837ce6b0d867daaa891cf09b4a14eff8d833f"
+    }
+  ],
+  "created_at": "2026-06-16T07:27:43.705003+00:00",
+  "crossref_doi": "10.1002/rcm.9153",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "hashed spectrum feature vectors from upstream feature hashing stage",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "serialized nearest neighbor index structure",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Nearest neighbor indexes trade construction time for query speed by organizing vectors in space to enable rapid similarity lookups without exhaustive comparisons.",
+    "Feature-hashed vectors reduce spectrum dimensionality while preserving spectral similarity relationships needed for clustering.",
+    "Index serialization format must support fast deserialization and efficient neighbor lookup during downstream sparse distance matrix construction.",
+    "The index structure is an intermediate data structure in a four-stage pipeline: hashing \u2192 indexing \u2192 sparse distance matrix \u2192 density-based clustering."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the falcon repository (github.com/bittremieux/falcon or bittremieux-lab/falcon) contains source code implementing nearest neighbor index construction",
+      "verify that the implementation accepts hashed feature vectors as input (array, vector, or matrix format)",
+      "verify that the implementation produces a serialized index structure as output (file, binary object, or pickle format)",
+      "script_runs: execute the index construction module with valid hashed feature vectors and confirm no runtime errors occur",
+      "file_exists: confirm that the serialized index output can be loaded and contains index metadata (e.g., vector dimension, number of indexed points, index type)",
+      "verify that index construction completes without exhaustive pairwise comparisons (robust to parameter choices; implementation may use LSH, KD-tree, or other approximate NN strategies)"
+    ],
+    "expert_review": [
+      "confirm that the nearest neighbor index construction correctly implements a valid approximate or exact nearest neighbor search strategy appropriate for spectrum similarity searching",
+      "confirm that the index structure supports efficient similarity queries and is suitable for sparse pairwise distance matrix computation as described in the workflow",
+      "confirm that serialization and deserialization of the index preserves correctness and does not introduce numerical artifacts"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How are low-dimensional spectrum vectors used to construct nearest neighbor indexes for fast similarity searching in falcon?: 'the spectrum vectors are used to construct nearest neighbor indexes for fast similarity searching'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectrum vectors are used to construct nearest neighbor indexes that enable efficient computation of sparse pairwise distance matrices without exhaustively comparing all spectra to each other.: 'the spectrum vectors are used to construct nearest neighbor indexes for fast similarity searching. The nearest neighbor indexes are used to efficiently compute a sparse pairwise distance matrix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] hashed spectrum feature vectors from upstream feature hashing stage: 'First, high-resolution spectra are binned and converted to low-dimensional vectors using feature hashing.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] serialized nearest neighbor index structure: 'Next, the spectrum vectors are used to construct nearest neighbor indexes for fast similarity searching.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] falcon: 'The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python 3.8+: '_falcon_ requires Python 3.8+ and is available on the Linux and OSX platforms.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pickle; import numpy as np; vectors = np.load('{inputs.hashed_vectors}'); from sklearn.neighbors import NearestNeighbors; nn = NearestNeighbors(n_neighbors=5, algorithm='kd_tree'); nn.fit(vectors); pickle.dump(nn, open('nn_index.pkl', 'wb'))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "nn_index.pkl",
+  "expected_outputs": [
+    "serialized nearest neighbor index structure"
+  ],
+  "finding": "Spectrum vectors are used to construct nearest neighbor indexes that enable efficient computation of sparse pairwise distance matrices without exhaustively comparing all spectra to each other.",
+  "github_name": "bittremieuxlab/falcon",
+  "input_from": "task_001",
+  "inputs": [
+    "hashed spectrum feature vectors from upstream feature hashing stage"
+  ],
+  "keywords": [],
+  "landmark_outputs": [],
+  "linked_result_ids": [
+    "result_002",
+    "result_003",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Load hashed spectrum feature vectors from upstream feature hashing stage",
+    "Construct nearest neighbor index structure using input vectors",
+    "Serialize and write index to persistent storage for downstream use",
+    "Validation: index file exists and is deserializable; index supports efficient neighbor query operations required for sparse distance matrix construction",
+    "References: source article (DOI: 10.1002/rcm.9153)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/hashed_feature_matrix"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How are low-dimensional spectrum vectors used to construct nearest neighbor indexes for fast similarity searching in falcon?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "nearest-neighbor-index-construction",
+    "spectrum-vector-serialization",
+    "high-dimensional-data-indexing",
+    "feature-vector-similarity-search-preparation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_falcon/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "falcon_system",
+    "arch_binning_hashing",
+    "arch_nn_index",
+    "arch_sparse_distance_matrix",
+    "arch_density_clustering",
+    "tool_falcon_ms",
+    "tool_spectrum_utils"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "modeling"
+  ],
+  "synthesized_from": "github:bittremieux-lab__falcon",
+  "task_description": "Construct serialized nearest neighbor index structures from hashed spectrum feature vectors to enable fast similarity searching in spectrum clustering. Output the index as a binary or structured file suitable for downstream distance matrix computation.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "hashed spectrum feature vectors",
+      "port_id": "hashed_vectors",
+      "resolved_via": null,
+      "source": "task_001/hashed_feature_matrix",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement nearest neighbor index construction from hashed feature vectors and serialize the resulting index structure.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "serialized nearest neighbor index",
+      "port_id": "nn_index",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "tandem-ms",
+    "spectral-library-matching"
+  ],
+  "title": "Reconstruct the Nearest Neighbor Index Construction Layer of the falcon pipeline",
+  "tools": [
+    "falcon",
+    "Python 3.8+"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load hashed spectrum feature vectors (low-dimensional representations produced by feature hashing of binned spectra). 2. Build nearest neighbor indexes using the vector input, selecting an appropriate nearest neighbor algorithm and index structure. 3. Serialize and persist the index to a file format suitable for fast retrieval and similarity search operations."
+}

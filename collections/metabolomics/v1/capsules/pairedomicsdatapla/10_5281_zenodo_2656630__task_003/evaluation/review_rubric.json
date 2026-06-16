@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that https://pairedomicsdata.bioinformatics.nl/api/projects (or equivalent endpoint) is accessible and returns HTTP 200"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that the retrieved response is valid JSON (parseable without syntax errors)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that each project document in the response array contains the required top-level keys present in app/public/schema.json (file_format_is check: robust to schema version updates)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that the JSON Schema definition exists at app/public/schema.json in the iomega/paired-data-form repository"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "For a sample of \u22655 randomly selected project documents, validate each against the published schema using a JSON Schema validator (e.g., ajv or jsonschema); output: pass/fail per document"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that all project documents conform to the schema with no validation errors (no canonical answer for sample size; expert review may recommend full census)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify that https://pairedomicsdata.bioinformatics.nl/api/projects (or equivalent endpoint) is accessible and returns HTTP 200",
+      "Verify that the retrieved response is valid JSON (parseable without syntax errors)",
+      "Verify that each project document in the response array contains the required top-level keys present in app/public/schema.json (file_format_is check: robust to schema version updates)",
+      "Verify that the JSON Schema definition exists at app/public/schema.json in the iomega/paired-data-form repository",
+      "For a sample of \u22655 randomly selected project documents, validate each against the published schema using a JSON Schema validator (e.g., ajv or jsonschema); output: pass/fail per document",
+      "Verify that all project documents conform to the schema with no validation errors (no canonical answer for sample size; expert review may recommend full census)"
+    ],
+    "expert_review": [
+      "Assess whether the sample size (if sampling is used) is adequate for detecting schema drift or widespread malformation",
+      "Verify that the schema definition itself is syntactically correct and complete (e.g., all referenced definitions are present)",
+      "Assess whether any observed validation failures indicate a genuine platform issue or expected variability in optional fields"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

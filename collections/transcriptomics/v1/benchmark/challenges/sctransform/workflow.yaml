@@ -1,0 +1,39 @@
+schema_version: 0.1.0
+workflow_id: coll_sctransform_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+narrative:
+  tagline: sctransform is a computational method for single-cell RNA-seq analysis,
+    though the specific contributions and findings require expert review for confirmation.
+  pseudo_abstract: This benchmark describes sctransform, a tool for single-cell transcriptomics
+    data processing. The paper's primary findings and methodological contributions
+    require expert validation to establish the strength and scope of the reported
+    results.
+  research_questions:
+  - Assess the scientific task and reproducibility context described by this article
+    package.
+  methods_summary: ''
+  domain: transcriptomics
+  techniques:
+  - normalization
+  - statistical-analysis
+  claims: []
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: A reviewed SciTask Card and capsule describing the benchmarkable task.
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

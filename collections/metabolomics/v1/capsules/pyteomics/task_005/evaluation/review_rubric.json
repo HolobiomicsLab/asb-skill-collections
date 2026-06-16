@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify conda is available and executable in the agent's environment"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify Bioconda channel is accessible and queryable"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "Python site-packages contains pyteomics directory after installation"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "each module import returns a module object with __name__ attribute matching the "
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify conda is available and executable in the agent's environment",
+      "verify Bioconda channel is accessible and queryable",
+      "script_runs: conda install -c bioconda pyteomics completes without error",
+      "file_exists: verify Python site-packages contains pyteomics directory after installation",
+      "script_runs: Python script imports pyteomics.mass, pyteomics.pepxml, pyteomics.mzid without ImportError",
+      "output_matches_reference: verify each module import returns a module object with __name__ attribute matching the expected module path"
+    ],
+    "expert_review": [
+      "Assess whether the installed version and dependency resolution from Bioconda matches upstream source (github:levitsky/pyteomics) in functionality for the three tested modules",
+      "Confirm that no runtime errors or missing optional dependencies prevent the three core module imports from succeeding in a clean conda environment"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

@@ -1,0 +1,2 @@
+  figures/fiddle_logo.png
+paper.md

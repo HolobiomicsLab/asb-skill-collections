@@ -1,0 +1,351 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Lib2NIST_configuration.png",
+      "role": "figure",
+      "sha256": "7d086035ff252e4a8649842bac3d761953850edc9f49a5e52785fb2a258d3b0d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Lib2NIST_define_subset.png",
+      "role": "figure",
+      "sha256": "b81482ceef988d0afe81dc5b0652569e012b9d63cbb9cc4899772f090281750b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/check_number_of_spectra_nist.png",
+      "role": "figure",
+      "sha256": "2f690e0650c5915ec79875a6b3b15a1c5ae3e05ddf4c1b3b43f6f06354e475bd"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "07b08b2cbf191113d234f9369ca97922b48747e137841e7bdb6fa38cc99a6dc0"
+    }
+  ],
+  "created_at": "2026-06-15T13:31:46.023986+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Compiled EI mass spectral library object in R (e.g., result of read_lib or combined libraries via c() operator)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NIST ri.dat file (retention index database file from NIST installation)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NIST USER.DBU file (user database file from NIST installation)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "EI library object with RI field populated for each compound based on median experimental RI from capillary columns, excluding records with standard deviation > 30",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Kovats retention index (RI) is a standardized measure of compound retention time on gas chromatography columns, essential for EI library matching and compound identification.",
+    "Capillary GC columns are the standard platform for modern EI-MS experiments; Lee RI values from packed columns are excluded to ensure data homogeneity.",
+    "When multiple RI records exist for the same compound across different experiments, median RI is used to reduce noise; values with standard deviation exceeding 30 are rejected to exclude outliers.",
+    "The assign_ri function requires specification of column polarity (semi-polar, non-polar, or polar) to match RI data to the appropriate experimental conditions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify that mspcompiler package contains extract_ri function (file_exists: function definition in package source or documentation)",
+      "Verify that mspcompiler package contains assign_ri function (file_exists: function definition in package source or documentation)",
+      "Verify script_runs: R script that calls library(mspcompiler); extract_ri() on a NIST ri.dat file completes without error",
+      "Verify script_runs: R script that calls assign_ri() to populate RI field in compiled EI library object completes without error",
+      "Verify field_present: resulting R object or MSP output file contains 'RI' field or equivalent retention index metadata field",
+      "Verify value_in_range or contains_substring: RI values in output are numeric and match expected format for Kovats retention indices (typically integer or decimal values in range ~500\u20133500)"
+    ],
+    "expert_review": [
+      "Confirm that RI values extracted from NIST ri.dat file are chemically and analytically plausible for the corresponding compounds (expert judgment of retention index correctness)",
+      "Confirm that RI assignment to library entries is chemically consistent \u2014 i.e., compounds are matched to correct RI values and not transposed or corrupted"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does extract_ri extract Kovats retention index values from a NIST ri.dat file, and how does assign_ri then populate those RI values into a compiled EI library object?: 'compile either EI or tandem mass spectral libraries from various sources, such as NIST (if you have it installed)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The mspcompiler workflow includes two sequential operations: extract_ri() to extract experimental RI from NIST files, and assign_ri() to assign experimental RI to the combined library.: 'Extract experimental RI from NIST files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Compiled EI mass spectral library object in R (e.g., result of read_lib or combined libraries via c() operator): 'After read in and organize all these libraries, we can now combine them into a single file, assign experimental RI'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NIST ri.dat file (retention index database file from NIST installation): 'Extract experimental RI from the \"ri.dat\" and \"USER.DBU\" files. Once you have NIST library installed, these files can be found in, for example, \"~/Programs/nist14/mssearch/nist_ri\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NIST USER.DBU file (user database file from NIST installation): 'Extract experimental RI from the \"ri.dat\" and \"USER.DBU\" files. Once you have NIST library installed, these files can be found in, for example, \"~/Programs/nist14/mssearch/nist_ri\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] EI library object with RI field populated for each compound based on median experimental RI from capillary columns, excluding records with standard deviation > 30: 'This function will only keep RI records from \"capillary\" columns and \"Lee RI\" will be removed. When there are multiple records for a single compound, the median RI will be used and if the standard'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mspcompiler: 'library(mspcompiler)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'library(mspcompiler)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NIST: 'Extract experimental RI from the \"ri.dat\" and \"USER.DBU\" files. Once you have NIST library installed'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is documented: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mspcompiler); compiled_lib <- readRDS('{inputs.compiled_ei_library}'); ri_data <- extract_ri('{inputs.nist_ri_dat_file}', '{inputs.nist_user_dbu_file}'); result_lib <- assign_ri(compiled_lib, ri_data, polarity='semi-polar'); saveRDS(result_lib, 'task_003_output_library.rds'); cat('RI assignment complete. RI field populated:', !is.null(result_lib@RI), '\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [
+      "NIST"
+    ],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "EI library object with RI field populated for each compound based on median experimental RI from capillary columns, excluding records with standard deviation > 30"
+  ],
+  "finding": "The mspcompiler workflow includes two sequential operations: extract_ri() to extract experimental RI from NIST files, and assign_ri() to assign experimental RI to the combined library.",
+  "github_name": "QizhiSu/mspcompiler",
+  "input_from": "task_001",
+  "inputs": [
+    "Compiled EI mass spectral library object in R (e.g., result of read_lib or combined libraries via c() operator)",
+    "NIST ri.dat file (retention index database file from NIST installation)",
+    "NIST USER.DBU file (user database file from NIST installation)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "nist_ri_extracted.txt",
+    "combine_ei_with_ri.msp"
+  ],
+  "linked_result_ids": [
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_020"
+  ],
+  "methodology_summary": [
+    "Load a compiled EI library object and NIST RI database files (ri.dat and USER.DBU) into R.",
+    "Parse NIST RI database files using extract_ri to retrieve experimental retention index records.",
+    "Filter RI records to retain only those from capillary GC columns; compute median RI for compounds with multiple records and discard records with standard deviation > 30.",
+    "Assign filtered RI values to the EI library object using assign_ri with semi-polar column polarity specification.",
+    "Validation: Verify that RI field is populated in the output library object and confirm presence of RI values in MSP output file."
+  ],
+  "missing_information": [
+    "No changelog or version history is documented"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does extract_ri extract Kovats retention index values from a NIST ri.dat file, and how does assign_ri then populate those RI values into a compiled EI library object?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "retention-index-extraction-from-nist-database",
+    "spectral-library-metadata-assignment",
+    "mass-spectrometry-column-polarity-filtering",
+    "r-object-inspection-and-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mspcompiler/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "TOOL_EXTRACT_STRUCTURE",
+    "TOOL_ASSIGN_SMILES",
+    "TOOL_EXTRACT_RI",
+    "TOOL_ASSIGN_RI",
+    "DS_NIST_EI",
+    "DS_RIKEN_EI",
+    "DS_MONA_EI",
+    "DS_SWGDRUG_EI",
+    "DS_NIST_MS2",
+    "DS_GNPS_MS2",
+    "ARCH_EI_PIPELINE",
+    "ARCH_MS2_PIPELINE",
+    "COMP_KOVATS_RI"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:QizhiSu__mspcompiler",
+  "task_description": "Extract Kovats retention index (RI) data from NIST ri.dat and USER.DBU files using extract_ri, assign those RI values to a compiled EI mass spectral library object using assign_ri with semi-polar column polarity, and verify that the RI field is populated in the resulting library object.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Compiled EI mass spectral library object",
+      "port_id": "compiled_ei_library",
+      "resolved_via": null,
+      "source": "task_001/combined_ei_msp",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NIST ri.dat file",
+      "port_id": "nist_ri_dat_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NIST USER.DBU file",
+      "port_id": "nist_user_dbu_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Extract Kovats RI values from NIST ri.dat using extract_ri and assign them to a compiled EI library via assign_ri, then verify RI field population in the output.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "EI library object with RI values assigned",
+      "port_id": "ei_library_with_ri",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "gc-ms",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Implement the NIST RI Extraction and Assignment Step using extract_ri and assign_ri",
+  "tools": [
+    "mspcompiler",
+    "R",
+    "NIST"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: NIST, EI library object with RI field populated for each compound based on median experimental RI from capillary columns, excluding records with standard deviation > 30."
+  ],
+  "workflow_description": "1. Load a compiled EI library object (e.g., from read_lib or a combined EI library from multiple sources) into R. 2. Extract experimental Kovats RI data from NIST ri.dat and USER.DBU files using extract_ri, which parses the NIST RI database files. 3. Apply assign_ri to the compiled EI library, specifying polarity = \"semi-polar\" to filter RI records from capillary GC columns only, and discard RI values where standard deviation exceeds 30 or use median RI when multiple records exist for a single compound. 4. Verify that RI fields are populated in the resulting library object by inspecting the RI column in the output or writing the output to MSP format using write_EI_msp and confirming RI presence in the file."
+}

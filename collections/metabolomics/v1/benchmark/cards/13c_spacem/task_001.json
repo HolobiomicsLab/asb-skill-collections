@@ -1,0 +1,159 @@
+{
+  "abstraction_frame": null,
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "961a4bb95b7da39af036dd862c6a06cd4cfa69c159505f0eb681f0fb866c2996"
+    }
+  ],
+  "created_at": "2026-06-15T10:16:31.489653+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "main_article: paper.md",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "A reviewed SciTask Card and capsule describing the benchmarkable task.",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "Metabolomics (v2 via asb-domain-core)",
+  "domain_knowledge": [],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Confirm that every cited input artifact exists or is explicitly marked missing.",
+      "Confirm that expected outputs are tied to figures, tables, files, or claims in the package."
+    ],
+    "llm_or_expert_review": [
+      "Judge whether the task description matches the source evidence.",
+      "Judge whether the workflow description is sufficient for a future agent attempt.",
+      "Review uncertainty notes and missing-information claims."
+    ],
+    "not_in_scope_for_mvp": [
+      "Running scientific code or reproducing figures.",
+      "Scoring model-generated scientific outputs."
+    ]
+  },
+  "evidence_snippets": [],
+  "executable": {
+    "cmd": [
+      "cat",
+      "{inputs.main_article}"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 30,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "A reviewed SciTask Card and capsule describing the benchmarkable task."
+  ],
+  "finding": "The finding should be confirmed by expert review; no strong finding sentence was detected heuristically.",
+  "github_name": null,
+  "input_from": null,
+  "inputs": [
+    "main_article: paper.md"
+  ],
+  "keywords": [],
+  "landmark_outputs": [],
+  "linked_result_ids": [],
+  "methodology_summary": [],
+  "missing_information": [
+    "No local code/script artifact was detected.",
+    "No explicit data-reference artifact was detected."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Assess the scientific task and reproducibility context described by this article package.",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [],
+  "skills": [
+    "scientific_task_formulation",
+    "evidence_linking",
+    "expert_review_preparation",
+    "reproducibility_gap_detection"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_13c_spacem/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [],
+  "subdomains": [
+    "isotope-tracing",
+    "spatial-metabolomics"
+  ],
+  "subtask_categories": [],
+  "synthesized_from": "github:Buglakova__13C-SpaceM",
+  "task_description": "Create a bounded scientific task from the article package by linking a research question or finding to available inputs, expected outputs, tools, skills, workflow logic, evidence snippets, missing information, and an evaluation strategy.",
+  "task_id": "task_001",
+  "task_inputs": [],
+  "task_kind": null,
+  "task_objective": "",
+  "task_outputs": [],
+  "techniques": [
+    "stable-isotope-labeling",
+    "mass-spectrometry-imaging"
+  ],
+  "title": "Reconstruct: Single-cell isotope tracing - 13C-SpaceM",
+  "tools": [
+    "GitHub"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by deterministic heuristics and needs scientific expert review.",
+    "Workflow steps are descriptive only; no scientific workflow was executed.",
+    "PDFs, images, notebooks, archives, and unknown file types are referenced but not deeply parsed."
+  ],
+  "workflow_description": "Review indexed article artifacts, connect claims to outputs, inspect available materials, and record missing information. No workflow is executed in the MVP."
+}

@@ -1,0 +1,271 @@
+schema_version: 0.1.0
+workflow_id: coll_metaboannotator_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_003
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: MetaboAnnotatoR performs metabolite annotation of LC-MS All-ion fragmentation
+    features using ion fragment databases, with demonstrated results showing three
+    lipid annotations from six ESI+ lipidomics features including LPC(14:0) assignment
+    for feature 3.
+  pseudo_abstract: MetaboAnnotatoR is an R package designed to annotate metabolite
+    features from LC-MS All-ion fragmentation (AIF) datasets acquired in centroid
+    mode using ion fragment databases. The package operates on processed data consisting
+    of XCMS peak-picked data and RAMClustR-derived pseudo-MS/MS spectra. When the
+    annotateRC function was applied to six lipidomics features from human serum using
+    the default LipidPos library, three features received lipid annotations, with
+    LPC(14:0) assigned as the rank 1 annotation for feature 3 (468.3095 m/z, 82.92009
+    s), which also showed candidate annotations to fragments of several PCs containing
+    the 14:0 fatty acyl chain with lower confidence scores. The package describes
+    mechanisms for generating custom library entries through genFragEntry (which identifies
+    marker peaks above noise and mpeaksThres thresholds and attributes occurrence
+    scores) and importing MS/MS spectra from .msp files via mspToLib (which converts
+    spectra records to CSV library entries with ionization mode suffixes). Annotation
+    results can be exported using saveAnnotations to store global annotations, ranked
+    candidates, spectra visualizations as PDFs, and pseudo-MS/MS spectra as MGF files.
+  research_questions:
+  - Does the annotateRC function successfully annotate three out of six features from
+    the targetTable.csv using xcmsSet and RAMClustR objects with LipidPos libraries?
+  - What are the alternative candidate annotations for feature 3 (468.3095 m/z, 82.92009
+    s) and how do their scores compare to the rank 1 annotation?
+  - How does the genFragEntry function process an experimental MS/MS spectrum to generate
+    a metabolite library entry by applying peak-picking thresholds and occurrence
+    scoring?
+  - Does the mspToLib function correctly convert MS/MS spectra from .msp library files
+    into individual CSV library entries with appropriate positive/negative ionisation
+    mode suffixes when applied with default peak-picking parameters?
+  - Does the saveAnnotations function successfully write all expected output file
+    types (global results table, ranked results, ranked spectra PDFs, and pseudo-MS/MS
+    MGF file) to the specified directory without errors?
+  methods_summary: "Load the targetTable.csv feature list and the pre-computed xcmsSet\
+    \ and RAMClustR objects. Specify the LipidPos fragment ion library as the annotation\
+    \ database. Execute the annotateRC function to compute fragment-ion matching scores\
+    \ and rank candidate lipid identities. Extract ranked annotation results for all\
+    \ six features. Validation: Verify that exactly three features receive lipid annotations\
+    \ and that feature 3's top-ranked candidate is LPC(14:0). References: source article\
+    \ (DOI: 10.1021/acs.analchem.1c03032) Load the annotateRC results object from\
+    \ MetaboAnnotatoR containing ranked candidate annotations. Extract the ranked\
+    \ candidate list for feature 3 (annotations$rankedResult[[3]]). Inspect annotation\
+    \ scores and rank positions, confirming LPC(14:0) as rank 1. Identify and list\
+    \ PC species containing the 14:0 fatty-acyl chain and their lower ranking positions.\
+    \ Export the ranked candidate table to a CSV file with metabolite name, rank,\
+    \ and score columns. Validation: Confirm file exists, contains at least 3 rows\
+    \ (LPC(14:0) + at least 2 PC(14:0) variants), LPC(14:0) has rank=1, and all PC(14:0)\
+    \ variants have rank > 1. References: source article (DOI: 10.1021/acs.analchem.1c03032)\
+    \ Load MS/MS spectrum data from MassBank for D-Pantothenic Acid Apply noise threshold\
+    \ filtering at intensity \u22650.005 to remove background signals Apply marker\
+    \ peak threshold filtering at intensity \u22650.1 to identify significant fragments\
+    \ Execute genFragEntry with mpeaksScore=0.9 and mzTol=0.01 to score and annotate\
+    \ fragment matches Validation: Output CSV library entry contains annotated fragment\
+    \ ions with mass, intensity, and match scores; structure matches MetaboAnnotatoR\
+    \ library entry format References: source article (DOI: 10.1021/acs.analchem.1c03032)\
+    \ Load MSP spectral library from MetaboAnnotatoR package bundle. Parse spectral\
+    \ records and extract compound metadata (name, m/z, RT) and peak intensity lists.\
+    \ Apply noise threshold (0.005) and marker peak threshold (0.1) to filter and\
+    \ rank spectral peaks. Append ionization mode suffixes ([M+H]+ or [M-H]\u2212\
+    ) to library entry identifiers based on precursor charge annotation. Export filtered\
+    \ and annotated spectra as per-spectrum CSV rows with mode-suffixed headers. Validation:\
+    \ Verify CSV row count matches input spectrum count, mode suffixes are present\
+    \ and consistent, and peak columns are numeric and within 0\u2013100 relative\
+    \ intensity range. References: source article (DOI: 10.1021/acs.analchem.1c03032)\
+    \ Load MetaboAnnotatoR annotations object containing annotated features and ranked\
+    \ candidate matches Execute saveAnnotations function to export results, PDFs,\
+    \ and spectral data to a specified directory Enumerate and list all files generated\
+    \ in the output directory Verify file presence and non-zero file size for each\
+    \ expected output type Validation: Confirm that global results, ranked results,\
+    \ ranked spectra PDFs (one per feature), and pseudo-MS/MS MGF file all exist and\
+    \ contain data (file size > 0 bytes) References: source article (DOI: 10.1021/acs.analchem.1c03032)"
+  domain: metabolomics
+  techniques:
+  - lc-ms
+  - feature-detection
+  - database-annotation
+  - metabolite-identification
+  - clustering
+  claims:
+  - claim_text: MetaboAnnotatoR is designed to perform metabolite annotation of features
+      from LC-MS All-ion fragmentation (AIF) datasets using ion fragment databases.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: MetaboAnnotatoR requires raw LC-MS AIF chromatograms acquired or transformed
+      in centroid mode.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: MetaboAnnotatoR requires R version 4.5.0 or higher.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: The example dataset was used to illustrate feature annotation using
+      LC-MS AIF chromatograms processed using xcms and RamClustR packages.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL-001
+  - claim_text: MetaboAnnotatoR example feature table targetTable.csv contains 6 features
+      from a LC-MS Lipidomics (ESI+) chromatogram to be annotated.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: The example xcmsSet object (xset) contains processed data from 100
+      AIF LC-MS chromatograms from human serum samples.
+    claim_type: finding
+    speculative: false
+  - claim_text: Three out of the six features were annotated to a lipid in the example
+      annotation results.
+    claim_type: finding
+    speculative: false
+  - claim_text: Feature 3 has an m/z value of 468.3095 and a retention time of 82.92009
+      s.
+    claim_type: finding
+    speculative: false
+  - claim_text: The rank 1 annotation for feature 3 is LPC(14:0).
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-008
+  - claim_text: MetaboAnnotatoR provides the annotateRC function for performing annotations.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: MetaboAnnotatoR provides the plotResultSpec function to visualise
+      spectra containing matched ions to candidate annotations.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: MetaboAnnotatoR provides the saveAnnotations function to save annotation
+      results to a user-specified directory.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: The genFragEntry function generates metabolite library entries from
+      MS/MS spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-002
+  - claim_text: The genFragEntry function attributes occurrence scores to peaks above
+      the mpeaksThres threshold (marker peaks) and above the noise level.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-002
+  - claim_text: The default noise parameter for genFragEntry is 0.005.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-002
+  - claim_text: The default mpeaksScore parameter for genFragEntry is 0.9.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-002
+  - claim_text: The default mpeaksThres parameter for genFragEntry is 0.1.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-002
+  - claim_text: The default mzTol parameter for genFragEntry is 0.01.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-002
+  - claim_text: The mspToLib function converts MS/MS spectra from .msp library files
+      into MetaboAnnotatoR metabolite library entries.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: The mspToLib function adds a positive or negative mode suffix to each
+      output file name.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-003
+  - claim_text: MetaboAnnotatoR inputs can include either a raw AIF LC-MS chromatogram
+      in .mzML or CDF format or a processed dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: A processed dataset for MetaboAnnotatoR consists of a RAMClustR object
+      containing pseudo-MS/MS spectra and an XCMS object containing peak-picked data.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: MetaboAnnotatoR can use default Lipid Positive mode libraries named
+      LipidPos.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-001
+  - claim_text: The annotateRC function stores results in an object with a global
+      annotations property.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-001
+  - claim_text: The annotateRC function stores candidate annotations in a rankedResult
+      property.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-001
+  - claim_text: Feature 3 could be annotated to fragments of PCs containing the 14:0
+      fatty acyl chain with lower confidence than LPC(14:0).
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-008
+  speculative: false
+  task_openness: mixed
+  method_alternatives: []
+  substitution_constraints:
+  - Input requires either raw AIF LC-MS chromatogram in centroid mode or processed
+    dataset with RAMClustR and XCMS objects
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Per-spectrum CSV library entries with positive/negative ionization mode suffixes
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Global results table (all annotated features and top candidate per feature)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Ranked results table (all candidate annotations per feature with scores)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Ranked spectra PDF files (one per feature showing matched ions for each candidate)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Pseudo-MS/MS MGF file (pseudo-MS/MS spectra in MGF format)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: File audit report (inventory of all output files with metadata)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

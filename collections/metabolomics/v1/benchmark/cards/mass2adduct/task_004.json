@@ -1,0 +1,324 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "5ec722ce6c7d34157c2dccaf42d8443e6f66ade354f4ae1e31ec86adc0ca483e"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:46.430517+00:00",
+  "crossref_doi": "10.1021/acs.analchem.0c04720",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Cardinal MSProcessedImagingExperiment or MSContinuousImagingExperiment object (in-memory R object or saved .rds file)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reference adduct dataset (built-in: adducts or adducts2; or user-supplied data.frame with columns: name, formula, mass)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Annotated massdiff object (data.frame with columns A, B, diff, and matches) containing ion pairs matched to known adducts",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Cardinal version 2.2 or later is required for MSProcessedImagingExperiment and MSContinuousImagingExperiment interoperability with mass2adduct.",
+    "The msimat format requires a numeric matrix with m/z values as column names and pixels as row names, with intensity values as entries; Cardinal conversion must produce this structure.",
+    "The massdiff() function calculates mass differences for all possible ion pairs; the resulting object has three columns (A: parent m/z, B: adduct m/z, diff: mass difference).",
+    "adductMatch() identifies the closest-matching adduct in the reference database for each mass difference, accounting for the fact that mass resolution varies with m/z.",
+    "The built-in reference datasets adducts and adducts2 contain biologically-relevant chemical species; users may substitute custom tables with three columns (name, formula, mass)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:kbseah__mass2adduct repository contains cardinal2msimat() function with callable signature",
+      "verify that cardinal2msimat() function accepts MSProcessedImagingExperiment or MSContinuousImagingExperiment objects as input",
+      "verify that cardinal2msimat() returns an object of class msimat",
+      "verify that the returned msimat object can be passed directly to massdiff() without preprocessing errors",
+      "verify that massdiff() output can be passed directly to adductMatch() without preprocessing errors",
+      "script_runs: execute cardinal2msimat() \u2192 massdiff() \u2192 adductMatch() pipeline end-to-end on a test MSProcessedImagingExperiment or MSContinuousImagingExperiment object from Cardinal package; robust to dataset size up to 10,000 peaks",
+      "verify output_matches_reference: pipeline produces a named list or data.frame with columns including mass difference values and adduct annotations, matching the structure documented in methods section"
+    ],
+    "expert_review": [
+      "assess whether Cardinal object conversion preserves spatial metadata required for downstream corrPairsMSI() correlation analysis",
+      "assess whether mass accuracy is maintained through the cardinal2msimat() conversion step and does not introduce systematic bias",
+      "evaluate whether the interoperability path correctly handles both continuous and discrete imaging experiment formats without data loss"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Can mass2adduct's massdiff() and adductMatch() pipeline successfully process MSI data converted from Cardinal's MSProcessedImagingExperiment or MSContinuousImagingExperiment objects using the cardinal2msimat() function?: 'If you are using Cardinal to process your MSI data, data objects in the `MSProcessedImagingExperiment` or `MSContinuousImagingExperiment` formats can be converted to mass2adduct's `msimat` format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] The mass2adduct package provides cardinal2msimat() for converting Cardinal MSI data objects to the msimat format compatible with the massdiff() and adductMatch() pipeline.: 'If you are using Cardinal to process your MSI data, data objects in the `MSProcessedImagingExperiment` or `MSContinuousImagingExperiment` formats can be converted to mass2adduct's `msimat` format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Cardinal MSProcessedImagingExperiment or MSContinuousImagingExperiment object (in-memory R object or saved .rds file): 'If you are using Cardinal to process your MSI data, data objects in the `MSProcessedImagingExperiment` or `MSContinuousImagingExperiment` formats can be converted to mass2adduct's `msimat` format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Reference adduct dataset (built-in: adducts or adducts2; or user-supplied data.frame with columns: name, formula, mass): 'There are two built-in data sets `adducts` and `adducts2` (shorter), which list biologically-relevant chemical species that might occur in biological samples.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Annotated massdiff object (data.frame with columns A, B, diff, and matches) containing ion pairs matched to known adducts: 'We can match massdiffs to specific adduct types using the same function `adductMatch` that we applied to the histogram above. This adds an additional column to the `massdiff` object called `matches`,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Cardinal: 'If you are using Cardinal to process your MSI data, data objects in the `MSProcessedImagingExperiment` or `MSContinuousImagingExperiment` formats can be converted to mass2adduct's `msimat` format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] mass2adduct: 'This package presents tools for counting and identifying possible adducts in MS data, and accompanies Janda et al. (in prep.).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] R: 'library(mass2adduct)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No version information or release date for mass2adduct package provided in article or repository metadata: 'Synthesized at: 2026-06-15T13:12:45+00:00'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] No documentation of cardinal2msimat() function signature, parameter defaults, or error handling behavior in the provided text: 'If you are using Cardinal to process your MSI data, data objects in the `MSProcessedImagingExperiment` or `MSContinuousImagingExperiment` formats can be converted to mass2adduct's `msimat` format'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(Cardinal); library(mass2adduct); cardinal_obj <- readRDS('{inputs.cardinal_imaging_object}'); msimat_data <- cardinal2msimat(cardinal_obj); adduct_ref <- readRDS('{inputs.adduct_reference}'); massdiff_result <- massdiff(msimat_data); annotated_result <- adductMatch(massdiff_result, adduct_ref); saveRDS(annotated_result, 'annotated_massdiff_task_004.rds'); write.csv(annotated_result, 'annotated_massdiff_task_004.csv', row.names=FALSE)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "annotated_massdiff.csv",
+  "expected_outputs": [
+    "Annotated massdiff object (data.frame with columns A, B, diff, and matches) containing ion pairs matched to known adducts"
+  ],
+  "finding": "The mass2adduct package provides cardinal2msimat() for converting Cardinal MSI data objects to the msimat format compatible with the massdiff() and adductMatch() pipeline.",
+  "github_name": "kbseah/mass2adduct",
+  "input_from": "task_001",
+  "inputs": [
+    "Cardinal MSProcessedImagingExperiment or MSContinuousImagingExperiment object (in-memory R object or saved .rds file)",
+    "Reference adduct dataset (built-in: adducts or adducts2; or user-supplied data.frame with columns: name, formula, mass)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "msimat_object.rds",
+    "massdiff_table.csv",
+    "annotated_massdiff.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_009",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_014"
+  ],
+  "methodology_summary": [
+    "Load a Cardinal imaging experiment object (MSProcessedImagingExperiment or MSContinuousImagingExperiment) into R.",
+    "Convert the Cardinal object to msimat format using cardinal2msimat() function to produce a peak-intensity matrix with m/z column names.",
+    "Compute all pairwise mass differences using massdiff(), producing a three-column data.frame (parent m/z, adduct m/z, mass difference).",
+    "Match each mass difference to the closest entry in a reference adduct database using adductMatch() with built-in or custom adduct table.",
+    "Validation: verify that the output object is a data.frame with columns A, B, diff, and matches; confirm that at least one ion pair matches to a known adduct; inspect matches column for non-NA entries indicating successful mapping to the reference database.",
+    "References: source article (DOI: 10.1021/acs.analchem.0c04720)"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "No version information or release date for mass2adduct package provided in article or repository metadata",
+    "No documentation of cardinal2msimat() function signature, parameter defaults, or error handling behavior in the provided text"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/massdiff_histogram"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can mass2adduct's massdiff() and adductMatch() pipeline successfully process MSI data converted from Cardinal's MSProcessedImagingExperiment or MSContinuousImagingExperiment objects using the cardinal2msimat() function?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "cardinal-imaging-object-conversion",
+    "mass-difference-calculation-from-spectral-peaks",
+    "adduct-mass-matching-to-reference-database",
+    "msi-data-format-interoperability"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mass2adduct/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_MASS2ADDUCT",
+    "COMP_MSIMAT",
+    "COMP_MASSDIFF_OBJ",
+    "TOOL_MASSDIFF_FN",
+    "TOOL_ADDUCTMATCH",
+    "TOOL_CARDINAL2MSIMAT",
+    "TOOL_CARDINAL",
+    "CONCEPT_MASSDIFF",
+    "ARCH_WORKFLOW",
+    "RES_INTEGER_BACKGROUND"
+  ],
+  "subdomains": [
+    "spatial-metabolomics",
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:kbseah__mass2adduct",
+  "task_description": "Convert a Cardinal MSProcessedImagingExperiment or MSContinuousImagingExperiment object to mass2adduct's msimat format using cardinal2msimat(), then apply the massdiff() and adductMatch() pipeline to identify and annotate molecular adducts in MSI data. Output an annotated mass difference table with adduct matches.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cardinal imaging experiment object",
+      "port_id": "cardinal_imaging_object",
+      "resolved_via": null,
+      "source": "task_001/massdiff_histogram",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Reference adduct dataset",
+      "port_id": "adduct_reference",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Validate that Cardinal MSI data objects convert successfully via cardinal2msimat() and process through the massdiff() and adductMatch() pipeline without errors.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Annotated mass difference table with adduct matches",
+      "port_id": "annotated_massdiff",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "adduct-detection",
+    "mass-spectrometry-imaging",
+    "maldi",
+    "metabolite-identification",
+    "feature-detection"
+  ],
+  "title": "Extend mass2adduct workflow to Cardinal-exported MSI data using cardinal2msimat()",
+  "tools": [
+    "Cardinal",
+    "mass2adduct",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Annotated massdiff object (data.frame with columns A, B, diff, and matches) containing ion pairs matched to known adducts."
+  ],
+  "workflow_description": "1. Load a Cardinal imaging experiment object (MSProcessedImagingExperiment or MSContinuousImagingExperiment format, Cardinal version 2.2 or later) into the R environment. 2. Convert the Cardinal object to msimat format using the cardinal2msimat() function. 3. Calculate all pairwise mass differences from the msimat object using massdiff(). 4. Match mass differences to known chemical adducts by applying adductMatch() with the built-in adducts reference dataset (or a custom adduct table). 5. Inspect the annotated massdiff object to verify matches, filtering for adducts of interest if needed."
+}

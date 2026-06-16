@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 'options.txt' exists in the working directory after CLI execution"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 'options.txt' has format TOML (text file parseable as TOML key-value pairs)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify options.txt contains field 'msdial_version' with value '4' or '5' matching the --print argument"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify options.txt contains at least one configuration key expected for MS-DIAL lipid filtering (e.g., thresholds, model paths, or feature columns); no canonical answer for exact key set without seeing reference file"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file 'options.txt' exists in the working directory after CLI execution",
+      "verify file 'options.txt' has format TOML (text file parseable as TOML key-value pairs)",
+      "verify options.txt contains field 'msdial_version' with value '4' or '5' matching the --print argument",
+      "verify options.txt contains at least one configuration key expected for MS-DIAL lipid filtering (e.g., thresholds, model paths, or feature columns); no canonical answer for exact key set without seeing reference file",
+      "script_runs: LipoCLEAN CLI invocation with '--print MSD4' argument completes without error",
+      "script_runs: LipoCLEAN CLI invocation with '--print MSD5' argument completes without error"
+    ],
+    "expert_review": [
+      "Confirm that the keys and structure present in options.txt are appropriate for configuring MS-DIAL version 4 or 5 lipid filtering (requires domain knowledge of MS-DIAL configuration format and LipoCLEAN expected parameters)"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

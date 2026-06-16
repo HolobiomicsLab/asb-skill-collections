@@ -1,0 +1,290 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Lib2NIST_configuration.png",
+      "role": "figure",
+      "sha256": "7d086035ff252e4a8649842bac3d761953850edc9f49a5e52785fb2a258d3b0d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Lib2NIST_define_subset.png",
+      "role": "figure",
+      "sha256": "b81482ceef988d0afe81dc5b0652569e012b9d63cbb9cc4899772f090281750b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/check_number_of_spectra_nist.png",
+      "role": "figure",
+      "sha256": "2f690e0650c5915ec79875a6b3b15a1c5ae3e05ddf4c1b3b43f6f06354e475bd"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "07b08b2cbf191113d234f9369ca97922b48747e137841e7bdb6fa38cc99a6dc0"
+    }
+  ],
+  "created_at": "2026-06-15T13:31:46.023986+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MoNA EI library in MSP format (GC-MS Spectra)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reorganized MoNA EI library object with SMILES field properly populated from Comment field",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MoNA EI library files encode SMILES information in the Comment field rather than a dedicated SMILES field, requiring field relocation for MS-DIAL compatibility.",
+    "mspcompiler's reorganize_mona function performs bidirectional field mapping: extracting structured chemical identifiers from unstructured comment text and populating the canonical SMILES field.",
+    "The MSP format is a line-delimited text standard for mass spectral metadata; field order and naming are critical for downstream software recognition.",
+    "MS-DIAL and mspcompiler expect SMILES and InChIKey in dedicated metadata fields; Comment field content is ignored during library matching operations."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: input MoNA EI library file (e.g., MoNA download .msp or .json format) from https://mona.fiehnlab.ucdavis.edu/downloads",
+      "script_runs: reorganize_mona() function executes without error on valid MoNA input file",
+      "file_format_is: output object is an R list (or equivalent serialized structure)",
+      "field_present: output object contains all required fields expected by downstream mspcompiler pipeline steps (exact field names and structure require expert review of source code)",
+      "row_count_equals: output object row/record count matches or correctly summarizes input MoNA library record count",
+      "output_matches_reference: if mspcompiler repository includes test fixtures or example outputs, verify reorganize_mona() output structure and content match reference deposit or example in repo"
+    ],
+    "expert_review": [
+      "verify that the internal list format produced by reorganize_mona() conforms to the schema expected by downstream pipeline functions (read_lib, assign_smiles, separate_polarity, etc.)",
+      "verify that field mapping from MoNA source format to internal format is complete and semantically correct (e.g., metadata fields, spectral peak data, compound identifiers are preserved or correctly transformed)",
+      "verify that no spectral information or compound metadata is lost or corrupted during reorganization"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the reorganize_mona function restructure a downloaded MoNA EI library file into the internal list format required by subsequent mspcompiler pipeline steps?: 'compile either EI or tandem mass spectral libraries from various sources, such as NIST (if you have it installed), MoNA, and GPNS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The mspcompiler package includes a reorganize_mona function as a pipeline step that transforms MoNA EI library files into the internal list format expected by downstream processing steps.: 'mspcompiler is to offer ways to compile either EI or tandem mass spectral libraries from various sources, such as NIST (if you have it installed), MoNA, and GPNS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MoNA EI library in MSP format (GC-MS Spectra): 'Please download \"GC-MS Spectra\" in \"MSP\" form. This file has SMILES information though, it is in the *Comment* field.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Reorganized MoNA EI library object with SMILES field properly populated from Comment field: 'the SMILES has to be extracted from the *Comment* and put into the *SMILES* field by the *reorganize_mona* function'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mspcompiler: 'library(mspcompiler)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'library(mspcompiler)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MoNA: 'compile either EI or tandem mass spectral libraries from various sources, such as NIST (if you have it installed), MoNA, and GPNS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting reorganize_mona() function behavior, parameters, expected input/output schema, or version history: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "R",
+      "--slave",
+      "-e",
+      "library(mspcompiler); mona_raw <- read_lib('{inputs.mona_ei_raw_msp}'); mona_reorganized <- reorganize_mona(mona_raw); saveRDS(mona_reorganized, 'mona_reorganized.rds'); cat('Reorganization complete. Input rows:', nrow(mona_raw), 'Output rows:', nrow(mona_reorganized), 'SMILES populated:', sum(!is.na(mona_reorganized$SMILES)), '\\n')"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Reorganized MoNA EI library object with SMILES field properly populated from Comment field"
+  ],
+  "finding": "The mspcompiler package includes a reorganize_mona function as a pipeline step that transforms MoNA EI library files into the internal list format expected by downstream processing steps.",
+  "github_name": "QizhiSu/mspcompiler",
+  "input_from": "task_001",
+  "inputs": [
+    "MoNA EI library in MSP format (GC-MS Spectra)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "mona_ei_raw.Rdata",
+    "mona_ei_reorganized.Rdata"
+  ],
+  "linked_result_ids": [
+    "result_010",
+    "result_011",
+    "result_012"
+  ],
+  "methodology_summary": [
+    "Load the MoNA EI MSP file into R using read_lib() to parse the initial msp structure.",
+    "Apply reorganize_mona() to extract SMILES from the Comment field and populate the SMILES field.",
+    "Validation: Verify the output object has a populated SMILES field for all records and row count equals input row count."
+  ],
+  "missing_information": [
+    "No changelog documenting reorganize_mona() function behavior, parameters, expected input/output schema, or version history"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the reorganize_mona function restructure a downloaded MoNA EI library file into the internal list format required by subsequent mspcompiler pipeline steps?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "spectral-library-format-conversion",
+    "metadata-field-extraction-and-restructuring",
+    "smiles-notation-parsing",
+    "library-object-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mspcompiler/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_MSPCOMPILER",
+    "TOOL_REORGANIZE_MONA",
+    "DS_NIST_EI",
+    "DS_RIKEN_EI",
+    "DS_MONA_EI",
+    "DS_SWGDRUG_EI",
+    "DS_NIST_MS2",
+    "DS_MONA_MS2",
+    "DS_GNPS_MS2",
+    "ARCH_EI_PIPELINE",
+    "ARCH_MS2_PIPELINE",
+    "COMP_MSP_FORMAT",
+    "COMP_MGF_FORMAT"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:QizhiSu__mspcompiler",
+  "task_description": "Apply the reorganize_mona function to a downloaded MoNA EI library MSP file to extract SMILES information from the Comment field and restructure it into the internal mspcompiler list format, producing a properly formatted library object ready for downstream pipeline steps.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MoNA EI library MSP file (GC-MS Spectra)",
+      "port_id": "mona_ei_raw_msp",
+      "resolved_via": null,
+      "source": "task_001/combined_ei_msp",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the reorganize_mona function to convert a MoNA EI library file into the internal list format, with validation of required fields and output row count.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Reorganized MoNA EI library object with SMILES field",
+      "port_id": "mona_ei_reorganized",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "gc-ms",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Implement the MoNA EI Library Reorganization Step using reorganize_mona",
+  "tools": [
+    "NIST",
+    "mspcompiler",
+    "R",
+    "MoNA"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: MoNA, Reorganized MoNA EI library object with SMILES field properly populated from Comment field."
+  ],
+  "workflow_description": "1. Load the MoNA EI library MSP file using read_lib() with type='EI' to parse the initial msp structure into an R list object. 2. Apply reorganize_mona() function to extract SMILES information from the Comment field and populate the SMILES field in the library object. 3. Verify the output object contains the expected field structure (SMILES field populated) and that row count matches the input."
+}

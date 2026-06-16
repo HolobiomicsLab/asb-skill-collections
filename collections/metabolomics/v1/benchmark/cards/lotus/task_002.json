@@ -1,0 +1,305 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "80ba092b72f7ff29c4aa8b8253038299d107ecc5219cddf4542e969981d24399"
+    }
+  ],
+  "created_at": "2026-06-15T21:24:43.431654+00:00",
+  "crossref_doi": "10.1007/s00044-016-1764-y",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LOTUS 2D structure-organism pairs table (published flat file or deposited dataset)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Four-bin frequency distribution of 2D structures: singleton (89,903), low-diversity 1\u201310 (45,640), medium-diversity 10\u2013100 (3,990), high-diversity >100 (403)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report confirming counts match or documenting discrepancies",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "2D structure representation in LOTUS is standardized after curation; each structure is a unique chemical entity independent of its source database origin.",
+    "An organism-structure pair is counted once per unique structure even if the same structure appears in multiple reference sources for the same organism.",
+    "The four organism-occurrence bins (1, 2\u201310, 11\u2013100, >100) are defined by the upper bounds of the previous category; overlap must be avoided (e.g., a structure present in exactly 10 organisms belongs to bin 2\u201310, not 11\u2013100).",
+    "LOTUS 2D curated structures total 153,956; the four bins must sum to this total to be valid."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Load the published LOTUS flat file (2D structures dataset); verify file_exists and file_format_is (CSV or TSV)",
+      "Parse the 2D structure-organism pairs table; verify row_count_equals the total number of unique structure-organism pairs reported in EnrichedIndex (484174)",
+      "Group unique 2D structures by organism count; verify the four bin counts match exactly: structures appearing in exactly 1 organism = 89903, structures in 1\u201310 organisms = 45640, structures in 10\u2013100 organisms = 3990, structures in >100 organisms = 403 (byte-for-byte exact match required)",
+      "Verify the four counts sum to the total unique 2D structure count (89903 + 45640 + 3990 + 403 = 139936)"
+    ],
+    "expert_review": [
+      "Confirm the binning logic is scientifically meaningful: verify that the boundaries (1, 1\u201310, 10\u2013100, >100) are clearly defined and that overlaps or off-by-one errors in interval definition do not occur",
+      "Assess whether the reported counts are consistent with the documented curation pipeline (steps 1_gathering through 4_visualizing) and the organism/structure quality assurance steps"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the distribution counts of unique 2D structures in LOTUS when binned by organism prevalence (appearing in 1, 1\u201310, 10\u2013100, or >100 distinct organisms)?: '*LOTUS* is a comprehensive collection of documented structure-organism pairs.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LOTUS is a comprehensive collection of documented structure-organism pairs designed to enable computational understanding of organisms and their chemistry.: 'Within the frame of current computational approaches in Natural Products research and related fields, these documented structure-organism pairs should allow a more complete understanding of organisms'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] LOTUS 2D structure-organism pairs table (published flat file or deposited dataset): '484174 (3D|2D) unique referenced structure-organism pairs... 153956 (3D|2D) unique curated structures'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Four-bin frequency distribution of 2D structures: singleton (89,903), low-diversity 1\u201310 (45,640), medium-diversity 10\u2013100 (3,990), high-diversity >100 (403): 'Among 2D structures, 89903 are present in only 1 organism, 45640 are present in between 1 and 10 organisms, 3990 are present in between 10 and 100 organisms, 403 are present in more than 100'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Verification report confirming counts match or documenting discrepancies: 'Among 2D structures, 89903 are present in only 1 organism, 45640 are present in between 1 and 10 organisms, 3990 are present in between 10 and 100 organisms, 403 are present in more than 100'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: '1_integrating.R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python 3: 'R\n- Python 3\n- Java >= 17'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion section does not report the four binned counts (89,903 / 45,640 / 3,990 / 403) or reference their location in the article or supplementary materials.: '[No relevant span; claim inferred from absence]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python3",
+      "-c",
+      "import pandas as pd; df = pd.read_csv('{inputs.lotus_pairs_table}'); structure_counts = df.groupby('structure_id')['organism'].nunique(); bins = {'singleton (1)': (structure_counts == 1).sum(), 'low (2-10)': ((structure_counts >= 2) & (structure_counts <= 10)).sum(), 'medium (11-100)': ((structure_counts > 10) & (structure_counts <= 100)).sum(), 'high (>100)': (structure_counts > 100).sum()}; total = sum(bins.values()); print('\\n'.join([f'{k}: {v}' for k, v in bins.items()])); print(f'Total: {total}'); print(f'Expected: 89903, 45640, 3990, 403'); print(f'Match: {bins[\"singleton (1)\"] == 89903 and bins[\"low (2-10)\"] == 45640 and bins[\"medium (11-100)\"] == 3990 and bins[\"high (>100)\"] == 403}')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "lotus_2d_organism_frequency_bins.txt",
+  "expected_outputs": [
+    "Four-bin frequency distribution of 2D structures: singleton (89,903), low-diversity 1\u201310 (45,640), medium-diversity 10\u2013100 (3,990), high-diversity >100 (403)",
+    "Verification report confirming counts match or documenting discrepancies"
+  ],
+  "finding": "LOTUS is a comprehensive collection of documented structure-organism pairs designed to enable computational understanding of organisms and their chemistry.",
+  "github_name": "lotusnprod/lotus-processor",
+  "input_from": "task_001",
+  "inputs": [
+    "LOTUS 2D structure-organism pairs table (published flat file or deposited dataset)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "lotus_2d_structures_with_organism_counts.tsv",
+    "binned_distribution_summary.csv"
+  ],
+  "linked_result_ids": [
+    "result_006",
+    "result_010"
+  ],
+  "methodology_summary": [
+    "Load LOTUS flat file containing all unique 2D structure-organism associations.",
+    "For each unique 2D structure, count the number of distinct organisms in which it appears.",
+    "Assign each structure to one of four bins based on organism-occurrence count: 1 (singleton), 2\u201310 (low), 11\u2013100 (medium), >100 (high).",
+    "Tabulate the number of structures in each bin.",
+    "Validation: Verify that bin counts match the reported gold standard (89,903 / 45,640 / 3,990 / 403) and that the four bin totals sum to 153,956 unique 2D structures.",
+    "References: source article (DOI: 10.1007/s00044-016-1764-y)"
+  ],
+  "missing_information": [
+    "No changelog found.",
+    "The discussion section does not report the four binned counts (89,903 / 45,640 / 3,990 / 403) or reference their location in the article or supplementary materials."
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/verification_report"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the distribution counts of unique 2D structures in LOTUS when binned by organism prevalence (appearing in 1, 1\u201310, 10\u2013100, or >100 distinct organisms)?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "structure-organism-pair-grouping",
+    "frequency-distribution-binning",
+    "count-verification-and-validation",
+    "flat-file-parsing-and-loading",
+    "data-summary-statistics"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_lotus/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_LOTUS",
+    "ARCH_ORGANISM_SUBPIPELINE",
+    "ARCH_STRUCTURE_SUBPIPELINE",
+    "TOOL_TRANSLATING_ORGANISM_KT",
+    "COMP_STRUCTURE_ORGANISM_PAIRS",
+    "RESULT_TOTAL_PAIRS_3D",
+    "RESULT_TOTAL_PAIRS_2D",
+    "RESULT_UNIQUE_STRUCTURES_3D",
+    "RESULT_UNIQUE_STRUCTURES_2D",
+    "RESULT_UNIQUE_ORGANISMS",
+    "RESULT_SOURCE_DATABASES",
+    "RESULT_2D_STRUCT_1_ORG",
+    "RESULT_2D_STRUCT_1_10_ORG",
+    "RESULT_2D_STRUCT_10_100_ORG",
+    "RESULT_2D_STRUCT_GT100_ORG",
+    "RESULT_ORG_1_STRUCT",
+    "RESULT_ORG_1_10_STRUCT",
+    "RESULT_ORG_10_100_STRUCT",
+    "RESULT_ORG_GT100_STRUCT"
+  ],
+  "subdomains": [
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "statistical-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:lotusnprod__lotus-processor",
+  "task_description": "Bin the 153,956 unique 2D structures from the LOTUS database by organism occurrence frequency (1, 1\u201310, 10\u2013100, >100 organisms per structure) and verify the four reported distribution counts: 89,903 / 45,640 / 3,990 / 403.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LOTUS 2D structure-organism pairs flat file",
+      "port_id": "lotus_pairs_table",
+      "resolved_via": null,
+      "source": "task_001/verification_report",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Load the LOTUS 2D structure-organism flat file, group unique structures by organism frequency bins (1, 1\u201310, 10\u2013100, >100), and report the four counts.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Four-bin frequency distribution counts",
+      "port_id": "binned_distribution",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Verification report with bin counts and match status",
+      "port_id": "verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quantitative-structure-activity"
+  ],
+  "title": "Reproduce the organism-count distribution across 2D structure\u2013organism pairs",
+  "tools": [
+    "R",
+    "Python 3"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Four-bin frequency distribution of 2D structures: singleton (89,903), low-diversity 1\u201310 (45,640), medium-diversity 10\u2013100 (3,990), high-diversity >100 (403), Verification report confirming counts match or documenting discrepancies."
+  ],
+  "workflow_description": "1. Load the LOTUS 2D structure-organism pairs table from the published flat file. 2. Group all unique 2D structures by their associated organism count. 3. Bin structures into four frequency bins: singleton structures (1 organism), low-diversity structures (2\u201310 organisms), medium-diversity structures (11\u2013100 organisms), and high-diversity structures (>100 organisms). 4. Count the number of structures in each bin and compare against the reported gold-standard counts. 5. Generate a summary report documenting bin membership counts and any discrepancies."
+}

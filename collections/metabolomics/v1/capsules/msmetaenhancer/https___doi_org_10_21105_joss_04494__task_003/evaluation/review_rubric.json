@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: check that Monitor class is defined in the MSMetaEnhancer codebase (GitHub repository RECETOX/MSMetaEnhancer)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "status report output is a structured format (JSON, dict, or similar) containing ",
+      "value": "JSON"
+    },
+    {
+      "id": "pf_004",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "status report contains required fields for each service (service name, availabil",
+      "value": [
+        "for each service (service name",
+        "availability state",
+        "error state)"
+      ]
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "Monitor component tracks the services mentioned in intro (CIR, CTS, PubChem, IDS"
+    },
+    {
+      "id": "pf_006",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "if a reference implementation or specification exists in repository documentatio"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: check that Monitor class is defined in the MSMetaEnhancer codebase (GitHub repository RECETOX/MSMetaEnhancer)",
+      "script_runs: execute Monitor component initialization with mock service instances and verify no runtime errors occur",
+      "file_format_is: verify that status report output is a structured format (JSON, dict, or similar) containing per-service status entries",
+      "field_present: verify status report contains required fields for each service (service name, availability state, error state)",
+      "contains_substring: verify Monitor component tracks the services mentioned in intro (CIR, CTS, PubChem, IDSM, BridgeDb)",
+      "output_matches_reference: if a reference implementation or specification exists in repository documentation or tests, verify Monitor output structure matches expected schema"
+    ],
+    "expert_review": [
+      "assess whether the Monitor component correctly distinguishes between service unavailability and transient errors during annotation runs",
+      "evaluate whether the status tracking mechanism is appropriate for asynchronous annotation workflows and does not introduce bottlenecks",
+      "review whether the structured status report provides sufficient diagnostic information for users to identify which services failed and why"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at output/screening/Diagnostic_QCs_Batch_1/ directory"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "file_format_is PNG for all 10 EIC plot files in output/screening/Diagnostic_QCs_Batch_1/"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "row_count_equals 10 PNG files present in output/screening/Diagnostic_QCs_Batch_1/ (one per component)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "file_exists for each expected EIC plot file matching pattern corresponding to the 10 targets (5 internal standards + 5 endogenous)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at output/screening/Diagnostic_QCs_Batch_1/ directory",
+      "file_format_is PNG for all 10 EIC plot files in output/screening/Diagnostic_QCs_Batch_1/",
+      "row_count_equals 10 PNG files present in output/screening/Diagnostic_QCs_Batch_1/ (one per component)",
+      "script_runs: tardisPeaks() executes without error when called with screening_mode=TRUE on vignette LC-MS dataset",
+      "file_exists for each expected EIC plot file matching pattern corresponding to the 10 targets (5 internal standards + 5 endogenous)"
+    ],
+    "expert_review": [
+      "visual inspection of EIC plots for correct peak identification and appropriate m/z and retention time windows for each of the 10 targets",
+      "verification that screening mode output correctly flags target visibility within specified m/z and RT windows for all 14 runs",
+      "assessment that EIC plot quality is sufficient for diagnostic inspection (clarity, axis labels, peak prominence relative to noise)"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

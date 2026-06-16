@@ -1,0 +1,60 @@
+schema_version: 0.1.0
+workflow_id: coll_bindiscover_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+narrative:
+  tagline: BinDiscover is a tool for metabolomics analysis that requires expert validation
+    of its findings.
+  pseudo_abstract: This benchmark describes BinDiscover, a computational mechanism
+    for metabolomics analysis. The work includes an unclassified task involving reconstruction
+    of findings that should be confirmed through expert review, though no strong empirical
+    findings were detected heuristically in the available documentation.
+  research_questions:
+  - Assess the scientific task and reproducibility context described by this article
+    package.
+  methods_summary: ''
+  domain: metabolomics
+  techniques:
+  - feature-detection
+  - database-annotation
+  - metabolite-identification
+  claims: []
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 'figure: figures/file.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/fontawesome-webfont.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/graphical_abstract.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/mana_cover.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/minus.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/plus.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

@@ -1,0 +1,171 @@
+# SciTask Card: Reconstruct the metadata cleaning and validation pipeline step in matchms
+
+- Task ID: `task_001`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T21:14:07.897424+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_matchms/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-processing`, `data-analysis`
+- GitHub: `matchms/matchms`
+- Quality: Score 2/5 — placeholder, 8 grounding failures
+
+## Classification
+
+- Task kind: `component_reconstruction`
+- Article type: `software-tool`
+- Primary domain: `cheminformatics`
+- Keywords: `mass spectrometry` · `ms/ms data` · `spectral similarity` · `cosine score` · `molecular fingerprint comparison` · `metadata cleaning` · `peak filtering` · `mzml format` · `mgf format` · `untargeted metabolomics` · `spectral processing` · `pairwise similarity measures`
+
+## Research Question
+What metadata cleaning and validation tools does matchms provide, and how do they operate on mass spectrometry spectral data?
+
+## Connected Finding
+Matchms provides an array of tools for metadata cleaning and validation that work alongside basic peak filtering to ensure data accuracy and integrity of mass spectrometry spectral data.
+
+## Task Description
+Load a publicly available mass spectrometry spectral dataset (MGF or MSP file from the matchms repository) and apply matchms metadata cleaning and validation filters to produce a cleaned spectrum collection. Output the cleaned spectra as a validated dataset file.
+
+## Inputs
+- Public spectral dataset in MGF or MSP format from matchms repository
+
+## Expected Outputs
+- Cleaned spectrum collection with validated metadata as MGF or JSON file
+- Test report confirming metadata validation filters pass
+
+## Expected Output File
+
+- `cleaned_spectra.mgf`
+
+## Landmark Outputs
+
+- `raw_spectrum_count.txt`
+- `metadata_validation_log.csv`
+- `cleaned_spectra.mgf`
+- `pytest_report.txt`
+
+## Tools
+- matchms
+- Python
+- pytest
+
+## Skills
+- spectral-metadata-standardization
+- mass-spectrometry-data-validation
+- spectral-file-format-conversion
+- data-quality-assessment-filtering
+- python-workflow-scripting
+
+## Workflow Description
+1. Import spectral data from a public MGF or MSP file using matchms Python package. 2. Apply matchms metadata cleaning filters to standardize and validate spectrum metadata fields (e.g., instrument type, precursor m/z, retention time). 3. Apply matchms validation filters to remove spectra with missing or invalid critical metadata. 4. Export the cleaned spectrum collection to an output file (MGF or JSON format). 5. Run pytest on the cleaning workflow to verify filter logic and data integrity constraints are met.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/filtering_sketch.png` | figure | False |
+| `figures/filtering_sketch.svg` | figure | False |
+| `figures/flowchart_matchms.png` | figure | False |
+| `figures/flowchart_matchms.svg` | figure | False |
+| `figures/matchms.png` | figure | False |
+| `figures/matchms_header.png` | figure | False |
+| `figures/matchms_sketch.png` | figure | False |
+| `figures/peak_filtering.png` | figure | False |
+| `figures/peak_filtering.svg` | figure | False |
+| `figures/spectra-array-plot-example.png` | figure | False |
+| `figures/spectrum-mirror-plot-example.png` | figure | False |
+| `figures/spectrum-plot-example.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No specific example MGF or MSP file path or public data deposit is provided in the contributing guidelines section; the exact location of test data or reference spectral datasets within the matchms repository is not stated
+- The metadata cleaning and validation component is mentioned in general terms, but the specific filter class names, function signatures, input parameter options, and expected output schema are not documented in the contributing guidelines
+- No reference implementation example, tutorial, or minimal working code snippet demonstrating metadata cleaning workflow is included in the provided text
+
+## Domain Knowledge
+- Metadata fields in mass spectrometry spectra typically include precursor m/z, retention time, instrument type, ionization mode, and compound identifier (e.g., InChI, SMILES) — cleaning standardizes their formats and removes invalid entries.
+- Validation filtering removes spectra lacking critical metadata required for downstream similarity scoring or database matching.
+- MGF (Mascot Generic Format) and MSP (NIST MS Search format) are interchange formats for spectral data; matchms supports bidirectional conversion between these and internal JSON representation.
+- A spectrum is considered 'cleaned' when all mandatory metadata fields are present, non-null, and conform to expected data types and value ranges (e.g., m/z values are positive floats).
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: pytest, Test report confirming metadata validation filters pass.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] What metadata cleaning and validation tools does matchms provide, and how do they operate on mass spectrometry spectral data?: 'Matchms offers an array of tools for metadata cleaning and validation, alongside basic peak filtering, to ensure data accuracy and integrity.'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] Matchms provides an array of tools for metadata cleaning and validation that work alongside basic peak filtering to ensure data accuracy and integrity of mass spectrometry spectral data.: 'Matchms offers an array of tools for metadata cleaning and validation, alongside basic peak filtering, to ensure data accuracy and integrity.'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [methods] Public spectral dataset in MGF or MSP format from matchms repository: 'Matchms supports multiple spectral data formats including mzML, mzXML, msp, metabolomics-USI, MGF, and JSON'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [methods] Cleaned spectrum collection with validated metadata as MGF or JSON file: 'Matchms offers an array of tools for metadata cleaning and validation, alongside basic peak filtering'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [methods] Test report confirming metadata validation filters pass: 'make sure the existing tests still work by running ``pytest``'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [methods] matchms: 'Matchms offers an array of tools for metadata cleaning and validation'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [methods] Python: 'Matchms is a versatile open-source Python package'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [methods] pytest: 'make sure the existing tests still work by running ``pytest``'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [other] No specific example MGF or MSP file path or public data deposit is provided in the contributing guidelines section; the exact location of test data or reference spectral datasets within the matchms repository is not stated: '[UNTRUSTED_DOCUMENT] section contains only GitHub release comparison links and no dataset references'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [other] The metadata cleaning and validation component is mentioned in general terms, but the specific filter class names, function signatures, input parameter options, and expected output schema are not documented in the contributing guidelines: 'No filter or metadata cleaning API documentation appears in the provided text'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [other] No reference implementation example, tutorial, or minimal working code snippet demonstrating metadata cleaning workflow is included in the provided text: 'Section contains only version tag links with no procedural or code examples'
+
+## Evaluation Strategy
+### Direct Checks
+- verify file exists at github.com/matchms/matchms repository
+- verify matchms package can be imported in Python environment
+- verify at least one spectral data file (MGF or MSP format) is available in the repository or can be downloaded from a public source (e.g., Zenodo, MetaboLights, MassIVE)
+- script_runs: Python script that instantiates matchms metadata cleaning filters executes without errors
+- script_runs: Python script that applies metadata filters to a loaded spectral dataset completes execution
+- file_exists: cleaned spectrum collection output file is generated
+- file_format_is: output file matches expected format (MGF, MSP, JSON, or matchms native format)
+- row_count_equals or field_present: output collection contains spectra records with metadata fields (robust to various field schemas used across spectral formats)
+- contains_substring: output file or collection object contains evidence of applied filter transformations (e.g., modified metadata entries, removed invalid entries, or validation logs)
+- output_matches_reference: if matchms repository includes example cleaned spectral outputs or test fixtures, byte-for-byte or structural equivalence check against reference deposit
+
+### Expert Review
+- Assess whether metadata cleaning operations (e.g., field standardization, missing value handling, invalid entry removal) conform to metabolomics/mass spectrometry best practices and matchms design intent
+- Evaluate whether cleaned metadata is chemically and informatically valid (e.g., precursor m/z values in plausible ranges, molecular weight consistency, retained spectrum count is reasonable relative to input)
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Import spectral data from a public MGF or MSP file repository using matchms I/O functions.
+2. Apply matchms metadata cleaning filters to standardize spectrum annotations (precursor m/z, retention time, compound identifiers, instrument metadata).
+3. Apply matchms validation filters to remove spectra with missing or malformed critical metadata fields.
+4. Export cleaned spectrum collection to output file in MGF or JSON format.
+5. Validation: Run pytest on the cleaning module to confirm filter logic executes without error and output spectrum count and metadata completeness match expected thresholds.
+
+## Workflow Ports
+
+**Inputs:**
+
+- `raw_spectra` — Raw spectral dataset in MGF or MSP format
+
+**Outputs:**
+
+- `cleaned_spectra` — Cleaned spectrum collection with validated metadata
+- `validation_report` — Test and validation report for metadata cleaning
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:matchms__matchms`
+- **Synthesized at:** 2026-06-15T21:19:21+00:00
+
+## Extraction Quality
+- Score: 2/5
+- Coherent: true
+- Placeholder detected: true
+- Groundedness failures (8):
+  - inputs[0]: evidence_span not found in section 'methods' (value='Public spectral dataset in MGF or MSP format from matchms re', span='Matchms supports multiple spectral data formats including mz')
+  - expected_outputs[0]: evidence_span not found in section 'methods' (value='Cleaned spectrum collection with validated metadata as MGF o', span='Matchms offers an array of tools for metadata cleaning and v')
+  - tools[0]: evidence_span not found in section 'methods' (value='matchms', span='Matchms offers an array of tools for metadata cleaning and v')
+  - tools[1]: evidence_span not found in section 'methods' (value='Python', span='Matchms is a versatile open-source Python package')
+  - missing_information[0]: evidence_span not found in section 'other' (value='No specific example MGF or MSP file path or public data depo', span='[UNTRUSTED_DOCUMENT] section contains only GitHub release co')
+  - missing_information[1]: evidence_span not found in section 'other' (value='The metadata cleaning and validation component is mentioned ', span='No filter or metadata cleaning API documentation appears in ')
+  - missing_information[2]: evidence_span not found in section 'other' (value='No reference implementation example, tutorial, or minimal wo', span='Section contains only version tag links with no procedural o')
+  - Semantic gap: research_question asks 'how do they operate' but finding only states 'work alongside basic peak filtering' without explaining operational mechanics
+- Notes: This card exhibits severe groundedness and coherence issues. The research_question and finding are semantically aligned and non-contradictory, but they lack specificity and operational detail. Six of seven TracedClaims have section-span mismatches (all cite 'intro'-level evidence but claim 'methods' grounding), indicating either incorrect section tagging or evidence extraction errors. The missing_information entries are problematic: they assert gaps in documentation but provide self-referential or meta-commentary evidence_spans rather than authentic source quotes, making them impossible to verify. Placeholder language ('an array of tools', 'ensure data accuracy') dominates; no concrete API, filter names, parameter schemas, or validation rules are cited. The workflow_description is richer than the research_question/finding pair, suggesting the task was designed before the research question was formally articulated. The evaluation_strategy references 'filter class names' and 'API documentation' as direct checks, but the card itself provides zero evidence of these existing. Recommend: (1) Re-ground all claims against the actual source document, correcting section tags; (2) Replace missing_information meta-commentary with genuine quoted gaps; (3) Add specific filter/function names, parameter lists, or code examples to research_question and finding; (4) Reconcile workflow_description detail with research_question scope; (5) Clarify whether task assumes external documentation not in the source card.
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

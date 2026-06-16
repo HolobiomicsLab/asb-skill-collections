@@ -1,0 +1,54 @@
+schema_version: 0.1.0
+workflow_id: coll_np_analyst_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+narrative:
+  tagline: NPAnalyst is a tool-chain for relating metabolite MS data with bio-activity
+    data.
+  pseudo_abstract: NPAnalyst provides a command-line interface and integrated workflow
+    for connecting metabolite mass spectrometry data with biological activity measurements,
+    enabling researchers to correlate molecular composition with bioactivity outcomes.
+  research_questions:
+  - Assess the scientific task and reproducibility context described by this article
+    package.
+  methods_summary: ''
+  domain: metabolomics
+  techniques:
+  - molecular-networking
+  - database-annotation
+  - metabolite-identification
+  - spectral-library-matching
+  - machine-learning
+  claims:
+  - claim_text: Tool-chain for relating metabolite MS data with bio-activity data
+    claim_type: finding
+    evidence_step: task_001
+    speculative: false
+  - claim_text: Complete usage of the npanalyst CLI is documented.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_NPANALYST
+  - claim_text: The npanalyst source code is hosted on GitHub under the liningtonlab
+      organization.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_NPANALYST
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: A reviewed SciTask Card and capsule describing the benchmarkable task.
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

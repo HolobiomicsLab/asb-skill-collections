@@ -1,33 +1,68 @@
 name: Python
 slug: python
+version_used: '3.8'
 evidence_spans:
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution metabolomics data processing.
+- Requires Python 3.8+.
+- is a Python application programming interface and command-line tool
+- MetaMiner requires a 64-bit Linux system or macOS and Python (versions 2.6-2.7, 3.3 and higher are supported)
 - Python versions badge
-- MAMSI is a Python framework
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- MOCCal, or Multi-Omic CCS Calibrator, is a Python application
-- Our MS2DeepScore Python library offers two types of data generators
-- Our MS2DeepScore Python library
 derived_from:
+- doi: 10.1038/s41467-023-39889-1
+  title: Trackable and scalable LC-MS metabolomics data processing using asari
+- doi: 10.1021/acs.analchem.1c05017
+  title: deimos
+- doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
+- doi: 10.1074/mcp.M113.031278
+  title: featurefindermetab
 - doi: 10.1186/s13321-024-00804-5
   title: idslmint
+- doi: 10.1007/s00044-016-1764-y
+  title: 'Binding of anti-Trypanosoma natural products from African flora against selected drug targets: a docking study'
 - doi: 10.1371/journal.pcbi.1011814
   title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+- doi: 10.21105/joss.02411
+  title: matchms
 - doi: 10.3390/metabo11030163
   title: The mwtab Python Library for RESTful Access and Enhanced Quality Control, Deposition, and Curation of the Metabolomics Workbench Data Repository
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
+- doi: 10.3390/metabo9070144
+  title: molnetenhancer
 - doi: 10.1186/s13321-021-00558-4
   title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+- doi: 10.1093/bioinformatics/btx582
+  title: ms2lda
+- doi: 10.1038/s41467-023-37446-4
+  title: ms2query
+- doi: 10.21105/joss.04494
+  title: msmetaenhancer
+- doi: 10.1371/journal.pcbi.1003123
+  title: mummichog
 - doi: 10.1021/acs.jproteome.5c00435
   title: 'mzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format'
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+- doi: 10.1021/acs.jnatprod.1c00399
+  title: npclassifier
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
 - doi: 10.1371/journal.pcbi.1011912
   title: Common data models to streamline metabolomics processing and annotation, and implementation in a Python pipeline
 - doi: 10.1007/s00216-023-05070-2
   title: PFΔScreen — an open-source tool for automated PFAS feature prioritization in non-target HRMS data
+- doi: 10.1093/bioinformatics/bty046
+  title: pymzml
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
 - doi: 10.21105/joss.08070
   title: spectripy
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
 - doi: 10.1021/acs.analchem.0c03895
@@ -36,13 +71,30 @@ source_repos:
 - HinesLab/MOCCal
 - JonZwe/PFAScreen
 - MoseleyBioinformaticsLab/MESSES
+- OpenMS/OpenMS
+- OpenMS/pyopenms_viz
+- RECETOX/MSMetaEnhancer
+- ablab/npdtools
+- bihealth/NeatMS
+- bittremieux-lab/spectrum_utils
 - glasgowcompbio/vimms
 - https://github.com/cwieder/metabolomics-ORA
 - https://github.com/matchms/ms2deepscore
 - idslme/IDSL_MINT
+- iomega/ms2query
 - kevinmildau/specXplore
 - kopeckylukas/py-mamsi
+- levitsky/pyteomics
+- lotusnprod/lotus-processor
+- madeleineernst/pyMolNetEnhancer
+- matchms/matchms
 - mobiusklein/mzpeak_prototyping
+- mwang87/NP-Classifier
+- pnnl/deimos
+- pymzML/pymzML
 - rformassspectrometry/SpectriPy
 - shuzhao-li-lab/PythonCentricPipelineForMetabolomics
+- shuzhao-li-lab/asari
+- shuzhao-li/mummichog
+- vdhooftcompmet/MS2LDA
 schema_version: 0.2.0

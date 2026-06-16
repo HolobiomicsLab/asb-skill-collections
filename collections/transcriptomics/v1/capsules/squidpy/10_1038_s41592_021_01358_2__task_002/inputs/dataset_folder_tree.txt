@@ -1,0 +1,21 @@
+  figures/ContainerShow_axis.png
+  figures/ContainerShow_channel.png
+  figures/ContainerShow_channelwise.png
+  figures/ContainerShow_channelwise_segmentation.png
+  figures/ContainerShow_imshow_kwargs.png
+  figures/ContainerShow_library_id.png
+  figures/ContainerShow_scale_mask_circle_crop.png
+  figures/ContainerShow_segmentation.png
+  figures/ContainerShow_transpose_channelwise_False_False.png
+  figures/ContainerShow_transpose_channelwise_False_True.png
+  figures/ContainerShow_transpose_channelwise_True_False.png
+  figures/ContainerShow_transpose_channelwise_True_True.png
+  figures/DetectTissue_detect_tissue_felzenszwalb.png
+  figures/DetectTissue_detect_tissue_otsu.png
+  figures/figure1.png
+  figures/squidpy_horizontal.png
+  figures/squidpy_vertical.png
+  figures/test_img.jpg
+  figures/tissue_hires_image.png
+  figures/tissue_lowres_image.png
+paper.md

@@ -1,0 +1,470 @@
+{
+  "abstraction_frame": null,
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "figures/file.png",
+      "locator_id": "pkg_5c4bc9a1",
+      "locator_kind": "package_artifact",
+      "name": "figures/file.png",
+      "prose": "figure: figures/file.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/fontawesome-webfont.svg",
+      "locator_id": "pkg_ad615792",
+      "locator_kind": "package_artifact",
+      "name": "figures/fontawesome-webfont.svg",
+      "prose": "figure: figures/fontawesome-webfont.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/graphical_abstract.png",
+      "locator_id": "pkg_97ddcaba",
+      "locator_kind": "package_artifact",
+      "name": "figures/graphical_abstract.png",
+      "prose": "figure: figures/graphical_abstract.png",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/mana_cover.png",
+      "locator_id": "pkg_a83193d2",
+      "locator_kind": "package_artifact",
+      "name": "figures/mana_cover.png",
+      "prose": "figure: figures/mana_cover.png",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/minus.png",
+      "locator_id": "pkg_47e7fc50",
+      "locator_kind": "package_artifact",
+      "name": "figures/minus.png",
+      "prose": "figure: figures/minus.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/plus.png",
+      "locator_id": "pkg_54115199",
+      "locator_kind": "package_artifact",
+      "name": "figures/plus.png",
+      "prose": "figure: figures/plus.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "paper.md",
+      "locator_id": "pkg_38ef7509",
+      "locator_kind": "package_artifact",
+      "name": "paper.md",
+      "prose": "main_article: paper.md",
+      "score": 0.5,
+      "side": "input"
+    },
+    {
+      "locator": "figures/file.png",
+      "locator_id": "pkg_5c4bc9a1",
+      "locator_kind": "package_artifact",
+      "name": "figures/file.png",
+      "prose": "figure: figures/file.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/fontawesome-webfont.svg",
+      "locator_id": "pkg_ad615792",
+      "locator_kind": "package_artifact",
+      "name": "figures/fontawesome-webfont.svg",
+      "prose": "figure: figures/fontawesome-webfont.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/graphical_abstract.png",
+      "locator_id": "pkg_97ddcaba",
+      "locator_kind": "package_artifact",
+      "name": "figures/graphical_abstract.png",
+      "prose": "figure: figures/graphical_abstract.png",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/mana_cover.png",
+      "locator_id": "pkg_a83193d2",
+      "locator_kind": "package_artifact",
+      "name": "figures/mana_cover.png",
+      "prose": "figure: figures/mana_cover.png",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/minus.png",
+      "locator_id": "pkg_47e7fc50",
+      "locator_kind": "package_artifact",
+      "name": "figures/minus.png",
+      "prose": "figure: figures/minus.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/plus.png",
+      "locator_id": "pkg_54115199",
+      "locator_kind": "package_artifact",
+      "name": "figures/plus.png",
+      "prose": "figure: figures/plus.png",
+      "score": 0.75,
+      "side": "expected_output"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/file.png",
+      "role": "figure",
+      "sha256": "5c4bc9a16aebf38c4b950f59b8e501ca36495328cb9eb622218bce9064a35e3e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/fontawesome-webfont.svg",
+      "role": "figure",
+      "sha256": "ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/graphical_abstract.png",
+      "role": "figure",
+      "sha256": "97ddcaba451a6b92f3ab889d5261e4dba0a9a7b93e726379d8af570fea740858"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mana_cover.png",
+      "role": "figure",
+      "sha256": "a83193d22068ed0ca3fc3ce5c9224f3786152e36b091e0dc4d968af6e20d1a09"
+    },
+    {
+      "indexable": false,
+      "path": "figures/minus.png",
+      "role": "figure",
+      "sha256": "47e7fc50db3699f1ca41ce9a2ffa202c00c5d1d5180c55f62ba859b1bd6cc008"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plus.png",
+      "role": "figure",
+      "sha256": "54115199b96a130cba02147c47c0deb43dcc9b9f08b5162bba8642b34980ac63"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "38ef7509b306e2cf7c2af1dd3c4e55f638d7ad7ecb51db7ea7ad15ec6c9584bc"
+    }
+  ],
+  "created_at": "2026-06-15T13:51:39.336640+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/file.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/fontawesome-webfont.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/graphical_abstract.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/mana_cover.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/minus.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/plus.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "main_article: paper.md",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/file.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/fontawesome-webfont.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/graphical_abstract.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/mana_cover.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/minus.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/plus.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "Metabolomics (v2 via asb-domain-core)",
+  "domain_knowledge": [],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Confirm that every cited input artifact exists or is explicitly marked missing.",
+      "Confirm that expected outputs are tied to figures, tables, files, or claims in the package."
+    ],
+    "llm_or_expert_review": [
+      "Judge whether the task description matches the source evidence.",
+      "Judge whether the workflow description is sufficient for a future agent attempt.",
+      "Review uncertainty notes and missing-information claims."
+    ],
+    "not_in_scope_for_mvp": [
+      "Running scientific code or reproducing figures.",
+      "Scoring model-generated scientific outputs."
+    ]
+  },
+  "evidence_snippets": [],
+  "executable": {
+    "cmd": [
+      "echo",
+      "Task task_001: Reconstruct BinDiscover - article package review complete. Input figures and paper.md are present and available for analysis."
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "figure: figures/file.png",
+    "figure: figures/fontawesome-webfont.svg",
+    "figure: figures/graphical_abstract.png",
+    "figure: figures/mana_cover.png",
+    "figure: figures/minus.png",
+    "figure: figures/plus.png"
+  ],
+  "finding": "The finding should be confirmed by expert review; no strong finding sentence was detected heuristically.",
+  "github_name": "metabolomics-us/bindiscover",
+  "input_from": null,
+  "inputs": [
+    "figure: figures/file.png",
+    "figure: figures/fontawesome-webfont.svg",
+    "figure: figures/graphical_abstract.png",
+    "figure: figures/mana_cover.png",
+    "figure: figures/minus.png",
+    "figure: figures/plus.png",
+    "main_article: paper.md"
+  ],
+  "keywords": [],
+  "landmark_outputs": [],
+  "linked_result_ids": [],
+  "methodology_summary": [],
+  "missing_information": [
+    "No local code/script artifact was detected.",
+    "No explicit data-reference artifact was detected."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Assess the scientific task and reproducibility context described by this article package.",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [],
+  "skills": [
+    "scientific_task_formulation",
+    "evidence_linking",
+    "expert_review_preparation",
+    "output_grounding",
+    "figure_table_interpretation",
+    "reproducibility_gap_detection"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_bindiscover/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [],
+  "subdomains": [
+    "biomarker-discovery",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [],
+  "synthesized_from": "github:metabolomics-us__bindiscover",
+  "task_description": "Create a bounded scientific task from the article package by linking a research question or finding to available inputs, expected outputs, tools, skills, workflow logic, evidence snippets, missing information, and an evaluation strategy.",
+  "task_id": "task_001",
+  "task_inputs": [],
+  "task_kind": null,
+  "task_objective": "",
+  "task_outputs": [],
+  "techniques": [
+    "feature-detection",
+    "database-annotation",
+    "metabolite-identification"
+  ],
+  "title": "Reconstruct: BinDiscover",
+  "tools": [
+    "GitHub"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by deterministic heuristics and needs scientific expert review.",
+    "Workflow steps are descriptive only; no scientific workflow was executed.",
+    "PDFs, images, notebooks, archives, and unknown file types are referenced but not deeply parsed."
+  ],
+  "workflow_description": "Review indexed article artifacts, connect claims to outputs, inspect available materials, and record missing information. No workflow is executed in the MVP."
+}

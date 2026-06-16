@@ -1,0 +1,10 @@
+name: Q-Exactive orbitrap
+slug: q-exactive-orbitrap
+evidence_spans:
+- tested and validated using Q-Exactive orbitrap UHPLC-HRMS/MS data
+derived_from:
+- doi: 10.1186/s12859-017-1744-3
+  title: lipidmatch
+source_repos:
+- GarrettLab-UF/LipidMatch
+schema_version: 0.2.0

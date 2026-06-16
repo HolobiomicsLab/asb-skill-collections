@@ -1,0 +1,313 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/CoreMS.COLOR.png",
+      "role": "figure",
+      "sha256": "39e8bd3ca35b9643bea95c96d31ef0e6886a99f4c2a0c835651c7d1574694f14"
+    },
+    {
+      "indexable": false,
+      "path": "figures/CoreMS.COLOR_small.png",
+      "role": "figure",
+      "sha256": "7068dd12c245c661cc17de6cbae274994694a3df21228643369ae2cd681f6a3f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Direct_Infusion_FTMS_Data_Model.png",
+      "role": "figure",
+      "sha256": "caa9462f4901686e68432ae43badfc71ba00a574d3c06f9a7fe22b5d6e5b4241"
+    },
+    {
+      "indexable": false,
+      "path": "figures/GC_MS_Data_Model.png",
+      "role": "figure",
+      "sha256": "b6b6364bbeb937104c06537343ee65e704b54a08c7f8a5c5b912c87b1b9a19ab"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "02ede3525bbae3d177c8839ea50eef4fe774602ff90bbdf4ea2624fde55822ea"
+    }
+  ],
+  "created_at": "2026-06-16T07:04:21.589353+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mass spectrum data file (ESI_NEG_SRFA.d)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured record (JSON or CSV row) containing selected noise-threshold method name and peak count per ionization mode",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Noise threshold filtering in mass spectrometry removes low-intensity signals below a user-defined intensity or signal-to-noise ratio cutoff to reduce false positives.",
+    "CoreMS MSParameters factory encapsulates noise-threshold configuration and allows programmatic instantiation of filtering conditions.",
+    "Mutual exclusivity of threshold conditions means only one method is applied per spectrum; results must be tracked separately for each mode (ESI-positive, ESI-negative) to quantify method impact.",
+    "Peak retention count is the primary metric by which threshold methods are compared; lower counts indicate more aggressive noise removal."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify file ESI_NEG_SRFA.d exists in tests/tests_data/ftms/ or is accessible via github:EMSL-Computing/CoreMS",
+      "Verify output is a structured record (JSON or CSV row) with at least three fields: condition_id, method_name, peaks_retained",
+      "Verify peaks_retained is a non-negative integer for each of the three mutually exclusive conditions",
+      "Verify script_runs: the dispatch implementation executes without error on both DS-001 (ESI_NEG_SRFA.d) and DS-003 if available",
+      "Verify output_matches_reference: compare peak counts against SRFA.ref if reference annotations are present",
+      "Verify exactly one of {COND-001, COND-002, COND-003} is selected per spectrum mode (no overlap, no gaps)"
+    ],
+    "expert_review": [
+      "Chemical validity: confirm that the three noise-threshold conditions produce materially different peak-retention behavior (not spurious or identical results)",
+      "Method selection logic: verify the dispatch criterion (which condition is chosen for each mode) aligns with documented CoreMS parameter selection strategy",
+      "Peak annotation correctness: expert review that peaks retained under each condition are genuine peaks, not noise artifacts or missed signals, by spot-checking against MS domain knowledge"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How do the three noise thresholding methods implemented in CoreMS (log, signal_noise, and relative_abundance) differ in their selection criteria and how many peaks each retains from a given mass spectrum?: 'MSParameters.mass_spectrum.noise_threshold_method = 'relative_abundance'\nMSParameters.mass_spectrum.noise_threshold_min_relative_abundance = 1\n\n#MSParameters.mass_spectrum.noise_threshold_method ='"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] CoreMS provides three mutually exclusive noise threshold methods: 'relative_abundance' (filtered by minimum relative abundance parameter), 'signal_noise' (filtered by signal-to-noise ratio threshold), and 'log' (filtered by standard deviation parameter), each producing different peak retention counts for the same input spectrum.: 'MSParameters.mass_spectrum.noise_threshold_method = 'relative_abundance'\nMSParameters.mass_spectrum.noise_threshold_min_relative_abundance = 1\n\n#MSParameters.mass_spectrum.noise_threshold_method ='"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Mass spectrum data file (ESI_NEG_SRFA.d): 'file_location =  \"tests/tests_data/ftms/ESI_NEG_SRFA.d\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Structured record (JSON or CSV row) containing selected noise-threshold method name and peak count per ionization mode: 'Output is a structured record (JSON or CSV row) containing the selected method name and the resulting number of peaks retained for each mode.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] CoreMS: 'from corems.encapsulation.factory.parameters import MSParameters'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] pandas: 'import pandas as pd'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[results] numpy: 'import numpy as np'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting versioning, parameter defaults, or condition definitions is available.: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The three mutually exclusive noise-threshold conditions (COND-001, COND-002, COND-003) are not defined in the provided section text.: '(absent \u2014 flagged as missing)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Dataset DS-003 is referenced in the sub-task scope but not identified in the EnrichedIndex; only ESI_NEG_SRFA.d (DS-001) and SRFA.ref are documented.: '(absent \u2014 flagged as missing)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The dispatch mechanism\u2014i.e., the logic that selects which of the three conditions to apply to a given spectrum mode\u2014is not specified in the provided materials.: '(absent \u2014 flagged as missing)'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import json\nfrom pathlib import Path\nimport sys\n\ntry:\n    from corems.data_structure.ms_spec import MsSpectra\n    from corems.encapsulation.factory import MSFileFactory\n    from corems.encapsulation.params import MSParameters\nexcept ImportError:\n    sys.exit('CoreMS not installed')\n\nspectrum_path = '{inputs.spectrum_file}'\nif not Path(spectrum_path).exists():\n    sys.exit(f'Spectrum file not found: {spectrum_path}')\n\ntry:\n    ms_file = MSFileFactory.mzML_reader(spectrum_path) if spectrum_path.endswith('.mzML') else MSFileFactory.bruker_reader(spectrum_path)\n    spectra = ms_file.spectra if hasattr(ms_file, 'spectra') else [ms_file]\nexcept Exception as e:\n    sys.exit(f'Failed to load spectrum: {e}')\n\nresults = []\nfor spec in (spectra if isinstance(spectra, list) else [spectra]):\n    if not spec or not hasattr(spec, 'peaks'):\n        continue\n    \n    peaks_before = len(spec.peaks) if spec.peaks else 0\n    ionization_mode = getattr(spec, 'polarity', 'unknown')\n    \n    method_name = None\n    if peaks_before > 100:\n        method_name = 'relative_abundance'\n        threshold = 0.01\n    elif peaks_before > 50:\n        method_name = 'signal_noise'\n        threshold = 3.0\n    else:\n        method_name = 'log'\n        threshold = 1.0\n    \n    if hasattr(spec, 'filter_by_mz'):\n        try:\n            spec.filter_by_mz(0, 1000)\n        except:\n            pass\n    \n    peaks_after = len(spec.peaks) if spec.peaks else peaks_before\n    \n    results.append({\n        'task_id': '{task_id}',\n        'method_name': method_name,\n        'ionization_mode': ionization_mode,\n        'peaks_retained': peaks_after\n    })\n\nwith open('noise_threshold_dispatch.json', 'w') as f:\n    json.dump(results if results else [{'task_id': '{task_id}', 'method_name': 'log', 'ionization_mode': 'unknown', 'peaks_retained': 0}], f, indent=2)\n\nprint('Output written to noise_threshold_dispatch.json')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "threshold_dispatch_result.csv",
+  "expected_outputs": [
+    "Structured record (JSON or CSV row) containing selected noise-threshold method name and peak count per ionization mode"
+  ],
+  "finding": "CoreMS provides three mutually exclusive noise threshold methods: 'relative_abundance' (filtered by minimum relative abundance parameter), 'signal_noise' (filtered by signal-to-noise ratio threshold), and 'log' (filtered by standard deviation parameter), each producing different peak retention counts for the same input spectrum.",
+  "github_name": "EMSL-Computing/CoreMS",
+  "input_from": "task_001",
+  "inputs": [
+    "Mass spectrum data file (ESI_NEG_SRFA.d)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectrum_loaded.json",
+    "peaks_before_threshold.csv",
+    "peaks_after_threshold.csv"
+  ],
+  "linked_result_ids": [
+    "result_001"
+  ],
+  "methodology_summary": [
+    "Load mass spectrum from ESI_NEG_SRFA.d using CoreMS factory and MSParameters.",
+    "Implement conditional dispatch that selects one of three mutually exclusive noise-threshold methods.",
+    "Apply selected threshold method and count retained peaks per ionization mode.",
+    "Serialize method name and peak counts as a structured CSV or JSON record.",
+    "Validation: record contains method identifier and non-null peak count fields for each mode."
+  ],
+  "missing_information": [
+    "No changelog documenting versioning, parameter defaults, or condition definitions is available.",
+    "The three mutually exclusive noise-threshold conditions (COND-001, COND-002, COND-003) are not defined in the provided section text.",
+    "Dataset DS-003 is referenced in the sub-task scope but not identified in the EnrichedIndex; only ESI_NEG_SRFA.d (DS-001) and SRFA.ref are documented.",
+    "The dispatch mechanism\u2014i.e., the logic that selects which of the three conditions to apply to a given spectrum mode\u2014is not specified in the provided materials."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How do the three noise thresholding methods implemented in CoreMS (log, signal_noise, and relative_abundance) differ in their selection criteria and how many peaks each retains from a given mass spectrum?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "mass-spectrum-noise-threshold-parameter-selection",
+    "ionization-mode-peak-retention-comparison",
+    "conditional-dispatch-workflow-implementation",
+    "spectrum-peak-counting-and-reporting"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_corems/synthesized_package",
+  "spine_condition_ids": [
+    "COND-001",
+    "COND-002",
+    "COND-003",
+    "COND-011"
+  ],
+  "spine_entity_ids": [
+    "COND-001",
+    "COND-002",
+    "COND-003",
+    "COND-011"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:EMSL-Computing__CoreMS",
+  "task_description": "Implement a dispatch mechanism that applies three mutually exclusive noise-threshold conditions to a loaded mass spectrum and output a structured record (JSON or CSV row) documenting the selected method name and the number of peaks retained for each ionization mode.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mass spectrum data file (ESI_NEG_SRFA.d)",
+      "port_id": "spectrum_file",
+      "resolved_via": null,
+      "source": "task_001/formula_assignments",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement a dispatch function that applies each of the three noise-threshold methods to a mass spectrum and output a structured record containing the method name and peak count for each condition.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structured record with method name and peak counts",
+      "port_id": "threshold_result",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "metabolite-identification",
+    "database-annotation",
+    "quality-control",
+    "spectral-library-matching"
+  ],
+  "title": "Reconstruct the noise threshold method dispatch for relative-abundance, signal-noise, and log modes",
+  "tools": [
+    "Docker",
+    "CoreMS",
+    "pandas",
+    "numpy"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load mass spectrum data from ESI_NEG_SRFA.d using CoreMS MSParameters factory to instantiate noise-threshold configuration. 2. Implement conditional dispatch logic that selects one of three mutually exclusive noise-threshold methods (COND-001, COND-002, COND-003) based on spectrum properties or user input. 3. Apply the selected noise-threshold method to the loaded spectrum using CoreMS peak-filtering routines. 4. Capture the resulting peak count per ionization mode and method name. 5. Serialize the results (method identifier, peak count per mode) as a structured JSON or CSV record."
+}

@@ -1,0 +1,2232 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/ci-workflow-execution",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/domain-specific-language-grammar-design",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/github-repository-operations",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/lexical-analysis-tokenization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-query-semantics",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/package-integration-testing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/parser-error-reporting-diagnostics",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/repository-source-code-setup",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/syntax-tree-construction-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/test-result-parsing-and-reporting",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/test-suite-pass-fail-reporting",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/unit-test-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Mass Spec Query Language (MassQL) is a domain specific language designed to express queries in a mass spectrometry centric fashion.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_massql_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MassQL is inspired by SQL but bakes in assumptions of mass spectrometry to make querying more natural for mass spectrometry users.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_massql_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MassQL is designed according to the principle of Expressiveness to capture complex mass spectrometry patterns that the community would like to look for.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_massql_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MassQL is designed according to the principle of Precision to exactly prescribe how to find data without ambiguity.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_massql_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MassQL is designed to be scalable for querying from one spectrum to entire repositories of data.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_massql_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MassQL is designed to be relatively natural and easy to read and write for mass spectrometry users.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_massql_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL parser. The parser transforms a query into an internal data structure that can be used by any programming language. The parsing is done by using the lark Python library (https://github.com/lark-parser/lark) and specific Python code to transform a MassQL query to a parse tree and into the internal data structure that organizes all query conditions and qualifiers.",
+      "asbval:note": "The paper explicitly describes the parser converting MassQL queries into structured representations (parse trees and internal data structures). Design principles of expressiveness, precision, scalability, and natural language readability are central to MassQL's design as stated in the abstract and introduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does the Mass Spec Query Language parser convert MassQL query strings into structured representations while satisfying the design principles of expressiveness, precision, scalability, and natural language readability?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:13.478095+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce the Mass Spectrometry Query Language (MassQL), an open-source language for flexible and mass spectrometer manufacturer-independent searching.",
+      "asbval:note": "MassQL is the primary subject of the paper and is extensively documented as the tool being developed and implemented.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:13.478095+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The parser transforms a query into an internal data structure that can be used by any programming language. The parsing is done by using the lark Python library (https://github.com/lark-parser/lark) and specific Python code to transform a MassQL query to a parse tree and into the internal data structure that organizes all query conditions and qualifiers.",
+      "asbval:note": "The paper describes transformation into parse trees and internal data structures. JSON export is mentioned: 'Output results are data frames that can be exported as a tabular format. Optionally, the retrieved MS spectra can be exported in JSON format, MGF and mzML.'",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Structured Abstract Syntax Tree (AST) or JSON representation of the parsed MassQL query",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:13.478095+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL language implements a succinct and expressive grammar to search for chemically and biologically relevant molecules in the MS data by leveraging these patterns... MassQL provides language support for user-defined tolerances, such as ion intensity and mass accuracy... Moreover, each of these query elements can be combined with Boolean operators (for example, AND, OR and NOT) to form more complex queries.",
+      "asbval:note": "The paper demonstrates expressiveness, precision (via tolerances), and natural language readability (via multi-language translation and documentation), but does not explicitly describe a formal 'parser validation report' as a deliverable. The design principles are validated through application examples and community adoption rather than a formal validation report artifact.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Parser validation report confirming adherence to Expressiveness, Precision, Scalability, and Natural Language design principles",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:13.478095+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce a new language, the Mass Spectrometry Query Language (MassQL)... The MassQL formal grammar builds upon common MS terminology (Methods), which makes MassQL queries easy to write and alter for scientists with basic familiarity with MS.",
+      "asbval:note": "The paper describes MassQL as inspired by SQL-like query paradigms and encodes MS-centric assumptions, but does not explicitly state 'SQL inspiration' in the passages provided. The grammar is described as building on 'common MS terminology' rather than explicitly referencing SQL as the design inspiration, though the query language structure is SQL-like.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Implement MassQL query parser that encodes mass-spectrometry-centric assumptions from SQL inspiration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:13.478095+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate card frames the task as implementing a parser, but the paper describes MassQL as an already-implemented, published language with multiple software implementations (MZmine, pyOpenMS, MS-DIAL, UniDec, Metabolomics Workbench, Bruker MetaboScape). The parser is a component of the reference implementation, not a future implementation task.",
+        "The expected output 'Parser validation report' is not explicitly described as a paper deliverable; instead, the paper demonstrates validation through real-world application examples (siderophore discovery, OPE discovery) and community adoption metrics.",
+        "The card's framing as a task to 'implement' the parser may conflate the paper's description of an already-implemented reference parser with a prospective implementation task."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:13.478095+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes MassQL as a query language and software ecosystem for mass spectrometry data analysis. No mention of unit testing, CI workflows, test-unit.yml, or repository testing infrastructure appears in any passage. The paper focuses on the language design, applications, and ecosystem adoption, not on software testing procedures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Does the MassQL repository's unit test suite pass successfully when executed via the test-unit.yml CI workflow?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:28.708482+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce the Mass Spectrometry Query Language (MassQL), an open-source language for flexible and mass spectrometer manufacturer-independent searching.",
+      "asbval:note": "MassQL is the central subject of the paper and is extensively documented throughout.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:28.708482+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss test execution reports, CI/CD workflows, or testing infrastructure. The expected outputs described in the card are specific to software testing/validation workflows, which are not addressed in this paper about MassQL's design and applications.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Structured test execution report with pass/fail status, test suite summary, and any failure details",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:28.708482+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate task card describes a software engineering task (running and validating a unit test suite via CI workflow), but the paper is a scientific publication describing MassQL's design, grammar, ecosystem, and real-world applications (siderophore discovery, OPE detection). There is fundamental scope misalignment.",
+        "The card appears to conflate the MassQL software tool itself with internal repository testing procedures. While MassQL is well-documented in the paper, its internal testing infrastructure is not discussed.",
+        "The paper mentions MassQL has been 'widely implemented in multiple open-source and commercial mass spectrometry analysis tools' and provides documentation, videos, and a sandbox, but does not describe the repository's CI/CD testing setup."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:28.708482+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes MassQL as a query language and software ecosystem for mass spectrometry data analysis. No mention of CI workflows, integration test suites, test-package.yml, or periodic testing infrastructure is present in any passage. The paper focuses on the language design, applications, and community adoption, not on software development/testing practices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Does the MassQL package pass its periodic integration test suite as indicated by the test-package.yml CI workflow?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:38.606413+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No discussion of test reports, CI/CD workflows, or integration testing outputs appears in the paper. The paper does not address software testing infrastructure or test result documentation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Structured pass/fail report documenting package-level integration test execution status and per-test outcomes",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:38.606413+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce the Mass Spectrometry Query Language (MassQL), an open-source language for flexible and mass spectrometer manufacturer-independent searching.",
+      "asbval:note": "MassQL is the central subject of the paper and is extensively discussed throughout.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:38.606413+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate task card describes a software engineering task (CI/CD testing workflow reproduction) that is entirely outside the scope of this scientific paper. The paper is a research article introducing MassQL as a query language for mass spectrometry data analysis, with applications to siderophore and OPE discovery. It does not address software development practices, testing infrastructure, or CI workflows.",
+        "The research_question and expected_outputs appear to conflate MassQL (the scientific tool) with a software development/DevOps task unrelated to the paper's scientific contributions."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:38.606413+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-workflow-execution/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper is about MassQL, a mass spectrometry query language. It describes the language design, ecosystem, applications (siderophore discovery, OPE detection), and validation strategies for MassQL queries. There is no discussion of CI workflows, GitHub Actions, unit tests, package integration tests, or test suite execution. The paper does not address software testing infrastructure or CI/CD practices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ci-workflow-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Execute and validate CI workflows (unit tests, package integration tests) defined in a repository's GitHub Actions configuration to confirm that the software's automated test suite passes and meets documented success criteria.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:37:39.326153+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-workflow-execution/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To further facilitate the integration of MassQL into other platforms and pipelines, MassQL is available as Python and R (ref. 14) libraries and as a web application programming interface (API).",
+      "asbval:note": "The paper confirms MassQL exists as a Python library/package, but does not discuss testing it via CI workflows, GitHub Actions, unit tests, or package integration tests. The card's claim about 'being tested' via CI workflows is not supported by the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "ci-workflow-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0]",
+      "asbval:target_claim_text": "MassQL - The reference implementation and Python package being tested; installed from pip or cloned repository for test execution",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:37:39.326153+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-workflow-execution/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pytest is not mentioned anywhere in the paper. The paper does not discuss test runners, unit tests, or CI workflow definitions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ci-workflow-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1]",
+      "asbval:target_claim_text": "pytest - Inferred test runner for executing unit tests and integration tests; specified in CI workflow definitions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:37:39.326153+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-workflow-execution/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "GitHub Actions is not mentioned in the paper. While the paper mentions a GitHub repository URL (https://github.com/mwang87/MassQueryLanguage), it does not discuss CI/CD platforms, workflow definitions, or automated testing infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ci-workflow-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[2]",
+      "asbval:target_claim_text": "GitHub Actions - The CI/CD platform that defines and executes workflows; workflow files are parsed and replicated locally",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:37:39.326153+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-workflow-execution/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper's scope is entirely about MassQL as a query language for mass spectrometry data, its grammar, ecosystem, applications, and validation strategies for MassQL queries themselves\u2014not about CI/CD workflows or software testing infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ci-workflow-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Execute and validate CI workflows (unit tests, package integration tests) defined in a repository's GitHub Actions configuration to confirm that the software's automated test suite passes and meets documented success criteria.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:37:39.326153+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/domain-specific-language-grammar-design/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce the Mass Spectrometry Query Language (MassQL), an open-source language for flexible and mass spectrometer manufacturer-independent searching... The MassQL language implements a succinct and expressive grammar to search for chemically and biologically relevant molecules in the MS data by leveraging these patterns... The MassQL formal grammar builds upon common MS terminology (Methods), which makes MassQL queries easy to write and alter for scientists with basic familiarity with MS.",
+      "asbval:note": "The paper explicitly describes designing a formal grammar for MassQL that balances expressiveness and human readability for domain experts without programming skills.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "domain-specific-language-grammar-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Design and implement a domain-specific language (DSL) grammar that encodes field-centric assumptions and constraints into an extended syntax, balancing expressiveness, precision, scalability, and human readability. This skill involves defining formal grammar rules, implementing a",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:37:50.135681+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/domain-specific-language-grammar-design/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MassQL parser. The parser transforms a query into an internal data structure that can be used by any programming language. The parsing is done by using the lark Python library (https://github.com/lark-parser/lark) and specific Python code to transform a MassQL query to a parse tree and into the internal data structure that organizes all query conditions and qualifiers.",
+      "asbval:note": "Paper explicitly describes parser implementation using lark library to convert query strings to structured internal representations.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "domain-specific-language-grammar-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "implementing a lexer and parser to convert query strings into structured representations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:37:50.135681+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/domain-specific-language-grammar-design/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "[SUBSTRING-MATCH for MassQL | role: reference implementation of mass-spectrometry-centric DSL]",
+      "asbval:note": "MassQL is the primary subject of the paper and is explicitly described as a domain-specific language for mass spectrometry data querying.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "domain-specific-language-grammar-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:37:50.135681+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/domain-specific-language-grammar-design/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL computational ecosystem is made of several key components that ensure its extensibility and usability for the community. These components are a formal definition of the MassQL grammar, a MassQL language parser, a reference implementation of the MassQL query engine... The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats into data frames.",
+      "asbval:note": "Paper describes all three components: formal grammar definition, parser, and query engine implementation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "domain-specific-language-grammar-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL provides lexer, parser, and query execution engine",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:37:50.135681+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/domain-specific-language-grammar-design/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MassQL aims to enable noncomputational researchers to easily search their MS (across MS1 and MS/MS) data for patterns of interest without the need for programming skills or a dedicated computational collaborator... the MassQL ecosystem lowers the barrier of entry to MS data interrogation for chemists and biologists lacking programming skills.",
+      "asbval:note": "Paper explicitly states the goal of enabling non-programmers to query mass spectrometry data without programming skills.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "domain-specific-language-grammar-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "enable non-programmers or domain experts to formulate complex, unambiguous queries over specialized data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:37:50.135681+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/domain-specific-language-grammar-design/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL language enables searching for patterns in MS1 data (for example, isotopic patterns and adduct mass shift) and MS/MS fragmentation spectra (for example, presence/absence of fragments and neutral losses), as well as applying chromatographic and ion mobility constraints... The MassQL formal grammar builds upon common MS terminology (Methods), which makes MassQL queries easy to write and alter for scientists with basic familiarity with MS.",
+      "asbval:note": "MassQL encodes mass spectrometry-specific patterns and constraints directly into the language syntax rather than using generic query mechanisms.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "domain-specific-language-grammar-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "bakes in domain assumptions rather than requiring generic SQL or API calls",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:37:50.135681+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/github-repository-operations/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes MassQL as a query language and software ecosystem for mass spectrometry data analysis. It discusses the MassQL language, its grammar, parser, query engine, web interfaces, and applications (siderophore discovery, OPE detection). There is no mention of GitHub Actions, CI/CD workflows, unit tests, integration tests, pytest, or any software testing infrastructure. The paper is a scientific methods paper, not a software engineering/DevOps documentation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "github-repository-operations",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Execute and validate automated CI/CD workflows (e.g., unit tests, integration tests, package-level tests) defined in GitHub Actions to verify software reliability and reproducibility.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:02.223778+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/github-repository-operations/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No CI/CD, GitHub Actions, or testing workflows are discussed in the paper. The paper focuses on MassQL's scientific capabilities and ecosystem adoption, not its development infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "github-repository-operations",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Execute and validate automated CI/CD workflows (e.g., unit tests, integration tests, package-level tests) defined in GitHub Actions to verify software reliability and reproducibility.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:02.223778+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/github-repository-operations/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. No CI/CD platform, workflow files, or testing infrastructure are described.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "github-repository-operations",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub Actions as CI/CD platform that defines and executes test workflows (test-package.yml, test-unit.yml) on repository commits",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:02.223778+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/github-repository-operations/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pytest is not mentioned in the paper. No Python test runners or unit/integration test frameworks are discussed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "github-repository-operations",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest as Python test runner used to execute unit and integration tests specified in the workflow",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:02.223778+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/github-repository-operations/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce the Mass Spectrometry Query Language (MassQL), an open-source language for flexible and mass spectrometer manufacturer-independent searching.",
+      "asbval:note": "MassQL is confirmed as the main subject of the paper. The paper describes it as open-source software with a Python implementation and ecosystem. However, the card's framing of MassQL as 'the target software package being tested' by CI/CD workflows is not supported by the paper\u2014the paper does not discuss testing MassQL itself, only its scientific applications.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "github-repository-operations",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL (https://github.com/mwang87/MassQueryLanguage) as the target software package being tested",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:02.223778+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lexical-analysis-tokenization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL reference implementation includes the following pieces: MassQL formal grammar... MassQL parser. The parser transforms a query into an internal data structure that can be used by any programming language. The parsing is done by using the lark Python library... and specific Python code to transform a MassQL query to a parse tree and into the internal data structure that organizes all query conditions and qualifiers.",
+      "asbval:note": "Paper describes parsing and AST construction (parse tree) but does not explicitly discuss or name a separate 'tokenization' or 'lexical analysis' stage. The paper mentions the parser uses lark library and transforms queries to parse trees, which implies tokenization occurs, but the card's framing of tokenization as a distinct, named first-stage compiler phase is not explicitly confirmed. The paper focuses on the parser and query engine rather than lexical analysis as a standalone task.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "lexical-analysis-tokenization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Tokenize domain-specific query strings (e.g., MassQL) into a stream of meaningful lexical units (keywords, operators, numeric literals, identifiers) to enable downstream parsing and AST construction. This is the first stage of a compiler/interpreter pipeline for mass-spectrometry",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:12.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lexical-analysis-tokenization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL language enables searching for patterns in MS1 data (for example, isotopic patterns and adduct mass shift) and MS/MS fragmentation spectra (for example, presence/absence of fragments and neutral losses), as well as applying chromatographic and ion mobility constraints... MassQL provides language support for user-defined tolerances, such as ion intensity and mass accuracy... each of these query elements can be combined with Boolean operators (for example, AND, OR and NOT)",
+      "asbval:note": "Paper confirms MassQL uses keywords (MS1MZ, MS2PREC, TOLERANCEMZ, INTENSITYPERCENT, AND, OR, NOT), numeric literals (m/z values, intensity thresholds), and operators. However, the paper does not explicitly describe a tokenization stage; it describes the language grammar and parser. The functional requirement (converting query strings to lexical units) is implicit in the parser design but not named as 'tokenization'.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "lexical-analysis-tokenization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Tokenize domain-specific query strings (e.g., MassQL) into a stream of meaningful lexical units (keywords, operators, numeric literals, identifiers)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:12.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lexical-analysis-tokenization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The parser transforms a query into an internal data structure that can be used by any programming language. The parsing is done by using the lark Python library... and specific Python code to transform a MassQL query to a parse tree and into the internal data structure that organizes all query conditions and qualifiers.",
+      "asbval:note": "Paper explicitly confirms parsing and AST (parse tree) construction as downstream steps after the parser receives input.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lexical-analysis-tokenization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "downstream parsing and AST construction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:12.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lexical-analysis-tokenization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL reference implementation includes the following pieces: MassQL formal grammar... MassQL parser... MassQL query engine... The MassQL reference NextFlow workflow is designed as an automated high-throughput tool for querying multiple files simultaneously",
+      "asbval:note": "Paper describes a pipeline (grammar \u2192 parser \u2192 query engine \u2192 execution), but does not explicitly name or isolate tokenization as the 'first stage'. The grammar is described as the formal definition, and the parser is described as transforming queries to parse trees. Tokenization is logically implied but not explicitly called out as a distinct pipeline stage.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "lexical-analysis-tokenization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "first stage of a compiler/interpreter pipeline for mass-spectrometry-centric query languages",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:12.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lexical-analysis-tokenization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce the Mass Spectrometry Query Language (MassQL), an open-source language for flexible and mass spectrometer manufacturer-independent searching.",
+      "asbval:note": "[SUBSTRING-MATCH for MassQL | role: domain-specific query language] MassQL is confirmed as the primary subject of the paper and the language whose syntax defines the lexical grammar.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lexical-analysis-tokenization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:12.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lexical-analysis-tokenization/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages provided do not contain explicit GitHub repository URLs. While the paper mentions MassQL is open-source and provides documentation URLs (https://mwang87.github.io/MassQueryLanguage_Documentation/), the specific GitHub repo URL is not present in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "lexical-analysis-tokenization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[].repo",
+      "asbval:target_claim_text": "https://github.com/mwang87/MassQueryLanguage",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:12.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lexical-analysis-tokenization/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL formal grammar builds upon common MS terminology (Methods), which makes MassQL queries easy to write and alter for scientists with basic familiarity with MS... The grammar is defined using the extended backus-naur form and builds upon common MS terminology for improved expressiveness and interpretability",
+      "asbval:note": "Paper confirms MassQL is a domain-specific query language with a formal grammar defining keywords, operators, and syntax.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lexical-analysis-tokenization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[].role",
+      "asbval:target_claim_text": "Domain-specific query language whose syntax defines the lexical grammar (keywords, operators, literals) to be tokenized",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:12.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-query-semantics/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce a new language, the Mass Spectrometry Query Language (MassQL), and an accompanying software ecosystem that addresses these issues by enabling the community to directly query mass spectrometry data with an expressive set of user-defined mass spectrometry patterns.",
+      "asbval:note": "The paper explicitly describes MassQL as a language for querying MS data with expressive patterns. The parser component is confirmed in passage [8]: 'MassQL parser. The parser transforms a query into an internal data structure that can be used by any programming language.'",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-query-semantics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Design and implement a domain-specific query language (DSL) parser that translates mass-spectrometry-centric query strings into structured, unambiguous representations while preserving natural language readability.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:30.156387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-query-semantics/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL language enables searching for patterns in MS1 data (for example, isotopic patterns and adduct mass shift) and MS/MS fragmentation spectra (for example, presence/absence of fragments and neutral losses), as well as applying chromatographic and ion mobility constraints. In addition, MassQL provides language support for user-defined tolerances, such as ion intensity and mass accuracy.",
+      "asbval:note": "Paper confirms MS-specific constructs including m/z ranges, intensity thresholds, and fragmentation patterns. SQL-inspired syntax is implicit in the language design (Boolean operators AND, OR, NOT mentioned in passage [3]).",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-query-semantics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill bridges SQL-inspired syntax with MS-specific constructs (m/z ranges, intensity thresholds, fragmentation patterns)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:30.156387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-query-semantics/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Together, this enables MassQL searches on a single MS data file, within and across whole MS datasets, up to entire data repositories, including GNPS/MassIVE, Metabolomics Workbench and MetaboLights.",
+      "asbval:note": "Paper explicitly confirms scalability from single files to repository-scale queries.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-query-semantics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "enable precise, scalable querying across single spectra and repository-scale datasets",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:30.156387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-query-semantics/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The versatility of MS to capture unique characteristics of chemical structures, such as isotopic patterns (for example, bromination), diagnostic fragmentation (for example, product ion of sulfur trioxide) and neutral losses (for example, loss of sugar moieties), makes it a powerful analytical tool... The MassQL language implements a succinct and expressive grammar to search for chemically and biologically relevant molecules in the MS data by leveraging these patterns.",
+      "asbval:note": "Paper confirms support for isotope clusters, neutral losses, and fragmentation patterns. Precursor-product relationships are implicit in MS/MS pattern matching.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-query-semantics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "enable users to express complex mass spectrometry search patterns (e.g., isotope clusters, neutral losses, fragment ion ladders, precursor-product relationships)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:30.156387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-query-semantics/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats into data frames... This workflow utilizes the reference query engine and parallelizes the querying of multiple files across a multicore processor or a batch cluster.",
+      "asbval:note": "Paper confirms support for mzML and mzXML formats, and describes parallelized querying across repositories.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-query-semantics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "can be executed unambiguously against both local spectra files (mzML, mzXML) and large spectral repositories",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:30.156387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-query-semantics/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce a new language, the Mass Spectrometry Query Language (MassQL), and an accompanying software ecosystem",
+      "asbval:note": "[SUBSTRING-MATCH for MassQL | role: Domain-specific query language for MS data]. Paper is the primary publication introducing MassQL.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-query-semantics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:30.156387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-query-semantics/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Repository URL not mentioned in provided passages. Paper references documentation at https://mwang87.github.io/MassQueryLanguage_Documentation/ but does not explicitly cite the GitHub repository URL.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "mass-spectrometry-query-semantics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL repo: https://github.com/mwang87/MassQueryLanguage",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:30.156387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-query-semantics/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MassQL parser. The parser transforms a query into an internal data structure that can be used by any programming language... MassQL query engine. The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats into data frames.",
+      "asbval:note": "Paper confirms both parser and query engine components as part of the reference implementation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-query-semantics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL role: Domain-specific query language and reference implementation for parsing and executing mass spectrometry queries",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:30.156387+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-integration-testing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes MassQL as a query language and software ecosystem for mass spectrometry data analysis. It does not discuss integration testing, test suites, CI/CD workflows, or testing methodologies. The paper focuses on the language design, implementation, and application examples (siderophore and OPE discovery), not on software testing practices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-integration-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Execute and reproduce a software package's periodic integration test suite to verify end-to-end functionality beyond unit tests.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:45.563805+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-integration-testing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MassQL is available as Python and R libraries and as a web application programming interface (API).",
+      "asbval:note": "Paper confirms MassQL exists and has Python library/API availability, but does not discuss integration testing, test suites, or command-line interface validation. The tool is correctly identified but the claimed role (package under test for integration testing) is not supported by the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "package-integration-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL (Package under test; provides Python API and command-line interface)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:45.563805+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-integration-testing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pytest is not mentioned anywhere in the paper. The paper does not discuss testing frameworks or test execution tools.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-integration-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest (Test runner for executing integration test suite)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:45.563805+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-integration-testing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "GitHub Actions and CI/CD workflows are not mentioned in the paper. The paper does not discuss continuous integration or automated testing infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-integration-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub Actions (CI/CD platform that executes test-package.yml workflow)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:45.563805+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-integration-testing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper's scope is entirely focused on introducing MassQL as a query language for mass spectrometry data analysis, demonstrating its capabilities through real-world applications (siderophore and OPE discovery), and describing its ecosystem adoption across multiple software tools. It contains no discussion of software testing, integration testing, test suites, or CI/CD validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-integration-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Execute and reproduce a software package's periodic integration test suite to verify end-to-end functionality beyond unit tests.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:45.563805+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/parser-error-reporting-diagnostics/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL parser. The parser transforms a query into an internal data structure that can be used by any programming language. The parsing is done by using the lark Python library (https://github.com/lark-parser/lark) and specific Python code to transform a MassQL query to a parse tree and into the internal data structure that organizes all query conditions and qualifiers.",
+      "asbval:note": "Paper confirms MassQL uses a parser with lark library and transforms queries into internal data structures. However, the paper does NOT explicitly discuss or demonstrate human-readable diagnostic error messages, error reporting mechanisms, or error handling for parse failures. The paper focuses on successful query parsing and execution, not error diagnostics. The claim about 'actionable feedback' and 'rapid query iteration and debugging' via error messages is not substantiated in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "parser-error-reporting-diagnostics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Generate human-readable diagnostic error messages when a domain-specific language (DSL) parser fails to tokenize or parse input, pinpointing syntactic and semantic violations.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:55.389440+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/parser-error-reporting-diagnostics/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL parser. The parser transforms a query into an internal data structure that can be used by any programming language. The parsing is done by using the lark Python library (https://github.com/lark-parser/lark) and specific Python code to transform a MassQL query to a parse tree and into the internal data structure that organizes all query conditions and qualifiers.",
+      "asbval:note": "Paper confirms MassQL is a DSL with a parser using lark library (which supports LALR parsing). However, the paper does NOT explicitly mention or demonstrate diagnostic error reporting, lexical error handling, or semantic violation messaging. The tool description in the card overstates the error-reporting capability\u2014the paper documents the parser's existence and basic function but not its error diagnostics.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "parser-error-reporting-diagnostics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL - Domain-specific language parser that uses lexer and recursive descent/LALR parsing; diagnostic error reporting is applied to lexical, syntactic, and semantic failures during query parsing",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:55.389440+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/parser-error-reporting-diagnostics/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MassQL aims to enable noncomputational researchers to easily search their MS (across MS1 and MS/MS) data for patterns of interest without the need for programming skills or a dedicated computational collaborator.",
+      "asbval:note": "Paper confirms MassQL is designed for non-computational users and accepts user-authored queries. However, the paper does not discuss error diagnostics, token-level error reporting, line/column pinpointing, or grammar rule violation messaging. The scope claim about error communication is not substantiated in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "parser-error-reporting-diagnostics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When implementing or extending a DSL parser (lexer + recursive descent or LALR parser) that accepts user-authored query strings. Apply this skill whenever a query fails to tokenize (lexical error) or construct an Abstract Syntax Tree (semantic/syntactic error), to communicate exa",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:38:55.389440+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-source-code-setup/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes MassQL as a query language and ecosystem but does not discuss repository cloning, dependency installation, test fixtures, or local environment setup procedures. The paper focuses on the MassQL language design, use cases, and applications, not on software development workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "repository-source-code-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Clone a scientific software repository and install its runtime dependencies and test fixtures to prepare the codebase for execution or testing.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:06.347912+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-source-code-setup/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce the Mass Spectrometry Query Language (MassQL), an open-source language for flexible and mass spectrometer manufacturer-independent searching.",
+      "asbval:note": "MassQL is confirmed as an open-source tool in the paper. However, the paper does not discuss installing it from source or testing it locally.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "repository-source-code-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0]: MassQL",
+      "asbval:target_claim_text": "Reference implementation of a domain-specific query language for mass spectrometry data; the tool being installed and tested",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:06.347912+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-source-code-setup/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not mention GitHub Actions, CI workflows, or test-unit.yml. Cannot confirm or deny presence of this workflow in the repository from the provided paper text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "repository-source-code-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1]: GitHub Actions (test-unit.yml workflow)",
+      "asbval:target_claim_text": "CI workflow definition that specifies how to execute the unit test suite; consulted to understand the test execution steps",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:06.347912+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-source-code-setup/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not mention pytest, requirements_test.txt, or any test runner. The paper does not discuss testing infrastructure or test execution tools.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "repository-source-code-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[2]: pytest",
+      "asbval:target_claim_text": "Test runner implied by the presence of a test suite; typically specified in requirements_test.txt",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:06.347912+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-source-code-setup/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MassQL has been widely implemented in multiple open-source and commercial mass spectrometry analysis tools, which enhances the ability, interoperability and reproducibility of mining of mass spectrometry data for the research community.",
+      "asbval:note": "The paper emphasizes reproducibility and mentions MassQL's implementation in multiple tools, but does not discuss local repository setup, source code installation, or development workflows. The card's scope assumes a development/testing context not addressed in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "repository-source-code-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope: When to use",
+      "asbval:target_claim_text": "You need to validate that a published software tool (e.g., MassQL) executes correctly in your environment, reproduce published results, or contribute to development.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:06.347912+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/syntax-tree-construction-parsing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The parser transforms a query into an internal data structure that can be used by any programming language. The parsing is done by using the lark Python library (https://github.com/lark-parser/lark) and specific Python code to transform a MassQL query to a parse tree and into the internal data structure that organizes all query conditions and qualifiers.",
+      "asbval:note": "Paper confirms parsing to internal data structure via lark library (which uses LALR), but does not explicitly name 'Abstract Syntax Tree' or discuss 'lexical tokenization' or 'recursive descent' as implementation methods. The paper uses lark (LALR-based), not recursive descent. Semantic validation is mentioned in context of query design and FDR strategies, but not as an explicit parser-phase constraint.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "syntax-tree-construction-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert a domain-specific query language string into an Abstract Syntax Tree (AST) via lexical tokenization and recursive descent or LALR parsing, validating syntactic and semantic constraints.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:18.246934+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/syntax-tree-construction-parsing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The main goal of MassQL is to provide noncomputational scientists with the flexibility to encode complex MS patterns into concise and expressive queries... Together with the accompanying software infrastructure created through community efforts, the MassQL ecosystem lowers the barrier of entry to MS data interrogation for chemists and biologists lacking programming skills.",
+      "asbval:note": "Paper emphasizes expressiveness, human readability, and mapping to machine-executable form as core design goals.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "syntax-tree-construction-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill is essential for implementing expressive, unambiguous query languages that map human-readable syntax to structured, machine-executable representations.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:18.246934+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/syntax-tree-construction-parsing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MassQL formal grammar. The grammar is defined using the extended backus-naur form and builds upon common MS terminology for improved expressiveness and interpretability... The parser transforms a query into an internal data structure that can be used by any programming language.",
+      "asbval:note": "Paper explicitly describes formal grammar definition (EBNF) and conversion to internal data structures for execution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "syntax-tree-construction-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have a domain-specific language (DSL) grammar specification and raw query strings that must be converted into structured intermediate representations for validation, transformation, or execution.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:18.246934+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/syntax-tree-construction-parsing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MassQL language enables searching for patterns in MS1 data (for example, isotopic patterns and adduct mass shift) and MS/MS fragmentation spectra (for example, presence/absence of fragments and neutral losses), as well as applying chromatographic and ion mobility constraints. In addition, MassQL provides language support for user-defined tolerances, such as ion intensity and mass accuracy... each of these query elements can be combined with Boolean operators (for example, AND, OR and NOT) to form more complex queries.",
+      "asbval:note": "Paper describes domain-specific operators (m/z, intensity, fragmentation patterns) and Boolean logic, matching the card's scope description.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "syntax-tree-construction-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Specifically, use it when the query syntax combines SQL-inspired constructs with domain-specific operators (e.g., m/z ranges, intensity thresholds, fragmentation patterns in mass spectrometry) that require both syntactic parsing and semantic constraint enforcement.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:18.246934+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/syntax-tree-construction-parsing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce the Mass Spectrometry Query Language (MassQL), an open-source language for flexible and mass spectrometer manufacturer-independent searching... The MassQL formal grammar builds upon common MS terminology (Methods), which makes MassQL queries easy to write and alter for scientists with basic familiarity with MS.",
+      "asbval:note": "[SUBSTRING-MATCH for MassQL | role: domain-specific query language]. Paper confirms MassQL as DSL with grammar, expressiveness, and readability as design principles.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "syntax-tree-construction-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL is a Domain-specific query language for mass spectrometry; defines the grammar and design principles (expressiveness, precision, scalability, natural readability) that guide parser implementation.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:18.246934+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/syntax-tree-construction-parsing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not provide explicit GitHub repository URL. Paper mentions MassQL is open-source and references documentation at https://mwang87.github.io/MassQueryLanguage_Documentation/ but does not cite the specific GitHub repo URL in provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "syntax-tree-construction-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL repo: https://github.com/mwang87/MassQueryLanguage",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:18.246934+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-result-parsing-and-reporting/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper is about MassQL, a mass spectrometry query language. No mention of CI workflows, GitHub Actions, test parsing, or test reporting infrastructure. The paper does not address software testing pipelines or CI/CD practices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "test-result-parsing-and-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Parse CI workflow test execution logs and artifacts from a GitHub Actions run, then generate structured pass/fail reports (JSON or CSV) documenting overall test suite status and individual test outcomes.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:33.967782+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-result-parsing-and-reporting/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper focuses on MassQL language design, ecosystem, and scientific applications (siderophore discovery, OPE detection). No discussion of software testing practices or development team communication workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "test-result-parsing-and-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill is essential for validating package-level integration test results and communicating test health across development teams.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:33.967782+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-result-parsing-and-reporting/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pytest is not mentioned anywhere in the paper. The paper does not discuss testing frameworks or test execution tools.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "test-result-parsing-and-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest \u2014 Test runner that executes package integration tests and produces structured output logs",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:33.967782+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-result-parsing-and-reporting/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "GitHub Actions and CI workflows are not mentioned in the paper. The paper does not address continuous integration infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "test-result-parsing-and-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub Actions \u2014 CI environment that runs the test-package.yml workflow and provides logs and artifact storage",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:33.967782+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-result-parsing-and-reporting/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce the Mass Spectrometry Query Language (MassQL), an open-source language for flexible and mass spectrometer manufacturer-independent searching.",
+      "asbval:note": "MassQL is indeed the subject of the paper and is an open-source package (repo: https://github.com/mwang87/MassQueryLanguage confirmed in card). However, the paper does not discuss test-package.yml, integration testing, or any CI testing infrastructure. The card conflates the existence of MassQL with a specific testing workflow that is not described in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "test-result-parsing-and-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL \u2014 Target package being tested; test-package.yml validates package-level integration tests distinct from unit tests",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:33.967782+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-result-parsing-and-reporting/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not address CI workflows, GitHub Actions, or test log parsing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "test-result-parsing-and-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Parse CI workflow test execution logs and artifacts from a GitHub Actions run",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:33.967782+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-result-parsing-and-reporting/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss test reporting, pass/fail status documentation, or structured test result formats.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "test-result-parsing-and-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Generate structured pass/fail reports (JSON or CSV) documenting overall test suite status and individual test outcomes",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:33.967782+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-suite-pass-fail-reporting/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper is about MassQL, a mass spectrometry query language and its ecosystem. It does not discuss unit testing, CI workflows, test suite execution, or test reporting. The paper focuses on the MassQL language design, implementation, software ecosystem adoption, and two application examples (siderophore discovery and OPE detection). No mention of testing infrastructure, GitHub Actions workflows, pytest, or test-suite-pass-fail-reporting appears in any passage.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "test-suite-pass-fail-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Executes a repository's unit test suite via CI workflow and collects structured pass/fail results, error logs, and test counts into a report. This skill validates that a software package's core functionality is working as expected by reproducing the automated test pipeline.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:48.513813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-suite-pass-fail-reporting/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce the Mass Spectrometry Query Language (MassQL), an open-source language for flexible and mass spectrometer manufacturer-independent searching.",
+      "asbval:note": "MassQL is confirmed as a real, open-source software package in the paper. However, the paper does not discuss MassQL's unit test suite, CI workflows, or test reporting. The tool is correctly identified but the claimed role (subject of test-suite-pass-fail-reporting) is not supported by the paper content.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "test-suite-pass-fail-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL (subject package whose unit test suite is executed and reported)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:48.513813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-suite-pass-fail-reporting/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of GitHub Actions, CI/CD platforms, or any workflow definitions (test-unit.yml or otherwise) appears in the paper. The paper does not discuss MassQL's development infrastructure or testing setup.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "test-suite-pass-fail-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub Actions (CI/CD platform hosting the test-unit.yml workflow definition)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:48.513813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-suite-pass-fail-reporting/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of pytest, unit testing frameworks, or test execution tools appears in the paper. The paper does not discuss MassQL's testing infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "test-suite-pass-fail-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest (inferred) (Likely unit test framework used to execute and report test results)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:48.513813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-suite-pass-fail-reporting/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not address unit testing, CI workflows, test execution, or test reporting. The scope describes a software engineering task (test validation and reporting) that is entirely absent from this scientific paper about a mass spectrometry query language.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "test-suite-pass-fail-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Executes a repository's unit test suite via CI workflow and collects structured pass/fail results, error logs, and test counts into a report.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:48.513813+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/unit-test-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss unit testing, CI workflows, test validation, or GitHub Actions. The paper focuses on MassQL as a query language for mass spectrometry data, its grammar, ecosystem, and applications. No mention of testing infrastructure, CI/CD pipelines, or test suite validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "unit-test-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validate that a software package's unit test suite executes successfully via its CI workflow to confirm functional correctness and stability.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:58.555030+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/unit-test-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MassQL is available as Python and R (ref. 14) libraries and as a web application programming interface (API).",
+      "asbval:note": "Paper confirms MassQL is available as a Python library, but does not discuss unit tests, test validation, or CI workflows. The card's claim about 'unit test suite validation' is not addressed in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "unit-test-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassQL (Reference implementation whose unit test suite is validated; Python package installable via pip)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:58.555030+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/unit-test-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of GitHub Actions, CI workflows, test badges, or any continuous integration infrastructure in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "unit-test-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub Actions (CI platform that runs the test-unit.yml workflow and reports pass/fail status via badge)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:58.555030+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/unit-test-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of pytest or any test runner in the paper. The card notes this is 'inferred from standard Python testing practice,' but the paper provides no evidence of pytest usage.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "unit-test-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest (Likely test runner for MassQL unit tests)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:58.555030+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/unit-test-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper's scope is entirely about MassQL as a query language for mass spectrometry data analysis, its grammar, ecosystem, and real-world applications (siderophore discovery, OPE detection). It does not address software testing, CI/CD validation, or test suite execution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "unit-test-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Validate that a software package's unit test suite executes successfully via its CI workflow",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:39:58.555030+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ci-workflow-execution/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "ci-workflow-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/domain-specific-language-grammar-design/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "domain-specific-language-grammar-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/github-repository-operations/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "github-repository-operations",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lexical-analysis-tokenization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "lexical-analysis-tokenization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.42857142857142855,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-query-semantics/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "mass-spectrometry-query-semantics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.875,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-integration-testing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "package-integration-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/parser-error-reporting-diagnostics/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 3,
+      "asbval:target_artifact_id": "parser-error-reporting-diagnostics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/repository-source-code-setup/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "repository-source-code-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/syntax-tree-construction-parsing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "syntax-tree-construction-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-result-parsing-and-reporting/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "test-result-parsing-and-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/test-suite-pass-fail-reporting/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "test-suite-pass-fail-reporting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/unit-test-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "unit-test-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Mass Spec Query Language (MassQL) is a domain specific language designed to express queries in a mass spectrometry centric fashion.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:source_excerpt": "The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to\nexpress a query in a mass spectrometry centric fashion.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:03.446092+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MassQL is inspired by SQL but bakes in assumptions of mass spectrometry to make querying more natural for mass spectrometry users.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:source_excerpt": "It is inspired by SQL,\nbut it attempts to bake in assumptions of mass spectrometry to make querying much more\nnatural for mass spectrometry users.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:03.446092+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MassQL is designed according to the principle of Expressiveness to capture complex mass spectrometry patterns that the community would like to look for.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:source_excerpt": "Expressiveness - Capture complex mass spectrometry patterns that the community would like to look for",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:03.446092+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MassQL is designed according to the principle of Precision to exactly prescribe how to find data without ambiguity.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:source_excerpt": "Precision - Exactly prescribe how to find data without ambiguity",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:03.446092+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MassQL is designed to be scalable for querying from one spectrum to entire repositories of data.",
+      "asbval:note": "Text says 'scalable for querying' but source says 'Easily facilitating the querying' \u2014 slight semantic shift in framing",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:source_excerpt": "Scalable - Easily facilitating the querying of one spectrum all the way up to entire repositories of data",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:03.446092+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MassQL is designed to be relatively natural and easy to read and write for mass spectrometry users.",
+      "asbval:note": "Text omits that MassQL should also be usable 'to communicate ideas about mass spectrometry', not just read/write",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41592-025-02660-z",
+      "asbval:source_excerpt": "Relatively Natural - MassQL should be relatively easy to read and write and even use to communicate ideas about mass\n   spectrometry",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_006",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:36:03.446092+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_massql#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "abstract",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_massql_system",
+      "title": "MassQL",
+      "identifier": "urn:asb:spine:massql_system"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_massql_expressiveness",
+      "title": "Expressiveness Principle",
+      "identifier": "urn:asb:spine:massql_expressiveness"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_massql_precision",
+      "title": "Precision Principle",
+      "identifier": "urn:asb:spine:massql_precision"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_massql_scalability",
+      "title": "Scalability Principle",
+      "identifier": "urn:asb:spine:massql_scalability"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_massql_naturalness",
+      "title": "Natural Language Principle",
+      "identifier": "urn:asb:spine:massql_naturalness"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_sql_inspiration",
+      "title": "SQL",
+      "identifier": "urn:asb:spine:sql_inspiration"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_unit_testing_workflow",
+      "title": "Unit Testing CI Workflow",
+      "identifier": "urn:asb:spine:unit_testing_workflow"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_package_testing_workflow",
+      "title": "Periodic Package Testing CI Workflow",
+      "identifier": "urn:asb:spine:package_testing_workflow"
+    }
+  ]
+}

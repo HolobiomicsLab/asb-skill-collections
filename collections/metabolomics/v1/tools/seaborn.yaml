@@ -2,9 +2,13 @@ name: seaborn
 slug: seaborn
 evidence_spans:
 - It requires the Python dependencies NumPy [40], pandas [41, 42], seaborn
+- import seaborn as sns
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
 source_repos:
+- bittremieux-lab/spectrum_utils
 - https://github.com/Coayala/MetaboDirect
 schema_version: 0.2.0

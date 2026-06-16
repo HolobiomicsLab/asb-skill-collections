@@ -1,0 +1,8 @@
+  figures/explain_patterns.png
+  figures/mineMS2_gnps_coupling.png
+  figures/mineMS2_workflow.png
+  figures/pnordicum_ms2_gnps.png
+  figures/pnordicum_ms2_gnps_mined.png
+  figures/pnordicum_ms2_gnps_mined_clique.png
+  figures/pnordicum_ms2_gnps_mined_pattern_trp.png
+paper.md

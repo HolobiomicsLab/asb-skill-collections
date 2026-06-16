@@ -1,0 +1,505 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/OpenMS.svg",
+      "role": "figure",
+      "sha256": "0ee26840faa3ce47adc3dce8041a01befdee718de6c4146c94a9c7900ff4ec80"
+    },
+    {
+      "indexable": false,
+      "path": "figures/feature_boundary.png",
+      "role": "figure",
+      "sha256": "c6b79367c06ad83e9d1c8a5c8a268fdfd03479f4daefb5312926770498f79083"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure1.svg",
+      "role": "figure",
+      "sha256": "9d68124b85dbeb8fb438f6c37aa0904bf54490f5a17df865f4e46d41994b806b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/peak_boundary.png",
+      "role": "figure",
+      "sha256": "0af04c72bd8ed0e2f31adb0737f7ebd1cee0c74d6fe386ec66accfdf92b7a65a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/pyOpenMSviz_logo_color.png",
+      "role": "figure",
+      "sha256": "ceaeffc928521e4b5e13793b4ef10d6120410450097fbb8c559d19c4f37b4181"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "88e7cac74aad391687069eb4c4d6edac8ad5e02ff27fe5b73ff4f73271db268f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "7dc214d47e3ba04d49043c711b49edbd77eee331640f2e65ea29ceb41ad0e8a0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "6107f3ae53cf20e2ba220e847ee2dde5f2cd9533c0e8da5ba139e92f12685668"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "d4e105b89963704cb10a1a1aecc3582e85b802f2df675792471dfe6b44ca2c8a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs4].png",
+      "role": "figure",
+      "sha256": "d953a0140849e75037ab6b0351ec948d5f4340193337f7fc59c1c2067fc2a08d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_with_annotation[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "aa93c54ffae06c504458b99bd3c32db005e56988dff7c48483d6820ebd6a6b00"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "50ed52bc21729c2a755461bb67cb6db3699f1d53497d54663f99692773d472b9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "3a2513944a8eed16c352f3835bb25105a51b81a66ab6bd8da6d31530bc2f745c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "fe4ce3d6644427846010c86faa8777979d05ed2d9fd2810fe38a3c55b2e8b4b9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "f9db27c57161026399f082fb93ecc9a3ece656a17f124f94c4ee03be9684a91b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_mz_im[ms_matplotlib].png",
+      "role": "figure",
+      "sha256": "9476b907c61ce2391cc97afb08cc84bd56f527ae45b1674dd6d058a22aea163a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "f457beb583e235d069b94c6ff2e0348c05656514e9d4d3578c244aafc269814a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "42c8bb546b740e25661992c025c16816849cd375b801f73a65d3e2f7dfc4a097"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "50fb29dbdd2f63f513b51a7b5ee91d8a4f973e16e4d35a69904af43ca0df6562"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "843c3ffa9401b0b475f66b6b9868b71e6e949ebf9e10a932833dc1c5f29a861d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d835dc4650ebf688b4204a6596d45f4e99c10eb50db50b32e49eb261ea85b272"
+    }
+  ],
+  "created_at": "2026-06-16T07:19:11.067804+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "19 gallery scripts (Python files) across ms_matplotlib, ms_bokeh, and ms_plotly backends from the pyOpenMS-Viz repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "pyOpenMS-Viz library, pandas, matplotlib, Bokeh, and Plotly packages installed in Python 3.12 environment",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "A CSV or structured table file with columns (Example, Time, Mem (MB)) containing per-script execution times for all 19 gallery scripts, matching the reported computation times table",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Total aggregate execution time (minutes:seconds.milliseconds format) across all 19 scripts for verification against reported 00:06.221",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Wall-clock execution time measurement must account for system variability; multiple runs per script may be needed to establish representative baseline timings.",
+    "The three plotting backends (matplotlib, Bokeh, Plotly) exhibit different performance characteristics: Bokeh and Plotly are interactive but may render slower than static matplotlib plots.",
+    "Gallery script execution times depend on underlying data size, visualization complexity (2D vs. 3D), and whether interactive rendering is performed during execution.",
+    "Total execution time is the sum of individual script times, not wall-clock time elapsed; parallel execution or system load can introduce variance between reported and measured times.",
+    "The reported table groups scripts by backend (ms_plotly, ms_bokeh, ms_matplotlib) with execution times ranging from 00:00.052 to 00:01.476 minutes."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: gallery execution log or timing report in github:OpenMS__pyopenms_viz repository",
+      "file_format_is: timing report is structured (CSV, JSON, YAML, or table) with columns/fields for script_name, backend, and execution_time_seconds",
+      "field_present: each of 19 scripts appears in timing report with entries for all three backends (ms_matplotlib, ms_bokeh, ms_plotly)",
+      "value_in_range: total gallery execution time sum across all script-backend combinations equals 00:06.221 (372.221 seconds), robust to \u00b10.5 second measurement variance",
+      "script_runs: reproduce gallery build command (e.g., sphinx-build or make gallery) on fresh clone of github:OpenMS__pyopenms_viz and capture wall-clock execution time",
+      "output_matches_reference: reproduced total gallery execution time matches reported 00:06.221 within \u00b15% (measurement tolerance for hardware/load variation)"
+    ],
+    "expert_review": [
+      "assess whether reported per-script times are plausible given typical visualization library overhead (matplotlib < bokeh < plotly expected pattern)",
+      "confirm that timing methodology (single run per script vs. averaged runs) is documented and appropriate for performance claims",
+      "evaluate whether 00:06.221 total is reasonable for 19 scripts across 3 backends on contemporary hardware (no obvious bottlenecks or anomalies)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the per-script execution times for the 19 gallery scripts across the three plotting backends (matplotlib, Bokeh, Plotly), and what is the total gallery execution time?: 'pyOpenMS-Viz is a Python library that provides a simple interface for extending the plotting capabilities of Pandas DataFrames for creating static or interactive visualizations of mass spectrometry'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The library integrates seamlessly with three plotting library backends: matplotlib, Bokeh, and Plotly, which are the backends used for the 19 gallery scripts whose execution times must be measured.: 'It integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] 19 gallery scripts (Python files) across ms_matplotlib, ms_bokeh, and ms_plotly backends from the pyOpenMS-Viz repository: '**from all galleries**: [contains list of 19 scripts with file paths like gallery_scripts/ms_plotly/plot_peakmap_marginals_ms_plotly.py]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pyOpenMS-Viz library, pandas, matplotlib, Bokeh, and Plotly packages installed in Python 3.12 environment: 'pip install pyopenmsviz --upgrade'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] A CSV or structured table file with columns (Example, Time, Mem (MB)) containing per-script execution times for all 19 gallery scripts, matching the reported computation times table: 'Computation times... **00:06.221** total execution time for 19 files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Total aggregate execution time (minutes:seconds.milliseconds format) across all 19 scripts for verification against reported 00:06.221: '**00:06.221** total execution time for 19 files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] pyOpenMS-Viz: 'pyOpenMS-Viz is a Python library that provides a simple interface for extending the plotting capabilities of Pandas DataFrames'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Pandas: 'leverages the power of Pandas for data manipulation and representation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] matplotlib: 'integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Bokeh: 'integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Plotly: 'integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'conda create --name=pyopenms-viz python=3.12'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is provided for pyOpenMS-viz: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The section text does not specify where per-script execution times and gallery timing data are located or how they are reported: 'No reference to timing data location or format in provided text; only metadata provided: 'Source: github:OpenMS__pyopenms_viz, Synthesized at: 2026-06-16T07:19:09+00:00''"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Details on hardware platform, Python version, and environment configuration used for the reported gallery execution time are not documented: 'Section text contains no information on execution environment, hardware specs, or Python configuration used for timing measurements'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No documentation of whether the 00:06.221 gallery time includes compilation, import overhead, or only script execution: 'Section text does not clarify timing scope or boundaries'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "gallery_execution_times.csv",
+  "expected_outputs": [
+    "A CSV or structured table file with columns (Example, Time, Mem (MB)) containing per-script execution times for all 19 gallery scripts, matching the reported computation times table",
+    "Total aggregate execution time (minutes:seconds.milliseconds format) across all 19 scripts for verification against reported 00:06.221"
+  ],
+  "finding": "The library integrates seamlessly with three plotting library backends: matplotlib, Bokeh, and Plotly, which are the backends used for the 19 gallery scripts whose execution times must be measured.",
+  "github_name": "OpenMS/pyopenms_viz",
+  "input_from": null,
+  "inputs": [
+    "19 gallery scripts (Python files) across ms_matplotlib, ms_bokeh, and ms_plotly backends from the pyOpenMS-Viz repository",
+    "pyOpenMS-Viz library, pandas, matplotlib, Bokeh, and Plotly packages installed in Python 3.12 environment"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "environment_setup.log",
+    "per_script_times.csv",
+    "total_execution_time.txt"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_011",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_024"
+  ],
+  "methodology_summary": [
+    "Create and activate a Python 3.12 conda environment with pyOpenMS-Viz and all three plotting backends installed.",
+    "Sequentially execute each of the 19 gallery scripts, recording wall-clock time using Python's time module or Unix time command.",
+    "Aggregate per-script execution times and compute total execution time across all scripts.",
+    "Tabulate measured execution times in a dataframe matching the reported table structure (Example, Time, Mem columns).",
+    "Validation: Compare measured per-script times and total aggregate time (00:06.221 minutes) against reported values; verify all 19 scripts executed successfully without errors."
+  ],
+  "missing_information": [
+    "No changelog or version history is provided for pyOpenMS-viz",
+    "The section text does not specify where per-script execution times and gallery timing data are located or how they are reported",
+    "Details on hardware platform, Python version, and environment configuration used for the reported gallery execution time are not documented",
+    "No documentation of whether the 00:06.221 gallery time includes compilation, import overhead, or only script execution"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the per-script execution times for the 19 gallery scripts across the three plotting backends (matplotlib, Bokeh, Plotly), and what is the total gallery execution time?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "script-execution-time-measurement",
+    "python-environment-setup-and-reproducibility",
+    "batch-script-performance-profiling",
+    "mass-spectrometry-visualization-backend-comparison",
+    "computational-execution-table-generation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pyopenmsviz/synthesized_package",
+  "spine_condition_ids": [
+    "cond_backend_plotly",
+    "cond_backend_bokeh",
+    "cond_backend_matplotlib",
+    "cond_3d_plotting"
+  ],
+  "spine_entity_ids": [
+    "backend_bokeh_layer",
+    "backend_plotly_layer",
+    "backend_matplotlib_layer",
+    "tool_bokeh",
+    "tool_plotly",
+    "tool_matplotlib",
+    "cond_backend_bokeh",
+    "cond_backend_plotly",
+    "cond_backend_matplotlib",
+    "cond_3d_plotting",
+    "metric_total_gallery_exec_time",
+    "metric_peakmap_marginals_plotly_time",
+    "metric_spyogenes_subplots_bokeh_time",
+    "metric_spectrum_binning_matplotlib_time",
+    "metric_spyogenes_subplots_matplotlib_time",
+    "metric_spyogenes_subplots_plotly_time",
+    "metric_peakmap_marginals_matplotlib_time",
+    "metric_peakmap_plotly_time",
+    "metric_peakmap_marginals_bokeh_time",
+    "metric_spectrum_dia_matplotlib_time",
+    "metric_mobilogram_bokeh_time",
+    "metric_chromatogram_bokeh_time",
+    "metric_peakmap_bokeh_time",
+    "metric_mobilogram_matplotlib_time",
+    "metric_spectrum_dia_plotly_time",
+    "metric_chromatogram_matplotlib_time",
+    "metric_spectrum_dia_bokeh_time",
+    "metric_peakmap_matplotlib_time",
+    "metric_mobilogram_plotly_time",
+    "metric_chromatogram_plotly_time"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "benchmark-evaluation",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:OpenMS__pyopenms_viz",
+  "task_description": "Reproduce the per-script execution times for all 19 gallery scripts across three backends (ms_matplotlib, ms_bokeh, ms_plotly) and verify the reported total gallery execution time of 00:06.221 minutes.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "19 gallery scripts from pyOpenMS-Viz repository",
+      "port_id": "gallery_scripts",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Python 3.12 environment with pyOpenMS-Viz, pandas, matplotlib, Bokeh, Plotly installed",
+      "port_id": "env_config",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Measure and record wall-clock execution time for each of 19 gallery scripts across three backends (matplotlib, Bokeh, Plotly) and verify total gallery execution time equals 00:06.221.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-script execution times table (CSV)",
+      "port_id": "execution_times_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Total gallery execution time (minutes:seconds.milliseconds)",
+      "port_id": "total_execution_time",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reproduce the backend execution-time benchmark table across all three plotting backends",
+  "tools": [
+    "pyOpenMS-Viz",
+    "Pandas",
+    "matplotlib",
+    "Bokeh",
+    "Plotly",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Set up a Python 3.12 environment with pyOpenMS-Viz installed via pip and all three plotting backends (matplotlib, Bokeh, Plotly) available. 2. Sequentially execute each of the 19 gallery scripts listed in the computation times table, recording wall-clock execution time for each script using a timer (e.g. Python's time module or Unix time command). 3. Aggregate per-script execution times and compute the total execution time across all 19 scripts. 4. Compare reported execution time for each script against the measured value; compare reported total (00:06.221) against the measured aggregate. 5. Tabulate results in a dataframe matching the structure of the reported table (Example, Time, Mem columns) and export as CSV."
+}

@@ -1,0 +1,9 @@
+  figures/chunked_layout.png
+  figures/mzpeak_extract_times_2026.svg
+  figures/mzpeak_file_sizes_2026.svg
+  figures/packed_tables.png
+  figures/point_layout.png
+  figures/sciex_null_marking_delta_encoding_error.png
+  figures/sparse_tables.png
+  figures/thermo_null_marking_err.png
+paper.md

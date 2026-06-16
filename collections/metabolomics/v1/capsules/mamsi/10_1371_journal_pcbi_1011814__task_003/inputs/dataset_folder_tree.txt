@@ -1,0 +1,10 @@
+  figures/MAMSI_logo.png
+  figures/MAMSI_logo.svg
+  figures/confusion_matrix.png
+  figures/correlation_heatmap.png
+  figures/lv_estimation.png
+  figures/mb-vip.png
+  figures/network.png
+  figures/null_models_distribution.png
+  figures/silhouette_plot.png
+paper.md

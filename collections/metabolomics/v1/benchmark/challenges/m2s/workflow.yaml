@@ -1,0 +1,62 @@
+schema_version: 0.1.0
+workflow_id: coll_m2s_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: M2S is a Matlab package designed to match untargeted metabolomic features
+    across two LC-MS datasets.
+  pseudo_abstract: M2S implements a feature matching pipeline for untargeted metabolomics
+    that takes two LC-MS feature datasets as input and produces matched features as
+    output. The package provides a mechanism for aligning metabolomic features between
+    LC-MS analyses to facilitate comparative metabolomic studies.
+  research_questions:
+  - How does the M2S Matlab package match untargeted metabolomic features across two
+    LC-MS datasets?
+  methods_summary: Load two LC-MS untargeted metabolomic feature tables into Matlab
+    environment Parse feature identifiers (m/z, retention time) from both datasets
+    Apply M2S matching algorithm to identify corresponding features across datasets
+    using m/z and RT similarity criteria Compute matching scores reflecting confidence
+    in feature correspondence Export matched feature table with linked feature pairs
+    and scores
+  domain: bioinformatics
+  techniques: []
+  claims:
+  - claim_text: M2S is a Matlab package designed to match untargeted metabolomic features
+      of two LC-MS datasets.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_matlab
+  - claim_text: M2S was developed by Rui Climaco Pinto in 2021 at Imperial College
+      London.
+    claim_type: finding
+    speculative: false
+  - claim_text: The M2S source code is available on GitHub as rjdossan__M2S.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Matched feature table containing linked features from both datasets with matching
+    scores
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

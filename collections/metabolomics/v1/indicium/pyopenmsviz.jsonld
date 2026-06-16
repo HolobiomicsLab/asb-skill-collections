@@ -1,0 +1,1349 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "extension",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/backend-compatibility-verification-visualization-library",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/backend-performance-benchmarking",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/backend-routing-and-dispatch",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/batch-script-performance-profiling",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/chromatogram-plot-generation-retention-time",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/computational-execution-table-generation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/configuration-object-pattern",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/dataframe-plotting-interface-design",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/execution-time-aggregation-by-category",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/interactive-html-figure-generation-plotly",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ion-mobility-mobilogram-visualization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-data-parsing-mzml-bruker",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-data-visualization-pandas",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-plot-type-specialization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-visualization-backend-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/matplotlib-bokeh-plotly-backend-switching",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/multi-inheritance-class-hierarchy",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mzml-data-parsing-pymzml-pyopenms",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/orchestrator-architecture-design",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/pandas-dataframe-manipulation-ms-columns",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peak-map-rendering-retention-time-mz-intensity",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peakmap-heatmap-rendering-mz-rt",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/performance-metric-comparison-across-backends",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/plotly-3d-surface-scatter-visualization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/python-environment-setup-and-reproducibility",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/script-execution-time-measurement",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-plot-generation-mz-intensity",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/statistical-summary-computation-median-range",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/visualization-comparative-performance-metrics",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "pyOpenMS-Viz is a Python library that provides a simple interface for extending the plotting capabilities of Pandas DataFrames for creating static or interactive visualizations of mass spectrometry data.",
+      "@type": "asb:Claim",
+      "source_task_kind": "extension",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyopenms_viz_system"
+        },
+        {
+          "id": "asb:spine_tool_pandas"
+        },
+        {
+          "id": "asb:spine_tool_pyopenms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "pyOpenMS-Viz integrates seamlessly with various plotting library backends including matplotlib, bokeh, and plotly.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyopenms_viz_system"
+        },
+        {
+          "id": "asb:spine_tool_bokeh"
+        },
+        {
+          "id": "asb:spine_tool_plotly"
+        },
+        {
+          "id": "asb:spine_tool_matplotlib"
+        },
+        {
+          "id": "asb:spine_tool_pyopenms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The recommended way of installing pyOpenMS-viz is through the Python Package Index (PyPI).",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyopenms_viz_system"
+        },
+        {
+          "id": "asb:spine_tool_pyopenms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "pyOpenMS-viz can be installed with the command 'pip install pyopenmsviz --upgrade'.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyopenms_viz_system"
+        },
+        {
+          "id": "asb:spine_tool_pyopenms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The source code for pyOpenMS-Viz is freely open and accessible on Github at https://github.com/OpenMS/pyopenms_viz under the BSD-3-Clause license.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyopenms_viz_system"
+        },
+        {
+          "id": "asb:spine_tool_pyopenms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Chromatograms can be plotted using kind = chromatogram with retention time on the x-axis and intensity on the y-axis.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The 'by' parameter in chromatogram plots can be used to separate out different mass traces.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Mobilograms are a type of plot used to visualize ion mobility data with ion mobility represented on the x-axis and intensity shown on the y-axis.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Mobilograms are functionally similar to chromatograms.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Peak Maps can be plotted using kind = peakmap with mass-to-charge on the x-axis, retention time on the y-axis, and intensity on the z-axis or represented by color.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "3D plotting is enabled using plot_3d=True parameter in Peak Maps.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "3D plotting for Peak Maps is currently only supported for ms_matplotlib and ms_plotly backends.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_plotly"
+        },
+        {
+          "id": "asb:spine_tool_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A spectrum can be plotted using kind = 'spectrum' with mass-to-charge ratio on the x-axis and intensity on the y-axis.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "pyOpenMS-viz plotting occurs by calling the .plot() method on a pandas dataframe.",
+      "@type": "asb:Claim",
+      "source_task_kind": "extension",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyopenms_viz_system"
+        },
+        {
+          "id": "asb:spine_tool_pandas"
+        },
+        {
+          "id": "asb:spine_tool_pyopenms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Mandatory plotting values for pyOpenMS-viz include column names for the x and y axes and the kind of plot.",
+      "@type": "asb:Claim",
+      "source_task_kind": "extension",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyopenms_viz_system"
+        },
+        {
+          "id": "asb:spine_tool_pyopenms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "BOKEH backend is available for simple plots including LinePlot, VLinePlot, and ScatterPlot.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_bokeh"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "PLOTLY backend is available for simple plots including PLOTLYLinePlot, PLOTLYVLinePlot, and PLOTLYScatterPlot.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_plotly"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MATPLOTLIB backend is available for simple plots including MATPLOTLIBLinePlot, MATPLOTLIBVLinePlot, and MATPLOTLIBScatterPlot.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "BOKEH backend is available for mass spectrometry plots including BOKEHChromatogramPlot, BOKEHMobilogramPlot, BOKEHSpectrumPlot, and BOKEHPeakMapPlot.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_bokeh"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "PLOTLY backend is available for mass spectrometry plots including PLOTLYChromatogramPlot, PLOTLYMobilogramPlot, PLOTLYSpectrumPlot, and PLOTLYPeakMapPlot.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_plotly"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_021",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MATPLOTLIB backend is available for mass spectrometry plots including MATPLOTLIBChromatogramPlot, MATPLOTLIBMobilogramPlot, MATPLOTLIBSpectrumPlot, and MATPLOTLIBPeakMapPlot.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_021_evidence",
+      "evidence_for": "claim_021",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_022",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Configuration classes are available including BaseConfig, LegendConfig, BasePlotConfig, LineConfig, VLineConfig, ScatterConfig, ChromatogramConfig, MobilogramConfig, SpectrumConfig, and PeakMapConfig.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_022_evidence",
+      "evidence_for": "claim_022",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_023",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Base abstract classes BasePlot and BaseMSPlot are inherited by other classes in pyOpenMS-Viz.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyopenms_viz_system"
+        },
+        {
+          "id": "asb:spine_tool_pyopenms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_023_evidence",
+      "evidence_for": "claim_023",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_024",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Simple plot classes include LinePlot, VLinePlot, and ScatterPlot which inherit from the BasePlot class.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_024_evidence",
+      "evidence_for": "claim_024",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_025",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Mass spectrometry plot classes include ChromatogramPlot, MobilogramPlot, SpectrumPlot, and PeakMapPlot which inherit from the BaseMSPlot class.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_chromatogram_plot"
+        },
+        {
+          "id": "asb:spine_comp_mobilogram_plot"
+        },
+        {
+          "id": "asb:spine_comp_spectrum_plot"
+        },
+        {
+          "id": "asb:spine_comp_peakmap_plot"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_025_evidence",
+      "evidence_for": "claim_025",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_026",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The total execution time for 19 files from all galleries was 00:06.221.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_026_evidence",
+      "evidence_for": "claim_026",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_027",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Key features of pyOpenMS-Viz include DataFrame Based Plotting, Interactive and Static Plotting with multiple backends, and Usage Flexibility.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyopenms_viz_system"
+        },
+        {
+          "id": "asb:spine_tool_pandas"
+        },
+        {
+          "id": "asb:spine_tool_bokeh"
+        },
+        {
+          "id": "asb:spine_tool_plotly"
+        },
+        {
+          "id": "asb:spine_tool_matplotlib"
+        },
+        {
+          "id": "asb:spine_tool_pyopenms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_027_evidence",
+      "evidence_for": "claim_027",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_028",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "pyOpenMS-Viz is licensed under the BSD 3-Clause license.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyopenms_viz_system"
+        },
+        {
+          "id": "asb:spine_tool_pyopenms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_028_evidence",
+      "evidence_for": "claim_028",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_pyopenmsviz#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "hierarchical",
+        "abstraction_level": "implicit",
+        "orchestration_planning": "static",
+        "data_transport": "in_memory",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_pyopenms_viz_system",
+      "title": "pyOpenMS-Viz",
+      "identifier": "urn:asb:spine:pyopenms_viz_system"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_core_base_layer",
+      "title": "Core Base Layer",
+      "identifier": "urn:asb:spine:core_base_layer",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_core_simple_plots_layer",
+      "title": "Core Simple Plots Layer",
+      "identifier": "urn:asb:spine:core_simple_plots_layer",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_core_ms_plots_layer",
+      "title": "Core Mass Spectrometry Plots Layer",
+      "identifier": "urn:asb:spine:core_ms_plots_layer",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_backend_bokeh_layer",
+      "title": "Bokeh Backend Extension Layer",
+      "identifier": "urn:asb:spine:backend_bokeh_layer",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_backend_plotly_layer",
+      "title": "Plotly Backend Extension Layer",
+      "identifier": "urn:asb:spine:backend_plotly_layer",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_backend_matplotlib_layer",
+      "title": "Matplotlib Backend Extension Layer",
+      "identifier": "urn:asb:spine:backend_matplotlib_layer",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_config_layer",
+      "title": "Configuration Classes Layer",
+      "identifier": "urn:asb:spine:config_layer",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_chromatogram_plot",
+      "title": "ChromatogramPlot",
+      "identifier": "urn:asb:spine:comp_chromatogram_plot"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_mobilogram_plot",
+      "title": "MobilogramPlot",
+      "identifier": "urn:asb:spine:comp_mobilogram_plot"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_spectrum_plot",
+      "title": "SpectrumPlot",
+      "identifier": "urn:asb:spine:comp_spectrum_plot"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_peakmap_plot",
+      "title": "PeakMapPlot",
+      "identifier": "urn:asb:spine:comp_peakmap_plot"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pandas",
+      "title": "Pandas",
+      "identifier": "urn:asb:spine:tool_pandas"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_bokeh",
+      "title": "Bokeh",
+      "identifier": "urn:asb:spine:tool_bokeh"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_plotly",
+      "title": "Plotly",
+      "identifier": "urn:asb:spine:tool_plotly"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_matplotlib",
+      "title": "Matplotlib",
+      "identifier": "urn:asb:spine:tool_matplotlib"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pyopenms",
+      "title": "pyOpenMS",
+      "identifier": "urn:asb:spine:tool_pyopenms"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pymzml",
+      "title": "pymzml",
+      "identifier": "urn:asb:spine:tool_pymzml"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pyteomics",
+      "title": "pyteomics",
+      "identifier": "urn:asb:spine:tool_pyteomics"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_alphatims",
+      "title": "AlphaTims",
+      "identifier": "urn:asb:spine:tool_alphatims"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_mzml",
+      "title": "mzML",
+      "identifier": "urn:asb:spine:dataset_mzml"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_bruker_d",
+      "title": "Bruker .d",
+      "identifier": "urn:asb:spine:dataset_bruker_d"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_backend_bokeh",
+      "title": "Bokeh Backend Condition",
+      "identifier": "urn:asb:spine:cond_backend_bokeh"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_backend_plotly",
+      "title": "Plotly Backend Condition",
+      "identifier": "urn:asb:spine:cond_backend_plotly"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_backend_matplotlib",
+      "title": "Matplotlib Backend Condition",
+      "identifier": "urn:asb:spine:cond_backend_matplotlib"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_3d_plotting",
+      "title": "3D Plotting Condition",
+      "identifier": "urn:asb:spine:cond_3d_plotting"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_total_gallery_exec_time",
+      "title": "Total Gallery Execution Time",
+      "identifier": "urn:asb:spine:metric_total_gallery_exec_time"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_peakmap_marginals_plotly_time",
+      "title": "PeakMap Marginals Plotly Execution Time",
+      "identifier": "urn:asb:spine:metric_peakmap_marginals_plotly_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_plotly"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_spyogenes_subplots_bokeh_time",
+      "title": "S. pyogenes Subplots Bokeh Execution Time",
+      "identifier": "urn:asb:spine:metric_spyogenes_subplots_bokeh_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_bokeh"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_spectrum_binning_matplotlib_time",
+      "title": "Spectrum Binning Investigation Matplotlib Execution Time",
+      "identifier": "urn:asb:spine:metric_spectrum_binning_matplotlib_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_spyogenes_subplots_matplotlib_time",
+      "title": "S. pyogenes Subplots Matplotlib Execution Time",
+      "identifier": "urn:asb:spine:metric_spyogenes_subplots_matplotlib_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_spyogenes_subplots_plotly_time",
+      "title": "S. pyogenes Subplots Plotly Execution Time",
+      "identifier": "urn:asb:spine:metric_spyogenes_subplots_plotly_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_plotly"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_peakmap_marginals_matplotlib_time",
+      "title": "PeakMap Marginals Matplotlib Execution Time",
+      "identifier": "urn:asb:spine:metric_peakmap_marginals_matplotlib_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_peakmap_plotly_time",
+      "title": "PeakMap Plotly Execution Time",
+      "identifier": "urn:asb:spine:metric_peakmap_plotly_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_plotly"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_peakmap_marginals_bokeh_time",
+      "title": "PeakMap Marginals Bokeh Execution Time",
+      "identifier": "urn:asb:spine:metric_peakmap_marginals_bokeh_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_bokeh"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_spectrum_dia_matplotlib_time",
+      "title": "DIA Spectrum Matplotlib Execution Time",
+      "identifier": "urn:asb:spine:metric_spectrum_dia_matplotlib_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_mobilogram_bokeh_time",
+      "title": "Mobilogram Bokeh Execution Time",
+      "identifier": "urn:asb:spine:metric_mobilogram_bokeh_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_bokeh"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_chromatogram_bokeh_time",
+      "title": "Chromatogram Bokeh Execution Time",
+      "identifier": "urn:asb:spine:metric_chromatogram_bokeh_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_bokeh"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_peakmap_bokeh_time",
+      "title": "PeakMap Bokeh Execution Time",
+      "identifier": "urn:asb:spine:metric_peakmap_bokeh_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_bokeh"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_mobilogram_matplotlib_time",
+      "title": "Mobilogram Matplotlib Execution Time",
+      "identifier": "urn:asb:spine:metric_mobilogram_matplotlib_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_spectrum_dia_plotly_time",
+      "title": "DIA Spectrum Plotly Execution Time",
+      "identifier": "urn:asb:spine:metric_spectrum_dia_plotly_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_plotly"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_chromatogram_matplotlib_time",
+      "title": "Chromatogram Matplotlib Execution Time",
+      "identifier": "urn:asb:spine:metric_chromatogram_matplotlib_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_spectrum_dia_bokeh_time",
+      "title": "DIA Spectrum Bokeh Execution Time",
+      "identifier": "urn:asb:spine:metric_spectrum_dia_bokeh_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_bokeh"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_peakmap_matplotlib_time",
+      "title": "PeakMap Matplotlib Execution Time",
+      "identifier": "urn:asb:spine:metric_peakmap_matplotlib_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_mobilogram_plotly_time",
+      "title": "Mobilogram Plotly Execution Time",
+      "identifier": "urn:asb:spine:metric_mobilogram_plotly_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_plotly"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_chromatogram_plotly_time",
+      "title": "Chromatogram Plotly Execution Time",
+      "identifier": "urn:asb:spine:metric_chromatogram_plotly_time",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_backend_plotly"
+        }
+      ]
+    }
+  ]
+}

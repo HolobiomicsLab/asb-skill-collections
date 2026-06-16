@@ -1,0 +1,1901 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/batch-normalization-implementation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/chemical-class-assignment-classyfire",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/compound-structural-similarity-retrieval",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/deep-learning-model-inference-and-ensemble-prediction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/deep-learning-model-inference-on-test-sets",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/dense-neural-network-layer-construction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/dimensionality-reduction-t-sne",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/dropout-regularization-application",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/embedding-space-visualization-and-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/interquartile-range-filtering-for-outlier-rejection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectral-similarity-binning-and-stratification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/monte-carlo-dropout-uncertainty-quantification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/neural-network-regularization-techniques",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/precision-recall-curve-generation-for-ranking-tasks",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/root-mean-squared-error-computation-by-bin",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/root-mean-squared-error-regression-evaluation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/siamese-network-embedding-generation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/siamese-network-inference-spectrum-pairs",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-embedding-extraction-from-neural-networks",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-peak-binning-and-vectorization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-similarity-prediction-neural-networks",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-preprocessing-binning-normalization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/structural-clustering-validation-in-chemical-space",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/tanimoto-fingerprint-ground-truth-computation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/tanimoto-score-threshold-optimization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The dataset was retrieved from GNPS on 25/01/2021 and contains a total of 210,407 MS/MS spectra.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The full cleaned dataset contains 210,407 spectra, with 184,698 annotated with InChIKey and SMILES and/or InChI.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "After filtering, the dataset resulted in 109,734 spectra with 15,062 unique InChIKeys.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Peaks with intensities less than 0.1% of the maximum peak intensity were removed during spectral filtering.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spectrum peaks were binned into 10,000 equally-sized bins ranging from 10 to 1000 m/z.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "9,948 out of 10,000 possible bins are known to the model.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The training set contains 102,536 spectra of 14,062 unique molecules.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_training_set"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The validation set contains 3,597 spectra of 500 unique InChIKeys.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_validation_set"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The test set contains 3,601 spectra of 500 unique InChIKeys.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_test_set"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore can predict Tanimoto scores between 0.1 and 0.9 with a RMSE between 0.13 and 0.2.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore achieves a root mean squared error for predicted Tanimoto scores of about 0.15 when run without uncertainty restrictions.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore achieves a root mean squared error down to 0.1 with stronger restrictions on model uncertainty.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        },
+        {
+          "id": "asb:spine_metric_rmse_with_uncertainty"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore clearly outperforms both classical measures and Spec2Vec with respect to identifying high Tanimoto pairs.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        },
+        {
+          "id": "asb:spine_spec2vec_tool"
+        },
+        {
+          "id": "asb:spine_cond_spec2vec_baseline"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "implicit",
+      "subject": "implicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Combining spectral predictions for the same compound pair reduces prediction error, with individual predictions showing higher RMSE than the median of predictions.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_test_set"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Removing outliers with interquartile range less than 0.2 retains 93% of all scores.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "With IQR threshold less than 0.025, the average RMSE drops from about 0.17 to about 0.11.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The dropout rate used in the neural network is 0.2.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The network uses L1 and L2 weight regularization with value 10^-6 in the first dense layer.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "For Monte-Carlo Dropout ensembles, N=10 embeddings were created from networks with dropout enabled.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The neural network was trained using the Adam optimizer with a learning rate of 0.001.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_021",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A batch size of 32 was used during model training.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_021_evidence",
+      "evidence_for": "claim_021",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_022",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Training continued until the validation loss did not decrease for 5 epochs using early stopping.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_022_evidence",
+      "evidence_for": "claim_022",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_023",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The base network creates abstract embeddings with 200-dimensional vectors.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_base_network_component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_023_evidence",
+      "evidence_for": "claim_023",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_024",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The first two densely connected layers each have 500 nodes.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_024_evidence",
+      "evidence_for": "claim_024",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_025",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Predicting all possible similarity scores between 3,601 test spectra (6,485,401 unique pairs) took 5-10 minutes on an Intel i7-8550U CPU.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_test_set"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_025_evidence",
+      "evidence_for": "claim_025",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_026",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The t-SNE visualization was performed using cosine metric, perplex ity of 100, learning rate of 200, and 1000 iterations.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "analysis",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_tsne_tool"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_026_evidence",
+      "evidence_for": "claim_026",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_027",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The test set contains 14 chemical superclasses, 99 different chemical classes and 140 different chemical subclasses.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "analysis",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_test_set"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_027_evidence",
+      "evidence_for": "claim_027",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_028",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore achieves a mean absolute error of about 0.12.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_028_evidence",
+      "evidence_for": "claim_028",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_029",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Low-intensity peak removal data augmentation randomly removes non-zero bins with intensity below 0.4 in 0-20% of cases.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_data_augmentation_component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_029_evidence",
+      "evidence_for": "claim_029",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_030",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Peak intensity jitter data augmentation applies changes between 0% and 40% to non-zero bin intensities.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_data_augmentation_component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_030_evidence",
+      "evidence_for": "claim_030",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_031",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "New peak addition data augmentation adds 0-10 randomly selected peaks with intensities between 0 and 0.01.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_data_augmentation_component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_031_evidence",
+      "evidence_for": "claim_031",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_032",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore uses Tanimoto scores on RDKit Daylight fingerprints with 2048 bits to compute structural similarities.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        },
+        {
+          "id": "asb:spine_rdkit_tool"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_032_evidence",
+      "evidence_for": "claim_032",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_033",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore is implemented as a Siamese neural network with two components: a base network and a head part with cosine calculation.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        },
+        {
+          "id": "asb:spine_base_network_component"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_033_evidence",
+      "evidence_for": "claim_033",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_034",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The input to the neural network is the binned spectrum vector ranging from 10 to 1000 m/z with up to 10,000 bins.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_034_evidence",
+      "evidence_for": "claim_034",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_035",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore can be trained to predict various structural similarity scores including Tanimoto on Daylight fingerprints, Tanimoto on Morgan-2, and Dice scores on Morgan-2.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        },
+        {
+          "id": "asb:spine_morgan2_fingerprint"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_035_evidence",
+      "evidence_for": "claim_035",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_036",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Molecules of the same chemical class tend to cluster together in t-SNE plots of MS2DeepScore embeddings.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "analysis",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        },
+        {
+          "id": "asb:spine_tsne_tool"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_036_evidence",
+      "evidence_for": "claim_036",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_037",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore is available as an easily installable Python library running on Python 3.7 and 3.8.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_037_evidence",
+      "evidence_for": "claim_037",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_038",
+      "context": "implicit",
+      "subject": "implicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The spectral binning uses 10,000 equally-sized bins and only 9,948 of these are known to the model after training data filtering.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_038_evidence",
+      "evidence_for": "claim_038",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_039",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The InChIKey split for training, validation, and test sets was 14,062, 500, and 500 respectively.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_test_set"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_039_evidence",
+      "evidence_for": "claim_039",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_040",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Peak intensities were square root transformed to avoid too strong a focus on the highest intensity peaks.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_040_evidence",
+      "evidence_for": "claim_040",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_041",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The maximum number of peaks retained per spectrum was limited to 1,000 highest intensity peaks.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_041_evidence",
+      "evidence_for": "claim_041",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_042",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore does not require spectrum metadata such as parent mass and elemental formula as input.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_042_evidence",
+      "evidence_for": "claim_042",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_043",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore is applicable to GC-MS data which generally lack precursor masses.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_043_evidence",
+      "evidence_for": "claim_043",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_044",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Each training epoch uses one cycle of data generation that goes through all spectra in the training set once.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_training_set"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_044_evidence",
+      "evidence_for": "claim_044",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_045",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Structural similarity labels are distributed into 10 equally-sized bins between 0 and 1 for balanced sampling.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_045_evidence",
+      "evidence_for": "claim_045",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_046",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The validation set uses 10 cycles, iterating 10 times over 3,597 spectra to monitor training progress on 35,970 total spectrum pairs.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_validation_set"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_046_evidence",
+      "evidence_for": "claim_046",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_047",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "For final test evaluation, all possible spectrum pairs between the 3,601 test spectra were used, totaling 6,485,401 unique pairs.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_test_set"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_047_evidence",
+      "evidence_for": "claim_047",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_048",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Accuracy is lower for the highest and lowest Tanimoto scores, partly attributed to regression to the mean effect.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_048_evidence",
+      "evidence_for": "claim_048",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_049",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MS2DeepScore performs better when predicting structural similarity scores with less skewed distributions.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_MS2DeepScore_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_049_evidence",
+      "evidence_for": "claim_049",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_050",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Tanimoto scores on RDKit Daylight fingerprints result in 10-100 times more pairs in the 0.2-0.9 range compared to Morgan-3 fingerprints.",
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_rdkit_tool"
+        },
+        {
+          "id": "asb:spine_morgan3_fingerprint"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_050_evidence",
+      "evidence_for": "claim_050",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1186/s13321-021-00558-4",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_ms2deepscore#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_MS2DeepScore_system",
+      "title": "MS2DeepScore",
+      "identifier": "urn:asb:spine:MS2DeepScore_system"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_siamese_network_architecture",
+      "title": "Siamese Neural Network Architecture",
+      "identifier": "urn:asb:spine:siamese_network_architecture",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_base_network_component",
+      "title": "Base Network",
+      "identifier": "urn:asb:spine:base_network_component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_mc_dropout_component",
+      "title": "Monte-Carlo Dropout Ensemble",
+      "identifier": "urn:asb:spine:mc_dropout_component"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_spectral_embedding_artifact",
+      "title": "Spectral Embedding Vector",
+      "identifier": "urn:asb:spine:spectral_embedding_artifact",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_data_generator_component",
+      "title": "DataGeneratorAllSpectrums",
+      "identifier": "urn:asb:spine:data_generator_component"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_gnps_dataset",
+      "title": "GNPS MS/MS Spectral Dataset",
+      "identifier": "urn:asb:spine:gnps_dataset"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_training_set",
+      "title": "Training Set",
+      "identifier": "urn:asb:spine:training_set"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_validation_set",
+      "title": "Validation Set",
+      "identifier": "urn:asb:spine:validation_set"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_test_set",
+      "title": "Test Set",
+      "identifier": "urn:asb:spine:test_set"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_matchms_tool",
+      "title": "matchms",
+      "identifier": "urn:asb:spine:matchms_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_rdkit_tool",
+      "title": "RDKit",
+      "identifier": "urn:asb:spine:rdkit_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_pubchempy_tool",
+      "title": "pubchempy",
+      "identifier": "urn:asb:spine:pubchempy_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tsne_tool",
+      "title": "t-SNE",
+      "identifier": "urn:asb:spine:tsne_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_classyfire_tool",
+      "title": "ClassyFire",
+      "identifier": "urn:asb:spine:classyfire_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_spec2vec_tool",
+      "title": "Spec2Vec",
+      "identifier": "urn:asb:spine:spec2vec_tool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_modified_cosine_tool",
+      "title": "Modified Cosine Score",
+      "identifier": "urn:asb:spine:modified_cosine_tool"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_daylight_fingerprint",
+      "title": "RDKit Daylight Fingerprint",
+      "identifier": "urn:asb:spine:daylight_fingerprint"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_morgan2_fingerprint",
+      "title": "Morgan-2 Fingerprint",
+      "identifier": "urn:asb:spine:morgan2_fingerprint"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_morgan3_fingerprint",
+      "title": "Morgan-3 Fingerprint",
+      "identifier": "urn:asb:spine:morgan3_fingerprint"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_ms2deepscore_no_uncertainty",
+      "title": "MS2DeepScore without uncertainty restriction",
+      "identifier": "urn:asb:spine:cond_ms2deepscore_no_uncertainty"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_ms2deepscore_with_uncertainty",
+      "title": "MS2DeepScore with uncertainty restriction (IQR filtering)",
+      "identifier": "urn:asb:spine:cond_ms2deepscore_with_uncertainty"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_mc_dropout_iqr025",
+      "title": "Monte-Carlo Dropout with IQR < 0.025 threshold",
+      "identifier": "urn:asb:spine:cond_mc_dropout_iqr025"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_mc_dropout_iqr02",
+      "title": "Monte-Carlo Dropout with IQR < 0.2 threshold",
+      "identifier": "urn:asb:spine:cond_mc_dropout_iqr02"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_mc_dropout_ensemble100",
+      "title": "Monte-Carlo Dropout ensemble of 100 predictions",
+      "identifier": "urn:asb:spine:cond_mc_dropout_ensemble100"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_median_multiple_spectra",
+      "title": "Median of multiple spectra predictions for same compound pair",
+      "identifier": "urn:asb:spine:cond_median_multiple_spectra"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_cond_spec2vec_baseline",
+      "title": "Spec2Vec baseline",
+      "identifier": "urn:asb:spine:cond_spec2vec_baseline"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_cond_modified_cosine_baseline",
+      "title": "Modified Cosine baseline",
+      "identifier": "urn:asb:spine:cond_modified_cosine_baseline"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_daylight_tanimoto",
+      "title": "MS2DeepScore trained on Daylight Tanimoto labels",
+      "identifier": "urn:asb:spine:cond_daylight_tanimoto"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_morgan2_tanimoto",
+      "title": "MS2DeepScore trained on Morgan-2 Tanimoto labels",
+      "identifier": "urn:asb:spine:cond_morgan2_tanimoto"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_morgan3_tanimoto",
+      "title": "MS2DeepScore trained on Morgan-3 Tanimoto labels",
+      "identifier": "urn:asb:spine:cond_morgan3_tanimoto"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_morgan2_dice",
+      "title": "MS2DeepScore trained on Morgan-2 Dice labels",
+      "identifier": "urn:asb:spine:cond_morgan2_dice"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_morgan3_dice",
+      "title": "MS2DeepScore trained on Morgan-3 Dice labels",
+      "identifier": "urn:asb:spine:cond_morgan3_dice"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_cond_daylight_dice",
+      "title": "MS2DeepScore trained on Daylight Dice labels",
+      "identifier": "urn:asb:spine:cond_daylight_dice"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_rmse_no_uncertainty",
+      "title": "RMSE ~0.15 without uncertainty restriction",
+      "identifier": "urn:asb:spine:metric_rmse_no_uncertainty",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_ms2deepscore_no_uncertainty"
+        },
+        {
+          "id": "asb:spine_cond_daylight_tanimoto"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_rmse_with_uncertainty",
+      "title": "RMSE ~0.1 with uncertainty restriction",
+      "identifier": "urn:asb:spine:metric_rmse_with_uncertainty",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_ms2deepscore_with_uncertainty"
+        },
+        {
+          "id": "asb:spine_cond_daylight_tanimoto"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_rmse_tanimoto_bins",
+      "title": "RMSE 0.13\u20130.2 across Tanimoto bins 0.1\u20130.9",
+      "identifier": "urn:asb:spine:metric_rmse_tanimoto_bins",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_ms2deepscore_no_uncertainty"
+        },
+        {
+          "id": "asb:spine_cond_daylight_tanimoto"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_metric_rmse_iqr025",
+      "title": "RMSE ~0.11 with IQR < 0.025",
+      "identifier": "urn:asb:spine:metric_rmse_iqr025",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_mc_dropout_iqr025"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_ms2deepscore_outperforms_baselines",
+      "title": "MS2DeepScore outperforms Spec2Vec and modified Cosine in retrieving chemically related pairs",
+      "identifier": "urn:asb:spine:result_ms2deepscore_outperforms_baselines",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_ms2deepscore_no_uncertainty"
+        },
+        {
+          "id": "asb:spine_cond_spec2vec_baseline"
+        },
+        {
+          "id": "asb:spine_cond_modified_cosine_baseline"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_median_multiple_spectra_improves",
+      "title": "Median of multiple spectra predictions reduces prediction error",
+      "identifier": "urn:asb:spine:result_median_multiple_spectra_improves",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_median_multiple_spectra"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_embeddings_cluster_chemically",
+      "title": "MS2DeepScore embeddings form chemically meaningful clusters",
+      "identifier": "urn:asb:spine:result_embeddings_cluster_chemically",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_ms2deepscore_no_uncertainty"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_all_fingerprints_accurate",
+      "title": "MS2DeepScore accurately predicts all tested structural similarity measures",
+      "identifier": "urn:asb:spine:result_all_fingerprints_accurate",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_daylight_tanimoto"
+        },
+        {
+          "id": "asb:spine_cond_morgan2_tanimoto"
+        },
+        {
+          "id": "asb:spine_cond_morgan3_tanimoto"
+        },
+        {
+          "id": "asb:spine_cond_daylight_dice"
+        },
+        {
+          "id": "asb:spine_cond_morgan2_dice"
+        },
+        {
+          "id": "asb:spine_cond_morgan3_dice"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_daylight_less_skewed",
+      "title": "Daylight fingerprints yield less skewed score distribution and better MS2DeepScore performance",
+      "identifier": "urn:asb:spine:result_daylight_less_skewed",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_daylight_tanimoto"
+        },
+        {
+          "id": "asb:spine_cond_morgan3_tanimoto"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_mc_dropout_improves_all_bins",
+      "title": "Monte-Carlo dropout ensemble reduces prediction error across nearly all Tanimoto bins",
+      "identifier": "urn:asb:spine:result_mc_dropout_improves_all_bins",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_mc_dropout_ensemble100"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_result_iqr_improves_extreme_bins",
+      "title": "IQR filtering most improves extreme Tanimoto score predictions",
+      "identifier": "urn:asb:spine:result_iqr_improves_extreme_bins",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_cond_mc_dropout_iqr025"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_data_augmentation_component",
+      "title": "Data Augmentation",
+      "identifier": "urn:asb:spine:data_augmentation_component"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_tanimoto_score",
+      "title": "Tanimoto Score",
+      "identifier": "urn:asb:spine:tanimoto_score"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_dice_score",
+      "title": "Dice Score",
+      "identifier": "urn:asb:spine:dice_score"
+    }
+  ]
+}

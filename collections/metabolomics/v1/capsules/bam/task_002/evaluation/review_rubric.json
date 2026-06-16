@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the BAM codebase (github:HassounLab__BAM) contains a biotransformation rules module or file"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the module accepts molecular structures in SMILES format as input"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the module produces a structured output file (CSV, JSON, or TSV format) containing transformed structures"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output file contains at least one column for input SMILES and at least one column for output/transformed SMILES"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: compare a sample of rule-applied transformations against documented biotransformation rules in the repository documentation or codebase comments (if available)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the BAM codebase (github:HassounLab__BAM) contains a biotransformation rules module or file",
+      "verify that the module accepts molecular structures in SMILES format as input",
+      "verify that the module produces a structured output file (CSV, JSON, or TSV format) containing transformed structures",
+      "script_runs: execute the biotransformation rule-application function on a test set of 5\u201310 SMILES strings and confirm no runtime errors occur",
+      "verify that output file contains at least one column for input SMILES and at least one column for output/transformed SMILES",
+      "verify output_matches_reference: compare a sample of rule-applied transformations against documented biotransformation rules in the repository documentation or codebase comments (if available)"
+    ],
+    "expert_review": [
+      "assess whether the biotransformation rules applied are chemically and metabolically plausible for the input structures tested",
+      "assess whether the transformed structures follow valid chemical valence and bonding rules",
+      "assess whether the rule-application logic correctly encodes the intended biotransformation pathways (e.g., oxidation, conjugation, phase I/II metabolism)"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

@@ -1,0 +1,91 @@
+schema_version: 0.1.0
+workflow_id: coll_deepsat_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: streaming
+  characterisation_confidence: inferred
+narrative:
+  tagline: SMART 3 is a system that retrieves model metadata from TensorFlow Serving
+    and provides an API for programmatic spectroscopic classification.
+  pseudo_abstract: 'Reconstructs 2 described mechanisms (described in the paper but
+    not separately evaluated there): The SMART 3 system queries model metadata via
+    an HTTP GET call to the /model/metadata endpoint on a TensorFlow Serving instance,
+    from which model input names must be extracted and verified, as changes to these
+    input names require corresponding code updates. The /api/smart3/search endpoint
+    accepts peaks as a JSON list of dictionaries with 1H and 13C as headers for programmatic
+    classification requests.'
+  research_questions:
+  - How does the SMART 3 system query the TensorFlow Serving instance to retrieve
+    and validate model metadata, and what information about input names must be extracted?
+  - How should peak data be formatted and submitted to the DeepSAT SMART 3 classification
+    API endpoint to obtain predictions?
+  methods_summary: 'Construct an HTTP GET request to the TensorFlow Serving /model/metadata
+    endpoint. Execute the request and retrieve the JSON response from the server.
+    Parse the returned JSON to extract model input tensor names and validate required
+    response fields (signature, inputs, outputs). Write the extracted input names
+    and validation results to a structured JSON output file. Validation: Confirm that
+    the response structure is valid JSON, contains all expected top-level fields,
+    and input names are non-empty strings matching the expected NMR spectroscopic
+    dimensions (1H, 13C). Query the /model/metadata endpoint via TensorFlow Serving
+    to retrieve and validate the current model input schema. Format NMR peak data
+    as a JSON list of dictionaries with 1H and 13C keys. Submit a POST request to
+    /api/smart3/search with the formatted JSON payload. Parse and extract classification
+    predictions from the returned JSON response. Validation: HTTP response code is
+    200 (or documented success code), and response JSON contains expected prediction
+    fields with valid numeric or categorical values.'
+  domain: bioinformatics
+  techniques:
+  - deep-learning
+  - machine-learning
+  claims:
+  - claim_text: Model metadata can be checked by passing through tensorflow serving
+      at the /model/metadata URL.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_tensorflow_serving
+  - claim_text: If the model input names change, the code must be updated accordingly.
+    claim_type: finding
+    speculative: false
+  - claim_text: SMART 3 provides an API at /api/smart3/search for programmatic classification.
+    claim_type: finding
+    speculative: false
+    entity_id: component_smart3
+  - claim_text: Peak data can be input to the SMART 3 API as a JSON list of dictionaries
+      with 1H and 13C as headers.
+    claim_type: finding
+    speculative: false
+    entity_id: component_smart3
+  - claim_text: DeepSAT source code is available on github under the user mwang87.
+    claim_type: finding
+    speculative: false
+    entity_id: system_deepsat
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 2-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Structured JSON response containing classification predictions and metadata
+    from the API
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

@@ -1,0 +1,320 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "00009acb676bfc86736a464f71b5009b163ea21bb77bdb97c9b82991d18f6163"
+    }
+  ],
+  "created_at": "2026-06-15T21:17:53.323536+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Zenodo biosynfoni fingerprint dataset deposit (DOI: 10.5281/zenodo.14822624)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "biosynfoni package source code repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary statistics table containing bit-frequency per position, sparsity, and pairwise Tanimoto similarity distribution metrics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Distribution plots (histogram/density) visualizing bit-frequency, sparsity, and Tanimoto similarity across fingerprint vectors",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "Bit-frequency in molecular fingerprints measures how often each bit position is set to 1 across all vectors in a dataset, indicating the prevalence of specific chemical substructures.",
+    "Sparsity quantifies the proportion of zero bits in a fingerprint vector; natural product fingerprints often exhibit high sparsity due to the rarity of certain chemical features.",
+    "Tanimoto similarity (Jaccard index) is the standard metric for comparing binary fingerprints, computed as the intersection of set bits divided by the union of set bits, ranging from 0 (dissimilar) to 1 (identical).",
+    "The pairwise Tanimoto similarity distribution across a large fingerprint dataset reveals the chemical diversity and clustering properties of the molecular space represented."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that Zenodo deposit 10.5281/zenodo.14822624 is accessible and contains downloadable biosynfoni fingerprint dataset files",
+      "verify file_format_is: all fingerprint vectors are in a standard serializable format (e.g., NumPy binary, HDF5, CSV, or pickle) that can be loaded by a computational agent",
+      "verify script_runs: a Python script can successfully load all fingerprint vectors from the deposited dataset without errors",
+      "verify that summary statistics table contains at least the following named fields: position_index, bit_frequency (or analogous), sparsity_metric, and vector_count",
+      "verify that pairwise Tanimoto similarity distribution plot contains axes labeled with similarity range and frequency/density, with title or caption identifying it as Tanimoto similarity",
+      "verify row_count_equals: summary statistics table has one row per fingerprint position (or one row per summary statistic computed across all vectors, depending on output schema chosen)",
+      "verify output_matches_reference: computed bit-frequency values are consistent across repeated loads (robust to parameter choices in bit-frequency calculation)",
+      "verify that all expected_outputs files exist in the task output directory with correct extensions (.csv, .json, .png, .pdf, or .npz as appropriate)"
+    ],
+    "expert_review": [
+      "Confirm that the choice of Tanimoto similarity metric is appropriate for the fingerprint representation and that pairwise distance computation is correctly implemented",
+      "Confirm that sparsity metric definition (e.g., fraction of zero bits, entropy-based measure) is justified and consistent with biosynfoni fingerprint design",
+      "Confirm that summary statistics are computed over the full population of fingerprints in the release and are not inadvertently filtered or subsampled",
+      "Confirm that visualization and tabular outputs are scientifically interpretable and support inferences about fingerprint bit informativeness and vector similarity landscape"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the statistical properties of the biosynfoni fingerprint vectors in the deposited dataset, including bit-frequency distributions, sparsity characteristics, and pairwise similarity patterns?: 'a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] biosynfoni is a molecular fingerprint resource designed for natural product chemistry and bioinformatic research, providing a dataset suitable for statistical characterization of fingerprint properties.: 'a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Zenodo biosynfoni fingerprint dataset deposit (DOI: 10.5281/zenodo.14822624): 'https://doi.org/10.5281/zenodo.14822624'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] biosynfoni package source code repository: 'https://github.com/lucinamay/biosynfoni'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Summary statistics table containing bit-frequency per position, sparsity, and pairwise Tanimoto similarity distribution metrics: 'compute summary statistics (e.g., bit-frequency per position, sparsity, pairwise Tanimoto similarity distribution)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Distribution plots (histogram/density) visualizing bit-frequency, sparsity, and Tanimoto similarity across fingerprint vectors: 'a summary statistics table and/or distribution plot'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] biosynfoni: 'a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pip: 'pip install -e .[dev]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found \u2014 version history and update documentation absent: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "fingerprint_summary_statistics.csv",
+  "expected_outputs": [
+    "Summary statistics table containing bit-frequency per position, sparsity, and pairwise Tanimoto similarity distribution metrics",
+    "Distribution plots (histogram/density) visualizing bit-frequency, sparsity, and Tanimoto similarity across fingerprint vectors"
+  ],
+  "finding": "biosynfoni is a molecular fingerprint resource designed for natural product chemistry and bioinformatic research, providing a dataset suitable for statistical characterization of fingerprint properties.",
+  "github_name": "lucinamay/biosynfoni",
+  "input_from": "task_001",
+  "inputs": [
+    "Zenodo biosynfoni fingerprint dataset deposit (DOI: 10.5281/zenodo.14822624)",
+    "biosynfoni package source code repository"
+  ],
+  "keywords": [
+    "molecular fingerprinting",
+    "natural product chemistry",
+    "bioinformatics",
+    "cheminformatics"
+  ],
+  "landmark_outputs": [
+    "fingerprint_vectors_loaded.pkl",
+    "bit_frequency_distribution.csv",
+    "sparsity_distribution.csv",
+    "tanimoto_similarity_matrix.pkl",
+    "summary_statistics.csv",
+    "bit_frequency_histogram.png"
+  ],
+  "linked_result_ids": [
+    "result_001"
+  ],
+  "methodology_summary": [
+    "Install biosynfoni package from source repository using pip in development mode.",
+    "Load fingerprint vectors from the Zenodo dataset deposit.",
+    "Compute bit-frequency distribution across all bit positions.",
+    "Calculate sparsity (zero-bit proportion) for the dataset.",
+    "Compute all pairwise Tanimoto similarity coefficients.",
+    "Summarize statistics (mean, median, std dev) for each metric.",
+    "Generate histogram and density plots for distributions.",
+    "Validation: confirm all metrics are computed without missing values and visualizations display expected distributional characteristics."
+  ],
+  "missing_information": [
+    "No changelog found \u2014 version history and update documentation absent"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the statistical properties of the biosynfoni fingerprint vectors in the deposited dataset, including bit-frequency distributions, sparsity characteristics, and pairwise similarity patterns?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "fingerprint-vector-loading-and-parsing",
+    "molecular-fingerprint-bit-frequency-analysis",
+    "sparsity-metric-computation",
+    "tanimoto-similarity-pairwise-calculation",
+    "distribution-statistics-summarization",
+    "statistical-distribution-visualization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_biosynfoni/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "biosynfoni_system",
+    "tool_biosynfoni_pkg",
+    "component_molecular_fingerprint",
+    "dataset_zenodo"
+  ],
+  "subdomains": [
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:lucinamay__biosynfoni",
+  "task_description": "Load the deposited biosynfoni dataset from Zenodo and compute summary statistics (bit-frequency per position, sparsity, pairwise Tanimoto similarity distribution) across all fingerprint vectors. Output a summary statistics table and distribution visualizations.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Zenodo biosynfoni fingerprint dataset deposit",
+      "port_id": "zenodo_dataset",
+      "resolved_via": null,
+      "source": "task_001/test_report",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "biosynfoni package source code",
+      "port_id": "biosynfoni_repo",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Compute and report summary statistics (bit-frequency, sparsity, Tanimoto similarity distribution) across all biosynfoni fingerprint vectors in the Zenodo dataset release.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Summary statistics table with bit-frequency, sparsity, and similarity metrics",
+      "port_id": "summary_stats_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Distribution visualization plots for fingerprint statistics",
+      "port_id": "distribution_plots",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "database-annotation",
+    "dereplication"
+  ],
+  "title": "Analyze the fingerprint vector distribution across the Zenodo biosynfoni dataset",
+  "tools": [
+    "biosynfoni",
+    "pip"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: pip, Summary statistics table containing bit-frequency per position, sparsity, and pairwise Tanimoto similarity distribution metrics."
+  ],
+  "workflow_description": "1. Install biosynfoni package in development mode using pip install -e .[dev] from the project root. 2. Load all fingerprint vectors from the Zenodo dataset deposit (10.5281/zenodo.14822624). 3. Compute bit-frequency distribution across all positions in the fingerprint vectors. 4. Calculate sparsity metric (proportion of zero bits) across the dataset. 5. Compute pairwise Tanimoto similarity coefficients for all fingerprint vector pairs. 6. Generate summary statistics table including mean, median, and standard deviation of bit-frequencies, sparsity, and similarity scores. 7. Create distribution plots (histogram/density) for bit-frequencies, sparsity values, and pairwise Tanimoto similarity. 8. Validation: verify that summary statistics table contains all computed metrics with no missing values and that plots display expected distributional shapes."
+}

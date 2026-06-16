@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the cluster assignment file exists and is readable"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is cluster assignment output (e.g. TSV, CSV, or JSON with spectrum identifiers and cluster labels)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: cluster assignment file contains at least two columns/fields: spectrum identifier and cluster label"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify row_count_equals: cluster assignment file contains one row per input spectrum (row count matches input spectrum count)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: cluster assignment file contains valid cluster identifiers (numeric or alphanumeric labels, no nulls or 'None' values for assigned spectra)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: density-based clustering implementation (DBSCAN or equivalent) executes without errors on sparse distance matrix input"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: cluster assignments are reproducible (byte-for-byte or robust to parameter choices, depending on implementation determinism)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the cluster assignment file exists and is readable",
+      "verify file_format_is cluster assignment output (e.g. TSV, CSV, or JSON with spectrum identifiers and cluster labels)",
+      "verify field_present: cluster assignment file contains at least two columns/fields: spectrum identifier and cluster label",
+      "verify row_count_equals: cluster assignment file contains one row per input spectrum (row count matches input spectrum count)",
+      "verify contains_substring: cluster assignment file contains valid cluster identifiers (numeric or alphanumeric labels, no nulls or 'None' values for assigned spectra)",
+      "verify script_runs: density-based clustering implementation (DBSCAN or equivalent) executes without errors on sparse distance matrix input",
+      "verify output_matches_reference: cluster assignments are reproducible (byte-for-byte or robust to parameter choices, depending on implementation determinism)"
+    ],
+    "expert_review": [
+      "assess whether cluster assignments are biologically/chemically meaningful by comparing against known spectrum families or reference spectral libraries, if available",
+      "assess whether the density threshold parameters (e.g. eps, min_samples for DBSCAN) are appropriately justified and documented",
+      "assess whether cluster quality metrics (silhouette score, Davies-Bouldin index, or domain-specific measures) meet expected thresholds for mass spectrometry data"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

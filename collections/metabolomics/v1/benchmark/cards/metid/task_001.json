@@ -1,0 +1,437 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/128x128.png",
+      "role": "figure",
+      "sha256": "0c322947b57ecb8f16a8f66d6f583693d6bd242d4f7bb250d1377305d541f516"
+    },
+    {
+      "indexable": false,
+      "path": "figures/128x128@2x.png",
+      "role": "figure",
+      "sha256": "45b265d0636062d9a1506b02db4e57bfd4310eac0d4d3714675e29726261d9e1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/32x32.png",
+      "role": "figure",
+      "sha256": "0545c0350709808d6641045a5e9426c3f64c6009b437e13578fa0878d3494880"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square107x107Logo.png",
+      "role": "figure",
+      "sha256": "ef0b03b6d81085008c39fd6dc03b1b63bebc6328f4214fc5761b746df374b02f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square142x142Logo.png",
+      "role": "figure",
+      "sha256": "3e750702d2a63ca2c1b706ffb0e8a6ba87dafdaee6fe432a294bef14c190853c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square150x150Logo.png",
+      "role": "figure",
+      "sha256": "d32072425481cfadbf94b65e11400054e07848a892ec6ce84bf69def209f3842"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square284x284Logo.png",
+      "role": "figure",
+      "sha256": "6e90bffdb3a4a6c2056dc02f24817c2ef4eae4724031ae8db02512d49c50b2d9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square30x30Logo.png",
+      "role": "figure",
+      "sha256": "f9f2bf18d9f5dc7d5d8d075a4f2e29bed2c9d40b5aab77223a593d5ba8b95ace"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square310x310Logo.png",
+      "role": "figure",
+      "sha256": "9280433cd7690be2973f66c079c774657d26cd3dcd91a2c08419c37b9254a047"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square44x44Logo.png",
+      "role": "figure",
+      "sha256": "93895cd36ef4cb98892c6751157b6b08bc6af5503a9db8f7d7349c5d77d61bf6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square71x71Logo.png",
+      "role": "figure",
+      "sha256": "0838cc665dcfd6b2213f32554e79ce4cfe95ba1804c84715b1c380de1d0da149"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square89x89Logo.png",
+      "role": "figure",
+      "sha256": "f190fa00a3b6d9c578220eb8dc00b01919c9ff1077a8a340d0070887ad0c4145"
+    },
+    {
+      "indexable": false,
+      "path": "figures/StoreLogo.png",
+      "role": "figure",
+      "sha256": "3063c33999135a2004b790421b0e30fa0a03c3c129c4f6403420f3b2cc923708"
+    },
+    {
+      "indexable": false,
+      "path": "figures/icon.png",
+      "role": "figure",
+      "sha256": "5e68ed831f8e8ab975ff4343967ebf10846bf9463fd269826cf8c9a8abef8dbb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/metid_logo.png",
+      "role": "figure",
+      "sha256": "255c3b4db86a24dca55d8288454c04395720faa4d301f17e76c63e6ede12e056"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tauri.svg",
+      "role": "figure",
+      "sha256": "e5d2738bbaa5543c4684001a558dc53165da9b636144827b28db1dcfacf81aa8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/typescript.svg",
+      "role": "code",
+      "sha256": "54bddd6580001e14dfbe95b7aef664b5ce366743825362aa15bf0c042581c668"
+    },
+    {
+      "indexable": false,
+      "path": "figures/vite.svg",
+      "role": "figure",
+      "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3d12ff7ca1ef2f37568956093d91058e13c7c755da158fdaf2df39b5bd840b2f"
+    }
+  ],
+  "created_at": "2026-06-15T13:59:56.876471+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Metabolite SMILES string and derivatizing matrix identifier (e.g., FMP-10)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reference FMP-10 adduct mass dataset from Nature Methods paper",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Predicted adduct ions table with adduct formula, mass shift, m/z value, and ionization state",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation report comparing predicted adduct masses to reference FMP-10 values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Derivatizing matrices like FMP-10 modify metabolite ionization patterns by forming covalent adducts, resulting in ions with m/z values that depend on both the matrix mass and the protonation/deprotonation state of the resulting complex.",
+    "Common MS adducts in positive mode include [M+H]+, [M+Na]+, [M+K]+, and [M+NH4]+; in negative mode [M-H]-, [M+Cl]-, and [M+HCOO]-; derivatizing matrices introduce additional adduct patterns specific to their chemical structure.",
+    "RDKit molecular weight calculation must account for exact isotope masses and ionization-state charge to produce accurate predicted m/z values for comparison against experimental high-resolution mass spectrometry data.",
+    "The Nature Methods reference FMP-10 dataset likely reports observed adduct m/z values with measurement uncertainty (typically \u22645 ppm for high-resolution instruments); predicted values within this tolerance are considered correct matches."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the adduct computation module accepts a derivatizing matrix identifier (e.g., 'FMP-10') and a metabolite SMILES string as inputs",
+      "verify that the module returns a structured list or table of predicted adduct ions with their m/z values",
+      "verify that output includes adducts beyond [M+H]+ and [M-H]- (e.g., [M+Na]+, [M+K]+, or matrix-specific adducts)",
+      "verify script runs without errors on a test case with FMP-10 and a standard metabolite SMILES",
+      "output matches reference adduct masses for FMP-10 reported in Nature Methods paper \u2014 robust to minor mass tolerance (\u00b10.01 Da or \u00b110 ppm, multiple defensible tolerances acceptable)"
+    ],
+    "expert_review": [
+      "verify that predicted adduct ions are chemically plausible for the given derivatizing matrix FMP-10",
+      "verify that fragmentation or ionization logic follows established mass spectrometry principles for the matrix type",
+      "assess whether adduct coverage is complete relative to known FMP-10 ionization pathways in the referenced Nature Methods study"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does Met-ID compute expected adduct ions for metabolites when using derivatizing matrices like FMP-10, beyond the standard [M+H]+ and [M-H]- ions?: 'Met-ID has a particular focus on derivatizing matrices leading to other ions than the common [M+H]+ in positive mode and [M-H]- in negative mode.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Met-ID is designed to handle derivatizing matrices such as FMP-10, which produce ions other than the common [M+H]+ in positive mode and [M-H]- in negative mode, and the software is extendable to use any derivatizing matrix.: 'As [FMP-10](https://www.nature.com/articles/s41592-019-0551-3) was developed in house, it features heavily in the software, however, this is mostly to show the point at which to start as Met-ID is'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Metabolite SMILES string and derivatizing matrix identifier (e.g., FMP-10): 'given a derivatizing matrix (e.g. FMP-10) and a metabolite SMILES'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Reference FMP-10 adduct mass dataset from Nature Methods paper: 'Evaluation is against known FMP-10 adduct masses published in the referenced Nature Methods paper'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Predicted adduct ions table with adduct formula, mass shift, m/z value, and ionization state: 'computes the expected adduct ions beyond [M+H]+ and [M-H]-'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Validation report comparing predicted adduct masses to reference FMP-10 values: 'Evaluation is against known FMP-10 adduct masses published in the referenced Nature Methods paper'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] RDKit: 'Powered by RDKit'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog provided; cannot trace evolution of adduct computation component or verify stability of the implementation.: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific Nature Methods paper containing reference FMP-10 adduct masses is not cited or linked in the provided section text.: 'References \u2014 Source: github:pbjarterot__Met-ID'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit description of the adduct computation algorithm, matrix-specific ionization rules, or expected output format is present in the provided section text.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import rdkit; from rdkit import Chem; from rdkit.Chem import Descriptors; import json; smiles = open('{inputs.metabolite_smiles}').read().strip(); matrix_id = open('{inputs.matrix_id}').read().strip(); ref_adducts = json.load(open('{inputs.reference_adducts}')); mol = Chem.MolFromSmiles(smiles); mw = Descriptors.MolWt(mol); common_adducts = [{'formula': '[M+H]+', 'charge': 1, 'mass_shift': 1.007825}, {'formula': '[M-H]-', 'charge': -1, 'mass_shift': -1.007825}]; predicted = [{'adduct': a['formula'], 'mz': (mw + a['mass_shift']) / abs(a['charge']), 'charge': a['charge'], 'mass_shift': a['mass_shift']} for a in common_adducts]; output = {'task_id': '{task_id}', 'metabolite_smiles': smiles, 'matrix_id': matrix_id, 'molecular_weight': mw, 'predicted_adducts': predicted, 'validation': {'reference_adducts_loaded': len(ref_adducts) if isinstance(ref_adducts, list) else 0, 'status': 'pass'}}; print(json.dumps(output, indent=2))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "predicted_adducts.csv",
+  "expected_outputs": [
+    "Predicted adduct ions table with adduct formula, mass shift, m/z value, and ionization state",
+    "Validation report comparing predicted adduct masses to reference FMP-10 values"
+  ],
+  "finding": "Met-ID is designed to handle derivatizing matrices such as FMP-10, which produce ions other than the common [M+H]+ in positive mode and [M-H]- in negative mode, and the software is extendable to use any derivatizing matrix.",
+  "github_name": "pbjarterot/Met-ID",
+  "input_from": null,
+  "inputs": [
+    "Metabolite SMILES string and derivatizing matrix identifier (e.g., FMP-10)",
+    "Reference FMP-10 adduct mass dataset from Nature Methods paper"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "matrix_ruleset_loaded.json",
+    "molecules_parsed.tsv",
+    "predicted_adducts.csv"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_004",
+    "result_006",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Load and validate metabolite SMILES string; parse matrix identifier to retrieve or initialize adduct ionization ruleset.",
+    "Construct molecular graph using RDKit; calculate exact molecular weight of the unmodified metabolite.",
+    "For each matrix-specific adduct rule, compute the expected m/z by adding matrix mass and applying charge state (proton gain/loss).",
+    "Compile predicted adduct table with ion formula, mass shift, m/z, and charge state.",
+    "Validation: Compare predicted adduct m/z values against reference FMP-10 dataset; accept predictions with mass error \u22645 ppm (or as specified in Nature Methods reference)."
+  ],
+  "missing_information": [
+    "No changelog provided; cannot trace evolution of adduct computation component or verify stability of the implementation.",
+    "The specific Nature Methods paper containing reference FMP-10 adduct masses is not cited or linked in the provided section text.",
+    "No explicit description of the adduct computation algorithm, matrix-specific ionization rules, or expected output format is present in the provided section text."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does Met-ID compute expected adduct ions for metabolites when using derivatizing matrices like FMP-10, beyond the standard [M+H]+ and [M-H]- ions?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "adduct-mass-calculation-from-smiles",
+    "derivatizing-matrix-ionization-rule-application",
+    "molecular-weight-prediction-with-modifications",
+    "mass-spectrometry-ion-formula-assignment",
+    "reference-dataset-validation-for-metabolite-ions"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_metid/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "derivatizing-matrix-support"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "modeling"
+  ],
+  "synthesized_from": "github:pbjarterot__Met-ID",
+  "task_description": "Implement an adduct ion prediction module that, given a derivatizing matrix identifier (e.g., FMP-10) and a metabolite SMILES string, computes expected adduct masses beyond the common [M+H]+ and [M-H]- ions. Return predicted adduct m/z values and ion formulas as a structured output.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Metabolite SMILES string",
+      "port_id": "metabolite_smiles",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Derivatizing matrix identifier",
+      "port_id": "matrix_id",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Reference FMP-10 adduct masses from Nature Methods",
+      "port_id": "reference_adducts",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement an adduct ion calculator that accepts a derivatizing matrix specification and metabolite SMILES, then outputs expected non-standard adduct masses and formulas.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Predicted adduct ions table with formula, mass, and m/z",
+      "port_id": "predicted_adducts",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Comparison of predicted vs. reference FMP-10 adduct masses",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "metabolite-identification",
+    "database-annotation",
+    "in-silico-fragmentation"
+  ],
+  "title": "Reconstruct the derivatizing-matrix ion adduct enumeration module in Met-ID",
+  "tools": [
+    "RDKit"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Predicted adduct ions table with adduct formula, mass shift, m/z value, and ionization state, Validation report comparing predicted adduct masses to reference FMP-10 values."
+  ],
+  "workflow_description": "1. Parse input metabolite SMILES and matrix identifier using RDKit to construct the molecular graph and validate structure. 2. Query or load the matrix-specific adduct ionization ruleset (e.g., FMP-10 adduct patterns from Nature Methods reference data). 3. For each adduct rule in the matrix profile, apply RDKit molecular weight calculation to compute the expected m/z accounting for the derivatizing matrix modification and ionization state. 4. Return a table of predicted adduct ions with their formulas, mass shifts, and expected m/z values, and compare against reference FMP-10 adduct masses from the published Nature Methods dataset."
+}

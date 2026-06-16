@@ -1,0 +1,26 @@
+# Evaluation Strategy
+
+## Direct Checks
+
+- verify file exists: salmon 2.0 Rust binary or compiled executable from COMBINE-lab/salmon repo
+- verify file exists: salmon 1.12.0 C++ binary (salmon-cpp conda package or cpp branch source)
+- verify file exists or is retrievable: GEUVADIS ERR188044 fastq reads (SRA accession or local cached copy)
+- verify file exists or is retrievable: GRCh38 cDNA reference transcripts (Ensembl or local cached copy)
+- script_runs: `salmon index` with Rust 2.0 on GRCh38 cDNA to completion, producing index directory with expected Rust-format metadata
+- script_runs: `salmon index` with C++ 1.12.0 on GRCh38 cDNA to completion, producing index directory with C++ pufferfish-format metadata
+- script_runs: `salmon quant` (Rust 2.0) on ERR188044 with default settings (orphanChainSubThresh=0.75, postMergeChainSubThresh=0.75) against Rust index, producing quant.sf and aux_info/meta_info.json
+- script_runs: `salmon quant` (C++ 1.12.0) on ERR188044 with explicit flags `--orphanChainSubThresh 0.95 --postMergeChainSubThresh 0.9` against C++ index, producing quant.sf and aux_info/meta_info.json
+- script_runs: `salmon quant` (Rust 2.0) on ERR188044 with explicit flags `--orphanChainSubThresh 0.95 --postMergeChainSubThresh 0.9` against Rust index, producing quant.sf and aux_info/meta_info.json
+- file_format_is: output quant.sf files are tab-delimited text with columns (Name, Length, EffectiveLength, TPM, NumReads)
+- file_format_is: output aux_info/meta_info.json contains JSON object with num_mapped_reads field
+- value_in_range: C++ 1.12.0 default quantification (orphanChainSubThresh=0.95, postMergeChainSubThresh=0.9) mapping count is within ±100 reads of the reported value (~83.48% or ~30.3M reads on ERR188044)
+- value_in_range: Rust 2.0 quantification with matching thresholds (0.95/0.9) mapping count is within ±100 reads of C++ 1.12.0 result, confirming convergence
+- output_matches_reference: per-transcript NumReads correlation (Pearson) between Rust 2.0 (0.95/0.9) and C++ 1.12.0 (0.95/0.9) is ≥0.998, robust to parameter choices in computation of correlation statistic
+- value_in_range: absolute difference in total mapped reads between Rust (0.95/0.9) and C++ (0.95/0.9) is ≤1000 reads (corresponding to ~80% gap closure claim of ~49k reads out of ~62k total gap)
+- expert_review: manual inspection of per-transcript abundance profiles (top 100 transcripts by TPM) to confirm Rust (0.95/0.9) and C++ (0.95/0.9) show no systematic directional bias (confirming 'symmetric tie-breaks' claim)
+
+## Expert Review
+
+- domain bioinformatics: verify that the reported ~80% gap attribution to orphan/post-merge pruning defaults is mechanistically sound given the known behavior of chain filtering in selective alignment
+- domain statistics: review the Pearson 0.999 correlation statistic reported in the text to confirm it is appropriate for comparing per-transcript quantification and assess whether the correlation metric captures the claimed agreement adequately
+- domain computational biology: assess whether the residual ~20% mapping count gap attributable to 'benign symmetric tie-breaks' in chaining/alignment is plausible given differences in floating-point arithmetic and tie-breaking rules between Rust and C++ implementations

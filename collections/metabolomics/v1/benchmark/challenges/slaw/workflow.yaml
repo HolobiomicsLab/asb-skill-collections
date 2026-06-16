@@ -1,0 +1,143 @@
+schema_version: 0.1.0
+workflow_id: coll_slaw_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: SLAW is a scalable, containerized workflow for untargeted LC-MS processing
+    that integrates peak picking, sample alignment, isotopologue and adduct grouping,
+    gap-filling by data recursion, and extraction of consolidated MS2 spectra and
+    isotopic data.
+  pseudo_abstract: SLAW implements a complete untargeted LC-MS processing pipeline
+    with multiple integrated components. The workflow incorporates peak picking algorithms
+    (Centwave, FeatureFinderMetabo, ADAP), followed by sample alignment and grouping
+    of isotopologues and adducts. The pipeline includes gap-filling by data recursion
+    as a processing step and extraction of consolidated MS2 spectra and isotopic data.
+    SLAW is designed for scalability to efficiently process thousands of samples and
+    features automated parameter optimization for peak picking, alignment, and gap-filling
+    operations.
+  research_questions:
+  - How does SLAW implement gap-filling by data recursion to recover missing feature
+    intensities across samples in untargeted LC-MS processing?
+  - How does SLAW group detected LC-MS features into isotopologue and adduct clusters
+    after peak picking?
+  - How does SLAW extract and consolidate MS2 spectra and isotopic data from grouped
+    feature ions across samples?
+  methods_summary: 'Load aligned feature table containing missing (NA or zero) feature
+    intensities from the alignment step Identify gaps: enumerate all missing feature
+    intensity entries and their sample-feature coordinates Execute data recursion:
+    for each missing entry, search across samples using retention time and m/z proximity
+    windows to locate the same feature in alternate sample batches Retrieve and populate:
+    fill missing intensities with values recovered from recursively matched samples
+    Validation: confirm that all recoverable gaps have been filled and feature table
+    dimensions match input (same samples and features) References: source article
+    (DOI: 10.1021/acs.analchem.1c02687) Load aligned feature table with m/z, retention
+    time, and intensity data. Define isotopologue mass differences (C13, N15, O18,
+    D) and adduct mass transformations for the ionization mode. Cluster features by
+    binning on retention time windows and linking features within mass tolerance of
+    theoretical isotopologue/adduct masses. Assign group identifiers to isotopologues
+    and adducts sharing the same molecular ion. Validation: grouped feature table
+    contains all input features, each assigned a unique or shared group ID; mass differences
+    between clustered features match theoretical isotopologue or adduct masses within
+    specified ppm tolerance. References: source article (DOI: 10.1021/acs.analchem.1c02687)
+    Load feature-grouped data structure and MS2 scan metadata from preceding processing
+    steps. Map MS2 spectra to feature groups using retention time, m/z, and scan index
+    linkages. Consolidate multiple MS2 scans per feature group by merging peak lists
+    and intensities. Annotate isotopic relationships and adduct assignments within
+    consolidated spectrum records. Validation: consolidated spectra file contains
+    one entry per feature group with non-null MS2 mass list and isotope annotations
+    present where applicable. References: source article (DOI: 10.1021/acs.analchem.1c02687)'
+  domain: metabolomics
+  techniques:
+  - lc-ms
+  - feature-detection
+  - chromatogram-alignment
+  - quality-control
+  - normalization
+  claims:
+  - claim_text: SLAW is a scalable, containerized workflow for untargeted LC-MS processing.
+    claim_type: finding
+    speculative: false
+    entity_id: SLAW_system
+  - claim_text: SLAW was developed by Alexis Delabriere in the Zamboni Lab at ETH
+      Zurich.
+    claim_type: finding
+    speculative: false
+    entity_id: SLAW_system
+  - claim_text: SLAW performs complete processing including peak picking, sample alignment,
+      pick picking, grouping of isotopologues and adducts, gap-filling by data recursion,
+      extraction of consolidated MS2 spectra and isotopic data.
+    claim_type: finding
+    speculative: false
+    entity_id: SLAW_system
+  - claim_text: SLAW can process thousands of samples efficiently.
+    claim_type: finding
+    speculative: false
+    entity_id: SLAW_system
+  - claim_text: 'SLAW wraps three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+      and ADAP.'
+    claim_type: finding
+    speculative: false
+    entity_id: SLAW_system
+  - claim_text: SLAW provides automated parameter optimization for picking, alignment,
+      and gap-filling.
+    claim_type: finding
+    speculative: false
+    entity_id: SLAW_system
+  - claim_text: The stable version of this repository is 1.0.0.
+    claim_type: finding
+    speculative: false
+  - claim_text: The latest development version can be found on adelabriere/slaw:dev.
+    claim_type: finding
+    speculative: false
+    entity_id: SLAW_system
+  - claim_text: The development version includes a fix for low memory/processor settings.
+    claim_type: finding
+    speculative: false
+  - claim_text: SLAW development is continuing in the zamboni-lab GitHub.
+    claim_type: finding
+    speculative: false
+    entity_id: SLAW_system
+  - claim_text: 'The recommended citation for SLAW is: Delabriere A, Warmer P, Brennsteiner
+      V and Zamboni N, SLAW: A scalable and self-optimizing processing workflow for
+      untargeted LC-MS, 2021.'
+    claim_type: finding
+    speculative: false
+    entity_id: SLAW_system
+  speculative: false
+  task_openness: mixed
+  method_alternatives:
+  - Centwave, FeatureFinderMetabo, or ADAP can be used as alternative peak picking
+    algorithms
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Consolidated MS2 spectra and isotopic data file indexed by feature group
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

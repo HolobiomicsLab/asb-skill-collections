@@ -1,0 +1,337 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/xia-lab/MetaboAnalystR",
+      "locator_id": "gh_xia-lab_metaboanalystr",
+      "locator_kind": "github",
+      "name": "xia-lab/MetaboAnalystR",
+      "prose": "xia-lab/MetaboAnalystR GitHub repository (source code and configuration)",
+      "score": 0.375,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MetaboAnalystRlogo.png",
+      "role": "figure",
+      "sha256": "0769d8c41a1099d43ff221a8c6012031e5c68bfe38c742a976c67f321e225608"
+    },
+    {
+      "indexable": false,
+      "path": "figures/log_v3.0.png",
+      "role": "figure",
+      "sha256": "e761f4328588a3dfad821dbc130f3237b731ccf593dd698b4374fc33dbc020b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "0f15f48c1a848368f863ecb261941a9f7631d4ad22060171ad0ad4d50b97e444"
+    }
+  ],
+  "created_at": "2026-06-16T06:24:36.065725+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "xia-lab/MetaboAnalystR GitHub repository (source code and configuration)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw LC-MS spectral data in mzML or mzXML format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Quantitative feature table with m/z, retention time, and sample intensities",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Peak detection and alignment quality report including feature count and missing value summary",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MetaboAnalystR 4.0 implements a unified pipeline that integrates peak detection, alignment, and feature extraction into a single coherent workflow for global metabolomics.",
+    "LC-MS feature tables require both m/z and retention time dimensions for accurate metabolite annotation and to distinguish isomers.",
+    "Peak alignment across samples is critical for detecting features present in multiple samples and requires both retention-time and m/z tolerance parameters to be tuned for instrument and method characteristics.",
+    "Missing values in metabolomics feature tables arise from instrument detection limits, ionization variability, and chromatographic drift, and must be tracked and reported for downstream statistical analysis.",
+    "The xia-lab/MetaboAnalystR repository serves as the authoritative source for configuration, parameter defaults, and quality-control logic for the complete workflow."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that xia-lab/MetaboAnalystR repository is accessible and contains R package structure (DESCRIPTION, R/, man/ directories present)",
+      "verify file_exists: R scripts or functions implementing LC-MS peak detection module",
+      "verify file_exists: R scripts or functions implementing peak alignment module",
+      "verify file_exists: R scripts or functions implementing feature table generation module",
+      "verify file_exists: example or vignette demonstrating end-to-end workflow from raw spectral data input to feature table output",
+      "script_runs: execute a minimal end-to-end workflow using provided example data (if present in repo) and confirm feature table output is generated in expected format (CSV, data.frame, or matrix)",
+      "verify field_present: output feature table contains expected columns (m/z, retention time, intensity/abundance) \u2014 no canonical answer for exact column names; any schema that represents features with mass and temporal dimensions is acceptable",
+      "verify file_format_is: final feature table output in standard rectangular format (CSV, TSV, or R data object)"
+    ],
+    "expert_review": [
+      "assess whether peak detection algorithm implementation (e.g., centWave, matched filter, or equivalent) follows standard LC-MS metabolomics practices and produces chemically interpretable results",
+      "assess whether peak alignment algorithm correctly handles retention time drift and m/z calibration across multiple samples",
+      "assess whether feature table generation properly handles missing values, duplicate features, and isotope/adduct relationships in a way consistent with published metabolomics best practices",
+      "assess overall fidelity of the implemented pipeline to stated LC-MS metabolomics workflow in MetaboAnalystR 4.0 title and documentation"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] What is the architecture and workflow of MetaboAnalystR 4.0 for processing LC-MS data in global metabolomics?: 'MetaboAnalystR 4.0: a unified LC-MS workflow for global metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MetaboAnalystR 4.0 implements a unified LC-MS workflow for global metabolomics, as indicated by the software title.: 'MetaboAnalystR 4.0: a unified LC-MS workflow for global metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] xia-lab/MetaboAnalystR GitHub repository (source code and configuration): 'xia-lab/MetaboAnalystR'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw LC-MS spectral data in mzML or mzXML format: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Quantitative feature table with m/z, retention time, and sample intensities: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Peak detection and alignment quality report including feature count and missing value summary: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MetaboAnalystR: 'MetaboAnalystR 4.0: a unified LC-MS workflow for global metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version changes, bug fixes, or feature additions in MetaboAnalystR: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit documentation of specific LC-MS peak detection, alignment, or feature table generation methods provided in discussion section: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "feature_table.csv",
+  "expected_outputs": [
+    "Quantitative feature table with m/z, retention time, and sample intensities",
+    "Peak detection and alignment quality report including feature count and missing value summary"
+  ],
+  "finding": "MetaboAnalystR 4.0 implements a unified LC-MS workflow for global metabolomics, as indicated by the software title.",
+  "github_name": "xia-lab/MetaboAnalystR",
+  "input_from": null,
+  "inputs": [
+    "xia-lab/MetaboAnalystR GitHub repository (source code and configuration)",
+    "Raw LC-MS spectral data in mzML or mzXML format"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "raw_peaks.csv",
+    "aligned_peaks.csv",
+    "feature_table.csv",
+    "qc_report.txt"
+  ],
+  "linked_result_ids": [],
+  "methodology_summary": [
+    "Initialize MetaboAnalystR environment and load raw LC-MS spectral files",
+    "Apply peak detection algorithm to identify ion features across all samples",
+    "Align detected peaks using retention-time and m/z matching criteria",
+    "Consolidate aligned peaks into a quantitative feature table with sample-wise intensity values",
+    "Validation: feature table contains \u22651 feature, intensity columns match sample count, and m/z and retention-time columns are populated without null values in feature identifiers"
+  ],
+  "missing_information": [
+    "No changelog documenting version changes, bug fixes, or feature additions in MetaboAnalystR",
+    "No explicit documentation of specific LC-MS peak detection, alignment, or feature table generation methods provided in discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the architecture and workflow of MetaboAnalystR 4.0 for processing LC-MS data in global metabolomics?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [],
+  "skills": [
+    "spectral-peak-detection-and-deconvolution",
+    "retention-time-and-mz-based-alignment",
+    "feature-table-generation-from-aligned-spectra",
+    "metabolomics-data-quality-assessment",
+    "lcms-workflow-orchestration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_metaboanalystr/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS-001",
+    "COMP-001",
+    "TOOL-001"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:xia-lab__MetaboAnalystR",
+  "task_description": "Implement the complete MetaboAnalystR 4.0 LC-MS workflow from raw spectral data ingestion through peak detection, alignment, and quantitative feature table generation using the xia-lab/MetaboAnalystR GitHub repository.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "xia-lab/MetaboAnalystR GitHub repository",
+      "port_id": "metaboanalyst_repo",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw LC-MS spectral data (mzML or mzXML)",
+      "port_id": "raw_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the complete LC-MS data processing pipeline in MetaboAnalystR 4.0 from raw spectral input through peak detection, alignment, and feature table generation.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Quantitative feature table",
+      "port_id": "feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Peak detection and alignment quality report",
+      "port_id": "qc_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "database-annotation",
+    "metabolite-identification",
+    "multivariate-statistics",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct the unified LC-MS data processing pipeline in MetaboAnalystR 4.0",
+  "tools": [
+    "MetaboAnalystR"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Clone and initialize the xia-lab/MetaboAnalystR repository and load raw LC-MS spectral data (mzML or mzXML format) into the MetaboAnalystR environment. 2. Execute peak detection on raw spectra using the configured algorithm parameters within MetaboAnalystR's peak detection module. 3. Perform retention-time and m/z-based alignment of detected peaks across all samples using MetaboAnalystR's alignment function. 4. Consolidate aligned peaks into a quantitative feature table with m/z, retention time, and intensity values for each detected feature across all samples. 5. Validate the feature table for completeness, missing value patterns, and quality metrics as defined in the MetaboAnalystR quality assessment module."
+}

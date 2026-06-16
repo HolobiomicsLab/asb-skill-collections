@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at path 'tests/tests_data/ftms/ESI_NEG_SRFA.d'"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at path 'tests/tests_data/ftms/SRFA.ref'"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output is a CSV or pandas-compatible table",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_005",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table contains columns for molecular formula assignments",
+      "value": [
+        "for molecular formula assignments"
+      ]
+    },
+    {
+      "id": "pf_006",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table contains a mass error field"
+    },
+    {
+      "id": "pf_007",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table contains a score field"
+    },
+    {
+      "id": "pf_008",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table has at least one row of assigned molecular formula data (no empty r"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at path 'tests/tests_data/ftms/ESI_NEG_SRFA.d'",
+      "verify file exists at path 'tests/tests_data/ftms/SRFA.ref'",
+      "script_runs: execute CoreMS FT-ICR pipeline (apodization with Hanning window and one zero-fill, noise thresholding, MzDomainCalibration, SearchMolecularFormulas with CHO constraints) on ESI_NEG_SRFA.d without raising exceptions",
+      "file_format_is: output is a CSV or pandas-compatible table",
+      "field_present: output table contains columns for molecular formula assignments",
+      "field_present: output table contains a mass error field",
+      "field_present: output table contains a score field",
+      "row_count_equals: output table has at least one row of assigned molecular formula data (no empty result sets)"
+    ],
+    "expert_review": [
+      "verify that assigned molecular formulas respect CHO atom constraints (only Carbon, Hydrogen, Oxygen atoms present)",
+      "verify that mass error values are within physically plausible range for FT-ICR MS (typically < 5 ppm for high-resolution instruments)",
+      "verify that score values reflect confidence metrics appropriate to molecular formula assignment algorithms",
+      "expert judgment on whether Hanning apodization with one zero-fill is correctly applied to the FT-ICR time-domain data",
+      "expert judgment on whether MzDomainCalibration against SRFA.ref produces reasonable calibration (inspect calibration residuals if available)"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

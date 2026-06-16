@@ -1,0 +1,437 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MetaMiner_fig.png",
+      "role": "figure",
+      "sha256": "8946d4837ea7a20ec1249c27dc3f7ef063c863d643d54dd2d0db9e2c683965a3"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "0c3d467eac6f9863989454dc554174c55680e2ab8691086c3a13f57cf83dfc0b"
+    }
+  ],
+  "created_at": "2026-06-16T05:40:21.538092+00:00",
+  "crossref_doi": null,
+  "data_accessions": [
+    {
+      "accession": "MSV000080102",
+      "evidence_span": "twork of identified RiPP.  It is based on a few files from [MSV000080102 dataset](https://gnps.ucsd.edu/ProteoSAFe/result.jsp?task=6",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080102"
+    },
+    {
+      "accession": "SRR3309439",
+      "evidence_span": "ces griseus ATCC 12648](https://www.ebi.ac.uk/ena/data/view/SRR3309439)),  and `spades_outdir` is the directory containing the gen",
+      "kind": "sra_run",
+      "url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR3309439"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Three mzML spectra files from MSV000080102 dataset (C18p_5uL_NASA_Sample_BB2_01_25958.mzML, C18p_5uL_NASA_Sample_BB3_01_25959.mzML, C18p_5uL_NASA_Sample_BB4_01_25960.mzML) or downloaded precomputed spectral network output from GNPS",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Example RiPP FASTA file containing sequence DATITTVTVTSTSIWASTVSNHC (test_data/metaminer/molnet/example_RiPP.fasta)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Unpacked GNPS spectral network output directory (ProteoSAFe-METABOLOMICS-SNETS-V2-unpacked) containing clustered spectra and network files",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "propagations.pdf \u2013 graphical report with each page corresponding to a connected component of a significant PSM",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "propagations_detailed.txt \u2013 detailed text report listing all spectra from same cluster and clusters at distance 1 and 2 for each significant PSM",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "propagations_short.txt \u2013 same as detailed report but listing only one representative per each cluster",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "RiPPs (Ribosomally synthesized and Post-translationally modified Peptides) are natural product compounds encoded by biosynthetic gene clusters that undergo post-translational modifications affecting their mass spectrometry signatures.",
+    "GNPS Molecular Networking clusters related mass spectra into connected components based on cosine similarity, allowing propagation of identifications across spectral families with related structures.",
+    "A 'significant PSM' (Peptide-Spectrum Match) in the context of spectral networking requires both high-confidence matching and cluster-level propagation evidence to warrant reporting in the graphical output.",
+    "The --blind flag enables search for arbitrary mass shifts representing novel post-translational modifications not in the predefined RiPP modification database, substantially increasing computational cost.",
+    "Distance 1 and 2 clustering metrics in spectral networks indicate direct neighbors and second-order connections in the similarity graph, used to distinguish high-confidence propagations from distant spurious matches."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file_exists: spec_nets/propagations.pdf in output directory",
+      "verify file_exists: spec_nets output folder is created",
+      "verify file_format_is: propagations.pdf is a valid PDF file (byte-for-byte magic number check)",
+      "verify row_count_equals or field_present: two additional named output files are present in spec_nets folder with names matching manual documentation"
+    ],
+    "expert_review": [
+      "inspect propagations.pdf visually to confirm spectral network visualization content is sensible and non-empty",
+      "confirm the two additional named output files match the exact filenames and purposes documented in the NPDtools 2.5.0 manual for Spectral Networking stage"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What output files does the Spectral Networking stage of the MetaMiner pipeline produce when run on test mass spectrometry data?: 'NPDtools \u2013 Natural Product Discovery tools \u2013 is a toolkit containing various pipelines for _in silico_ analysis of natural product mass spectrometry data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The MetaMiner pipeline includes a spectral networking stage that enlarges the set of identified RiPPs via spectral networking and allows users to visualize the results after identifying some RiPPs.: 'After identifying some RiPPs, users can further enlarge the set of RiPP identifications via spectral network and visualize the results'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Three mzML spectra files from MSV000080102 dataset (C18p_5uL_NASA_Sample_BB2_01_25958.mzML, C18p_5uL_NASA_Sample_BB3_01_25959.mzML, C18p_5uL_NASA_Sample_BB4_01_25960.mzML) or downloaded precomputed spectral network output from GNPS: 'Download `C18p_5uL_NASA_Sample_BB2_01_25958.mzML`, `C18p_5uL_NASA_Sample_BB3_01_25959.mzML` and `C18p_5uL_NASA_Sample_BB4_01_25960.mzML` files from [MSV000080102] or download their precomputed'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Example RiPP FASTA file containing sequence DATITTVTVTSTSIWASTVSNHC (test_data/metaminer/molnet/example_RiPP.fasta): 'and an example RiPP `DATITTVTVTSTSIWASTVSNHC` (available in `test_data/metaminer/molnet/example_RiPP.fasta`)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Unpacked GNPS spectral network output directory (ProteoSAFe-METABOLOMICS-SNETS-V2-unpacked) containing clustered spectra and network files: 'use the minimal subset of this spectral network output files available in `test_data/metaminer/molnet/ProteoSAFe-METABOLOMICS-SNETS-V2-unpacked/`. If using an archive downloaded from GNPS, please'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] propagations.pdf \u2013 graphical report with each page corresponding to a connected component of a significant PSM: '`propagations.pdf` (graphical report, each page corresponds to a connected component of a significant PSM)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] propagations_detailed.txt \u2013 detailed text report listing all spectra from same cluster and clusters at distance 1 and 2 for each significant PSM: '`propagations_detailed.txt`  (detailed text report: for each significant PSM, lists all spectra from the same cluster and from clusters at distance 1 and 2)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] propagations_short.txt \u2013 same as detailed report but listing only one representative per each cluster: '`propagations_short.txt` (the same as above but lists only one representative per each cluster)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MetaMiner: 'MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] NPDtools 2.5.0: 'The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] GNPS Spectral Networking / Molecular Networking: 'Spectral network can be easily run through GNPS. Detailed instructions can be found in the [GNPS documentation]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[other] matplotlib: 'For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib` and `networkx` Python libraries'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[other] networkx: 'For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib` and `networkx` Python libraries'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The exact filenames and descriptions of the two required output files (in addition to propagations.pdf) produced by the Spectral Networking stage are not specified in the provided discussion section: 'No information provided about spec_nets output file requirements beyond the GitHub repository reference'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "metaminer",
+      "--spec-network",
+      "{inputs.spectral_network_dir}",
+      "--fasta",
+      "{inputs.rippp_fasta}",
+      "--spectra",
+      "{inputs.spectra_files}",
+      "--output",
+      "metaminer_outdir",
+      "--blind"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "propagations.pdf",
+  "expected_outputs": [
+    "propagations.pdf \u2013 graphical report with each page corresponding to a connected component of a significant PSM",
+    "propagations_detailed.txt \u2013 detailed text report listing all spectra from same cluster and clusters at distance 1 and 2 for each significant PSM",
+    "propagations_short.txt \u2013 same as detailed report but listing only one representative per each cluster"
+  ],
+  "finding": "The MetaMiner pipeline includes a spectral networking stage that enlarges the set of identified RiPPs via spectral networking and allows users to visualize the results after identifying some RiPPs.",
+  "github_name": "ablab/npdtools",
+  "input_from": "task_003",
+  "inputs": [
+    "Three mzML spectra files from MSV000080102 dataset (C18p_5uL_NASA_Sample_BB2_01_25958.mzML, C18p_5uL_NASA_Sample_BB3_01_25959.mzML, C18p_5uL_NASA_Sample_BB4_01_25960.mzML) or downloaded precomputed spectral network output from GNPS",
+    "Example RiPP FASTA file containing sequence DATITTVTVTSTSIWASTVSNHC (test_data/metaminer/molnet/example_RiPP.fasta)",
+    "Unpacked GNPS spectral network output directory (ProteoSAFe-METABOLOMICS-SNETS-V2-unpacked) containing clustered spectra and network files"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "metaminer_outdir/spec_nets/propagations.pdf",
+    "metaminer_outdir/spec_nets/propagations_detailed.txt",
+    "metaminer_outdir/spec_nets/propagations_short.txt"
+  ],
+  "linked_result_ids": [
+    "result_015",
+    "result_019",
+    "result_020",
+    "result_041",
+    "result_042"
+  ],
+  "methodology_summary": [
+    "Load and prepare spectral data: obtain or download the three mzML spectra files from MSV000080102 and the precomputed GNPS spectral network output (or compute spectral networks de novo via GNPS).",
+    "Configure spectral networking input: unpack the GNPS ProteoSAFe output archive and prepare the example RiPP FASTA file containing the target sequence DATITTVTVTSTSIWASTVSNHC.",
+    "Execute MetaMiner with spectral networking: run the pipeline with the --spec-network flag pointing to the network directory, enabling blind mode for demonstration of novel PTM detection.",
+    "Generate propagation reports: MetaMiner identifies connected components in the spectral network related to significant RiPP identifications and generates graphical (PDF) and text (detailed and condensed) outputs.",
+    "Validation: verify that all three required output files (propagations.pdf, propagations_detailed.txt, propagations_short.txt) are present in metaminer_outdir/spec_nets/ directory and contain non-empty content.",
+    "References: MSV000080102 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080102); SRR3309439 (https://www.ncbi.nlm.nih.gov/sra/?term=SRR3309439)"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "The exact filenames and descriptions of the two required output files (in addition to propagations.pdf) produced by the Spectral Networking stage are not specified in the provided discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_003/rippp_candidate_db"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What output files does the Spectral Networking stage of the MetaMiner pipeline produce when run on test mass spectrometry data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "spectral-network-propagation-analysis",
+    "mass-spectrometry-metadata-interpretation",
+    "rippp-structure-database-matching",
+    "gnps-workflow-result-processing",
+    "spectral-cluster-connectivity-assessment"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_dereplicator/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_METAMINER",
+    "ARCH_METAMINER_PIPELINE",
+    "COMP_SPECTRAL_NETWORKING",
+    "DATASET_TEST_DATA",
+    "DATASET_MSV000080102",
+    "ARTIFACT_SPEC_NETS"
+  ],
+  "subdomains": [
+    "natural-products",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "visualization",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:ablab__npdtools",
+  "task_description": "Run the spectral networking stage of MetaMiner on MSV000080102 test spectra paired with an example RiPP sequence to generate and verify the spec_nets output folder containing propagations.pdf, propagations_detailed.txt, and propagations_short.txt files.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "mzML spectral data files from MSV000080102",
+      "port_id": "spectra_files",
+      "resolved_via": null,
+      "source": "task_003/rippp_candidate_db",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Example RiPP FASTA sequence file",
+      "port_id": "rippp_fasta",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Unpacked GNPS spectral network output directory",
+      "port_id": "spectral_network_dir",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute the Spectral Networking stage of MetaMiner on MSV000080102 spectra and confirm the spec_nets output folder is produced with all required files including propagations.pdf.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Graphical spectral network propagation report",
+      "port_id": "propagations_pdf",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Detailed text report of spectral propagations",
+      "port_id": "propagations_detailed_txt",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Condensed text report of spectral propagations",
+      "port_id": "propagations_short_txt",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dereplication",
+    "database-annotation",
+    "in-silico-fragmentation"
+  ],
+  "title": "Reconstruct spectral networking output generation via MetaMiner Spectral Networking component",
+  "tools": [
+    "MetaMiner",
+    "NPDtools 2.5.0",
+    "GNPS Spectral Networking / Molecular Networking",
+    "matplotlib",
+    "networkx"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: MetaMiner, NPDtools 2.5.0, matplotlib, networkx, propagations.pdf \u2013 graphical report with each page corresponding to a connected component of a significant PSM, propagations_detailed.txt \u2013 detailed text report listing all spectra from same cluster and clusters at distance 1 and 2 for each significant PSM, propagations_short.txt \u2013 same as detailed report but listing only one representative per each cluster."
+  ],
+  "workflow_description": "1. Download the three mzML spectra files (C18p_5uL_NASA_Sample_BB2_01_25958.mzML, C18p_5uL_NASA_Sample_BB3_01_25959.mzML, C18p_5uL_NASA_Sample_BB4_01_25960.mzML) from MSV000080102 or retrieve the precomputed spectral network output files from GNPS and unpack the ProteoSAFe-METABOLOMICS-SNETS-V2 archive. 2. Execute MetaMiner with the --spec-network option pointing to the unpacked spectral network directory, the example RiPP FASTA file (DATITTVTVTSTSIWASTVSNHC), and the --blind flag for demonstration purposes: python metaminer.py <spectra_files> -s test_data/metaminer/molnet/example_RiPP.fasta --blind --spec-network test_data/metaminer/molnet/ProteoSAFe-METABOLOMICS-SNETS-V2-unpacked -o metaminer_outdir. 3. Verify that the spec_nets output folder is created within metaminer_outdir containing the three required output files: propagations.pdf (graphical report with one page per connected component of significant PSM), propagations_detailed.txt (detailed text report listing all spectra from same cluster and clusters at distance 1 and 2), and propagations_short.txt (same as detailed but with one representative per cluster)."
+}

@@ -1,0 +1,145 @@
+schema_version: 0.1.0
+workflow_id: coll_moccal_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: MOCCal is a Python application for analyzing high-dimensional, multi-omic
+    traveling-wave ion mobility mass spectrometry data through collision cross section
+    calibration, biomolecular class assignment, and class-specific CCS calculations
+    without requiring prior feature identification.
+  pseudo_abstract: 'MOCCal implements three core mechanisms for TWIM-MS data analysis:
+    (1) a CCS calibration module that transforms arrival-time data into collision
+    cross section values for multi-omic analysis, (2) a biomolecular class assignment
+    module that operates on unidentified features to classify experimental data, and
+    (3) a class-specific CCS calculation module that applies class-appropriate methods
+    to compute CCS values for assigned biomolecular features. The application integrates
+    these components into an end-to-end pipeline capable of processing high-dimensional,
+    multi-omic TWIM-MS datasets.'
+  research_questions:
+  - How does MOCCal convert raw arrival-time measurements from TWIM-MS into collision
+    cross section (CCS) values through calibration?
+  - How does MOCCal assign biomolecular class labels to experimental TWIM-MS features
+    without requiring prior feature identification?
+  - How does MOCCal compute class-specific collision cross section (CCS) values for
+    biomolecular features that have been assigned to experimental classes?
+  - Can MOCCal successfully execute its complete workflow (CCS calibration, biomolecular
+    class assignment, and class-specific CCS calculations) on a multi-omic TWIM-MS
+    dataset external to its bundled examples?
+  methods_summary: 'Load raw arrival-time measurements and calibration reference template
+    from MOCCal repository Extract known CCS values and corresponding arrival times
+    from calibration reference compounds Construct arrival-time-to-CCS mapping using
+    calibration reference points Apply calibration transform to experimental arrival-time
+    data to compute CCS values Validation: verify that reference compound arrival
+    times map to their known CCS values within expected tolerance Load experimental
+    TWIM-MS data from RawDT or UserDT format containing arrival times and m/z values.
+    Apply MOCCal''s biomolecular class-assignment algorithm to classify each feature
+    based on physico-chemical properties. Compile assigned class labels into a tabular
+    format indexed by feature identifier. Validation: Output table contains one row
+    per input feature with no missing class assignments and class labels consistent
+    with MOCCal''s supported biomolecular ontology (protein, lipid, metabolite, nucleic
+    acid, or other defined classes). Load feature table containing assigned biomolecular
+    class labels and raw arrival time measurements from TWIM-MS. Stratify features
+    by biomolecular class (e.g., lipid, protein, carbohydrate). Apply class-specific
+    CCS calibration model or coefficients to convert arrival time to CCS for each
+    class stratum. Assemble output table with feature identifiers, class labels, and
+    calibrated CCS values. Validation: Output CCS table contains all input features
+    with valid numeric CCS values and class label match. Load multi-omic TWIM-MS raw
+    data from a public repository in the format expected by MOCCal. Apply CCS calibration
+    using known reference standards or internal calibrants to establish arrival-time-to-CCS
+    conversion. Perform biomolecular class assignment without requiring prior feature
+    identification. Calculate class-specific CCS values for each assigned biomolecular
+    class. Validation: verify CCS output file exists, contains expected columns (class,
+    CCS, arrival time), and all rows have valid numeric CCS values; confirm execution
+    completed without runtime errors.'
+  domain: metabolomics
+  techniques: []
+  claims:
+  - claim_text: MOCCal is a Python application for high-dimensional, multi-omic traveling-wave
+      ion mobility mass spectrometry (TWIM-MS) data analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: MOCCal_system
+  - claim_text: MOCCal provides functionality for collision cross section (CCS) calibration.
+    claim_type: finding
+    speculative: false
+    entity_id: MOCCal_system
+  - claim_text: MOCCal provides functionality for experimental data biomolecular class
+      assignment.
+    claim_type: finding
+    speculative: false
+    entity_id: MOCCal_system
+  - claim_text: MOCCal provides functionality for experimental class-specific CCS
+      calculations.
+    claim_type: finding
+    speculative: false
+    entity_id: MOCCal_system
+  - claim_text: MOCCal offers class assignment and CCS calculations without needing
+      to identify features first.
+    claim_type: finding
+    speculative: false
+    entity_id: MOCCal_system
+  - claim_text: The terms arrival time and drift time are used interchangeably within
+      MOCCal software for convenience.
+    claim_type: finding
+    speculative: false
+    entity_id: MOCCal_system
+  - claim_text: TWIM platforms record the time at which the ion reaches the detector
+      (arrival time) rather than the time an ion spends within the TWIM cell (drift
+      time).
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 4-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Calibrated CCS values table with ion identifiers and corresponding collision
+    cross section measurements
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: CCS calibration table with feature identifiers, class labels, and computed
+    CCS values
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Structured CCS output file containing calibrated and class-specific collision
+    cross section values
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Execution log confirming MOCCal workflow completed without error
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

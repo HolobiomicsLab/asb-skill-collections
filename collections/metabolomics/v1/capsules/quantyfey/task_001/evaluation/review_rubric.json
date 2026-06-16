@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:CDLMarkus__QuantyFey repository is accessible and contains a README documenting the external calibration component"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "calibration-related script or module in the QuantyFey repository (e.g., R script"
+    },
+    {
+      "id": "pf_003",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "README or documentation mentions 'calibration' AND 'intensity' AND 'concentratio",
+      "value": "calibration"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that any calibration function or module has documented inputs (raw MS intensity data format) and outputs (quantified concentration format)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "any provided calibration reference data or example (CSV, TSV, RData, or similar ",
+      "value": "CSV"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:CDLMarkus__QuantyFey repository is accessible and contains a README documenting the external calibration component",
+      "file_exists: calibration-related script or module in the QuantyFey repository (e.g., R script, function definition, or documented algorithm for converting raw MS intensity to concentration)",
+      "contains_substring: README or documentation mentions 'calibration' AND 'intensity' AND 'concentration' (any order, case-insensitive)",
+      "verify that any calibration function or module has documented inputs (raw MS intensity data format) and outputs (quantified concentration format)",
+      "file_format_is: any provided calibration reference data or example (CSV, TSV, RData, or similar structured format)"
+    ],
+    "expert_review": [
+      "Assess whether the documented calibration algorithm is mathematically sound for converting raw MS intensity to concentration (e.g., linear regression, curve fitting, standard addition method)",
+      "Verify that the calibration component handles multiple MS ionization modes or compound classes correctly, if applicable",
+      "Evaluate whether the calibration step is appropriately separated from drift correction and visualization components as claimed"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

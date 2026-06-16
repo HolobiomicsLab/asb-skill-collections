@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "doi.org/10.5281"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "zenodo.org"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "AllPositive dataset contains mass spectra in a loadable format (e.g., JSON, MGF,",
+      "value": "JSON"
+    },
+    {
+      "id": "pf_005",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "AllPositive dataset contains exactly 95,320 spectra as reported in methods secti",
+      "value": 95320
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "computed peak coverage statistic (missing-fraction = 1 \u2212 \u03a3\u221aw_i / \u03a3\u221aw_i) outputs "
+    },
+    {
+      "id": "pf_007",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "0.03"
+    },
+    {
+      "id": "pf_008",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_009",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output plot or table contains coverage measurements at multiple corpus sizes sho",
+      "value": "coverage measurements at multiple corpus sizes showing progression toward 97% coverage, parameter-sensitive to corpus size intervals chosen"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify AllPositive dataset is accessible at https://doi.org/10.5281/zenodo.3978118",
+      "file_exists: verify trained Word2Vec model (AllPositive, 15-epoch) is accessible at https://zenodo.org/record/4173596",
+      "script_runs: verify spec2vec package (https://github.com/iomeva/spec2vec) can be installed and imported successfully",
+      "file_format_is: verify AllPositive dataset contains mass spectra in a loadable format (e.g., JSON, MGF, or compatible pickle)",
+      "row_count_equals: verify AllPositive dataset contains exactly 95,320 spectra as reported in methods section",
+      "value_in_range: verify computed peak coverage statistic (missing-fraction = 1 \u2212 \u03a3\u221aw_i / \u03a3\u221aw_i) outputs a value between 0.0 and 1.0 for each corpus size",
+      "output_matches_reference: verify final missing-fraction value for full 95,320-spectrum corpus matches the reported 97% peak coverage (or equivalently, 0.03 missing fraction) from discussion text, within \u00b11 percentage point",
+      "script_runs: verify analysis script (from https://github.com/iomega/spec2vec_gnps_data_analysis or equivalent) can compute coverage curve without errors",
+      "contains_substring: verify output plot or table contains coverage measurements at multiple corpus sizes showing progression toward 97% coverage, parameter-sensitive to corpus size intervals chosen"
+    ],
+    "expert_review": [
+      "Verify that the missing-fraction calculation (1 \u2212 \u03a3\u221aw_i / \u03a3\u221aw_i) correctly implements the intended peak coverage metric described in methods; confirm interpretation of w_i as peak weights and that square root weighting is appropriate for this analysis",
+      "Assess whether the reported 97% peak coverage for the 15-epoch model is consistent with the claim that 'a model pre-trained on a large spectra dataset will cover a large enough fraction of the features' from the discussion section",
+      "Evaluate whether coverage curve shape and saturation behavior are reasonable given typical Word2Vec learning dynamics on ~95k spectra"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

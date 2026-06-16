@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that repository constantino-garcia/cmmrt contains implementation of Bayesian meta-learning projection mechanism"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that implementation accepts as input: (i) a pre-trained DNN model trained on METLIN SMRT dataset, (ii) calibration molecules (\u226510), and (iii) a held-out test set with known retention times"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that code produces projected RT predictions (numeric values in seconds) for the held-out test set as named output artifact"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that projection mechanism maps retention times from external chromatographic method onto METLIN-trained DNN's feature space"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "reported mean absolute error on held-out test set is within the range cited in a"
+    },
+    {
+      "id": "pf_007",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "presence of trained model weights or checkpoint file for METLIN-trained DNN in r"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that repository constantino-garcia/cmmrt contains implementation of Bayesian meta-learning projection mechanism",
+      "verify that implementation accepts as input: (i) a pre-trained DNN model trained on METLIN SMRT dataset, (ii) calibration molecules (\u226510), and (iii) a held-out test set with known retention times",
+      "verify that code produces projected RT predictions (numeric values in seconds) for the held-out test set as named output artifact",
+      "verify that projection mechanism maps retention times from external chromatographic method onto METLIN-trained DNN's feature space",
+      "script_runs: execute meta-learning projection pipeline with minimum 10 calibration molecules and report absence of runtime errors",
+      "value_in_range: reported mean absolute error on held-out test set is within the range cited in article (39.2\u00b11.2 s or better), or expert review explains variance",
+      "file_exists: verify presence of trained model weights or checkpoint file for METLIN-trained DNN in repository"
+    ],
+    "expert_review": [
+      "assess whether Bayesian formulation of meta-learning projection is mathematically sound and implements posterior inference over projection parameters",
+      "evaluate whether projected RT predictions on held-out test set are competitive with baseline methods (as claimed in article abstract)",
+      "review whether the implementation correctly handles the low-data regime (10 calibration molecules) and produces credible uncertainty estimates",
+      "assess reproducibility: compare projected RT predictions against reference results reported in article or supplementary material if available"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

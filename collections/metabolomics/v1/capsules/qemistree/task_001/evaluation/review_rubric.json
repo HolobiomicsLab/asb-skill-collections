@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify q2-qemistree plugin is installable from github:biocore__q2-qemistree"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify q2-qemistree accepts LC-MS/MS feature data in QIIME 2 artifact format (e.g., FeatureTable[Frequency])"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify q2-qemistree produces a tree artifact output (Phylogeny[Rooted] or equivalent format)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output tree file exists and is in valid Newick or compatible phylogenetic format"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify tree contains nodes corresponding to input LC-MS/MS features \u2014 row_count_equals or node count matches feature count (robust to tree representation choices)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify q2-qemistree plugin is installable from github:biocore__q2-qemistree",
+      "verify q2-qemistree accepts LC-MS/MS feature data in QIIME 2 artifact format (e.g., FeatureTable[Frequency])",
+      "verify q2-qemistree produces a tree artifact output (Phylogeny[Rooted] or equivalent format)",
+      "script_runs: q2-qemistree command executes without error on valid input feature table and molecular networking data",
+      "verify output tree file exists and is in valid Newick or compatible phylogenetic format",
+      "verify tree contains nodes corresponding to input LC-MS/MS features \u2014 row_count_equals or node count matches feature count (robust to tree representation choices)"
+    ],
+    "expert_review": [
+      "assess whether tree topology reflects expected chemical relatedness among metabolomic features (requires domain knowledge of mass-spectrometry feature clustering)",
+      "evaluate whether branching patterns are biologically/chemically interpretable for untargeted metabolomic comparison",
+      "review whether feature tree enables meaningful downstream statistical or visual analysis as intended by tool design"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

@@ -1,0 +1,44 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify package 'tima' installs successfully from https://taxonomicallyinformedannotation.r-universe.dev/tima using install.packages('tima', repos='https://taxonomicallyinformedannotation.r-universe.dev')"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify package loads without errors by executing library('tima') in R session"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify R CMD check passes by confirming CI badge in repository README indicates passing status or by running R CMD check locally on package source"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify package 'tima' installs successfully from https://taxonomicallyinformedannotation.r-universe.dev/tima using install.packages('tima', repos='https://taxonomicallyinformedannotation.r-universe.dev')",
+      "verify package loads without errors by executing library('tima') in R session",
+      "verify R CMD check passes by confirming CI badge in repository README indicates passing status or by running R CMD check locally on package source"
+    ],
+    "expert_review": [
+      "confirm that any warnings or notes reported by R CMD check are acceptable (e.g., expected non-fatal notes) and do not indicate functional defects in the package"
+    ]
+  },
+  "max_score": 3.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the MS2LDA repository (github:vdhooftcompmet__MS2LDA) is accessible and contains a COMP-PREPROCESSING module or equivalent preprocessing code"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: check that the repository contains documented support for .mgf, .msp, and .mzML input formats in the preprocessing stage"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: load a minimal example .mgf, .msp, or .mzML file from the repository's test data or documentation and confirm the preprocessing ingestion code executes without error"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: confirm that the bag-of-fragments output structure (format, fields, fragment representation) matches the documented schema in the repository or methods section"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: confirm that the intermediate output from format-ingestion is serializable (e.g., JSON, pickle, CSV) and conforms to the expected bag-of-fragments structure before LDA training"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: check that preprocessing code or documentation references fragment binning, neutral loss extraction, or noise filtering as documented in the workflow steps"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the MS2LDA repository (github:vdhooftcompmet__MS2LDA) is accessible and contains a COMP-PREPROCESSING module or equivalent preprocessing code",
+      "verify file_exists: check that the repository contains documented support for .mgf, .msp, and .mzML input formats in the preprocessing stage",
+      "verify script_runs: load a minimal example .mgf, .msp, or .mzML file from the repository's test data or documentation and confirm the preprocessing ingestion code executes without error",
+      "verify output_matches_reference: confirm that the bag-of-fragments output structure (format, fields, fragment representation) matches the documented schema in the repository or methods section",
+      "verify file_format_is: confirm that the intermediate output from format-ingestion is serializable (e.g., JSON, pickle, CSV) and conforms to the expected bag-of-fragments structure before LDA training",
+      "verify contains_substring: check that preprocessing code or documentation references fragment binning, neutral loss extraction, or noise filtering as documented in the workflow steps"
+    ],
+    "expert_review": [
+      "assess whether the fragment-binning strategy (mass tolerance, binning method) is appropriate for MS/MS fragmentation data and consistent with standard proteomics/metabolomics practice",
+      "assess whether the noise-filtering thresholds and criteria are biologically/chemically justified and whether they risk removing genuine low-abundance fragments",
+      "assess whether the bag-of-fragments representation (e.g., term frequency, binary presence/absence, weighted counts) is suitable as input to LDA and matches the model's documented assumptions"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

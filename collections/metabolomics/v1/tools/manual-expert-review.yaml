@@ -5,7 +5,10 @@ derived_from:
   title: mol2ccs
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
+- doi: 10.1021/acs.analchem.1c02687
+  title: 'SLAW: A Scalable and Self-Optimizing Processing Workflow for Untargeted LC-MS'
 source_repos:
+- adelabriere/SLAW
 - enveda/ccs-prediction
 - stanstrup/QC4Metabolomics
 schema_version: 0.2.0

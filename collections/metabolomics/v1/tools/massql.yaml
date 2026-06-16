@@ -1,0 +1,14 @@
+name: MassQL
+slug: massql
+evidence_spans:
+- The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion.
+- Integration with MassQL-searchable MotifDB
+derived_from:
+- doi: 10.1038/s41592-025-02660-z
+  title: massql
+- doi: 10.1093/bioinformatics/btx582
+  title: ms2lda
+source_repos:
+- mwang87/MassQueryLanguage
+- vdhooftcompmet/MS2LDA
+schema_version: 0.2.0

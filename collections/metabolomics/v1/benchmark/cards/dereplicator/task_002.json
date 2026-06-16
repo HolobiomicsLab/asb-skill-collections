@@ -1,0 +1,346 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MetaMiner_fig.png",
+      "role": "figure",
+      "sha256": "8946d4837ea7a20ec1249c27dc3f7ef063c863d643d54dd2d0db9e2c683965a3"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "0c3d467eac6f9863989454dc554174c55680e2ab8691086c3a13f57cf83dfc0b"
+    }
+  ],
+  "created_at": "2026-06-16T05:40:21.538092+00:00",
+  "crossref_doi": null,
+  "data_accessions": [
+    {
+      "accession": "MSV000080102",
+      "evidence_span": "twork of identified RiPP.  It is based on a few files from [MSV000080102 dataset](https://gnps.ucsd.edu/ProteoSAFe/result.jsp?task=6",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080102"
+    },
+    {
+      "accession": "SRR3309439",
+      "evidence_span": "ces griseus ATCC 12648](https://www.ebi.ac.uk/ena/data/view/SRR3309439)),  and `spades_outdir` is the directory containing the gen",
+      "kind": "sra_run",
+      "url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR3309439"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LC-MS/MS spectra in MGF format (AmfS.mgf) from S. griseus test dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Antibiotic Biosynthetic Gene Cluster GenBank file (.final.gbk) generated from S. griseus contigs by antiSMASH",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Tab-separated value file (significant_matches.tsv) containing compound\u2013spectrum matches with columns: SpecFile, Scan, SpectrumMass, Retention, Charge, Score, P-Value, FDR, PeptideMass, SeqFile, Class, FragmentSeq, ModifiedSeq",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Absence of AmfS peptide (TGSQVSLLVCEYSSLSVVLCTP) in significant_matches.tsv output, confirming the antiSMASH input failure mode",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Lantibiotics are ribosomal peptides with characteristic dehydrated residues (dehydroalanine S-18, dehydrobutyrine T-18) that appear in both raw and modified sequence forms in MetaMiner output.",
+    "antiSMASH .final.gbk files annotate open reading frames and biosynthetic gene clusters but may lose or alter precursor peptide sequence information compared to raw FASTA assemblies due to gene calling or annotation differences.",
+    "AmfS is a known lantibiotic precursor peptide from Streptomyces griseus with the sequence TGSQVSLLVCEYSSLSVVLCTP and its modification pattern T-18GS-18QVS-18LLVCEYS-18SLSVVLCTP, serving as a positive control for lantibiotic detection in this test dataset.",
+    "MetaMiner performs all-vs-all matching between spectra and sequence files by default; output failures may stem from gene discovery or extraction differences between genome mining tool outputs and raw assembly.",
+    "The test data includes parallel runs with FASTA and antiSMASH .gbk inputs on the same biological sample to benchmark input format robustness."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: antiSMASH .gbk output for S. griseus SRR3309439 dataset in github:ablab__npdtools repository",
+      "verify file exists: contigs.fasta for S. griseus SRR3309439 dataset in github:ablab__npdtools repository",
+      "script_runs: MetaMiner execution with antiSMASH .gbk file as input completes without fatal errors",
+      "script_runs: MetaMiner execution with contigs.fasta file as input completes without fatal errors",
+      "file_format_is: MetaMiner output directory structure and log files present after .gbk run",
+      "file_format_is: MetaMiner output directory structure and log files present after .fasta run",
+      "contains_substring: MetaMiner .gbk run output does not contain 'AmfS' in results (no detection), robust to different output format variations"
+    ],
+    "expert_review": [
+      "Confirm that AmfS absence in .gbk results represents a known/documented failure mode (manual discrepancy between FASTA and antiSMASH input handling)",
+      "Evaluate whether MetaMiner .fasta results correctly detect AmfS and that detection is biologically plausible",
+      "Assess whether the input discrepancy observed is consistent with documented differences in how antiSMASH .gbk and raw .fasta files are parsed by MetaMiner"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does MetaMiner fail to detect the AmfS RiPP when using antiSMASH .gbk output instead of FASTA sequences for the S. griseus dataset?: 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools' output: raw nucleotide sequences `.fasta` format or *antiSMASH*'s `.final.gbk` or `.gbk` file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] MetaMiner successfully detects AmfS using contigs.fasta input but fails when antiSMASH output is used as input, demonstrating input format-dependent detection differences.: 'While `MetaMiner` successfully detect AmfS using the `contigs.fasta` file, it fails with antiSMASH result as input'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] LC-MS/MS spectra in MGF format (AmfS.mgf) from S. griseus test dataset: 'test_data/metaminer/msms/AmfS.mgf spectrum against test_data/metaminer/fasta/S.griseus_fragment.fasta'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Antibiotic Biosynthetic Gene Cluster GenBank file (.final.gbk) generated from S. griseus contigs by antiSMASH: 'The `.final.gbk` file in the test data folder is generated from `contigs.fasta` by `antiSMASH`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Tab-separated value file (significant_matches.tsv) containing compound\u2013spectrum matches with columns: SpecFile, Scan, SpectrumMass, Retention, Charge, Score, P-Value, FDR, PeptideMass, SeqFile, Class, FragmentSeq, ModifiedSeq: 'All the detected RiPPs are reported in plain text tab-separated value files (`.tsv`). Each file starts with a header line containing column descriptions. The rest lines represent compound\u2013spectrum'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Absence of AmfS peptide (TGSQVSLLVCEYSSLSVVLCTP) in significant_matches.tsv output, confirming the antiSMASH input failure mode: 'While `MetaMiner` successfully detect AmfS using the `contigs.fasta` file, it fails with antiSMASH result as input'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MetaMiner: 'MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] antiSMASH: 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools' output: raw nucleotide sequences `.fasta` format or *antiSMASH*'s `.final.gbk` or `.gbk` file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Dereplicator: 'matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting AmfS detection failure or FASTA-vs-antiSMASH input discrepancy: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "significant_matches.tsv",
+  "expected_outputs": [
+    "Tab-separated value file (significant_matches.tsv) containing compound\u2013spectrum matches with columns: SpecFile, Scan, SpectrumMass, Retention, Charge, Score, P-Value, FDR, PeptideMass, SeqFile, Class, FragmentSeq, ModifiedSeq",
+    "Absence of AmfS peptide (TGSQVSLLVCEYSSLSVVLCTP) in significant_matches.tsv output, confirming the antiSMASH input failure mode"
+  ],
+  "finding": "MetaMiner successfully detects AmfS using contigs.fasta input but fails when antiSMASH output is used as input, demonstrating input format-dependent detection differences.",
+  "github_name": "ablab/npdtools",
+  "input_from": null,
+  "inputs": [
+    "LC-MS/MS spectra in MGF format (AmfS.mgf) from S. griseus test dataset",
+    "Antibiotic Biosynthetic Gene Cluster GenBank file (.final.gbk) generated from S. griseus contigs by antiSMASH"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "metaminer_outdir/significant_matches.tsv",
+    "metaminer_outdir/all_matches.tsv"
+  ],
+  "linked_result_ids": [
+    "result_008",
+    "result_031",
+    "result_033"
+  ],
+  "methodology_summary": [
+    "Download or locate S. griseus test data: LC-MS/MS spectra (AmfS.mgf) and antiSMASH-generated .final.gbk annotation.",
+    "Execute MetaMiner with antiSMASH input: invoke metaminer.py pointing to spectra directory and antiSMASH .gbk sequence file using default lantibiotic search class.",
+    "Harvest and inspect significant_matches.tsv output for presence or absence of AmfS peptide in FragmentSeq and ModifiedSeq columns.",
+    "Validation: Confirm that AmfS peptide (raw sequence TGSQVSLLVCEYSSLSVVLCTP or modified TGSQVSLLVCEYSSLSVVLCTP-with-dehydration marks) does NOT appear in significant_matches.tsv, reproducing the documented antiSMASH input failure mode.",
+    "References: MSV000080102 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080102); SRR3309439 (https://www.ncbi.nlm.nih.gov/sra/?term=SRR3309439)"
+  ],
+  "missing_information": [
+    "No changelog documenting AmfS detection failure or FASTA-vs-antiSMASH input discrepancy"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does MetaMiner fail to detect the AmfS RiPP when using antiSMASH .gbk output instead of FASTA sequences for the S. griseus dataset?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "ripp-peptide-identification-from-spectra",
+    "biosynthetic-gene-cluster-mining-with-genomic-data",
+    "mass-spectrum-database-matching",
+    "post-translational-modification-pattern-recognition",
+    "genome-annotation-format-comparison"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_dereplicator/synthesized_package",
+  "spine_condition_ids": [
+    "COND_FASTA_INPUT",
+    "COND_ANTISMASH_INPUT",
+    "COND_BLIND_MODE"
+  ],
+  "spine_entity_ids": [
+    "SYS_METAMINER",
+    "ARCH_METAMINER_PIPELINE",
+    "TOOL_ANTISMASH",
+    "DATASET_TEST_DATA",
+    "COMP_AMFS",
+    "COMP_STREPTOMYCES_GRISEUS",
+    "COND_FASTA_INPUT",
+    "COND_ANTISMASH_INPUT",
+    "COND_BLIND_MODE",
+    "RESULT_AMFS_IDENTIFICATION",
+    "RESULT_ANTISMASH_FAILURE",
+    "ARTIFACT_SPEC_NETS"
+  ],
+  "subdomains": [
+    "natural-products",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:ablab__npdtools",
+  "task_description": "Run MetaMiner on S. griseus LC-MS/MS spectra using antiSMASH .gbk output instead of raw FASTA to reproduce the documented failure mode where AmfS peptide is not detected.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LC-MS/MS spectra in MGF format",
+      "port_id": "spectra_mgf",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "antiSMASH .final.gbk genome annotation file",
+      "port_id": "antismash_gbk",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Run MetaMiner on S. griseus antiSMASH .gbk output and confirm AmfS is not detected, verifying the known FASTA-vs-antiSMASH input discrepancy.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Compound-spectrum matches report (significant_matches.tsv)",
+      "port_id": "matches_tsv",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Verification that AmfS is absent from results",
+      "port_id": "absence_confirmation",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dereplication",
+    "database-annotation",
+    "in-silico-fragmentation"
+  ],
+  "title": "Reproduce antiSMASH input failure for MetaMiner AmfS detection",
+  "tools": [
+    "NPDtools 2.5.0",
+    "MetaMiner",
+    "antiSMASH",
+    "Dereplicator"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: MetaMiner, Tab-separated value file (significant_matches.tsv) containing compound\u2013spectrum matches with columns: SpecFile, Scan, SpectrumMass, Retention, Charge, Score, P-Value, FDR, PeptideMass, SeqFile, Class, FragmentSeq, ModifiedSeq, Absence of AmfS peptide (TGSQVSLLVCEYSSLSVVLCTP) in significant_matches.tsv output, confirming the antiSMASH input failure mode."
+  ],
+  "workflow_description": "1. Obtain S. griseus LC-MS/MS spectra file (AmfS.mgf) and antiSMASH-generated .final.gbk file from test data. 2. Execute MetaMiner with antiSMASH .gbk file as sequence input and spectra directory, using default lantibiotic search mode: `python metaminer.py test_data/metaminer/msms/ -s test_data/metaminer/antismash/ -o metaminer_outdir`. 3. Parse the generated significant_matches.tsv output file and verify absence of AmfS peptide (TGSQVSLLVCEYSSLSVVLCTP or modified form). 4. Compare results against the baseline FASTA-input run which successfully identifies AmfS to confirm the discrepancy."
+}

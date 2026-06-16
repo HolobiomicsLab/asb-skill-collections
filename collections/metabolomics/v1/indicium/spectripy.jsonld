@@ -1,0 +1,2712 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/cross-language-function-invocation-and-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/cross-language-interface-design",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/data-marshalling-and-type-conversion",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/function-wrapping-and-binding-mechanisms",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-data-loading-and-formatting",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-package-integration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/r-python-interoperability-via-wrapper",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectra-object-instantiation-and-manipulation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-workflow-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The SpectriPy package allows integration of Python MS packages into a Spectra-based MS analysis in R.",
+      "asserted_by": "doi:https://doi.org/10.21105/joss.08070",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SpectriPy"
+        },
+        {
+          "id": "asb:spine_Spectra"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:https://doi.org/10.21105/joss.08070",
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SpectriPy achieves seamless integration of Python libraries into R by wrapping Python functionality into R functions.",
+      "asserted_by": "doi:https://doi.org/10.21105/joss.08070",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SpectriPy"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:https://doi.org/10.21105/joss.08070",
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The SpectriPy project has reached a stable, usable state and is being actively developed.",
+      "asserted_by": "doi:https://doi.org/10.21105/joss.08070",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SpectriPy"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:https://doi.org/10.21105/joss.08070",
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SpectriPy is licensed under the Artistic-2.0 license.",
+      "asserted_by": "doi:https://doi.org/10.21105/joss.08070",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SpectriPy"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:https://doi.org/10.21105/joss.08070",
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SpectriPy has been published with DOI 10.21105/joss.08070.",
+      "asserted_by": "doi:https://doi.org/10.21105/joss.08070",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SpectriPy"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:https://doi.org/10.21105/joss.08070",
+      "workflow_coupling": "tight"
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py provides an R interface to Python enabling interoperability between the two programming languages... The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "The paper explicitly describes SpectriPy's core function: wrapping Python MS package functionality (matchms) for use in R workflows with Spectra objects.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does SpectriPy wrap Python mass spectrometry package functionality to enable seamless integration into R-based Spectra analysis workflows?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:21.159820+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures.",
+      "asbval:note": "SpectriPy (case-insensitive match: Spectri Py) is the primary subject of the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:21.159820+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects... Spectri Py allows translation between R and Python MS data structures. In particular, Spectri Py provides the functions rspec_to_pyspec() and pyspec_to_rspec() to convert between R's Spectra::Spectra",
+      "asbval:note": "Spectra is explicitly named as the R MS data structure that SpectriPy integrates with.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:21.159820+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py: Enhancing Cross-Language Mass Spectrometry Data Analysis with R and Python",
+      "asbval:note": "R is one of the two primary programming languages for which SpectriPy provides integration.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:21.159820+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py: Enhancing Cross-Language Mass Spectrometry Data Analysis with R and Python",
+      "asbval:note": "Python is one of the two primary programming languages for which SpectriPy provides integration.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:21.159820+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_001/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R. These functions internally translate the MS data from a Spectra::Spectra object to the respective Python MS data structures, execute the Python functions, and collect and convert the results to R data types",
+      "asbval:note": "The paper describes the wrapping mechanism (compareSpectriPy and filterSpectriPy functions) but does not provide an explicit architecture diagram or formal CrossLanguageIntegrationLayer document. The mechanism is described in prose and code examples rather than as a formal architectural specification.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Architecture diagram or document describing the CrossLanguageIntegrationLayer showing how Python MS package functions are wrapped into R function interfaces",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:21.159820+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_001/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These functions also handle the conversion, and any required renaming and reformatting of spectra metadata, such as MS level, retention times, or any other arbitrary metadata available in the MS data object.",
+      "asbval:note": "The paper describes data marshalling and type conversion at a high level but does not provide a formal technical specification document with detailed conversion rules. The description is embedded in the paper narrative rather than as a standalone specification.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Technical specification document detailing the function-wrapping mechanism, data marshalling protocol, and type conversion rules between R and Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:21.159820+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_001/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "As an example, the Cosine (i.e., Dot product) and Cosine Hungarian similarity scores are compared between two sets of spectra, calculated with Spectra's built-in compare Spectra() and Spectri Py's compare Spectri Py() calling the Cosine Hungarian function from matchms, respectively.",
+      "asbval:note": "The paper provides example code and a figure comparing results from wrapped Python functions (Cosine Hungarian from matchms) executed in R, but this is not a formal validation report\u2014it is a demonstration example within the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Validation report confirming wrapped Python MS functions execute correctly within R Spectra workflows with correct data interchange",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:21.159820+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate task card frames the expected outputs as formal deliverables (architecture diagram, technical specification document, validation report) that would be produced as part of a reconstruction or engineering task. However, the paper is a software publication describing an already-implemented tool, not a task specification or project plan. The paper does describe the technical mechanisms but in narrative and code-example form rather than as formal standalone documents.",
+        "The research question is well-aligned with the paper's scope, but the expected outputs appear to be aspirational engineering artifacts rather than outputs the paper itself produces. The paper documents the tool's design and functionality but does not present formal architecture diagrams, specification documents, or validation reports as separate deliverables."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:21.159820+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R. These functions internally translate the MS data from a Spectra::Spectra object to the respective Python MS data structures, execute the Python functions, and collect and convert the results to R data types, enabling the integration of functionality from the matchms Python library directly into R-based analysis workflows.",
+      "asbval:note": "The paper explicitly describes how SpectriPy wraps Python functionality (matchms) for R-based Spectra workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does SpectriPy wrap Python MS package functionality to enable seamless integration into R-based Spectra analysis workflows?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.146684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures.",
+      "asbval:note": "SpectriPy (case-insensitive match: Spectri Py) is the primary subject of the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.146684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "Spectra is explicitly mentioned as an R package used for MS data structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.146684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py: Enhancing Cross-Language Mass Spectrometry Data Analysis with R and Python",
+      "asbval:note": "R is a primary programming language for the package.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.146684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_002/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py: Enhancing Cross-Language Mass Spectrometry Data Analysis with R and Python",
+      "asbval:note": "Python is a primary programming language for the package.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.146684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_002/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "An example combined R-Python data analysis workflow, which can be realized using the Quarto system is provided in the following code snippets. In this particular example we start the analysis in Python, loading and processing the MS data with functions from the matchms library... To continue the analysis in R, we could either translate to full MS data to R using the pyspec_to_rspec() function, or, as shown in the code block below, create a Spectra::Spectra object using Spectri Py's Ms Backend Py backend class.",
+      "asbval:note": "The paper provides code examples demonstrating package loading, Spectra object creation, and Python function invocation.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Execution log or R console output showing successful package load, Spectra object creation, and Python function invocation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.146684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_002/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These functions internally translate the MS data from a Spectra::Spectra object to the respective Python MS data structures, execute the Python functions, and collect and convert the results to R data types",
+      "asbval:note": "The paper explicitly describes conversion of Python results back to R data types.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "R object returned from the Python MS package function call (e.g., numeric vector, data frame, or modified Spectra object)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.146684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_002/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not explicitly describe generation of a 'validation report' as a formal output. The paper demonstrates function calls and result conversion but does not mention formal validation reporting.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Validation report confirming function call success, output type, and R-native data structure integrity",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.146684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/https___doi_org_10_21105_joss_08070__task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card's research question and expected outputs are well-aligned with the paper's scope. The paper is a software paper describing SpectriPy's functionality for cross-language MS data analysis.",
+        "The expected output about 'validation report' is somewhat speculative\u2014the paper demonstrates successful function calls and data conversion but does not explicitly describe formal validation reporting as a deliverable."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.146684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R. These functions internally translate the MS data from a Spectra::Spectra object to the respective Python MS data structures, execute the Python functions, and collect and convert the results to R data types",
+      "asbval:note": "Core research question is directly supported by the paper's description of SpectriPy's wrapper functions and their return of R-native objects.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Invoke Python mass spectrometry package functions from within R-based Spectra workflows using language-bridging wrappers (e.g., SpectriPy), then validate that the wrapped call executes without error and returns properly typed R-native objects.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures. It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "SpectriPy (case-insensitive match: Spectri Py) confirmed as R package with bidirectional conversion capability.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SpectriPy - R package that wraps Python MS package functions (matchms, spectrum_utils) into R functions and handles bidirectional conversion between Spectra and Python spectral objects",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "excellent software libraries for such data analysis are available in both R and Python, including R packages from the Rfor Mass Spectrometry initiative such as Spectra, Ms Core Utils, Metabo Annotation, and Com- pound Db",
+      "asbval:note": "Spectra confirmed as R package from R for Mass Spectrometry initiative; used as container object in SpectriPy workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra - R package providing efficient in-memory and on-disk storage, subsetting, processing, and comparison of mass spectrometry spectra; serves as the container object passed to SpectriPy wrappers",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Python libraries like matchms (Huber et al., 2020), spectrum_utils (Bittremieux, 2020), Pyteomics (Goloborodko et al., 2013), and py OpenMS (R\u00f6st et al., 2014)... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "matchms confirmed as Python library wrapped by SpectriPy for similarity, filtering, and normalization. However, the paper demonstrates 'Cosine Hungarian' similarity (not CosineGreedy or ModifiedCosine specifically named). The functional role (similarity scoring) is confirmed but specific algorithm names differ.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms - Python library providing spectral similarity algorithms (CosineGreedy, ModifiedCosine) and normalization; wrapped by SpectriPy for use in R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "spectrum_utils confirmed as Python library with bidirectional object conversion support in SpectriPy.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "spectrum_utils - Python library for spectral filtering and processing; wrapped by SpectriPy for bidirectional object conversion with R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reticulate R package (Ushey et al., 2025) provides an R interface to Python enabling interoperability between the two programming languages. The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures.",
+      "asbval:note": "reticulate confirmed as underlying R package for Python interoperability and object marshalling. However, the paper does not explicitly mention 'py_require()' function for dependency installation\u2014only that 'During installation, Spectri Py automatically configures a Python environment and installs all required libraries.' The core marshalling role is confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "reticulate - R package that manages Python environment setup, dependency installation via py_require(), and R\u2013Python object marshalling beneath SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R... execute the Python functions, and collect and convert the results to R data types",
+      "asbval:note": "Scope is directly aligned with paper's description of SpectriPy's core functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Invoke Python mass spectrometry package functions from within R-based Spectra workflows using language-bridging wrappers (e.g., SpectriPy), then validate that the wrapped call executes without error and returns properly typed R-native objects.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Each of these software packages covers different and in part complementary aspects in the analysis of MS data, but their integration into a single workflow remains a challenge, in particular across programming languages. To avoid the need for repeated implementation of algorithms in different programming languages we developed the Spectri Py package.",
+      "asbval:note": "Scope rationale is supported; paper confirms complementary algorithms across languages and the motivation for SpectriPy.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Your R-based Spectra analysis workflow requires a specific mass spectrometry algorithm (e.g., CosineGreedy similarity scoring, spectral normalization, or advanced filtering) that is available only in a Python MS package (matchms, spectrum_utils) and not yet in native R.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These functions internally translate the MS data from a Spectra::Spectra object to the respective Python MS data structures, execute the Python functions, and collect and convert the results to R data types",
+      "asbval:note": "Expected outputs of R-native typed objects confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "R-native objects (vectors, data frames, or Spectra objects) with properly typed similarity scores, filtered spectra, or normalized intensity matrices",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "res_cosinehungarian <- compare Spectri Py( sps1, sps2, param = Cosine Hungarian(tolerance = 0.1))",
+      "asbval:note": "Method confirmed with concrete code example showing compare_spectripy() (written as compare Spectri Py in paper) with Cosine Hungarian parameter.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "Use SpectriPy's compare_spectripy() function to invoke matchms similarity algorithms (e.g., Cosine Hungarian) on Spectra objects",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R.",
+      "asbval:note": "filter_spectripy() (written as filter Spectri Py in paper) confirmed for filtering and normalization.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "Use SpectriPy's filter_spectripy() function to invoke matchms filtering and normalization routines on Spectra objects",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py provides the functions rspec_to_pyspec() and pyspec_to_rspec() to convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects.",
+      "asbval:note": "Conversion functions confirmed with exact names.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "Convert between R Spectra objects and Python matchms/spectrum_utils objects using rspec_to_pyspec() and pyspec_to_rspec() functions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/012",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "This class acts as an interface to the MS data in the associated Python session. All data from the referenced Python data object is accessible in R, with the entire or subsets of the data translated on-the-fly from Python to R only upon request.",
+      "asbval:note": "MsBackendPy (written as Ms Backend Py in paper) confirmed for lazy-loaded access.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "Use MsBackendPy backend class to create lazy-loaded Spectra objects that reference Python data without full translation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:57.513563+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-interface-design/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures. It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "Core claim is directly supported by the paper's description of SpectriPy's purpose and functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-interface-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Design and implement function wrapping and object marshalling layers that translate APIs between compiled/interpreted languages (Python \u2194 R) while preserving type semantics and enabling seamless execution within unified analytical workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:21.858327+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-interface-design/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reticulate R package (Ushey et al., 2025) provides an R interface to Python enabling interoperability between the two programming languages. The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures.",
+      "asbval:note": "Reticulate is confirmed as the foundational bridge. Automatic dependency management is mentioned in context of SpectriPy installation.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-interface-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "reticulate \u2014 Cross-language bridge enabling R-to-Python object instantiation, function calls, and automatic dependency management via py_require()",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:21.858327+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-interface-design/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R. These functions internally translate the MS data from a Spectra::Spectra object to the respective Python MS data structures, execute the Python functions, and collect and convert the results to R data types.",
+      "asbval:note": "SpectriPy (case-insensitive match: Spectri Py) is confirmed with compareSpectriPy() function and conversion functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-interface-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SpectriPy \u2014 Concrete R package implementing the wrapping pattern, providing compareSpectriPy() and conversion functions for matchms/spectrum_utils",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:21.858327+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-interface-design/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py provides the functions rspec_to_pyspec() and pyspec_to_rspec() to convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects.",
+      "asbval:note": "Spectra is confirmed as the R-side MS data container used by SpectriPy.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-interface-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra \u2014 R-side container for MS spectral data that SpectriPy wraps for Python library integration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:21.858327+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-interface-design/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R... the Cosine (i.e., Dot product) and Cosine Hungarian similarity scores are compared between two sets of spectra, calculated with Spectra's built-in compare Spectra() and Spectri Py's compare Spectri Py() calling the Cosine Hungarian function from matchms, respectively.",
+      "asbval:note": "matchms is confirmed as wrapped by SpectriPy. However, the paper demonstrates 'Cosine Hungarian' similarity, not 'CosineGreedy' or 'ModifiedCosine' as claimed. The card's specific algorithm names are not verified in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "cross-language-interface-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms \u2014 Python library providing spectral similarity algorithms (CosineGreedy, ModifiedCosine) that are wrapped by SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:21.858327+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-interface-design/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py provides the functions rspec_to_pyspec() and pyspec_to_rspec() to convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects... Scale intensities for i in range(len(mgf_p)): mgf_py[i] = mms_filt.normalize_intensities(mgf_py[i])",
+      "asbval:note": "spectrum_utils is confirmed with MsmsSpectrum object translation and normalization functionality demonstrated.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-interface-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "spectrum_utils \u2014 Python library providing spectral normalization and filtering; its MsmsSpectrum objects are translated to/from R Spectra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:21.858327+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-interface-design/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures.",
+      "asbval:note": "R is confirmed as the primary language context for the paper's work on cross-language interface design.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cross-language-interface-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R \u2014 language with related skills including cross-language-interface-design, data-marshalling-and-type-conversion, etc.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:21.858327+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/data-marshalling-and-type-conversion/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py provides the functions rspec_to_pyspec() and pyspec_to_rspec() to convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects. These functions also handle the conversion, and any required renaming and reformatting of spectra metadata, such as MS level, retention times, or any other arbitrary metadata available in the MS data object.",
+      "asbval:note": "Claim is directly supported by passage describing core conversion functionality and metadata preservation.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "data-marshalling-and-type-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert mass spectrometry spectral objects between R Spectra::Spectra and Python matchms/spectrum_utils representations, marshalling data across language boundaries while preserving spectral metadata and peak m/z\u2013intensity pairs.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:36.488380+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/data-marshalling-and-type-conversion/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R. These functions internally translate the MS data from a Spectra::Spectra object to the respective Python MS data structures, execute the Python functions, and collect and convert the results to R data types, enabling the integration of functionality from the matchms Python library directly into R-based analysis workflows.",
+      "asbval:note": "Passage explicitly describes execution of Python algorithms from R via SpectriPy wrapper functions.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "data-marshalling-and-type-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This enables seamless execution of Python-based MS algorithms within R workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:36.488380+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/data-marshalling-and-type-conversion/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures. It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "Tool name confirmed (case-insensitive: 'Spectri Py' in paper vs 'SpectriPy' in card). Role fully supported.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "data-marshalling-and-type-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SpectriPy - Provides R function wrappers and conversion methods (e.g., for translating Spectra::Spectra \u2194 matchms.Spectrum) and orchestrates compareSpectriPy() for cross-language similarity scoring",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:36.488380+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/data-marshalling-and-type-conversion/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "excellent software libraries for such data analysis are available in both R and Python, including R packages from the Rfor Mass Spectrometry initiative such as Spectra, Ms Core Utils, Metabo Annotation, and Com- pound Db... Spectri Py provides the functions rspec_to_pyspec() and pyspec_to_rspec() to convert between R's Spectra::Spectra and Python's matchms.Spectrum",
+      "asbval:note": "Spectra confirmed as R package and source/sink for conversion operations.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "data-marshalling-and-type-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra - Source and sink for spectral data in R; defines the Spectra::Spectra S4 class and backends used as input to SpectriPy conversion",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:36.488380+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/data-marshalling-and-type-conversion/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reticulate R package (Ushey et al., 2025) provides an R interface to Python enabling interoperability between the two programming languages. The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures... During installation, Spectri Py automatically configures a Python environment and installs all required libraries.",
+      "asbval:note": "Reticulate confirmed as underlying R-Python interface. However, paper does not explicitly mention 'py_require()' function or that SpectriPy uses it for automatic installation\u2014only that SpectriPy 'automatically configures a Python environment and installs all required libraries' during installation. The mechanism is not named in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "data-marshalling-and-type-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "reticulate - Manages R\u2013Python process-level data interchange, including object serialization and function calls; SpectriPy's py_require() dependency ensures automatic Python library installation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:36.488380+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/data-marshalling-and-type-conversion/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Python libraries like matchms (Huber et al., 2020)... Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R... the Cosine (i.e., Dot product) and Cosine Hungarian similarity scores are compared between two sets of spectra, calculated with Spectra's built-in compare Spectra() and Spectri Py's compare Spectri Py() calling the Cosine Hungarian function from matchms",
+      "asbval:note": "matchms confirmed as Python library with similarity scoring. However, the specific algorithm mentioned in paper is 'Cosine Hungarian', not 'CosineGreedy' as claimed in the card. Paper does not name 'CosineGreedy' algorithm.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "data-marshalling-and-type-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms - Python library providing Spectrum objects and similarity scoring algorithms (e.g., CosineGreedy) that accept converted spectral data and return numeric scores",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:36.488380+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/data-marshalling-and-type-conversion/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Python libraries like... spectrum_utils (Bittremieux, 2020)... Spectri Py provides the functions rspec_to_pyspec() and pyspec_to_rspec() to convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "spectrum_utils confirmed with MsmsSpectrum class and normalization/filtering functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "data-marshalling-and-type-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "spectrum_utils - Python library providing MsmsSpectrum objects and normalization/filtering methods; SpectriPy converts to/from this class for advanced peak processing",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:36.488380+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/data-marshalling-and-type-conversion/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures... enabling the integration of R and Python for MS data analysis, empowering data analysts to benefit from the full power of algorithms in both programming languages.",
+      "asbval:note": "R confirmed as the host language for integration of Python MS packages via SpectriPy.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "data-marshalling-and-type-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R - integration of Python MS packages into a [*Spectra*]-based MS analysis in R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:36.488380+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures. It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "Core claim fully supported by paper's description of SpectriPy's purpose and functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "A cross-language binding technique that wraps Python mass spectrometry library functions (e.g., matchms, spectrum_utils) as callable R functions within the Spectra object model, enabling seamless data interchange and interoperability between R and Python analysis workflows in a s",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reticulate R package (Ushey et al., 2025) provides an R interface to Python enabling interoperability between the two programming languages. The open-source Spectri Py R package builds upon reticulate",
+      "asbval:note": "Explicitly named and described as foundational to SpectriPy.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "reticulate",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures.",
+      "asbval:note": "Paper uses 'Spectri Py' (with space); card uses 'SpectriPy' (no space). Case-insensitive entity matching confirms same tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "excellent software libraries for such data analysis are available in both R and Python, including R packages from the Rfor Mass Spectrometry initiative such as Spectra, Ms Core Utils, Metabo Annotation, and Com- pound Db",
+      "asbval:note": "Spectra R package confirmed as part of ecosystem; SpectriPy converts to/from Spectra::Spectra objects.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Python libraries like matchms (Huber et al., 2020), spectrum_utils (Bittremieux, 2020), Pyteomics (Goloborodko et al., 2013), and py OpenMS (R\u00f6st et al., 2014)... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "matchms explicitly named as Python library whose functions are wrapped by SpectriPy.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Python libraries like matchms (Huber et al., 2020), spectrum_utils (Bittremieux, 2020)... It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "spectrum_utils explicitly named; SpectriPy converts to/from its MsmsSpectrum class.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "spectrum_utils",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reticulate R package (Ushey et al., 2025) provides an R interface to Python enabling interoperability between the two programming languages.",
+      "asbval:note": "Paper confirms reticulate provides R-to-Python interface and interoperability. However, paper does not explicitly mention 'py_require()' function or environment initialization details. The role is semantically correct but specific function names are not verified in passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[reticulate].role",
+      "asbval:target_claim_text": "R package providing in-process R-to-Python function binding and data marshalling; manages Python environment initialization and library installation via py_require()",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R... Spectri Py provides the functions rspec_to_pyspec() and pyspec_to_rspec() to convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects.",
+      "asbval:note": "Paper confirms compareSpectriPy() and conversion functions. However, paper shows 'Cosine Hungarian' parameter class in example, not 'CosineGreedyParam'. The card's specific parameter class name is not verified; paper uses different parameter naming.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[SpectriPy].role",
+      "asbval:target_claim_text": "R package implementing the wrapper layer; provides compareSpectriPy() and conversion functions (Spectra \u2194 matchms.Spectrum / MsmsSpectrum) and parameter classes (CosineGreedyParam)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py provides the functions rspec_to_pyspec() and pyspec_to_rspec() to convert between R's Spectra::Spectra and Python's matchms.Spectrum... Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison... from the matchms Python library to be called directly from R.",
+      "asbval:note": "Spectra object model confirmed as central to SpectriPy integration architecture.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[Spectra].role",
+      "asbval:target_claim_text": "R package providing the MS spectra object model and comparison interface into which wrapped Python functions integrate",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R... Cosine (i.e., Dot product) and Cosine Hungarian similarity scores are compared between two sets of spectra, calculated with Spectra's built-in compare Spectra() and Spectri Py's compare Spectri Py() calling the Cosine Hungarian function from matchms",
+      "asbval:note": "Paper confirms matchms provides spectral similarity scoring and processing operations wrapped by SpectriPy. However, specific function names 'CosineGreedy' and 'ModifiedCosine' are not mentioned; paper shows 'Cosine Hungarian' instead. Functional role is correct but specific similarity function names differ.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[matchms].role",
+      "asbval:target_claim_text": "Python library providing spectral similarity scoring functions (CosineGreedy, ModifiedCosine) and spectral processing operations wrapped and exposed via SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "spectrum_utils.spectrum.MsmsSpectrum class and conversion confirmed; normalization/filtering operations confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[spectrum_utils].role",
+      "asbval:target_claim_text": "Python library providing MsmsSpectrum class and normalization/filtering operations; objects converted to/from R Spectra via SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures.",
+      "asbval:note": "R confirmed as the host language for cross-language binding and data marshalling.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[R].role",
+      "asbval:target_claim_text": "Programming language environment for cross-language interface design and data marshalling",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:55.531420+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py provides functionality to efficiently translate between R and Python MS data structures. It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "Core research question is directly supported by the paper's description of SpectriPy's functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Load mass spectrometry data from diverse file formats and standardized databases into language-specific spectral objects (R Spectra or Python matchms/spectrum_utils objects) that enable downstream processing, similarity calculations, and cross-language workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "excellent software libraries for such data analysis are available in both R and Python, including R packages from the Rfor Mass Spectrometry initiative such as Spectra, Ms Core Utils, Metabo Annotation, and Compound Db",
+      "asbval:note": "Spectra is confirmed as an R package for MS data analysis. The paper mentions it as part of the R for Mass Spectrometry initiative.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra - Core R package for creating, storing, and manipulating MS spectral objects with pluggable backends for different file formats and storage strategies",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures. It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "SpectriPy (case-insensitive match: Spectri Py) is confirmed as the primary subject of the paper with exactly the described role.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SpectriPy - R package wrapper enabling conversion between R Spectra objects and Python matchms/spectrum_utils objects for cross-language data loading and transformation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "mzR is not mentioned in any of the provided passages. While the paper discusses MS data loading, it does not specifically name mzR or MsBackendMzR.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzR - R package providing efficient on-disk reading of mzML, mzXML, and CDF files via the MsBackendMzR backend",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Python libraries like matchms (Huber et al., 2020)... Spectri Py provides an easy way to compare spectra similarity functions from commonly-used R and Python libraries... Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R.",
+      "asbval:note": "matchms is confirmed as a Python library used for spectral comparison and filtering, with SpectriPy providing integration.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms - Python library for spectral object representation and similarity scoring; input/output target for cross-language workflows via SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Python libraries like... spectrum_utils (Bittremieux, 2020)... It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "spectrum_utils is confirmed as a Python library for MS spectra processing with conversion support via SpectriPy.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "spectrum_utils - Python library for MS spectra processing and representation; conversion bridge for cross-language analysis via SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R packages from the Rfor Mass Spectrometry initiative such as Spectra, Ms Core Utils, Metabo Annotation, and Compound Db",
+      "asbval:note": "CompoundDb is mentioned as part of the R for Mass Spectrometry initiative, but the paper does not describe its specific backend functionality or role in loading spectra from compound databases.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "CompoundDb - R package providing MsBackendCompDb backend to load spectra directly from compound databases with on-the-fly data retrieval",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "MsBackendMassbank is not mentioned in any of the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MsBackendMassbank - R package providing backends (MsBackendMassbank, MsBackendMassbankSql) to import/export MassBank text and SQL database formats",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In this particular example we start the analysis in Python, loading and processing the MS data with functions from the matchms library... from matchms.importing import load_from_mgf mgf_py = list(load_from_mgf(<MGF file>))",
+      "asbval:note": "The paper demonstrates loading MGF files, but uses Python's matchms.importing.load_from_mgf, not the R MsBackendMgf package. The function is performed but with a different tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MsBackendMgf - R package providing MsBackendMgf backend to import/export Mascot Generic Format files into Spectra objects",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "MsBackendMsp is not mentioned in any of the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MsBackendMsp - R package providing MsBackendMsp backend to import/export NIST MSP format spectra into Spectra objects",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "MsBackendMetaboLights is not mentioned in any of the provided passages, though MetaboLights is referenced in the context of example workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MsBackendMetaboLights - R package providing MsBackendMetaboLights backend to retrieve and cache MS data files from MetaboLights repository",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures... enables seamless cross-language integration of MS data analysis algorithms within unified analysis workflows.",
+      "asbval:note": "R is confirmed as the primary language for the SpectriPy package with cross-language interoperability as a core feature.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R - language with related skills including cross-language-interface-design, data-marshalling-and-type-conversion, etc.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:14.915575+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-package-integration/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py provides an easy way to compare spectra similarity functions from commonly-used R and Python libraries, e.g. during LC-MS/MS data annotation. As an example, the Cosine (i.e., Dot product) and Cosine Hungarian similarity scores are compared between two sets of spectra, calculated with Spectra's built-in compare Spectra() and Spectri Py's compare Spectri Py() calling the Cosine Hungarian function from matchms, respectively.",
+      "asbval:note": "Paper demonstrates CosineHungarian (not CosineGreedy) similarity from matchms. Spectral normalization is mentioned (normalize_intensities) but not explicitly highlighted as a key example. The core claim about wrapping Python libraries and bidirectional translation is supported.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-package-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Wrap Python mass spectrometry libraries (matchms, spectrum_utils) as R-callable functions within the Spectra framework, enabling seamless bidirectional translation of spectral objects and leveraging specialized Python algorithms (e.g., CosineGreedy similarity, spectral normalizat",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:34.341313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-package-integration/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures.",
+      "asbval:note": "SpectriPy (case-insensitive match: Spectri Py) is the primary subject of the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-package-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:34.341313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-package-integration/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "Spectra is explicitly named as the R object container for MS data.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-package-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:34.341313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-package-integration/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "matchms is explicitly identified as a Python library providing similarity, filtering, and normalization routines.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-package-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:34.341313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-package-integration/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "spectrum_utils is explicitly named as a Python library providing MsmsSpectrum objects.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-package-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "spectrum_utils",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:34.341313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-package-integration/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reticulate R package (Ushey et al., 2025) provides an R interface to Python enabling interoperability between the two programming languages. The open-source Spectri Py R package builds upon reticulate",
+      "asbval:note": "reticulate is explicitly identified as the foundation for SpectriPy's Python\u2013R communication.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-package-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "reticulate",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:34.341313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-package-integration/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Cosine Hungarian similarity scores are compared between two sets of spectra, calculated with Spectra's built-in compare Spectra() and Spectri Py's compare Spectri Py() calling the Cosine Hungarian function from matchms, respectively.",
+      "asbval:note": "Paper explicitly demonstrates CosineHungarian from matchms. CosineGreedy and ModifiedCosine are not mentioned in the passages; only CosineHungarian is explicitly shown. Filtering and normalization are mentioned generically but not detailed with specific matchms function names.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-package-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[matchms].role",
+      "asbval:target_claim_text": "Python library providing spectral similarity functions (CosineGreedy, CosineHungarian, ModifiedCosine) and spectral filtering/normalization algorithms called via SpectriPy wrappers",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:34.341313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-package-integration/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "spectrum_utils.spectrum.MsmsSpectrum is explicitly named. Peak processing is implied by the general description of MS data processing but not explicitly detailed.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-package-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[spectrum_utils].role",
+      "asbval:target_claim_text": "Python library for MS spectrum object representation (MsmsSpectrum) and peak processing, interfaced through SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:34.341313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-package-integration/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reticulate R package (Ushey et al., 2025) provides an R interface to Python enabling interoperability between the two programming languages. The open-source Spectri Py R package builds upon reticulate",
+      "asbval:note": "reticulate's role in enabling Python\u2013R communication is confirmed. However, the specific function 'py_require()' is not mentioned in the passages; the paper does not detail the specific dependency management mechanism.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-package-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[reticulate].role",
+      "asbval:target_claim_text": "R package enabling inter-process Python\u2013R communication; SpectriPy uses its py_require() function to manage Python dependencies",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:34.341313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-package-integration/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures. It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects and includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "The scope is well-aligned with the paper's stated purpose and accomplishments.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-package-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Wrap Python mass spectrometry libraries (matchms, spectrum_utils) as R-callable functions within the Spectra framework, enabling seamless bidirectional translation of spectral objects and leveraging specialized Python algorithms in R-based MS analysis workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:34.341313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-python-interoperability-via-wrapper/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py provides an easy way to compare spectra similarity functions from commonly-used R and Python libraries... Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R. These functions internally translate the MS data from a Spectra::Spectra object to the respective Python MS data structures, execute the Python functions, and collect and convert the results to R data types",
+      "asbval:note": "Core claim fully supported: SpectriPy wraps matchms and spectrum_utils functionality into R functions that handle object translation automatically.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "r-python-interoperability-via-wrapper",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "SpectriPy wraps Python mass spectrometry package functionality (matchms, spectrum_utils) into R function signatures, enabling seamless invocation of Python MS algorithms within R-based Spectra workflows without manual object marshalling.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:49.038731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-python-interoperability-via-wrapper/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "SpectriPy confirmed as wrapper providing translation and direct application of Python routines in R.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "r-python-interoperability-via-wrapper",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SpectriPy (wrapper layer that translates Python MS package APIs and objects into R function signatures)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:49.038731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-python-interoperability-via-wrapper/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects... Spectri Py provides the functions rspec_to_pyspec() and pyspec_to_rspec() to convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects.",
+      "asbval:note": "Spectra confirmed as R MS data container that SpectriPy converts to/from.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "r-python-interoperability-via-wrapper",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra (R package providing MS data container and backend infrastructure)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:49.038731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-python-interoperability-via-wrapper/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "excellent software libraries for such data analysis are available in both R and Python... as well as Python libraries like matchms... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "matchms confirmed as Python library with spectral similarity, filtering, and normalization routines wrapped by SpectriPy.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "r-python-interoperability-via-wrapper",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms (Python library providing specialized MS algorithms: spectral similarity, peak matching, normalization)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:49.038731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-python-interoperability-via-wrapper/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "as well as Python libraries like... spectrum_utils... It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "spectrum_utils confirmed as Python library for MS spectrum processing; conversion to/from spectrum_utils.spectrum.MsmsSpectrum objects documented.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "r-python-interoperability-via-wrapper",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "spectrum_utils (Python library providing MS spectrum processing utilities: filtering, peak detection)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:49.038731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-python-interoperability-via-wrapper/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reticulate R package (Ushey et al., 2025) provides an R interface to Python enabling interoperability between the two programming languages. The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures... During installation, Spectri Py automatically configures a Python environment and installs all required libraries.",
+      "asbval:note": "reticulate confirmed as foundation for SpectriPy and automatic Python environment setup is confirmed. However, specific version requirement 'v1.41+' and specific function 'py_require()' are not mentioned in passages; automatic installation is confirmed but mechanism not detailed.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "r-python-interoperability-via-wrapper",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "reticulate (R package that manages Python environment setup, function invocation, and bidirectional object conversion; SpectriPy relies on reticulate v1.41+ for automatic Python library installation via py_require())",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:49.038731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-python-interoperability-via-wrapper/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures... Spectri Py hence enables and simplifies the integration of R and Python for MS data analysis",
+      "asbval:note": "R confirmed as the host language for SpectriPy integration.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "r-python-interoperability-via-wrapper",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (language for integration of Python MS packages into Spectra-based MS analysis)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:49.038731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-python-interoperability-via-wrapper/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py: Enhancing Cross-Language Mass Spectrometry Data Analysis with R and Python... The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures.",
+      "asbval:note": "Python confirmed as the source language for MS libraries wrapped by SpectriPy.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "r-python-interoperability-via-wrapper",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python (language for MS package implementation that SpectriPy wraps)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:49.038731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-python-interoperability-via-wrapper/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "As an example, the Cosine (i.e., Dot product) and Cosine Hungarian similarity scores are compared between two sets of spectra, calculated with Spectra's built-in compare Spectra() and Spectri Py's compare Spectri Py() calling the Cosine Hungarian function from matchms",
+      "asbval:note": "Cosine Hungarian (not CosineGreedy) is the specific similarity function mentioned in the paper. Spectral normalization and peak filtering are mentioned generically but not with specific function names. The use case is supported but the specific algorithm name differs.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "r-python-interoperability-via-wrapper",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When to use: You have a Spectra object in R and need to apply a specialized Python MS algorithm (e.g., CosineGreedy similarity scoring, spectral normalization, or peak filtering from matchms or spectrum_utils)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:49.038731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-python-interoperability-via-wrapper/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "As such, Spectri Py provides an easy way to compare spectra similarity functions from commonly-used R and Python libraries, e.g. during LC-MS/MS data annotation.",
+      "asbval:note": "Implicit support: the paper demonstrates comparing R's native Spectra functions with Python's matchms functions, suggesting users should choose based on availability and preference.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "r-python-interoperability-via-wrapper",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: Your desired MS operation is already available as a native R function in Spectra or related packages",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:59:49.038731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectra-object-instantiation-and-manipulation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py provides the functions rspec_to_pyspec() and pyspec_to_rspec() to convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects... Spectri Py hence enables and simplifies the integration of R and Python for MS data analysis",
+      "asbval:note": "The paper demonstrates creating and manipulating Spectra objects in R, converting between data structures, and enabling cross-language integration. The research question aligns with the paper's core functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectra-object-instantiation-and-manipulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Create and manipulate Spectra objects in R to represent mass spectrometry data, enabling downstream MS analysis workflows. This skill bridges raw or tabular MS data into R's native Spectra infrastructure, which supports efficient backends, spectral processing, and cross-language ",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:07.923783+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectra-object-instantiation-and-manipulation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Excellent software libraries for such data analysis are available in both R and Python, including R packages from the Rfor Mass Spectrometry initiative such as Spectra, Ms Core Utils, Metabo Annotation, and Com- pound Db",
+      "asbval:note": "Spectra is explicitly mentioned as a core R package from the R for Mass Spectrometry initiative.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectra-object-instantiation-and-manipulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra (Core R package providing the Spectra S4 class and backends for efficient MS data storage and manipulation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:07.923783+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectra-object-instantiation-and-manipulation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures. It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "SpectriPy is confirmed as the main package enabling cross-language integration between Spectra objects and Python MS packages.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectra-object-instantiation-and-manipulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SpectriPy (R wrapper enabling Spectra objects to be passed to and returned from Python MS package functions (matchms, spectrum_utils))",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:07.923783+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectra-object-instantiation-and-manipulation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reticulate R package (Ushey et al., 2025) provides an R interface to Python enabling interoperability between the two programming languages. The open-source Spectri Py R package builds upon reticulate",
+      "asbval:note": "Reticulate is explicitly identified as the foundation upon which SpectriPy is built.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectra-object-instantiation-and-manipulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "reticulate (R package managing Python environment and function wrapping; required by SpectriPy for cross-language integration)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:07.923783+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectra-object-instantiation-and-manipulation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "mzR is not mentioned in any of the provided passages. While the paper discusses MS data import and backends, it does not specifically name mzR or MsBackendMzR.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "spectra-object-instantiation-and-manipulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzR (R package supporting import of mzML, mzXML, and CDF files via the MsBackendMzR backend)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:07.923783+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectra-object-instantiation-and-manipulation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R... the Cosine Hungarian function from matchms",
+      "asbval:note": "matchms is confirmed as a Python library integrated via SpectriPy. However, the paper demonstrates 'Cosine Hungarian' similarity scoring, not 'CosineGreedy' or 'ModifiedCosine' as claimed in the card.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectra-object-instantiation-and-manipulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms (Python MS package providing spectral similarity scoring (CosineGreedy, ModifiedCosine) callable through SpectriPy)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:07.923783+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectra-object-instantiation-and-manipulation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py: Enhancing Cross-Language Mass Spectrometry Data Analysis with R and Python... enables seamless cross-language integration of MS data analysis algorithms within unified analysis workflows",
+      "asbval:note": "R is the primary language for the Spectra-based MS analysis workflows described throughout the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectra-object-instantiation-and-manipulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (language for integration of Python MS packages into a [*Spectra*]-based MS analysis in R)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:07.923783+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectra-object-instantiation-and-manipulation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "An example combined R-Python data analysis workflow, which can be realized using the Quarto system is provided in the following code snippets. In this particular example we start the analysis in Python, loading and processing the MS data with functions from the matchms library... load_from_mgf(<MGF file>)",
+      "asbval:note": "The paper demonstrates MGF file loading and MS data processing, but does not explicitly enumerate all file formats (mzML, mzXML, CDF, MSP) mentioned in the card's scope. Only MGF is explicitly shown in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectra-object-instantiation-and-manipulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When to use: You have mass spectrometry spectral data (m/z and intensity pairs, precursor m/z, MS level, and metadata) in R memory or in a file format (mzML, mzXML, CDF, MGF, MSP), and you need to organize it into a queryable, processable object",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:07.923783+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectra-object-instantiation-and-manipulation/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss MsBackendMassbankSql, MsBackendCompDb, or MsBackendMemory backends. These backend options are not mentioned in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "spectra-object-instantiation-and-manipulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: Data is stored in a relational database (SQL) and you require live querying without loading all spectra into memory\u2014use MsBackendMassbankSql or MsBackendCompDb backends instead of MsBackendMemory.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:07.923783+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py provides an R interface to Python enabling interoperability between the two programming languages... provides functionality to efficiently translate between R and Python MS data structures... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "Core research question directly supported by paper's description of SpectriPy's purpose and functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verify that cross-language wrapped spectral analysis functions (Python MS libraries integrated into R via reticulate) execute correctly and return expected data structures when invoked from R Spectra workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The open-source Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures.",
+      "asbval:note": "SpectriPy (case-insensitive match: Spectri Py) is the primary subject of the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "Spectra is explicitly named as the R MS data structure that SpectriPy integrates with.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reticulate R package (Ushey et al., 2025) provides an R interface to Python enabling interoperability between the two programming languages. The open-source Spectri Py R package builds upon reticulate",
+      "asbval:note": "reticulate is explicitly identified as the foundation for SpectriPy's cross-language functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "reticulate",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Python libraries like matchms (Huber et al., 2020)... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "matchms is explicitly named as a Python library wrapped by SpectriPy.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Python libraries like... spectrum_utils (Bittremieux, 2020)... It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects",
+      "asbval:note": "spectrum_utils is explicitly named as a Python library with spectrum objects convertible by SpectriPy.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "spectrum_utils",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectri Py R package builds upon reticulate and provides functionality to efficiently translate between R and Python MS data structures... includes functionality to directly apply spectral similarity, filtering, normalization, etc. routines from the Python matchms library on MS data in R.",
+      "asbval:note": "Role description matches paper's description of SpectriPy's core function.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[SpectriPy].role",
+      "asbval:target_claim_text": "Primary integration layer wrapping Python MS functions (matchms, spectrum_utils) as R callables in Spectra workflows",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectra::Spectra... Spectri Py's compare Spectri Py() and filter Spectri Py() functions allow spectra comparison, and filtering and processing routines, respectively, from the matchms Python library to be called directly from R.",
+      "asbval:note": "Spectra is confirmed as the R MS data structure that hosts wrapped Python functions.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[Spectra].role",
+      "asbval:target_claim_text": "R infrastructure for storing, handling, and comparing MS spectra objects; hosts wrapped Python functions as methods",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The reticulate R package (Ushey et al., 2025) provides an R interface to Python enabling interoperability between the two programming languages... Installation During installation, Spectri Py automatically configures a Python environment and installs all required libraries. The installation can be configured through several environment variables",
+      "asbval:note": "Paper confirms reticulate manages Python environment and object conversion, and environment variable configuration is mentioned. However, specific mention of 'py_require()' function is not found in passages; this is a specific API detail not verified.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[reticulate].role",
+      "asbval:target_claim_text": "R package managing Python environment, object conversion, and cross-language function calls; enables py_require() and environment variable configuration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Cosine Hungarian similarity scores are compared between two sets of spectra, calculated with Spectra's built-in compare Spectra() and Spectri Py's compare Spectri Py() calling the Cosine Hungarian function from matchms",
+      "asbval:note": "CosineHungarian is explicitly named as a matchms function. Paper confirms matchms provides spectral similarity metrics and spectrum objects.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[matchms].role",
+      "asbval:target_claim_text": "Python library providing spectral similarity metrics (CosineGreedy, CosineHungarian, etc.) and spectrum object definitions wrapped by SpectriPy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "It can convert between R's Spectra::Spectra and Python's matchms.Spectrum and spectrum_utils.spectrum.Msms Spectrum objects... Scale intensities for i in range(len(mgf_p)): mgf_py[i] = mms_filt.normalize_intensities(mgf_py[i])",
+      "asbval:note": "MsmsSpectrum (as spectrum_utils.spectrum.Msms Spectrum) and normalization functions are explicitly mentioned.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[spectrum_utils].role",
+      "asbval:target_claim_text": "Python library providing spectrum objects (MsmsSpectrum) and normalization/filtering functions convertible to/from R Spectra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "By leveraging R's reticulate package, and translating between R and Python MS data structures, this package enables seamless cross-language integration of MS data analysis algorithms within unified analysis workflows.",
+      "asbval:note": "Scope aligns with paper's central claim about SpectriPy enabling cross-language integration.",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Verify that cross-language wrapped spectral analysis functions execute correctly and return expected data structures when invoked from R Spectra workflows",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:00:23.134744+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-function-invocation-and-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 12,
+      "asbval:target_artifact_id": "cross-language-function-invocation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8333333333333334,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cross-language-interface-design/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "cross-language-interface-design",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8571428571428571,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/data-marshalling-and-type-conversion/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "data-marshalling-and-type-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/function-wrapping-and-binding-mechanisms/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 11,
+      "asbval:target_artifact_id": "function-wrapping-and-binding-mechanisms",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7272727272727273,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-loading-and-formatting/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 12,
+      "asbval:target_artifact_id": "mass-spectrometry-data-loading-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5833333333333334,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-package-integration/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "mass-spectrometry-package-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-python-interoperability-via-wrapper/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "r-python-interoperability-via-wrapper",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7777777777777778,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectra-object-instantiation-and-manipulation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "spectra-object-instantiation-and-manipulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.625,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-workflow-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 11,
+      "asbval:target_artifact_id": "spectral-workflow-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.9090909090909091,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The SpectriPy package allows integration of Python MS packages into a Spectra-based MS analysis in R.",
+      "asbval:note": "Text accurately represents source_excerpt; substring_in_paper=false is expected for markdown-formatted content",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:source_excerpt": "The *SpectriPy* package allows integration of Python MS packages into a\n[*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis\nin R.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:11.107965+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SpectriPy achieves seamless integration of Python libraries into R by wrapping Python functionality into R functions.",
+      "asbval:note": "Text accurately represents source_excerpt; minor word order variation does not affect meaning",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:source_excerpt": "By wrapping Python functionality into R functions, *SpectriPy* allows a\nseamless integration of Python libraries into R",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:11.107965+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The SpectriPy project has reached a stable, usable state and is being actively developed.",
+      "asbval:note": "Text accurately represents source_excerpt; substring_in_paper=false likely due to markdown formatting",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:source_excerpt": "Project Status: Active \u2013 The project has reached a stable, usable state and is being actively developed.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:11.107965+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SpectriPy is licensed under the Artistic-2.0 license.",
+      "asbval:note": "Text accurately extracts license information from source_excerpt badge",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:source_excerpt": "[![license](https://img.shields.io/badge/license-Artistic--2.0-brightgreen.svg)](https://opensource.org/licenses/Artistic-2.0)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:11.107965+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SpectriPy has been published with DOI 10.21105/joss.08070.",
+      "asbval:note": "Text accurately extracts DOI from source_excerpt badge",
+      "asbval:perspicacite_kb": "asb-paper-10-21105-joss-08070",
+      "asbval:source_excerpt": "[![DOI](https://joss.theoj.org/papers/10.21105/joss.08070/status.svg)](https://doi.org/10.21105/joss.08070)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:11.107965+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_spectripy#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "tight",
+        "composition_modularity": "flat",
+        "abstraction_level": "implicit",
+        "orchestration_planning": "static",
+        "data_transport": "in_memory",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SpectriPy",
+      "title": "SpectriPy",
+      "identifier": "urn:asb:spine:SpectriPy"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_Spectra",
+      "title": "Spectra",
+      "identifier": "urn:asb:spine:Spectra"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_CrossLanguageIntegrationLayer",
+      "title": "Cross-Language Integration Layer",
+      "identifier": "urn:asb:spine:CrossLanguageIntegrationLayer",
+      "abstraction_level": "asb:FixedArchitecture"
+    }
+  ]
+}

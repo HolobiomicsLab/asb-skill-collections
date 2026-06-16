@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that squidpy.gr.spatial_neighbors is callable and accepts a bundled example dataset (e.g., dataset_visium or dataset_imc) as input"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the function returns an AnnData object"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the returned AnnData object contains a 'obsp' (observations pairwise) key after execution"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the CSR graph is stored under the expected key in obsp (e.g., 'spatial_neighbors' or similar), robust to naming conventions documented in function signature"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the CSR graph object has the expected structure (sparse matrix format with shape matching number of observations)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the CSR graph contains non-zero entries corresponding to spatial neighbor connections"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that squidpy.gr.spatial_neighbors is callable and accepts a bundled example dataset (e.g., dataset_visium or dataset_imc) as input",
+      "verify that the function returns an AnnData object",
+      "verify that the returned AnnData object contains a 'obsp' (observations pairwise) key after execution",
+      "verify that the CSR graph is stored under the expected key in obsp (e.g., 'spatial_neighbors' or similar), robust to naming conventions documented in function signature",
+      "verify that the CSR graph object has the expected structure (sparse matrix format with shape matching number of observations)",
+      "verify that the CSR graph contains non-zero entries corresponding to spatial neighbor connections"
+    ],
+    "expert_review": [
+      "assess whether the spatial neighbor graph topology is biologically or geometrically sensible given the input dataset's spatial coordinates",
+      "evaluate whether the connectivity pattern matches expected spatial relationships for the tissue type or imaging modality"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

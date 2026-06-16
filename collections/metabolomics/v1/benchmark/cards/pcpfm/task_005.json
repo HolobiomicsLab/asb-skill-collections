@@ -1,0 +1,356 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ee5480be63c91439469b81e562a3617ebc83f50e9c31e6e4ed1a9df64a89838f"
+    }
+  ],
+  "created_at": "2026-06-15T12:44:57.617706+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1011912",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_002.expected_outputs[0]: Blank-masked feature table in TSV format with low-intensity background features removed, indexed by feature identifier and sample",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Interpolated feature table (.tsv) with missing values imputed to 0.5\u00d7 minimum feature intensity",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sample metadata CSV with batch field indicating experimental batch or acquisition group for each sample",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Batch-corrected feature table (.tsv) with identical dimensions to input, feature intensities adjusted to remove systematic batch biases",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Quantitative validation report containing: sample count, feature count, pre- and post-correction inter-batch variance estimates for \u22655 representative features",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Batch effects in LC-MS metabolomics arise from systematic shifts in feature intensities across acquisition runs or experimental groups, independent of biological variation; pycombat uses an empirical Bayesian approach to identify and adjust these systematic biases.",
+    "Batch correction cannot reliably handle tables with extensive missing values (zeros), so imputation must precede batch correction to avoid distorted covariate estimation and parameter shrinkage.",
+    "Inter-batch variance is typically quantified as the ratio or difference in median feature intensity between batch pairs; reduction in this metric (relative to pre-correction) is the primary success criterion for batch correction efficacy.",
+    "The --by_batch metadata field must exactly match sample-level batch labels in the input metadata CSV; mismatched or misspelled batch designations will cause the correction to fail or produce spurious results.",
+    "Batch correction trades inter-batch variance reduction against potential inflation of within-batch variance or removal of genuine biological signals that correlate with batch; validation requires domain expert review of corrected feature distributions, not only variance metrics."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: input multi-batch interpolated feature table (e.g., CSV, TSV, or HDF5 format)",
+      "verify file_format_is: input feature table conforms to expected shape (rows=samples, columns=features)",
+      "script_runs: pycombat batch_correct function executes without errors on input table using by_batch parameter",
+      "verify file_exists: output corrected feature table (same format as input)",
+      "row_count_equals: corrected table row count matches input table row count (samples preserved)",
+      "row_count_equals: corrected table column count matches input table column count (features preserved)",
+      "verify output_matches_reference: inter-batch variance (e.g., sum-of-squares or Silhouette distance) for selected features is lower in corrected table than uncorrected table; solution_space: multiple defensible variance metrics (PCA-based, PERMANOVA, homogeneity index) are valid",
+      "value_in_range: variance reduction magnitude is quantitatively reported as a numeric score or percentage; parameter-sensitive: depends on feature and batch selection"
+    ],
+    "expert_review": [
+      "inspect corrected feature table for biological plausibility: verify that batch correction does not artificially inflate or eliminate true biological signal (e.g., case-control or treatment effects should remain detectable post-correction)",
+      "assess choice of selected features for variance reduction analysis: confirm that features are representative (e.g., not cherry-picked) and that the selection strategy is justified",
+      "evaluate appropriateness of inter-batch variance metric: confirm that the chosen metric (e.g., between-batch dispersion, homogeneity index) is statistically sound for the experimental design"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does batch correction via pycombat preserve the structural integrity (sample and feature count) of multi-batch metabolomics feature tables while reducing inter-batch variance?: 'Batch correction is performed using pycombat'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Batch correction using pycombat is applied to multi-batch interpolated feature tables via the by_batch flag, and the corrected table should retain identical sample and feature dimensions while systematically reducing inter-batch intensity variance for shared features.: 'Batch correction is difficult and may require non-default options for removing rare features or other params to achieve the desired result. Batch correction cannot handle missing values well either,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Interpolated feature table (.tsv) with missing values imputed to 0.5\u00d7 minimum feature intensity: 'Missing features can complicate statistical testing since zeros will skew analyses towards significant results. It is often proper to impute values to 'fill in' these missing values. Currently, the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Sample metadata CSV with batch field indicating experimental batch or acquisition group for each sample: 'Batch correction is performed using pycombat.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Batch-corrected feature table (.tsv) with identical dimensions to input, feature intensities adjusted to remove systematic batch biases: 'This command will use the batches, determed by the `--by_batch` flag to batch correct the feature table. Batch correction is performed using pycombat.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Quantitative validation report containing: sample count, feature count, pre- and post-correction inter-batch variance estimates for \u22655 representative features: 'Batch correction is difficult and may require non-default options for removing rare features or other params to achieve the desired result.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pycombat: 'Batch correction is performed using pycombat.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'Python-Centric Pipeline for Metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No changelog or version information found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "batch_corrected_feature_table.tsv",
+  "expected_outputs": [
+    "Batch-corrected feature table (.tsv) with identical dimensions to input, feature intensities adjusted to remove systematic batch biases",
+    "Quantitative validation report containing: sample count, feature count, pre- and post-correction inter-batch variance estimates for \u22655 representative features"
+  ],
+  "finding": "Batch correction using pycombat is applied to multi-batch interpolated feature tables via the by_batch flag, and the corrected table should retain identical sample and feature dimensions while systematically reducing inter-batch intensity variance for shared features.",
+  "github_name": "shuzhao-li-lab/PythonCentricPipelineForMetabolomics",
+  "input_from": "task_002",
+  "inputs": [
+    "task_002.expected_outputs[0]: Blank-masked feature table in TSV format with low-intensity background features removed, indexed by feature identifier and sample",
+    "Interpolated feature table (.tsv) with missing values imputed to 0.5\u00d7 minimum feature intensity",
+    "Sample metadata CSV with batch field indicating experimental batch or acquisition group for each sample"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "interpolated_input_table.tsv",
+    "pre_correction_batch_variance_summary.json",
+    "batch_corrected_feature_table.tsv",
+    "post_correction_batch_variance_summary.json",
+    "batch_correction_validation_report.txt"
+  ],
+  "linked_result_ids": [
+    "result_037"
+  ],
+  "methodology_summary": [
+    "Load interpolated feature table and metadata containing batch labels for each sample.",
+    "Invoke pycombat-based batch correction via pcpfm batch_correct with --by_batch parameter set to the batch metadata field.",
+    "Confirm output table preserves input sample and feature dimensions.",
+    "Calculate median inter-batch variance for representative high-intensity features before and after correction, grouped by batch field.",
+    "Validation: confirm corrected-table inter-batch variance is lower than uncorrected baseline, indicating successful batch effect attenuation without dimension loss.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1011912)"
+  ],
+  "missing_information": [
+    "No changelog or version information found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does batch correction via pycombat preserve the structural integrity (sample and feature count) of multi-batch metabolomics feature tables while reducing inter-batch variance?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "batch-effect-variance-quantification",
+    "metabolomic-feature-table-processing",
+    "batch-correction-quality-assessment",
+    "multi-batch-experimental-design-understanding",
+    "inter-sample-variance-calculation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pcpfm/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS-PCPFM",
+    "ARCH-PIPELINE",
+    "ARCH-PREPROCESS",
+    "ARCH-ASSEMBLE",
+    "ARCH-CONVERT",
+    "ARCH-ASARI-STEP",
+    "ARCH-QAQC",
+    "ARCH-BLANK-MASKING",
+    "ARCH-DROP-SAMPLES",
+    "ARCH-NORMALIZE",
+    "ARCH-DROP-MISSING",
+    "ARCH-IMPUTE",
+    "ARCH-BATCH-CORRECT",
+    "ARCH-LOG-TRANSFORM",
+    "ARCH-BUILD-EMPCPDS",
+    "ARCH-L4-ANNOTATE",
+    "ARCH-L1B-ANNOTATE",
+    "ARCH-MAP-MS2",
+    "ARCH-L2-ANNOTATE",
+    "ARCH-L1A-ANNOTATE",
+    "ARCH-OUTPUT",
+    "COMP-PYCOMBAT",
+    "ARTIFACT-FEATURE-TABLE"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:shuzhao-li-lab__PythonCentricPipelineForMetabolomics",
+  "task_description": "Apply batch correction to a multi-batch interpolated feature table using pycombat, then verify that the corrected table preserves sample and feature counts while reducing inter-batch variance for selected metabolite features.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Interpolated feature table (.tsv) with imputed missing values",
+      "port_id": "interpolated_feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample metadata CSV with batch field",
+      "port_id": "sample_metadata_with_batches",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Apply pycombat batch correction to a multi-batch interpolated feature table and verify that sample/feature counts remain unchanged while quantifying inter-batch variance reduction for selected metabolomic features.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Batch-corrected feature table (.tsv)",
+      "port_id": "batch_corrected_feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Quantitative validation report (JSON or text)",
+      "port_id": "batch_correction_validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "tandem-ms",
+    "feature-detection",
+    "database-annotation",
+    "spectral-library-matching",
+    "metabolite-identification"
+  ],
+  "title": "Extend PCPFM batch correction step to validate pycombat output retains sample count and reduces batch variance",
+  "tools": [
+    "ThermoRawFileParser",
+    "pycombat",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Quantitative validation report containing: sample count, feature count, pre- and post-correction inter-batch variance estimates for \u22655 representative features."
+  ],
+  "workflow_description": "1. Load the interpolated feature table (post-imputation) and sample metadata containing batch labels. 2. Apply pycombat-based batch correction via the pcpfm batch_correct command with the --by_batch parameter specifying the batch metadata field. 3. Verify that the output table has identical dimensions (sample count and feature count) to the input table. 4. Calculate median inter-batch variance for a subset of high-intensity features in both uncorrected and corrected tables using sample grouping by the batch field. 5. Confirm that corrected table median inter-batch variance is lower than uncorrected median inter-batch variance, demonstrating successful batch effect attenuation."
+}

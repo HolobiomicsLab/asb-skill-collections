@@ -1,0 +1,21 @@
+  figures/DBCustomIcon.png
+  figures/DBLipidsIcon.png
+  figures/DBOnlineIcon.png
+  figures/DBSpectraIcon.png
+  figures/KMDIcon.png
+  figures/MZmine_logo_CMYK.jpg
+  figures/MZmine_logo_CMYK.png
+  figures/MZmine_logo_RGB.jpg
+  figures/MZmine_logo_RGB.png
+  figures/MZmine_logo_black.jpg
+  figures/MZmine_logo_black.png
+  figures/MZmine_logo_white.png
+  figures/RKMIcon.png
+  figures/annotationsicon.png
+  figures/arrowdownicon.png
+  figures/arrowupicon.png
+  figures/axesicon.png
+  figures/bgicon.png
+  figures/blocksizeicon.png
+  figures/btnAccept.png
+paper.md

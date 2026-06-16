@@ -1,0 +1,10 @@
+name: memo-ms
+slug: memo-ms
+evidence_spans:
+- pip install memo-ms
+derived_from:
+- doi: 10.3389/fbinf.2022.842964
+  title: memo
+source_repos:
+- mandelbrot-project/memo
+schema_version: 0.2.0

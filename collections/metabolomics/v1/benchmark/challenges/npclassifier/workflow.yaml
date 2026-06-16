@@ -1,0 +1,146 @@
+schema_version: 0.1.0
+workflow_id: coll_npclassifier_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: NP Classifier is a natural product classification system providing programmatic
+    access via a /classify API endpoint that accepts SMILES strings and returns predictions
+    through TensorFlow Serving.
+  pseudo_abstract: 'The NP Classifier implements a RESTful API architecture for molecular
+    classification. The system exposes two key endpoints: a /classify endpoint that
+    accepts SMILES strings as query parameters for programmatic classification requests,
+    and a /model/metadata endpoint that provides model metadata through TensorFlow
+    Serving. The underlying models are deployed in a dockerized environment and require
+    specific layer naming conventions: input layers named ''input_2048'' and ''input_4096'',
+    and an output layer named ''output''. The workflow describes a Keras model conversion
+    process that produces HDF5 TF2 models with these specified layer names to ensure
+    compatibility with the serving infrastructure.'
+  research_questions:
+  - Does the /classify API endpoint accept a SMILES string parameter and return a
+    properly structured classification response?
+  - Does the TensorFlow Serving endpoint at /model/metadata successfully return model
+    metadata including the correct input and output layer names when queried on the
+    running Dockerized NP-Classifier server?
+  - What are the required layer names that a converted Keras model must expose after
+    transformation to HDF5 TensorFlow 2.3.0 format for use in the NP Classifier pipeline?
+  methods_summary: 'Verify Docker containers (NP-Classifier server and TensorFlow
+    Serving) are running and healthy. Construct HTTP GET request to /classify endpoint
+    with valid SMILES string parameter. Execute request and capture HTTP response
+    (status code, headers, body). Parse JSON response body and validate structure
+    contains ''output'' field. Confirm input layer names ''input_2048'' and ''input_4096''
+    are present in response metadata or model schema. Validation: HTTP status is 200,
+    response is valid JSON, and all required layer names match specification. Launch
+    the NP-Classifier Docker Compose stack to start TensorFlow Serving. Issue an HTTP
+    GET request to the /model/metadata REST endpoint exposed by TensorFlow Serving.
+    Parse the JSON response and extract input/output layer metadata. Validate that
+    input layers are exactly named ''input_2048'' and ''input_4096'' and output layer
+    is named ''output''. Validation: metadata response contains all three expected
+    layer names with correct spelling and format. Clone the NP-Classifier GitHub repository
+    to obtain the model conversion script and pre-trained model artifacts. Execute
+    the get_models.sh script from Classifier/models_folder/models to download and
+    convert Keras models to HDF5 TF2 format using TensorFlow 2.3.0. Load the resulting
+    HDF5 model into a TensorFlow 2.3.0 environment and programmatically inspect all
+    layer objects. Extract and validate layer names, confirming exact matches for
+    ''input_2048'', ''input_4096'', and ''output''. Validation: layer name inspection
+    must report all three required layers with exact spelling and no additional input
+    or output layers deviating from the specification.'
+  domain: bioinformatics
+  techniques:
+  - machine-learning
+  - deep-learning
+  claims:
+  - claim_text: NP Classifier is typically deployed locally.
+    claim_type: finding
+    speculative: false
+  - claim_text: Docker and docker-compose are required to bring up the NP Classifier.
+    claim_type: finding
+    speculative: false
+  - claim_text: NP Classifier models are downloaded via a shell script located at
+      Classifier/models_folder/models/get_models.sh.
+    claim_type: finding
+    speculative: false
+  - claim_text: Python must be installed to convert keras models into HDF5 TF2 models.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_TENSORFLOW
+  - claim_text: TensorFlow version 2.3.0 must be installed to convert keras models
+      into HDF5 TF2 models.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_TENSORFLOW
+  - claim_text: A Docker network named nginx-net must be created before building the
+      dockerized server.
+    claim_type: finding
+    speculative: false
+  - claim_text: The dockerized server is built using the make server-compose command.
+    claim_type: finding
+    speculative: false
+  - claim_text: Model metadata can be checked at the /model/metadata endpoint via
+      TensorFlow Serving.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_TENSORFLOW
+  - claim_text: If model input names change, the code must be updated accordingly.
+    claim_type: finding
+    speculative: false
+  - claim_text: Input layer names should be "input_2048" and "input_4096".
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_INPUT_2048
+  - claim_text: The output layer name should be "output".
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_OUTPUT_LAYER
+  - claim_text: NP Classifier can be used programmatically via the /classify API endpoint
+      with SMILES notation.
+    claim_type: finding
+    speculative: false
+    entity_id: API_CLASSIFY
+  - claim_text: A cached flag can be provided as a parameter to the /classify endpoint
+      to retrieve cached results and improve performance.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints:
+  - TensorFlow version 2.3.0 is required to convert keras models into HDF5 TF2 models
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Model metadata JSON response containing input and output layer names
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: HDF5 TF2 model file with verified layer names (input_2048, input_4096, output)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification report listing confirmed layer names and structural compliance
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

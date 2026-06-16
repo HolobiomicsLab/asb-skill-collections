@@ -1,0 +1,405 @@
+schema_version: 0.1.0
+workflow_id: coll_msmetaenhancer_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_004
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: dynamic
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: MSMetaEnhancer is a Python tool that enriches mass spectrometry metadata
+    files (.msp) by asynchronously fetching chemical identifiers (SMILES, InChI, CAS
+    numbers) from multiple external services.
+  pseudo_abstract: 'MSMetaEnhancer adds metadata including SMILES, InChI, and CAS
+    number to .msp files through asynchronous annotation processing, retrieving data
+    from five external services: CIR, CTS, PubChem, IDSM, and BridgeDb. The tool implements
+    a modular architecture comprising web-based converters that make HTTP requests
+    to external APIs and compute-based converters for local chemical structure transformations.
+    The system uses a ConverterBuilder mechanism to automatically discover and instantiate
+    available converters into Job objects that define conversion tasks, and employs
+    Monitor-based service status tracking during the annotation process. RDKit serves
+    as a reference implementation for ComputeConverter subclasses that perform local
+    chemical property computations.'
+  research_questions:
+  - What metadata fields can MSMetaEnhancer add to mass spectra records by querying
+    external web services?
+  - How does the ConverterBuilder component automatically discover and instantiate
+    all available converter classes to create a complete set of source-to-target conversion
+    Job objects?
+  - How does MSMetaEnhancer track the availability and error state of external web
+    services during annotation runs?
+  - How does a ComputeConverter subclass using RDKit perform local chemical structure
+    conversions (e.g., SMILES to InChI) without relying on web services?
+  - What are the per-attribute fill-rate statistics and annotation coverage metrics
+    produced by MSMetaEnhancer's Logger component when running the full annotation
+    pipeline on a test .msp file?
+  methods_summary: "Instantiate MSMetaEnhancer Application and load sample .msp spectra\
+    \ file. Define conversion jobs specifying source compound attributes, target metadata\
+    \ fields (SMILES, InChI, CAS), and web converter services (CIR, CTS, PubChem,\
+    \ IDSM, BridgeDb). Invoke asynchronous `annotate_spectra` method to dispatch enrichment\
+    \ requests to each service via WebConverter HTTP queries. Aggregate parsed API\
+    \ responses into enriched spectra records. Validation: verify all target metadata\
+    \ fields are populated in output .msp file and conform to expected chemical identifier\
+    \ formats (SMILES syntax, InChI structure, CAS registry numbering). Dynamically\
+    \ discover all converter class definitions in the web and compute converter packages\
+    \ using Python module introspection. Instantiate each discovered converter class\
+    \ with appropriate initialization parameters (session for web, no args for compute).\
+    \ Extract the conversions tuple list from each converter's __init__ method via\
+    \ attribute inspection. Transform each conversion tuple into a Job object and\
+    \ aggregate into a master enumeration. Validate that all declared conversion methods\
+    \ are callable and match their specifications. Validation: Run pytest on ConverterBuilder\
+    \ tests to confirm that the enumerated job list matches the expected set of conversions\
+    \ for all registered services. Instantiate Monitor class with registry of active\
+    \ web service converters (CIR, CTS, PubChem, IDSM, BridgeDb) and initialize per-service\
+    \ state dictionaries for uptime, error counts, latency, and last-check timestamp.\
+    \ Integrate Monitor with asynchronous annotation event loop to capture request-start,\
+    \ response-received, and error-occurred events from WebConverter base class. Compute\
+    \ per-service metrics: uptime percentage (successful requests / total requests),\
+    \ cumulative error count, mean response latency, and wall-clock timestamp of last\
+    \ status check. Serialize aggregated status as JSON with per-service summaries\
+    \ (availability %, error count, mean latency ms, last check) and overall health\
+    \ indicator. Validation: verify JSON output contains all five registered services,\
+    \ all uptime and error counts are non-negative integers, latency values are positive\
+    \ floats, and timestamps are ISO 8601 format. Create a new ComputeConverter subclass\
+    \ file in the compute converters directory. Define conversions list (source \u2192\
+    \ target mappings) and invoke create_top_level_conversion_methods with asynch=False.\
+    \ Implement RDKit-based conversion methods (e.g., SMILES to InChI via Chem.MolFromSmiles\
+    \ and Chem.inchi.MolToInchi). Return results as dictionaries mapping target attribute\
+    \ names to converted values. Register the converter in __init__.py for auto-discovery.\
+    \ Write pytest tests validating converter instantiation and conversion accuracy\
+    \ on reference SMILES inputs. Validation: all pytest tests pass, including new\
+    \ converter tests and existing test suite, confirming correct implementation of\
+    \ ComputeConverter interface and accurate molecular structure conversions. Load\
+    \ the example .msp file and initialize the MSMetaEnhancer Application with all\
+    \ available converters (CIR, CTS, PubChem, IDSM, BridgeDb, RDKit) via ConverterBuilder.\
+    \ Run the asynchronous annotate_spectra() method with all supported conversion\
+    \ jobs to enrich spectra metadata in parallel. Capture structured Logger output\
+    \ events recording per-attribute conversion success, failure, and enrichment outcome\
+    \ for each spectrum. Parse Logger records to compute initial and final fill rates\
+    \ (non-null counts) for each metadata field across the spectra dataset. Construct\
+    \ a summary table with metadata fields as rows and fill-rate before/after annotation,\
+    \ absolute and relative gain as columns. Validation: verify that summary table\
+    \ row count matches the number of metadata fields present in the annotated .msp\
+    \ file, and that all fill-rate values are in [0, 1]."
+  domain: cheminformatics
+  techniques:
+  - database-annotation
+  - metabolite-identification
+  claims:
+  - claim_text: MSMetaEnhancer is a tool used for .msp files annotation.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: MSMetaEnhancer adds metadata like SMILES, InChI, and CAS number to
+      files.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: MSMetaEnhancer fetches metadata from CIR, CTS, PubChem, IDSM, and
+      BridgeDb services.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: MSMetaEnhancer uses asynchronous implementation of annotation process
+      allowing for optimal fetching speed.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: "The citation for MSMetaEnhancer is Troj\xE1k et al., (2022). MSMetaEnhancer:\
+      \ A Python package for mass spectra metadata annotation. Journal of Open Source\
+      \ Software, 7(79), 4494."
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: MSMetaEnhancer has a modular architecture that makes it easy to add
+      new conversion services.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: 'There are two main types of converters in MSMetaEnhancer: Web Converters
+      and Compute Converters.'
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: Web Converters are services that make HTTP requests to external APIs.
+    claim_type: finding
+    speculative: false
+  - claim_text: Compute Converters are services that perform local computations.
+    claim_type: finding
+    speculative: false
+  - claim_text: Converter is an abstract base class for all converters in MSMetaEnhancer.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: WebConverter is a base class for web-based API services in MSMetaEnhancer.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: ComputeConverter is a base class for local computation services in
+      MSMetaEnhancer.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: Job represents a conversion task defined as source attribute to target
+      attribute using specific converter.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: Converter Builder automatically discovers and instantiates available
+      converters.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: Converters automatically generate methods like compound_name_to_inchi()
+      based on conversions list.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: Web converters should be created in MSMetaEnhancer/libs/converters/web/
+      directory.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: Converters should define endpoints as a dictionary in their __init__
+      method.
+    claim_type: finding
+    speculative: false
+  - claim_text: Converters should define conversions as tuples of source attribute,
+      target attribute, and conversion method.
+    claim_type: finding
+    speculative: false
+  - claim_text: Web converters should use Throttler for rate limiting if needed.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_THROTTLER
+  - claim_text: Web converters should be registered in MSMetaEnhancer/libs/converters/web/__init__.py
+      file.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: Compute converters should be created in MSMetaEnhancer/libs/converters/compute/
+      directory.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: Compute converters should use asynch=False when creating conversion
+      methods.
+    claim_type: finding
+    speculative: false
+  - claim_text: Compute converters should be registered in MSMetaEnhancer/libs/converters/compute/__init__.py
+      file.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: Converter developers should always handle API errors gracefully and
+      return empty dictionaries when data is not available.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: Converter developers should respect API rate limits using throttling
+      mechanisms.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: Converter developers should validate input data before making API
+      calls.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: Converter developers should implement robust response parsing that
+      handles various response formats.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: Converter developers should include docstrings for all methods explaining
+      parameters and return values.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: Converter developers should write comprehensive tests including service
+      availability and conversion functionality.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: Developers should run pytest tests/ to ensure they haven't broken
+      existing tests.
+    claim_type: finding
+    speculative: false
+  - claim_text: Developers can use Throttler class for rate limiting in converters.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_THROTTLER
+  - claim_text: Developers can use @lru_cache decorator for caching responses in converters.
+    claim_type: finding
+    speculative: false
+  - claim_text: Developers can use @escape_single_quotes decorator for input sanitization
+      in converters.
+    claim_type: finding
+    speculative: false
+  - claim_text: CTS or PubChem converters serve as reference implementations for Web
+      Converter Template.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: RDKit converter serves as a reference implementation for Compute Converter
+      Template.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: The Application class serves as a top-level interface to use MSMetaEnhancer
+      tool.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  - claim_text: The main method of Application class is asynchronous annotate_spectra
+      method.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_APPLICATION
+  - claim_text: annotate_spectra method runs annotation process using given conversions.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_SPECTRA
+  - claim_text: It is possible to specify particular conversion jobs in annotate_spectra
+      which will be executed in respecting the given order.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_SPECTRA
+  - claim_text: If no jobs are given to annotate_spectra, all jobs supported by given
+      services are used.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_SPECTRA
+  - claim_text: Application class allows loading and saving spectra files in supported
+      formats.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_APPLICATION
+  - claim_text: Application class allows curation of given spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_APPLICATION
+  - claim_text: In version 0.1.3, multidict was passed instead of frozendict to aiohttp.ClientSession.post
+      because it is required by the package.
+    claim_type: finding
+    speculative: false
+  - claim_text: In version 0.1.3, only the first result is taken when there are multiple
+      hits in CIR conversions.
+    claim_type: finding
+    speculative: false
+  - claim_text: In version 0.1.3, PubChem now supports ISOMERIC_SMILES and CANONICAL_SMILES
+      instead of generic SMILES.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_PUBCHEM
+  - claim_text: In version 0.1.2 released on 2022-01-06, generate_options() function
+      was added to Galaxy submodule.
+    claim_type: finding
+    speculative: false
+  - claim_text: In version 0.1.2, monitoring of services status during annotation
+      process was added.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MONITOR
+  - claim_text: In version 0.1.2, validation of obtained metadata was added.
+    claim_type: finding
+    speculative: false
+  - claim_text: In version 0.1.2, structure and contents of documentation were changed.
+    claim_type: finding
+    speculative: false
+  - claim_text: In version 0.1.2, tests checking contents and consistency of individual
+      services were removed.
+    claim_type: finding
+    speculative: false
+  - claim_text: In version 0.1.1 released on 2021-12-07, get_conversion_functions
+      was added on the level of Converter.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONVERTER_BASE
+  - claim_text: In version 0.1.1, computation of all available jobs in Application
+      was changed.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_APPLICATION
+  - claim_text: In version 0.1.1, get_all_conversions on the level of Annotator was
+      removed.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_ANNOTATOR
+  - claim_text: In version 0.1.0 released on 2021-11-16, conda environment files were
+      added.
+    claim_type: finding
+    speculative: false
+  - claim_text: In version 0.1.0, IDSM SPARQL was used for PubChem service.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_PUBCHEM
+  - claim_text: In version 0.1.0, logging and quantitative progress of annotation
+      process were added.
+    claim_type: finding
+    speculative: false
+  - claim_text: In version 0.1.0, generalised requests to obtain multiple values at
+      once were added.
+    claim_type: finding
+    speculative: false
+  - claim_text: In version 0.1.0, asynchronous requests were added to MSMetaEnhancer.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSMETAENHANCER
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - Web Converters as alternative to Compute Converters
+  substitution_constraints:
+  - Rate limiting must respect API rate limits using throttling mechanisms
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Annotated .msp file with enriched metadata fields (SMILES, InChI, CAS number)
+    populated from web service conversions
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Structured JSON status report per service including uptime percentage, error
+    count, mean response time, and last check timestamp
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Structured Logger output with per-attribute annotation events and statistics
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Summary table of annotation coverage per metadata field (CSV or structured
+    format)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

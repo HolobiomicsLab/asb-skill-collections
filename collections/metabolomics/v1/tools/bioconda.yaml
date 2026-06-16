@@ -1,0 +1,10 @@
+name: Bioconda
+slug: bioconda
+evidence_spans:
+- You can also install Pyteomics from `Bioconda <https://bioconda.github.io/index.html>`_
+derived_from:
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+source_repos:
+- levitsky/pyteomics
+schema_version: 0.2.0

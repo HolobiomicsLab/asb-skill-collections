@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the input artifact (abundance-correlation-refined feature groups) exists in the github:sneumann__xcms repository or is a valid chained input from a preceding sub-task"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that groupFeatures function runs successfully with EicSimilarityParam(threshold=0.7, n=2) parameters on the input feature groups"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the output feature group count is a single integer value"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that overlay EIC plot files for groups FG.013.001 and FG.045.001 exist in the expected_outputs directory"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that each EIC plot file is in a standard image format (PNG, PDF, or SVG)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the input artifact (abundance-correlation-refined feature groups) exists in the github:sneumann__xcms repository or is a valid chained input from a preceding sub-task",
+      "verify that groupFeatures function runs successfully with EicSimilarityParam(threshold=0.7, n=2) parameters on the input feature groups",
+      "verify that the output feature group count is a single integer value",
+      "verify that overlay EIC plot files for groups FG.013.001 and FG.045.001 exist in the expected_outputs directory",
+      "verify that each EIC plot file is in a standard image format (PNG, PDF, or SVG)"
+    ],
+    "expert_review": [
+      "assess whether the final feature group count is consistent with the expected outcome of applying EIC similarity refinement (threshold=0.7, n=2) to the input groups",
+      "assess whether the overlay EIC plots for FG.013.001 and FG.045.001 show visually coherent peak shapes and retention time alignment consistent with features of the same compound",
+      "assess whether the parameter choices (threshold=0.7, n=2) are appropriate for the data and whether the grouping results are biologically/chemically plausible"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

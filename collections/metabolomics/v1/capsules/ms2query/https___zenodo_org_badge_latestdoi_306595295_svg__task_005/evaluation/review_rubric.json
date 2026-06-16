@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that GitHub repository https://github.com/iomega/ms2query contains a .github/workflows directory with at least one YAML workflow file"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the workflow file(s) in .github/workflows/ contain 'sonarcloud' or 'sonar' as a substring (case-insensitive)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the workflow file(s) reference GitHub Actions (contains 'uses:' directive with 'actions/' namespace)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that a workflow file exists that runs Python tests (contains 'python setup.py test' or equivalent pytest/test invocation)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that commit history for PR #62 (https://github.com/iomega/ms2query/pull/62) shows workflow file additions or modifications"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the repository README or documentation references CI status badge or links to Sonarcloud analysis dashboard"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that GitHub repository https://github.com/iomega/ms2query contains a .github/workflows directory with at least one YAML workflow file",
+      "verify that the workflow file(s) in .github/workflows/ contain 'sonarcloud' or 'sonar' as a substring (case-insensitive)",
+      "verify that the workflow file(s) reference GitHub Actions (contains 'uses:' directive with 'actions/' namespace)",
+      "verify that a workflow file exists that runs Python tests (contains 'python setup.py test' or equivalent pytest/test invocation)",
+      "script_runs: execute the workflow configuration through a GitHub Actions schema validator and confirm valid YAML syntax",
+      "verify that commit history for PR #62 (https://github.com/iomega/ms2query/pull/62) shows workflow file additions or modifications",
+      "verify that the repository README or documentation references CI status badge or links to Sonarcloud analysis dashboard"
+    ],
+    "expert_review": [
+      "assess whether the Sonarcloud integration is correctly wired to execute on pull requests and main branch pushes (requires understanding of GitHub Actions event triggers and Sonarcloud configuration)",
+      "evaluate whether the workflow configuration enforces passing tests before allowing merge (review branch protection rules and workflow gates)",
+      "review Sonarcloud quality gates and thresholds to determine if they are appropriate for a scientific Python package (parameter_sensitive: thresholds vary by project maturity)"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

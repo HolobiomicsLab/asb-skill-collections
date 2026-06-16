@@ -1,0 +1,1205 @@
+{
+  "abstraction_frame": null,
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "figures/DBCustomIcon.png",
+      "locator_id": "pkg_d9253b88",
+      "locator_kind": "package_artifact",
+      "name": "figures/DBCustomIcon.png",
+      "prose": "figure: figures/DBCustomIcon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/DBLipidsIcon.png",
+      "locator_id": "pkg_64239735",
+      "locator_kind": "package_artifact",
+      "name": "figures/DBLipidsIcon.png",
+      "prose": "figure: figures/DBLipidsIcon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/DBOnlineIcon.png",
+      "locator_id": "pkg_bd474fea",
+      "locator_kind": "package_artifact",
+      "name": "figures/DBOnlineIcon.png",
+      "prose": "figure: figures/DBOnlineIcon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/DBSpectraIcon.png",
+      "locator_id": "pkg_399a2940",
+      "locator_kind": "package_artifact",
+      "name": "figures/DBSpectraIcon.png",
+      "prose": "figure: figures/DBSpectraIcon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/KMDIcon.png",
+      "locator_id": "pkg_dfb2e8df",
+      "locator_kind": "package_artifact",
+      "name": "figures/KMDIcon.png",
+      "prose": "figure: figures/KMDIcon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/MZmine_logo_CMYK.jpg",
+      "locator_id": "pkg_d636f848",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_CMYK.jpg",
+      "prose": "figure: figures/MZmine_logo_CMYK.jpg",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/MZmine_logo_CMYK.png",
+      "locator_id": "pkg_c27fe8a7",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_CMYK.png",
+      "prose": "figure: figures/MZmine_logo_CMYK.png",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/MZmine_logo_RGB.jpg",
+      "locator_id": "pkg_983a1931",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_RGB.jpg",
+      "prose": "figure: figures/MZmine_logo_RGB.jpg",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/MZmine_logo_RGB.png",
+      "locator_id": "pkg_5cc6f37c",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_RGB.png",
+      "prose": "figure: figures/MZmine_logo_RGB.png",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/MZmine_logo_black.jpg",
+      "locator_id": "pkg_859e75af",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_black.jpg",
+      "prose": "figure: figures/MZmine_logo_black.jpg",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/MZmine_logo_black.png",
+      "locator_id": "pkg_2975b1c6",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_black.png",
+      "prose": "figure: figures/MZmine_logo_black.png",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/MZmine_logo_white.png",
+      "locator_id": "pkg_136c9792",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_white.png",
+      "prose": "figure: figures/MZmine_logo_white.png",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/RKMIcon.png",
+      "locator_id": "pkg_d4076aac",
+      "locator_kind": "package_artifact",
+      "name": "figures/RKMIcon.png",
+      "prose": "figure: figures/RKMIcon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/annotationsicon.png",
+      "locator_id": "pkg_5c432c1f",
+      "locator_kind": "package_artifact",
+      "name": "figures/annotationsicon.png",
+      "prose": "figure: figures/annotationsicon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/arrowdownicon.png",
+      "locator_id": "pkg_0ef6a82b",
+      "locator_kind": "package_artifact",
+      "name": "figures/arrowdownicon.png",
+      "prose": "figure: figures/arrowdownicon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/arrowupicon.png",
+      "locator_id": "pkg_3c9a4342",
+      "locator_kind": "package_artifact",
+      "name": "figures/arrowupicon.png",
+      "prose": "figure: figures/arrowupicon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/axesicon.png",
+      "locator_id": "pkg_6893a551",
+      "locator_kind": "package_artifact",
+      "name": "figures/axesicon.png",
+      "prose": "figure: figures/axesicon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/bgicon.png",
+      "locator_id": "pkg_fbba5a5d",
+      "locator_kind": "package_artifact",
+      "name": "figures/bgicon.png",
+      "prose": "figure: figures/bgicon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/blocksizeicon.png",
+      "locator_id": "pkg_70c086aa",
+      "locator_kind": "package_artifact",
+      "name": "figures/blocksizeicon.png",
+      "prose": "figure: figures/blocksizeicon.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/btnAccept.png",
+      "locator_id": "pkg_33326a1a",
+      "locator_kind": "package_artifact",
+      "name": "figures/btnAccept.png",
+      "prose": "figure: figures/btnAccept.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "paper.md",
+      "locator_id": "pkg_1c35e842",
+      "locator_kind": "package_artifact",
+      "name": "paper.md",
+      "prose": "main_article: paper.md",
+      "score": 0.5,
+      "side": "input"
+    },
+    {
+      "locator": "figures/DBCustomIcon.png",
+      "locator_id": "pkg_d9253b88",
+      "locator_kind": "package_artifact",
+      "name": "figures/DBCustomIcon.png",
+      "prose": "figure: figures/DBCustomIcon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/DBLipidsIcon.png",
+      "locator_id": "pkg_64239735",
+      "locator_kind": "package_artifact",
+      "name": "figures/DBLipidsIcon.png",
+      "prose": "figure: figures/DBLipidsIcon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/DBOnlineIcon.png",
+      "locator_id": "pkg_bd474fea",
+      "locator_kind": "package_artifact",
+      "name": "figures/DBOnlineIcon.png",
+      "prose": "figure: figures/DBOnlineIcon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/DBSpectraIcon.png",
+      "locator_id": "pkg_399a2940",
+      "locator_kind": "package_artifact",
+      "name": "figures/DBSpectraIcon.png",
+      "prose": "figure: figures/DBSpectraIcon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/KMDIcon.png",
+      "locator_id": "pkg_dfb2e8df",
+      "locator_kind": "package_artifact",
+      "name": "figures/KMDIcon.png",
+      "prose": "figure: figures/KMDIcon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/MZmine_logo_CMYK.jpg",
+      "locator_id": "pkg_d636f848",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_CMYK.jpg",
+      "prose": "figure: figures/MZmine_logo_CMYK.jpg",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/MZmine_logo_CMYK.png",
+      "locator_id": "pkg_c27fe8a7",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_CMYK.png",
+      "prose": "figure: figures/MZmine_logo_CMYK.png",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/MZmine_logo_RGB.jpg",
+      "locator_id": "pkg_983a1931",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_RGB.jpg",
+      "prose": "figure: figures/MZmine_logo_RGB.jpg",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/MZmine_logo_RGB.png",
+      "locator_id": "pkg_5cc6f37c",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_RGB.png",
+      "prose": "figure: figures/MZmine_logo_RGB.png",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/MZmine_logo_black.jpg",
+      "locator_id": "pkg_859e75af",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_black.jpg",
+      "prose": "figure: figures/MZmine_logo_black.jpg",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/MZmine_logo_black.png",
+      "locator_id": "pkg_2975b1c6",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_black.png",
+      "prose": "figure: figures/MZmine_logo_black.png",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/MZmine_logo_white.png",
+      "locator_id": "pkg_136c9792",
+      "locator_kind": "package_artifact",
+      "name": "figures/MZmine_logo_white.png",
+      "prose": "figure: figures/MZmine_logo_white.png",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/RKMIcon.png",
+      "locator_id": "pkg_d4076aac",
+      "locator_kind": "package_artifact",
+      "name": "figures/RKMIcon.png",
+      "prose": "figure: figures/RKMIcon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/annotationsicon.png",
+      "locator_id": "pkg_5c432c1f",
+      "locator_kind": "package_artifact",
+      "name": "figures/annotationsicon.png",
+      "prose": "figure: figures/annotationsicon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/arrowdownicon.png",
+      "locator_id": "pkg_0ef6a82b",
+      "locator_kind": "package_artifact",
+      "name": "figures/arrowdownicon.png",
+      "prose": "figure: figures/arrowdownicon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/arrowupicon.png",
+      "locator_id": "pkg_3c9a4342",
+      "locator_kind": "package_artifact",
+      "name": "figures/arrowupicon.png",
+      "prose": "figure: figures/arrowupicon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/axesicon.png",
+      "locator_id": "pkg_6893a551",
+      "locator_kind": "package_artifact",
+      "name": "figures/axesicon.png",
+      "prose": "figure: figures/axesicon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/bgicon.png",
+      "locator_id": "pkg_fbba5a5d",
+      "locator_kind": "package_artifact",
+      "name": "figures/bgicon.png",
+      "prose": "figure: figures/bgicon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/blocksizeicon.png",
+      "locator_id": "pkg_70c086aa",
+      "locator_kind": "package_artifact",
+      "name": "figures/blocksizeicon.png",
+      "prose": "figure: figures/blocksizeicon.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/btnAccept.png",
+      "locator_id": "pkg_33326a1a",
+      "locator_kind": "package_artifact",
+      "name": "figures/btnAccept.png",
+      "prose": "figure: figures/btnAccept.png",
+      "score": 0.75,
+      "side": "expected_output"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/DBCustomIcon.png",
+      "role": "figure",
+      "sha256": "d9253b88ba2d82c7bb456b960c4eca8840491efa35e36f4d8c9301f6b39fe694"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DBLipidsIcon.png",
+      "role": "figure",
+      "sha256": "64239735bd05f714305b6387d3b803a6823be50d22cf162e8cb373f2ec7a9849"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DBOnlineIcon.png",
+      "role": "figure",
+      "sha256": "bd474feacdb225f557c0c271342e5568ac0f619f7e4e5b0e86e130bfcc9d27c9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DBSpectraIcon.png",
+      "role": "figure",
+      "sha256": "399a2940e9626728e4441ebb1816097192759803e421b77eebe986e55340f1f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/KMDIcon.png",
+      "role": "figure",
+      "sha256": "dfb2e8dfe422d343c4cd6f79d6f00ca69c35652f11c3f5d9e3c1a0eb05bd13f6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MZmine_logo_CMYK.jpg",
+      "role": "figure",
+      "sha256": "d636f84860a313e6032da65d17a5f2bfc9e86e577834a5bbdf3aeab42bcdc4d7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MZmine_logo_CMYK.png",
+      "role": "figure",
+      "sha256": "c27fe8a7cdfe411cdafc76372962b758f8af51768921e10d729fba7a1a60ef8e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MZmine_logo_RGB.jpg",
+      "role": "figure",
+      "sha256": "983a1931696783f039858541fef49c1e412218c535072142597cb4a706c4dc92"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MZmine_logo_RGB.png",
+      "role": "figure",
+      "sha256": "5cc6f37c64b5e0693a7891d0bc3baec2e5e2be90ad8ffe0cd8a59ad9c315b0d9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MZmine_logo_black.jpg",
+      "role": "figure",
+      "sha256": "859e75af3cdc7798cd8972261c4130801d73c785c67dbf53ada7bc7cc6e4f533"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MZmine_logo_black.png",
+      "role": "figure",
+      "sha256": "2975b1c6246aaef121b87ae0d850264fc2a2fb5bf2e7881bbb9cfbf7b8a7f5c1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MZmine_logo_white.png",
+      "role": "figure",
+      "sha256": "136c97921203f2ed329549047365a4dd663404258cc1a86992c2df14e98077d5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/RKMIcon.png",
+      "role": "figure",
+      "sha256": "d4076aac5c99e918067995fb056342d04876a43895fd0ceaec78b226f243a523"
+    },
+    {
+      "indexable": false,
+      "path": "figures/annotationsicon.png",
+      "role": "figure",
+      "sha256": "5c432c1f37611e387384c08e06533684c3d3f6e1f95d1a9656dae2f3dd0ad354"
+    },
+    {
+      "indexable": false,
+      "path": "figures/arrowdownicon.png",
+      "role": "figure",
+      "sha256": "0ef6a82b28330fdc6038d1689d4d389aa8885a8fe6a33c3c5e09e840338afca4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/arrowupicon.png",
+      "role": "figure",
+      "sha256": "3c9a434272ad44a8abaae883aa2e7efd7fd252be7f21bdc4c894ef0a256107fb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/axesicon.png",
+      "role": "figure",
+      "sha256": "6893a551f4b6cca6d6bcbe78ec75513d32935e0e229b7f32c9e75d0b9126ff68"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bgicon.png",
+      "role": "figure",
+      "sha256": "fbba5a5db4938a3c1518b803f08dc6556ee75a07689b60a526a1d227a74c9e82"
+    },
+    {
+      "indexable": false,
+      "path": "figures/blocksizeicon.png",
+      "role": "figure",
+      "sha256": "70c086aa0151bae71f52c8262a28ad3cfc2515a4ede6ec9f3cf5fbb700ca70b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/btnAccept.png",
+      "role": "figure",
+      "sha256": "33326a1a24f89c1740091ee0e7bf3eaff46826defba252bf810ab3602178055c"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "1c35e84223bdc4e6790bb47c05eb06a12e54c6306397ed8c77f01461355f7e6e"
+    }
+  ],
+  "created_at": "2026-06-15T21:14:42.808593+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/DBCustomIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/DBLipidsIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/DBOnlineIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/DBSpectraIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/KMDIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_CMYK.jpg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_CMYK.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_RGB.jpg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_RGB.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_black.jpg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_black.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_white.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/RKMIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/annotationsicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/arrowdownicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/arrowupicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/axesicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/bgicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/blocksizeicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/btnAccept.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "main_article: paper.md",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/DBCustomIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/DBLipidsIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/DBOnlineIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/DBSpectraIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/KMDIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_CMYK.jpg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_CMYK.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_RGB.jpg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_RGB.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_black.jpg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_black.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MZmine_logo_white.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/RKMIcon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/annotationsicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/arrowdownicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/arrowupicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/axesicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/bgicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/blocksizeicon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/btnAccept.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": null,
+  "domain_knowledge": [],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Confirm that every cited input artifact exists or is explicitly marked missing.",
+      "Confirm that expected outputs are tied to figures, tables, files, or claims in the package."
+    ],
+    "llm_or_expert_review": [
+      "Judge whether the task description matches the source evidence.",
+      "Judge whether the workflow description is sufficient for a future agent attempt.",
+      "Review uncertainty notes and missing-information claims."
+    ],
+    "not_in_scope_for_mvp": [
+      "Running scientific code or reproducing figures.",
+      "Scoring model-generated scientific outputs."
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "question",
+      "snippet_id": "ev_001",
+      "source_path": "paper.md",
+      "text": "The goals of the project is to provide a user-friendly, flexible and easily extendable software with a complete set of modules covering the entire MS data analysis workflow."
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "echo",
+      "Task reconstruction complete: article package with figures and paper.md catalogued"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "figure: figures/DBCustomIcon.png",
+    "figure: figures/DBLipidsIcon.png",
+    "figure: figures/DBOnlineIcon.png",
+    "figure: figures/DBSpectraIcon.png",
+    "figure: figures/KMDIcon.png",
+    "figure: figures/MZmine_logo_CMYK.jpg",
+    "figure: figures/MZmine_logo_CMYK.png",
+    "figure: figures/MZmine_logo_RGB.jpg",
+    "figure: figures/MZmine_logo_RGB.png",
+    "figure: figures/MZmine_logo_black.jpg",
+    "figure: figures/MZmine_logo_black.png",
+    "figure: figures/MZmine_logo_white.png",
+    "figure: figures/RKMIcon.png",
+    "figure: figures/annotationsicon.png",
+    "figure: figures/arrowdownicon.png",
+    "figure: figures/arrowupicon.png",
+    "figure: figures/axesicon.png",
+    "figure: figures/bgicon.png",
+    "figure: figures/blocksizeicon.png",
+    "figure: figures/btnAccept.png"
+  ],
+  "finding": "MZmine 2 aims to provide user-friendly, flexible and easily extendable software with a complete set of modules covering the entire MS data analysis workflow",
+  "github_name": "mzmine/mzmine",
+  "input_from": null,
+  "inputs": [
+    "figure: figures/DBCustomIcon.png",
+    "figure: figures/DBLipidsIcon.png",
+    "figure: figures/DBOnlineIcon.png",
+    "figure: figures/DBSpectraIcon.png",
+    "figure: figures/KMDIcon.png",
+    "figure: figures/MZmine_logo_CMYK.jpg",
+    "figure: figures/MZmine_logo_CMYK.png",
+    "figure: figures/MZmine_logo_RGB.jpg",
+    "figure: figures/MZmine_logo_RGB.png",
+    "figure: figures/MZmine_logo_black.jpg",
+    "figure: figures/MZmine_logo_black.png",
+    "figure: figures/MZmine_logo_white.png",
+    "figure: figures/RKMIcon.png",
+    "figure: figures/annotationsicon.png",
+    "figure: figures/arrowdownicon.png",
+    "figure: figures/arrowupicon.png",
+    "figure: figures/axesicon.png",
+    "figure: figures/bgicon.png",
+    "figure: figures/blocksizeicon.png",
+    "figure: figures/btnAccept.png",
+    "main_article: paper.md"
+  ],
+  "keywords": [],
+  "landmark_outputs": [],
+  "linked_result_ids": [
+    "result_001"
+  ],
+  "methodology_summary": [],
+  "missing_information": [
+    "No local code/script artifact was detected.",
+    "No explicit data-reference artifact was detected."
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "The goals of the project is to provide a user-friendly, flexible and easily extendable software with a complete set of modules covering the entire MS data analysis workflow.",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "scientific_task_formulation",
+    "evidence_linking",
+    "expert_review_preparation",
+    "output_grounding",
+    "figure_table_interpretation",
+    "reproducibility_gap_detection"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mzmine2/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [],
+  "subdomains": [],
+  "subtask_categories": [],
+  "synthesized_from": "github:mzmine__mzmine2",
+  "task_description": "Create a bounded scientific task from the article package by linking a research question or finding to available inputs, expected outputs, tools, skills, workflow logic, evidence snippets, missing information, and an evaluation strategy.",
+  "task_id": "task_001",
+  "task_inputs": [],
+  "task_kind": null,
+  "task_objective": "",
+  "task_outputs": [],
+  "techniques": [],
+  "title": "Reconstruct and evaluate a paper-grounded scientific task",
+  "tools": [
+    "MZmine 2",
+    "mzmine2",
+    "GitHub",
+    "MZmine"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by deterministic heuristics and needs scientific expert review.",
+    "Workflow steps are descriptive only; no scientific workflow was executed.",
+    "PDFs, images, notebooks, archives, and unknown file types are referenced but not deeply parsed."
+  ],
+  "workflow_description": "Review indexed article artifacts, connect claims to outputs, inspect available materials, and record missing information. No workflow is executed in the MVP."
+}

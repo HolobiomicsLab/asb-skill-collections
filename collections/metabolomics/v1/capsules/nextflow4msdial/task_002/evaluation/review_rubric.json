@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file github:Nextflow4Metabolomics__nextflow4ms-dial exists and is accessible"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify Nextflow version \u226522.10.0 is installed and executable"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify Docker is installed and daemon is running"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Script runs: execute nextflow run on the repository with Docker profile and a public .mzML dataset (e.g., from MetaboLights or MassIVE); workflow must complete without fatal errors"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "File exists: verify that MS-DIAL output directory contains expected metabolomics feature table or annotation files (robust to naming convention variations)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "File exists: verify that MSFLO output files are present in designated output directory"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify workflow execution log contains no ERROR or FAILED status messages"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file github:Nextflow4Metabolomics__nextflow4ms-dial exists and is accessible",
+      "Verify Nextflow version \u226522.10.0 is installed and executable",
+      "Verify Docker is installed and daemon is running",
+      "Script runs: execute nextflow run on the repository with Docker profile and a public .mzML dataset (e.g., from MetaboLights or MassIVE); workflow must complete without fatal errors",
+      "File exists: verify that MS-DIAL output directory contains expected metabolomics feature table or annotation files (robust to naming convention variations)",
+      "File exists: verify that MSFLO output files are present in designated output directory",
+      "Verify workflow execution log contains no ERROR or FAILED status messages"
+    ],
+    "expert_review": [
+      "Evaluate whether output feature table structure and column headers match expected MS-DIAL output schema for LC-HRMS metabolomics data",
+      "Evaluate whether detected metabolite annotations and mass accuracy are chemically plausible for the input dataset",
+      "Assess whether output files are suitable for downstream metabolomics statistical analysis"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

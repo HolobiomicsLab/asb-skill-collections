@@ -1,0 +1,306 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "26863274c2eafe9b1317e53ccb5fcdebeea2a178bb4c09b0fbeacd8f09fa717a"
+    }
+  ],
+  "created_at": "2026-06-15T12:49:30.022773+00:00",
+  "crossref_doi": "10.1186/s13321-022-00613-8",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SMRT dataset with 80,038 experimental retention times and molecular structures from METLIN small molecule dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Trained DNN model checkpoint and retention time predictions on test set",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Performance metrics: mean absolute error of 39.2\u00b11.2 s and median absolute error of 17.2\u00b10.9 s",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Cosine annealing with warm restarts (SGDR) cycles the learning rate between high and low values across epochs to escape local minima and improve DNN generalization for regression tasks.",
+    "Stochastic weight averaging (SWA) averages model weights across multiple epochs with low constant learning rates to find flatter minima and reduce test error without hyperparameter tuning.",
+    "Molecular fingerprints (MACCS166, Extended Connectivity, Path-based) encode chemical substructure patterns as binary vectors and typically outperform high-dimensional descriptor sets for QSAR and retention time prediction.",
+    "Heavy regularization (L1/L2 penalties, dropout) is essential when training DNNs on chemical datasets to prevent overfitting on the 80,038-sample SMRT dataset and stabilize predictions across chemical space.",
+    "Retention time prediction error is reported as both mean absolute error (robustness across the full distribution) and median absolute error (robustness to outliers); both metrics with \u00b1std reflect cross-validation uncertainty."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in constantino-garcia/cmmrt repository containing trained DNN model weights or checkpoint",
+      "verify file_format_is: training script (Python .py file) loads SMRT dataset (80,038 experimental retention times from METLIN)",
+      "verify script_runs: training script executes without errors on standard PyTorch/TensorFlow environment",
+      "verify output_matches_reference: reported mean absolute error is 39.2\u00b11.2 s (byte-for-byte match against published value in repository documentation or results file)",
+      "verify output_matches_reference: reported median absolute error is 17.2\u00b10.9 s (byte-for-byte match against published value in repository documentation or results file)",
+      "verify contains_substring: training configuration includes 'cosine annealing warm restarts' in hyperparameter specification or learning rate schedule",
+      "verify contains_substring: training configuration includes 'stochastic weight averaging' (SWA) in model or optimizer code",
+      "verify field_present: model or training log contains regularization parameters (L1/L2 penalty, dropout, weight decay specifications)"
+    ],
+    "expert_review": [
+      "assess whether DNN regularization strength and architecture (layer count, units, activation functions) are appropriate and 'heavily regularized' as claimed",
+      "assess whether reported error metrics (39.2\u00b11.2 s mean, 17.2\u00b10.9 s median) are consistent with the descriptor + fingerprint input features and the SMRT dataset size",
+      "assess whether cosine annealing warm restarts learning rate schedule parameters (cycle length, warm restarts frequency) are reasonably configured",
+      "assess whether stochastic weight averaging implementation (update frequency, number of averaged checkpoints) follows standard best practices"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the predictive performance of a heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging on retention time prediction using the METLIN SMRT dataset?: 'The best results were obtained by a heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of 39.2\u00b11.2 s and'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] A heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging achieved mean absolute error of 39.2\u00b11.2 s and median absolute error of 17.2 \u00b1 0.9 s on retention time prediction.: 'The best results were obtained by a heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of 39.2\u00b11.2 s and'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SMRT dataset with 80,038 experimental retention times and molecular structures from METLIN small molecule dataset: 'We have trained state-of-the-art machine learning regressors using the 80,038 experimental RTs from the METLIN small molecule dataset (SMRT)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Trained DNN model checkpoint and retention time predictions on test set: 'The best results were obtained by a heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of 39.2\u00b11.2 s and'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Performance metrics: mean absolute error of 39.2\u00b11.2 s and median absolute error of 17.2\u00b10.9 s: 'The best results were obtained by a heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of 39.2\u00b11.2 s and'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] alvaDesc: '5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [
+      "alvaDesc"
+    ],
+    "compute_tier": "heavy",
+    "open_source_alternatives": [
+      {
+        "closed": "alvaDesc",
+        "expected_divergence": "",
+        "oss": "RDKit"
+      }
+    ]
+  },
+  "expected_artifact_name": "dnn_model_predictions.csv",
+  "expected_outputs": [
+    "Trained DNN model checkpoint and retention time predictions on test set",
+    "Performance metrics: mean absolute error of 39.2\u00b11.2 s and median absolute error of 17.2\u00b10.9 s"
+  ],
+  "finding": "A heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging achieved mean absolute error of 39.2\u00b11.2 s and median absolute error of 17.2 \u00b1 0.9 s on retention time prediction.",
+  "github_name": "constantino-garcia/cmmrt",
+  "input_from": null,
+  "inputs": [
+    "SMRT dataset with 80,038 experimental retention times and molecular structures from METLIN small molecule dataset"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "descriptors_fingerprints.npz",
+    "train_val_test_split.json",
+    "dnn_model_checkpoint.h5",
+    "predictions_metrics.csv"
+  ],
+  "linked_result_ids": [
+    "result_009"
+  ],
+  "methodology_summary": [
+    "Load SMRT dataset (80,038 molecules with experimental retention times from METLIN).",
+    "Generate 5,666 descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, Path) using alvaDesc.",
+    "Construct feature matrices combining descriptors and fingerprints; split into train/validation/test sets.",
+    "Train heavily regularized DNN with cosine annealing warm restarts scheduling and stochastic weight averaging.",
+    "Evaluate on test set and compute mean absolute error and median absolute error with uncertainties.",
+    "Validation: output MAE = 39.2\u00b11.2 s and MdAE = 17.2\u00b10.9 s matches reported values within reported standard deviations.",
+    "References: source article (DOI: 10.1186/s13321-022-00613-8)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the predictive performance of a heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging on retention time prediction using the METLIN SMRT dataset?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "descriptor-fingerprint-feature-engineering",
+    "deep-neural-network-training-regularization",
+    "retention-time-prediction-regression",
+    "cosine-annealing-schedule-optimization",
+    "stochastic-weight-averaging-implementation",
+    "regression-model-evaluation-mae-metrics"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_cmmrt/synthesized_package",
+  "spine_condition_ids": [
+    "cond_dnn_best",
+    "cond_descriptors_only",
+    "cond_fingerprints_only",
+    "cond_descriptors_and_fingerprints"
+  ],
+  "spine_entity_ids": [
+    "dataset_smrt",
+    "component_ecfp",
+    "component_path_fp",
+    "cond_descriptors_only",
+    "cond_fingerprints_only",
+    "cond_descriptors_and_fingerprints",
+    "cond_dnn_best",
+    "result_fingerprints_better",
+    "metric_mae_mean",
+    "metric_mae_median"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "model-training",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:constantino-garcia__cmmrt",
+  "task_description": "Train a heavily regularized deep neural network with cosine annealing warm restarts and stochastic weight averaging on the SMRT dataset using molecular descriptors and fingerprints to predict retention time, and reproduce the reported mean absolute error of 39.2\u00b11.2 s and median absolute error of 17.2\u00b10.9 s.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SMRT dataset with experimental retention times and molecular structures",
+      "port_id": "smrt_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Train a regularized DNN with cosine annealing warm restarts and stochastic weight averaging on the METLIN SMRT dataset and achieve mean absolute error of 39.2\u00b11.2 s and median absolute error of 17.2\u00b10.9 s.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained DNN model checkpoint",
+      "port_id": "trained_dnn_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mean absolute error (39.2\u00b11.2 s) and median absolute error (17.2\u00b10.9 s)",
+      "port_id": "performance_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "retention-time-prediction",
+    "machine-learning",
+    "metabolite-identification",
+    "database-annotation",
+    "deep-learning"
+  ],
+  "title": "Reproduce DNN mean and median absolute error on SMRT dataset",
+  "tools": [
+    "alvaDesc"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Trained DNN model checkpoint and retention time predictions on test set."
+  ],
+  "workflow_description": "1. Load SMRT dataset containing 80,038 experimental retention times and corresponding molecular structures from the METLIN small molecule dataset. 2. Generate 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints) using alvaDesc software for all molecules. 3. Prepare feature matrices combining descriptors and fingerprints as model inputs and retention times as regression targets. 4. Configure a deeply regularized DNN architecture with heavy regularization (L1/L2 penalties) and train using cosine annealing with warm restarts as the learning rate scheduler. 5. Apply stochastic weight averaging during training to improve generalization. 6. Evaluate trained model on held-out test set and compute mean absolute error (MAE) and median absolute error (MdAE) with reported uncertainties (\u00b11.2 s and \u00b10.9 s respectively)."
+}

@@ -1,0 +1,535 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "mimenet.pdf",
+      "role": "main_article",
+      "sha256": "94446c8f65eb734a969001c270046abc1728842d6c0b9261c937923c514c9a92"
+    }
+  ],
+  "created_at": "2026-06-15T07:36:08.260853+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1009021",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "IBD (PRISM) microbiome abundance data (201 microbial species, 121 IBD patients + 34 controls)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "IBD (PRISM) metabolome abundance data (8848 metabolites, 121 IBD patients + 34 controls)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "IBD (External) microbiome abundance data (two cohorts: 20 healthy subjects from LifeLines-DEEP + 43 subjects from Groningen)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "IBD (External) metabolome abundance data (paired with external microbiome cohorts)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mean Spearman correlation coefficients (SCC) for metabolite prediction on IBD (External) dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Count of well-predicted metabolites on IBD (External) dataset (those with SCC above 95th percentile threshold)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Per-metabolite prediction correlations table for IBD (External) evaluation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparison metrics (SCC, prediction accuracy) versus benchmark models (MelonnPan, Random Forest, Elastic Net, WGCNA) on IBD (External) data",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Centered log-ratio (CLR) transformation preserves compositional properties of microbiome and metabolome data and prevents spurious correlations from constant-sum constraints; a pseudocount of 1 is added before log-ratio calculation to avoid undefined logarithms.",
+    "Well-predicted metabolites are those with Spearman correlation coefficients above the 95th percentile of background correlations obtained by shuffling samples and repeating 10-fold cross-validation 100 times; this threshold controls for spurious associations.",
+    "External validation on a held-out cohort (IBD External) tests model generalizability across different patient populations and sampling protocols without re-tuning hyperparameters.",
+    "The optimal MiMeNet architecture for IBD data uses a single hidden layer of 512 nodes with L2 regularization (\u03bb=0.001) and dropout (0.5); these settings were determined via nested 5-fold cross-validation on the training set only.",
+    "Early stopping terminates training when validation loss does not improve for 40 consecutive iterations, preventing overfitting to the training set while optimizing generalization to external test data."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that the IBD (External) dataset files or metadata are present in the MiMeNet repository (YDaiLab/MiMeNet) or accessible via the cited cohort accessions (LifeLines-DEEP or equivalent)",
+      "file_format_is: verify that prediction outputs (correlation scores or result table) from external validation are in a standard tabular format (CSV, TSV, or Excel)",
+      "value_in_range: verify that reported Spearman correlation coefficients for external validation predictions fall within the valid range [-1.0, 1.0]",
+      "output_matches_reference: retrieve the reported external validation correlation metrics from Figure 2 or Table 2 (or cited supplementary figure) and confirm that reproduced values match the published reference values within rounding tolerance (robust to minor floating-point precision)",
+      "script_runs: verify that the MiMeNet codebase (from https://github.com/YDaiLab/MiMeNet) contains a reproducible script or workflow for training on IBD (PRISM) full dataset and evaluating on IBD (External) cohorts without errors"
+    ],
+    "expert_review": [
+      "Validate that the model trained on IBD (PRISM) full dataset (121 IBD samples) does not leak information from the held-out IBD (External) samples (43 IBD + 20 control subjects); confirm data provenance and exclusivity of training/test splits",
+      "Assess whether the reported external validation correlation coefficients are biologically plausible and consistent with the cross-validation results reported in the abstract and main text",
+      "Review the exact composition and preprocessing steps applied to the two external cohorts (LifeLines-DEEP and the second cohort) to confirm they match the methodology described in the Methods section",
+      "Evaluate whether the choice of Spearman correlation as the evaluation metric is appropriate for the reported metabolite abundance distributions and whether any alternative metrics should be reported for comparison"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] What are the prediction correlation metrics achieved by a MiMeNet model trained on the full IBD (PRISM) dataset when evaluated on the held-out IBD (External) dataset?: 'Even though there was a decrease in overall correlations as expected, we show that MiMeNet can still predict the metabolomic profiles when using smaller sets of training data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] When training using the entire IBD (PRISM) dataset to predict the IBD (External) test set, MiMeNet identified 308 well-predicted metabolites while MelonnPan identified 186, with mean correlation increased from 0.168 to 0.275 for annotated metabolites.: 'When training using the entire IBD (PRISM) dataset to predict the IBD (External) dataset, MiMeNet identified 308 well-predicted metabolites while MelonnPan identified 186, of which 160 were also'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] IBD (PRISM) microbiome abundance data (201 microbial species, 121 IBD patients + 34 controls): 'A total of 201 microbial species and 8848 metabolites were identified for the IBD (PRISM) and IBD (External) datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] IBD (PRISM) metabolome abundance data (8848 metabolites, 121 IBD patients + 34 controls): 'A total of 201 microbial species and 8848 metabolites were identified for the IBD (PRISM) and IBD (External) datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] IBD (External) microbiome abundance data (two cohorts: 20 healthy subjects from LifeLines-DEEP + 43 subjects from Groningen): 'includes an external validation dataset using two other cohorts. One consists of 20 healthy subjects who participated in LifeLines-DEEP, a general population-based study in the northern Netherlands'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] IBD (External) metabolome abundance data (paired with external microbiome cohorts): 'A total of 201 microbial species and 8848 metabolites were identified for the IBD (PRISM) and IBD (External) datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Mean Spearman correlation coefficients (SCC) for metabolite prediction on IBD (External) dataset: 'the average of the correlations between the predicted and observed values for metabolites was reported'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Count of well-predicted metabolites on IBD (External) dataset (those with SCC above 95th percentile threshold): 'We then defined a metabolite as well-predicted if its SCC is above the 95th percentile of the background correlations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Per-metabolite prediction correlations table for IBD (External) evaluation: 'the average of the correlations between the predicted and observed values for metabolites was reported'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Comparison metrics (SCC, prediction accuracy) versus benchmark models (MelonnPan, Random Forest, Elastic Net, WGCNA) on IBD (External) data: 'The evaluation was done by training 100 evaluated on the IBD (External) test set using the area under the receiver operating characteristic curve (AUC)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MiMeNet: 'An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] neural networks: 'An MLPNN model is composed of multiple fully connected hidden layers'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] ADAM optimizer: 'MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MelonnPan: 'MelonnPan was downloaded from https://github.com/biobakery/melonnpan and executed using the given instructions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Random Forest: 'Random Forest models were implemented using RandomForestRegressor with the default parameter set of 100 tree estimators'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Elastic Net: 'Multivariate Elastic Net models were implemented using ElasticNet and GridSearchCV using 5-fold internal cross-validation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] WGCNA: 'Weighted correlation network analysis (WGCNA) of microbial features was performed using the WGCNA library in R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CCA (Canonical Correlation Analysis): 'Canonical correlation analyses were implemented using CCA with 10, 20, and 40 components'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific prediction correlation metric values (mean Spearman correlation coefficients, number of well-predicted metabolites, or per-metabolite correlations) achieved when a model trained on the full IBD (PRISM) dataset is evaluated on the held-out IBD (External) dataset are not explicitly stated in the provided discussion section.: 'Our comparison shows that the MiMeNet model is competitive with the NED model in terms of predictive accuracy and the ability to make well-prediction for a larger set of metabolites'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_020",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The exact figure, table, or supplementary material location where external validation results on IBD (External) cohorts are reported is not specified in the provided discussion text.: 'Our comparison shows that the MiMeNet model is competitive with the NED model in terms of predictive accuracy'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_021",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion section does not describe the data preprocessing, normalization, or filtering procedures (e.g., the 10% feature presence threshold mentioned for methods) as applied to the external validation IBD cohorts.: 'Although the MiMeNet analysis is data-driven without incorporating mechanistic knowledge, these types of evidence obtained from the integrative analysis of metagenomes and metabolomes could be used'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_022",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No statement is provided regarding the handling of missing data, feature alignment, or batch correction between the IBD (PRISM) training cohort and the two external IBD (External) validation cohorts.: 'The predictive model in MiMeNet distinguishes it from MelonnPan [26], which uses a regularized linear regression to model each metabolite separately'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ibd_external_validation_metrics.csv",
+  "expected_outputs": [
+    "Mean Spearman correlation coefficients (SCC) for metabolite prediction on IBD (External) dataset",
+    "Count of well-predicted metabolites on IBD (External) dataset (those with SCC above 95th percentile threshold)",
+    "Per-metabolite prediction correlations table for IBD (External) evaluation",
+    "Comparison metrics (SCC, prediction accuracy) versus benchmark models (MelonnPan, Random Forest, Elastic Net, WGCNA) on IBD (External) data"
+  ],
+  "finding": "When training using the entire IBD (PRISM) dataset to predict the IBD (External) test set, MiMeNet identified 308 well-predicted metabolites while MelonnPan identified 186, with mean correlation increased from 0.168 to 0.275 for annotated metabolites.",
+  "github_name": "biobakery/melonnpan",
+  "input_from": "task_001",
+  "inputs": [
+    "IBD (PRISM) microbiome abundance data (201 microbial species, 121 IBD patients + 34 controls)",
+    "IBD (PRISM) metabolome abundance data (8848 metabolites, 121 IBD patients + 34 controls)",
+    "IBD (External) microbiome abundance data (two cohorts: 20 healthy subjects from LifeLines-DEEP + 43 subjects from Groningen)",
+    "IBD (External) metabolome abundance data (paired with external microbiome cohorts)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "ibd_prism_preprocessed.csv",
+    "trained_mimenet_model.pkl",
+    "ibd_external_preprocessed.csv",
+    "predicted_metabolite_abundances_external.csv",
+    "per_metabolite_scc_external.csv",
+    "well_predicted_metabolites_external.txt"
+  ],
+  "linked_result_ids": [
+    "result_015"
+  ],
+  "methodology_summary": [
+    "Preprocess IBD (PRISM) and IBD (External) microbiome and metabolome data using centered log-ratio transformation, removing features in <10% of samples.",
+    "Train a single MiMeNet MLPNN on the full IBD (PRISM) dataset (layer size 512, 1 hidden layer, L2 penalty 0.001, dropout 0.5) using ADAM optimizer with early stopping.",
+    "Apply the trained model to IBD (External) test data to generate predicted metabolite abundances.",
+    "Compute Spearman correlation coefficients between predicted and observed metabolite abundances for external validation.",
+    "Identify well-predicted metabolites as those with SCC above the 95th percentile threshold derived from shuffled background distribution.",
+    "Compare prediction performance to benchmark models (MelonnPan, Random Forest, Elastic Net, WGCNA) using identical evaluation metrics.",
+    "Validation: External validation is successful if the mean SCC and count of well-predicted metabolites on IBD (External) are comparable to or exceed reported baseline methods and cross-validation results on held-out internal folds.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1009021)"
+  ],
+  "missing_information": [
+    "The specific prediction correlation metric values (mean Spearman correlation coefficients, number of well-predicted metabolites, or per-metabolite correlations) achieved when a model trained on the full IBD (PRISM) dataset is evaluated on the held-out IBD (External) dataset are not explicitly stated in the provided discussion section.",
+    "The exact figure, table, or supplementary material location where external validation results on IBD (External) cohorts are reported is not specified in the provided discussion text.",
+    "The discussion section does not describe the data preprocessing, normalization, or filtering procedures (e.g., the 10% feature presence threshold mentioned for methods) as applied to the external validation IBD cohorts.",
+    "No statement is provided regarding the handling of missing data, feature alignment, or batch correction between the IBD (PRISM) training cohort and the two external IBD (External) validation cohorts."
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/benchmark_results"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the prediction correlation metrics achieved by a MiMeNet model trained on the full IBD (PRISM) dataset when evaluated on the held-out IBD (External) dataset?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "results",
+    "methods",
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "microbiome-metabolome-abundance-normalization",
+    "centered-log-ratio-transformation-application",
+    "neural-network-hyperparameter-optimization",
+    "metabolite-prediction-correlation-evaluation",
+    "background-distribution-significance-thresholding",
+    "cross-dataset-model-generalization-assessment",
+    "comparative-machine-learning-benchmarking"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_mimenet",
+  "spine_condition_ids": [
+    "cond_mimenet_IBD_PRISM",
+    "cond_linear_IBD_PRISM",
+    "cond_mimenet_CF",
+    "cond_mimenet_soil",
+    "CCA_baseline",
+    "cond_linear_CF",
+    "cond_linear_soil",
+    "cond_mimenet_IBD_external",
+    "cond_annotated_only"
+  ],
+  "spine_entity_ids": [
+    "MiMeNet",
+    "MLPNN_architecture",
+    "IBD_PRISM_dataset",
+    "IBD_external_dataset",
+    "cystic_fibrosis_dataset",
+    "soil_dataset",
+    "CCA_baseline",
+    "cond_mimenet_IBD_PRISM",
+    "cond_mimenet_CF",
+    "cond_mimenet_soil",
+    "cond_linear_IBD_PRISM",
+    "cond_linear_CF",
+    "cond_linear_soil",
+    "cond_mimenet_IBD_external",
+    "cond_annotated_only",
+    "metric_scc_mimenet_IBD_PRISM",
+    "metric_scc_linear_IBD_PRISM",
+    "metric_scc_mimenet_CF",
+    "metric_scc_mimenet_soil",
+    "metric_wellpred_mimenet_IBD_PRISM",
+    "metric_wellpred_linear_IBD_PRISM",
+    "metric_wellpred_mimenet_CF",
+    "metric_wellpred_mimenet_soil",
+    "result_mimenet_outperforms_linear",
+    "result_external_validation",
+    "10fold_CV_protocol"
+  ],
+  "subdomains": [
+    "microbiome-metabolomics",
+    "artificial-intelligence",
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "benchmark-evaluation",
+    "data-analysis"
+  ],
+  "synthesized_from": null,
+  "task_description": "Train a MiMeNet neural network model on the full IBD (PRISM) dataset and evaluate its metabolite abundance prediction performance on the held-out IBD (External) dataset, reporting Spearman correlation coefficient (SCC) and prediction accuracy metrics.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "IBD (PRISM) microbiome abundance matrix",
+      "port_id": "ibd_prism_microbes",
+      "resolved_via": null,
+      "source": "task_001/benchmark_results",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "IBD (PRISM) metabolome abundance matrix",
+      "port_id": "ibd_prism_metabolites",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "IBD (External) microbiome abundance matrix",
+      "port_id": "ibd_external_microbes",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "IBD (External) metabolome abundance matrix",
+      "port_id": "ibd_external_metabolites",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Train a MiMeNet model on the complete IBD (PRISM) dataset and report Spearman and Pearson correlation coefficients for metabolite predictions on the IBD (External) validation cohorts.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mean and per-metabolite Spearman correlation coefficients on IBD (External) data",
+      "port_id": "external_scc_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Count and identities of well-predicted metabolites (SCC >95th percentile) on IBD (External)",
+      "port_id": "well_predicted_metabolites_external",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Comparison table of prediction performance versus MelonnPan, Random Forest, Elastic Net, WGCNA",
+      "port_id": "benchmark_comparison",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "deep-learning",
+    "machine-learning",
+    "random-forest",
+    "correlation-analysis",
+    "clustering"
+  ],
+  "title": "Reproduce MiMeNet external validation on the IBD (External) dataset",
+  "tools": [
+    "MiMeNet",
+    "neural networks",
+    "ADAM optimizer",
+    "MelonnPan",
+    "Random Forest",
+    "Elastic Net",
+    "WGCNA",
+    "CCA (Canonical Correlation Analysis)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load and preprocess IBD (PRISM) microbiome (201 features) and metabolome (8848 features) data, applying centered log-ratio transformation and removing features present in <10% of samples. 2. Train a single MiMeNet multilayer perceptron neural network on the full IBD (PRISM) dataset using optimal hyperparameters (layer size 512, single hidden layer, L2 penalty 0.001, dropout 0.5) with ADAM optimizer and mean squared error loss, applying early stopping when validation loss does not improve within 40 iterations. 3. Load and preprocess IBD (External) microbiome and metabolome data using identical transformation and filtering procedures. 4. Evaluate the trained model on IBD (External) test data by computing Spearman correlation coefficients between predicted and observed metabolite abundances for each metabolite. 5. Identify well-predicted metabolites in the IBD (External) dataset using the 95th percentile threshold of background correlations from shuffled cross-validation. 6. Report mean SCC, count of well-predicted metabolites, and comparison metrics relative to baseline models."
+}

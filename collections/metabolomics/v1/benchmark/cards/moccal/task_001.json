@@ -1,0 +1,275 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ac5523bfc6b2e8e2c15a98fe4ed4b07ab6485b85c309b5adad34916ec78564eb"
+    }
+  ],
+  "created_at": "2026-06-15T13:23:47.986392+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw TWIM-MS arrival-time data (example data from HinesLab/MOCCal repository)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CCS calibration reference template with known calibrant compounds and their CCS values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Calibrated CCS values table with ion identifiers and corresponding collision cross section measurements",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "TWIM platforms record arrival time (time ion reaches detector) rather than drift time (time spent in TWIM cell), requiring explicit conversion for CCS calculation.",
+    "CCS calibration requires a set of reference compounds with known collision cross section values to establish the arrival-time-to-CCS mapping function.",
+    "Class-specific calibration is necessary because different biomolecular classes (proteins, lipids, metabolites) may have distinct arrival-time-to-CCS relationships.",
+    "Calibration templates must contain arrival-time measurements for the same reference compounds run under identical instrument conditions as the experimental data."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:HinesLab__MOCCal repository is accessible and contains calibration data templates and example data files",
+      "verify file_exists for calibration template file(s) in the MOCCal repository root or designated calibration/ subdirectory",
+      "verify file_exists for example arrival-time data file(s) in the MOCCal repository",
+      "script_runs: execute MOCCal calibration module with example arrival-time data and calibration template as inputs without errors",
+      "verify output_matches_reference: confirm that CCS values produced by the calibration transform are numeric, non-negative, and within physically plausible range for biomolecules (typically 50\u2013500 \u0172)"
+    ],
+    "expert_review": [
+      "assess whether the calibration transform correctly converts TWIM arrival-time values to CCS values according to the underlying ion-mobility physics (requires domain expertise in mass spectrometry and ion-mobility separation)",
+      "evaluate whether the produced CCS values are consistent with known reference compounds or literature values for the biomolecular classes being calibrated"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MOCCal convert raw arrival-time measurements from TWIM-MS into collision cross section (CCS) values through calibration?: 'collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MOCCal implements CCS calibration as a core functionality that transforms TWIM-MS arrival-time data into collision cross section values for multi-omic high-dimensional analysis.: 'MOCCal, or Multi-Omic CCS Calibrator, is a Python application for high-dimensional, multi-omic traveling-wave ion mobility mass spectrometry (TWIM-MS) data anlaysis. Functionality includes collision'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw TWIM-MS arrival-time data (example data from HinesLab/MOCCal repository): 'calibration data templates and example data provided in the MOCCal repository'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CCS calibration reference template with known calibrant compounds and their CCS values: 'calibration data templates and example data provided in the MOCCal repository'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Calibrated CCS values table with ion identifiers and corresponding collision cross section measurements: 'applying the calibration transform to produce CCS values from input arrival times'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'MOCCal, or Multi-Omic CCS Calibrator, is a Python application'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, updates, or modifications to calibration methods and data templates: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; from scipy.interpolate import interp1d; import json; raw_at = json.load(open('{inputs.raw_arrival_times}')); cal_ref = json.load(open('{inputs.calibration_template}')); ref_at = [c['arrival_time'] for c in cal_ref['calibrants']]; ref_ccs = [c['ccs'] for c in cal_ref['calibrants']]; calib_func = interp1d(ref_at, ref_ccs, kind='linear', fill_value='extrapolate'); ccs_values = [{'ion_id': ion['id'], 'arrival_time': ion['arrival_time'], 'ccs': float(calib_func(ion['arrival_time']))} for ion in raw_at['ions']]; json.dump({'calibrated_ccs': ccs_values}, sys.stdout, indent=2)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "calibrated_ccs.csv",
+  "expected_outputs": [
+    "Calibrated CCS values table with ion identifiers and corresponding collision cross section measurements"
+  ],
+  "finding": "MOCCal implements CCS calibration as a core functionality that transforms TWIM-MS arrival-time data into collision cross section values for multi-omic high-dimensional analysis.",
+  "github_name": "HinesLab/MOCCal",
+  "input_from": null,
+  "inputs": [
+    "Raw TWIM-MS arrival-time data (example data from HinesLab/MOCCal repository)",
+    "CCS calibration reference template with known calibrant compounds and their CCS values"
+  ],
+  "keywords": [
+    "traveling-wave ion mobility mass spectrometry",
+    "collision cross section calibration",
+    "multi-omic data analysis",
+    "biomolecular class assignment",
+    "twim-ms",
+    "drift time",
+    "high-dimensional data"
+  ],
+  "landmark_outputs": [
+    "calibration_reference_map.json",
+    "calibrated_ccs.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_005",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Load raw arrival-time measurements and calibration reference template from MOCCal repository",
+    "Extract known CCS values and corresponding arrival times from calibration reference compounds",
+    "Construct arrival-time-to-CCS mapping using calibration reference points",
+    "Apply calibration transform to experimental arrival-time data to compute CCS values",
+    "Validation: verify that reference compound arrival times map to their known CCS values within expected tolerance"
+  ],
+  "missing_information": [
+    "No changelog documenting version history, updates, or modifications to calibration methods and data templates"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MOCCal convert raw arrival-time measurements from TWIM-MS into collision cross section (CCS) values through calibration?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "arrival-time-to-ccs-transformation",
+    "twim-ms-calibration-mapping",
+    "ion-mobility-reference-matching",
+    "collision-cross-section-calculation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_moccal/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MOCCal_system",
+    "comp_ccs_calibration",
+    "tool_twim_ms"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "modeling"
+  ],
+  "synthesized_from": "github:HinesLab__MOCCal",
+  "task_description": "Apply CCS calibration transform to convert raw TWIM-MS arrival-time values to collision cross section (CCS) values using MOCCal calibration templates and example data from the HinesLab/MOCCal repository.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw TWIM-MS arrival-time data",
+      "port_id": "raw_arrival_times",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CCS calibration reference template",
+      "port_id": "calibration_template",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Apply the MOCCal calibration transform to convert raw TWIM-MS arrival-time values into collision cross section (CCS) values.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Calibrated CCS values table",
+      "port_id": "calibrated_ccs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Implement CCS Calibration module for TWIM-MS arrival-time data",
+  "tools": [
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load raw arrival-time data and calibration template from MOCCal repository example files. 2. Parse calibration reference compounds and their known CCS values from the template. 3. Establish arrival-time-to-CCS mapping function using calibration reference points. 4. Apply calibration transform to experimental arrival-time values to produce calibrated CCS values. 5. Output calibrated CCS table with corresponding ion identifiers."
+}

@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: rawrr R package installation in standard library path"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "format_is: returned value from rawrr:::.rawrrAssembly() is a non-empty character string representing a file path"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "assembly file at path returned by rawrr:::.rawrrAssembly() exists on filesystem"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "format_is: returned value from rawrr:::.getRawrrAssemblyVersion() is a non-empty character string conforming to semantic versioning pattern (e.g. 'X.Y.Z')"
+    },
+    {
+      "id": "pf_007",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "assembly file path contains '.NET' or 'net8.0' or similar framework identifier i",
+      "value": ".NET"
+    },
+    {
+      "id": "pf_008",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "assembly version string is non-empty and matches pattern of dotted numeric versi"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file_exists: rawrr R package installation in standard library path",
+      "script_runs: execute R command `rawrr:::.rawrrAssembly()` without error and capture output",
+      "format_is: returned value from rawrr:::.rawrrAssembly() is a non-empty character string representing a file path",
+      "file_exists: assembly file at path returned by rawrr:::.rawrrAssembly() exists on filesystem",
+      "script_runs: execute R command `rawrr:::.getRawrrAssemblyVersion()` without error and capture output",
+      "format_is: returned value from rawrr:::.getRawrrAssemblyVersion() is a non-empty character string conforming to semantic versioning pattern (e.g. 'X.Y.Z')",
+      "contains_substring: assembly file path contains '.NET' or 'net8.0' or similar framework identifier indicating .NET 8.0 assembly",
+      "contains_substring: assembly version string is non-empty and matches pattern of dotted numeric version components"
+    ],
+    "expert_review": [
+      "Verify that the dispatch mechanism correctly routes R function calls through the precompiled assembly without requiring a raw data file input",
+      "Confirm that assembly path and version metadata are retrievable independently of any raw mass spectrometry data file, validating the two-layer architecture claim"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

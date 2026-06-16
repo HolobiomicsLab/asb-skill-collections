@@ -1,0 +1,21 @@
+  figures/ArchRProject_Schematic.png
+  figures/ArchR_FunctionSchematic.png
+  figures/ArchR_Logo_Integrated.png
+  figures/ArchR_Workflow_Horizontal.png
+  figures/Cluster6-Cluster10-Marker-Peaks_1.png
+  figures/Cluster6-Cluster10-Marker-Peaks_2.png
+  figures/Cluster6-Cluster10-Motifs-Down_1.png
+  figures/Cluster6-Cluster10-Motifs-Up_1.png
+  figures/Cluster6-Marker-Peaks_1.png
+  figures/FRIP-TSS-Enrichment_1.png
+  figures/FRIP-TSS-Enrichment_2.png
+  figures/Footprints-Divide-Bias_1.png
+  figures/Frags_vs_TSS.png
+  figures/GeneActivityScore_Schematic.png
+  figures/TSS_vs_FRiP.png
+  figures/UMAP-Samples-Clusters_1.png
+  figures/UMAP-Samples-Clusters_2.png
+  figures/UMAP-Samples-Clusters_3.png
+  figures/favicon-16x16.png
+  figures/favicon-32x32.png
+paper.md

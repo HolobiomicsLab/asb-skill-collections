@@ -1,0 +1,276 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "07af780b6416118ddafb725c7dac8b956d4c906e32808e514f43fce54b06884e"
+    }
+  ],
+  "created_at": "2026-06-15T19:02:59.735108+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Publicly available Hi-C FASTQ accession (e.g., NCBI SRA, GEO, or ENCODE-DCC repository accession)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Hi-C contact map in ENCODE reference format (.hic file) with verified checksum matching reference",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "The ENCODE Hi-C uniform processing pipeline is a standardized wrapper around Juicer that ensures consistent kilobase-resolution Hi-C map generation from raw FASTQ files across ENCODE submissions.",
+    "Hi-C contact maps are typically stored in binary .hic format, which encodes chromosome pairs, interaction counts, and resolution-specific normalization matrices for efficient random access.",
+    "Checksum verification (e.g., MD5 or SHA256) is the standard reproducibility assurance for ENCODE pipeline outputs, confirming deterministic pipeline execution on identical inputs.",
+    "The pipeline accepts paired-end Hi-C FASTQ files and produces alignment, duplicate filtering, and contact binning steps before generating the final .hic file."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that ENCODE-DCC/hic-pipeline repository is accessible and contains executable pipeline code",
+      "verify that a public Hi-C FASTQ accession (SRA/GEO format) can be retrieved and loaded",
+      "verify that pipeline execution completes without fatal errors on the selected accession",
+      "verify that output Hi-C map file exists in expected format (e.g., .hic or standard matrix format)",
+      "verify that output checksum or file hash can be computed and compared against documented ENCODE reference checksum (if reference checksum is available in repository or documentation)"
+    ],
+    "expert_review": [
+      "assess whether the computed Hi-C map reflects expected contact frequency patterns and chromosome structure characteristic of valid Hi-C data",
+      "review whether pipeline parameter settings align with ENCODE uniform processing standards",
+      "evaluate whether any deviations from reference output (if detected) are attributable to software versions, reference genome builds, or acceptable preprocessing variations rather than pipeline failure"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the ENCODE Hi-C uniform processing pipeline produce output that conforms to the reference format and integrity standards expected for Hi-C maps generated from FASTQ data?: 'ENCODE's Hi-C uniform processing pipeline based on Juicer can be found [here](https://github.com/ENCODE-DCC/hic-pipeline)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Juicer includes a pipeline for generating Hi-C maps from fastq raw data files, which forms the basis for ENCODE's Hi-C uniform processing pipeline.: 'we include the pipeline for generating Hi-C maps from fastq raw data files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Publicly available Hi-C FASTQ accession (e.g., NCBI SRA, GEO, or ENCODE-DCC repository accession): 'publicly available Hi-C FASTQ accession'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Hi-C contact map in ENCODE reference format (.hic file) with verified checksum matching reference: 'resulting Hi-C map matches the ENCODE reference output format and checksum'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Juicer: 'Juicer is a platform for analyzing kilobase resolution Hi-C data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ENCODE Hi-C uniform processing pipeline (encode_hic_pipeline): 'ENCODE's Hi-C uniform processing pipeline based on Juicer can be found [here](https://github.com/ENCODE-DCC/hic-pipeline)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specific Hi-C FASTQ accession identifier provided for pipeline testing: 'Source: github:aidenlab__juicer'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No reference checksum or expected output specification documented: 'Source: github:aidenlab__juicer'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "git clone https://github.com/ENCODE-DCC/hic-pipeline.git && cd hic-pipeline && ./encode_hic_pipeline.sh {inputs.hic_fastq_accession}"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "hic_contact_map.hic",
+  "expected_outputs": [
+    "Hi-C contact map in ENCODE reference format (.hic file) with verified checksum matching reference"
+  ],
+  "finding": "Juicer includes a pipeline for generating Hi-C maps from fastq raw data files, which forms the basis for ENCODE's Hi-C uniform processing pipeline.",
+  "github_name": "aidenlab/juicer",
+  "input_from": "task_001",
+  "inputs": [
+    "Publicly available Hi-C FASTQ accession (e.g., NCBI SRA, GEO, or ENCODE-DCC repository accession)"
+  ],
+  "keywords": [
+    "hi-c data analysis",
+    "kilobase resolution",
+    "hi-c map generation",
+    "feature annotation",
+    "fastq processing",
+    "3d genomics"
+  ],
+  "landmark_outputs": [
+    "aligned_reads.bam",
+    "deduped_reads.bam",
+    "contact_matrix.txt",
+    "hic_contact_map.hic"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Obtain Hi-C FASTQ data from a public repository or accession identifier.",
+    "Clone the ENCODE Hi-C uniform processing pipeline from ENCODE-DCC/hic-pipeline.",
+    "Execute the pipeline wrapper to align reads, deduplicate, and bin contacts into a kilobase-resolution Hi-C map.",
+    "Generate and compare checksums of the output .hic file against the ENCODE reference.",
+    "Validation: Output .hic file exists, matches expected format, and checksum matches reference checksum."
+  ],
+  "missing_information": [
+    "No changelog found",
+    "No specific Hi-C FASTQ accession identifier provided for pipeline testing",
+    "No reference checksum or expected output specification documented"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the ENCODE Hi-C uniform processing pipeline produce output that conforms to the reference format and integrity standards expected for Hi-C maps generated from FASTQ data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "hi-c-fastq-to-contact-map-pipeline",
+    "hic-map-format-validation",
+    "checksum-verification-for-reproducibility",
+    "encode-hic-pipeline-execution",
+    "kilobase-resolution-contact-map-analysis"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_juicer/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "juicer_system",
+    "juicer_pipeline",
+    "juicer_cli_tools",
+    "juicer_v1_6",
+    "juicer_v2",
+    "encode_hic_pipeline",
+    "fastq_dataset",
+    "juicer_citation"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:aidenlab__juicer",
+  "task_description": "Execute the ENCODE Hi-C uniform processing pipeline (encode_hic_pipeline) on a publicly available Hi-C FASTQ accession to generate a kilobase-resolution Hi-C map, and verify that the output matches ENCODE reference format and checksum.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Hi-C FASTQ dataset accession or file path",
+      "port_id": "hic_fastq_accession",
+      "resolved_via": null,
+      "source": "task_001/hic_map",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the ENCODE Hi-C pipeline on a public Hi-C FASTQ accession and validate output format and checksum against reference standards.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Hi-C contact map in .hic format",
+      "port_id": "hic_contact_map",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reproduce the ENCODE Hi-C Uniform Processing Pipeline Output Using the Juicer-Based ENCODE Workflow",
+  "tools": [
+    "Juicer",
+    "ENCODE Hi-C uniform processing pipeline (encode_hic_pipeline)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Obtain a publicly available Hi-C FASTQ dataset from a public repository (e.g., NCBI SRA, GEO) or use an ENCODE-deposited accession. 2. Clone the ENCODE Hi-C uniform processing pipeline from the ENCODE-DCC/hic-pipeline repository. 3. Run the encode_hic_pipeline wrapper on the FASTQ input files to generate aligned reads and construct the Hi-C contact map. 4. Validate the output Hi-C map file format (e.g., .hic binary format) and compute checksum or file hash. 5. Compare the computed checksum against the ENCODE reference output checksum to confirm pipeline reproducibility and correctness."
+}

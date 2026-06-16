@@ -1,0 +1,423 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_IS.png",
+      "role": "figure",
+      "sha256": "19f92dcb7564378ef46b8c08abb35b427ff4b977a62d8cbeee0adf40512db051"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_accuracy.png",
+      "role": "figure",
+      "sha256": "381b8d172fdce61d311b6d31755c5bd3f474e06a2f70d33cb0f42db962456e97"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_bracketing_table.png",
+      "role": "figure",
+      "sha256": "f65eb78270689d3307ebe570c2a364e556a7472a4e35deee095a012712cb8570"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_drift_correction.png",
+      "role": "figure",
+      "sha256": "dc211d838d3d8ab732c3cb9dd1287e88bcc8f4777452bbc8c490e615c42881bd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_model_diagnostics.png",
+      "role": "figure",
+      "sha256": "598146aaa46c17c5becf74ddd4dd4178f873fd68058d8269ec58bc2341477c2c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_parameters.png",
+      "role": "figure",
+      "sha256": "92ad5ec4a358f569cdb2831e59aecd293bde70a5612f0b9da1658bfe6b39664d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_quantification_parameters.png",
+      "role": "figure",
+      "sha256": "2b43580506c449efaa9254bc77f87615d2de56d7b9601a81208a90bbaa8724b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_quantification_plot.png",
+      "role": "figure",
+      "sha256": "0122649e8a64674c56d7220408295fb1f238eb093c118217061e9f6d40f624a9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_visualization.png",
+      "role": "figure",
+      "sha256": "0d4044927fc493320c7d8915fb6f9fedf667481b7b4cd6f97497e03a9d400e5b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/concentration_template.png",
+      "role": "figure",
+      "sha256": "872a8e9e49b93cf99b48f84ff60dae78b10674e105db302e7d88386c18520aa8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/configure_settings_output.png",
+      "role": "figure",
+      "sha256": "58a2c850a38847061d9531e95c18f0e6cb67437ebc31e842098bfb6b5a1a11ee"
+    },
+    {
+      "indexable": false,
+      "path": "figures/data_upload_parameters.png",
+      "role": "figure",
+      "sha256": "73282d1b9a5c6db70e2527f7287543f6dce76c377ed67502586f88c843ff008a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/example1_RT.png",
+      "role": "figure",
+      "sha256": "79bd163baeab8f98aee8a311d9c833c4a3545428e694b7871b300b2c1d7b4391"
+    },
+    {
+      "indexable": false,
+      "path": "figures/example1_areas.png",
+      "role": "figure",
+      "sha256": "cd9638fbe8f666893ce8cef7a8a66ac03924ff708b0b17327faaa5843744145e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/flowchart.png",
+      "role": "figure",
+      "sha256": "5718e68d4e65a39f3af2cdbaeaab6a21bfce6fd510bb46f21f61430b08e179b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/graphical_abstract.png",
+      "role": "figure",
+      "sha256": "7e323521962ebcea0e3c34d71d74922cbe6174736dda4e8b7826a6e8b4784ed1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/icon.png",
+      "role": "figure",
+      "sha256": "3be71757c99b1866d5fb332ba6d88fe64b8d327d3dceffd378a0256204d08bb9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/model_diagnostics_HisRes.png",
+      "role": "figure",
+      "sha256": "27ac15c5ad17c8804e265727a028158c3ab8f049e19e89f5d6334873c71379db"
+    },
+    {
+      "indexable": false,
+      "path": "figures/model_diagnostics_QQ.png",
+      "role": "figure",
+      "sha256": "acd13de7ef2a447043ecea15ce1e7bf669153801e52551b015cba7a39b4dac6e"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "931214a9764078052f021fb79a579348a289d6edcb3eaeb470bf202edf9f6d19"
+    }
+  ],
+  "created_at": "2026-06-15T13:58:43.515508+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw MS intensity data with sample identifiers and measured ion intensities",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Calibration standard data containing known concentrations and corresponding MS intensities",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Quantified concentration table with sample identifiers and calculated concentration values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Calibration curve parameters (model coefficients and fit metrics)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "External calibration requires measurement of concentration standards across a known range to establish the relationship between MS intensity and analyte concentration.",
+    "Linear or polynomial regression models are commonly used to fit calibration curves; model selection depends on the dynamic range and linearity of the instrument response.",
+    "Calibration quality is assessed via R\u00b2 fit metrics and residual analysis to ensure the model reliably predicts unknown sample concentrations.",
+    "The calibration component operates independently of drift correction; it assumes either drift-corrected intensity data as input or that drift is negligible over the measurement batch."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:CDLMarkus__QuantyFey repository is accessible and contains a README documenting the external calibration component",
+      "file_exists: calibration-related script or module in the QuantyFey repository (e.g., R script, function definition, or documented algorithm for converting raw MS intensity to concentration)",
+      "contains_substring: README or documentation mentions 'calibration' AND 'intensity' AND 'concentration' (any order, case-insensitive)",
+      "verify that any calibration function or module has documented inputs (raw MS intensity data format) and outputs (quantified concentration format)",
+      "file_format_is: any provided calibration reference data or example (CSV, TSV, RData, or similar structured format)"
+    ],
+    "expert_review": [
+      "Assess whether the documented calibration algorithm is mathematically sound for converting raw MS intensity to concentration (e.g., linear regression, curve fitting, standard addition method)",
+      "Verify that the calibration component handles multiple MS ionization modes or compound classes correctly, if applicable",
+      "Evaluate whether the calibration step is appropriately separated from drift correction and visualization components as claimed"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does QuantyFey implement external calibration to convert raw mass spectrometry intensity measurements into quantified concentration values?: 'visualization, analysis, and quantification of mass spectrometry (MS) data using external calibration'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] QuantyFey is a Shiny application designed for quantification of mass spectrometry data using external calibration methodology.: 'QuantyFey is a Shiny application for the visualization, analysis, and quantification of mass spectrometry (MS) data using external calibration'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw MS intensity data with sample identifiers and measured ion intensities: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Calibration standard data containing known concentrations and corresponding MS intensities: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Quantified concentration table with sample identifiers and calculated concentration values: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Calibration curve parameters (model coefficients and fit metrics): 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Shiny: 'QuantyFey is a Shiny application for the visualization, analysis, and quantification of mass spectrometry (MS) data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No description of the external calibration component algorithm, inputs, or outputs is provided in the discussion section: '[UNTRUSTED_DOCUMENT]\n_No changelog found._\n\n## References\n\n- Source: github:CDLMarkus__QuantyFey\n[/UNTRUSTED_DOCUMENT]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "shiny::runApp(appDir='.', launch.browser=FALSE); quit(save='no')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "quantified_concentrations.csv",
+  "expected_outputs": [
+    "Quantified concentration table with sample identifiers and calculated concentration values",
+    "Calibration curve parameters (model coefficients and fit metrics)"
+  ],
+  "finding": "QuantyFey is a Shiny application designed for quantification of mass spectrometry data using external calibration methodology.",
+  "github_name": "CDLMarkus/QuantyFey",
+  "input_from": null,
+  "inputs": [
+    "Raw MS intensity data with sample identifiers and measured ion intensities",
+    "Calibration standard data containing known concentrations and corresponding MS intensities"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "calibration_standards_processed.csv",
+    "calibration_curve_fit.json",
+    "calibration_model_metrics.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load and parse raw MS intensity data and calibration standard reference data",
+    "Fit a regression model (linear or polynomial) relating MS intensity to known standard concentrations",
+    "Evaluate model fit quality using R\u00b2 and residual diagnostics",
+    "Apply the calibration model to convert raw sample intensities to quantified concentrations",
+    "Validation: Calibration model R\u00b2 \u2265 0.99 and prediction residuals within acceptable range for quantitative accuracy"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "No description of the external calibration component algorithm, inputs, or outputs is provided in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does QuantyFey implement external calibration to convert raw mass spectrometry intensity measurements into quantified concentration values?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "calibration-curve-fitting-ms-data",
+    "intensity-to-concentration-conversion",
+    "regression-model-validation-quantification",
+    "ms-quantitative-analysis-standards"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_quantyfey/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "sys_quantyfey",
+    "comp_ms_data_input",
+    "comp_external_calibration",
+    "comp_intensity_drift_correction",
+    "comp_visualization"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "modeling",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:CDLMarkus__QuantyFey",
+  "task_description": "Implement the external calibration component of QuantyFey that converts raw MS intensity data into quantified concentration outputs using calibration curves. Produce a calibration model and apply it to generate concentration predictions.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw MS intensity data with sample identifiers",
+      "port_id": "raw_intensity_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Calibration standard measurements with known concentrations",
+      "port_id": "calibration_standards",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Reconstruct the external calibration algorithm that transforms raw MS intensity inputs into quantified concentration outputs.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Quantified concentration table",
+      "port_id": "quantified_concentrations",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Calibration curve parameters and fit metrics",
+      "port_id": "calibration_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Implement the External Calibration quantification module for MS data in QuantyFey",
+  "tools": [
+    "Shiny"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Shiny, Calibration curve parameters (model coefficients and fit metrics)."
+  ],
+  "workflow_description": "1. Load raw MS intensity data and corresponding calibration standard measurements. 2. Fit external calibration curves (linear or polynomial regression) relating intensity to known concentration standards. 3. Apply the fitted calibration model to raw intensity data to compute quantified concentration values. 4. Output concentration table with sample identifiers and quantified values."
+}

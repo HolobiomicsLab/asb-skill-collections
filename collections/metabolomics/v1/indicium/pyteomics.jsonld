@@ -1,0 +1,925 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "extension",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/bioconda-package-installation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/conditional-dependency-resolution",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/database-accessor-initialization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/hdf5-format-support-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/installation-validation-and-diagnostics",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/installation-validation-reporting",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/module-import-verification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/optional-dependency-extra-specifier-usage",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/package-manager-environment-setup",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/proforma-notation-parsing-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/python-environment-configuration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/python-package-dependency-installation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Pyteomics is a collection of lightweight and handy tools for Python that help to handle various sorts of proteomics data.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Pyteomics provides modules to facilitate calculation of mass and isotopic distribution of polypeptides.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Pyteomics provides modules to facilitate calculation of charge and pI of polypeptides.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Pyteomics provides modules to facilitate prediction of chromatographic retention time of polypeptides.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Pyteomics supports recent versions of Python 3.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Pyteomics can be installed using pip Python package manager.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Pyteomics can be installed from Bioconda using conda.",
+      "@type": "asb:Claim",
+      "source_task_kind": "extension",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        },
+        {
+          "id": "asb:spine_tool_conda"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "On Arch Linux and related distros, Pyteomics can be installed from AUR.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "NumPy is an optional dependency for Pyteomics.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        },
+        {
+          "id": "asb:spine_tool_numpy"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Matplotlib is used by the pyteomics.pylab_aux module.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        },
+        {
+          "id": "asb:spine_comp_pylab_aux"
+        },
+        {
+          "id": "asb:spine_tool_matplotlib"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "lxml is used by XML parsing modules and the pyteomics.mass.mass.Unimod class.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        },
+        {
+          "id": "asb:spine_comp_mass_module"
+        },
+        {
+          "id": "asb:spine_comp_mass_mass_unimod"
+        },
+        {
+          "id": "asb:spine_tool_lxml"
+        },
+        {
+          "id": "asb:spine_dataset_unimod"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Pandas can be used with pyteomics.pepxml, pyteomics.tandem, pyteomics.mzid, and pyteomics.auxiliary modules.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        },
+        {
+          "id": "asb:spine_comp_pepxml"
+        },
+        {
+          "id": "asb:spine_comp_tandem"
+        },
+        {
+          "id": "asb:spine_comp_mzid"
+        },
+        {
+          "id": "asb:spine_comp_auxiliary"
+        },
+        {
+          "id": "asb:spine_tool_pandas"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SQLAlchemy is used by the pyteomics.mass.unimod module.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        },
+        {
+          "id": "asb:spine_comp_mass_module"
+        },
+        {
+          "id": "asb:spine_comp_mass_unimod"
+        },
+        {
+          "id": "asb:spine_tool_sqlalchemy"
+        },
+        {
+          "id": "asb:spine_dataset_unimod"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Pynumpress adds support for Numpress compression in mzML.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_pynumpress"
+        },
+        {
+          "id": "asb:spine_format_mzml"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "h5py and optionally hdf5plugin are used by the pyteomics.mzmlb module.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        },
+        {
+          "id": "asb:spine_comp_mzmlb"
+        },
+        {
+          "id": "asb:spine_tool_h5py"
+        },
+        {
+          "id": "asb:spine_tool_hdf5plugin"
+        },
+        {
+          "id": "asb:spine_format_mzmlb"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "psims is used by the pyteomics.proforma module.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        },
+        {
+          "id": "asb:spine_comp_proforma"
+        },
+        {
+          "id": "asb:spine_tool_psims"
+        },
+        {
+          "id": "asb:spine_format_proforma"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "spectrum_utils is optionally used for spectrum annotation in the pyteomics.pylab_aux module.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        },
+        {
+          "id": "asb:spine_comp_pylab_aux"
+        },
+        {
+          "id": "asb:spine_tool_spectrum_utils"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "All dependencies in Pyteomics are optional.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Pyteomics can be installed with the XML extra to get dependencies needed to read XML format.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        },
+        {
+          "id": "asb:spine_tool_numpy"
+        },
+        {
+          "id": "asb:spine_tool_lxml"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Currently provided extras for Pyteomics installation are XML, TDA, graphics, DF, Unimod, numpress, mzMLb, and proforma.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_pyteomics_system"
+        },
+        {
+          "id": "asb:spine_dataset_unimod"
+        },
+        {
+          "id": "asb:spine_format_mzmlb"
+        },
+        {
+          "id": "asb:spine_format_proforma"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_pyteomics#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "implicit",
+        "orchestration_planning": "static",
+        "data_transport": "in_memory",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_pyteomics_system",
+      "title": "Pyteomics",
+      "identifier": "urn:asb:spine:pyteomics_system"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_mass_module",
+      "title": "pyteomics.mass",
+      "identifier": "urn:asb:spine:comp_mass_module"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_mass_unimod",
+      "title": "pyteomics.mass.unimod",
+      "identifier": "urn:asb:spine:comp_mass_unimod"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_mass_mass_unimod",
+      "title": "pyteomics.mass.mass.Unimod",
+      "identifier": "urn:asb:spine:comp_mass_mass_unimod"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_pepxml",
+      "title": "pyteomics.pepxml",
+      "identifier": "urn:asb:spine:comp_pepxml"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_tandem",
+      "title": "pyteomics.tandem",
+      "identifier": "urn:asb:spine:comp_tandem"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_mzid",
+      "title": "pyteomics.mzid",
+      "identifier": "urn:asb:spine:comp_mzid"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_auxiliary",
+      "title": "pyteomics.auxiliary",
+      "identifier": "urn:asb:spine:comp_auxiliary"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_pylab_aux",
+      "title": "pyteomics.pylab_aux",
+      "identifier": "urn:asb:spine:comp_pylab_aux"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_mzmlb",
+      "title": "pyteomics.mzmlb",
+      "identifier": "urn:asb:spine:comp_mzmlb"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_proforma",
+      "title": "pyteomics.proforma",
+      "identifier": "urn:asb:spine:comp_proforma"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pip",
+      "title": "pip",
+      "identifier": "urn:asb:spine:tool_pip"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_conda",
+      "title": "conda",
+      "identifier": "urn:asb:spine:tool_conda"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_numpy",
+      "title": "numpy",
+      "identifier": "urn:asb:spine:tool_numpy"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_matplotlib",
+      "title": "matplotlib",
+      "identifier": "urn:asb:spine:tool_matplotlib"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_lxml",
+      "title": "lxml",
+      "identifier": "urn:asb:spine:tool_lxml"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pandas",
+      "title": "pandas",
+      "identifier": "urn:asb:spine:tool_pandas"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_sqlalchemy",
+      "title": "sqlalchemy",
+      "identifier": "urn:asb:spine:tool_sqlalchemy"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pynumpress",
+      "title": "pynumpress",
+      "identifier": "urn:asb:spine:tool_pynumpress"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_h5py",
+      "title": "h5py",
+      "identifier": "urn:asb:spine:tool_h5py"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_hdf5plugin",
+      "title": "hdf5plugin",
+      "identifier": "urn:asb:spine:tool_hdf5plugin"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_psims",
+      "title": "psims",
+      "identifier": "urn:asb:spine:tool_psims"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_spectrum_utils",
+      "title": "spectrum_utils",
+      "identifier": "urn:asb:spine:tool_spectrum_utils"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_unimod",
+      "title": "Unimod",
+      "identifier": "urn:asb:spine:dataset_unimod"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_format_mzml",
+      "title": "mzML",
+      "identifier": "urn:asb:spine:format_mzml"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_format_mzmlb",
+      "title": "mzMLb",
+      "identifier": "urn:asb:spine:format_mzmlb"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_format_proforma",
+      "title": "ProForma",
+      "identifier": "urn:asb:spine:format_proforma"
+    }
+  ]
+}

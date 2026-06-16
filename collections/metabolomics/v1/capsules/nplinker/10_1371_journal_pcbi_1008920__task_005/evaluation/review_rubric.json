@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that S1 Data, S2 Data, S3 Data, and S4 Data files (containing high-scoring links from Cr\u00fcsemann, Le\u00e3o, and Gross datasets) are present in the supplementary materials"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the reported combined score formula s'\u2081/p = sgn(s'_corr)|s'_corr|^(1/p) + sgn(s'_IOKR)|s'_IOKR|^(1/p) is correctly implemented in NPLinker source code (zenodo.org/record/4680579) or referenced supplementary code"
+    },
+    {
+      "id": "pf_003",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "p values tested in sensitivity analysis span at least the range [0.5, 1.0, 2.0, "
+    },
+    {
+      "id": "pf_004",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "validated-link ratio (proportion of validated links among top-scoring links at 9"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "for any combination function form reported, verify that the enrichment p-value a"
+    },
+    {
+      "id": "pf_006",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "presence of a supplementary table, figure, or dataset file reporting systematic "
+    },
+    {
+      "id": "pf_007",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that S1 Data, S2 Data, S3 Data, and S4 Data files (containing high-scoring links from Cr\u00fcsemann, Le\u00e3o, and Gross datasets) are present in the supplementary materials",
+      "verify that the reported combined score formula s'\u2081/p = sgn(s'_corr)|s'_corr|^(1/p) + sgn(s'_IOKR)|s'_IOKR|^(1/p) is correctly implemented in NPLinker source code (zenodo.org/record/4680579) or referenced supplementary code",
+      "value_in_range: confirm that p values tested in sensitivity analysis span at least the range [0.5, 1.0, 2.0, 4.0] or comparable exponents, with documentation of which values were evaluated",
+      "value_in_range: confirm that validated-link ratio (proportion of validated links among top-scoring links at 90th percentile or equivalent threshold) is reported for each combination function variant, with ratios between 0 and 1",
+      "output_matches_reference: for any combination function form reported, verify that the enrichment p-value and validated-link count matches the corresponding entry in Table 2 or supplementary tables for the baseline case (p=0.5 or equivalent baseline exponent)",
+      "file_exists: verify presence of a supplementary table, figure, or dataset file reporting systematic variation of p and alternative combination functions with corresponding enrichment metrics",
+      "script_runs: verify that a reproducible script or Jupyter notebook exists (in the NPLinker repository or supplementary materials) that accepts the precomputed IOKR and standardised strain correlation score outputs and produces the sensitivity analysis outputs without requiring re-computation of IOKR or strain correlation scores"
+    ],
+    "expert_review": [
+      "Assess whether the choice of alternative combination function forms (beyond \u2113p-norm) is mathematically sound and biologically justified\u2014e.g., weighted linear combinations, geometric means, other norms",
+      "Evaluate whether the reported sensitivity trend (validated-link ratio as a function of p) is consistent across the three datasets (Cr\u00fcsemann, Le\u00e3o, Gross) and whether any deviation is explained or flagged",
+      "Judge whether the span of p values and combination functions tested is sufficiently comprehensive to characterize the sensitivity landscape, or whether critical parameter regimes may have been missed",
+      "Review whether the authors discuss or acknowledge limitations in extrapolating sensitivity findings to untested product classes or datasets beyond the three reported microbial strains"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

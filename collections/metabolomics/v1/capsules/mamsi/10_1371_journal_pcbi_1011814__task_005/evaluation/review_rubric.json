@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in github:kopeckylukas__py-mamsi repository containing MamsiStructSearch.flattening or equivalent parameter definition"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: instantiate MamsiStructSearch with flattening='silhouette' (or equivalent API) on sample LC-MS data from kopeckylukas/py-mamsi-tutorials without error"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: instantiate MamsiStructSearch with default flattening method (constant-threshold or equivalent) on identical sample data without error"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "cluster assignments output from silhouette-flattened pipeline is a structured re",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "cluster assignments output from default-flattened pipeline matches same structur"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "row_count_equals or value_in_range: number of structural clusters produced by silhouette method is within \u00b150% of default method (or report exact counts for expert review if outside range)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "silhouette score(s) reported by silhouette method are in range [\u22121, +1], robust "
+    },
+    {
+      "id": "pf_008",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "cluster assignment outputs include field indicating flattening method used, allo",
+      "value": [
+        "indicating flattening method used",
+        "allowing byte-for-byte verification of method identity"
+      ]
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in github:kopeckylukas__py-mamsi repository containing MamsiStructSearch.flattening or equivalent parameter definition",
+      "verify script_runs: instantiate MamsiStructSearch with flattening='silhouette' (or equivalent API) on sample LC-MS data from kopeckylukas/py-mamsi-tutorials without error",
+      "verify script_runs: instantiate MamsiStructSearch with default flattening method (constant-threshold or equivalent) on identical sample data without error",
+      "file_format_is: cluster assignments output from silhouette-flattened pipeline is a structured record (CSV, JSON, or Python dict-like object) with fields: feature_id, cluster_id, and confidence_score or equivalent",
+      "file_format_is: cluster assignments output from default-flattened pipeline matches same structure",
+      "row_count_equals or value_in_range: number of structural clusters produced by silhouette method is within \u00b150% of default method (or report exact counts for expert review if outside range)",
+      "value_in_range: silhouette score(s) reported by silhouette method are in range [\u22121, +1], robust to parameter choices",
+      "field_present: cluster assignment outputs include field indicating flattening method used, allowing byte-for-byte verification of method identity"
+    ],
+    "expert_review": [
+      "Compare silhouette-method vs. default-method cluster assignments for biological/chemical plausibility: do reassignments of features to different clusters align with expected m/z and RT proximity and known metabolite structure relationships?",
+      "Evaluate whether silhouette-based flattening produces more stable or more interpretable cluster boundaries than constant-threshold method on the same dataset",
+      "Assess whether the silhouette method resolves ambiguous borderline features (low distance to multiple clusters) more defensibly than the default approach, multiple defensible outcomes possible"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

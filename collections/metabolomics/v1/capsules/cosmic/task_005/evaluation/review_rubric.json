@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:sirius-ms__sirius repository is accessible and contains a .github/workflows/distribute.yaml file"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the distribute.yaml workflow defines a 'Build and Publish' job or equivalent release automation step"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the repository README.md file exists and contains a build badge reference (e.g., markdown image link to workflow status badge)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the build badge URL points to the distribute.yaml workflow and resolves to a passing (green) status indicator on the release branch or main branch"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:sirius-ms__sirius repository is accessible and contains a .github/workflows/distribute.yaml file",
+      "verify that the distribute.yaml workflow defines a 'Build and Publish' job or equivalent release automation step",
+      "verify that the repository README.md file exists and contains a build badge reference (e.g., markdown image link to workflow status badge)",
+      "verify that the build badge URL points to the distribute.yaml workflow and resolves to a passing (green) status indicator on the release branch or main branch"
+    ],
+    "expert_review": [
+      "confirm that the badge rendering and status endpoint are correctly configured to reflect the actual workflow state (not stale or cached)",
+      "assess whether the workflow definition and badge linkage constitute adequate evidence of reproducible automated distribution, given the scope of this sub-task"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

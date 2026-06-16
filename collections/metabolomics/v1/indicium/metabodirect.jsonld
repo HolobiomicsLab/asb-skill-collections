@@ -1,0 +1,1962 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/analytical-pipeline-feature-documentation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/biochemical-transformation-matching",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/chemodiversity-metric-calculation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/code-repository-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/command-line-pipeline-execution-and-runtime-benchmarking",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/cross-platform-software-capability-mapping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/cytoscape-edge-node-file-formatting",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/distance-metric-calculation-bray-curtis-euclidean-jaccard",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/diversity-visualization-by-treatment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ft-icr-ms-analysis-tool-evaluation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ft-icr-ms-data-preprocessing-and-quality-control",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/functional-trait-diversity-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-difference-network-construction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-molecular-formula-handling",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolite-abundance-normalization-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolite-abundance-stratification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolite-chemodiversity-index-calculation-and-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/microbial-phage-infection-experimental-design-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/multivariate-ordination-analysis-nmds-pca",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/nmds-ordination-distance-metric-selection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peak-abundance-normalization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peak-intensity-normalization-method-selection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/peak-pairwise-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/permanova-statistical-testing-multivariate-groups",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ppm-error-tolerance-filtering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/richness-index-computation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/software-feature-inventory-and-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/thermodynamic-molecular-index-calculation-from-elemental-composition",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/transformation-classification-biotic-abiotic",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect requires a single line of code to launch a fully automated framework for the generation and visualization of a wide range of plots.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect is uniquely able to automatically generate biochemical transformation networks based on mass differences.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "DI-MS drawbacks include inability to separate chemical isomers, lack of fine resolving power, and signal suppression or enhancement.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "FT-ICR MS has evolved into a powerful tool to study molecular composition of small-molecule organic complex mixtures in diverse ecosystems.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_FT_ICR_MS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "40 samples were processed in less than 1 min whereas 120 samples took as little as 2 min by MetaboDirect.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        },
+        {
+          "id": "asb:spine_Metric_Runtime_40samples"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The bacterium-phage data set had an average of 1025 peaks detected across 36 samples.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "An average of 495 peaks in the bacterium-phage data set received molecular formula assignment.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The main steps of the MetaboDirect pipeline took less than 1 min (~36 s) for the bacterium-phage data set.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect analysis including KEGG mapping and biochemical transformations took around 10 min for the bacterium-phage data set.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        },
+        {
+          "id": "asb:spine_KEGG_Database"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Full MetaboDirect analysis including KEGG mapping, biochemical transformations, and network creation took about 21 min for the bacterium-phage data set.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        },
+        {
+          "id": "asb:spine_KEGG_Database"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The S. fallax data set consisted of 4 samples with an average of 1793 assigned molecular formulas.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The main MetaboDirect pipeline steps for the S. fallax data set were clocked at around 30 s.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Full analysis of the S. fallax data set including KEGG mapping and network construction took about 32 min.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_KEGG_Database"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Approximately 200 masses were filtered out from the bacterium-phage data set because they contained isotopic carbon.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "One sample in the bacterium-phage data set was identified as a potential outlier with very low assigned molecular formulas.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The chemical composition of the exometabolome of cells infected with HS2 phage changed at 30 min post-inoculation, then returned to uninfected similarity.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The molecular composition of exometabolome from cells infected with HP1 phage did not change throughout the experiment.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Most detected metabolites were shared between infected and uninfected cells in the bacterium-phage data set.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Unique metabolites in the bacterium-phage data set were mostly protein-like, lignin-like, and lipid-like.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "In the S. fallax data set, the number of unique metabolites in control and inoculated samples was almost the same as shared metabolites.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_021",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Lignin-like metabolites were most abundant in unique metabolites in inoculated S. fallax samples.",
+      "@type": "asb:Claim",
+      "source_task_kind": "analysis",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_021_evidence",
+      "evidence_for": "claim_021",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_022",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Tannins were present only in control samples of the S. fallax data set.",
+      "@type": "asb:Claim",
+      "source_task_kind": "analysis",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_022_evidence",
+      "evidence_for": "claim_022",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_023",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Inoculating S. fallax leachate with microorganisms increased the diversity of metabolites in richness.",
+      "@type": "asb:Claim",
+      "source_task_kind": "analysis",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_Cond_Sphagnum_Inoculated"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_023_evidence",
+      "evidence_for": "claim_023",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_024",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Inoculation decreased functional diversity of metabolites in S. fallax samples.",
+      "@type": "asb:Claim",
+      "source_task_kind": "analysis",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_024_evidence",
+      "evidence_for": "claim_024",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_025",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect was developed in Python 3.8 and R 4.0.2.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_025_evidence",
+      "evidence_for": "claim_025",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_026",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect requires Python dependencies including NumPy, pandas, seaborn, py4cytoscape, and matplotlib.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_026_evidence",
+      "evidence_for": "claim_026",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_027",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect consists of 6 major steps: data pre-processing, data diagnostics, data exploration, chemodiversity analysis, statistical analysis, and transformation network analysis.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_027_evidence",
+      "evidence_for": "claim_027",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_028",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect can work with molecular formulas generated by software such as DataAnalysis, Xcalibur, CoreMS, or MassSpecWavelet followed by MFAssignR.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        },
+        {
+          "id": "asb:spine_CoreMS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_028_evidence",
+      "evidence_for": "claim_028",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_029",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The normalization methods available in MetaboDirect include max, minmax, mean, median, total sum, and zscore.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_029_evidence",
+      "evidence_for": "claim_029",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_030",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect calculates thermodynamic indices including NOSC, GFE, AImod, and DBE.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        },
+        {
+          "id": "asb:spine_NOSC_Index"
+        },
+        {
+          "id": "asb:spine_AImod_Index"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_030_evidence",
+      "evidence_for": "claim_030",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_031",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect generates Van Krevelen diagrams during data exploration.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_031_evidence",
+      "evidence_for": "claim_031",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_032",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect can query the KEGG database to provide putative KEGG Pathway, Module, and Brite annotations.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        },
+        {
+          "id": "asb:spine_KEGG_Database"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_032_evidence",
+      "evidence_for": "claim_032",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_033",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect calculates diversity metrics including Shannon diversity index, Gini-Simpson index, and Chao1 richness estimator.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_033_evidence",
+      "evidence_for": "claim_033",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_034",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Rao's quadratic entropy is used by MetaboDirect to measure functional-based diversity.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_034_evidence",
+      "evidence_for": "claim_034",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_035",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect performs PERMANOVA for statistical analysis of FT-ICR MS data.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        },
+        {
+          "id": "asb:spine_FT_ICR_MS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_035_evidence",
+      "evidence_for": "claim_035",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_036",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect generates NMDS ordination plots for metabolomic data visualization.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_036_evidence",
+      "evidence_for": "claim_036",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_037",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect creates PCA scree plots and biplots based on molecular composition and thermodynamic indices.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_037_evidence",
+      "evidence_for": "claim_037",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_038",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect uses mass difference network-based approach to generate molecular transformation networks.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_038_evidence",
+      "evidence_for": "claim_038",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_039",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Mass differences with a maximum error of 1 ppm are kept as putative mass-based transformations in MetaboDirect.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_039_evidence",
+      "evidence_for": "claim_039",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_040",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Microorganisms are responsible for mobilization, transformation, and storage of natural organic matter.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_040_evidence",
+      "evidence_for": "claim_040",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_041",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Microorganisms can directly assimilate low molecular weight DOM less than 600 Da for metabolic processes.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_041_evidence",
+      "evidence_for": "claim_041",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_042",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Environmental conditions such as temperature and water availability influence microbial community structure and its interaction with NOM.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_042_evidence",
+      "evidence_for": "claim_042",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_043",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "High-resolution mass spectrometry has allowed high-precision formula assignment of diverse organic compounds based on ultra-high mass accuracy.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_043_evidence",
+      "evidence_for": "claim_043",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_044",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect is a command-line-based pipeline requiring minimal coding experience.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_044_evidence",
+      "evidence_for": "claim_044",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_045",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The most abundant chemical transformation in the bacterium-phage data set was methylation.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_045_evidence",
+      "evidence_for": "claim_045",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_046",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect provides all R scripts used in the generation of tables and visualizations for customization.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_046_evidence",
+      "evidence_for": "claim_046",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_047",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect can perform all analyses offered by other FT-ICR MS software except raw spectra processing and molecular formula assignment.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        },
+        {
+          "id": "asb:spine_FT_ICR_MS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_047_evidence",
+      "evidence_for": "claim_047",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_048",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MetaboDirect integrates metabolomics within microbiome studies to advance understanding of microbial-chemical interactions.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_MetaboDirect"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_048_evidence",
+      "evidence_for": "claim_048",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_049",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Chemodiversity analysis for the bacterium-phage data set found little differences in metabolite diversity between infected and uninfected cells.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_049_evidence",
+      "evidence_for": "claim_049",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_050",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "PERMANOVA analysis showed the phage type produces a significant difference in metabolite content.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_050_evidence",
+      "evidence_for": "claim_050",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_metabodirect#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "hierarchical",
+        "abstraction_level": "concrete",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_MetaboDirect",
+      "title": "MetaboDirect",
+      "identifier": "urn:asb:spine:MetaboDirect"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_MetaboDirect_Pipeline_Architecture",
+      "title": "MetaboDirect Six-Step Pipeline",
+      "identifier": "urn:asb:spine:MetaboDirect_Pipeline_Architecture",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_Step_DataPreprocessing",
+      "title": "Data Pre-processing Step",
+      "identifier": "urn:asb:spine:Step_DataPreprocessing",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_Step_DataDiagnostics",
+      "title": "Data Diagnostics Step",
+      "identifier": "urn:asb:spine:Step_DataDiagnostics",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_Step_DataExploration",
+      "title": "Data Exploration Step",
+      "identifier": "urn:asb:spine:Step_DataExploration",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_Step_ChemodiversityAnalysis",
+      "title": "Chemodiversity Analysis Step",
+      "identifier": "urn:asb:spine:Step_ChemodiversityAnalysis",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_Step_StatisticalAnalysis",
+      "title": "Statistical Analysis Step",
+      "identifier": "urn:asb:spine:Step_StatisticalAnalysis",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_Step_TransformationNetworks",
+      "title": "Transformation Network Analysis Step",
+      "identifier": "urn:asb:spine:Step_TransformationNetworks",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_TransformationNetwork_GeneratedArtifact",
+      "title": "Per-Sample Molecular Transformation Network",
+      "identifier": "urn:asb:spine:TransformationNetwork_GeneratedArtifact",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_TestNormalization_Script",
+      "title": "test_normalization companion script",
+      "identifier": "urn:asb:spine:TestNormalization_Script"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_SPANS",
+      "title": "SPANS",
+      "identifier": "urn:asb:spine:SPANS"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_NOSC_Index",
+      "title": "NOSC",
+      "identifier": "urn:asb:spine:NOSC_Index"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_GFE_Index",
+      "title": "GFE",
+      "identifier": "urn:asb:spine:GFE_Index"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_AImod_Index",
+      "title": "AImod",
+      "identifier": "urn:asb:spine:AImod_Index"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_DBE_Index",
+      "title": "DBE",
+      "identifier": "urn:asb:spine:DBE_Index"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_Formularity",
+      "title": "Formularity",
+      "identifier": "urn:asb:spine:Formularity"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_CoreMS",
+      "title": "CoreMS",
+      "identifier": "urn:asb:spine:CoreMS"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_Cytoscape",
+      "title": "Cytoscape",
+      "identifier": "urn:asb:spine:Cytoscape"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_MetaNetter2",
+      "title": "MetaNetter_2",
+      "identifier": "urn:asb:spine:MetaNetter2"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_KEGG_Database",
+      "title": "KEGG",
+      "identifier": "urn:asb:spine:KEGG_Database"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_MetaboAnalyst",
+      "title": "MetaboAnalyst",
+      "identifier": "urn:asb:spine:MetaboAnalyst"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_ftmsRanalysis",
+      "title": "ftmsRanalysis",
+      "identifier": "urn:asb:spine:ftmsRanalysis"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_PyKrev",
+      "title": "PyKrev",
+      "identifier": "urn:asb:spine:PyKrev"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_UME",
+      "title": "UltraMassExplorer",
+      "identifier": "urn:asb:spine:UME"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_pmartR",
+      "title": "pmartR",
+      "identifier": "urn:asb:spine:pmartR"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_vegan_R",
+      "title": "vegan",
+      "identifier": "urn:asb:spine:vegan_R"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_Dataset_PhageHost",
+      "title": "Marine Phage-Host Exometabolome Dataset",
+      "identifier": "urn:asb:spine:Dataset_PhageHost"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_Dataset_SphagnumLeachate",
+      "title": "Sphagnum fallax Leachate Incubation Dataset",
+      "identifier": "urn:asb:spine:Dataset_SphagnumLeachate"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_Pseudoalteromonas",
+      "title": "Pseudoalteromonas",
+      "identifier": "urn:asb:spine:Pseudoalteromonas"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_HP1_Phage",
+      "title": "HP1",
+      "identifier": "urn:asb:spine:HP1_Phage"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_HS2_Phage",
+      "title": "HS2",
+      "identifier": "urn:asb:spine:HS2_Phage"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_Sphagnum_fallax",
+      "title": "Sphagnum fallax",
+      "identifier": "urn:asb:spine:Sphagnum_fallax"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_FT_ICR_MS",
+      "title": "FT-ICR MS",
+      "identifier": "urn:asb:spine:FT_ICR_MS"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_PhageType_HP1",
+      "title": "HP1 phage infection condition",
+      "identifier": "urn:asb:spine:Cond_PhageType_HP1"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_PhageType_HS2",
+      "title": "HS2 phage infection condition",
+      "identifier": "urn:asb:spine:Cond_PhageType_HS2"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_PhageType_Control",
+      "title": "Uninfected control condition",
+      "identifier": "urn:asb:spine:Cond_PhageType_Control"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_Sphagnum_Inoculated",
+      "title": "S. fallax leachate with microorganisms",
+      "identifier": "urn:asb:spine:Cond_Sphagnum_Inoculated"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_Sphagnum_Control",
+      "title": "S. fallax leachate without microorganisms",
+      "identifier": "urn:asb:spine:Cond_Sphagnum_Control"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_Benchmark_40samples",
+      "title": "Benchmark: 40 samples",
+      "identifier": "urn:asb:spine:Cond_Benchmark_40samples"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_Benchmark_120samples",
+      "title": "Benchmark: 120 samples",
+      "identifier": "urn:asb:spine:Cond_Benchmark_120samples"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_PhageDataset_MainOnly",
+      "title": "Phage dataset: main pipeline only",
+      "identifier": "urn:asb:spine:Cond_PhageDataset_MainOnly"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_PhageDataset_WithKEGG",
+      "title": "Phage dataset: main pipeline + KEGG + transformations",
+      "identifier": "urn:asb:spine:Cond_PhageDataset_WithKEGG"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_PhageDataset_Full",
+      "title": "Phage dataset: full analysis including networks",
+      "identifier": "urn:asb:spine:Cond_PhageDataset_Full"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_SphagnumDataset_MainOnly",
+      "title": "S. fallax dataset: main pipeline only",
+      "identifier": "urn:asb:spine:Cond_SphagnumDataset_MainOnly"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_Cond_SphagnumDataset_Full",
+      "title": "S. fallax dataset: full analysis including networks",
+      "identifier": "urn:asb:spine:Cond_SphagnumDataset_Full"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_Metric_Runtime_40samples",
+      "title": "Runtime for 40 samples (main pipeline)",
+      "identifier": "urn:asb:spine:Metric_Runtime_40samples",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_Benchmark_40samples"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_Metric_Runtime_120samples",
+      "title": "Runtime for 120 samples (main pipeline)",
+      "identifier": "urn:asb:spine:Metric_Runtime_120samples",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_Benchmark_120samples"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_Metric_Runtime_PhageMain",
+      "title": "Runtime for phage dataset (main pipeline only)",
+      "identifier": "urn:asb:spine:Metric_Runtime_PhageMain",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_PhageDataset_MainOnly"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_Metric_Runtime_PhageKEGGTransform",
+      "title": "Runtime for phage dataset (main + KEGG + transformations)",
+      "identifier": "urn:asb:spine:Metric_Runtime_PhageKEGGTransform",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_PhageDataset_WithKEGG"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_Metric_Runtime_PhageFull",
+      "title": "Runtime for phage dataset (full analysis)",
+      "identifier": "urn:asb:spine:Metric_Runtime_PhageFull",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_PhageDataset_Full"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_Metric_Runtime_SphagnumMain",
+      "title": "Runtime for S. fallax dataset (main pipeline only)",
+      "identifier": "urn:asb:spine:Metric_Runtime_SphagnumMain",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_SphagnumDataset_MainOnly"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_Metric_Runtime_SphagnumFull",
+      "title": "Runtime for S. fallax dataset (full analysis)",
+      "identifier": "urn:asb:spine:Metric_Runtime_SphagnumFull",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_SphagnumDataset_Full"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_Metric_PhageDataset_AvgPeaks",
+      "title": "Average peaks detected in phage dataset",
+      "identifier": "urn:asb:spine:Metric_PhageDataset_AvgPeaks",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_PhageDataset_MainOnly"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_Metric_PhageDataset_AvgFormulas",
+      "title": "Average peaks with molecular formula in phage dataset",
+      "identifier": "urn:asb:spine:Metric_PhageDataset_AvgFormulas",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_PhageDataset_MainOnly"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_Metric_SphagnumDataset_AvgFormulas",
+      "title": "Average assigned molecular formulas in S. fallax dataset",
+      "identifier": "urn:asb:spine:Metric_SphagnumDataset_AvgFormulas",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_SphagnumDataset_MainOnly"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_Metric_PERMANOVA_PhageType",
+      "title": "PERMANOVA p-value for phage type effect",
+      "identifier": "urn:asb:spine:Metric_PERMANOVA_PhageType",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_PhageType_HP1"
+        },
+        {
+          "id": "asb:spine_Cond_PhageType_HS2"
+        },
+        {
+          "id": "asb:spine_Cond_PhageType_Control"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_Result_HS2_CompositionChange",
+      "title": "HS2 infection causes transient exometabolome composition change",
+      "identifier": "urn:asb:spine:Result_HS2_CompositionChange",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_PhageType_HS2"
+        },
+        {
+          "id": "asb:spine_Cond_PhageType_HP1"
+        },
+        {
+          "id": "asb:spine_Cond_PhageType_Control"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_Result_PhageUniqueMetabolites",
+      "title": "Unique metabolites are protein-like, lignin-like, and lipid-like in phage dataset",
+      "identifier": "urn:asb:spine:Result_PhageUniqueMetabolites",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_PhageType_HP1"
+        },
+        {
+          "id": "asb:spine_Cond_PhageType_HS2"
+        },
+        {
+          "id": "asb:spine_Cond_PhageType_Control"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_Result_SphagnumUniqueMetabolites",
+      "title": "Lignin-like metabolites unique to inoculated S. fallax samples; tannins only in control",
+      "identifier": "urn:asb:spine:Result_SphagnumUniqueMetabolites",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_Sphagnum_Inoculated"
+        },
+        {
+          "id": "asb:spine_Cond_Sphagnum_Control"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_Result_PhageChemodiversity",
+      "title": "Little chemodiversity difference between infected and uninfected cells",
+      "identifier": "urn:asb:spine:Result_PhageChemodiversity",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_PhageType_HP1"
+        },
+        {
+          "id": "asb:spine_Cond_PhageType_HS2"
+        },
+        {
+          "id": "asb:spine_Cond_PhageType_Control"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_Result_SphagnumChemodiversity",
+      "title": "Microbial inoculation increases S. fallax metabolite richness but decreases functional diversity",
+      "identifier": "urn:asb:spine:Result_SphagnumChemodiversity",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_Sphagnum_Inoculated"
+        },
+        {
+          "id": "asb:spine_Cond_Sphagnum_Control"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_Result_MetaboDirect_AutomationAdvantage",
+      "title": "MetaboDirect superior automation vs. other FT-ICR MS software",
+      "identifier": "urn:asb:spine:Result_MetaboDirect_AutomationAdvantage",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_Cond_Benchmark_40samples"
+        },
+        {
+          "id": "asb:spine_Cond_Benchmark_120samples"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_Result_MetaboDirect_UniqueNetworkGeneration",
+      "title": "MetaboDirect uniquely auto-generates biochemical transformation networks ab initio",
+      "identifier": "urn:asb:spine:Result_MetaboDirect_UniqueNetworkGeneration"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_Baseline_MetaboAnalyst_Comparison",
+      "title": "MetaboAnalyst (comparison baseline)",
+      "identifier": "urn:asb:spine:Baseline_MetaboAnalyst_Comparison"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_Baseline_PyKrev_Comparison",
+      "title": "PyKrev (comparison baseline)",
+      "identifier": "urn:asb:spine:Baseline_PyKrev_Comparison"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_Baseline_ftmsRanalysis_Comparison",
+      "title": "ftmsRanalysis (comparison baseline)",
+      "identifier": "urn:asb:spine:Baseline_ftmsRanalysis_Comparison"
+    },
+    {
+      "@type": "asb:Baseline",
+      "id": "asb:spine_Baseline_UME_Comparison",
+      "title": "UltraMassExplorer (comparison baseline)",
+      "identifier": "urn:asb:spine:Baseline_UME_Comparison"
+    }
+  ]
+}

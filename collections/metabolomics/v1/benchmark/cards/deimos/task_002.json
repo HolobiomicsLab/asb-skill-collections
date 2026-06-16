@@ -1,0 +1,349 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/icon.png",
+      "role": "figure",
+      "sha256": "b619bc21ac9fc6eb922829b05e247dc82431dafcc2edbfb7fb96b28973f281c3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "8f646fc27b0f55e5344aab1222ddf5c7501dc09c1e63a88374ec458469c3a517"
+    },
+    {
+      "indexable": false,
+      "path": "figures/overview.png",
+      "role": "figure",
+      "sha256": "64c35d799814f2073f0f257bda3de8e1e5531ed2cf582746cf802679ea79c4ac"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d554b717bdd475fc6ee7e7806c0af62e7afe83d65c1036c5955f48ca2286277c"
+    }
+  ],
+  "created_at": "2026-06-16T07:39:32.715601+00:00",
+  "crossref_doi": null,
+  "data_accessions": [
+    {
+      "accession": "MSV000091746",
+      "evidence_span": "3d3422d94b1dde95fc0178c>`_ * Use ftp://massive.ucsd.edu/v01/MSV000091746 as the FTP Download Link (not the v07 folder shown in MassI",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000091746"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "First HDF5 feature table (e.g., example_alignment.h5 with key 'A')",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Second HDF5 feature table (e.g., example_alignment.h5 with key 'B')",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Aligned feature table in HDF5 format containing matched features with mz, drift_time, retention_time, and intensity for all aligned features",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "DEIMoS alignment exploits N-dimensional feature space (mass, drift time, retention time) simultaneously to increase matching confidence and separation between features compared to single-dimension approaches.",
+    "Reference-based alignment requires two or more feature tables with consistent dimensional columns (mz, drift_time, retention_time, intensity) to enable reliable matching across datasets.",
+    "The alignment step produces a merged output table where each row represents a feature matched across input datasets, enabling downstream analysis of features with common identity across study samples."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file example_alignment.h5 exists in repository or deposited dataset",
+      "verify deimos.alignment function is callable from deimos package after installation",
+      "verify output aligned table file_format_is HDF5 or pandas DataFrame serializable format",
+      "verify aligned output contains expected columns matching input feature tables (robust to column order)",
+      "script_runs: Python script loading example_alignment.h5, calling deimos.alignment with reference-based method, and writing aligned output without errors",
+      "verify output row_count_equals or approximately matches expected feature count (parameter-sensitive to alignment tolerance parameters)",
+      "verify aligned features contain at least the common dimensions (m/z, drift_time, retention_time) from input tables"
+    ],
+    "expert_review": [
+      "assess whether reference-based alignment correctly matched homologous features across the two input feature tables",
+      "evaluate alignment quality by examining mass accuracy and dimensional correspondence of matched features",
+      "verify that alignment method choice (reference-based vs. other approaches) was appropriate for the example datasets",
+      "assess whether the aligned output preserves intensity and other quantitative metadata without loss or corruption"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does reference-based alignment in DEIMoS adjust feature coordinates across samples to account for instrument variation?: 'Alignment is the process by which feature coordinates across samples are adjusted to account for instrument variation (drift, calibration, etc.) such that matching features are aligned to adjust for'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Reference-based alignment constructs a model for each dimension of a sample by putatively matching detected features against an in-study reference sample, minimizing the residual, and subsequently applying the fit transform to align coordinates.: 'To perform alignment, we can construct a model for each dimension of a sample by putatively matching detected features against an in-study reference sample, minimizing the residual, and subsequently'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[results] First HDF5 feature table (e.g., example_alignment.h5 with key 'A'): 'data['A'] = deimos.load('example_alignment.h5', key='A')'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Second HDF5 feature table (e.g., example_alignment.h5 with key 'B'): 'data['A'] = deimos.load('example_alignment.h5', key='A')'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Aligned feature table in HDF5 format containing matched features with mz, drift_time, retention_time, and intensity for all aligned features: 'output comprising detected features aligned across study samples and characterized by mass, CCS, tandem mass spectra, and isotopic signature'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] DEIMoS: 'DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'is a Python application programming interface and command-line tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[results] deimos: 'import deimos'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, bug fixes, or feature updates is available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import h5py; import numpy as np; from deimos.alignment import align; a = h5py.File('{inputs.feature_table_a}', 'r'); b = h5py.File('{inputs.feature_table_b}', 'r'); aligned = align([a, b]); out = h5py.File('aligned_features_{task_id}.h5', 'w'); out.create_dataset('aligned', data=aligned); out.close(); a.close(); b.close()"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "aligned_features.h5",
+  "expected_outputs": [
+    "Aligned feature table in HDF5 format containing matched features with mz, drift_time, retention_time, and intensity for all aligned features"
+  ],
+  "finding": "Reference-based alignment constructs a model for each dimension of a sample by putatively matching detected features against an in-study reference sample, minimizing the residual, and subsequently applying the fit transform to align coordinates.",
+  "github_name": "pnnl/deimos",
+  "input_from": null,
+  "inputs": [
+    "First HDF5 feature table (e.g., example_alignment.h5 with key 'A')",
+    "Second HDF5 feature table (e.g., example_alignment.h5 with key 'B')"
+  ],
+  "keywords": [
+    "high-dimensional mass spectrometry",
+    "feature detection",
+    "feature alignment",
+    "collision cross section calibration",
+    "isotope detection",
+    "ms/ms spectral deconvolution",
+    "n-dimensional data analysis",
+    "untargeted metabolomics",
+    "multidimensional spectrometry"
+  ],
+  "landmark_outputs": [
+    "feature_table_a_loaded.csv",
+    "feature_table_b_loaded.csv",
+    "alignment_report.txt"
+  ],
+  "linked_result_ids": [
+    "result_008",
+    "result_009",
+    "result_021",
+    "result_025",
+    "result_026"
+  ],
+  "methodology_summary": [
+    "Load two feature tables in HDF5 format specifying multi-dimensional columns (mass, drift time, retention time, intensity).",
+    "Apply reference-based alignment to match features across datasets using simultaneous N-dimensional similarity comparison.",
+    "Export aligned features to HDF5 format with matched feature identities preserved.",
+    "Validation: verify aligned output table contains features matched across both input datasets with dimensional consistency and no data loss.",
+    "References: MSV000091746 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000091746)"
+  ],
+  "missing_information": [
+    "No changelog documenting version history, bug fixes, or feature updates is available"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does reference-based alignment in DEIMoS adjust feature coordinates across samples to account for instrument variation?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "results"
+  ],
+  "skills": [
+    "multi-dimensional-feature-alignment",
+    "hdf5-feature-table-loading",
+    "cross-dataset-feature-matching",
+    "mass-spectrometry-data-integration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_deimos/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "deimos_system",
+    "arch_pipeline",
+    "comp_alignment",
+    "comp_calibration",
+    "comp_deconvolution",
+    "comp_filters",
+    "comp_grid",
+    "comp_io",
+    "comp_isotopes",
+    "comp_peakpick",
+    "comp_plot",
+    "comp_subset",
+    "comp_utils",
+    "comp_cli",
+    "fmt_mzml",
+    "fmt_hdf5",
+    "dataset_massive_userguide",
+    "dataset_massive_manuscript",
+    "method_ccs_singlefield",
+    "method_isotope_detect",
+    "result_improved_sensitivity"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:pnnl__deimos",
+  "task_description": "Align features across two HDF5 feature tables using deimos.alignment with reference-based alignment to produce a single merged feature table with matched features across datasets.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "First HDF5 feature table",
+      "port_id": "feature_table_a",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Second HDF5 feature table",
+      "port_id": "feature_table_b",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Apply deimos.alignment reference-based method to align feature coordinates between two HDF5 sample tables using putative feature matching against a reference sample.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Aligned feature table",
+      "port_id": "aligned_features",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "ion-mobility",
+    "feature-detection",
+    "chromatogram-alignment",
+    "mass-spectrometry-imaging"
+  ],
+  "title": "Reconstruct the Peak-Picking Processing Step on mzML Input Data",
+  "tools": [
+    "DEIMoS",
+    "Python",
+    "deimos"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load two feature tables in HDF5 format using deimos.load() with keys and columns parameters specifying mz, drift_time, retention_time, and intensity dimensions. 2. Apply deimos.alignment.align() using reference-based alignment mode to match features across the two datasets by exploiting multi-dimensional similarity in mass, drift time, and retention time. 3. Export the aligned feature table to HDF5 format using deimos.save() with appropriate key and compression settings."
+}

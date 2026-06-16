@@ -1,0 +1,302 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Rplot001.jpg",
+      "role": "figure",
+      "sha256": "79259d0fa68ec36cfa387ea2b9948e1a8f0a42239143735eeae01a80ab72da72"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d8ab23ebaf3bf6459087e91d56055beef2ca5b026fc08b4cf749c6c400b5330d"
+    }
+  ],
+  "created_at": "2026-06-15T13:20:51.739319+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_002.expected_outputs[0]: SummarizedExperiment object with 'ratio_corrected' assay containing batch-corrected Compound/Internal Standard ratios",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pre-processed SummarizedExperiment object output from doAnalysis",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Plots subdirectory containing quality-control visualization files",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reports subdirectory containing tab-delimited text files and Excel exports",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "The cautionRSD and nonReportableRSD parameters define thresholds for compound reliability: compounds with relative standard deviation above cautionRSD (15%) are flagged for caution, and those above nonReportableRSD (30%) are marked as unreliable.",
+    "The backgroundPercent parameter (40%) sets the threshold for identifying background signal intensity relative to peak intensity, used to filter weak or noisy measurements.",
+    "Quality reports in mzQuality include both visual plots (for human inspection) and tab-delimited text files (for downstream computational analysis) alongside Excel exports for stakeholder communication.",
+    "The assays parameter specifies which assay type to report on; 'area' refers to the integrated area under the chromatographic peak, a standard quantification metric in liquid chromatography\u2013mass spectrometry."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file_exists: output directory contains 'Plots' subdirectory",
+      "verify file_exists: output directory contains 'Reports' subdirectory",
+      "verify file_format_is: all files in Plots subdirectory are image files (PNG, PDF, or similar graphics format)",
+      "verify file_format_is: all files in Reports subdirectory are tab-delimited text files (.txt or .tsv)",
+      "verify script_runs: createReports() function executes without error when called with parameters makeSummaryReport=TRUE, makeCompoundReport=TRUE, backgroundPercent=40, cautionRSD=15, nonReportableRSD=30, assays='area'",
+      "verify row_count_equals: summary report and compound report files are non-empty (contain at least header row plus one data row)"
+    ],
+    "expert_review": [
+      "Verify that generated plots are visually coherent and match documented mzQuality output styles for quality control visualization",
+      "Verify that report content appropriately reflects the specified RSD thresholds (cautionRSD=15, nonReportableRSD=30) in flagging or categorizing compounds"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does the createReports function generate the expected directory structure with Plots and Reports sub-folders and the correct file types when called with specified parameters?: 'The `createReports` function creates a folder containing the results of the analysis. The results are separated by *Plots* and *Reports*.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The createReports function creates a folder containing analysis results organized into separate Plots and Reports sub-folders.: 'The `createReports` function creates a folder containing the results of the analysis. The results are separated by *Plots* and *Reports*.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Pre-processed SummarizedExperiment object output from doAnalysis: 'The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Plots subdirectory containing quality-control visualization files: 'an export will be made that contains the mentioned plots, tab-delimited text files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Reports subdirectory containing tab-delimited text files and Excel exports: 'tab-delimited text files for programmatic access and a human-friendly Excel export'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] mzQuality: 'mzQuality requires a specific format for the input data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] R: 'library(mzQuality)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SummarizedExperiment: 'Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mzQuality); library(SummarizedExperiment); exp <- readRDS('{inputs.experiment_object}'); createReports(exp, makeSummaryReport=TRUE, makeCompoundReport=TRUE, backgroundPercent=40, cautionRSD=15, nonReportableRSD=30, assays='area'); if (!dir.exists('Plots') || !dir.exists('Reports')) stop('Missing output directories'); plots_files <- list.files('Plots', full.names=FALSE); reports_files <- list.files('Reports', full.names=FALSE); if (length(plots_files) == 0 || length(reports_files) == 0) stop('Output directories are empty'); cat('SUCCESS: createReports completed with output validation\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Plots subdirectory containing quality-control visualization files",
+    "Reports subdirectory containing tab-delimited text files and Excel exports"
+  ],
+  "finding": "The createReports function creates a folder containing analysis results organized into separate Plots and Reports sub-folders.",
+  "github_name": "hankemeierlab/mzQuality",
+  "input_from": "task_002",
+  "inputs": [
+    "task_002.expected_outputs[0]: SummarizedExperiment object with 'ratio_corrected' assay containing batch-corrected Compound/Internal Standard ratios",
+    "Pre-processed SummarizedExperiment object output from doAnalysis"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "Plots/*.png",
+    "Reports/*.txt",
+    "Reports/*.xlsx"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_034"
+  ],
+  "methodology_summary": [
+    "Load the pre-processed SummarizedExperiment object from the mzQuality analysis pipeline.",
+    "Invoke createReports with summary and compound report flags enabled, quality thresholds (backgroundPercent=40, cautionRSD=15, nonReportableRSD=30), and assay specification (area).",
+    "Generate Plots subdirectory containing quality-control visualizations and Reports subdirectory containing text and Excel files.",
+    "Validation: Confirm directory structure exists with expected subdirectories and file extensions (*.png in Plots; *.txt and *.xlsx in Reports)."
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the createReports function generate the expected directory structure with Plots and Reports sub-folders and the correct file types when called with specified parameters?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "metabolomics-quality-control-report-generation",
+    "r-bioconductor-summarizedexperiment-manipulation",
+    "batch-effect-assessment-via-quality-metrics",
+    "compound-reliability-filtering-by-rsd-thresholds"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mzquality/synthesized_package",
+  "spine_condition_ids": [
+    "cond_with_calibration_lines"
+  ],
+  "spine_entity_ids": [
+    "tool_createReports",
+    "cond_with_calibration_lines"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "visualization"
+  ],
+  "synthesized_from": "github:hankemeierlab__mzQuality",
+  "task_description": "Call createReports on an analysed mzQuality experiment object with parameters makeSummaryReport=TRUE, makeCompoundReport=TRUE, backgroundPercent=40, cautionRSD=15, nonReportableRSD=30, and assays='area', then verify that the expected Plots and Reports directory structure and file types are generated.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-processed SummarizedExperiment object",
+      "port_id": "experiment_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute createReports with specified parameters and verify the output directory contains correctly organized Plots and Reports sub-folders with expected file types.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Output directory containing Plots and Reports subdirectories",
+      "port_id": "reports_directory",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control",
+    "feature-detection",
+    "lc-ms",
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce the createReports file-system export from the analysed experiment",
+  "tools": [
+    "mzQuality",
+    "R",
+    "SummarizedExperiment"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: SummarizedExperiment."
+  ],
+  "workflow_description": "1. Load a pre-processed SummarizedExperiment object created by buildExperiment and doAnalysis from the mzQuality package. 2. Call the createReports function with the specified parameters (makeSummaryReport=TRUE, makeCompoundReport=TRUE, backgroundPercent=40, cautionRSD=15, nonReportableRSD=30, assays='area'). 3. Verify that the output directory contains a Plots subdirectory with quality-control visualizations and a Reports subdirectory with tab-delimited text files and human-friendly Excel exports. 4. Confirm that all expected report files are present and in the correct format."
+}

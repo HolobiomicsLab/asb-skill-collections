@@ -1,0 +1,363 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/NLeSC/MAGMa",
+      "locator_id": "gh_nlesc_magma",
+      "locator_kind": "github",
+      "name": "NLeSC/MAGMa",
+      "prose": "MAGMa GitHub repository URL: https://github.com/NLeSC/MAGMa",
+      "score": 0.2857,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/ESCIENCE_logo_C_nl_small_cyanblack.png",
+      "role": "figure",
+      "sha256": "104646ff81ee4600d919e14864067bbe19a46009997a63e709145186db87d86f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nlesc.jpg",
+      "role": "figure",
+      "sha256": "ce1c0d7d06029965b49527cd659c444b9aa2c6f2cf0099fd922b6f30fd61c0e3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nmc.png",
+      "role": "figure",
+      "sha256": "fa530f7aadcec8c9b041bc4886afdddf73b99b8deac4ec92403edecc42158a1b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_0_aaaaaa_40x100.png",
+      "role": "figure",
+      "sha256": "9a8492a580bf85d3e98ae8861fbd45567e5a1f83eeafcf9574da0399d5f602ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_0_eeeeee_40x100.png",
+      "role": "figure",
+      "sha256": "a86f3a2b5b124bfca91a6ca96f44f9b1ce04e34ed3fc7f6313ab2ce2cc030c4b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_55_c0402a_40x100.png",
+      "role": "figure",
+      "sha256": "ec42d64ef88ef8efcc56f44f74cd162bb6bab14c8ed88ac3b361a6a622eecbfc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_55_eeeeee_40x100.png",
+      "role": "figure",
+      "sha256": "a86f3a2b5b124bfca91a6ca96f44f9b1ce04e34ed3fc7f6313ab2ce2cc030c4b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_100_f8f8f8_1x400.png",
+      "role": "figure",
+      "sha256": "6e26bee28fa44d1d46cba6101120a011b26c7b18d2b8ef98799e8d9acb3e7ee7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_35_dddddd_1x400.png",
+      "role": "figure",
+      "sha256": "c78e86894dc105b0acbfc824c8d84764a1e66d943aa940c4a5efb9f585432e11"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_60_eeeeee_1x400.png",
+      "role": "figure",
+      "sha256": "96de36a90580c09160c0ad471622b5eead5e0800113071d5450aba02879d3ecb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_inset-hard_75_999999_1x100.png",
+      "role": "figure",
+      "sha256": "a705209de7d974f8df5a468f93a95a2192399ff22f8920c42af67225505882eb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_inset-soft_50_c9c9c9_1x100.png",
+      "role": "figure",
+      "sha256": "9f7e3cd2c01fc23b2c4b085488d2e909739ccfda3f938665c820e8ba40eb0c5a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_3383bb_256x240.png",
+      "role": "figure",
+      "sha256": "ffd288472dc15e2f77f90a835ded1d117f336d39021889968b41a064bd120e8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_454545_256x240.png",
+      "role": "figure",
+      "sha256": "cb36e80beaf2a527d463da552a5c679a46c4ff8c881318a194bb0ccb61cb2d5c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_70b2e1_256x240.png",
+      "role": "figure",
+      "sha256": "68c0578580411218f323ef69e1d52b4de7292afdc1b942aebb20afa0127dbd82"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_999999_256x240.png",
+      "role": "figure",
+      "sha256": "5127e3620735237313c23cca2b80a17f716c87ef371eb85086e7dd8a256a20c8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_fbc856_256x240.png",
+      "role": "figure",
+      "sha256": "016b41155ac08b5c2d9f01d7ec127621417e103e620fe9127f09d3a2945ee4b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "728f5cdb8fddbed5c636832db5e7f3181f5bb5bda8141b9205c8e52574ccb952"
+    }
+  ],
+  "created_at": "2026-06-16T07:32:39.548179+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MAGMa GitHub repository URL: https://github.com/NLeSC/MAGMa",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured table (CSV or JSON) recording badge status values with columns: badge_name, endpoint_url, status_value, retrieval_timestamp",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Badge endpoints return status information in standardized formats (JSON, SVG, or text); the appropriate parsing method depends on endpoint type and content negotiation.",
+    "Travis CI, Coveralls, Landscape.io, Docker Hub, and Zenodo are continuous integration and release-tracking services commonly embedded in scientific software repositories.",
+    "Badge URLs are typically stable but endpoint response formats and availability may vary; a timestamp records when the retrieval occurred for reproducibility."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that badge endpoint URLs from NLeSC/MAGMa README are accessible (HTTP status 200 or 301/302 redirect)",
+      "verify that each badge endpoint returns a response body containing status/value metadata (robust to badge service format changes)",
+      "verify that retrieved badge statuses are recorded in a structured table with columns: [badge_name, endpoint_url, reported_status, retrieval_timestamp]",
+      "verify table file exists in expected_outputs and format_is CSV or JSON",
+      "verify that at least 5 badge endpoints are queried and tabulated (Travis CI, Coveralls, Landscape.io, Docker Hub, Zenodo as listed in sub-task scope)"
+    ],
+    "expert_review": [
+      "expert review whether the badge status values accurately reflect the live state of the project (requires manual inspection of live badge endpoints to confirm agent correctly parsed and recorded reported values)",
+      "expert review whether any badge endpoint returned a deprecated or no-longer-maintained service error, and assess whether the README is outdated relative to current project infrastructure"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the current build, code quality, test coverage, deployment, and archival status indicators reported by the badge endpoints referenced in the MAGMa project README?: '.. image:: https://travis-ci.org/NLeSC/MAGMa.svg?branch=master\n    :target: https://travis-ci.org/NLeSC/MAGMa\n\n.. image:: https://landscape.io/github/NLeSC/MAGMa/master/landscape.svg?style=flat'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Five badge endpoints are embedded in the MAGMa README: Travis CI (build status), Landscape.io (code health), Coveralls (test coverage), Docker Hub (container readiness), and Zenodo (DOI archival), each linking to live project status pages.: '.. image:: https://travis-ci.org/NLeSC/MAGMa.svg?branch=master\n.. image:: https://landscape.io/github/NLeSC/MAGMa/master/landscape.svg?style=flat\n.. image::'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MAGMa GitHub repository URL: https://github.com/NLeSC/MAGMa: 'https://github.com/NLeSC/MAGMa'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structured table (CSV or JSON) recording badge status values with columns: badge_name, endpoint_url, status_value, retrieval_timestamp: 'To contribute contact me via Github issue or pull request at https://github.com/NLeSC/MAGMa'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MAGMa: 'MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites''"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documentation found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific badge endpoint URLs and names as they appear in the NLeSC/MAGMa README are not provided in the article text or EnrichedIndex: 'Source: github:NLeSC__MAGMa'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "badge_status_table.csv",
+  "expected_outputs": [
+    "Structured table (CSV or JSON) recording badge status values with columns: badge_name, endpoint_url, status_value, retrieval_timestamp"
+  ],
+  "finding": "Five badge endpoints are embedded in the MAGMa README: Travis CI (build status), Landscape.io (code health), Coveralls (test coverage), Docker Hub (container readiness), and Zenodo (DOI archival), each linking to live project status pages.",
+  "github_name": "NLeSC/MAGMa",
+  "input_from": "task_001",
+  "inputs": [
+    "MAGMa GitHub repository URL: https://github.com/NLeSC/MAGMa"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "readme_raw.txt",
+    "badge_urls_extracted.txt"
+  ],
+  "linked_result_ids": [
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Access the MAGMa GitHub repository and retrieve the README file.",
+    "Parse the README to extract all badge endpoint URLs (Travis CI, Coveralls, Landscape.io, Docker Hub, Zenodo).",
+    "Query each badge endpoint and extract the current status value or metric reported.",
+    "Organize results into a structured table with badge name, endpoint URL, status value, and retrieval timestamp.",
+    "Validation: Verify that the output table contains at least four badge entries with non-empty status values and valid endpoint URLs."
+  ],
+  "missing_information": [
+    "No changelog documentation found",
+    "The specific badge endpoint URLs and names as they appear in the NLeSC/MAGMa README are not provided in the article text or EnrichedIndex"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the current build, code quality, test coverage, deployment, and archival status indicators reported by the badge endpoints referenced in the MAGMa project README?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "badge-endpoint-retrieval",
+    "repository-metadata-extraction",
+    "status-value-parsing",
+    "build-system-monitoring"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_magma/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MAGMa_System",
+    "Tool_Docker",
+    "Tool_TravisCI",
+    "Tool_Coveralls",
+    "Tool_Landscape",
+    "Tool_Zenodo"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:NLeSC__MAGMa",
+  "task_description": "Retrieve the current status values from live badge endpoints (Travis CI, Coveralls, Landscape.io, Docker Hub, Zenodo) referenced in the MAGMa GitHub repository and record them in a structured table.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MAGMa GitHub repository URL",
+      "port_id": "github_repo_url",
+      "resolved_via": null,
+      "source": "task_001/component_manifest",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Retrieve and tabulate the current status values from each of the five badge endpoints (Travis CI, Landscape.io, Coveralls, Docker Hub, Zenodo) as a structured table showing build, code quality, coverage, deployment, and archival status.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Badge status values table",
+      "port_id": "badge_status_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "in-silico-fragmentation",
+    "metabolite-identification",
+    "database-annotation",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce the CI/CD badge status for the MAGMa GitHub repository",
+  "tools": [
+    "MAGMa"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Access the MAGMa repository at https://github.com/NLeSC/MAGMa and locate the README file. 2. Identify all badge endpoint URLs embedded in or referenced by the README (Travis CI build status, Coveralls code coverage, Landscape.io code quality, Docker Hub image status, Zenodo DOI badge). 3. For each badge endpoint, retrieve the current status value by accessing the endpoint URL and parsing the response (status field, numerical score, or version string as applicable). 4. Tabulate the results in a structured table with columns for badge name, endpoint URL, retrieved status value, and timestamp of retrieval."
+}

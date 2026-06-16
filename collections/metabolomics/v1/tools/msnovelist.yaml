@@ -1,0 +1,12 @@
+name: MSNovelist
+slug: msnovelist
+evidence_spans:
+- The SIRIUS web services (CSI:FingerID, CANOPUS, MSNovelist and others)
+derived_from:
+- doi: 10.1038/s41587-021-01045-9
+  title: cosmic
+- doi: 10.1038/s41592-019-0344-8
+  title: sirius
+source_repos:
+- sirius-ms/sirius
+schema_version: 0.2.0

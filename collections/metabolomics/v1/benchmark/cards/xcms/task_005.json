@@ -1,0 +1,465 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "86601462b6f0c575885716815b42ad0a84fd0c8b2e0ef6830db20c97c115f971"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3cd338aea178a6cea4663bb04918d92bc5823b649a8a6d08454b0e192af19016"
+    }
+  ],
+  "created_at": "2026-06-15T12:18:05.623444+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "PestMix1_DDA.mzML file from Agilent Pesticide mix LC-MS/MS runs",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Flumazenil (Metlin ID 2724) reference spectrum in MGF format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Fenamiphos (Metlin ID 72445) reference spectrum in MGF format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mirror-plot comparison figure showing consensus MS2 spectrum for m/z 304.1131 aligned with Flumazenil and Fenamiphos reference spectra",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Consensus MS2 spectrum for the chromatographic peak at m/z 304.1131",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Peak detection table listing detected chromatographic peaks with retention time, m/z, and intensity",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "CentWave peak detection parameters (snthresh, noise, ppm) control signal-to-noise ratio discrimination and mass accuracy tolerance; typical snthresh=5 requires 5\u00d7 noise level signal intensity and ppm=10 sets mass tolerance to 10 parts per million.",
+    "Consensus MS2 spectra aggregate fragment peaks from multiple precursor ion isolations of the same compound to increase signal intensity and robustness for spectral matching.",
+    "Mirror-plots display experimental and reference MS2 spectra in opposing directions with peaks color-coded by matching status, enabling visual assessment of spectral similarity and identification confidence.",
+    "Agilent Pesticide mix is a certified reference standard containing known pesticide compounds at defined concentrations, used for method validation and instrument calibration in LC-MS/MS workflows."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file PestMix1_DDA.mzML exists in the xcms package repository or publicly accessible deposit",
+      "verify script runs: load PestMix1_DDA.mzML using xcms::readMSData() or equivalent, byte-for-byte reproducibility depends on xcms version and data format stability",
+      "verify script runs: execute findChromPeaks() with CentWaveParam(snthresh=5, noise=100, ppm=10) without errors",
+      "verify script runs: call chromPeakSpectra() on the detected peaks and extract MS2 spectra, output is Spectra object",
+      "verify script runs: build consensus spectrum for m/z 304.1131 using combineSpectra() with combinePeaks(), parameter-sensitive to mass tolerance and combination method",
+      "verify script runs: load Flumazenil and Fenamiphos MGF reference spectra using MsBackendMgf",
+      "verify script runs: compute mirror-plot comparison using compareSpectra() and visualize, output is a figure or numeric similarity scores",
+      "verify output_matches_reference: mirror-plot visual structure and similarity scores are consistent with xcms vignette example outputs (if published) \u2014 no canonical answer for exact numerical values due to parameter sensitivity"
+    ],
+    "expert_review": [
+      "assess whether CentWaveParam settings (snthresh=5, noise=100, ppm=10) are appropriate for DDA data from Agilent Pesticide mix and whether they recover the peak at m/z 304.1131 with reasonable sensitivity",
+      "assess whether the consensus spectrum for m/z 304.1131 is chemically plausible (expected fragment ions, intensity patterns) for the putative compound",
+      "assess whether mirror-plot similarity scores and fragment ion matches against Flumazenil and Fenamiphos references are biochemically meaningful and consistent with literature MS/MS fragmentation patterns"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Can an experimental MS2 spectrum derived from a chromatographic peak at m/z 304.1131 in DDA data be matched against reference MS2 spectra from Flumazenil and Fenamiphos to identify the compound?: 'A search of potential ions with a similar m/z in a reference database (e.g. [Metlin](https://metlin.scripps.edu)) returned a large list of potential hits, most with a very small ppm. For two of the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The consensus MS2 spectrum from the chromatographic peak at m/z 304.1131 has high similarity to Fenamiphos but not to Flumazenil when compared using the normalized dot-product method with 40 ppm tolerance, allowing identification of the peak as Fenamiphos.: 'Clearly, the candidate spectrum does not match Flumanezil, while it has a high similarity to Fenamiphos.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PestMix1_DDA.mzML file from Agilent Pesticide mix LC-MS/MS runs: 'The data files used are reversed-phase LC-MS/MS runs from the Agilent Pesticide mix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Flumazenil (Metlin ID 2724) reference spectrum in MGF format: '[Flumazenil](https://en.wikipedia.org/wiki/Flumazenil) (Metlin ID 2724)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Fenamiphos (Metlin ID 72445) reference spectrum in MGF format: '[Fenamiphos](https://en.wikipedia.org/wiki/Fenamiphos) (Metlin ID 72445)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Mirror-plot comparison figure showing consensus MS2 spectrum for m/z 304.1131 aligned with Flumazenil and Fenamiphos reference spectra: 'we can also calculate similarities between them with the `compareSpectra()` method'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Consensus MS2 spectrum for the chromatographic peak at m/z 304.1131: 'We next reduce this to a single MS2 spectrum using the `combineSpectra()` method employing the `combinePeaks()` function'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Peak detection table listing detected chromatographic peaks with retention time, m/z, and intensity: 'findChromPeaks() method. Below we define the settings for a *centWave*-based peak detection'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] xcms: 'The *xcms* R package provides functionality to efficiently preprocess LC-MS (as well as GC-MS and LC-MS/MS) data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MsFeatures: 'General MS feature grouping functionality if defined by the `r Biocpkg(\"MsFeatures\")` package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectra: 'library(Spectra)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MsBackendMgf: 'library(MsBackendMgf)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MetaboCoreUtils: '%\\VignetteDepends{xcms,MsDataHub,BiocStyle,pander,Spectra,MsBackendMgf,MetaboCoreUtils}'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific retention time window for m/z 304.1131 in PestMix1_DDA.mzML is not documented: 'No section text specifies chromatographic retention time for the target peak'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Exact location or access method for Flumazenil and Fenamiphos MGF reference spectra is not provided: 'No section text specifies repository location or download URL for reference spectra files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No expected output figures or reference mirror-plot images are deposited for comparison: 'No section text references a deposited figure or reference output for the mirror-plot reproduction'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "mirror_plot_consensus_vs_standards.png",
+  "expected_outputs": [
+    "Mirror-plot comparison figure showing consensus MS2 spectrum for m/z 304.1131 aligned with Flumazenil and Fenamiphos reference spectra",
+    "Consensus MS2 spectrum for the chromatographic peak at m/z 304.1131",
+    "Peak detection table listing detected chromatographic peaks with retention time, m/z, and intensity"
+  ],
+  "finding": "The consensus MS2 spectrum from the chromatographic peak at m/z 304.1131 has high similarity to Fenamiphos but not to Flumazenil when compared using the normalized dot-product method with 40 ppm tolerance, allowing identification of the peak as Fenamiphos.",
+  "github_name": "sneumann/xcms",
+  "input_from": "task_002",
+  "inputs": [
+    "PestMix1_DDA.mzML file from Agilent Pesticide mix LC-MS/MS runs",
+    "Flumazenil (Metlin ID 2724) reference spectrum in MGF format",
+    "Fenamiphos (Metlin ID 72445) reference spectrum in MGF format"
+  ],
+  "keywords": [
+    "untargeted metabolomics",
+    "lc-ms/ms",
+    "feature grouping",
+    "compound annotation",
+    "peak detection",
+    "centwave algorithm",
+    "retention time alignment",
+    "abundance correlation",
+    "eic similarity",
+    "swath acquisition",
+    "data-dependent acquisition",
+    "data-independent acquisition",
+    "ms2 spectrum matching",
+    "adduct detection",
+    "isotope detection"
+  ],
+  "landmark_outputs": [
+    "peak_detection_results.csv",
+    "ms2_spectra_for_mz_304.1131.msp",
+    "consensus_spectrum_mz_304.1131.msp",
+    "spectral_similarity_scores.csv"
+  ],
+  "linked_result_ids": [
+    "result_013",
+    "result_014",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_021",
+    "result_022",
+    "result_023",
+    "result_024",
+    "result_025",
+    "result_026",
+    "result_027",
+    "result_028",
+    "result_029",
+    "result_030"
+  ],
+  "methodology_summary": [
+    "Load mzML raw data and apply centWave chromatographic peak detection with specified signal-to-noise and mass accuracy thresholds.",
+    "Extract all MS2 spectra associated with the target m/z 304.1131 chromatographic peak.",
+    "Merge multiple MS2 spectra into a single consensus spectrum to improve signal and representation.",
+    "Compare consensus spectrum against Flumazenil and Fenamiphos reference spectra using spectral similarity scoring.",
+    "Validation: Mirror-plot successfully aligns experimental consensus peaks with reference spectra; spectral similarity scores (cosine or dot-product) \u2265 0.7 indicate high-confidence match to reference standards."
+  ],
+  "missing_information": [
+    "No changelog or version history provided",
+    "Specific retention time window for m/z 304.1131 in PestMix1_DDA.mzML is not documented",
+    "Exact location or access method for Flumazenil and Fenamiphos MGF reference spectra is not provided",
+    "No expected output figures or reference mirror-plot images are deposited for comparison"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can an experimental MS2 spectrum derived from a chromatographic peak at m/z 304.1131 in DDA data be matched against reference MS2 spectra from Flumazenil and Fenamiphos to identify the compound?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "chromatographic-peak-detection-centwave",
+    "ms2-spectrum-extraction-and-consensus-building",
+    "spectral-similarity-matching-and-comparison",
+    "mass-spectrometry-visualization-mirror-plots",
+    "peak-table-filtering-by-mz-and-retention-time"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_xcms/synthesized_package",
+  "spine_condition_ids": [
+    "cond_msw_peak_detection",
+    "cond_centwave_dda"
+  ],
+  "spine_entity_ids": [
+    "spectra_package",
+    "pestmix_dda_dataset",
+    "centwave_param",
+    "find_chrom_peaks_method",
+    "chrom_peak_spectra_method",
+    "flumazenil_compound",
+    "fenamiphos_compound",
+    "cond_msw_peak_detection",
+    "cond_centwave_dda",
+    "result_dda_peak_count",
+    "result_mz304_annotation"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "visualization"
+  ],
+  "synthesized_from": "github:sneumann__xcms",
+  "task_description": "Load the PestMix1_DDA.mzML file, detect chromatographic peaks using centWave (snthresh=5, noise=100, ppm=10), extract MS2 spectra for the peak at m/z 304.1131, build a consensus spectrum, and generate a mirror-plot comparison against Flumazenil and Fenamiphos reference spectra.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PestMix1_DDA.mzML file from Agilent Pesticide mix",
+      "port_id": "raw_mzml",
+      "resolved_via": null,
+      "source": "task_002/subgroup_count",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Flumazenil reference spectrum MGF",
+      "port_id": "flumazenil_ref_mgf",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Fenamiphos reference spectrum MGF",
+      "port_id": "fenamiphos_ref_mgf",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Load PestMix1_DDA.mzML data, detect chromatographic peaks with CentWaveParam, extract and combine MS2 spectra for m/z 304.1131, and reproduce mirror-plot and similarity comparisons against Flumazenil and Fenamiphos references.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mirror-plot comparison figure",
+      "port_id": "mirror_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Consensus MS2 spectrum",
+      "port_id": "consensus_spectrum",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Chromatographic peak detection table",
+      "port_id": "peak_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "clustering"
+  ],
+  "title": "Reproduce DDA chromatographic peak detection and MS2 spectrum annotation for m/z 304.1131 in PestMix1_DDA",
+  "tools": [
+    "xcms",
+    "MsFeatures",
+    "Spectra",
+    "MsBackendMgf",
+    "MetaboCoreUtils"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: MsBackendMgf, Mirror-plot comparison figure showing consensus MS2 spectrum for m/z 304.1131 aligned with Flumazenil and Fenamiphos reference spectra, Consensus MS2 spectrum for the chromatographic peak at m/z 304.1131, Peak detection table listing detected chromatographic peaks with retention time, m/z, and intensity."
+  ],
+  "workflow_description": "1. Load PestMix1_DDA.mzML raw data using xcms. 2. Perform chromatographic peak detection on MS level 1 with findChromPeaks() and CentWaveParam (snthresh=5, noise=100, ppm=10). 3. Extract MS2 spectra associated with the m/z 304.1131 chromatographic peak using chromPeakSpectra(). 4. Combine multiple MS2 spectra into a single consensus spectrum using combineSpectra() with combinePeaks(). 5. Match the experimental consensus spectrum against Flumazenil (Metlin ID 2724) and Fenamiphos (Metlin ID 72445) reference spectra in MGF format using compareSpectra(). 6. Generate a mirror-plot visualization comparing the consensus spectrum to the reference spectra."
+}

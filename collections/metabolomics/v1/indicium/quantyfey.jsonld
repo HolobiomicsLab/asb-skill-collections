@@ -1,0 +1,2314 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "extension",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/calibration-curve-fitting-ms-data",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/corrected-intensity-table-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/file-path-abstraction-and-normalization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/intensity-drift-artifact-detection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/intensity-to-concentration-conversion",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ms-quantitative-analysis-standards",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ms-signal-correction-strategy-selection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/platform-specific-code-refactoring",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/quantitative-ms-data-preprocessing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/r-dependency-package-compatibility-auditing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/regression-model-validation-quantification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/shiny-application-cross-platform-adaptation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/system-library-dependency-mapping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "QuantyFey is a Shiny application for the visualization, analysis, and quantification of mass spectrometry data using external calibration.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_sys_quantyfey"
+        },
+        {
+          "id": "asb:spine_tool_shiny"
+        },
+        {
+          "id": "asb:spine_comp_external_calibration"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "QuantyFey is specifically designed to address intensity drifts in datasets.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_sys_quantyfey"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "QuantyFey offers multiple correction strategies to ensure accurate quantification.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_sys_quantyfey"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "QuantyFey is compatible with Windows operating systems only.",
+      "@type": "asb:Claim",
+      "source_task_kind": "extension",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_sys_quantyfey"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "Paper explicitly describes QuantyFey as a tool for external calibration-based quantification and demonstrates conversion of intensity to concentration values.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does QuantyFey implement external calibration to convert raw mass spectrometry intensity measurements into quantified concentration values?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:12.204729+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies",
+      "asbval:note": "Paper demonstrates calculation of concentrations for compounds in the dataset.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Quantified concentration table with sample identifiers and calculated concentration values",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:12.204729+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "manual tuning of calibration functions, and remaining intensity drift was assessed",
+      "asbval:note": "Paper references calibration functions and their tuning, implying calibration curve parameters are part of the workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Calibration curve parameters (model coefficients and fit metrics)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:12.204729+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Shiny (R web framework) is not mentioned in any of the provided passages. The paper describes QuantyFey as an open-source tool but does not specify its implementation framework or UI technology in the available excerpts.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Shiny",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:12.204729+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card focuses narrowly on the external calibration module implementation, while the paper's primary contribution emphasizes drift correction strategies (IS correction, QC-based drift correction, bracketing methods) as equally or more central to QuantyFey's significance.",
+        "The card does not mention drift correction, which is the paper's main innovation and a core feature of QuantyFey according to the abstract."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:12.204729+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "Paper explicitly discusses QuantyFey's multiple drift correction strategies (IS correction, QC-based drift correction, custom bracketing, weighted bracketing)",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What correction strategies does QuantyFey implement to address intensity drifts in mass spectrometry datasets?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:19.885348+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Shiny (R web framework) is not mentioned in any of the provided passages. Paper describes QuantyFey as an open-source tool but does not specify its implementation framework or UI technology in the available text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Shiny",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:19.885348+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions, and remaining intensity drift was assessed.",
+      "asbval:note": "Paper demonstrates output of corrected quantification results (concentrations) after applying drift correction strategies",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Corrected MS intensity table with drift correction applied",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:19.885348+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "Paper describes QuantyFey as an already-developed tool with integrated drift correction strategies, not as a task to implement the module. The card frames this as an implementation task, but the paper presents QuantyFey as a completed tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title_task",
+      "asbval:target_claim_text": "Implement the Intensity Drift Correction module within the QuantyFey pipeline",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:19.885348+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "Card title frames drift correction as an implementation task ('Implement the Intensity Drift Correction module'), but paper presents QuantyFey as an already-developed, published tool with integrated drift correction capabilities.",
+        "Card does not mention the specific drift correction strategies (IS correction, QC-based, custom bracketing, weighted bracketing) that are central to the paper's contribution.",
+        "Card does not specify the application domain (amino acids, biogenic amines in porcine plasma) or the LC-MS/MS context that frames the paper's work."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:19.885348+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification",
+      "asbval:note": "Paper confirms QuantyFey exists and is open-source. However, no mention of Shiny interface, Linux/macOS deployment limitations, or any cross-platform extension work. The paper focuses on drift correction strategies in LC-MS quantification, not platform deployment.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Extend QuantyFey's Shiny interface to support Linux/macOS deployment",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No discussion of platform-specific dependencies, Linux/macOS compatibility issues, or deployment barriers in the paper. The paper's focus is on drift correction methodology and quantification accuracy.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What platform-specific dependencies currently prevent QuantyFey from running on Linux or macOS?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Shiny (R web framework) is not mentioned anywhere in the provided passages. The paper describes QuantyFey as a tool for LC-MS quantification but does not specify its user interface technology.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Shiny",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of Shiny configuration files, platform-agnostic code modifications, or any software engineering deliverables related to interface development.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Modified Shiny application configuration files with platform-agnostic code",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No discussion of platform dependency analysis or compatibility reporting in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Platform dependency resolution and compatibility report",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of testing procedures for cross-platform deployment or application launch validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Test log confirming successful application launch on Linux or macOS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate task card describes a software engineering / DevOps task (cross-platform deployment of a Shiny web interface), but the paper is a scientific methods paper focused on LC-MS quantification and drift correction strategies.",
+        "The paper's abstract and results discuss analytical chemistry methodology (calibration, drift correction, quantification accuracy) with no mention of software architecture, user interface frameworks, or deployment infrastructure.",
+        "The card appears to conflate QuantyFey (the analytical tool described in the paper) with a hypothetical software engineering project to extend its platform support. This is a fundamental scope mismatch."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/calibration-curve-fitting-ms-data/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "The abstract explicitly describes external calibration-based quantification and drift correction as core functionality. The results section confirms application to targeted LC-MS/MS data with calibration standards and drift correction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "calibration-curve-fitting-ms-data",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Fit external calibration curves (linear or polynomial regression) to mass spectrometry intensity measurements using known concentration standards, then apply the fitted model to convert raw sample intensities into quantified concentration values. Essential when intensity drift oc",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:44.630594+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/calibration-curve-fitting-ms-data/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "QuantyFey is confirmed as the primary tool for external calibration-based quantification and drift correction. The abstract and results confirm its use for quantification and drift correction. The Shiny application nature and specific features (visualization, model optimization, automatic selection) are consistent with the paper's description of its flexible design for compound-specific evaluation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "calibration-curve-fitting-ms-data",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QuantyFey \u2014 Interactive Shiny application for visualization, regression model optimization, automatic model selection, drift correction, and quantification of MS data via external calibration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:44.630594+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/calibration-curve-fitting-ms-data/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "external calibration-based quantification, with support for multiple drift correction strategies... Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions",
+      "asbval:note": "The scope directly aligns with the paper's central contribution: external calibration-based quantification with drift correction strategies applied to convert intensities to concentrations.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "calibration-curve-fitting-ms-data",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Fit external calibration curves to mass spectrometry intensity measurements using known concentration standards, then apply the fitted model to convert raw sample intensities into quantified concentration values. Essential when intensity drift occurs during measurement runs.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:44.630594+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We applied QuantyFey to a targeted LC-MS/MS dataset... The dataset was affected by substantial signal drift across the run... Concentrations of all compounds were calculated using different drift correction strategies... and remaining intensity drift was assessed.",
+      "asbval:note": "Paper explicitly addresses drift correction strategies and assessment of remaining drift in corrected data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "corrected-intensity-table-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validation of mass spectrometry intensity tables after drift correction to ensure removal of drift artifacts and preservation of quantification accuracy.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.273069+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "QuantyFey is confirmed as the primary tool for drift correction. Paper describes it as supporting multiple drift correction strategies.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "corrected-intensity-table-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QuantyFey \u2014 Shiny application that performs intensity drift correction and generates the corrected intensity table to be validated",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.273069+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing",
+      "asbval:note": "All four strategies mentioned in the card are explicitly named and evaluated in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "corrected-intensity-table-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope \u2014 drift correction strategies",
+      "asbval:target_claim_text": "Internal Standard correction, statistical drift correction, custom or weighted bracketing",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.273069+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QuantyFey offers a transparent and accessible framework for quantitative LC-MS(MS) analysis, especially in situations where drift correction is critical",
+      "asbval:note": "Paper confirms QuantyFey is used for drift correction prior to quantification; validation of corrected tables is implicit in the workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "corrected-intensity-table-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope \u2014 application context",
+      "asbval:target_claim_text": "After applying one or more intensity drift correction strategies within QuantyFey and before exporting the corrected intensity table for final quantification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.273069+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "Logically consistent with paper's positioning of QuantyFey as a drift correction tool that precedes validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "corrected-intensity-table-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope \u2014 when NOT to use",
+      "asbval:target_claim_text": "Input is raw, uncorrected MS intensity data \u2014 apply drift correction first using QuantyFey before validation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.273069+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/file-path-abstraction-and-normalization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper is about LC-MS quantification tool (QuantyFey) for metabolite analysis. No mention of cross-platform file path abstraction, Windows/Unix path conventions, or OS-specific code portability.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "file-path-abstraction-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Abstracts platform-specific file path conventions (Windows backslashes vs. Unix forward slashes) and system calls to enable a codebase to run identically across Windows, Linux, and macOS.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:55.692984+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/file-path-abstraction-and-normalization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Shiny. QuantyFey is described as an open-source tool for LC-MS quantification; no web application framework is discussed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "file-path-abstraction-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Shiny (Web application framework hosting the interactive interface that must be made cross-platform compatible)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:55.692984+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/file-path-abstraction-and-normalization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss R base functions, file path handling, or OS detection mechanisms. QuantyFey is described as a tool for targeted LC-MS quantification with drift correction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "file-path-abstraction-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (base) (Provides file.path() and normalizePath() functions for platform-agnostic path handling, and Sys.info() for OS detection)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:55.692984+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/file-path-abstraction-and-normalization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention RTools or Windows-specific build toolchains. No discussion of conditional OS-specific dependencies.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "file-path-abstraction-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RTools (Windows-specific toolchain; conditional requirement for Windows builds that must be wrapped in OS checks)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:55.692984+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences or when internal standards (IS) are unavailable... we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies.",
+      "asbval:note": "The abstract directly addresses intensity drift detection and correction using calibration-based strategies in targeted LC-MS analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "intensity-drift-artifact-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Detection and correction of intensity drift artifacts in targeted mass spectrometry quantification data using statistical models and calibration-based strategies. This skill addresses systematic loss or gain of signal intensity over the course of a measurement sequence, which com",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:02.046693+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies.",
+      "asbval:note": "QuantyFey is explicitly named and described as the primary tool developed in this paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "intensity-drift-artifact-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QuantyFey",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:02.046693+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies... Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions",
+      "asbval:note": "The paper confirms QuantyFey supports drift correction strategies and calibration function tuning, but does not explicitly state it is a 'Shiny application' or detail the specific UI framework. The functional capabilities (loading data, applying strategies, optimizing models, exporting results) are implied but not explicitly confirmed in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "intensity-drift-artifact-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Interactive Shiny application for loading raw MS intensity data, selecting and applying drift correction strategies, optimizing regression models, and exporting corrected quantification tables.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:02.046693+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences... The dataset was affected by substantial signal drift across the run.",
+      "asbval:note": "The paper explicitly addresses drift in long analytical sequences and demonstrates application to a dataset with substantial signal drift across the run.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "intensity-drift-artifact-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope alignment",
+      "asbval:target_claim_text": "Apply this skill when processing raw MS intensity tables from long measurement sequences where you observe systematic, time-dependent changes in signal magnitude",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:02.046693+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "tool for external calibration-based quantification, with support for multiple drift correction strategies... A calibration standard was used as a proxy for a QC sample and different drift correction strategies were compared",
+      "asbval:note": "The paper emphasizes external calibration-based quantification and demonstrates use of calibration standards distributed across the run for drift correction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "intensity-drift-artifact-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope alignment",
+      "asbval:target_claim_text": "Particularly critical when external calibration is used and calibration standards are distributed across the sequence",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:02.046693+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "Core functionality explicitly stated in abstract.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "intensity-to-concentration-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert raw mass spectrometry intensity measurements into quantified concentration values using external calibration curve fitting.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis... We applied QuantyFey to a targeted LC-MS/MS dataset... The dataset was affected by substantial signal drift across the run... Concentrations of all compounds were calculated using different drift correction strategies",
+      "asbval:note": "Paper demonstrates drift correction applied to targeted LC-MS/MS data and concentration calculation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "intensity-to-concentration-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill is essential when processing targeted MS data that exhibits intensity drift, requiring application of drift-corrected calibration models to produce concentration tables with sample identifiers.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "Tool name and role confirmed in abstract.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "intensity-to-concentration-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QuantyFey",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "Paper confirms external calibration, drift correction, and quantification functionality. However, passages do not explicitly state that QuantyFey is a Shiny application\u2014this implementation detail is not verified in provided text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "intensity-to-concentration-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Shiny application for interactive external calibration, drift correction, and quantification of targeted MS data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions",
+      "asbval:note": "Paper mentions 'manual tuning of calibration functions' but does not explicitly confirm automatic regression model optimization capability.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "intensity-to-concentration-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "provides manual and automatic regression model optimization",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing",
+      "asbval:note": "All three drift correction strategies explicitly named and tested in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "intensity-to-concentration-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "multiple drift correction strategies (IS, bracketing, weighted bracketing)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies",
+      "asbval:note": "Paper demonstrates concentration calculation output, consistent with concentration table generation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "intensity-to-concentration-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "concentration table output",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Repository URL not present in provided passages; cannot verify.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "intensity-to-concentration-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].repo",
+      "asbval:target_claim_text": "https://github.com/CDLMarkus/QuantyFey",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-quantitative-analysis-standards/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "The abstract explicitly describes external calibration-based quantification and drift correction as core functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ms-quantitative-analysis-standards",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "A method for converting raw mass spectrometry intensity measurements into quantified concentration values by fitting external calibration curves (linear or polynomial regression) against known concentration standards and applying the model to sample data. Essential for handling i",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:18.531161+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-quantitative-analysis-standards/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies... different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing. Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions",
+      "asbval:note": "Paper confirms QuantyFey performs external calibration-based quantification and supports IS correction, QC-based drift correction, custom bracketing, and weighted bracketing. However, the paper does not explicitly state that QuantyFey is a 'Shiny application' or describe 'interactive and automatic regression model optimization (linear/quadratic)' \u2014 these implementation details are not verified in the provided passages. The drift correction strategies and calibration function tuning are confirmed, but the specific UI framework and regression optimization claims cannot be verified from the abstract alone.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "ms-quantitative-analysis-standards",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QuantyFey \u2014 Interactive Shiny application for MS data quantification via external calibration; provides drift correction strategies (IS correction, statistical drift models, custom/weighted bracketing), interactive and automatic regression model optimization (linear/quadratic), a",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:18.531161+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-quantitative-analysis-standards/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis... we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "The scope aligns with the paper's stated purpose and the abstract's emphasis on drift correction in external calibration workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ms-quantitative-analysis-standards",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "MS Quantitative Analysis via External Calibration Standards \u2014 method for converting raw MS intensity data paired with known-concentration calibration standard measurements into absolute or relative concentrations, especially critical when intensity drift is observed across the me",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:18.531161+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "Core research question directly supported by abstract statement of tool purpose and capability.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Selecting and applying intensity drift correction strategies to mass spectrometry datasets to remove systematic signal artifacts and ensure accurate quantification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences... different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing",
+      "asbval:note": "Paper explicitly identifies signal drift in long sequences and demonstrates comparison of multiple correction strategies.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill addresses the common problem of signal intensity drifting over long measurement sequences by choosing from multiple correction methods suited to the dataset's characteristics.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies... We applied QuantyFey to a targeted LC-MS/MS dataset",
+      "asbval:note": "Paper describes QuantyFey as tool for applying drift correction to MS datasets.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have loaded raw MS intensity tables into QuantyFey and observe or suspect intensity drift artifacts across your measurement sequence.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences or when internal standards (IS) are unavailable",
+      "asbval:note": "Paper identifies drift in long sequences and discusses internal standards role.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Drift is especially likely in long-running targeted MS experiments where calibration curves or internal standards show systematic variation over time.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "Paper describes QuantyFey as external calibration-based quantification tool with drift correction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use this skill before proceeding to final quantification when external calibration is applied.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss or address this exclusion criterion explicitly.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input is already a drift-corrected or preprocessed intensity table from another software pipeline",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not explicitly discuss this exclusion criterion.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Measurement sequence has no detectable temporal drift or shows only random noise",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences or when internal standards (IS) are unavailable... This limits the ability of analysts to maintain data quality in more complex or resource-limited experimental setups",
+      "asbval:note": "Paper identifies scenarios where internal standards are unavailable as a key motivation for QuantyFey.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Dataset lacks internal standards or calibration reference data needed for most correction strategies",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "Paper confirms QuantyFey as tool for drift correction strategy selection and application. Paper does not explicitly state it is a 'Shiny application' \u2014 this implementation detail is not verified in provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QuantyFey - Shiny application providing interactive selection, application, and optimization of intensity drift correction strategies for mass spectrometry data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Repository URL not present in provided passages; insufficient data to verify.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub repository: https://github.com/CDLMarkus/QuantyFey",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/platform-specific-code-refactoring/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper is about QuantyFey, an LC-MS quantification tool with drift correction. No mention of Shiny applications, Windows-only dependencies, cross-platform refactoring, or software engineering tasks. This is a completely different domain (analytical chemistry/mass spectrometry vs. software engineering).",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "platform-specific-code-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Identify and refactor Windows-only dependencies, file path conventions, and system calls in a Shiny application codebase to enable cross-platform (Linux/macOS) compatibility.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:36.828097+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/platform-specific-code-refactoring/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper contains no discussion of Shiny applications, platform-specific code refactoring, Windows dependencies, or cross-platform compatibility engineering. The paper focuses on LC-MS quantification methodology and drift correction strategies.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "platform-specific-code-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Identify and refactor Windows-only dependencies, file path conventions, and system calls in a Shiny application codebase to enable cross-platform (Linux/macOS) compatibility.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:36.828097+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/platform-specific-code-refactoring/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Shiny is not mentioned anywhere in the paper. The paper describes QuantyFey as an open-source tool for LC-MS quantification, not a Shiny web application.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "platform-specific-code-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Shiny (Web application framework in which platform-specific dependencies are identified and refactored for cross-platform compatibility)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:36.828097+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/platform-specific-code-refactoring/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "While R is likely used to develop QuantyFey (given it is described as an open-source tool), the paper does not discuss R as a tool for platform-specific code refactoring, conditional branches, or cross-platform abstractions. The paper focuses on the analytical chemistry application, not software engineering practices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "platform-specific-code-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (Programming language used to implement conditional code branches, platform detection, and cross-platform file path abstractions)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:36.828097+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies... different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quantitative-ms-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Correct intensity drifts in targeted mass spectrometry datasets using external calibration and multiple drift correction strategies (Internal Standard, statistical models, bracketing methods)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions, and remaining intensity drift was assessed.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quantitative-ms-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "ensure accurate quantification before downstream analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quantitative-ms-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "intensity artifacts accumulate during MS measurement runs and would otherwise bias quantitative results",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The dataset was affected by substantial signal drift across the run.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quantitative-ms-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "raw MS intensity tables showing systematic drift during a measurement sequence",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "A calibration standard was used as a proxy for a QC sample",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quantitative-ms-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "external calibration standards are available in the measurement sequence",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quantitative-ms-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QuantyFey",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QuantyFey offers a transparent and accessible framework for quantitative LC-MS(MS) analysis... Its flexible design allows for compound-specific evaluation and quantification",
+      "asbval:note": "Paper confirms QuantyFey supports drift correction strategy selection and quantification export, but does not explicitly mention 'Shiny application', 'visualization', or 'regression model optimization' in the provided passages. The tool's implementation technology and specific UI features are not detailed in the abstract/introduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "quantitative-ms-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Interactive Shiny application for visualization, drift correction strategy selection, regression model optimization, and export of corrected MS quantification data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper is about QuantyFey, an LC-MS quantification tool with drift correction. No mention of R, Shiny, package dependencies, cross-platform auditing, or conditional code branches. The paper addresses signal drift in mass spectrometry data, not software compatibility.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-dependency-package-compatibility-auditing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Systematically identify and document platform-specific R package dependencies, system library requirements, and conditional code branches that prevent cross-platform execution of Shiny applications.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper scope is quantitative LC-MS analysis with drift correction strategies. No overlap with R package auditing, Shiny application deployment, or cross-platform compatibility assessment.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-dependency-package-compatibility-auditing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "R Dependency and Package Compatibility Auditing for Shiny applications",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Shiny is not mentioned in the paper. QuantyFey is described as an open-source tool for LC-MS quantification, not a Shiny application.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-dependency-package-compatibility-auditing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Shiny (Target application framework being audited for platform-specific dependencies and conditional code branches)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "R is not mentioned in the paper. QuantyFey is presented as a vendor-independent tool for LC-MS quantification without specification of its implementation language or R dependency.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-dependency-package-compatibility-auditing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (Execution environment; version-specific dependencies must be identified and abstracted)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "RTools is not mentioned. No discussion of Windows-specific prerequisites or platform constraints in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-dependency-package-compatibility-auditing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RTools (Windows-only prerequisite identified as platform-specific constraint)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Apptainer is not mentioned. No discussion of containerization, Linux deployment, or alternative execution mechanisms.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-dependency-package-compatibility-auditing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Apptainer (Alternative container deployment mechanism documented as workaround for Linux execution)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/regression-model-validation-quantification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
+      "asbval:note": "Paper explicitly describes external calibration-based quantification and drift correction strategies; regression model validation is core to the tool's purpose.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "regression-model-validation-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validate and optimize regression models (linear or polynomial) fitted to mass spectrometry external calibration data to ensure accurate conversion of raw intensity measurements to quantified concentration values.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/regression-model-validation-quantification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions, and remaining intensity drift was assessed.",
+      "asbval:note": "Paper demonstrates evaluation of drift correction strategies and calibration function tuning to assess model adequacy.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "regression-model-validation-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill ensures the selected model appropriately captures the intensity\u2013concentration relationship and correctly handles intensity drift correction.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/regression-model-validation-quantification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification",
+      "asbval:note": "Tool name confirmed in abstract.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "regression-model-validation-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QuantyFey",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/regression-model-validation-quantification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies. We applied QuantyFey to a targeted LC-MS/MS dataset... different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing.",
+      "asbval:note": "Paper confirms QuantyFey supports external calibration, multiple drift correction strategies, and linear/quadratic models (implied by 'manual tuning of calibration functions'). However, passages do not explicitly confirm it is a 'Shiny application' or name specific modules ('Interactive Regression Model Optimization', 'Automatic Optimization Module'). These implementation details cannot be verified from provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "regression-model-validation-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Shiny application providing Interactive Regression Model Optimization and Automatic Optimization Module for selection and validation of linear or quadratic calibration models with multiple drift correction strategies",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/regression-model-validation-quantification/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "tool for external calibration-based quantification... Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions, and remaining intensity drift was assessed.",
+      "asbval:note": "Scope aligns with paper's description of external calibration workflow and model evaluation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "regression-model-validation-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have fitted one or more regression models (linear or polynomial) to external calibration standards in MS data and need to verify model adequacy before applying it to unknown samples.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/regression-model-validation-quantification/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing",
+      "asbval:note": "Paper explicitly compares these four drift correction strategies.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "regression-model-validation-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Specifically when intensity drift is observed during measurement and you must choose between competing correction strategies (IS correction, drift correction, bracketing, or weighted bracketing)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/regression-model-validation-quantification/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "manual tuning of calibration functions",
+      "asbval:note": "Paper does not explicitly state model order limits. Claim of 'linear and quadratic only' cannot be verified from passages; passages only confirm calibration function tuning occurs.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "regression-model-validation-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "QuantyFey supports only linear and quadratic models",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper is about QuantyFey, an open-source LC-MS quantification tool with drift correction. No mention of Shiny applications, Windows-only refactoring, cross-platform adaptation of web frameworks, or R interactive applications. The paper focuses on analytical chemistry software, not web application development.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "shiny-application-cross-platform-adaptation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Audit and refactor a Windows-only Shiny application to run on Linux and macOS by identifying platform-specific dependencies, replacing OS-dependent code patterns, and validating cross-platform functionality.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:08.658172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Shiny is not mentioned anywhere in the paper. The paper describes QuantyFey as a tool for LC-MS quantification, not a Shiny web application.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "shiny-application-cross-platform-adaptation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Shiny (Interactive web framework for R; the application runtime to be refactored for cross-platform deployment)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:08.658172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "While R may be used in the development of QuantyFey, the paper does not discuss R as a tool or mention platform abstraction functions. The paper focuses on the QuantyFey tool itself and its drift correction capabilities.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "shiny-application-cross-platform-adaptation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (Programming language and runtime environment; provides platform abstraction functions)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:08.658172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "RStudio or any R IDE is not mentioned in the paper. The paper does not discuss development environments for Shiny applications.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "shiny-application-cross-platform-adaptation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RStudio / R IDE (Development environment for testing and launching the refactored Shiny application)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:08.658172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper's scope is entirely about LC-MS quantification with drift correction strategies (IS correction, QC-based drift correction, bracketing methods). There is no discussion of Shiny applications, cross-platform refactoring, or web application development.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "shiny-application-cross-platform-adaptation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Audit and refactor a Windows-only Shiny application to run on Linux and macOS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:08.658172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/system-library-dependency-mapping/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper is about LC-MS quantification drift correction (QuantyFey tool), not about cross-platform application dependency mapping or system library auditing. No mention of platform-specific constraints, file path conventions, or conditional code branches for cross-platform compatibility.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "system-library-dependency-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Identify and document platform-specific system library dependencies, file path conventions, and conditional code branches in a cross-platform application to enable targeted remediation and cross-platform compatibility testing.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:16.545679+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/system-library-dependency-mapping/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper describes QuantyFey as 'vendor-independent' and 'open-source' but does not address cross-platform dependency mapping, system library constraints, or deployment compatibility testing. The paper focuses on drift correction strategies in LC-MS analysis, not software engineering or platform compatibility.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "system-library-dependency-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "System-library-dependency-mapping for cross-platform applications; understanding OS-specific constraints before deployment",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:16.545679+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/system-library-dependency-mapping/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of Shiny in the paper. QuantyFey is described as an 'open-source tool for targeted LC-MS quantification' but no web framework or UI technology is specified in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "system-library-dependency-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Shiny (R web application framework for which platform-specific dependencies must be audited)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:16.545679+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/system-library-dependency-mapping/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss R language, packages, or conditional compilation. QuantyFey is described as a quantification tool but implementation language and dependency management are not addressed in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "system-library-dependency-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (base and package ecosystem) for platform availability and conditional compilation scanning",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:16.545679+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/system-library-dependency-mapping/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of RTools or any Windows-specific development tools. Paper does not discuss R package compilation or platform-specific toolchains.",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "system-library-dependency-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RTools (Windows-specific development tools for R package compilation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:16.545679+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/calibration-curve-fitting-ms-data/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 3,
+      "asbval:target_artifact_id": "calibration-curve-fitting-ms-data",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "corrected-intensity-table-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/file-path-abstraction-and-normalization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "file-path-abstraction-and-normalization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "intensity-drift-artifact-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "intensity-to-concentration-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.625,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-quantitative-analysis-standards/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 3,
+      "asbval:target_artifact_id": "ms-quantitative-analysis-standards",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 10,
+      "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/platform-specific-code-refactoring/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "platform-specific-code-refactoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "quantitative-ms-data-preprocessing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8571428571428571,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "r-dependency-package-compatibility-auditing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/regression-model-validation-quantification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "regression-model-validation-quantification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7142857142857143,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "shiny-application-cross-platform-adaptation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/system-library-dependency-mapping/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "system-library-dependency-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "QuantyFey is a Shiny application for the visualization, analysis, and quantification of mass spectrometry data using external calibration.",
+      "asbval:note": "Text accurately represents source_excerpt; substring_in_paper=false but content is directly supported by the excerpt",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:source_excerpt": "QuantyFey** is a Shiny application for the **visualization, analysis, and quantification** of **mass spectrometry (MS) data** using **external calibration",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:01.582292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "QuantyFey is specifically designed to address intensity drifts in datasets.",
+      "asbval:note": "Text accurately represents source_excerpt; substring_in_paper=false but content is directly supported by the excerpt",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:source_excerpt": "It is specifically designed to address **intensity drifts** in datasets",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:01.582292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "QuantyFey offers multiple correction strategies to ensure accurate quantification.",
+      "asbval:note": "Text accurately represents source_excerpt; substring_in_paper=false but content is directly supported by the excerpt",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:source_excerpt": "offering multiple **correction strategies** to ensure accurate quantification",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:01.582292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "QuantyFey is compatible with Windows operating systems only.",
+      "asbval:note": "Source_excerpt states 'compatible with Windows' but does not say 'only'; claim adds unsupported exclusivity qualifier",
+      "asbval:perspicacite_kb": "asb-paper-10-1016-j-aca-2025-344571",
+      "asbval:source_excerpt": "QuantyFey is compatible with **Windows** operating systems only",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:01.582292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_quantyfey#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "implicit",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_sys_quantyfey",
+      "title": "QuantyFey",
+      "identifier": "urn:asb:spine:sys_quantyfey"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_shiny",
+      "title": "Shiny",
+      "identifier": "urn:asb:spine:tool_shiny"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ms_data_input",
+      "title": "MS Data Input",
+      "identifier": "urn:asb:spine:comp_ms_data_input"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_external_calibration",
+      "title": "External Calibration",
+      "identifier": "urn:asb:spine:comp_external_calibration"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_intensity_drift_correction",
+      "title": "Intensity Drift Correction",
+      "identifier": "urn:asb:spine:comp_intensity_drift_correction"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_visualization",
+      "title": "Visualization Module",
+      "identifier": "urn:asb:spine:comp_visualization"
+    }
+  ]
+}

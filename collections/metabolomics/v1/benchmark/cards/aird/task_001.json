@@ -1,0 +1,470 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/AIR.png",
+      "role": "figure",
+      "sha256": "cd84d418867c4427b931209963844a5928542b08240d71e5fc8b3018eaecf849"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AIR_01.png",
+      "role": "figure",
+      "sha256": "e01371f7fd17589e420e3b12b9bf8623250214471bf8340d1d6c5e80c435b288"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdManager.png",
+      "role": "figure",
+      "sha256": "bf9a22e9f1c1799b7ae87b6748766a6b655d021b860b82f78dbf531b48034210"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdPro.png",
+      "role": "figure",
+      "sha256": "c4ea12bde93161a340e1d7c0ac30b2af041afce4c51108b5f59fbe5d56ff68fd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdProLogo.png",
+      "role": "figure",
+      "sha256": "89117d389dbc221655a60252f2548cf6d5370f6d283956cc348a8c48714b0368"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdProTrans.png",
+      "role": "figure",
+      "sha256": "b4b726856e380dd34cb4d429403bb615358d383052d20eac6c68960737390cd9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdPro_ 2.png",
+      "role": "figure",
+      "sha256": "b4b726856e380dd34cb4d429403bb615358d383052d20eac6c68960737390cd9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdPro_ 3.png",
+      "role": "figure",
+      "sha256": "c4ea12bde93161a340e1d7c0ac30b2af041afce4c51108b5f59fbe5d56ff68fd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Arrows.png",
+      "role": "figure",
+      "sha256": "8e15dfe896c84e370e185351d675f97ad18b976da1eea73d8da5a714246633e9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/CleanErrors.png",
+      "role": "figure",
+      "sha256": "4d2486559aca2ee986ed33e903464a38a5445bf2fc7f2bbe96cf11127d68b50a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/CleanFinished.png",
+      "role": "figure",
+      "sha256": "7e92b17bded7c189ac03e0d0df39efa3bf8305dedb7ea035f8d169dee1874687"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Computation.png",
+      "role": "figure",
+      "sha256": "ba44ee8b156e3cd3380d17cd72ab10956ba8cd97e45b3a356575dc7f36dbdb82"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Connected.png",
+      "role": "figure",
+      "sha256": "cea4dd305a03f461bbd28c78aed7be4933e5c8374392025d32e0636af279caca"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Conversion.png",
+      "role": "figure",
+      "sha256": "4dae389e821586057beab9296c7e36cb85a14d3603f892db719cb80df53c6335"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ConversionCenter.png",
+      "role": "figure",
+      "sha256": "aaaba5189f6e2e15297ee20a97358e5e5df458ce689858e9f5bf081cd59edf38"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Help.png",
+      "role": "figure",
+      "sha256": "0da0fe9a660a97b48e979b2f3477b8c713dea4c3841759635d5787c3cb740ef7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MetaboLights.jpg",
+      "role": "figure",
+      "sha256": "f43bbe666708f0df1c89e156c6175f30b20752bbcd4b9b3e26c459b5af060ca4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Proteomexchange.png",
+      "role": "figure",
+      "sha256": "5a5bc1662bec813ef737f1b94138911424cb867b854f01a65b93e64214fdd6ff"
+    },
+    {
+      "indexable": false,
+      "path": "figures/SearchEngine.png",
+      "role": "figure",
+      "sha256": "f565e7edb4e56fbb10308743606920d12ddf5307b1bb7f6cd53a697f62ae471d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "118bd705f872ed7e2a726c9fad05eb7c50b73d8f90cb8ccdc1409fc6a90a335a"
+    }
+  ],
+  "created_at": "2026-06-15T14:04:46.383725+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Build-docker.sh script and Dockerfile multi-stage configuration from AirdPro project root directory",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "System with Docker Engine version 20.10 or later installed and running",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "airdpro:cli Docker image, verified to exist in local Docker image registry with reported size metric in the range 6\u20137 GB",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Build log output confirming successful multi-stage build completion with no fatal errors",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Multi-stage Dockerfile builds allow separate build and runtime stages; the runtime-cli stage produces a minimal image excluding GUI dependencies, reducing size to 6\u20137 GB vs. 8\u201310 GB for the full Linux variant.",
+    "Wine initialization on first container run requires downloading and configuring .NET Framework 4.8 components, which may take >30 minutes; subsequent runs on the same image are faster as the Wine prefix is cached.",
+    "The airdpro:cli image targets command-line batch processing; it excludes X11 and XQuartz dependencies needed for GUI mode, making it suitable for headless and automated analysis workflows.",
+    "Docker image size is reported by `docker images` in the SIZE column and reflects the compressed layer sizes; a 6\u20137 GB image decompresses to larger uncompressed size when instantiated."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file 'build-docker.sh' exists in github:CSi-Studio__AirdPro repository",
+      "script_runs: execute build-docker.sh without errors",
+      "verify Docker image 'airdpro:cli' exists after build completion",
+      "value_in_range: Docker image airdpro:cli size is between 5.5 GB and 7.5 GB (parameter-sensitive to base Ubuntu 22.04 + Wine + .NET Framework 4.8 layers)",
+      "verify Docker image airdpro:cli is built from Ubuntu 22.04 base (inspect image layers or Dockerfile)"
+    ],
+    "expert_review": [
+      "Assess whether multi-stage build architecture follows best practices for minimizing final image size while maintaining functionality",
+      "Verify that airdpro:cli image is functional for CLI batch processing (requires domain knowledge of AirdPro vendor file conversion workflow)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the multi-stage Docker build process that produces the airdpro:cli image from a Ubuntu 22.04 base with Wine environment?: 'AirdPro is a GUI client for conversion from vendor files to Aird files. AirdPro is written in C# and is based on pwiz_bindings_cli.dll from the ProteoWizard project.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The document describes that AirdPro is built using Docker with Wine to run the C#-based application in Linux containers, leveraging .NET Framework 4.8 and pwiz_bindings_cli.dll from ProteoWizard, but the specific multi-stage Dockerfile build steps and image size metrics are not detailed in the provided text.: 'AirdPro is written in C# and is based on pwiz_bindings_cli.dll from the ProteoWizard project.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Build-docker.sh script and Dockerfile multi-stage configuration from AirdPro project root directory: 'Build all images (first build may take longer)\n./build-docker.sh'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] System with Docker Engine version 20.10 or later installed and running: 'Docker Desktop for Mac (version 20.10+)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] airdpro:cli Docker image, verified to exist in local Docker image registry with reported size metric in the range 6\u20137 GB: 'CLI Version (For batch processing tasks)\nSize: ~6-7GB'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Build log output confirming successful multi-stage build completion with no fatal errors: 'Build process explanation:\n- Download Ubuntu base image\n- Install Wine and dependencies\n- Initialize Wine environment\n- Install .NET Framework 4.8\n- Compile AirdPro application'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Docker Desktop for Mac: 'Docker Desktop for Mac (version 20.10+)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Wine: 'Wine to run Windows applications in Linux containers'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] .NET Framework 4.8: '.NET Framework 4.8 installed and run through Wine'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Docker Compose: 'Docker Compose configuration'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting Docker build process, versioning, or layer structure changes: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "docker",
+      "build",
+      "-t",
+      "airdpro:cli",
+      "-f",
+      "Dockerfile",
+      "--target",
+      "runtime-cli",
+      "."
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "airdpro:cli Docker image, verified to exist in local Docker image registry with reported size metric in the range 6\u20137 GB",
+    "Build log output confirming successful multi-stage build completion with no fatal errors"
+  ],
+  "finding": "The document describes that AirdPro is built using Docker with Wine to run the C#-based application in Linux containers, leveraging .NET Framework 4.8 and pwiz_bindings_cli.dll from ProteoWizard, but the specific multi-stage Dockerfile build steps and image size metrics are not detailed in the provided text.",
+  "github_name": "CSi-Studio/AirdPro",
+  "input_from": null,
+  "inputs": [
+    "Build-docker.sh script and Dockerfile multi-stage configuration from AirdPro project root directory",
+    "System with Docker Engine version 20.10 or later installed and running"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "Dockerfile (source file confirming multi-stage structure)",
+    "docker build output log (showing Ubuntu download, Wine installation, .NET Framework installation steps)"
+  ],
+  "linked_result_ids": [
+    "result_027",
+    "result_017",
+    "result_018",
+    "result_028",
+    "result_031",
+    "result_036",
+    "result_004",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Invoke the build-docker.sh script to trigger Docker's multi-stage build pipeline targeting the runtime-cli stage.",
+    "Download and configure the Ubuntu 22.04 base image, then install Wine and all required Linux dependencies for Windows application support.",
+    "Initialize the Wine environment and install .NET Framework 4.8 within the Wine prefix so that compiled C# binaries can execute.",
+    "Compile the AirdPro application using the .NET SDK during the build stage, then copy the CLI executable into the runtime-cli final image.",
+    "Verification: Query docker images to confirm airdpro:cli exists and report its size; confirm the reported size falls within 6\u20137 GB range."
+  ],
+  "missing_information": [
+    "No changelog documenting Docker build process, versioning, or layer structure changes"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the multi-stage Docker build process that produces the airdpro:cli image from a Ubuntu 22.04 base with Wine environment?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "docker-multistage-build-execution",
+    "container-image-size-verification",
+    "wine-environment-initialization-validation",
+    "dotnet-framework-installation-in-containers",
+    "docker-image-registry-inspection"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_aird/synthesized_package",
+  "spine_condition_ids": [
+    "cond_wine_performance",
+    "cond_native_windows",
+    "artifact_docker_image_windows",
+    "artifact_docker_image_linux",
+    "artifact_docker_image_cli",
+    "artifact_docker_image_dev"
+  ],
+  "spine_entity_ids": [
+    "airdpro_system",
+    "arch_docker_wine_stack",
+    "arch_multistage_build",
+    "artifact_docker_image_windows",
+    "artifact_docker_image_linux",
+    "artifact_docker_image_cli",
+    "artifact_docker_image_dev",
+    "comp_wine",
+    "comp_docker_desktop",
+    "comp_docker_compose",
+    "tool_build_script_sh",
+    "cond_wine_performance",
+    "metric_wine_perf_degradation",
+    "metric_windows_image_size",
+    "metric_linux_image_size",
+    "metric_cli_image_size",
+    "metric_dev_image_size",
+    "result_wine_memory_overhead",
+    "result_wine_startup_time",
+    "result_hardware_accel_unavailable"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:CSi-Studio__AirdPro",
+  "task_description": "Execute the multi-stage Dockerfile build process to produce the airdpro:cli Docker image from Ubuntu 22.04 + Wine base, then verify the image exists and matches the expected ~6\u20137 GB size metric.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Dockerfile multi-stage build configuration",
+      "port_id": "dockerfile_config",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "build-docker.sh build automation script",
+      "port_id": "build_script",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute the build-docker.sh script to construct the airdpro:cli Docker image and verify its successful creation with the expected ~6\u20137 GB size.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "airdpro:cli Docker image in local registry",
+      "port_id": "cli_image",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Docker build execution log with build status",
+      "port_id": "build_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reconstruct the Docker multi-stage build pipeline producing the airdpro:cli image",
+  "tools": [
+    "AirdPro V5",
+    "Docker Desktop for Mac",
+    "Wine",
+    ".NET Framework 4.8",
+    "Docker Compose"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Docker Desktop for Mac, Wine, .NET Framework 4.8, Docker Compose, airdpro:cli Docker image, verified to exist in local Docker image registry with reported size metric in the range 6\u20137 GB, Build log output confirming successful multi-stage build completion with no fatal errors."
+  ],
+  "workflow_description": "1. Run the build-docker.sh script with the --linux-only flag to initiate the multi-stage Docker build targeting the runtime-cli stage. 2. Monitor the build process as it downloads the Ubuntu 22.04 base image, installs Wine and dependencies, initializes the Wine environment, and installs .NET Framework 4.8. 3. Verify successful image creation by querying Docker for the airdpro:cli image and confirm its size falls within the expected 6\u20137 GB range using docker images command. 4. Optionally test image functionality by running a basic container instantiation from airdpro:cli to ensure the compiled AirdPro CLI binary is executable and responds to --help."
+}

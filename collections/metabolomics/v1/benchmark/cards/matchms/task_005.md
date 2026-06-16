@@ -1,0 +1,176 @@
+# SciTask Card: Reproduce matchms installation and import across supported distribution channels
+
+- Task ID: `task_005`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T21:14:07.897424+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_matchms/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `benchmark-evaluation`, `information-extraction`
+- GitHub: `matchms/matchms`
+- Quality: Score 3/5 — Coherent: false, placeholder, 2 grounding failures
+
+## Classification
+
+- Task kind: `reproduction`
+- Article type: `software-tool`
+- Primary domain: `cheminformatics`
+- Keywords: `mass spectrometry` · `ms/ms data` · `spectral similarity` · `cosine score` · `molecular fingerprint comparison` · `metadata cleaning` · `peak filtering` · `mzml format` · `mgf format` · `untargeted metabolomics` · `spectral processing` · `pairwise similarity measures`
+
+## Research Question
+Are the documented distribution channels (PyPI and Bioconda) for matchms functional and does the package import successfully after installation from these channels?
+
+## Connected Finding
+Matchms is distributed through multiple channels including PyPI and Bioconda, as referenced in the contributing guidelines which specify procedures for release management and waiting for availability on Bioconda.
+
+## Task Description
+Verify that matchms installs correctly from PyPI and Bioconda package repositories and that the package imports without error, confirming both documented distribution channels are functional for the current release version.
+
+## Inputs
+- Current matchms release version identifier (e.g., from PyPI or GitHub releases page)
+- Access to PyPI package repository
+- Access to Bioconda package repository
+
+## Expected Outputs
+- Installation log from PyPI showing successful package installation with no errors
+- Installation log from Bioconda showing successful package installation with no errors
+- Import test result confirming matchms module loads without errors from both installations
+
+## Expected Output File
+
+- `installation_smoke_test_report.txt`
+
+## Landmark Outputs
+
+- `pypi_install.log`
+- `bioconda_install.log`
+- `pypi_import_test.txt`
+- `bioconda_import_test.txt`
+
+## Tools
+- matchms
+- Python
+- pip
+- conda
+
+## Skills
+- python-package-installation-and-management
+- package-repository-verification
+- module-import-testing
+- installation-troubleshooting
+- distribution-channel-validation
+
+## Workflow Description
+1. Install matchms from PyPI using pip or equivalent package manager. 2. Import the installed matchms package in Python and verify no import errors occur. 3. Install matchms from Bioconda using conda package manager. 4. Import the Bioconda-installed matchms package in Python and verify no import errors occur. 5. Document installation success and import status for both channels.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/filtering_sketch.png` | figure | False |
+| `figures/filtering_sketch.svg` | figure | False |
+| `figures/flowchart_matchms.png` | figure | False |
+| `figures/flowchart_matchms.svg` | figure | False |
+| `figures/matchms.png` | figure | False |
+| `figures/matchms_header.png` | figure | False |
+| `figures/matchms_sketch.png` | figure | False |
+| `figures/peak_filtering.png` | figure | False |
+| `figures/peak_filtering.svg` | figure | False |
+| `figures/spectra-array-plot-example.png` | figure | False |
+| `figures/spectrum-mirror-plot-example.png` | figure | False |
+| `figures/spectrum-plot-example.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No explicit statement in the provided section text about which PyPI or Bioconda release channel versions are currently active or recommended for installation testing.
+- The section text does not specify minimum Python version requirements, required dependencies (numpy, pandas, etc.), or platform compatibility constraints for installation.
+- No information provided about expected behavior or acceptable error messages during a clean installation, or known installation issues in the current or recent versions.
+
+## Domain Knowledge
+- PyPI is the official Python Package Index and the primary distribution channel for Python packages; successful publication requires passing automated workflows before artifact availability.
+- Bioconda is a conda channel providing bioinformatics software packages; package availability on Bioconda follows automated pull requests to the bioconda-recipes repository and is not instantaneous with PyPI release.
+- A successful import test confirms that all package dependencies are correctly installed and the Python environment is properly configured for the package to function.
+- The conda verify workflow is an automated check run by the matchms project to validate that the Bioconda-distributed package installs and functions correctly in a clean conda environment.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: Installation log from PyPI showing successful package installation with no errors, Installation log from Bioconda showing successful package installation with no errors, Import test result confirming matchms module loads without errors from both installations.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] Are the documented distribution channels (PyPI and Bioconda) for matchms functional and does the package import successfully after installation from these channels?: 'Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] Matchms is distributed through multiple channels including PyPI and Bioconda, as referenced in the contributing guidelines which specify procedures for release management and waiting for availability on Bioconda.: 'Matchms is a versatile open-source Python package'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [other] Current matchms release version identifier (e.g., from PyPI or GitHub releases page): 'Goto [GitHub release page](https://github.com/matchms/matchms/releases)'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [other] Access to PyPI package repository: 'Verify new release is on [PyPi](https://pypi.org/project/matchms/#history)'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [other] Access to Bioconda package repository: 'Wait until new release is also on Bioconda (https://anaconda.org/bioconda/matchms)'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [other] Installation log from PyPI showing successful package installation with no errors: 'Verify new release is on [PyPi](https://pypi.org/project/matchms/#history)'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [other] Installation log from Bioconda showing successful package installation with no errors: 'Wait until new release is also on Bioconda (https://anaconda.org/bioconda/matchms)'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [other] Import test result confirming matchms module loads without errors from both installations: 'Test matchms from bioconda by manually running [Conda verify](https://github.com/matchms/matchms/actions/workflows/conda_verify.yml) workflow'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [other] matchms: 'Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [other] Python: 'Matchms is a versatile open-source Python package'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [other] pip: 'Verify new release is on [PyPi](https://pypi.org/project/matchms/#history)'
+- `ev_012` from `agent2_synthesis` (agent2_traced): [other] conda: 'Wait until new release is also on Bioconda (https://anaconda.org/bioconda/matchms)'
+- `ev_013` from `agent2_synthesis` (agent2_traced): [other] No explicit statement in the provided section text about which PyPI or Bioconda release channel versions are currently active or recommended for installation testing.: '[0.28.1]: https://github.com/matchms/matchms/compare/0.28.0...0.28.1'
+- `ev_014` from `agent2_synthesis` (agent2_traced): [other] The section text does not specify minimum Python version requirements, required dependencies (numpy, pandas, etc.), or platform compatibility constraints for installation.: '[0.28.1]: https://github.com/matchms/matchms/compare/0.28.0...0.28.1'
+- `ev_015` from `agent2_synthesis` (agent2_traced): [other] No information provided about expected behavior or acceptable error messages during a clean installation, or known installation issues in the current or recent versions.: '[0.28.1]: https://github.com/matchms/matchms/compare/0.28.0...0.28.1'
+
+## Evaluation Strategy
+### Direct Checks
+- verify file_exists: Python environment with pip and/or conda available
+- script_runs: `pip install matchms` completes without error exit code
+- script_runs: `python -c 'import matchms'` executes without ImportError or exception
+- script_runs: `conda install -c bioconda matchms` completes without error exit code (if conda/bioconda accessible)
+- script_runs: `python -c 'import matchms; print(matchms.__version__)'` returns a non-empty version string
+- value_in_range: installed matchms version matches or is compatible with current release tag from github.com/matchms/matchms/releases
+- contains_substring: matchms module namespace contains expected submodules (e.g., 'matchms.importing', 'matchms.filtering', 'matchms.similarity')
+
+### Expert Review
+- Confirm that PyPI package metadata and Bioconda recipe are correctly synchronized and point to the same upstream source
+- Assess whether any warnings or deprecation notices emitted during import are acceptable for the current release cycle
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Execution Profile
+- **Compute tier:** trivial
+
+## Methodology Summary
+1. Create isolated Python environment (virtual environment or fresh conda env) to ensure clean installation baseline.
+2. Download and install matchms from PyPI using pip, capturing installation logs and any error messages.
+3. Execute Python import statement 'import matchms' and verify no ImportError or ModuleNotFoundError exceptions occur; record success status.
+4. Create second isolated conda environment and install matchms from Bioconda channel, capturing installation logs.
+5. Execute Python import statement 'import matchms' in the Bioconda environment and verify no ImportError or ModuleNotFoundError exceptions occur; record success status.
+6. Validation: Both PyPI and Bioconda installations complete without error, and matchms module imports successfully in both environments, confirming both distribution channels are functional.
+
+## Workflow Ports
+
+**Inputs:**
+
+- `pypi_release_version` — Current matchms release version identifier
+- `bioconda_release_version` — Current matchms release version on Bioconda
+
+**Outputs:**
+
+- `pypi_install_log` — Installation log from PyPI
+- `bioconda_install_log` — Installation log from Bioconda
+- `import_test_result` — Import test results confirming successful package loading
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:matchms__matchms`
+- **Synthesized at:** 2026-06-15T21:20:13+00:00
+
+## Extraction Quality
+- Score: 3/5
+- Coherent: false
+- Placeholder detected: true
+- Groundedness failures (2):
+  - Finding's evidence_span does not support the claim about PyPI and Bioconda distribution. The span 'Matchms is a versatile open-source Python package' describes matchms generally but does not mention distribution channels or Bioconda.
+  - Research question asks about whether channels are 'functional' and whether 'package imports successfully', but the finding only asserts distribution channel existence, not their functionality or import success.
+- Notes: This card conflates a static informational claim (distribution channels exist) with a functional verification task (channels work and imports succeed). The research_question is appropriately scoped as an empirical verification question, but the finding is too weak and incorrectly grounded to address it. The finding should either (1) report results from an actual installation/import test, or (2) be reframed as a preliminary observation that simply states the documented channels, separate from the functional verification task. The evidence_span for the finding is particularly problematic—it does not support any claim about Bioconda or contributing guidelines. Consider strengthening grounding or revising the finding to be a hypothesis rather than a claim. The task itself is well-designed with clear methodology and evaluation criteria, but the card's top-level research_question and finding do not properly frame it.
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

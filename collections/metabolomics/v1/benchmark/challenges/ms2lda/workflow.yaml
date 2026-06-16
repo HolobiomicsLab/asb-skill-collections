@@ -1,0 +1,396 @@
+schema_version: 0.1.0
+workflow_id: coll_ms2lda_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: MS2LDA is an unsupervised machine learning framework that applies Latent
+    Dirichlet Allocation to tandem mass spectrometry data to discover recurring fragmentation
+    patterns (Mass2Motifs) representing molecular substructures, with integrated preprocessing,
+    LDA modeling, automated annotation via MAG and Spec2Vec, MotifDB integration,
+    and interactive visualization.
+  pseudo_abstract: "MS2LDA implements a complete workflow for unsupervised substructure\
+    \ discovery in mass spectrometry data. The tool describes a preprocessing mechanism\
+    \ that converts MS/MS spectra into bag-of-fragments format, extracts neutral losses,\
+    \ and filters noise to prepare input for LDA modeling. MS2LDA applies Latent Dirichlet\
+    \ Allocation to infer Mass2Motifs\u2014recurring patterns of fragment ions and\
+    \ neutral losses that describe latent fragmentation behaviors across spectral\
+    \ datasets. The framework incorporates automated annotation of discovered Mass2Motifs\
+    \ through a mechanism that integrates the MAG annotation system with Spec2Vec\
+    \ embeddings, loading pretrained models from a Zenodo repository to generate per-motif\
+    \ annotation records. MS2LDA describes integration with a MassQL-searchable MotifDB\
+    \ that enables motif-to-database comparison and retrieval of known reference motifs.\
+    \ The tool provides a postprocessing pipeline that generates molecular network\
+    \ representations (GraphML format) encoding discovered motifs and their relationships.\
+    \ Results are accessible through both an interactive web application (MS2LDAViz)\
+    \ for real-time exploration and command-line interfaces for scripted analysis\
+    \ workflows, with output including Mass2Motif collections, spectra-motif loadings,\
+    \ visualizations, and network exports."
+  research_questions:
+  - How does MS2LDA convert mass spectrometry input files in multiple formats (.mgf,
+    .msp, .mzML) into a bag-of-fragments representation suitable for LDA training?
+  - How does MS2LDA apply Latent Dirichlet Allocation to a bag-of-fragments corpus
+    to infer Mass2Motifs from mass spectrometry fragmentation patterns?
+  - How does the Spec2Vec-based annotation lookup process generate per-motif annotation
+    records by loading a trained motifset and the Spec2Vec model?
+  - How does MS2LDA query a MassQL-searchable MotifDB to retrieve and rank database
+    matches for discovered motifs?
+  - How does MS2LDA construct a network graph that encodes spectral similarity relationships
+    and motif membership annotations for post-processing visualization and export?
+  methods_summary: "Load spectral data from input file (mgf, msp, or mzML) using format-specific\
+    \ parsers. Extract fragment ion m/z values and peak intensities; calculate neutral\
+    \ loss values for all fragment\u2013precursor pairs. Apply noise filtering to\
+    \ remove low-intensity fragments and statistically insignificant peaks. Bin fragment\
+    \ and neutral loss masses into discrete mass tokens via mass-binning discretization.\
+    \ Generate bag-of-fragments corpus, encoding each spectrum as a document with\
+    \ token frequencies. Validation: verify corpus dimensionality, token inventory\
+    \ completeness, and that all documents are non-empty; check that at least 80%\
+    \ of input spectra are retained post-filtering. Load preprocessed corpus containing\
+    \ bag-of-fragments representations of preprocessed MS/MS spectra Initialize LDA\
+    \ model with specified topic count (n_motifs), hyperparameters (alpha, beta),\
+    \ and iteration limit (n_iterations) Train LDA inference on corpus, iteratively\
+    \ updating topic-fragment and spectrum-topic distributions Monitor and record\
+    \ convergence metrics (log-likelihood or perplexity) across training iterations\
+    \ Extract learned Mass2Motif distributions (topic-fragment probability maps) from\
+    \ converged model Serialize trained model state to pickle binary (ms2lda.bin)\
+    \ and motifset to JSON schema (motifset.json) Validation: convergence curve shows\
+    \ stable or decreasing objective; motifset contains all n_motifs with non-zero\
+    \ fragment probabilities; model and motifset files are non-empty and deserializable\
+    \ Load pre-trained Spec2Vec model and spectral embeddings from Zenodo deposit.\
+    \ Parse trained motifset JSON file to extract all Mass2Motif records and their\
+    \ fragment/loss compositions. Compute cosine similarity between each motif's embedding\
+    \ and reference spectral embeddings using Spec2Vec. Rank candidate annotations\
+    \ by similarity score and extract top-N matches with associated structural labels.\
+    \ Validation: Output JSON contains all motif identifiers with non-null similarity\
+    \ scores and at least one annotation label per motif; similarity scores fall within\
+    \ [0, 1] range and are ranked in descending order. Load the inferred motifset\
+    \ JSON, extracting Mass2Motif definitions (fragment and neutral-loss compositions).\
+    \ For each motif, formulate a MassQL query targeting its characteristic fragment\
+    \ and neutral-loss pattern. Execute the MassQL query against the MotifDB library\
+    \ using the MassQL4MotifDB integration layer. Rank returned matches by similarity\
+    \ or match score (e.g., cosine similarity on fragment-loss overlap). Serialize\
+    \ ranked results to JSON with per-motif match records (MotifDB ID, name, composition,\
+    \ score). Validation: Confirm JSON output contains a ranked match list for each\
+    \ input motif; verify presence of MotifDB identifiers, match scores, and composition\
+    \ metadata for each returned entry. Load motifset JSON and extract Mass2Motif\
+    \ fragment and neutral-loss probability distributions. Construct pseudo-spectra\
+    \ for each motif by converting probabilities to intensity-weighted m/z vectors.\
+    \ Compute pairwise cosine similarity between all motif pseudo-spectra. Filter\
+    \ edges by similarity threshold and populate graph with motif nodes and weighted\
+    \ similarity edges. Annotate nodes with motif metadata (ID, fragment composition,\
+    \ spectra count) and edges with similarity scores. Serialize graph to GraphML\
+    \ format with proper XML structure and attribute declarations. Validation: verify\
+    \ network.graphml is valid XML, contains all motif nodes with unique IDs, edges\
+    \ reflect computed similarity, and file is parseable by standard graph tools (e.g.,\
+    \ NetworkX, Cytoscape)."
+  domain: metabolomics
+  techniques:
+  - clustering
+  - dimensionality-reduction
+  - machine-learning
+  - molecular-networking
+  - spectral-library-matching
+  - tandem-ms
+  claims:
+  - claim_text: MS2LDA is an advanced tool designed for unsupervised substructure
+      discovery in mass spectrometry data.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA significantly enhances the capabilities described in the original
+      MS2LDA paper from 2016.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: Mass spectrometry fragmentation patterns hold abundant structural
+      information vital for analytical chemistry, natural product research, and food
+      safety assessments.
+    claim_type: finding
+    speculative: false
+  - claim_text: MS2LDA identifies recurring substructures (motifs) across spectral
+      datasets without relying on prior compound identification.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: Mass2Motifs can be added to the online MotifDB by raising an issue
+      following the Mass2Motifs template.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-MOTIFDB
+  - claim_text: MS2LDA expects preprocessed MS/MS data typically in .mgf, .mzML, or
+      .msp formats.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA provides Mass2Motifs, spectra-motif loadings, and optional
+      annotations via MotifDB or MAG as output.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: "Downloading the required models and storing a few runs typically\
+      \ requires 15\u201320 GB of free space."
+    claim_type: finding
+    speculative: false
+  - claim_text: MS2LDA applies probabilistic topic modeling to tandem mass spectrometry
+      data for unsupervised discovery of fragmentation patterns.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA identifies recurring patterns of mass fragments and neutral
+      losses called Mass2Motifs across MS/MS datasets.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs
+      are most likely to explain the observed fragmentation patterns.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA preprocessing includes converting MS/MS spectra into a bag-of-fragments
+      format.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA preprocessing includes extracting neutral losses.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA preprocessing includes filtering out noise.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA model training applies LDA to processed spectra to learn Mass2Motifs
+      that describe recurring fragmentation patterns.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA postprocessing includes visualizing motif loadings across spectra
+      and comparing motifs to known entries in MotifDB.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA has been successfully applied to discover novel natural products
+      in fungal extracts, plant metabolomics, and marine organisms.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA has applications in environmental monitoring including pesticide
+      detection, water quality assessment, and soil contamination analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA can be used for clinical metabolomics applications including
+      biomarker discovery, drug metabolism studies, and disease profiling.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA has applications in food science including food authenticity
+      testing, quality control, and flavor profiling.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDAViz lets users run analyses and explore results in a browser
+      with live controls and rich visualizations.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-MS2LDAVIZ
+  - claim_text: Before running MS2LDA, users must download the Spec2Vec model, embeddings,
+      and library DB from the Zenodo repository.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDAViz includes a Motif Rankings tab that allows users to browse
+      all Mass2Motifs ranked based on different thresholds.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-MASSQL
+  - claim_text: MS2LDAViz includes a Motif Details tab for inspecting selected motifs
+      in depth with suggested structures and annotations.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDAViz includes a Spectra Search tab for finding individual spectra
+      by parent mass or fragment/loss values.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDAViz includes a View Network tab for exploring an interactive
+      network of optimized motifs.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-MS2LDAVIZ
+  - claim_text: MS2LDAViz includes a Motif Search tab for performing motif-motif searches
+      against reference motifs in MotifDB.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: The `run_analysis.sh` script is provided for Linux/macOS users to
+      simplify MS2LDA execution.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: The `run_analysis.bat` script is provided for Windows users to simplify
+      MS2LDA execution.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA command-line interface accepts --input flag for specifying
+      the path to input spectra file.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA command-line interface accepts --output flag for specifying
+      the directory to store results.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA command-line interface accepts --n_topics flag for specifying
+      the number of Mass2Motifs to infer.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA command-line interface accepts --n_iterations flag for specifying
+      the number of LDA training iterations.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA command-line interface accepts --alpha flag for specifying
+      the LDA alpha hyperparameter.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA command-line interface accepts --beta flag for specifying the
+      LDA beta hyperparameter.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: After a successful MS2LDA run, results include a motif_figures folder
+      with individual motif visualizations as PNG files.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: After a successful MS2LDA run, results include a motifs folder with
+      each inferred Mass2Motif.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: After a successful MS2LDA run, results include a motifset.json file
+      with discovered Mass2Motifs in JSON format.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: After a successful MS2LDA run, results include a convergence_curve.png
+      file showing the training convergence plot.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: After a successful MS2LDA run, results include a network.graphml file
+      for molecular network export.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: After a successful MS2LDA run, results include a ms2lda.bin file which
+      is a binary dump of the trained LDA model.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: After a successful MS2LDA run, results include a ms2lda_viz.json.gz
+      file containing compressed results for the MS2LDAViz web app.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: 'MS2LDA''s functionality is organized into modular steps: Preprocessing,
+      Modeling, Annotation, and Visualization.'
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA Preprocessing module filters and cleans spectra in positive/negative
+      ion mode.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA Modeling module infers Mass2Motifs via LDA.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA Annotation module assigns substructure meaning.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA Visualization module explores and exports results.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA can be installed using pip, Conda, or Poetry.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA is developed by a team led by Rosina Torres Ortega, Jonas Dietrich,
+      and Joe Wandy, under supervision of Justin J.J. van der Hooft at Wageningen
+      University & Research.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  - claim_text: MS2LDA builds on the original work published by van der Hooft et al.
+      in PNAS 2016.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-MS2LDA
+  speculative: false
+  task_openness: open
+  method_alternatives: []
+  substitution_constraints:
+  - MAG is trained on positive ionization mode data
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Per-motif annotation records in JSON format with motif identifiers, suggested
+    structure labels, Spec2Vec similarity scores, and confidence metrics
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Ranked MotifDB match records per input motif, returned as JSON with per-motif
+    match lists including MotifDB entry ID, name, fragment composition, neutral-loss
+    composition, and match score
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: GraphML-formatted network file (network.graphml) with Mass2Motif nodes, similarity-weighted
+    edges, and motif metadata attributes
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

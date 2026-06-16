@@ -1,0 +1,12 @@
+  figures/BATF_footprint_comparison_all.png
+  figures/BATF_footprint_comparison_subsets.png
+  figures/BATF_heatmap.png
+  figures/IRF1_footprint.png
+  figures/atacorrect.png
+  figures/bindetect.png
+  figures/chr4-119628321-119629356.png
+  figures/chr4-163701830-163702617.png
+  figures/footprinting.png
+  figures/network.png
+  figures/tobias.png
+paper.md

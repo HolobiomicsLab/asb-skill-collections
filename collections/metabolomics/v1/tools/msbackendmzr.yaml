@@ -1,0 +1,10 @@
+name: MsBackendMzR
+slug: msbackendmzr
+evidence_spans:
+- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from the raw MS data files
+derived_from:
+- doi: 10.3390/metabo12020173
+  title: spectra
+source_repos:
+- rformassspectrometry/Spectra
+schema_version: 0.2.0

@@ -1,0 +1,957 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/algorithm-parameter-comparison-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/calibration-residual-calculation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/compound-identification-from-ms-data",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/conditional-dispatch-workflow-implementation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ftms-mass-spectrum-peak-detection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ftms-raw-data-loading-and-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/gc-ms-chromatogram-processing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ionization-mode-peak-retention-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/low-resolution-mass-spectra-library-matching",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-calibration-against-reference-standards",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-calibration-coefficient-computation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-error-calculation-and-reporting",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrum-calibration-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrum-noise-threshold-parameter-selection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-formula-assignment-and-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ppm-tolerance-window-adjustment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/reference-peak-matching-and-fallback-logic",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/retention-index-calibration-and-alignment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/search-mode-configuration-optimization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-similarity-scoring",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectrum-peak-counting-and-reporting",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/statistical-score-distribution-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/time-domain-signal-apodization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "CoreMS is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-001"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Data handling and software development for modern mass spectrometry is an interdisciplinary endeavor requiring skills in computational science and a deep understanding of MS.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Contributors must create an issue proposing a fix or expanded functionality before contributing.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Contributors can fork the CoreMS repository or make a branch if part of the development team.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-001"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "CoreMS follows the NumPy documentation style guide.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-001"
+        },
+        {
+          "id": "asb:spine_TOOL-008"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Documentation in CoreMS is rendered using the pdoc package.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-001"
+        },
+        {
+          "id": "asb:spine_TOOL-001"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "CoreMS uses semantic versioning with major, minor, and patch version numbers.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-001"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Major version is incremented when making incompatible API changes.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Minor version is incremented when adding new features in a backwards-compatible manner.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Patch version is incremented for backwards-compatible bug fixes.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Unit tests must be added or updated to cover changes made in merge requests.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Documentation must be updated and rerendered to reflect any new features or changes in CoreMS.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-001"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The CI/CD pipeline must pass before merging into the master branch.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Relevant issues or pull requests should be referenced in merge requests.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Contributing to CoreMS means agreeing that contributions will be licensed as described in the LICENSE file.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-001"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "CoreMS has sibling projects including EnviroMS and MetaMS.",
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-001"
+        },
+        {
+          "id": "asb:spine_SYS-002"
+        },
+        {
+          "id": "asb:spine_SYS-003"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14009575",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_corems#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "hierarchical",
+        "abstraction_level": "concrete",
+        "orchestration_planning": "static",
+        "data_transport": "in_memory",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:statistical-score-distribution-analysis--EDAM:operation_2939",
+      "subject_id": "asb.skill:statistical-score-distribution-analysis",
+      "subject_label": "statistical-score-distribution-analysis",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_2939",
+      "object_label": "Principal component visualisation",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.0
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SYS-001",
+      "title": "CoreMS",
+      "identifier": "urn:asb:spine:SYS-001"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SYS-002",
+      "title": "EnviroMS",
+      "identifier": "urn:asb:spine:SYS-002"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SYS-003",
+      "title": "MetaMS",
+      "identifier": "urn:asb:spine:SYS-003"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_ARCH-001",
+      "title": "FT-ICR Data Processing Pipeline",
+      "identifier": "urn:asb:spine:ARCH-001",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_ARCH-002",
+      "title": "GC-MS Processing Pipeline",
+      "identifier": "urn:asb:spine:ARCH-002",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_ARCH-003",
+      "title": "LC-MS Processing Pipeline",
+      "identifier": "urn:asb:spine:ARCH-003",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-001",
+      "title": "ReadBrukerSolarix",
+      "identifier": "urn:asb:spine:COMP-001"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-002",
+      "title": "ImportMassSpectraThermoMSFileReader",
+      "identifier": "urn:asb:spine:COMP-002"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-003",
+      "title": "MzDomainCalibration",
+      "identifier": "urn:asb:spine:COMP-003"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-004",
+      "title": "SearchMolecularFormulas",
+      "identifier": "urn:asb:spine:COMP-004"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-005",
+      "title": "HeteroatomsClassification",
+      "identifier": "urn:asb:spine:COMP-005"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-006",
+      "title": "ReadAndiNetCDF",
+      "identifier": "urn:asb:spine:COMP-006"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-007",
+      "title": "LowResMassSpectralMatch",
+      "identifier": "urn:asb:spine:COMP-007"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-008",
+      "title": "MetabRefGCInterface",
+      "identifier": "urn:asb:spine:COMP-008"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-009",
+      "title": "ReadNistMSI",
+      "identifier": "urn:asb:spine:COMP-009"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-010",
+      "title": "ReadMassList",
+      "identifier": "urn:asb:spine:COMP-010"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-011",
+      "title": "OxygenPriorityAssignment",
+      "identifier": "urn:asb:spine:COMP-011"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-012",
+      "title": "MassErrorPrediction",
+      "identifier": "urn:asb:spine:COMP-012"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-013",
+      "title": "GC_RI_Calibration",
+      "identifier": "urn:asb:spine:COMP-013"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-014",
+      "title": "MSParameters",
+      "identifier": "urn:asb:spine:COMP-014"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-015",
+      "title": "LCMSParameters",
+      "identifier": "urn:asb:spine:COMP-015"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-016",
+      "title": "SignalProcessing",
+      "identifier": "urn:asb:spine:COMP-016"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-017",
+      "title": "TIC_Data",
+      "identifier": "urn:asb:spine:COMP-017"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-018",
+      "title": "EIC_Data",
+      "identifier": "urn:asb:spine:COMP-018"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-019",
+      "title": "ScanDependentDetail",
+      "identifier": "urn:asb:spine:COMP-019"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL-001",
+      "title": "pdoc",
+      "identifier": "urn:asb:spine:TOOL-001"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL-002",
+      "title": "PostgreSQL",
+      "identifier": "urn:asb:spine:TOOL-002"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL-003",
+      "title": "SQLite",
+      "identifier": "urn:asb:spine:TOOL-003"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL-004",
+      "title": "multiprocessing.Pool",
+      "identifier": "urn:asb:spine:TOOL-004"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL-005",
+      "title": "pandas",
+      "identifier": "urn:asb:spine:TOOL-005"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL-006",
+      "title": "matplotlib",
+      "identifier": "urn:asb:spine:TOOL-006"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL-007",
+      "title": "cProfile",
+      "identifier": "urn:asb:spine:TOOL-007"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL-008",
+      "title": "NumPy documentation style guide",
+      "identifier": "urn:asb:spine:TOOL-008"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DS-001",
+      "title": "ESI_NEG_SRFA.d",
+      "identifier": "urn:asb:spine:DS-001"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DS-002",
+      "title": "SRFA.ref",
+      "identifier": "urn:asb:spine:DS-002"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DS-003",
+      "title": "Exploris_SRFA_Example.raw",
+      "identifier": "urn:asb:spine:DS-003"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DS-004",
+      "title": "PNNLMetV20191015.MSL",
+      "identifier": "urn:asb:spine:DS-004"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DS-005",
+      "title": "MetabRef",
+      "identifier": "urn:asb:spine:DS-005"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-001",
+      "title": "noise_threshold_relative_abundance",
+      "identifier": "urn:asb:spine:COND-001"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-002",
+      "title": "noise_threshold_signal_noise",
+      "identifier": "urn:asb:spine:COND-002"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-003",
+      "title": "noise_threshold_log",
+      "identifier": "urn:asb:spine:COND-003"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-004",
+      "title": "calibration_12T_field",
+      "identifier": "urn:asb:spine:COND-004"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-005",
+      "title": "calibration_15T_field",
+      "identifier": "urn:asb:spine:COND-005"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-006",
+      "title": "bromothymol_blue_search",
+      "identifier": "urn:asb:spine:COND-006"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-007",
+      "title": "chlorophenol_red_search",
+      "identifier": "urn:asb:spine:COND-007"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-008",
+      "title": "calibration_fallback_ppm_widening",
+      "identifier": "urn:asb:spine:COND-008"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-009",
+      "title": "apodization_hanning_one_zerofill",
+      "identifier": "urn:asb:spine:COND-009"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-010",
+      "title": "SRFA_molecular_search_CHO",
+      "identifier": "urn:asb:spine:COND-010"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-011",
+      "title": "prob_score_output",
+      "identifier": "urn:asb:spine:COND-011"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-012",
+      "title": "first_hit_search",
+      "identifier": "urn:asb:spine:COND-012"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND-013",
+      "title": "all_hits_search",
+      "identifier": "urn:asb:spine:COND-013"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-020",
+      "title": "Bromothymol Blue",
+      "identifier": "urn:asb:spine:COMP-020"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-021",
+      "title": "Chlorophenol Red",
+      "identifier": "urn:asb:spine:COMP-021"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP-022",
+      "title": "SRFA",
+      "identifier": "urn:asb:spine:COMP-022"
+    }
+  ]
+}

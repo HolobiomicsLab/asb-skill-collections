@@ -1,0 +1,20 @@
+  figures/compound_quantification_IS.png
+  figures/compound_quantification_accuracy.png
+  figures/compound_quantification_bracketing_table.png
+  figures/compound_quantification_drift_correction.png
+  figures/compound_quantification_model_diagnostics.png
+  figures/compound_quantification_parameters.png
+  figures/compound_quantification_quantification_parameters.png
+  figures/compound_quantification_quantification_plot.png
+  figures/compound_quantification_visualization.png
+  figures/concentration_template.png
+  figures/configure_settings_output.png
+  figures/data_upload_parameters.png
+  figures/example1_RT.png
+  figures/example1_areas.png
+  figures/flowchart.png
+  figures/graphical_abstract.png
+  figures/icon.png
+  figures/model_diagnostics_HisRes.png
+  figures/model_diagnostics_QQ.png
+paper.md

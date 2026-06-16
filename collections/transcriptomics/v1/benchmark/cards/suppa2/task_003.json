@@ -1,0 +1,271 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "505f60af93888225083df1df48559a7fe48effff6491356940c740f479cc06d9"
+    }
+  ],
+  "created_at": "2026-06-15T17:50:44.296688+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "PSI matrix files (one per condition, rows=events, columns=samples)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Transcript expression quantification files (TPM or equivalent, per condition)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Differential splicing results table (TSV/CSV) with columns: event_id, dpsi, pvalue, and per-condition mean PSI values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "PSI (percent-spliced-in) ranges from 0 to 1 and represents the inclusion ratio of an exon or splice variant across samples.",
+    "\u0394PSI is the difference in mean PSI between two conditions; effect sizes near 0.1 are typically considered modest biological changes in splicing.",
+    "SUPPA2's uncertainty-aware approach accounts for expression-dependent variance in PSI estimates to avoid false positives in low-abundance transcripts.",
+    "Transcript expression quantification (TPM, FPKM, or counts) must be provided to weight or filter low-confidence PSI values."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:comprna__SUPPA repository is accessible and contains a diffSplice subcommand implementation",
+      "verify file_format_is: input PSI matrix files are tab-separated or comma-separated text files with events as rows and conditions as columns",
+      "verify file_format_is: input transcript expression files follow expected format (e.g., tab-separated with transcript identifiers and expression values)",
+      "verify file_exists: output differential splicing results table is produced with .txt or .tsv extension",
+      "verify field_present: output table contains at least 'dpsi' column (delta PSI values)",
+      "verify field_present: output table contains at least 'p-value' or 'pvalue' column",
+      "verify row_count_equals: output table contains one row per input splicing event (exact match to input event count)",
+      "verify script_runs: diffSplice subcommand executes without fatal errors on minimal test input (PSI matrix + expression files)"
+    ],
+    "expert_review": [
+      "statistical validity: assess whether the differential splicing statistical test (method for computing dpsi and p-value) is appropriate for paired/unpaired conditions and handles missing/zero values correctly",
+      "biological plausibility: review whether computed dpsi values and p-values align with expected effect sizes and significance thresholds for known alternative splicing events",
+      "uncertainty quantification: if SUPPA2 claims uncertainty-aware analysis, verify that confidence intervals or error estimates are present in output or documented in method"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the SUPPA2 diffSplice subcommand compute differential splicing statistics (delta PSI and p-values) from per-condition PSI matrices and transcript expression data?: 'SUPPA2: fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SUPPA2 performs fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions by consuming PSI matrices and expression data to generate differential splicing results.: 'SUPPA2: fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] PSI matrix files (one per condition, rows=events, columns=samples): 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Transcript expression quantification files (TPM or equivalent, per condition): 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Differential splicing results table (TSV/CSV) with columns: event_id, dpsi, pvalue, and per-condition mean PSI values: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SUPPA2: 'SUPPA2: fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history found in discussion section: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "diffsplice_results.tsv",
+  "expected_outputs": [
+    "Differential splicing results table (TSV/CSV) with columns: event_id, dpsi, pvalue, and per-condition mean PSI values"
+  ],
+  "finding": "SUPPA2 performs fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions by consuming PSI matrices and expression data to generate differential splicing results.",
+  "github_name": "comprna/SUPPA",
+  "input_from": "task_002",
+  "inputs": [
+    "PSI matrix files (one per condition, rows=events, columns=samples)",
+    "Transcript expression quantification files (TPM or equivalent, per condition)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "psi_matrix_condition1.tsv",
+    "psi_matrix_condition2.tsv",
+    "transcript_expression_condition1.tsv",
+    "transcript_expression_condition2.tsv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_005",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Load PSI matrices and transcript expression quantification for each condition.",
+    "Align sample identifiers across PSI and expression files.",
+    "Apply SUPPA2 diffSplice statistical test with uncertainty-aware variance estimation.",
+    "Compute \u0394PSI (mean difference) and two-sided p-values per event.",
+    "Validation: output table row count equals total number of events; all p-values fall in [0, 1] and \u0394PSI in [\u22121, 1]."
+  ],
+  "missing_information": [
+    "No changelog or version history found in discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the SUPPA2 diffSplice subcommand compute differential splicing statistics (delta PSI and p-values) from per-condition PSI matrices and transcript expression data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "psi-matrix-loading-and-normalization",
+    "transcript-expression-quantification-handling",
+    "differential-splicing-statistical-testing",
+    "alternative-splicing-event-comparison-across-conditions",
+    "uncertainty-aware-significance-assessment"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_suppa2/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SUPPA2_system",
+    "comp_diffSplicing",
+    "arch_commandSubcommand",
+    "tool_salmon_kallisto",
+    "pub_suppa2_2018",
+    "metric_speed"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:comprna__SUPPA",
+  "task_description": "Implement the SUPPA2 diffSplice statistical test: consume per-condition PSI matrices and transcript expression files to compute differential splicing statistics (\u0394PSI and p-value) for each alternative splicing event.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PSI matrix files (one per condition)",
+      "port_id": "psi_matrices",
+      "resolved_via": null,
+      "source": "task_002/psi_matrix",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Transcript expression quantification files",
+      "port_id": "expr_quantification",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the diffSplice statistical testing module to compute delta PSI values and p-values per splicing event from condition-grouped PSI and transcript expression matrices.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Differential splicing results table with \u0394PSI and p-values",
+      "port_id": "diffsplice_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "statistical-analysis",
+    "differential-abundance-analysis"
+  ],
+  "title": "Reconstruct the differential splicing analysis command from PSI matrices across multiple conditions",
+  "tools": [
+    "SUPPA2"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load PSI matrix files for each condition and transcript expression quantification files. 2. Align samples across conditions and normalize expression values if needed. 3. Apply the SUPPA2 diffSplice statistical test to compute per-event \u0394PSI (difference in percent-spliced-in) between conditions. 4. Calculate p-values for each event using the uncertainty-aware method implemented in SUPPA2. 5. Compile results into a single differential splicing table with event identifiers, \u0394PSI values, and statistical significance metrics."
+}

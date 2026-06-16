@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "input .msp file is readable and located at a known path"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output file has .msp extension"
+    },
+    {
+      "id": "pf_003",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output .msp file contains at least one of the following metadata fields: 'SMILES",
+      "value": "SMILES"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "row_count_equals or value_in_range: number of annotated records in output .msp is greater than or equal to number of input records (no loss of spectra during annotation)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output .msp records contain at least one new metadata field not present in input",
+      "value": [
+        "not present in input"
+      ]
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: input .msp file is readable and located at a known path",
+      "file_format_is: output file has .msp extension",
+      "contains_substring: output .msp file contains at least one of the following metadata fields: 'SMILES', 'InChI', 'CAS'",
+      "script_runs: MSMetaEnhancer.annotate_spectra() method executes without raising an unhandled exception when passed a valid .msp file and service configuration",
+      "row_count_equals or value_in_range: number of annotated records in output .msp is greater than or equal to number of input records (no loss of spectra during annotation)",
+      "field_present: output .msp records contain at least one new metadata field not present in input .msp (robust to which specific field, but at least one enrichment must occur)"
+    ],
+    "expert_review": [
+      "Verify that SMILES, InChI, or CAS values returned by annotate_spectra are chemically valid and correspond to the intended compound (requires domain expertise in chemical informatics)",
+      "Assess whether the asynchronous dispatching to CIR, CTS, PubChem, IDSM, and BridgeDb services completed without timeout or network errors under typical network conditions",
+      "Confirm that the output .msp file preserves all original spectral data (m/z, intensity pairs) while adding metadata enrichment"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

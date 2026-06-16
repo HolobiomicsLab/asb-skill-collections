@@ -1,0 +1,260 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "9fb57229e747bae7a1d4271db393a9a1a8a91880c6064af4803572fcbff7e89d"
+    }
+  ],
+  "created_at": "2026-06-15T19:03:19.044971+00:00",
+  "crossref_doi": "10.1093/nar/gkv007",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pre-fitted lmFit object from a public GEO microarray or RNA-seq dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Table of differential expression results containing gene identifiers, log-fold changes, moderated t-statistics, adjusted p-values, and B-statistics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Empirical Bayes methods in limma stabilize variance estimates by borrowing information across genes, yielding stable moderated t-statistics even with small numbers of biological replicates.",
+    "The B-statistic represents the log-odds ratio that a gene is differentially expressed versus non-differentially expressed under the prior distribution estimated from data.",
+    "Moderated t-statistics incorporate estimated prior degrees of freedom, shrinking gene-specific variances toward a pooled estimate and reducing false positives from low-variance genes.",
+    "The eBayes function fits a scaled inverse-chi-squared prior to the residual variances from lmFit, using method-of-moments or maximum-likelihood estimation depending on the specified trend argument."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:bioc__limma repository contains limma R package source code",
+      "verify that the limma package includes functions for empirical Bayes hyperparameter estimation (e.g., eBayes function)",
+      "verify that limma documentation or vignette describes the workflow: lmFit \u2192 eBayes \u2192 moderated t-statistics and B-statistics generation",
+      "script_runs: execute a reproducible R script that loads a public GEO microarray dataset (e.g., via GEOquery), fits a linear model using lmFit, applies eBayes to estimate empirical Bayes hyperparameters, and outputs moderated t-statistics and B-statistics",
+      "verify that the output table contains required columns: gene identifier, log-fold-change, moderated t-statistic, B-statistic, and adjusted p-value",
+      "verify that B-statistic values are numeric and finite (no NaN or Inf entries)"
+    ],
+    "expert_review": [
+      "assess whether the estimated prior variance (s2.prior) and degrees of freedom (df.prior) from eBayes are biologically plausible given the input dataset",
+      "assess whether the moderated t-statistics show appropriate stabilization (shrinkage) compared to unmoderated t-statistics, particularly for genes with small sample sizes or high variance",
+      "assess whether the ranking of genes by B-statistic aligns with expected differential expression patterns or with published results from the same GEO dataset (if available)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does limma estimate hyperparameters of the prior distribution over gene-wise variances to compute moderated t-statistics and B-statistics?: 'Empirical Bayesian methods are used to provide stable results even when the number of arrays is small.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Empirical Bayesian methods in limma estimate hyperparameters of the prior distribution over gene-wise variances, enabling computation of moderated t-statistics and B-statistics that remain stable even with small numbers of arrays.: 'Empirical Bayesian methods are used to provide stable results even when the number of arrays is small.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pre-fitted lmFit object from a public GEO microarray or RNA-seq dataset: 'limma is an R package for the analysis of gene expression data, especially the use of linear models for analysing designed experiments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Table of differential expression results containing gene identifiers, log-fold changes, moderated t-statistics, adjusted p-values, and B-statistics: 'Empirical Bayesian methods are used to provide stable results even when the number of arrays is small.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] limma: 'Limma is an R package for the analysis of gene expression data, especially the use of linear models for analysing designed experiments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] R: 'Limma is an R package for the analysis of gene expression data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history documentation found for the limma package: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(limma); load('{inputs.lmfit_object}'); fit2 <- eBayes(fit); results <- topTable(fit2, adjust.method='BH', number=Inf); write.csv(results, file='de_results_{task_id}.csv', row.names=TRUE)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ebayes_results.csv",
+  "expected_outputs": [
+    "Table of differential expression results containing gene identifiers, log-fold changes, moderated t-statistics, adjusted p-values, and B-statistics"
+  ],
+  "finding": "Empirical Bayesian methods in limma estimate hyperparameters of the prior distribution over gene-wise variances, enabling computation of moderated t-statistics and B-statistics that remain stable even with small numbers of arrays.",
+  "github_name": "bioc/limma",
+  "input_from": null,
+  "inputs": [
+    "Pre-fitted lmFit object from a public GEO microarray or RNA-seq dataset"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "ebayes_fit.rds",
+    "moderated_tstats.csv",
+    "ebayes_results.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_004",
+    "result_009",
+    "result_010",
+    "result_011"
+  ],
+  "methodology_summary": [
+    "Load a pre-fitted lmFit object containing gene-wise ordinary least-squares estimates and residual variances",
+    "Apply empirical Bayes estimation to fit a scaled inverse-chi-squared prior distribution over gene-wise variances",
+    "Compute moderated t-statistics by shrinking gene variances toward the posterior mean under the fitted prior",
+    "Calculate B-statistics (log-odds of differential expression) from the moderated t-statistics and estimated prior degrees of freedom",
+    "Validation: verify that moderated t-statistics show reduced variance and improved power-to-detect compared to ordinary t-statistics, particularly for genes with small sample sizes or low initial variance estimates",
+    "References: source article (DOI: 10.1093/nar/gkv007)"
+  ],
+  "missing_information": [
+    "No changelog or version history documentation found for the limma package"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does limma estimate hyperparameters of the prior distribution over gene-wise variances to compute moderated t-statistics and B-statistics?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods"
+  ],
+  "skills": [
+    "empirical-bayes-variance-estimation",
+    "moderated-t-statistic-computation",
+    "gene-expression-statistical-testing",
+    "differential-expression-result-interpretation",
+    "prior-distribution-fitting-for-genomics"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_limmavoom/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "limma",
+    "comp_linear_models",
+    "comp_voom",
+    "dataset_microarray",
+    "dataset_rnaseq"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "rna-seq"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:bioc__limma",
+  "task_description": "Fit the empirical Bayes prior distribution over gene-wise variances using a pre-fitted lmFit object, then compute moderated t-statistics and B-statistics for differential expression inference. Output moderated test statistics and posterior odds ratios.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-fitted lmFit object from linear model",
+      "port_id": "lmfit_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement empirical Bayes hyperparameter estimation on a pre-fitted lmFit object to compute moderated t-statistics and B-statistics for differential expression testing.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Differential expression results with moderated statistics",
+      "port_id": "ebayes_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "statistical-analysis",
+    "normalization",
+    "false-discovery-rate-correction"
+  ],
+  "title": "Reconstruct voom precision-weight computation for RNA-seq count data",
+  "tools": [
+    "limma",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load a pre-fitted lmFit object from a public GEO microarray or RNA-seq dataset into R. 2. Apply empirical Bayes hyperparameter estimation using limma's eBayes function to fit the prior distribution over gene-wise variances and stabilize variance estimates. 3. Extract moderated t-statistics and B-statistics (log-odds of differential expression) from the fitted eBayes object. 4. Generate a results table containing gene identifiers, log-fold changes, moderated t-statistics, adjusted p-values, and B-statistics, sorted by significance."
+}

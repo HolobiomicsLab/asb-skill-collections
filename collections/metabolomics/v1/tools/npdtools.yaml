@@ -1,0 +1,10 @@
+name: NPDtools
+slug: npdtools
+evidence_spans:
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
+derived_from:
+- doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
+source_repos:
+- ablab/npdtools
+schema_version: 0.2.0

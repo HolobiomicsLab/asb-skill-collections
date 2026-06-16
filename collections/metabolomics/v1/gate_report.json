@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-06-15T14:20:01.715433+00:00",
+  "generated_at": "2026-06-16T07:50:46.281132+00:00",
   "collection_dir": "collections/metabolomics/v1",
   "corpus_path": "collections/metabolomics/v1/corpus.yaml",
   "mode": "strict",
@@ -12,7 +12,10 @@
       "gold-oa",
       "green-oa",
       "oa",
-      "open-access"
+      "open-access",
+      "repo-copyleft",
+      "repo-oa",
+      "repo-permissive"
     ],
     "per_span_cap": 150,
     "cumulative_cap": 1500,
@@ -46,7 +49,7 @@
         15
       ],
       "hard_gate": true,
-      "summary": "Every included paper's access.type is in the OA allowed set (v0 OA-only).  (50 included papers checked)",
+      "summary": "Every included paper's access.type is in the OA allowed set (v0 OA-only).  (95 included papers checked)",
       "n_findings": 0,
       "details": []
     },
@@ -58,7 +61,7 @@
         6
       ],
       "hard_gate": true,
-      "summary": "OA papers exempt from caps (unlimited verbatim w/ attribution; >300-char spans \u2192 advisory WARN).  Non-OA: per-span text cap 300 chars, cumulative cap 1500 chars/DOI.  Near-verbatim similarity flagged for all.  (5644 verbatim spans scanned)",
+      "summary": "OA papers exempt from caps (unlimited verbatim w/ attribution; >300-char spans \u2192 advisory WARN).  Non-OA: per-span text cap 300 chars, cumulative cap 1500 chars/DOI.  Near-verbatim similarity flagged for all.  (11122 verbatim spans scanned)",
       "n_findings": 0,
       "details": []
     },
@@ -69,7 +72,7 @@
         6
       ],
       "hard_gate": true,
-      "summary": "Two-tier PII / dual-use scan of verbatim quote spans (pii_config=2026-06-15.1).  (5644 spans scanned)",
+      "summary": "Two-tier PII / dual-use scan of verbatim quote spans (pii_config=2026-06-15.1).  (11122 spans scanned)",
       "n_findings": 0,
       "details": []
     },
@@ -80,7 +83,7 @@
         8
       ],
       "hard_gate": true,
-      "summary": "Every skill carries a source DOI + a license SPDX tag.  (739 skills checked)",
+      "summary": "Every skill carries a source DOI + a license SPDX tag.  (1485 skills checked)",
       "n_findings": 0,
       "details": []
     }

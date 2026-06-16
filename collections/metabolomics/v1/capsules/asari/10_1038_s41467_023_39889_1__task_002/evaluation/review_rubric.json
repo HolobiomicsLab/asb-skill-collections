@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in asari source repository (github:shuzhao-li-lab/asari) containing COMP_COMPOSITEMAP construction logic"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify scipy.signal.find_peaks is imported and called exactly once per composite map construction in the peak detection module"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify function signature of composite map builder accepts summed intensity array as input"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "number of find_peaks function calls in execution trace equals 1 (not N where N ="
+    },
+    {
+      "id": "pf_006",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output composite peak detection result is a structured record (JSON, pickle, or ",
+      "value": "JSON"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in asari source repository (github:shuzhao-li-lab/asari) containing COMP_COMPOSITEMAP construction logic",
+      "verify scipy.signal.find_peaks is imported and called exactly once per composite map construction in the peak detection module",
+      "verify function signature of composite map builder accepts summed intensity array as input",
+      "script_runs: execute asari peak detection pipeline on test dataset (github:shuzhao-li/data/tree/main/data) and confirm no errors occur during composite map construction and scipy.signal.find_peaks invocation",
+      "value_in_range: confirm number of find_peaks function calls in execution trace equals 1 (not N where N = number of samples), parameter-sensitive to sample count and batch processing configuration",
+      "file_format_is: verify output composite peak detection result is a structured record (JSON, pickle, or numpy array) containing detected peak indices and properties"
+    ],
+    "expert_review": [
+      "Confirm that composite map construction (COMP_COMPOSITEMAP) correctly sums intensity values across all samples at each retention time and m/z coordinate before peak detection",
+      "Confirm that single composite-level find_peaks call produces equivalent or superior peak detection sensitivity compared to per-sample peak detection baseline (RESULT_COMPOSITE_EFFICIENCY claim)",
+      "Verify prominence control parameters used in scipy.signal.find_peaks call are appropriate for metabolomics data and documented in code or configuration"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

@@ -1,0 +1,304 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b41ca01ee34b6dde0c912eea02dee2daafda73e90db3c861c66ac04bb32144c7"
+    }
+  ],
+  "created_at": "2026-06-15T19:03:30.531922+00:00",
+  "crossref_doi": "10.12688/f1000research.7563.1",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "tximport list object (txi) containing transcript-level abundance, estimated counts, and transcript length matrices from salmon quantification",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sample metadata table with two condition groups for DESeqDataSet construction",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "DESeqDataSet object with embedded offset matrix derived from transcript length estimates",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Transcript-level quantification outputs (abundance, counts, length) must be aggregated to gene-level matrices for count-based differential expression analysis.",
+    "The offset matrix encodes effective gene length variation across samples, correcting for differential isoform usage that would otherwise bias gene-level count estimates.",
+    "DESeq2::DESeqDataSetFromTximport automatically incorporates the length matrix as an offset term in the GLM, eliminating the need for manual matrix construction.",
+    "The tximport length matrix is required as input to DESeqDataSetFromTximport; missing or malformed length data will cause offset embedding to fail."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file tximportData salmon files exist in the package or referenced deposit",
+      "script_runs: execute R code calling tximport() on salmon files to produce txi list object",
+      "script_runs: execute R code calling DESeq2::DESeqDataSetFromTximport() with txi list and two-condition sample table",
+      "verify DESeqDataSet object contains 'offset' matrix (field_present: object@assays[['offset']] or equivalent accessor)",
+      "verify offset matrix dimensions match gene count matrix (row and column counts equal between counts and offset)",
+      "verify offset matrix is numeric and finite (no NaN or Inf values), robust to numerical precision",
+      "verify offset matrix derives from tximport length matrix (output_matches_reference: offset approximately equals log(length matrix) with standard DESeq2 transformation)"
+    ],
+    "expert_review": [
+      "confirm offset matrix embedding method matches 'original counts and offset' approach described in Soneson et al. article",
+      "confirm two-condition sample table specification is valid (correct column names, factor levels, sample counts)",
+      "confirm DESeqDataSet construction did not discard or alter the offset information from tximport",
+      "assess whether downstream DESeq analysis using this offset object produces sensible results (e.g., length bias correction is applied)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] When DESeq2::DESeqDataSetFromTximport is called with a tximport output object (txi) and a sample table, does the resulting DESeqDataSet correctly embed the transcript-length-derived offset matrix needed for gene-level differential expression analysis using the 'original counts and offset' method?: 'The functions `edgeR::DGEListFromTximport`, for *edgeR* and *limma*, and `DESeq2::DESeqDataSetFromTximport`, for *DESeq2*, take care of creation of the offset for you.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] DESeq2::DESeqDataSetFromTximport accepts a tximport list object (containing gene-level counts, abundance, and length matrices) and a sample table, and automatically constructs the appropriate offset matrix from the transcript-length estimates to correct for differential isoform usage, producing a DESeqDataSet ready for differential expression analysis.: 'dds <- DESeqDataSetFromTximport(txi, sampleTable, ~ condition)\n# dds is now ready for DESeq()'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] tximport list object (txi) containing transcript-level abundance, estimated counts, and transcript length matrices from salmon quantification: 'tximport as of version 1.3.9 will import inferential replicates (Gibbs samples or bootstrap samples) from Salmon'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Sample metadata table with two condition groups for DESeqDataSet construction: 'two-condition sample table'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] DESeqDataSet object with embedded offset matrix derived from transcript length estimates: 'offset matrix is correctly embedded in the resulting object'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] tximport: 'Imports transcript-level abundance, estimated counts and transcript lengths, and summarizes into matrices for use with downstream statistical analysis packages'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] DESeq2: 'use with downstream statistical analysis packages such as edgeR, DESeq2, limma-voom'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] salmon: 'tximport as of version 1.3.9 will import inferential replicates (Gibbs samples or bootstrap samples) from Salmon, Sailfish or kallisto'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is available for the tximport repository: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(DESeq2); library(tximport); txi <- readRDS('{inputs.txi_list}'); coldata <- read.csv('{inputs.sample_metadata}', row.names=1); dds <- DESeqDataSetFromTximport(txi, colData=coldata, design=~condition); stopifnot(!is.null(assays(dds)[['offset']])); stopifnot(nrow(assays(dds)[['offset']]) == ncol(dds) && ncol(assays(dds)[['offset']]) == nrow(dds)); saveRDS(dds, 'dds_object.rds'); cat('DESeqDataSet with offset matrix successfully created and validated\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "DESeqDataSet object with embedded offset matrix derived from transcript length estimates"
+  ],
+  "finding": "DESeq2::DESeqDataSetFromTximport accepts a tximport list object (containing gene-level counts, abundance, and length matrices) and a sample table, and automatically constructs the appropriate offset matrix from the transcript-length estimates to correct for differential isoform usage, producing a DESeqDataSet ready for differential expression analysis.",
+  "github_name": "thelovelab/tximport",
+  "input_from": "task_001",
+  "inputs": [
+    "tximport list object (txi) containing transcript-level abundance, estimated counts, and transcript length matrices from salmon quantification",
+    "Sample metadata table with two condition groups for DESeqDataSet construction"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "txi_list_object.RData",
+    "colData_sample_table.csv",
+    "dds_object_with_offset.RData"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_012",
+    "result_033",
+    "result_034"
+  ],
+  "methodology_summary": [
+    "Load tximport list (txi) containing transcript abundance, counts, and length matrices from salmon quantification files.",
+    "Prepare a sample metadata table (colData) with two-condition group assignments for each sample.",
+    "Invoke DESeq2::DESeqDataSetFromTximport with the txi object and sample table to construct a DESeqDataSet; the function automatically computes and embeds an offset matrix from the length matrix to adjust for effective gene length variation across conditions.",
+    "Validation: Confirm that the DESeqDataSet object contains a non-null, correctly dimensioned offset matrix (samples \u00d7 genes) stored in the assays slot, and that matrix values reflect the log-normalized length ratios used to correct count-based abundance estimates.",
+    "References: source article (DOI: 10.12688/f1000research.7563.1)"
+  ],
+  "missing_information": [
+    "No changelog or version history is available for the tximport repository"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/gene_counts_matrix"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "When DESeq2::DESeqDataSetFromTximport is called with a tximport output object (txi) and a sample table, does the resulting DESeqDataSet correctly embed the transcript-length-derived offset matrix needed for gene-level differential expression analysis using the 'original counts and offset' method?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "transcript-abundance-import-and-summarization",
+    "rna-seq-count-matrix-construction",
+    "gene-length-offset-matrix-computation",
+    "deseq2-object-initialization-from-transcript-data",
+    "isoform-usage-bias-correction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_tximport/synthesized_package",
+  "spine_condition_ids": [
+    "cond_original_counts_offset",
+    "cond_divided_counts"
+  ],
+  "spine_entity_ids": [
+    "sys_tximport",
+    "tool_salmon",
+    "tool_deseq2",
+    "ds_tximportdata",
+    "comp_tximport_fn",
+    "comp_deseqdatasetfromtximport",
+    "cond_original_counts_offset",
+    "cond_divided_counts",
+    "res_no_offset_warning"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "rna-seq"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "model-training"
+  ],
+  "synthesized_from": "github:thelovelab__tximport",
+  "task_description": "Construct a DESeqDataSet from a tximport object using DESeq2::DESeqDataSetFromTximport with a two-condition sample table, and verify that the offset matrix derived from transcript length estimates is correctly embedded in the resulting object.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "tximport list object from salmon quantification",
+      "port_id": "txi_list",
+      "resolved_via": null,
+      "source": "task_001/gene_counts_matrix",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample table with two-condition assignments",
+      "port_id": "sample_metadata",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Verify that DESeq2::DESeqDataSetFromTximport correctly embeds the length-based offset matrix from tximport output into the DESeqDataSet object for downstream differential expression analysis.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "DESeqDataSet with embedded offset matrix",
+      "port_id": "deseq_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct DESeqDataSetFromTximport offset creation for DESeq2 downstream analysis",
+  "tools": [
+    "tximport",
+    "DESeq2",
+    "salmon"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the tximport list object (txi) produced from salmon quantification files using tximport with type='salmon'. 2. Create a sample table (colData) with sample identifiers and two-condition group assignments. 3. Pass the txi object and sample table to DESeq2::DESeqDataSetFromTximport to construct a DESeqDataSet, which automatically embeds an offset matrix computed from the length matrix to account for changes in effective gene length across samples. 4. Verify that the offset matrix is present and correctly formatted within the resulting DESeqDataSet object."
+}

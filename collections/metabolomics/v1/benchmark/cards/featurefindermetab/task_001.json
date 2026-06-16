@@ -1,0 +1,1266 @@
+{
+  "abstraction_frame": null,
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "figures/AxisWidget.png",
+      "locator_id": "pkg_015a7fc3",
+      "locator_kind": "package_artifact",
+      "name": "figures/AxisWidget.png",
+      "prose": "figure: figures/AxisWidget.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/ColorSelector.png",
+      "locator_id": "pkg_69d1d456",
+      "locator_kind": "package_artifact",
+      "name": "figures/ColorSelector.png",
+      "prose": "figure: figures/ColorSelector.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/DeMeanderize.png",
+      "locator_id": "pkg_4cc03948",
+      "locator_kind": "package_artifact",
+      "name": "figures/DeMeanderize.png",
+      "prose": "figure: figures/DeMeanderize.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/ExperimentalSettings.png",
+      "locator_id": "pkg_77e4aaa6",
+      "locator_kind": "package_artifact",
+      "name": "figures/ExperimentalSettings.png",
+      "prose": "figure: figures/ExperimentalSettings.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/HistogramWidget.png",
+      "locator_id": "pkg_219fa5e6",
+      "locator_kind": "package_artifact",
+      "name": "figures/HistogramWidget.png",
+      "prose": "figure: figures/HistogramWidget.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/INIFileEditor.png",
+      "locator_id": "pkg_83f7bed7",
+      "locator_kind": "package_artifact",
+      "name": "figures/INIFileEditor.png",
+      "prose": "figure: figures/INIFileEditor.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/Kernel.png",
+      "locator_id": "pkg_dbda1993",
+      "locator_kind": "package_artifact",
+      "name": "figures/Kernel.png",
+      "prose": "figure: figures/Kernel.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/Kernel_DataPoints.png",
+      "locator_id": "pkg_1afd6ebe",
+      "locator_kind": "package_artifact",
+      "name": "figures/Kernel_DataPoints.png",
+      "prose": "figure: figures/Kernel_DataPoints.png",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/MetaDataBrowser.png",
+      "locator_id": "pkg_58974cdb",
+      "locator_kind": "package_artifact",
+      "name": "figures/MetaDataBrowser.png",
+      "prose": "figure: figures/MetaDataBrowser.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/OpenMS_75x55_transparent.png",
+      "locator_id": "pkg_f81c0666",
+      "locator_kind": "package_artifact",
+      "name": "figures/OpenMS_75x55_transparent.png",
+      "prose": "figure: figures/OpenMS_75x55_transparent.png",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/background.png",
+      "locator_id": "pkg_86c23802",
+      "locator_kind": "package_artifact",
+      "name": "figures/background.png",
+      "prose": "figure: figures/background.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/category.png",
+      "locator_id": "pkg_acbfeda2",
+      "locator_kind": "package_artifact",
+      "name": "figures/category.png",
+      "prose": "figure: figures/category.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "figures/example_header.png",
+      "locator_id": "pkg_5980d79a",
+      "locator_kind": "package_artifact",
+      "name": "figures/example_header.png",
+      "prose": "figure: figures/example_header.png",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/example_wizard.png",
+      "locator_id": "pkg_a9c980ae",
+      "locator_kind": "package_artifact",
+      "name": "figures/example_wizard.png",
+      "prose": "figure: figures/example_wizard.png",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/logo.drawio.svg",
+      "locator_id": "pkg_c8cf35eb",
+      "locator_kind": "package_artifact",
+      "name": "figures/logo.drawio.svg",
+      "prose": "figure: figures/logo.drawio.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/openms_logo_corner_small.png",
+      "locator_id": "pkg_5b473ed1",
+      "locator_kind": "package_artifact",
+      "name": "figures/openms_logo_corner_small.png",
+      "prose": "figure: figures/openms_logo_corner_small.png",
+      "score": 0.8571,
+      "side": "input"
+    },
+    {
+      "locator": "figures/openms_logo_corner_transparent.png",
+      "locator_id": "pkg_da56bef2",
+      "locator_kind": "package_artifact",
+      "name": "figures/openms_logo_corner_transparent.png",
+      "prose": "figure: figures/openms_logo_corner_transparent.png",
+      "score": 0.8571,
+      "side": "input"
+    },
+    {
+      "locator": "figures/openms_logo_large_transparent.png",
+      "locator_id": "pkg_a627704c",
+      "locator_kind": "package_artifact",
+      "name": "figures/openms_logo_large_transparent.png",
+      "prose": "figure: figures/openms_logo_large_transparent.png",
+      "score": 0.8571,
+      "side": "input"
+    },
+    {
+      "locator": "figures/openms_logo_small_transparent.png",
+      "locator_id": "pkg_8bcac7a8",
+      "locator_kind": "package_artifact",
+      "name": "figures/openms_logo_small_transparent.png",
+      "prose": "figure: figures/openms_logo_small_transparent.png",
+      "score": 0.8571,
+      "side": "input"
+    },
+    {
+      "locator": "figures/splash.png",
+      "locator_id": "pkg_3e937706",
+      "locator_kind": "package_artifact",
+      "name": "figures/splash.png",
+      "prose": "figure: figures/splash.png",
+      "score": 0.75,
+      "side": "input"
+    },
+    {
+      "locator": "paper.md",
+      "locator_id": "pkg_d7bc529c",
+      "locator_kind": "package_artifact",
+      "name": "paper.md",
+      "prose": "main_article: paper.md",
+      "score": 0.5,
+      "side": "input"
+    },
+    {
+      "locator": "figures/AxisWidget.png",
+      "locator_id": "pkg_015a7fc3",
+      "locator_kind": "package_artifact",
+      "name": "figures/AxisWidget.png",
+      "prose": "figure: figures/AxisWidget.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/ColorSelector.png",
+      "locator_id": "pkg_69d1d456",
+      "locator_kind": "package_artifact",
+      "name": "figures/ColorSelector.png",
+      "prose": "figure: figures/ColorSelector.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/DeMeanderize.png",
+      "locator_id": "pkg_4cc03948",
+      "locator_kind": "package_artifact",
+      "name": "figures/DeMeanderize.png",
+      "prose": "figure: figures/DeMeanderize.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/ExperimentalSettings.png",
+      "locator_id": "pkg_77e4aaa6",
+      "locator_kind": "package_artifact",
+      "name": "figures/ExperimentalSettings.png",
+      "prose": "figure: figures/ExperimentalSettings.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/HistogramWidget.png",
+      "locator_id": "pkg_219fa5e6",
+      "locator_kind": "package_artifact",
+      "name": "figures/HistogramWidget.png",
+      "prose": "figure: figures/HistogramWidget.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/INIFileEditor.png",
+      "locator_id": "pkg_83f7bed7",
+      "locator_kind": "package_artifact",
+      "name": "figures/INIFileEditor.png",
+      "prose": "figure: figures/INIFileEditor.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/Kernel.png",
+      "locator_id": "pkg_dbda1993",
+      "locator_kind": "package_artifact",
+      "name": "figures/Kernel.png",
+      "prose": "figure: figures/Kernel.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/Kernel_DataPoints.png",
+      "locator_id": "pkg_1afd6ebe",
+      "locator_kind": "package_artifact",
+      "name": "figures/Kernel_DataPoints.png",
+      "prose": "figure: figures/Kernel_DataPoints.png",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/MetaDataBrowser.png",
+      "locator_id": "pkg_58974cdb",
+      "locator_kind": "package_artifact",
+      "name": "figures/MetaDataBrowser.png",
+      "prose": "figure: figures/MetaDataBrowser.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/OpenMS_75x55_transparent.png",
+      "locator_id": "pkg_f81c0666",
+      "locator_kind": "package_artifact",
+      "name": "figures/OpenMS_75x55_transparent.png",
+      "prose": "figure: figures/OpenMS_75x55_transparent.png",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/background.png",
+      "locator_id": "pkg_86c23802",
+      "locator_kind": "package_artifact",
+      "name": "figures/background.png",
+      "prose": "figure: figures/background.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/category.png",
+      "locator_id": "pkg_acbfeda2",
+      "locator_kind": "package_artifact",
+      "name": "figures/category.png",
+      "prose": "figure: figures/category.png",
+      "score": 0.75,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/example_header.png",
+      "locator_id": "pkg_5980d79a",
+      "locator_kind": "package_artifact",
+      "name": "figures/example_header.png",
+      "prose": "figure: figures/example_header.png",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/example_wizard.png",
+      "locator_id": "pkg_a9c980ae",
+      "locator_kind": "package_artifact",
+      "name": "figures/example_wizard.png",
+      "prose": "figure: figures/example_wizard.png",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/logo.drawio.svg",
+      "locator_id": "pkg_c8cf35eb",
+      "locator_kind": "package_artifact",
+      "name": "figures/logo.drawio.svg",
+      "prose": "figure: figures/logo.drawio.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/openms_logo_corner_small.png",
+      "locator_id": "pkg_5b473ed1",
+      "locator_kind": "package_artifact",
+      "name": "figures/openms_logo_corner_small.png",
+      "prose": "figure: figures/openms_logo_corner_small.png",
+      "score": 0.8571,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/openms_logo_corner_transparent.png",
+      "locator_id": "pkg_da56bef2",
+      "locator_kind": "package_artifact",
+      "name": "figures/openms_logo_corner_transparent.png",
+      "prose": "figure: figures/openms_logo_corner_transparent.png",
+      "score": 0.8571,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/openms_logo_large_transparent.png",
+      "locator_id": "pkg_a627704c",
+      "locator_kind": "package_artifact",
+      "name": "figures/openms_logo_large_transparent.png",
+      "prose": "figure: figures/openms_logo_large_transparent.png",
+      "score": 0.8571,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/openms_logo_small_transparent.png",
+      "locator_id": "pkg_8bcac7a8",
+      "locator_kind": "package_artifact",
+      "name": "figures/openms_logo_small_transparent.png",
+      "prose": "figure: figures/openms_logo_small_transparent.png",
+      "score": 0.8571,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/splash.png",
+      "locator_id": "pkg_3e937706",
+      "locator_kind": "package_artifact",
+      "name": "figures/splash.png",
+      "prose": "figure: figures/splash.png",
+      "score": 0.75,
+      "side": "expected_output"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/AxisWidget.png",
+      "role": "figure",
+      "sha256": "015a7fc31b2a606f7845382ca1a1d55eba5b990b41b11f98ef9c6a3630e23851"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ColorSelector.png",
+      "role": "figure",
+      "sha256": "69d1d4564e26e175121fd3377157a09d487218a3115cc99ea002537b3c205063"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DeMeanderize.png",
+      "role": "figure",
+      "sha256": "4cc0394828a3862953247607a5ed40a24a1bb46500502b2d72caef603688d9b3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ExperimentalSettings.png",
+      "role": "figure",
+      "sha256": "77e4aaa64aeff7f252a32fd7137373ed7aac6bf644c3335defbd5644fa68471a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/HistogramWidget.png",
+      "role": "figure",
+      "sha256": "219fa5e6b3b0f68189330a58ed1d635e418455de2d9576d10f90747b6f2a3a20"
+    },
+    {
+      "indexable": false,
+      "path": "figures/INIFileEditor.png",
+      "role": "figure",
+      "sha256": "83f7bed79366f23cb8aabff4bbb297f6dd390fcd4942b3e119a8d2546ed67d31"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Kernel.png",
+      "role": "figure",
+      "sha256": "dbda199330d58a28c804a7bfc06d7bd8aa34135146215d925570c8af8fb9322c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Kernel_DataPoints.png",
+      "role": "figure",
+      "sha256": "1afd6ebe720db573b991fd8b36486be49f867a4b89d4ea479fe2d434cb3379a7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MetaDataBrowser.png",
+      "role": "figure",
+      "sha256": "58974cdb9e267f95324d47f4bf45b3aff0419126e2226375590c9a108b6b27cb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/OpenMS_75x55_transparent.png",
+      "role": "figure",
+      "sha256": "f81c06668d5d6a6e969efccba7114b4460a6faab27e59bbbc7efcdde2f60ce04"
+    },
+    {
+      "indexable": false,
+      "path": "figures/background.png",
+      "role": "figure",
+      "sha256": "86c23802b46e12c0d632785211069337b525c70bfb576e27284f1ef2d0e610ad"
+    },
+    {
+      "indexable": false,
+      "path": "figures/category.png",
+      "role": "figure",
+      "sha256": "acbfeda2ad89cf2ad096a07de23f113dbe6b09e019218ea9783806194bc560ee"
+    },
+    {
+      "indexable": false,
+      "path": "figures/example_header.png",
+      "role": "figure",
+      "sha256": "5980d79a48758cd353b8766039eba498465c9ffa3791f1bcf747d46d65a67be3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/example_wizard.png",
+      "role": "figure",
+      "sha256": "a9c980ae5a424a4d97600cf663c9dfbc8be2ead21bd7efe9e2cae7f3f5bad4b5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.drawio.svg",
+      "role": "figure",
+      "sha256": "c8cf35eb52fe1b434cc7033be419bd68a667dab3be0693b2469cdda6a7f48f82"
+    },
+    {
+      "indexable": false,
+      "path": "figures/openms_logo_corner_small.png",
+      "role": "figure",
+      "sha256": "5b473ed123b723b0835d4b5427b6d2e5ff47877e7c36e675a8e4e7c23eb9f921"
+    },
+    {
+      "indexable": false,
+      "path": "figures/openms_logo_corner_transparent.png",
+      "role": "figure",
+      "sha256": "da56bef23103ca17d70aa8661396b543a7f207e8ac51739fe1dd329c765814bb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/openms_logo_large_transparent.png",
+      "role": "figure",
+      "sha256": "a627704c37dd1f1de284c4cb05ee6631df034f9a977595b30215db8650303820"
+    },
+    {
+      "indexable": false,
+      "path": "figures/openms_logo_small_transparent.png",
+      "role": "figure",
+      "sha256": "8bcac7a89a585fdaf651e262d47507d159eb5cea135b4d4e133ee3828db1b872"
+    },
+    {
+      "indexable": false,
+      "path": "figures/splash.png",
+      "role": "figure",
+      "sha256": "3e937706310727227cbbee3b189f1f3404896f804a7fba38852c42d270341186"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d7bc529c40d003806064bc26705cf1a0a0a5ada8a8d953b273d16a0fdd7d133e"
+    }
+  ],
+  "created_at": "2026-06-16T05:35:04.628863+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/AxisWidget.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/ColorSelector.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/DeMeanderize.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/ExperimentalSettings.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/HistogramWidget.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/INIFileEditor.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/Kernel.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/Kernel_DataPoints.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MetaDataBrowser.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/OpenMS_75x55_transparent.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/background.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/category.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/example_header.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/example_wizard.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/logo.drawio.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/openms_logo_corner_small.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/openms_logo_corner_transparent.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/openms_logo_large_transparent.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/openms_logo_small_transparent.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/splash.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "main_article: paper.md",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/AxisWidget.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/ColorSelector.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/DeMeanderize.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/ExperimentalSettings.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/HistogramWidget.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/INIFileEditor.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/Kernel.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/Kernel_DataPoints.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/MetaDataBrowser.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/OpenMS_75x55_transparent.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/background.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/category.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/example_header.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/example_wizard.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/logo.drawio.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/openms_logo_corner_small.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/openms_logo_corner_transparent.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/openms_logo_large_transparent.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/openms_logo_small_transparent.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/splash.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "If you found a bug, e.g. an OpenMS tool crashes during data processing, it is essential to provide some basic information: - the OpenMS version you are running - the platform you are running OpenMS on (Windows 10, ...) - how you installed OpenMS (e.g., from within KNIME, binary installers, self compiled) - a description on how to reproduce the bug - relevant tool output (e.g., error messages) - data to repoduce the bug (If possible as a GitHub gist.",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": null,
+  "domain_knowledge": [],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Confirm that every cited input artifact exists or is explicitly marked missing.",
+      "Confirm that expected outputs are tied to figures, tables, files, or claims in the package."
+    ],
+    "llm_or_expert_review": [
+      "Judge whether the task description matches the source evidence.",
+      "Judge whether the workflow description is sufficient for a future agent attempt.",
+      "Review uncertainty notes and missing-information claims."
+    ],
+    "not_in_scope_for_mvp": [
+      "Running scientific code or reproducing figures.",
+      "Scoring model-generated scientific outputs."
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "question",
+      "snippet_id": "ev_001",
+      "source_path": "paper.md",
+      "text": "[![License (3-Clause BSD)](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg?logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA1MTIgN..."
+    },
+    {
+      "reason": "question",
+      "snippet_id": "ev_002",
+      "source_path": "paper.md",
+      "text": "> **New to open source or the project?** Start with our [Contributor Onboarding Guide](https://openms.de/contribute/) for a beginner-friendly introduction."
+    },
+    {
+      "reason": "missing_information",
+      "snippet_id": "ev_003",
+      "source_path": "paper.md",
+      "text": "You most likely came here to: - report bugs or annoyances - pose questions - point out missing documentation - request new features"
+    },
+    {
+      "reason": "output",
+      "snippet_id": "ev_004",
+      "source_path": "paper.md",
+      "text": "If you found a bug, e.g. an OpenMS tool crashes during data processing, it is essential to provide some basic information: - the OpenMS version you are running - the platform you are running OpenMS on (Windows 10, ...) - how you installed OpenMS (e.g., from within KNIME, binary installers, self compiled) - a description on how to reproduce the bug - relevant tool output (e.g., error messages) - data to repoduce the bug (If possible as a GitHub gist."
+    },
+    {
+      "reason": "workflow",
+      "snippet_id": "ev_005",
+      "source_path": "paper.md",
+      "text": "The severity is usually assigned by OpenMS maintainers and used internally to e.g. indicate if a bug is a blocker for a new release."
+    },
+    {
+      "reason": "question",
+      "snippet_id": "ev_006",
+      "source_path": "paper.md",
+      "text": "They might provide additional guidance and valuable information on how your specific aim is achieved."
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "echo",
+      "Task task_001: Reconstruct OpenMS article package. No executable code artifacts present in package. Inputs comprise figures and paper.md; outputs specify figures (pass-through) and bug-reporting guidelines (documentation). Manual reconstruction required: review paper.md, verify figures, and document OpenMS bug-reporting protocol."
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "figure: figures/AxisWidget.png",
+    "figure: figures/ColorSelector.png",
+    "figure: figures/DeMeanderize.png",
+    "figure: figures/ExperimentalSettings.png",
+    "figure: figures/HistogramWidget.png",
+    "figure: figures/INIFileEditor.png",
+    "figure: figures/Kernel.png",
+    "figure: figures/Kernel_DataPoints.png",
+    "figure: figures/MetaDataBrowser.png",
+    "figure: figures/OpenMS_75x55_transparent.png",
+    "figure: figures/background.png",
+    "figure: figures/category.png",
+    "figure: figures/example_header.png",
+    "figure: figures/example_wizard.png",
+    "figure: figures/logo.drawio.svg",
+    "figure: figures/openms_logo_corner_small.png",
+    "figure: figures/openms_logo_corner_transparent.png",
+    "figure: figures/openms_logo_large_transparent.png",
+    "figure: figures/openms_logo_small_transparent.png",
+    "figure: figures/splash.png",
+    "If you found a bug, e.g. an OpenMS tool crashes during data processing, it is essential to provide some basic information: - the OpenMS version you are running - the platform you are running OpenMS on (Windows 10, ...) - how you installed OpenMS (e.g., from within KNIME, binary installers, self compiled) - a description on how to reproduce the bug - relevant tool output (e.g., error messages) - data to repoduce the bug (If possible as a GitHub gist."
+  ],
+  "finding": "The finding should be confirmed by expert review; no strong finding sentence was detected heuristically.",
+  "github_name": "OpenMS/OpenMS",
+  "input_from": null,
+  "inputs": [
+    "figure: figures/AxisWidget.png",
+    "figure: figures/ColorSelector.png",
+    "figure: figures/DeMeanderize.png",
+    "figure: figures/ExperimentalSettings.png",
+    "figure: figures/HistogramWidget.png",
+    "figure: figures/INIFileEditor.png",
+    "figure: figures/Kernel.png",
+    "figure: figures/Kernel_DataPoints.png",
+    "figure: figures/MetaDataBrowser.png",
+    "figure: figures/OpenMS_75x55_transparent.png",
+    "figure: figures/background.png",
+    "figure: figures/category.png",
+    "figure: figures/example_header.png",
+    "figure: figures/example_wizard.png",
+    "figure: figures/logo.drawio.svg",
+    "figure: figures/openms_logo_corner_small.png",
+    "figure: figures/openms_logo_corner_transparent.png",
+    "figure: figures/openms_logo_large_transparent.png",
+    "figure: figures/openms_logo_small_transparent.png",
+    "figure: figures/splash.png",
+    "main_article: paper.md"
+  ],
+  "keywords": [],
+  "landmark_outputs": [],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_014",
+    "result_015"
+  ],
+  "methodology_summary": [],
+  "missing_information": [
+    "No local code/script artifact was detected.",
+    "No explicit data-reference artifact was detected.",
+    "You most likely came here to: - report bugs or annoyances - pose questions - point out missing documentation - request new features"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "[![License (3-Clause BSD)](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg?logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA1MTIgN...",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "scientific_task_formulation",
+    "evidence_linking",
+    "expert_review_preparation",
+    "output_grounding",
+    "figure_table_interpretation",
+    "workflow_reconstruction",
+    "reproducibility_gap_detection"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_featurefindermetab/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [],
+  "subdomains": [],
+  "subtask_categories": [],
+  "synthesized_from": "github:OpenMS__OpenMS",
+  "task_description": "Create a bounded scientific task from the article package by linking a research question or finding to available inputs, expected outputs, tools, skills, workflow logic, evidence snippets, missing information, and an evaluation strategy.",
+  "task_id": "task_001",
+  "task_inputs": [],
+  "task_kind": null,
+  "task_objective": "",
+  "task_outputs": [],
+  "techniques": [],
+  "title": "Reconstruct: OpenMS",
+  "tools": [
+    "OpenMS",
+    "KNIME",
+    "Python",
+    "GitHub"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by deterministic heuristics and needs scientific expert review.",
+    "Workflow steps are descriptive only; no scientific workflow was executed.",
+    "PDFs, images, notebooks, archives, and unknown file types are referenced but not deeply parsed."
+  ],
+  "workflow_description": "The severity is usually assigned by OpenMS maintainers and used internally to e.g. indicate if a bug is a blocker for a new release."
+}

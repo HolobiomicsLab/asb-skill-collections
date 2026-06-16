@@ -1,0 +1,520 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/OpenMS.svg",
+      "role": "figure",
+      "sha256": "0ee26840faa3ce47adc3dce8041a01befdee718de6c4146c94a9c7900ff4ec80"
+    },
+    {
+      "indexable": false,
+      "path": "figures/feature_boundary.png",
+      "role": "figure",
+      "sha256": "c6b79367c06ad83e9d1c8a5c8a268fdfd03479f4daefb5312926770498f79083"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure1.svg",
+      "role": "figure",
+      "sha256": "9d68124b85dbeb8fb438f6c37aa0904bf54490f5a17df865f4e46d41994b806b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/peak_boundary.png",
+      "role": "figure",
+      "sha256": "0af04c72bd8ed0e2f31adb0737f7ebd1cee0c74d6fe386ec66accfdf92b7a65a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/pyOpenMSviz_logo_color.png",
+      "role": "figure",
+      "sha256": "ceaeffc928521e4b5e13793b4ef10d6120410450097fbb8c559d19c4f37b4181"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "88e7cac74aad391687069eb4c4d6edac8ad5e02ff27fe5b73ff4f73271db268f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "7dc214d47e3ba04d49043c711b49edbd77eee331640f2e65ea29ceb41ad0e8a0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "6107f3ae53cf20e2ba220e847ee2dde5f2cd9533c0e8da5ba139e92f12685668"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "d4e105b89963704cb10a1a1aecc3582e85b802f2df675792471dfe6b44ca2c8a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs4].png",
+      "role": "figure",
+      "sha256": "d953a0140849e75037ab6b0351ec948d5f4340193337f7fc59c1c2067fc2a08d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_with_annotation[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "aa93c54ffae06c504458b99bd3c32db005e56988dff7c48483d6820ebd6a6b00"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "50ed52bc21729c2a755461bb67cb6db3699f1d53497d54663f99692773d472b9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "3a2513944a8eed16c352f3835bb25105a51b81a66ab6bd8da6d31530bc2f745c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "fe4ce3d6644427846010c86faa8777979d05ed2d9fd2810fe38a3c55b2e8b4b9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "f9db27c57161026399f082fb93ecc9a3ece656a17f124f94c4ee03be9684a91b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_mz_im[ms_matplotlib].png",
+      "role": "figure",
+      "sha256": "9476b907c61ce2391cc97afb08cc84bd56f527ae45b1674dd6d058a22aea163a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "f457beb583e235d069b94c6ff2e0348c05656514e9d4d3578c244aafc269814a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "42c8bb546b740e25661992c025c16816849cd375b801f73a65d3e2f7dfc4a097"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "50fb29dbdd2f63f513b51a7b5ee91d8a4f973e16e4d35a69904af43ca0df6562"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "843c3ffa9401b0b475f66b6b9868b71e6e949ebf9e10a932833dc1c5f29a861d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d835dc4650ebf688b4204a6596d45f4e99c10eb50db50b32e49eb261ea85b272"
+    }
+  ],
+  "created_at": "2026-06-16T07:19:11.067804+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mass spectrometry data file in mzML format or Bruker .d directory containing chromatographic and spectral information (m/z, retention time, intensity)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Parsed pandas DataFrame with required columns for m/z, retention time, and intensity values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Interactive 3D peak-map visualization file in HTML format displaying intensity as a surface or scatter plot with m/z (x), retention time (y), and intensity (z) axes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Confirmation that the Plotly backend successfully renders the 3D plot without errors",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Peak maps represent mass spectrometry data with m/z on x-axis, retention time on y-axis, and intensity as z-axis or color dimension, enabling visualization of elution and fragmentation patterns across chromatographic time.",
+    "The Plotly backend in pyOpenMS-Viz is the only implementation currently supporting true 3D rendering of peak maps, while matplotlib supports 3D but with different rendering characteristics suitable for publication.",
+    "Ion intensity in mass spectrometry is typically stored as non-negative numeric values representing detector signal; normalization and log-scaling are common preprocessing steps but not required for 3D visualization.",
+    "Bruker .d directories contain binary data files (e.g., analysis.tdf, analysis.tdf_bin) requiring specialized readers like alphatims; mzML is an open XML format readable by multiple parsers (pyOpenMS, pymzML, pyteomics) with equivalent information content.",
+    "Interactive 3D plots rendered by Plotly must be saved as HTML files to preserve interactivity (rotation, zoom, hover tooltips); static PNG export loses the 3D interaction capability."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: input mzML or Bruker .d dataset (artifact path must be concrete file or public accession)",
+      "script_runs: Python script calling pyOpenMS-Viz with parameters kind='peakmap', plot_3d=True, backend='ms_plotly' on the input dataset completes without exception",
+      "file_exists: output 3D figure file (HTML or interactive format) is generated by the Plotly backend",
+      "file_format_is: output figure file is valid Plotly HTML (contains 'plotly' in file content or has .html extension with interactive Plotly JSON structure)",
+      "contains_substring: output HTML file contains Plotly.js library reference or '\"type\":\"scatter3d\"' indicating 3D rendering",
+      "robust to parameter choices: 3D peakmap renders correctly across multiple representative mzML/Bruker datasets with varying peak densities and m/z ranges"
+    ],
+    "expert_review": [
+      "Verify that the 3D peakmap visual representation correctly maps m/z (x-axis), retention time or scan number (y-axis), and intensity (z-axis) according to mass spectrometry conventions",
+      "Assess that the interactive Plotly 3D figure is navigable (pan, zoom, rotate) and that peak clusters are visually distinguishable in 3D space",
+      "Confirm that the 3D rendering does not introduce visual artifacts or misalignment of peaks relative to the underlying data values"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Can pyOpenMS-Viz successfully render a 3D peak-map visualization using the Plotly backend on real mass spectrometry data from mzML or Bruker .d format files?: 'It integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] pyOpenMS-Viz integrates seamlessly with multiple plotting library backends including Plotly, which supports interactive visualizations of mass spectrometry data.: 'It integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Mass spectrometry data file in mzML format or Bruker .d directory containing chromatographic and spectral information (m/z, retention time, intensity): '.mzML ... .d'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Parsed pandas DataFrame with required columns for m/z, retention time, and intensity values: 'ms_data = pd.read_csv(\"path/to/ms_data.csv\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Interactive 3D peak-map visualization file in HTML format displaying intensity as a surface or scatter plot with m/z (x), retention time (y), and intensity (z) axes: 'intensity is on the z-axis (or represented by color)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Confirmation that the Plotly backend successfully renders the 3D plot without errors: 'Currently 3D plotting only supported for `ms_matplotlib` and `ms_plotly` backends'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] pyOpenMS-Viz: 'pyOpenMS-Viz is a Python library that provides a simple interface for extending the plotting capabilities of Pandas DataFrames'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Pandas: 'leverages the power of Pandas for data manipulation and representation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Plotly: 'integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'pyOpenMS-Viz is a Python library'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pyOpenMS: 'pyopenms ... pymzml ... pyteomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pymzml: 'pyopenms ... pymzml ... pyteomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pyteomics: 'pyopenms ... pymzml ... pyteomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[other] alphatims: 'alphatims'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history documentation is available; unclear which version of pyOpenMS-Viz supports 3D peakmap rendering with Plotly backend: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Section text provides no example code, API documentation, or parameter details for the 3D peakmap call (kind='peakmap', plot_3d=True, backend='ms_plotly'): '[UNTRUSTED_DOCUMENT] ... [/UNTRUSTED_DOCUMENT] (entire provided section contains only metadata; no method or API reference)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No sample mzML or Bruker .d datasets are deposited or referenced; unclear whether public test data exists for reproducible execution: '[UNTRUSTED_DOCUMENT] ... [/UNTRUSTED_DOCUMENT] (no dataset accessions or file paths provided)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Synthesis date indicates 2026 (future); unclear whether this reflects a real release or a hypothetical/placeholder document: 'Synthesized at: 2026-06-16T07:19:09+00:00'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import plotly.graph_objects as go; from pymzml.run import Reader; import numpy as np; mzml_file = '{inputs.raw_ms_data}'; df = pd.read_csv('{inputs.parsed_dataframe}'); df_pivot = df.pivot_table(index='retention_time', columns='m/z', values='intensity', aggfunc='sum').fillna(0); rt = df_pivot.index.values; mz = df_pivot.columns.values; intensity = df_pivot.values; fig = go.Figure(data=[go.Surface(x=mz, y=rt, z=intensity, colorscale='Viridis')]); fig.update_layout(title='3D Peak Map', scene=dict(xaxis_title='m/z', yaxis_title='Retention Time (min)', zaxis_title='Intensity')); fig.write_html('peak_map_3d.html'); print('3D peak map successfully generated: peak_map_3d.html')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "peakmap_3d.html",
+  "expected_outputs": [
+    "Interactive 3D peak-map visualization file in HTML format displaying intensity as a surface or scatter plot with m/z (x), retention time (y), and intensity (z) axes",
+    "Confirmation that the Plotly backend successfully renders the 3D plot without errors"
+  ],
+  "finding": "pyOpenMS-Viz integrates seamlessly with multiple plotting library backends including Plotly, which supports interactive visualizations of mass spectrometry data.",
+  "github_name": "OpenMS/pyopenms_viz",
+  "input_from": "task_004",
+  "inputs": [
+    "Mass spectrometry data file in mzML format or Bruker .d directory containing chromatographic and spectral information (m/z, retention time, intensity)",
+    "Parsed pandas DataFrame with required columns for m/z, retention time, and intensity values"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "ms_data_parsed.csv",
+    "peakmap_3d.html"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_006",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_018"
+  ],
+  "methodology_summary": [
+    "Load mzML or Bruker .d mass spectrometry file into a pandas DataFrame using appropriate parser (PyOpenMS, pymzML, pyteomics, or alphatims) with required columns: m/z, retention time, and intensity.",
+    "Configure pandas plotting backend to 'ms_plotly' to enable Plotly-based rendering.",
+    "Call DataFrame.plot() with x='m/z', y='rt', kind='peakmap', plot_3d=True to invoke 3D peak-map visualization.",
+    "Export the resulting Plotly figure object to an interactive HTML file using write_html() method.",
+    "Validation: Confirm that the output HTML file contains valid Plotly 3D trace data and renders without errors when opened in a web browser; verify presence of m/z, retention time, and intensity axes and interactive controls."
+  ],
+  "missing_information": [
+    "No changelog or version history documentation is available; unclear which version of pyOpenMS-Viz supports 3D peakmap rendering with Plotly backend",
+    "Section text provides no example code, API documentation, or parameter details for the 3D peakmap call (kind='peakmap', plot_3d=True, backend='ms_plotly')",
+    "No sample mzML or Bruker .d datasets are deposited or referenced; unclear whether public test data exists for reproducible execution",
+    "Synthesis date indicates 2026 (future); unclear whether this reflects a real release or a hypothetical/placeholder document"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can pyOpenMS-Viz successfully render a 3D peak-map visualization using the Plotly backend on real mass spectrometry data from mzML or Bruker .d format files?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "mass-spectrometry-data-parsing-mzml-bruker",
+    "pandas-dataframe-manipulation-ms-columns",
+    "plotly-3d-surface-scatter-visualization",
+    "peak-map-rendering-retention-time-mz-intensity",
+    "interactive-html-figure-generation-plotly",
+    "backend-compatibility-verification-visualization-library"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pyopenmsviz/synthesized_package",
+  "spine_condition_ids": [
+    "cond_backend_plotly",
+    "cond_backend_matplotlib",
+    "cond_backend_bokeh"
+  ],
+  "spine_entity_ids": [
+    "pyopenms_viz_system",
+    "backend_bokeh_layer",
+    "backend_plotly_layer",
+    "backend_matplotlib_layer",
+    "tool_plotly",
+    "tool_pyopenms",
+    "dataset_mzml",
+    "dataset_bruker_d",
+    "cond_backend_bokeh",
+    "cond_backend_plotly",
+    "cond_backend_matplotlib",
+    "metric_total_gallery_exec_time",
+    "metric_peakmap_marginals_plotly_time",
+    "metric_spyogenes_subplots_plotly_time",
+    "metric_peakmap_marginals_matplotlib_time",
+    "metric_peakmap_plotly_time",
+    "metric_peakmap_marginals_bokeh_time",
+    "metric_peakmap_bokeh_time",
+    "metric_spectrum_dia_plotly_time",
+    "metric_peakmap_matplotlib_time",
+    "metric_mobilogram_plotly_time",
+    "metric_chromatogram_plotly_time"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "visualization",
+    "data-processing"
+  ],
+  "synthesized_from": "github:OpenMS__pyopenms_viz",
+  "task_description": "Implement a 3D peak-map rendering workflow using pyOpenMS-Viz with Plotly backend (`kind='peakmap', plot_3d=True, backend='ms_plotly'`) on real mzML or Bruker .d mass spectrometry data, producing a valid interactive 3D figure file that visualizes m/z (x-axis), retention time (y-axis), and intensity (z-axis or color).",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "mzML or Bruker .d mass spectrometry dataset",
+      "port_id": "raw_ms_data",
+      "resolved_via": null,
+      "source": "task_004/backend_performance_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pandas DataFrame with m/z, retention time, and intensity columns",
+      "port_id": "parsed_dataframe",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Execute a 3D peak-map rendering call with Plotly backend on an mzML or Bruker .d dataset and validate the output as a valid 3D figure file.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Interactive 3D peak-map visualization in HTML format",
+      "port_id": "peakmap_3d_html",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Execution log confirming successful Plotly 3D rendering and backend compatibility",
+      "port_id": "rendering_success_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Extend pyOpenMS-Viz to produce a 3D PeakMap plot via the Plotly backend using the plot_3d=True flag",
+  "tools": [
+    "pyOpenMS-Viz",
+    "Pandas",
+    "Plotly",
+    "Python",
+    "pyOpenMS",
+    "pymzml",
+    "pyteomics",
+    "alphatims"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load mass spectrometry data from an mzML or Bruker .d file into a pandas DataFrame using PyOpenMS, pymzML, pyteomics (for mzML) or alphatims (for .d format), ensuring columns for m/z, retention time, and intensity are present. 2. Set the pandas plotting backend to 'ms_plotly' using `pd.set_option('plotting.backend', 'ms_plotly')`. 3. Call the DataFrame.plot() method with parameters `x='m/z'`, `y='rt'`, `z='intensity'` (or omit z for color mapping), `kind='peakmap'`, and `plot_3d=True` to invoke the Plotly 3D rendering engine. 4. Capture the returned Plotly figure object and save it as an interactive HTML file using `fig.write_html()` to verify successful 3D visualization and backend compatibility."
+}

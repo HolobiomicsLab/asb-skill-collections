@@ -1,0 +1,434 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/ADAP_threshold_all_vs_recall_training_500.png",
+      "role": "figure",
+      "sha256": "868d10e2aecc68ae27a8abe7b7f85ee31ad224864e52fc405cb1fcddbd726cfb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ROC_recall_High_vs_all.png",
+      "role": "figure",
+      "sha256": "b9732f3ed13d7b6d42f72b01dabecb0bda260db84756b8323cae7802289db13f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Screenshot 2020-04-28 at 16.43.33.png",
+      "role": "figure",
+      "sha256": "22b0f91065b4f4a7e7d4baf49bd8b522b55dc20a1b98052fc4874a1dc6ad61ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/annotation_tool.png",
+      "role": "figure",
+      "sha256": "26705aa01e0b11cdfb1ea6cbbe06bdfff05798c8813391e1d65d955fac84ae4f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/recall_table.png",
+      "role": "figure",
+      "sha256": "07eee0f4265e683e1a82eae4b619bcb4c5108119166946dea371406b06c51194"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "26027a71cfce773fea3597ffb312bfd500abd6eb40992e0b3e76a37854ce6226"
+    }
+  ],
+  "created_at": "2026-06-16T07:11:40.529655+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw LC-MS data in mzML format from NeatMS example data (github.com/bihealth/NeatMS/data folder)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature table in CSV format exported from mzMine or XCMS (github.com/bihealth/NeatMS/data/test_data folder)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Peak matrix arrays with shape (2, 120) per peak, where dimension 0 encodes signal intensity and dimension 1 encodes binary margin/peak classification",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report confirming first and last 40 values represent signal margins (value 0) and middle 40 values represent peak signal (value 1)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Batch split statistics (training, test, validation sample counts) matching 80:10:10 default split",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "The margin parameter controls the amount of surrounding signal (baseline) retained around the peak; margin=1 means the margin on both sides equals the peak width, resulting in a 3\u00d7 the peak width total extraction window that is then interpolated to 120 points.",
+    "The binary dimension (second axis of the 2\u00d7120 matrix) serves as an attention mask for the neural network, distinguishing margin regions (0) from true peak signal (1), helping the model learn to focus on peak features rather than baseline noise.",
+    "The min_scan_num parameter (default 5) filters out low-quality peaks with fewer than 5 scans, as such sparse signals are unreliable for manual or automated classification and degrade model performance.",
+    "The softmax output layer produces three class probabilities (High_quality, Low_quality, Noise) that sum to 1; downstream hyperparameter tuning uses a probability threshold to balance sensitivity vs. specificity.",
+    "NeatMS applies dropout and kernel regularization within the convolutional architecture to prevent overfitting during transfer learning or full training, requiring careful monitoring of training vs. validation accuracy divergence."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in github:bihealth__NeatMS repository: example mzML input file",
+      "verify file exists in github:bihealth__NeatMS repository: example feature-table input file",
+      "script_runs: NeatMS default preprocessing applied to example inputs without errors",
+      "verify output file format_is: peak matrix (array, table, or matrix format)",
+      "verify peak matrix shape matches documented result_matrix_shape artifact \u2014 first 40 and last 40 values (robust to representation format)",
+      "verify peak matrix binary dimension (rows vs. columns) matches documented result_matrix_shape \u2014 exact byte-for-byte or exact value comparison"
+    ],
+    "expert_review": [
+      "peak matrix values and distributions are consistent with expected LC-MS preprocessing behavior (noise filtering, normalization if applied)",
+      "first and last 40 row/column values are scientifically plausible given input mzML and feature-table characteristics"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does applying NeatMS default preprocessing to example mzML and feature-table inputs produce a peak matrix with the documented result_matrix_shape dimensions?: 'The source code and related materials (e.g. tutorials, example data, neural network model) are available at [https://github.com/bihealth/NeatMS](https://github.com/bihealth/NeatMS).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] NeatMS is an open source python package for untargeted LCMS signal labelling and filtering that enables automated filtering of false positive MS1 peaks reported by commonly used LCMS data processing pipelines.: '**NeatMS** is an open source python package for untargeted LCMS signal labelling and filtering. **NeatMS** enables automated filtering of false positive MS<sup>1</sup> peaks reported by commonly used'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Raw LC-MS data in mzML format from NeatMS example data (github.com/bihealth/NeatMS/data folder): 'Raw data files in mzML format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Feature table in CSV format exported from mzMine or XCMS (github.com/bihealth/NeatMS/data/test_data folder): 'One feature table file in .csv format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Peak matrix arrays with shape (2, 120) per peak, where dimension 0 encodes signal intensity and dimension 1 encodes binary margin/peak classification: 'The resulting matrix size for one peak is therefore (2, 120)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Verification report confirming first and last 40 values represent signal margins (value 0) and middle 40 values represent peak signal (value 1): 'the first and last 40 values of the peak will represent the margins (surrounding signal), the middle 40 values represent the peak itself'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Batch split statistics (training, test, validation sample counts) matching 80:10:10 default split: 'By default, the split between training:test:validation batches is 80:10:10'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] NeatMS: 'NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'After installation, you should be able to import NeatMS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] NumPy: 'import numpy as np'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pandas: 'import pandas as pd'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Location and format of documented result_matrix_shape artifact not specified in provided text: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Expected peak matrix shape dimensions (rows, columns) and data type not documented in provided section: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import neatms; from neatms.io import Experiment; from neatms.preprocessing import NN_handler; import pandas as pd; import numpy as np; exp = Experiment(); exp.import_mzml('{inputs.raw_mzml_files}'); feat_table = pd.read_csv('{inputs.feature_table_csv}'); handler = NN_handler(matrix_size=120, margin=1, min_scan_num=5); batches = handler.create_batches(exp, feat_table, split=[0.8, 0.1, 0.1], normalize=False); assert all(m.shape == (2, 120) for batch in batches for m in batch), 'Peak matrix shape mismatch'; assert all(np.all(m[1, :40] == 0) and np.all(m[1, 40:80] == 1) and np.all(m[1, 80:] == 0) for batch in batches for m in batch), 'Binary encoding mismatch'; print(f'\u2713 Peak matrices verified: shape={batches[0][0].shape}'); print(f'\u2713 Batch split: train={len(batches[0])}, test={len(batches[1])}, val={len(batches[2])}')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "peak_matrix_verification_report.txt",
+  "expected_outputs": [
+    "Peak matrix arrays with shape (2, 120) per peak, where dimension 0 encodes signal intensity and dimension 1 encodes binary margin/peak classification",
+    "Verification report confirming first and last 40 values represent signal margins (value 0) and middle 40 values represent peak signal (value 1)",
+    "Batch split statistics (training, test, validation sample counts) matching 80:10:10 default split"
+  ],
+  "finding": "NeatMS is an open source python package for untargeted LCMS signal labelling and filtering that enables automated filtering of false positive MS1 peaks reported by commonly used LCMS data processing pipelines.",
+  "github_name": "bihealth/NeatMS",
+  "input_from": null,
+  "inputs": [
+    "Raw LC-MS data in mzML format from NeatMS example data (github.com/bihealth/NeatMS/data folder)",
+    "Feature table in CSV format exported from mzMine or XCMS (github.com/bihealth/NeatMS/data/test_data folder)"
+  ],
+  "keywords": [
+    "untargeted lcms",
+    "signal labelling",
+    "peak filtering",
+    "false positive detection",
+    "neural network classification",
+    "ms1 peaks",
+    "metabolomics data processing"
+  ],
+  "landmark_outputs": [
+    "experiment_object.pkl",
+    "batch_training_arrays.npy",
+    "batch_test_arrays.npy",
+    "batch_validation_arrays.npy",
+    "matrix_shape_validation.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_014",
+    "result_015"
+  ],
+  "methodology_summary": [
+    "Load raw mzML and feature table files into a NeatMS Experiment object using the standard import interface.",
+    "Create a NN_handler with default parameters (matrix_size=120, margin=1, min_scan_num=5) to instantiate the peak matrix construction pipeline.",
+    "Generate batch arrays by calling create_batches() with default 80:10:10 split ratios and no class normalization.",
+    "Extract and inspect the shape and binary encoding of the peak matrices to confirm (2, 120) dimensionality and margin/peak signal partitioning.",
+    "Validation: Confirm that peak matrices have shape (2, 120), binary dimension correctly encodes margin (0) and peak (1) regions with first/last 40 points and middle 40 points respectively, and batch counts match documented 80:10:10 split."
+  ],
+  "missing_information": [
+    "No changelog or version history provided",
+    "Location and format of documented result_matrix_shape artifact not specified in provided text",
+    "Expected peak matrix shape dimensions (rows, columns) and data type not documented in provided section"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does applying NeatMS default preprocessing to example mzML and feature-table inputs produce a peak matrix with the documented result_matrix_shape dimensions?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "lc-ms-data-preprocessing",
+    "peak-matrix-construction",
+    "mzml-feature-table-parsing",
+    "neural-network-input-preparation",
+    "batch-generation-and-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_neatms/synthesized_package",
+  "spine_condition_ids": [
+    "cond_full_training",
+    "cond_default_threshold",
+    "cond_batch_split_80_10_10"
+  ],
+  "spine_entity_ids": [
+    "neatms_system",
+    "arch_cnn_model",
+    "dataset_mzml",
+    "dataset_feature_table",
+    "dataset_example_model",
+    "comp_peak_matrix",
+    "cond_full_training",
+    "cond_default_threshold",
+    "cond_batch_split_80_10_10",
+    "result_default_model_threshold",
+    "result_matrix_shape",
+    "result_no_overfitting_observed"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "artificial-intelligence",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:bihealth__NeatMS",
+  "task_description": "Preprocess example mzML raw data and feature table using NeatMS default parameters to construct the peak matrix representation, verifying that the output matrix shape matches the documented architecture (2 dimensions \u00d7 120 points, with first/last 40 values representing signal margins and middle 40 values representing peak signal).",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw LC-MS data in mzML format",
+      "port_id": "raw_mzml_files",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature table in CSV format",
+      "port_id": "feature_table_csv",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute NeatMS default preprocessing on provided mzML and feature-table inputs and validate that the reconstructed peak matrix dimensions match the documented result_matrix_shape artifact.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Preprocessed peak matrices with shape (2, 120)",
+      "port_id": "peak_matrix_arrays",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Verification report of matrix dimensions and margin/peak encoding",
+      "port_id": "matrix_shape_verification",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Training/test/validation split statistics",
+      "port_id": "batch_statistics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "deep-learning",
+    "feature-detection",
+    "metabolite-identification",
+    "dimensionality-reduction"
+  ],
+  "title": "Reproduce the Peak Matrix Shape from NeatMS Default Preprocessing Parameters",
+  "tools": [
+    "NeatMS",
+    "Python",
+    "NumPy",
+    "pandas"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Create a NeatMS Experiment object by loading raw mzML files from the example data folder and the corresponding feature table (csv format) from the github repository, specifying the input format as 'mzmine'. 2. Instantiate a NN_handler (Neural Network Handler) object with the experiment and default batch-creation parameters (matrice_size=120, margin=1, min_scan_num=5). 3. Call create_batches() with default split ratios (80% training, 10% test, 10% validation) and normalise_class=False to generate peak matrix batches. 4. Inspect the resulting batch arrays to extract and verify the shape of the peak matrices (expected: 2 \u00d7 120 per peak) and confirm that the binary dimension correctly encodes margin (0) vs. peak (1) regions. 5. Validate that the first and last 40 values correspond to margin portions and the middle 40 values correspond to peak signal, matching the documented result_matrix_shape."
+}

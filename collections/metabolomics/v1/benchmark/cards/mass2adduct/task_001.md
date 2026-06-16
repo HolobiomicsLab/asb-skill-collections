@@ -1,0 +1,150 @@
+# SciTask Card: Reproduce adduct identification and ranking from built-in mass spectrometry imaging datasets
+
+- Task ID: `task_001`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T13:12:46.430517+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mass2adduct/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-processing`, `data-analysis`, `information-extraction`
+- DOI: `10.1021/acs.analchem.0c04720`
+- GitHub: `kbseah/mass2adduct`
+
+## Classification
+
+- Task kind: `reproduction`
+- Article type: `research-article`
+- Primary domain: `metabolomics`
+- Subdomains: `spatial-metabolomics`, `untargeted-metabolomics`, `computational-metabolomics`
+- Techniques: `adduct-detection`, `mass-spectrometry-imaging`, `maldi`, `metabolite-identification`, `feature-detection`
+
+## Research Question
+What is the complete computational workflow for detecting and ranking molecular adducts in mass spectrometry imaging data using the mass2adduct package?
+
+## Connected Finding
+The mass2adduct package implements a pipeline that computes mass difference objects, builds histograms of those differences, matches them to known adducts using adductMatch(), and ranks results with topAdducts() to identify the most abundant adducts.
+
+## Task Description
+Execute the full mass2adduct analysis pipeline on preprocessed MSI data: compute pairwise mass differences, generate a mass difference histogram, annotate known adducts using the built-in adducts/adducts2 reference datasets, and produce a ranked table of top mass differences with adduct matches. Output the annotated massdiff object and ranked adducts summary table.
+
+## Inputs
+- Preprocessed MSI data matrix in CSV format with m/z values as column headers and pixel intensities as entries
+- Built-in adducts reference dataset listing biologically-relevant chemical species (name, formula, mass columns)
+
+## Expected Outputs
+- Mass difference histogram object (massdiffhist class) showing distribution of pairwise m/z differences with labeled peaks for known adducts
+- Table of top-ranked mass differences with occurrence counts, quantiles, and matches to known adducts from adductMatch() output
+- Annotated massdiff object with added 'matches' column indicating closest-matching adduct for each ion pair
+
+## Expected Output File
+
+- `topAdducts_ranked_table.csv`
+
+## Landmark Outputs
+
+- `massdiff_object.rds`
+- `massdiff_histogram.png`
+- `adductMatch_results.csv`
+
+## Tools
+- mass2adduct
+- R
+
+## Skills
+- mass-spectrometry-peak-pair-analysis
+- adduct-mass-difference-matching
+- mass-spectrum-histogram-interpretation
+- chemical-transformation-annotation
+- spatial-correlation-assessment-in-imaging-mass-spectrometry
+
+## Workflow Description
+1. Load preprocessed MSI data from CSV into an msimat object using the msimat() function with appropriate file path and delimiter (sep=';'). 2. Compute all pairwise mass differences between peaks using massdiff() to generate a data.frame with parent ion (A), adduct ion (B), and mass difference (diff) columns. 3. Create a mass difference histogram using hist() on the massdiff object to identify peaks representing common chemical transformations. 4. Apply adductMatch() to the histogram with the built-in adducts or adducts2 reference dataset to match observed mass differences to known chemical species, reporting counts and quantile values. 5. Apply topAdducts() to rank the histogram mass differences by occurrence in descending order and report matches to known adducts for the top n peaks (default or user-specified). 6. Optionally apply adductMatch() directly to the massdiff object to annotate individual ion pairs and produce a filtered massdiff object containing only pairs with adduct matches.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No changelog or version history documented
+- Specific package version or commit hash for reproducibility
+
+## Domain Knowledge
+- An adduct is a molecular ion formed by the addition of a chemical moiety (often matrix or salt ions) to a parent ion during MSI processing, and massdiff values represent the mass differences between parent and adduct ion pairs.
+- Mass differences histogram bins exhibit peaks at integer values because most chemical masses are close to integers, creating background noise distinct from meaningful adduct transformations.
+- The adductMatch() function performs closest-bin matching in a mass difference histogram, accounting for the fact that mass spectrometer resolution varies with m/z value, unlike fixed-width histogram bins.
+- Quantile values from adductMatch() are typically high (close to 1.0) because the majority of observed mass differences have zero to few counts, making even modest peaks represent statistically significant transformations.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: Mass difference histogram object (massdiffhist class) showing distribution of pairwise m/z differences with labeled peaks for known adducts, Table of top-ranked mass differences with occurrence counts, quantiles, and matches to known adducts from adductMatch() output, Annotated massdiff object with added 'matches' column indicating closest-matching adduct for each ion pair.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] What is the complete computational workflow for detecting and ranking molecular adducts in mass spectrometry imaging data using the mass2adduct package?: 'This package presents tools for counting and identifying possible adducts in MS data'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [methods] The mass2adduct package implements a pipeline that computes mass difference objects, builds histograms of those differences, matches them to known adducts using adductMatch(), and ranks results with topAdducts() to identify the most abundant adducts.: 'd.diff <- massdiff(d) # Returns object of classes data.frame and massdiff; d.diff.hist <- hist(d.diff); The following function looks for known adducts by finding the closest-matching bin in the mass'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [other] Preprocessed MSI data matrix in CSV format with m/z values as column headers and pixel intensities as entries: 'This should be exported as plain-text CSV files from standard MSI software such as SCiLS or MSiReader.'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [other] Built-in adducts reference dataset listing biologically-relevant chemical species (name, formula, mass columns): 'There are two built-in data sets `adducts` and `adducts2` (shorter), which list biologically-relevant chemical species that might occur in biological samples.'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [other] Mass difference histogram object (massdiffhist class) showing distribution of pairwise m/z differences with labeled peaks for known adducts: 'd.diff.hist <- hist(d.diff) # Object of classes histogram and massdiffhist'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [other] Table of top-ranked mass differences with occurrence counts, quantiles, and matches to known adducts from adductMatch() output: 'The following function looks for known adducts by finding the closest-matching bin in the mass difference histogram produced above. It reports the number of counts (i.e. how many pairs of MS peaks'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [other] Annotated massdiff object with added 'matches' column indicating closest-matching adduct for each ion pair: 'We can match massdiffs to specific adduct types using the same function `adductMatch` that we applied to the histogram above. This adds an additional column to the `massdiff` object called `matches`,'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [methods] mass2adduct: 'This package presents tools for counting and identifying possible adducts in MS data'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [methods] R: 'library(mass2adduct)'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [discussion] No changelog or version history documented: '_No changelog found._'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [discussion] Specific package version or commit hash for reproducibility: 'Source: github:kbseah__mass2adduct'
+
+## Evaluation Strategy
+### Direct Checks
+- verify that mass2adduct package is installable from github:kbseah__mass2adduct
+- verify that built-in datasets 'adducts' and 'adducts2' are accessible via data(adducts) and data(adducts2)
+- verify file_exists: extdata/msi.csv is present in package
+- script_runs: msimat() successfully loads the CSV file and returns an object of class msimat
+- script_runs: massdiff() function executes on msimat object and returns object with classes data.frame and massdiff
+- script_runs: hist() method executes on massdiff object and returns object with classes histogram and massdiffhist
+- script_runs: adductMatch() function executes on histogram object to annotate known adducts
+- script_runs: topAdducts() function executes and produces ranked table of mass differences with adduct matches in descending order by occurrence, robust to dataset size variations
+- file_format_is: topAdducts() output is a structured table with at least columns for mass difference values, occurrence counts, and adduct annotations
+- value_in_range: all computed mass difference values are positive numbers (masses cannot be negative)
+- output_matches_reference: topAdducts() table rows are sorted in descending order by occurrence count
+
+### Expert Review
+- chemical plausibility of matched adducts: verify that adductMatch() correctly identifies biologically-relevant adducts from the built-in datasets for the test dataset
+- appropriateness of mass difference histogram binning: confirm that histogram resolution is adequate to resolve distinct adduct types without over- or under-binning
+- correctness of massdiff calculation: verify that pairwise mass differences are computed exhaustively and accurately from the input mass list
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load preprocessed MSI data from CSV into msimat object
+2. Compute all pairwise mass differences using massdiff() to identify potential adduct pairs
+3. Generate mass difference histogram using hist() to visualize distribution of observed mass differences
+4. Match histogram peaks to known chemical transformations using adductMatch() with adducts reference dataset, reporting counts and quantiles
+5. Rank mass differences by occurrence using topAdducts() and annotate with known adduct matches
+6. Validation: Verify that topAdducts() output includes counts, quantiles, and adduct name matches for top-ranked mass differences; confirm massdiff object subset excludes ion pairs without matched adducts
+7. References: source article (DOI: 10.1021/acs.analchem.0c04720)
+
+## Workflow Ports
+
+**Inputs:**
+
+- `msi_csv` — Preprocessed MSI data matrix in CSV format
+- `adducts_ref` — Built-in adducts reference dataset
+
+**Outputs:**
+
+- `massdiff_histogram` — Mass difference histogram with known adduct annotations
+- `top_adducts_table` — Ranked table of top mass differences with adduct matches
+- `annotated_massdiff` — Annotated massdiff object with adduct matches per ion pair
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:kbseah__mass2adduct`
+- **Synthesized at:** 2026-06-15T13:19:02+00:00
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

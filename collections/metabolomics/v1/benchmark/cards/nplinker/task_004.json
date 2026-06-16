@@ -1,0 +1,543 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "nplinker.pdf",
+      "role": "main_article",
+      "sha256": "f336b781d4488fcaf350c71aa5cf495c9603fe908229dcc004dede066845eba5"
+    }
+  ],
+  "created_at": "2026-06-15T08:56:40.523217+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1008920",
+  "data_accessions": [
+    {
+      "accession": "MSV000078836",
+      "evidence_span": "Cs a number of strains for the st From this platform we con MSV000078836 [38], MSV Cru\u00a8semann, Gross and Le\u00e3 The Cru\u00a8semann data set",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836"
+    },
+    {
+      "accession": "MSV000085038",
+      "evidence_span": "ets each with numerous validated links: V000085018 [39] and MSV000085038 [40], hereafter referred to as \u00e3o, respectively. et consist",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "antiSMASH v5.0.0 BGC predictions (JSON or GenBank format) from microbial genome assemblies",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GNPS metabolomic data: MS2 spectra with strain annotations and molecular families from spectral clustering",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MIBiG database reference BGCs with structural annotations for homology scoring",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ranked hypothetical link table (CSV or TSV) with GCF ID, MF ID, standardised strain correlation score, IOKR score, combined \u2113\u2081/\u2082 score, and metadata (strain count, BGC size, product type) sorted by combined score",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NPLinker link objects and metadata structure (JSON or Python pickle) persisting GCF\u2013MF and BGC\u2013spectrum relationships with associated scores",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Filtering and ranking statistics: count of links scoring above 90th percentile for each scoring function and their intersections",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Biosynthetic Gene Clusters (BGCs) are contiguous genomic regions whose genes collectively encode enzymes for production of one or more structurally related specialised metabolites; antiSMASH prediction yields a large fraction of unknown products requiring correlation with metabolomic data for validation.",
+    "Gene Cluster Families (GCFs) group related BGCs across strains by similarity distance; the assumption underlying GCF-level scoring is that BGCs close in GCF space encode structurally or functionally similar metabolites.",
+    "Strain correlation scoring relies on the overlap of strain sets contributing to a GCF and a Molecular Family; raw overlap counts are biased by dataset size, necessitating hypergeometric standardisation to make scores comparable across links of different GCF and MF sizes.",
+    "Input-Output Kernel Regression (IOKR) projects MS2 spectra into molecular fingerprint space to rank candidate BGC structures without requiring product-class-specific models, but requires considerable MIBiG homology (cumulative BLAST score \u226510,000) to assign structural predictions.",
+    "The complementarity of strain correlation (correlation-based) and IOKR (feature-based) scores arises because strain correlation is invariant to molecular structure and sensitive only to presence/absence patterns, while IOKR is sensitive to chemical features independent of strain content; combining both scores increases enrichment of validated links in the top percentile."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at https://github.com/sdrogers/nplinker (GitHub repository root)",
+      "verify file exists at http://doi.org/10.5281/zenodo.4680579 (Zenodo release archive)",
+      "script_runs: clone NPLinker repository and execute setup.py or equivalent package installation without errors",
+      "file_format_is: NPLinker source tree contains nplinker/ module directory with __init__.py",
+      "file_exists: NPLinker repository contains documented integration point for antiSMASH output (file path or module name)",
+      "file_exists: NPLinker repository contains documented integration point for BiG-SCAPE output (file path or module name)",
+      "file_exists: NPLinker repository contains documented integration point for GNPS output (file path or module name)",
+      "contains_substring: NPLinker codebase or documentation references 'GCF' and 'MF' (molecular feature) as object types",
+      "contains_substring: NPLinker codebase or documentation describes strain correlation scoring function or method",
+      "contains_substring: NPLinker codebase or documentation describes IOKR (Input-Output Kernel Regression) scoring function or integration",
+      "file_exists: NPLinker source tree contains implementation of combined scoring function (strain correlation + IOKR)",
+      "output_matches_reference: run NPLinker on a small test dataset (subset of Cr\u00fcsemann or similar public paired omics data) and verify output table structure contains columns for GCF identifier, spectrum identifier, strain correlation score, IOKR score, and combined rank",
+      "file_format_is: NPLinker primary output artifact is a table (CSV, TSV, JSON, or database format) with filterable ranked link records",
+      "field_present: output link table contains at least the following fields: GCF_ID, spectrum_ID, strain_correlation_score, IOKR_score, combined_score, rank",
+      "script_runs: NPLinker orchestration layer accepts antiSMASH BGC annotations (GenBank or JSON format) without format conversion errors",
+      "script_runs: NPLinker orchestration layer accepts BiG-SCAPE GCF clustering output without format conversion errors",
+      "script_runs: NPLinker orchestration layer accepts GNPS MS/MS spectrum library metadata without format conversion errors",
+      "value_in_range: combined scoring function applies \u2113p-norm with p=0.5 and sign-adjusted absolute values (robust to parameter choices in combining function)",
+      "contains_substring: NPLinker documentation or code comments explain the control loop: input \u2192 GCF-MF hypothetical link enumeration \u2192 score application \u2192 filtering \u2192 ranked output",
+      "file_exists: NPLinker repository includes example or demo configuration file showing how to chain antiSMASH \u2192 BiG-SCAPE \u2192 GNPS inputs"
+    ],
+    "expert_review": [
+      "Verify that the NPLinker orchestration logic correctly maps antiSMASH-detected BGCs into BiG-SCAPE GCF clusters (no misalignment of identifiers or lost BGCs)",
+      "Verify that strain correlation score computation accurately reflects the presence/absence of shared strains between GCF and MF (biological correctness of the metric)",
+      "Verify that IOKR scoring function is correctly applied: molecular fingerprints are derived from structures, kernel is applied to spectra, predictions are bounded in expected range",
+      "Verify that the combined scoring function (\u2113p-norm with p=0.5) preserves directionality and relative ranking of both component scores",
+      "Verify that the output ranked link table is filterable by percentile threshold (e.g., 90th percentile) and that filtered results match the proportions and p-values reported in Table 2 of the article",
+      "Verify that NPLinker handles edge cases correctly: BGCs with no MIBiG homology (should be excluded from IOKR scoring), spectra with insufficient peaks (should be denoised or excluded), multiple GCFs mapping to the same BGC (antiSMASH edge case mentioned in results)",
+      "Verify that the control loop terminates gracefully and produces interpretable error messages when inputs are malformed or incomplete"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does NPLinker orchestrate the integration of antiSMASH/BiG-SCAPE genomic outputs and GNPS metabolomic outputs to create and rank hypothetical BGC-metabolite links?: 'NPLinker accepts genomic outputs from antiSMASH and BiG-SCAPE (including reference BGCs from the MIBiG database [32]), and metabolomic output from the public, community-driven Global Natural Products'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] NPLinker creates objects for spectra, MFs, BGCs and GCFs from input data while maintaining hierarchical relationships and strain associations, then generates hypothetical links between metabolomic and genomic objects that can be evaluated using various scoring functions (both built-in and custom) and sorted, filtered, and visualized in tabular format.: 'NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them, and keeps track of strain ID or IDs associated with each object.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] antiSMASH v5.0.0 BGC predictions (JSON or GenBank format) from microbial genome assemblies: 'after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GNPS metabolomic data: MS2 spectra with strain annotations and molecular families from spectral clustering: 'metabolomic output from the public, community-driven Global Natural Products Social (GNPS) knowledge base [33]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MIBiG database reference BGCs with structural annotations for homology scoring: 'BGCs from the relevant strains show significant homology to the MIBiG BGC. Because both of them belong to the product class'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Ranked hypothetical link table (CSV or TSV) with GCF ID, MF ID, standardised strain correlation score, IOKR score, combined \u2113\u2081/\u2082 score, and metadata (strain count, BGC size, product type) sorted by combined score: 'links can be sorted, inspected and filtered by various scoring functions or combinations thereof, and visualised as tables'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NPLinker link objects and metadata structure (JSON or Python pickle) persisting GCF\u2013MF and BGC\u2013spectrum relationships with associated scores: 'NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Filtering and ranking statistics: count of links scoring above 90th percentile for each scoring function and their intersections: 'links scoring above the 90th percentile for raw correlation, standardised correlation and IOKR scores'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] antiSMASH: 'the genomes were run through antiSMASH v5.0.0 for BGC detection'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] BiG-SCAPE: 'and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NPLinker: 'NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GNPS: 'metabolomic output from the public, community-driven Global Natural Products Social (GNPS) knowledge base'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MIBiG: 'MIBiG database [32] most of which have structural annotations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific file format and schema for antiSMASH output ingested by NPLinker (GenBank, JSON, or other): 'By pairing the MIBiG and GNPS databases, and using the Paired omics Data Platform, we introduced data sets to test the efficiency of the scoring methods'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific file format and schema for BiG-SCAPE output ingested by NPLinker (cluster assignment table or other): 'By pairing the MIBiG and GNPS databases, and using the Paired omics Data Platform, we introduced data sets to test the efficiency of the scoring methods'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific file format and schema for GNPS metabolomic data ingested by NPLinker (spectrum library metadata, MS/MS spectra in mzXML/mzML or other): 'By pairing the MIBiG and GNPS databases, and using the Paired omics Data Platform, we introduced data sets to test the efficiency of the scoring methods'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Details on how NPLinker resolves the 'antiSMASH mapping the same ID to multiple GCFs' edge case during orchestration: 'antiSMASH mapping the same ID to multiple GCFs, as discussed earlier'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Computational time complexity and memory requirements for the NPLinker orchestration loop (BGC-spectrum enumeration, strain correlation computation, IOKR scoring): 'As a denoising step, to avoid time-consuming computation of fragmentation trees for the spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Quantitative measure of homology threshold used to assign MIBiG structures to BGCs for IOKR candidate set filtering: 'restricts its use to those BGCs which show considerable homology with MIBiG entries'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_020",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific kernel function (PPK parameters, bandwidth, or other hyperparameters) used in the IOKR component of NPLinker: 'IOKR is also highly dependent on the choice of both kernel function and molecular fingerprints'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_021",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific molecular fingerprint algorithm and parameters used in the IOKR component of NPLinker: 'IOKR is also highly dependent on the choice of both kernel function and molecular fingerprints'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_022",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Documented validation workflow or test suite for verifying NPLinker orchestration correctness on known positive and negative link sets: 'As an additional level of validation, we tested some high scoring links by exploring whether it was possible to manually match peaks in the MS2 spectra to the chemical structures'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "nplinker.cli",
+      "run",
+      "--antismash",
+      "{inputs.antismash_bgc_predictions}",
+      "--gnps",
+      "{inputs.gnps_spectra_mf}",
+      "--mibig",
+      "{inputs.mibig_reference}",
+      "--output-links",
+      "ranked_links_{task_id}.csv",
+      "--output-metadata",
+      "nplinker_metadata_{task_id}.json",
+      "--output-stats",
+      "filtering_stats_{task_id}.tsv"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ranked_links.csv",
+  "expected_outputs": [
+    "Ranked hypothetical link table (CSV or TSV) with GCF ID, MF ID, standardised strain correlation score, IOKR score, combined \u2113\u2081/\u2082 score, and metadata (strain count, BGC size, product type) sorted by combined score",
+    "NPLinker link objects and metadata structure (JSON or Python pickle) persisting GCF\u2013MF and BGC\u2013spectrum relationships with associated scores",
+    "Filtering and ranking statistics: count of links scoring above 90th percentile for each scoring function and their intersections"
+  ],
+  "finding": "NPLinker creates objects for spectra, MFs, BGCs and GCFs from input data while maintaining hierarchical relationships and strain associations, then generates hypothetical links between metabolomic and genomic objects that can be evaluated using various scoring functions (both built-in and custom) and sorted, filtered, and visualized in tabular format.",
+  "github_name": "NPLinker/nplinker",
+  "input_from": "task_002",
+  "inputs": [
+    "antiSMASH v5.0.0 BGC predictions (JSON or GenBank format) from microbial genome assemblies",
+    "GNPS metabolomic data: MS2 spectra with strain annotations and molecular families from spectral clustering",
+    "MIBiG database reference BGCs with structural annotations for homology scoring"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "gcfs_clustered.txt",
+    "hypothetical_links_raw.csv",
+    "strain_correlation_scores.csv",
+    "iokr_scores.csv",
+    "ranked_links.csv",
+    "percentile_enrichment_stats.json"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_015",
+    "result_016",
+    "result_021",
+    "result_022",
+    "result_023",
+    "result_026",
+    "result_028",
+    "result_031",
+    "result_034",
+    "result_035",
+    "result_041"
+  ],
+  "methodology_summary": [
+    "Cluster detected BGCs into Gene Cluster Families (GCFs) using BiG-SCAPE, grouping by product class and similarity distance.",
+    "Generate the complete set of hypothetical GCF\u2013Molecular Family (MF) link combinations from input genomic and metabolomic data.",
+    "Compute standardised strain correlation score for each link by calculating hypergeometric expected value and variance and z-normalising.",
+    "Score BGC\u2013spectrum links using Input-Output Kernel Regression (IOKR) on molecular fingerprints for BGCs with MIBiG structural homology; aggregate to GCF\u2013MF level.",
+    "Standardise IOKR scores and combine both standardised scores using \u2113\u2081/\u2082-norm with sign adjustment to produce a single ranking.",
+    "Rank all hypothetical links and export table with filtering and sorting options; calculate enrichment statistics for validated links at 90th percentile.",
+    "Validation: confirm that joint 90th-percentile links show significantly higher proportion of validated links (p < 0.05) than either score alone.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1008920); MSV000078836 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836); MSV000085038 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038)"
+  ],
+  "missing_information": [
+    "Specific file format and schema for antiSMASH output ingested by NPLinker (GenBank, JSON, or other)",
+    "Specific file format and schema for BiG-SCAPE output ingested by NPLinker (cluster assignment table or other)",
+    "Specific file format and schema for GNPS metabolomic data ingested by NPLinker (spectrum library metadata, MS/MS spectra in mzXML/mzML or other)",
+    "Details on how NPLinker resolves the 'antiSMASH mapping the same ID to multiple GCFs' edge case during orchestration",
+    "Computational time complexity and memory requirements for the NPLinker orchestration loop (BGC-spectrum enumeration, strain correlation computation, IOKR scoring)",
+    "Quantitative measure of homology threshold used to assign MIBiG structures to BGCs for IOKR candidate set filtering",
+    "Specific kernel function (PPK parameters, bandwidth, or other hyperparameters) used in the IOKR component of NPLinker",
+    "Specific molecular fingerprint algorithm and parameters used in the IOKR component of NPLinker",
+    "Documented validation workflow or test suite for verifying NPLinker orchestration correctness on known positive and negative link sets"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/iokr_model"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does NPLinker orchestrate the integration of antiSMASH/BiG-SCAPE genomic outputs and GNPS metabolomic outputs to create and rank hypothetical BGC-metabolite links?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "results",
+    "discussion"
+  ],
+  "skills": [
+    "biosynthetic-gene-cluster-detection-and-annotation",
+    "gene-cluster-family-formation-and-similarity-clustering",
+    "strain-correlation-scoring-and-hypergeometric-standardisation",
+    "input-output-kernel-regression-for-metabolite-matching",
+    "multi-criterion-score-combination-and-ranking",
+    "metabolomic-spectral-annotation-and-molecular-family-clustering",
+    "cross-database-structural-homology-matching"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_nplinker",
+  "spine_condition_ids": [
+    "COND_COMBINED_SCORES",
+    "COND_STD_STRAIN_CORR_ONLY",
+    "COND_IOKR_ONLY",
+    "COND_MIBIG_GNPS_EVAL"
+  ],
+  "spine_entity_ids": [
+    "SYS_NPLINKER",
+    "ARCH_NPLINKER_PIPELINE",
+    "COMP_COMBINED_SCORE",
+    "TOOL_ANTISMASH",
+    "TOOL_BIGSCAPE",
+    "TOOL_GNPS",
+    "DS_GNPS_TRAINING",
+    "DS_MIBIG_GNPS_PAIRS",
+    "COND_MIBIG_GNPS_EVAL",
+    "METRIC_COMBINED_IMPROVES_RATIO",
+    "METRIC_MIBIG_GNPS_PAIRS_COUNT",
+    "RESULT_NPLINKER_UTILITY",
+    "ARTIFACT_GCF_MF_LINKS"
+  ],
+  "subdomains": [
+    "natural-products",
+    "microbiome-metabolomics",
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "statistical-analysis"
+  ],
+  "synthesized_from": null,
+  "task_description": "Implement the NPLinker framework orchestration layer that ingests antiSMASH-predicted BGCs and BiG-SCAPE-clustered GCFs from genomic data, GNPS metabolomic outputs (spectra and molecular families), and produces a filterable ranked table of GCF\u2013MF (or BGC\u2013spectrum) hypothetical links scored by standardised strain correlation and IOKR functions.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "antiSMASH v5.0.0 BGC predictions",
+      "port_id": "antismash_bgc_predictions",
+      "resolved_via": null,
+      "source": "task_002/iokr_model",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GNPS MS2 spectra and molecular families with strain annotations",
+      "port_id": "gnps_spectra_mf",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MIBiG database reference BGCs",
+      "port_id": "mibig_reference",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the NPLinker orchestration layer that ingests antiSMASH/BiG-SCAPE and GNPS data, constructs hypothetical GCF-MF link objects, applies standardised strain correlation and IOKR scoring functions, and produces a filterable ranked link table.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ranked GCF\u2013MF hypothetical link table with all scores",
+      "port_id": "ranked_link_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Persisted NPLinker link objects and metadata",
+      "port_id": "nplinker_link_objects",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Filtering and ranking enrichment statistics at 90th percentile",
+      "port_id": "percentile_statistics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "correlation-analysis",
+    "machine-learning",
+    "database-annotation",
+    "network-annotation-propagation"
+  ],
+  "title": "Reconstruct the NPLinker pipeline fixed processing architecture for loading, scoring, and filtering GCF-MF hypothetical links",
+  "tools": [
+    "antiSMASH",
+    "BiG-SCAPE",
+    "NPLinker",
+    "GNPS",
+    "MIBiG"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Ranked hypothetical link table (CSV or TSV) with GCF ID, MF ID, standardised strain correlation score, IOKR score, combined \u2113\u2081/\u2082 score, and metadata (strain count, BGC size, product type) sorted by combined score."
+  ],
+  "workflow_description": "1. Load antiSMASH v5.0.0 BGC predictions from input microbial genomes and run BiG-SCAPE v1.0.0 to cluster BGCs into Gene Cluster Families (GCFs), grouping BGCs by product class and similarity distance. 2. Import GNPS metabolomic data: MS2 spectra, molecular families (MFs) from spectral clustering, and strain annotations for each spectrum and MF. 3. Create NPLinker in-memory objects (Spectrum, MF, BGC, GCF entities) maintaining hierarchical relationships and strain IDs; construct the complete set of hypothetical GCF\u2013MF link combinations. 4. For each hypothetical link, compute standardised strain correlation score by calculating hypergeometric expected value and variance of the raw correlation score across all links, then z-normalise: s*_corr = (s_corr \u2212 E[s_corr]) / \u221aVar[s_corr]. 5. For BGCs with MIBiG structural homology (cumulative BLAST score \u226510,000), extract molecular fingerprints from predicted metabolite structures and score BGC\u2013spectrum links using Input-Output Kernel Regression (IOKR) with CDK substructure, PubChem, and Klekota-Roth fingerprints and probability product kernel filtering. 6. Standardise IOKR scores using expected value and variance over the set of all potential links: s*_IOKR = (s_IOKR \u2212 E[s_IOKR]) / \u221aVar[s_IOKR]; aggregate BGC\u2013spectrum IOKR scores to GCF\u2013MF level by taking the maximum. 7. Combine standardised scores using \u2113\u2081/\u2082-norm with sign adjustment: s_combined = sgn(s*_corr)|s*_corr|^(1/2) + sgn(s*_IOKR)|s*_IOKR|^(1/2). 8. Rank all hypothetical links by combined score and export as filterable table with sortable columns for each scoring function and complementary filtering options (strain, MIBiG inclusion, product type). Validation: confirm that links scoring in the joint 90th percentile for both standardised strain correlation and IOKR show significantly higher enrichment of validated links (p < 0.05) compared to either score alone."
+}

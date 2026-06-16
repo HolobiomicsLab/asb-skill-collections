@@ -1,0 +1,366 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/methylKit_logo.png",
+      "role": "figure",
+      "sha256": "95914611e366169d643f217c61d26f9c19ddd55cf2d5f56ab7767a6f7e4ff6f2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "4c8b270ca6f0e13380a49cca704330aa037d0d68d8583090138549c4186a0806"
+    }
+  ],
+  "created_at": "2026-06-15T18:05:47.772040+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_001.expected_outputs[0]: methylDiff object containing differentially methylated bases with hyper- and hypo-methylated base counts",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "methylBase object from unite() on example CpG files",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Dendrogram object showing hierarchical clustering of samples",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Scree plot showing variance explained by each principal component (PNG or PDF)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "PC1/PC2 scatter plot visualization (PNG or PDF)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Hierarchical clustering of methylation profiles groups samples by overall methylation similarity, enabling discovery of sample structure and potential batch effects.",
+    "Principal component analysis on methylation data reduces dimensionality while preserving variance; PC1 and PC2 typically capture the largest sources of methylation variation across samples.",
+    "The scree plot quantifies how much total variance each principal component explains; interpretation guides whether downstream analyses should use one, two, or more PCs.",
+    "Dendrogram branch heights reflect distances (typically Euclidean or correlation-based) between sample methylation profiles; shorter distances indicate more similar methylation landscapes.",
+    "Visualization of sample clustering is essential quality control to identify outliers, validate expected group separations, and detect confounding factors before differential methylation analysis."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that inputs include a united methylBase object (output of unite() on example CpG files) or a concrete file path to such an object in the methylKit package repository",
+      "verify that clusterSamples() function is callable on the methylBase object and produces a dendrogram object (class 'dendrogram' or equivalent hierarchical clustering structure)",
+      "verify that PCASamples() function is callable on the methylBase object and produces at least two plot files in PNG or PDF format",
+      "verify that the dendrogram object can be serialized and matches the visual structure described in the methylKit vignette (no canonical answer for exact tree topology, but structure must be reproducible from the same input)",
+      "verify that the PCA scree plot file exists and contains variance explained per principal component",
+      "verify that the PC1/PC2 scatter plot file exists and displays sample clustering in 2D space",
+      "script_runs: both clusterSamples() and PCASamples() execute without error on the provided methylBase input",
+      "file_format_is: output plot files are valid PNG or PDF (robust to file format choice)"
+    ],
+    "expert_review": [
+      "visual inspection of dendrogram: confirm that hierarchical clustering structure is biologically plausible given the input methylation data (e.g., expected samples cluster together, no inverted relationships)",
+      "visual inspection of PCA plots: confirm that the scree plot shows expected variance decay and that PC1/PC2 scatter reflects meaningful sample separation (no canonical answer; requires domain judgment of methylation patterns)",
+      "confirm that clusterSamples() and PCASamples() implementations in the methylKit package match the documented behavior in the vignette"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How do the four samples (test1, test2, ctrl1, ctrl2) cluster based on methylation similarity, and what are their relationships in principal component space?: 'We can cluster the samples based on the similarity of their methylation profiles. The following function will cluster the samples and draw a dendrogram.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] clusterSamples() produces a dendrogram showing sample clustering by correlation distance with Ward linkage, and PCASamples() generates a scree plot and PC1/PC2 scatter plot revealing methylation profile relationships among the four samples.: 'clusterSamples(meth, dist=\"correlation\", method=\"ward\", plot=TRUE)\n```\n\nSetting the `plot=FALSE` will return a dendrogram object which can be\nmanipulated by users or fed in to other user functions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] methylBase object from unite() on example CpG files: 'From the united methylBase object produced by unite() on the example CpG files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Dendrogram object showing hierarchical clustering of samples: 'run clusterSamples() to obtain a dendrogram'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Scree plot showing variance explained by each principal component (PNG or PDF): 'PCASamples() to obtain a scree plot'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] PC1/PC2 scatter plot visualization (PNG or PDF): 'PC1/PC2 scatter'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] methylKit: 'title: \"methylKit: User Guide'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'packageVersion('methylKit')'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] knitr: '%\\VignetteEngine{knitr::rmarkdown}'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] No detailed methods section content provided; only vignette header and setup code present.: 'Document contains only vignette header and setup code, no methods section text'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(methylKit); mBase <- readRDS('{inputs.methylbase_object}'); clusterSamples(mBase, dist='correlation', method='ward', plot=TRUE); pdf('dendrogram.pdf'); clusterSamples(mBase, dist='correlation', method='ward', plot=TRUE); dev.off(); pca <- PCASamples(mBase, screeplot=TRUE); pdf('screeplot.pdf'); PCASamples(mBase, screeplot=TRUE); dev.off(); pdf('pc1_pc2_scatter.pdf'); PCASamples(mBase); dev.off();"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Dendrogram object showing hierarchical clustering of samples",
+    "Scree plot showing variance explained by each principal component (PNG or PDF)",
+    "PC1/PC2 scatter plot visualization (PNG or PDF)"
+  ],
+  "finding": "clusterSamples() produces a dendrogram showing sample clustering by correlation distance with Ward linkage, and PCASamples() generates a scree plot and PC1/PC2 scatter plot revealing methylation profile relationships among the four samples.",
+  "github_name": "al2na/methylKit",
+  "input_from": "task_001",
+  "inputs": [
+    "task_001.expected_outputs[0]: methylDiff object containing differentially methylated bases with hyper- and hypo-methylated base counts",
+    "methylBase object from unite() on example CpG files"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "dendrogram.rda",
+    "scree_plot.pdf",
+    "pca_scatter_pc1_pc2.pdf"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_030",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_034",
+    "result_035",
+    "result_036",
+    "result_037",
+    "result_038",
+    "result_039",
+    "result_040",
+    "result_041",
+    "result_042",
+    "result_043",
+    "result_044"
+  ],
+  "methodology_summary": [
+    "Load the united methylBase object containing merged methylation calls across all samples.",
+    "Apply hierarchical clustering via clusterSamples() to compute pairwise sample distances and construct a dendrogram.",
+    "Apply principal component analysis via PCASamples() to identify major axes of methylation variation.",
+    "Generate scree plot showing cumulative and per-component variance explained by principal components.",
+    "Generate PC1 vs. PC2 scatter plot to visualize sample grouping in the first two principal components.",
+    "Validation: Dendrogram and PCA plots should visually match the vignette outputs and support expected sample stratification based on methylation profiles."
+  ],
+  "missing_information": [
+    "No changelog found.",
+    "No detailed methods section content provided; only vignette header and setup code present."
+  ],
+  "parameters": [],
+  "primary_domain": "genomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How do the four samples (test1, test2, ctrl1, ctrl2) cluster based on methylation similarity, and what are their relationships in principal component space?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "methylation-data-clustering",
+    "principal-component-analysis-visualization",
+    "hierarchical-dendrogram-interpretation",
+    "sample-similarity-assessment-from-methylation",
+    "epigenetic-sample-stratification"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_methylkit/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp_methylBase",
+    "tool_unite",
+    "tool_clusterSamples",
+    "tool_PCASamples",
+    "dataset_example_CpG_files"
+  ],
+  "subdomains": [
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:al2na__methylKit",
+  "task_description": "From a united methylBase object, perform unsupervised clustering and dimensionality reduction to obtain a dendrogram and principal component analysis plots (scree plot and PC1/PC2 scatter) visualizing sample relationships.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "united methylBase object",
+      "port_id": "methylbase_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Generate a dendrogram from clusterSamples() and two PNG/PDF plots (scree plot and PC1/PC2 scatter) from PCASamples() using the united methylBase object.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "dendrogram object from hierarchical clustering",
+      "port_id": "dendrogram_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "scree plot showing PC variance",
+      "port_id": "scree_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PC1/PC2 scatter plot",
+      "port_id": "pca_scatter_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "differential-abundance-analysis",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce sample clustering and PCA outputs from the methylBase object",
+  "tools": [
+    "methylKit",
+    "R",
+    "knitr"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: knitr, Scree plot showing variance explained by each principal component (PNG or PDF)."
+  ],
+  "workflow_description": "1. Load the methylBase object produced by unite() from example CpG methylation files. 2. Apply clusterSamples() function to perform hierarchical clustering on methylation profiles and generate a dendrogram object. 3. Apply PCASamples() function to compute principal components and generate a scree plot showing variance explained by each PC. 4. Extract and visualize the first two principal components (PC1 and PC2) as a scatter plot to assess sample grouping and methylation-based similarity."
+}

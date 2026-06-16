@@ -1,0 +1,316 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/FredHutch/SEACR",
+      "locator_id": "gh_fredhutch_seacr",
+      "locator_kind": "github",
+      "name": "FredHutch/SEACR",
+      "prose": "GitHub repository URL: github:FredHutch__SEACR",
+      "score": 0.4,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "55ccc5cfa99362c11cf07a6f067966adc94310aff58e868e07989f4716f3eb9e"
+    }
+  ],
+  "created_at": "2026-06-15T19:25:45.360988+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GitHub repository URL: github:FredHutch__SEACR",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Minimal CUT&RUN bedGraph test file with chromosome, start, end, and signal columns",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Peaked-regions output file from SEACR in BED or bedGraph format containing genomic coordinates and peak statistics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification log confirming cloned repository structure, script executability, and successful end-to-end run completion",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "CUT&RUN bedGraph format consists of four columns: chromosome, start coordinate, end coordinate, and signal intensity, and is the standard input for peak-calling tools like SEACR.",
+    "SEACR (Sparse Enrichment Analysis for CUT&RUN) is designed specifically for sparse epigenetic data from cleavage under targets and release under nuclease experiments and outputs peak regions in standard genomic coordinate formats.",
+    "Executable permissions on shell scripts (*.sh) and R scripts must be verified via file stat checks or chmod commands to ensure the cloned scripts can be invoked directly.",
+    "Peaked-regions output from SEACR contains chromosomal coordinates and associated peak statistics and should be validated for non-zero row counts and properly formatted BED-like structure."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:FredHutch__SEACR",
+      "verify repository can be cloned without errors",
+      "file_exists: shell script files (*.sh) in cloned repository root or standard subdirectories (bin/, scripts/)",
+      "file_exists: R script files (*.R) in cloned repository root or standard subdirectories (bin/, scripts/, R/)",
+      "verify shell scripts have executable permissions (mode includes +x)",
+      "verify R scripts are readable and syntactically valid R (script_runs on R parser without fatal errors)",
+      "script_runs: end-to-end SEACR execution with minimal valid CUT&RUN bedGraph input file",
+      "file_exists: peaked-regions output file produced after end-to-end run",
+      "file_format_is: output file has expected format (BED or similar tabular peak region format), robust to naming conventions",
+      "output_matches_reference: output structure contains expected columns for peak regions (chromosome, start, end, score or similar), no canonical answer for exact column names or order across SEACR versions"
+    ],
+    "expert_review": [
+      "confirm that the cloned SEACR repository is the correct and current version intended for CUT&RUN analysis",
+      "assess whether the minimal test bedGraph input is representative of real CUT&RUN data and appropriate for validating end-to-end functionality",
+      "evaluate whether the peaked-regions output file content is biologically sensible (e.g., peak coordinates fall within expected genomic ranges, score values are in expected ranges)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] What are the core computational components (shell and R scripts) that comprise the SEACR tool, and can they be executed end-to-end on typical CUT&RUN bedGraph input to produce peaked-regions output?: 'No examples found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The provided document contains no concrete description of SEACR's shell/R script components, their executable status, or their end-to-end operation on CUT&RUN bedGraph inputs. No mechanism documentation or implementation details are available in the text.: '_No examples found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] GitHub repository URL: github:FredHutch__SEACR: 'Source: github:FredHutch__SEACR'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Minimal CUT&RUN bedGraph test file with chromosome, start, end, and signal columns: '[UNTRUSTED_DOCUMENT]\n_No usage/docs found._\n[/UNTRUSTED_DOCUMENT]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Peaked-regions output file from SEACR in BED or bedGraph format containing genomic coordinates and peak statistics: '[UNTRUSTED_DOCUMENT]\n_No usage/docs found._\n[/UNTRUSTED_DOCUMENT]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Verification log confirming cloned repository structure, script executability, and successful end-to-end run completion: '[UNTRUSTED_DOCUMENT]\n_No usage/docs found._\n[/UNTRUSTED_DOCUMENT]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] git: 'Clone the SEACR repository'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] SEACR: 'github:FredHutch__SEACR'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog was found in the discussion section: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "set -e && git clone https://github.com/FredHutch/SEACR.git seacr_repo && cd seacr_repo && ls -la && file SEACR.sh && chmod +x SEACR.sh && test -f SEACR.R && Rscript SEACR.R --help 2>&1 | head -5 || true && bash SEACR.sh {inputs.bedgraph_input} 1.0 non peaks.bed && test -s peaks.bed && head peaks.bed && echo 'SEACR reconstruction and validation complete' > ../validation.log"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "seacr_peaks.bed",
+  "expected_outputs": [
+    "Peaked-regions output file from SEACR in BED or bedGraph format containing genomic coordinates and peak statistics",
+    "Verification log confirming cloned repository structure, script executability, and successful end-to-end run completion"
+  ],
+  "finding": "The provided document contains no concrete description of SEACR's shell/R script components, their executable status, or their end-to-end operation on CUT&RUN bedGraph inputs. No mechanism documentation or implementation details are available in the text.",
+  "github_name": "FredHutch/SEACR",
+  "input_from": null,
+  "inputs": [
+    "GitHub repository URL: github:FredHutch__SEACR",
+    "Minimal CUT&RUN bedGraph test file with chromosome, start, end, and signal columns"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "repo_structure_manifest.txt",
+    "script_permissions_check.log",
+    "test_bedgraph_prepared.bedGraph",
+    "seacr_peaks.bed"
+  ],
+  "linked_result_ids": [],
+  "methodology_summary": [
+    "Clone the SEACR repository from FredHutch GitHub.",
+    "Verify presence of shell and R scripts and confirm executable permissions.",
+    "Prepare or obtain a minimal valid CUT&RUN bedGraph test file.",
+    "Run SEACR end-to-end on the test bedGraph input.",
+    "Validate that peaked-regions output file is produced and contains valid genomic coordinates and peak annotations.",
+    "Validation: Confirm repository cloning succeeds, all shell and R scripts exist with executable permissions set, and SEACR produces a non-empty peaked-regions file with proper BED-like format (chromosome, start, end, plus metadata columns)."
+  ],
+  "missing_information": [
+    "No changelog was found in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the core computational components (shell and R scripts) that comprise the SEACR tool, and can they be executed end-to-end on typical CUT&RUN bedGraph input to produce peaked-regions output?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [],
+  "skills": [
+    "repository-cloning-and-dependency-verification",
+    "shell-script-executability-validation",
+    "bedgraph-format-parsing-and-validation",
+    "peak-calling-output-interpretation",
+    "end-to-end-bioinformatics-pipeline-testing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_seacr/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SEACR_system"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:FredHutch__SEACR",
+  "task_description": "Clone the SEACR repository from GitHub, verify presence and executability of shell and R scripts, and validate end-to-end functionality by running the tool on a minimal CUT&RUN bedGraph input file to produce a peaked-regions output.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SEACR GitHub repository URL",
+      "port_id": "seacr_repo_url",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Minimal CUT&RUN bedGraph test file",
+      "port_id": "bedgraph_input",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Clone the SEACR repository, verify shell and R scripts are present and executable, and validate the tool runs end-to-end on a minimal CUT&RUN bedGraph file to produce a peaked-regions output.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SEACR peaked-regions output file",
+      "port_id": "peaked_regions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Repository and execution verification report",
+      "port_id": "validation_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reconstruct the SEACR peak-calling tool from its public GitHub repository",
+  "tools": [
+    "git",
+    "SEACR"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Verification log confirming cloned repository structure, script executability, and successful end-to-end run completion."
+  ],
+  "workflow_description": "1. Clone the FredHutch/SEACR repository from GitHub using git. 2. Verify that shell scripts and R scripts are present in the cloned repository and have executable permissions set. 3. Prepare a minimal CUT&RUN bedGraph input file meeting SEACR format requirements. 4. Execute SEACR end-to-end on the test bedGraph input using the cloned scripts. 5. Verify that the peaked-regions output file is produced and contains valid region coordinates."
+}

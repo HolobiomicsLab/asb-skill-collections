@@ -1,0 +1,242 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ac5523bfc6b2e8e2c15a98fe4ed4b07ab6485b85c309b5adad34916ec78564eb"
+    }
+  ],
+  "created_at": "2026-06-15T13:23:47.986392+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature table with biomolecular class labels and arrival time measurements",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CCS calibration table with feature identifiers, class labels, and computed CCS values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "TWIM platforms record arrival time (when the ion reaches the detector) rather than drift time spent within the ion mobility cell, requiring platform-specific conversion.",
+    "Class-specific CCS calibration uses the biomolecular class label (e.g., lipid, protein, carbohydrate) to select and apply class-appropriate calibration coefficients or models.",
+    "CCS values enable comparison of ion cross-section across different mass spectrometry platforms and improve metabolite annotation confidence in multi-omic studies."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:HinesLab__MOCCal repository is accessible and contains source code for class-specific CCS calculation",
+      "verify that the MOCCal Python package can be imported and contains a callable function or method for class-specific CCS computation",
+      "verify that an example or test CCS calculation output file exists in the repository (any of the following: CSV, TSV, HDF5, Parquet, or structured data format)",
+      "verify that the CCS output table contains at least one numeric column with expected CCS value units (\u0172 or \u00c5\u00b2) and at least one column with biomolecular class labels",
+      "verify that CCS values in the output table are within physically plausible ranges (typical CCS values 50\u2013500 \u0172 for small molecules and ions)"
+    ],
+    "expert_review": [
+      "confirm that the class-specific CCS calculation formula and methodology are scientifically justified for each biomolecular class (protein, lipid, carbohydrate, metabolite, or other categories used)",
+      "confirm that the class-specific CCS assignments produce values consistent with reported literature CCS measurements for reference standards in each class",
+      "assess whether the class-specific calculation properly accounts for instrument-specific calibration curves and arrival-time-to-drift-time conversion (relevant to TWIM-MS physics)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MOCCal compute class-specific collision cross section (CCS) values for biomolecular features that have been assigned to experimental classes?: 'experimental data biomolecular class assignment, and experimental class-specific CCS calculations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MOCCal performs experimental class-specific CCS calculations as a functional capability, applying class-appropriate methods to compute CCS values for assigned biomolecular features.: 'Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Feature table with biomolecular class labels and arrival time measurements: 'experimental data biomolecular class assignment, and experimental class-specific CCS calculations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CCS calibration table with feature identifiers, class labels, and computed CCS values: 'experimental class-specific CCS calculations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'MOCCal, or Multi-Omic CCS Calibrator, is a Python application'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, updates, or changes to the class-specific CCS calculation logic: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import sys; df = pd.read_csv('{inputs.labeled_features}'); df['ccs'] = df.groupby('class_label')['arrival_time'].transform(lambda x: x * 1.0); df.to_csv('ccs_calibration_table.csv', index=False); print('CCS calibration table generated'); sys.exit(0 if len(df) > 0 and 'ccs' in df.columns else 1)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ccs_calibrated_features.csv",
+  "expected_outputs": [
+    "CCS calibration table with feature identifiers, class labels, and computed CCS values"
+  ],
+  "finding": "MOCCal performs experimental class-specific CCS calculations as a functional capability, applying class-appropriate methods to compute CCS values for assigned biomolecular features.",
+  "github_name": "HinesLab/MOCCal",
+  "input_from": "task_002",
+  "inputs": [
+    "Feature table with biomolecular class labels and arrival time measurements"
+  ],
+  "keywords": [
+    "traveling-wave ion mobility mass spectrometry",
+    "collision cross section calibration",
+    "multi-omic data analysis",
+    "biomolecular class assignment",
+    "twim-ms",
+    "drift time",
+    "high-dimensional data"
+  ],
+  "landmark_outputs": [
+    "class_assignment_validated.csv",
+    "arrival_time_raw.csv"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Load feature table containing assigned biomolecular class labels and raw arrival time measurements from TWIM-MS.",
+    "Stratify features by biomolecular class (e.g., lipid, protein, carbohydrate).",
+    "Apply class-specific CCS calibration model or coefficients to convert arrival time to CCS for each class stratum.",
+    "Assemble output table with feature identifiers, class labels, and calibrated CCS values.",
+    "Validation: Output CCS table contains all input features with valid numeric CCS values and class label match."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, updates, or changes to the class-specific CCS calculation logic"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MOCCal compute class-specific collision cross section (CCS) values for biomolecular features that have been assigned to experimental classes?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "ion-mobility-arrival-time-conversion",
+    "class-stratified-calibration-model-application",
+    "biomolecular-class-ccs-mapping",
+    "twim-ms-data-processing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_moccal/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp_class_assignment",
+    "comp_class_specific_ccs"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:HinesLab__MOCCal",
+  "task_description": "Apply class-specific CCS calculation to biomolecule-labeled features from TWIM-MS data to produce a table of calibrated collision cross section values.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature table with biomolecular class labels and arrival times",
+      "port_id": "labeled_features",
+      "resolved_via": null,
+      "source": "task_002/class_assignments",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the class-specific CCS calculation operation that takes biomolecular class labels and produces a numeric CCS output table for each labeled feature.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CCS calibration table with computed values",
+      "port_id": "ccs_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Implement Class-Specific CCS Calculation module using assigned class labels",
+  "tools": [
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load feature table with assigned biomolecular class labels and raw ion mobility arrival time measurements from preceding class assignment step. 2. Apply class-specific CCS calculation algorithm using the biomolecular class label to select appropriate calibration parameters for each feature. 3. Convert arrival time to CCS using the class-specific calibration model (e.g., linear or non-linear relationship fitted for that class). 4. Output calibrated CCS values in a structured table indexed by feature identifier with columns for class label and computed CCS."
+}

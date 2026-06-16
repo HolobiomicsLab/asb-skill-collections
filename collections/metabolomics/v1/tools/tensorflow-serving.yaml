@@ -5,6 +5,9 @@ evidence_spans:
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
+- doi: 10.1021/acs.jnatprod.1c00399
+  title: npclassifier
 source_repos:
 - https://github.com/mwang87/DeepSAT
+- mwang87/NP-Classifier
 schema_version: 0.2.0

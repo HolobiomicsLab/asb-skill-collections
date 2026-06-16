@@ -1,0 +1,314 @@
+{
+  "abstraction_frame": "result",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Rplot001.jpg",
+      "role": "figure",
+      "sha256": "79259d0fa68ec36cfa387ea2b9948e1a8f0a42239143735eeae01a80ab72da72"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d8ab23ebaf3bf6459087e91d56055beef2ca5b026fc08b4cf749c6c400b5330d"
+    }
+  ],
+  "created_at": "2026-06-15T13:20:51.739319+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_002.expected_outputs[0]: SummarizedExperiment object with 'ratio_corrected' assay containing batch-corrected Compound/Internal Standard ratios",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Batch-corrected SummarizedExperiment object with QC sample assays and internal standard ratio data",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Recommendation table (tab-delimited or CSV) with columns: compound, recommended_internal_standard, min_RSDQC",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Full RSDQC matrix (tab-delimited or CSV) with compounds as rows and internal standard candidates as columns, showing RSDQC for each pair",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "RSDQC (Relative Standard Deviation of QC samples) is computed on batch-corrected compound/internal standard ratios and measures consistency of ionization and detector response across repeated QC injections, with lower values indicating more stable internal standards.",
+    "An internal standard is optimal for a given compound when its RSDQC is minimized, indicating that the compound-to-standard ratio exhibits the least variability after batch correction.",
+    "Batch correction using pooled study quality control samples (SQC) adjusts for instrument drift and matrix effects; RSDQC must be calculated post-correction to reflect true analytical stability.",
+    "The exhaustive evaluation across all internal standard candidates per compound acknowledges that no single internal standard performs equally well for all analytes due to differential ionization suppression and detector response."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that batch-corrected experiment object (SummarizedExperiment) exists as input",
+      "verify file_exists for RSDQC values table (tab-delimited or CSV format) computed across all internal standard candidates",
+      "verify that output table contains at least one row per compound with columns for compound identifier, internal standard candidates, and their corresponding RSDQC values",
+      "verify that output table field_present: 'recommended_internal_standard' or equivalent column identifying the internal standard with minimum RSDQC per compound",
+      "verify output_matches_reference against reported recommendation table location in article (if deposited), or verify table structure is consistent with mzQuality export format"
+    ],
+    "expert_review": [
+      "verify that RSDQC calculation methodology matches article description: relative standard deviation computed over batch-corrected QC sample ratios (compound / internal standard) for each candidate pairing",
+      "verify that the lowest RSDQC selection logic is correctly applied per compound (no ties, handling of missing values, numerical precision)",
+      "assess whether batch-correction step (using pooled SQC samples) was applied before RSDQC computation, as stated in article scope"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Which internal standard achieves the lowest Relative Standard Deviation of QC samples (RSDQC) for each compound when calculated across all internal standard candidates on batch-corrected data?: 'mzQuality is capable of recommending different internal standards by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC) of batch-corrected ratio's. Here, the internal'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] mzQuality exhaustively calculates RSDQC values of batch-corrected ratios across all internal standard candidates for each compound and identifies the internal standard yielding the lowest RSDQC as the recommended choice.: 'mzQuality is capable of recommending different internal standards by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC) of batch-corrected ratio's. Here, the internal'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Batch-corrected SummarizedExperiment object with QC sample assays and internal standard ratio data: 'Build SummarizedExperiment object from data frame with specified columns for compounds, samples, and assays'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Recommendation table (tab-delimited or CSV) with columns: compound, recommended_internal_standard, min_RSDQC: 'mzQuality is capable of recommending different internal standards by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC) of batch-corrected ratio's.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Full RSDQC matrix (tab-delimited or CSV) with compounds as rows and internal standard candidates as columns, showing RSDQC for each pair: 'an export will be made that contains the mentioned plots, tab-delimited text files for programmatic access'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'mzQuality is a user-friendly R package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mzQuality: 'mzQuality is capable of recommending different internal standards by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SummarizedExperiment: 'Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(SummarizedExperiment); library(mzQuality); se <- readRDS('{inputs.batch_corrected_experiment}'); qc_idx <- grep('QC', colData(se)$sample_type, ignore.case=TRUE); compounds <- rownames(se); int_stds <- unique(unlist(strsplit(colnames(assay(se, 'ratio_corrected')), '_'))); rsdqc_matrix <- matrix(NA, nrow=length(compounds), ncol=length(int_stds), dimnames=list(compounds, int_stds)); for(i in seq_along(compounds)) { for(j in seq_along(int_stds)) { col_pattern <- paste0(compounds[i], '_', int_stds[j]); matching_cols <- grep(col_pattern, colnames(assay(se, 'ratio_corrected')), fixed=TRUE); if(length(matching_cols) > 0) { qc_vals <- assay(se, 'ratio_corrected')[i, intersect(matching_cols, qc_idx)]; if(length(qc_vals) > 1 && !all(is.na(qc_vals))) { rsdqc_matrix[i,j] <- (sd(qc_vals, na.rm=TRUE) / mean(qc_vals, na.rm=TRUE)) * 100; } } } }; recommendation <- data.frame(compound=rownames(rsdqc_matrix), recommended_internal_standard=colnames(rsdqc_matrix)[apply(rsdqc_matrix, 1, which.min)], min_RSDQC=apply(rsdqc_matrix, 1, min, na.rm=TRUE)); write.table(recommendation, 'task_003_recommendation.tsv', sep='\\t', row.names=FALSE, quote=FALSE); write.table(rsdqc_matrix, 'task_003_rsdqc_matrix.tsv', sep='\\t', quote=FALSE);"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "internal_standard_recommendations.csv",
+  "expected_outputs": [
+    "Recommendation table (tab-delimited or CSV) with columns: compound, recommended_internal_standard, min_RSDQC",
+    "Full RSDQC matrix (tab-delimited or CSV) with compounds as rows and internal standard candidates as columns, showing RSDQC for each pair"
+  ],
+  "finding": "mzQuality exhaustively calculates RSDQC values of batch-corrected ratios across all internal standard candidates for each compound and identifies the internal standard yielding the lowest RSDQC as the recommended choice.",
+  "github_name": "hankemeierlab/mzQuality",
+  "input_from": "task_002",
+  "inputs": [
+    "task_002.expected_outputs[0]: SummarizedExperiment object with 'ratio_corrected' assay containing batch-corrected Compound/Internal Standard ratios",
+    "Batch-corrected SummarizedExperiment object with QC sample assays and internal standard ratio data"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "rsdqc_full_matrix.csv",
+    "internal_standard_recommendations.csv"
+  ],
+  "linked_result_ids": [
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Load batch-corrected SummarizedExperiment containing QC sample assays and compound/internal standard ratios.",
+    "For each compound, compute relative standard deviation (RSD) of QC sample ratios across all internal standard candidates.",
+    "Construct RSDQC matrix with compounds as rows and internal standards as columns.",
+    "Identify minimum RSDQC internal standard for each compound.",
+    "Validation: recommendation table contains all compounds with non-missing RSDQC values and internal standard assignments; RSDQC matrix is complete and consistent with recommendation selections."
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Which internal standard achieves the lowest Relative Standard Deviation of QC samples (RSDQC) for each compound when calculated across all internal standard candidates on batch-corrected data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "internal-standard-selection-optimization",
+    "batch-corrected-data-extraction",
+    "qc-sample-variability-assessment",
+    "compound-standard-ratio-normalization",
+    "metabolomics-quality-metric-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mzquality/synthesized_package",
+  "spine_condition_ids": [
+    "cond_no_secondary_assay"
+  ],
+  "spine_entity_ids": [
+    "comp_rsdqc",
+    "comp_ratio_corrected_assay",
+    "cond_no_secondary_assay",
+    "result_is_recommendation"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:hankemeierlab__mzQuality",
+  "task_description": "Extract relative standard deviation of QC samples (RSDQC) values for each compound across all internal standard candidates from a batch-corrected experiment object, and identify the internal standard achieving the lowest RSDQC per compound. Produce a recommendation table.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Batch-corrected SummarizedExperiment object",
+      "port_id": "batch_corrected_experiment",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Extract RSDQC values for all internal standard candidates per compound from batch-corrected experiment and produce a recommendation table identifying the optimal internal standard for each compound.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Internal standard recommendation table per compound",
+      "port_id": "recommendation_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Full RSDQC matrix across all compound-standard pairs",
+      "port_id": "rsdqc_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control",
+    "feature-detection",
+    "lc-ms",
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce the RSDQC-based internal standard recommendation output from the analysed experiment",
+  "tools": [
+    "R",
+    "mzQuality",
+    "SummarizedExperiment"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: SummarizedExperiment, Recommendation table (tab-delimited or CSV) with columns: compound, recommended_internal_standard, min_RSDQC, Full RSDQC matrix (tab-delimited or CSV) with compounds as rows and internal standard candidates as columns, showing RSDQC for each pair."
+  ],
+  "workflow_description": "1. Load the batch-corrected SummarizedExperiment object containing QC sample ratios (compound / internal standard) and their batch-correction metadata. 2. For each compound, iterate over all internal standard candidates and compute the relative standard deviation (RSD) of the batch-corrected QC sample ratios. 3. Tabulate RSDQC values in a matrix with compounds as rows and internal standards as columns. 4. For each compound, identify the internal standard with the minimum RSDQC value. 5. Construct and export a recommendation table listing each compound, its recommended internal standard, and the corresponding minimum RSDQC."
+}

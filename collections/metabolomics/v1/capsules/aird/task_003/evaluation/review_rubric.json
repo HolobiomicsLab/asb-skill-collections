@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists for each of four built Docker images (airdpro:cli, airdpro:dev, airdpro:linux, airdpro:windows) in local Docker daemon or registry"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "retrieve reported compressed size (in GB) for airdpro:cli image via 'docker images' or 'docker inspect' command; value_in_range [6, 7]"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "retrieve reported compressed size (in GB) for airdpro:dev image via 'docker images' or 'docker inspect' command; value_in_range [9, 11]"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "retrieve reported compressed size (in GB) for airdpro:linux image via 'docker images' or 'docker inspect' command; value_in_range [8, 10]"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "retrieve reported compressed size (in GB) for airdpro:windows image via 'docker images' or 'docker inspect' command; value_in_range [4, 5]"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists for each of four built Docker images (airdpro:cli, airdpro:dev, airdpro:linux, airdpro:windows) in local Docker daemon or registry",
+      "retrieve reported compressed size (in GB) for airdpro:cli image via 'docker images' or 'docker inspect' command; value_in_range [6, 7]",
+      "retrieve reported compressed size (in GB) for airdpro:dev image via 'docker images' or 'docker inspect' command; value_in_range [9, 11]",
+      "retrieve reported compressed size (in GB) for airdpro:linux image via 'docker images' or 'docker inspect' command; value_in_range [8, 10]",
+      "retrieve reported compressed size (in GB) for airdpro:windows image via 'docker images' or 'docker inspect' command; value_in_range [4, 5]",
+      "script_runs: docker build succeeds without error for all four image variants using Dockerfile(s) from github:CSi-Studio__AirdPro"
+    ],
+    "expert_review": [
+      "verify that reported image sizes are consistent with documented compression method and base layers (Wine, .NET Framework 4.8, ProteoWizard bindings) across all four variants",
+      "assess whether any image size falls outside its documented range and evaluate whether the discrepancy reflects a documentation error, image configuration drift, or legitimate variation in build artifact"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

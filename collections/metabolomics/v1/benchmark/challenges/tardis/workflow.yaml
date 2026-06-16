@@ -1,0 +1,299 @@
+schema_version: 0.1.0
+workflow_id: coll_tardis_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_000
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_004
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: TARDIS is an R package for targeted peak integration in LC-MS data that
+    automatically calculates area under the peak, max intensity, and quality metrics
+    for chemical compounds. The workflow demonstrates screening mode to inspect extracted
+    ion chromatograms, full peak detection to generate quantitative output tables,
+    and integration with MsExperiment objects.
+  pseudo_abstract: 'This workflow demonstrates the complete targeted analysis pipeline
+    in TARDIS for LC-MS data. Starting with a target compound list created from an
+    input file, the workflow first runs tardisPeaks() in screening mode to generate
+    diagnostic extracted ion chromatogram (EIC) plots for ten selected compounds across
+    quality control (QC) runs, allowing visual inspection of peak detection and integration
+    results. After adjusting retention time parameters based on the screening results,
+    the workflow then executes tardisPeaks() with full peak detection (screening_mode=FALSE)
+    to produce quantitative outputs: a data.frame containing per-target area-under-curve
+    (AUC) values across all runs, a QC feature table with average metrics per target,
+    and multiple CSV files reporting max intensity, signal-to-noise ratio, peak correlation,
+    and points over peak for all targets. The workflow additionally demonstrates that
+    when processing data containing multiple overlapping m/z scan windows without
+    mass_range separation, peaks display a sawtooth profile due to empty spectrum
+    filtering, and shows that tardisPeaks() accepts both file paths and MsExperiment
+    objects as input for screening mode operations.'
+  research_questions:
+  - How does the createTargetList() function filter and restructure input compound
+    data based on polarity specification to produce a correctly formatted target data.frame?
+  - Does tardisPeaks() in screening mode successfully generate and save extracted
+    ion chromatogram (EIC) plots for all 10 target compounds (5 internal standards
+    + 5 endogenous metabolites) to the diagnostic QC output folder?
+  - What quantitative metrics and output tables does tardisPeaks() generate when run
+    in peak detection mode (screening_mode=FALSE) on LC-MS data?
+  - Does the sawtooth artefact appear in extracted ion chromatogram (EIC) output when
+    tardisPeaks() is run on LC-MS data with multiple overlapping m/z scan windows
+    without proper mass_range separation?
+  - Do MsExperiment objects with annotated sampleData$type produce identical screening-mode
+    EIC diagnostic outputs compared to file-path-based invocation of tardisPeaks()?
+  methods_summary: 'Load targets file (xlsx or csv) into R environment Validate required
+    columns: compound ID, name, m/z, RT (minutes), polarity Filter rows by polarity
+    mode (positive or negative ionization) Select and standardize column order for
+    downstream tardisPeaks integration Validation: Output data.frame contains all
+    original targets (or filtered subset) with correct column names and data types;
+    no missing values in required fields References: source article (DOI: 10.1021/acs.analchem.5c00567)
+    Load 14 centroided .mzML LC-MS runs and target compound metadata (m/z, retention
+    time, polarity) into TARDIS environment. Execute tardisPeaks() with screening_mode=TRUE
+    to screen target visibility within m/z and retention time windows, applying automatic
+    polarity filtering. Generate and save 10 extracted ion chromatogram (EIC) PNG
+    plots with peak annotations to output/screening/Diagnostic_QCs_Batch_1/ folder.
+    Validation: verify that exactly 10 PNG files are generated (one per target), each
+    file exists in the specified output directory, and files are readable PNG images
+    with visible chromatographic traces and peak annotations. References: source article
+    (DOI: 10.1021/acs.analchem.5c00567) Load vignette LC-MS data in centroided .mzML
+    format using Spectra package. Apply xcms retention-time correction algorithm to
+    align targets 1577 and 1583 across runs. Execute tardisPeaks() with screening_mode=FALSE
+    to perform targeted peak detection with automatic polarity filtering. Calculate
+    area-under-curve (AUC), max intensity, signal-to-noise ratio (SNR), peak correlation
+    (peak_cor), and points-over-peak for each target in each run. Aggregate per-run
+    metrics into QC feature table tibble (average metrics per target across QC runs)
+    and export individual metric tables (AUC, Max Intensity, SNR, peak_cor, pop) as
+    CSV files. Save extracted ion chromatograms (EICs) to output directory for manual
+    quality inspection. Validation: Verify that QC feature table tibble and all per-metric
+    CSV files (AUC, Max Intensity, SNR, peak_cor, pop) are successfully written to
+    the output directory with correct structure and non-empty content matching expected
+    metric columns. References: source article (DOI: 10.1021/acs.analchem.5c00567)
+    Load centroided mzML vignette files and parse as Spectra objects. Define target
+    compound list with m/z, RT, and polarity annotations. Execute tardisPeaks() with
+    multi-window mass_range but without scan-window separation to trigger sawtooth
+    artefacts. Re-execute tardisPeaks() with correct mass_range argument routing to
+    enable scan-window segregation. Generate and compare EIC plots from both runs
+    to visualize artefact elimination. Validation: Confirm sawtooth oscillations present
+    in first EIC set and absent in second set; verify AUC and peak-shape metrics improve
+    with correct routing. References: source article (DOI: 10.1021/acs.analchem.5c00567)
+    Load vignette mzML files into a Spectra object via the Spectra package. Prepare
+    sample metadata with type labels and combine with Spectra to construct an MsExperiment
+    object. Define a target list with compound identifiers, chemical names, m/z values,
+    retention times, and ion polarity. Execute tardisPeaks() in screening mode (screening_mode=TRUE)
+    using the MsExperiment object as lcmsData to check target visibility within expected
+    m/z and RT windows. Extract and compare diagnostic EIC PNG files from MsExperiment-based
+    invocation against reference EICs from file-path-based invocation to confirm functional
+    equivalence. Validation: EIC PNG files produced by both invocation methods are
+    identical in file content and visual representation, confirming correct MsExperiment
+    integration. References: source article (DOI: 10.1021/acs.analchem.5c00567)'
+  domain: multi-omics
+  techniques:
+  - lc-ms
+  - feature-detection
+  - chromatogram-alignment
+  - quality-control
+  - spectral-library-matching
+  claims:
+  - claim_text: TARDIS automatically calculates area under the peak, max intensity
+      and various quality metrics for targeted chemical compounds in LC-MS data.
+    claim_type: finding
+    speculative: false
+    entity_id: TARDIS_system
+  - claim_text: TARDIS uses an established retention time correction algorithm from
+      the xcms package.
+    claim_type: finding
+    speculative: false
+    entity_id: TARDIS_system
+  - claim_text: TARDIS loads MS data as Spectra objects for easy integration with
+      other tools of the Rformassspectrometry initiative.
+    claim_type: finding
+    speculative: false
+    entity_id: TARDIS_system
+  - claim_text: Input files for TARDIS need to be converted to the .mzML format.
+    claim_type: finding
+    speculative: false
+    entity_id: TARDIS_system
+  - claim_text: Input files for TARDIS need to be centroided.
+    claim_type: finding
+    speculative: false
+    entity_id: TARDIS_system
+  - claim_text: Polarity filtering is done within TARDIS, so no polarity subsetting
+      has to be performed when converting the files.
+    claim_type: finding
+    speculative: false
+    entity_id: TARDIS_system
+  - claim_text: A compound ID must be present for each compound in the target data.frame.
+    claim_type: finding
+    speculative: false
+  - claim_text: A compound Name must be present for each compound in the target data.frame.
+    claim_type: finding
+    speculative: false
+  - claim_text: Theoretical or measured m/z must be present for each compound in the
+      target data.frame.
+    claim_type: finding
+    speculative: false
+  - claim_text: Expected RT in minutes must be present for each compound in the target
+      data.frame.
+    claim_type: finding
+    speculative: false
+  - claim_text: A column indicating the polarity of the formed ion must be present
+      for each compound in the target data.frame.
+    claim_type: finding
+    speculative: false
+  - claim_text: An input file can be either .xlsx or .csv format for conversion to
+      a target data.frame using createTargetList().
+    claim_type: finding
+    speculative: false
+    entity_id: comp_createTargetList
+  - claim_text: 'The vignette example has a total of 14 runs: two QC injections, followed
+      by four sample injections, two QC injections, four sample injections and two
+      QC injections.'
+    claim_type: finding
+    speculative: false
+  - claim_text: An MsExperiment object can be used as input for TARDIS instead of
+      file paths.
+    claim_type: finding
+    speculative: false
+    entity_id: TARDIS_system
+  - claim_text: The sampleData column in an MsExperiment object for TARDIS must be
+      named 'type'.
+    claim_type: finding
+    speculative: false
+    entity_id: TARDIS_system
+  - claim_text: If data contains multiple overlapping m/z scan windows, it is necessary
+      to analyze these separately through the mass_range argument.
+    claim_type: finding
+    speculative: false
+    entity_id: cond_multiple_scan_windows
+  - claim_text: If data contains multiple overlapping m/z scan windows and is not
+      analyzed separately, peaks will have a sawtooth profile due to filtering of
+      empty spectra within TARDIS.
+    claim_type: finding
+    speculative: false
+    entity_id: TARDIS_system
+  - claim_text: Screening mode can be run in TARDIS using the argument screening_mode
+      = TRUE in the tardisPeaks function.
+    claim_type: finding
+    speculative: false
+    entity_id: TARDIS_system
+  - claim_text: EICs (Extracted Ion Chromatograms) from screening mode are saved in
+      the output folder and can be inspected.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_screening_mode
+  - claim_text: Peak detection can be performed in all runs by setting screening_mode
+      = FALSE in the tardisPeaks function.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_tardisPeaks
+  - claim_text: The results object from tardisPeaks is a list that contains a data.frame
+      with the AUC of each target in each run.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_tardisPeaks
+  - claim_text: The results object from tardisPeaks contains a tibble with a feature
+      table with the average metrics for each target in the QC runs.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_tardisPeaks
+  - claim_text: 'Results from tardisPeaks include tables with metrics: Max. Int.,
+      SNR, peak_cor and points over the peak.'
+    claim_type: finding
+    speculative: false
+    entity_id: comp_tardisPeaks
+  - claim_text: Results tables from tardisPeaks are saved into the output folder.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_tardisPeaks
+  - claim_text: 'The screening mode in the vignette example was limited to 10 targets:
+      5 internal standards and 5 endogenous metabolites.'
+    claim_type: finding
+    speculative: false
+    entity_id: comp_screening_mode
+  - claim_text: In the vignette example, target 1577 eluted towards the edge of the
+      retention time window.
+    claim_type: finding
+    speculative: false
+  - claim_text: In the vignette example, target 1583 eluted towards the edge of the
+      retention time window.
+    claim_type: finding
+    speculative: false
+  - claim_text: In the vignette example, the expected retention time for target 1577
+      was adjusted to 8.82 minutes.
+    claim_type: finding
+    speculative: false
+  - claim_text: In the vignette example, the expected retention time for target 1583
+      was adjusted to 4 minutes.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - MsExperiment object can be used as input instead of file paths
+  substitution_constraints:
+  - Data with multiple overlapping m/z scan windows must be analyzed separately through
+    mass_range argument
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 10 extracted ion chromatogram (EIC) PNG plots (one per target compound) with
+    peak annotations
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: QC feature table tibble containing average metrics for each target in QC runs
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: CSV file with AUC values for each target in each run
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: CSV files with Max Intensity, SNR, peak_cor, and points over peak metrics
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Extracted Ion Chromatograms (EICs) saved in the output folder
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: EIC PNG diagnostic figures saved to output folder for visual inspection of
+    target peak detection in screening mode
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification report confirming EIC PNG files from MsExperiment-based invocation
+    match file-path-based reference invocation
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

@@ -1,0 +1,284 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "80ba092b72f7ff29c4aa8b8253038299d107ecc5219cddf4542e969981d24399"
+    }
+  ],
+  "created_at": "2026-06-15T21:24:43.431654+00:00",
+  "crossref_doi": "10.1007/s00044-016-1764-y",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LOTUS dataset deposit from Zenodo (record 3778405)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report table with counts of 3D/2D structure-organism pairs, unique structures, unique organisms, and source databases, with reported vs. actual values and differences",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "LOTUS structure-organism pairs exist in two representational tiers: referenced (raw, with multiplicity) and curated (deduplicated, validated structures), each tracked separately for 2D and 3D stereoisomer variants.",
+    "Unique organism count is derived from the union of all organisms across all structure records, aggregating across databases and structure types.",
+    "The 31 source databases are initial contributions to LOTUS and must be traceable through a source attribution or database origin column in the curated tables.",
+    "3D and 2D pair counts typically differ because 2D structures (SMILES/InChI without stereochemistry) collapse multiple stereoisomeric 3D variants into single records."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "retrieve LOTUS dataset deposit from GitHub (lotusnprod/lotus-processor) or Zenodo; verify file_exists for primary flat-file tables (structure, organism, reference)",
+      "row_count_equals for unique referenced structure-organism pairs (3D): 588,694",
+      "row_count_equals for unique referenced structure-organism pairs (2D): 484,174",
+      "row_count_equals for unique curated structures (3D): 231,330",
+      "row_count_equals for unique curated structures (2D): 153,956",
+      "row_count_equals for unique organisms: 42,166",
+      "value_in_range for source database count: 31 (or contains_substring if reported in metadata file)"
+    ],
+    "expert_review": [
+      "verify that row counts represent the correct unit of analysis (e.g., unique pairs after deduplication, not raw records)",
+      "confirm that 3D/2D distinction in structure counts is applied consistently across reported figures",
+      "assess whether reported organism count includes valid taxonomic filtering and does not double-count synonyms"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the documented headline counts of unique structure-organism pairs, curated structures, organisms, and source databases in the LOTUS dataset?: '*LOTUS* is a comprehensive collection of documented structure-organism pairs.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] The EnrichedIndex reports LOTUS contains 588,694 (3D) and 484,174 (2D) unique referenced structure-organism pairs, 231,330 (3D) and 153,956 (2D) unique curated structures, 42,166 unique organisms, and 31 source databases.: '588694 | 484174 (3D|2D) unique referenced structure-organism pairs; 231330 | 153956 (3D|2D) unique curated structures; 42166 unique organisms; 31 initial open databases'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] LOTUS dataset deposit from Zenodo (record 3778405): 'zenodo.org/record/3778405#.XsylyC1Ph0Y'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Verification report table with counts of 3D/2D structure-organism pairs, unique structures, unique organisms, and source databases, with reported vs. actual values and differences: '588694 | 484174 (3D|2D) unique referenced structure-organism pairs. They consist of 231330 | 153956 (3D|2D) unique curated structures and 42166 unique organisms, originating from 31 initial open'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'standardizing.R, 1_integrating.R, 1_cleaningOriginal.R, 4_cleaningTaxonomy.R, 5_addingOTL.R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python 3: '221[[smiles.py]], 260[[3_cleaningAndEnriching/sanitizing.py]], 280[[3_cleaningAndEnriching/stereocounting.py]]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specific file paths, accession identifiers, or DOI for the LOTUS dataset deposit are provided in the section text: 'Source: github:lotusnprod__lotus-processor'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python3",
+      "-c",
+      "import urllib.request; import zipfile; import os; import json; import pandas as pd; urllib.request.urlretrieve('https://zenodo.org/record/3778405/files/LOTUS_3778405.zip', '/tmp/lotus.zip'); zipfile.ZipFile('/tmp/lotus.zip').extractall('/tmp/lotus'); files = [f for f in os.listdir('/tmp/lotus') if f.endswith(('.csv', '.tsv', '.json'))]; print('Extracted files:', files); data_3d = {}; data_2d = {}; for f in files: (data_3d if '3D' in f or '3d' in f else data_2d)[f] = pd.read_csv(f'/tmp/lotus/{f}', sep='\\t' if f.endswith('.tsv') else ',', on_bad_lines='skip'); pairs_3d = len(data_3d[list(data_3d.keys())[0]].drop_duplicates()) if data_3d else 0; pairs_2d = len(data_2d[list(data_2d.keys())[0]].drop_duplicates()) if data_2d else 0; all_data = pd.concat([df for df in list(data_3d.values()) + list(data_2d.values())], ignore_index=True); unique_structures = len(all_data[all_data.columns[0]].unique()) if len(all_data.columns) > 0 else 0; unique_organisms = len(all_data[all_data.columns[1]].unique()) if len(all_data.columns) > 1 else 0; source_dbs = len(all_data[all_data.columns[-1]].unique()) if len(all_data.columns) > 0 else 0; report = {'3D_pairs_reported': 588694, '3D_pairs_actual': pairs_3d, '2D_pairs_reported': 484174, '2D_pairs_actual': pairs_2d, 'structures_3d_reported': 231330, 'structures_3d_actual': unique_structures, 'structures_2d_reported': 153956, 'structures_2d_actual': 0, 'unique_organisms_reported': 42166, 'unique_organisms_actual': unique_organisms, 'databases_reported': 31, 'databases_actual': source_dbs}; print(json.dumps(report, indent=2))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": "/tmp"
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "lotus_count_verification.csv",
+  "expected_outputs": [
+    "Verification report table with counts of 3D/2D structure-organism pairs, unique structures, unique organisms, and source databases, with reported vs. actual values and differences"
+  ],
+  "finding": "The EnrichedIndex reports LOTUS contains 588,694 (3D) and 484,174 (2D) unique referenced structure-organism pairs, 231,330 (3D) and 153,956 (2D) unique curated structures, 42,166 unique organisms, and 31 source databases.",
+  "github_name": "lotusnprod/lotus-processor",
+  "input_from": null,
+  "inputs": [
+    "LOTUS dataset deposit from Zenodo (record 3778405)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "3d_structure_organism_pairs.csv",
+    "2d_structure_organism_pairs.csv",
+    "unique_structures_inventory.csv",
+    "unique_organisms_list.txt",
+    "source_databases_enumeration.txt"
+  ],
+  "linked_result_ids": [
+    "result_006",
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010"
+  ],
+  "methodology_summary": [
+    "Download and extract LOTUS dataset deposit from Zenodo record 3778405.",
+    "Load 3D and 2D structure-organism pair tables into memory.",
+    "Deduplicate and count unique referenced structure-organism pairs per dimension.",
+    "Count unique curated structure identifiers and unique organism identifiers across all records.",
+    "Enumerate source database origins from metadata and verify count against 31 reported databases.",
+    "Validation: All reported counts (588,694 3D pairs, 484,174 2D pairs, 231,330 3D structures, 153,956 2D structures, 42,166 organisms, 31 databases) must match actual file-derived counts with zero absolute difference.",
+    "References: source article (DOI: 10.1007/s00044-016-1764-y)"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "No specific file paths, accession identifiers, or DOI for the LOTUS dataset deposit are provided in the section text"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the documented headline counts of unique structure-organism pairs, curated structures, organisms, and source databases in the LOTUS dataset?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "structure-organism-pair-counting-and-deduplication",
+    "database-metadata-enumeration",
+    "tsv-csv-file-parsing-and-aggregation",
+    "count-verification-against-published-values",
+    "dataset-integrity-assessment"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_lotus/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_LOTUS",
+    "ARCH_ORGANISM_SUBPIPELINE",
+    "ARCH_STRUCTURE_SUBPIPELINE",
+    "TOOL_TRANSLATING_ORGANISM_KT",
+    "DS_PHYTOCHEM_USDA",
+    "COMP_STRUCTURE_ORGANISM_PAIRS",
+    "RESULT_TOTAL_PAIRS_3D",
+    "RESULT_TOTAL_PAIRS_2D",
+    "RESULT_UNIQUE_STRUCTURES_3D",
+    "RESULT_UNIQUE_STRUCTURES_2D",
+    "RESULT_UNIQUE_ORGANISMS",
+    "RESULT_SOURCE_DATABASES",
+    "RESULT_2D_STRUCT_1_ORG",
+    "RESULT_2D_STRUCT_1_10_ORG",
+    "RESULT_2D_STRUCT_10_100_ORG",
+    "RESULT_2D_STRUCT_GT100_ORG",
+    "RESULT_ORG_1_STRUCT",
+    "RESULT_ORG_1_10_STRUCT",
+    "RESULT_ORG_10_100_STRUCT",
+    "RESULT_ORG_GT100_STRUCT"
+  ],
+  "subdomains": [
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:lotusnprod__lotus-processor",
+  "task_description": "Retrieve the LOTUS dataset deposit and verify the reported headline structure-organism pair counts: 588,694 (3D) and 484,174 (2D) unique referenced pairs, 231,330 (3D) and 153,956 (2D) unique curated structures, 42,166 unique organisms, and 31 source databases. Produce a verification report documenting actual counts against reported values.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LOTUS dataset deposit from Zenodo",
+      "port_id": "lotus_deposit",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Retrieve the published LOTUS dataset flat files and verify the reported headline counts: 588,694 (3D) and 484,174 (2D) unique referenced structure-organism pairs, 231,330 (3D) and 153,956 (2D) unique curated structures, 42,166 unique organisms, and 31 source databases.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Verification report with actual vs. reported counts",
+      "port_id": "verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quantitative-structure-activity"
+  ],
+  "title": "Reproduce the aggregate structure-organism pair statistics reported for the LOTUS dataset",
+  "tools": [
+    "R",
+    "Python 3"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Verification report table with counts of 3D/2D structure-organism pairs, unique structures, unique organisms, and source databases, with reported vs. actual values and differences."
+  ],
+  "workflow_description": "1. Download the LOTUS dataset deposit from Zenodo (record 3778405) and extract the curated structure-organism tables in TSV or CSV format. 2. Load the 3D and 2D structure-organism pair files using R or Python and count unique referenced (raw) structure-organism pairs by grouping on structure identifier and organism identifier columns. 3. Count unique curated structure identifiers across the 3D and 2D datasets separately by deduplicating the structure ID field. 4. Count unique organism identifiers across all structure-organism records to obtain the organism total. 5. Enumerate the source database identifiers present in the dataset metadata or source attribution columns to verify the count of 31 initial databases. 6. Compile all counts into a verification table and compare against the reported values with absolute and relative difference columns."
+}

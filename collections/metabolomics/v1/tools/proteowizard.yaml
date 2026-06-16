@@ -2,9 +2,14 @@ name: ProteoWizard
 slug: proteowizard
 evidence_spans:
 - pwiz_bindings_cli.dll from the ProteoWizard project
+- MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF
+- uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
+- doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
 source_repos:
 - CSi-Studio/AirdPro
+- ablab/npdtools
 schema_version: 0.2.0

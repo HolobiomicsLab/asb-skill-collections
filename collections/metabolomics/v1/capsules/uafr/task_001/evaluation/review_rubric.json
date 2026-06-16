@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file standard_data.csv exists in github:castratton__uafR repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify mzExacto() function is defined and callable in the uafR R package from github:castratton__uafR"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output of mzExacto(standard_data.csv, query_chemicals=COND-known-chemicals-explicit) is a single dataframe"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify dataframe contains columns for m/z, retention time, match factor, and area (exact column names must be confirmed against article/code)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify dataframe row for Ethyl hexanoate contains m/z value matching article-reported value"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify dataframe row for Methyl salicylate contains retention time value matching article-reported value"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify dataframe row for Octanal contains match factor value matching article-reported value"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify dataframe row for Undecane contains area value matching article-reported value"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file standard_data.csv exists in github:castratton__uafR repository",
+      "verify mzExacto() function is defined and callable in the uafR R package from github:castratton__uafR",
+      "verify output of mzExacto(standard_data.csv, query_chemicals=COND-known-chemicals-explicit) is a single dataframe",
+      "verify dataframe contains columns for m/z, retention time, match factor, and area (exact column names must be confirmed against article/code)",
+      "verify dataframe row for Ethyl hexanoate contains m/z value matching article-reported value",
+      "verify dataframe row for Methyl salicylate contains retention time value matching article-reported value",
+      "verify dataframe row for Octanal contains match factor value matching article-reported value",
+      "verify dataframe row for Undecane contains area value matching article-reported value"
+    ],
+    "expert_review": [
+      "confirm that the four compounds (Ethyl hexanoate, Methyl salicylate, Octanal, Undecane) are present in COND-known-chemicals-explicit input list and are chemically appropriate test cases for mzExacto()",
+      "confirm that reported m/z, retention time, match factor, and area values in article represent the correct expected outputs for these compounds under the stated input conditions",
+      "assess whether mzExacto() function behavior and return structure align with the documented intent in the methods section"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

@@ -1,0 +1,252 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "80ba092b72f7ff29c4aa8b8253038299d107ecc5219cddf4542e969981d24399"
+    }
+  ],
+  "created_at": "2026-06-15T21:24:43.431654+00:00",
+  "crossref_doi": "10.1007/s00044-016-1764-y",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Cleaned organism table (interim/tables/2_cleaned/organism/cleaned.tsv.gz) containing standardized and verified organism names",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "OTL-enriched organism dictionary in SQLite format (interim/dictionaries/organism/otl.sqlite)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "The Open Tree of Life (OTL) is a standardized taxonomic resource that provides stable identifiers for organisms; mapping cleaned organism names to OTL requires fuzzy matching and validation strategies to handle nomenclatural variation.",
+    "OTL identifiers serve as canonical references for downstream taxonomic and phylogenetic analyses, enabling cross-dataset organism reconciliation.",
+    "The cleaned organism table has already passed verification steps (4_cleaningTaxonomy.R) and contains verified organism records suitable for OTL mapping.",
+    "OTL enrichment produces both a SQLite dictionary for efficient lookup and potentially tabular outputs (.tsv.gz) for integration with the main curated data table."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file interim/tables/2_cleaned/organism/cleaned.tsv.gz exists in lotusnprod/lotus-processor repository",
+      "verify file 5_addingOTL.R exists in lotusnprod/lotus-processor repository",
+      "verify script 5_addingOTL.R runs without error when executed with R, using interim/tables/2_cleaned/organism/cleaned.tsv.gz as input",
+      "verify at least one output file matching pattern interim/dictionaries/organism/*.tsv is produced after script execution",
+      "verify output file(s) in interim/dictionaries/organism/ are in TSV format (tab-separated values, .tsv extension)",
+      "verify output TSV file(s) contain at least two columns: one for organism identifiers and one for Open Tree of Life identifiers, robust to column naming conventions"
+    ],
+    "expert_review": [
+      "assess whether Open Tree of Life identifier mappings in output dictionary are semantically correct for a representative sample of organism entries",
+      "assess whether the script appropriately handles missing or ambiguous organism names in the cleaned input table"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the 5_addingOTL.R script enrich cleaned organism names with Open Tree of Life identifiers?: '5_addingOTL.R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The 5_addingOTL.R script processes the cleaned organism table (interim/tables/2_cleaned/organism/cleaned.tsv.gz) to map organism names to Open Tree of Life identifiers, producing an OTL-enriched organism dictionary output in interim/dictionaries/organism/.: 'R\n- Python 3\n- Java >= 17'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Cleaned organism table (interim/tables/2_cleaned/organism/cleaned.tsv.gz) containing standardized and verified organism names: '122([interim/tables/2_cleaned/organism/cleaned.tsv.gz]) --> 123[[5_addingOTL.R]]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] OTL-enriched organism dictionary in SQLite format (interim/dictionaries/organism/otl.sqlite): '123[[5_addingOTL.R]] --> 124([interim/dictionaries/organism/otl.sqlite])'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: '5_addingOTL.R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "source('5_addingOTL.R'); processOTLEnrichment('{inputs.cleaned_organism_table}', 'interim/dictionaries/organism/otl.sqlite')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "otl.sqlite",
+  "expected_outputs": [
+    "OTL-enriched organism dictionary in SQLite format (interim/dictionaries/organism/otl.sqlite)"
+  ],
+  "finding": "The 5_addingOTL.R script processes the cleaned organism table (interim/tables/2_cleaned/organism/cleaned.tsv.gz) to map organism names to Open Tree of Life identifiers, producing an OTL-enriched organism dictionary output in interim/dictionaries/organism/.",
+  "github_name": "lotusnprod/lotus-processor",
+  "input_from": "task_002",
+  "inputs": [
+    "Cleaned organism table (interim/tables/2_cleaned/organism/cleaned.tsv.gz) containing standardized and verified organism names"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "interim/dictionaries/organism/otl.sqlite"
+  ],
+  "linked_result_ids": [
+    "result_008",
+    "result_009"
+  ],
+  "methodology_summary": [
+    "Load the cleaned and taxonomy-verified organism table from interim/tables/2_cleaned/organism/cleaned.tsv.gz.",
+    "Apply OTL name-to-identifier mapping using fuzzy matching and validation heuristics to assign stable taxonomic identifiers to each organism record.",
+    "Enrich organism records with OTL metadata (identifiers, taxonomic ranks, synonyms, hierarchy).",
+    "Write the enriched dictionary to interim/dictionaries/organism/otl.sqlite for indexed lookup and validation.",
+    "Validation: Verify that all records in the cleaned organism table receive OTL identifiers and that the SQLite file is syntactically correct and queryable.",
+    "References: source article (DOI: 10.1007/s00044-016-1764-y)"
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/binned_distribution"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the 5_addingOTL.R script enrich cleaned organism names with Open Tree of Life identifiers?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "organism-taxonomy-mapping",
+    "otl-identifier-assignment",
+    "organism-dictionary-enrichment",
+    "taxonomic-metadata-integration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_lotus/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_LOTUS",
+    "ARCH_ORGANISM_SUBPIPELINE",
+    "TOOL_TRANSLATING_ORGANISM_KT",
+    "TOOL_ADDING_OTL_R",
+    "TOOL_NAMES_R",
+    "DS_PLATINUM",
+    "DS_OTL",
+    "COMP_STRUCTURE_ORGANISM_PAIRS",
+    "RESULT_TOTAL_PAIRS_3D",
+    "RESULT_TOTAL_PAIRS_2D",
+    "RESULT_2D_STRUCT_1_ORG"
+  ],
+  "subdomains": [
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:lotusnprod__lotus-processor",
+  "task_description": "Execute the 5_addingOTL.R script on the cleaned organism table to enrich organism records with Open Tree of Life (OTL) identifiers and produce the OTL-enhanced organism dictionary.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cleaned organism table with standardized names and taxonomy verification",
+      "port_id": "cleaned_organism_table",
+      "resolved_via": null,
+      "source": "task_002/binned_distribution",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute 5_addingOTL.R on the cleaned organism table to generate OTL-enriched organism dictionary files with Open Tree of Life identifiers.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "OTL-enriched organism dictionary with taxonomic identifiers",
+      "port_id": "otl_organism_dictionary",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quantitative-structure-activity"
+  ],
+  "title": "Reconstruct the organism taxonomy enrichment step via Open Tree of Life integration",
+  "tools": [
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: OTL-enriched organism dictionary in SQLite format (interim/dictionaries/organism/otl.sqlite)."
+  ],
+  "workflow_description": "1. Load the cleaned organism table from interim/tables/2_cleaned/organism/cleaned.tsv.gz. 2. Execute 5_addingOTL.R to map cleaned organism names to OTL taxonomic identifiers and annotations. 3. Write the enriched organism dictionary to interim/dictionaries/organism/otl.sqlite and associated output files (.tsv.gz format)."
+}

@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that implementation includes a Projection module that processes 512-D encoder outputs"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that implementation includes a Prediction module that processes 512-D encoder outputs"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that contrastive loss function is implemented and applied to encoder outputs"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that contrastive loss computes similarity between augmented pairs from the same original ion image"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the combined Projection + Prediction architecture prevents dimensional collapse in learned representations (parameter-sensitive: requires inspection of loss trajectory and final representation statistics)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that implementation includes a Projection module that processes 512-D encoder outputs",
+      "verify that implementation includes a Prediction module that processes 512-D encoder outputs",
+      "verify that contrastive loss function is implemented and applied to encoder outputs",
+      "verify that contrastive loss computes similarity between augmented pairs from the same original ion image",
+      "verify that the combined Projection + Prediction architecture prevents dimensional collapse in learned representations (parameter-sensitive: requires inspection of loss trajectory and final representation statistics)",
+      "script_runs: execute the Projection and Prediction modules on sample 512-D vectors and confirm no runtime errors",
+      "script_runs: execute the contrastive loss computation on paired augmented representations and confirm output is a scalar loss value"
+    ],
+    "expert_review": [
+      "assess whether the Projection and Prediction module architecture design follows established contrastive learning best practices (e.g., SimCLR, BYOL) to avoid solution collapse",
+      "assess whether the contrastive loss formulation (e.g., NT-Xent, cosine similarity weighting) is appropriate for ion image representation learning",
+      "assess whether the integration of Projection and Prediction modules with the ResNet18 encoder outputs is mathematically and computationally sound"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

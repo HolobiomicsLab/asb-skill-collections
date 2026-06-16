@@ -1,0 +1,318 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "6b8e6cf2eaeb2714f91803ea40d914d80213565f7960e27eac29f9d592f63fab"
+    }
+  ],
+  "created_at": "2026-06-15T21:14:33.527412+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "domainMASSTs repository README file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured inventory of standalone web applications with live URLs and publication links",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "The domainMASSTs project comprises six complementary web applications (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST) developed in the Dorrestein Lab at UC San Diego for domain-specific mass spectrometry library searching.",
+    "Each standalone web application is independently deployed and accessible via a live URL; these applications allow single-spectrum queries against curated spectral libraries.",
+    "metadataMASST serves an aggregation and visualization role for multi-application search outputs, distinct from the domain-specific query tools.",
+    "The authoritative source code repository is hosted on GitHub under GNPS_MASST (github.com/mwang87/GNPS_MASST) and archived on Zenodo (DOI: 10.5281/zenodo.492844724).",
+    "README documentation in the repository should explicitly list each application's deployed URL and any associated peer-reviewed publications describing methods or validation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file README.md exists in github.com/robinschmid/microbe_masst repository",
+      "verify file README.md exists in the domainMASSTs repository (github.com/mwang87/GNPS_MASST or equivalent root repo)",
+      "extract from README.md a structured table or list containing columns: [application_name, live_url, publication_link]; row_count_equals 6 (one per tool: microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST)",
+      "field_present: each row must have non-empty application_name matching one of the six known tool names",
+      "field_present: each row must have live_url field with a valid URL format (http:// or https://)",
+      "field_present: each row must have publication_link field (may be empty if tool is not yet published, but field structure must be present)",
+      "verify that all six application names appear exactly once in the extracted table \u2014 no duplicates, no missing entries",
+      "robust to whitespace/formatting variations in README rendering across git platforms"
+    ],
+    "expert_review": [
+      "verify that each live_url actually resolves and serves the advertised web application (human or automated browser check required)",
+      "verify that each publication_link (where provided) is a valid and active DOI, PubMed ID, or persistent URL",
+      "confirm that the table/list structure in README.md is the canonical, current, and complete inventory of domainMASSTs tools \u2014 no tools listed elsewhere in README should be missing"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the complete set of domain-specific MASST standalone web applications, their live URLs, and their associated publications as documented in the domainMASSTs repository?: 'Standalone Web Apps:\n1. [microbeMASST](https://masst.gnps2.org/microbemasst/)\n2. [plantMASST](https://masst.gnps2.org/plantmasst/)\n3. [tissueMASST](https://masst.gnps2.org/tissuemasst/)\n4.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Six domain-specific MASST web applications are available: microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, and metadataMASST, each with documented live URLs and associated peer-reviewed or preprint publications.: 'Publications associated with the search tools:\n1. [microbeMASST - Nature Microbiology](https://www.nature.com/articles/s41564-023-01575-9)\n2. [plantMASST -'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] domainMASSTs repository README file: 'This repository contains the code and data for the different domain-specific MASSTs currently under development in the Dorrestein Lab at UC San Diego'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Structured inventory of standalone web applications with live URLs and publication links: 'standalone web applications, which allow users to search one spectrum at a time'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] microbeMASST: 'microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] plantMASST: 'microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] tissueMASST: 'microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] microbiomeMASST: 'microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] foodMASST: 'microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] metadataMASST: 'Aggregated search outputs can be generated and visualized using metadataMASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] GNPS_MASST: 'The code for the different standalone web applications, which allow users to search one spectrum at a time, can be found in GNPS_MASST'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is documented: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The section text does not contain the README content or any URLs for the six applications: '[UNTRUSTED_DOCUMENT] ... _No changelog found._ ... [/UNTRUSTED_DOCUMENT]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "grep",
+      "-E",
+      "(microbeMASST|plantMASST|tissueMASST|microbiomeMASST|foodMASST|metadataMASST|http)",
+      "{inputs.readme_file}"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 30,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "masst_applications_inventory.csv",
+  "expected_outputs": [
+    "Structured inventory of standalone web applications with live URLs and publication links"
+  ],
+  "finding": "Six domain-specific MASST web applications are available: microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, and metadataMASST, each with documented live URLs and associated peer-reviewed or preprint publications.",
+  "github_name": "mwang87/GNPS_MASST",
+  "input_from": null,
+  "inputs": [
+    "domainMASSTs repository README file"
+  ],
+  "keywords": [
+    "mass spectrometry spectral search",
+    "domain-specific search tools",
+    "microbe identification",
+    "plant metabolomics",
+    "tissue analysis",
+    "microbiome profiling",
+    "food analysis",
+    "metadata aggregation",
+    "untargeted metabolomics",
+    "spectral library matching"
+  ],
+  "landmark_outputs": [
+    "readme_extracted_text.txt",
+    "application_urls_raw.json"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Retrieve the domainMASSTs repository from Zenodo or GitHub source",
+    "Parse the README file to locate documented standalone web applications",
+    "Extract application names, live URLs, and publication metadata",
+    "Validate URL accessibility for each application",
+    "Compile structured inventory with verification status",
+    "Validation: Confirm all six applications (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST) are present in the inventory with accessible URLs and documented publication links where available"
+  ],
+  "missing_information": [
+    "No changelog or version history is documented",
+    "The section text does not contain the README content or any URLs for the six applications"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the complete set of domain-specific MASST standalone web applications, their live URLs, and their associated publications as documented in the domainMASSTs repository?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "repository-metadata-extraction",
+    "web-application-documentation-mining",
+    "url-validation-and-accessibility-verification",
+    "structured-data-compilation-from-readme",
+    "cross-reference-publication-linking"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_microbemasst/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "domainMASST_system",
+    "microbeMASST",
+    "plantMASST",
+    "tissueMASST",
+    "microbiomeMASST",
+    "foodMASST",
+    "metadataMASST",
+    "GNPS_MASST_tool"
+  ],
+  "subdomains": [
+    "microbiome-metabolomics",
+    "plant-metabolomics",
+    "foodomics"
+  ],
+  "subtask_categories": [
+    "information-extraction",
+    "data-processing"
+  ],
+  "synthesized_from": "github:robinschmid__microbe_masst",
+  "task_description": "Extract and verify the complete list of standalone web applications (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST) from the domainMASSTs repository README, documenting their live URLs and associated publication links.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "domainMASSTs repository README",
+      "port_id": "readme_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Compile and verify the registry of all six domain-specific MASST web applications with their canonical URLs and linked publication DOIs.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structured inventory of standalone web applications with URLs and publication links",
+      "port_id": "application_inventory",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "spectral-library-matching",
+    "database-annotation",
+    "cosine-similarity-scoring"
+  ],
+  "title": "Reproduce the enumeration of domain-specific MASST components and their published URLs from the repository README",
+  "tools": [
+    "microbeMASST",
+    "plantMASST",
+    "tissueMASST",
+    "microbiomeMASST",
+    "foodMASST",
+    "metadataMASST",
+    "GNPS_MASST"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST, Structured inventory of standalone web applications with live URLs and publication links."
+  ],
+  "workflow_description": "1. Clone or retrieve the domainMASSTs repository from the Zenodo deposit (10.5281/zenodo.492844724) or GitHub source (github.com/mwang87/GNPS_MASST). 2. Locate and parse the README file to identify all documented standalone web applications and their metadata. 3. Extract the live URL for each application (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST) and any associated peer-reviewed publication links. 4. Validate that each URL is accessible and responds correctly. 5. Compile extracted data into a structured inventory file (CSV or JSON) with columns for application name, live URL, publication DOI/link, and verification status."
+}

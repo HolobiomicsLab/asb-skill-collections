@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file CTCF_ChIP_200K.bed.gz exists in github:macs3-project__MACS/test directory"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file CTCF_Control_200K.bed.gz exists in github:macs3-project__MACS/test directory"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "pileup BEDGRAPH output file with format .bdg"
+    },
+    {
+      "id": "pf_007",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_008",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "local_lambda.bdg"
+    },
+    {
+      "id": "pf_009",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "p-value or q-value score BEDGRAPH file in output directory"
+    },
+    {
+      "id": "pf_010",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_011",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_012",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "all output BEDGRAPH files conform to BEDGRAPH specification (chromosome, start, "
+    },
+    {
+      "id": "pf_013",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "pileup BEDGRAPH is non-empty (at least one data row beyond header)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file CTCF_ChIP_200K.bed.gz exists in github:macs3-project__MACS/test directory",
+      "verify file CTCF_Control_200K.bed.gz exists in github:macs3-project__MACS/test directory",
+      "script_runs: macs3 filterdup on CTCF_ChIP_200K.bed.gz and CTCF_Control_200K.bed.gz without error",
+      "script_runs: macs3 predictd on filtered ChIP file without error",
+      "script_runs: macs3 pileup on filtered ChIP file with fragment length parameter without error",
+      "file_exists: pileup BEDGRAPH output file with format .bdg",
+      "script_runs: macs3 bdgcmp comparing pileup BEDGRAPH and control lambda track without error",
+      "file_exists: local_lambda.bdg file in output directory",
+      "file_exists: p-value or q-value score BEDGRAPH file in output directory",
+      "script_runs: macs3 bdgopt on score BEDGRAPH without error",
+      "script_runs: macs3 bdgpeakcall on optimized score track without error",
+      "file_format_is: all output BEDGRAPH files conform to BEDGRAPH specification (chromosome, start, end, value columns)",
+      "row_count_equals: pileup BEDGRAPH is non-empty (at least one data row beyond header)"
+    ],
+    "expert_review": [
+      "pileup BEDGRAPH coverage values are realistic for ChIP-Seq signal (positive, reasonable magnitude relative to sequencing depth)",
+      "local_lambda.bdg background estimates are appropriate and smaller than or comparable to ChIP pileup signal in non-peak regions",
+      "p/q-value score BEDGRAPH shows expected statistical enrichment pattern (higher scores at true peak regions, lower in background)",
+      "peak calls from bdgpeakcall output align with known or expected CTCF binding sites based on CTCF tutorial dataset documentation"
+    ]
+  },
+  "max_score": 13.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

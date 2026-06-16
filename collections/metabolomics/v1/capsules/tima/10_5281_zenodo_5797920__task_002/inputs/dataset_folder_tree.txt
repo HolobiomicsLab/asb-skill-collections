@@ -1,0 +1,21 @@
+  figures/apple-touch-icon-120x120.png
+  figures/apple-touch-icon-152x152.png
+  figures/apple-touch-icon-180x180.png
+  figures/apple-touch-icon-60x60.png
+  figures/apple-touch-icon-76x76.png
+  figures/apple-touch-icon.png
+  figures/benchmark_comparison_neg.svg
+  figures/favicon-16x16.png
+  figures/favicon-32x32.png
+  figures/inst-001_.png
+  figures/lifecycle-archived.svg
+  figures/lifecycle-defunct.svg
+  figures/lifecycle-deprecated.svg
+  figures/lifecycle-experimental.svg
+  figures/lifecycle-maturing.svg
+  figures/lifecycle-questioning.svg
+  figures/lifecycle-stable.svg
+  figures/lifecycle-superseded.svg
+  figures/logo.svg
+  figures/tima.svg
+paper.md

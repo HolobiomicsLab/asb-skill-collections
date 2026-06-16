@@ -1,0 +1,467 @@
+schema_version: 0.1.0
+workflow_id: coll_asari_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: concrete
+  orchestration_planning: dynamic
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: Asari is a transparent, scalable Python program for high-resolution LC-MS
+    metabolomics data processing that prioritizes mass separation and alignment, performs
+    peak detection on composite maps rather than individual samples, and enables reproducible
+    tracking between features and mass tracks.
+  pseudo_abstract: Asari implements a complete LC-MS metabolomics preprocessing workflow
+    centered on high mass resolution and composite mass track construction. The pipeline
+    extracts mass tracks from centroided mzML files, aligns them across samples into
+    a MassGrid using either pairwise landmark-based or clustering-based approaches
+    depending on study size, calibrates retention time via LOWESS regression on high-confidence
+    anchor peaks, and constructs composite mass tracks by summing aligned signals
+    across samples. Peak detection is performed once on composite tracks using scipy.signal.find_peaks
+    with dynamically determined prominence thresholds, rather than repeatedly on individual
+    samples, and detected peaks are mapped back to individual samples for quantification.
+    The resulting features are annotated through isotope and adduct grouping and database
+    matching. Asari is designed for reproducibility through JSON-centric data structures
+    that enable tracking between features and extracted ion chromatograms, and for
+    scalability through performance-conscious memory and CPU management suitable for
+    processing >1000 samples on standard hardware.
+  research_questions:
+  - Does the asari pipeline successfully produce all five canonical output artifacts
+    (preferred_Feature_table.tsv, full_Feature_table.tsv, _mass_grid_mapping.csv,
+    cmap.pickle, and Annotated_empiricalCompounds.json) when executed on a publicly
+    deposited centroided mzML dataset?
+  - How does performing peak detection on a single composite map rather than on individual
+    samples improve computational efficiency in metabolomics data processing?
+  - How does asari determine which mass alignment algorithm to apply based on study
+    size?
+  - How does the peak quality filtering mechanism using SNR (>2), peak shape goodness-of-fit,
+    and minimum peak height (default 1e5 with >20% prominence) thresholds reduce the
+    number of detected features in the feature table?
+  - How does asari's computational performance (wall-clock time and peak memory usage)
+    scale with increasing numbers of LC-MS samples?
+  methods_summary: "Parse mzML files and extract MS1 spectra indexed by binned m/z\
+    \ (0.001 amu) to form mzTree. Construct mass tracks per sample by grouping m/z\
+    \ values within 2\xD7 ppm tolerance (5 ppm default) and applying nearest-neighbor\
+    \ clustering where needed; establish anchor tracks via isotope/adduct patterns.\
+    \ Align mass tracks across samples via pairwise anchor-first matching (\u2264\
+    10 samples) or centroid-based clustering (>10 samples) to form a MassGrid; recalibrate\
+    \ m/z if systematic offset exceeds 1 ppm. Calibrate retention time per sample\
+    \ by identifying landmark peaks (mSelectivity >0.99, prominence >20% height) and\
+    \ fitting LOWESS regression to reference sample, storing scan-number mappings\
+    \ in rt_cal_dict. Assemble composite mass tracks by summing RT-aligned intensities\
+    \ across samples; detect elution peaks using local maxima with adaptive prominence\
+    \ and noise-based filtering; evaluate peaks for peakshape and SNR. Map detected\
+    \ features back to individual samples using RT calibration dictionaries; extract\
+    \ and report peak areas and intensities. Perform pre-annotation via khipu to group\
+    \ features into empirical compounds by isotope/adduct relationships; search against\
+    \ HMDB 4 via JMS to obtain formula and isomer matches. Validation: verify existence\
+    \ and format of canonical outputs (preferred_Feature_table.tsv, full_Feature_table.tsv,\
+    \ _mass_grid_mapping.csv, cmap.pickle, epd.pickle, Annotated_empiricalCompounds.json)\
+    \ and confirm row/record counts are non-empty and consistent across tables. References:\
+    \ source article (DOI: 10.1038/s41467-023-39889-1) Synchronize all sample mass\
+    \ tracks to reference retention-time coordinates using pre-computed rt_cal_dict\
+    \ mappings. Sum aligned intensity arrays element-wise across samples for each\
+    \ m/z, creating composite mass tracks of consistent length. Audit each composite\
+    \ track: rescale if ceiling exceeded, detect low-intensity baseline/noise, detrend\
+    \ if high-signal-high-noise, apply adaptive smoothing. Subtract baseline+noise\
+    \ filter to isolate positive-intensity regions and segment the track. Apply scipy.signal.find_peaks\
+    \ with dynamic prominence control (max of three criteria) on each segment to detect\
+    \ local maxima. Evaluate peaks for gaussian fit quality (goodness_fitting), chromatographic\
+    \ selectivity (cSelectivity), and SNR, filtering by SNR > 2 threshold. Validation:\
+    \ verify peak detection is called exactly once per composite track (not per sample)\
+    \ and all reported peaks contain cSelectivity, SNR, and goodness_fitting metrics.\
+    \ References: source article (DOI: 10.1038/s41467-023-39889-1) Determine alignment\
+    \ strategy by evaluating sample count: if \u226410, use pairwise anchor-prioritized\
+    \ alignment; else use nearest-neighbor clustering. Identify reference sample as\
+    \ the sample with the highest count of anchor mass tracks (isotopic/adduct pairs).\
+    \ For small studies, align anchor mass tracks first between each sample and the\
+    \ reference, then recalibrate all m/z values if systematic shift exceeds 1 ppm,\
+    \ then align remaining tracks. For large studies, apply nearest-neighbor clustering\
+    \ to bin mass tracks by m/z difference, using histogram-based m/z seed detection\
+    \ with peaks separated by at least mz_tolerance. Compute consensus m/z for each\
+    \ aligned bin as the mean of median m/z and m/z at highest intensity. Validation:\
+    \ _mass_grid_mapping.csv is produced with all samples represented, consensus m/z\
+    \ values are numeric and within instrument ppm tolerance, and pairwise/clustering\
+    \ dispatching is correctly applied based on sample count threshold (\u226410 vs\
+    \ >10). References: source article (DOI: 10.1038/s41467-023-39889-1) Load full\
+    \ peak list from composite track detection with SNR, peakshape, peak height, and\
+    \ prominence annotations. Filter peaks by SNR > 2 to retain sufficient signal-to-noise\
+    \ measurements. Filter peaks by goodness_fitting > 0.5 using gaussian peak evaluation\
+    \ to select well-shaped peaks. Filter peaks by minimum peak height (1e5) AND prominence\
+    \ \u226520% of peak height to eliminate low-signal and poorly prominent peaks.\
+    \ Map retained peaks back to individual samples via RT alignment dictionaries\
+    \ and extract sample-specific peak areas. Compile filtered feature table with\
+    \ quantitative intensity values per sample. Validation: verify that row count\
+    \ in preferred_Feature_table.tsv is less than full_Feature_table.tsv and that\
+    \ all retained peaks meet the four thresholds (SNR > 2, peakshape > 0.5, height\
+    \ \u2265 1e5, prominence \u2265 20% height). References: source article (DOI:\
+    \ 10.1038/s41467-023-39889-1) Retrieve or construct public mzML test datasets\
+    \ at three scale points: 10, 50, and 100+ samples. Install asari from PyPI (pip\
+    \ install asari-metabolomics) using default configuration (5 ppm tolerance, positive\
+    \ mode). Execute asari process on each cohort using a system profiler (time, psutil,\
+    \ or Linux /usr/bin/time -v) to capture wall-clock duration and peak memory. Repeat\
+    \ each run 2\u20133 times and calculate mean, standard deviation, and throughput\
+    \ (samples/hour) per cohort. Plot wall-clock time and peak memory as functions\
+    \ of sample count; visually assess linearity and extrapolate to 1000-sample scenario.\
+    \ Validation: confirm that observed scaling behaviour supports or refutes the\
+    \ >1000-samples-on-laptop claim by verifying that extrapolated runtime for 1000\
+    \ samples remains <24 hours on a single CPU core with \u226416 GB peak memory.\
+    \ References: source article (DOI: 10.1038/s41467-023-39889-1)"
+  domain: metabolomics
+  techniques:
+  - lc-ms
+  - feature-detection
+  - chromatogram-alignment
+  - quality-control
+  - database-annotation
+  claims:
+  - claim_text: Asari is a trackable and scalable Python program for high-resolution
+      metabolomics data processing.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: Asari performs peak detection on a composite map instead of repeated
+      on individual samples.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: Asari uses statistics guided peak detection based on local maxima
+      and prominence with selective use of smoothing.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: 'LC-MS application of Asari was described in Li et al. Nature Communications
+      14.1 (2023): 4113.'
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: GC-MS workflow was added to Asari in version 1.16.6.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: A web server for Asari is available at https://asari.app.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: Mass tracks of unique m/z values are extracted from each mzML data
+      file, then aligned into a MassGrid.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MASSGRID
+  - claim_text: Retention time is calibrated for each sample to a common reference
+      sample.
+    claim_type: finding
+    speculative: false
+  - claim_text: For each m/z value, corresponding mass tracks from all sample files
+      are summarized into one composite mass track.
+    claim_type: finding
+    speculative: false
+  - claim_text: Peak detection is performed on the composite mass tracks to generate
+      a feature list for the experiment.
+    claim_type: finding
+    speculative: false
+  - claim_text: The features are mapped back to each sample to extract peak area as
+      intensity values.
+    claim_type: finding
+    speculative: false
+  - claim_text: Asari's approach of MassGrid and composite mass tracks is highly scalable.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: In LC-MS metabolomics, a feature is defined by m/z and retention time
+      across one experiment.
+    claim_type: finding
+    speculative: false
+  - claim_text: Asari uses 'empirical compound' to group degenerate features into
+      a tentative compound/metabolite.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: M/z values in data are indexed to a dictionary by int(mz * 1000) for
+      efficiency retrieval.
+    claim_type: finding
+    speculative: false
+  - claim_text: Each data bin has a m/z range around 0.001.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MZTREE
+  - claim_text: If the m/z range in a data bin is within 2 x tolerance ppm, the bin
+      leads to a single mass track.
+    claim_type: finding
+    speculative: false
+  - claim_text: A consensus m/z value is taken as the mean of median m/z and the m/z
+      at highest intensity.
+    claim_type: finding
+    speculative: false
+  - claim_text: When multiple data points exist in the same scan on the same mass
+      track, max intensity is used.
+    claim_type: finding
+    speculative: false
+  - claim_text: The sample with the highest number of anchor mass tracks is designated
+      as the reference sample.
+    claim_type: finding
+    speculative: false
+    entity_id: ALG_ANCHOR_TRACKS
+  - claim_text: If the sample number is no more than 10, this is considered a small
+      study and pairwise alignment is performed.
+    claim_type: finding
+    speculative: false
+    entity_id: COND_SMALL_STUDY
+  - claim_text: The default systematic m/z difference threshold for recalibration
+      is 1 ppm.
+    claim_type: finding
+    speculative: false
+  - claim_text: 'A set of landmark elution peaks are determined in the reference sample
+      by the criterion: mSelectivity > 0.99.'
+    claim_type: finding
+    speculative: false
+    entity_id: ALG_LANDMARK_PEAKS
+  - claim_text: The default min_peak_height for landmark peaks is 1e5.
+    claim_type: finding
+    speculative: false
+    entity_id: METRIC_MSELECTIVITY
+  - claim_text: Landmark peak prominence must be greater than 20% of peak height.
+    claim_type: finding
+    speculative: false
+  - claim_text: LOWESS regression is used to obtain a function describing the relationship
+      of RT values between good_landmark_peaks and selected_reference_landmark_peaks.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_LOWESS
+  - claim_text: A 10% extension out of both ends is added as boundaries for LOWESS
+      regression convergence.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_LOWESS
+  - claim_text: Composite mass tracks sum intensity values on corresponding mass tracks
+      across all samples after RT calibration.
+    claim_type: finding
+    speculative: false
+  - claim_text: Asari detects an elution peak only once on the composite mass tracks
+      instead of in every sample.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: If the max intensity of a mass track is higher than 1E8, the mass
+      track is rescaled under 1E8 for peak detection.
+    claim_type: finding
+    speculative: false
+  - claim_text: The default min_intensity_threshold for low-intensity tracks is 1e3
+      for Orbitrap data.
+    claim_type: finding
+    speculative: false
+    entity_id: PARAM_MIN_INTENSITY_THRESHOLD
+  - claim_text: The default min_peak_height for Orbitrap data is 1e5.
+    claim_type: finding
+    speculative: false
+    entity_id: PARAM_MIN_PEAK_HEIGHT
+  - claim_text: Smoothing is applied when the noise level is higher than 1% of max
+      intensity and max intensity is lower than 10 times of the preset min_peak_height.
+    claim_type: finding
+    speculative: false
+    entity_id: PARAM_MIN_PEAK_HEIGHT
+  - claim_text: The initial prominence value for peak detection is 1/3 of min_peak_height.
+    claim_type: finding
+    speculative: false
+    entity_id: PARAM_MIN_PEAK_HEIGHT
+  - claim_text: For high-intensity and high-noise segments, prominence is set as the
+      greater of prominence and 5% of max intensity.
+    claim_type: finding
+    speculative: false
+  - claim_text: The default sliding window size for prominence computation is 25 scans.
+    claim_type: finding
+    speculative: false
+  - claim_text: The default SNR threshold for peaks is greater than 2.
+    claim_type: finding
+    speculative: false
+  - claim_text: The default peakshape threshold for peaks is greater than 0.5.
+    claim_type: finding
+    speculative: false
+  - claim_text: The recommended feature table output by Asari is 'preferred_Feature_table.tsv'.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: All peaks are kept in 'export/full_Feature_table.tsv'.
+    claim_type: finding
+    speculative: false
+    entity_id: ARTIFACT_FULL_FEATURE_TABLE
+  - claim_text: Asari uses the khipu package for pre-annotation where isotopes and
+      adducts are grouped into empirical compounds.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: Empirical compounds are searched against HMDB 4 database via the JMS
+      package.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_HMDB4
+  - claim_text: The dashboard is built using the panel library.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_PANEL
+  - claim_text: 'The dashboard uses the files: ''project.json'', ''export/cmap.pickle'',
+      ''export/epd.pickle'' and ''export/full_Feature_table.tsv''.'
+    claim_type: finding
+    speculative: false
+    entity_id: ARTIFACT_FULL_FEATURE_TABLE
+  - claim_text: Asari does not use smoothed data for visual inspection in the dashboard
+      to avoid being misleading.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: The default m/z precision in Asari is set at 5 ppm.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: The default ionization mode in Asari is positive.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: Asari uses pymzml to parse mzML files by default.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: M/z values in Asari chromatogram building are binned to 0.001 amu.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: Asari is designed to run more than 1000 samples on a laptop computer.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: Asari requires Python 3.8 or higher.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: Asari installation time is approximately 5 seconds if common libraries
+      already exist.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: Input data to Asari are centroided mzML files from LC-MS metabolomics.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: Asari ignores MS/MS spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: Asari has a Docker image available at https://hub.docker.com/r/shuzhao/asari.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: The Asari Docker image includes ThermoRawFileParser for converting
+      Thermo .raw files to .mzML files.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  - claim_text: The source code for Asari is hosted at https://github.com/shuzhao-li/asari.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_ASARI
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - dynamic time warp (DTW)
+  - univariate spline
+  - pairwise alignment
+  - nearest neighbor clustering by centroiding
+  substitution_constraints:
+  - mzML format required for input data
+  - MS/MS spectra are not processed by asari
+  - Pickle files should not be trusted from other people
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Composite mass tracks (summed intensity arrays) indexed by consensus m/z and
+    full RT scan length
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Feature list with detected elution peaks on composite tracks: peak apex (scan),
+    peak area, height, baseline boundaries, cSelectivity, SNR, goodness_fitting, and
+    parent_masstrack_id'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Execution log confirming single peak-detection pass on composite map vs. N
+    per-sample passes
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: _mass_grid_mapping.csv file documenting aligned m/z values, sample-track associations,
+    and consensus m/z per grid position
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: MassGrid object linking aligned mass tracks across all samples with consensus
+    m/z identifiers
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Filtered feature table (preferred_Feature_table.tsv) containing only peaks
+    meeting SNR > 2, peakshape > 0.5, and minimum peak height criteria with sample-specific
+    peak areas
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Row count comparison report showing number of peaks in full_Feature_table.tsv
+    vs. preferred_Feature_table.tsv
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: QC summary metrics including SNR distribution, peakshape distribution, and
+    peak height distribution of retained peaks
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Scalability benchmark table (CSV or TSV) with columns: sample_count, wall_clock_time_seconds,
+    peak_memory_mb, run_number, mean_time, std_dev_time, mean_memory, std_dev_memory'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Wall-clock time vs. sample count plot (PNG or PDF) showing linear or near-linear
+    scaling up to 100+ samples
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Peak memory usage vs. sample count plot (PNG or PDF) demonstrating memory
+    efficiency across cohort sizes
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Summary report (text or markdown) stating mean throughput (samples/hour) per
+    cohort and extrapolated time estimate for 1000-sample project
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

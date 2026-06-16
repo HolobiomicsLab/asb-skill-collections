@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "github.com"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "Configuration Classes Layer files (.py format) exist in the repository structure"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "Core Base Layer files (.py format) exist in the repository structure"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "Extension Layer files for Bokeh, Matplotlib, and Plotly (.py format) each exist "
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "source code contains a routing mechanism (function or method) that accepts a 'ba",
+      "value": "backend="
+    },
+    {
+      "id": "pf_006",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the routing mechanism dispatches to exactly three distinct backend implementatio"
+    },
+    {
+      "id": "pf_007",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_008",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "each backend call produces an object of the correct type (bokeh Figure, matplotl"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that the pyopenms_viz package source code is accessible at github.com/OpenMS/pyopenms_viz",
+      "file_format_is: verify that Configuration Classes Layer files (.py format) exist in the repository structure",
+      "file_format_is: verify that Core Base Layer files (.py format) exist in the repository structure",
+      "file_format_is: verify that Extension Layer files for Bokeh, Matplotlib, and Plotly (.py format) each exist in the repository structure",
+      "contains_substring: verify that source code contains a routing mechanism (function or method) that accepts a 'backend=' keyword argument",
+      "contains_substring: verify that the routing mechanism dispatches to exactly three distinct backend implementations (Bokeh, Matplotlib, Plotly)",
+      "script_runs: verify that a minimal instantiation script (backend= keyword call) executes without error when backend='bokeh', backend='matplotlib', and backend='plotly' are each specified",
+      "output_matches_reference: verify that each backend call produces an object of the correct type (bokeh Figure, matplotlib Axes, plotly Figure), no canonical answer\u2014any of three distinct backend-specific types is valid"
+    ],
+    "expert_review": [
+      "Confirm that the identified routing mechanism correctly implements the advertised control flow from Configuration Classes Layer \u2192 Core Base Layer \u2192 one of three Extension Layers",
+      "Assess whether the dispatcher logic is architecturally sound and follows recognized orchestrator patterns for pluggable backends",
+      "Evaluate the completeness of the three backend implementations: do Bokeh, Matplotlib, and Plotly each receive all necessary data and parameters from the Core Base Layer?"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

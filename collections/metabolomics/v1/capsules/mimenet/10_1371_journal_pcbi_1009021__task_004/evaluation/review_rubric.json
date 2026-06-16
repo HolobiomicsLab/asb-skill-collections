@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "IBD (PRISM) dataset microbiome and metabolome input files are accessible in the "
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "0.45"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "mean Spearman correlation on annotated metabolites for annotated-only model is l"
+    },
+    {
+      "id": "pf_006",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "scatterplot output file (PNG/PDF/SVG) exists and contains two-dimensional visual",
+      "value": "PDF"
+    },
+    {
+      "id": "pf_007",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "Fig 2D\u20132F caption or associated text explicitly states numeric mean correlation "
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that IBD (PRISM) dataset microbiome and metabolome input files are accessible in the MiMeNet repository or cited deposit (Zenodo/GEO/MetaboLights)",
+      "script_runs: execute MiMeNet training pipeline with configuration parameter 'train_on_all_metabolites=True' on IBD (PRISM) dataset and verify no runtime errors",
+      "script_runs: execute MiMeNet training pipeline with configuration parameter 'train_on_all_metabolites=False' (annotated only) on IBD (PRISM) dataset and verify no runtime errors",
+      "output_matches_reference: mean Spearman correlation on annotated metabolites for all-metabolites model is between 0.45 and 0.50 (robust to minor numerical precision differences), matching Fig 2D\u20132F context or SI Table",
+      "output_matches_reference: mean Spearman correlation on annotated metabolites for annotated-only model is lower than all-metabolites model, with delta (improvement) reported in Fig 2D\u20132F or supplementary materials",
+      "file_format_is: scatterplot output file (PNG/PDF/SVG) exists and contains two-dimensional visualization of prediction correlations across annotated metabolites for both training conditions",
+      "contains_substring: Fig 2D\u20132F caption or associated text explicitly states numeric mean correlation values and/or delta improvements for annotated metabolites across the two training regimes"
+    ],
+    "expert_review": [
+      "assess whether the reported improvement in mean Spearman correlation when including unannotated metabolites during training is biologically plausible and consistent with the stated hypothesis that shared information across metabolites improves prediction",
+      "evaluate whether the comparison controls for confounding factors (network architecture, hyperparameters, cross-validation scheme, random seed) between the two training conditions to isolate the effect of metabolite set composition",
+      "determine whether the annotated metabolite set is clearly defined and reproducibly extracted from the input metabolomic data, and verify no data leakage or label contamination between conditions"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

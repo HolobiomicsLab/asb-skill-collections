@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: input multi-batch interpolated feature table (e.g., CSV, TSV, or HDF5 format)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: input feature table conforms to expected shape (rows=samples, columns=features)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: output corrected feature table (same format as input)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "corrected table row count matches input table row count (samples preserved)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "corrected table column count matches input table column count (features preserve"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: inter-batch variance (e.g., sum-of-squares or Silhouette distance) for selected features is lower in corrected table than uncorrected table; solution_space: multiple defensible variance metrics (PCA-based, PERMANOVA, homogeneity index) are valid"
+    },
+    {
+      "id": "pf_008",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "variance reduction magnitude is quantitatively reported as a numeric score or pe"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: input multi-batch interpolated feature table (e.g., CSV, TSV, or HDF5 format)",
+      "verify file_format_is: input feature table conforms to expected shape (rows=samples, columns=features)",
+      "script_runs: pycombat batch_correct function executes without errors on input table using by_batch parameter",
+      "verify file_exists: output corrected feature table (same format as input)",
+      "row_count_equals: corrected table row count matches input table row count (samples preserved)",
+      "row_count_equals: corrected table column count matches input table column count (features preserved)",
+      "verify output_matches_reference: inter-batch variance (e.g., sum-of-squares or Silhouette distance) for selected features is lower in corrected table than uncorrected table; solution_space: multiple defensible variance metrics (PCA-based, PERMANOVA, homogeneity index) are valid",
+      "value_in_range: variance reduction magnitude is quantitatively reported as a numeric score or percentage; parameter-sensitive: depends on feature and batch selection"
+    ],
+    "expert_review": [
+      "inspect corrected feature table for biological plausibility: verify that batch correction does not artificially inflate or eliminate true biological signal (e.g., case-control or treatment effects should remain detectable post-correction)",
+      "assess choice of selected features for variance reduction analysis: confirm that features are representative (e.g., not cherry-picked) and that the selection strategy is justified",
+      "evaluate appropriateness of inter-batch variance metric: confirm that the chosen metric (e.g., between-batch dispersion, homogeneity index) is statistically sound for the experimental design"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

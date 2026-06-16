@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that kopeckylukas/py-mamsi repository contains a MamsiStructSearch class or module"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that MamsiStructSearch has a load_lcms() method accepting a list or array-like input"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that MamsiStructSearch produces a named artifact (file, object, or data structure) representing structural clusters"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the implementation searches for isotopologue signatures using mass difference of 1.00335 Da"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the implementation searches for common adduct signatures via electrospray ionisation adducts"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the implementation merges overlapping adduct and isotopologue clusters"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the implementation supports cross-assay cluster linking using [M+H]+/[M-H]- references"
+    },
+    {
+      "id": "pf_008",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_009",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "structural cluster output format is documented or demonstrated in tutorials repo"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that kopeckylukas/py-mamsi repository contains a MamsiStructSearch class or module",
+      "verify that MamsiStructSearch has a load_lcms() method accepting a list or array-like input",
+      "verify that MamsiStructSearch produces a named artifact (file, object, or data structure) representing structural clusters",
+      "verify that the implementation searches for isotopologue signatures using mass difference of 1.00335 Da",
+      "verify that the implementation searches for common adduct signatures via electrospray ionisation adducts",
+      "verify that the implementation merges overlapping adduct and isotopologue clusters",
+      "verify that the implementation supports cross-assay cluster linking using [M+H]+/[M-H]- references",
+      "script_runs: execute a minimal MamsiStructSearch workflow on sample LC-MS features (m/z, RT columns) from kopeckylukas/py-mamsi-tutorials and confirm no runtime errors \u2014 solution_space: multiple defensible sample inputs valid",
+      "output_matches_reference: verify that structural cluster output format is documented or demonstrated in tutorials repository"
+    ],
+    "expert_review": [
+      "evaluate whether the adduct and correlation-clustering logic correctly implements the description in the repository README and methods section",
+      "evaluate whether the mass tolerance thresholds and RT window parameters for isotopologue and adduct detection are biochemically appropriate",
+      "evaluate whether the merging strategy for overlapping clusters (adduct + isotopologue) is statistically sound and avoids over-clustering"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

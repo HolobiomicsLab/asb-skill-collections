@@ -1,0 +1,541 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "spec2vec.pdf",
+      "role": "main_article",
+      "sha256": "43e95bc72a94f777c7e95a8b0f18b38bad439e3cfba278b7f0c3db97d6c510cb"
+    }
+  ],
+  "created_at": "2026-06-15T06:52:35.005391+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1008724",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "AllPositive dataset (95,320 positive-mode LC-MS spectra with InChIKey annotations)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pre-trained Word2Vec models (15-epoch and 50-epoch) trained on AllPositive dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Cosine similarity score implementation from matchms package (>=0.6.0)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Modified cosine similarity score implementation from matchms package",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Library matching results table with true-positive rates, false-positive rates, and area-under-curve for cosine, modified cosine, and Spec2Vec (15-epoch and 50-epoch) similarity scores",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ROC curves comparing performance of cosine, modified cosine, and Spec2Vec similarity scores on AllPositive library matching task",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Quantitative performance metrics (TP/FP counts and rates) for each similarity scoring method",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "InChIKey first 14 characters (planar InChIKey) represent the planar graph topology of a molecule and are used as ground truth for structural similarity classification in library matching tasks.",
+    "Cosine similarity score requires minimum matching peaks (min_match=6) and relative intensity threshold of 0.01 to filter low-intensity noise; modified cosine additionally allows matching peaks shifted by precursor m/z difference.",
+    "Spec2Vec requires Word2Vec model trained on spectrum documents where peaks are binned to 2 decimal precision (e.g., 'peak@200.45') and neutral losses (5.0\u2013200.0 Da) are added as features.",
+    "The parent mass scaling rule (max_peaks = 0.5 \u00d7 parentmass) for Spec2Vec ensures larger molecules with more fragments are represented proportionally during model training, preventing bias toward high-mass fragmentation patterns.",
+    "Missing fraction threshold (fraction of unknown peaks <0.05) should be checked to ensure Spec2Vec similarity scores for out-of-distribution spectra are not returned, as the pre-trained model may lack learned embeddings for uncommon fragments."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at Zenodo deposit 10.5281/zenodo.3978118 (AllPositive dataset)",
+      "verify AllPositive dataset contains exactly 95,320 spectra or 92,954 spectra with InChIKey as reported in methods",
+      "verify trained Word2Vec models exist at Zenodo deposit zenodo.org/record/4173596 (AllPositive dataset models)",
+      "verify spec2vec Python package (https://github.com/iomega/spec2vec) can be installed and imported",
+      "verify matchms Python package (https://github.com/matchms/matchms) contains cosine and modified cosine implementations",
+      "script_runs: library matching experiment with cosine score (tolerance=0.005, min_match=6) on AllPositive dataset subset",
+      "script_runs: library matching experiment with modified cosine score (tolerance=0.005, min_match=10) on AllPositive dataset subset",
+      "script_runs: library matching experiment with Spec2Vec 15-epoch model on AllPositive dataset subset",
+      "script_runs: library matching experiment with Spec2Vec 50-epoch model on AllPositive dataset subset",
+      "output_matches_reference: true-positive and false-positive rate values from cosine library matching match reported figure/table location in published paper (multiple defensible rounding approaches)",
+      "output_matches_reference: true-positive and false-positive rate values from modified cosine library matching match reported figure/table location in published paper (multiple defensible rounding approaches)",
+      "output_matches_reference: true-positive and false-positive rate values from Spec2Vec 15-epoch library matching match reported figure/table location in published paper (multiple defensible rounding approaches)",
+      "output_matches_reference: true-positive and false-positive rate values from Spec2Vec 50-epoch library matching match reported figure/table location in published paper (multiple defensible rounding approaches)",
+      "file_format_is: AllPositive dataset in JSON or MGF format (standard metabolomics spectrum format)",
+      "field_present: each spectrum in dataset contains required fields for library matching (m/z, intensity, precursor_mz, InChIKey)"
+    ],
+    "expert_review": [
+      "verify that reported library matching experimental conditions (tolerance and min_match thresholds) are appropriate for LC-MS metabolomics data",
+      "verify that the query spectrum subset and library spectrum subset used in reported results are properly stratified (no leakage between training and test sets)",
+      "assess whether reported true-positive and false-positive rates are consistent with expected performance differences between cosine, modified cosine, and Spec2Vec approaches",
+      "confirm that the 15-epoch and 50-epoch training iterations for Word2Vec models are computationally justified and reasonable for the AllPositive dataset size",
+      "assess whether precursor m/z tolerance (1ppm) used for pre-selection is appropriate for high-resolution LC-MS instruments"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How do Spec2Vec similarity scores compare to cosine and modified cosine scores in terms of true-to-false-positive rate during library matching on the AllPositive dataset?: 'Spec2Vec model was trained only on the library set and Spec2Vec and cosine similarity scores were compared with h cosine similarity scores for library matching (Fig 4). Both Spec2Vec and cosine'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Spec2Vec resulted in a notably better true/false positive ratio at all thresholds compared to cosine and modified cosine scores during library matching, achieving up to 88% accuracy and higher retrieval rates.: 'Spec2Vec resulted in a notably better true/false positive ratio at all thresholds. Spec2Vec also allowed to correctly match the query spectra with up to 88% accuracy and showed both higher accuracy'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] AllPositive dataset (95,320 positive-mode LC-MS spectra with InChIKey annotations): 'The here used subset contains all spectra with positive ionization mode containing 112,956 spectra, out of which 92,954 with InChIKey'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pre-trained Word2Vec models (15-epoch and 50-epoch) trained on AllPositive dataset: 'The two most important trained Word2Vec models used in this work can be downloaded from https://zenodo.org/record/4173596 (trained on AllPositive dataset)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Cosine similarity score implementation from matchms package (>=0.6.0): 'the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (> = 0.6.0)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Modified cosine similarity score implementation from matchms package: 'Following Watrous [11], our modified cosine score combines both the matching peak m/z and the m/z shifted by the difference in precursor m/z'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Library matching results table with true-positive rates, false-positive rates, and area-under-curve for cosine, modified cosine, and Spec2Vec (15-epoch and 50-epoch) similarity scores: 'high Spec2Vec spectrum similarity score correlates stronger with structural similarity than the cosine or modified cosine scores'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[results] ROC curves comparing performance of cosine, modified cosine, and Spec2Vec similarity scores on AllPositive library matching task: 'The poorer correlation between cosine and modified cosine similarity and structural similarity can largely be explained by high false positive rates'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Quantitative performance metrics (TP/FP counts and rates) for each similarity scoring method: 'ignoring scores based on fewer than min_match matching peak ks (here: min_match = 10)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] spec2vec: 'spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] matchms: 'the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[abstract] Word2Vec: 'inspired by a natural language processing algorithm\u2014Word2Vec'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] gensim: 'A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Numpy: 'Spec2Vec by making extensive use of Numpy [24] and Numba [25]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Numba: 'by making extensive use of Numpy [24] and Numba [25], the library'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pandas: 'Spec2Vec by making extensive use of Numpy [24] and Numba [25], the library was optimised by making extensive use of Pandas [40]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] scipy: 'An additional cosine score implementation (Fig C in S3 Text) relies on scipy [41]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Exact number of spectra used as queries vs. library spectra in the reported library matching experiment is not specified: 'each removed 'query' spectrum was compared to the dataset by only using the Spec2Vec similarity score'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific figure or table location in the paper where library matching true-positive and false-positive rates are reported is not identified in the provided discussion text: 'Here, the performance was assessed based on library matching and unknown compound matching results'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_020",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Minimum matching peaks threshold (min_match) specified for Spec2Vec models in library matching is not explicitly stated in the provided discussion: 'Spec2Vec scores correlate better with structural similarity than cosine-based scores'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_021",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Whether the reported library matching results use the same AllPositive dataset for both training the Word2Vec model and evaluating performance, or use a held-out test set, is not clearly specified: 'A separate Word2Vec model was trained on the remaining data of 76,062 spectra'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "library_matching_performance_results.csv",
+  "expected_outputs": [
+    "Library matching results table with true-positive rates, false-positive rates, and area-under-curve for cosine, modified cosine, and Spec2Vec (15-epoch and 50-epoch) similarity scores",
+    "ROC curves comparing performance of cosine, modified cosine, and Spec2Vec similarity scores on AllPositive library matching task",
+    "Quantitative performance metrics (TP/FP counts and rates) for each similarity scoring method"
+  ],
+  "finding": "Spec2Vec resulted in a notably better true/false positive ratio at all thresholds compared to cosine and modified cosine scores during library matching, achieving up to 88% accuracy and higher retrieval rates.",
+  "github_name": "matchms/matchms",
+  "input_from": "task_001",
+  "inputs": [
+    "AllPositive dataset (95,320 positive-mode LC-MS spectra with InChIKey annotations)",
+    "Pre-trained Word2Vec models (15-epoch and 50-epoch) trained on AllPositive dataset",
+    "Cosine similarity score implementation from matchms package (>=0.6.0)",
+    "Modified cosine similarity score implementation from matchms package"
+  ],
+  "keywords": [
+    "mass spectrometry fragmentation",
+    "spectral similarity scoring",
+    "untargeted metabolomics",
+    "metabolite identification",
+    "lc-ms/ms",
+    "word embeddings",
+    "natural language processing",
+    "molecular networks",
+    "database searching",
+    "structural annotation",
+    "cosine similarity",
+    "ms2 spectra"
+  ],
+  "landmark_outputs": [
+    "filtered_allpositive_spectra.mgf",
+    "cosine_similarity_matrix.csv",
+    "modified_cosine_similarity_matrix.csv",
+    "spec2vec_similarity_matrix_15epoch.csv",
+    "spec2vec_similarity_matrix_50epoch.csv",
+    "roc_curves_comparison.png"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_005",
+    "result_006",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_010",
+    "result_009",
+    "result_026",
+    "result_038",
+    "result_040",
+    "result_041",
+    "result_044",
+    "result_045",
+    "result_050"
+  ],
+  "methodology_summary": [
+    "Load and filter AllPositive dataset: remove peaks with m/z outside [0, 1000], discard spectra with <10 peaks, remove spectra without InChIKey annotation.",
+    "Pre-select library candidate spectra using precursor m/z matching (1 ppm tolerance) to reduce computational cost.",
+    "Compute cosine similarity scores with relative intensity threshold <0.01, tolerance 0.005, and min_match=6; compute modified cosine with tolerance 0.005 and min_match=10.",
+    "Compute Spec2Vec similarity scores using both 15-epoch and 50-epoch pre-trained Word2Vec models on parent-mass-scaled peak subsets.",
+    "For each similarity method, rank query spectra and classify hits as true positives (matching planar InChIKey) or false positives (non-matching structure) to construct ROC curves.",
+    "Calculate true-positive rate, false-positive rate, and area-under-curve for each method and compare against reported paper benchmarks.",
+    "Validation: ROC curve performance metrics (AUC, TP/FP rates) must show Spec2Vec (especially 50-epoch model) superior to cosine and modified cosine, with lower false-positive rates at equivalent true-positive thresholds, matching patterns reported in the paper.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1008724)"
+  ],
+  "missing_information": [
+    "Exact number of spectra used as queries vs. library spectra in the reported library matching experiment is not specified",
+    "The specific figure or table location in the paper where library matching true-positive and false-positive rates are reported is not identified in the provided discussion text",
+    "Minimum matching peaks threshold (min_match) specified for Spec2Vec models in library matching is not explicitly stated in the provided discussion",
+    "Whether the reported library matching results use the same AllPositive dataset for both training the Word2Vec model and evaluating performance, or use a held-out test set, is not clearly specified"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/spec2vec_scores_allpositive"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How do Spec2Vec similarity scores compare to cosine and modified cosine scores in terms of true-to-false-positive rate during library matching on the AllPositive dataset?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "intro",
+    "results",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "mass-spectrometry-library-matching",
+    "spectral-similarity-scoring-cosine-variants",
+    "word-embedding-based-spectrum-representation",
+    "receiver-operator-characteristic-curve-generation",
+    "structural-similarity-ground-truth-validation",
+    "peak-filtering-and-preprocessing-LC-MS",
+    "chemical-structure-fingerprint-comparison"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_spec2vec",
+  "spine_condition_ids": [
+    "COND_SPEC2VEC_UNIQUEINCHIKEY",
+    "COND_SPEC2VEC_ALLPOSITIVE",
+    "COND_COSINE_TOL005_MIN6",
+    "COND_MODIFIED_COSINE_TOL005_MIN10",
+    "COND_COSINE_ON_SPEC2VEC_PROCESSED",
+    "COND_LIBRARY_MATCHING_ALLPOSITIVE"
+  ],
+  "spine_entity_ids": [
+    "SPEC2VEC_SYSTEM",
+    "COSINE_SCORE",
+    "MODIFIED_COSINE_SCORE",
+    "GNPS_DATASET",
+    "ALLPOSITIVE_DATASET",
+    "UNIQUEINCHIKEYS_DATASET",
+    "COND_SPEC2VEC_UNIQUEINCHIKEY",
+    "COND_SPEC2VEC_ALLPOSITIVE",
+    "COND_MODIFIED_COSINE_TOL005_MIN10",
+    "COND_COSINE_TOL005_MIN6",
+    "COND_COSINE_ON_SPEC2VEC_PROCESSED",
+    "COND_LIBRARY_MATCHING_ALLPOSITIVE",
+    "RESULT_SPEC2VEC_BETTER_STRUCTURAL_CORR",
+    "RESULT_COSINE_HIGH_FALSE_POSITIVE",
+    "RESULT_SPEC2VEC_BETTER_LIBRARY_MATCHING",
+    "RESULT_ALLPOSITIVE_PEAK_COVERAGE",
+    "RESULT_SPEC2VEC_SCALABLE",
+    "RESULT_COSINE_ON_SPEC2VEC_DATA_LOWER",
+    "METRIC_TANIMOTO_TOP01PCT_SPEC2VEC",
+    "METRIC_TANIMOTO_TOP01PCT_COSINE",
+    "METRIC_TANIMOTO_TOP01PCT_MODCOSINE",
+    "LIBRARY_MATCHING",
+    "PEAK_FILTERING_COSINE",
+    "PEAK_FILTERING_SPEC2VEC",
+    "SPEC2VEC_PACKAGE"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics",
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "benchmark-evaluation",
+    "data-analysis"
+  ],
+  "synthesized_from": null,
+  "task_description": "Reproduce library matching performance results for the AllPositive dataset using cosine, modified cosine, and Spec2Vec similarity scores with reported experimental parameters, computing true-positive and false-positive rates for validation against structural similarity labels.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "AllPositive dataset (95,320 LC-MS spectra with InChIKey)",
+      "port_id": "allpositive_spectra",
+      "resolved_via": null,
+      "source": "task_001/spec2vec_scores_allpositive",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-trained Word2Vec models (15-epoch and 50-epoch AllPositive)",
+      "port_id": "word2vec_models",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "matchms Python package (>=0.6.0) for cosine/modified cosine scoring",
+      "port_id": "matchms_pkg",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "spec2vec Python package for Spec2Vec similarity computation",
+      "port_id": "spec2vec_pkg",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Reproduce the library matching true-to-false-positive rate curves for Spec2Vec, cosine, and modified cosine similarity scores using the AllPositive dataset with specified parameters.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Library matching performance table (TP/FP rates, AUC by method)",
+      "port_id": "library_matching_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ROC curve plots comparing similarity scoring methods",
+      "port_id": "roc_curves",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Quantitative metrics and statistical comparisons",
+      "port_id": "performance_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "spectral-library-matching",
+    "molecular-networking",
+    "tandem-ms",
+    "machine-learning",
+    "natural-language-processing",
+    "cosine-similarity-scoring"
+  ],
+  "title": "Reproduce library matching true-to-false-positive performance of Spec2Vec versus cosine scores",
+  "tools": [
+    "spec2vec",
+    "matchms",
+    "Word2Vec",
+    "gensim",
+    "Numpy",
+    "Numba",
+    "Pandas",
+    "scipy"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Library matching results table with true-positive rates, false-positive rates, and area-under-curve for cosine, modified cosine, and Spec2Vec (15-epoch and 50-epoch) similarity scores."
+  ],
+  "workflow_description": "1. Download the AllPositive dataset (95,320 spectra with InChIKey annotations) from Zenodo 10.5281/zenodo.3978118 and the pre-trained Word2Vec models (15-epoch and 50-epoch versions trained on AllPositive data) from zenodo.org/record/4173596. 2. Filter spectra: remove peaks with m/z outside [0, 1000], discard spectra with fewer than 10 peaks, and remove spectra without InChIKey annotation. 3. For cosine and modified cosine scoring, apply peak filtering by ignoring peaks with relative intensities <0.01 compared to the highest intensity peak; for Spec2Vec, apply parent-mass-scaled peak filtering (max_peaks = 0.5 \u00d7 parentmass). 4. Pre-select potentially matching spectra using precursor m/z matching with 1 ppm tolerance. 5. Compute similarity scores: apply cosine similarity with tolerance 0.005 and minimum matching peaks = 6; apply modified cosine with tolerance 0.005 and minimum matching peaks = 10; apply Spec2Vec similarity using both the 15-epoch and 50-epoch Word2Vec models. 6. For each similarity method, rank query spectra against library and classify hits as true positives (matching InChIKey within first 14 characters / planar structure) or false positives (non-matching structure) to construct receiver-operator-characteristic curves. 7. Calculate and report true-positive rate, false-positive rate, and area-under-curve for each method and compare against reported paper results."
+}

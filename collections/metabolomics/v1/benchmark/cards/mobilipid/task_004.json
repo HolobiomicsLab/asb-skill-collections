@@ -1,0 +1,374 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MobiLipid_Logo_whiteBackground@300x.png",
+      "role": "figure",
+      "sha256": "f4f4d578fe6d5983f24db86fd33882be0edcdb359a455c87b5d55d2a7ba9c0f0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_after_correction.jpg",
+      "role": "figure",
+      "sha256": "22f59f8dd7a1648b529881f12cdb6c8a5944521bc029a36a54284f500b04c47c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_after_correction_all_results.jpg",
+      "role": "figure",
+      "sha256": "8116e5ccda398092e9de60907ea05f3f7f9084ad50c51fd0fc4b0ba7290dfb32"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_figure.jpg",
+      "role": "figure",
+      "sha256": "669de6c93098a6f8ec5d05a27b6291f80dc710aa18ed93ee004058662eb893e5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_table.jpg",
+      "role": "figure",
+      "sha256": "e6ab716db3386d37d0837a07744a352f1ca0b77d43814e9f51ada97bb287dfd9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Correction_functions.jpg",
+      "role": "figure",
+      "sha256": "e9842f794ed3de85e541033fc86f858ae5f12bd67c5653014aded0ef9deac71f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Number_Lipids.jpg",
+      "role": "figure",
+      "sha256": "19333851f29b8a7432f3c08b5c7a05cafb4606c9c444c24206a37c2b881c06e5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Resampling.jpg",
+      "role": "figure",
+      "sha256": "40426f9193833adf6d3c57282e87775abc1441d818098c219e7a935bfbf98dbf"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Violin_plot_1.jpg",
+      "role": "figure",
+      "sha256": "8de37ee5843620be802766f7d091a1ce7c8c5b6b0cc6a7e5f4ceb3da43a8e017"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Violin_plot_2.jpg",
+      "role": "figure",
+      "sha256": "8e20acb67ee1fd9a62b3f3b212686ff3bb77a57a8bb302d66225b8593c0599ff"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "052bac31597d2d591d3bd025995fade1add0413a35be358c0512be2f13a2a7d2"
+    }
+  ],
+  "created_at": "2026-06-15T12:36:27.945262+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MobiLipid codebase and DTCCSN2 library for U13C labeled lipids",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ion mobility-mass spectrometry lipidomics experimental data",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary table of CCS bias estimation quality metrics (e.g., residual error, accuracy) as a function of lipid count per lipid class",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Visualization (curve or heatmap) showing the relationship between number of detected lipids per class and CCS bias estimation quality",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "CCS (collision cross section) bias in IM-MS arises from systematic deviations between measured and theoretical CCS values; internal standardization with U13C labeled lipids can correct this without additional external calibration beyond vendor-specific requirements.",
+    "Lipid class stratification is necessary because CCS bias may vary across lipid classes; MobiLipid groups lipids by class to enable class-specific bias assessment.",
+    "The DTCCSN2 library contains reference CCS values for U13C labeled lipids; subsampling studies measure the minimum lipid count per class needed to achieve stable and accurate bias estimation.",
+    "Quality metrics for CCS bias estimation typically include residual error (difference between predicted and reference CCS), coefficient of variation, or absolute error relative to reference values.",
+    "Ion mobility-mass spectrometry instruments produce CCS measurements that require post-hoc correction; MobiLipid automates this via R Markdown workflows integrated into standard lipidomics pipelines."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: github:FelinaHildebrand/MobiLipid repository is accessible and contains DTCCSN2 library artifact",
+      "verify file_format_is: DTCCSN2 library is in a format compatible with R (e.g., .csv, .rds, or documented data structure)",
+      "verify script_runs: R Markdown workflow in MobiLipid codebase executes without error when provided with lipid detection counts and CCS measurements as inputs",
+      "verify output_matches_reference: computational workflow produces a quantitative metric (bias estimate, root mean square error, or correlation coefficient) that demonstrates relationship between lipid count per class and CCS bias quality",
+      "verify field_present: output includes explicit statement or table row showing minimum lipid count per class threshold below which bias estimation remains effective"
+    ],
+    "expert_review": [
+      "Assess whether the reported finding (low number of lipids per class suffices for effective CCS bias estimation) is scientifically defensible given the computational results and DTCCSN2 reference data",
+      "Evaluate the statistical rigor of the relationship analysis (e.g., linearity, saturation behavior, confidence bounds) between lipid count per class and bias estimation quality",
+      "Review whether the CCS bias estimation method is appropriate for ion mobility-mass spectrometry lipidomics and whether internal standardization with U13C labeled lipids is correctly implemented in the computational workflow"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the minimum number of lipids per lipid class required to achieve effective CCS bias estimation and correction using the MobiLipid workflow?: 'requiring a low number of lipids detected per lipid class for effective implementation of CCS bias calculation and correction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MobiLipid enables effective CCS bias calculation and correction while requiring only a low number of lipids detected per lipid class.: 'requiring a low number of lipids detected per lipid class for effective implementation of CCS bias calculation and correction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MobiLipid codebase and DTCCSN2 library for U13C labeled lipids: 'Employing a newly established DT CCS N2 library for U13C labeled lipids, which is provided together with the code'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Ion mobility-mass spectrometry lipidomics experimental data: 'MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias in ion mobility-mass spectrometry (IM-MS)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Summary table of CCS bias estimation quality metrics (e.g., residual error, accuracy) as a function of lipid count per lipid class: 'requiring a low number of lipids detected per lipid class for effective implementation of CCS bias calculation and correction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Visualization (curve or heatmap) showing the relationship between number of detected lipids per class and CCS bias estimation quality: 'requiring a low number of lipids detected per lipid class for effective implementation of CCS bias calculation and correction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] specific minimum number of lipids per class required for effective CCS bias estimation not stated in section text: 'No explicit threshold value provided in the discussion section'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] quantitative results or tables demonstrating the relationship between detected lipid count per class and CCS bias quality not included in section text: 'No results, figures, or tables referenced in the discussion section'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ccs_bias_quality_metrics.csv",
+  "expected_outputs": [
+    "Summary table of CCS bias estimation quality metrics (e.g., residual error, accuracy) as a function of lipid count per lipid class",
+    "Visualization (curve or heatmap) showing the relationship between number of detected lipids per class and CCS bias estimation quality"
+  ],
+  "finding": "MobiLipid enables effective CCS bias calculation and correction while requiring only a low number of lipids detected per lipid class.",
+  "github_name": "FelinaHildebrand/MobiLipid",
+  "input_from": "task_001",
+  "inputs": [
+    "MobiLipid codebase and DTCCSN2 library for U13C labeled lipids",
+    "Ion mobility-mass spectrometry lipidomics experimental data"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "lipid_subsampling_levels.txt",
+    "bias_estimates_per_class.csv",
+    "residual_error_by_count.csv",
+    "bias_quality_curve.png"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Load the DTCCSN2 reference library and experimental IM-MS lipidomics data into R.",
+    "Systematically subsample detected lipids per class across a range of counts (e.g., 1\u201310 lipids per class).",
+    "Apply MobiLipid internal standardization with U13C labeled lipids to calculate CCS bias at each subsampling level without external calibration.",
+    "Compute bias estimation quality metrics (residual error, accuracy, or deviation) for each lipid class and count level.",
+    "Generate a summary table and visualization showing how CCS bias estimation quality stabilizes with increasing lipid counts per class.",
+    "Validation: confirm that effective CCS bias correction is achieved with a low number of lipids per class, as indicated by convergence of bias metrics and acceptable residual error (acceptance criterion to be determined by reported thresholds in the paper)."
+  ],
+  "missing_information": [
+    "No changelog found",
+    "specific minimum number of lipids per class required for effective CCS bias estimation not stated in section text",
+    "quantitative results or tables demonstrating the relationship between detected lipid count per class and CCS bias quality not included in section text"
+  ],
+  "parameters": [],
+  "primary_domain": "lipidomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the minimum number of lipids per lipid class required to achieve effective CCS bias estimation and correction using the MobiLipid workflow?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "ccs-bias-calculation-and-correction",
+    "lipid-class-stratified-analysis",
+    "internal-standardization-with-isotope-labels",
+    "ion-mobility-mass-spectrometry-data-processing",
+    "quality-control-metric-evaluation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mobilipid/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "mobil_lipid_system",
+    "ccs_bias_assessment_component",
+    "ccs_bias_correction_component",
+    "dtccs_n2_library",
+    "ccs_qc_capability"
+  ],
+  "subdomains": [
+    "lipidomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:FelinaHildebrand__MobiLipid",
+  "task_description": "Computationally evaluate the relationship between the number of detected lipids per lipid class and CCS bias estimation quality using MobiLipid and the bundled DTCCSN2 library, reproducing the reported finding that effective CCS bias correction requires only a low number of lipids per class.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MobiLipid codebase and DTCCSN2 library",
+      "port_id": "mobilipid_codebase",
+      "resolved_via": null,
+      "source": "task_001/validation_report",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ion mobility-mass spectrometry lipidomics data",
+      "port_id": "imms_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Computationally determine the minimum lipid count per class needed for robust CCS bias estimation using MobiLipid and the DTCCSN2 library.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CCS bias estimation quality metrics by lipid count",
+      "port_id": "bias_metrics_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Visualization of relationship between lipid count and bias quality",
+      "port_id": "bias_quality_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "ion-mobility",
+    "quality-control",
+    "stable-isotope-labeling",
+    "high-resolution-ms"
+  ],
+  "title": "Analyze the minimum lipids-per-class requirement for effective CCS bias calculation in MobiLipid",
+  "tools": [
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Summary table of CCS bias estimation quality metrics (e.g., residual error, accuracy) as a function of lipid count per lipid class."
+  ],
+  "workflow_description": "1. Load the DTCCSN2 library for U13C labeled lipids and experimental IM-MS lipidomics data into R. 2. Use MobiLipid to systematically vary the number of detected lipids per lipid class (e.g., 1, 2, 3, 5, 10 lipids). 3. For each subsampling level, calculate CCS bias using internal standardization with the available U13C labeled lipids without additional external calibration. 4. Assess bias estimation quality by computing residual error or deviation metrics between predicted and reference CCS values across lipid classes. 5. Quantify the trade-off between lipid count per class and bias correction accuracy, generating a summary table of performance metrics at each sampling level. 6. Visualize the relationship as a curve or heatmap showing how CCS bias estimation quality stabilizes with increasing lipid counts per class."
+}

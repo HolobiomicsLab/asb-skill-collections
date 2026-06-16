@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file exists for each of: ChromatogramPlot, MobilogramPlot, SpectrumPlot, PeakMapPlot output figures under matplotlib backend"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file exists for each of: ChromatogramPlot, MobilogramPlot, SpectrumPlot, PeakMapPlot output figures under Bokeh backend"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file exists for each of: ChromatogramPlot, MobilogramPlot, SpectrumPlot, PeakMapPlot output figures under Plotly backend"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file_format_is for each generated plot output (PNG, HTML, or SVG as appropriate to backend)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify script_runs: execution of plot generation code using mzML input via pymzml/pyOpenMS without errors"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify script_runs: execution of plot generation code using Bruker .d input via AlphaTims without errors"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Output matches reference deposit: byte-for-byte comparison of static plot outputs (matplotlib/SVG) against gallery reference files; robust to parameter choices for interactive outputs (Bokeh/Plotly HTML)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file exists for each of: ChromatogramPlot, MobilogramPlot, SpectrumPlot, PeakMapPlot output figures under matplotlib backend",
+      "Verify file exists for each of: ChromatogramPlot, MobilogramPlot, SpectrumPlot, PeakMapPlot output figures under Bokeh backend",
+      "Verify file exists for each of: ChromatogramPlot, MobilogramPlot, SpectrumPlot, PeakMapPlot output figures under Plotly backend",
+      "Verify file_format_is for each generated plot output (PNG, HTML, or SVG as appropriate to backend)",
+      "Verify script_runs: execution of plot generation code using mzML input via pymzml/pyOpenMS without errors",
+      "Verify script_runs: execution of plot generation code using Bruker .d input via AlphaTims without errors",
+      "Output matches reference deposit: byte-for-byte comparison of static plot outputs (matplotlib/SVG) against gallery reference files; robust to parameter choices for interactive outputs (Bokeh/Plotly HTML)"
+    ],
+    "expert_review": [
+      "Visual inspection of generated ChromatogramPlot figures across all three backends for correct intensity vs. retention time representation",
+      "Visual inspection of generated MobilogramPlot figures across all three backends for correct intensity vs. ion mobility representation",
+      "Visual inspection of generated SpectrumPlot figures across all three backends for correct m/z vs. intensity representation",
+      "Visual inspection of generated PeakMapPlot figures across all three backends for correct 2D m/z vs. retention time heatmap/scatter representation",
+      "Verification that interactive features (zoom, pan, hover tooltips) function correctly in Bokeh and Plotly outputs"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

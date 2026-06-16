@@ -1,0 +1,440 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b8f14457916bad741d32924527054213ac940e85ead0b0c2ae0a920cfa2ca3c9"
+    }
+  ],
+  "created_at": "2026-06-15T18:27:16.217915+00:00",
+  "crossref_doi": "10.1038/nmeth.4197",
+  "data_accessions": [
+    {
+      "accession": "ERR458493",
+      "evidence_span": "tion correctly) was right all along.  ## Dataset  - Reads: `ERR458493` (Gierli\u0144ski/Schurch *S. cerevisiae* benchmark),   1,093,95",
+      "kind": "sra_run",
+      "url": "https://www.ncbi.nlm.nih.gov/sra/?term=ERR458493"
+    },
+    {
+      "accession": "ERR188044",
+      "evidence_span": "set), so the only variable is the mapper. Reads: GEUVADIS `ERR188044` (36.35M 76bp PE); default selective alignment, `-l A`, no",
+      "kind": "sra_run",
+      "url": "https://www.ncbi.nlm.nih.gov/sra/?term=ERR188044"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "salmon C++ source code repository (cpp branch)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test dataset: ERR458493 single-end 51 bp reads (S. cerevisiae)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reference transcriptome: Ensembl R64-1-1 cDNA (6,612 transcripts)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Modified QuantOptionsUtils.cpp with force_flush = true on ostream_sink_mt",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SAM file containing all mapped read records without truncation or buffer loss",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report confirming SAM record count equals reported NumReads in quant.sf",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "The ostream_sink_mt with force_flush=false allowed mapping records to accumulate in the output buffer and be lost on stream closure if the buffer had not naturally overflowed.",
+    "For small inputs, the large SAM @SQ header would overflow the buffer and mask the problem, but most records would be lost; verification requires matching record counts against the quantification summary.",
+    "The --writeMappings/-z flag enables SAM output of per-read mapping details, essential for diagnosing mis-orientation and locus placement issues like the pufferfish SSHash k-mer bug.",
+    "The fix must preserve all mapping records written during the quant phase; enabling force_flush ensures the trailing buffer is flushed before stream closure, even for small datasets."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that salmon 2.0 source code repository (github:COMBINE-lab/salmon) contains a writeMappings function or equivalent SAM output handler",
+      "script_runs: execute salmon 2.0 quant on a test dataset (human GEUVADIS ERR188044 or yeast ERR458493) with SAM output enabled (if available via --writeMappings or similar flag) and confirm the command completes without error",
+      "output_matches_reference: retrieve the reported mapping count (total mapped reads) from salmon quant's standard output or log file on the test dataset",
+      "row_count_equals: verify that the SAM output file record count (excluding header lines, byte-for-byte) matches the mapping count reported by salmon quant on the same test run",
+      "file_format_is: verify that the SAM output file conforms to SAM format specification (header lines starting with @, data lines with tab-delimited fields)",
+      "value_in_range: confirm that per-transcript selective-alignment quantification Pearson correlation vs. C++ salmon 1.12.0 remains at or above 0.999 on byte-identical index (robust to parameter choices)"
+    ],
+    "expert_review": [
+      "Review salmon 2.0 source code (cpp branch and Rust rewrite) to identify and document the exact nature of the writeMappings flush bug: confirm whether an ostream buffer was indeed not flushed before close, and verify that the fix (if applied) correctly calls flush() or uses a non-buffered stream",
+      "Verify that the fix does not introduce off-by-one errors, duplicate records, or corrupted SAM records in the output",
+      "Assess whether the fix is consistent with SAM specification and whether downstream tools (e.g., samtools, alignment viewers) successfully parse the corrected SAM file without warnings or errors"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] How does the writeMappings flush bug in SAM output streaming affect record completeness, and what is the mechanism by which flushing the ostream buffer before close ensures all mapped reads appear in the output file?: 'the SAM output stream was wrapped in an ostream buffer that was not flushed before close, causing record loss'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] The writeMappings flush bug occurs when the SAM output stream buffer is not explicitly flushed before the stream closes, which causes buffered records to be lost. Flushing the ostream buffer before close ensures that all in-flight records are written to disk, preventing data loss and making the SAM record count match the number of mapped reads reported by salmon quant.: 'the SAM output stream was wrapped in an ostream buffer that was not flushed before close, causing record loss'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] salmon C++ source code repository (cpp branch): 'Its source is preserved on the [`cpp`](https://github.com/COMBINE-lab/salmon/tree/cpp) branch'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Test dataset: ERR458493 single-end 51 bp reads (S. cerevisiae): 'Reads: `ERR458493` (Gierli\u0144ski/Schurch *S. cerevisiae* benchmark), 1,093,957 single-end 51 bp reads'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Reference transcriptome: Ensembl R64-1-1 cDNA (6,612 transcripts): 'Reference: Ensembl R64-1-1 cDNA, 6,612 transcripts'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Modified QuantOptionsUtils.cpp with force_flush = true on ostream_sink_mt: 'Fixed by enabling `force_flush` on the sink (`src/util/QuantOptionsUtils.cpp`)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SAM file containing all mapped read records without truncation or buffer loss: 'mapping records (written per batch) only reached disk when the `ofstream` buffer overflowed, so the trailing buffer was lost when the stream wasn't explicitly closed'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Verification report confirming SAM record count equals reported NumReads in quant.sf: 'with the placement diagnosis above possible'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] salmon 1.12.0: 'C++ salmon 1.11.4 vs. this Rust port, both selective-alignment mode'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pufferfish: 'pufferfish's SSHash k-mer lookup, now fixed upstream'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit mention of a writeMappings flush bug or its fix in the provided discussion section text: 'The section provides no technical details about the writeMappings function, buffer flushing, or any related bug fix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of which salmon version (C++ 1.11.x, 1.12.0, or Rust 2.0.x) contained the writeMappings bug or when it was fixed: 'No version-specific discussion of the writeMappings issue is provided in the available text'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No quantitative benchmarking details (runtime in seconds, peak memory in GB) are reported for the test datasets: 'index construction is faster, and peak memory is lower'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of which flag or option enables SAM output (writeMappings or equivalent) in salmon 2.0: 'The discussion does not list the command-line flag or option required to produce SAM output in salmon 2.0'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "quant_mappings.sam",
+  "expected_outputs": [
+    "Modified QuantOptionsUtils.cpp with force_flush = true on ostream_sink_mt",
+    "SAM file containing all mapped read records without truncation or buffer loss",
+    "Verification report confirming SAM record count equals reported NumReads in quant.sf"
+  ],
+  "finding": "The writeMappings flush bug occurs when the SAM output stream buffer is not explicitly flushed before the stream closes, which causes buffered records to be lost. Flushing the ostream buffer before close ensures that all in-flight records are written to disk, preventing data loss and making the SAM record count match the number of mapped reads reported by salmon quant.",
+  "github_name": "COMBINE-lab/salmon",
+  "input_from": "task_002",
+  "inputs": [
+    "salmon C++ source code repository (cpp branch)",
+    "Test dataset: ERR458493 single-end 51 bp reads (S. cerevisiae)",
+    "Reference transcriptome: Ensembl R64-1-1 cDNA (6,612 transcripts)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "QuantOptionsUtils.cpp.patch",
+    "salmon_rebuilt.log",
+    "quant.sf",
+    "record_count_validation.txt"
+  ],
+  "linked_result_ids": [
+    "result_032"
+  ],
+  "methodology_summary": [
+    "Inspect salmon C++ source code to locate ostream_sink_mt initialization in QuantOptionsUtils.cpp where force_flush is set to false.",
+    "Modify the sink configuration to enable force_flush = true, ensuring all buffered mapping records are written to disk before stream closure.",
+    "Rebuild salmon from the modified source code.",
+    "Execute salmon index on the Ensembl R64-1-1 reference transcriptome.",
+    "Run salmon quant in selective-alignment mode with --writeMappings flag on ERR458493 test reads.",
+    "Extract the SAM record count (grep '^[^@]' output.sam | wc -l) and compare against the NumReads field in the generated quant.sf file.",
+    "Validation: SAM record count must equal the reported NumReads in quant.sf, confirming no records were lost to buffer truncation.",
+    "References: source article (DOI: 10.1038/nmeth.4197); ERR458493 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR458493); ERR188044 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR188044)"
+  ],
+  "missing_information": [
+    "No explicit mention of a writeMappings flush bug or its fix in the provided discussion section text",
+    "No specification of which salmon version (C++ 1.11.x, 1.12.0, or Rust 2.0.x) contained the writeMappings bug or when it was fixed",
+    "No quantitative benchmarking details (runtime in seconds, peak memory in GB) are reported for the test datasets",
+    "No specification of which flag or option enables SAM output (writeMappings or equivalent) in salmon 2.0"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/mapping_rate_cpp_prefix"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the writeMappings flush bug in SAM output streaming affect record completeness, and what is the mechanism by which flushing the ostream buffer before close ensures all mapped reads appear in the output file?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion",
+    "methods"
+  ],
+  "skills": [
+    "sam-record-parsing-and-validation",
+    "c++-stream-io-debugging",
+    "buffer-management-and-flush-protocols",
+    "salmon-quantification-output-verification",
+    "biological-sequence-read-mapping"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_salmon/synthesized_package",
+  "spine_condition_ids": [
+    "cond_cpp_salmon_before_fix",
+    "cond_rust_port_yeast",
+    "cond_cpp_salmon_after_fix",
+    "cond_cpp_1_12_0_human",
+    "cond_rust_human_defaults",
+    "cond_rust_human_matched_thresholds"
+  ],
+  "spine_entity_ids": [
+    "salmon_2_0",
+    "salmon_cpp",
+    "arch_salmon_workflow",
+    "salmon_index_cmd",
+    "salmon_quant_cmd",
+    "salmon_quantmerge_cmd",
+    "write_mappings",
+    "cond_cpp_salmon_before_fix",
+    "cond_rust_port_yeast",
+    "cond_cpp_salmon_after_fix",
+    "cond_cpp_1_12_0_human",
+    "cond_rust_human_defaults",
+    "cond_rust_human_matched_thresholds",
+    "metric_cpp_mapping_rate_before_fix",
+    "metric_rust_mapping_rate_yeast",
+    "metric_cpp_mapping_rate_after_fix",
+    "metric_cpp_mapped_human",
+    "metric_rust_mapped_human_defaults",
+    "metric_rust_matched_thresholds_mapping",
+    "result_write_mappings_flush_bug",
+    "result_index_format_incompatibility",
+    "quant_sf"
+  ],
+  "subdomains": [
+    "rna-seq",
+    "differential-expression"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:COMBINE-lab__salmon",
+  "task_description": "Implement the writeMappings SAM output flush fix (enable force_flush on the ostream_sink_mt to prevent record loss from unflushed buffers), then verify the corrected code produces a SAM file whose record count matches the number of mapped reads reported by salmon quant on a test dataset.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "salmon C++ source code repository",
+      "port_id": "salmon_cpp_source",
+      "resolved_via": null,
+      "source": "task_002/mapping_rate_cpp_prefix",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ERR458493 single-end 51 bp reads",
+      "port_id": "test_reads_fastq",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ensembl R64-1-1 cDNA transcriptome",
+      "port_id": "reference_transcripts",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement or apply the fix for the writeMappings flush bug and verify that the corrected SAM output has a record count equal to the number of mapped reads reported by salmon quant on a test dataset.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "QuantOptionsUtils.cpp with force_flush enabled",
+      "port_id": "modified_source",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SAM file from salmon quant --writeMappings",
+      "port_id": "sam_output",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Record count verification against quant.sf NumReads",
+      "port_id": "verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quantitative-structure-activity",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct the writeMappings SAM-flush bug fix and verify output record completeness",
+  "tools": [
+    "salmon 2.0",
+    "salmon 1.12.0",
+    "pufferfish"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: salmon 1.12.0, pufferfish, Modified QuantOptionsUtils.cpp with force_flush = true on ostream_sink_mt, SAM file containing all mapped read records without truncation or buffer loss, Verification report confirming SAM record count equals reported NumReads in quant.sf."
+  ],
+  "workflow_description": "1. Locate the SAM output stream initialization in src/util/QuantOptionsUtils.cpp where the ostream_sink_mt is created with force_flush = false. 2. Modify the sink configuration to set force_flush = true to ensure mapping records are flushed to disk before stream closure. 3. Rebuild the salmon codebase with the corrected flush configuration. 4. Run salmon quant with --writeMappings/-z flag on a test dataset (e.g., ERR458493 yeast reads against Ensembl R64-1-1 index), capturing both the SAM output and the quantification summary. 5. Count the number of SAM records in the output file and compare against the NumReads total reported in quant.sf to verify record count matches the mapped read count."
+}

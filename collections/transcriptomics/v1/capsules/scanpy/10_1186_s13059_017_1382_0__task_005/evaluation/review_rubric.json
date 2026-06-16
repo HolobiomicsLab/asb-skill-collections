@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 'hatch.toml' exists in the repository root"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 'pyproject.toml' exists in the repository root"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "test execution log contains no non-skipped test failures (robust to test count a"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file 'hatch.toml' exists in the repository root",
+      "verify file 'pyproject.toml' exists in the repository root",
+      "script_runs: execute 'hatch run hatch-test' in the scanpy repository directory and confirm exit code is 0",
+      "script_runs: execute 'hatch test' in the scanpy repository directory and confirm exit code is 0",
+      "output_matches_reference: verify that test execution log contains no non-skipped test failures (robust to test count and parameter changes)"
+    ],
+    "expert_review": [
+      "Verify that the Hatch environment configuration in hatch.toml correctly specifies the test environment and pytest invocation",
+      "Confirm that all declared test dependencies in the Hatch configuration are correctly resolved and available"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

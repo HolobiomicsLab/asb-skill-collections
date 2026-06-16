@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: github:pymzML__pymzML repository contains FileInterface class definition"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: _open method is present in FileInterface class"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: _open method implementation contains conditional dispatch logic (if/elif statements) checking file extension"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: _open method contains references to IndexedGzip handler class"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: _open method contains references to StandardGzip handler class"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: _open method contains references to StandardMzml handler class"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: _open method contains references to SQLiteDatabase handler class"
+    },
+    {
+      "id": "pf_008",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_009",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_010",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_011",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_012",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "dispatch decision for each file extension matches documented handler mapping in "
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: github:pymzML__pymzML repository contains FileInterface class definition",
+      "verify file_exists: _open method is present in FileInterface class",
+      "verify contains_substring: _open method implementation contains conditional dispatch logic (if/elif statements) checking file extension",
+      "verify contains_substring: _open method contains references to IndexedGzip handler class",
+      "verify contains_substring: _open method contains references to StandardGzip handler class",
+      "verify contains_substring: _open method contains references to StandardMzml handler class",
+      "verify contains_substring: _open method contains references to SQLiteDatabase handler class",
+      "script_runs: instantiate FileInterface and call _open with test file having .mzML.gz extension, verify returns IndexedGzip instance",
+      "script_runs: instantiate FileInterface and call _open with test file having .mzML extension, verify returns StandardMzml instance",
+      "script_runs: instantiate FileInterface and call _open with test file having .db extension, verify returns SQLiteDatabase instance",
+      "script_runs: instantiate FileInterface and call _open with test file having .gz extension (non-mzML), verify returns StandardGzip instance",
+      "output_matches_reference: dispatch decision for each file extension matches documented handler mapping in pymzML codebase (multiple defensible approaches to content inspection logic are valid)"
+    ],
+    "expert_review": [
+      "Verify that content inspection logic (beyond extension checking) correctly disambiguates between handler types when file extensions are ambiguous or misleading",
+      "Confirm that the dispatch mechanism is robust to edge cases (empty files, corrupted headers, missing extensions) and fails gracefully",
+      "Review whether the handler class resolution prioritizes file extension or content inspection in a manner consistent with pymzML design philosophy"
+    ]
+  },
+  "max_score": 12.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

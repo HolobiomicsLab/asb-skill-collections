@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that exportPeakMatrixForSTREAM function exists in github:GreenleafLab__ArchR repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the function is callable within R environment with ArchR package loaded"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output file exists and has a matrix-like format (csv, tsv, or HDF5)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output contains row names (peaks) and column names (cells), robust to different delimiters"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that peak identifiers follow standard genomic interval notation (chr:start-end), parameter-sensitive to coordinate format"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that cell identifiers match input ArchR project cell barcodes"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that matrix values are numeric and represent chromatin accessibility scores, no canonical answer on expected value ranges across datasets"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that exportPeakMatrixForSTREAM function exists in github:GreenleafLab__ArchR repository",
+      "verify that the function is callable within R environment with ArchR package loaded",
+      "verify that output file exists and has a matrix-like format (csv, tsv, or HDF5)",
+      "verify output contains row names (peaks) and column names (cells), robust to different delimiters",
+      "verify that peak identifiers follow standard genomic interval notation (chr:start-end), parameter-sensitive to coordinate format",
+      "verify that cell identifiers match input ArchR project cell barcodes",
+      "verify that matrix values are numeric and represent chromatin accessibility scores, no canonical answer on expected value ranges across datasets"
+    ],
+    "expert_review": [
+      "confirm that exported matrix dimensions and content structure are compatible with STREAM input requirements based on STREAM documentation",
+      "confirm that peak-by-cell matrix encoding (sparse vs. dense, normalization approach) matches STREAM specifications for trajectory inference",
+      "confirm that cell ordering and peak filtering (if any) are appropriate for downstream STREAM analysis"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

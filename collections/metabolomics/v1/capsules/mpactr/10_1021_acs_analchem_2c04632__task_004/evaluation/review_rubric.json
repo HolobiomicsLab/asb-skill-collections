@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file exists: github:mums2__mpactr repository is accessible and contains R6 class definition for filter_mispicked_ions()"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify script_runs: Load mpactr library and execute filter_mispicked_ions(data2, copy_object=FALSE) on a named R6 object, capturing row counts before and after"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify output_matches_reference: Row count of data2 after in-place filter equals row count of separately assigned data2_mispicked object (no canonical answer \u2014 both should show identical filtered row count, multiple valid test datasets defensible)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify value_in_range: Both data2 and data2_mispicked row counts are positive integers and data2_mispicked count \u2264 original data2 count"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file exists: github:mums2__mpactr repository is accessible and contains R6 class definition for filter_mispicked_ions()",
+      "Verify script_runs: Load mpactr library and execute filter_mispicked_ions(data2, copy_object=FALSE) on a named R6 object, capturing row counts before and after",
+      "Verify output_matches_reference: Row count of data2 after in-place filter equals row count of separately assigned data2_mispicked object (no canonical answer \u2014 both should show identical filtered row count, multiple valid test datasets defensible)",
+      "Verify value_in_range: Both data2 and data2_mispicked row counts are positive integers and data2_mispicked count \u2264 original data2 count"
+    ],
+    "expert_review": [
+      "Confirm that copy_object=FALSE parameter is correctly implemented to trigger in-place modification via R6 reference semantics rather than deep copy",
+      "Validate that the observed in-place behavior is consistent with R6 class architecture and does not depend on external garbage collection or environment-specific behavior"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

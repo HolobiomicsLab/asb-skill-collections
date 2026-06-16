@@ -5,13 +5,21 @@ evidence_spans:
 - the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
 - the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
 - the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31]
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Matchms offers an array of tools for metadata cleaning and validation
+- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+- doi: 10.21105/joss.02411
+  title: matchms
+- doi: 10.3389/fbinf.2022.842964
+  title: memo
 - doi: 10.1186/s13321-021-00558-4
   title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
 source_repos:
 - https://github.com/iomega/spec2vec
 - https://github.com/matchms/ms2deepscore
+- mandelbrot-project/memo
+- matchms/matchms
 schema_version: 0.2.0

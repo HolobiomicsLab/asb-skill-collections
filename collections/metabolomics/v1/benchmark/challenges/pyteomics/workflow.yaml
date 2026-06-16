@@ -1,0 +1,220 @@
+schema_version: 0.1.0
+workflow_id: coll_pyteomics_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: Pyteomics is a Python package providing lightweight tools for proteomics
+    data analysis, with modules for calculating polypeptide properties and accessing
+    common proteomics data formats. The package is installable via pip and conda,
+    with optional dependencies for extended functionality.
+  pseudo_abstract: 'Pyteomics offers a collection of modules designed to facilitate
+    common proteomics data analysis tasks, including calculation of basic physico-chemical
+    properties of polypeptides such as mass, isotopic distribution, charge, and pI,
+    as well as chromatographic retention time. The package supports access to proteomics
+    data formats and provides modular functionality where core features are available
+    through standard installation, while extended capabilities rely on optional dependencies:
+    the mzMLb module requires h5py and hdf5plugin for accessing mzMLb data formats,
+    the mass.unimod module depends on sqlalchemy for Unimod database access, and the
+    proforma module uses psims for additional functionality. Pyteomics is distributed
+    through multiple package managers including pip and Bioconda, supporting recent
+    versions of Python 3.'
+  research_questions:
+  - Can the core Pyteomics modules (pyteomics.mass, pyteomics.pepxml, pyteomics.mzid,
+    pyteomics.tandem, pyteomics.auxiliary) be successfully installed and imported
+    after pip installation from PyPI?
+  - What conditional dependencies must be installed to enable mzMLb format support
+    in pyteomics?
+  - Does the pyteomics.mass.unimod module successfully initialize when sqlalchemy
+    is installed as a conditional dependency?
+  - What is the mechanism by which the pyteomics.proforma module becomes available
+    after installing the psims conditional dependency?
+  - Can Pyteomics be successfully installed via the Bioconda conda channel and do
+    its core modules import without errors?
+  methods_summary: 'Execute pip install command for Pyteomics package from PyPI in
+    a Python 3 environment Sequentially import each of the five core modules (pyteomics.mass,
+    pyteomics.pepxml, pyteomics.mzid, pyteomics.tandem, pyteomics.auxiliary) to verify
+    module availability Capture and log import status (success or exception details)
+    for each module Validation: confirm installation completes without error and all
+    five core modules import successfully without ImportError or missing dependency
+    exceptions Install Pyteomics with the mzMLb extra specifier to fetch h5py and
+    hdf5plugin dependencies. Execute Python import statement for pyteomics.mzmlb module.
+    Validation: confirm that the import completes without ImportError, indicating
+    successful dependency resolution and module accessibility. Install the sqlalchemy
+    package dependency using pip package manager. Import the pyteomics.mass.unimod
+    module in a Python script or interactive session. Instantiate the Unimod database
+    accessor object to confirm initialization without errors. Validation: Successful
+    module import and object instantiation with no exceptions raised indicates correct
+    conditional dependency wiring. Execute pip install command targeting psims package
+    from PyPI Import pyteomics.proforma module in interactive Python or test script
+    Verify module loads without ImportError or ModuleNotFoundError exceptions Inspect
+    module for ProForma-related functions and classes to confirm parsing capability
+    is present Validation: Confirm pip installation exits with status 0, import statement
+    executes without exception, and ProForma parsing callables are discoverable via
+    introspection (dir() or hasattr()) Install Pyteomics using conda from the Bioconda
+    channel Launch Python and attempt to import pyteomics.mass Attempt to import pyteomics.pepxml
+    and pyteomics.mzid Record version information and import success status Validation:
+    All three core module imports execute without errors and version information is
+    captured in the verification report'
+  domain: proteomics
+  techniques: []
+  claims:
+  - claim_text: Pyteomics is a collection of lightweight and handy tools for Python
+      that help to handle various sorts of proteomics data.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: Pyteomics provides modules to facilitate calculation of mass and isotopic
+      distribution of polypeptides.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: Pyteomics provides modules to facilitate calculation of charge and
+      pI of polypeptides.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: Pyteomics provides modules to facilitate prediction of chromatographic
+      retention time of polypeptides.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: Pyteomics supports recent versions of Python 3.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: Pyteomics can be installed using pip Python package manager.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: Pyteomics can be installed from Bioconda using conda.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: On Arch Linux and related distros, Pyteomics can be installed from
+      AUR.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: NumPy is an optional dependency for Pyteomics.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: Matplotlib is used by the pyteomics.pylab_aux module.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: lxml is used by XML parsing modules and the pyteomics.mass.mass.Unimod
+      class.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: Pandas can be used with pyteomics.pepxml, pyteomics.tandem, pyteomics.mzid,
+      and pyteomics.auxiliary modules.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: SQLAlchemy is used by the pyteomics.mass.unimod module.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: Pynumpress adds support for Numpress compression in mzML.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_pynumpress
+  - claim_text: h5py and optionally hdf5plugin are used by the pyteomics.mzmlb module.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: psims is used by the pyteomics.proforma module.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: spectrum_utils is optionally used for spectrum annotation in the pyteomics.pylab_aux
+      module.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: All dependencies in Pyteomics are optional.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: Pyteomics can be installed with the XML extra to get dependencies
+      needed to read XML format.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  - claim_text: Currently provided extras for Pyteomics installation are XML, TDA,
+      graphics, DF, Unimod, numpress, mzMLb, and proforma.
+    claim_type: finding
+    speculative: false
+    entity_id: pyteomics_system
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints:
+  - All dependencies are optional
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Confirmation that pyteomics.mzmlb module imports successfully without errors
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Successful import of pyteomics.mass.unimod module with no errors and instantiated
+    Unimod accessor object ready for use
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Installation log confirming psims package installed successfully
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Python import statement execution log confirming pyteomics.proforma module
+    imported without error
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification report confirming ProForma notation parsing functions are accessible
+    in imported module
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Installation verification report documenting successful conda installation
+    and module import test results
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

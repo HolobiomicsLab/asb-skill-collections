@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:HinesLab__MOCCal repository is accessible and contains source code for class-specific CCS calculation"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the MOCCal Python package can be imported and contains a callable function or method for class-specific CCS computation"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that an example or test CCS calculation output file exists in the repository (any of the following: CSV, TSV, HDF5, Parquet, or structured data format)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the CCS output table contains at least one numeric column with expected CCS value units (\u0172 or \u00c5\u00b2) and at least one column with biomolecular class labels"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that CCS values in the output table are within physically plausible ranges (typical CCS values 50\u2013500 \u0172 for small molecules and ions)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:HinesLab__MOCCal repository is accessible and contains source code for class-specific CCS calculation",
+      "verify that the MOCCal Python package can be imported and contains a callable function or method for class-specific CCS computation",
+      "verify that an example or test CCS calculation output file exists in the repository (any of the following: CSV, TSV, HDF5, Parquet, or structured data format)",
+      "verify that the CCS output table contains at least one numeric column with expected CCS value units (\u0172 or \u00c5\u00b2) and at least one column with biomolecular class labels",
+      "verify that CCS values in the output table are within physically plausible ranges (typical CCS values 50\u2013500 \u0172 for small molecules and ions)"
+    ],
+    "expert_review": [
+      "confirm that the class-specific CCS calculation formula and methodology are scientifically justified for each biomolecular class (protein, lipid, carbohydrate, metabolite, or other categories used)",
+      "confirm that the class-specific CCS assignments produce values consistent with reported literature CCS measurements for reference standards in each class",
+      "assess whether the class-specific calculation properly accounts for instrument-specific calibration curves and arrival-time-to-drift-time conversion (relevant to TWIM-MS physics)"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

@@ -1,0 +1,113 @@
+schema_version: 0.1.0
+workflow_id: coll_lipoclean_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: LipoCLEAN is a command-line tool that filters lipid identifications from
+    MS-DIAL through configuration via TOML-formatted options files. The tool supports
+    MS-DIAL versions 4 and 5, with version-specific default configuration templates
+    that can be generated and customized.
+  pseudo_abstract: LipoCLEAN accepts all configuration options, including MS-DIAL
+    export file locations, through a TOML-formatted text file. Version-specific default
+    configuration files can be generated for MS-DIAL 4 or MS-DIAL 5 using the `--print
+    MSD4` or `--print MSD5` command-line arguments, which create an `options.txt`
+    file that users can subsequently edit. The tool can be installed and run as an
+    executable, a Python package, or a Docker container.
+  research_questions:
+  - How does the LipoCLEAN command-line tool accept configuration input and what file
+    format is required to specify MS-DIAL export locations?
+  - How does the LipoCLEAN CLI generate default configuration files for different
+    MS-DIAL versions?
+  methods_summary: 'Prepare TOML configuration file with LipoCLEAN options, specifying
+    MS-DIAL version and input dataset path. Invoke LipoCLEAN command-line interface
+    with the TOML configuration as the primary argument. Capture tool output and error
+    streams to verify successful execution. Validation: Confirm tool exits with status
+    code 0, output file exists and contains quality-scored lipid identifications in
+    the expected tabular format. Invoke LipoCLEAN CLI with `--print MSD4` or `--print
+    MSD5` flag to retrieve default configuration for the target MS-DIAL version Capture
+    or redirect the generated TOML-formatted options output to options.txt file Validation:
+    Confirm that options.txt file exists and contains valid TOML syntax with all expected
+    configuration keys for the specified MS-DIAL version'
+  domain: lipidomics
+  techniques:
+  - machine-learning
+  - quality-control
+  - metabolite-identification
+  claims:
+  - claim_text: LipoCLEAN is a command line tool.
+    claim_type: finding
+    speculative: false
+    entity_id: lipoclean_system
+  - claim_text: Usage instructions for LipoCLEAN can be obtained using the `--help`
+      flag.
+    claim_type: finding
+    speculative: false
+    entity_id: lipoclean_system
+  - claim_text: LipoCLEAN options are given to the tool in a TOML formatted text file.
+    claim_type: finding
+    speculative: false
+    entity_id: lipoclean_system
+  - claim_text: Default options files for MS-DIAL 4 can be obtained using the `--print
+      MSD4` command line argument.
+    claim_type: finding
+    speculative: false
+    entity_id: msdial_tool
+  - claim_text: Default options files for MS-DIAL 5 can be obtained using the `--print
+      MSD5` command line argument.
+    claim_type: finding
+    speculative: false
+    entity_id: msdial_tool
+  - claim_text: The default options file created by LipoCLEAN is named `options.txt`
+      and can be edited.
+    claim_type: finding
+    speculative: false
+    entity_id: lipoclean_system
+  - claim_text: LipoCLEAN can be installed and run as an executable.
+    claim_type: finding
+    speculative: false
+    entity_id: lipoclean_system
+  - claim_text: LipoCLEAN can be installed and run as a Python package.
+    claim_type: finding
+    speculative: false
+    entity_id: lipoclean_system
+  - claim_text: LipoCLEAN can be installed and run as a Docker container.
+    claim_type: finding
+    speculative: false
+    entity_id: lipoclean_system
+  - claim_text: LipoCLEAN is a machine learning based quality filter for lipid identifications
+      from MS-DIAL.
+    claim_type: finding
+    speculative: false
+    entity_id: lipoclean_system
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 2-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: options.txt file in TOML format containing default configuration keys for
+    the specified MS-DIAL version
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

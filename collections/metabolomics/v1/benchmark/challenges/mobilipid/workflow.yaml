@@ -1,0 +1,144 @@
+schema_version: 0.1.0
+workflow_id: coll_mobilipid_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: MobiLipid is a tool that streamlines lipidomics workflows by automating
+    collision cross section (CCS) bias assessment and correction in ion mobility-mass
+    spectrometry analyses through internal standardization using a newly established
+    DTCCSN2 library for U13C labeled lipids.
+  pseudo_abstract: MobiLipid provides a newly established DTCCSN2 library for U13C
+    labeled lipids distributed with the code and implements CCS bias assessment and
+    correction mechanisms within an R Markdown workflow that integrates into IM-MS
+    lipidomics analyses. The tool employs internal standardization with U13C labeled
+    lipids to enable CCS bias calculation and correction without requiring additional
+    external calibration beyond vendor-specific requirements. Analysis of the tool
+    demonstrates that effective CCS bias calculation and correction can be achieved
+    while requiring only a low number of lipids detected per lipid class.
+  research_questions:
+  - What is the structure, lipid class coverage, and range of CCS values contained
+    in the DTCCSN2 library for U13C labeled lipids that is distributed with MobiLipid?
+  - How does MobiLipid calculate CCS bias in IM-MS lipidomics data using internal
+    standardization with U13C labeled lipids?
+  - How does MobiLipid apply CCS bias correction using the automated R Markdown workflow
+    to transform assessed bias measurements into corrected CCS values?
+  - What is the minimum number of lipids per lipid class required to achieve effective
+    CCS bias estimation and correction using the MobiLipid workflow?
+  methods_summary: "Clone or download the MobiLipid repository from GitHub. Locate\
+    \ and open the DTCCSN2 library file and inspect its file format (e.g., CSV, TSV,\
+    \ or R data object). Parse and extract all records, verifying presence of required\
+    \ fields (lipid identifier, class, CCS value, measurement conditions). Enumerate\
+    \ and count lipid classes and verify CCS value distributions are consistent with\
+    \ expected ranges for ion mobility data. Compare observed library composition\
+    \ against specifications stated in project documentation and paper abstract. Validation:\
+    \ confirm file loads without error, all required fields are populated, CCS values\
+    \ are numeric and physically plausible, and lipid class coverage matches documented\
+    \ scope. Load IM-MS experimental data and DTCCSN2 reference library into R environment.\
+    \ Match experimental lipid features to reference library entries by m/z, retention\
+    \ time, and lipid class annotation. Calculate per-lipid CCS bias as measured CCS\
+    \ minus theoretical CCS value from library. Aggregate bias metrics by lipid class\
+    \ and compute summary statistics (mean, SD, range, quartiles). Validation: Report\
+    \ generated with per-class bias means and confidence intervals; bias values within\
+    \ expected instrument calibration tolerance (typically \xB12\u20133%) indicate\
+    \ acceptable CCS quality. Load bias assessment output containing calculated bias\
+    \ factors and correction statistics stratified by lipid class. Apply class-specific\
+    \ CCS bias correction factors to measured CCS values using the MobiLipid correction\
+    \ algorithm. Generate output table with original CCS, corrected CCS, applied bias\
+    \ factor, and lipid identifiers. Validation: corrected CCS values are produced\
+    \ for all lipids with assigned bias factors; output matches expected tabular structure\
+    \ and contains no missing values in corrected CCS column. Load the DTCCSN2 reference\
+    \ library and experimental IM-MS lipidomics data into R. Systematically subsample\
+    \ detected lipids per class across a range of counts (e.g., 1\u201310 lipids per\
+    \ class). Apply MobiLipid internal standardization with U13C labeled lipids to\
+    \ calculate CCS bias at each subsampling level without external calibration. Compute\
+    \ bias estimation quality metrics (residual error, accuracy, or deviation) for\
+    \ each lipid class and count level. Generate a summary table and visualization\
+    \ showing how CCS bias estimation quality stabilizes with increasing lipid counts\
+    \ per class. Validation: confirm that effective CCS bias correction is achieved\
+    \ with a low number of lipids per class, as indicated by convergence of bias metrics\
+    \ and acceptable residual error (acceptance criterion to be determined by reported\
+    \ thresholds in the paper)."
+  domain: lipidomics
+  techniques:
+  - ion-mobility
+  - quality-control
+  - stable-isotope-labeling
+  - high-resolution-ms
+  claims:
+  - claim_text: MobiLipid aims to streamline lipidomics workflows by offering a fully
+      automated solution for assessing and correcting collision cross section (CCS)
+      bias in ion mobility-mass spectrometry (IM-MS) analyses.
+    claim_type: finding
+    speculative: false
+    entity_id: mobil_lipid_system
+  - claim_text: MobiLipid employs a newly established DT CCS N2 library for U13C labeled
+      lipids.
+    claim_type: finding
+    speculative: false
+    entity_id: mobil_lipid_system
+  - claim_text: MobiLipid eliminates the need to measure additional external calibration
+      besides vendor specific calibration requirements by internal standardization.
+    claim_type: finding
+    speculative: false
+    entity_id: mobil_lipid_system
+  - claim_text: MobiLipid enhances CCS quality control by providing an R Markdown
+      that integrates into IM-MS lipidomics workflows.
+    claim_type: finding
+    speculative: false
+    entity_id: mobil_lipid_system
+  - claim_text: CCS bias calculation and correction can be implemented effectively
+      with a low number of lipids detected per lipid class.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 4-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Corrected CCS values in tabular format (CSV or data frame) with original and
+    corrected CCS per lipid, including bias correction metadata
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Summary table of CCS bias estimation quality metrics (e.g., residual error,
+    accuracy) as a function of lipid count per lipid class
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Visualization (curve or heatmap) showing the relationship between number of
+    detected lipids per class and CCS bias estimation quality
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

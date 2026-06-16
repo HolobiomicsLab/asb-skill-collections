@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the GitHub repository adelabriere/SLAW or zamboni-lab/SLAW contains a README or documentation file describing the post-picking grouping step"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the repository contains executable code or a module that implements isotopologue and adduct grouping"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that example grouped feature output (table or file) exists in the repository, deposited dataset, or supplementary materials with at least one field representing feature groups"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "grouped feature output file in repository or supplementary materials"
+    },
+    {
+      "id": "pf_005",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "grouped feature output contains identifiable fields for isotopologue group ID an",
+      "value": [
+        "for isotopologue group ID and/or adduct annotation"
+      ]
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the GitHub repository adelabriere/SLAW or zamboni-lab/SLAW contains a README or documentation file describing the post-picking grouping step",
+      "verify that the repository contains executable code or a module that implements isotopologue and adduct grouping",
+      "verify that example grouped feature output (table or file) exists in the repository, deposited dataset, or supplementary materials with at least one field representing feature groups",
+      "file_exists: grouped feature output file in repository or supplementary materials",
+      "field_present: grouped feature output contains identifiable fields for isotopologue group ID and/or adduct annotation",
+      "script_runs: grouping module executes without error on provided test LC-MS feature input"
+    ],
+    "expert_review": [
+      "verify that the implemented grouping algorithm correctly clusters detected features by isotopologue series (e.g., M, M+1, M+2 patterns)",
+      "verify that the grouping algorithm correctly identifies and separates adduct forms (e.g., [M+H]+, [M+Na]+, [M-H]\u2212)",
+      "verify that grouped output is biologically and chemically sensible: isotopologue groups show expected mass deltas and adduct groups show expected mass shifts"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

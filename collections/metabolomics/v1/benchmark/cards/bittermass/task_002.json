@@ -1,0 +1,271 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d99a89eede44b3ef329fa8d47412aa5273ea74b47f7f4b19fd37f5af8f4360d0"
+    }
+  ],
+  "created_at": "2026-06-15T13:58:47.028399+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw molecular structures in SMILES or SDF format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CSV or Excel file containing molecular descriptors formatted for BitterPredict.m input",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "BitterPredict.m requires a specific set of pre-calculated molecular descriptors; the complete descriptor list and naming convention must be obtained from the BitterPredict repository or documentation.",
+    "SMILES and SDF are standard molecular representation formats; SMILES strings must be kekulized and aromaticity must be standardized consistently across all molecules.",
+    "Molecular descriptor calculation involves physicochemical properties (e.g., molecular weight, logP, H-bond donors/acceptors) and topological/structural features; calculation method and parameter settings must match those used to train BitterPredict.",
+    "CSV and Excel formats differ in encoding and delimiter handling; the output format (sheet name, header row, column order) must conform exactly to BitterPredict.m's documented input specification."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in github:Niv-Lab__BitterPredict1 repository containing descriptor calculation code (e.g. descriptor_calculator.m, descriptor_*.py, or equivalent)",
+      "verify that code accepts raw molecular input in at least one of: SMILES string format, SDF file format, or other standard molecular structure representation",
+      "verify that code produces output in CSV or Excel format",
+      "verify that output file contains at least one named molecular descriptor column with numeric or categorical values",
+      "script_runs: execute descriptor conversion code with a small test dataset (e.g. 5\u201310 molecules in SMILES or SDF format) and verify no runtime errors",
+      "output_matches_reference: confirm output descriptor file structure is compatible with BitterPredict.m by checking column names match the documented required descriptor set (if documented in repo)",
+      "file_format_is: verify output file is valid CSV or Excel (robust to whitespace and minor formatting variations)",
+      "row_count_equals: verify output file has one row per input molecule, plus header row"
+    ],
+    "expert_review": [
+      "evaluate whether the named descriptor set computed is chemically and informatically sound for bitter taste prediction (domain expertise required to assess descriptor choice and molecular relevance)",
+      "assess completeness: does the descriptor set include established molecular features known to correlate with bitterness perception, or is it limited to generic cheminformatics descriptors?"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What descriptor input format and preparation workflow is required to convert raw molecular representations into the CSV or Excel files needed for BitterPredict.m classification?: 'BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] BitterPredict.m accepts CSV or Excel files containing pre-computed molecular descriptors as input, which must be prepared prior to classification; details on descriptor specification and preparation workflow are documented within the BitterPredict.m file itself.: 'BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules, and calucautes a predictions if each molecule is bitter or not. Details and examples of how to use the code is'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Raw molecular structures in SMILES or SDF format: 'BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] CSV or Excel file containing molecular descriptors formatted for BitterPredict.m input: 'BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] BitterPredict: 'BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, changes, or descriptor selection rationale is available: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific set of named descriptors required as input by BitterPredict.m is not described in the accessible discussion section: 'No explicit descriptor list in provided section text'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Implementation details and location of the descriptor conversion code within the repository are not specified in the discussion section: 'No implementation details in provided section text'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "bitterpredict.descriptor_extraction",
+      "--input",
+      "{inputs.raw_structures}",
+      "--output",
+      "descriptors_output.csv"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "descriptors.csv",
+  "expected_outputs": [
+    "CSV or Excel file containing molecular descriptors formatted for BitterPredict.m input"
+  ],
+  "finding": "BitterPredict.m accepts CSV or Excel files containing pre-computed molecular descriptors as input, which must be prepared prior to classification; details on descriptor specification and preparation workflow are documented within the BitterPredict.m file itself.",
+  "github_name": "Niv-Lab/BitterPredict1",
+  "input_from": null,
+  "inputs": [
+    "Raw molecular structures in SMILES or SDF format"
+  ],
+  "keywords": [
+    "taste prediction",
+    "bitter compound classification",
+    "chemical structure descriptors",
+    "molecular classification",
+    "chemoinformatics"
+  ],
+  "landmark_outputs": [
+    "molecules_parsed.sdf",
+    "molecules_standardized.csv",
+    "descriptors_raw.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Load and parse raw SMILES or SDF input files into standardized molecular structures.",
+    "Validate molecular syntax and apply structure standardization (kekulization, aromaticity perception).",
+    "Calculate all required molecular descriptors (physicochemical and topological properties) from standardized structures.",
+    "Assemble descriptor values into a table with molecules as rows and descriptors as named columns.",
+    "Export table to CSV or Excel format matching BitterPredict.m input specification.",
+    "Validation: Verify output file format (CSV or Excel), confirm presence and naming of all required descriptor columns, and check that all rows contain valid numeric descriptor values with no missing entries."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, changes, or descriptor selection rationale is available",
+    "The specific set of named descriptors required as input by BitterPredict.m is not described in the accessible discussion section",
+    "Implementation details and location of the descriptor conversion code within the repository are not specified in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What descriptor input format and preparation workflow is required to convert raw molecular representations into the CSV or Excel files needed for BitterPredict.m classification?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "molecular-descriptor-calculation",
+    "smiles-sdf-parsing-validation",
+    "chemical-structure-standardization",
+    "descriptor-table-assembly",
+    "molecular-cheminformatics-pipeline"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_bittermass/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_BitterPredict",
+    "TOOL_BitterPredict_m",
+    "COMP_ChemicalStructure"
+  ],
+  "subdomains": [
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:Niv-Lab__BitterPredict1",
+  "task_description": "Convert raw molecular representations (SMILES or SDF format) into the named descriptor set required by BitterPredict.m, producing a correctly formatted CSV or Excel file with all required molecular descriptors as input for bitter/non-bitter classification.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw molecular structures (SMILES or SDF)",
+      "port_id": "raw_structures",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement a descriptor calculation pipeline that converts molecular structures (SMILES/SDF) into a correctly formatted CSV or Excel file compatible with BitterPredict.m input requirements.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Descriptor table (CSV or Excel) for BitterPredict.m",
+      "port_id": "descriptor_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "quantitative-structure-activity"
+  ],
+  "title": "Reconstruct the chemical structure descriptor extraction pipeline feeding BitterPredict",
+  "tools": [
+    "BitterPredict"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: CSV or Excel file containing molecular descriptors formatted for BitterPredict.m input."
+  ],
+  "workflow_description": "1. Load raw molecular structures in SMILES or SDF format. 2. Parse and validate molecular structure syntax using a cheminformatics parser (e.g., RDKit). 3. Calculate the complete set of molecular descriptors required by BitterPredict.m from the validated structures. 4. Assemble descriptors into a structured table with molecules as rows and descriptor columns as required. 5. Export the descriptor table to CSV or Excel format compatible with BitterPredict.m input specification."
+}

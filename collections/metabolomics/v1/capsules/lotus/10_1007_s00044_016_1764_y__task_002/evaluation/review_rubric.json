@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Load the published LOTUS flat file (2D structures dataset); verify file_exists and file_format_is (CSV or TSV)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Parse the 2D structure-organism pairs table; verify row_count_equals the total number of unique structure-organism pairs reported in EnrichedIndex (484174)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Group unique 2D structures by organism count; verify the four bin counts match exactly: structures appearing in exactly 1 organism = 89903, structures in 1\u201310 organisms = 45640, structures in 10\u2013100 organisms = 3990, structures in >100 organisms = 403 (byte-for-byte exact match required)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify the four counts sum to the total unique 2D structure count (89903 + 45640 + 3990 + 403 = 139936)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Load the published LOTUS flat file (2D structures dataset); verify file_exists and file_format_is (CSV or TSV)",
+      "Parse the 2D structure-organism pairs table; verify row_count_equals the total number of unique structure-organism pairs reported in EnrichedIndex (484174)",
+      "Group unique 2D structures by organism count; verify the four bin counts match exactly: structures appearing in exactly 1 organism = 89903, structures in 1\u201310 organisms = 45640, structures in 10\u2013100 organisms = 3990, structures in >100 organisms = 403 (byte-for-byte exact match required)",
+      "Verify the four counts sum to the total unique 2D structure count (89903 + 45640 + 3990 + 403 = 139936)"
+    ],
+    "expert_review": [
+      "Confirm the binning logic is scientifically meaningful: verify that the boundaries (1, 1\u201310, 10\u2013100, >100) are clearly defined and that overlaps or off-by-one errors in interval definition do not occur",
+      "Assess whether the reported counts are consistent with the documented curation pipeline (steps 1_gathering through 4_visualizing) and the organism/structure quality assurance steps"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

@@ -1,0 +1,6 @@
+  figures/docker-windows-tutorial-0.png
+  figures/docker-windows-tutorial-1.png
+  figures/docker-windows-tutorial-2.png
+  figures/func+export_coverage.svg
+  figures/func+import_data.svg
+paper.md

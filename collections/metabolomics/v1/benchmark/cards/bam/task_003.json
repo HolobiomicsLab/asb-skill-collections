@@ -1,0 +1,321 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "dc86550c053bb49dc462ac43c834959a9182e65c94abdf4e662068621a7f1919"
+    }
+  ],
+  "created_at": "2026-06-15T14:05:17.730493+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Candidate transformed structures from biotransformation-rules module (structures with mass, formula, and SMILES notation)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Untargeted metabolomics MS/MS spectral data (feature intensity matrix and MS2 spectra)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Molecular network file in standard graph format (GraphML, JSON, or GXF) containing nodes (features) and edges (spectral similarity links)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature annotation table (CSV or TSV) mapping each MS feature to candidate structure(s), molecular family cluster, and annotation confidence metrics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Global molecular networking links MS features with high spectral similarity to infer shared structural motifs or metabolite families, enabling collective annotation.",
+    "Biotransformation rules define in silico predicted phase I and phase II metabolic transformations; candidate structures from these rules must be mapped back to experimental features via mass-to-charge and spectral matching.",
+    "Spectral similarity thresholds (e.g., cosine similarity >0.6\u20130.8) are critical for filtering false-positive edges in the network and determining network resolution.",
+    "Annotation confidence depends on both spectral similarity to known spectra and consistency with biotransformation rules; features with multiple candidate structures require scoring or ranking.",
+    "Network visualization and interpretation require understanding of community structure (clusters), node centrality, and bridge edges that connect distinct molecular families."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that inputs include at least one concrete artifact: either a file from the BAM package (github:HassounLab__BAM), a deposited dataset with public accession, or task output from a preceding biotransformation-rules sub-task",
+      "verify file_exists for the molecular network output file (expected format: .graphml, .gexf, or .net)",
+      "verify file_exists for the annotation table output (expected format: .csv, .tsv, or .xlsx)",
+      "verify that the annotation table contains at least the following fields: node_id, compound_name, mass, or equivalent identifiers \u2014 exact field names may vary; no canonical answer",
+      "verify that the molecular network file is valid and parseable in its declared format (robust to node/edge count variation)",
+      "verify row_count_equals or row_count_is_greater_than for the annotation table (at least 1 data row beyond headers)",
+      "verify that molecular network nodes correspond to entries in the annotation table \u2014 at least one mapping present"
+    ],
+    "expert_review": [
+      "assess whether the global molecular networking component executed without errors or warnings and completed the full network assembly pipeline",
+      "assess the chemical plausibility and coherence of node connectivity in the molecular network (whether edges reflect realistic biotransformation or spectral similarity relationships)",
+      "assess whether annotation table entries show reasonable mass-to-charge and structural relationships consistent with untargeted metabolomics data",
+      "assess whether the network structure and annotations reflect integration of the candidate transformed structures from the preceding biotransformation-rules module"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the global molecular networking component of BAM operate on candidate transformed structures to generate a molecular network file and annotation table?: 'Molecular structure discovery from untargeted metabolomics data using biotransformation rules and global molecular networking'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] BAM implements a method that combines biotransformation rules and global molecular networking as components for molecular structure discovery from untargeted metabolomics data.: 'code to implement the biotransformation-based annotation method (**BAM**) [[1]](#1), as well as the data used to validate BAM'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Candidate transformed structures from biotransformation-rules module (structures with mass, formula, and SMILES notation): 'candidate transformed structures produced by the biotransformation-rules module'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Untargeted metabolomics MS/MS spectral data (feature intensity matrix and MS2 spectra): 'untargeted metabolomics data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Molecular network file in standard graph format (GraphML, JSON, or GXF) containing nodes (features) and edges (spectral similarity links): 'global molecular networking component of BAM to generate a molecular network file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Feature annotation table (CSV or TSV) mapping each MS feature to candidate structure(s), molecular family cluster, and annotation confidence metrics: 'generate a molecular network file and annotation table'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] BAM: 'HassounLab/BAM'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bam",
+      "molecular-network",
+      "--candidate-structures",
+      "{inputs.candidate_structures}",
+      "--ms-spectra",
+      "{inputs.ms_spectra}",
+      "--output-network",
+      "molecular_network.graphml",
+      "--output-annotations",
+      "feature_annotations.tsv"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "annotation_table.csv",
+  "expected_outputs": [
+    "Molecular network file in standard graph format (GraphML, JSON, or GXF) containing nodes (features) and edges (spectral similarity links)",
+    "Feature annotation table (CSV or TSV) mapping each MS feature to candidate structure(s), molecular family cluster, and annotation confidence metrics"
+  ],
+  "finding": "BAM implements a method that combines biotransformation rules and global molecular networking as components for molecular structure discovery from untargeted metabolomics data.",
+  "github_name": "HassounLab/BAM",
+  "input_from": "task_002",
+  "inputs": [
+    "Candidate transformed structures from biotransformation-rules module (structures with mass, formula, and SMILES notation)",
+    "Untargeted metabolomics MS/MS spectral data (feature intensity matrix and MS2 spectra)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectral_similarity_matrix.csv",
+    "network_edges_filtered.csv",
+    "molecular_network.graphml",
+    "cluster_assignments.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load candidate structures from biotransformation rules and MS/MS spectral features.",
+    "Compute pairwise spectral similarity scores across all features using cosine similarity or analogous metric.",
+    "Apply spectral similarity threshold to filter network edges and retain high-confidence spectral matches.",
+    "Detect molecular families via graph clustering or community detection on the filtered network.",
+    "Integrate candidate structures with network nodes and assign feature-to-structure annotations based on mass and spectral consistency.",
+    "Validation: Confirm molecular network file is properly formatted and parseable; verify annotation table contains all MS features with at least one candidate structure assignment and cluster membership; assess annotation coverage (% of features with predicted structures) and network statistics (number of nodes, edges, clusters) match expected scale."
+  ],
+  "missing_information": [
+    "No changelog or version history available"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the global molecular networking component of BAM operate on candidate transformed structures to generate a molecular network file and annotation table?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "spectral-similarity-network-construction",
+    "metabolite-structure-annotation-integration",
+    "molecular-network-clustering-and-analysis",
+    "mass-spectral-feature-grouping",
+    "biotransformation-candidate-integration-with-networking"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_bam/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp_biotransformation_rules",
+    "comp_global_molecular_networking"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "information-extraction",
+    "visualization"
+  ],
+  "synthesized_from": "github:HassounLab__BAM",
+  "task_description": "Execute the global molecular networking component of BAM on candidate transformed structures to generate a molecular network file and annotation table linking metabolite features to putative structures.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Candidate transformed structures from biotransformation rules",
+      "port_id": "candidate_structures",
+      "resolved_via": null,
+      "source": "task_002/transformed_structures",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Untargeted metabolomics MS/MS spectral data",
+      "port_id": "ms_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute global molecular networking on transformed candidate structures to produce a molecular network file and corresponding annotation table.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Molecular network in graph format",
+      "port_id": "network_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature-to-structure annotation table",
+      "port_id": "annotation_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "metabolite-identification",
+    "network-annotation-propagation",
+    "database-annotation",
+    "high-resolution-ms"
+  ],
+  "title": "Reconstruct the Global Molecular Networking Annotation Step",
+  "tools": [
+    "BAM"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load candidate transformed structures from biotransformation-rules module output and MS/MS spectral data. 2. Construct a similarity network by computing spectral similarity scores (e.g., cosine similarity or variant thereof) between all feature pairs in the dataset. 3. Filter edges based on a similarity threshold to retain only high-confidence spectral matches. 4. Apply graph-based clustering or community detection to identify connected components representing putative molecular families. 5. Annotate each network node with the corresponding candidate structures from the biotransformation rules output and associate with MS1/MS2 features. 6. Export the molecular network in a standard format (e.g., GraphML, JSON, or GXF) and generate a feature annotation table linking each MS feature to its predicted structure(s) and network cluster membership."
+}

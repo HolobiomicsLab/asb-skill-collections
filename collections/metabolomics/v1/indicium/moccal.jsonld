@@ -1,0 +1,3283 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "extension",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/arrival-time-to-ccs-conversion",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/biomolecular-class-ccs-mapping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/biomolecular-class-label-assignment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/class-specific-ccs-calculation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/class-stratified-calibration-model-application",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/collision-cross-section-calculation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ion-mobility-arrival-time-conversion",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ion-mobility-feature-classification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/ion-mobility-reference-matching",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-data-table-formatting",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/twim-ms-calibration-mapping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/twim-ms-data-processing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MOCCal is a Python application for high-dimensional, multi-omic traveling-wave ion mobility mass spectrometry (TWIM-MS) data analysis.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MOCCal_system"
+        },
+        {
+          "id": "asb:spine_tool_twim_ms"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MOCCal provides functionality for collision cross section (CCS) calibration.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MOCCal_system"
+        },
+        {
+          "id": "asb:spine_comp_class_assignment"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MOCCal provides functionality for experimental data biomolecular class assignment.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MOCCal_system"
+        },
+        {
+          "id": "asb:spine_comp_class_assignment"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MOCCal provides functionality for experimental class-specific CCS calculations.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MOCCal_system"
+        },
+        {
+          "id": "asb:spine_comp_class_assignment"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MOCCal offers class assignment and CCS calculations without needing to identify features first.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_MOCCal_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The terms arrival time and drift time are used interchangeably within MOCCal software for convenience.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_MOCCal_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "TWIM platforms record the time at which the ion reaches the detector (arrival time) rather than the time an ion spends within the TWIM cell (drift time).",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Arrival times from traveling wave ion mobility (TWIM) devices must undergo a calibration process to obtain CCS values... Here we describe the development of a multiomic CCS calibration tool, MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value.",
+      "asbval:note": "The research question directly matches the paper's core objective of converting TWIM arrival times to CCS values via MOCCal.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does MOCCal convert raw arrival-time measurements from TWIM-MS into collision cross section (CCS) values through calibration?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:26:48.271569+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": "MOCCal is explicitly described as a Python program.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:26:48.271569+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values... MOCCal will calculate up to three calibrated TWCCSN2 values... The calibrated TWCCSN2 value providing the smallest \u0394CCS relative to its respective trendline is retained for the MOCCal output.",
+      "asbval:note": "The paper describes MOCCal outputting calibrated CCS values (TWCCSN2) for features identified by their m/z and other identifiers, matching the expected output description.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Calibrated CCS values table with ion identifiers and corresponding collision cross section measurements",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:26:48.271569+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card does not mention the critical biomolecular class assignment functionality (lipid, small molecule, peptide classification) that is central to MOCCal's operation.",
+        "The card does not specify that MOCCal uses power-law calibration equations or the \u0394CCS trendline-matching approach for selecting the best calibration curve.",
+        "The card does not mention the use of DEIMoS for arrival-time extraction from raw .mzML files, which is a prerequisite component of the MOCCal workflow.",
+        "The card does not reference the Unified CCS Compendium or DTCCSN2 vs m/z trendlines, which are essential reference data used by MOCCal for class assignment."
+      ],
+      "asbval:n_drift_notes": 4,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:26:48.271569+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2.",
+      "asbval:note": "The paper explicitly describes the identity-agnostic class assignment process using \u0394CCS minimization against trendlines.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does MOCCal assign biomolecular class labels to experimental TWIM-MS features without requiring prior feature identification?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:00.149460+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": "MOCCal is explicitly described as a Python program.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:00.149460+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values... MOCCal will calculate up to three calibrated TWCCSN2 values using each set of class-specific calibration parameters... The calibrated TWCCSN2 value providing the smallest \u0394CCS relative to its respective trendline is retained for the MOCCal output.",
+      "asbval:note": "The paper describes MOCCal outputting class assignments for features with their identifiers and assigned biomolecular class (lipid, small molecule, or peptide).",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Table of per-feature class labels with feature identifiers and their assigned biomolecular class",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:00.149460+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we propose a novel method that can be used to assign multiomic features to their corresponding biomolecular class for TWCCSN2 value determination without prior identification.",
+      "asbval:note": "The paper describes MOCCal as implementing exactly this functionality\u2014class assignment without prior identification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Implement Biomolecular Class Assignment module operating on unidentified features",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:00.149460+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity. Every singly charged feature is calibrated with as many as three different calibration equations, provided that data for small molecule, lipid, and peptide (z = 1) CCS calibration mixtures are provided.",
+      "asbval:note": "The research question directly aligns with MOCCal's core function of computing class-specific CCS values using power law calibration equations.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does MOCCal compute class-specific collision cross section (CCS) values for biomolecular features that have been assigned to experimental classes?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:12.395009+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": "MOCCal is explicitly described as a Python program.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:12.395009+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values... MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2... The calibrated TWCCSN2 value providing the smallest \u0394CCS relative to its respective trendline is retained for the MOCCal output.",
+      "asbval:note": "The paper describes MOCCal outputting calibrated CCS values with class assignments and feature identifiers, consistent with the expected output claim.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "CCS calibration table with feature identifiers, class labels, and computed CCS values",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:12.395009+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card title mentions 'Implement Class-Specific CCS Calculation module' which suggests a development/implementation task, but the paper describes MOCCal as an already-developed tool. The research question and expected outputs are consistent with MOCCal's documented functionality, not a new implementation task."
+      ],
+      "asbval:n_drift_notes": 1,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:12.395009+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_004/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": "The paper demonstrates MOCCal's complete workflow on external multiomic datasets (NIST SRM 1950 and simulated mixtures), confirming the research question's feasibility.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_004",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Can MOCCal successfully execute its complete workflow (CCS calibration, biomolecular class assignment, and class-specific CCS calculations) on a multi-omic TWIM-MS dataset external to its bundled examples?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:23.825340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_004/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": "MOCCal is explicitly described as a Python program.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_004",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:23.825340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_004/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": "The tool is confirmed as available at the HinesLab GitHub repository.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_004",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HinesLab/MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:23.825340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_004/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For each feature in the spreadsheet with a charge state of 1, MOCCal will calculate up to three calibrated TWCCSN2 values using each set of class-specific calibration parameters... The calibrated TWCCSN2 value providing the smallest \u0394CCS relative to its respective trendline is retained for the MOCCal output.",
+      "asbval:note": "The paper confirms MOCCal produces calibrated class-specific CCS values as output.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_004",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Structured CCS output file containing calibrated and class-specific collision cross section values",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:23.825340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_004/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not explicitly describe execution logs or error confirmation outputs. The paper discusses MOCCal metrics and scoring but does not detail logging functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "task_004",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Execution log confirming MOCCal workflow completed without error",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:23.825340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_004/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card frames the task as applying MOCCal to 'a new multi-omic TWIM-MS dataset external to its bundled examples,' which is consistent with the paper's demonstration on NIST SRM 1950 and simulated multiomic samples\u2014these are presented as validation datasets, not bundled examples.",
+        "The research question is appropriately scoped to MOCCal's documented capabilities: CCS calibration, biomolecular class assignment, and class-specific CCS calculations are all core functions described in the paper."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_004",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:27:23.825340+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Arrival times from traveling wave ion mobility (TWIM) devices must undergo a calibration process to obtain CCS values... Here we describe the development of a multiomic CCS calibration tool, MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value.",
+      "asbval:note": "Core research question is directly supported by abstract and introduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert raw arrival-time measurements from TWIM-MS into calibrated collision cross section (CCS) values by establishing a mapping function from reference compounds with known CCS values.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "CCS values, unlike drift times, are comparable across different laboratories and instrumentation. Comparison of CCS values between laboratories using CCS databases can be helpful in the assignment of an identification to an unknown feature.",
+      "asbval:note": "Semantic equivalence: paper establishes that CCS values enable cross-laboratory comparability.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This enables standardized, comparable ion mobility measurements across multi-omic datasets.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves and uses the difference (in \u00c5 2 ) between the calibrated TW CCS N2 value and DT CCS N2 vs m / z regression lines to determine the best calibration curve.",
+      "asbval:note": "Verbatim presence of MOCCal as Python application with CCS calibration functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal is a Python application that implements CCS calibration module to transform arrival-time data into CCS values for multi-omic TWIM-MS analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": "Verbatim presence of repository URL (case-insensitive match).",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal repository is at https://github.com/HinesLab/MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
+      "asbval:note": "DEIMoS confirmed as optional dependency for raw data processing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS is an optional dependency for processing raw calibration files",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No specific version number (1.3.2) or 'RawDT workflow' terminology found in passages. Paper mentions DEIMoS as prerequisite but does not specify version constraints.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS version 1.3.2 required when using RawDT workflow",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not provide DEIMoS repository URL. Only mentions it as 'open-source software' without link.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS repository is at http://github.com/pnnl/deimos",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
+      "asbval:note": "Python confirmed as the language/platform for MOCCal implementation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python is used (as a tool/language for MOCCal)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": "HinesLab/MOCCal is the same entity as MOCCal (the Python application). The card lists it redundantly as a separate tool; this is a duplication, not a distinct tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HinesLab/MOCCal is listed as a separate tool entity",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2.",
+      "asbval:note": "Scope aligns with paper's description of MOCCal's purpose: arrival-time-to-CCS conversion for class assignment.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have raw TWIM-MS arrival-time data and need to transform it into absolute CCS values for downstream biomolecular class assignment",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The CCS calibration process begins by selecting calibration standards for the biomolecular classes that are expected to be within the data... For calibration input into MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required.",
+      "asbval:note": "Paper explicitly requires calibration standards with known CCS values as input.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Applicable when a calibration template with reference compounds and their known CCS values is available",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity.",
+      "asbval:note": "Paper explicitly states MOCCal works on 'unknown identity' features, supporting feature-independent operation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Requires feature-independent CCS quantitation without prior feature identification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/012",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Arrival times from TWIM experiments are calibrated to experimental CCS values from DTIM platforms (DTCCSN2) using a set of standards.",
+      "asbval:note": "Semantic equivalence: MOCCal is designed to convert arrival times to CCS, so pre-calibrated data would not require this step.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "NOT applicable when input data already contains calibrated CCS values",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/013",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For calibration input into MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required.",
+      "asbval:note": "Paper explicitly requires calibration standards; absence of these makes MOCCal inapplicable.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "NOT applicable when no reference compounds or known CCS values are available",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/014",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For DTIMS experiments, the amount of time it takes an ion to traverse the drift region of the spectrometer, referred to as the drift time, can be converted to a collision cross section (CCS, in \u00c52) value... However, CCS values cannot be obtained directly from the TWIM platforms. Instead, arrival times from TWIM experiments are calibrated to experimental CCS values from DTIM platforms.",
+      "asbval:note": "Paper distinguishes DTIM (drift-time) from TWIM (arrival-time); MOCCal is specific to TWIM.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "NOT applicable for drift-time (not arrival-time) ion mobility spectrometry",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:29.841559+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity. Every singly charged feature is calibrated with as many as three different calibration equations, provided that data for small molecule, lipid, and peptide (z = 1) CCS calibration mixtures are provided.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-ccs-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute class-specific collision cross section (CCS) values for ion mobility features by applying biomolecule-class-appropriate calibration models to arrival time measurements.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:50.471159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values",
+      "asbval:note": "Paper specifies power law (non-linear) regression models, not linear or non-linear generically. The card's claim of 'linear or non-linear' is broader than what the paper implements; MOCCal uses power law specifically.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "biomolecular-class-ccs-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "conversion of raw TWIM-MS arrival times to calibrated CCS using class-dependent linear or non-linear regression models",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:50.471159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Based on provided charge states, features with two or more charges will be calibrated with only the peptide z = 2 or z = 3 calibration curves. For each feature in the spreadsheet with a charge state of 1, MOCCal will calculate up to three calibrated TWCCSN2 values using each set of class-specific calibration parameters",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-ccs-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill after biomolecular class labels have been assigned to features in a TWIM-MS dataset and you have raw ion mobility arrival time measurements.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:50.471159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "It is highly documented that calibrants that are structurally similar to the analyte provide the most accurately calibrated TWCCSN2 values... MOCCal is currently set up to perform CCS calibrations for lipids, small molecules, and peptides (z = 1 to z = 3) in positive ionization mode.",
+      "asbval:note": "Paper supports lipids, small molecules, and peptides; carbohydrates are not mentioned as a supported class in MOCCal.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "biomolecular-class-ccs-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use it when you need to convert arrival times to standardized CCS values where calibration accuracy depends critically on the biomolecular class (e.g., lipids, proteins, carbohydrates may require different calibration models).",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:50.471159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is designed for the assignment of features to a calibrant set/CCS calibration curve without any a priori knowledge of the feature's classification or identity... MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2.",
+      "asbval:note": "The paper actually describes MOCCal as performing class assignment WITHOUT prior knowledge of feature identity, which contradicts the scope statement that class labels must be pre-assigned. MOCCal performs identity-agnostic class assignment as part of its workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "biomolecular-class-ccs-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Do not use if features lack explicit class labels or if CCS calibration is class-agnostic.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:50.471159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-ccs-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal tool with repo https://github.com/HinesLab/MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:50.471159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves and uses the difference (in \u00c52) between the calibrated TW CCS N2 value and DT CCS N2 vs m/z regression lines to determine the best calibration curve.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-ccs-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal role: Implements class-specific CCS calculation as a functional module within the multi-omic TWIM-MS data analysis workflow; selects and applies class-appropriate calibration parameters to convert arrival times to CCS values.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:50.471159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations. These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-ccs-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python tool with evidence_spans: 'MOCCal, or Multi-Omic CCS Calibrator, is a Python application'",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:28:50.471159+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves... we propose a novel method that can be used to assign multiomic features to their corresponding biomolecular class for TWCCSN2 value determination without prior identification.",
+      "asbval:note": "Paper demonstrates class assignment for lipids, small molecules, and peptides (z=1-3), but does NOT include carbohydrates. The research question lists 'carbohydrate' as an example class, but the paper only validates lipid, small molecule, and peptide assignments. This is a partial match: the function is correct but the scope of biomolecular classes is narrower than claimed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Assign biomolecular class labels (e.g., lipid, peptide, carbohydrate) to unidentified TWIM-MS features based on their physico-chemical properties, without requiring prior feature identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:04.333358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is currently set up to perform CCS calibrations for lipids, small molecules, and peptides (z = 1 to z = 3) in positive ionization mode.",
+      "asbval:note": "Paper explicitly states MOCCal supports lipids, small molecules, and peptides only. Carbohydrates are not mentioned as a supported class. The scope claim overstates the biomolecular classes covered.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Assign biomolecular class labels (e.g., lipid, peptide, carbohydrate) to unidentified TWIM-MS features",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:04.333358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, a multiomic CCS calibration tool, to automate the assignment of unknown features... The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations. These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": "MOCCal is confirmed as a Python application performing biomolecular class assignment via CCS calibration.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal (Core Python application performing biomolecular class assignment)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:04.333358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
+      "asbval:note": "Paper confirms DEIMoS is required for raw data processing and arrival time extraction, but does NOT specify version 1.3.2. The version number cannot be verified from the passages. The role description 'RawDT workflow' is not explicitly mentioned in the paper; the paper describes it as extracting arrival times from raw TWIM data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS (pnnl version 1.3.2) - Required upstream preprocessing tool for RawDT workflow",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:04.333358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations. These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": "Python is confirmed as the language in which MOCCal is implemented.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python (language/environment for MOCCal)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:04.333358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": "This is a duplicate of the MOCCal tool already listed. The card contains two separate tool entries for MOCCal (one named 'MOCCal' and one named 'HinesLab/MOCCal'), which is redundant. The GitHub repository is confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HinesLab/MOCCal (duplicate tool entry)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:04.333358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2. A correctly calibrated feature should fall within a few \u00c52 of the DTCCSN2 vs m/z trendline for its true biochemical class... the \u0394CCS between the trendline DTCCSN2 value and the calibrated TWCCSN2 value is determined... The calibrated TWCCSN2 value with the smallest \u0394CCS to the corresponding trendline is selected as the correct match.",
+      "asbval:note": "The core method of class assignment via \u0394CCS minimization is clearly described and validated in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "Class assignment via comparison of calibrated TWCCSN2 values to DTCCSN2 vs m/z trendlines using \u0394CCS minimization",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:04.333358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The calibrated TWCCSN2 value providing the smallest \u0394CCS relative to its respective trendline is retained for the MOCCal output... MOCCal assigned 88.6% of the 44 lipid features to the lipid CCS calibrants, whereas 93.3% of the 15 small molecule features were assigned to the small molecule CCS calibrants.",
+      "asbval:note": "MOCCal outputs class assignments and calibrated TWCCSN2 values, as demonstrated in the results.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Class-specific CCS calibration assignments and calibrated TWCCSN2 values for each feature",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:04.333358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values... Parameters are optimized for class-specific power law regressions using the calibrant's arrival time and reference drift tube CCS value.",
+      "asbval:note": "Power law calibration is the core mathematical approach used by MOCCal.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "parameters",
+      "asbval:target_claim_text": "Power law calibration curves (class-specific)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:04.333358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Users must also supply the EDC delay coefficient, which is unique to each instrument.",
+      "asbval:note": "EDC delay coefficient is confirmed as a required parameter.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "parameters",
+      "asbval:target_claim_text": "EDC delay coefficient (instrument-specific)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:04.333358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the m/z of the feature is used to calculate a predicted DTCCSN2 value based on DTCCSN2 vs m/z regression lines developed from DTCCSN2 values in the Unified CCS Compendium",
+      "asbval:note": "The Unified CCS Compendium is used as the reference database for trendline generation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "parameters",
+      "asbval:target_claim_text": "Unified CCS Compendium reference trendlines",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:04.333358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves... we propose a novel method that can be used to assign multiomic features to their corresponding biomolecular class for TWCCSN2 value determination without prior identification.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-specific-ccs-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Calculate collision cross section (CCS) values partitioned by biomolecular class for TWIM-MS data using MOCCal, enabling class-aware mobility calibration without prior feature identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:25.936854+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed an automated tool, MOCCal, for the assignment of features to a calibrant set/CCS calibration curve without any a priori knowledge of the feature's classification or identity... The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations. These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-specific-ccs-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal \u2014 Python application that orchestrates CCS calibration, biomolecular class assignment, and class-specific CCS calculations on multi-omic TWIM-MS data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:25.936854+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-specific-ccs-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal repo: https://github.com/HinesLab/MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:25.936854+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-specific-ccs-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS \u2014 Dependency for MOCCal's RawDT workflow; processes raw TWIM-MS calibration files prior to MOCCal execution",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:25.936854+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not provide DEIMoS repository URL; only mentions it as 'open-source software DEIMoS' without specifying the GitHub repository location.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "class-specific-ccs-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS repo: http://github.com/pnnl/deimos",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:25.936854+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-specific-ccs-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python \u2014 Programming environment and runtime for MOCCal scripts",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:25.936854+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... MOCCal is currently set up to perform CCS calibrations for lipids, small molecules, and peptides (z = 1 to z = 3) in positive ionization mode.",
+      "asbval:note": "Paper demonstrates MOCCal works on lipids, small molecules, and peptides, but does NOT mention carbohydrates as a supported biomolecular class. The scope claim lists 'carbohydrate' as an example, but the paper only supports lipids, small molecules, and peptides.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "class-specific-ccs-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have multi-omic TWIM-MS data (raw or processed arrival-time records) and have already assigned features or detected ion features to biomolecular classes (e.g., lipid, carbohydrate, protein), and you need CCS values stratified by class to improve calibration accuracy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:25.936854+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, to automate the assignment of unknown features to the power law calibration... we propose a novel method that can be used to assign multiomic features to their corresponding biomolecular class for TWCCSN2 value determination without prior identification.",
+      "asbval:note": "The paper explicitly states MOCCal performs class assignment without prior identification, so the 'when NOT to use' clause is accurate.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-specific-ccs-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input data lacks biomolecular class assignments (apply biomolecular class assignment step first).",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:25.936854+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The CCS calibration process begins by selecting calibration standards for the biomolecular classes that are expected to be within the data... Parameters are optimized for class-specific power law regressions using the calibrant's arrival time and reference drift tube CCS value.",
+      "asbval:note": "Paper confirms that calibration standards and parameters must be established before CCS conversion.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-specific-ccs-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "CCS calibration curve has not been established; feature arrival times cannot be converted to CCS without a validated calibration model.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:25.936854+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity. Every singly charged feature is calibrated with as many as three different calibration equations, provided that data for small molecule, lipid, and peptide (z = 1) CCS calibration mixtures are provided.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Apply class-specific calibration models to convert ion mobility arrival time measurements into collision cross section (CCS) values, using biomolecular class labels to select appropriate calibration parameters for each feature.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:39.649279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill bridges class assignment and quantitative CCS computation in TWIM-MS workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:39.649279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is a Python program... Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal is a Python application that implements class-specific CCS calculation; loads feature tables with class labels and arrival times, applies class-stratified calibration models, and outputs CCS tables",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:39.649279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal repo: https://github.com/HinesLab/MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:39.649279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS and fit to a Gaussian distribution... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS is an upstream tool for raw calibration file processing when using MOCCal RawDT; required dependency for raw data workflows",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:39.649279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Repository URL for DEIMoS not provided in passages; only mentioned as 'open-source software DEIMoS' without explicit GitHub link. Cannot verify the specific URL claimed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS repo: http://github.com/pnnl/deimos",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:39.649279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python is used (as a language/environment for MOCCal)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:39.649279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values. Based on provided charge states, features with two or more charges will be calibrated with only the peptide z = 2 or z = 3 calibration curves.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have a feature table with assigned biomolecular class labels and raw ion mobility arrival time measurements from TWIM-MS data, and you need to compute class-appropriate CCS values for downstream multi-omic analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:39.649279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The CCS calibration process begins by selecting calibration standards for the biomolecular classes that are expected to be within the data... For calibration input into MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when class-specific calibration relationships have been established or are available for your experimental classes.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:39.649279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations... Every singly charged feature is calibrated with as many as three different calibration equations, provided that data for small molecule, lipid, and peptide (z = 1) CCS calibration mixtures are provided.",
+      "asbval:note": "The paper demonstrates that class assignment is a prerequisite step; MOCCal requires class labels to apply the correct calibration curve.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Features have not yet been assigned to experimental biomolecular classes (use class assignment skill first) \u2014 when NOT to use",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:39.649279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The CCS calibration process begins by selecting calibration standards for the biomolecular classes that are expected to be within the data... Parameters are optimized for class-specific power law regressions using the calibrant's arrival time and reference drift tube CCS value.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Class-specific calibration models or parameters have not been established for the classes present in your data \u2014 when NOT to use",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:39.649279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-calculation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we describe the development of a multiomic CCS calibration tool, MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves... we demonstrate that MOCCal provides accurately calibrated TW CCS N2 values for small molecules, lipids, and peptides.",
+      "asbval:note": "Core research question is directly supported by abstract and introduction. The paper explicitly addresses converting arrival times to CCS values using calibration curves for multiomic samples without prior identification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Transform raw TWIM-MS arrival-time measurements into calibrated collision cross section (CCS) values using reference compound calibration curves. This skill enables quantitative ion-mobility characterization for high-dimensional multi-omic datasets without requiring prior feature",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:55.640045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-calculation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Arrival times from traveling wave ion mobility (TWIM) devices must undergo a calibration process to obtain CCS values... Here we describe the development of a multiomic CCS calibration tool, MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value.",
+      "asbval:note": "Scope is directly aligned with paper's central contribution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Transform raw TWIM-MS arrival-time measurements into calibrated collision cross section (CCS) values using reference compound calibration curves.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:55.640045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-calculation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... These calibrated CCS values are then compared against the corresponding DTCCSN2 vs m/z biomolecular trendlines.",
+      "asbval:note": "Paper demonstrates that CCS calibration precedes class assignment via trendline comparison.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "This is the required first step before biomolecular class assignment or cross-dataset CCS comparisons in the MOCCal workflow.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:55.640045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-calculation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application... These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": "Tool name and role confirmed. [SUBSTRING-MATCH for MOCCal | role: CCS calibration tool]",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal is a Python application that implements CCS calibration, biomolecular class assignment, and class-specific CCS calculations as an integrated workflow for TWIM-MS data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:55.640045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-calculation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": "Repository URL confirmed in conclusion.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal repository is at https://github.com/HinesLab/MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:55.640045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-calculation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
+      "asbval:note": "DEIMoS role and conditional requirement confirmed. [SUBSTRING-MATCH for DEIMoS | role: arrival time extraction from raw data]",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS is a dependency required only for raw calibration file processing; preprocesses raw TWIM data before MOCCal calibration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:55.640045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-calculation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
+      "asbval:note": "Python confirmed as implementation language.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "collision-cross-section-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python is used as the implementation language for MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:55.640045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-calculation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The card lists both 'MOCCal' and 'HinesLab/MOCCal' as separate tools. These refer to the same software (MOCCal is the tool, HinesLab is the GitHub organization). This is a redundant entry; only one tool entry is needed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "collision-cross-section-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Tool entry 'HinesLab/MOCCal' is a duplicate or conflation of the MOCCal tool already listed",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:29:55.640045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity. Every singly charged feature is calibrated with as many as three different calibration equations, provided that data for small molecule, lipid, and peptide (z = 1) CCS calibration mixtures are provided.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert TWIM-MS ion arrival time measurements to calibrated collision cross section (CCS) values using class-specific calibration parameters",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:10.846549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The use of multiple omics analysis, such as proteomics, metabolomics, and lipidomics, in combination has grown in popularity given the wealth of information that can be obtained about an organism, disease state, or condition when a systems-level view is taken. However, with this added sample complexity, challenges with data collection, data analysis, and feature identification also increase. The rapid gas-phase and structural separation of ion mobility mass spectrometry (IM-MS) is a promising approach for complex multiomic sample analysis",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill is essential for quantifying biomolecular structural properties in high-dimensional multi-omic ion mobility workflows",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:10.846549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values. Based on provided charge states, features with two or more charges will be calibrated with only the peptide z = 2 or z = 3 calibration curves.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have a feature table containing raw ion mobility arrival time measurements paired with experimentally assigned biomolecular class labels",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:10.846549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal will calculate up to three calibrated TWCCSN2 values using each set of class-specific calibration parameters for small molecules, lipids, and peptides (z = 1). MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2.",
+      "asbval:note": "The paper describes MOCCal as performing class assignment as part of its workflow, so the card's claim that class assignment should be done first is consistent with the tool's design.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Features have not yet been assigned to a biomolecular class; use class assignment first",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:10.846549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application that automates the assignment of unknown features to the power law calibration that provides the most accurate CCS value. MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal is a Python application that implements class-specific CCS calibration and conversion from arrival time to CCS values for TWIM-MS data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:10.846549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal repository: https://github.com/HinesLab/MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:10.846549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS and fit to a Gaussian distribution. For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS is a required dependency for MOCCal RawDT module when processing raw calibration files prior to arrival time conversion",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:10.846549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "DEIMoS is confirmed as a tool used by MOCCal, but the specific GitHub repository URL is not mentioned in the passages. Cannot verify the exact URL provided.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS repository: http://github.com/pnnl/deimos",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:10.846549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python is used (as MOCCal is a Python application)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:10.846549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss or enumerate related skills. This appears to be metadata added by the extractor that is not grounded in the paper content. The related_skills list is not validated by the paper passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python has related_skills including 'arrival-time-to-ccs-transformation', 'collision-cross-section-calculation', etc.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:10.846549+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... MOCCal is currently set up to perform CCS calibrations for lipids, small molecules, and peptides (z = 1 to z = 3) in positive ionization mode.",
+      "asbval:note": "Paper demonstrates class assignment for lipids, small molecules, and peptides (z=1-3), NOT carbohydrates or proteins as general classes. Carbohydrates are not mentioned; proteins are only addressed via peptide digests (tryptic peptides), not intact proteins. The claim overstates the scope of biomolecular classes supported.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "ion-mobility-feature-classification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Assigns biomolecular class labels (e.g., lipid, protein, carbohydrate) to TWIM-MS features based on their physico-chemical properties (arrival time and m/z) without requiring prior feature identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:25.717741+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves and uses the difference (in \u00c52) between the calibrated TW CCS N2 value and DT CCS N2 vs m/z regression lines to determine the best calibration curve.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-feature-classification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This enables immediate class-stratified analysis and class-specific CCS calibration on unidentified experimental data.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:25.717741+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal... User-friendly GUIs have been implemented in MOCCal to allow for easy accessibility by users at any level of programming competency.",
+      "asbval:note": "Paper confirms MOCCal is a Python application with GUIs, but does not explicitly state it is available as a 'standalone executable' separate from the Python script. The paper mentions 'stand-alone MOCCal application' but in context this refers to using pre-processed data without raw data input, not a compiled binary distinct from Python.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "ion-mobility-feature-classification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal is the core application that implements biomolecular class assignment algorithm and performs CCS calibration; available as both Python script and standalone executable",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:25.717741+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS and fit to a Gaussian distribution... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
+      "asbval:note": "Paper confirms DEIMoS extracts arrival times from raw data and is required for MOCCal's raw data workflow. However, the paper does not explicitly state DEIMoS converts data to 'm/z format'\u2014m/z values are assumed to be provided separately or extracted by other means. The claim about 'm/z format conversion' is not explicitly supported.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "ion-mobility-feature-classification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS is a PNNL preprocessing tool required for RawDT workflow; converts raw ion mobility mass spectrometry data to arrival time and m/z format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:25.717741+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-feature-classification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python is used as the implementation language for MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:25.717741+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Arrival times from traveling wave ion mobility (TWIM) devices must undergo a calibration process to obtain CCS values... Here we describe the development of a multiomic CCS calibration tool, MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Transform raw arrival-time measurements from traveling-wave ion mobility mass spectrometry (TWIM-MS) into calibrated collision cross section (CCS) values by establishing a mapping function between reference compounds with known CCS values and their corresponding arrival times.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "CCS values, unlike drift times, are comparable across different laboratories and instrumentation... MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill enables standardization of ion-mobility data across experiments and instruments without requiring prior feature identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application... MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal is a Python application that implements CCS calibration transformation, biomolecular class assignment, and class-specific CCS calculations for TWIM-MS data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal repository URL is https://github.com/HinesLab/MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS is a PNNL package required for MOCCal_RawDT workflow when processing raw calibration files",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not provide DEIMoS repository URL; only confirms it is open-source software used by MOCCal. URL cannot be verified from passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS repository URL is http://github.com/pnnl/deimos",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python is used as the implementation language for MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For multiomic mixtures, several different types of calibrants must be used to obtain the most accurate CCS values from TWIM platforms. Here we describe the development of a multiomic CCS calibration tool, MOCCal... Using real and simulated multiomic samples, we demonstrate that MOCCal provides accurately calibrated TW CCS N2 values for small molecules, lipids, and peptides.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have raw arrival-time data from TWIM-MS and need to convert it to collision cross section (CCS) values for multi-omic analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For calibration input into MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required... It is highly recommended that standards be chosen to span the desired mass range and calibration data be collected via flow injection or direct infusion.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use it when you have access to a calibration template containing reference compounds with known CCS values that span the mass and charge ranges of your experimental ions.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Obtaining class assignments and accurately calibrated TWCCSN2 values at the beginning of the data analysis process will aid the feature identification process... Comparison of CCS values between laboratories using CCS databases can be helpful in the assignment of an identification to an unknown feature.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "This skill is essential before downstream biomolecular class assignment or cross-dataset comparison of ion-mobility properties.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "If the calibration data are processed before using MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required.",
+      "asbval:note": "Paper indicates MOCCal can accept pre-processed data, implying it is not needed if data are already calibrated.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Do NOT use when input data is already in calibrated CCS units or processed from a vendor-supplied calibration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For DTIMS experiments, the amount of time it takes an ion to traverse the drift region of the spectrometer, referred to as the drift time, can be converted to a collision cross section (CCS, in \u00c52) value... However, CCS values cannot be obtained directly from the TWIM platforms. Instead, arrival times from TWIM experiments are calibrated to experimental CCS values from DTIM platforms.",
+      "asbval:note": "Paper distinguishes DTIM (which can be converted directly) from TWIM (which requires calibration via MOCCal).",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Do NOT use when raw arrival-time data are from drift-time ion mobility (DTIM) rather than TWIM",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:38.772282+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-table-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Format TWIM-MS experimental data into tabular structures indexed by feature identifier, with columns for arrival time, m/z values, and assigned biomolecular class labels. This enables downstream CCS calibration and class-specific calculations without prior feature identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:56.146063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values... Raw data files for the calibration mixtures were loaded into MOCCal as .mzML files.",
+      "asbval:note": "Paper confirms MOCCal accepts spreadsheet input and .mzML raw data files. The card claims 'UserDT and RawDT input formats' but the paper does not use this terminology; instead it describes 'spreadsheet' and '.mzML file' inputs. The functional claim (accepts both processed and raw data) is supported, but the specific format names 'UserDT' and 'RawDT' are not found in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-data-table-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal performs biomolecular class assignment and CCS calibration on formatted feature tables; accepts UserDT and RawDT input formats",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:56.146063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS and fit to a Gaussian distribution... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
+      "asbval:note": "Paper confirms DEIMoS extracts arrival times from raw TWIM-MS data for use with MOCCal. However, the paper does not use the term 'RawDT pipeline' or 'RawDT format'; it describes DEIMoS as extracting arrival times from raw data files (.mzML) for MOCCal processing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-data-table-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS preprocesses raw TWIM-MS data into formats compatible with MOCCal RawDT pipeline",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:56.146063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-table-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python is used; MOCCal is a Python application",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:56.146063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values... MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-table-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have raw or processed TWIM-MS data (arrival time and m/z values) from a mass spectrometry instrument and need to organize it into a feature table before biomolecular class assignment or CCS calculations.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:56.146063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Raw data files for the calibration mixtures were loaded into MOCCal as .mzML files... Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values.",
+      "asbval:note": "Paper describes input as '.mzML files' (raw) and 'spreadsheet' (processed), not 'RawDT' or 'UserDT' formats. The functional intent is correct but the format terminology differs.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-data-table-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use this skill if your data is currently in RawDT or UserDT input formats and you need indexed feature rows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:56.146063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is currently set up to perform CCS calibrations for lipids, small molecules, and peptides (z = 1 to z = 3) in positive ionization mode... TWIM separations were performed in nitrogen with a gas flow of 90 mL/min, a wave velocity of 600 m/s (unless otherwise stated), and a wave height of 40 V.",
+      "asbval:note": "Paper confirms MOCCal is designed specifically for TWIM platforms, implying it is not suitable for non-TWIM MS data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-table-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Data is from non-ion-mobility mass spectrometry platforms (e.g., standard LC-MS without TWIM capability) \u2014 when NOT to use",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:56.146063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity.",
+      "asbval:note": "Paper explicitly states MOCCal is designed for 'unknown identity' features, supporting the claim that pre-identified features are outside the scope.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-table-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input data is already a fully annotated and identified feature table with known metabolite/protein identities \u2014 when NOT to use",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:30:56.146063+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves... we propose a novel method that can be used to assign multiomic features to their corresponding biomolecular class for TWCCSN2 value determination without prior identification.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-calibration-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Transform raw arrival-time measurements from traveling-wave ion mobility mass spectrometry (TWIM-MS) into collision cross section (CCS) values by establishing and applying a calibration mapping function derived from reference compounds with known CCS values. This skill enables do",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:09.556172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application... If the calibration data are processed before using MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required... However, if the calibration data are not already processed, raw data for each calibration solution should be loaded as a .mzML file.",
+      "asbval:note": "Paper confirms MOCCal is a Python application supporting both processed spreadsheet input and raw .mzML file input. However, the paper does not use the terminology 'UserDT' and 'RawDT' workflows\u2014these appear to be extractor-introduced labels. The functional distinction (processed vs. raw) is correct but the specific workflow names are not verbatim from the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "twim-ms-calibration-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal - Python application that implements CCS calibration for TWIM-MS arrival-time data and provides UserDT (processed data) and RawDT (raw calibration file) workflows",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:09.556172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-calibration-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS - Required for RawDT workflow to preprocess raw calibration files before CCS mapping in MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:09.556172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
+      "asbval:note": "Python is confirmed as the implementation language for MOCCal. However, the extensive list of 'related_skills' appears to be extractor-generated and is not grounded in the paper's explicit skill taxonomy. The paper does not enumerate these specific skill names or relationships.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "twim-ms-calibration-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python - related_skills include arrival-time-to-ccs-transformation, collision-cross-section-calculation, ion-mobility-reference-matching, etc.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:09.556172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-calibration-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[MOCCal].repo",
+      "asbval:target_claim_text": "https://github.com/HinesLab/MOCCal",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:09.556172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper mentions DEIMoS as open-source software but does not provide a repository URL. The candidate URL cannot be verified from the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "twim-ms-calibration-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[DEIMoS].repo",
+      "asbval:target_claim_text": "http://github.com/pnnl/deimos",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:09.556172+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-data-processing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves... we have developed an automated tool, MOCCal, for the assignment of features to a calibrant set/CCS calibration curve without any a priori knowledge of the feature's classification or identity.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Apply MOCCal to perform collision cross section (CCS) calibration, biomolecular class assignment, and class-specific CCS calculation on traveling-wave ion mobility mass spectrometry (TWIM-MS) data without requiring prior feature identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:20.727902+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-data-processing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... we demonstrate that MOCCal provides accurately calibrated TW CCS N2 values for small molecules, lipids, and peptides.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "transforms raw or processed TWIM-MS arrival time and m/z measurements into calibrated, class-labeled CCS values suitable for multi-omic profiling",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:20.727902+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-data-processing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "DEIMoS - Preprocessing dependency for RawDT workflow \u2014 converts raw TWIM calibration files to processed format prior to MOCCal execution",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:20.727902+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-data-processing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal, a multiomic CCS calibration tool... The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations. These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MOCCal - Core Python application performing CCS calibration, biomolecular class assignment, and class-specific CCS calculation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:20.727902+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-data-processing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python - language in which MOCCal is implemented",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:20.727902+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-data-processing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HinesLab/MOCCal - repository reference",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:20.727902+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-data-processing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The CCS calibration process begins by selecting calibration standards for the biomolecular classes that are expected to be within the data... Parameters are optimized for class-specific power law regressions using the calibrant's arrival time and reference drift tube CCS value.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "establish a CCS calibration curve from known standards",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:20.727902+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-data-processing/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MOCCal will calculate up to three calibrated TWCCSN2 values using each set of class-specific calibration parameters... MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2... The assignment process is demonstrated in Figure 2 for a small molecule, a lipid, and a singly charged peptide.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "assign unidentified features to biomolecular classes (e.g., lipids, metabolites, peptides) based on physico-chemical properties alone",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:20.727902+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-data-processing/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The calibrated TWCCSN2 value with the smallest \u0394CCS to the corresponding trendline is selected as the correct match, and that calibrated TWCCSN2 value is retained... Comparison of CCS values between laboratories using CCS databases can be helpful in the assignment of an identification to an unknown feature.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "compute class-appropriate CCS values for downstream feature matching or annotation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:20.727902+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-data-processing/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed an automated tool, MOCCal, for the assignment of features to a calibrant set/CCS calibration curve without any a priori knowledge of the feature's classification or identity.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "twim-ms-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "feature identification is unavailable or unreliable at the time of analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:31:20.727902+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 14,
+      "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7857142857142857,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "biomolecular-class-ccs-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.625,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 10,
+      "asbval:target_artifact_id": "biomolecular-class-label-assignment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "class-specific-ccs-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 11,
+      "asbval:target_artifact_id": "class-stratified-calibration-model-application",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8181818181818182,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/collision-cross-section-calculation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "collision-cross-section-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.875,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7777777777777778,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "ion-mobility-feature-classification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.4,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 11,
+      "asbval:target_artifact_id": "ion-mobility-reference-matching",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.9090909090909091,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "mass-spectrometry-data-table-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.625,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "twim-ms-calibration-mapping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/twim-ms-data-processing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 10,
+      "asbval:target_artifact_id": "twim-ms-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MOCCal is a Python application for high-dimensional, multi-omic traveling-wave ion mobility mass spectrometry (TWIM-MS) data analysis.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:source_excerpt": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application for high-dimensional, multi-omic traveling-wave ion mobility mass spectrometry (TWIM-MS) data anlaysis.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:26:31.509731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MOCCal provides functionality for collision cross section (CCS) calibration.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:source_excerpt": "Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:26:31.509731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MOCCal provides functionality for experimental data biomolecular class assignment.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:source_excerpt": "Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:26:31.509731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MOCCal provides functionality for experimental class-specific CCS calculations.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:source_excerpt": "Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:26:31.509731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MOCCal offers class assignment and CCS calculations without needing to identify features first.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:source_excerpt": "Notably, MOCCal offers class assignment and CCS calculations without need for identifying the features first.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:26:31.509731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The terms arrival time and drift time are used interchangeably within MOCCal software for convenience.",
+      "asbval:note": "Text adds 'within MOCCal software' qualifier not present in source; source says 'within the software' generically",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:source_excerpt": "The terms arrival time and drift time are used interchangeably within the software for convenience.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_006",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:26:31.509731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "TWIM platforms record the time at which the ion reaches the detector (arrival time) rather than the time an ion spends within the TWIM cell (drift time).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04290",
+      "asbval:source_excerpt": "However, it should be noted that TWIM platforms record the time at which the ion reaches the detector (arrival time) rather than the time an ion spends within the TWIM cell (drift time).",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_007",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:26:31.509731+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_moccal#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_MOCCal_system",
+      "title": "MOCCal",
+      "identifier": "urn:asb:spine:MOCCal_system"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_ccs_calibration",
+      "title": "CCS Calibration",
+      "identifier": "urn:asb:spine:comp_ccs_calibration"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_class_assignment",
+      "title": "Biomolecular Class Assignment",
+      "identifier": "urn:asb:spine:comp_class_assignment"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_class_specific_ccs",
+      "title": "Class-Specific CCS Calculation",
+      "identifier": "urn:asb:spine:comp_class_specific_ccs"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_twim_ms",
+      "title": "TWIM-MS",
+      "identifier": "urn:asb:spine:tool_twim_ms"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_userdt",
+      "title": "UserDT",
+      "identifier": "urn:asb:spine:dataset_userdt"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_rawdt",
+      "title": "RawDT",
+      "identifier": "urn:asb:spine:dataset_rawdt"
+    }
+  ]
+}

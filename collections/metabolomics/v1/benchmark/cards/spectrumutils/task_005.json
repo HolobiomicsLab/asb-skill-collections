@@ -1,0 +1,467 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/annot_fmt.png",
+      "role": "figure",
+      "sha256": "aa131da2eb4a03f3caf34c65d28d9f2d582c6a9efa49cdf2a01207b6fab43eed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/facet.png",
+      "role": "figure",
+      "sha256": "e57e59a644daa6d219a1a655c97392d67c7c53ccefaada676834db3499f037f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ion_types.png",
+      "role": "figure",
+      "sha256": "3689e78338321ae78c8539a57d51429d8fbe5f05f749ab00f8e3ea326a1b3040"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mass_errors.png",
+      "role": "figure",
+      "sha256": "4d0b8529e04b2c5939cecdad599868d4ca9773c22322732fc85f5777067da0ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mirror.png",
+      "role": "figure",
+      "sha256": "32701dbd4d13d84c64d237aee23847c79d67c07f61da2b321dd8d377d01368e2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/neutral_losses_1.png",
+      "role": "figure",
+      "sha256": "f7b624ba1657b23cb0c63a1759a448c55ecc5f0badb718312246fe6f8319925d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/neutral_losses_2.png",
+      "role": "figure",
+      "sha256": "5617bb2da993ae878ddaf3894e11e149637f5c8ea16e64ad010b83c63e125799"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ast.png",
+      "role": "figure",
+      "sha256": "37923b9adda7fc9c3eaaa3e950cc45cc94ec0431ef868a1f4c748b977ceeaf01"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex1.png",
+      "role": "figure",
+      "sha256": "c45d39b10ee03b10a075fa8050fb66b8392d57f9219b5fe7df730b987c1bb034"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex2.png",
+      "role": "figure",
+      "sha256": "ece2c94ae2f27a0f19070045aed63ecb78b715daf321bbebb5959a99e09ebc23"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex3.png",
+      "role": "figure",
+      "sha256": "28d41a86b95b6c72243ecaa9e58ac5767f1eb1c88d808006d1ed0a65dd6a079e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/quickstart.png",
+      "role": "figure",
+      "sha256": "44490275960117903431e424672fdc3c31f5b4afa180c518c144ff18633f63fd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/runtime.png",
+      "role": "figure",
+      "sha256": "4c5df6692e74ad37aec5e8719571aa0972961c4f3032164976cbc7d81d0863ac"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectrum_utils.png",
+      "role": "figure",
+      "sha256": "73d5e118673e38e5efcf597fd07ff1ecc88427f294570dd8613c9b7f4ba675c0"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "0dc02878eada4e3ac6351523d62ecf382dc0914af1caa073734c3f8aead8fbe9"
+    }
+  ],
+  "created_at": "2026-06-16T07:16:56.758905+00:00",
+  "crossref_doi": "10.1021/acs.analchem.9b04884",
+  "data_accessions": [
+    {
+      "accession": "MSV000082283",
+      "evidence_span": "# Retrieve the spectrum by its USI.     usi = \"mzspec:MSV000082283:f07074:scan:5475\"     spectrum = sus.MsmsSpectrum.from_usi(",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000082283"
+    },
+    {
+      "accession": "MSV000079960",
+      "evidence_span": "as sus   peptide = \"DLTDYLM[Oxidation]K\" usi_top = \"mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372\" spectrum_top = sus.MsmsSpectrum.",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000079960"
+    },
+    {
+      "accession": "MSV000080679",
+      "evidence_span": "a(peptide, 0.5, \"Da\", ion_types=\"aby\") usi_bottom = \"mzspec:MSV000080679:j11962_C1orf144:scan:10671\" spectrum_bottom = sus.MsmsSpect",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080679"
+    },
+    {
+      "accession": "PXD000561",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555\" peptide =",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD000561"
+    },
+    {
+      "accession": "PXD014834",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD014834:TCGA-AA-3518-01A-11_W_VU_20120915_A0218_3F_R_FR01:scan:8370",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD014834"
+    },
+    {
+      "accession": "PXD022531",
+      "evidence_span": "as sup import spectrum_utils.spectrum as sus  usi = \"mzspec:PXD022531:j12541_C5orf38:scan:12368\" peptide = \"VAATLEILTLK/2\" spectr",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD022531"
+    },
+    {
+      "accession": "PXD004732",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840\"",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD004732"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Universal Spectrum Identifier (USI) string for a public tandem MS spectrum (e.g., mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ProForma 2.0 peptide sequence string with optional modifications (e.g., VLHPLEGAVVIIFK or EM[Oxidation]EVEES[Phospho]PEK)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Fragment ion mass tolerance value and mode (e.g., 10 ppm or 0.05 Da)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "PNG image file containing the annotated mass spectrum with b and y ions highlighted and labeled",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "ProForma 2.0 is a standardized notation for representing peptide sequences and peptidoforms (modified peptides) using controlled vocabularies such as Unimod and PSI-MOD; modifications can be specified by name, CV accession, or delta mass.",
+    "Fragment ion types include primary peptide fragments (a, b, c, x, y, z ions) and internal fragments (m ions); by default spectrum_utils annotates b and y ions, which are the most commonly observed in tandem MS of peptides.",
+    "USI (Universal Spectrum Identifier) is a standardized mechanism for retrieving spectra from public proteomics and metabolomics repositories (PXD, MSV, and GNPS datasets); the USI format includes dataset identifier, file name, and scan number.",
+    "Fragment mass tolerance is typically specified in parts per million (ppm) for high-resolution mass spectrometers or in Daltons (Da) for lower-resolution instruments; common thresholds are 5\u201320 ppm for Orbitrap instruments.",
+    "Spectrum visualization in publication-quality form requires normalization of intensities, removal of precursor and noise peaks, and application of intensity scaling (e.g., square-root scaling) to de-emphasize overly intense peaks."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: output PNG or SVG artifact from spectrum_utils.plot",
+      "file_format_is: output artifact is valid PNG or SVG (byte-for-byte magic number check)",
+      "script_runs: Python script successfully loads USI mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:1 using spectrum_utils",
+      "script_runs: annotate_proforma method executes without exception when called with ion_types parameter including b and y ions",
+      "output_matches_reference: rendered figure contains annotated b and y ion labels in the output artifact (robust to rendering engine variation in exact pixel placement)"
+    ],
+    "expert_review": [
+      "visual inspection of rendered spectrum confirms b/y ion annotations are chemically plausible and positioned at correct m/z values",
+      "expert assessment that annotated fragment ions follow ProForma 2.0 specification as claimed in package documentation"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Can spectrum_utils load a publicly deposited mass spectrometry spectrum via Universal Spectrum Identifier (USI) and annotate it with fragment ion types for visualization?: 'Spectrum loading from online proteomics and metabolomics data resources using the Universal Spectrum Identifier (USI) mechanism.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] spectrum_utils provides capabilities for spectrum loading from online resources via USI and annotating observed spectrum fragments using the ProForma 2.0 specification, supporting both data retrieval and fragment annotation workflows.: 'Spectrum loading from online proteomics and metabolomics data resources using the Universal Spectrum Identifier (USI) mechanism. ... Annotating observed spectrum fragments using the ProForma 2.0'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Universal Spectrum Identifier (USI) string for a public tandem MS spectrum (e.g., mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555): 'usi = \"mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] ProForma 2.0 peptide sequence string with optional modifications (e.g., VLHPLEGAVVIIFK or EM[Oxidation]EVEES[Phospho]PEK): 'peptide = \"VLHPLEGAVVIIFK\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Fragment ion mass tolerance value and mode (e.g., 10 ppm or 0.05 Da): 'spectrum.annotate_proforma(peptide, 10, \"ppm\", ion_types=\"abyIm\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] PNG image file containing the annotated mass spectrum with b and y ions highlighted and labeled: 'plt.savefig(\"proforma_ex1.png\", bbox_inches=\"tight\", dpi=300, transparent=True)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] spectrum_utils: 'spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'spectrum_utils is a Python package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] matplotlib: 'fig, ax = plt.subplots(figsize=(12, 6))'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] ProForma 2.0: 'fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No version or changelog information is available to confirm which version of spectrum_utils was used or what changes may have been made to the plotting and annotation API.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import spectrum_utils.spectrum as sus; import spectrum_utils.plot as sup; from pyteomics import mass; from proforma import ProForma; import matplotlib.pyplot as plt; import requests; import json; usi = '{inputs.usi_identifier}'; peptide_str = '{inputs.peptide_proforma}'; tolerance_spec = '{inputs.fragment_tolerance_config}'; spectrum_json = requests.get(f'https://metabolomics-usi.ucsd.edu/json/?usi={usi}').json(); spec = sus.Spectrum(spectrum_json['peaks'][:, 0], spectrum_json['peaks'][:, 1], metadata={'precursor_mz': spectrum_json['precursor_mz'], 'precursor_charge': spectrum_json['precursor_charge'], 'peptide': peptide_str}); pf = ProForma(peptide_str); b_ions, y_ions = [], []; seq = str(pf); mz_tol = float(tolerance_spec.split()[0]) if 'ppm' in tolerance_spec else float(tolerance_spec.split()[0]); mode = 'ppm' if 'ppm' in tolerance_spec else 'Da'; for i in range(1, len(seq)): b_mz = (mass.fast_mass(seq[:i], charge=1) + 1.007825) / 1; y_mz = (mass.fast_mass(seq[i:], charge=1) + 1.007825 + 18.010565) / 1; b_ions.append((i, b_mz, 'b')); y_ions.append((len(seq)-i, y_mz, 'y')); fig, ax = plt.subplots(figsize=(12, 6)); sup.mirror(ax, spec.mz, spec.intensity); ax.set_xlabel('m/z'); ax.set_ylabel('Intensity'); ax.set_title(f'Spectrum: {peptide_str}'); ax.grid(True, alpha=0.3); plt.tight_layout(); plt.savefig('spectrum_annotated.png', dpi=300, bbox_inches='tight'); plt.close()"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "annotated_spectrum.png",
+  "expected_outputs": [
+    "PNG image file containing the annotated mass spectrum with b and y ions highlighted and labeled"
+  ],
+  "finding": "spectrum_utils provides capabilities for spectrum loading from online resources via USI and annotating observed spectrum fragments using the ProForma 2.0 specification, supporting both data retrieval and fragment annotation workflows.",
+  "github_name": "bittremieuxlab/spectrum_utils",
+  "input_from": "task_002",
+  "inputs": [
+    "Universal Spectrum Identifier (USI) string for a public tandem MS spectrum (e.g., mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555)",
+    "ProForma 2.0 peptide sequence string with optional modifications (e.g., VLHPLEGAVVIIFK or EM[Oxidation]EVEES[Phospho]PEK)",
+    "Fragment ion mass tolerance value and mode (e.g., 10 ppm or 0.05 Da)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectrum_object.pkl",
+    "annotated_spectrum.png"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_005",
+    "result_016"
+  ],
+  "methodology_summary": [
+    "Retrieve the spectrum from a public proteomics data repository using the USI accession.",
+    "Parse the ProForma peptide string and match fragment ion masses against observed m/z peaks within the specified tolerance.",
+    "Generate and label annotated peaks for b and y ion types.",
+    "Render a publication-quality spectrum plot with annotated fragments, appropriate axis labels, and styling (grid, spines).",
+    "Validation: Output PNG file exists, contains rendered spectrum with visible annotated peaks, and pixel dimensions are consistent with specified figure size.",
+    "References: source article (DOI: 10.1021/acs.analchem.9b04884); MSV000082283 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000082283); MSV000079960 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000079960); MSV000080679 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080679); PXD000561 (https://www.ebi.ac.uk/pride/archive/projects/PXD000561); PXD014834 (https://www.ebi.ac.uk/pride/archive/projects/PXD014834); PXD022531 (https://www.ebi.ac.uk/pride/archive/projects/PXD022531); PXD004732 (https://www.ebi.ac.uk/pride/archive/projects/PXD004732)"
+  ],
+  "missing_information": [
+    "No version or changelog information is available to confirm which version of spectrum_utils was used or what changes may have been made to the plotting and annotation API."
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/annotation_report"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can spectrum_utils load a publicly deposited mass spectrometry spectrum via Universal Spectrum Identifier (USI) and annotate it with fragment ion types for visualization?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "spectral-peak-annotation-using-proforma",
+    "fragment-ion-mass-matching",
+    "peptidoform-representation-and-interpretation",
+    "spectrum-visualization-and-figure-rendering",
+    "usi-spectrum-retrieval-and-loading"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_spectrumutils/synthesized_package",
+  "spine_condition_ids": [
+    "cond_spectrum_utils_040"
+  ],
+  "spine_entity_ids": [
+    "system_spectrum_utils",
+    "comp_proforma_module",
+    "comp_fragment_annotation",
+    "comp_plot",
+    "comp_iplot",
+    "comp_utils_module",
+    "tool_usi",
+    "tool_matplotlib",
+    "arch_processing_pipeline",
+    "cond_spectrum_utils_040",
+    "result_speed_comparison",
+    "dataset_pxd000561"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "visualization",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:bittremieux-lab__spectrum_utils",
+  "task_description": "Load a publicly deposited tandem mass spectrum via Universal Spectrum Identifier (USI), annotate fragment ions using ProForma 2.0 specification for b and y peptide ions, and render a publication-quality spectrum visualization as a PNG file.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Universal Spectrum Identifier (USI) string",
+      "port_id": "usi_identifier",
+      "resolved_via": null,
+      "source": "task_002/annotation_report",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ProForma peptide sequence string",
+      "port_id": "peptide_proforma",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Fragment ion mass tolerance (value and mode)",
+      "port_id": "fragment_tolerance_config",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Load a spectrum via USI, annotate b/y fragment ions using ProForma 2.0, and generate a publication-quality spectrum visualization as PNG/SVF file.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PNG image of annotated spectrum",
+      "port_id": "annotated_spectrum_png",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "spectral-library-matching",
+    "quality-control",
+    "tandem-ms"
+  ],
+  "title": "Reproduce publication-quality spectrum plot using spectrum_utils.plot and Matplotlib",
+  "tools": [
+    "spectrum_utils",
+    "Python",
+    "matplotlib",
+    "ProForma 2.0"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Retrieve the spectrum from an online proteomics data resource using MsmsSpectrum.from_usi() with the provided USI accession. 2. Annotate the spectrum with a ProForma peptide string using annotate_proforma() method, specifying ion_types='by' to label b and y fragment ions and a fragment tolerance (e.g., 10 ppm). 3. Create a matplotlib figure and use spectrum_utils.plot.spectrum() to render the annotated spectrum with grid disabled and spine visibility adjusted. 4. Save the resulting figure as a PNG file with 300 dpi resolution and tight bounding box."
+}

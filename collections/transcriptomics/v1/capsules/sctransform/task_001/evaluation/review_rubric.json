@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Confirm that every cited input artifact exists or is explicitly marked missing."
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Confirm that expected outputs are tied to figures, tables, files, or claims in the package."
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Confirm that every cited input artifact exists or is explicitly marked missing.",
+      "Confirm that expected outputs are tied to figures, tables, files, or claims in the package."
+    ],
+    "llm_or_expert_review": [
+      "Judge whether the task description matches the source evidence.",
+      "Judge whether the workflow description is sufficient for a future agent attempt.",
+      "Review uncertainty notes and missing-information claims."
+    ],
+    "not_in_scope_for_mvp": [
+      "Running scientific code or reproducing figures.",
+      "Scoring model-generated scientific outputs."
+    ]
+  },
+  "max_score": 2.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that pyMolNetEnhancer repository (madeleineernst/pyMolNetEnhancer) is accessible and contains implementation code for feature-based mapping"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: a Python module or script within the repository that implements the feature-based MS2LDA-to-network mapping logic"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: the feature-based mapping function accepts as inputs (1) a GNPS feature-based molecular network artifact and (2) MS2LDA substructural motif data, and executes without errors"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: the annotated network artifact produced contains node/edge attributes documenting which Mass2Motif substructures are mapped to which network features (robust to annotation format variations across GNPS versions)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: the output network artifact is in a standard format compatible with GNPS (GraphML, JSON, or tabular edge/node list)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that pyMolNetEnhancer repository (madeleineernst/pyMolNetEnhancer) is accessible and contains implementation code for feature-based mapping",
+      "verify file_exists: a Python module or script within the repository that implements the feature-based MS2LDA-to-network mapping logic",
+      "verify script_runs: the feature-based mapping function accepts as inputs (1) a GNPS feature-based molecular network artifact and (2) MS2LDA substructural motif data, and executes without errors",
+      "verify output_matches_reference: the annotated network artifact produced contains node/edge attributes documenting which Mass2Motif substructures are mapped to which network features (robust to annotation format variations across GNPS versions)",
+      "verify file_format_is: the output network artifact is in a standard format compatible with GNPS (GraphML, JSON, or tabular edge/node list)"
+    ],
+    "expert_review": [
+      "Assess whether the feature-based mapping correctly associates MS2LDA motif presence/absence or intensity patterns with molecular network features (nodes), as distinct from the classical node-to-node or cluster-level mapping",
+      "Evaluate whether the annotated network artifact is semantically valid: substructure annotations should correspond to chemically plausible fragmentation patterns or structural motifs present in the underlying spectra",
+      "Assess reproducibility: confirm that running the feature-based mapping step deterministically reproduces the same annotated network when given identical inputs"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

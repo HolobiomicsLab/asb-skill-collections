@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in repository BioNet-XMU/DeepION containing encoder module implementation"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify encoder implementation file_format_is Python (.py)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs without errors when instantiating ResNet18-based encoder pair with two input tensors"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: encoder pair accepts two augmented ion images (batch dimension optional) and produces exactly two output tensors"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify each output tensor has shape compatible with 512-dimensional representation (final dimension equals 512)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify parameters are shared between the two encoder instances (weight identity check or parameter count verification)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify ResNet18 backbone is used as base architecture (inspect model architecture string or layer names contain 'ResNet18' or equivalent)"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify encoder module integrates into full DeepION pipeline as described (Projection and Prediction modules receive 512-dim vectors as input without shape mismatch)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in repository BioNet-XMU/DeepION containing encoder module implementation",
+      "verify encoder implementation file_format_is Python (.py)",
+      "verify script_runs without errors when instantiating ResNet18-based encoder pair with two input tensors",
+      "verify output_matches_reference: encoder pair accepts two augmented ion images (batch dimension optional) and produces exactly two output tensors",
+      "verify each output tensor has shape compatible with 512-dimensional representation (final dimension equals 512)",
+      "verify parameters are shared between the two encoder instances (weight identity check or parameter count verification)",
+      "verify ResNet18 backbone is used as base architecture (inspect model architecture string or layer names contain 'ResNet18' or equivalent)",
+      "verify encoder module integrates into full DeepION pipeline as described (Projection and Prediction modules receive 512-dim vectors as input without shape mismatch)"
+    ],
+    "expert_review": [
+      "assess whether ResNet18 architecture choice and parameter sharing strategy are appropriate for ion image representation learning in mass spectrometry imaging context",
+      "evaluate whether 512-dimensional output dimension is justified and consistent with downstream contrastive loss and projection module design",
+      "review encoder design rationale: confirm that shared-weight architecture is intentional for contrastive learning objective (maximizing similarity between augmented pairs)"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

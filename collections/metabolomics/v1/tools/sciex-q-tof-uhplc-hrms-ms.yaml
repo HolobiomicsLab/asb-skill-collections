@@ -1,0 +1,10 @@
+name: SCIEX Q-TOF UHPLC-HRMS/MS
+slug: sciex-q-tof-uhplc-hrms-ms
+evidence_spans:
+- Agilent, Bruker and SCIEX Q-TOF UHPLC-HRMS/MS experiments
+derived_from:
+- doi: 10.1186/s12859-017-1744-3
+  title: lipidmatch
+source_repos:
+- GarrettLab-UF/LipidMatch
+schema_version: 0.2.0

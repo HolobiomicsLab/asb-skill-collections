@@ -1,0 +1,432 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/AIR.png",
+      "role": "figure",
+      "sha256": "cd84d418867c4427b931209963844a5928542b08240d71e5fc8b3018eaecf849"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AIR_01.png",
+      "role": "figure",
+      "sha256": "e01371f7fd17589e420e3b12b9bf8623250214471bf8340d1d6c5e80c435b288"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdManager.png",
+      "role": "figure",
+      "sha256": "bf9a22e9f1c1799b7ae87b6748766a6b655d021b860b82f78dbf531b48034210"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdPro.png",
+      "role": "figure",
+      "sha256": "c4ea12bde93161a340e1d7c0ac30b2af041afce4c51108b5f59fbe5d56ff68fd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdProLogo.png",
+      "role": "figure",
+      "sha256": "89117d389dbc221655a60252f2548cf6d5370f6d283956cc348a8c48714b0368"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdProTrans.png",
+      "role": "figure",
+      "sha256": "b4b726856e380dd34cb4d429403bb615358d383052d20eac6c68960737390cd9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdPro_ 2.png",
+      "role": "figure",
+      "sha256": "b4b726856e380dd34cb4d429403bb615358d383052d20eac6c68960737390cd9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/AirdPro_ 3.png",
+      "role": "figure",
+      "sha256": "c4ea12bde93161a340e1d7c0ac30b2af041afce4c51108b5f59fbe5d56ff68fd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Arrows.png",
+      "role": "figure",
+      "sha256": "8e15dfe896c84e370e185351d675f97ad18b976da1eea73d8da5a714246633e9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/CleanErrors.png",
+      "role": "figure",
+      "sha256": "4d2486559aca2ee986ed33e903464a38a5445bf2fc7f2bbe96cf11127d68b50a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/CleanFinished.png",
+      "role": "figure",
+      "sha256": "7e92b17bded7c189ac03e0d0df39efa3bf8305dedb7ea035f8d169dee1874687"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Computation.png",
+      "role": "figure",
+      "sha256": "ba44ee8b156e3cd3380d17cd72ab10956ba8cd97e45b3a356575dc7f36dbdb82"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Connected.png",
+      "role": "figure",
+      "sha256": "cea4dd305a03f461bbd28c78aed7be4933e5c8374392025d32e0636af279caca"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Conversion.png",
+      "role": "figure",
+      "sha256": "4dae389e821586057beab9296c7e36cb85a14d3603f892db719cb80df53c6335"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ConversionCenter.png",
+      "role": "figure",
+      "sha256": "aaaba5189f6e2e15297ee20a97358e5e5df458ce689858e9f5bf081cd59edf38"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Help.png",
+      "role": "figure",
+      "sha256": "0da0fe9a660a97b48e979b2f3477b8c713dea4c3841759635d5787c3cb740ef7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MetaboLights.jpg",
+      "role": "figure",
+      "sha256": "f43bbe666708f0df1c89e156c6175f30b20752bbcd4b9b3e26c459b5af060ca4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Proteomexchange.png",
+      "role": "figure",
+      "sha256": "5a5bc1662bec813ef737f1b94138911424cb867b854f01a65b93e64214fdd6ff"
+    },
+    {
+      "indexable": false,
+      "path": "figures/SearchEngine.png",
+      "role": "figure",
+      "sha256": "f565e7edb4e56fbb10308743606920d12ddf5307b1bb7f6cd53a697f62ae471d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "118bd705f872ed7e2a726c9fad05eb7c50b73d8f90cb8ccdc1409fc6a90a335a"
+    }
+  ],
+  "created_at": "2026-06-15T14:04:46.383725+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "AirdPro project repository with Dockerfile and multi-stage build configuration",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Docker system with Docker Engine version 20.10 or higher installed and running",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Documented image size metrics from the methods section (cli ~6\u20137 GB, dev ~9\u201311 GB, linux ~8\u201310 GB, windows ~4\u20135 GB)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured verification report (JSON or CSV) listing each image variant, its measured compressed size in GB, documented target range, and pass/fail verification status",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Docker uncompressed image size (reported by `docker inspect --format='{{.Size}}'`) differs from compressed disk storage footprint; comparisons must account for compression algorithms applied by the storage driver (overlay2, aufs, etc.).",
+    "A multi-stage Dockerfile produces a single final image per target, but intermediate build stages are cached separately; only the final stage's layer stack contributes to the reported image size.",
+    "The documented size ranges (~6\u20137 GB for CLI, ~8\u201310 GB for Linux, ~9\u201311 GB for dev, ~4\u20135 GB for Windows) refer to compressed storage; uncompressed in-memory size will be larger.",
+    "Docker size measurements via `docker system df` reflect the unique layers stored on disk, not the sum of all image layers (due to layer sharing across images and base image reuse)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists for each of four built Docker images (airdpro:cli, airdpro:dev, airdpro:linux, airdpro:windows) in local Docker daemon or registry",
+      "retrieve reported compressed size (in GB) for airdpro:cli image via 'docker images' or 'docker inspect' command; value_in_range [6, 7]",
+      "retrieve reported compressed size (in GB) for airdpro:dev image via 'docker images' or 'docker inspect' command; value_in_range [9, 11]",
+      "retrieve reported compressed size (in GB) for airdpro:linux image via 'docker images' or 'docker inspect' command; value_in_range [8, 10]",
+      "retrieve reported compressed size (in GB) for airdpro:windows image via 'docker images' or 'docker inspect' command; value_in_range [4, 5]",
+      "script_runs: docker build succeeds without error for all four image variants using Dockerfile(s) from github:CSi-Studio__AirdPro"
+    ],
+    "expert_review": [
+      "verify that reported image sizes are consistent with documented compression method and base layers (Wine, .NET Framework 4.8, ProteoWizard bindings) across all four variants",
+      "assess whether any image size falls outside its documented range and evaluate whether the discrepancy reflects a documentation error, image configuration drift, or legitimate variation in build artifact"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the documented compressed size ranges for each of the four AirdPro Docker image variants (cli, dev, linux, windows)?: 'AirdPro is a GUI client for conversion from vendor files to Aird files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The provided section text does not contain documented compressed size metrics or ranges for any Docker image variants (cli, dev, linux, windows).: '_No examples found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] AirdPro project repository with Dockerfile and multi-stage build configuration: 'Dockerfile uses an optimized build strategy: 1. **Build Stage**: Compile application using .NET Framework SDK 2. **macOS Runtime**: Based on Ubuntu 22.04, pre-configured with Wine and .NET Framework'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Docker system with Docker Engine version 20.10 or higher installed and running: 'Docker Desktop for Mac (version 20.10+)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Documented image size metrics from the methods section (cli ~6\u20137 GB, dev ~9\u201311 GB, linux ~8\u201310 GB, windows ~4\u20135 GB): 'Image Variants: 1. Windows Native (`airdpro:windows`): Size: ~4-5GB. 2. Linux/macOS Wine (`airdpro:linux`, `airdpro:macos`): Size: ~8-10GB. 3. CLI Version (`airdpro:cli`): Size: ~6-7GB. 4.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structured verification report (JSON or CSV) listing each image variant, its measured compressed size in GB, documented target range, and pass/fail verification status: 'Image Variants: 1. Windows Native (`airdpro:windows`): Size: ~4-5GB. 2. Linux/macOS Wine (`airdpro:linux`, `airdpro:macos`): Size: ~8-10GB. 3. CLI Version (`airdpro:cli`): Size: ~6-7GB. 4.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Docker (docker build, docker inspect, docker system df): 'Build all images (first build may take longer)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Dockerfile (multi-stage build with --target flag): 'Dockerfile uses an optimized build strategy'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "image_size_verification_report.json",
+  "expected_outputs": [
+    "Structured verification report (JSON or CSV) listing each image variant, its measured compressed size in GB, documented target range, and pass/fail verification status"
+  ],
+  "finding": "The provided section text does not contain documented compressed size metrics or ranges for any Docker image variants (cli, dev, linux, windows).",
+  "github_name": "CSi-Studio/AirdPro",
+  "input_from": "task_001",
+  "inputs": [
+    "AirdPro project repository with Dockerfile and multi-stage build configuration",
+    "Docker system with Docker Engine version 20.10 or higher installed and running",
+    "Documented image size metrics from the methods section (cli ~6\u20137 GB, dev ~9\u201311 GB, linux ~8\u201310 GB, windows ~4\u20135 GB)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "docker_build.log",
+    "image_sizes_raw.csv",
+    "image_size_verification_report.json"
+  ],
+  "linked_result_ids": [
+    "result_029",
+    "result_030",
+    "result_031"
+  ],
+  "methodology_summary": [
+    "Build all four Docker image variants (cli, dev, linux, windows) using multi-stage Dockerfile with --target flags.",
+    "Query uncompressed and compressed image sizes using Docker API (`docker inspect`, `docker system df`).",
+    "Convert byte measurements to gigabytes and benchmark against documented ranges from methods section.",
+    "Generate structured verification report with image name, measured size, documented range, and pass/fail status.",
+    "Validation: each image's compressed size must fall within its documented range (\u00b110% tolerance for minor variations in dependencies and build artifacts)."
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the documented compressed size ranges for each of the four AirdPro Docker image variants (cli, dev, linux, windows)?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "docker-image-build-and-inspection",
+    "containerized-application-deployment-validation",
+    "artifact-size-measurement-and-range-verification",
+    "multi-stage-dockerfile-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_aird/synthesized_package",
+  "spine_condition_ids": [
+    "artifact_docker_image_windows",
+    "artifact_docker_image_linux",
+    "artifact_docker_image_cli",
+    "artifact_docker_image_dev",
+    "cond_wine_performance",
+    "cond_native_windows"
+  ],
+  "spine_entity_ids": [
+    "airdpro_system",
+    "arch_docker_wine_stack",
+    "arch_multistage_build",
+    "artifact_docker_image_windows",
+    "artifact_docker_image_linux",
+    "artifact_docker_image_cli",
+    "artifact_docker_image_dev",
+    "comp_docker_desktop",
+    "comp_docker_compose",
+    "tool_build_script_sh",
+    "cond_wine_performance",
+    "cond_native_windows",
+    "metric_windows_image_size",
+    "metric_linux_image_size",
+    "metric_cli_image_size",
+    "metric_dev_image_size",
+    "result_wine_memory_overhead"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:CSi-Studio__AirdPro",
+  "task_description": "After building all four Docker image variants (airdpro:cli, airdpro:dev, airdpro:linux, airdpro:windows) using the provided Dockerfile, programmatically query each image's compressed size via the Docker API and verify that each falls within its documented metric range (cli ~6\u20137 GB, dev ~9\u201311 GB, linux ~8\u201310 GB, windows ~4\u20135 GB). Produce a size-verification report.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "AirdPro project repository with Dockerfile and build configuration",
+      "port_id": "dockerfile_and_project",
+      "resolved_via": null,
+      "source": "task_001/cli_image",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Docker Engine version 20.10+ with daemon running",
+      "port_id": "docker_engine",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Image size specification (cli ~6\u20137 GB, dev ~9\u201311 GB, linux ~8\u201310 GB, windows ~4\u20135 GB)",
+      "port_id": "documented_size_spec",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Measure compressed size of four built Docker images and verify each falls within its documented metric range.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Image size verification report with measured vs. documented ranges and pass/fail status",
+      "port_id": "size_verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Implement a Docker image size audit across all four airdpro image variants",
+  "tools": [
+    "AirdPro V5",
+    "Docker (docker build, docker inspect, docker system df)",
+    "Dockerfile (multi-stage build with --target flag)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Docker (docker build, docker inspect, docker system df), Dockerfile (multi-stage build with --target flag), Structured verification report (JSON or CSV) listing each image variant, its measured compressed size in GB, documented target range, and pass/fail verification status."
+  ],
+  "workflow_description": "1. Execute the multi-stage Docker build process via `docker build --target runtime-cli`, `docker build --target runtime-dev`, `docker build --target runtime-linux`, and `docker build --target runtime-windows` to produce all four image variants. 2. Query each built image using `docker inspect --format='{{.Size}}'` to retrieve the uncompressed image size in bytes. 3. Query the compressed size of each image stored on disk using `docker system df` or equivalent Docker API calls to determine the actual storage footprint. 4. Convert byte sizes to gigabytes and compare each against the documented range (cli 6\u20137 GB, dev 9\u201311 GB, linux 8\u201310 GB, windows 4\u20135 GB). 5. Generate a structured verification report listing image name, measured size (GB), documented range, and pass/fail status for each variant."
+}

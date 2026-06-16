@@ -1,0 +1,418 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/icon.png",
+      "role": "figure",
+      "sha256": "b619bc21ac9fc6eb922829b05e247dc82431dafcc2edbfb7fb96b28973f281c3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "8f646fc27b0f55e5344aab1222ddf5c7501dc09c1e63a88374ec458469c3a517"
+    },
+    {
+      "indexable": false,
+      "path": "figures/overview.png",
+      "role": "figure",
+      "sha256": "64c35d799814f2073f0f257bda3de8e1e5531ed2cf582746cf802679ea79c4ac"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d554b717bdd475fc6ee7e7806c0af62e7afe83d65c1036c5955f48ca2286277c"
+    }
+  ],
+  "created_at": "2026-06-16T07:39:32.715601+00:00",
+  "crossref_doi": null,
+  "data_accessions": [
+    {
+      "accession": "MSV000091746",
+      "evidence_span": "3d3422d94b1dde95fc0178c>`_ * Use ftp://massive.ucsd.edu/v01/MSV000091746 as the FTP Download Link (not the v07 folder shown in MassI",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000091746"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_002.expected_outputs[0]: Aligned feature table in HDF5 format containing matched features with mz, drift_time, retention_time, and intensity for all aligned features",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MassIVE user-guide LC-IMS-MS/MS dataset (MSV000091746) in mzML.gz format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "YAML configuration file specifying workflow parameters (e.g., config.yaml or workflows/default_config.yaml)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "HDF5-formatted output files in output/ directory containing detected features aligned across study samples, characterized by mass, CCS, tandem mass spectra, and isotopic signature",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Snakemake DAG execution log confirming all workflow rules (peak detection, alignment, calibration, isotope detection, deconvolution) completed successfully",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "DEIMoS is instrument-agnostic and designed to operate on N-dimensional mass spectrometry data, utilizing all available dimensions (m/z, drift time, retention time, intensity) simultaneously for improved feature detection, alignment, and deconvolution.",
+    "The Snakemake workflow automatically detects .mzML and .mzML.gz files in the input/ directory and produces HDF5-formatted output in output/, with the directory structure relative to the current working directory.",
+    "The default workflow configuration provided in workflows/default_config.yaml may require modification to accommodate dataset-specific instrument parameters, ionization mode, and processing thresholds.",
+    "Feature detection and alignment operate on all N dimensions to increase sensitivity and confidence in feature matching; MS/MS deconvolution benefits from multi-dimensional separation by reducing spectral convolution artifacts.",
+    "Successful workflow completion requires no manual intervention after invocation; Snakemake manages rule dependencies, parallelization, and file routing based on the configuration and available computational resources."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file github:pnnl__deimos can be cloned from https://github.com/pnnl/deimos",
+      "verify dataset MSV000091746 is accessible via ftp://massive.ucsd.edu/v01/MSV000091746",
+      "verify Snakemake workflow execution completes without errors using provided YAML configuration",
+      "verify all final HDF5 output artifacts exist (file_exists check on output .h5 files)",
+      "verify output HDF5 files are valid HDF5 format using h5py or similar tool",
+      "verify Snakemake reports successful completion of all workflow rules (script_runs with exit code 0)"
+    ],
+    "expert_review": [
+      "confirm that HDF5 output structure and content are consistent with DEIMoS workflow specification",
+      "validate that feature detection, alignment, and calibration steps produced chemically plausible results",
+      "assess whether output datasets contain expected dimensional data (m/z, drift_time, retention_time, intensity) without corruption"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the DEIMoS Snakemake workflow successfully execute end-to-end on the publicly deposited MassIVE user guide example dataset, completing all workflow rules and producing final HDF5 output artifacts?: 'DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool for high-dimensional mass spectrometry (MS) data analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] DEIMoS functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution, with output comprising detected features aligned across study samples and characterized by mass, CCS, tandem mass spectra, and isotopic signature.: 'Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution, with the output comprising detected'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MassIVE user-guide LC-IMS-MS/MS dataset (MSV000091746) in mzML.gz format: 'Use ftp://massive.ucsd.edu/v01/MSV000091746 as the FTP Download Link'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] YAML configuration file specifying workflow parameters (e.g., config.yaml or workflows/default_config.yaml): 'A Snakemake configuration file in YAML format is required. DEIMoS will try to find config.yaml in the current directory, else a configuration file must be specified through the --config flag. A'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] HDF5-formatted output files in output/ directory containing detected features aligned across study samples, characterized by mass, CCS, tandem mass spectra, and isotopic signature: 'output comprising detected features aligned across study samples and characterized by mass, CCS, tandem mass spectra, and isotopic signature'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Snakemake DAG execution log confirming all workflow rules (peak detection, alignment, calibration, isotope detection, deconvolution) completed successfully: 'The CLI is able to process data from mzML through MS1 and MS2 peakpicking.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] DEIMoS: 'DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Snakemake: 'A Snakemake configuration file in YAML format is required.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] conda: 'Use conda to create a virtual environment with required dependencies.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pip: 'Install DEIMoS using pip: pip install -e .'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'is a Python application programming interface and command-line tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, bug fixes, or feature changes is available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "snakemake",
+      "--snakefile",
+      "Snakefile",
+      "--configfile",
+      "{inputs.config_yaml}",
+      "--cores",
+      "all",
+      "--use-conda",
+      "--directory",
+      "."
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "features.h5",
+  "expected_outputs": [
+    "HDF5-formatted output files in output/ directory containing detected features aligned across study samples, characterized by mass, CCS, tandem mass spectra, and isotopic signature",
+    "Snakemake DAG execution log confirming all workflow rules (peak detection, alignment, calibration, isotope detection, deconvolution) completed successfully"
+  ],
+  "finding": "DEIMoS functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution, with output comprising detected features aligned across study samples and characterized by mass, CCS, tandem mass spectra, and isotopic signature.",
+  "github_name": "pnnl/deimos",
+  "input_from": "task_002",
+  "inputs": [
+    "task_002.expected_outputs[0]: Aligned feature table in HDF5 format containing matched features with mz, drift_time, retention_time, and intensity for all aligned features",
+    "MassIVE user-guide LC-IMS-MS/MS dataset (MSV000091746) in mzML.gz format",
+    "YAML configuration file specifying workflow parameters (e.g., config.yaml or workflows/default_config.yaml)"
+  ],
+  "keywords": [
+    "high-dimensional mass spectrometry",
+    "feature detection",
+    "feature alignment",
+    "collision cross section calibration",
+    "isotope detection",
+    "ms/ms spectral deconvolution",
+    "n-dimensional data analysis",
+    "untargeted metabolomics",
+    "multidimensional spectrometry"
+  ],
+  "landmark_outputs": [
+    "ms1_peaks.h5",
+    "ms2_spectra.h5",
+    "aligned_features.h5",
+    "isotope_annotations.h5",
+    "ccs_calibration_model.pkl"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_020"
+  ],
+  "methodology_summary": [
+    "Clone DEIMoS repository and create conda virtual environment with required dependencies.",
+    "Download MassIVE user-guide dataset (MSV000091746) and place mzML.gz files in input/ directory.",
+    "Prepare or modify YAML configuration file with workflow-specific parameters (default_config.yaml provided).",
+    "Invoke DEIMoS CLI with config.yaml to execute Snakemake workflow, specifying core count and execution mode.",
+    "Snakemake automatically orchestrates peak detection, feature alignment, CCS calibration, isotope detection, and MS/MS deconvolution, populating output/ with HDF5 files.",
+    "Validation: confirm all output HDF5 files are present, contain expected datasets (ms1, ms2, features, isotopes), and have non-zero row counts indicating successful rule execution.",
+    "References: MSV000091746 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000091746)"
+  ],
+  "missing_information": [
+    "No changelog documenting version history, bug fixes, or feature changes is available"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the DEIMoS Snakemake workflow successfully execute end-to-end on the publicly deposited MassIVE user guide example dataset, completing all workflow rules and producing final HDF5 output artifacts?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "results"
+  ],
+  "skills": [
+    "mass-spectrometry-workflow-orchestration-snakemake",
+    "lcims-msms-data-preprocessing-peak-detection",
+    "multidimensional-feature-alignment-cross-dataset",
+    "collision-cross-section-calibration-ccs",
+    "tandem-mass-spectrum-deconvolution-isotope-annotation",
+    "hdf5-output-validation-verification"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_deimos/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "deimos_system",
+    "arch_pipeline",
+    "comp_alignment",
+    "comp_calibration",
+    "comp_deconvolution",
+    "comp_filters",
+    "comp_grid",
+    "comp_io",
+    "comp_isotopes",
+    "comp_peakpick",
+    "comp_plot",
+    "comp_subset",
+    "comp_utils",
+    "comp_cli",
+    "fmt_hdf5",
+    "dataset_massive_manuscript",
+    "method_ccs_singlefield",
+    "method_isotope_detect",
+    "result_improved_sensitivity"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:pnnl__deimos",
+  "task_description": "Execute the DEIMoS Snakemake workflow end-to-end on the MassIVE user-guide LC-IMS-MS/MS dataset (MSV000091746), using the provided YAML configuration and default workflow parameters, to produce aligned features characterized by mass, collision cross section, tandem mass spectra, and isotopic signature in HDF5 output files.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MassIVE user-guide mzML.gz files",
+      "port_id": "mzml_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Snakemake YAML configuration file",
+      "port_id": "config_yaml",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute the complete DEIMoS Snakemake workflow on MSV000091746 using the provided YAML configuration and verify all rules complete with HDF5 output artifacts generated.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "HDF5 output files with aligned features and annotations",
+      "port_id": "hdf5_features",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Snakemake workflow completion status",
+      "port_id": "execution_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "ion-mobility",
+    "feature-detection",
+    "chromatogram-alignment",
+    "mass-spectrometry-imaging"
+  ],
+  "title": "Reconstruct Isotopologue Detection on a Detected Feature Table",
+  "tools": [
+    "DEIMoS",
+    "Snakemake",
+    "conda",
+    "pip",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Clone the DEIMoS repository from GitHub and activate the conda environment as specified in the installation documentation. 2. Download the MassIVE user-guide example dataset (MSV000091746) and place mzML.gz files in the input/ directory. 3. Prepare or modify the config.yaml file (or use workflows/default_config.yaml) to specify dataset-specific parameters for the workflow. 4. Invoke the DEIMoS CLI with the configuration file, specifying the number of cores and execution mode (local or cluster) as needed: deimos --config config.yaml --cores N. 5. Snakemake automatically detects input files, executes the complete rule DAG including peak detection, feature alignment, CCS calibration, isotope detection, and MS/MS deconvolution, and populates output/ with HDF5-formatted results. 6. Verify successful completion by confirming all output HDF5 files are present in output/ and contain expected datasets (ms1, ms2, features, isotopes) with non-zero row counts."
+}

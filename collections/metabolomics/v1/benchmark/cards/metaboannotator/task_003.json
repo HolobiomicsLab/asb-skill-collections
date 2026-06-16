@@ -1,0 +1,276 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MetaboAnnotatoR.jpeg",
+      "role": "figure",
+      "sha256": "7581280c2f229e63ffef877fb14954a2b892a821bc2ef16311e9cb49721a1168"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b329d5cb032d2f7b1bdbe9c972021138eb0f4425c5e272b57e78a796bd4d422e"
+    }
+  ],
+  "created_at": "2026-06-15T12:33:51.764194+00:00",
+  "crossref_doi": "10.1021/acs.analchem.1c03032",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "D-Pantothenic Acid MS/MS spectrum from MassBank accession MSBNK-RIKEN-PR100295",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CSV library entry containing annotated fragments with mass-to-charge, intensity, and fragment match scores",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Noise filtering at 0.005 intensity units removes low-abundance background signals; marker peak filtering at 0.1 selects fragment ions with significant abundance for reliable matching.",
+    "Mass tolerance (mzTol=0.01) defines the allowable ppm or Da window for fragment peak matching against reference databases; stricter tolerance reduces false-positive annotations.",
+    "The mpeaksScore parameter (0.9) sets the minimum cosine similarity or dot-product score required to accept a fragment-ion match, controlling specificity of library entry assignments.",
+    "D-Pantothenic Acid [M+H]+ generates characteristic fragment ions that serve as a positive-control case for validating the genFragEntry workflow on a known metabolite."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at MassBank accession MSBNK-RIKEN-PR100295 or retrieve MS/MS spectrum record for D-Pantothenic Acid [M+H]+ from public MassBank deposit",
+      "verify genFragEntry function is callable within MetaboAnnotatoR package (github:gggraca__MetaboAnnotatoR)",
+      "verify script runs: execute genFragEntry with documented parameters (noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1, mzTol=0.01) on D-Pantothenic Acid spectrum input",
+      "verify expected_outputs[0] file_format_is CSV",
+      "verify expected_outputs[0] field_present: contains column headers consistent with library entry structure (no canonical answer \u2014 structure depends on MetaboAnnotatoR internal design)"
+    ],
+    "expert_review": [
+      "expert chemist/metabolomics analyst review: do the peaks retained after noise=0.005 and mpeaksThres=0.1 filtering match known D-Pantothenic Acid fragmentation pattern for [M+H]+ adduct",
+      "expert review: is the mpeaksScore=0.9 threshold appropriately stringent for marker peak selection in this compound class",
+      "expert review: does the output CSV entry align with standard MassBank library entry format and annotation conventions"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does the genFragEntry function process an experimental MS/MS spectrum to generate a metabolite library entry by applying peak-picking thresholds and occurrence scoring?: 'This function will attribute occurrence scores to the peaks above *mpeaksThres* threshold (\"marker peaks\") and above the noise level.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] genFragEntry converts an MS/MS spectrum into a library entry by identifying marker peaks above the mpeaksThres threshold (0.1 default) and noise level (0.005 default), attributing occurrence scores to these peaks, with parameters including mpeaksScore=0.9, mzTol=0.01, and requires explicit definition of metabolite name, adduct notation, accurate adduct m/z, and output filename.: 'This function will attribute occurrence scores to the peaks above *mpeaksThres* threshold (\"marker peaks\") and above the noise level. Note that metabolite name, adduct name, accurate adduct m/z and'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] D-Pantothenic Acid MS/MS spectrum from MassBank accession MSBNK-RIKEN-PR100295: 'MS/MS spectrum of D-Pantothenic Acid [M+H]+ adduct from MassBank, accession code: MSBNK-RIKEN-PR100295'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] CSV library entry containing annotated fragments with mass-to-charge, intensity, and fragment match scores: 'MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets, using ion fragment databases'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MetaboAnnotatoR: 'MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'To install this package, start R (version \"4.5.0\" or higher)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(MetaboAnnotatoR); spectrum_data <- read.csv('{inputs.massbank_spectrum}'); result <- genFragEntry(spectrum_data, noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1, mzTol=0.01); write.csv(result, 'library_entry_{task_id}.csv', row.names=FALSE)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "d_pantothenic_acid_library_entry.csv",
+  "expected_outputs": [
+    "CSV library entry containing annotated fragments with mass-to-charge, intensity, and fragment match scores"
+  ],
+  "finding": "genFragEntry converts an MS/MS spectrum into a library entry by identifying marker peaks above the mpeaksThres threshold (0.1 default) and noise level (0.005 default), attributing occurrence scores to these peaks, with parameters including mpeaksScore=0.9, mzTol=0.01, and requires explicit definition of metabolite name, adduct notation, accurate adduct m/z, and output filename.",
+  "github_name": "gggraca/MetaboAnnotatoR",
+  "input_from": null,
+  "inputs": [
+    "D-Pantothenic Acid MS/MS spectrum from MassBank accession MSBNK-RIKEN-PR100295"
+  ],
+  "keywords": [
+    "metabolite annotation",
+    "lc-ms all-ion fragmentation",
+    "centroid mode",
+    "pseudo-ms/ms spectra",
+    "lipidomics",
+    "esi+ ionisation",
+    "feature table",
+    "fragment databases",
+    "peak-picking",
+    "library matching"
+  ],
+  "landmark_outputs": [
+    "filtered_spectrum.txt",
+    "scored_fragments.csv",
+    "d_pantothenic_acid_library_entry.csv"
+  ],
+  "linked_result_ids": [
+    "result_013",
+    "result_014",
+    "result_015"
+  ],
+  "methodology_summary": [
+    "Load MS/MS spectrum data from MassBank for D-Pantothenic Acid",
+    "Apply noise threshold filtering at intensity \u22650.005 to remove background signals",
+    "Apply marker peak threshold filtering at intensity \u22650.1 to identify significant fragments",
+    "Execute genFragEntry with mpeaksScore=0.9 and mzTol=0.01 to score and annotate fragment matches",
+    "Validation: Output CSV library entry contains annotated fragment ions with mass, intensity, and match scores; structure matches MetaboAnnotatoR library entry format",
+    "References: source article (DOI: 10.1021/acs.analchem.1c03032)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the genFragEntry function process an experimental MS/MS spectrum to generate a metabolite library entry by applying peak-picking thresholds and occurrence scoring?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "ms-ms-spectrum-peak-annotation",
+    "fragment-ion-matching-and-scoring",
+    "noise-filtering-threshold-application",
+    "spectral-library-entry-generation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_metaboannotator/synthesized_package",
+  "spine_condition_ids": [
+    "COND-001"
+  ],
+  "spine_entity_ids": [
+    "COMP-002",
+    "DS-003",
+    "DS-004",
+    "COND-001"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:gggraca__MetaboAnnotatoR",
+  "task_description": "Apply the genFragEntry function to the hard-coded D-Pantothenic Acid MS/MS spectrum (MassBank accession MSBNK-RIKEN-PR100295) using documented parameters (noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1, mzTol=0.01) to produce a CSV library entry demonstrating the fragment annotation workflow.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "D-Pantothenic Acid MS/MS spectrum (MSBNK-RIKEN-PR100295)",
+      "port_id": "massbank_spectrum",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Convert the D-Pantothenic Acid MS/MS spectrum using genFragEntry with specified parameters (noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1, mzTol=0.01) to produce a CSV library entry file.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CSV library entry with annotated fragment ions",
+      "port_id": "library_entry_csv",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "database-annotation",
+    "metabolite-identification",
+    "clustering"
+  ],
+  "title": "Reconstruct the genFragEntry library-entry generation step for D-Pantothenic Acid [M+H]+",
+  "tools": [
+    "MetaboAnnotatoR",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: CSV library entry containing annotated fragments with mass-to-charge, intensity, and fragment match scores."
+  ],
+  "workflow_description": "1. Load the D-Pantothenic Acid MS/MS spectrum from MassBank accession MSBNK-RIKEN-PR100295. 2. Apply peak-picking filtering at noise threshold of 0.005 to remove low-intensity signals. 3. Apply marker peak filtering at threshold of 0.1 to identify significant fragment peaks. 4. Execute genFragEntry function with mpeaksScore=0.9 and mzTol=0.01 to annotate fragment ions and generate scored matches. 5. Output results as a CSV-formatted library entry containing annotated fragments with mass, intensity, and match scores."
+}

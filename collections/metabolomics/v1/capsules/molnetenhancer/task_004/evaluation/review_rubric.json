@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that pyMolNetEnhancer package is accessible from github:madeleineernst__pyMolNetEnhancer"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: a Python module or script implementing MapChemicalClassesMotifs or equivalent combined pipeline operation"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output artifact from pipeline execution (enriched network file in format such as"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "enriched network contains both chemical class and MS2LDA motif annotations simul"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that pyMolNetEnhancer package is accessible from github:madeleineernst__pyMolNetEnhancer",
+      "verify file_exists: a Python module or script implementing MapChemicalClassesMotifs or equivalent combined pipeline operation",
+      "script_runs: execute the combined pipeline step (MapChemicalClassesMotifs) on a GNPS molecular network file with both chemical class annotations and MS2LDA motif data as inputs without error",
+      "file_exists: output artifact from pipeline execution (enriched network file in format such as .graphml, .json, .csv, or .txt)",
+      "output_matches_reference: enriched network contains both chemical class and MS2LDA motif annotations simultaneously on nodes or edges; multiple defensible output formats and annotation schemes are valid"
+    ],
+    "expert_review": [
+      "assess whether the combined pipeline correctly integrates chemical class information and MS2LDA substructural motifs without loss or conflict of annotation data",
+      "evaluate the design decision to combine both annotation types in a single operation versus sequential application of separate mappers",
+      "review whether the enriched network artifact preserves network topology and node identity from the input GNPS network"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

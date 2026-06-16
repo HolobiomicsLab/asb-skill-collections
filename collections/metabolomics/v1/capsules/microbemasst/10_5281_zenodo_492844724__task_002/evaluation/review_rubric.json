@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github.com/mwang87/GNPS_MASST or equivalent public repository URL"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify GNPS_MASST repository contains routing logic code (script_runs: clone repository and search for routing/dispatcher functions)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify routing logic accepts user-selected domain parameter as input (contains_substring: 'domain' or 'MASST' in routing function signature)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify routing logic maps domain selection to at least the six documented applications: microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST (output_matches_reference: routing table or conditional logic enumerates all six)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify implemented routing logic can be instantiated with a test spectrum and a domain parameter without error (script_runs: execute routing function with valid inputs)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github.com/mwang87/GNPS_MASST or equivalent public repository URL",
+      "verify GNPS_MASST repository contains routing logic code (script_runs: clone repository and search for routing/dispatcher functions)",
+      "verify routing logic accepts user-selected domain parameter as input (contains_substring: 'domain' or 'MASST' in routing function signature)",
+      "verify routing logic maps domain selection to at least the six documented applications: microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST (output_matches_reference: routing table or conditional logic enumerates all six)",
+      "verify implemented routing logic can be instantiated with a test spectrum and a domain parameter without error (script_runs: execute routing function with valid inputs)"
+    ],
+    "expert_review": [
+      "assess whether routing logic correctly implements domain-spectrum matching semantics (does microbe spectrum route to microbeMASST, plant to plantMASST, etc.)",
+      "assess whether routing logic gracefully handles edge cases: unrecognized domain, null/missing domain parameter, null/invalid spectrum input",
+      "assess whether routing implementation follows GNPS_MASST architectural conventions and is maintainable for future domain additions"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

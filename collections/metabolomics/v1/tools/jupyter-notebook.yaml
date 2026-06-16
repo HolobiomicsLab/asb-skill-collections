@@ -1,0 +1,10 @@
+name: Jupyter Notebook
+slug: jupyter-notebook
+evidence_spans:
+- You can install them through the pip command `pip install notebook dash jupyter-dash`
+derived_from:
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+source_repos:
+- bihealth/NeatMS
+schema_version: 0.2.0

@@ -1,0 +1,365 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/open2c/cooltools",
+      "locator_id": "gh_open2c_cooltools",
+      "locator_kind": "github",
+      "name": "open2c/cooltools",
+      "prose": "cooltools GitHub repository (open2c/cooltools)",
+      "score": 0.5,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/cooltools-logo-futura.png",
+      "role": "figure",
+      "sha256": "726eacd3b3f3226502291e4a9ca7bfbec7a4cd263fe916798fdafb94baf17153"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "dd40b0ce0a98b1e9936f2244a8d5c26417a737bfa619cf5f660f140fad59e89c"
+    }
+  ],
+  "created_at": "2026-06-15T17:50:30.421402+00:00",
+  "crossref_doi": "10.1101/2022.10.31.514564",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "cooltools GitHub repository (open2c/cooltools)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Python module cooltools.lib with adaptive_coarsegrain function accessible via import",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Built HTML documentation in docs/_build/html/ that includes adaptive_coarsegrain in the cooltools.lib API reference",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "pytest unit test report confirming code passes linting and coverage checks",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "The adaptive_coarsegrain utility is a library-level function introduced in v0.3.0 alongside other plotting and utility modules for Hi-C analysis support.",
+    "Library utilities in cooltools are organized under the cooltools.lib subpackage and must be documented in docs/api.rst following the Sphinx Autosummary extension convention.",
+    "Code must follow PEP-8 style standards and pass flake8 linting; pytest-flake8 automatically enforces this during test execution.",
+    "Functions must include Numpy-style docstrings to be properly indexed by Sphinx and appear in the generated API reference documentation.",
+    "Editable installation mode (pip install -e .) creates a symbolic link allowing live code changes to be immediately reflected without reinstallation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that cooltools/lib module directory exists in the open2c/cooltools repository at the documented location",
+      "script_runs: execute Python import statement `from cooltools.lib import adaptive_coarsegrain` and verify script completes without ImportError",
+      "field_present: verify that adaptive_coarsegrain is listed in the __all__ export list or module __init__.py of cooltools.lib",
+      "contains_substring: verify that the function signature and docstring are present in the source file containing adaptive_coarsegrain definition"
+    ],
+    "expert_review": [
+      "confirm that adaptive_coarsegrain is semantically consistent with described functionality as a library utility for coarse-graining operations",
+      "verify that the function's implementation and documentation align with standard Hi-C analysis practices for adaptive resolution adjustment"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How is the adaptive_coarsegrain function integrated into the cooltools library as a utility within the cooltools.lib subpackage?: 'cooltools: enabling high-resolution Hi-C analysis in Python'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The document does not contain sufficient verbatim evidence describing the implementation, integration mechanism, or API path of adaptive_coarsegrain within cooltools.lib. The provided section text ends mid-sentence and contains no functional details about this specific utility.: 'The recently-introduced ***cooler*** format readily handles storage of high-resolution datasets via a'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] cooltools GitHub repository (open2c/cooltools): 'git clone https://github.com/open2c/cooltools.git'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python module cooltools.lib with adaptive_coarsegrain function accessible via import: 'Several library utilities added: `plotting.gridspec_inches`, `adaptive_coarsegrain`, singleton interpolation, and colormaps.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Built HTML documentation in docs/_build/html/ that includes adaptive_coarsegrain in the cooltools.lib API reference: 'After this, you can find an HTML version of the documentation in `docs/_build/html/index.html`.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pytest unit test report confirming code passes linting and coverage checks: 'We use [pytest](https://docs.pytest.org/en/latest) as our unit testing framework with the `pytest-cov` extension to check code coverage and `pytest-flake8` to check code style.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'enabling high-resolution Hi-C analysis in Python'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pytest: 'We use [pytest](https://docs.pytest.org/en/latest) as our unit testing framework'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pytest-cov: 'We use [pytest](https://docs.pytest.org/en/latest) as our unit testing framework with the `pytest-cov` extension'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pytest-flake8: 'pytest-cov` extension to check code coverage and `pytest-flake8` to check code style'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] flake8: 'We use [flake8](http://flake8.pycqa.org/en/latest/) to automatically lint the code'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Sphinx: 'We use [Numpy style docstrings](https://numpydoc.readthedocs.io/en/latest/format.html>) and [Sphinx](http://www.sphinx-doc.org/en/stable) to document this library'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[other] conda: 'we recommend using [conda](https://docs.conda.io/en/latest/miniconda.html)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit documentation provided for the adaptive_coarsegrain function's API, parameters, return values, or usage examples: 'Several library utilities added: `plotting.gridspec_inches`, `adaptive_coarsegrain`, singleton interpolation, and colormaps.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific version of cooltools in which adaptive_coarsegrain was first introduced is not stated; only v0.3.0 (2019-11-04) mentions its addition: 'Several library utilities added: `plotting.gridspec_inches`, `adaptive_coarsegrain`, singleton interpolation, and colormaps.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No information on whether adaptive_coarsegrain accepts NaN values or has specific compatibility constraints with Hi-C data formats: 'Several library utilities added: `plotting.gridspec_inches`, `adaptive_coarsegrain`, singleton interpolation, and colormaps.'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "test_report.txt",
+  "expected_outputs": [
+    "Python module cooltools.lib with adaptive_coarsegrain function accessible via import",
+    "Built HTML documentation in docs/_build/html/ that includes adaptive_coarsegrain in the cooltools.lib API reference",
+    "pytest unit test report confirming code passes linting and coverage checks"
+  ],
+  "finding": "The document does not contain sufficient verbatim evidence describing the implementation, integration mechanism, or API path of adaptive_coarsegrain within cooltools.lib. The provided section text ends mid-sentence and contains no functional details about this specific utility.",
+  "github_name": "open2c/cooltools",
+  "input_from": null,
+  "inputs": [
+    "cooltools GitHub repository (open2c/cooltools)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "cooltools/lib/__init__.py (with adaptive_coarsegrain exported)",
+    "cooltools/lib/adaptive_coarsegrain.py (or equivalent module location)",
+    "tests/test_lib.py (or test file containing unit tests for the function)",
+    "docs/_build/html/cooltools.lib.html (API documentation page)",
+    ".pytest_cache/pytest.log (test execution log)"
+  ],
+  "linked_result_ids": [
+    "result_036",
+    "result_039"
+  ],
+  "methodology_summary": [
+    "Clone and set up the cooltools development environment using git and editable pip installation mode.",
+    "Verify adaptive_coarsegrain function is present in the cooltools.lib module and can be imported without errors.",
+    "Execute pytest with coverage and style checking extensions (pytest-cov and pytest-flake8) on the lib package to verify code correctness and PEP-8 compliance.",
+    "Build Sphinx documentation and confirm adaptive_coarsegrain appears in the automatically generated API reference for cooltools.lib.",
+    "Validation: confirm file_exists for the function module, successful import without error, pytest test suite passes with zero style violations, and function is listed in generated HTML documentation at docs/_build/html/cooltools.lib.html.",
+    "References: source article (DOI: 10.1101/2022.10.31.514564)"
+  ],
+  "missing_information": [
+    "No explicit documentation provided for the adaptive_coarsegrain function's API, parameters, return values, or usage examples",
+    "The specific version of cooltools in which adaptive_coarsegrain was first introduced is not stated; only v0.3.0 (2019-11-04) mentions its addition",
+    "No information on whether adaptive_coarsegrain accepts NaN values or has specific compatibility constraints with Hi-C data formats"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How is the adaptive_coarsegrain function integrated into the cooltools library as a utility within the cooltools.lib subpackage?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "python-package-api-interface-design",
+    "library-module-organization-and-accessibility",
+    "sphinx-documentation-generation-and-api-reference-inclusion",
+    "pytest-unit-test-execution-and-coverage-reporting",
+    "pep8-code-style-compliance-verification",
+    "editable-development-mode-installation-and-verification"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_cooltools/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "cooltools_system",
+    "component_adaptive_coarsegrain",
+    "component_lib"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:open2c__cooltools",
+  "task_description": "Verify that the adaptive_coarsegrain function has been added to the cooltools.lib library package and is accessible via the documented API import path (cooltools.lib.adaptive_coarsegrain).",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "cooltools GitHub repository",
+      "port_id": "cooltools_repo",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Verify that adaptive_coarsegrain is accessible at its documented API path within cooltools.lib by importing and confirming proper module registration.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "cooltools.lib module with adaptive_coarsegrain function",
+      "port_id": "lib_module",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Generated Sphinx HTML documentation including lib package API",
+      "port_id": "api_docs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "pytest output report with coverage and style checks",
+      "port_id": "test_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reproduce the adaptive coarse-graining utility integration into cooltools.lib",
+  "tools": [
+    "cooler",
+    "Python",
+    "pytest",
+    "pytest-cov",
+    "pytest-flake8",
+    "flake8",
+    "Sphinx",
+    "conda"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: pytest, pytest-cov, pytest-flake8, flake8, Sphinx, conda, Python module cooltools.lib with adaptive_coarsegrain function accessible via import, Built HTML documentation in docs/_build/html/ that includes adaptive_coarsegrain in the cooltools.lib API reference, pytest unit test report confirming code passes linting and coverage checks."
+  ],
+  "workflow_description": "1. Clone the cooltools repository from open2c/cooltools. 2. Install the package in editable development mode using pip install -e . 3. Import the adaptive_coarsegrain function from cooltools.lib and confirm it is callable. 4. Run pytest on the lib package unit tests to verify function behavior and code coverage are satisfactory. 5. Build the Sphinx documentation using make docs and verify the function appears in the cooltools.lib API reference. 6. Generate a test report confirming successful import, execution, and documentation inclusion."
+}

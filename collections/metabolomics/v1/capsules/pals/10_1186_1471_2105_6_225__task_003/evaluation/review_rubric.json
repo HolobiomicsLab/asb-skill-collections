@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that PALS repository (github:glasgowcompbio/PALS) contains documented implementation of PLAGE decomposition method"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file_exists: locate example or test data in PALS repository using GNPS Molecular Families format"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file_exists: locate example or test data in PALS repository using MS2LDA Mass2Motifs format"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify output_matches_reference: compare decomposition scores/loadings from both non-pathway metabolite sets against any published reference results or supplementary tables reporting PLAGE application to these data types"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify that PALS repository (github:glasgowcompbio/PALS) contains documented implementation of PLAGE decomposition method",
+      "Verify file_exists: locate example or test data in PALS repository using GNPS Molecular Families format",
+      "Verify file_exists: locate example or test data in PALS repository using MS2LDA Mass2Motifs format",
+      "Script_runs: execute PALS decomposition on GNPS Molecular Families input and confirm output artifact is produced",
+      "Script_runs: execute PALS decomposition on MS2LDA Mass2Motifs input and confirm output artifact is produced",
+      "Verify output_matches_reference: compare decomposition scores/loadings from both non-pathway metabolite sets against any published reference results or supplementary tables reporting PLAGE application to these data types"
+    ],
+    "expert_review": [
+      "Confirm that reported decomposition results for Molecular Families and Mass2Motifs demonstrate statistically and biologically meaningful variance decomposition consistent with the PLAGE method's theoretical properties",
+      "Assess whether the generalization to fragmentation-spectrum-derived groupings (GNPS and MS2LDA) is substantively different from pathway-based analysis and whether results validate the claim of generalization",
+      "Evaluate robustness claims: verify that PLAGE scores on these non-pathway metabolite sets show comparable or superior noise tolerance relative to ORA/GSEA baselines if such comparisons are reported"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

@@ -1,0 +1,10 @@
+name: psims
+slug: psims
+evidence_spans:
+- '- `psims <https://mobiusklein.github.io/psims/docs/build/html/>`_ (used py :py:mod:`pyteomics.proforma`)'
+derived_from:
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+source_repos:
+- levitsky/pyteomics
+schema_version: 0.2.0

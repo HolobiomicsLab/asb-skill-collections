@@ -1,0 +1,3954 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/fragmentation-pattern-extraction-and-ranking",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/gnps-molecular-network-integration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/graph-based-metabolite-similarity-assessment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/network-component-identification-and-filtering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/precision-recall-optimization-in-spectral-annotation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "mineMS2 patterns are graphs with ion peaks as nodes and m/z differences as edges.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_MINEMS2"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "mineMS2 m/z differences include not only neutral losses but also m/z differences between ions that belong to distinct fragmentation paths.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_MINEMS2"
+        },
+        {
+          "id": "asb:spine_COMP_DISCRETIZE"
+        },
+        {
+          "id": "asb:spine_COMP_FRAGMENTATION_GRAPH"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The mineMS2 method is independent of external spectral databases and knowledge of the molecular formula of precursor ions.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_MINEMS2"
+        },
+        {
+          "id": "asb:spine_COMP_MINESUBGRAPHS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_004",
+      "context": "implicit",
+      "subject": "implicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "mineMS2 patterns are complementary to MS2LDA patterns because they consist of exact graphs rather than probabilistic lists.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_MINEMS2"
+        },
+        {
+          "id": "asb:spine_TOOL_MS2LDA"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The dataset contains 51 MS/MS spectra from secondary metabolites of Penicillium nordicum.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TOOL_INSTRUMENT"
+        },
+        {
+          "id": "asb:spine_COMP_PENICILLIUM_NORDICUM"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Penicillium nordicum spectra were acquired on a Luna C18 column using HPLC coupled to an LTQ Orbitrap XL hybrid mass spectrometer.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TOOL_INSTRUMENT"
+        },
+        {
+          "id": "asb:spine_COMP_PENICILLIUM_NORDICUM"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Penicillium nordicum spectra were acquired in positive ionization mode at HCD20 collision energy with a resolution of 7,500.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_PENICILLIUM_NORDICUM"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The molecular network was precomputed on the GNPS website and extracted in GraphML format.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_MINEMS2"
+        },
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "mineMS2 can be coupled to GNPS MS/MS molecular networking to focus on patterns that best explain components of the network.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_MINEMS2"
+        },
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "It is recommended to compute the patterns and the GNPS network using the same .mgf input file to avoid matching issues.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The ms2Lib class is used throughout the workflow to store the spectra data and metadata, the m/z differences, the fragmentation graphs, and the patterns.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_MS2LIB"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The ms2Lib constructor function can take the collection of MS/MS spectra as input as a single mgf file, a vector of individual mgf file names, the name of a directory containing individual spectra as mgf files, or a list of Spectrum2 objects.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_MS2LIB"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Supplementary metadata about the spectra can be provided as a tsv tabular file.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The metadata are not used in the computations of m/z differences, fragmentation graphs, or frequent patterns but can be displayed in plot titles.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Two columns mz.precursor and file are automatically inserted at the beginning of the metadata table stored in the ms2Lib object.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_MS2LIB"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The discretizeMzDifferences method computes the m/z differences between the peaks in each spectrum and discretizes them for the whole spectra collection.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_MINEMS2"
+        },
+        {
+          "id": "asb:spine_COMP_DISCRETIZE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The m/z differences computed by discretizeMzDifferences include not only neutral losses but also differences between ions that belong to distinct fragmentation paths of the precursor.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_DISCRETIZE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default value of the ppm parameter in discretizeMzDifferences is 15.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_DISCRETIZE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default value of the dmz parameter in discretizeMzDifferences is 0.007 Da.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_DISCRETIZE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default value of the count parameter in discretizeMzDifferences is 2.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_DISCRETIZE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_021",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default value of the maxFrags parameter in discretizeMzDifferences is 15.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_DISCRETIZE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_021_evidence",
+      "evidence_for": "claim_021",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_022",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default value of the limMzFormula parameter in discretizeMzDifferences is c(14.5, 200).",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_DISCRETIZE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_022_evidence",
+      "evidence_for": "claim_022",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_023",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The mineClosedSubgraphs method extracts frequent subgraphs among the fragmentation graphs.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_MINESUBGRAPHS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_023_evidence",
+      "evidence_for": "claim_023",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_024",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default value of the count parameter in mineClosedSubgraphs is 2.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_MINESUBGRAPHS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_024_evidence",
+      "evidence_for": "claim_024",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_025",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default value of the sizeMin parameter in mineClosedSubgraphs is 1.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_MINESUBGRAPHS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_025_evidence",
+      "evidence_for": "claim_025",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_026",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "When the number of frequent m/z differences is above 600 and sizeMin is set to 1, the sizeMin value will be automatically increased to 2.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_026_evidence",
+      "evidence_for": "claim_026",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_027",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The findGNPSComponents function extracts connected components from the molecular network.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_FINDGNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_027_evidence",
+      "evidence_for": "claim_027",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_028",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The findGNPSComponents function can extract cliques from the molecular network.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_FINDGNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_028_evidence",
+      "evidence_for": "claim_028",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_029",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The findGNPSComponents function selects a set of disjoint cliques by decreasing order of size.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_MINEMS2"
+        },
+        {
+          "id": "asb:spine_COMP_FINDGNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_029_evidence",
+      "evidence_for": "claim_029",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_030",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The findGNPSComponents function can extract high similarity pairs of nodes from the molecular network.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_FINDGNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_030_evidence",
+      "evidence_for": "claim_030",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_031",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The minSize parameter of findGNPSComponents specifies the minimum size of detected cliques.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_FINDGNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_031_evidence",
+      "evidence_for": "claim_031",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_032",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The pairThreshold parameter of findGNPSComponents specifies the threshold of the cosine score for high similarity pairs of nodes.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_FINDGNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_032_evidence",
+      "evidence_for": "claim_032",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_033",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Nine components were selected from the Penicillium nordicum GNPS molecular network.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        },
+        {
+          "id": "asb:spine_METRIC_GNPS_COMPONENTS"
+        },
+        {
+          "id": "asb:spine_COMP_PENICILLIUM_NORDICUM"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_033_evidence",
+      "evidence_for": "claim_033",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_034",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Components 6, 7, 8 and 9 are the connected components of the Penicillium nordicum network.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_PENICILLIUM_NORDICUM"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_034_evidence",
+      "evidence_for": "claim_034",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_035",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Components 1, 3, and 4 are disjoint cliques from component 6 (the larger cluster).",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_035_evidence",
+      "evidence_for": "claim_035",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_036",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Components 2 and 5 are disjoint cliques from component 7 (the smaller cluster).",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_036_evidence",
+      "evidence_for": "claim_036",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_037",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The recall metric measures the proportion of explained spectra among the component spectra.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_037_evidence",
+      "evidence_for": "claim_037",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_038",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The precision metric measures the proportion of component spectra among the explained spectra.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_038_evidence",
+      "evidence_for": "claim_038",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_039",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The F1-score is the harmonic mean of precision and recall.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_039_evidence",
+      "evidence_for": "claim_039",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_040",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "For the pair of spectra with precursor m/z values of 370.1283 and 404.0891 (component 8), the best explaining pattern P70 has an F1-score of 1.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_040_evidence",
+      "evidence_for": "claim_040",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_041",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The largest component in the Penicillium nordicum GNPS network consists of 21 spectra.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        },
+        {
+          "id": "asb:spine_COMP_PENICILLIUM_NORDICUM"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_041_evidence",
+      "evidence_for": "claim_041",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_042",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The m/z difference of 99.0683 is shared by 19 out of 21 fragmentation spectra in the largest component.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_042_evidence",
+      "evidence_for": "claim_042",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_043",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The m/z difference of 99.0683 has a precision of 1, indicating it is not present in any other spectra of the dataset.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_043_evidence",
+      "evidence_for": "claim_043",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_045",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The m/z difference of 186.079 has a possible formula of C11H10ON2.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_TRYPTOPHAN"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_045_evidence",
+      "evidence_for": "claim_045",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_047",
+      "context": "implicit",
+      "subject": "implicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A total of multiple patterns include the m/z difference of 186.079.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_P179"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_047_evidence",
+      "evidence_for": "claim_047",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_048",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A pattern including the m/z difference 186.079 is found in 7 spectra.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_048_evidence",
+      "evidence_for": "claim_048",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_049",
+      "context": "implicit",
+      "subject": "implicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "mineMS2 discovers new similarities between spectra that are not all linked together in the GNPS network.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_MINEMS2"
+        },
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_049_evidence",
+      "evidence_for": "claim_049",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_050",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default ppm tolerance in mineMS2 is 15 ppm.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_MINEMS2"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_050_evidence",
+      "evidence_for": "claim_050",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_051",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "When ppm tolerance was set to 7 ppm on the LIMS-DB dataset, the average F1-score decreased to 0.47.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_051_evidence",
+      "evidence_for": "claim_051",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_052",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "With the default ppm tolerance of 15 ppm on the LIMS-DB dataset, the average F1-score is 0.53.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_052_evidence",
+      "evidence_for": "claim_052",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_053",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "At 7 ppm tolerance, patterns explaining ChemOnt concepts contained 5.2 m/z differences on average.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_053_evidence",
+      "evidence_for": "claim_053",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_054",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "At 15 ppm tolerance, patterns explaining ChemOnt concepts contained 6.8 m/z differences on average.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_054_evidence",
+      "evidence_for": "claim_054",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_055",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default maximum number of fragments in discretizeMzDifferences is set to 15.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_DISCRETIZE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_055_evidence",
+      "evidence_for": "claim_055",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_056",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Mining the LIMS-DB dataset with maxFrags of 20 increased running time to 1.5 hours.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_056_evidence",
+      "evidence_for": "claim_056",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_057",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The default maxFrags of 15 requires 20 minutes to mine the LIMS-DB dataset.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_057_evidence",
+      "evidence_for": "claim_057",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "id": "claim_058",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The GNPS network for Penicillium nordicum contains 2 clusters of sizes 21 and 11, in addition to 2 pairs.",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        },
+        {
+          "id": "asb:spine_COMP_PENICILLIUM_NORDICUM"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_058_evidence",
+      "evidence_for": "claim_058",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "tight"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The GNPS network from the 51 spectra was rebuilt... This network contains two large connected components of respective size 21 and 11, two pairs, and 15 spectra remaining isolated. The main components to be explained (disjoint cliques of size above 3, as well as pairs with similarity above 0.9) were extracted (findGNPSComponents method), leading to 5 disjoint cliques, in addition to the initial 4 connected components of the network. Finally, mineMS2 patterns of highest recall for these components were selected (findPatternsExplainingComponents method), with the precision and size of the patterns being used to split ties (see the package vignette): patterns explaining each component were found, with a minimum recall of 0.9 and a mean F1-score of 0.89 (minimum of 0.55).",
+      "asbval:note": "The paper describes the general workflow of findPatternsExplainingComponents applied to P. nordicum network components, but does NOT provide specific details about 'component 8' with precursor m/z values 370.1283 and 404.0891, nor does it name a specific pattern 'P70' or report its F1-score as 1.0. The paper reports mean F1-score of 0.89 (minimum 0.55) across all components, not component-specific metrics. The specific component and pattern identifiers appear to be fabricated or from supplementary materials not provided in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "When findPatternsExplainingComponents is applied to component 8 (a high-similarity pair of spectra with precursor m/z values 370.1283 and 404.0891) using recall-precision-size metrics and top=5, does pattern P70 achieve perfect F1-score while other top-5 patterns maintain recall=",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:58.634062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No such table or data frame is provided in the passages. The paper reports aggregate statistics (mean F1-score 0.89, minimum 0.55) but not per-component breakdowns with specific pattern identifiers like 'P70' or component numbers like '8'.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Table or data frame with pattern identifiers, recall, precision, F1-score, and size metrics for top-5 patterns per component, confirming P70 achieves F1=1.0 for component 8",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:58.634062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No such verification report exists in the passages. The paper does not name pattern 'P70' or provide component-level F1-score breakdowns. The claim of 'all other top-5 patterns have recall=1.0' contradicts the paper's statement that patterns were selected with 'minimum recall of 0.9', not 1.0.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Verification report confirming pattern P70 F1-score=1.0 and all other top-5 patterns have recall=1.0 with precision<1.0",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:58.634062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The GNPS network from the 51 spectra was rebuilt, with selected parameter values to obtain the more consistent network with the one reported by the authors (see Supplementary File 1, Note S2). This network contains two large connected components of respective size 21 and 11, two pairs, and 15 spectra remaining isolated. The main components to be explained (disjoint cliques of size above 3, as well as pairs with similarity above 0.9) were extracted (findGNPSComponents method), leading to 5 disjoint cliques, in addition to the initial 4 connected components of the network.",
+      "asbval:note": "The paper does report component counts (2 large connected components, 2 pairs, 15 isolated spectra; 5 disjoint cliques extracted), but the title claims to 'reproduce the count' while the research_question and expected_outputs focus on pattern P70 and component 8 metrics\u2014a mismatch. The title is narrower in scope than the actual research question.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Reproduce the count of GNPS components extracted from the Penicillium nordicum molecular network",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:58.634062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mineMS2 analysis of the spectra collection was performed in 14 s for the P.verrucosum dataset (respectively, 24 s for the P. nordicum dataset)... Finally, mineMS2 patterns of highest recall for these components were selected (findPatternsExplainingComponents method)...",
+      "asbval:note": "mineMS2 is explicitly used in the P. nordicum analysis and the findPatternsExplainingComponents method is part of the mineMS2 package.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mineMS2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:58.634062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "igraph is not mentioned anywhere in the provided passages. The paper uses GNPS for molecular network generation and mineMS2 for pattern extraction, but does not name igraph as a tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "igraph",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:58.634062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package ( https://github.com/odisce/mineMS2 ). ... The described algorithm was written in C++ using Boost, and wrapped with Rcpp into the mineMS2 R package",
+      "asbval:note": "mineMS2 is an R package, so R is the language/environment used.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:58.634062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The title ('Reproduce the count of GNPS components') is narrower and different in focus from the research_question (which asks about pattern P70 F1-score on component 8). This is a significant scope mismatch.",
+        "The research_question references specific component and pattern identifiers ('component 8', 'pattern P70', precursor m/z values 370.1283 and 404.0891) that do not appear in the paper passages. These appear to be either fabricated or from supplementary materials not provided.",
+        "The expected_outputs claim specific F1-score values (1.0 for P70, 0.9 minimum recall for all top-5) that are not supported by the paper's reported aggregate statistics (mean F1-score 0.89, minimum 0.55, minimum recall 0.9).",
+        "The card conflates two different tasks: (1) reproducing component counts (title), and (2) validating pattern metrics for a specific component (research_question and expected_outputs). These should be separate cards."
+      ],
+      "asbval:n_drift_notes": 4,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:58.634062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We propose an innovative de novo strategy for searching for exact fragmentation patterns within collections of MS/MS spectra. This approach is based on (i) a new representation of spectra as graphs of m/z differences, and (ii) an efficient frequent-subgraph mining algorithm... maximal subgraphs (i.e. closed subgraphs) are mined at the selected frequency threshold... select the patterns that best explain these components... patterns explaining each component were found, with a minimum recall of 0.9 and a mean F1-score of 0.89",
+      "asbval:note": "All core claims verified: closed subgraph mining of m/z differences, ranking by recall/precision/F1-score metrics, and network component explanation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Extract frequent fragmentation patterns from collections of MS/MS spectra by mining closed subgraphs of m/z differences, then rank patterns by their ability to explain network components using recall, precision, and size metrics.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Importantly, such approaches do not require any information from spectral or molecular databases, nor any knowledge about molecular formulas... This new graph representation is exact and makes no assumption about the fragmentation path leading to a given fragment ion, nor about the molecular formula of the precursor.",
+      "asbval:note": "Paper explicitly states no database or molecular formula requirement.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "discovery of shared fragmentation signatures independent of spectral database thresholds and molecular formula knowledge",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The spectra are converted to Directed Acyclic Graphs built on a common set of edge labels extracted from the whole spectra collection... The search for common patterns of m/z differences (edges) among the fragmentation graphs is performed by an efficient Frequent Subgraph Mining (FSM) algorithm... spectra common to at least two spectra",
+      "asbval:note": "Minimum frequency threshold of 2 is standard in the paper's examples.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have a collection of MS/MS spectra (\u22652 spectra) and wish to identify fragmentation signatures common to subsets of those spectra.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The coupling of mineMS2 to molecular networks [27] is a valuable strategy to focus on the patterns that best-explain each component of the network... The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components.",
+      "asbval:note": "Explicit integration with GNPS networks for component and clique explanation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Particularly valuable when coupled to GNPS molecular networks to explain why spectral pairs or cliques cluster together",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Direct matching to databases, however, is limited by the amount of available MS/MS data obtained from pure standards... Importantly, such approaches do not require any information from spectral or molecular databases, nor any knowledge about molecular formulas.",
+      "asbval:note": "Paper emphasizes de novo approach independent of databases and formulas.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "when seeking patterns that distinguish one set of spectra from others without requiring precursor molecular formulas or external spectral libraries",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The spectra are converted to Directed Acyclic Graphs... Frequency testing: Subgraphs with frequencies below the specified threshold are discarded.",
+      "asbval:note": "Frequency threshold is a core parameter; minimum 2 is implicit in pattern mining.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input collection contains fewer than 2 spectra (frequency threshold count\u22652 cannot be met)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "mineMS2 detects m/z differences that MS2LDA does not consider because they are not neutral losses but differences between peaks from two distinct fragmentation paths... all m/z differences for mineMS2 versus fragments and precursor losses for MS2LDA",
+      "asbval:note": "Paper explicitly states mineMS2 includes non-neutral-loss m/z differences (differences between alternative fragmentation paths), making it unsuitable if only neutral losses are desired. Claim text is incomplete in the card.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Goal is to identify neutral losses only; mineMS2 patterns include [incomplete claim text]",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package (https://github.com/odisce/mineMS2)... Our approach, named mineMS2, relies on a new representation of spectra as fragmentation graphs of m/z differences, and on a dedicated suite of mining algorithms for these particular graphs... the patterns that best explain these components were found, with a minimum recall of 0.9 and a mean F1-score of 0.89",
+      "asbval:note": "mineMS2 is the primary tool; all functions confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mineMS2 \u2014 Core package for discretizing m/z differences, mining closed subgraphs, and ranking patterns by recall-precision metrics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention igraph by name. While mineMS2 package includes methods to extract connected components and cliques (findGNPSComponents, findPatternsExplainingComponents), the paper does not specify igraph as the underlying library. The paper states 'The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity' but does not name igraph.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "igraph \u2014 Loading and manipulating GNPS molecular networks (GraphML format) and extracting connected components, cliques, and high-similarity pairs",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In molecular networks, as generated by the GNPS platform [27], each vertex is a spectrum and an edge indicates a high pairwise similarity according to the modified cosine score... The coupling of mineMS2 to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software",
+      "asbval:note": "GNPS is confirmed as the molecular networking platform used with mineMS2.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS \u2014 Public MS/MS spectral library and molecular networking platform that supplies precursor-based similarity networks for component extraction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Cytoscape. While figures show network visualizations (e.g., Fig. 6 of fungisporin cluster), the paper does not name Cytoscape as the visualization tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Cytoscape \u2014 Visualizing annotated networks with patterns and component assignments",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention MSnbase. Input format is specified as .mgf (mass spectrometry data format), but no R package for spectrum object management is named.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSnbase \u2014 Storing spectra as Spectrum2 objects and managing MS/MS metadata",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/012",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package (https://github.com/odisce/mineMS2)... The described algorithm was written in C++ using Boost, and wrapped with Rcpp into the mineMS2 R package",
+      "asbval:note": "mineMS2 is confirmed as an R package with C++ backend wrapped via Rcpp.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R \u2014 R-based package (vignette title and package context indicate R-based package)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:02.518643+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The coupling of mineMS2 to molecular networks [27] is a valuable strategy to focus on the patterns that best-explain each component of the network. Since mineMS2 works best at explaining small dense components, patterns specific to the connected components of the network, including cliques and high similarity pairs, are of particular interest. The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software... The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components.",
+      "asbval:note": "Claim is directly supported by passage describing the coupling strategy and its implementation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gnps-molecular-network-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Integrate fragmentation pattern mining results with GNPS MS/MS molecular networks to identify patterns that optimally explain connected components, cliques, and high-similarity spectrum pairs.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:25.161742+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The coupling of mineMS2 to molecular networks [27] is a valuable strategy to focus on the patterns that best-explain each component of the network... Our methodology thus enables to automatically extract the clusters from a molecular network and provide common fragmentation patterns to help interpret these clusters in terms of common m/z differences.",
+      "asbval:note": "Paper supports the targeted annotation aspect but does not explicitly claim independence from cosine-score thresholds. The paper describes using GNPS networks with 'selected parameter values' but does not frame mineMS2 patterns as independent of cosine similarity.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "gnps-molecular-network-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This coupling enables discovery of chemical similarities independent of network cosine-score thresholds and facilitates targeted annotation of network neighborhoods.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:25.161742+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package ( https://github.com/odisce/mineMS2 )... The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components. This protocol was applied to the P. nordicum study ([51]; see the mineMS2 coupling to gnps vignette from the package)... Finally, mineMS2 patterns of highest recall for these components were selected (findPatternsExplainingComponents method)",
+      "asbval:note": "Function name findPatternsExplainingComponents is explicitly mentioned in passage 14.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gnps-molecular-network-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mineMS2 with role: Mining and representation of frequent fragmentation patterns as graphs; integration point with GNPS networks via findPatternsExplainingComponents function",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:25.161742+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "igraph is not mentioned anywhere in the paper passages. The paper describes mineMS2 extracting components and cliques but does not name igraph as the tool used for this purpose.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "gnps-molecular-network-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "igraph with role: Loading, parsing, and extracting connected components and cliques from molecular network GraphML files",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:25.161742+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software... The GNPS network from the 51 spectra was rebuilt, with selected parameter values to obtain the more consistent network with the one reported by the authors",
+      "asbval:note": "GNPS is confirmed as the source of molecular networks and network topology. Cosine similarity is mentioned in the paper as the basis for GNPS edges.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gnps-molecular-network-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS with role: Public MS/MS spectral library and molecular networking platform; source of network topology and cosine-similarity edge weights",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:25.161742+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Cytoscape is not mentioned in any of the paper passages. The paper does not discuss visualization tools for the annotated networks.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "gnps-molecular-network-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Cytoscape with role: Visualization of annotated molecular networks with pattern assignments overlaid as node/edge attributes",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:25.161742+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package ( https://github.com/odisce/mineMS2 )... The described algorithm was written in C++ using Boost, and wrapped with Rcpp into the mineMS2 R package",
+      "asbval:note": "R is confirmed as the environment for mineMS2 package distribution and use.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gnps-molecular-network-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R as environment for mineMS2 package",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:25.161742+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Since mineMS2 works best at explaining small dense components, patterns specific to the connected components of the network, including cliques and high similarity pairs, are of particular interest... For the applications to large collections of spectra, coupling mineMS2 with a similarity network such as GNPS [27] enables to focus on motifs that explain groups of spectra (cliques or connected components) and facilitate their interpretation.",
+      "asbval:note": "Scope description aligns with paper's stated use case for coupling mineMS2 with GNPS networks.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gnps-molecular-network-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When to use: You have computed frequent fragmentation patterns from a collection of MS/MS spectra using mineMS2, and you want to focus pattern interpretation on subsets of spectra that form meaningful network components",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:25.161742+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss minimum spectrum count thresholds or spectral diversity requirements for the GNPS coupling workflow. Insufficient information to validate this negative criterion.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "gnps-molecular-network-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: The input spectra collection is very small (< 10 spectra) or lacks sufficient spectral diversity",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:25.161742+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We propose an innovative de novo strategy for searching for exact fragmentation patterns within collections of MS/MS spectra. This approach is based on (i) a new representation of spectra as graphs of m/z differences, and (ii) an efficient frequent-subgraph mining algorithm... Importantly, such approaches do not require any information from spectral or molecular databases, nor any knowledge about molecular formulas.",
+      "asbval:note": "Core research question is directly supported by abstract and introduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Extract and compare fragmentation patterns represented as m/z-difference graphs across MS/MS spectra to identify metabolite similarities independent of external databases or molecular formulas.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:41.827718+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our approach, named mineMS2, relies on a new representation of spectra as fragmentation graphs of m/z differences, and on a dedicated suite of mining algorithms for these particular graphs... The mineMS2 software is publicly available as an R package (https://github.com/odisce/mineMS2).",
+      "asbval:note": "mineMS2 confirmed as R package with stated functionality for graph construction and pattern mining.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mineMS2 \u2014 Core package for discretizing m/z differences, constructing fragmentation graphs, extracting frequent closed subgraphs (patterns), and ranking patterns by recall-precision-size metrics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:41.827718+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "igraph is not mentioned in any passage. While the paper discusses GNPS networks and component extraction, no specific tool name is given for this functionality. Insufficient evidence to confirm or deny.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "igraph \u2014 Loading, parsing, and manipulating GNPS molecular networks; extracting connected components, cliques, and node pairs; representing patterns and fragmentation graphs as formal graph objects",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:41.827718+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "MSnbase is not mentioned in any passage. The paper discusses MS/MS spectra and their representation but does not name the R class or package used for storage.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSnbase \u2014 Providing Spectrum2 class objects for storing and organizing MS/MS spectral data and metadata",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:41.827718+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In molecular networks, as generated by the GNPS platform [27], each vertex is a spectrum and an edge indicates a high pairwise similarity according to the modified cosine score... The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software, as described in a dedicated vignette (the precomputed molecular network is provided as a file, in addition to the library of MS/MS spectra).",
+      "asbval:note": "GNPS is confirmed as source of molecular networks used for component extraction and pattern interpretation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS \u2014 Source of molecular networks (GraphML format) that define spectrum similarity relationships and network structure for component extraction and pattern interpretation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:41.827718+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Cytoscape is not mentioned in any passage. The paper discusses visualization of networks and patterns but does not name Cytoscape as the tool used.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Cytoscape \u2014 Visualization of annotated molecular networks with best-explaining patterns overlaid",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:41.827718+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package (https://github.com/odisce/mineMS2)... The described algorithm was written in C++ using Boost, and wrapped with Rcpp into the mineMS2 R package.",
+      "asbval:note": "R is confirmed as the language/environment for mineMS2 package.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R \u2014 R-based package",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:41.827718+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software... The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components.",
+      "asbval:note": "Paper confirms GNPS network coupling and component/clique extraction, but does not mention 'Spectrum2 objects' or 'ms2Lib class' by name. The paper uses .mgf format for input and discusses spectra collections but does not specify these R class names.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have a collection of MS/MS spectra (stored as Spectrum2 objects in an ms2Lib class) and need to identify which spectra share identical fragmentation patterns\u2014particularly when coupled to a GNPS molecular network to focus on explaining network components ",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:41.827718+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Importantly, such approaches do not require any information from spectral or molecular databases, nor any knowledge about molecular formulas... This approach is based on (i) a new representation of spectra as graphs of m/z differences, and (ii) an efficient frequent-subgraph mining algorithm.",
+      "asbval:note": "Paper explicitly states independence from databases and molecular formulas.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use this skill when external spectral databases or precursor molecular formulas are unavailable or when you want to discover pattern-based similarities independent of network similarity thresholds.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:41.827718+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The spectra are converted to Directed Acyclic Graphs built on a common set of edge labels extracted from the whole spectra collection... FSM algorithms extract all or a subset of the subgraphs from a set of graphs with a frequency above a specified threshold.",
+      "asbval:note": "Paper discusses frequency thresholds and pattern mining on collections, implying minimum collection size requirement.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: When only a single spectrum or <2 spectra are available (patterns require count\u22652 for frequency definition)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:41.827718+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software, as described in a dedicated vignette (the precomputed molecular network is provided as a file, in addition to the library of MS/MS spectra). The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity",
+      "asbval:note": "Exact match: connected components, cliques, minimum size, and similarity-based pairs are all explicitly mentioned as features of mineMS2 for network component extraction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-component-identification-and-filtering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Extract and filter distinct network components (connected components, cliques, and high-similarity node pairs) from MS/MS molecular networks, applying cosine similarity and minimum size thresholds to isolate spectra groups suitable for pattern explanation analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:58.054672+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "igraph is not mentioned anywhere in the provided passages. The paper states mineMS2 is an R package that performs these operations, but does not name igraph as the underlying library used for graph parsing or component extraction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "network-component-identification-and-filtering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "igraph \u2014 Parse GraphML network, extract connected components, cliques, and apply graph filters for component identification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:58.054672+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software... The GNPS network from the 51 spectra was rebuilt, with selected parameter values to obtain the more consistent network with the one reported by the authors",
+      "asbval:note": "GNPS is confirmed as the source of molecular networks that mineMS2 accepts as input. Cosine similarity is mentioned in passage 3 as the basis for GNPS network construction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-component-identification-and-filtering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS \u2014 Generate the molecular network by cosine similarity clustering of MS/MS spectra; provides the input GraphML network structure",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:58.054672+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Finally, mineMS2 patterns of highest recall for these components were selected (findPatternsExplainingComponents method), with the precision and size of the patterns being used to split ties... patterns explaining each component were found, with a minimum recall of 0.9 and a mean F1-score of 0.89",
+      "asbval:note": "mineMS2 explicitly ranks patterns by recall, precision, and size to identify best-explaining patterns per network component via the findPatternsExplainingComponents method.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-component-identification-and-filtering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mineMS2 \u2014 Accept extracted network components and rank fragmentation patterns by recall, precision, and size metrics to identify best-explaining patterns per component",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:58.054672+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package ( https://github.com/odisce/mineMS2 )",
+      "asbval:note": "mineMS2 is confirmed as an R package. The vignette and methods described are R-based.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-component-identification-and-filtering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R \u2014 R-based package for network component identification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:58.054672+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software... The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components... patterns explaining each component were found, with a minimum recall of 0.9 and a mean F1-score of 0.89",
+      "asbval:note": "Fully supported. Paper explicitly describes F1-score-based ranking of patterns to explain GNPS network components.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "precision-recall-optimization-in-spectral-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Identify and rank fragmentation patterns that optimally explain MS/MS spectral components by balancing recall and precision using F1-score and other metrics to isolate patterns with perfect or near-perfect explanatory power, essential when coupled to GNPS molecular networks",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:54:10.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components... (findGNPSComponents method)... (findPatternsExplainingComponents method)",
+      "asbval:note": "Function names confirmed in passage. ms2Lib class name not explicitly mentioned but mineMS2 R package structure is confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "precision-recall-optimization-in-spectral-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mineMS2 with findPatternsExplainingComponents() function and ms2Lib class",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:54:10.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention igraph by name. Paper states 'The GNPS network from the 51 spectra was rebuilt' and describes extracting components, but does not name the tool used for GraphML parsing or network manipulation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "precision-recall-optimization-in-spectral-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "igraph for loading and manipulating GNPS molecular network (GraphML format) and extracting network components",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:54:10.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The coupling of mineMS2 to molecular networks [27] is a valuable strategy to focus on the patterns that best-explain each component of the network... the precomputed molecular network is provided as a file, in addition to the library of MS/MS spectra",
+      "asbval:note": "GNPS role confirmed. Paper describes GNPS network as input to mineMS2 workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "precision-recall-optimization-in-spectral-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS provides MS/MS molecular networking methodology that defines spectral components through cosine similarity thresholding; network output (GraphML) is input to this skill",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:54:10.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Cytoscape is not mentioned anywhere in the paper. Paper uses GNPS for visualization but does not reference Cytoscape.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "precision-recall-optimization-in-spectral-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Cytoscape as visualization tool for annotated molecular network (optional downstream step)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:54:10.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package ( https://github.com/odisce/mineMS2 )",
+      "asbval:note": "R confirmed as host language for mineMS2. igraph not mentioned in paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "precision-recall-optimization-in-spectral-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R as host language for mineMS2 and igraph",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:54:10.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The GNPS network from the 51 spectra was rebuilt... This network contains two large connected components of respective size 21 and 11, two pairs, and 15 spectra remaining isolated. The main components to be explained (disjoint cliques of size above 3, as well as pairs with similarity above 0.9) were extracted",
+      "asbval:note": "Scope fully supported. Paper describes exactly this workflow: mineMS2 pattern extraction followed by GNPS component extraction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "precision-recall-optimization-in-spectral-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have extracted fragmentation patterns from a collection of MS/MS spectra (using mineMS2) and have partitioned spectra into components via GNPS molecular networking (e.g., connected components, cliques, or high-similarity pairs with cosine > threshold)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:54:10.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Finally, mineMS2 patterns of highest recall for these components were selected (findPatternsExplainingComponents method), with the precision and size of the patterns being used to split ties",
+      "asbval:note": "Supported. Paper describes ranking patterns by recall, precision, and F1-score to select best patterns per component.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "precision-recall-optimization-in-spectral-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use this skill when you want to identify the single most specific and sensitive pattern per component, or to rank the top-N candidate patterns by their balance of recall and precision",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:54:10.453728+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 12,
+      "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "gnps-molecular-network-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5555555555555556,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "network-component-identification-and-filtering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "precision-recall-optimization-in-spectral-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "mineMS2 patterns are graphs with ion peaks as nodes and m/z differences as edges.",
+      "asbval:note": "substring_in_paper=false; claim content is reasonable but source_excerpt provided does not contain relevant information about mineMS2 patterns",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "tadata.df[,\"rt\"]), sep = \"_\")\npnordicum.m2l <- setIds(pnordicum.m2l,ids)\n```\n\n## Mining pa",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "mineMS2 m/z differences include not only neutral losses but also m/z differences between ions that belong to distinct fragmentation paths.",
+      "asbval:note": "substring_in_paper=false; excerpt mentions m/z differences but does not explicitly state they include ions from distinct fragmentation paths",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": " spectra data is detailed in the *mineMS2_main* vignette.\nBriefly,\n\n1.  Building the **fragmentation graph** of each spectrum (`discretizeMzDifferences`)\n\n    1.  computing and aligning **all m/z difference",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The mineMS2 method is independent of external spectral databases and knowledge of the molecular formula of precursor ions.",
+      "asbval:note": "substring_in_paper=false; source_excerpt does not address independence from databases or molecular formula knowledge",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "2.  building the fragmentation graphs\n\n2.  **Extracting common patterns** between fragmentation graphs (`mineClosedSubgraphs`)\n\n```{r pattern_mining, me",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "mineMS2 patterns are complementary to MS2LDA patterns because they consist of exact graphs rather than probabilistic lists.",
+      "asbval:note": "Text accurately represents the source_excerpt about complementarity to MS2LDA and exact graph structure",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "mineMS2 patterns are **complementary to those of MS2LDA** [@vanderHooft2016], the latter consisting of a list of neutral fragments and losses and being obtained using a probabilistic approach.\nIn particular, the **structure of mineMS2 patterns in the form of exact graphs** (all m",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The dataset contains 51 MS/MS spectra from secondary metabolites of Penicillium nordicum.",
+      "asbval:note": "Text accurately represents the source_excerpt about 51 MS/MS spectra from Penicillium nordicum",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "The dataset contains **51 MS/MS spectra** from secondary metabolites of *Penicillium nordicum* (one spectrum per compound) acquired on an HPLC system (Luna C18 column; Phenomenex) coupled to an LTQ Orbitrap XL hybrid (Thermo Fisher Scientific) operated in the positive ionization ",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The Penicillium nordicum spectra were acquired on a Luna C18 column using HPLC coupled to an LTQ Orbitrap XL hybrid mass spectrometer.",
+      "asbval:note": "Text accurately represents the source_excerpt about Luna C18 column, HPLC, and LTQ Orbitrap XL hybrid",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "acquired on an HPLC system (Luna C18 column; Phenomenex) coupled to an LTQ Orbitrap XL hybrid (Thermo Fisher Scientific)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_006",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The Penicillium nordicum spectra were acquired in positive ionization mode at HCD20 collision energy with a resolution of 7,500.",
+      "asbval:note": "Text accurately represents the source_excerpt about positive ionization mode, HCD20 collision energy, and 7,500 resolution",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "operated in the positive ionization mode at a HCD20 collision energy and a resolution of 7,500",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_007",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The molecular network was precomputed on the GNPS website and extracted in GraphML format.",
+      "asbval:note": "Text accurately represents the source_excerpt about molecular network precomputed on GNPS and extracted in GraphML format",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "the molecular network has been precomputed on the GNPS website and extracted in the *GraphML* format (file *pnordicum_ms2_gnps.graphml* inside the *dataset* subdirectory of the *mineMS2* installation folder).",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_008",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "mineMS2 can be coupled to GNPS MS/MS molecular networking to focus on patterns that best explain components of the network.",
+      "asbval:note": "Text accurately represents the source_excerpt about coupling mineMS2 to GNPS molecular networking",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "This vignette describes how *mineMS2* can be **coupled to the GNPS MS/MS molecular networking** methodology [@Watrous2012] to **focus on patterns that best explain components** of the network.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_009",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "It is recommended to compute the patterns and the GNPS network using the same .mgf input file to avoid matching issues.",
+      "asbval:note": "Text accurately represents the source_excerpt about using the same .mgf input file",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "We strongly recommend to **compute the patterns and the GNPS network using the same .mgf input file** to avoid matching issues.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_010",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The ms2Lib class is used throughout the workflow to store the spectra data and metadata, the m/z differences, the fragmentation graphs, and the patterns.",
+      "asbval:note": "Text accurately represents the source_excerpt about ms2Lib class storing spectra data, metadata, m/z differences, fragmentation graphs, and patterns",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "The **`ms2Lib`** class is used throughout the workflow to **store the spectra data and metadata, the m/z differences, the fragmentation graphs, and the patterns**.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_011",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_012",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The ms2Lib constructor function can take the collection of MS/MS spectra as input as a single mgf file, a vector of individual mgf file names, the name of a directory containing individual spectra as mgf files, or a list of Spectrum2 objects.",
+      "asbval:note": "Text accurately represents the source_excerpt about ms2Lib constructor accepting multiple input formats",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "The `ms2Lib` constructor function takes the **collection of MS/MS spectra as input** either:\n\n-   as the name of a single ***mgf*** file containing all spectra\n\n-   as a vector of the individual *mgf* file names\n\n-   as the name of the directory containing the individual spectra ",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_012",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_013",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Supplementary metadata about the spectra can be provided as a tsv tabular file.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "**Supplementary metadata** about the spectra (such as the molecule names, or their elemental formulas) can also be provided as a ***tsv*** tabular file.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_013",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_014",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The metadata are not used in the computations of m/z differences, fragmentation graphs, or frequent patterns but can be displayed in plot titles.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "These metadata are not used in the computations (m/z differences, fragmentation graphs, frequent patterns) but can be displayed in the plot titles (see below).",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_014",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_015",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Two columns mz.precursor and file are automatically inserted at the beginning of the metadata table stored in the ms2Lib object.",
+      "asbval:note": "Text omits 'automatically' qualifier and 'with the information borrowed from the mgf file' context",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "Note that the two columns *mz.precursor* and *file* have been inserted at the beginning of the metadata table stored in the `ms2Lib` object with the information borrowed from the *mgf* file.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_015",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_016",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The discretizeMzDifferences method computes the m/z differences between the peaks in each spectrum and discretizes them for the whole spectra collection.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "The first step of the *mineMS2* algorithm, **`discretizeMzDifferences`**, **computes the m/z differences** between the peaks in each spectrum and **discretizes (or aligns) them for the whole spectra collection** (so that common m/z differences between spectra have the same value ",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_016",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_017",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The m/z differences computed by discretizeMzDifferences include not only neutral losses but also differences between ions that belong to distinct fragmentation paths of the precursor.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "Note that these m/z differences include not only the neutral losses but also differences between ions that belong to distinct fragmentation paths of the precursor.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_017",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_018",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The default value of the ppm parameter in discretizeMzDifferences is 15.",
+      "asbval:note": "Text simplifies parameter description; source indicates ppm is used for kernel density estimation bandwidth, not just a standalone default",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   `ppm`: The accuracy of the mass spectrometer in *ppm* used to determine the bandwidth of the kernel density estimation (default: `15`)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_018",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_019",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The default value of the dmz parameter in discretizeMzDifferences is 0.007 Da.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   `dmz`: The minimum deviation used for bandwidth (in Da; default: `0.007`)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_019",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_020",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The default value of the count parameter in discretizeMzDifferences is 2.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   `count`: The minimum number of spectra in which a m/z difference needs to be present to be considered as frequent (default: `2`)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_020",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_021",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The default value of the maxFrags parameter in discretizeMzDifferences is 15.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   `maxFrags`: only the `maxFrags` most intense peaks will be considered to build the graph (should be at most 20 to be done in reasonable time; default: `15`)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_021",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_022",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The default value of the limMzFormula parameter in discretizeMzDifferences is c(14.5, 200).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   `limMzFormula`: the range of m/z difference values for which formulas will be searched (default: `c(14.5, 200)`).",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_022",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_023",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The mineClosedSubgraphs method extracts frequent subgraphs among the fragmentation graphs.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "The next step consists in **extracting the frequent subgraphs (i.e. the patterns) among the fragmentation graphs**.\nThe **`mineClosedSubgraphs`** method has two main parameters:",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_023",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_024",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The default value of the count parameter in mineClosedSubgraphs is 2.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   `count`: minimum number of spectra in which a pattern is detected to be considered; should be at least 2 (default: `2`)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_024",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_025",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The default value of the sizeMin parameter in mineClosedSubgraphs is 1.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   `sizeMin`: minimum size of the pattern (default: `1`)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_025",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_026",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "When the number of frequent m/z differences is above 600 and sizeMin is set to 1, the sizeMin value will be automatically increased to 2.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "Note that when the number of frequent m/z differences is high (above 600) and a `sizeMin` value of 1 has been selected, the value will be automatically increased to 2 to avoid computational overload (a warning is displayed)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_026",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_027",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The findGNPSComponents function extracts connected components from the molecular network.",
+      "asbval:note": "Text claims function 'extracts' connected components, but source only describes what connected components are; doesn't explicitly state the function extracts them (though context suggests it does).",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "We consider 3 type of components of the network:\n\n-   the **connected components** of the graph (subgraphs in which any two nodes are connected by a path)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_027",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_028",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The findGNPSComponents function can extract cliques from the molecular network.",
+      "asbval:note": "Source describes cliques as a type of component but doesn't explicitly state findGNPSComponents extracts cliques; inferred from context.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   the **cliques** (subgraphs in which any all pairs of nodes are connected)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_028",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_029",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The findGNPSComponents function selects a set of disjoint cliques by decreasing order of size.",
+      "asbval:note": "Source attributes clique selection to 'mineMS2' function, not 'findGNPSComponents'; different function names.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "Instead of computing all the cliques from the network, **mineMS2 selects a set of disjoint cliques** (i.e. cliques without any nodes in common) by decreasing number of size (nodes): the algorithm starts with the biggest clique, then searches for the biggest clique that does not c",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_029",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_030",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The findGNPSComponents function can extract high similarity pairs of nodes from the molecular network.",
+      "asbval:note": "Source describes high similarity pairs as a component type but doesn't explicitly state findGNPSComponents extracts them; inferred from context.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   the **high similarity pairs of nodes** (pairs of spectra with a cosine score superior to a threshold)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_030",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_031",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The minSize parameter of findGNPSComponents specifies the minimum size of detected cliques.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "**All these components can be extracted** using the **`findGNPSComponents`** function, with the main parameters:\n\n1\\.\n`minSize`: minimum size of the detected cliques",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_031",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_032",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The pairThreshold parameter of findGNPSComponents specifies the threshold of the cosine score for high similarity pairs of nodes.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "2\\.\n`pairThreshold`: threshold of the cosine score for high similarity pairs of nodes",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_032",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_033",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Nine components were selected from the Penicillium nordicum GNPS molecular network.",
+      "asbval:note": "Source states 'Nine components have been selected' but doesn't specify they are from Penicillium nordicum GNPS network in the excerpt.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "Nine components have been selected:",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_033",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_034",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Components 6, 7, 8 and 9 are the connected components of the Penicillium nordicum network.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "Components 6, 7, 8 and 9 are the connected components of the network (2 clusters and 2 pairs).",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_034",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_035",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Components 1, 3, and 4 are disjoint cliques from component 6 (the larger cluster).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "Components 1, 3, and 4 are disjoint cliques from the component 6 (larger cluster).",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_035",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_036",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Components 2 and 5 are disjoint cliques from component 7 (the smaller cluster).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "Components 2 and 5 are disjoint cliques from component 7 (smaller cluster).",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_036",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_037",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The recall metric measures the proportion of explained spectra among the component spectra.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   **recall**: proportion of *explained* spectra among the *component* spectra; the recall is 1 if all spectra from the component are explained",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_037",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_038",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The precision metric measures the proportion of component spectra among the explained spectra.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   **precision**: proportion of *component* spectra among the *explained* spectra; the precision is 1 if no spectrum outside of the component is explained",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_038",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_039",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The F1-score is the harmonic mean of precision and recall.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "-   **F1-score**: harmonic mean of the precision and recall; the F1-score is 1 if recall and precision are 1, i.e. if the pattern explains all spectra from the component and no other one",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_039",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_040",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "For the pair of spectra with precursor m/z values of 370.1283 and 404.0891 (component 8), the best explaining pattern P70 has an F1-score of 1.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "For example, for the pair of spectra with precursor m/z values of $370.1283$ and $404.0891$ (component 8), the best explaining pattern P70 has an F1-score of 1, while the other patterns have still a recall of 1 but a lower precision (i.e. are less specific to this pair of spectra",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_040",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_041",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The largest component in the Penicillium nordicum GNPS network consists of 21 spectra.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "We first investigate the pattern best explaining the largest component (`r which.max(sapply(molnet_comp.ls, length))` consisting of 21 spectra, including:",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_041",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_042",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The m/z difference of 99.0683 is shared by 19 out of 21 fragmentation spectra in the largest component.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "We see that 19 out of the 21 fragmentation spectra share an m/z difference of $99.0683$, that is not present in any other spectra of the data set (precision = 1).",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_042",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_043",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The m/z difference of 99.0683 has a precision of 1, indicating it is not present in any other spectra of the dataset.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "that is not present in any other spectra of the data set (precision = 1).",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_043",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_045",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The m/z difference of 186.079 has a possible formula of C11H10ON2.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "This pattern includes an m/z difference of $186.079$, with the possible formula $C_{11}H_{10}ON_2$, that may correspond to a loss of tryptophan, which is indeed included in the peptides.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_045",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_047",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "A total of multiple patterns include the m/z difference of 186.079.",
+      "asbval:note": "Text says 'multiple patterns' but source specifies an exact count via code reference; vague quantifier omits specificity",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "A total of other `r length(tryptophan_patterns.ls[[1]])` patterns (including the P179 from the previous section) include this m/z difference.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_047",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_048",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "A pattern including the m/z difference 186.079 is found in 7 spectra.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "Interestingly, this pattern is included in 7 spectra, that are not all linked together in the GNPS network, but that were identified by the authors of [@Hautbergue2019] as tetrapeptides containing a tryptophan residue.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_048",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_049",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "mineMS2 discovers new similarities between spectra that are not all linked together in the GNPS network.",
+      "asbval:note": "Source excerpt describes spectra not linked in GNPS network but doesn't explicitly attribute discovery to mineMS2; attribution is inferred rather than stated",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "that are not all linked together in the GNPS network, but that were identified by the authors of [@Hautbergue2019] as tetrapeptides containing a tryptophan residue.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_049",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_050",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The default ppm tolerance in mineMS2 is 15 ppm.",
+      "asbval:note": "Source excerpt provided does not contain information about ppm tolerance; appears to be unrelated code snippet",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "and 5 are disjoint cliques from component 7 (smaller cluster).\n\nThe m/z values of the precursors from these spectra can be retrieved with:\n\n```{r molnet_comp_mzprec}\nlapply(molnet_comp.ls,\n       function(spec_indices.vi)\n         getInfo(pnordicum.m2l, paste0(",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "claim_050",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_051",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "When ppm tolerance was set to 7 ppm on the LIMS-DB dataset, the average F1-score decreased to 0.47.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "when the tolerance was set to 7\\~ppm, the average F1-score for the ChemOnt concepts was decreased to 0.47 (instead of 0.53 with the default tolerance of 15\\~ppm).",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_051",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_052",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "With the default ppm tolerance of 15 ppm on the LIMS-DB dataset, the average F1-score is 0.53.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "0.53 with the default tolerance of 15\\~ppm).",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_052",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_053",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "At 7 ppm tolerance, patterns explaining ChemOnt concepts contained 5.2 m/z differences on average.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "In addition, the patterns best explaining the ChemOnt concepts at 7~ppm contained 5.2\\~m/z differences on average, versus 6.8\\~m/z differences with the 15\\~ppm tolerance.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_053",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_054",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "At 15 ppm tolerance, patterns explaining ChemOnt concepts contained 6.8 m/z differences on average.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "versus 6.8\\~m/z differences with the 15\\~ppm tolerance.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_054",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_055",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The default maximum number of fragments in discretizeMzDifferences is set to 15.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "**`maxFrags`** The default maximum number of fragments is set to 15 as a compromise to extract most of the spectral information while avoiding computational overload.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_055",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_056",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Mining the LIMS-DB dataset with maxFrags of 20 increased running time to 1.5 hours.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "As an example, the mining of the LIMS-DB dataset (622 spectra) with a `maxFrags` value of 20 (instead of 15) increased the running time to 1.5\\~h (instead of 20\\~min) and resulted in a slight increase of concepts explained with F1-scores above 0.7.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_056",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_057",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The default maxFrags of 15 requires 20 minutes to mine the LIMS-DB dataset.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "increased the running time to 1.5\\~h (instead of 20\\~min)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_057",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_058",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The GNPS network for Penicillium nordicum contains 2 clusters of sizes 21 and 11, in addition to 2 pairs.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01051-y",
+      "asbval:source_excerpt": "Two clusters (of size 21 and 11, respectively) are detected by GNPS, in addition to 2 pairs.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_058",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:51:30.902134+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_minems2#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "tight",
+        "composition_modularity": "hierarchical",
+        "abstraction_level": "concrete",
+        "orchestration_planning": "static",
+        "data_transport": "in_memory",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SYS_MINEMS2",
+      "title": "mineMS2",
+      "identifier": "urn:asb:spine:SYS_MINEMS2"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_ARCH_WORKFLOW",
+      "title": "mineMS2 Fixed Processing Pipeline",
+      "identifier": "urn:asb:spine:ARCH_WORKFLOW",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_ARCH_GNPS_COUPLING",
+      "title": "mineMS2-GNPS Coupling Pipeline",
+      "identifier": "urn:asb:spine:ARCH_GNPS_COUPLING",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_MS2LIB",
+      "title": "ms2Lib",
+      "identifier": "urn:asb:spine:COMP_MS2LIB"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_DISCRETIZE",
+      "title": "discretizeMzDifferences",
+      "identifier": "urn:asb:spine:COMP_DISCRETIZE"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_MINESUBGRAPHS",
+      "title": "mineClosedSubgraphs",
+      "identifier": "urn:asb:spine:COMP_MINESUBGRAPHS"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_FINDGNPS",
+      "title": "findGNPSComponents",
+      "identifier": "urn:asb:spine:COMP_FINDGNPS"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_FINDPATTERNS",
+      "title": "findPatternsExplainingComponents",
+      "identifier": "urn:asb:spine:COMP_FINDPATTERNS"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_ANNOTATENET",
+      "title": "annotateNetwork",
+      "identifier": "urn:asb:spine:COMP_ANNOTATENET"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_PLOTPATTERNS",
+      "title": "plotPatterns",
+      "identifier": "urn:asb:spine:COMP_PLOTPATTERNS"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_COMP_FRAGMENTATION_GRAPH",
+      "title": "Fragmentation Graph",
+      "identifier": "urn:asb:spine:COMP_FRAGMENTATION_GRAPH",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_COMP_PATTERN",
+      "title": "Fragmentation Pattern",
+      "identifier": "urn:asb:spine:COMP_PATTERN",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DATASET_PNORDICUM",
+      "title": "Penicillium nordicum MS/MS dataset",
+      "identifier": "urn:asb:spine:DATASET_PNORDICUM"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_GNPS",
+      "title": "GNPS",
+      "identifier": "urn:asb:spine:TOOL_GNPS"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_CYTOSCAPE",
+      "title": "Cytoscape",
+      "identifier": "urn:asb:spine:TOOL_CYTOSCAPE"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_IGRAPH",
+      "title": "igraph",
+      "identifier": "urn:asb:spine:TOOL_IGRAPH"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_METGEM",
+      "title": "MetGem",
+      "identifier": "urn:asb:spine:TOOL_METGEM"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_MS2LDA",
+      "title": "MS2LDA",
+      "identifier": "urn:asb:spine:TOOL_MS2LDA"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_INSTRUMENT",
+      "title": "LTQ Orbitrap XL",
+      "identifier": "urn:asb:spine:TOOL_INSTRUMENT"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_DEFAULT_PARAMS",
+      "title": "Default mineMS2 parameters on Penicillium nordicum dataset",
+      "identifier": "urn:asb:spine:COND_DEFAULT_PARAMS"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_GNPS_COMPONENTS",
+      "title": "GNPS component extraction with minSize=3, pairThreshold=0.9",
+      "identifier": "urn:asb:spine:COND_GNPS_COMPONENTS"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_PATTERN_METRIC",
+      "title": "Pattern selection by recall then precision then size",
+      "identifier": "urn:asb:spine:COND_PATTERN_METRIC"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_N_PATTERNS",
+      "title": "Total patterns detected",
+      "identifier": "urn:asb:spine:METRIC_N_PATTERNS",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_DEFAULT_PARAMS"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_GNPS_COMPONENTS",
+      "title": "Number of GNPS components extracted",
+      "identifier": "urn:asb:spine:METRIC_GNPS_COMPONENTS",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_GNPS_COMPONENTS"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_P70_F1",
+      "title": "F1-score of pattern P70 for component 8",
+      "identifier": "urn:asb:spine:METRIC_P70_F1",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_PATTERN_METRIC"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_COMP6_RECALL",
+      "title": "Recall of best pattern for component 6 (largest cluster)",
+      "identifier": "urn:asb:spine:METRIC_COMP6_RECALL",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_PATTERN_METRIC"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_TRP_PATTERN_SPECTRA",
+      "title": "Spectra sharing tryptophan-loss pattern outside GNPS network",
+      "identifier": "urn:asb:spine:METRIC_TRP_PATTERN_SPECTRA",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_DEFAULT_PARAMS"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_VALINE_LOSS",
+      "title": "m/z difference 99.0683 corresponds to valine loss in tetrapeptides",
+      "identifier": "urn:asb:spine:RESULT_VALINE_LOSS"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_TRYPTOPHAN_LOSS",
+      "title": "m/z difference 186.079 corresponds to tryptophan loss",
+      "identifier": "urn:asb:spine:RESULT_TRYPTOPHAN_LOSS"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_NEW_SIMILARITIES",
+      "title": "mineMS2 discovers new spectral similarities beyond GNPS network",
+      "identifier": "urn:asb:spine:RESULT_NEW_SIMILARITIES"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_VALINE",
+      "title": "C5H9ON",
+      "identifier": "urn:asb:spine:COMP_VALINE"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_TRYPTOPHAN",
+      "title": "C11H10ON2",
+      "identifier": "urn:asb:spine:COMP_TRYPTOPHAN"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_P70",
+      "title": "P70",
+      "identifier": "urn:asb:spine:COMP_P70"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_P179",
+      "title": "P179",
+      "identifier": "urn:asb:spine:COMP_P179"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_PENICILLIUM_NORDICUM",
+      "title": "Penicillium nordicum",
+      "identifier": "urn:asb:spine:COMP_PENICILLIUM_NORDICUM"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: the TOML-formatted options file passed as input to the CLI"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: the MS-DIAL export artifact (input dataset or reference file) referenced in the TOML config"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "at least one output artifact is produced by the tool (file, report, or structure"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "robust to parameter choices: the TOML config can specify different MS-DIAL versions (4 or 5 per EnrichedIndex) and tool should handle version-specific defaults"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: the TOML-formatted options file passed as input to the CLI",
+      "verify file exists: the MS-DIAL export artifact (input dataset or reference file) referenced in the TOML config",
+      "script_runs: LipoCLEAN CLI invocation with TOML config file completes without non-zero exit code",
+      "file_exists: at least one output artifact is produced by the tool (file, report, or structured record); exact output format and naming convention should be confirmed from tool documentation or repository README",
+      "robust to parameter choices: the TOML config can specify different MS-DIAL versions (4 or 5 per EnrichedIndex) and tool should handle version-specific defaults"
+    ],
+    "expert_review": [
+      "Verify that the output artifact(s) produced by LipoCLEAN are scientifically plausible quality-filtered lipid identifications (e.g., records retain expected fields, filtering logic is applied, no data corruption)",
+      "Confirm that the TOML configuration was correctly parsed and applied by inspecting output metadata or logs for parameter echo"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

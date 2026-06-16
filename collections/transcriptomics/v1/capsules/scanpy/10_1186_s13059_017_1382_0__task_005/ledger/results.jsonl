@@ -1,0 +1,2 @@
+{"result_id": "result_044", "summary": "To build Scanpy docs, run hatch run docs:build. To run Scanpy tests, run hatch test.", "result_type": "minor", "claim_ids": ["claim_048", "claim_051"], "support_status": "not_evaluated", "linked_task_ids": ["task_005"], "linked_eval_check_ids": [], "task_relevance": "task_linked"}
+{"result_id": "result_046", "summary": "Scanpy uses pytest for testing.", "result_type": "minor", "claim_ids": ["claim_050"], "support_status": "not_evaluated", "linked_task_ids": ["task_005"], "linked_eval_check_ids": [], "task_relevance": "task_linked"}

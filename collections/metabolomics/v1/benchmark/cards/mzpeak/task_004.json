@@ -1,0 +1,432 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "figures/mzpeak_file_sizes_2026.svg",
+      "locator_id": "pkg_49c9ad31",
+      "locator_kind": "package_artifact",
+      "name": "figures/mzpeak_file_sizes_2026.svg",
+      "prose": "mzPeak test file in mzPeak format",
+      "score": 0.25,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/chunked_layout.png",
+      "role": "figure",
+      "sha256": "3ca8575ebd762e124c0f15a6fe60c603efe6da3f44154f894242396b419a85e1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mzpeak_extract_times_2026.svg",
+      "role": "figure",
+      "sha256": "e2a7c053512e6231b8c0b63b4c8fe8a0bb9402a64a5624c8d5d5d40790a9c624"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mzpeak_file_sizes_2026.svg",
+      "role": "figure",
+      "sha256": "49c9ad31b3a37ba32d1e1956ebbc7f16223a514a4b259c88abbcb0a6a01369ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/packed_tables.png",
+      "role": "figure",
+      "sha256": "66c65c79dd27a99c36b3c6a40fe2378c9ecfa4bca0f7541d6c5e25d3f2853538"
+    },
+    {
+      "indexable": false,
+      "path": "figures/point_layout.png",
+      "role": "figure",
+      "sha256": "684ab13e3bd27efbfca849fbc0790aac5095ebd70bfd5c8e48036177346a6d8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/sciex_null_marking_delta_encoding_error.png",
+      "role": "figure",
+      "sha256": "46939a56a60e6477195b6dd6df5cb62dceed3d415bc24854cda2833ca38f2ebb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/sparse_tables.png",
+      "role": "figure",
+      "sha256": "ffb91f0ee9291ca6e47eae86170b167959cfafbb9ae5ba8147b568ad396453ac"
+    },
+    {
+      "indexable": false,
+      "path": "figures/thermo_null_marking_err.png",
+      "role": "figure",
+      "sha256": "67df7eca5cb325551682a2d1c5a55fd68deefb871bbafea509f500593ba8cdeb"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b1e401c385b9a6960c4061f6465f82185e921e1f0543efa486fb446b9647e804"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:33.864303+00:00",
+  "crossref_doi": "10.1021/acs.jproteome.5c00435",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "mzPeak test file in mzPeak format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Rust implementation spectrum table (CSV format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Python/pyarrow implementation spectrum table (CSV format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "R/arrow implementation spectrum table (CSV format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Cross-implementation consistency report documenting field-level agreement and any divergences",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "mzPeak is a mass spectrometry data format specified as a living document by HUPO-PSI with draft specification available at https://hupo-psi.github.io/mzPeak-specification/.",
+    "The Rust implementation provides primary read/write functionality; Python and R implementations provide read-only access via pyarrow and arrow libraries respectively.",
+    "Field-level agreement checking requires attention to data type consistency (integer, float, string), precision in numerical comparisons, and completeness of spectrum records across implementations.",
+    "The mzPeak specification and implementations are work-in-progress with no stability guarantee, so reader behavior may diverge if implementations interpret the specification differently."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in github:mobiusklein__mzpeak_prototyping repository: a sample mzPeak file suitable for cross-reader testing",
+      "script_runs: Rust reader executable successfully loads the sample mzPeak file and outputs a structured record (JSON, Arrow IPC, or Parquet)",
+      "script_runs: Python/pyarrow reader successfully loads the same sample mzPeak file and outputs a tabular structure (DataFrame or Arrow Table)",
+      "script_runs: R/arrow reader successfully loads the same sample mzPeak file and outputs a tabular structure (data.frame or Arrow Table)",
+      "field_present: all three output tables contain identical column names (robust to row ordering)",
+      "row_count_equals: Rust, Python, and R readers produce tables with matching row counts for the same input file",
+      "output_matches_reference: spectrum record fields (m/z values, intensities, retention time, scan metadata) are byte-for-byte identical across all three readers, or expert review documents acceptable tolerance and root causes for any divergence"
+    ],
+    "expert_review": [
+      "Evaluate whether small numerical differences (floating-point precision) in m/z or intensity fields across the three readers are acceptable given IEEE 754 standards and the format specification",
+      "Assess whether any missing or extra fields in one reader relative to the others represent implementation bugs, format ambiguities, or intentional design choices",
+      "Determine whether differences in metadata field ordering, naming conventions, or data-type encoding (e.g., integer vs. float for scan number) indicate true interoperability issues or benign representation choices"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Do the Rust, Python/pyarrow, and R/arrow implementations of mzPeak file readers produce field-level agreement when loading the same input file?: 'There is a separate Python implementation in `python/` which is a complete re-implementation for _reading_ mzPeak files using [`pyarrow`]... There is also an R implementation in `R/`, which is also a'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Three independent mzPeak reader implementations exist: a Rust library, a Python implementation using pyarrow, and an R implementation using arrow, all capable of reading mzPeak files.: 'The primary work shown here is written in Rust at the repository root, including a library for reading and writing mzPeak files... There is a separate Python implementation in `python/` which is a'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] mzPeak test file in mzPeak format: 'a library for reading and writing mzPeak files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Rust implementation spectrum table (CSV format): 'a library for reading and writing mzPeak files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python/pyarrow implementation spectrum table (CSV format): 'complete re-implementation for _reading_ mzPeak files using [`pyarrow`]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R/arrow implementation spectrum table (CSV format): 'complete re-implementation using the [`arrow`] for _reading_ only'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Cross-implementation consistency report documenting field-level agreement and any divergences: 'a library for reading and writing mzPeak files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Rust: 'The primary work shown here is written in Rust at the repository root'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'There is a separate Python implementation in `python/`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] pyarrow: 'complete re-implementation for _reading_ mzPeak files using [`pyarrow`]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'There is also an R implementation in `R/`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] arrow: 'complete re-implementation using the [`arrow`] for _reading_ only'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is documented for the discussion section or the mzpeak_prototyping repository state: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "cross_implementation_consistency_report.txt",
+  "expected_outputs": [
+    "Rust implementation spectrum table (CSV format)",
+    "Python/pyarrow implementation spectrum table (CSV format)",
+    "R/arrow implementation spectrum table (CSV format)",
+    "Cross-implementation consistency report documenting field-level agreement and any divergences"
+  ],
+  "finding": "Three independent mzPeak reader implementations exist: a Rust library, a Python implementation using pyarrow, and an R implementation using arrow, all capable of reading mzPeak files.",
+  "github_name": "HUPO-PSI/mzPeak-specification",
+  "input_from": "task_001",
+  "inputs": [
+    "mzPeak test file in mzPeak format"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "rust_spectrum_table.csv",
+    "python_spectrum_table.csv",
+    "r_spectrum_table.csv"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_007",
+    "result_008",
+    "result_010"
+  ],
+  "methodology_summary": [
+    "Load and parse mzPeak file using Rust library reader; export tabular spectrum output to standardized CSV format.",
+    "Load and parse identical mzPeak file using Python/pyarrow reader implementation; export tabular spectrum output to standardized CSV format.",
+    "Load and parse identical mzPeak file using R/arrow reader implementation; export tabular spectrum output to standardized CSV format.",
+    "Perform field-by-field comparison of three CSV outputs: verify field names match, data types agree, row counts are identical, and numerical values are consistent across implementations.",
+    "Validation: Generate consistency report confirming all three implementations produce identical field structure and values; flag any discrepancies in field presence, type, or numerical content as implementation divergences.",
+    "References: source article (DOI: 10.1021/acs.jproteome.5c00435)"
+  ],
+  "missing_information": [
+    "No changelog or version history is documented for the discussion section or the mzpeak_prototyping repository state"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/mzpeak_output"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Do the Rust, Python/pyarrow, and R/arrow implementations of mzPeak file readers produce field-level agreement when loading the same input file?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "cross-language-implementation-compatibility",
+    "mass-spectrometry-data-format-reading",
+    "tabular-data-field-comparison",
+    "spectrum-record-consistency-validation",
+    "data-serialization-format-interoperability"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mzpeak/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "mzPeak_format",
+    "rust_impl",
+    "python_impl",
+    "r_impl",
+    "dotnet_impl",
+    "tool_pyarrow",
+    "tool_arrow_r",
+    "mzpeak_spec_doc",
+    "ref_publication",
+    "cli_converter"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:mobiusklein__mzpeak_prototyping",
+  "task_description": "Load the same mzPeak file using three independent reader implementations (Rust library, Python/pyarrow, and R/arrow) and compare the resulting tabular outputs to verify field-level agreement across all three readers. Generate a cross-implementation consistency report.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "mzPeak test file in mzPeak format",
+      "port_id": "mzpeak_file",
+      "resolved_via": null,
+      "source": "task_001/mzpeak_output",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Load a single mzPeak file using Rust, Python, and R readers, then compare tabular outputs for field-level consistency and identify any discrepancies.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Rust implementation spectrum table (CSV format)",
+      "port_id": "rust_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Python/pyarrow implementation spectrum table (CSV format)",
+      "port_id": "python_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "R/arrow implementation spectrum table (CSV format)",
+      "port_id": "r_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cross-implementation consistency report",
+      "port_id": "consistency_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "quality-control"
+  ],
+  "title": "Analyze cross-implementation output consistency across Rust, Python, and R mzPeak readers",
+  "tools": [
+    "OpenMS",
+    "Rust",
+    "Python",
+    "pyarrow",
+    "R",
+    "arrow"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Rust, pyarrow, R, arrow, Rust implementation spectrum table (CSV format), Python/pyarrow implementation spectrum table (CSV format), R/arrow implementation spectrum table (CSV format), Cross-implementation consistency report documenting field-level agreement and any divergences."
+  ],
+  "workflow_description": "1. Load the test mzPeak file using the Rust library reader and export the resulting spectrum table to CSV format. 2. Load the identical mzPeak file using the Python/pyarrow implementation and export the spectrum table to CSV format. 3. Load the identical mzPeak file using the R/arrow implementation and export the spectrum table to CSV format. 4. Compare the three CSV outputs field-by-field to identify any discrepancies in field names, data types, row counts, and numerical values. 5. Generate a consistency report documenting field-level agreement, any divergences detected, and validation status across all three implementations."
+}

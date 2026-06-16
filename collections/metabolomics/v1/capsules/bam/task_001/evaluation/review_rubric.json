@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the BAM repository (HassounLab/BAM) is accessible and contains executable pipeline code"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that a validation dataset is deposited and accessible (e.g., via GitHub repository, Zenodo, or supplementary materials)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the pipeline script runs without errors on the validation dataset using the repository codebase"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that pipeline execution produces output files in expected format (e.g., CSV, JSON, or structured results table)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "value of reported validation metric (annotation accuracy or coverage) matches the metric value produced by pipeline execution on validation dataset \u2014 exact match required"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output file contains required fields for validation metrics (e.g., accuracy, coverage, sensitivity, specificity columns or equivalent)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the BAM repository (HassounLab/BAM) is accessible and contains executable pipeline code",
+      "verify that a validation dataset is deposited and accessible (e.g., via GitHub repository, Zenodo, or supplementary materials)",
+      "verify that the pipeline script runs without errors on the validation dataset using the repository codebase",
+      "verify that pipeline execution produces output files in expected format (e.g., CSV, JSON, or structured results table)",
+      "value of reported validation metric (annotation accuracy or coverage) matches the metric value produced by pipeline execution on validation dataset \u2014 exact match required",
+      "verify output file contains required fields for validation metrics (e.g., accuracy, coverage, sensitivity, specificity columns or equivalent)"
+    ],
+    "expert_review": [
+      "assess whether the pipeline execution faithfully implements the biotransformation-based annotation method as described in the article methods",
+      "assess whether the reproduced validation metrics are scientifically reasonable and consistent with method design",
+      "assess whether any discrepancies between reported and reproduced metrics can be explained by documentation, parameter defaults, or known environment differences"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

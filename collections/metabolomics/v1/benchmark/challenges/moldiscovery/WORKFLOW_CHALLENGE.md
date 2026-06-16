@@ -1,0 +1,121 @@
+# Workflow Challenge: `coll_moldiscovery_workflow`
+
+
+> molDiscovery is a web-based tool made available for academic users to support metabologenomic analysis and molecular discovery workflows.
+
+**Mode:** `actual`  
+**Reproducibility tier:** `type-checked`
+
+## Mission
+
+Reproduce the methodology of the source paper as faithfully as possible using the steps below. Where a step's reproducibility tier is `bypassed`, `manual-only`, or `experimental`, use the cached output declared in its resumption contract; do not attempt to re-execute.
+
+## Tier promise
+
+_Every step has typed I/O ports declared; executable optional. Filesystem presence check + type-port resolution._
+
+## Instructions
+
+Reproduce the 1-step workflow below. Honor each step's IO contract; produce the files listed under 'Final expected outputs'.
+
+## Background
+
+The paper describes molDiscovery, a tool designed for academic users that is accessible through a publicly hosted web service at https://metabologenomic.cbd.cs.cmu.edu/. The service provides functionality for metabologenomic analysis and molecular discovery. Further documentation and technical inquiries regarding the tool can be directed to hoseinm@andrew.cmu.edu.
+
+## Research questions
+
+- Is the molDiscovery academic web service deployed and accessible at the documented URL?
+
+## Methods overview
+
+Send HTTP GET request to the molDiscovery service endpoint. Capture HTTP response status code and metadata (headers, latency, timestamp). Verify response status code is in the 2xx success range. Validation: HTTP status code equals 200 or other valid success code (2xx), confirming the service is reachable and operational.
+
+**Domain:** bioinformatics
+
+**Techniques:** database-annotation, deep-learning, machine-learning, molecular-networking, spectral-library-matching
+
+## Claims to address (CLAIM_VALIDATION rubric)
+Your output should make each binding claim checkable:
+- **(finding)** molDiscovery is available for academic users to test at https://metabologenomic.cbd.cs.cmu.edu/ _[grounded: molDiscovery_system]_
+- **(finding)** For more information about molDiscovery, users can contact hoseinm@andrew.cmu.edu _[grounded: molDiscovery_system]_
+- **(finding)** molDiscovery is hosted on GitHub under the mohimanilab organization _[grounded: molDiscovery_system]_
+
+## Steps
+
+### Step `task_001`
+- Title: Reconstruct the molDiscovery web service endpoint availability and response
+- Task kind: `component_reconstruction`
+- Task: Verify that the molDiscovery academic web service hosted at https://metabologenomic.cbd.cs.cmu.edu/ is reachable and returns a valid HTTP response, confirming operational deployment.
+- Inputs:
+  - molDiscovery web service URL: https://metabologenomic.cbd.cs.cmu.edu/
+- Expected outputs:
+  - HTTP connectivity check report documenting response status, headers, and timestamp
+- Tools: molDiscovery
+- Primary expected artifact: `deployment_check_report.txt`
+
+## Final expected outputs
+
+- `HTTP connectivity check report documenting response status, headers, and timestamp` (type: file, tolerance: hash)
+
+## How your attempt will be scored
+
+ASB defines seven rubrics in `workflow_rubric.py` (STEP_ORDERING, INTERMEDIATE_FIDELITY, END_TO_END_OUTPUT, TOOL_SELECTION, EFFICIENCY, CLAIM_VALIDATION, ADVERSARIAL_TRAP_AVOIDANCE). Which of them bind for *this* challenge depends on the tier and openness below.
+
+### Tier evaluation profile
+
+**Evaluator:** automated — filesystem presence + type-port resolution; END_TO_END_OUTPUT with declared per-output tolerance.
+**Binding rubrics:** STEP_ORDERING, END_TO_END_OUTPUT (typed/tolerance), TOOL_SELECTION, CLAIM_VALIDATION.
+
+### Openness stance
+
+**Openness: closed — reproduction-first.** The deterministic rubrics above bind. A different method is acceptable ONLY if it appears under *Sanctioned method substitutions*; outputs are compared with the declared tolerance. Different is wrong here only when it departs from the sanctioned set or breaks an invariant.
+
+## Workflow characterisation
+
+_Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)._
+
+- **Coupling:** ad_hoc
+
+- **Composition modularity:** flat
+
+- **Abstraction level:** abstract
+
+- **Orchestration planning:** static
+
+- **Data transport:** file
+
+- **Characterisation confidence:** inferred
+
+
+## Submission
+
+Produce two artifacts in your output directory:
+
+1. The output files at the paths declared under **Final expected outputs**.
+2. An `attempt.json` matching the schema below.
+3. _(Optional)_ `attempt_metrics.json` with `wall_time_s`, `total_tokens`, `cost_usd` for the EFFICIENCY rubric.
+
+### `attempt.json` schema
+
+```json
+{
+  "workflow_id": "coll_moldiscovery_workflow",
+  "agent_order": [
+    "task_001"
+  ],
+  "intermediate_outputs": {
+    "task_001": {
+      "<output_name>": "<locator>"
+    }
+  },
+  "final_outputs": {
+    "HTTP connectivity check report documenting response status, headers, and timestamp": "<locator>"
+  },
+  "chosen_tools": {
+    "task_001": "<tool_name>"
+  }
+}
+```
+
+---
+_Generated by `asb workflow-challenge` (see ASB docs/superpowers/specs/2026-05-12-workflow-evaluation-and-reviewer-ui-design.md)._

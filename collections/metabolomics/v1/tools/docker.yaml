@@ -1,0 +1,17 @@
+name: Docker
+slug: docker
+evidence_spans:
+- Both Docker and Singularity (for high-performance computing) are supported
+- you need docker and docker-compose
+derived_from:
+- doi: 10.5281/zenodo.14009575
+  title: corems
+- doi: 10.1021/jasms.4c00364
+  title: nextflow4msdial
+- doi: 10.1021/acs.jnatprod.1c00399
+  title: npclassifier
+source_repos:
+- EMSL-Computing/CoreMS
+- Nextflow4Metabolomics/nextflow4ms-dial
+- mwang87/NP-Classifier
+schema_version: 0.2.0

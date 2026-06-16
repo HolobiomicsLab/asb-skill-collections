@@ -1,0 +1,3 @@
+  figures/geseca-spatial-top.png
+  figures/geseca-vignette-score-toy-example.png
+paper.md

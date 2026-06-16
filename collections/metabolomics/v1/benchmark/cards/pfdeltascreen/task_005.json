@@ -1,0 +1,334 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/logo.jpg",
+      "role": "figure",
+      "sha256": "71bce88a8c368752824edde4511954dd9c5403b3e20a4bc993ddcbf0120ee7f8"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "4edf5fbad132b38a70dc2febd2892a1258d4ccc00edde341d64a0c786a44a59e"
+    }
+  ],
+  "created_at": "2026-06-15T12:20:13.915230+00:00",
+  "crossref_doi": "10.1007/s00216-023-05070-2",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Custom feature list artifact (CSV or TSV format) containing m/z, retention time, and intensity columns",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MS2 spectral data (mzML or equivalent) for fragment-based diagnostic filtering",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Prioritized feature table (CSV) containing custom input features annotated with MD/C scores, KMD values, and MS2 fragment match status",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Filter validation report (CSV or JSON) showing per-feature pass/fail status for each prioritization criterion (MD/C threshold, KMD clustering, MS2 match)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MD/C (mass defect / molecular mass ratio) is a key discriminator for PFAS identification because fluorine incorporation creates characteristic mass defects that differentiate PFAS from isomeric non-fluorinated compounds.",
+    "Kendrick mass defect analysis clusters PFAS homologues by molecular weight spacing (typically 2 \u00d7 13.007825 Da per CF\u2082 unit) and is most effective when features share a common fluorinated backbone structure.",
+    "Custom feature lists bypass automated pyOpenMS peak detection and must supply exact m/z values, retention times, and intensities to ensure compatibility with downstream mass-based filters that assume feature-level precision.",
+    "MS2 diagnostic fragments (e.g., CF\u2083\u207b, CF\u2082\u207b, or SO\u2082NH\u207b for PFOS-like compounds) are structure-specific and their presence/absence in the MS2 data is used to confirm or reject candidate PFAS features identified by mass-based filters alone."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:JonZwe__PFAScreen containing pipeline input stage code",
+      "verify pipeline accepts CSV or TSV artifact as optional custom feature list input",
+      "verify custom feature list input does not trigger pyOpenMS feature detection when supplied",
+      "script_runs: execute pipeline with custom CSV feature list artifact and verify no errors or fallback to automated detection",
+      "verify downstream MD/C filter reads and processes custom feature list records without modification to filter logic",
+      "verify downstream KMD filter reads and processes custom feature list records without modification to filter logic",
+      "verify downstream MS2 fragment filter reads and processes custom feature list records without modification to filter logic",
+      "verify output of prioritization filters applied to custom feature data matches expected schema (any of: feature ID, m/z, retention time, prioritization score, filter pass/fail labels)",
+      "expert_review: parameter-sensitive \u2014 confirm that MD/C, KMD, and MS2 thresholds are applied identically whether features originate from pyOpenMS detection or custom CSV supply"
+    ],
+    "expert_review": [
+      "Review whether custom feature list format specification (column names, data types, required vs. optional fields) is documented or inferred from code",
+      "Assess whether edge cases (missing m/z, missing MS2 data, malformed rows) are handled gracefully and do not silently corrupt downstream filter logic",
+      "Evaluate whether any pyOpenMS-specific metadata (e.g. feature quality scores, detection confidence) is required or optional when using custom feature input",
+      "Judge whether the prioritization filters produce chemically and statistically defensible PFAS rankings when applied to externally supplied feature data"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Can PF\u0394Screen's prioritization filters (MD/C-m/C, KMD analysis, and MS2 fragment diagnostics) correctly process and filter PFAS features supplied via an optional custom feature list, rather than relying solely on pyOpenMS-detected features?: 'Optionally, custom feature lists can be included. PF\u0394Screen uses several techniques for prioritization such as the MD/C-m/C approach, Kendrick mass defect (KMD) analysis and fragment mass differences'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PF\u0394Screen supports optional inclusion of custom feature lists as an alternative input pathway, and applies prioritization techniques including MD/C-m/C approach, KMD analysis, and MS2 fragment analysis to features regardless of their source.: 'Optionally, custom feature lists can be included. PF\u0394Screen uses several techniques for prioritization such as the MD/C-m/C approach, Kendrick mass defect (KMD) analysis and fragment mass differences'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Custom feature list artifact (CSV or TSV format) containing m/z, retention time, and intensity columns: 'Optionally, custom feature lists can be included'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MS2 spectral data (mzML or equivalent) for fragment-based diagnostic filtering: 'fragment mass differences and diagnostic fragments in the MS2 data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Prioritized feature table (CSV) containing custom input features annotated with MD/C scores, KMD values, and MS2 fragment match status: 'PF\u0394Screen uses several techniques for prioritization such as the MD/C-m/C approach, Kendrick mass defect (KMD) analysis and fragment mass differences'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Filter validation report (CSV or JSON) showing per-feature pass/fail status for each prioritization criterion (MD/C threshold, KMD clustering, MS2 match): 'PF\u0394Screen prioritizes potential PFAS features in LC- or GC-HRMS data using MD/C-m/C approach, Kendrick mass defect (KMD) analysis, and fragment mass differences'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'PF\u0394Screen is an open-source Python based non-target screening software tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] pyOpenMS: 'pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history found: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "prioritized_custom_features.csv",
+  "expected_outputs": [
+    "Prioritized feature table (CSV) containing custom input features annotated with MD/C scores, KMD values, and MS2 fragment match status",
+    "Filter validation report (CSV or JSON) showing per-feature pass/fail status for each prioritization criterion (MD/C threshold, KMD clustering, MS2 match)"
+  ],
+  "finding": "PF\u0394Screen supports optional inclusion of custom feature lists as an alternative input pathway, and applies prioritization techniques including MD/C-m/C approach, KMD analysis, and MS2 fragment analysis to features regardless of their source.",
+  "github_name": "JonZwe/PFAScreen",
+  "input_from": "task_002",
+  "inputs": [
+    "Custom feature list artifact (CSV or TSV format) containing m/z, retention time, and intensity columns",
+    "MS2 spectral data (mzML or equivalent) for fragment-based diagnostic filtering"
+  ],
+  "keywords": [
+    "pfas screening",
+    "non-target hrms",
+    "lc-hrms",
+    "gc-hrms",
+    "feature detection",
+    "kendrick mass defect analysis",
+    "fragment mass differences",
+    "ms2 diagnostics",
+    "esi ionization",
+    "apci ionization",
+    "untargeted metabolomics"
+  ],
+  "landmark_outputs": [
+    "custom_features_validated.csv",
+    "md_c_filtered_features.csv",
+    "kmd_clustered_features.csv",
+    "ms2_matched_features.csv"
+  ],
+  "linked_result_ids": [
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Parse and validate custom feature list CSV/TSV, confirming presence of required columns (m/z, retention time, intensity) and numeric data types.",
+    "Convert custom feature objects into PF\u0394Screen's internal feature representation to ensure compatibility with downstream filter modules.",
+    "Calculate mass defect and mass defect / nominal mass ratio (MD/C) for each custom feature; flag features exceeding PFAS-typical MD/C thresholds.",
+    "Perform Kendrick mass defect clustering to identify homologous series within the custom feature set.",
+    "Match each custom feature m/z against MS2 fragmentation patterns to detect diagnostic PFAS fragments and confirm structural hypotheses.",
+    "Validation: Verify that at least 90% of custom features receive a prioritization score and that filter pass/fail status can be independently audited against reference PFAS standards or known-mass spike compounds.",
+    "References: source article (DOI: 10.1007/s00216-023-05070-2)"
+  ],
+  "missing_information": [
+    "No changelog or version history found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/prioritized_features"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can PF\u0394Screen's prioritization filters (MD/C-m/C, KMD analysis, and MS2 fragment diagnostics) correctly process and filter PFAS features supplied via an optional custom feature list, rather than relying solely on pyOpenMS-detected features?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "feature-list-format-validation",
+    "md-defect-ratio-calculation",
+    "kendrick-mass-defect-clustering",
+    "ms2-fragment-diagnostic-matching",
+    "custom-data-schema-mapping",
+    "hrms-feature-annotation-integration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pfdeltascreen/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "PFDeltaScreen_System",
+    "pyOpenMS_Tool",
+    "PFAS_Prioritization_Architecture",
+    "CustomFeatureList_Artifact",
+    "PFDeltaScreen_Publication"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:JonZwe__PFAScreen",
+  "task_description": "Extend PF\u0394Screen's input pipeline to accept an optional custom feature list (CSV/TSV format) as an alternative to pyOpenMS-detected features, and validate that the downstream PFAS prioritization filters (MD/C, KMD, and MS2 fragment analysis) operate correctly on externally supplied feature data.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Custom feature list artifact (CSV/TSV)",
+      "port_id": "custom_feature_list",
+      "resolved_via": null,
+      "source": "task_002/prioritized_features",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MS2 spectral data (mzML or equivalent)",
+      "port_id": "ms2_spectral_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Implement and validate custom feature list import (CSV/TSV) in PF\u0394Screen and confirm all prioritization filters operate identically on externally supplied versus pyOpenMS-detected features.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Prioritized feature table with MD/C, KMD, and MS2 annotations",
+      "port_id": "prioritized_feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-feature prioritization filter validation report",
+      "port_id": "filter_validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "high-resolution-ms",
+    "chemical-class-annotation",
+    "database-annotation",
+    "quality-control"
+  ],
+  "title": "Extend PF\u0394Screen prioritization by incorporating a user-supplied custom feature list",
+  "tools": [
+    "Python",
+    "pyOpenMS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Filter validation report (CSV or JSON) showing per-feature pass/fail status for each prioritization criterion (MD/C threshold, KMD clustering, MS2 match)."
+  ],
+  "workflow_description": "1. Load custom feature list from user-supplied CSV/TSV file, validating required columns (m/z, retention time, intensity). 2. Parse feature metadata and convert to internal PF\u0394Screen feature object format compatible with downstream prioritization modules. 3. Apply MD/C-m/C ratio filtering to identify PFAS-like features with elevated mass defects. 4. Perform Kendrick mass defect (KMD) analysis on filtered features to cluster potential PFAS homologues. 5. Cross-reference features against MS2 fragment data to detect diagnostic fragment mass differences indicative of PFAS structure. 6. Generate prioritized feature table and comparison report showing which custom features pass each prioritization filter."
+}

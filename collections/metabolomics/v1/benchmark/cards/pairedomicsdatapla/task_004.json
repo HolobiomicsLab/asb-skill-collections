@@ -1,0 +1,324 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Slide1.svg",
+      "role": "figure",
+      "sha256": "80c2b1f28251e97ceccbf3c6bf1dac9c87e2909daa015295ae08d5d27ebf189c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/architecture.png",
+      "role": "figure",
+      "sha256": "47a4ac54cacb7c8aa6dbd66d604a38b463eef8a945b02a057afe4804fe782cae"
+    },
+    {
+      "indexable": false,
+      "path": "figures/architecture.svg",
+      "role": "figure",
+      "sha256": "88440540f16ee2c841a769b3540b119c7b4485fa4abb1736a242c998bc045c8a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nlesc.png",
+      "role": "figure",
+      "sha256": "948238d0fb8706a610c9703eb5fd55a28de68703e05c079c16e6790d024f0f6b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide1.png",
+      "role": "figure",
+      "sha256": "dad7f28a55aacb51c3d96305d73543dbc53c10cbdff46b7b7238f462e353efe3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide2.png",
+      "role": "figure",
+      "sha256": "85b33f400db3e669746b64d8b8eda3c8f2eeb0dc1c58e4363089d8c9fddda6ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide3.png",
+      "role": "figure",
+      "sha256": "a8e884bba7e906abbdb011f0fad3f24ac2f3ef6bb8ca9c0f13cebaf4fd462667"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide4.png",
+      "role": "figure",
+      "sha256": "afc1aa5c3c5e250fa10ab86e5187200213dff0bc1dc84f3d8a337fe97c1c1b64"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide5.png",
+      "role": "figure",
+      "sha256": "62b48629a51c1950a9642d64030dfa87298673b8c2d569c75b3a790c6040c9da"
+    },
+    {
+      "indexable": false,
+      "path": "figures/wur.png",
+      "role": "figure",
+      "sha256": "e9da6f0b6e7ac61a4d02b4fb417d567f8d3eea50c1cffd6d954983459d4eebb8"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d4fdafd858db9ef873ed914a2a6aa220a5a256ddacd25827ddcf412c814c7ee0"
+    }
+  ],
+  "created_at": "2026-06-16T06:05:14.068972+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Project JSON document with URL-typed fields",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation report listing all URL fields containing whitespace, with field names and flagged values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "URL fields in omics project metadata must not contain whitespace characters to ensure compatibility with data repository links and web application serialization.",
+    "Whitespace includes not only visible spaces but also tabs, newlines, and other Unicode space characters that may be invisible during data entry.",
+    "JSON schema validation can enforce field-level constraints by defining URL type with pattern matching rules that reject whitespace.",
+    "The paired-data-form platform stores project metadata in JSON format, making client-side and server-side validation critical before data persistence."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: project JSON document input",
+      "verify file_format_is: input is valid JSON",
+      "script_runs: validation script executes without error on test inputs",
+      "output_matches_reference: validation script identifies all URL fields containing whitespace in a test JSON document with known whitespace-containing URLs, no false negatives",
+      "output_matches_reference: validation script produces no false positives on a test JSON document with valid URLs (no whitespace)",
+      "contains_substring: validation output includes flagged URL field name(s) and the problematic value(s) containing spaces"
+    ],
+    "expert_review": [
+      "Confirm URL field schema is correctly identified in the project JSON structure",
+      "Confirm whitespace character definition (space, tab, newline, etc.) aligns with platform requirements",
+      "Confirm error/warning message is actionable for end users submitting project data"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How should the validation system detect and flag URL fields in project JSON documents that contain whitespace characters, which are invalid in URLs?: 'Links MS/MS mass spectra with genome, sample preparation, extraction method and instrumentation method'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The platform stores paired omics data projects using a JSON schema format (app/public/schema.json) that defines project structure, which serves as the basis for implementing field-level validation rules including URL format constraints.: 'The [JSON schema (app/public/schema.json)](app/public/schema.json) describes the format of an project.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Project JSON document with URL-typed fields: 'Each project page on [https://pairedomicsdata.bioinformatics.nl](https://pairedomicsdata.bioinformatics.nl) has a download button, which gives you the JSON document of the project.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Validation report listing all URL fields containing whitespace, with field names and flagged values: 'Warning to not include spaces in urls'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] npm: 'make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Which specific fields in the project JSON schema are designated as URL-typed and should be subject to the whitespace validation rule?: 'Warning to not include spaces in urls ([#75]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] What constitutes 'spaces' in the context of URL validation\u2014only space characters, or all whitespace (tabs, newlines, etc.)?: 'Warning to not include spaces in urls ([#75]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Should the validation rule reject the document submission, issue a warning, or auto-correct by removing/encoding spaces?: 'Warning to not include spaces in urls ([#75]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "node -e \"const fs = require('fs'); const data = JSON.parse(fs.readFileSync('{inputs.project_json}', 'utf8')); const report = []; function scanUrls(obj, path = '') { if (typeof obj === 'object' && obj !== null) { for (const key in obj) { const newPath = path ? path + '.' + key : key; if (typeof obj[key] === 'string' && key.toLowerCase().includes('url')) { if (/\\s/.test(obj[key])) { report.push({field: newPath, value: obj[key], contains_whitespace: true}); } } else if (typeof obj[key] === 'object') { scanUrls(obj[key], newPath); } } } } scanUrls(data); console.log(JSON.stringify({validation_report: report, total_flagged: report.length, timestamp: new Date().toISOString()}, null, 2)); fs.writeFileSync('{task_id}_validation_report.json', JSON.stringify({validation_report: report, total_flagged: report.length, timestamp: new Date().toISOString()}, null, 2)); process.exit(report.length > 0 ? 1 : 0);\""
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "url_validation_report.json",
+  "expected_outputs": [
+    "Validation report listing all URL fields containing whitespace, with field names and flagged values"
+  ],
+  "finding": "The platform stores paired omics data projects using a JSON schema format (app/public/schema.json) that defines project structure, which serves as the basis for implementing field-level validation rules including URL format constraints.",
+  "github_name": "iomega/paired-data-form",
+  "input_from": "task_002",
+  "inputs": [
+    "Project JSON document with URL-typed fields"
+  ],
+  "keywords": [
+    "mass spectrometry",
+    "ms/ms spectra",
+    "genomic data",
+    "biosynthetic gene clusters",
+    "paired omics",
+    "metabolomics",
+    "data integration"
+  ],
+  "landmark_outputs": [
+    "url_fields_schema.json",
+    "flagged_urls.csv"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_020"
+  ],
+  "methodology_summary": [
+    "Load and parse the project JSON document.",
+    "Identify all fields with URL type designation in the document schema.",
+    "Scan each URL field for the presence of whitespace characters (spaces, tabs, newlines, etc.).",
+    "Record and report all URLs containing whitespace with their field locations.",
+    "Validation: accept output if all URL fields in the document have been scanned and all whitespace-containing URLs are flagged."
+  ],
+  "missing_information": [
+    "Which specific fields in the project JSON schema are designated as URL-typed and should be subject to the whitespace validation rule?",
+    "What constitutes 'spaces' in the context of URL validation\u2014only space characters, or all whitespace (tabs, newlines, etc.)?",
+    "Should the validation rule reject the document submission, issue a warning, or auto-correct by removing/encoding spaces?"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How should the validation system detect and flag URL fields in project JSON documents that contain whitespace characters, which are invalid in URLs?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "json-schema-validation",
+    "url-format-constraint-checking",
+    "whitespace-character-detection",
+    "field-type-identification",
+    "validation-report-generation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pairedomicsdatapla/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp-json-schema",
+    "artifact-project-json"
+  ],
+  "subdomains": [
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:iomega__paired-data-form",
+  "task_description": "Implement a validation rule that scans all URL-typed fields in a project JSON document and flags any value containing whitespace characters, enforcing the constraint that URLs must not include spaces.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Project JSON document",
+      "port_id": "project_json",
+      "resolved_via": null,
+      "source": "task_002/enriched_project_json",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement a validation rule that scans all URL-type fields in project JSON and flags any values containing whitespace characters.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "URL whitespace validation report",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Implement URL-space validation for project JSON fields to detect embedded spaces",
+  "tools": [
+    "npm"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: npm, Validation report listing all URL fields containing whitespace, with field names and flagged values."
+  ],
+  "workflow_description": "1. Load a project JSON document from the platform. 2. Identify all fields designated as URL type in the schema (e.g., project URLs, reference links, data repository links). 3. Iterate through each URL field and check for the presence of whitespace characters (spaces, tabs, newlines). 4. For each URL containing whitespace, record the field name, the offending URL value, and generate a warning message. 5. Compile validation results into a report listing all flagged URLs and their locations within the document."
+}

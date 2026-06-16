@@ -1,0 +1,2249 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/chromatographic-peak-overlap-resolution",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/coeluting-compound-resolution",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/cosine-similarity-spectral-clustering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/gc-ms-spectral-deconvolution",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/gc-ms-spectral-similarity-clustering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrum-extraction-and-formatting",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-network-graph-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/network-topology-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/network-topology-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/raw-chromatography-data-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-batch-submission-to-networking-server",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-library-molecular-networking",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "This repository is a companion to a manuscript by Aksenov et al. published in Nature Biotechnology in 2020.",
+      "asserted_by": "doi:10.1038/s41587-020-0700-3",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_AUTO_DECONV"
+        },
+        {
+          "id": "asb:spine_COMP_MOL_NETWORKING"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1038/s41587-020-0700-3",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The manuscript describes auto-deconvolution and molecular networking of gas chromatography\u2013mass spectrometry data.",
+      "asserted_by": "doi:10.1038/s41587-020-0700-3",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_AUTO_DECONV"
+        },
+        {
+          "id": "asb:spine_COMP_MOL_NETWORKING"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1038/s41587-020-0700-3",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The source repository is located on GitHub under the identifier bittremieux__GNPS_GC.",
+      "asserted_by": "doi:10.1038/s41587-020-0700-3",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_GNPS_GC"
+        },
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1038/s41587-020-0700-3",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The document was synthesized on 2026-06-16 at 05:56:15 UTC.",
+      "asserted_by": "doi:10.1038/s41587-020-0700-3",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1038/s41587-020-0700-3",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data. We then designed workflows to enable the community to store, process, share, annotate, compare and perform molecular networking of GC-MS data within the Global Natural Product Social (GNPS) Molecular Networking analysis platform.",
+      "asbval:note": "The paper explicitly describes the MSHub auto-deconvolution and GNPS molecular networking pipeline for GC-MS data, and provides public datasets and reproducibility infrastructure (job retention, cloning, hyperlink sharing).",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Can the auto-deconvolution and molecular networking pipeline described in the Nature Biotechnology 2020 manuscript be successfully re-run on the companion GC-MS dataset to reproduce the reported network and deconvolved spectra outputs?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:11.441722+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We refer to the dataset spectral deconvolution tool within the GNPS environment as 'MSHub'.",
+      "asbval:note": "MSHub is explicitly named and described as the auto-deconvolution tool integrated into GNPS.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:11.441722+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We deployed this functionality within GNPS/MassIVE (https://gnps.ucsd.edu). We refer to the dataset spectral deconvolution tool within the GNPS environment as 'MSHub'.",
+      "asbval:note": "GNPS is the platform hosting MSHub and molecular networking workflows for GC-MS data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:11.441722+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Once the summary file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectra can be searched against public, private or commercial libraries. GNPS saves deconvoluted data as a summary file... Once the .mgf file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectral features can be searched against public libraries.",
+      "asbval:note": "The paper explicitly describes MGF file output from MSHub deconvolution containing deconvolved spectra.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Deconvolved spectra table (MGF or mzTab format) with individual compound mass-to-charge and intensity values",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:11.441722+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "One of the developments that enabled finding structural relationships within mass spectrometry data is spectral alignment, which forms the basis for molecular networking. GNPS has now expanded to include GC-MS-specific molecular networking. The output from GNPS can be exported for use in statistical analysis environments and for data visualization (e.g., Supplementary Figs. 7\u201310), including molecular cartography.",
+      "asbval:note": "Paper describes molecular networking output and visualization capabilities but does not explicitly name GraphML, JSON, or PNG as output formats. The paper mentions export for visualization but specific file formats are not detailed in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Molecular network file and visualization (GraphML, JSON, or PNG) showing spectral clusters and cosine similarity edges",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:11.441722+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_001/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Molecular networking can further guide the annotation at the family level by utilizing information from connected nodes rather than focusing on individual annotations. One can visualize aspects such as derivatized vs. non-derivatized, candidate compound class or subclass, instrument type or other metadata and inspect individual clusters of nodes.",
+      "asbval:note": "Paper describes network analysis and visualization of clusters and nodes, but does not explicitly discuss 'network topology metrics' as a quantitative output. The focus is on visualization and annotation guidance rather than formal topology metrics.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Network topology metrics and comparison to reported network structure",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:11.441722+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card frames the task as a reproducibility/replication study ('Can the pipeline be successfully re-run'), which is consistent with the paper's emphasis on reproducibility and FAIR practices.",
+        "The paper provides extensive infrastructure for reproducibility (job retention, hyperlink sharing, clone functionality, public datasets), supporting the feasibility of the proposed task.",
+        "The card does not mention alternative deconvolution tools (MZmine/ADAP, MS-DIAL, etc.) that the paper explicitly supports as compatible inputs to GNPS, which could be relevant for a full reproduction workflow."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:11.441722+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data.",
+      "asbval:note": "Paper explicitly describes MSHub as an auto-deconvolution tool for GC-MS data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Reconstruct the MSHub auto-deconvolution module for GC-MS raw data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:30.751423+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MSHub performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization and quantifies the reproducibility of fragmentation patterns across samples.",
+      "asbval:note": "The paper describes the auto-deconvolution process and its mechanism (non-negative matrix factorization) for separating fragmentation patterns.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does the auto-deconvolution method process raw gas chromatography\u2013mass spectrometry data to separate and identify individual chemical components from complex mixtures?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:30.751423+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We refer to the dataset spectral deconvolution tool within the GNPS environment as 'MSHub'.",
+      "asbval:note": "MSHub is explicitly named and described as the deconvolution tool used in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:30.751423+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Once the .mgf file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectra can be searched against public, private or commercial libraries.",
+      "asbval:note": "Paper confirms MGF format output from MSHub for downstream analysis including molecular networking. However, mzML format is not explicitly mentioned in the passages; only .mgf format is documented as the output format for MSHub.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "File of deconvolved spectra in MGF or mzML format ready for molecular networking",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:30.751423+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card frames the task as 'reconstruct the MSHub auto-deconvolution module,' which could imply reverse-engineering or reimplementation. The paper describes MSHub as an existing tool deployed within GNPS, not as a task to be reconstructed by the user. The card may be conflating the paper's engineering of MSHub with a user-facing task.",
+        "The research question is appropriately scoped to the paper's focus on auto-deconvolution methodology, but the card does not capture the paper's emphasis on scalability, reproducibility, and repository-scale operation as key innovations."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:30.751423+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "One of the developments that enabled finding structural relationships within mass spectrometry data is spectral alignment, which forms the basis for molecular networking. GNPS has now expanded to include GC-MS-specific molecular networking. ... Molecular networking can further guide the annotation at the family level by utilizing information from connected nodes rather than focusing on individual annotations.",
+      "asbval:note": "Paper describes that GNPS performs molecular networking on deconvolved GC-MS spectra and that networks are created through spectral similarity. However, the paper does not explicitly specify the output format (GraphML or JSON). The paper mentions exporting output for use in statistical analysis and visualization but does not name specific file formats for the network itself.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does the molecular networking step process deconvolved gas chromatography\u2013mass spectrometry spectra and what network output format does it produce?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:43.226627+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The GNPS leverages the repository infrastructure now has expanded to include GC-MS-specific deconvolution, reference spectra matching and molecular networking tools. ... GNPS/MassIVE lowers the expertise threshold required for analysis and encourages FAIR practices by promoting re-use of GC-MS data. ... The community infrastructure can be accessed at https://gnps.ucsd.edu under the header 'GC-MS EI Data Analysis'.",
+      "asbval:note": "The paper refers to 'GNPS' with GC-MS-specific functionality and 'MSHub' as the deconvolution tool within GNPS, but does not use the exact name 'GNPS_GC'. The tool is accessed via GNPS at gnps.ucsd.edu under 'GC-MS EI Data Analysis'. The card names 'GNPS_GC' which appears to be a shorthand or alternate naming convention not explicitly used in the paper text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS_GC",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:43.226627+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The output from GNPS can be exported for use in statistical analysis environments and for data visualization (e.g., Supplementary Figs. 7\u201310), including molecular cartography. ... The 3D model, feature table used for mapping and snapshots shown on the Figure 2f\u2013i are available at: https://github.com/aaksenov1/Human-volatilome-3D-mapping-. ... The GC-MS adapted MolNetEnhancer code with an example Jupyter notebook can be found here: https://github.com/madeleineernst/pyMolNetEnhancer.",
+      "asbval:note": "Paper confirms that GNPS outputs network data that can be exported for visualization and analysis, and mentions molecular networks are created through spectral similarity. However, the paper does not explicitly state that outputs are in GraphML or JSON format. The paper mentions exporting for visualization and statistical analysis but does not specify the network file format.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Molecular network file in GraphML or JSON format containing nodes (spectra/compounds) and edges (spectral similarity or MS/MS fragmentation matches)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:43.226627+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_1038_s41587_020_0700_3__task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card frames the task as 'reconstructing' the molecular networking module, which implies building or reimplementing it. The paper describes using the existing GNPS molecular networking functionality, not reconstructing it.",
+        "The card's focus on 'network output format' (GraphML or JSON) is not explicitly addressed in the paper passages. The paper discusses network visualization and export for analysis but does not specify these particular file formats."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:59:43.226627+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chromatographic-peak-overlap-resolution/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data... MSHub/GNPS performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization",
+      "asbval:note": "Core research question directly supported by abstract and introduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "chromatographic-peak-overlap-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Auto-deconvolution of overlapping gas chromatography\u2013mass spectrometry peaks to extract individual compound spectra from co-eluting analytes",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:00:41.922537+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chromatographic-peak-overlap-resolution/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "spectral deconvolution, a process that separates fragmentation ion patterns for each eluting molecule into a composite mass spectrum",
+      "asbval:note": "Semantic equivalence: deconvolution separates fragmentation patterns for each eluting molecule, which is equivalent to recovering pure spectra from co-eluting compounds.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "chromatographic-peak-overlap-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "recovery of pure mass spectra from complex chromatographic mixtures where multiple compounds elute simultaneously",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:00:41.922537+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chromatographic-peak-overlap-resolution/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We refer to the dataset spectral deconvolution tool within the GNPS environment as 'MSHub'",
+      "asbval:note": "Tool name confirmed verbatim (case-insensitive).",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "chromatographic-peak-overlap-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:00:41.922537+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chromatographic-peak-overlap-resolution/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MSHub/GNPS performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization and quantifies the reproducibility of fragmentation patterns across samples",
+      "asbval:note": "Role description matches paper's description of MSHub functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "chromatographic-peak-overlap-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[MSHub].role",
+      "asbval:target_claim_text": "Performs automated deconvolution of overlapping GC-MS peaks to extract individual compound spectra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:00:41.922537+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chromatographic-peak-overlap-resolution/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We then designed workflows to enable the community to store, process, share, annotate, compare and perform molecular networking of GC-MS data within the Global Natural Product Social (GNPS) Molecular Networking analysis platform",
+      "asbval:note": "GNPS confirmed as platform for GC-MS analysis and molecular networking.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "chromatographic-peak-overlap-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:00:41.922537+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chromatographic-peak-overlap-resolution/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We deployed this functionality within GNPS/MassIVE (https://gnps.ucsd.edu)",
+      "asbval:note": "URL confirmed verbatim in paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "chromatographic-peak-overlap-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[GNPS].repo",
+      "asbval:target_claim_text": "https://gnps.ucsd.edu",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:00:41.922537+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chromatographic-peak-overlap-resolution/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Once the .mgf file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectra can be searched against public, private or commercial libraries... GNPS has now expanded to include GC-MS-specific molecular networking",
+      "asbval:note": "Paper confirms MGF format and molecular networking/library matching roles. However, mzTab format is not explicitly mentioned in passages; only .mgf and .csv formats are referenced. The core functionality (accepting deconvolved spectra for networking and library matching) is supported, but format claim is incomplete.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chromatographic-peak-overlap-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[GNPS].role",
+      "asbval:target_claim_text": "Accepts deconvolved spectra in MGF/mzTab format for downstream molecular networking and spectral library matching",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:00:41.922537+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/coeluting-compound-resolution/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data... MSHub/GNPS performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization and quantifies the reproducibility of fragmentation patterns across samples.",
+      "asbval:note": "The research question directly aligns with the paper's core contribution: automated deconvolution of GC-MS data to separate overlapping components.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "coeluting-compound-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Automated separation and identification of overlapping chemical components in gas chromatography\u2013mass spectrometry (GC-MS) data using deconvolution algorithms. This skill resolves co-eluting compounds that appear as merged peaks in raw chromatograms, extracting individual compone",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:00:54.225133+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/coeluting-compound-resolution/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We refer to the dataset spectral deconvolution tool within the GNPS environment as 'MSHub'. All MSHub algorithms use efficient HDF5 technologies.",
+      "asbval:note": "MSHub is explicitly named and described as the deconvolution tool in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "coeluting-compound-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:00:54.225133+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/coeluting-compound-resolution/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MSHub/GNPS performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization and quantifies the reproducibility of fragmentation patterns across samples.",
+      "asbval:note": "The role description matches the paper's description of MSHub's function in auto-deconvolution and fragmentation pattern extraction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "coeluting-compound-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Implements auto-deconvolution algorithm to resolve overlapping peaks and extract individual component spectra from raw GC-MS data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:00:54.225133+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/coeluting-compound-resolution/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The source code of the MSHub software, including low- and high resolution data processing versions is available online at Github (version used in GNPS) (https://github.com/CCMS-UCSD/GNPS_Workflows/tree/master/mshub-gc/tools/mshub-gc/proc) and at BitBucket (standalone version in MSHub developers' repository, both high and low resolution: https://bitbucket.org/iAnalytica/mshub_process/src/master/). Scripts used to parse, filter, organize data and generate the plots in the manuscript are available online at Github (https://github.com/bittremieux/GNPS_GC_fig).",
+      "asbval:note": "The paper lists the primary MSHub source code repository as https://github.com/CCMS-UCSD/GNPS_Workflows/tree/master/mshub-gc/tools/mshub-gc/proc, not the URL provided in the card. The card's URL (https://github.com/bittremieux/GNPS_GC) appears to be a supporting repository for figure generation scripts, not the main MSHub implementation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "coeluting-compound-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].repo",
+      "asbval:target_claim_text": "https://github.com/bittremieux/GNPS_GC",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:00:54.225133+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cosine-similarity-spectral-clustering/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "molecular networks are created through spectral similarity of the deconvoluted fragmentation spectrum... EI-based cosine similarity networks are predominantly driven by structural similarity based on chemical class annotations",
+      "asbval:note": "Passage confirms cosine similarity-based molecular network construction for clustering deconvolved spectra.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cosine-similarity-spectral-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Cluster mass spectra by computing pairwise cosine similarity scores and constructing a molecular network where nodes represent spectra and edges represent similarity above a threshold.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:02.046278+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cosine-similarity-spectral-clustering/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "molecular networking can further guide the annotation at the family level by utilizing information from connected nodes rather than focusing on individual annotations",
+      "asbval:note": "Passage confirms molecular networking organizes spectra into groups for structural relationship identification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cosine-similarity-spectral-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill is essential for organizing GC-MS deconvolved spectra into groups of structurally related compounds.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:02.046278+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cosine-similarity-spectral-clustering/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Once the .mgf file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectral features can be searched against public libraries",
+      "asbval:note": "Paper confirms MGF format is used for deconvolved spectra in GNPS workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cosine-similarity-spectral-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have a collection of deconvolved mass spectra (in MGF or mzTab format) from GC-MS analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:02.046278+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cosine-similarity-spectral-clustering/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "spectral deconvolution, a process that separates fragmentation ion patterns for each eluting molecule into a composite mass spectrum",
+      "asbval:note": "Paper describes deconvolution as separating overlapping peaks into individual spectra.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cosine-similarity-spectral-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Specifically use it after auto-deconvolution has separated overlapping chromatographic peaks into individual compound spectra.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:02.046278+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cosine-similarity-spectral-clustering/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Currently, deconvolution requires setting multiple parameters manually, or computational skills to run the software. Also, the lack of data sharing in a uniform format precludes data comparison between laboratories",
+      "asbval:note": "Paper confirms deconvolution is a prerequisite step before downstream analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cosine-similarity-spectral-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input spectra are raw, overlapping GC-MS chromatographic peaks that have not been deconvolved\u2014apply auto-deconvolution first.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:02.046278+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cosine-similarity-spectral-clustering/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "GNPS has now expanded to include GC-MS-specific molecular networking. GNPS-based GC-MS analysis enables data co- and re-analysis",
+      "asbval:note": "Paper confirms GNPS performs molecular networking for GC-MS data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cosine-similarity-spectral-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS executes molecular networking workflow to cluster deconvolved spectra by cosine similarity and constructs network graph",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:02.046278+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cosine-similarity-spectral-clustering/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We deployed this functionality within GNPS/MassIVE (https://gnps.ucsd.edu)",
+      "asbval:note": "URL confirmed in paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cosine-similarity-spectral-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS repo: https://gnps.ucsd.edu",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:02.046278+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cosine-similarity-spectral-clustering/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data... MSHub/GNPS performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization",
+      "asbval:note": "Paper confirms MSHub performs auto-deconvolution of GC-MS data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "cosine-similarity-spectral-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSHub auto-deconvolves overlapping GC-MS chromatographic peaks to produce individual spectra suitable for cosine similarity clustering",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:02.046278+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-deconvolution/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data... MSHub performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization",
+      "asbval:note": "Core claim directly supported by abstract and introduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gc-ms-spectral-deconvolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Automated separation and extraction of individual component mass spectra from overlapping gas chromatography\u2013mass spectrometry peaks using the MSHub auto-deconvolution algorithm",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:17.001006+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-deconvolution/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "spectral deconvolution, a process that separates fragmentation ion patterns for each eluting molecule into a composite mass spectrum... Molecular networking can further guide the annotation at the family level",
+      "asbval:note": "Paper explicitly addresses deconvolution for resolving mixed spectra and molecular networking for annotation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gc-ms-spectral-deconvolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill resolves mixed spectra in complex chemical mixtures to enable accurate compound identification and downstream molecular networking analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:17.001006+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-deconvolution/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We refer to the dataset spectral deconvolution tool within the GNPS environment as 'MSHub'. All MSHub algorithms use efficient HDF5 technologies... MSHub performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization",
+      "asbval:note": "MSHub is the primary deconvolution tool described in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gc-ms-spectral-deconvolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSHub \u2014 Performs automated deconvolution of overlapping GC-MS peaks to extract individual component spectra from complex mixtures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:17.001006+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-deconvolution/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Once the summary file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectra can be searched against public, private or commercial libraries... GNPS has now expanded to include GC-MS-specific molecular networking",
+      "asbval:note": "GNPS accepts deconvolved spectra and performs molecular networking. MGF format explicitly mentioned in passage 5.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gc-ms-spectral-deconvolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS \u2014 Accepts deconvolved spectra (in MGF or mzTab format) for downstream molecular networking and spectral clustering by cosine similarity",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:17.001006+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-deconvolution/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Scripts used to parse, filter, organize data and generate the plots in the manuscript are available online at Github (https://github.com/bittremieux/GNPS_GC_fig). Script for merging individual .mgf files into a single file for creating global network is available at Github: https://github.com/bittremieux/GNPS_GC/blob/master/src/merge_mgf.py",
+      "asbval:note": "GitHub repository URL confirmed in data availability section.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gc-ms-spectral-deconvolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS repo: https://github.com/bittremieux/GNPS_GC",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:17.001006+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-deconvolution/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "much of GC-MS data processing is restricted to vendor-specific formats and software... Currently, deconvolution requires setting multiple parameters manually, or computational skills to run the software",
+      "asbval:note": "Paper addresses vendor formats and the need for deconvolution of overlapping peaks.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gc-ms-spectral-deconvolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have raw GC-MS data (in netCDF or vendor format) containing overlapping chromatographic peaks",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:17.001006+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-deconvolution/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Once the .mgf file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectral features can be searched against public libraries... Molecular networking can further guide the annotation at the family level",
+      "asbval:note": "Paper explicitly describes deconvolution output used for library matching and molecular networking.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gc-ms-spectral-deconvolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use it when your analysis goal requires extracting pure, deconvolved spectra suitable for molecular networking, spectral library matching, or detailed chemical identification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:17.001006+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-deconvolution/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Currently, 1D EI GC-MS data are amenable... GC-MS is often the only mass spectrometry method in non-metabolomics laboratories",
+      "asbval:note": "Paper focuses on GC-MS, implicitly distinguishing from LC-MS/MS approaches.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gc-ms-spectral-deconvolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input data is already high-resolution liquid chromatography\u2013mass spectrometry (LC-MS) with baseline-resolved peaks; deconvolution is unnecessary",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:17.001006+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-similarity-clustering/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "GNPS has now expanded to include GC-MS-specific molecular networking. One of the developments that enabled finding structural relationships within mass spectrometry data is spectral alignment, which forms the basis for molecular networking. In the case of EI, unlike in LC-MS/MS where the precursor ion mass is known, the molecular ion is often absent. For this reason, the molecular networks are created through spectral similarity of the deconvoluted fragmentation spectrum without considering the molecular ion. We explored molecular networking patterns for the EI data and observed that the EI-based cosine similarity networks are predominantly driven by structural similarity based on chemical class annotations.",
+      "asbval:note": "Research question is well-supported by the paper's description of molecular networking via spectral similarity and cosine similarity-based network construction for GC-MS data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gc-ms-spectral-similarity-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Groups deconvolved gas chromatography\u2013mass spectrometry spectra by spectral similarity to identify and cluster chemically related compounds within complex mixtures. This enables structured molecular network assembly where nodes represent unique deconvolved spectra and edges refle",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:29.450863+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-similarity-clustering/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We deployed this functionality within GNPS/MassIVE (https://gnps.ucsd.edu). We refer to the dataset spectral deconvolution tool within the GNPS environment as 'MSHub'. GNPS has now expanded to include GC-MS-specific molecular networking.",
+      "asbval:note": "The paper refers to the tool as 'MSHub' (the deconvolution engine) deployed within 'GNPS' or 'GNPS/MassIVE' environment. The card names 'GNPS_GC' which appears to be a GitHub repository reference (https://github.com/bittremieux/GNPS_GC mentioned in passage 6), but the primary tool name in the paper is 'MSHub' for deconvolution and 'GNPS' for the overall platform. The GitHub repository 'GNPS_GC' is mentioned for code availability but is not the primary tool name used in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "gc-ms-spectral-similarity-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS_GC",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:29.450863+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-similarity-clustering/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data. We then designed workflows to enable the community to store, process, share, annotate, compare and perform molecular networking of GC-MS data within the Global Natural Product Social (GNPS) Molecular Networking analysis platform. MSHub/GNPS performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization and quantifies the reproducibility of fragmentation patterns across samples. The tools are accessible through gnps.ucsd.edu.",
+      "asbval:note": "The role description accurately captures the functionality: auto-deconvolution, molecular networking, spectral similarity computation via cosine similarity, and network topology output are all confirmed in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "gc-ms-spectral-similarity-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Web service and command-line interface for auto-deconvolution and cosine similarity-based molecular networking of GC-MS data; computes spectral similarity, clusters spectra, and outputs network topology.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:29.450863+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrum-extraction-and-formatting/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data. We then designed workflows to enable the community to store, process, share, annotate, compare and perform molecular networking of GC-MS data within the Global Natural Product Social (GNPS) Molecular Networking analysis platform.",
+      "asbval:note": "Research question directly supported by abstract and introduction describing MSHub's purpose for auto-deconvolution and molecular networking.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrum-extraction-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert raw gas chromatography\u2013mass spectrometry (GC-MS) data into standardized, deconvolved mass spectra suitable for downstream molecular networking and spectral library matching. This skill resolves overlapping peaks in complex chromatographic mixtures and exports individual c",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:43.556830+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrum-extraction-and-formatting/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MSHub/GNPS performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization and quantifies the reproducibility of fragmentation patterns across samples.",
+      "asbval:note": "Scope aligns with paper's core contribution of auto-deconvolution and downstream molecular networking.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrum-extraction-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Convert raw GC-MS data into standardized, deconvolved mass spectra suitable for downstream molecular networking and spectral library matching",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:43.556830+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrum-extraction-and-formatting/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Currently, 1D EI GC-MS data are amenable. We recommend to use a minimum of 10 files in the dataset for deconvolution with MSHub.",
+      "asbval:note": "Paper confirms GC-MS data input but does not explicitly name netCDF or vendor-specific formats in provided passages. Paper mentions 'vendor-specific formats and software' as a problem being solved but does not detail input format specifications in these excerpts.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrum-extraction-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input data is raw GC-MS data in netCDF or vendor-specific binary format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:43.556830+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrum-extraction-and-formatting/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data.",
+      "asbval:note": "MSHub is the primary tool described throughout the paper for auto-deconvolution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrum-extraction-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:43.556830+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrum-extraction-and-formatting/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MSHub/GNPS performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization and quantifies the reproducibility of fragmentation patterns across samples.",
+      "asbval:note": "Role description matches paper's description of MSHub functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrum-extraction-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Auto-deconvolution engine that resolves overlapping GC-MS peaks and extracts individual component spectra from raw data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:43.556830+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrum-extraction-and-formatting/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The source code of the MSHub software, including low- and high resolution data processing versions is available online at Github (version used in GNPS) (https://github.com/CCMS-UCSD/GNPS_Workflows/tree/master/mshub-gc/tools/mshub-gc/proc) and at BitBucket (standalone version in MSHub developers' repository, both high and low resolution: https://bitbucket.org/iAnalytica/mshub_process/src/master/). Scripts used to parse, filter, organize data and generate the plots in the manuscript are available online at Github (https://github.com/bittremieux/GNPS_GC_fig).",
+      "asbval:note": "Paper provides multiple GitHub repositories for MSHub code. The card's URL (https://github.com/bittremieux/GNPS_GC) appears to be a supporting repository for figure generation scripts, not the primary MSHub source code. Primary MSHub source is at https://github.com/CCMS-UCSD/GNPS_Workflows/tree/master/mshub-gc/tools/mshub-gc/proc. The card's URL is a valid but secondary repository.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrum-extraction-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].repo",
+      "asbval:target_claim_text": "https://github.com/bittremieux/GNPS_GC",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:43.556830+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-graph-parsing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "GNPS has now expanded to include GC-MS-specific molecular networking. One of the developments that enabled finding structural relationships within mass spectrometry data is spectral alignment, which forms the basis for molecular networking.",
+      "asbval:note": "Paper confirms GNPS performs GC-MS molecular networking and produces network outputs, but does not explicitly describe parsing/validating GraphML or JSON output files. The paper focuses on GNPS workflow execution and network visualization, not on downstream parsing of network file formats. The specific task of 'parsing and validating' network output files in GraphML/JSON format is not documented in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-network-graph-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Parse and validate molecular network output files (GraphML or JSON format) produced by GNPS_GC to extract node and edge structures, connectivity metrics, and network topology for downstream analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:54.563956+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-graph-parsing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Molecular networking can further guide the annotation at the family level by utilizing information from connected nodes rather than focusing on individual annotations",
+      "asbval:note": "Paper mentions 'connected nodes' and network structure but does not explicitly describe extraction of node/edge structures or connectivity metrics as a parsing task. The paper describes network visualization and interpretation, not programmatic extraction of graph components.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-network-graph-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "extract node and edge structures, connectivity metrics, and network topology",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:54.563956+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-graph-parsing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The source code of the MSHub software, including low- and high resolution data processing versions is available online at Github (version used in GNPS) (https://github.com/CCMS-UCSD/GNPS_Workflows/tree/master/mshub-gc/tools/mshub-gc/proc) and at BitBucket",
+      "asbval:note": "Paper references GNPS GC-MS workflows and MSHub, but the specific GitHub repository URL cited in the card (https://github.com/bittremieux/GNPS_GC) is not mentioned in the passages. The paper cites different GitHub repositories for GNPS GC-MS code (GNPS_Workflows/mshub-gc and bittremieux/GNPS_GC_fig for plotting scripts). The tool name 'GNPS_GC' is not explicitly used; the paper refers to 'GNPS' with 'GC-MS' capability or 'MSHub'.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-network-graph-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS_GC",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:54.563956+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-graph-parsing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MSHub performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization and quantifies the reproducibility of fragmentation patterns across samples. GNPS has now expanded to include GC-MS-specific molecular networking.",
+      "asbval:note": "Paper confirms GNPS/MSHub produces deconvolved spectra and molecular networks, but does not explicitly state that output is in GraphML or JSON format. The paper mentions .mgf files and feature tables but does not document the specific file formats of network outputs.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-network-graph-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Produces deconvolved GC-MS spectra and molecular network output files in GraphML/JSON format; this skill parses and validates those outputs.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:54.563956+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-graph-parsing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Once the summary file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectra can be searched against public, private or commercial libraries. The output from GNPS can be exported for use in statistical analysis environments and for data visualization (e.g., Supplementary Figs. 7\u201310), including molecular cartography.",
+      "asbval:note": "Paper describes GNPS output export and visualization but does not explicitly document the task of parsing and validating network output files as a distinct workflow step. The paper focuses on GNPS job execution and result interpretation, not on programmatic parsing of network graph files.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-network-graph-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "After GNPS_GC molecular networking job completion, when you have retrieved raw network output files and need to extract, validate, and structure the network topology for further metabolite assignment, comparative network analysis, or visualization.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:01:54.563956+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-comparison/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "GNPS has now expanded to include GC-MS-specific molecular networking. GNPS-based GC-MS analysis enables data co- and re-analysis, as the processing is agnostic to the data origin... To showcase this ability, we built a global network of various public GC-MS datasets and applied a balance score of 65%... Molecular networking can further guide the annotation at the family level by utilizing information from connected nodes rather than focusing on individual annotations",
+      "asbval:note": "The paper demonstrates molecular networking of GC-MS data and discusses reproducibility and re-analysis capabilities. The research question aligns with the paper's scope of enabling reproducible GC-MS molecular networking workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-topology-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compare the topology of a newly constructed molecular network against a published reference network to validate that an auto-deconvolution and molecular networking workflow has been successfully reproduced. This skill assesses whether nodes (spectra/compounds), edges (similarity ",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:08.685491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-comparison/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We then designed workflows to enable the community to store, process, share, annotate, compare and perform molecular networking of GC-MS data within the Global Natural Product Social (GNPS) Molecular Networking analysis platform.",
+      "asbval:note": "GNPS is confirmed as the platform for molecular networking of GC-MS data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-topology-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS executes molecular networking workflow to construct the network graph from deconvolved spectra; provides node and edge outputs for topology comparison",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:08.685491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-comparison/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data... MSHub/GNPS performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization",
+      "asbval:note": "MSHub is confirmed as the auto-deconvolution tool integrated with GNPS.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-topology-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSHub performs auto-deconvolution of overlapping GC-MS chromatographic peaks to generate individual compound spectra that serve as input to GNPS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:08.685491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-comparison/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Scripts used to parse, filter, organize data and generate the plots in the manuscript are available online at Github (https://github.com/bittremieux/GNPS_GC_fig). Script for merging individual .mgf files into a single file for creating global network is available at Github: https://github.com/bittremieux/GNPS_GC/blob/master/src/merge_mgf.py)",
+      "asbval:note": "The bittremieux/GNPS_GC repository is confirmed as containing scripts for re-executing the workflow and generating network outputs.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-topology-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "bittremieux/GNPS_GC repository enables re-execution of the published auto-deconvolution and molecular networking workflow on the deposited GC-MS dataset for topology validation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:08.685491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-comparison/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To promote analysis reproducibility, all GNPS jobs performed are retained in the 'My User' space and can be shared as hyperlinks... The user's own or someone else's shared analysis can be precisely reproduced by clicking the 'clone' button.",
+      "asbval:note": "The paper explicitly emphasizes reproducibility and the ability to re-execute and compare analyses, which aligns with the scope of network topology comparison for validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-topology-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "After executing a molecular networking workflow on GC-MS data that has been processed through auto-deconvolution, and a published reference network exists from a prior analysis of the same or analogous dataset. Use this skill to validate reproducibility and to detect deviations c",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:08.685491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-comparison/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "All of the GNPS analysis jobs for all of the studies are summarized in Supplementary Table 1... All of the data used in preparation of this manuscript are publicly available at the MassIVE repository",
+      "asbval:note": "The paper provides published reference networks and datasets, supporting the condition that reference networks should be available for comparison.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-topology-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "No reference network or published topology description is available, making validation against ground truth impossible.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:08.685491+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "GNPS has now expanded to include GC-MS-specific molecular networking. One of the developments that enabled finding structural relationships within mass spectrometry data is spectral alignment, which forms the basis for molecular networking.",
+      "asbval:note": "Paper describes molecular networking of GC-MS data and mentions GraphML/JSON export capability ('The output from GNPS can be exported for use in statistical analysis environments'), but does not explicitly describe validation of network topology, node/edge counts, or connectivity metrics as a task. The paper focuses on generating and using networks, not validating their structural integrity.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "network-topology-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validate the structural integrity and connectivity of a molecular network output from GC-MS deconvolution by checking node and edge counts, connectivity metrics, and GraphML/JSON format compliance.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:20.460548+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The output from GNPS can be exported for use in statistical analysis environments and for data visualization (e.g., Supplementary Figs. 7\u201310), including molecular cartography. GNPS/MassIVE lowers the expertise threshold required for analysis.",
+      "asbval:note": "Paper confirms GNPS generates molecular networks and exports them, but the tool is referred to as 'GNPS' or 'GNPS/MassIVE' with GC-MS-specific workflows, not specifically as 'GNPS_GC'. The GitHub repository link provided (https://github.com/bittremieux/GNPS_GC) is mentioned in passage [6] for merging .mgf files, but 'GNPS_GC' as a distinct tool name is not explicitly used in the paper text. The paper uses 'GNPS GC-MS environment' or 'GNPS' with GC-MS workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "network-topology-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS_GC generates the molecular network (GraphML/JSON) whose topology is validated by this skill",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:20.460548+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Once the summary file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectra can be searched against public, private or commercial libraries. GNPS has now expanded to include GC-MS-specific molecular networking. The output from GNPS can be exported for use in statistical analysis environments and for data visualization.",
+      "asbval:note": "Paper confirms deconvolved GC-MS spectra are processed through GNPS, molecular networks are generated, and outputs are exported in formats suitable for downstream analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-topology-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "After retrieving a molecular network file (GraphML or JSON format) from GNPS_GC following submission of deconvolved GC-MS spectra.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:20.460548+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Molecular networking can further guide the annotation at the family level by utilizing information from connected nodes rather than focusing on individual annotations.",
+      "asbval:note": "Paper describes using molecular networks for annotation and chemical similarity exploration, but does not explicitly describe pre-validation of network topology as a prerequisite step. The paper assumes networks are already sound and focuses on their interpretation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "network-topology-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use this skill to confirm the network structure is sound before performing chemical similarity searches, community detection, or annotation.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:20.460548+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper mentions export of GNPS output for visualization and analysis but does not explicitly name GraphML as an export format. Passages are insufficient to confirm GraphML is a supported output format.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "network-topology-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "molecular network file in GraphML format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:20.460548+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper mentions export of GNPS output but does not explicitly name JSON as an export format. Passages are insufficient to confirm JSON is a supported output format.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "network-topology-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "molecular network file in JSON format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:20.460548+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-validation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MSHub performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization and quantifies the reproducibility of fragmentation patterns across samples. Once the summary file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectra can be searched against public, private or commercial libraries.",
+      "asbval:note": "Paper confirms deconvolved GC-MS data is the input to downstream GNPS workflows including molecular networking.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "network-topology-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "deconvolved GC-MS",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:20.460548+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/raw-chromatography-data-parsing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data. We then designed workflows to enable the community to store, process, share, annotate, compare and perform molecular networking of GC-MS data within the Global Natural Product Social (GNPS) Molecular Networking analysis platform.",
+      "asbval:note": "Paper describes MSHub/GNPS as performing auto-deconvolution and molecular networking of GC-MS data, but does not explicitly discuss raw data parsing from vendor formats or netCDF/mzML conversion as a distinct task. The paper states 'Currently, 1D EI GC-MS data are amenable' and mentions alternative tools (MZmine, OpenChrom, AMDIS, etc.) for deconvolution, but does not detail raw format parsing as a primary function of MSHub itself. The card frames this as a separate parsing skill; the paper treats it as part of the integrated workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "raw-chromatography-data-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Load and parse raw gas chromatography\u2013mass spectrometry (GC-MS) data from vendor or open formats (netCDF, mzML) to prepare input for downstream peak deconvolution and molecular networking.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:35.870249+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/raw-chromatography-data-parsing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data. We then designed workflows to enable the community to store, process, share, annotate, compare and perform molecular networking of GC-MS data within the Global Natural Product Social (GNPS) Molecular Networking analysis platform.",
+      "asbval:note": "Paper describes MSHub/GNPS workflows for deconvolution and molecular networking but does not isolate raw data parsing as a distinct, documented skill. The paper mentions that GNPS accepts input from other deconvolution tools and supports output from MZmine/ADAP and MS-DIAL, but does not detail vendor format or netCDF/mzML parsing as a primary MSHub function.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "raw-chromatography-data-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Load and parse raw gas chromatography\u2013mass spectrometry (GC-MS) data from vendor or open formats (netCDF, mzML) to prepare input for downstream peak deconvolution and molecular networking.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:35.870249+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/raw-chromatography-data-parsing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data.",
+      "asbval:note": "MSHub is confirmed as the core tool for GC-MS deconvolution in GNPS.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "raw-chromatography-data-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:35.870249+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/raw-chromatography-data-parsing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MSHub performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization and quantifies the reproducibility of fragmentation patterns across samples.",
+      "asbval:note": "MSHub's role as a deconvolution engine is confirmed. The paper describes it resolving fragmentation patterns and improving spectral quality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "raw-chromatography-data-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Core deconvolution engine that consumes parsed GC-MS data and resolves overlapping chromatographic peaks into individual component mass spectra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:35.870249+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/raw-chromatography-data-parsing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The source code of the MSHub software, including low- and high resolution data processing versions is available online at Github (version used in GNPS) (https://github.com/CCMS-UCSD/GNPS_Workflows/tree/master/mshub-gc/tools/mshub-gc/proc) and at BitBucket (standalone version in MSHub developers' repository, both high and low resolution: https://bitbucket.org/iAnalytica/mshub_process/src/master/). Scripts used to parse, filter, organize data and generate the plots in the manuscript are available online at Github (https://github.com/bittremieux/GNPS_GC/blob/master/src/merge_mgf.py)",
+      "asbval:note": "The card lists https://github.com/bittremieux/GNPS_GC, which is confirmed in the paper as a repository for scripts used to parse, filter, and organize data. However, the primary MSHub source code repository is https://github.com/CCMS-UCSD/GNPS_Workflows/tree/master/mshub-gc/tools/mshub-gc/proc (for GNPS version) or https://bitbucket.org/iAnalytica/mshub_process/src/master/ (standalone). The card's URL is a supporting repository for data processing scripts, not the primary MSHub codebase.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "raw-chromatography-data-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].repo",
+      "asbval:target_claim_text": "https://github.com/bittremieux/GNPS_GC",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:35.870249+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-batch-submission-to-networking-server/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "GNPS has now expanded to include GC-MS-specific molecular networking. GNPS-based GC-MS analysis enables data co- and re-analysis, as the processing is agnostic to the data origin.",
+      "asbval:note": "Paper describes GNPS (not specifically 'GNPS_GC' as a distinct tool name) for molecular networking of GC-MS data. The paper refers to 'GNPS GC-MS environment' and 'GNPS/MassIVE' as the platform. The GitHub repository mentioned (https://github.com/bittremieux/GNPS_GC) is cited for merging .mgf files, but the primary tool is called 'GNPS' or 'GNPS/MassIVE', not 'GNPS_GC' as a standalone service name.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectral-batch-submission-to-networking-server",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Submit a batch of deconvolved gas chromatography\u2013mass spectrometry spectra to the GNPS_GC web service or command-line interface to generate a molecular network.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:50.677481+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-batch-submission-to-networking-server/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The GNPS leverages the repository infrastructure now has expanded to include GC-MS-specific deconvolution, reference spectra matching and molecular networking tools. The tools are accessible through gnps.ucsd.edu.",
+      "asbval:note": "Paper describes the tool as 'GNPS' or 'GNPS/MassIVE' with GC-MS-specific workflows, accessible at gnps.ucsd.edu. The GitHub repository 'GNPS_GC' is mentioned but appears to be a utility script repository (for merging .mgf files) rather than the primary tool name. The primary platform is GNPS/MassIVE, not 'GNPS_GC'.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectral-batch-submission-to-networking-server",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS_GC web service or command-line interface",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:50.677481+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-batch-submission-to-networking-server/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Once the summary file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectra can be searched against public, private or commercial libraries. Molecular networking can further guide the annotation at the family level by utilizing information from connected nodes. The output from GNPS can be exported for use in statistical analysis environments and for data visualization.",
+      "asbval:note": "Paper confirms GNPS accepts deconvolved spectra and produces molecular networks with exportable outputs for visualization. However, specific output formats (GraphML/JSON) are not explicitly mentioned in the passages. The paper mentions export for 'statistical analysis environments and data visualization' but does not specify GraphML or JSON as output formats.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectral-batch-submission-to-networking-server",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "web service or command-line interface that accepts deconvolved GC-MS spectra and produces molecular network output in GraphML or JSON format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:50.677481+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-batch-submission-to-networking-server/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "GNPS-based GC-MS analysis enables data co- and re-analysis, as the processing is agnostic to the data origin. To showcase this ability, we built a global network of various public GC-MS datasets and applied a balance score of 65% to ensure that only good quality deconvoluted spectra are matched against the reference library. Molecular networking can further guide the annotation at the family level by utilizing information from connected nodes.",
+      "asbval:note": "Paper describes batch processing of deconvolved spectra through GNPS for molecular networking. However, the tool is called 'GNPS' or 'GNPS/MassIVE', not 'GNPS_GC'. The paper does not explicitly mention GraphML/JSON output formats or command-line interface details for job submission/monitoring.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectral-batch-submission-to-networking-server",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Submit a batch of deconvolved gas chromatography\u2013mass spectrometry spectra to the GNPS_GC web service or command-line interface to generate a molecular network. This skill bridges auto-deconvolved spectra and structured network analysis by orchestrating remote or local job submis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:02:50.677481+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-molecular-networking/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "GNPS has now expanded to include GC-MS-specific molecular networking. One of the developments that enabled finding structural relationships within mass spectrometry data is spectral alignment, which forms the basis for molecular networking.",
+      "asbval:note": "Paper explicitly describes GC-MS molecular networking in GNPS for compound discovery and family-level annotation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-molecular-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Build and analyze molecular networks from deconvolved GC-MS spectra by clustering them via cosine similarity in GNPS, enabling compound discovery and family annotation in complex mixtures.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:03:03.988654+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-molecular-networking/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the molecular networks are created through spectral similarity of the deconvoluted fragmentation spectrum without considering the molecular ion... EI-based cosine similarity networks are predominantly driven by structural similarity based on chemical class annotations",
+      "asbval:note": "Paper explicitly uses cosine similarity for GC-MS molecular network construction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-molecular-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "clustering them via cosine similarity",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:03:03.988654+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-molecular-networking/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We engineered a machine learning approach, MSHub, to enable auto-deconvolution of gas chromatography-mass spectrometry (GC-MS) data... MSHub/GNPS performs auto-deconvolution of compound fragmentation patterns via unsupervised non-negative matrix factorization",
+      "asbval:note": "MSHub is explicitly described as the auto-deconvolution tool for GC-MS data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-molecular-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MSHub - Performs automated deconvolution of overlapping chromatographic peaks to extract individual compound spectra from GC-MS raw data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:03:03.988654+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-molecular-networking/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We then designed workflows to enable the community to store, process, share, annotate, compare and perform molecular networking of GC-MS data within the Global Natural Product Social (GNPS) Molecular Networking analysis platform.",
+      "asbval:note": "GNPS is explicitly described as hosting GC-MS molecular networking workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-molecular-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS - Hosts the molecular networking workflow that clusters deconvolved spectra by cosine similarity and constructs the network graph",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:03:03.988654+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-molecular-networking/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Once the .mgf file is generated by GNPS-MSHub or imported from another deconvolution tool, the spectral features can be searched against public libraries",
+      "asbval:note": "Paper confirms MGF format is used for deconvolved spectra in GNPS workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-molecular-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input spectra are deconvolved GC-MS spectra in MGF or mzTab format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:03:03.988654+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-molecular-networking/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "However, to spot mis-assignments at the molecular family level, we propose to explore deconvoluted GC-MS data via molecular networking... These EI networks can be used to visualize chemical distributions and guide annotations.",
+      "asbval:note": "Paper describes molecular networking for untargeted exploration and family-level annotation without prior identity.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-molecular-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use this when exploring untargeted metabolomics data where compound identity is unknown but structural relationships matter.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:03:03.988654+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-molecular-networking/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Currently, 1D EI GC-MS data are amenable... GNPS has now expanded to include GC-MS-specific molecular networking",
+      "asbval:note": "Paper confirms GC-MS focus and distinguishes from LC-MS/MS approaches.",
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-molecular-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Spectra are from liquid chromatography\u2013mass spectrometry (LC-MS); this skill is optimized for GC-MS data",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T06:03:03.988654+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chromatographic-peak-overlap-resolution/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "chromatographic-peak-overlap-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8571428571428571,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/coeluting-compound-resolution/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "coeluting-compound-resolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/cosine-similarity-spectral-clustering/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "cosine-similarity-spectral-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-deconvolution/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "gc-ms-spectral-deconvolution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/gc-ms-spectral-similarity-clustering/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 3,
+      "asbval:target_artifact_id": "gc-ms-spectral-similarity-clustering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrum-extraction-and-formatting/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "mass-spectrum-extraction-and-formatting",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8333333333333334,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-graph-parsing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "molecular-network-graph-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-comparison/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "network-topology-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/network-topology-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "network-topology-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2857142857142857,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/raw-chromatography-data-parsing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "raw-chromatography-data-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.4,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-batch-submission-to-networking-server/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "spectral-batch-submission-to-networking-server",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-molecular-networking/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "spectral-library-molecular-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "This repository is a companion to a manuscript by Aksenov et al. published in Nature Biotechnology in 2020.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:source_excerpt": "This is a companion repository to the following manuscript:\n\n- Aksenov, A.A., Laponogov, I., Zhang, Z. _et al_. Auto-deconvolution and molecular networking of gas chromatography\u2013mass spectrometry data. _Nature Biotechnology_ (2020)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:58:55.264663+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The manuscript describes auto-deconvolution and molecular networking of gas chromatography\u2013mass spectrometry data.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:source_excerpt": "Auto-deconvolution and molecular networking of gas chromatography\u2013mass spectrometry data",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:58:55.264663+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The source repository is located on GitHub under the identifier bittremieux__GNPS_GC.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:source_excerpt": "Source: github:bittremieux__GNPS_GC",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:58:55.264663+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The document was synthesized on 2026-06-16 at 05:56:15 UTC.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1038-s41587-020-0700-3",
+      "asbval:source_excerpt": "Synthesized at: 2026-06-16T05:56:15+00:00",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-16T05:58:55.264663+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_mshub#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:network-topology-comparison--EDAM:operation_3927",
+      "subject_id": "asb.skill:network-topology-comparison",
+      "subject_label": "network-topology-comparison",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_3927",
+      "object_label": "Network analysis",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.25
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SYS_MSHUB",
+      "title": "MSHub",
+      "identifier": "urn:asb:spine:SYS_MSHUB"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SYS_GNPS_GC",
+      "title": "GNPS_GC",
+      "identifier": "urn:asb:spine:SYS_GNPS_GC"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_AUTO_DECONV",
+      "title": "Auto-deconvolution",
+      "identifier": "urn:asb:spine:COMP_AUTO_DECONV"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_MOL_NETWORKING",
+      "title": "Molecular Networking",
+      "identifier": "urn:asb:spine:COMP_MOL_NETWORKING"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_GCMS",
+      "title": "GC-MS",
+      "identifier": "urn:asb:spine:TOOL_GCMS"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_GNPS",
+      "title": "GNPS",
+      "identifier": "urn:asb:spine:TOOL_GNPS"
+    }
+  ]
+}

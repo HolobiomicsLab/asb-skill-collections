@@ -1,0 +1,284 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/falcon_how.png",
+      "role": "figure",
+      "sha256": "9007c99deda36a28155954597b73094c65fc9abbb8fb41978a78d85320c065a3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/falcon_logo.png",
+      "role": "figure",
+      "sha256": "4dc5b75966382006308757c54f59ec43e5b578b1bfc5a4e831744cb003331e27"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3ae694c2452a22f92eb602bd988837ce6b0d867daaa891cf09b4a14eff8d833f"
+    }
+  ],
+  "created_at": "2026-06-16T07:27:43.705003+00:00",
+  "crossref_doi": "10.1002/rcm.9153",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Public tandem MS/MS spectrum dataset associated with Bittremieux et al. 2021 (doi:10.1002/rcm.9153)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Cluster assignment output file produced by falcon command-line tool",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Feature hashing reduces high-resolution spectra to low-dimensional vectors, enabling efficient nearest neighbor searching on large spectral datasets.",
+    "Falcon uses density-based clustering to group spectra into clusters based on pairwise similarity computed via nearest neighbor indexes, avoiding exhaustive O(n\u00b2) comparisons.",
+    "Python 3.8+ and compatible versions of spectrum-utils are required dependencies; installation via pip ensures correct version pinning.",
+    "Output cluster assignments map each spectrum to a cluster identifier, forming the basis for downstream spectral similarity network analysis and metabolite annotation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: check that falcon-ms and spectrum-utils==0.3.5 can be installed via pip without errors",
+      "script_runs: execute falcon command-line tool on the Bittremieux et al. 2021 dataset (doi:10.1002/rcm.9153) and confirm exit code is 0",
+      "file_exists: verify that cluster assignment output file is produced by the falcon run",
+      "file_format_is: confirm output file is a valid structured format (CSV, TSV, or JSON) that can be parsed",
+      "row_count_equals: verify output file contains at least 1 row of cluster assignments (non-empty result)"
+    ],
+    "expert_review": [
+      "Inspect cluster assignment output for semantic correctness: verify that spectrum identifiers are present and cluster IDs are assigned as expected for MS/MS data",
+      "Confirm that the number of clusters and cluster size distribution are reasonable given the dataset size and falcon algorithm parameters"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Can falcon-ms be successfully installed and executed end-to-end on the reference dataset from Bittremieux et al. 2021 without errors?: 'You can easily install _falcon_ with pip:\n\n    pip install falcon-ms spectrum-utils==0.3.5'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] falcon requires Python 3.8+ and is available on Linux and OSX platforms, and can be installed via pip along with spectrum-utils==0.3.5.: '_falcon_ requires Python 3.8+ and is available on the Linux and OSX platforms.\n\nYou can easily install _falcon_ with pip:\n\n    pip install falcon-ms spectrum-utils==0.3.5'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Public tandem MS/MS spectrum dataset associated with Bittremieux et al. 2021 (doi:10.1002/rcm.9153): 'publicly available dataset associated with Bittremieux et al. 2021'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Cluster assignment output file produced by falcon command-line tool: 'produce a cluster assignment output file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] falcon: 'The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] spectrum-utils==0.3.5: 'pip install falcon-ms spectrum-utils==0.3.5'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python 3.8+: '_falcon_ requires Python 3.8+ and is available on the Linux and OSX platforms.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is documented: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Exact location and accession identifier for the publicly available dataset associated with Bittremieux et al. 2021 (doi:10.1002/rcm.9153) is not specified in the section text: 'Source: github:bittremieux-lab__falcon'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "pip install falcon-ms spectrum-utils==0.3.5 && falcon {inputs.spectrum_dataset} --output cluster_output.tsv"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "cluster_assignments.txt",
+  "expected_outputs": [
+    "Cluster assignment output file produced by falcon command-line tool"
+  ],
+  "finding": "falcon requires Python 3.8+ and is available on Linux and OSX platforms, and can be installed via pip along with spectrum-utils==0.3.5.",
+  "github_name": "bittremieuxlab/falcon",
+  "input_from": null,
+  "inputs": [
+    "Public tandem MS/MS spectrum dataset associated with Bittremieux et al. 2021 (doi:10.1002/rcm.9153)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "installation_log.txt",
+    "falcon_execution_log.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_008",
+    "result_009"
+  ],
+  "methodology_summary": [
+    "Install falcon-ms and spectrum-utils==0.3.5 dependencies via pip on Python 3.8+",
+    "Locate or retrieve the public tandem MS/MS spectrum dataset associated with Bittremieux et al. 2021",
+    "Execute falcon command-line tool to cluster spectra via feature hashing, nearest neighbor indexing, and density-based clustering",
+    "Validation: Verify tool execution completes without error and output cluster assignment file is non-empty and contains valid cluster identifiers",
+    "References: source article (DOI: 10.1002/rcm.9153)"
+  ],
+  "missing_information": [
+    "No changelog or version history is documented",
+    "Exact location and accession identifier for the publicly available dataset associated with Bittremieux et al. 2021 (doi:10.1002/rcm.9153) is not specified in the section text"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can falcon-ms be successfully installed and executed end-to-end on the reference dataset from Bittremieux et al. 2021 without errors?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "command-line-tool-execution",
+    "python-package-installation-and-dependency-management",
+    "tandem-mass-spectrum-clustering",
+    "spectrum-similarity-nearest-neighbor-indexing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_falcon/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "falcon_system",
+    "arch_binning_hashing",
+    "arch_density_clustering",
+    "tool_falcon_ms",
+    "tool_spectrum_utils",
+    "pub_bittremieux2021"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:bittremieux-lab__falcon",
+  "task_description": "Install falcon-ms and spectrum-utils==0.3.5, then execute the falcon command-line tool on the Bittremieux et al. 2021 public dataset to produce cluster assignments. Verify successful execution and non-empty output.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Public tandem MS/MS spectrum dataset (Bittremieux et al. 2021)",
+      "port_id": "spectrum_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Install falcon-ms and spectrum-utils==0.3.5, execute falcon on the Bittremieux et al. 2021 dataset, and verify non-empty cluster output is produced without errors.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cluster assignment output file from falcon",
+      "port_id": "cluster_assignments",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "tandem-ms",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce the end-to-end falcon clustering run on the Bittremieux et al. 2021 dataset",
+  "tools": [
+    "falcon",
+    "spectrum-utils==0.3.5",
+    "Python 3.8+"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Install falcon-ms and spectrum-utils==0.3.5 using pip on a Python 3.8+ environment. 2. Retrieve or locate the publicly available tandem MS/MS spectrum dataset associated with Bittremieux et al. 2021. 3. Run the falcon command-line tool on the dataset to perform spectrum clustering via feature hashing, nearest neighbor indexing, and density-based clustering, producing a cluster assignment output file. 4. Verify that the tool executed without errors and the output file is non-empty."
+}

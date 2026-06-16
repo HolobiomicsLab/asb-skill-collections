@@ -1,0 +1,12 @@
+name: JavaFX 24
+slug: javafx-24
+evidence_spans:
+- JavaFX version-24
+derived_from:
+- doi: 10.1038/s41467-021-23953-9
+  title: iimn
+- doi: 10.1038/s41587-023-01690-2
+  title: mzmine3
+source_repos:
+- mzmine/mzmine
+schema_version: 0.2.0

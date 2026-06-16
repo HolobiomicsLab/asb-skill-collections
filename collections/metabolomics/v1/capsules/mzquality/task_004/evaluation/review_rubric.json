@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: output directory contains 'Plots' subdirectory"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: output directory contains 'Reports' subdirectory"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: all files in Plots subdirectory are image files (PNG, PDF, or similar graphics format)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: all files in Reports subdirectory are tab-delimited text files (.txt or .tsv)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: createReports() function executes without error when called with parameters makeSummaryReport=TRUE, makeCompoundReport=TRUE, backgroundPercent=40, cautionRSD=15, nonReportableRSD=30, assays='area'"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify row_count_equals: summary report and compound report files are non-empty (contain at least header row plus one data row)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file_exists: output directory contains 'Plots' subdirectory",
+      "verify file_exists: output directory contains 'Reports' subdirectory",
+      "verify file_format_is: all files in Plots subdirectory are image files (PNG, PDF, or similar graphics format)",
+      "verify file_format_is: all files in Reports subdirectory are tab-delimited text files (.txt or .tsv)",
+      "verify script_runs: createReports() function executes without error when called with parameters makeSummaryReport=TRUE, makeCompoundReport=TRUE, backgroundPercent=40, cautionRSD=15, nonReportableRSD=30, assays='area'",
+      "verify row_count_equals: summary report and compound report files are non-empty (contain at least header row plus one data row)"
+    ],
+    "expert_review": [
+      "Verify that generated plots are visually coherent and match documented mzQuality output styles for quality control visualization",
+      "Verify that report content appropriately reflects the specified RSD thresholds (cautionRSD=15, nonReportableRSD=30) in flagging or categorizing compounds"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

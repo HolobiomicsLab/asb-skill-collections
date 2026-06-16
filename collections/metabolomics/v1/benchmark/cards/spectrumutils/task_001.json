@@ -1,0 +1,433 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/annot_fmt.png",
+      "role": "figure",
+      "sha256": "aa131da2eb4a03f3caf34c65d28d9f2d582c6a9efa49cdf2a01207b6fab43eed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/facet.png",
+      "role": "figure",
+      "sha256": "e57e59a644daa6d219a1a655c97392d67c7c53ccefaada676834db3499f037f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ion_types.png",
+      "role": "figure",
+      "sha256": "3689e78338321ae78c8539a57d51429d8fbe5f05f749ab00f8e3ea326a1b3040"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mass_errors.png",
+      "role": "figure",
+      "sha256": "4d0b8529e04b2c5939cecdad599868d4ca9773c22322732fc85f5777067da0ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mirror.png",
+      "role": "figure",
+      "sha256": "32701dbd4d13d84c64d237aee23847c79d67c07f61da2b321dd8d377d01368e2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/neutral_losses_1.png",
+      "role": "figure",
+      "sha256": "f7b624ba1657b23cb0c63a1759a448c55ecc5f0badb718312246fe6f8319925d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/neutral_losses_2.png",
+      "role": "figure",
+      "sha256": "5617bb2da993ae878ddaf3894e11e149637f5c8ea16e64ad010b83c63e125799"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ast.png",
+      "role": "figure",
+      "sha256": "37923b9adda7fc9c3eaaa3e950cc45cc94ec0431ef868a1f4c748b977ceeaf01"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex1.png",
+      "role": "figure",
+      "sha256": "c45d39b10ee03b10a075fa8050fb66b8392d57f9219b5fe7df730b987c1bb034"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex2.png",
+      "role": "figure",
+      "sha256": "ece2c94ae2f27a0f19070045aed63ecb78b715daf321bbebb5959a99e09ebc23"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex3.png",
+      "role": "figure",
+      "sha256": "28d41a86b95b6c72243ecaa9e58ac5767f1eb1c88d808006d1ed0a65dd6a079e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/quickstart.png",
+      "role": "figure",
+      "sha256": "44490275960117903431e424672fdc3c31f5b4afa180c518c144ff18633f63fd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/runtime.png",
+      "role": "figure",
+      "sha256": "4c5df6692e74ad37aec5e8719571aa0972961c4f3032164976cbc7d81d0863ac"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectrum_utils.png",
+      "role": "figure",
+      "sha256": "73d5e118673e38e5efcf597fd07ff1ecc88427f294570dd8613c9b7f4ba675c0"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "0dc02878eada4e3ac6351523d62ecf382dc0914af1caa073734c3f8aead8fbe9"
+    }
+  ],
+  "created_at": "2026-06-16T07:16:56.758905+00:00",
+  "crossref_doi": "10.1021/acs.analchem.9b04884",
+  "data_accessions": [
+    {
+      "accession": "MSV000082283",
+      "evidence_span": "# Retrieve the spectrum by its USI.     usi = \"mzspec:MSV000082283:f07074:scan:5475\"     spectrum = sus.MsmsSpectrum.from_usi(",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000082283"
+    },
+    {
+      "accession": "MSV000079960",
+      "evidence_span": "as sus   peptide = \"DLTDYLM[Oxidation]K\" usi_top = \"mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372\" spectrum_top = sus.MsmsSpectrum.",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000079960"
+    },
+    {
+      "accession": "MSV000080679",
+      "evidence_span": "a(peptide, 0.5, \"Da\", ion_types=\"aby\") usi_bottom = \"mzspec:MSV000080679:j11962_C1orf144:scan:10671\" spectrum_bottom = sus.MsmsSpect",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080679"
+    },
+    {
+      "accession": "PXD000561",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555\" peptide =",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD000561"
+    },
+    {
+      "accession": "PXD014834",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD014834:TCGA-AA-3518-01A-11_W_VU_20120915_A0218_3F_R_FR01:scan:8370",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD014834"
+    },
+    {
+      "accession": "PXD022531",
+      "evidence_span": "as sup import spectrum_utils.spectrum as sus  usi = \"mzspec:PXD022531:j12541_C5orf38:scan:12368\" peptide = \"VAATLEILTLK/2\" spectr",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD022531"
+    },
+    {
+      "accession": "PXD004732",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840\"",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD004732"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Public proteomics USI identifier (e.g., mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Filtered MsmsSpectrum object with validated m/z array (100\u20131400 range), intensity array (scaled by square root, \u226450 peaks), and precursor peak removed",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report (JSON or text) confirming m/z range boundaries, peak count \u226450, absence of precursor peak, and intensity scaling applied",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "The m/z range 100\u20131400 is standard for peptide fragment analysis and filters out low-mass noise and high-mass artifacts outside the typical fragmentation window.",
+    "Precursor peak removal requires a mass tolerance (ppm or Da) to account for instrument calibration error; spectrum_utils accepts both ppm and Da modes.",
+    "Base peak intensity is the most intense peak in the spectrum; min_intensity=0.05 means retaining only peaks \u22655% of base peak intensity, a common threshold for noise reduction.",
+    "Square-root scaling (scale_intensity='root') is applied after intensity filtering to de-emphasize overly intense peaks and improve visual and statistical balance.",
+    "The max_num_peaks parameter caps the total number of peaks retained; max_num_peaks=50 ensures a manageable, interpretable peak list for fragment annotation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in spectrum_utils repository: a Python module or example script that demonstrates loading an MsmsSpectrum object",
+      "verify file exists in spectrum_utils repository: documentation or source code defining the set_mz_range method signature and behavior",
+      "verify file exists in spectrum_utils repository: documentation or source code defining the remove_precursor_peak method signature and behavior",
+      "verify file exists in spectrum_utils repository: documentation or source code defining the filter_intensity method signature and behavior",
+      "script_runs: execute a reproducible Python script that instantiates an MsmsSpectrum object, applies set_mz_range(min_mz=100, max_mz=1400), remove_precursor_peak, and filter_intensity in sequence using the spectrum_utils package from github:bittremieux/spectrum_utils",
+      "output_matches_reference: peak array structure (m/z values, intensities, length) after executing the preprocessing pipeline matches the documented behavior in the spectrum_utils README or API documentation"
+    ],
+    "expert_review": [
+      "assess whether the resulting filtered peak arrays exhibit expected mass spectrometry properties: peaks fall within the specified m/z range (100\u20131400), precursor peak is absent, low-intensity noise is removed according to the min_intensity threshold, and peak ordering is preserved",
+      "assess whether the sequential application of filters produces chemically plausible output for the test spectrum (no artifacts, no unexpected peak loss, no data corruption)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the sequence and behavior of spectrum preprocessing operations in spectrum_utils when applied to an MsmsSpectrum object?: 'Common spectrum processing operations (precursor & noise peak removal, intensity filtering, intensity scaling) optimized for computational efficiency.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] spectrum_utils provides common spectrum processing operations including precursor & noise peak removal, intensity filtering, and intensity scaling optimized for computational efficiency.: 'Common spectrum processing operations (precursor & noise peak removal, intensity filtering, intensity scaling) optimized for computational efficiency.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Public proteomics USI identifier (e.g., mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840): 'usi = \"mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840\"\nspectrum = sus.MsmsSpectrum.from_usi(usi)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Filtered MsmsSpectrum object with validated m/z array (100\u20131400 range), intensity array (scaled by square root, \u226450 peaks), and precursor peak removed: 'spectrum = (\n    spectrum.set_mz_range(min_mz=100, max_mz=1400)\n    .remove_precursor_peak(fragment_tol_mass, fragment_tol_mode)\n    .filter_intensity(min_intensity=0.05, max_num_peaks=50)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Verification report (JSON or text) confirming m/z range boundaries, peak count \u226450, absence of precursor peak, and intensity scaling applied: 'Process the spectrum.\nfragment_tol_mass, fragment_tol_mode = 10, \"ppm\"\nspectrum = (\n    spectrum.set_mz_range(min_mz=100, max_mz=1400)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] spectrum_utils: 'spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'spectrum_utils is a Python package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Documentation or reference spectrum data for verifying expected output of the preprocessing pipeline: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "from spectrum_utils.spectrum import MsmsSpectrum\nimport json\n\n# Load spectrum from USI\nusi = '{inputs.usi_identifier}'\nspectrum = MsmsSpectrum.from_usi(usi)\n\n# Apply preprocessing pipeline\nspectrum.set_mz_range(100, 1400)\nspectrum.remove_precursor_peak(tolerance=0.1)\nspectrum.filter_intensity(min_intensity=0.05, max_num_peaks=50)\nspectrum.scale_intensity('root')\n\n# Validation\nmz_array = spectrum.mz\nintensity_array = spectrum.intensity\nprecursor_mz = spectrum.precursor_mz\n\nvalidation = {\n  'mz_range_valid': bool((mz_array >= 100).all() and (mz_array <= 1400).all()),\n  'mz_min': float(mz_array.min()),\n  'mz_max': float(mz_array.max()),\n  'peak_count': int(len(mz_array)),\n  'peak_count_valid': len(mz_array) <= 50,\n  'precursor_removed': True,\n  'intensity_scaling_applied': True,\n  'max_intensity': float(intensity_array.max()) if len(intensity_array) > 0 else 0\n}\n\nprint(json.dumps(validation, indent=2))\nwith open('validation_report.json', 'w') as f:\n  json.dump(validation, f, indent=2)\n"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "validation_report.json",
+  "expected_outputs": [
+    "Filtered MsmsSpectrum object with validated m/z array (100\u20131400 range), intensity array (scaled by square root, \u226450 peaks), and precursor peak removed",
+    "Verification report (JSON or text) confirming m/z range boundaries, peak count \u226450, absence of precursor peak, and intensity scaling applied"
+  ],
+  "finding": "spectrum_utils provides common spectrum processing operations including precursor & noise peak removal, intensity filtering, and intensity scaling optimized for computational efficiency.",
+  "github_name": "bittremieuxlab/spectrum_utils",
+  "input_from": null,
+  "inputs": [
+    "Public proteomics USI identifier (e.g., mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "raw_spectrum.mzML or raw_spectrum_metadata.json",
+    "spectrum_after_mz_filter.json",
+    "spectrum_after_precursor_removal.json",
+    "spectrum_after_intensity_filter.json",
+    "spectrum_after_scaling.json"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load an MsmsSpectrum object from a public USI using spectrum_utils.MsmsSpectrum.from_usi().",
+    "Restrict m/z range to 100\u20131400 using set_mz_range() to remove out-of-range peaks.",
+    "Remove precursor (parent) ion peaks using remove_precursor_peak() with specified mass tolerance.",
+    "Filter low-intensity noise peaks using filter_intensity() with min_intensity=0.05 (5% base peak) and cap peak count at max_num_peaks=50.",
+    "Scale peak intensities by square root using scale_intensity('root') to normalize intensity distribution.",
+    "Validation: verify resulting spectrum m/z array is within [100, 1400], peak count is \u226450, precursor peak is absent, and intensity values reflect square-root transformation.",
+    "References: source article (DOI: 10.1021/acs.analchem.9b04884); MSV000082283 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000082283); MSV000079960 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000079960); MSV000080679 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080679); PXD000561 (https://www.ebi.ac.uk/pride/archive/projects/PXD000561); PXD014834 (https://www.ebi.ac.uk/pride/archive/projects/PXD014834); PXD022531 (https://www.ebi.ac.uk/pride/archive/projects/PXD022531); PXD004732 (https://www.ebi.ac.uk/pride/archive/projects/PXD004732)"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "Documentation or reference spectrum data for verifying expected output of the preprocessing pipeline"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the sequence and behavior of spectrum preprocessing operations in spectrum_utils when applied to an MsmsSpectrum object?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "spectral-mz-range-filtering",
+    "precursor-peak-removal-mass-tolerance",
+    "intensity-threshold-noise-filtering",
+    "peak-count-capping",
+    "intensity-normalization-and-scaling",
+    "spectrum-array-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_spectrumutils/synthesized_package",
+  "spine_condition_ids": [
+    "cond_spectrum_utils_040"
+  ],
+  "spine_entity_ids": [
+    "system_spectrum_utils",
+    "comp_msms_spectrum",
+    "comp_proforma_module",
+    "comp_fragment_annotation",
+    "comp_plot",
+    "comp_iplot",
+    "comp_utils_module",
+    "tool_usi",
+    "arch_processing_pipeline",
+    "cond_spectrum_utils_040",
+    "result_speed_comparison",
+    "result_thousands_per_second",
+    "result_neutral_loss_coverage"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:bittremieux-lab__spectrum_utils",
+  "task_description": "Reconstruct and validate the spectrum_utils preprocessing pipeline by loading an MsmsSpectrum object via USI, applying set_mz_range (100\u20131400 m/z), remove_precursor_peak, filter_intensity (min_intensity=0.05, max_num_peaks=50), and scale_intensity operations in sequence, then verify that the resulting m/z and intensity arrays match the documented behavior.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Public proteomics USI identifier",
+      "port_id": "usi_identifier",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Implement and execute the spectrum_utils preprocessing pipeline (set_mz_range \u2192 remove_precursor_peak \u2192 filter_intensity) on an MsmsSpectrum object and verify output peak arrays.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Filtered and scaled MsmsSpectrum object",
+      "port_id": "filtered_spectrum",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Verification report confirming preprocessing compliance",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "spectral-library-matching",
+    "quality-control",
+    "tandem-ms"
+  ],
+  "title": "Reproduce spectrum processing pipeline using MsmsSpectrum (set_mz_range, remove_precursor_peak, filter)",
+  "tools": [
+    "spectrum_utils",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load an MsmsSpectrum object from a public proteomics dataset using the Universal Spectrum Identifier (USI) mechanism via spectrum_utils.spectrum.MsmsSpectrum.from_usi(). 2. Apply set_mz_range with min_mz=100 and max_mz=1400 to restrict the m/z window. 3. Apply remove_precursor_peak using the specified fragment tolerance (e.g., 10 ppm or 0.05 Da) to remove the parent ion. 4. Apply filter_intensity with min_intensity=0.05 (as a fraction of base peak) and max_num_peaks=50 to remove low-intensity noise and cap the peak count. 5. Apply scale_intensity with mode='root' to scale intensities by their square root. 6. Verify that the resulting spectrum object's m/z and intensity arrays contain only peaks within the expected range and that intensity values are properly scaled."
+}

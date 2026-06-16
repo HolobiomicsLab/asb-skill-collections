@@ -1,0 +1,261 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d99a89eede44b3ef329fa8d47412aa5273ea74b47f7f4b19fd37f5af8f4360d0"
+    }
+  ],
+  "created_at": "2026-06-15T13:58:47.028399+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CSV or Excel file with required chemical structure descriptors for molecules",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CSV file with per-molecule binary bitter/not-bitter predictions",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "BitterPredict requires specific molecular descriptors as input; the descriptor set must match those used during model training for valid predictions.",
+    "Binary predictions represent discrete classes (bitter vs. non-bitter) with no confidence scores or probability outputs reported in the classifier's standard output.",
+    "Input format flexibility (CSV or Excel) allows integration with diverse upstream cheminformatics pipelines; descriptor columns must be named and ordered consistently.",
+    "The classifier operates on calculated molecular properties rather than raw chemical structure files (SMILES, MOL, SDF), requiring prior descriptor computation by cheminformatics software."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:Niv-Lab__BitterPredict1 repository is accessible and contains BitterPredict.m file",
+      "file_exists: BitterPredict.m in the repository",
+      "script_runs: BitterPredict.m executes without error when provided a valid CSV or Excel input file containing required molecular descriptors",
+      "output_matches_reference: per-molecule predictions (binary bitter/not-bitter labels) are produced for all input molecules; no canonical answer for prediction values themselves without reference dataset, but output structure must be complete and non-null for all rows"
+    ],
+    "expert_review": [
+      "verify that the descriptor columns present in the input file match those documented as 'required' by BitterPredict.m (descriptor names and roles are domain-specific chemical/computational knowledge)",
+      "assess whether the binary predictions are internally consistent with the classifier's decision logic as documented in the repository README or code comments"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the input format and data structure required for BitterPredict.m to generate bitter/not-bitter predictions for a set of molecules?: 'BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules, and calucautes a predictions if each molecule is bitter or not.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] BitterPredict.m accepts CSV or Excel files containing chemical structure descriptors of molecules as input and produces binary bitter/not-bitter predictions as output.: 'BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules, and calucautes a predictions if each molecule is bitter or not.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] CSV or Excel file with required chemical structure descriptors for molecules: 'BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] CSV file with per-molecule binary bitter/not-bitter predictions: 'calucautes a predictions if each molecule is bitter or not'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] BitterPredict: 'BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history found in the provided discussion section: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit specification of which molecular descriptors are required as input columns to BitterPredict.m: 'BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of the output format, column names, or structure of the binary predictions produced by BitterPredict.m: 'calucautes a predictions if each molecule is bitter or not'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import bitterpredict; bitterpredict.predict('{inputs.descriptor_table}', 'predictions_{task_id}.csv')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "predictions.csv",
+  "expected_outputs": [
+    "CSV file with per-molecule binary bitter/not-bitter predictions"
+  ],
+  "finding": "BitterPredict.m accepts CSV or Excel files containing chemical structure descriptors of molecules as input and produces binary bitter/not-bitter predictions as output.",
+  "github_name": "Niv-Lab/BitterPredict1",
+  "input_from": null,
+  "inputs": [
+    "CSV or Excel file with required chemical structure descriptors for molecules"
+  ],
+  "keywords": [
+    "taste prediction",
+    "bitter compound classification",
+    "chemical structure descriptors",
+    "molecular classification",
+    "chemoinformatics"
+  ],
+  "landmark_outputs": [
+    "descriptor_validation.log",
+    "predictions.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load input CSV or Excel file containing pre-computed molecular descriptors.",
+    "Parse descriptor matrix and validate presence of required features for BitterPredict classifier.",
+    "Execute BitterPredict.m inference on descriptor vectors.",
+    "Map predicted class labels to output identifiers and format as CSV.",
+    "Validation: output CSV contains one prediction per input molecule with binary labels (bitter/not-bitter); file format is valid and parseable."
+  ],
+  "missing_information": [
+    "No changelog or version history found in the provided discussion section",
+    "No explicit specification of which molecular descriptors are required as input columns to BitterPredict.m",
+    "No specification of the output format, column names, or structure of the binary predictions produced by BitterPredict.m"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the input format and data structure required for BitterPredict.m to generate bitter/not-bitter predictions for a set of molecules?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "molecular-descriptor-preparation",
+    "classifier-prediction-inference",
+    "chemical-structure-feature-encoding",
+    "binary-classification-output-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_bittermass/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_BitterPredict",
+    "TOOL_BitterPredict_m",
+    "COMP_ChemicalStructure",
+    "TASK_BitternessPrediction"
+  ],
+  "subdomains": [
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "modeling"
+  ],
+  "synthesized_from": "github:Niv-Lab__BitterPredict1",
+  "task_description": "Run the BitterPredict classifier on a CSV or Excel file containing molecular descriptors to generate per-molecule binary bitter/not-bitter predictions. Output predictions as a CSV file with molecule identifiers and predicted class labels.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CSV or Excel file with chemical structure descriptors",
+      "port_id": "descriptor_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute BitterPredict.m on a CSV or Excel file of molecular descriptors and generate binary bitter/not-bitter predictions for each compound.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-molecule binary bitter/not-bitter predictions",
+      "port_id": "predictions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "quantitative-structure-activity"
+  ],
+  "title": "Reproduce BitterPredict classifier predictions on a set of molecules with known chemical structure descriptors",
+  "tools": [
+    "BitterPredict"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load input CSV or Excel file containing molecular descriptors for a set of molecules. 2. Execute BitterPredict.m classifier on the loaded descriptor data. 3. Generate binary predictions (bitter or not-bitter) for each molecule. 4. Compile predictions into output CSV file with molecule identifiers and predicted class labels."
+}

@@ -1,0 +1,447 @@
+schema_version: 0.1.0
+workflow_id: coll_deseq2_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: DESeq2 is an R package for detecting differentially expressed genes from
+    RNA-seq count data using negative binomial generalized linear models with data-driven
+    priors on dispersion and log fold changes. The vignette demonstrates standard
+    differential expression workflows and data transformations.
+  pseudo_abstract: DESeq2 provides methods for statistical inference of systematic
+    changes in gene expression between conditions using count data from RNA-seq and
+    related assays. The package models count data with negative binomial generalized
+    linear models, incorporating data-driven prior distributions for dispersion estimates
+    and logarithmic fold changes. The vignette explains package usage through typical
+    workflows, including construction of DESeqDataSet objects from various input sources
+    (transcript quantification files via tximport, count matrices, htseq-count files,
+    or SummarizedExperiment objects), differential expression analysis using the DESeq
+    function, and results extraction via the results function which automatically
+    performs independent filtering. Log fold change shrinkage for visualization and
+    ranking is demonstrated using lfcShrink with three estimator types (apeglm, normal,
+    ashr). Data transformations including variance stabilizing transformation (vst)
+    and regularized logarithm (rlog) are described for downstream visualization and
+    clustering applications.
+  research_questions:
+  - How many genes in the airway dataset show statistically significant differential
+    expression (adjusted p-value < 0.1) between treated and untreated conditions when
+    analyzed with DESeq2 using the default FDR threshold?
+  - How do the three shrinkage estimators (apeglm, normal, ashr) in lfcShrink() differ
+    in their shrunken log fold change estimates for the airway dataset treated-vs-untreated
+    contrast?
+  - How does tximport process transcript-level quantification files from tximportData
+    to produce a gene-level count matrix suitable for DESeqDataSetFromTximport?
+  - How does the results() function automatically perform independent filtering based
+    on mean normalized counts, and what are the expected outputs when this filtering
+    is applied to DESeq2 results?
+  methods_summary: 'Load airway SummarizedExperiment and construct DESeqDataSet with
+    design ~cell+dex to account for cell type variation while testing dexamethasone
+    treatment effect. Estimate per-gene dispersions using the negative binomial GLM
+    framework, shrinking estimates toward a mean-dispersion trend fitted across all
+    genes. Fit negative binomial GLM for each gene and compute Wald test statistics
+    and p-values for the treatment coefficient. Apply automatic independent filtering
+    based on mean normalized count to optimize the number of genes achieving padj
+    < alpha, where alpha=0.1 (default FDR target). Extract results table with log2
+    fold changes, standard errors, test statistics, raw p-values, and Benjamini-Hochberg
+    adjusted p-values for treated-vs-untreated contrast. Validation: verify that the
+    count of genes with padj < 0.1 matches the reported value from the vignette and
+    that results table structure includes all required columns (baseMean, log2FoldChange,
+    lfcSE, stat, pvalue, padj). References: source article (DOI: 10.1186/s13059-014-0550-8)
+    Load airway dataset and construct DESeqDataSet with cell and dex design factors.
+    Execute DESeq() to estimate dispersions and fit negative binomial generalized
+    linear models. Extract base results table containing unshrunk log fold changes
+    and p-values for dex effect. Apply lfcShrink with apeglm method (adaptive t-prior,
+    ~5 seconds runtime) to shrink effect sizes. Apply lfcShrink with normal method
+    (adaptive normal prior) for comparison. Apply lfcShrink with ashr method (mixture
+    of normals prior) for additional estimator comparison. Generate MA-plots for each
+    shrunken result to visualize shrinkage strength and effect on visualization. Validation:
+    confirm that each lfcShrink call produces a DESeqResults object with log2FoldChange,
+    lfcSE, and padj columns; verify MA-plots show reduced noise in low-count genes
+    relative to base results; confirm apeglm shrinkage is more conservative than normal
+    prior and ashr produces intermediate shrinkage strength. References: source article
+    (DOI: 10.1186/s13059-014-0550-8) Load sample metadata and assign experimental
+    condition labels (A, B) from tximportData package. Construct file paths to Salmon
+    quantification outputs (quant.sf.gz) and load the tx2gene transcript-to-gene mapping
+    table. Import transcript-level quantifications using tximport() with type=''salmon''
+    to aggregate to gene level, producing estimated gene counts and length offsets.
+    Construct a DESeqDataSet from the tximport output (txi list) using DESeqDataSetFromTximport()
+    with sample metadata and design formula. Validation: verify that the assay matrix
+    contains un-normalized integer counts (not scaled by library size) by inspecting
+    the count values and confirming they match expected ranges for RNA-seq data. References:
+    source article (DOI: 10.1186/s13059-014-0550-8) Load airway SummarizedExperiment
+    and construct DESeqDataSet with design ~ cell + dex. Run DESeq() to fit negative
+    binomial GLM and estimate dispersions across all genes. Extract standard results
+    with results(dds, alpha=0.1) to apply automatic independent filtering based on
+    mean normalized count threshold. Separately apply IHW-based filtering using results(dds,
+    filterFun=ihw) to obtain hypothesis-weighted p-value adjustments and FDR control.
+    Tabulate and compare filtered gene counts, adjusted p-value distributions, and
+    NA assignments between standard filtering and IHW approaches. Validation: Verify
+    that the number of genes with padj < 0.1 after standard filtering is at least
+    as many as reported in the vignette summary(res) output, and confirm IHW metadata
+    contains ihwResult object with weights and rejection decisions. References: source
+    article (DOI: 10.1186/s13059-014-0550-8)'
+  domain: transcriptomics
+  techniques:
+  - normalization
+  - statistical-analysis
+  - false-discovery-rate-correction
+  claims:
+  - claim_text: The results() function automatically performs independent filtering
+      based on the mean of normalized counts for each gene.
+    claim_type: finding
+    evidence_step: task_004
+    speculative: false
+    source_task_kind: reproduction
+    entity_id: lfcshrink_function
+    condition_id: cond_treated_vs_untreated
+  - claim_text: DESeq2 provides methods to test for differential expression by use
+      of negative binomial generalized linear models.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: The DESeq2 estimates of dispersion and logarithmic fold changes incorporate
+      data-driven prior distributions.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: DESeq2 should be cited with the reference Love, M.I., Huber, W., Anders,
+      S. (2014) published in Genome Biology volume 15:550.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: Other Bioconductor packages with similar aims to DESeq2 include edgeR,
+      limma, DSS, EBSeq, and baySeq.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: DESeq2 internally corrects for library size, so transformed or normalized
+      values should not be used as input.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: The DESeqDataSet class extends the RangedSummarizedExperiment class.
+    claim_type: finding
+    speculative: false
+    entity_id: deseqdataset
+  - claim_text: The design formula in DESeq2 must be specified to express the variables
+      which will be used in modeling.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: The variable of interest should be placed at the end of the design
+      formula to benefit from default package settings.
+    claim_type: finding
+    speculative: false
+  - claim_text: Tximport is the recommended pipeline for DESeq2 to create gene-level
+      count matrices from transcript abundance estimates.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: Tximport can import transcript abundance estimates from Salmon, Sailfish,
+      kallisto, and RSEM.
+    claim_type: finding
+    speculative: false
+    entity_id: tximport_tool
+  - claim_text: Using fast transcript abundance quantifiers corrects for potential
+      changes in gene length across samples from differential isoform usage.
+    claim_type: finding
+    speculative: false
+  - claim_text: Salmon, Sailfish, and kallisto are substantially faster and require
+      less memory and disk usage compared to alignment-based methods.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_tool
+  - claim_text: Using fast quantifiers allows avoiding discarding fragments that can
+      align to multiple genes with homologous sequence, increasing sensitivity.
+    claim_type: finding
+    speculative: false
+  - claim_text: The Salmon software should be used with the --gcBias flag to estimate
+      a correction factor for systematic biases in RNA-seq data.
+    claim_type: finding
+    speculative: false
+    entity_id: salmon_tool
+  - claim_text: It is absolutely critical that the columns of the count matrix and
+      rows of the column data are in the same order.
+    claim_type: finding
+    speculative: false
+  - claim_text: The featureCounts function in Rsubread can quickly produce count matrices
+      from alignment files.
+    claim_type: finding
+    speculative: false
+    entity_id: featurecounts_tool
+  - claim_text: By default, R chooses a reference level for factors based on alphabetical
+      order.
+    claim_type: finding
+    speculative: false
+  - claim_text: DESeq2 will not make guesses about which column of the count matrix
+      belongs to which row of the column data.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: Technical replicates can be collapsed into single columns using the
+      collapseReplicates function in DESeq2.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: The pasilla dataset is from an experiment on Drosophila melanogaster
+      cell cultures investigating RNAi knock-down of the splicing factor pasilla.
+    claim_type: finding
+    speculative: false
+    entity_id: pasilla_dataset
+  - claim_text: The results function extracts a results table with log2 fold changes,
+      p values and adjusted p values.
+    claim_type: finding
+    speculative: false
+    entity_id: results_function
+  - claim_text: By default, results are for the last variable in the design formula
+      and the last level compared to the reference level.
+    claim_type: finding
+    speculative: false
+    entity_id: results_function
+  - claim_text: Log fold change shrinkage is useful for visualization and ranking
+      of genes.
+    claim_type: finding
+    speculative: false
+  - claim_text: The apeglm method is the default shrinkage estimator in DESeq2 as
+      of version 1.28.0.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: The ashr shrinkage estimator fits a mixture of Normal distributions
+      to form the prior.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: The apeglm method has been sped up to take roughly the same time as
+      the normal method, approximately 5 seconds for the pasilla dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: apeglm_estimator
+  - claim_text: The pasilla dataset contains approximately 10,000 genes and 7 samples.
+    claim_type: finding
+    speculative: false
+    entity_id: pasilla_dataset
+  - claim_text: Setting apeMethod="nbinomC" produces a 10x speedup but returns lfcSE
+      column with NA.
+    claim_type: finding
+    speculative: false
+  - claim_text: Batch effects should be corrected for by including known batch variables
+      in the design formula or using functions like svaseq or RUV.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: The plotCounts function normalizes counts by estimated size factors
+      and adds a pseudocount of 1/2 for log scale plotting.
+    claim_type: finding
+    speculative: false
+  - claim_text: For a log2 fold change of -1, the treatment induces a multiplicative
+      change of 0.5 in gene expression level.
+    claim_type: finding
+    speculative: false
+  - claim_text: If all samples in a row have zero counts, baseMean, log2 fold change,
+      p value and adjusted p value will all be set to NA.
+    claim_type: finding
+    speculative: false
+  - claim_text: Extreme count outliers detected by Cook's distance cause p value and
+      adjusted p value to be set to NA.
+    claim_type: finding
+    speculative: false
+  - claim_text: Low mean normalized count causes only the adjusted p value to be set
+      to NA through independent filtering.
+    claim_type: finding
+    speculative: false
+    entity_id: independent_filtering
+  - claim_text: The regionReport package can generate an HTML and PDF summary of DESeq2
+      results with plots.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: The Glimma package can generate interactive MA-plots of DESeq2 output.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: The pcaExplorer package can generate PCA plots, boxplots of counts
+      and other summaries from DESeq2 output.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: The iSEE package provides functions for creating an interactive Shiny-based
+      graphical user interface for exploring SummarizedExperiment objects.
+    claim_type: finding
+    speculative: false
+  - claim_text: The iSEEde package provides additional panels for interactive visualization
+      of differential expression results in iSEE applications.
+    claim_type: finding
+    speculative: false
+    entity_id: results_function
+  - claim_text: DEvis is available on CRAN and GitHub for analysis of differential
+      expression data.
+    claim_type: finding
+    speculative: false
+  - claim_text: Results can be exported using base R functions write.csv or write.delim.
+    claim_type: finding
+    speculative: false
+    entity_id: results_function
+  - claim_text: Multi-factor designs can be analyzed by including additional variables
+      in the design formula.
+    claim_type: finding
+    speculative: false
+  - claim_text: DESeq2 can analyze experimental designs with fixed effects including
+      multiple factors, interactions, and continuous variables.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: Adding variables to the design can control for additional variation
+      in counts and increase sensitivity for finding differences.
+    claim_type: finding
+    speculative: false
+  - claim_text: In experiments with many samples, there will likely be technical variation
+      affecting the observed counts that must be modeled.
+    claim_type: finding
+    speculative: false
+    entity_id: results_function
+  - claim_text: Variance stabilizing transformation and rlog are used to remove the
+      dependence of variance on the mean.
+    claim_type: finding
+    speculative: false
+  - claim_text: VST and rlog produce transformed data on the log2 scale which has
+      been normalized with respect to library size.
+    claim_type: finding
+    speculative: false
+  - claim_text: The rlog function may take too long for experiments with many samples
+      (e.g. 100s), so vst is a faster choice.
+    claim_type: finding
+    speculative: false
+  - claim_text: The rlog function requires fitting a shrinkage term for each sample
+      and each gene which takes time.
+    claim_type: finding
+    speculative: false
+  - claim_text: Transformation functions vst and rlog have a blind argument for whether
+      transformation should be blind to sample information.
+    claim_type: finding
+    speculative: false
+  - claim_text: When blind equals TRUE, vst and rlog functions re-estimate dispersions
+      using only an intercept.
+    claim_type: finding
+    speculative: false
+  - claim_text: Blind dispersion estimation should be used to compare samples in a
+      manner unbiased by experimental groups for quality assurance.
+    claim_type: finding
+    speculative: false
+  - claim_text: Blind dispersion estimation is not appropriate when expecting many
+      genes will have large differences explainable by experimental design.
+    claim_type: finding
+    speculative: false
+  - claim_text: Using blind dispersion estimation can lead to overly shrinking transformed
+      values when design differences are misattributed as noise.
+    claim_type: finding
+    speculative: false
+  - claim_text: Setting blind to FALSE uses dispersions already estimated or estimates
+      them using the current design formula.
+    claim_type: finding
+    speculative: false
+  - claim_text: Transformation functions vst and rlog return an object of class DESeqTransform,
+      which is a subclass of RangedSummarizedExperiment.
+    claim_type: finding
+    speculative: false
+  - claim_text: For approximately 20 samples, rlog may take 30 seconds while vst takes
+      less than 1 second.
+    claim_type: finding
+    speculative: false
+    entity_id: deseqdataset
+  - claim_text: Running times for vst and rlog are shorter when using blind=FALSE
+      if the function DESeq has already been run.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq_function
+  - claim_text: Pre-filtering low count genes reduces memory size of the dds object
+      and increases speed of count modeling in DESeq2.
+    claim_type: finding
+    speculative: false
+    entity_id: deseq2_system
+  - claim_text: Pre-filtering improves visualizations by not plotting features with
+      no information for differential expression.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - edgeR, limma, DSS, EBSeq, baySeq as alternatives to DESeq2
+  - apeglm, ashr, or normal shrinkage estimators
+  - vst or rlog for data transformation
+  - glmGamPoi for faster NB GLM fitting
+  substitution_constraints:
+  - glmGamPoi requires use of test="LRT" and specification of a reduced design
+  - rlog may be slow for many samples (100s)
+instructions: Reproduce the 4-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Shrunken LFC results table from apeglm estimator
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Shrunken LFC results table from normal estimator
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Shrunken LFC results table from ashr estimator
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Comparative MA-plots for three shrinkage estimators
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Gene-level count matrix (txi list object) containing un-normalized estimated
+    gene counts, transcript lengths, and abundance-weighted library size offsets
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: DESeqDataSet object (ddsTxi) with gene-level counts, sample metadata, and
+    design formula ready for differential expression analysis
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Results table with log2 fold changes, p-values, and adjusted p-values after
+    automatic independent filtering (default alpha=0.1)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Results table with IHW-adjusted p-values and metadata containing ihwResult
+    object
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Summary statistics comparing gene counts retained after standard filtering
+    vs. IHW filtering
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

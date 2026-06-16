@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:mwang87__MassQueryLanguage containing parser implementation or grammar definition"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "parser output for a canonical MassQL query example (if provided in repository) m"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "format_is: parser output is valid JSON or valid tree-serialized AST format with labeled nodes"
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "parser implementation or grammar file contains explicit handling of mass-spectro",
+      "value": "explicit handling of mass-spectrometry-specific constructs (e"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:mwang87__MassQueryLanguage containing parser implementation or grammar definition",
+      "script_runs: execute parser on a valid MassQL query string and confirm it produces structured output (AST or JSON), not an error",
+      "output_matches_reference: parser output for a canonical MassQL query example (if provided in repository) matches the documented or reference AST/JSON structure",
+      "format_is: parser output is valid JSON or valid tree-serialized AST format with labeled nodes",
+      "contains_substring: parser implementation or grammar file contains explicit handling of mass-spectrometry-specific constructs (e.g., precursor mass, fragment ion, spectrum, scan, tolerance keywords or operators beyond standard SQL)"
+    ],
+    "expert_review": [
+      "Does the parser grammar or implementation satisfy all four stated design principles (Expressiveness, Precision, Scalability, Relatively Natural) as applied to the specific MassQL constructs it handles?",
+      "Does the parser correctly handle the extension of SQL syntax with mass-spectrometry-specific operators and constraints (e.g., mass ranges, spectral similarity, retention time windows)?",
+      "Are there edge cases or ambiguous MassQL syntax patterns that the parser does not resolve, contradicting the Precision principle?",
+      "Does the parser implementation scale appropriately from single-spectrum to repository-scale queries without fundamental architectural limits?"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

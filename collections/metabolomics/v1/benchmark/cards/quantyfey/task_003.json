@@ -1,0 +1,423 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/CDLMarkus/QuantyFey",
+      "locator_id": "gh_cdlmarkus_quantyfey",
+      "locator_kind": "github",
+      "name": "CDLMarkus/QuantyFey",
+      "prose": "QuantyFey source code repository (CDLMarkus/QuantyFey)",
+      "score": 0.4,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_IS.png",
+      "role": "figure",
+      "sha256": "19f92dcb7564378ef46b8c08abb35b427ff4b977a62d8cbeee0adf40512db051"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_accuracy.png",
+      "role": "figure",
+      "sha256": "381b8d172fdce61d311b6d31755c5bd3f474e06a2f70d33cb0f42db962456e97"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_bracketing_table.png",
+      "role": "figure",
+      "sha256": "f65eb78270689d3307ebe570c2a364e556a7472a4e35deee095a012712cb8570"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_drift_correction.png",
+      "role": "figure",
+      "sha256": "dc211d838d3d8ab732c3cb9dd1287e88bcc8f4777452bbc8c490e615c42881bd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_model_diagnostics.png",
+      "role": "figure",
+      "sha256": "598146aaa46c17c5becf74ddd4dd4178f873fd68058d8269ec58bc2341477c2c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_parameters.png",
+      "role": "figure",
+      "sha256": "92ad5ec4a358f569cdb2831e59aecd293bde70a5612f0b9da1658bfe6b39664d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_quantification_parameters.png",
+      "role": "figure",
+      "sha256": "2b43580506c449efaa9254bc77f87615d2de56d7b9601a81208a90bbaa8724b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_quantification_plot.png",
+      "role": "figure",
+      "sha256": "0122649e8a64674c56d7220408295fb1f238eb093c118217061e9f6d40f624a9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/compound_quantification_visualization.png",
+      "role": "figure",
+      "sha256": "0d4044927fc493320c7d8915fb6f9fedf667481b7b4cd6f97497e03a9d400e5b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/concentration_template.png",
+      "role": "figure",
+      "sha256": "872a8e9e49b93cf99b48f84ff60dae78b10674e105db302e7d88386c18520aa8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/configure_settings_output.png",
+      "role": "figure",
+      "sha256": "58a2c850a38847061d9531e95c18f0e6cb67437ebc31e842098bfb6b5a1a11ee"
+    },
+    {
+      "indexable": false,
+      "path": "figures/data_upload_parameters.png",
+      "role": "figure",
+      "sha256": "73282d1b9a5c6db70e2527f7287543f6dce76c377ed67502586f88c843ff008a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/example1_RT.png",
+      "role": "figure",
+      "sha256": "79bd163baeab8f98aee8a311d9c833c4a3545428e694b7871b300b2c1d7b4391"
+    },
+    {
+      "indexable": false,
+      "path": "figures/example1_areas.png",
+      "role": "figure",
+      "sha256": "cd9638fbe8f666893ce8cef7a8a66ac03924ff708b0b17327faaa5843744145e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/flowchart.png",
+      "role": "figure",
+      "sha256": "5718e68d4e65a39f3af2cdbaeaab6a21bfce6fd510bb46f21f61430b08e179b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/graphical_abstract.png",
+      "role": "figure",
+      "sha256": "7e323521962ebcea0e3c34d71d74922cbe6174736dda4e8b7826a6e8b4784ed1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/icon.png",
+      "role": "figure",
+      "sha256": "3be71757c99b1866d5fb332ba6d88fe64b8d327d3dceffd378a0256204d08bb9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/model_diagnostics_HisRes.png",
+      "role": "figure",
+      "sha256": "27ac15c5ad17c8804e265727a028158c3ab8f049e19e89f5d6334873c71379db"
+    },
+    {
+      "indexable": false,
+      "path": "figures/model_diagnostics_QQ.png",
+      "role": "figure",
+      "sha256": "acd13de7ef2a447043ecea15ce1e7bf669153801e52551b015cba7a39b4dac6e"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "931214a9764078052f021fb79a579348a289d6edcb3eaeb470bf202edf9f6d19"
+    }
+  ],
+  "created_at": "2026-06-15T13:58:43.515508+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "QuantyFey source code repository (CDLMarkus/QuantyFey)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Modified Shiny application configuration files with platform-agnostic code",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Platform dependency resolution and compatibility report",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test log confirming successful application launch on Linux or macOS",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "QuantyFey is a Windows-only Shiny application designed to address intensity drifts in mass spectrometry datasets using multiple correction strategies.",
+    "Cross-platform R/Shiny development requires abstracting OS-specific file paths (backslash vs. forward slash), conditionally loading system libraries, and testing package availability across distributions.",
+    "Linux and macOS differ in library installation paths, system package managers (apt, brew), and availability of Windows-specific R packages; conditional logic must handle all three platforms.",
+    "Shiny applications depend on system-level dependencies for data I/O, rendering, and external tool invocation; missing system libraries cause silent failures at runtime rather than installation time."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: modified app configuration file (e.g., app.R, ui.R, server.R, or shiny.yaml) in the output artifact",
+      "verify file_format_is: configuration file is valid R syntax or YAML, script_runs without parse errors",
+      "verify script_runs: modified Shiny application launches successfully on Linux or macOS without dependency resolution errors",
+      "verify contains_substring: documentation or configuration identifies at least one platform-specific dependency that was modified or resolved",
+      "verify output_matches_reference: launched application displays the same core UI and data visualization components as the Windows baseline (robust to minor rendering differences across platforms)"
+    ],
+    "expert_review": [
+      "assess whether all identified platform-specific dependencies (e.g., file paths, system calls, graphics libraries, R package binaries) have been correctly diagnosed and addressed for Linux/macOS compatibility",
+      "evaluate whether the modified configuration preserves the original application's intended functionality for intensity drift correction and mass spectrometry quantification workflows",
+      "review whether the cross-platform solution is maintainable and whether configuration changes are properly documented for future deployment"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What platform-specific dependencies currently prevent QuantyFey from running on Linux or macOS?: 'QuantyFey is compatible with Windows operating systems only.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] QuantyFey is currently restricted to Windows operating systems, indicating the presence of unidentified platform-specific dependencies that must be resolved to enable cross-platform compatibility.: 'QuantyFey is compatible with Windows operating systems only.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] QuantyFey source code repository (CDLMarkus/QuantyFey): 'CDLMarkus/QuantyFey'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Modified Shiny application configuration files with platform-agnostic code: 'producing a modified app configuration that launches successfully on a non-Windows OS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Platform dependency resolution and compatibility report: 'identifying and resolving platform-specific dependencies'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Test log confirming successful application launch on Linux or macOS: 'launches successfully on a non-Windows OS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Shiny: 'QuantyFey is a Shiny application for the visualization, analysis, and quantification of mass spectrometry (MS) data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "cd {inputs.source_repo} && find . -type f \\( -name '*.R' -o -name 'app.R' -o -name 'ui.R' -o -name 'server.R' \\) -exec grep -l 'Windows\\|win\\.path\\|Sys\\.getenv.*APPDATA\\|choose\\.files\\|file\\.choose' {} \\; > /tmp/platform_issues.txt 2>&1 && echo '=== Platform Compatibility Analysis ===' && echo 'Files with potential Windows-only dependencies:' && cat /tmp/platform_issues.txt && echo '' && echo 'Recommended refactoring:' && echo '1. Replace hardcoded paths with file.path()' && echo '2. Replace Windows-specific functions with platform-agnostic alternatives' && echo '3. Use Sys.info()[\"sysname\"] for conditional logic' && echo 'Analysis complete. Review identified files for cross-platform compatibility.'"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "compatibility_report.md",
+  "expected_outputs": [
+    "Modified Shiny application configuration files with platform-agnostic code",
+    "Platform dependency resolution and compatibility report",
+    "Test log confirming successful application launch on Linux or macOS"
+  ],
+  "finding": "QuantyFey is currently restricted to Windows operating systems, indicating the presence of unidentified platform-specific dependencies that must be resolved to enable cross-platform compatibility.",
+  "github_name": "CDLMarkus/QuantyFey",
+  "input_from": null,
+  "inputs": [
+    "QuantyFey source code repository (CDLMarkus/QuantyFey)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "dependency_audit.txt",
+    "platform_incompatibilities.csv",
+    "modified_app.R",
+    "test_log_linux.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Retrieve and parse the QuantyFey source code from the CDLMarkus/QuantyFey repository.",
+    "Perform static code analysis to identify Windows-only dependencies, hard-coded file paths, and platform-conditional logic.",
+    "Document all identified incompatibilities with OS context and severity level.",
+    "Refactor configuration and application code to use platform-agnostic patterns (file.path, Sys.info(), conditional package loading).",
+    "Validation: Modified application launches without errors on a Linux or macOS test environment and produces a compatibility report with zero unresolved critical dependencies."
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What platform-specific dependencies currently prevent QuantyFey from running on Linux or macOS?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "shiny-application-cross-platform-adaptation",
+    "r-dependency-package-compatibility-auditing",
+    "platform-specific-code-refactoring",
+    "file-path-abstraction-and-normalization",
+    "system-library-dependency-mapping"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_quantyfey/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "sys_quantyfey",
+    "tool_shiny"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:CDLMarkus__QuantyFey",
+  "task_description": "Identify and resolve platform-specific dependencies in the QuantyFey Shiny application to enable cross-platform execution on Linux or macOS. Produce a modified app configuration and dependency resolution report documenting required changes.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "QuantyFey source code repository",
+      "port_id": "source_repo",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Identify Windows-specific dependencies in the QuantyFey codebase and modify the app configuration to enable successful execution on Linux or macOS.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Modified Shiny application configuration",
+      "port_id": "modified_config",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Platform dependency and compatibility report",
+      "port_id": "compatibility_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Application launch test log",
+      "port_id": "test_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Extend QuantyFey's Shiny interface to support Linux/macOS deployment",
+  "tools": [
+    "Shiny"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Shiny, Modified Shiny application configuration files with platform-agnostic code, Platform dependency resolution and compatibility report, Test log confirming successful application launch on Linux or macOS."
+  ],
+  "workflow_description": "1. Audit the QuantyFey Shiny application codebase (from CDLMarkus/QuantyFey repository) to identify Windows-only dependencies, file path conventions, and system calls. 2. Scan for platform-specific R package requirements, system libraries, and conditional code branches using static analysis. 3. Document all identified platform incompatibilities with severity and suggested alternatives (e.g., replace Windows path separators with platform-agnostic file.path() calls, identify unavailable packages). 4. Modify configuration files (app.R, global.R, or environment specifications) to abstract platform detection and implement cross-platform fallbacks. 5. Test the modified application launch on a Linux or macOS environment to verify successful initialization and basic functionality. 6. Generate a platform compatibility report listing all changes, conditional imports, and any remaining OS-specific constraints."
+}

@@ -1,0 +1,8 @@
+name: KNIME
+slug: knime
+derived_from:
+- doi: 10.1074/mcp.M113.031278
+  title: featurefindermetab
+source_repos:
+- OpenMS/OpenMS
+schema_version: 0.2.0

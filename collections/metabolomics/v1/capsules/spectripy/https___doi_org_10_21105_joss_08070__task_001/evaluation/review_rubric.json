@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: github:rformassspectrometry__SpectriPy repository accessible at https://github.com/RforMassSpectrometry/SpectriPy"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "SpectriPy R package source code in repository root or src/ directory"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "core integration layer implementation files use .R extension (or .cpp for C++ bi"
+    },
+    {
+      "id": "pf_004",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "SpectriPy package documentation or vignettes explicitly describe the function wr"
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "SpectriPy NAMESPACE or roxygen2 documentation declares exported functions that w"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "integration layer specification document, architecture diagram, or design docume"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: github:rformassspectrometry__SpectriPy repository accessible at https://github.com/RforMassSpectrometry/SpectriPy",
+      "file_exists: SpectriPy R package source code in repository root or src/ directory",
+      "file_format_is: core integration layer implementation files use .R extension (or .cpp for C++ bindings if present)",
+      "contains_substring: SpectriPy package documentation or vignettes explicitly describe the function wrapping mechanism for Python MS packages",
+      "contains_substring: SpectriPy NAMESPACE or roxygen2 documentation declares exported functions that wrap Python functionality",
+      "script_runs: SpectriPy installation from github:rformassspectrometry__SpectriPy succeeds without errors in R environment with Spectra dependency installed",
+      "file_exists: integration layer specification document, architecture diagram, or design document describing CrossLanguageIntegrationLayer in package documentation or vignettes"
+    ],
+    "expert_review": [
+      "Evaluate whether the function wrapping architecture in SpectriPy genuinely achieves 'seamless in-process interoperability' as claimed, or if there are documented limitations, overhead, or friction points in R\u2013Python data marshalling",
+      "Assess the completeness and correctness of the CrossLanguageIntegrationLayer design: does it cover all major Spectra data structures and Python MS library interfaces, or are there gaps?",
+      "Review whether the wrapping mechanism preserves data integrity, type safety, and performance across language boundaries for typical mass spectrometry workflows",
+      "Examine whether the package documentation adequately explains the internal architecture to enable users and developers to understand and extend the integration layer"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

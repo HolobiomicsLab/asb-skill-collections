@@ -1,0 +1,10 @@
+name: MS2LDA.Preprocessing.generate_corpus
+slug: ms2lda-preprocessing-generate-corpus
+evidence_spans:
+- Generate Corpus
+derived_from:
+- doi: 10.1093/bioinformatics/btx582
+  title: ms2lda
+source_repos:
+- vdhooftcompmet/MS2LDA
+schema_version: 0.2.0

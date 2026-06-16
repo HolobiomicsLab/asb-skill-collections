@@ -1,0 +1,114 @@
+schema_version: 0.1.0
+workflow_id: coll_mshub_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: "A companion repository enables reproduction of an auto-deconvolution and\
+    \ molecular networking workflow for gas chromatography\u2013mass spectrometry\
+    \ data, as described in the associated Nature Biotechnology 2020 publication."
+  pseudo_abstract: "Reproduces 1 reported result: A companion repository (bittremieux/GNPS_GC)\
+    \ has been established to enable re-execution of the auto-deconvolution and molecular\
+    \ networking workflow on the deposited GC-MS dataset associated with the Nature\
+    \ Biotechnology 2020 publication. Reconstructs 2 described mechanisms (described\
+    \ in the paper but not separately evaluated there): The manuscript describes auto-deconvolution\
+    \ and molecular networking methods for gas chromatography\u2013mass spectrometry\
+    \ data analysis, with implementation available in the companion repository (bittremieux/GNPS_GC).\
+    \ The method integrates auto-deconvolution with molecular networking for gas chromatography\u2013\
+    mass spectrometry data, enabling structured network analysis of deconvolved spectra."
+  research_questions:
+  - Can the auto-deconvolution and molecular networking pipeline described in the
+    Nature Biotechnology 2020 manuscript be successfully re-run on the companion GC-MS
+    dataset to reproduce the reported network and deconvolved spectra outputs?
+  - "How does the auto-deconvolution method process raw gas chromatography\u2013mass\
+    \ spectrometry data to separate and identify individual chemical components from\
+    \ complex mixtures?"
+  - "How does the molecular networking step process deconvolved gas chromatography\u2013\
+    mass spectrometry spectra and what network output format does it produce?"
+  methods_summary: "Load GC-MS raw data from the Nature Biotechnology 2020 companion\
+    \ deposit. Apply MSHub auto-deconvolution to separate overlapping chromatographic\
+    \ peaks into individual compound spectra. Export deconvolved spectra in MGF format\
+    \ compatible with GNPS. Execute GNPS molecular networking workflow with cosine\
+    \ similarity clustering and graph construction. Extract network topology metrics\
+    \ and compare node/edge counts and clustering structure to the published results.\
+    \ Validation: verify that the molecular network exhibits the same major cluster\
+    \ structure and number of connected components as reported in the original manuscript;\
+    \ deconvolved spectra should match the reference spectra in the GNPS deposit.\
+    \ References: source article (DOI: 10.1038/s41587-020-0700-3) Load raw GC-MS chromatography\
+    \ data from deposited files. Apply MSHub auto-deconvolution to resolve co-eluting\
+    \ spectral components. Export deconvolved spectra to standardized format (MGF\
+    \ or mzML). Validation: Verify output file exists, contains valid spectrum records,\
+    \ and is compatible with downstream GNPS molecular networking input requirements.\
+    \ References: source article (DOI: 10.1038/s41587-020-0700-3) Prepare deconvolved\
+    \ spectra in GNPS_GC-compatible format (MSP, mzXML, or equivalent). Submit spectra\
+    \ batch to GNPS_GC networking pipeline via web portal or API. Monitor job execution\
+    \ until network computation completes. Retrieve molecular network output in GraphML\
+    \ or JSON serialization. Validation: Confirm network file is well-formed (valid\
+    \ graph structure), contains \u22651 node and \u22650 edges, and edge metadata\
+    \ includes similarity scores or match statistics. References: source article (DOI:\
+    \ 10.1038/s41587-020-0700-3)"
+  domain: metabolomics
+  techniques:
+  - gc-ms
+  - spectral-deconvolution
+  - molecular-networking
+  - feature-detection
+  - metabolite-identification
+  - gnps-workflow
+  claims:
+  - claim_text: This repository is a companion to a manuscript by Aksenov et al. published
+      in Nature Biotechnology in 2020.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_AUTO_DECONV
+  - claim_text: "The manuscript describes auto-deconvolution and molecular networking\
+      \ of gas chromatography\u2013mass spectrometry data."
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_AUTO_DECONV
+  - claim_text: The source repository is located on GitHub under the identifier bittremieux__GNPS_GC.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_GNPS_GC
+  - claim_text: The document was synthesized on 2026-06-16 at 05:56:15 UTC.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: mixed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: File of deconvolved spectra in MGF or mzML format ready for molecular networking
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Molecular network file in GraphML or JSON format containing nodes (spectra/compounds)
+    and edges (spectral similarity or MS/MS fragmentation matches)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that xia-lab/MetaboAnalystR repository is accessible and contains R package structure (DESCRIPTION, R/, man/ directories present)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: R scripts or functions implementing LC-MS peak detection module"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: R scripts or functions implementing peak alignment module"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: R scripts or functions implementing feature table generation module"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: example or vignette demonstrating end-to-end workflow from raw spectral data input to feature table output"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: output feature table contains expected columns (m/z, retention time, intensity/abundance) \u2014 no canonical answer for exact column names; any schema that represents features with mass and temporal dimensions is acceptable"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: final feature table output in standard rectangular format (CSV, TSV, or R data object)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that xia-lab/MetaboAnalystR repository is accessible and contains R package structure (DESCRIPTION, R/, man/ directories present)",
+      "verify file_exists: R scripts or functions implementing LC-MS peak detection module",
+      "verify file_exists: R scripts or functions implementing peak alignment module",
+      "verify file_exists: R scripts or functions implementing feature table generation module",
+      "verify file_exists: example or vignette demonstrating end-to-end workflow from raw spectral data input to feature table output",
+      "script_runs: execute a minimal end-to-end workflow using provided example data (if present in repo) and confirm feature table output is generated in expected format (CSV, data.frame, or matrix)",
+      "verify field_present: output feature table contains expected columns (m/z, retention time, intensity/abundance) \u2014 no canonical answer for exact column names; any schema that represents features with mass and temporal dimensions is acceptable",
+      "verify file_format_is: final feature table output in standard rectangular format (CSV, TSV, or R data object)"
+    ],
+    "expert_review": [
+      "assess whether peak detection algorithm implementation (e.g., centWave, matched filter, or equivalent) follows standard LC-MS metabolomics practices and produces chemically interpretable results",
+      "assess whether peak alignment algorithm correctly handles retention time drift and m/z calibration across multiple samples",
+      "assess whether feature table generation properly handles missing values, duplicate features, and isotope/adduct relationships in a way consistent with published metabolomics best practices",
+      "assess overall fidelity of the implemented pipeline to stated LC-MS metabolomics workflow in MetaboAnalystR 4.0 title and documentation"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

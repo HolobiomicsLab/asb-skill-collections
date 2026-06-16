@@ -1,0 +1,174 @@
+schema_version: 0.1.0
+workflow_id: coll_limmavoom_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: Limma is an R package for analyzing gene expression data through linear
+    models and empirical Bayesian methods, designed to assess differential expression
+    across diverse technologies including microarrays, RNA-seq, and proteomics.
+  pseudo_abstract: The limma package provides methods for analyzing comparisons between
+    many RNA targets simultaneously in arbitrarily complex designed experiments. Empirical
+    Bayesian methods estimate hyperparameters of the prior distribution over gene-wise
+    variances, enabling computation of moderated t-statistics and B-statistics that
+    remain stable even when the number of arrays is small. Linear model and differential
+    expression functions apply to a wide variety of gene expression technologies including
+    microarrays (single-channel or two-color), quantitative PCR, RNA-seq, and proteomics.
+    The package also provides normalization and background correction functions for
+    microarrays and similar technologies.
+  research_questions:
+  - How does limma estimate hyperparameters of the prior distribution over gene-wise
+    variances to compute moderated t-statistics and B-statistics?
+  - What does the lmFit function in limma produce when applied to a microarray dataset
+    with a specified design matrix?
+  - Does prepending edgeR's calcNormFactors normalization to the limma voom pipeline
+    alter the ranked list of differentially expressed genes compared to the standard
+    limma-only workflow?
+  methods_summary: 'Load a pre-fitted lmFit object containing gene-wise ordinary least-squares
+    estimates and residual variances Apply empirical Bayes estimation to fit a scaled
+    inverse-chi-squared prior distribution over gene-wise variances Compute moderated
+    t-statistics by shrinking gene variances toward the posterior mean under the fitted
+    prior Calculate B-statistics (log-odds of differential expression) from the moderated
+    t-statistics and estimated prior degrees of freedom Validation: verify that moderated
+    t-statistics show reduced variance and improved power-to-detect compared to ordinary
+    t-statistics, particularly for genes with small sample sizes or low initial variance
+    estimates References: source article (DOI: 10.1093/nar/gkv007) Load microarray
+    expression matrix and sample metadata from a public GEO repository. Construct
+    a design matrix encoding experimental groups, conditions, and any batch or covariate
+    effects. Apply limma''s lmFit function to fit row-wise linear models across all
+    genes using the design matrix. Retrieve the MArrayLM object containing coefficient
+    estimates, standard errors, and model diagnostics. Validation: Confirm that the
+    MArrayLM object contains a non-empty coefficients matrix with dimensions matching
+    the number of genes and design matrix columns, and that all standard error estimates
+    are positive and finite. References: source article (DOI: 10.1093/nar/gkv007)
+    Load raw RNA-seq read counts and metadata; construct design matrix from experimental
+    annotations. Apply edgeR''s calcNormFactors with TMM method to compute library
+    size scaling factors accounting for composition bias. Execute voom transformation
+    using TMM-normalized library sizes to calculate precision weights for each observation.
+    Fit linear models using lmFit, then apply empirical Bayes variance moderation
+    with eBayes. Extract top differentially expressed genes and quantify concordance
+    with limma-only baseline. Validation: Confirm that TMM-voom and limma-only outputs
+    both pass Benjamini-Hochberg FDR correction at threshold 0.05; report overlap
+    of significant genes and magnitude of log-fold-change differences between methods.
+    References: source article (DOI: 10.1093/nar/gkv007)'
+  domain: transcriptomics
+  techniques:
+  - statistical-analysis
+  - normalization
+  - false-discovery-rate-correction
+  claims:
+  - claim_text: Limma is an R package for the analysis of gene expression data.
+    claim_type: finding
+    speculative: false
+    entity_id: limma
+  - claim_text: Limma uses linear models for analysing designed experiments and assessment
+      of differential expression.
+    claim_type: finding
+    speculative: false
+    entity_id: limma
+  - claim_text: Limma provides the ability to analyse comparisons between many RNA
+      targets simultaneously in complicated designed experiments.
+    claim_type: finding
+    speculative: false
+    entity_id: limma
+  - claim_text: Empirical Bayesian methods are used to provide stable results even
+      when the number of arrays is small.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_empirical_bayes
+  - claim_text: Normalization and background correction functions are provided for
+      microarrays and similar technologies.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_normalization
+  - claim_text: Linear model and differential expression functions apply to microarrays
+      (single-channel or two-color).
+    claim_type: finding
+    speculative: false
+  - claim_text: Linear model and differential expression functions apply to quantitative
+      PCR.
+    claim_type: finding
+    speculative: false
+  - claim_text: Linear model and differential expression functions apply to RNA-seq.
+    claim_type: finding
+    speculative: false
+  - claim_text: Linear model and differential expression functions apply to proteomics.
+    claim_type: finding
+    speculative: false
+  - claim_text: Ritchie et al. (2015) demonstrated that limma powers differential
+      expression analyses for RNA-sequencing and microarray studies.
+    claim_type: finding
+    speculative: false
+    entity_id: limma
+  - claim_text: Phipson et al. (2016) showed that robust hyperparameter estimation
+      protects against hypervariable genes.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_robust_hyperparameter
+  - claim_text: Phipson et al. (2016) showed that robust hyperparameter estimation
+      improves power to detect differential expression.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_robust_hyperparameter
+  - claim_text: Law et al. (2014) described voom as unlocking precision weights for
+      linear model analysis of RNA-seq read counts.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_voom
+  - claim_text: Law et al. (2016) presented RNA-seq analysis using limma, Glimma,
+      and edgeR as easy as 1-2-3.
+    claim_type: finding
+    speculative: false
+    entity_id: limma
+  - claim_text: Law et al. (2020) published a guide to creating design matrices for
+      gene expression experiments.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Top table of differentially expressed genes from TMM-voom-limma pipeline containing
+    gene identifiers, log-fold-changes, average log-expression, t-statistics, p-values,
+    and adjusted p-values (FDR).
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Top table of differentially expressed genes from limma-only baseline (without
+    TMM normalization pre-processing) in identical format for direct comparison.
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Comparison summary table or figure showing overlap of significantly differentially
+    expressed genes (FDR < 0.05) between TMM-voom and limma-only methods, including
+    count of concordant/discordant calls and magnitude of log-fold-change shifts.
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

@@ -1,0 +1,1989 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/batch-prediction-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/binary-classification-output-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/binary-classifier-ablation-testing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/chemical-structure-feature-encoding",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/chemical-structure-standardization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/classifier-prediction-inference",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/descriptor-subgroup-partitioning",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/descriptor-table-assembly",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-cheminformatics-pipeline",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-descriptor-calculation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/prediction-sensitivity-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/smiles-sdf-parsing-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "BitterPredict is a classifier that predicts whether a compound is bitter or not based on its chemical structure.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_BitterPredict"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "BitterPredict.m accepts CSV or EXCEL files as input containing required descriptors of molecules.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_BitterPredict"
+        },
+        {
+          "id": "asb:spine_TOOL_BitterPredict_m"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "BitterPredict.m calculates predictions for whether each molecule is bitter or not.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_BitterPredict"
+        },
+        {
+          "id": "asb:spine_TOOL_BitterPredict_m"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The full code for BitterPredict will be available upon publication.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_BitterPredict"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "BitterPredict is described in a publication authored by Ayana Dagan Wiener, Ido Nissim, Natalie Ben Abu, Gigliola Borgonovo, Angela Bassoli, and Masha Y. Niv.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_BitterPredict"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Paper confirms BitterPredict uses chemical structure/physicochemical descriptors as input and generates bitter/not-bitter predictions. However, the paper does not specify input format details, data structure requirements, or mention a '.m' file extension. The research question appears to assume implementation details (BitterPredict.m) not documented in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What is the input format and data structure required for BitterPredict.m to generate bitter/not-bitter predictions for a set of molecules?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:23.728869+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure.",
+      "asbval:note": "BitterPredict is confirmed as a tool used in the paper for bitterness prediction from chemical structure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:23.728869+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Prediction was performed for compounds extracted from external test set 1 and external test set 2 (Table 4)",
+      "asbval:note": "Paper confirms BitterPredict generates binary bitter/not-bitter predictions for molecules. However, no explicit mention of CSV output format. The paper shows results in tables but does not specify the actual output file format that BitterPredict produces.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "CSV file with per-molecule binary bitter/not-bitter predictions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:23.728869+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "The paper confirms that BitterPredict takes chemical structure/physicochemical descriptors as input and produces bitterness predictions, which aligns with the title's description.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Reproduce BitterPredict classifier predictions on a set of molecules with known chemical structure descriptors",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:23.728869+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The research question asks about 'BitterPredict.m' (suggesting a MATLAB implementation), but the paper does not specify the programming language or file format of BitterPredict. The paper references BitterPredict as a tool but does not provide implementation details.",
+        "The card focuses on input format and data structure requirements, which are not explicitly detailed in the paper. The paper only states that 'physicochemical descriptors' are used but does not specify the exact format, schema, or structure required.",
+        "The expected output specifies 'CSV file' format, but the paper does not confirm BitterPredict outputs CSV. The paper shows results in tables but does not document the actual output format."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:23.728869+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not describe BitterPredict's input format, descriptor extraction pipeline, or CSV/Excel preparation workflow. BitterPredict is mentioned only as a comparison tool that 'predicts the taste of a molecule based on its chemical structure' using 'physicochemical descriptors as inputs' (passage 9), but no details on descriptor preparation, file formats, or the .m file are provided. The paper focuses on BitterMasS (mass spectrum-based prediction), not BitterPredict's internal pipeline.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What descriptor input format and preparation workflow is required to convert raw molecular representations into the CSV or Excel files needed for BitterPredict.m classification?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:33.576430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of CSV/Excel output formats or BitterPredict.m input specifications in the paper. The paper does not document BitterPredict's descriptor input format or file preparation workflow. BitterPredict is cited as an external tool (reference 14) but its internal implementation details are not described.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "CSV or Excel file containing molecular descriptors formatted for BitterPredict.m input",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:33.576430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict is mentioned and used in the paper as a comparison tool for bitterness prediction from chemical structures. However, the paper does not describe BitterPredict's internal descriptor extraction pipeline or input file formats\u2014it only uses BitterPredict as an external reference tool for validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:33.576430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate task card appears to conflate BitterMasS (the main tool developed in this paper) with BitterPredict (an external reference tool). The paper develops BitterMasS, which predicts bitterness from mass spectra, not from chemical structure descriptors.",
+        "The research question and expected outputs focus on reconstructing BitterPredict's descriptor pipeline, but the paper does not document BitterPredict's internal methods\u2014it only cites BitterPredict (reference 14) as a comparison baseline.",
+        "The paper extensively documents the BitterMasS descriptor extraction pipeline (binning strategy, intensity normalization, instrumental metadata encoding) but does not describe BitterPredict's descriptor preparation workflow.",
+        "No CSV/Excel file formats or .m file specifications are mentioned in the paper for either tool."
+      ],
+      "asbval:n_drift_notes": 4,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:33.576430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not perform ablation studies on BitterPredict descriptor subgroups. BitterPredict is mentioned as a comparison tool (predicts bitterness from chemical structure using physicochemical descriptors), but no systematic removal or sensitivity analysis of its descriptors is conducted. The paper focuses on developing and validating BitterMasS (mass spectrum-based prediction), not analyzing BitterPredict's internal descriptor sensitivity.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Which descriptor subgroups have the greatest impact on bitter/not-bitter prediction accuracy when systematically removed from the BitterPredict classifier?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:43.249818+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No ablation analysis or descriptor-group sensitivity tables are presented in the paper. The paper does present feature importance analysis for BitterMasS (Figure 3, showing 20 most important features for the Random Forest model), but this is for BitterMasS, not BitterPredict, and it does not involve systematic ablation or prediction-change rate calculations.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Table of per-descriptor-group prediction-change rates showing how many molecules change prediction label when each descriptor subgroup is ablated",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:43.249818+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict is mentioned and used in the paper as a comparison/validation tool for external test sets, but it is not the primary tool being developed or analyzed. The paper uses BitterPredict to compare performance against BitterMasS on external sets, but does not perform the descriptor ablation analysis claimed in the task card. The tool is present but not used for the claimed purpose.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:43.249818+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The task card describes an analysis of BitterPredict's descriptor sensitivity via ablation, but the paper's focus is on developing BitterMasS (a mass spectrum-based predictor), not on analyzing BitterPredict's internal mechanisms.",
+        "The paper does include feature importance analysis, but only for BitterMasS (the Random Forest model trained on mass spectral data), not for BitterPredict.",
+        "BitterPredict is used as an external comparison tool to validate BitterMasS performance, not as the subject of sensitivity analysis.",
+        "The task card appears to conflate BitterMasS feature importance (which is present in the paper) with BitterPredict descriptor ablation (which is not performed)."
+      ],
+      "asbval:n_drift_notes": 4,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:43.249818+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/batch-prediction-comparison/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To obtain intuitive insights into the BitterMasS model, feature importance was extracted. In a Random Forest algorithm, on which the BitterMasS model is based, feature importance refers to the relative importance of each feature when making predictions.",
+      "asbval:note": "Paper performs feature importance extraction on BitterMasS (Random Forest), not descriptor ablation testing. The paper does NOT systematically remove descriptor subgroups to measure prediction stability. Instead, it directly extracts feature importance from the trained model. This is a different methodology than the claimed ablation-based approach.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "batch-prediction-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compare predictions across multiple ablated feature sets by systematically removing descriptor subgroups from a classifier input and measuring prediction stability. This skill quantifies which molecular descriptor families are most influential on bitter/not-bitter classification ",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:38.294330+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/batch-prediction-comparison/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Paper confirms BitterPredict exists and accepts descriptor input for binary bitter/not-bitter classification. However, the paper does NOT demonstrate BitterPredict being used for descriptor-ablated batch predictions. BitterPredict is used for structure-based prediction on external test sets, not for ablation studies. The GitHub repo URL cannot be verified from the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "batch-prediction-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict.m (repo: https://github.com/Niv-Lab/BitterPredict1) \u2014 Executes batch predictions on descriptor-ablated datasets and returns bitter/not-bitter classifications",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:38.294330+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/batch-prediction-comparison/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Direct confirmation of BitterPredict's role as a binary bitter/not-bitter classifier using chemical structure/descriptors.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "batch-prediction-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict \u2014 classifier which predicts whether a compound is bitter or not, based on its chemical structure",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:38.294330+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/batch-prediction-comparison/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not demonstrate or discuss descriptor ablation testing or prediction perturbation as a method. The paper's approach to understanding feature importance is direct extraction from the Random Forest model (Figure 3), not ablation-based empirical perturbation. No evidence in the paper supports the 'when NOT to use' or 'when to use' guidance provided in the scope section.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "batch-prediction-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have a trained molecular classifier (like BitterPredict) that accepts structured descriptor input, and you need to understand which chemical descriptor subgroups drive prediction outcomes. Apply this skill when feature importance cannot be directly extracted from the mod",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:38.294330+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classification-output-interpretation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterMasS, a Random Forest classifier that was trained on 5414 experimental mass spectra of bitter and nonbitter compounds... The spectrum-bitterness prediction strategy was more effective than the spectrum-structure-bitterness prediction strategy and covered more compounds.",
+      "asbval:note": "Paper demonstrates binary classification of compounds as bitter/not-bitter and discusses organizing predictions for downstream analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "binary-classification-output-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Interpret and compile binary classification predictions (bitter/not-bitter) from a machine-learning classifier into structured output files linked to molecule identifiers.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.248501+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classification-output-interpretation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Paper confirms BitterPredict exists and performs binary classification (bitter/not-bitter) from chemical structure descriptors. However, the paper does not mention 'BitterPredict.m' specifically as a MATLAB implementation, nor does it detail the exact file format or execution method. The paper references BitterPredict as a tool but does not provide the GitHub repo URL or confirm the .m extension. The functional role (binary classification on descriptors) is confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "binary-classification-output-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict.m \u2014 Executes binary classification on molecular descriptors to generate bitter/not-bitter predictions for each molecule",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.248501+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classification-output-interpretation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention GitHub repository URL or source code availability. Cannot verify from provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "binary-classification-output-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].repo",
+      "asbval:target_claim_text": "https://github.com/Niv-Lab/BitterPredict1",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.248501+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classification-output-interpretation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Exact functional description confirmed in paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "binary-classification-output-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].evidence_spans",
+      "asbval:target_claim_text": "BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.248501+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classification-output-interpretation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For comparison, a naive model that predicts spectra based on the proportion of bitter and nonbitter spectra in the training set was used... Prediction was performed for compounds extracted from external test set 1 and external test set 2 (Table 4)... The results were then combined, and the final label was selected based on the majority of the predictions.",
+      "asbval:note": "Paper demonstrates organizing predictions into structured outputs (Table 4 shows predictions mapped to compounds with precision/recall metrics), but the paper focuses on BitterMasS (mass spectrum-based) predictions, not BitterPredict (structure-based) predictions. The scope describes a BitterPredict workflow, but the paper's primary contribution is BitterMasS. The general workflow of compiling predictions into structured format is supported, but the specific tool focus (BitterPredict.m) is not the paper's main subject.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "binary-classification-output-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have executed a binary classifier (such as BitterPredict.m) on a set of molecules with chemical structure descriptors and need to translate the raw predictions into a structured CSV output file that maps molecule identifiers to their predicted class labels (bitter or not-bitt",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.248501+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classifier-ablation-testing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To obtain intuitive insights into the BitterMasS model, feature importance was extracted. In a Random Forest algorithm, on which the BitterMasS model is based, feature importance refers to the relative importance of each feature when making predictions.",
+      "asbval:note": "Paper performs feature importance analysis on BitterMasS (a mass-spectrum-based classifier), NOT descriptor ablation on a structure-based classifier. The card describes ablation testing (iterative removal of descriptor groups), but the paper uses built-in Random Forest feature importance ranking. These are related but distinct interpretability methods. The paper does NOT systematically remove descriptor subgroups and remeasure predictions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "binary-classifier-ablation-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Systematically remove descriptor subgroups from a molecular classifier's input data and measure prediction changes to identify which chemical structure descriptors have the greatest impact on bitter/not-bitter predictions.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:01.244752+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classifier-ablation-testing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To obtain intuitive insights into the BitterMasS model, feature importance was extracted... The feature importance values are relative and should be interpreted in the context of the other features in the model.",
+      "asbval:note": "Paper does extract feature importance to gain interpretability, but uses Random Forest's built-in feature importance method rather than ablation testing. The goal (interpretability) aligns, but the method differs.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "binary-classifier-ablation-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This reveals descriptor importance and enables interpretability of the classifier's decision logic.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:01.244752+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classifier-ablation-testing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Paper mentions BitterPredict as a structure-based classifier using physicochemical descriptors, but the paper's primary focus is BitterMasS (mass-spectrum-based), not BitterPredict. BitterPredict is used for comparison only. No evidence that BitterPredict.m is the tool used for the ablation testing described in the card. The card's research question describes ablation on a structure-based classifier, but the paper performs feature importance analysis on BitterMasS (spectrum-based).",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "binary-classifier-ablation-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict.m \u2014 Binary classifier that accepts CSV/EXCEL descriptor files and outputs bitter/not-bitter predictions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:01.244752+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classifier-ablation-testing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not describe or perform ablation testing on BitterPredict. The paper develops and validates BitterMasS (a mass-spectrum-based classifier using Random Forest), not a descriptor-ablation workflow on BitterPredict. BitterPredict is mentioned only as a comparison baseline for external validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "binary-classifier-ablation-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict \u2014 Binary classifier that accepts CSV/EXCEL descriptor files and outputs bitter/not-bitter predictions for each molecule; ablation testing iteratively calls this tool on descriptor-ablated datasets",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:01.244752+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classifier-ablation-testing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not perform descriptor-group ablation testing on BitterPredict or any structure-based classifier. The paper trains and interprets BitterMasS, which uses mass-spectral features (m/z bins and instrument parameters), not chemical structure descriptors. The interpretability method used is Random Forest feature importance, not ablation testing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "binary-classifier-ablation-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have a trained binary molecular classifier (like BitterPredict) and want to understand which groups of chemical descriptors drive its predictions.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:01.244752+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classifier-ablation-testing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The feature importance values are relative and should be interpreted in the context of the other features in the model. Since the total importance of all features is equal to one, the values of each feature were expressed as a percentage and the 20 most important features are presented in Figure 3.",
+      "asbval:note": "Paper ranks features by importance (Figure 3), but uses Random Forest feature importance ranking, not ablation testing. The outcome (ranked features) is similar, but the method is different.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "binary-classifier-ablation-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you need to rank descriptor subgroups by their contribution to prediction accuracy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:01.244752+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-feature-encoding/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict estimated that there are at least 11,000 compounds in the ChEBI database of molecules of biological interest that possess bitterness. Additional ML tools are developed to predict intense bitterness and the associated TAS2Rs. These methods use information about the structure of the compound.",
+      "asbval:note": "The paper does discuss structure-based prediction (BitterPredict uses physicochemical descriptors from chemical structure), but the primary focus of BitterMasS is NOT structure-to-descriptor encoding. Instead, BitterMasS predicts bitterness directly from MASS SPECTRA, not from encoded chemical descriptors. The card's research question describes a structure-encoding task, but the paper's main contribution is spectrum-based prediction. BitterPredict (mentioned as a comparison tool) does use structure descriptors, but the paper does not detail the descriptor encoding process itself\u2014it only states that BitterPredict 'uses information about the structure of the compound' and 'Physicochemical descriptors are used as inputs to the model' (passage 9). The paper's core innovation is bypassing structure encoding entirely.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-feature-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Encoding molecular structures as quantitative chemical descriptor vectors suitable for machine learning classifiers. This skill transforms raw chemical structures into tabular feature representations (CSV/Excel) that capture structural properties required for predictive modeling ",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:13.986453+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-feature-encoding/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict does exist and does use physicochemical descriptors from chemical structures. However, the paper does not describe HOW to encode structures into descriptors\u2014it only mentions that BitterPredict uses them. The paper's main scope is developing BitterMasS, which works directly from mass spectra WITHOUT structure encoding. The card's scope is misaligned with the paper's primary contribution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-feature-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have a set of molecules with known chemical structures and need to prepare them for classification or prediction tasks. Specifically, when you aim to train or apply a classifier (such as BitterPredict) that requires pre-computed chemical structure descriptors as input ra",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:13.986453+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-feature-encoding/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict is confirmed as a tool that takes chemical structure information (via physicochemical descriptors) and predicts bitterness. The role description is accurate.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "chemical-structure-feature-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict (role: Downstream classifier that consumes encoded molecular descriptors and produces bitter/not-bitter predictions)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:13.986453+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-feature-encoding/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not describe the process of generating or outputting chemical descriptor tables. The paper mentions that BitterPredict uses physicochemical descriptors as inputs, but does not document the descriptor generation workflow, output formats, or tools used to create descriptor tables. The paper focuses on mass spectral descriptor generation (binning strategy for m/z values), not chemical structure descriptor encoding.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "chemical-structure-feature-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "CSV or Excel file with molecular descriptors as columns; Table with molecule identifiers and computed chemical descriptors",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:13.986453+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-standardization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "If the name of the molecule was available, a search in the PubChem69 chemical compound database was performed followed by SMILES extraction. If the search was inconclusive, MarvinSketch70 was used to manually draw and extract SMILES.",
+      "asbval:note": "Paper does extract and work with SMILES representations, but the primary focus is on mass spectra, not SMILES parsing/canonicalization. The paper uses RDKit for InChIKey generation (passage 4: 'InChIKey, which was generated using RDKit'), not for SMILES canonicalization as the card claims. The card's framing of structure standardization as a core task is not central to BitterMasS, which predicts bitterness from mass spectra directly, not from chemical structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Parse and validate raw molecular structures in SMILES or SDF format, converting them into canonicalized representations suitable for descriptor calculation and chemical informatics pipelines.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.730088+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-standardization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Duplicates were identified and removed based on InChIKey, which was generated using RDKit.",
+      "asbval:note": "RDKit is used in the paper, but only for InChIKey generation to identify duplicates, not for SMILES canonicalization or validation as the card claims. The role is narrower than stated.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit \u2014 Cheminformatics parser for validating molecular structure syntax and canonicalizing SMILES/SDF representations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.730088+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-standardization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict is confirmed as a structure-based classifier using descriptors. However, the card's framing of it as consuming 'standardized molecular structures' from a prior canonicalization step is not explicitly demonstrated in the paper\u2014BitterPredict is presented as a separate, independent tool for comparison, not as a downstream consumer of the structure standardization workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "chemical-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict.m \u2014 Downstream classifier that consumes descriptor tables derived from standardized molecular structures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.730088+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-standardization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict is confirmed as a structure-based descriptor classifier, but the paper does not demonstrate it as a downstream consumer of a structure standardization pipeline. Instead, BitterMasS (the paper's main contribution) predicts bitterness directly from mass spectra, bypassing structure assignment entirely. The card's task framing is not aligned with the paper's actual workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict \u2014 Downstream classifier that consumes descriptor tables derived from standardized molecular structures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.730088+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-standardization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper's primary contribution is BitterMasS, which predicts bitterness directly from mass spectra without requiring structure standardization or descriptor calculation from structures. While BitterPredict is mentioned as a comparison tool, the paper does not present a workflow where structure standardization feeds into BitterPredict. The scope described in the card is not a central task in this paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "chemical-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have raw molecular structures in SMILES or SDF format that must be prepared as input to a descriptor-based classifier (e.g., BitterPredict). Apply this skill when the source structures have not yet been validated for syntax errors or canonicalized, and you need to feed c",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.730088+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/classifier-prediction-inference/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "The paper describes BitterPredict as a structure-based classifier using physicochemical descriptors for binary bitter/not-bitter prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "classifier-prediction-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Apply a trained machine-learning classifier to predict binary class labels (bitter/not-bitter) for a set of molecules given their chemical structure descriptors.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:40.078720+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/classifier-prediction-inference/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Paper confirms BitterPredict uses pre-computed descriptors for inference; no retraining is discussed in the context of application.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "classifier-prediction-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill is used when you have pre-computed molecular descriptors and need to generate taste predictions without retraining the classifier.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:40.078720+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/classifier-prediction-inference/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Paper confirms BitterPredict accepts descriptor inputs and produces binary predictions; file format not explicitly stated but consistent with descriptor-based workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "classifier-prediction-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have a CSV or Excel file containing chemical structure descriptors for one or more molecules, and you want to obtain binary bitter/not-bitter predictions for each molecule using the BitterPredict classifier.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:40.078720+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/classifier-prediction-inference/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Paper confirms BitterPredict exists and uses descriptors for binary prediction, but does not explicitly confirm the tool is named 'BitterPredict.m' or that it is a MATLAB implementation. The paper refers to 'BitterPredict' without specifying file extension or language. The GitHub repo URL cannot be verified from passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "classifier-prediction-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict.m (MATLAB classifier that accepts descriptor tables and produces binary bitter/not-bitter predictions)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:40.078720+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/classifier-prediction-inference/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.",
+      "asbval:note": "[SUBSTRING-MATCH for BitterPredict | role: binary classifier for bitter/not-bitter prediction from chemical structure]",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "classifier-prediction-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict (classifier which predicts whether a compound is bitter or not, based on its chemical structure)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:40.078720+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-subgroup-partitioning/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To obtain intuitive insights into the BitterMasS model, feature importance was extracted. In a Random Forest algorithm, on which the BitterMasS model is based, feature importance refers to the relative importance of each feature when making predictions... the values of each feature were expressed as a percentage and the 20 most important features are presented in Figure 3.",
+      "asbval:note": "Paper performs feature importance analysis on BitterMasS (Random Forest), not descriptor ablation/subgroup partitioning. The paper extracts feature importance rankings but does not systematically ablate descriptor subgroups. The functional approach differs: paper uses built-in Random Forest feature importance rather than controlled removal of descriptor categories.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "descriptor-subgroup-partitioning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Partition molecular descriptors into functionally coherent subgroups and systematically ablate each subgroup to quantify its impact on bitter/not-bitter prediction accuracy.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.407090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-subgroup-partitioning/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not perform controlled descriptor removal or ablation testing. Feature importance is extracted post-hoc from the trained Random Forest model, not via systematic ablation of descriptor subgroups.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "descriptor-subgroup-partitioning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill enables feature importance analysis through controlled descriptor removal and comparison of prediction changes.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.407090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-subgroup-partitioning/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not describe or perform descriptor subgroup partitioning or ablation. The scope card describes a methodology not present in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "descriptor-subgroup-partitioning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Partition molecular descriptors into functionally coherent subgroups and systematically ablate each subgroup to quantify its impact on bitter/not-bitter prediction accuracy.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.407090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-subgroup-partitioning/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict exists and accepts descriptors for prediction, but the paper does NOT use it for ablation testing or descriptor subgroup analysis. BitterPredict is compared to BitterMasS on external test sets, but no ablation workflow is demonstrated. The card's claimed role (running on 'each ablated dataset') is not supported by the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "descriptor-subgroup-partitioning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict.m \u2014 Classifier that accepts CSV/EXCEL files with molecular descriptors and produces bitter/not-bitter predictions; run independently on each ablated dataset to quantify descriptor subgroup impact",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.407090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-subgroup-partitioning/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Tool name and basic function confirmed. However, the card's broader context (descriptor ablation) is not supported.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "descriptor-subgroup-partitioning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict \u2014 Classifier which predicts whether a compound is bitter or not, based on its chemical structure.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.407090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-table-assembly/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict estimated that there are at least 11,000 compounds in the ChEBI database of molecules of biological interest that possess bitterness. Additional ML tools are developed to predict intense bitterness and the associated TAS2Rs. These methods use information about the structure of the compound.",
+      "asbval:note": "Paper describes BitterPredict as a tool that predicts bitterness from chemical structure using physicochemical descriptors as inputs (passage 9: 'BitterPredict is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.'). However, the paper does not describe the specific task of assembling pre-computed descriptors into CSV/Excel format for BitterPredict input. The paper focuses on BitterMasS (mass spectrum-based prediction), not on descriptor table assembly for BitterPredict. The research question describes a workflow task that is not explicitly addressed in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "descriptor-table-assembly",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Assemble pre-computed molecular descriptors into a structured CSV or Excel table formatted for input to BitterPredict classification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:02.647792+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-table-assembly/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Paper confirms BitterPredict uses physicochemical descriptors as inputs, but does not describe the specific CSV/Excel assembly workflow or the exact input format requirements. The paper is primarily about BitterMasS (mass spectrum-based prediction), not about descriptor table assembly for BitterPredict.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "descriptor-table-assembly",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Assemble pre-computed molecular descriptors into a structured CSV or Excel table formatted for input to BitterPredict classification. This skill bridges descriptor calculation and taste prediction by organizing descriptor columns and molecule rows into the exact input format requ",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:02.647792+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-table-assembly/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict is confirmed as a classifier that uses physicochemical descriptors (which would be organized in tabular form) for bitterness prediction. The paper references BitterPredict multiple times as a structure-based prediction tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "descriptor-table-assembly",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict.m (Target classifier that accepts the assembled descriptor table as input for taste prediction; requires exact CSV/Excel format produced by this skill)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:02.647792+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-table-assembly/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Duplicates were identified and removed based on InChIKey, which was generated using RDKit.",
+      "asbval:note": "Paper confirms RDKit is used for InChIKey generation and duplicate identification. However, the paper does not describe RDKit being used for descriptor calculation in the context of BitterPredict workflow. RDKit is used in the BitterMasS pipeline, not explicitly in a BitterPredict descriptor assembly workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "descriptor-table-assembly",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit (implied from workflow) - Cheminformatics parser used upstream to validate molecular structures and calculate descriptors prior to table assembly",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:02.647792+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-table-assembly/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict is confirmed as a real tool in the paper. However, the card's claim about 'source_task_ids' (task_001, task_002, task_003) cannot be verified from the paper passages provided.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "descriptor-table-assembly",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict (canonical tool entry with related_skills and source_task_ids)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:02.647792+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-cheminformatics-pipeline/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict estimated that there are at least 11,000 compounds in the ChEBI database of molecules of biological interest that possess bitterness. Additional ML tools are developed to predict intense bitterness and the associated TAS2Rs. These methods use information about the structure of the compound.",
+      "asbval:note": "Paper confirms BitterPredict uses chemical structure information for prediction, but does not describe a pipeline for converting SMILES/SDF to descriptor tables. The paper focuses on BitterMasS (mass spectrum-based prediction), not on descriptor preparation for BitterPredict. BitterPredict is mentioned as an existing tool but its descriptor pipeline is not documented in these passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-cheminformatics-pipeline",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert raw molecular structures (SMILES or SDF) into pre-computed descriptor tables (CSV or Excel) suitable for downstream machine-learning classifiers like BitterPredict.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:17.545135+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-cheminformatics-pipeline/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "RDKit is not mentioned anywhere in the paper. The paper uses InChIKey (generated using RDKit) for duplicate identification (passage 4: 'Duplicates were identified and removed based on InChIKey, which was generated using RDKit'), but RDKit is not discussed as a tool for descriptor calculation or SMILES/SDF parsing in the context of preparing input for classifiers.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "molecular-cheminformatics-pipeline",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit \u2014 Parses and validates SMILES/SDF structures; calculates molecular descriptors from validated structures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:17.545135+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-cheminformatics-pipeline/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Paper confirms BitterPredict uses physicochemical descriptors as inputs and predicts bitterness from chemical structure. However, the paper does not describe BitterPredict.m specifically, does not document its descriptor input format (CSV/Excel), and does not provide a pipeline for preparing such inputs. BitterPredict is presented as an existing external tool for comparison, not as the target of a descriptor preparation pipeline.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-cheminformatics-pipeline",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict.m \u2014 Target classifier that accepts the prepared CSV/Excel descriptor tables as input for taste prediction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:17.545135+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-cheminformatics-pipeline/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No repository URL is mentioned in the paper for BitterPredict or any related code.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "molecular-cheminformatics-pipeline",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[BitterPredict].repo",
+      "asbval:target_claim_text": "https://github.com/Niv-Lab/BitterPredict1",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:17.545135+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-cheminformatics-pipeline/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure.",
+      "asbval:note": "Claim is verbatim match to paper content.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-cheminformatics-pipeline",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[BitterPredict].evidence_spans",
+      "asbval:target_claim_text": "BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:17.545135+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-descriptor-calculation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Paper confirms BitterPredict uses physicochemical descriptors from chemical structure, but the paper does NOT describe a workflow for converting SMILES/SDF to descriptor tables. The paper uses BitterPredict as a downstream tool for comparison but does not document descriptor computation as a primary task. The descriptor-calculation workflow described in the card is not present in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-descriptor-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert raw molecular structures (SMILES or SDF format) into computed chemical descriptor tables suitable for machine-learning classifiers like BitterPredict.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:28.711019+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-descriptor-calculation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "Same as research_question: BitterPredict is confirmed to use descriptors, but the paper's primary focus is BitterMasS (mass-spectrum-based prediction), not descriptor-table construction from SMILES/SDF. The card's scope describes a preparatory workflow not documented in this paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-descriptor-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Convert raw molecular structures (SMILES or SDF format) into computed chemical descriptor tables suitable for machine-learning classifiers like BitterPredict.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:28.711019+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-descriptor-calculation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "RDKit is not mentioned anywhere in the paper. The paper does mention RDKit in passage [4] for InChIKey generation ('InChIKey, which was generated using RDKit'), but this is for duplicate removal in the dataset preparation, not for descriptor computation. The card's claim about RDKit computing descriptors for BitterPredict is not supported by the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "molecular-descriptor-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit \u2014 Cheminformatics parser for validating molecular structure syntax, parsing SMILES/SDF, and computing molecular descriptors from validated structures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:28.711019+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-descriptor-calculation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict is confirmed as a classifier that uses physicochemical descriptors from chemical structure. The paper compares BitterMasS against BitterPredict on external test sets.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-descriptor-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict.m \u2014 Downstream classifier that consumes the descriptor table output by this skill to generate bitter/not-bitter predictions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:28.711019+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-descriptor-calculation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure.",
+      "asbval:note": "Confirmed. The paper describes BitterPredict as a structure-based bitter/nonbitter classifier.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-descriptor-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict \u2014 tool with evidence_spans: 'BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.'",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:28.711019+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/prediction-sensitivity-analysis/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not perform descriptor ablation studies. Instead, it uses Random Forest feature importance extraction (passage 8: 'To obtain intuitive insights into the BitterMasS model, feature importance was extracted'). The paper's approach is post-hoc feature importance ranking from a trained model, not systematic ablation of descriptor subgroups. The paper also does not discuss lipophilicity or topological features as descriptor categories\u2014it focuses on mass spectral peak bins and instrumental descriptors.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "prediction-sensitivity-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Systematically ablate input descriptor subgroups to quantify their individual impact on bitter/not-bitter prediction accuracy in a trained classifier. This skill reveals which molecular descriptor categories (e.g., lipophilicity, topological features) drive predictions and which ",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:38.193781+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/prediction-sensitivity-analysis/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not perform ablation studies. Feature importance is extracted post-hoc from the trained Random Forest model (passage 8), not by removing descriptor subgroups and retraining or re-evaluating.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "prediction-sensitivity-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Systematically ablate input descriptor subgroups to quantify their individual impact on bitter/not-bitter prediction accuracy in a trained classifier.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:38.193781+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/prediction-sensitivity-analysis/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict is mentioned in the paper as a comparison tool (passages 8, 9, 10), but the paper's main contribution is BitterMasS, not BitterPredict. BitterPredict is used for external validation and comparison, not as the primary tool for the ablation/sensitivity analysis described in the card. The card's research question and scope describe a descriptor ablation workflow that is not performed in this paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "prediction-sensitivity-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:38.193781+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/prediction-sensitivity-analysis/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure. Physicochemical descriptors are used as inputs to the model.",
+      "asbval:note": "BitterPredict does accept structured descriptors and produces predictions, but the paper does not describe using it for ablation studies. The paper uses BitterMasS (a Random Forest classifier trained on mass spectra) as its primary tool, not BitterPredict. BitterMasS is invoked for prediction but not for descriptor ablation workflows. The role described in the card (ablation-based sensitivity analysis) is not demonstrated in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "prediction-sensitivity-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Trained classifier that accepts CSV/EXCEL descriptor files and produces bitter/not-bitter predictions for each molecule; invoked on each ablated dataset to quantify the impact of descriptor subgroup removal on prediction outputs",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:38.193781+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-sdf-parsing-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Duplicates were identified and removed based on InChIKey, which was generated using RDKit.",
+      "asbval:note": "Paper uses RDKit for InChIKey generation (duplicate detection), not for SMILES/SDF parsing or validation. The paper does not describe a SMILES/SDF parsing and validation workflow as a distinct task. RDKit is used in a post-hoc deduplication step, not as a primary structure validation tool before descriptor calculation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "smiles-sdf-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Parse and validate molecular structure syntax from raw SMILES or SDF format files using a cheminformatics parser (e.g., RDKit) to ensure structural integrity before descriptor calculation.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:52.940800+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-sdf-parsing-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss detection of malformed or invalid molecular representations, nor does it describe validation workflows to catch parsing errors or chemically invalid structures before descriptor calculation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "smiles-sdf-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "detect malformed or invalid molecular representations that would fail downstream descriptor computation or classification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:52.940800+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-sdf-parsing-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Duplicates were identified and removed based on InChIKey, which was generated using RDKit.",
+      "asbval:note": "RDKit is used for InChIKey generation (a derived identifier), not for primary SMILES/SDF parsing or syntax validation. The paper extracts SMILES from PubChem and MarvinSketch but does not describe a validation step using RDKit.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "smiles-sdf-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Parse and validate molecular structure syntax from raw SMILES or SDF format files using a cheminformatics parser (e.g., RDKit)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:52.940800+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-sdf-parsing-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "If the name of the molecule was available, a search in the PubChem69 chemical compound database was performed followed by SMILES extraction. If the search was inconclusive, MarvinSketch70 was used to manually draw and extract SMILES.",
+      "asbval:note": "Paper does extract SMILES for use with BitterPredict (structure-based classifier), but does not describe a validation step before feeding into BitterPredict. The workflow is SMILES extraction \u2192 BitterPredict application, not SMILES extraction \u2192 validation \u2192 BitterPredict.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "smiles-sdf-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have raw molecular structures in SMILES or SDF format that will feed into BitterPredict.m or other structure-based classifiers",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:52.940800+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-sdf-parsing-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Duplicates were identified and removed based on InChIKey, which was generated using RDKit.",
+      "asbval:note": "Paper uses RDKit for InChIKey generation (duplicate detection), not for SMILES/SDF parsing, syntax checking, or structure validation. The claimed role (parser and validator for SMILES/SDF with syntax checking) is not supported by the paper's actual usage.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "smiles-sdf-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit: Cheminformatics parser and validator for SMILES and SDF structures; performs syntax checking and chemical structure representation.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:52.940800+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-sdf-parsing-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BitterPredict14 is a tool that predicts the bitterness of a compound based on its chemical structure.",
+      "asbval:note": "BitterPredict is correctly described as a structure-based bitterness classifier. The paper extensively uses and compares BitterMasS against BitterPredict.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "smiles-sdf-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BitterPredict: Classifier which predicts whether a compound is bitter or not, based on its chemical structure.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:04:52.940800+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/batch-prediction-comparison/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "batch-prediction-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.25,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classification-output-interpretation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "binary-classification-output-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.4,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/binary-classifier-ablation-testing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "binary-classifier-ablation-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-feature-encoding/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "chemical-structure-feature-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.25,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-standardization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "chemical-structure-standardization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/classifier-prediction-inference/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "classifier-prediction-inference",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-subgroup-partitioning/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "descriptor-subgroup-partitioning",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/descriptor-table-assembly/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "descriptor-table-assembly",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.4,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-cheminformatics-pipeline/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "molecular-cheminformatics-pipeline",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-descriptor-calculation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "molecular-descriptor-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.4,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/prediction-sensitivity-analysis/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "prediction-sensitivity-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-sdf-parsing-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "smiles-sdf-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.16666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "BitterPredict is a classifier that predicts whether a compound is bitter or not based on its chemical structure.",
+      "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false; content is identical in meaning.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:source_excerpt": "BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:11.635635+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "BitterPredict.m accepts CSV or EXCEL files as input containing required descriptors of molecules.",
+      "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false; minor wording variation ('gets as input' vs 'accepts') does not affect accuracy.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:source_excerpt": "BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:11.635635+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "BitterPredict.m calculates predictions for whether each molecule is bitter or not.",
+      "asbval:note": "Source excerpt contains apparent typo ('calucautes' instead of 'calculates'), but text content is consistent with intended meaning; substring_in_paper=false suggests excerpt may be paraphrased or corrected.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:source_excerpt": "calucautes a predictions if each molecule is bitter or not",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:11.635635+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The full code for BitterPredict will be available upon publication.",
+      "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false; content is consistent.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:source_excerpt": "full code will be available upon publication.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:11.635635+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "BitterPredict is described in a publication authored by Ayana Dagan Wiener, Ido Nissim, Natalie Ben Abu, Gigliola Borgonovo, Angela Bassoli, and Masha Y. Niv.",
+      "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false; all author names and publication context are correctly captured.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-jafc-3c09767",
+      "asbval:source_excerpt": "Ayana Dagan Wiener, Ido Nissim, Natalie Ben Abu, Gigliola Borgonovo, Angela Bassoli, Masha Y. Niv. Bitter or not? BitterPredict, a tool for predicting taste from chemical structure In Revision.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:01:11.635635+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_bittermass#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SYS_BitterPredict",
+      "title": "BitterPredict",
+      "identifier": "urn:asb:spine:SYS_BitterPredict"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_BitterPredict_m",
+      "title": "BitterPredict.m",
+      "identifier": "urn:asb:spine:TOOL_BitterPredict_m"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_ChemicalStructure",
+      "title": "Chemical Structure Descriptors",
+      "identifier": "urn:asb:spine:COMP_ChemicalStructure"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_TASK_BitternessPrediction",
+      "title": "Bitterness Prediction Task",
+      "identifier": "urn:asb:spine:TASK_BitternessPrediction"
+    }
+  ]
+}

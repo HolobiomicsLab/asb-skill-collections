@@ -1,0 +1,374 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/DBCustomIcon.png",
+      "role": "figure",
+      "sha256": "d9253b88ba2d82c7bb456b960c4eca8840491efa35e36f4d8c9301f6b39fe694"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DBLipidsIcon.png",
+      "role": "figure",
+      "sha256": "64239735bd05f714305b6387d3b803a6823be50d22cf162e8cb373f2ec7a9849"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DBOnlineIcon.png",
+      "role": "figure",
+      "sha256": "bd474feacdb225f557c0c271342e5568ac0f619f7e4e5b0e86e130bfcc9d27c9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DBSpectraIcon.png",
+      "role": "figure",
+      "sha256": "399a2940e9626728e4441ebb1816097192759803e421b77eebe986e55340f1f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/KMDIcon.png",
+      "role": "figure",
+      "sha256": "dfb2e8dfe422d343c4cd6f79d6f00ca69c35652f11c3f5d9e3c1a0eb05bd13f6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/RKMIcon.png",
+      "role": "figure",
+      "sha256": "d4076aac5c99e918067995fb056342d04876a43895fd0ceaec78b226f243a523"
+    },
+    {
+      "indexable": false,
+      "path": "figures/annotationsicon.png",
+      "role": "figure",
+      "sha256": "5c432c1f37611e387384c08e06533684c3d3f6e1f95d1a9656dae2f3dd0ad354"
+    },
+    {
+      "indexable": false,
+      "path": "figures/arrowdownicon.png",
+      "role": "figure",
+      "sha256": "0ef6a82b28330fdc6038d1689d4d389aa8885a8fe6a33c3c5e09e840338afca4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/arrowupicon.png",
+      "role": "figure",
+      "sha256": "3c9a434272ad44a8abaae883aa2e7efd7fd252be7f21bdc4c894ef0a256107fb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/axesicon.png",
+      "role": "figure",
+      "sha256": "6893a551f4b6cca6d6bcbe78ec75513d32935e0e229b7f32c9e75d0b9126ff68"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bgicon.png",
+      "role": "figure",
+      "sha256": "fbba5a5db4938a3c1518b803f08dc6556ee75a07689b60a526a1d227a74c9e82"
+    },
+    {
+      "indexable": false,
+      "path": "figures/blocksizeicon.png",
+      "role": "figure",
+      "sha256": "70c086aa0151bae71f52c8262a28ad3cfc2515a4ede6ec9f3cf5fbb700ca70b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/btnspectraprocessing.png",
+      "role": "figure",
+      "sha256": "c5d445917e4d842182faf54f0895ab3cf2db55db60de51bd78cdc5255513c335"
+    },
+    {
+      "indexable": false,
+      "path": "figures/centroidicon.png",
+      "role": "figure",
+      "sha256": "87028ab8db2e97fa2682d2d09264167bb7725de300c4deb10674085e579a246d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/colorbaricon.png",
+      "role": "figure",
+      "sha256": "f419b4114c6cf61d2e74a4372b6d2ad57bdaa0c93fd5ba5baec2ac50b11cdf19"
+    },
+    {
+      "indexable": false,
+      "path": "figures/continuousicon.png",
+      "role": "figure",
+      "sha256": "eb4ab19ec187b29ba2175ee7a116be1d3a4173a387d3babf2c179bc52b58608e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/datapointsicon.png",
+      "role": "figure",
+      "sha256": "d7f666732d452c462443d267e4cef19d49ffa862d8c8925eba9ee648518f46df"
+    },
+    {
+      "indexable": false,
+      "path": "figures/exp_graph_all.png",
+      "role": "figure",
+      "sha256": "336ac1135534491a0882d055350d5e319e0faeab58d0ba673422265c1092ffa4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/exp_graph_emf.png",
+      "role": "figure",
+      "sha256": "9e445c097450d74a0396bc1733cac0f0eb5c9b4695424d662ee6dc3efe8e1add"
+    },
+    {
+      "indexable": false,
+      "path": "figures/exp_graph_eps.png",
+      "role": "figure",
+      "sha256": "56fb76a66ece0a856fe2e97e03cf79664e147c7b53616ecc0a5be2706015bbf7"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "5eba882426f31157ee55694a618a8dd5fa7aaea30811951890b1022af27d803b"
+    }
+  ],
+  "created_at": "2026-06-16T07:18:56.699764+00:00",
+  "crossref_doi": "10.1021/acs.analchem.1c02687",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Aligned feature table from sample alignment step (containing m/z, retention time, and peak intensities across samples)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Grouped feature table with isotopologue and adduct cluster assignments for each detected feature",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Isotopologue grouping relies on precise mass differences corresponding to stable isotopes: C13 (~1.003 Da), N15 (~0.997 Da), O18 (~2.004 Da), and D (~1.006 Da).",
+    "Common adduct masses must account for ionization mode: [M+H]+ (1.008 Da), [M+Na]+ (22.989 Da), [M+K]+ (38.963 Da), [M+NH4]+ (18.034 Da) in positive mode; [M\u2212H]\u2212 (\u22121.008 Da), [M+Cl]\u2212 (34.969 Da) in negative mode.",
+    "Retention time clustering is essential to group features of the same molecule across adduct variants, as they elute at the same or very similar times due to identical chromatographic behavior.",
+    "Mass accuracy tolerance (typically \u22645 ppm) determines the allowable deviation from theoretical mass differences when linking isotopologues and adducts."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the GitHub repository adelabriere/SLAW or zamboni-lab/SLAW contains a README or documentation file describing the post-picking grouping step",
+      "verify that the repository contains executable code or a module that implements isotopologue and adduct grouping",
+      "verify that example grouped feature output (table or file) exists in the repository, deposited dataset, or supplementary materials with at least one field representing feature groups",
+      "file_exists: grouped feature output file in repository or supplementary materials",
+      "field_present: grouped feature output contains identifiable fields for isotopologue group ID and/or adduct annotation",
+      "script_runs: grouping module executes without error on provided test LC-MS feature input"
+    ],
+    "expert_review": [
+      "verify that the implemented grouping algorithm correctly clusters detected features by isotopologue series (e.g., M, M+1, M+2 patterns)",
+      "verify that the grouping algorithm correctly identifies and separates adduct forms (e.g., [M+H]+, [M+Na]+, [M-H]\u2212)",
+      "verify that grouped output is biologically and chemically sensible: isotopologue groups show expected mass deltas and adduct groups show expected mass shifts"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does SLAW group detected LC-MS features into isotopologue and adduct clusters after peak picking?: 'grouping of isotopologues and adducts'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SLAW includes a processing step for grouping of isotopologues and adducts as part of its complete untargeted LC-MS workflow, which operates after peak picking and sample alignment.: 'Complete processing including peak picking, sample alignment, pick picking, grouping of isotopologues and adducts, gap-filling by data recursion'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Aligned feature table from sample alignment step (containing m/z, retention time, and peak intensities across samples): 'grouping of isotopologues and adducts'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Grouped feature table with isotopologue and adduct cluster assignments for each detected feature: 'grouping of isotopologues and adducts'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SLAW grouping module: 'grouping of isotopologues and adducts'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or detailed description of the post-picking grouping step algorithm is provided in the discussion section: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The document does not specify the algorithmic criteria or parameters used to cluster features into isotopologue and adduct groups: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No reference implementation or example grouped feature output is documented in the provided section: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "grouped_features.csv",
+  "expected_outputs": [
+    "Grouped feature table with isotopologue and adduct cluster assignments for each detected feature"
+  ],
+  "finding": "SLAW includes a processing step for grouping of isotopologues and adducts as part of its complete untargeted LC-MS workflow, which operates after peak picking and sample alignment.",
+  "github_name": "zamboni-lab/SLAW",
+  "input_from": "task_001",
+  "inputs": [
+    "Aligned feature table from sample alignment step (containing m/z, retention time, and peak intensities across samples)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "aligned_features.csv",
+    "isotope_mass_differences.txt",
+    "adduct_definitions.txt",
+    "grouped_features.csv"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Load aligned feature table with m/z, retention time, and intensity data.",
+    "Define isotopologue mass differences (C13, N15, O18, D) and adduct mass transformations for the ionization mode.",
+    "Cluster features by binning on retention time windows and linking features within mass tolerance of theoretical isotopologue/adduct masses.",
+    "Assign group identifiers to isotopologues and adducts sharing the same molecular ion.",
+    "Validation: grouped feature table contains all input features, each assigned a unique or shared group ID; mass differences between clustered features match theoretical isotopologue or adduct masses within specified ppm tolerance.",
+    "References: source article (DOI: 10.1021/acs.analchem.1c02687)"
+  ],
+  "missing_information": [
+    "No changelog or detailed description of the post-picking grouping step algorithm is provided in the discussion section",
+    "The document does not specify the algorithmic criteria or parameters used to cluster features into isotopologue and adduct groups",
+    "No reference implementation or example grouped feature output is documented in the provided section"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/filled_feature_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does SLAW group detected LC-MS features into isotopologue and adduct clusters after peak picking?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "isotopologue-adduct-cluster-assignment",
+    "mass-difference-pattern-matching",
+    "feature-grouping-by-molecular-ion",
+    "retention-time-alignment-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_slaw/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SLAW_system",
+    "arch_processing_pipeline",
+    "comp_gap_filling"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:adelabriere__SLAW",
+  "task_description": "Reconstruct the post-picking grouping module that clusters aligned LC-MS features into isotopologue and adduct groups. Produce a grouped feature table with cluster assignments.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Aligned feature table from sample alignment",
+      "port_id": "aligned_features",
+      "resolved_via": null,
+      "source": "task_001/filled_feature_table",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Identify and document the isotopologue and adduct grouping mechanism in SLAW, specifying its input features, grouping rules, and consolidated output format.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Grouped feature table with isotopologue and adduct cluster assignments",
+      "port_id": "grouped_features",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "quality-control",
+    "normalization"
+  ],
+  "title": "Reconstruct the Gap-Filling by Data Recursion Component",
+  "tools": [
+    "Centwave",
+    "SLAW grouping module"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load aligned feature table (output from sample alignment step) containing detected m/z and retention time coordinates. 2. Apply isotopologue and adduct grouping algorithm to cluster features sharing the same molecular ion with mass differences corresponding to isotopic shifts (e.g., C13, N15, D) or common adduct transformations (e.g., [M+H]+, [M+Na]+, [M+NH4]+). 3. Assign cluster identifiers to features and output grouped feature table with isotopologue/adduct group membership."
+}

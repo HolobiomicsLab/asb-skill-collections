@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:bioc__limma repository contains limma R package source code"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the limma package includes functions for empirical Bayes hyperparameter estimation (e.g., eBayes function)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that limma documentation or vignette describes the workflow: lmFit \u2192 eBayes \u2192 moderated t-statistics and B-statistics generation"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the output table contains required columns: gene identifier, log-fold-change, moderated t-statistic, B-statistic, and adjusted p-value"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that B-statistic values are numeric and finite (no NaN or Inf entries)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:bioc__limma repository contains limma R package source code",
+      "verify that the limma package includes functions for empirical Bayes hyperparameter estimation (e.g., eBayes function)",
+      "verify that limma documentation or vignette describes the workflow: lmFit \u2192 eBayes \u2192 moderated t-statistics and B-statistics generation",
+      "script_runs: execute a reproducible R script that loads a public GEO microarray dataset (e.g., via GEOquery), fits a linear model using lmFit, applies eBayes to estimate empirical Bayes hyperparameters, and outputs moderated t-statistics and B-statistics",
+      "verify that the output table contains required columns: gene identifier, log-fold-change, moderated t-statistic, B-statistic, and adjusted p-value",
+      "verify that B-statistic values are numeric and finite (no NaN or Inf entries)"
+    ],
+    "expert_review": [
+      "assess whether the estimated prior variance (s2.prior) and degrees of freedom (df.prior) from eBayes are biologically plausible given the input dataset",
+      "assess whether the moderated t-statistics show appropriate stabilization (shrinkage) compared to unmoderated t-statistics, particularly for genes with small sample sizes or high variance",
+      "assess whether the ranking of genes by B-statistic aligns with expected differential expression patterns or with published results from the same GEO dataset (if available)"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

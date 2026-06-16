@@ -1,0 +1,256 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "576be3e8cc37e286e6c3db044ec75a8d71371b030096346327f67aea076f877f"
+    }
+  ],
+  "created_at": "2026-06-16T07:06:27.996986+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Running NP-Classifier Docker container with TensorFlow Serving endpoint",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Model metadata JSON response containing input and output layer names",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "TensorFlow Serving exposes model metadata via a /model/metadata endpoint that returns JSON containing layer names and tensor specifications.",
+    "NP-Classifier uses two input layers ('input_2048' and 'input_4096') corresponding to different fingerprint bit-lengths, and a single output layer ('output') for classification predictions.",
+    "Docker Compose orchestration is required to bring up the full NP-Classifier stack including the TensorFlow Serving container and supporting services.",
+    "The ARCH_TENSORFLOW_SERVING passthrough layer in NP-Classifier forwards requests directly to the underlying TensorFlow Serving gRPC/REST interface without modification."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: docker-compose.yml or equivalent orchestration file in github:mwang87__NP-Classifier repository",
+      "script_runs: 'docker network create nginx-net' completes without error on agent system with Docker daemon",
+      "script_runs: 'make server-compose' (or equivalent build command from repository) completes without error and yields running containerized NP-Classifier service",
+      "file_format_is: TensorFlow Serving model artifact in models_folder directory is valid SavedModel format (contains saved_model.pb and variables/)",
+      "script_runs: HTTP GET request to http://localhost:8501/v1/models/<model_name>/metadata (or configured TensorFlow Serving port) returns valid JSON response without connection error",
+      "format_is: /metadata endpoint response is valid JSON conforming to TensorFlow Serving metadata schema",
+      "field_present: response JSON contains 'signature_def' or equivalent model signature metadata block",
+      "contains_substring: response JSON includes input layer names 'input_2048' and 'input_4096' (case-sensitive, byte-for-byte exact match)",
+      "contains_substring: response JSON includes output layer name 'output' (case-sensitive, byte-for-byte exact match)"
+    ],
+    "expert_review": [
+      "verify that returned metadata input/output layer names match the documented schema in the article (input_2048, input_4096, output) and are consistent with the Keras model architecture",
+      "confirm that TensorFlow Serving is correctly proxying through the ARCH_TENSORFLOW_SERVING passthrough layer as described in README, not failing silently or returning cached/default metadata"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the TensorFlow Serving endpoint at /model/metadata successfully return model metadata including the correct input and output layer names when queried on the running Dockerized NP-Classifier server?: 'We pass through tensorflow serving at this url:\n\n```/model/metadata```\n\nIf the model input names change, then we need to change it in the code'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The expected model layer names that should be returned by the /model/metadata endpoint are input layers 'input_2048' and 'input_4096', and output layer 'output'.: 'Input layers' names should be \"input_2048\" and \"input_4096\"\n\nOutput layer's name should be \"output\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Running NP-Classifier Docker container with TensorFlow Serving endpoint: 'We pass through tensorflow serving at this url'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Model metadata JSON response containing input and output layer names: 'Input layers' names should be \"input_2048\" and \"input_4096\"\n\nOutput layer's name should be \"output\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] docker: 'you need docker and docker-compose'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] docker-compose: 'you need docker and docker-compose'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TensorFlow Serving: 'We pass through tensorflow serving at this url'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, breaking changes, or release notes for the NP-Classifier project.: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "model_metadata.json",
+  "expected_outputs": [
+    "Model metadata JSON response containing input and output layer names"
+  ],
+  "finding": "The expected model layer names that should be returned by the /model/metadata endpoint are input layers 'input_2048' and 'input_4096', and output layer 'output'.",
+  "github_name": "mwang87/NP-Classifier",
+  "input_from": null,
+  "inputs": [
+    "Running NP-Classifier Docker container with TensorFlow Serving endpoint"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "tf_serving_response.json"
+  ],
+  "linked_result_ids": [
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010"
+  ],
+  "methodology_summary": [
+    "Launch the NP-Classifier Docker Compose stack to start TensorFlow Serving.",
+    "Issue an HTTP GET request to the /model/metadata REST endpoint exposed by TensorFlow Serving.",
+    "Parse the JSON response and extract input/output layer metadata.",
+    "Validate that input layers are exactly named 'input_2048' and 'input_4096' and output layer is named 'output'.",
+    "Validation: metadata response contains all three expected layer names with correct spelling and format."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, breaking changes, or release notes for the NP-Classifier project."
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the TensorFlow Serving endpoint at /model/metadata successfully return model metadata including the correct input and output layer names when queried on the running Dockerized NP-Classifier server?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "docker-container-orchestration",
+    "tensorflow-serving-endpoint-querying",
+    "model-metadata-validation",
+    "http-api-integration-testing",
+    "json-response-parsing-and-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_npclassifier/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "NP_CLASSIFIER_SYSTEM",
+    "ARCH_TENSORFLOW_SERVING",
+    "ARCH_DOCKER_COMPOSE",
+    "COMP_KERAS_MODEL",
+    "COMP_INPUT_2048",
+    "COMP_INPUT_4096",
+    "COMP_OUTPUT_LAYER",
+    "TOOL_TENSORFLOW",
+    "API_MODEL_METADATA"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:mwang87__NP-Classifier",
+  "task_description": "Query the /model/metadata endpoint on a running Dockerized NP-Classifier server and verify that TensorFlow Serving returns complete model metadata including input layer names ('input_2048', 'input_4096') and output layer name ('output'). Save the metadata response as a JSON file.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Running TensorFlow Serving endpoint URL",
+      "port_id": "tf_serving_endpoint",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Query the /model/metadata endpoint on the running Dockerized NP-Classifier server and verify TensorFlow Serving returns the correct input/output layer names.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Model metadata JSON response",
+      "port_id": "metadata_json",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "deep-learning"
+  ],
+  "title": "Reproduce the /model/metadata API response via TensorFlow Serving passthrough",
+  "tools": [
+    "docker",
+    "docker-compose",
+    "TensorFlow Serving"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Start the Dockerized NP-Classifier server using docker-compose. 2. Send an HTTP GET request to the /model/metadata endpoint on the running TensorFlow Serving container. 3. Parse the JSON response and extract input/output layer name fields. 4. Validate that input layers are named 'input_2048' and 'input_4096' and output layer is named 'output'. 5. Write the complete metadata response to a JSON file."
+}

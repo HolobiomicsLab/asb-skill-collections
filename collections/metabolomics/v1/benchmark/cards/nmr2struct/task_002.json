@@ -1,0 +1,294 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "e3e126a9fe5368559d69ae8b31fd84cecaabea264bdadfc5e547e2b9962fe656"
+    }
+  ],
+  "created_at": "2026-06-15T09:55:01.678255+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Deposited dataset containing molecular structures and fragmentation patterns",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Trained transformer fragment assembly model weights and configuration",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Fragment assembly accuracy metrics (exact match rate, partial correctness scores)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test set predictions and evaluation report",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "Fragment assembly requires selecting and ordering molecular building blocks to reconstruct target connectivity, a combinatorial problem that grows with molecular size.",
+    "Transformer attention mechanisms can learn to model inter-fragment chemical compatibility and spatial/topological constraints implicitly.",
+    "Ground truth evaluation requires canonical molecular representations (SMILES, InChI, or molecular graphs) to score exact or partial assembly correctness.",
+    "Fragment diversity and overlap in the training set directly impact model generalization to novel molecular topologies."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that the deposited dataset github:MarklandGroup__NMR2Struct contains at least one file listing molecular fragments paired with ground-truth assembled structures",
+      "file_format_is: verify that fragment-structure pair data is in a machine-readable format (CSV, JSON, pickle, or HDF5)",
+      "script_runs: verify that a Python script can load the transformer module checkpoint from the repository and execute forward inference on a test fragment set without errors",
+      "output_matches_reference: compare model-generated assembled structures (SMILES or graph representation) against ground-truth structures from the deposited dataset using exact string matching or molecular graph isomorphism, with >0% of outputs matching, no canonical answer (multiple valid SMILES representations exist for same molecule)",
+      "field_present: verify that model outputs include both connectivity graph and atomic formula for each assembled candidate structure"
+    ],
+    "expert_review": [
+      "Assess whether the assembled structures are chemically valid (valence rules satisfied, no impossible bonds)",
+      "Evaluate fragment assembly accuracy: does the model correctly combine fragments without dangling bonds or mismatched atom types?",
+      "Judge whether the isolated fragment assembly module's performance is meaningful in isolation or whether it relies on upstream spectral encoding that is not present in this evaluation"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does the transformer architecture assemble molecular fragments into candidate molecular structures?: 'a transformer architecture can be constructed to efficiently solve the task, traditionally performed by chemists, of assembling large numbers of molecular fragments into molecular structures'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] A transformer architecture is constructed to efficiently assemble large numbers of molecular fragments into molecular structures, performing the task traditionally executed manually by chemists.: 'a transformer architecture can be constructed to efficiently solve the task, traditionally performed by chemists, of assembling large numbers of molecular fragments into molecular structures'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Deposited dataset containing molecular structures and fragmentation patterns: 'deposited dataset'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Trained transformer fragment assembly model weights and configuration: 'transformer architecture can be constructed to efficiently solve the task'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Fragment assembly accuracy metrics (exact match rate, partial correctness scores): 'assembling large numbers of molecular fragments into molecular structures'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Test set predictions and evaluation report: 'transformer architecture'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] transformer architecture: 'we show how a transformer architecture can be constructed to efficiently solve the task'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No description of fragment assembly module architecture, training data, or evaluation protocol is present in the provided discussion section: '[UNTRUSTED_DOCUMENT] contains only references and metadata, not method description'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "fragment_assembly_evaluation.csv",
+  "expected_outputs": [
+    "Trained transformer fragment assembly model weights and configuration",
+    "Fragment assembly accuracy metrics (exact match rate, partial correctness scores)",
+    "Test set predictions and evaluation report"
+  ],
+  "finding": "A transformer architecture is constructed to efficiently assemble large numbers of molecular fragments into molecular structures, performing the task traditionally executed manually by chemists.",
+  "github_name": null,
+  "input_from": "task_001",
+  "inputs": [
+    "Deposited dataset containing molecular structures and fragmentation patterns"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "fragment_structure_pairs.json",
+    "model_checkpoint.pt",
+    "train_test_split.json",
+    "assembly_predictions.csv"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_005",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Prepare fragment-structure ground truth pairs from the deposited dataset.",
+    "Design and implement transformer encoder-decoder architecture to map fragment sets to assembled structures.",
+    "Train the transformer on fragment-structure pairs using structure prediction loss.",
+    "Evaluate assembly accuracy on held-out test pairs using exact-match and partial-correctness metrics.",
+    "Validation: Achieve measurable fragment assembly accuracy on molecules up to 19 heavy atoms, with documented success/failure patterns by structural class."
+  ],
+  "missing_information": [
+    "No changelog found",
+    "No description of fragment assembly module architecture, training data, or evaluation protocol is present in the provided discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the transformer architecture assemble molecular fragments into candidate molecular structures?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "fragment-assembly-transformer-architecture",
+    "molecular-structure-prediction-from-fragments",
+    "graph-neural-network-design-for-chemistry",
+    "fragment-canonicalization-and-matching",
+    "structure-accuracy-metric-computation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_nmr2struct/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "TransformerFragmentAssembler",
+    "EndToEndPipeline",
+    "Result_AccurateEfficientStructureElucidation"
+  ],
+  "subdomains": [
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:MarklandGroup__NMR2Struct",
+  "task_description": "Reconstruct and evaluate a transformer-based fragment assembly module that assembles molecular fragments into candidate structures. Validate assembly accuracy on fragment-structure pairs derived from the deposited dataset.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Molecular fragment-structure ground truth pairs from dataset",
+      "port_id": "fragment_structure_pairs",
+      "resolved_via": null,
+      "source": "task_001/accuracy_metrics",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Reconstruct and evaluate the transformer module that assembles molecular fragments into candidate structures using fragment-structure pairs from the dataset.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained transformer fragment assembly module",
+      "port_id": "assembly_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Fragment assembly accuracy evaluation results",
+      "port_id": "assembly_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "nmr",
+    "deep-learning",
+    "machine-learning",
+    "transformer-model"
+  ],
+  "title": "Reconstruct the Transformer Fragment Assembler for combinatorial fragment-to-structure assembly",
+  "tools": [
+    "transformer architecture"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Extract or prepare fragment-structure ground truth pairs from the deposited dataset, identifying molecular fragments and their corresponding assembled target structures. 2. Build a transformer architecture that takes an ordered or unordered set of molecular fragments as input and outputs candidate assembled molecular structures using attention mechanisms for fragment relationship modeling. 3. Train the transformer module on the fragment-structure pairs using a structure prediction loss (e.g., graph matching or canonical SMILES accuracy). 4. Evaluate fragment assembly accuracy on held-out test pairs, computing metrics such as exact structure match rate and partial assembly correctness. 5. Document assembly failures and success patterns across molecular complexity ranges (atoms, branching, ring systems)."
+}

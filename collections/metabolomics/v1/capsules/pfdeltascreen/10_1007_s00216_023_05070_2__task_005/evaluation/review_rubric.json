@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:JonZwe__PFAScreen containing pipeline input stage code"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify pipeline accepts CSV or TSV artifact as optional custom feature list input"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify custom feature list input does not trigger pyOpenMS feature detection when supplied"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify downstream MD/C filter reads and processes custom feature list records without modification to filter logic"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify downstream KMD filter reads and processes custom feature list records without modification to filter logic"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify downstream MS2 fragment filter reads and processes custom feature list records without modification to filter logic"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output of prioritization filters applied to custom feature data matches expected schema (any of: feature ID, m/z, retention time, prioritization score, filter pass/fail labels)"
+    },
+    {
+      "id": "pf_009",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:JonZwe__PFAScreen containing pipeline input stage code",
+      "verify pipeline accepts CSV or TSV artifact as optional custom feature list input",
+      "verify custom feature list input does not trigger pyOpenMS feature detection when supplied",
+      "script_runs: execute pipeline with custom CSV feature list artifact and verify no errors or fallback to automated detection",
+      "verify downstream MD/C filter reads and processes custom feature list records without modification to filter logic",
+      "verify downstream KMD filter reads and processes custom feature list records without modification to filter logic",
+      "verify downstream MS2 fragment filter reads and processes custom feature list records without modification to filter logic",
+      "verify output of prioritization filters applied to custom feature data matches expected schema (any of: feature ID, m/z, retention time, prioritization score, filter pass/fail labels)",
+      "expert_review: parameter-sensitive \u2014 confirm that MD/C, KMD, and MS2 thresholds are applied identically whether features originate from pyOpenMS detection or custom CSV supply"
+    ],
+    "expert_review": [
+      "Review whether custom feature list format specification (column names, data types, required vs. optional fields) is documented or inferred from code",
+      "Assess whether edge cases (missing m/z, missing MS2 data, malformed rows) are handled gracefully and do not silently corrupt downstream filter logic",
+      "Evaluate whether any pyOpenMS-specific metadata (e.g. feature quality scores, detection confidence) is required or optional when using custom feature input",
+      "Judge whether the prioritization filters produce chemically and statistically defensible PFAS rankings when applied to externally supplied feature data"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

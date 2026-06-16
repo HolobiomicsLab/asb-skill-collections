@@ -1,0 +1,255 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/mwang87/MassQueryLanguage",
+      "locator_id": "gh_mwang87_massquerylanguage",
+      "locator_kind": "github",
+      "name": "mwang87/MassQueryLanguage",
+      "prose": "MassQL repository source code at github:mwang87/MassQueryLanguage",
+      "score": 0.2857,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "86f1f18716ef9724c59f6fbd75d53073365a11adffc8bd11d124820af696b93d"
+    }
+  ],
+  "created_at": "2026-06-16T05:33:53.849924+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MassQL repository source code at github:mwang87/MassQueryLanguage",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured test execution report with pass/fail status, test suite summary, and any failure details",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MassQL is a domain-specific language designed for mass spectrometry query expression with four core design principles: expressiveness, precision, scalability, and readability.",
+    "The test-unit.yml workflow is the canonical CI definition for validating MassQL source code correctness against its test suite.",
+    "A passing badge state indicates all unit tests in the suite execute without failure under the defined CI environment."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify file '.github/workflows/test-unit.yml' exists in github:mwang87__MassQueryLanguage repository",
+      "Verify file_format_is YAML for '.github/workflows/test-unit.yml'",
+      "Script runs: execute the CI workflow defined in test-unit.yml against the repository source code and collect structured output",
+      "Output contains_substring 'pass' or 'success' in the final test report (solution_space: CI platforms may report status as 'passed', 'success', 'PASSED', or similar variants)",
+      "Verify all test jobs in the workflow complete without unhandled errors or timeout failures",
+      "Output matches reference: reported badge state from repository README or CI status page indicates passing status at synthesis timestamp 2026-06-16T05:33:51+00:00"
+    ],
+    "expert_review": [
+      "Assess whether the test suite comprehensively covers the core MassQL query language functionality (parsing, semantic validation, execution against spectra)",
+      "Evaluate whether passing tests validate the four stated design principles: Expressiveness, Precision, Scalability, and Relative Naturalness",
+      "Review whether test coverage includes domain-specific edge cases (e.g., handling of mass tolerance parameters, retention time windows, isotope patterns)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the MassQL repository's unit test suite pass successfully when executed via the test-unit.yml CI workflow?: '[![Unit Testing](https://github.com/mwang87/MassQueryLanguage/actions/workflows/test-unit.yml/badge.svg)]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The MassQL repository maintains a unit testing CI workflow (test-unit.yml) with an associated passing badge, indicating that the unit test suite executes successfully.: '[![Unit Testing](https://github.com/mwang87/MassQueryLanguage/actions/workflows/test-unit.yml/badge.svg)](https://github.com/mwang87/MassQueryLanguage/actions/workflows/test-unit.yml)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MassQL repository source code at github:mwang87/MassQueryLanguage: 'https://github.com/mwang87/MassQueryLanguage'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structured test execution report with pass/fail status, test suite summary, and any failure details: 'Execute the existing unit-testing CI workflow (test-unit.yml) against the MassQL repository source code and reproduce the reported passing badge state.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MassQL: 'The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "cd {inputs.massql_repo} && npm install && npm test 2>&1 | tee test_report.txt && echo 'Test execution completed'"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "test_report.json",
+  "expected_outputs": [
+    "Structured test execution report with pass/fail status, test suite summary, and any failure details"
+  ],
+  "finding": "The MassQL repository maintains a unit testing CI workflow (test-unit.yml) with an associated passing badge, indicating that the unit test suite executes successfully.",
+  "github_name": "mwang87/MassQueryLanguage",
+  "input_from": null,
+  "inputs": [
+    "MassQL repository source code at github:mwang87/MassQueryLanguage"
+  ],
+  "keywords": [
+    "mass spectrometry querying",
+    "domain-specific language",
+    "sql-inspired",
+    "spectrum pattern matching",
+    "ms data repository",
+    "natural language query"
+  ],
+  "landmark_outputs": [
+    "test_log.txt",
+    "test_summary.json"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Clone the MassQL repository from GitHub",
+    "Install all required dependencies and runtime environment",
+    "Execute the unit test suite via test-unit.yml CI workflow",
+    "Collect and structure test results (pass/fail counts, logs, error details)",
+    "Validation: All tests pass and badge state matches the reported passing condition"
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the MassQL repository's unit test suite pass successfully when executed via the test-unit.yml CI workflow?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "ci-workflow-execution",
+    "unit-test-validation",
+    "repository-source-code-setup",
+    "test-suite-pass-fail-reporting"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_massql/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "massql_system",
+    "unit_testing_workflow",
+    "package_testing_workflow"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:mwang87__MassQueryLanguage",
+  "task_description": "Execute the unit-testing CI workflow (test-unit.yml) against the MassQL repository source code and produce a structured pass/fail report confirming the test suite status.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MassQL repository source code",
+      "port_id": "massql_repo",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the test-unit.yml CI workflow and generate a structured pass/fail report confirming unit test suite status.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Unit test execution report",
+      "port_id": "test_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "natural-language-processing"
+  ],
+  "title": "Reproduce unit-test suite pass/fail results for the MassQL package",
+  "tools": [
+    "MassQL"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Structured test execution report with pass/fail status, test suite summary, and any failure details."
+  ],
+  "workflow_description": "1. Clone the MassQL repository (mwang87/MassQueryLanguage) from GitHub. 2. Install dependencies and runtime environment as specified in the repository configuration. 3. Execute the unit test suite defined in the test-unit.yml CI workflow. 4. Collect test execution results (pass/fail status, test counts, error logs) into a structured report file."
+}

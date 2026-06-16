@@ -1,0 +1,405 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/conda_asari_screenshot.png",
+      "role": "figure",
+      "sha256": "63a0d4afac544c88c5471e07a1c7b8621b13f42dc929ec51bfe4de7812eab5bc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/viz_screen_shot20220518.png",
+      "role": "figure",
+      "sha256": "8f39467923bd069f89f08ae3cf26aae438fe9cefae58597ac3cd3ec4546a05ce"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "326956a66d39dbea6b07415031b29fd5b0d550197b560a91838eb9f9bd36ba0a"
+    }
+  ],
+  "created_at": "2026-06-16T05:33:42.864961+00:00",
+  "crossref_doi": "10.1038/s41467-023-39889-1",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mass track data from all samples, each containing m/z and full-RT-range intensity arrays",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Anchor mass track pairs (isotopic or adduct differences) per sample for confidence-based alignment",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sample count and user-specified reference sample identifier (if provided)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "_mass_grid_mapping.csv file documenting aligned m/z values, sample-track associations, and consensus m/z per grid position",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MassGrid object linking aligned mass tracks across all samples with consensus m/z identifiers",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Anchor mass tracks (isotope/adduct markers) are prioritized in alignment because they have higher confidence and less stable m/z from centroiding artifacts; aligning them first prevents the remaining tracks from competing and causing spurious matches.",
+    "ppm tolerance is the default precision threshold (5 ppm); the method detects systematic m/z shifts >1 ppm between sample and reference and recalibrates all sample m/z values accordingly to ensure alignment fidelity.",
+    "The sample with the highest number of anchor mass tracks is designated as reference unless user-overridden, because abundance of confident isotopic/adduct patterns indicates a high-quality, representative profile.",
+    "For studies with \u226410 samples (small studies), pairwise anchor-first alignment prevents statistical undersampling errors; for >10 samples (large studies), nearest-neighbor clustering is computationally efficient and statistically robust.",
+    "Consensus m/z per grid position is computed as the mean of the median m/z and the m/z at maximum intensity to avoid instability from centroiding outliers and multiple data points in the same scan."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that _mass_grid_mapping.csv file exists in expected output location",
+      "verify file format is CSV with expected columns for m/z alignment mappings",
+      "verify script runs without errors when processing mzML inputs through COMP_MASSGRID dispatcher",
+      "verify that studies with \u226410 samples invoke ALG_PAIRWISE_ALIGN by checking function call logs or code execution trace",
+      "verify that studies with >10 samples invoke ALG_LANDMARK_PEAKS and/or ALG_NN_CLUSTERING by checking function call logs or code execution trace",
+      "verify output _mass_grid_mapping.csv row count is greater than zero and contains valid m/z alignment records",
+      "verify that all input mzML files are successfully parsed by pymzml without parse errors"
+    ],
+    "expert_review": [
+      "expert review of alignment quality: assess whether m/z alignment in _mass_grid_mapping.csv achieves expected mass separation and alignment precision given high mass resolution settings",
+      "expert review of algorithm selection logic: confirm that the conditional dispatch (sample count threshold \u226410 vs >10) is correctly implemented and produces scientifically defensible alignments for both small and large studies",
+      "expert review of mass track consistency: verify that aligned mass tracks in the output grid are reproducible and trackable back to original EICs per the asari design principle"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does asari determine which mass alignment algorithm to apply based on study size?: 'Taking advantage of high mass resolution to prioritize mass separation and alignment'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Asari is designed as a scalable program that uses performance-conscious approaches, operating with disciplined memory and CPU use, enabling it to handle studies of varying sizes through conditional algorithm selection.: 'Scalable, performance conscious, disciplined use of memory and CPU'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Mass track data from all samples, each containing m/z and full-RT-range intensity arrays: 'Build mass tracks per data bin. If the m/z range in a data bin is within 2 x tolerance ppm, the bin leads to a single mass track.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Anchor mass track pairs (isotopic or adduct differences) per sample for confidence-based alignment: 'Establish anchor mass tracks by finding m/z differences that match to either 13C/12C isotopes or Na/H adducts.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Sample count and user-specified reference sample identifier (if provided): 'The sample with the highest number of anchor mass tracks is designated as the reference sample, unless a user specifies a reference sample via input parameters.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] _mass_grid_mapping.csv file documenting aligned m/z values, sample-track associations, and consensus m/z per grid position: 'MassGrid is exported as a csv file.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MassGrid object linking aligned mass tracks across all samples with consensus m/z identifiers: 'Aignment of mass tracks across samples, resulting in the MassGrid'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'Requires Python 3.8+.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] asari mass_functions module (nn_cluster_by_mz_seeds): 'a nearest neighbor (NN) clustering is performed to establish the number of mass tracks. See [mass_functions.nn_cluster_by_mz_seeds](mass_functions.nn_cluster_by_mz_seeds).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] asari MassGrid class (build_grid_sample_wise, add_sample, build_grid_by_centroiding, bin_track_mzs): 'See [MassGrid.build_grid_sample_wise](MassGrid.build_grid_sample_wise), [MassGrid.add_sample](MassGrid.add_sample). See [MassGrid.build_grid_by_centroiding](MassGrid.build_grid_by_centroiding),'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog provided: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; sys.path.insert(0, '.'); from asari.mass_functions import nn_cluster_by_mz_seeds; from asari import MassGrid; import csv; import json; mass_tracks = json.load(open('{inputs.mass_tracks_all_samples}')); anchors = json.load(open('{inputs.anchor_pairs_registry}')); sample_count = json.load(open('{inputs.sample_count}'))['count']; ref_sample = max([(s, len(anchors.get(s, []))) for s in mass_tracks.keys()], key=lambda x: x[1])[0]; grid = MassGrid(); use_pairwise = sample_count <= 10; [grid.add_sample(s, mass_tracks[s], anchors.get(s, []) if use_pairwise else None) for s in mass_tracks]; grid.build_grid_sample_wise() if use_pairwise else grid.build_grid_by_centroiding(); with open('_mass_grid_mapping.csv', 'w', newline='') as f: writer = csv.writer(f); writer.writerow(['mz_bin', 'consensus_mz', 'samples', 'sample_tracks']); [writer.writerow([k, v.get('consensus_mz'), len(v.get('samples', [])), json.dumps(v)]) for k, v in grid.mapping.items()]"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "_mass_grid_mapping.csv",
+  "expected_outputs": [
+    "_mass_grid_mapping.csv file documenting aligned m/z values, sample-track associations, and consensus m/z per grid position",
+    "MassGrid object linking aligned mass tracks across all samples with consensus m/z identifiers"
+  ],
+  "finding": "Asari is designed as a scalable program that uses performance-conscious approaches, operating with disciplined memory and CPU use, enabling it to handle studies of varying sizes through conditional algorithm selection.",
+  "github_name": "shuzhao-li-lab/asari_pcpfm_tutorials",
+  "input_from": "task_001",
+  "inputs": [
+    "Mass track data from all samples, each containing m/z and full-RT-range intensity arrays",
+    "Anchor mass track pairs (isotopic or adduct differences) per sample for confidence-based alignment",
+    "Sample count and user-specified reference sample identifier (if provided)"
+  ],
+  "keywords": [
+    "high-resolution metabolomics",
+    "lc-ms",
+    "gc-ms",
+    "peak detection",
+    "mass alignment",
+    "extracted ion chromatogram",
+    "untargeted metabolomics",
+    "composite map processing",
+    "peak quality tracking"
+  ],
+  "landmark_outputs": [
+    "anchor_mass_track_registry.json",
+    "reference_sample_designation.txt",
+    "aligned_pairwise_sample_tracks.json",
+    "_mass_grid_mapping.csv"
+  ],
+  "linked_result_ids": [
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_020",
+    "result_021",
+    "result_023",
+    "result_024",
+    "result_025",
+    "result_026",
+    "result_027"
+  ],
+  "methodology_summary": [
+    "Determine alignment strategy by evaluating sample count: if \u226410, use pairwise anchor-prioritized alignment; else use nearest-neighbor clustering.",
+    "Identify reference sample as the sample with the highest count of anchor mass tracks (isotopic/adduct pairs).",
+    "For small studies, align anchor mass tracks first between each sample and the reference, then recalibrate all m/z values if systematic shift exceeds 1 ppm, then align remaining tracks.",
+    "For large studies, apply nearest-neighbor clustering to bin mass tracks by m/z difference, using histogram-based m/z seed detection with peaks separated by at least mz_tolerance.",
+    "Compute consensus m/z for each aligned bin as the mean of median m/z and m/z at highest intensity.",
+    "Validation: _mass_grid_mapping.csv is produced with all samples represented, consensus m/z values are numeric and within instrument ppm tolerance, and pairwise/clustering dispatching is correctly applied based on sample count threshold (\u226410 vs >10).",
+    "References: source article (DOI: 10.1038/s41467-023-39889-1)"
+  ],
+  "missing_information": [
+    "No changelog provided"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/preferred_feature_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does asari determine which mass alignment algorithm to apply based on study size?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "m/z-alignment-across-samples",
+    "mass-track-consensus-computation",
+    "pairwise-alignment-with-anchor-prioritization",
+    "nearest-neighbor-clustering-by-mass-difference",
+    "sample-study-size-stratified-algorithm-selection",
+    "mass-grid-construction-and-mapping"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_asari/synthesized_package",
+  "spine_condition_ids": [
+    "COND_SMALL_STUDY",
+    "COND_LARGE_STUDY",
+    "COND_LOW_INTENSITY_TRACK"
+  ],
+  "spine_entity_ids": [
+    "COMP_MASSGRID",
+    "TOOL_SCIPY_FIND_PEAKS",
+    "DS_MZML_INPUT",
+    "ALG_NN_CLUSTERING",
+    "ALG_PAIRWISE_ALIGN",
+    "ALG_ANCHOR_TRACKS",
+    "ALG_LANDMARK_PEAKS",
+    "COND_SMALL_STUDY",
+    "COND_LARGE_STUDY",
+    "COND_LOW_INTENSITY_TRACK",
+    "RESULT_SCALABILITY",
+    "ARTIFACT_MASSGRID_CSV"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:shuzhao-li-lab__asari",
+  "task_description": "Implement the m/z alignment module that constructs a MassGrid by dispatching between pairwise alignment (\u226410 samples) and nearest-neighbor clustering (>10 samples), producing a _mass_grid_mapping.csv file from aligned mass tracks across all samples.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mass track data from all samples",
+      "port_id": "mass_tracks_all_samples",
+      "resolved_via": null,
+      "source": "task_001/preferred_feature_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Anchor mass track pairs (isotopic/adduct) per sample",
+      "port_id": "anchor_pairs_registry",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Total number of samples and reference sample ID",
+      "port_id": "sample_count",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the m/z alignment dispatcher that selects between pairwise alignment (\u226410 samples) and landmark/clustering algorithms (>10 samples), outputting mass grid mappings from mzML files.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "_mass_grid_mapping.csv file with aligned m/z grid",
+      "port_id": "mass_grid_mapping",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MassGrid data structure with consensus m/z and sample track linkages",
+      "port_id": "massgrid_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "quality-control",
+    "database-annotation"
+  ],
+  "title": "Reconstruct the MassGrid alignment step and verify its conditional pairwise vs. landmark-based routing",
+  "tools": [
+    "Python",
+    "asari mass_functions module (nn_cluster_by_mz_seeds)",
+    "asari MassGrid class (build_grid_sample_wise, add_sample, build_grid_by_centroiding, bin_track_mzs)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: asari mass_functions module (nn_cluster_by_mz_seeds), asari MassGrid class (build_grid_sample_wise, add_sample, build_grid_by_centroiding, bin_track_mzs), _mass_grid_mapping.csv file documenting aligned m/z values, sample-track associations, and consensus m/z per grid position."
+  ],
+  "workflow_description": "1. Determine study size (sample count) to select alignment strategy: if \u226410 samples, use pairwise alignment with anchor mass track prioritization; else use nearest-neighbor clustering method. 2. Identify reference sample as the one with highest number of anchor mass tracks (13C/12C isotopes or Na/H adducts) unless user-specified. 3. For small studies, perform pairwise sample-wise alignment: align anchor mass tracks first between each sample and reference list, recalibrate all sample m/z values if systematic difference exceeds 1 ppm, then align remaining mass tracks. 4. For large studies, bin all sample mass tracks by m/z using nearest-neighbor clustering with histogram-based m/z seed detection, ensuring 2 peaks separated by at least mz_tolerance. 5. Construct consensus m/z for each aligned bin as mean of median m/z and m/z at highest intensity. 6. Generate _mass_grid_mapping.csv documenting aligned mass track identifiers, consensus m/z values, and sample membership across the MassGrid."
+}

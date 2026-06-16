@@ -1,0 +1,412 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/sirius-ms/sirius",
+      "locator_id": "gh_sirius-ms_sirius",
+      "locator_kind": "github",
+      "name": "sirius-ms/sirius",
+      "prose": "sirius-ms/sirius GitHub repository URL and access credentials",
+      "score": 0.2857,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/c-add-doc.svg",
+      "role": "figure",
+      "sha256": "0331b45d3f4b3fe94fac53e270c648bd752bdecf7088d393adcad7fc1e3750b5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-bug.svg",
+      "role": "figure",
+      "sha256": "9e96e834682340e83292106e54adcf3fb0bfebfb1b016c4d5759849958f794a3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-clipboard.svg",
+      "role": "figure",
+      "sha256": "928c11204b31b97dea6b501034c8bfb73778157d1e6d7967ae5f789d5f3b14da"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-controls-play.svg",
+      "role": "figure",
+      "sha256": "5eee7ae909a3bdde55bfeffbacd5f07adb3f92745bbbd4fef7a6e61ac1caa5ee"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-db.svg",
+      "role": "figure",
+      "sha256": "e75498f7620d5f0abcef46e541e321e9e2ca675e22569d43843830762e340af5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-document.svg",
+      "role": "figure",
+      "sha256": "d0fc9c1d387f544da1e3707856573ac67772d6e1c91b734b488f4898fd9cceb9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-documents.svg",
+      "role": "figure",
+      "sha256": "3a4e23ef42df760a86709fa57741ec3c45758c19ccbf56f02e80c928f62da5f2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-download.svg",
+      "role": "figure",
+      "sha256": "dda75ebcf71fd10f15cb755e4bf886949e8658989c54280f2e6a807e1fa3b443"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-dragndrop.svg",
+      "role": "figure",
+      "sha256": "bed310f570c7b7507c3aad2b93f0ea31bf27ca2d3a1ccd9b6131007837764403"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-export.svg",
+      "role": "figure",
+      "sha256": "5eaa07befa9ee1eea492f4572a07fa97a59f9b256f9e78bb0f35f643227583c7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fbmn.svg",
+      "role": "figure",
+      "sha256": "9f5106d232858882d3d166e5e2d5718ef6e6e3d36552a03f9a7d5a71f06bf799"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-filter-down.svg",
+      "role": "figure",
+      "sha256": "e0f2d17b87498a3f035a175ad4696dc6dfcbc7001978dc07876bc813a9aadc65"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-filter-up.svg",
+      "role": "figure",
+      "sha256": "a27d30910ff137b58b1041aef3a4d42b8af57a34995d1caceaacc9abf9a8b457"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fingerprint.svg",
+      "role": "figure",
+      "sha256": "56c5cff08cd5ccc615adf833da66a953de49f1f79e2d5b9ab1087a70370de6db"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fmet.svg",
+      "role": "figure",
+      "sha256": "e72c7c2b67996f3385eb4fcbdb224676b46bd3077585ab00652ad8079fb62187"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-close.svg",
+      "role": "figure",
+      "sha256": "35e7588df0d0606f50f40d67bbac994134d9cb0b2c9b663874fa27aadc924f7b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-file.svg",
+      "role": "figure",
+      "sha256": "bd1219b56e6a4e5bafb6bd6b45a46670ccdad9a1ac201bd4f461f7eaefed011b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-open.svg",
+      "role": "figure",
+      "sha256": "a54b3efb697e2fdcfbc65990017c59f1a505ee5fc2990613ea1b5c85fd57da69"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder.svg",
+      "role": "figure",
+      "sha256": "2647d3b4de1fc2c365d4c38429f4325fb003d9421d49252c7e2eb5e97b2844df"
+    },
+    {
+      "indexable": false,
+      "path": "figures/sirius-icon.png",
+      "role": "figure",
+      "sha256": "00f610d0bcbf41600b0280797afe83cf3464f46558f13efa5ec794aa93e8c8aa"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "792d8276cd43aa8522a3b3ab934482485212a6f7ee69f7ca284a8be748f0aef8"
+    }
+  ],
+  "created_at": "2026-06-15T21:20:51.157086+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "sirius-ms/sirius GitHub repository URL and access credentials",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Screenshot or JSON report of GitHub Actions workflow run showing passing status",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "README badge screenshot or URL confirming build badge displays passing status",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "GitHub Actions workflows are triggered by specified events (push, pull_request, release) defined in YAML configuration files located in .github/workflows/.",
+    "Build badges in repository READMEs display the status of the most recent workflow run and typically use shield.io or GitHub's native badge service.",
+    "A passing build badge indicates all jobs in the workflow completed without errors; a failing badge means at least one job encountered an error or was cancelled.",
+    "The distribute.yaml file defines the build and publish pipeline for SIRIUS and must complete successfully to generate a valid passing badge.",
+    "Access to the sirius-ms/sirius repository requires appropriate GitHub credentials; triggering workflows may require maintainer or admin privileges depending on branch protection rules."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:sirius-ms__sirius repository is accessible and contains a .github/workflows/distribute.yaml file",
+      "verify that the distribute.yaml workflow defines a 'Build and Publish' job or equivalent release automation step",
+      "verify that the repository README.md file exists and contains a build badge reference (e.g., markdown image link to workflow status badge)",
+      "verify that the build badge URL points to the distribute.yaml workflow and resolves to a passing (green) status indicator on the release branch or main branch"
+    ],
+    "expert_review": [
+      "confirm that the badge rendering and status endpoint are correctly configured to reflect the actual workflow state (not stale or cached)",
+      "assess whether the workflow definition and badge linkage constitute adequate evidence of reproducible automated distribution, given the scope of this sub-task"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the GitHub Actions 'Build and Publish' workflow on the release branch of the sirius-ms/sirius repository execute successfully and produce a passing build status?: '[![Build and Publish](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml/badge.svg?branch=release-4-pre)](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The Build and Publish workflow for sirius-ms/sirius is configured to run on the release branch and is accessible via a status badge in the README.: '[![Build and Publish](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml/badge.svg?branch=release-4-pre)](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] sirius-ms/sirius GitHub repository URL and access credentials: 'github:sirius-ms__sirius'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Screenshot or JSON report of GitHub Actions workflow run showing passing status: 'passing build badge, as reported in the repository README'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] README badge screenshot or URL confirming build badge displays passing status: 'passing build badge, as reported in the repository README'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SIRIUS: 'SIRIUS is a java-based software framework for the analysis of LC-MS/MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GitHub Actions: 'GitHub Actions 'Build and Publish' workflow (distribute.yaml)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "workflow_run_status.json",
+  "expected_outputs": [
+    "Screenshot or JSON report of GitHub Actions workflow run showing passing status",
+    "README badge screenshot or URL confirming build badge displays passing status"
+  ],
+  "finding": "The Build and Publish workflow for sirius-ms/sirius is configured to run on the release branch and is accessible via a status badge in the README.",
+  "github_name": "sirius-ms/sirius",
+  "input_from": "task_001",
+  "inputs": [
+    "sirius-ms/sirius GitHub repository URL and access credentials"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "distribute.yaml",
+    "workflow_run_logs.txt",
+    "readme_badge.png"
+  ],
+  "linked_result_ids": [
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Access the sirius-ms/sirius repository via GitHub and locate the release branch.",
+    "Review the distribute.yaml workflow configuration to identify build triggers and pipeline stages.",
+    "Trigger the workflow by creating a release tag or pushing to the release branch according to distribute.yaml trigger conditions.",
+    "Monitor the GitHub Actions interface until the workflow run completes.",
+    "Validation: Confirm the workflow run status displays 'passed' and the README build badge shows a passing status indicator (green badge with 'passing' or 'success' label)."
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the GitHub Actions 'Build and Publish' workflow on the release branch of the sirius-ms/sirius repository execute successfully and produce a passing build status?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "github-actions-workflow-execution",
+    "ci-cd-pipeline-monitoring",
+    "build-badge-verification",
+    "release-branch-management",
+    "repository-administration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_cosmic/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "sirius_system",
+    "distribute_workflow"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:sirius-ms__sirius",
+  "task_description": "Trigger the GitHub Actions 'Build and Publish' workflow (distribute.yaml) on the release branch of sirius-ms/sirius and verify that the build completes successfully and the repository README displays a passing build badge.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "sirius-ms/sirius repository URL",
+      "port_id": "github_repo",
+      "resolved_via": null,
+      "source": "task_001/sirius_spectra",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GitHub authentication credentials",
+      "port_id": "github_credentials",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Trigger and monitor the GitHub Actions 'Build and Publish' workflow on the release-4-pre branch and verify the workflow completes successfully with a passing build badge displayed in the README.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GitHub Actions workflow run status report",
+      "port_id": "workflow_run_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "README build badge verification screenshot",
+      "port_id": "badge_verification",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "in-silico-fragmentation",
+    "machine-learning",
+    "metabolite-identification",
+    "deep-learning",
+    "database-annotation",
+    "high-resolution-ms"
+  ],
+  "title": "Reproduce the Build and Publish CI workflow execution status for the SIRIUS release branch",
+  "tools": [
+    "SIRIUS",
+    "GitHub Actions"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: GitHub Actions, Screenshot or JSON report of GitHub Actions workflow run showing passing status, README badge screenshot or URL confirming build badge displays passing status."
+  ],
+  "workflow_description": "1. Navigate to the sirius-ms/sirius repository on GitHub and identify the release branch. 2. Examine the distribute.yaml workflow file in the .github/workflows directory to understand the build and publish pipeline. 3. Trigger the 'Build and Publish' workflow by creating a release tag or pushing to the release branch, depending on the workflow trigger conditions specified in distribute.yaml. 4. Monitor the GitHub Actions run until completion, tracking logs for any failures or warnings. 5. Verify that the workflow run status shows 'passed' in the Actions tab. 6. Inspect the repository README to confirm the build badge displays a passing status (typically indicated by 'passing' or 'success' label and green coloring)."
+}

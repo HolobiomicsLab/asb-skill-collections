@@ -1,36 +1,50 @@
 ---
 name: mass-spectrometry-metadata-interpretation
-description: Use when you have a Thermo Fisher .raw file and need to verify or document instrument configuration (resolving power, AGC target, injection time, scan filter strings) before downstream analysis, or when troubleshooting spectral quality issues by examining per-scan metadata such as signal-to-noise.
+description: Use when when integrating LC-MS/MS data from diverse sources (e.g., public repositories like MSV000080102, instrument outputs, or precomputed workflows) into NPDtools pipelines.
 license: CC-BY-4.0
 metadata:
-  edam_operation: http://edamontology.org/operation_3215
+  edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121
   - http://edamontology.org/topic_3520
   - http://edamontology.org/topic_0625
   tools:
+  - MetaMiner
+  - NPDtools 2.5.0
+  - matplotlib
+  - networkx
+  - ProteoWizard msconvert
+  - Dereplicator
+  - GNPS Spectral Networking / Molecular Networking
   - rawrr
   - RawFileReader
   - MsBackendRawFileReader
   - rawDiag
   - Spectra
 derived_from:
+- doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
 - doi: 10.1021/acs.jproteome.0c00866
-  title: rawrr
+  title: ''
 evidence_spans:
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
+- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib` and `networkx` Python libraries
 - rawrr::readSpectrum
 - Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
-- 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v1
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
+  - build: coll_dereplicator
+    doi: 10.1038/s41467-018-06082-8
+    title: dereplicator
   - build: coll_rawrr
     doi: 10.1021/acs.jproteome.0c00866
     title: rawrr
-  dedup_kept_from: coll_rawrr
+  dedup_kept_from: coll_dereplicator
 schema_version: 0.2.0
 ---
 
@@ -38,74 +52,68 @@ schema_version: 0.2.0
 
 ## Summary
 
-Extract and validate instrument metadata and quality indicators from Thermo Fisher Scientific Orbitrap raw mass spectrometry files to confirm spectral acquisition parameters and assess data integrity. This skill enables direct programmatic access to proprietary binary raw file metadata without GUI-based software, supporting reproducible method optimization and quality control in bottom-up proteomics workflows.
+Interpret and validate mass spectrometry file formats, centroiding status, and metadata to ensure compatibility with natural product discovery pipelines. This skill bridges raw instrument output and downstream metabologenomic analysis by verifying spectral data readiness and extracting critical acquisition parameters.
 
 ## When to use
 
-Apply this skill when you have a Thermo Fisher .raw file and need to verify or document instrument configuration (resolving power, AGC target, injection time, scan filter strings) before downstream analysis, or when troubleshooting spectral quality issues by examining per-scan metadata such as signal-to-noise ratios, baseline noise floors, or acquisition time budgets. Particularly useful when integrating raw data into modular R-based pipelines where GUI tools like MaxQuant or Skyline would constrain analytical flexibility.
+When integrating LC-MS/MS data from diverse sources (e.g., public repositories like MSV000080102, instrument outputs, or precomputed workflows) into NPDtools pipelines. Apply this skill before running Dereplicator, MetaMiner, or spectral networking stages to confirm that spectra are centroided, in supported formats, and carry necessary metadata for PSM matching and RiPP identification.
 
 ## When NOT to use
 
-- Input is not a Thermo Fisher .raw file (e.g., mzML, mzXML, or other vendor formats) — use vendor-neutral tools like ProteoWizard or pyteomics instead.
-- Analysis goal is high-level statistical aggregation of preprocessed peptide-level data — use MSstats, MSqRob, or other downstream R packages that operate on feature tables, not raw spectra.
-- Windows system without decimal symbol configured as '.' — rawrr requires this locale setting for proper parsing of numeric fields in the binary file.
+- Input spectra are already confirmed to be centroided and in a supported open format (MGF, mzXML, mzML, mzData) with verified metadata — skip directly to downstream analysis.
+- Spectral data is in a closed, proprietary format with no available converter (msconvert does not support it) — this skill cannot resolve such cases without external vendor tools.
+- The analysis goal does not require mass accuracy checks or spectral network propagation (e.g., if running only Dereplicator+ without --spec-network option) — metadata interpretation overhead may be unnecessary.
 
 ## Inputs
 
-- Thermo Fisher Scientific .raw file (binary Orbitrap FTMS format)
-- scan number (integer identifier, e.g., 9594)
-- precursor peptide sequence (for theoretical y-fragment m/z calculation, optional but recommended for quality checks)
-- scan filter string or scan type descriptor (optional, for pre-filtering scans, e.g., 'FTMS + c NSI Full ms2 [mass_range]')
+- LC-MS/MS spectra files in MGF, mzXML, mzML, or mzData format
+- Vendor instrument output files (if conversion via msconvert is required)
+- Spectral network archive (e.g., ProteoSAFe-METABOLOMICS-SNETS-V2 unpacked directory) containing cluster metadata and interconnectivity information
+- Sample metadata or acquisition logs indicating centroiding status and fragmentation method
 
 ## Outputs
 
-- rawrrSpectrum object containing 119+ metadata fields per scan
-- instrument parameters: resolving power, AGC target, injection time (ms), scan type
-- m/z and intensity arrays (centroided)
-- signal-to-noise ratios for identified y-ions
-- per-scan quality metrics (baseline noise floor, peak intensity distribution)
+- Validated, centroided spectra in MGF or native open format ready for MetaMiner or Dereplicator input
+- Verification report confirming format compatibility, centroiding status, and presence of critical metadata fields
+- Converted spectra files (if msconvert was applied)
+- Spectral network metadata index (cluster assignments, inter-cluster edges, PSM propagation annotations)
 
 ## How to apply
 
-Load the .raw file using rawrr::readFileHeader() to retrieve run-level metadata (scan count, time range, instrument model). Then invoke rawrr::readSpectrum() with the target scan number to extract a rawrrSpectrum object containing 119+ data items. Parse the returned object to retrieve instrument-specific parameters: resolving power (e.g., 30,000 at 200 m/z for Orbitrap FTMS), AGC target (e.g., 100,000 charges), and injection time in milliseconds. For quality assessment, extract m/z and intensity arrays from the centroided spectrum; identify y-ion signals by matching observed m/z to theoretical fragment m/z of the known precursor peptide; calculate signal-to-noise ratio per y-ion by comparing peak intensity to local baseline noise. Confirm all y-ions exceed tens to hundreds of counts above noise floor to validate high spectral quality. The workflow relies on compiled C# wrapper methods (RawFileReader API) invoked via system calls, with temporary file I/O for data marshalling back to R.
+First, verify that input spectra files are in an open, supported format: MGF (Mascot Generic Format), mzXML, mzML, or mzData. If spectra are in other formats (e.g., proprietary vendor formats), use ProteoWizard's msconvert utility to convert to MGF before proceeding. Second, confirm that spectra are centroided (not profile mode), as NPDtools requires centroided data for accurate mass matching. Third, if using MetaMiner's spectral networking stage (--spec-network option), ensure that the spectral network output directory (e.g., unpacked ProteoSAFe-METABOLOMICS-SNETS-V2 archive) contains expected metadata linking spectra to network clusters. Finally, validate that critical metadata fields (e.g., precursor m/z, fragmentation type, scan properties) are present by spot-checking a sample spectrum or inspecting the file header; missing metadata may cause silent failures in mass matching and propagation scoring.
 
 ## Related tools
 
-- **rawrr** (Bioconductor R package providing direct programmatic access to Thermo Fisher .raw file spectra and metadata via RawFileReader API wrapper; primary tool for this skill) — https://github.com/fgcz/rawrr
-- **RawFileReader** (.NET assembly (C#) that implements low-level binary parsing of Orbitrap .raw files; wrapped by rawrr and invoked via system call) — https://github.com/thermofisherlsms/RawFileReader
-- **MsBackendRawFileReader** (Bioconductor backend serving rawrr as a modular Spectra accessor for on-disk raw file access; optional integration for Bioconductor ecosystem) — https://github.com/cpanse/MsBackendRawFileReader
-- **rawDiag** (Companion R package for visualization and rational LC-MS method optimization using rawrr data; useful for interactive exploration of metadata and QC metrics) — https://github.com/fgcz/rawDiag
-- **Spectra** (Bioconductor package providing unified accessor interface for mass spectrometry data; MsBackendRawFileReader allows Spectra to read .raw files via rawrr)
+- **ProteoWizard msconvert** (Convert vendor-specific or unsupported spectrum formats to MGF for NPDtools compatibility) — http://proteowizard.sourceforge.net/tools/msconvert.html
+- **MetaMiner** (Primary consumer of validated, centroided spectra; requires proper metadata for RiPP PSM matching and spectral network propagation) — https://github.com/mohimanilab/MetaMiner
+- **Dereplicator** (Matches validated tandem mass spectra against post-translationally modified RiPP structure database; depends on centroiding and accurate precursor/fragment metadata) — https://github.com/ablab/npdtools
+- **GNPS Spectral Networking / Molecular Networking** (Produces spectral network cluster metadata and inter-spectrum connectivity used by MetaMiner --spec-network option for RiPP propagation and visualization)
 
 ## Examples
 
 ```
-S <- rawrr::readSpectrum(rawfile = "20181113_010_autoQC01.raw", scan = 9594); H <- rawrr::readFileHeader(rawfile = "20181113_010_autoQC01.raw"); cat('Resolving Power:', S[[1]]$`Resolving Power`, 'AGC Time (ms):', S[[1]]$`Injection Time (ms)`)
+msconvert proprietary_spectrum.raw --mgf --output validated_spectra/ && python metaminer.py validated_spectra/*.mgf -s example_RiPP.fasta --spec-network ProteoSAFe-METABOLOMICS-SNETS-V2-unpacked -o metaminer_outdir
 ```
 
 ## Evaluation signals
 
-- Extracted resolving power matches instrument specification sheet (e.g., exactly 30,000 at 200 m/z for Q Exactive HF Orbitrap).
-- AGC injection time is within plausible bounds relative to maximum allowed (e.g., 2.8 ms out of 55 ms max ≈ 5%).
-- All identified y-ions for known peptide have signal-to-noise ratios ≥ 10:1 (several tens to hundreds of counts above noise floor).
-- Centroided spectrum contains expected number of peaks for the peptide (e.g., 9 y-ions for a 10-residue peptide); absence of key ions signals acquisition or calibration problems.
-- No parsing errors or null values in mandatory metadata fields (scan type, filter string, m/z range, centroiding flag); file I/O round-trip consistency verified.
+- All input spectra files parse without errors in the native NPDtools reader (MGF, mzXML, mzData) or after msconvert conversion to MGF.
+- Spot-check: inspect a sample spectrum and confirm presence of centroided m/z-intensity pairs (not continuous profile data) and valid precursor m/z values.
+- When using --spec-network, verify that the unpacked spectral network directory contains at least three output files: propagations.pdf, propagations_detailed.txt, and propagations_short.txt, indicating successful cluster metadata parsing.
+- Run MetaMiner or Dereplicator on a small subset of validated spectra and confirm that PSM matches are returned; absence of matches despite known RiPPs in the structure database suggests metadata corruption or misconfigured centroiding.
+- Cross-check spectral network cluster sizes and inter-cluster edges reported in propagations_detailed.txt against known spectral similarity thresholds (e.g., cosine similarity > 0.7 implied by network construction) to confirm data integrity.
 
 ## Limitations
 
-- Windows systems require decimal symbol configured as '.' for proper numeric parsing; locale misconfiguration causes data extraction failure.
-- MsBackendRawFileReader backend is still under development (WIP status) and not yet stable for production use; rawrr stand-alone package is recommended.
-- Metadata interpretation depends on correct centroiding and lock mass correction applied during acquisition; if either is disabled, baseline noise estimates and S/N calculations become unreliable.
-- rawrr provides access only to Thermo Fisher Scientific Orbitrap instruments; other vendors (Waters, Bruker, Sciex, etc.) require alternative tools (e.g., ProteoWizard, ThermoRawFileParser for non-native formats).
-- On-disk backend performance for very large .raw files (>6.6 million scans as in the example) may be constrained by file I/O overhead; temporary file staging required for each spectrum read.
+- msconvert support is limited to formats explicitly handled by ProteoWizard; highly proprietary or legacy vendor formats may not convert successfully, requiring manual preprocessing or alternative tools.
+- Centroiding status is often not explicitly flagged in file headers; verification requires manual inspection of a sample spectrum or external instrument documentation—automated detection is unreliable.
+- Spectral network metadata (propagations files) depend on GNPS preprocessing quality; if the underlying spectral networking stage fails or uses non-standard parameters, propagation annotations may be incomplete or absent.
+- Critical metadata fields (e.g., precursor m/z, charge state) may be missing or malformed in publicly deposited datasets due to incomplete instrument configuration logging or submission errors; NPDtools will not warn users of such defects during parsing.
 
 ## Evidence
 
-- [readme] The package provides access to proprietary Thermo Fisher Scientific Orbitrap instrument data as a stand-alone R package or serves as MsRawFileReaderBackend for the Bioconductor Spectra package: "The package provides access to proprietary Thermo Fisher Scientific Orbitrap instrument data as a stand-alone R package or serves as MsRawFileReaderBackend for the Bioconductor Spectra package"
-- [other] Scan 9594 was successfully extracted using rawrr::readSpectrum, confirming resolving power of 30,000 at 200 m/z and AGC injection time of 2.8 ms (~5% of maximum 55 ms); all y-ion signals for LGGNEQVTR++ peptide are several tens to hundreds of times above the noise level, demonstrating high spectral quality.: "Scan 9594 was successfully extracted using rawrr::readSpectrum, confirming resolving power of 30,000 at 200 m/z and AGC injection time of 2.8 ms (~5% of maximum 55 ms); all y-ion signals for"
-- [methods] In order to return extracted data back to the R layer we use file I/O. More specifically, the extracted information is written to a temporary location on the harddrive, read back into memory and parsed into R objects: "the extracted information is written to a temporary location on the harddrive, read back into memory and parsed into R objects"
-- [methods] Specifically, R functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled C# wrapper methods using a system call: "R functions requesting access to data stored in binary raw files invoke compiled C# wrapper methods using a system call"
-- [results] In total, the API provides 119 data items for this particular scan: "In total, the API provides 119 data items for this particular scan"
-- [discussion] On Windows, the decimal symbol has to be configured as a '.'!: "On Windows, the decimal symbol has to be configured as a '.'!"
-- [intro] rawrr wraps the functionality of the RawFileReader .NET assembly: "rawrr wraps the functionality of the RawFileReader .NET assembly"
-- [intro] We strongly believe that a library providing raw data reading would finally close the gap and facilitate modular end-to-end analysis pipeline development in R: "a library providing raw data reading would finally close the gap and facilitate modular end-to-end analysis pipeline development in R"
+- [readme] Spectra files must be centroided and be in an open spectrum format (**MGF**, **mzXML**, **mzML** or **mzData**).: "Spectra files must be centroided and be in an open spectrum format (**MGF**, **mzXML**, **mzML** or **mzData**)."
+- [readme] NPDtools natively supports MGF and mzXML/mzData. We use msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF.: "NPDtools natively supports MGF and mzXML/mzData. We use msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF."
+- [methods] Execute MetaMiner with the --spec-network option pointing to the unpacked spectral network directory. Verify that the spec_nets output folder is created within metaminer_outdir containing the three required output files: propagations.pdf, propagations_detailed.txt, and propagations_short.txt.: "Verify that the spec_nets output folder is created within metaminer_outdir containing the three required output files: propagations.pdf, propagations_detailed.txt, and propagations_short.txt."
+- [readme] For parallel processing of multiple spectra files, NPDtools also requires joblib Python library. For presenting Spectral Network propagation graphs, MetaMiner requires matplotlib and networkx Python libraries.: "For presenting Spectral Network propagation graphs, MetaMiner requires `matplotlib` and `networkx` Python libraries."
+- [readme] The metabologenomic pipelines (currently MetaMiner only) require either raw genome nucleotide sequences or output of specific genome mining tools.: "The metabologenomic pipelines (currently MetaMiner only) require either raw genome nucleotide sequences or output of specific genome mining tools."

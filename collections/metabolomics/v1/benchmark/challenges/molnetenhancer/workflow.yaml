@@ -1,0 +1,132 @@
+schema_version: 0.1.0
+workflow_id: coll_molnetenhancer_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_003
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: pyMolNetEnhancer is a Python module that integrates chemical class and
+    substructure information within mass spectral molecular networks created through
+    the GNPS platform.
+  pseudo_abstract: 'pyMolNetEnhancer provides mechanisms for mapping MS2LDA substructural
+    information and chemical class information to mass spectral molecular networks.
+    The module supports multiple mapping approaches: classical and feature-based modes
+    for MS2LDA substructural information, chemical class mapping alone, and combined
+    mapping of both chemical class and substructural annotations within networks generated
+    through the Global Natural Products Social Molecular Networking (GNPS) platform.'
+  research_questions:
+  - How does pyMolNetEnhancer map MS2LDA-derived Mass2Motif substructural information
+    onto nodes in classical-mode GNPS mass spectral molecular networks?
+  - How does the feature-based mode pipeline map Mass2Motif substructural information
+    from MS2LDA onto a GNPS feature-based molecular network?
+  - How does pyMolNetEnhancer map chemical class information onto a GNPS mass spectral
+    molecular network?
+  - How does pyMolNetEnhancer jointly integrate both chemical class annotations and
+    MS2LDA substructural motif information onto a GNPS mass spectral molecular network
+    in a single combined operation?
+  methods_summary: 'Load GNPS classical molecular network and MS2LDA Mass2Motif output.
+    Align motif identifiers to network nodes using precursor m/z and spectral similarity
+    matching. Annotate network nodes with mapped motif metadata and confidence scores.
+    Validation: Confirm all mapped nodes contain motif attributes and output file
+    is valid graph format. Load GNPS feature-based molecular network and MS2LDA substructural
+    motif assignments. Match feature identifiers between the network and MS2LDA motif
+    table. Annotate network nodes with MS2LDA substructural labels and confidence
+    metadata using pyMolNetEnhancer. Export the enriched network graph with embedded
+    annotations in standard graph format. Validation: Verify all feature nodes with
+    matched motifs are annotated and network structure is preserved. Load a GNPS molecular
+    network from a standard file format (graphml or cytoscape). Prepare or retrieve
+    chemical class annotations for network nodes from GNPS library or external metadata
+    source. Apply pyMolNetEnhancer to map chemical class information onto network
+    nodes as attributes. Export the enriched network with embedded chemical class
+    labels in graphml or cytoscape format. Validation: verify that all network nodes
+    containing library matches have corresponding chemical class annotations; check
+    that the output network preserves the original topology and node count. Load GNPS
+    molecular network and organize node/edge structure for annotation Parse and align
+    chemical class assignments from GNPS library to network nodes Parse and align
+    MS2LDA substructural motifs to network features using feature-based mapping Merge
+    both annotation layers into unified node attribute dictionaries Export annotated
+    network with all chemical class and motif metadata preserved Validation: Verify
+    all network nodes carry both chemical class and at least one MS2LDA motif attribute;
+    confirm node count and edge count match original network'
+  domain: metabolomics
+  techniques:
+  - molecular-networking
+  - network-annotation-propagation
+  - database-annotation
+  - chemical-class-annotation
+  claims:
+  - claim_text: pyMolNetEnhancer is a python module integrating chemical class and
+      substructure information within mass spectral molecular networks created through
+      the GNPS platform.
+    claim_type: finding
+    speculative: false
+    entity_id: pyMolNetEnhancer
+  - claim_text: An analogous R package for MolNetEnhancer is available at https://github.com/madeleineernst/RMolNetEnhancer.
+    claim_type: finding
+    speculative: false
+    entity_id: RMolNetEnhancer
+  - claim_text: pyMolNetEnhancer enables mapping of MS2LDA substructural information
+      to mass spectral molecular networks using a classical approach.
+    claim_type: hypothesis
+    speculative: false
+    entity_id: pyMolNetEnhancer
+  - claim_text: pyMolNetEnhancer enables mapping of MS2LDA substructural information
+      to mass spectral molecular networks using a feature-based approach.
+    claim_type: hypothesis
+    speculative: false
+    entity_id: pyMolNetEnhancer
+  - claim_text: pyMolNetEnhancer enables mapping of chemical class information to
+      mass spectral molecular networks.
+    claim_type: hypothesis
+    speculative: false
+    entity_id: pyMolNetEnhancer
+  - claim_text: pyMolNetEnhancer enables mapping of both chemical class and MS2LDA
+      substructural information to mass spectral molecular networks simultaneously.
+    claim_type: hypothesis
+    speculative: false
+    entity_id: pyMolNetEnhancer
+  speculative: false
+  task_openness: open
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 4-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Annotated feature-based molecular network with MS2LDA substructural motif
+    annotations embedded as node attributes
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Fully-enriched molecular network with chemical class and MS2LDA motif annotations
+    integrated on all nodes
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

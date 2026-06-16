@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that a calibrated mass spectrum file exists in DS-001 dataset or CoreMS test data repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that SearchMolecularFormulas function is callable from CoreMS package with parameters first_hit=True and first_hit=False"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that summary table output file exists and is in tabular format (CSV or similar)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that summary table contains at least the following named columns: condition identifier, first_hit setting, assignment count, and score statistics (mean/median/std)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify row_count_equals: summary table has exactly 2 data rows (one for COND-012 with first_hit=True, one for COND-013 with first_hit=False)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that score statistics values are numeric and in valid range for the algorithm's scoring scheme"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify script_runs: Python script executing both SearchMolecularFormulas calls completes without runtime errors"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify that a calibrated mass spectrum file exists in DS-001 dataset or CoreMS test data repository",
+      "Verify that SearchMolecularFormulas function is callable from CoreMS package with parameters first_hit=True and first_hit=False",
+      "Verify that summary table output file exists and is in tabular format (CSV or similar)",
+      "Verify that summary table contains at least the following named columns: condition identifier, first_hit setting, assignment count, and score statistics (mean/median/std)",
+      "Verify row_count_equals: summary table has exactly 2 data rows (one for COND-012 with first_hit=True, one for COND-013 with first_hit=False)",
+      "Verify that score statistics values are numeric and in valid range for the algorithm's scoring scheme",
+      "Verify script_runs: Python script executing both SearchMolecularFormulas calls completes without runtime errors"
+    ],
+    "expert_review": [
+      "Assess whether the difference in formula assignment counts and score distributions between first_hit=True and first_hit=False modes is consistent with expected algorithmic behavior (greedy vs exhaustive search trade-offs)",
+      "Evaluate whether score distributions (histograms or quantile summaries) reveal meaningful differences in assignment quality or confidence between the two modes",
+      "Confirm that the same calibrated spectrum and molecular formula database were used for both COND-012 and COND-013 runs to ensure fair comparison"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

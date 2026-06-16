@@ -1,0 +1,10 @@
+name: joblib
+slug: joblib
+evidence_spans:
+- For parallel processing of multiple spectra or/and sequence files, MetaMiner requires `joblib` Python library
+derived_from:
+- doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
+source_repos:
+- ablab/npdtools
+schema_version: 0.2.0

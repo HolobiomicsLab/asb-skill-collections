@@ -1,0 +1,229 @@
+schema_version: 0.1.0
+workflow_id: coll_hicpro_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: HiC-Pro is an optimized and flexible pipeline for Hi-C data processing
+    that automates installation of key dependencies and provides containerized deployment
+    options.
+  pseudo_abstract: HiC-Pro describes a configurable pipeline architecture for Hi-C
+    data processing with integrated dependency management. The pipeline implements
+    SAM processing using samtools (>=1.9), which can be automatically installed if
+    not detected; requires the iced module for normalization, which must be independently
+    installed as it is no longer part of the HiC-Pro source code; and supports an
+    installation configuration mechanism where users edit a config-install.txt file
+    to specify tool paths. When paths are not explicitly set, the system searches
+    for dependencies in the $PATH environment variable before executing the installation
+    command. HiC-Pro provides multiple deployment options through conda, Docker, and
+    Singularity containers to ease dependency installation.
+  research_questions:
+  - What post-processing operations does HiC-Pro apply to SAM/BAM files output from
+    the alignment stage?
+  - How does the ICE normalization algorithm iteratively correct and balance raw Hi-C
+    contact matrices using the iced Python module?
+  - How does HiC-Pro detect the installation paths of required binary tools (Bowtie2,
+    samtools) and generate an environment-specific configuration file during setup?
+  - Can a Conda environment be successfully created from an environment specification
+    file with all required Python (>3.7) and R dependencies for HiC-Pro, and can tool
+    binaries (bowtie2, samtools, iced) be correctly resolved within that environment?
+  methods_summary: "Prepare HiC-Pro installation directory and config-install.txt\
+    \ template. Set SAMTOOLS_PATH in config-install.txt to the full path of samtools\
+    \ binary (>=1.9), or leave empty for automatic PATH-based detection. Execute 'make\
+    \ CONFIG_SYS=config-install.txt install' to run dependency checking and validation.\
+    \ Validate: Confirm that samtools (>=1.9) is correctly detected and its full path\
+    \ is recorded in the generated config-system.txt file. References: source article\
+    \ (DOI: 10.1186/s13059-015-0831-x) Verify Python >3.7 interpreter availability\
+    \ and accessibility. Obtain iced module source code from the official GitHub repository\
+    \ (https://github.com/hiclib/iced). Install iced and declare transitive dependencies\
+    \ (numpy \u22651.18.1, scipy \u22651.4.1) via pip or setup.py. Validate iced installation\
+    \ by importing the module and querying version and core API functions. Validation:\
+    \ confirm iced module is importable, all required dependencies meet version thresholds,\
+    \ and no import errors occur on test invocation. References: source article (DOI:\
+    \ 10.1186/s13059-015-0831-x) Parse config-install.txt user input to extract explicit\
+    \ paths and cluster scheduler preference. Query system PATH using 'which' for\
+    \ each binary (bowtie2, samtools, R, Python) where user did not provide explicit\
+    \ path. Verify bowtie2 and samtools presence; auto-install either if missing and\
+    \ version requirements (samtools >=1.9, Python >3.7) are not met. Collect all\
+    \ resolved paths and parameters into a key\u2013value structure conforming to\
+    \ the config-system.txt schema. Write the locked, immutable config-system.txt\
+    \ file to the installation PREFIX directory. Validation: config-system.txt exists,\
+    \ is read-only, and contains non-empty entries for all six required fields (PREFIX,\
+    \ BOWTIE2_PATH, SAMTOOLS_PATH, R_PATH, PYTHON_PATH, CLUSTER_SYS). References:\
+    \ source article (DOI: 10.1186/s13059-015-0831-x) Install Miniconda package manager\
+    \ from official sources. Create Conda environment from HiC-Pro environment.yml\
+    \ with specified installation path. Activate the Conda environment to make all\
+    \ dependencies available. Verify Python version and import all required Python\
+    \ libraries (bx-python, numpy, scipy, pysam, argparse) to confirm correct installation.\
+    \ Verify R availability and test loading of required R packages (ggplot2, RColorBrewer,\
+    \ grid). Verify tool binaries (bowtie2, samtools >=1.9) are executable and in\
+    \ PATH. Independently install and import iced module since it is not part of HiC-Pro\
+    \ source. Validation: Generate dependency verification report confirming all tool\
+    \ versions meet minimum requirements, all Python and R packages are importable,\
+    \ and all binary paths are resolved. References: source article (DOI: 10.1186/s13059-015-0831-x)"
+  domain: bioinformatics
+  techniques:
+  - quality-control
+  claims:
+  - claim_text: HiC-Pro is an optimized and flexible pipeline for Hi-C data processing.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: R version with ggplot2 greater than 2.2.1 is required as a dependency.
+    claim_type: finding
+    speculative: false
+  - claim_text: Python greater than 3.7 is required as a dependency.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_python
+  - claim_text: bx-python version 0.8.8 or greater is required.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_python
+  - claim_text: numpy version 1.18.1 or greater is required.
+    claim_type: finding
+    speculative: false
+  - claim_text: scipy version 1.4.1 or greater is required.
+    claim_type: finding
+    speculative: false
+  - claim_text: pysam version 0.15.4 or greater is required.
+    claim_type: finding
+    speculative: false
+  - claim_text: samtools version 1.9 or greater can be automatically installed if
+      not detected.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_bowtie2
+  - claim_text: bowtie2 can be automatically installed if not detected.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_bowtie2
+  - claim_text: The iced module is required for HiC-Pro installation.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: Iced is no longer part of the HiC-Pro source code and should be independently
+      installed.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: HiC-Pro version 3.X provides conda, Docker, and Singularity recipes.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: A conda environment can be created using the provided yml file from
+      HiC-Pro.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: miniconda must be installed first to build a conda environment for
+      HiC-Pro.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: A Docker image for HiC-Pro is automatically built and available on
+      Docker Hub.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: The docker pull command nservant/hicpro:latest retrieves the latest
+      HiC-Pro Docker image.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: A ready-to-use Singularity container for HiC-Pro is available at a
+      specified URL.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: The config-install.txt file must be edited to set paths for HiC-Pro
+      installation.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: CLUSTER_SYS configuration must be set to TORQUE, SGE, or SLURM for
+      cluster submission.
+    claim_type: finding
+    speculative: false
+  - claim_text: The installation command for HiC-Pro is make CONFIG_SYS=config-install.txt
+      install.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: Installation generates a config-system.txt file that defines all paths
+      to HiC-Pro dependencies.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: The config-system.txt file should not be edited.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_config_system
+  - claim_text: RColorBrewer is a required R package for HiC-Pro.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: The R grid package is required for HiC-Pro.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  - claim_text: argparse is a required Python library for HiC-Pro.
+    claim_type: finding
+    speculative: false
+    entity_id: hicpro_system
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - TORQUE scheduler as alternative to SLURM or SGE
+  - SGE scheduler as alternative to TORQUE or SLURM
+  - SLURM scheduler as alternative to TORQUE or SGE
+  substitution_constraints:
+  - samtools version must be >=1.9 or >=0.1.19 depending on context
+  - Python version must be >3.7 or >2.7
+instructions: Reproduce the 4-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: config-system.txt file encoding detected or user-supplied paths to bowtie2,
+    samtools, R, and Python binaries, plus cluster scheduler type
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Active Conda environment with all HiC-Pro dependencies installed and verified
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Dependency verification report listing Python version, all Python package
+    versions, R version, R package availability, tool binary paths, and iced module
+    status
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

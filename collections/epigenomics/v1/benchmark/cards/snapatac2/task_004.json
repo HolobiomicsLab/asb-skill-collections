@@ -1,0 +1,538 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-0.png",
+      "role": "figure",
+      "sha256": "62b9435f3307fc87f52ef0605b5fb429b904fb7c3008486d5e6a1a3e0ac2ef49"
+    },
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-1.png",
+      "role": "figure",
+      "sha256": "4c20c79eb335c2d7ab728a84f1a22058120bc74ab7192782d770cbbd942dab52"
+    },
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-2.png",
+      "role": "figure",
+      "sha256": "d5eb9377f2a149d7b57d78ca39f60cc51bc16213a568780072657558d22be90d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/func+export_coverage.svg",
+      "role": "figure",
+      "sha256": "b2c54284c113efb517e25ccfd1829a2f548e34db945b512753e130a447d46976"
+    },
+    {
+      "indexable": false,
+      "path": "figures/func+import_data.svg",
+      "role": "figure",
+      "sha256": "248512cdcfb5004f5e114f588183a92fef1e6115d05b1c32a5d917690d1efb66"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "95aea9a378722044cf71a0cc3f6bb553788936ff4c89d5f6c20466b68e804fde"
+    }
+  ],
+  "created_at": "2026-06-15T19:32:53.712417+00:00",
+  "crossref_doi": "10.1038/s41592-023-02139-9",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "pbmc10k_multiome dataset from snapatac2.datasets",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "AnnData object with imported fragments and filtered cells",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "AnnData object with tile count matrix",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spectral embedding coordinates saved in .obsm",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "UMAP layout coordinates in .obsm['X_umap']",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Cluster labels in .obs['leiden']",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Peak coordinates and statistics table from tl.macs3",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Merged peak set with cluster reproducibility metrics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Paired-end fragment counting requires importing ATAC fragments as coordinate pairs with both start and end positions; the default counting strategy in SnapATAC2 v2.9.0+ is paired-insertion mode, which counts each insertion site separately.",
+    "Spectral embedding with cosine similarity in SnapATAC2 achieves linear time and space complexity and returns eigenvectors weighted by eigenvalues; the resulting coordinates are suitable for direct UMAP visualization without manual eigenvector selection.",
+    "Leiden clustering in SnapATAC2 is resolution-sensitive; cluster numbers scale with resolution parameter and should be validated against known cell-type markers or reference annotations for PBMC datasets.",
+    "Peak calling in pseudo-bulk mode aggregates fragments by cluster assignment before invoking tl.macs3; merged peaks from tl.merge_peaks represent consensus accessible regions and are the standard input for downstream differential accessibility testing.",
+    "Tutorial reproducibility requires matching exact parameter defaults and dataset versions; pbmc10k_multiome dataset download is automated via snapatac2.datasets and includes both ATAC and RNA modalities."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: pbmc10k_multiome dataset accessible via snapatac2.datasets.pbmc10k_multiome",
+      "script_runs: SnapATAC2 pipeline execution script completes without errors (fragment import \u2192 tile matrix \u2192 spectral embedding \u2192 leiden clustering \u2192 macs3 peak calling)",
+      "file_exists: output AnnData object (.h5ad) or equivalent structured artifact generated after full pipeline",
+      "field_present: cluster assignments present in output object (e.g., .obs['leiden'] or equivalent clustering annotation column)",
+      "file_format_is: output object in HDF5-backed AnnData format or native SnapATAC2 format",
+      "output_matches_reference: UMAP layout coordinates byte-for-byte or robust to random seed variation \u2014 clarify whether tutorial provides fixed reference embeddings or multiple valid outcomes",
+      "value_in_range: cluster count (number of distinct leiden clusters) falls within expected range documented in tutorial (if range is specified)",
+      "contains_substring: peak calling output (BED or equivalent) contains expected genomic coordinates and peak statistics fields"
+    ],
+    "expert_review": [
+      "biological plausibility of cluster assignments: do recovered clusters correspond to expected cell types (e.g., T cells, B cells, monocytes, etc.) as described in tutorial or original pbmc10k_multiome analysis?",
+      "quality of spectral embedding and UMAP visualization: do clusters show expected separation and structure consistent with tutorial figures or reference publication?",
+      "peak calling quality: are called peaks consistent with known open chromatin regions and do they show expected enrichment patterns (e.g., TSS proximity, motif content)?",
+      "parameter sensitivity: does pipeline produce substantially different cluster assignments or peak calls under reasonable parameter variations (e.g., n_components, resolution, min_peak_size)? \u2014 note if reproducibility is brittle or robust"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Can the SnapATAC2 pipeline successfully process the pbmc10k_multiome dataset through fragment import, tile matrix generation, spectral embedding, leiden clustering, and peak calling to reproduce documented cluster assignments?: 'End-to-end analysis pipeline for single-cell ATAC-seq data, including preprocessing, dimension reduction, clustering, data integration, peak calling'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SnapATAC2 provides an end-to-end analysis pipeline for single-cell ATAC-seq data that includes preprocessing, dimension reduction, clustering, data integration, and peak calling steps.: 'End-to-end analysis pipeline for single-cell ATAC-seq data, including preprocessing, dimension reduction, clustering, data integration, peak calling'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pbmc10k_multiome dataset from snapatac2.datasets: 'datasets.pbmc10k_multiome'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] AnnData object with imported fragments and filtered cells: 'pp.import_fragments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] AnnData object with tile count matrix: 'pp.add_tile_matrix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Spectral embedding coordinates saved in .obsm: 'tl.spectral'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] UMAP layout coordinates in .obsm['X_umap']: 'tl.umap'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Cluster labels in .obs['leiden']: 'tl.leiden'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Peak coordinates and statistics table from tl.macs3: 'tl.macs3'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Merged peak set with cluster reproducibility metrics: 'tl.merge_peaks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SnapATAC2: 'SnapATAC2: A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pp.import_fragments: 'pp.import_fragments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pp.add_tile_matrix: 'pp.add_tile_matrix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] tl.spectral: 'tl.spectral'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] tl.umap: 'tl.umap'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] tl.leiden: 'tl.leiden'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] tl.macs3: 'tl.macs3'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] tl.merge_peaks: 'tl.merge_peaks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_020",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Leiden: 'tl.leiden for clustering'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_021",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] UMAP: 'tl.umap for embeddings'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_022",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version specification found: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_023",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No tutorial or reference results document cited in the provided section text: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import snapatac2 as snap; import snapatac2.datasets; adata = snapatac2.datasets.pbmc10k_multiome(processed=False); snap.pp.import_fragments(adata); snap.pp.add_tile_matrix(adata); snap.tl.spectral(adata); snap.tl.umap(adata); snap.tl.leiden(adata); snap.tl.macs3(adata, groupby='leiden'); snap.tl.merge_peaks(adata); adata.write('pbmc10k_multiome_final.h5ad')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "pbmc10k_multiome_processed.h5ad",
+  "expected_outputs": [
+    "AnnData object with imported fragments and filtered cells",
+    "AnnData object with tile count matrix",
+    "Spectral embedding coordinates saved in .obsm",
+    "UMAP layout coordinates in .obsm['X_umap']",
+    "Cluster labels in .obs['leiden']",
+    "Peak coordinates and statistics table from tl.macs3",
+    "Merged peak set with cluster reproducibility metrics"
+  ],
+  "finding": "SnapATAC2 provides an end-to-end analysis pipeline for single-cell ATAC-seq data that includes preprocessing, dimension reduction, clustering, data integration, and peak calling steps.",
+  "github_name": "scverse/SnapATAC2",
+  "input_from": null,
+  "inputs": [
+    "pbmc10k_multiome dataset from snapatac2.datasets"
+  ],
+  "keywords": [
+    "single-cell atac-seq",
+    "single-cell epigenomics",
+    "spectral embedding",
+    "multi-omics integration",
+    "dimension reduction",
+    "clustering",
+    "peak calling",
+    "preprocessing",
+    "fragment file conversion",
+    "scalable analysis"
+  ],
+  "landmark_outputs": [
+    "pbmc10k_multiome_imported.h5ad",
+    "pbmc10k_multiome_tile_matrix.h5ad",
+    "spectral_coordinates.csv",
+    "umap_coordinates.csv",
+    "leiden_clusters.csv",
+    "merged_peaks.bed"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Load the pbmc10k_multiome dataset from snapatac2.datasets public repository.",
+    "Import ATAC fragments into AnnData using pp.import_fragments with paired-end mode and default paired-insertion counting.",
+    "Generate tile-based count matrix using pp.add_tile_matrix across the genome.",
+    "Apply matrix-free spectral embedding using tl.spectral with cosine similarity to obtain low-dimensional coordinates.",
+    "Compute UMAP projection from spectral eigenvectors using tl.umap for visualization.",
+    "Cluster cells using tl.leiden algorithm on spectral coordinates.",
+    "Call peaks in pseudo-bulk mode grouped by cluster assignment using tl.macs3.",
+    "Merge overlapping peaks using tl.merge_peaks to produce final consensus peak set.",
+    "Validation: compare generated cluster labels and UMAP layout coordinates to reference tutorial output; report clustering purity and embedding correlation metrics.",
+    "References: source article (DOI: 10.1038/s41592-023-02139-9)"
+  ],
+  "missing_information": [
+    "No changelog or version specification found",
+    "No tutorial or reference results document cited in the provided section text"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can the SnapATAC2 pipeline successfully process the pbmc10k_multiome dataset through fragment import, tile matrix generation, spectral embedding, leiden clustering, and peak calling to reproduce documented cluster assignments?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "single-cell-atac-fragment-import-processing",
+    "tile-matrix-generation-counting-strategy-selection",
+    "spectral-embedding-dimension-reduction-parameters",
+    "leiden-clustering-resolution-optimization",
+    "peak-calling-pseudo-bulk-aggregation",
+    "cluster-umap-layout-reproducibility-benchmarking"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_snapatac2/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "snapatac2_system",
+    "snapatac2_core",
+    "snapatac2_python",
+    "snapatac2_contrib",
+    "spectral_embedding",
+    "multi_spectral",
+    "pp_make_fragment_file",
+    "pp_import_fragments",
+    "pp_add_tile_matrix",
+    "pp_make_peak_matrix",
+    "pp_make_gene_matrix",
+    "tl_macs3",
+    "pp_import_contacts",
+    "tl_leiden",
+    "tl_leiden_sweep",
+    "network_analysis",
+    "tool_macs3",
+    "dataset_pbmc10k_multiome",
+    "result_linear_complexity"
+  ],
+  "subdomains": [
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:scverse__SnapATAC2",
+  "task_description": "Execute the complete SnapATAC2 analysis pipeline on the pbmc10k_multiome dataset, from fragment import through peak calling with tl.macs3, and reproduce the reported cluster assignments and UMAP layout documented in the SnapATAC2 tutorial.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "pbmc10k_multiome dataset",
+      "port_id": "pbmc10k_multiome_raw",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the complete SnapATAC2 workflow on pbmc10k_multiome data and validate that output cluster assignments and embeddings match the documented tutorial results.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "AnnData with cluster assignments and embeddings",
+      "port_id": "anndata_with_clusters",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Merged peak coordinates and statistics",
+      "port_id": "peak_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cluster and UMAP reproducibility evaluation",
+      "port_id": "reproduction_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction",
+    "batch-correction",
+    "normalization"
+  ],
+  "title": "Reproduce the end-to-end ATAC-seq analysis pipeline on the pbmc10k_multiome dataset",
+  "tools": [
+    "SnapATAC2",
+    "Python",
+    "pp.import_fragments",
+    "pp.add_tile_matrix",
+    "tl.spectral",
+    "tl.umap",
+    "tl.leiden",
+    "tl.macs3",
+    "tl.merge_peaks",
+    "Leiden",
+    "UMAP"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: tl.macs3, tl.merge_peaks, Peak coordinates and statistics table from tl.macs3, Merged peak set with cluster reproducibility metrics."
+  ],
+  "workflow_description": "1. Download the pbmc10k_multiome dataset using snapatac2.datasets.pbmc10k_multiome. 2. Import fragment files into AnnData using pp.import_fragments with paired-end mode. 3. Generate tile matrix using pp.add_tile_matrix with paired-insertion counting strategy. 4. Perform spectral embedding dimension reduction using tl.spectral with cosine similarity metric. 5. Generate UMAP visualization using tl.umap on spectral eigenvectors. 6. Perform clustering using tl.leiden with default resolution parameter. 7. Call peaks using tl.macs3 in pseudo-bulk mode grouped by cluster assignment. 8. Merge overlapping peaks using tl.merge_peaks and compare cluster assignments and UMAP coordinates to tutorial reference."
+}

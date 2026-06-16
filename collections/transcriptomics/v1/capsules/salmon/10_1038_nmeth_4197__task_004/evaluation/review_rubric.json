@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file outputs/ERR188044_sparse_anchors.mapping_rates.txt exists and contains numeric mapping rate and NumReads Pearson values; robust to parameter choices in seed representation"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file outputs/ERR188044_fixed_k_anchors.mapping_rates.txt exists and contains numeric mapping rate and NumReads Pearson values; robust to parameter choices in seed representation"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file outputs/ERR188044_reference_kmers.mapping_rates.txt exists and contains numeric mapping rate and NumReads Pearson values; robust to parameter choices in seed representation"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "value of NumReads Pearson field in outputs/ERR188044_sparse_anchors.mapping_rates.txt is >= 0.99999995"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "value of NumReads Pearson field in outputs/ERR188044_fixed_k_anchors.mapping_rates.txt is >= 0.99999995"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "value of NumReads Pearson field in outputs/ERR188044_reference_kmers.mapping_rates.txt is >= 0.99999995"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that mapping rate (percentage of reads mapped) across all three seed variants differs by < 1% absolute; parameter-sensitive to index and read set"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file outputs/ERR188044_sparse_anchors.mapping_rates.txt exists and contains numeric mapping rate and NumReads Pearson values; robust to parameter choices in seed representation",
+      "verify file outputs/ERR188044_fixed_k_anchors.mapping_rates.txt exists and contains numeric mapping rate and NumReads Pearson values; robust to parameter choices in seed representation",
+      "verify file outputs/ERR188044_reference_kmers.mapping_rates.txt exists and contains numeric mapping rate and NumReads Pearson values; robust to parameter choices in seed representation",
+      "value of NumReads Pearson field in outputs/ERR188044_sparse_anchors.mapping_rates.txt is >= 0.99999995",
+      "value of NumReads Pearson field in outputs/ERR188044_fixed_k_anchors.mapping_rates.txt is >= 0.99999995",
+      "value of NumReads Pearson field in outputs/ERR188044_reference_kmers.mapping_rates.txt is >= 0.99999995",
+      "verify that mapping rate (percentage of reads mapped) across all three seed variants differs by < 1% absolute; parameter-sensitive to index and read set"
+    ],
+    "expert_review": [
+      "assess whether the reported NumReads Pearson values (\u22650.99999995) across seed variants are statistically consistent with the claim that seed granularity was not the root cause of mapping discrepancy",
+      "evaluate whether the choice of sparse fixed-k anchors, reference k-mer variants, and unitig-constrained MEMs constitutes a sufficiently comprehensive variant space to establish robustness to seed representation",
+      "review the experimental design to confirm that the alternative seed representations were applied to the same ERR188044 reads and GRCh38 cDNA index used in the reported baseline (36.35M 76bp PE)"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

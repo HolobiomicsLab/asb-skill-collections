@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github.com/matchms/matchms repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify matchms package can be imported in Python environment"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify at least one spectral data file (MGF or MSP format) is available in the repository or can be downloaded from a public source (e.g., Zenodo, MetaboLights, MassIVE)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "cleaned spectrum collection output file is generated"
+    },
+    {
+      "id": "pf_007",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output file matches expected format (MGF, MSP, JSON, or matchms native format)",
+      "value": "MGF"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "row_count_equals or field_present: output collection contains spectra records with metadata fields (robust to various field schemas used across spectral formats)"
+    },
+    {
+      "id": "pf_009",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output file or collection object contains evidence of applied filter transformat",
+      "value": "evidence of applied filter transformations (e"
+    },
+    {
+      "id": "pf_010",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "if matchms repository includes example cleaned spectral outputs or test fixtures"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github.com/matchms/matchms repository",
+      "verify matchms package can be imported in Python environment",
+      "verify at least one spectral data file (MGF or MSP format) is available in the repository or can be downloaded from a public source (e.g., Zenodo, MetaboLights, MassIVE)",
+      "script_runs: Python script that instantiates matchms metadata cleaning filters executes without errors",
+      "script_runs: Python script that applies metadata filters to a loaded spectral dataset completes execution",
+      "file_exists: cleaned spectrum collection output file is generated",
+      "file_format_is: output file matches expected format (MGF, MSP, JSON, or matchms native format)",
+      "row_count_equals or field_present: output collection contains spectra records with metadata fields (robust to various field schemas used across spectral formats)",
+      "contains_substring: output file or collection object contains evidence of applied filter transformations (e.g., modified metadata entries, removed invalid entries, or validation logs)",
+      "output_matches_reference: if matchms repository includes example cleaned spectral outputs or test fixtures, byte-for-byte or structural equivalence check against reference deposit"
+    ],
+    "expert_review": [
+      "Assess whether metadata cleaning operations (e.g., field standardization, missing value handling, invalid entry removal) conform to metabolomics/mass spectrometry best practices and matchms design intent",
+      "Evaluate whether cleaned metadata is chemically and informatically valid (e.g., precursor m/z values in plausible ranges, molecular weight consistency, retained spectrum count is reasonable relative to input)"
+    ]
+  },
+  "max_score": 10.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

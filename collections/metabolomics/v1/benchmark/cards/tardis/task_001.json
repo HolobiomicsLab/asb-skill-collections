@@ -1,0 +1,373 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Component_131.png",
+      "role": "figure",
+      "sha256": "49841ea093c2418dce75e85dd0a4fae55766914f14095539d56f7ba22284f052"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_14.png",
+      "role": "figure",
+      "sha256": "db5149cb16920f5dbd90a7ccd4a131023fcce4c5269adec045605882499f366c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_15.png",
+      "role": "figure",
+      "sha256": "c591c13e7564aa2ccba0a726a74ef897db63aedec774695889f3904ef50009bc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1576.png",
+      "role": "figure",
+      "sha256": "68b9db1ec71495a045b5f27d8bb05591fd644a2f0406383ad9dcd749f9100575"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1577.png",
+      "role": "figure",
+      "sha256": "77a337421706d3bbaf863a4b657a9efe1dde67669f769e3eebf5d6a0f6441288"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1578.png",
+      "role": "figure",
+      "sha256": "e2a5a816bbe9d511c4a533fd7d047ca5ae04ec6b67fa53574672ccef2fd6aba3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1583.png",
+      "role": "figure",
+      "sha256": "d86c987eb9530cad3fbbf8f6093cfdcd46d41a7e2e76630f28c7ac37b60b3e10"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_17.png",
+      "role": "figure",
+      "sha256": "484067618beead61a8937cba2e342448149b25f9a5a5f3ce3fee3c527b4ac6fb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_179.png",
+      "role": "figure",
+      "sha256": "ca7593be96ab92a038fd3bba8e5109722e59cef8ed48c98df7628a8b52db70c3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_183.png",
+      "role": "figure",
+      "sha256": "450029a8080d404d8bf4452316e111cca329b8052efbf365c67f9aecb2f09c80"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_21.png",
+      "role": "figure",
+      "sha256": "0771d4878d7bbc6425dcb9a7390d6882daf3ec84ce38db2a042bf70342734740"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_22.png",
+      "role": "figure",
+      "sha256": "b2a3ad8c85706b9a3c790c95c179a45e3957c342945ced0d5faa577abe37790f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_23.png",
+      "role": "figure",
+      "sha256": "e382f8674c98e4780fc98faf4a72eaa9f502cc88f635be7c66e74e29a3ee5c0e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_24.png",
+      "role": "figure",
+      "sha256": "e8a97419fd4639483cdb06111783a29829e07f23021989b9e8e6dcb2092fc7cb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_25.png",
+      "role": "figure",
+      "sha256": "ea88347302201a23f8b022eb8b9a496fd83ccf0439b546ca90bb9071145b7b97"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_331.png",
+      "role": "figure",
+      "sha256": "d234dcf1f1137bb4a43bc6f97c5239723ed9e2aa2297c4204168d4797363308e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_7.png",
+      "role": "figure",
+      "sha256": "3125b1dddebe3c6b5b0ce8f16e5df494b4070d0049fb377982d40e39d61e2d63"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_9.png",
+      "role": "figure",
+      "sha256": "9338b2919d0fa6f13ab4c1053eb8a4ac5cebbc87114ae218a2366648f39a9f09"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tardis.png",
+      "role": "figure",
+      "sha256": "3753660e6f52ebbe415127dbf72ed680f41d0ebe4de8549bb4cddcfaf18ca806"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tardis_new.png",
+      "role": "figure",
+      "sha256": "3753660e6f52ebbe415127dbf72ed680f41d0ebe4de8549bb4cddcfaf18ca806"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "424fcd032ba74d0180ed7b3853f27a43238247a9db11a9a9dfc3ad6dbfc6cc2e"
+    }
+  ],
+  "created_at": "2026-06-16T07:24:56.964844+00:00",
+  "crossref_doi": "10.1021/acs.analchem.5c00567",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Targets file in .xlsx or .csv format containing compound ID, name, m/z, RT, and polarity columns",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Formatted target data.frame with polarity-filtered rows and standardized column structure",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Target lists must specify polarity (positive or negative ionization mode) to enable correct m/z matching during peak detection.",
+    "Expected retention time (RT) values are typically stored in minutes and define the chromatographic window for screening and peak integration.",
+    "Compound ID must be a unique identifier to link targets to downstream results tables (AUC, intensity, SNR, peak quality metrics).",
+    "The m/z value can be either theoretical (calculated from elemental composition) or measured (from calibration standards) and must be precise enough for extraction window definition."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that createTargetList() function exists in the TARDIS package source code",
+      "verify file_exists: a targets.xlsx or targets.csv example file is present in the package repository or supplementary materials",
+      "verify that the function accepts polarity as a filtering parameter (by examining function signature and documentation)",
+      "verify that output is a data.frame (or tibble) with columns: compound ID, compound Name, m/z, RT, and polarity \u2014 robust to column order",
+      "verify that the data.frame row count matches the input file after polarity filtering is applied (exact row count comparison)",
+      "verify that all expected columns are present in output data.frame (field_present check for each of: ID, Name, m/z, RT, polarity)",
+      "script_runs: the createTargetList() function executes without error when provided a well-formed targets file and valid polarity parameter",
+      "verify output data.frame contains only rows matching the specified polarity filter (no off-polarity rows remain) \u2014 exact filtering verification"
+    ],
+    "expert_review": [
+      "Assess whether the polarity filtering logic correctly implements the intended chemical/analytical principle (positive vs. negative ionization mode selection)",
+      "Review whether m/z and RT columns are preserved at appropriate precision and units for downstream peak detection use",
+      "Evaluate whether the column selection and ordering match the expected input format documented in the TARDIS methods (Methods section or README)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does the createTargetList() function filter and restructure input compound data based on polarity specification to produce a correctly formatted target data.frame?: 'An input file (either .xlsx or .csv) can be converted to a correct data.frame using the `createTargetList()` function. Input parameters needed are: the path to the file, the patterns for positive and'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The createTargetList() function accepts an input file path, positive/negative ionization patterns, a polarity selection parameter, the column name indicating ionization mode, and columns of interest; it then produces a correctly structured target data.frame by applying these filters and selections.: 'Input parameters needed are: the path to the file, the patterns for positive and negative ionization, the polarity of interest, the columnn that contains the ionization mode and the other columns of'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Targets file in .xlsx or .csv format containing compound ID, name, m/z, RT, and polarity columns: 'Create target list data.frame with compound ID, name, m/z, RT, and polarity'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Formatted target data.frame with polarity-filtered rows and standardized column structure: 'Create target list data.frame with compound ID, name, m/z, RT, and polarity'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'R package for *TArgeted Raw Data Integration In Spectrometry*'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "R",
+      "--slave",
+      "-e",
+      "library(readxl); library(xcms); targets <- if(grepl('\\.xlsx$', '{inputs.targets_file}')) read_excel('{inputs.targets_file}') else read.csv('{inputs.targets_file}'); required_cols <- c('compound_id', 'name', 'mz', 'rt', 'polarity'); colnames(targets) <- tolower(colnames(targets)); targets <- targets[, required_cols]; targets <- targets[!is.na(targets$mz) & !is.na(targets$rt) & !is.na(targets$polarity), ]; saveRDS(targets, 'targets_filtered.rds'); write.csv(targets, 'targets_filtered.csv', row.names=FALSE); cat('Target list successfully formatted and saved\\n')"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "target_dataframe.rds",
+  "expected_outputs": [
+    "Formatted target data.frame with polarity-filtered rows and standardized column structure"
+  ],
+  "finding": "The createTargetList() function accepts an input file path, positive/negative ionization patterns, a polarity selection parameter, the column name indicating ionization mode, and columns of interest; it then produces a correctly structured target data.frame by applying these filters and selections.",
+  "github_name": "pablovgd/TARDIS",
+  "input_from": null,
+  "inputs": [
+    "Targets file in .xlsx or .csv format containing compound ID, name, m/z, RT, and polarity columns"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "targets_loaded.csv",
+    "targets_filtered.csv"
+  ],
+  "linked_result_ids": [
+    "result_006",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Load targets file (xlsx or csv) into R environment",
+    "Validate required columns: compound ID, name, m/z, RT (minutes), polarity",
+    "Filter rows by polarity mode (positive or negative ionization)",
+    "Select and standardize column order for downstream tardisPeaks integration",
+    "Validation: Output data.frame contains all original targets (or filtered subset) with correct column names and data types; no missing values in required fields",
+    "References: source article (DOI: 10.1021/acs.analchem.5c00567)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the createTargetList() function filter and restructure input compound data based on polarity specification to produce a correctly formatted target data.frame?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "results"
+  ],
+  "skills": [
+    "metabolite-target-list-formatting",
+    "polarity-mode-filtering-lcms",
+    "mass-charge-retention-time-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_tardis/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp_tardisPeaks",
+    "comp_createTargetList",
+    "comp_polarity_filtering",
+    "dataset_targets_xlsx",
+    "artifact_metric_csvs"
+  ],
+  "subdomains": [
+    "lipidomics",
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:UGent-LIMET__TARDIS",
+  "task_description": "Load a targets.xlsx or .csv file, apply polarity filtering, select required columns (compound ID, name, m/z, RT, polarity), and produce a correctly structured target data.frame for downstream peak integration by tardisPeaks.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Targets file in .xlsx or .csv format",
+      "port_id": "targets_file",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement createTargetList() to load compound metadata from .xlsx/.csv, filter by ionization polarity, select specified columns, and output a structured target data.frame.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Formatted target data.frame with polarity filtering applied",
+      "port_id": "target_dataframe",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "quality-control",
+    "spectral-library-matching"
+  ],
+  "title": "Reconstruct the createTargetList filtering and formatting step for LC-MS target input files",
+  "tools": [
+    "xcms",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Read targets file (xlsx or csv format) containing compound metadata. 2. Validate presence of required columns: compound ID, compound name, theoretical or measured m/z, expected RT in minutes, and polarity indicator. 3. Apply polarity filtering to subset targets by ionization mode. 4. Select and reorder columns to match the standardized target data.frame structure. 5. Return formatted data.frame object for use in tardisPeaks screening or peak detection steps."
+}

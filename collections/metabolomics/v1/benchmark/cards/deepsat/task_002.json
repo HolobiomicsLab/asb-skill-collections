@@ -1,0 +1,258 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Calcd_42086_image.png",
+      "role": "figure",
+      "sha256": "ce83199380ffab793baae594f2ebf4641f3b363ea537cfd35c9cd63726809645"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "e68e1653004a50f31908228524098a4fd68db7095a7af11f170bdeab2aafe7bb"
+    }
+  ],
+  "created_at": "2026-06-15T10:59:17.380380+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NMR peak data with 1H and 13C chemical shift headers",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured JSON response containing classification predictions and metadata from the API",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "DeepSAT SMART 3 Classification API expects peak data as a JSON list of dictionaries with exact keys 1H and 13C representing proton and carbon-13 chemical shifts respectively.",
+    "Model input names may change between deployments; the /model/metadata endpoint should be queried first to confirm the current expected schema before submitting classification requests.",
+    "TensorFlow Serving routes requests through a standardized inference pipeline; the /api/smart3/search endpoint is the dedicated classification API layer distinct from lower-level model inference internals.",
+    "Successful API responses return structured JSON containing predictions; response parsing must handle both successful (HTTP 200) and error responses (4xx/5xx) gracefully."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in github:mwang87__DeepSAT repository containing API endpoint documentation or implementation for /api/smart3/search",
+      "script_runs: execute a programmatic POST request to the /api/smart3/search endpoint with a valid JSON payload containing a list of dicts with '1H' and '13C' keys",
+      "output_matches_reference: returned response is valid JSON with a structured prediction object (no canonical answer \u2014 structure depends on model version and API contract)",
+      "verify response contains at least one field indicative of classification output (e.g. compound name, confidence score, or metadata \u2014 parameter-sensitive to API contract version)"
+    ],
+    "expert_review": [
+      "assess whether the JSON response structure and field semantics align with the documented DeepSAT Classification API specification",
+      "evaluate whether peak input format (1H and 13C headers as list of dicts) matches the actual API contract and produces chemically valid predictions",
+      "review whether any validation errors or malformed responses indicate missing or incompatible model input names (per finding: 'Model input names may change and require code updates')"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How should peak data be formatted and submitted to the DeepSAT SMART 3 classification API endpoint to obtain predictions?: 'Classify programmatically. You can put in your peaks as a json list of dicts, with 1H,13C as headers.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The /api/smart3/search endpoint accepts peaks as a JSON list of dictionaries with 1H and 13C as headers for programmatic classification requests.: 'You can put in your peaks as a json list of dicts, with 1H,13C as headers.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] NMR peak data with 1H and 13C chemical shift headers: 'You can put in your peaks as a json list of dicts, with 1H,13C as headers'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Structured JSON response containing classification predictions and metadata from the API: 'Classify programmatically. You can put in your peaks as a json list of dicts'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] tensorflow serving: 'We pass through tensorflow serving at this url'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history available to track API contract changes or breaking updates to endpoint /api/smart3/search: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import json; import requests; peaks = json.load(open('{inputs.nmr_peaks_json}')); metadata = requests.get('http://localhost:8501/v1/models/smart3:metadata').json(); payload = {'instances': peaks}; response = requests.post('http://localhost:8501/v1/models/smart3:predict', json=payload); assert response.status_code == 200; print(json.dumps(response.json(), indent=2))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 30,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "smart3_api_response.json",
+  "expected_outputs": [
+    "Structured JSON response containing classification predictions and metadata from the API"
+  ],
+  "finding": "The /api/smart3/search endpoint accepts peaks as a JSON list of dictionaries with 1H and 13C as headers for programmatic classification requests.",
+  "github_name": null,
+  "input_from": "task_001",
+  "inputs": [
+    "NMR peak data with 1H and 13C chemical shift headers"
+  ],
+  "keywords": [
+    "nmr spectroscopy",
+    "peak classification",
+    "1h nmr",
+    "13c nmr",
+    "rest api",
+    "model serving"
+  ],
+  "landmark_outputs": [
+    "model_metadata.json",
+    "nmr_peaks_payload.json"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Query the /model/metadata endpoint via TensorFlow Serving to retrieve and validate the current model input schema.",
+    "Format NMR peak data as a JSON list of dictionaries with 1H and 13C keys.",
+    "Submit a POST request to /api/smart3/search with the formatted JSON payload.",
+    "Parse and extract classification predictions from the returned JSON response.",
+    "Validation: HTTP response code is 200 (or documented success code), and response JSON contains expected prediction fields with valid numeric or categorical values."
+  ],
+  "missing_information": [
+    "No changelog or version history available to track API contract changes or breaking updates to endpoint /api/smart3/search"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How should peak data be formatted and submitted to the DeepSAT SMART 3 classification API endpoint to obtain predictions?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "restful-api-endpoint-invocation",
+    "json-payload-construction-for-nmr-spectra",
+    "http-post-request-assembly",
+    "api-response-parsing-and-validation",
+    "model-metadata-schema-verification"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_deepsat/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "system_deepsat",
+    "component_smart3",
+    "arch_api_layer",
+    "arch_metadata_layer"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:mwang87__DeepSAT",
+  "task_description": "Implement a programmatic POST request to the DeepSAT SMART 3 Classification API endpoint (/api/smart3/search), submitting a JSON list of peak dictionaries with 1H and 13C NMR headers, and capture the structured prediction response.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NMR peak data with 1H and 13C chemical shift headers",
+      "port_id": "nmr_peaks_json",
+      "resolved_via": null,
+      "source": "task_001/model_metadata",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Construct and execute a POST request to /api/smart3/search with peak data formatted as JSON dicts (1H, 13C headers) and parse the classification response.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structured JSON response containing classification predictions and metadata from the API",
+      "port_id": "api_response",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "deep-learning",
+    "machine-learning"
+  ],
+  "title": "Reconstruct the SMART 3 classification API call via /api/smart3/search",
+  "tools": [
+    "tensorflow serving"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: tensorflow serving, Structured JSON response containing classification predictions and metadata from the API."
+  ],
+  "workflow_description": "1. Retrieve model metadata from the /model/metadata endpoint via TensorFlow Serving to verify current input schema and model version. 2. Construct a JSON payload as a list of dictionaries, each containing 1H and 13C peak keys and corresponding chemical shift values. 3. Execute a POST request to the /api/smart3/search endpoint with the JSON payload as the request body. 4. Validate the HTTP response status code and parse the returned JSON structure to extract classification predictions and confidence scores. 5. Log the request parameters, response timestamp, and prediction results to a structured output file."
+}

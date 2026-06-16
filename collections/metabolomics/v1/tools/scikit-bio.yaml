@@ -1,0 +1,10 @@
+name: scikit-bio
+slug: scikit-bio
+evidence_spans:
+- conda install -c conda-forge scikit-bio
+derived_from:
+- doi: 10.3389/fbinf.2022.842964
+  title: memo
+source_repos:
+- mandelbrot-project/memo
+schema_version: 0.2.0

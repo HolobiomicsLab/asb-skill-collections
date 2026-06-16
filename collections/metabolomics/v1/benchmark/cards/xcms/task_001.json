@@ -1,0 +1,298 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "86601462b6f0c575885716815b42ad0a84fd0c8b2e0ef6830db20c97c115f971"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3cd338aea178a6cea4663bb04918d92bc5823b649a8a6d08454b0e192af19016"
+    }
+  ],
+  "created_at": "2026-06-15T12:18:05.623444+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Preprocessed faahKO xcms result object (XcmsExperiment or xcmsSet with detected chromatographic peaks)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature group count and table of group sizes showing distribution of features across groups",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Retention time similarity is a primary indicator that multiple detected ions (m/z) derive from the same compound eluting at the same chromatographic time.",
+    "The SimilarRtimeParam window parameter (20 seconds in this task) defines the maximum allowed retention time difference between features to group them together.",
+    "Feature grouping is typically applied after chromatographic peak detection and alignment to consolidate multiple ion peaks belonging to the same metabolite into single feature groups.",
+    "The faahKO dataset contains 8 LC-MS samples (4 knockout, 4 wild-type) used to validate feature grouping and downstream abundance correlation refinement."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that a pre-processed xcms result object for faahKO dataset is available as input (file_exists or accessible via standard xcms workflow)",
+      "verify that groupFeatures() function executes without error when called with SimilarRtimeParam(window=20s) on the xcms result object (script_runs)",
+      "verify that the output object contains a featureDefinitions table with a grouping column (field_present)",
+      "verify that the reported feature group count matches the unique group identifiers in the output object (output_matches_reference or value_in_range if a reference value is provided in the article)",
+      "verify that a table of group sizes (frequency distribution of features per group) can be extracted from the output and matches any reported table in the article (output_matches_reference, robust to formatting variations)",
+      "verify that all features in the input object are assigned to exactly one group (no missing or duplicate assignments)"
+    ],
+    "expert_review": [
+      "assess whether the grouping result is biologically sensible: features assigned to the same group should show plausible co-elution patterns consistent with a 20-second retention time window",
+      "assess whether the group size distribution is consistent with expected chromatographic behavior for the faahKO dataset (e.g., whether singleton and small-group frequencies are reasonable)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] When groupFeatures is applied to the faahKO xcms result object with SimilarRtimeParam using a 20-second retention time window, how many distinct feature groups are produced and what is the distribution of features across group sizes?: 'Grouping by similar retention time grouped the in total `r nrow(featureDefinitions(xmse))` features into `r length(unique(featureGroups(xmse)))` feature groups.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] When applying SimilarRtimeParam(20) to group features by retention time, the faahKO dataset features were grouped into a specific number of feature groups with varying sizes, as shown by the table of group sizes produced by the grouping operation.: 'xmse <- groupFeatures(xmse, SimilarRtimeParam(20))\ntable(featureGroups(xmse))'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Preprocessed faahKO xcms result object (XcmsExperiment or xcmsSet with detected chromatographic peaks): 'This data set consists of samples from 4 mice with knock-out of the fatty acid amide hydrolase (FAAH) and 4 wild type mice. Pre-processing of this data set is described in detail'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Feature group count and table of group sizes showing distribution of features across groups: 'Grouping by similar retention time grouped the in total features into feature groups'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] xcms: 'The *xcms* R package provides functionality to efficiently preprocess LC-MS (as well as GC-MS and LC-MS/MS) data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MsFeatures: 'General MS feature grouping functionality if defined by the `r Biocpkg(\"MsFeatures\")` package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion section provides no details about expected outputs, feature group counts, or group size distributions that would serve as reference values for validation: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(xcms); library(MsFeatures); data(faahKO); xdata <- faahKO; xdata <- groupFeatures(xdata, param = SimilarRtimeParam(window = 20)); cat('Feature group count:', length(unique(featureGroups(xdata))), '\\n'); print(table(table(featureGroups(xdata))))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "feature_groups_summary.csv",
+  "expected_outputs": [
+    "Feature group count and table of group sizes showing distribution of features across groups"
+  ],
+  "finding": "When applying SimilarRtimeParam(20) to group features by retention time, the faahKO dataset features were grouped into a specific number of feature groups with varying sizes, as shown by the table of group sizes produced by the grouping operation.",
+  "github_name": "sneumann/xcms",
+  "input_from": null,
+  "inputs": [
+    "Preprocessed faahKO xcms result object (XcmsExperiment or xcmsSet with detected chromatographic peaks)"
+  ],
+  "keywords": [
+    "untargeted metabolomics",
+    "lc-ms/ms",
+    "feature grouping",
+    "compound annotation",
+    "peak detection",
+    "centwave algorithm",
+    "retention time alignment",
+    "abundance correlation",
+    "eic similarity",
+    "swath acquisition",
+    "data-dependent acquisition",
+    "data-independent acquisition",
+    "ms2 spectrum matching",
+    "adduct detection",
+    "isotope detection"
+  ],
+  "landmark_outputs": [
+    "feature_groups_raw.txt",
+    "group_size_distribution.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_003",
+    "result_005",
+    "result_006",
+    "result_043"
+  ],
+  "methodology_summary": [
+    "Load preprocessed xcms result object containing detected chromatographic peaks from faahKO samples",
+    "Apply groupFeatures() with SimilarRtimeParam(window=20) to group features within a 20-second retention time window",
+    "Extract feature group assignments and compute group-wise statistics (count, size distribution)",
+    "Validate: verify that the total feature group count and group size table match published reference results"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "The discussion section provides no details about expected outputs, feature group counts, or group size distributions that would serve as reference values for validation"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "When groupFeatures is applied to the faahKO xcms result object with SimilarRtimeParam using a 20-second retention time window, how many distinct feature groups are produced and what is the distribution of features across group sizes?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "retention-time-based-feature-grouping",
+    "xcms-workflow-execution",
+    "mass-chromatogram-alignment",
+    "feature-annotation-consolidation",
+    "metabolomics-data-structure-handling"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_xcms/synthesized_package",
+  "spine_condition_ids": [
+    "cond_rtime_10s",
+    "cond_rtime_20s"
+  ],
+  "spine_entity_ids": [
+    "xcms_package",
+    "faahko_dataset",
+    "fticr_dataset",
+    "group_features_method",
+    "similar_rtime_param",
+    "compounding_workflow",
+    "feature_group_artifact",
+    "cond_rtime_10s",
+    "cond_rtime_20s",
+    "result_rtime_grouping_features",
+    "result_abundance_subgrouping",
+    "result_eic_subgrouping",
+    "result_dda_peak_count",
+    "result_eic_shift_separation"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:sneumann__xcms",
+  "task_description": "Apply SimilarRtimeParam with a 20-second retention time window to group features in a preprocessed faahKO xcms result object, and reproduce the reported feature group count and distribution of group sizes.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Preprocessed faahKO xcms result object",
+      "port_id": "xcms_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Apply SimilarRtimeParam(20) to the faahKO xcms result and reproduce the exact number of feature groups and tabular distribution of feature counts per group.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature group assignments and size distribution",
+      "port_id": "feature_groups_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "clustering"
+  ],
+  "title": "Reproduce retention-time-based feature grouping using SimilarRtimeParam(20) on the faahKO dataset",
+  "tools": [
+    "xcms",
+    "MsFeatures"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Feature group count and table of group sizes showing distribution of features across groups."
+  ],
+  "workflow_description": "1. Load the preprocessed faahKO xcms result object (XcmsExperiment or xcmsSet). 2. Apply the groupFeatures() function with SimilarRtimeParam(window=20) to perform initial retention time-based feature grouping. 3. Extract the resulting feature group assignments and compute summary statistics (total number of groups, count of features per group). 4. Generate a table showing the distribution of group sizes and verify against reported reference values."
+}

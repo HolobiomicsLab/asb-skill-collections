@@ -7,18 +7,24 @@ metadata:
   edam_topics:
   - http://edamontology.org/topic_3071
   - http://edamontology.org/topic_0091
+  - http://edamontology.org/topic_3172
   tools:
   - Python
   - jsonschema
   - MESSES
+  - npm
+  - ajv
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
+- doi: 10.1038/s41589-020-00724-z
+  title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
 - utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v1
@@ -27,6 +33,9 @@ provenance:
   - build: coll_messes
     doi: 10.3390/metabo13070842
     title: messes
+  - build: coll_pairedomicsdatapla
+    doi: 10.1038/s41589-020-00724-z
+    title: pairedomicsdatapla
   dedup_kept_from: coll_messes
 schema_version: 0.2.0
 ---

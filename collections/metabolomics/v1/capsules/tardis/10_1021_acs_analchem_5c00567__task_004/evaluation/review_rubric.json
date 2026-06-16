@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that vignette mzML files exist in the package repository at documented location"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that tardisPeaks() function exists and is callable with mass_range parameter"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that EIC output plots are generated as files (format: PDF or PNG) when tardisPeaks() runs without scan-window separation"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that sawtooth artefact is visibly present in EIC plots from first run \u2014 expert judgment required on visual pattern; no canonical quantitative threshold"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that EIC output plots are generated as files (format: PDF or PNG) when tardisPeaks() runs with corrected mass_range argument"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that peak profiles in second run show absence of sawtooth artefact \u2014 expert judgment required on visual pattern comparison between runs"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that vignette mzML files exist in the package repository at documented location",
+      "verify that tardisPeaks() function exists and is callable with mass_range parameter",
+      "verify that EIC output plots are generated as files (format: PDF or PNG) when tardisPeaks() runs without scan-window separation",
+      "verify that sawtooth artefact is visibly present in EIC plots from first run \u2014 expert judgment required on visual pattern; no canonical quantitative threshold",
+      "verify that EIC output plots are generated as files (format: PDF or PNG) when tardisPeaks() runs with corrected mass_range argument",
+      "verify that peak profiles in second run show absence of sawtooth artefact \u2014 expert judgment required on visual pattern comparison between runs"
+    ],
+    "expert_review": [
+      "inspect EIC plots from tardisPeaks() without scan-window separation and confirm sawtooth artefact is present and characteristic of incorrect mass_range routing",
+      "inspect EIC plots from tardisPeaks() with corrected mass_range argument and confirm peak profiles are clean and sawtooth pattern is eliminated",
+      "assess whether the visual difference between the two EIC sets adequately demonstrates the effect of scan-window routing on peak profile quality"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

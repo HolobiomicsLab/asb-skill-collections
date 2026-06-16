@@ -1,0 +1,491 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-120x120.png",
+      "role": "figure",
+      "sha256": "b25f5ef929e5815a41decba296168a18adfa3f1e90a6824d88641eac34a611f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-152x152.png",
+      "role": "figure",
+      "sha256": "5f749596f6aab1ba330c9c792455603bf44028833ff0516f1dbadf8c1782fae1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-180x180.png",
+      "role": "figure",
+      "sha256": "4dad7a301408410044a72a5f8b03db5d5fe1d123221a4789fc832a2424f3b544"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-60x60.png",
+      "role": "figure",
+      "sha256": "c8cc90df83794a47b9e1430734db6edc0142d7623d886dc432d06b96a99ac681"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-76x76.png",
+      "role": "figure",
+      "sha256": "c6c00177a061c34183473f58a25bb1cac8c37dcf47e25dd04f29ae03db42f9f1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon.png",
+      "role": "figure",
+      "sha256": "0fbea766d15b7f10d1da0a55a4223f9c6a392614ae1e380e21a2621451b2ef12"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-16x16.png",
+      "role": "figure",
+      "sha256": "2ef901d8e5ba7c3465bbf9444259d77648ca81d85ea695320d0ed472b57f6ce6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-32x32.png",
+      "role": "figure",
+      "sha256": "7d973740744b8e8af32f8d62b6b57f241489b2423012b87303b9716a2f4ad92d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "537befea4a116b05c85e6dea759f8eabdf6b70b8b8bbeed9ae07a6d8ba1ab8cf"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-basic.svg",
+      "role": "figure",
+      "sha256": "38243d97d58702019680f89ba678c7222b689c9b087ce8ed3d27f2fb872eecd9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-labels-ass.svg",
+      "role": "figure",
+      "sha256": "548337bceed874ec2e77e6c5c72797a06ce6e7f57064e3a4e34109ee45006c2d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-labels.svg",
+      "role": "figure",
+      "sha256": "46a4b5a9216f1cc9f01845d5a39ced08fe81824101267ea56271ca7c0f266818"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-xlim.svg",
+      "role": "figure",
+      "sha256": "ee313821a4158ce3aef2738777eb401aaf6f6ad57d41eb525d2843f5db3ee1a9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotmzdelta-1000.svg",
+      "role": "figure",
+      "sha256": "c9e7374103f48b101e3f97ec243ecc426fef3bae67f83906ada609fa5ebff911"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-asp05.svg",
+      "role": "figure",
+      "sha256": "d4664b3bb5ab0fd53d0c3317d4fe69e50515ceea4ce139f7f6225465098fa3d4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-asp2.svg",
+      "role": "figure",
+      "sha256": "b3a86ae463bb3128b81f3cb6b87569117fda4973022d8fae14fbe7f6827f34fa"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-color-each.svg",
+      "role": "figure",
+      "sha256": "deb89461b259202e039c4289c084411713c9a9d4b25d19eb70e24bfd049429de"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-color-peaks-label-labelcol.svg",
+      "role": "figure",
+      "sha256": "889779b01b3bf2413577759b5e324286970b70468785366754b2a2ad1fd9af68"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-color-peaks-label.svg",
+      "role": "figure",
+      "sha256": "1be6fb3e87fc22236b05170aa5660e37a079bc092b6fc40a570618a558efb5d9"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "680e234b34ad5df5d2fdbcc9e7176ad45373551649bff442304915fb76eb182c"
+    }
+  ],
+  "created_at": "2026-06-16T05:59:54.721704+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw MS data files in mzML or mzXML format with known file paths and spectra identifiers",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spectra package source code or installation with MsBackend virtual class definition",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "R script implementing backendParallelFactor() method that returns a factor grouping spectra by dataStorage file name",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Memory benchmark report (CSV or text) comparing peak-data memory demand for chunk-wise splitting versus whole-load approach",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Performance comparison visualization (plot or figure) showing memory usage reduction percentage across different dataset sizes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "The MsBackend virtual class defines an API contract that all backend implementations must satisfy, including required methods such as spectraData(), peaksData(), and spectraVariables().",
+    "The dataStorage variable is a special required spectra variable that identifies the file or resource path where each spectrum's data is stored and is essential for grouping spectra during parallel processing.",
+    "Chunk-wise processing reduces memory footprint by loading and processing spectra subsets sequentially rather than materializing the entire peak-data list in memory, which is critical for large datasets.",
+    "The backendParallelFactor() method must return a factor object compatible with R's parallel processing frameworks, where factor levels correspond to distinct data sources (file paths).",
+    "Peak data (m/z and intensity values) are returned as a NumericList, where each element is a matrix with two columns; memory overhead scales linearly with the total number of peaks across all spectra."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in github:rformassspectrometry__Spectra repository containing backendParallelFactor() method definition for MsBackendMzR class",
+      "verify backendParallelFactor() method returns a factor object (R class 'factor')",
+      "verify backendParallelFactor() method implementation extracts factor levels from dataStorage file names of spectra",
+      "script_runs: execute chunk-wise splitting operation on MsBackendMzR instance with parallel factor applied to Spectra object, no errors",
+      "script_runs: execute operation loading all spectra into memory without chunking on same MsBackendMzR instance, no errors",
+      "memory usage metric from chunk-wise operation is lower than memory usage metric from non-chunked operation (robust to measurement tool, parameter-sensitive to data size and chunk boundaries)"
+    ],
+    "expert_review": [
+      "peak-data memory demand reduction is substantive and not artifactual (accounts for memory allocation overhead, garbage collection timing, measurement precision)",
+      "chunk-wise splitting implementation is correct and complete (no silent data loss, correct reassembly of results across chunks, consistent with Spectra API semantics)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the backendParallelFactor() method for MsBackendMzR enable chunk-wise splitting of backend data during parallel processing, and what is the memory advantage of processing spectra in chunks rather than loading all peak data into memory at once?: 'backendParallelFactor() for `MsBackendMzR` on the other hand returns a `factor` based on the data files the data is stored in (i.e. based on the `dataStorage` of the MS data). Besides parallel'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MsBackendMzR's backendParallelFactor() returns a factor based on dataStorage file names to split the backend for parallel or serial processing. Chunk-wise processing via this splitting reduces memory demand because only the peak data of the current chunk\u2014not all spectra\u2014needs to be realized in memory during operations.: 'backendParallelFactor() for `MsBackendMzR` on the other hand returns a `factor` based on the data files the data is stored in (i.e. based on the `dataStorage` of the MS data). Besides parallel'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw MS data files in mzML or mzXML format with known file paths and spectra identifiers: 'Backends such as the `MsBackendMzR` for example retrieve the data on the fly from the raw MS data files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectra package source code or installation with MsBackend virtual class definition: 'The `Spectra` package separates the code for the analysis of MS data from the code needed to import, represent and provide the data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R script implementing backendParallelFactor() method that returns a factor grouping spectra by dataStorage file name: 'backendParallelFactor() mechanism for MsBackendMzR (returning a factor based on dataStorage file names)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Memory benchmark report (CSV or text) comparing peak-data memory demand for chunk-wise splitting versus whole-load approach: 'chunk-wise splitting during Spectra operations reduces peak-data memory demand compared to loading all spectra at once'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Performance comparison visualization (plot or figure) showing memory usage reduction percentage across different dataset sizes: 'chunk-wise splitting during Spectra operations reduces peak-data memory demand'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectra: 'The *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MsBackendMzR: 'Backends such as the `MsBackendMzR` for example retrieve the data on the fly from the raw MS data files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'library(Spectra)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] S4Vectors: 'return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg(\"S4Vectors\")`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] No methods section content available to detail backendParallelFactor() mechanism, parallel processing implementation strategy, or memory profiling methodology: 'Document contains only title page and metadata; actual methods section is absent'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history available to trace when backendParallelFactor() mechanism was introduced or modified in relation to parallel processing features: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(Spectra); library(MsBackendMzR); library(S4Vectors); source('{inputs.spectra_pkg}'); mzr_files <- list.files('{inputs.raw_ms_files}', pattern='\\\\.(mzML|mzXML)$', full.names=TRUE); if(length(mzr_files) > 0) { sps <- Spectra(mzr_files, source=MsBackendMzR()); factor_result <- backendParallelFactor(sps@backend); memory_whole <- object.size(peaksData(sps)); memory_chunk <- sum(sapply(split(1:length(sps), factor_result), function(idx) object.size(peaksData(sps[idx])))); reduction_pct <- 100 * (1 - memory_chunk / memory_whole); write.csv(data.frame(approach=c('whole-load', 'chunk-wise'), memory_bytes=c(memory_whole, memory_chunk), reduction_percent=c(0, reduction_pct)), 'memory_benchmark.csv'); cat('Memory reduction:', reduction_pct, '%\\\\n') } else { cat('No MS files found\\\\n') }"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "memory_benchmark_report.csv",
+  "expected_outputs": [
+    "R script implementing backendParallelFactor() method that returns a factor grouping spectra by dataStorage file name",
+    "Memory benchmark report (CSV or text) comparing peak-data memory demand for chunk-wise splitting versus whole-load approach",
+    "Performance comparison visualization (plot or figure) showing memory usage reduction percentage across different dataset sizes"
+  ],
+  "finding": "MsBackendMzR's backendParallelFactor() returns a factor based on dataStorage file names to split the backend for parallel or serial processing. Chunk-wise processing via this splitting reduces memory demand because only the peak data of the current chunk\u2014not all spectra\u2014needs to be realized in memory during operations.",
+  "github_name": "rformassspectrometry/Spectra",
+  "input_from": "task_002",
+  "inputs": [
+    "Raw MS data files in mzML or mzXML format with known file paths and spectra identifiers",
+    "Spectra package source code or installation with MsBackend virtual class definition"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "backend_parallel_factor.R",
+    "memory_profile_whole_load.txt",
+    "memory_profile_chunked.txt",
+    "benchmark_results.csv",
+    "memory_reduction_plot.png"
+  ],
+  "linked_result_ids": [
+    "result_018",
+    "result_019",
+    "result_020",
+    "result_021"
+  ],
+  "methodology_summary": [
+    "Define S4 class extending MsBackend with slots for spectra variables, m/z, and intensity data",
+    "Implement backendInitialize() to load raw MS data files and populate dataStorage metadata",
+    "Implement backendParallelFactor() to extract unique file paths from dataStorage and return a grouping factor",
+    "Implement peaksData() to extract and return m/z and intensity matrices with index-based subsetting support",
+    "Benchmark memory consumption: measure peak-data memory footprint for whole-load versus chunk-wise splitting approaches",
+    "Validation: memory usage in chunk-wise approach is statistically lower than whole-load approach; factor correctly groups all spectra by source file"
+  ],
+  "missing_information": [
+    "No methods section content available to detail backendParallelFactor() mechanism, parallel processing implementation strategy, or memory profiling methodology",
+    "No changelog or version history available to trace when backendParallelFactor() mechanism was introduced or modified in relation to parallel processing features"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the backendParallelFactor() method for MsBackendMzR enable chunk-wise splitting of backend data during parallel processing, and what is the memory advantage of processing spectra in chunks rather than loading all peak data into memory at once?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "s4-class-extension-for-backend-implementation",
+    "spectra-data-extraction-and-subsetting",
+    "parallel-factor-generation-from-metadata",
+    "memory-profiling-and-benchmarking",
+    "chunk-wise-data-processing-optimization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_spectra/synthesized_package",
+  "spine_condition_ids": [
+    "parallel_processing_condition",
+    "serial_processing_condition"
+  ],
+  "spine_entity_ids": [
+    "spectra_package",
+    "spectra_class",
+    "msbackend_mzr",
+    "parallel_processing_mechanism",
+    "backendparallelfactor_method",
+    "datastorage_variable",
+    "parallel_processing_condition",
+    "serial_processing_condition",
+    "result_memory_reduction",
+    "result_spectradata_memory_tradeoff"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:rformassspectrometry__Spectra",
+  "task_description": "Implement the backendParallelFactor() method for MsBackendMzR to generate a factor based on dataStorage file names, and validate that chunk-wise parallel splitting of spectra reduces peak-data memory consumption compared to loading all spectra into memory at once.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw MS data files in mzML or mzXML format",
+      "port_id": "raw_ms_files",
+      "resolved_via": null,
+      "source": "task_002/backend_class",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spectra package with MsBackend virtual class",
+      "port_id": "spectra_pkg",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement and validate the backendParallelFactor() mechanism for MsBackendMzR to split spectra by dataStorage and demonstrate reduced memory consumption during chunk-wise peak-data processing.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "R script implementing backendParallelFactor() method",
+      "port_id": "parallel_factor_impl",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Memory benchmark report comparing chunk-wise vs whole-load",
+      "port_id": "memory_benchmark",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Memory reduction comparison visualization",
+      "port_id": "performance_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "spectral-library-matching"
+  ],
+  "title": "Implement chunk-wise parallel processing via backendParallelFactor() and verify memory-reduction behaviour",
+  "tools": [
+    "Spectra",
+    "MsBackendMzR",
+    "R",
+    "S4Vectors"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: MsBackendMzR, S4Vectors, R script implementing backendParallelFactor() method that returns a factor grouping spectra by dataStorage file name, Memory benchmark report (CSV or text) comparing peak-data memory demand for chunk-wise splitting versus whole-load approach, Performance comparison visualization (plot or figure) showing memory usage reduction percentage across different dataset sizes."
+  ],
+  "workflow_description": "1. Define a new S4 class extending MsBackend with slots for spectra variables and peak data (m/z and intensity as NumericList). 2. Implement backendInitialize() to load MS data from raw files using MsBackendMzR and populate dataStorage metadata. 3. Implement backendParallelFactor() to extract unique file paths from the dataStorage variable and return a factor grouping spectra by source file. 4. Implement peaksData() to extract m/z and intensity values as a list of matrices, with support for subsetting by index. 5. Create a benchmark script that loads a test dataset: measure memory usage when reading all spectra at once versus reading in chunks grouped by the parallel factor. 6. Compare peak-data memory profiles between whole-load and chunk-wise approaches using memory profiling tools and document the reduction percentage."
+}

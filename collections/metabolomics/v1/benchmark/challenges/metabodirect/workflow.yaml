@@ -1,0 +1,455 @@
+schema_version: 0.1.0
+workflow_id: coll_metabodirect_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: MetaboDirect is an open-source, command-line pipeline that automates analysis,
+    visualization, and statistical interpretation of direct injection FT-ICR MS metabolomic
+    data with minimal coding requirements. The tool uniquely generates ab initio biochemical
+    transformation networks from mass differences and demonstrated superior computational
+    efficiency compared to existing FT-ICR MS software.
+  pseudo_abstract: 'MetaboDirect addresses a critical gap in FT-ICR MS data analysis
+    by providing a fully automated, single-command-line pipeline for processing high-resolution
+    mass spectrometry datasets. The software performs data pre-processing, filtering,
+    normalization, chemodiversity analysis, multivariate statistical analysis (PERMANOVA,
+    NMDS, PCA), and transformation network construction. MetaboDirect generates standard
+    visualizations including Van Krevelen diagrams, molecular composition plots, and
+    pairwise comparisons, while requiring minimal programming expertise through a
+    command-line interface that also allows customization for advanced users. The
+    pipeline was benchmarked on two real FT-ICR MS datasets: a marine phage-bacterial
+    infection experiment (36 samples, ~495 assigned molecular formulas per sample)
+    completed in <1 min for core analysis steps, and a Sphagnum leachate microbial
+    degradation study (4 samples, ~1793 assigned formulas) completed in ~30 s. A unique
+    feature is the ab initio generation of mass-difference-based biochemical transformation
+    networks that identify putative metabolic connections and hub metabolites without
+    requiring compound identification. Comparative evaluation shows MetaboDirect performs
+    all analyses available in competing tools (MetaboAnalyst, PyKrev, ftmsRanalysis,
+    UltraMassExplorer) except raw spectra processing and molecular formula assignment,
+    while standing apart in automated network generation and ease of access for non-programmers.
+    Application to the S. fallax leachate study demonstrated that microbial inoculation
+    increased metabolite richness but decreased functional diversity, indicating samples
+    contained greater overall diversity but reduced diversity in decomposability and
+    chemical reactivity.'
+  research_questions:
+  - Which analytical and visualization features are implemented in MetaboDirect, and
+    how do its capabilities compare to other available FT-ICR MS software tools across
+    key dimensions such as data filtering, statistical analysis, and transformation
+    network generation?
+  - Do the wall-clock runtimes of MetaboDirect's main pipeline on real FT-ICR MS datasets
+    match the reported performance benchmarks of <1 min for 40 samples and ~2 min
+    for 120 samples?
+  - Does the phage-type factor (HP1 vs. HS2 vs. control) produce a statistically significant
+    difference in metabolite content in the marine bacterium-phage system according
+    to PERMANOVA analysis?
+  - How does MetaboDirect construct biochemical transformation networks from FT-ICR
+    MS peak data, and what are the input requirements and output formats for this
+    mass-difference network generation step?
+  - Does inoculation of S. fallax leachate with microorganisms increase metabolite
+    richness but decrease functional diversity compared to uninoculated control samples?
+  methods_summary: "Inspect MetaboDirect codebase (Python/R) and ReadTheDocs documentation\
+    \ to enumerate all implemented analytical features across six pipeline steps.\
+    \ Systematically extract feature specifications from source code: filtering thresholds\
+    \ (m/z, isotopic, formula error \u22640.5 ppm, sample prevalence), normalization\
+    \ methods (max, minmax, mean, median, total sum, zscore), molecular indices (NOSC,\
+    \ GFE, AImod, DBE), statistical tests (PERMANOVA, NMDS, PCA), chemodiversity metrics\
+    \ (Shannon, Gini-Simpson, Chao1, Rao's), and transformation network construction.\
+    \ Query published documentation for UltraMassExplorer, FREDA, MetaboAnalyst, DropMS,\
+    \ and i-van Krevelen to determine which features each tool supports. Cross-reference\
+    \ MetaboDirect dependencies (vegan, SYNCSA, pmartR, KEGGREST, py4cytoscape) to\
+    \ confirm implementation of statistical and network visualization features. Construct\
+    \ binary comparison table with tools as rows and features as columns, marking\
+    \ \u2714 for present and \u2716 for absent. Validation: Comparison table matches\
+    \ the binary feature matrix reported in the paper's tool comparison figure/table,\
+    \ with all six MetaboDirect pipeline steps and all cited comparison tools represented.\
+    \ Install MetaboDirect v0.3.4 with Python (NumPy, pandas, seaborn, matplotlib)\
+    \ and R (vegan, SYNCSA) dependencies from GitHub and Zenodo sources. Retrieve\
+    \ phage-infected bacterium (36 samples, ~1025 peaks, ~495 assigned formulas) and\
+    \ S. fallax leachate (4 samples) peak-abundance CSV files from OSF deposit. Execute\
+    \ MetaboDirect main pipeline (data pre-processing, diagnostics, exploration, chemodiversity\
+    \ analysis) excluding KEGG mapping and transformation networks via command-line\
+    \ interface. Measure and record wall-clock runtime for phage dataset and S. fallax\
+    \ dataset using system timing tools; generate all intermediate CSV outputs (filtered\
+    \ peaks, thermodynamic indices, normalized intensities, diversity metrics). Validation:\
+    \ Compare observed runtimes (phage expected <36 seconds; S. fallax per reported\
+    \ value) against benchmarks; verify all expected CSV and visualization output\
+    \ files exist and contain non-empty tables with correct column headers matching\
+    \ pipeline documentation. Load normalized peak-intensity matrix and sample metadata\
+    \ (phage type grouping) from preprocessed MetaboDirect outputs for the 36-sample\
+    \ marine phage-host dataset. Calculate pairwise distances (Bray-Curtis, Euclidean,\
+    \ or Jaccard) between all samples using the vegdist function from the vegan package\
+    \ on normalized peak intensities. Execute PERMANOVA (permutational analysis of\
+    \ variance) with phage type as the grouping factor and 999 permutations to test\
+    \ the null hypothesis of no difference in metabolite composition between HP1,\
+    \ HS2, and control groups. Generate NMDS ordination using the selected distance\
+    \ metric, extracting the first two principal components as axes for visualization.\
+    \ Export PERMANOVA results (p-value, F-statistic, R\xB2) and NMDS scores to CSV;\
+    \ generate NMDS scatterplot with samples colored by phage type. Validation: Confirm\
+    \ that the PERMANOVA p-value matches the non-significant result (p > 0.05) reported\
+    \ in Supplementary Fig. S7C; verify NMDS plot shows no clear separation of samples\
+    \ by phage type. Load filtered peak list and reference biochemical transformation\
+    \ key into memory Calculate all pairwise mass differences between detected peaks\
+    \ within each sample Match mass differences to reference transformation key, retaining\
+    \ matches with \u22641 ppm error tolerance Classify matched transformations as\
+    \ biotic or abiotic based on prior biochemical categorization Generate node CSV\
+    \ (peaks with m/z, formula, compound class) and edge CSV files (transformations\
+    \ with source, target, type, error) formatted for Cytoscape Compute and export\
+    \ transformation summary statistics (count per sample, frequency distribution)\
+    \ as CSV tables and bar plots Validation: verify edge files contain no transformations\
+    \ with mass error >1 ppm, confirm all nodes reference detected peaks in input\
+    \ list, and confirm all transformations are classified (biotic or abiotic) Load\
+    \ S. fallax leachate peak-abundance matrix (CSV) and sample metadata with inoculation\
+    \ status annotations. Apply sum-normalization to raw peak intensities within each\
+    \ sample to standardize total abundance across samples. Compute abundance-based\
+    \ richness and diversity indices (Shannon, Gini-Simpson, Chao1) from normalized\
+    \ peak intensities using vegan package functions. Compute functional-based diversity\
+    \ (Rao's quadratic entropy) using SYNCSA package, integrating elemental composition,\
+    \ decomposability indices (NOSC, GFE, AImod, DBE), and aromaticity traits. Stratify\
+    \ all diversity metrics by inoculation status (inoculated vs. control) and generate\
+    \ grouped box plot visualizations. Export diversity metric values and grouped\
+    \ summary statistics to CSV and export visualizations as PNG/PDF. Validation:\
+    \ Verify that median/mean values of abundance-based richness indices (Chao1, Shannon)\
+    \ are higher in inoculated samples and that Rao's quadratic entropy is lower in\
+    \ inoculated samples relative to controls, consistent with reported patterns in\
+    \ the paper."
+  domain: metabolomics
+  techniques:
+  - direct-infusion-ms
+  - high-resolution-ms
+  - feature-detection
+  - metabolite-identification
+  - multivariate-statistics
+  - molecular-networking
+  claims:
+  - claim_text: MetaboDirect requires a single line of code to launch a fully automated
+      framework for the generation and visualization of a wide range of plots.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect is uniquely able to automatically generate biochemical
+      transformation networks based on mass differences.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: DI-MS drawbacks include inability to separate chemical isomers, lack
+      of fine resolving power, and signal suppression or enhancement.
+    claim_type: finding
+    speculative: false
+  - claim_text: FT-ICR MS has evolved into a powerful tool to study molecular composition
+      of small-molecule organic complex mixtures in diverse ecosystems.
+    claim_type: finding
+    speculative: false
+    entity_id: FT_ICR_MS
+  - claim_text: 40 samples were processed in less than 1 min whereas 120 samples took
+      as little as 2 min by MetaboDirect.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: The bacterium-phage data set had an average of 1025 peaks detected
+      across 36 samples.
+    claim_type: finding
+    speculative: false
+  - claim_text: An average of 495 peaks in the bacterium-phage data set received molecular
+      formula assignment.
+    claim_type: finding
+    speculative: false
+  - claim_text: The main steps of the MetaboDirect pipeline took less than 1 min (~36
+      s) for the bacterium-phage data set.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect analysis including KEGG mapping and biochemical transformations
+      took around 10 min for the bacterium-phage data set.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: Full MetaboDirect analysis including KEGG mapping, biochemical transformations,
+      and network creation took about 21 min for the bacterium-phage data set.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: The S. fallax data set consisted of 4 samples with an average of 1793
+      assigned molecular formulas.
+    claim_type: finding
+    speculative: false
+  - claim_text: The main MetaboDirect pipeline steps for the S. fallax data set were
+      clocked at around 30 s.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: Full analysis of the S. fallax data set including KEGG mapping and
+      network construction took about 32 min.
+    claim_type: finding
+    speculative: false
+    entity_id: KEGG_Database
+  - claim_text: Approximately 200 masses were filtered out from the bacterium-phage
+      data set because they contained isotopic carbon.
+    claim_type: finding
+    speculative: false
+  - claim_text: One sample in the bacterium-phage data set was identified as a potential
+      outlier with very low assigned molecular formulas.
+    claim_type: finding
+    speculative: false
+  - claim_text: The chemical composition of the exometabolome of cells infected with
+      HS2 phage changed at 30 min post-inoculation, then returned to uninfected similarity.
+    claim_type: finding
+    speculative: false
+  - claim_text: The molecular composition of exometabolome from cells infected with
+      HP1 phage did not change throughout the experiment.
+    claim_type: finding
+    speculative: false
+  - claim_text: Most detected metabolites were shared between infected and uninfected
+      cells in the bacterium-phage data set.
+    claim_type: finding
+    speculative: false
+  - claim_text: Unique metabolites in the bacterium-phage data set were mostly protein-like,
+      lignin-like, and lipid-like.
+    claim_type: finding
+    speculative: false
+  - claim_text: In the S. fallax data set, the number of unique metabolites in control
+      and inoculated samples was almost the same as shared metabolites.
+    claim_type: finding
+    speculative: false
+  - claim_text: Lignin-like metabolites were most abundant in unique metabolites in
+      inoculated S. fallax samples.
+    claim_type: finding
+    speculative: false
+  - claim_text: Tannins were present only in control samples of the S. fallax data
+      set.
+    claim_type: finding
+    speculative: false
+  - claim_text: Inoculating S. fallax leachate with microorganisms increased the diversity
+      of metabolites in richness.
+    claim_type: finding
+    speculative: false
+    entity_id: Cond_Sphagnum_Inoculated
+  - claim_text: Inoculation decreased functional diversity of metabolites in S. fallax
+      samples.
+    claim_type: finding
+    speculative: false
+  - claim_text: MetaboDirect was developed in Python 3.8 and R 4.0.2.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect requires Python dependencies including NumPy, pandas,
+      seaborn, py4cytoscape, and matplotlib.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: 'MetaboDirect consists of 6 major steps: data pre-processing, data
+      diagnostics, data exploration, chemodiversity analysis, statistical analysis,
+      and transformation network analysis.'
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect can work with molecular formulas generated by software
+      such as DataAnalysis, Xcalibur, CoreMS, or MassSpecWavelet followed by MFAssignR.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: The normalization methods available in MetaboDirect include max, minmax,
+      mean, median, total sum, and zscore.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect calculates thermodynamic indices including NOSC, GFE,
+      AImod, and DBE.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect generates Van Krevelen diagrams during data exploration.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect can query the KEGG database to provide putative KEGG
+      Pathway, Module, and Brite annotations.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect calculates diversity metrics including Shannon diversity
+      index, Gini-Simpson index, and Chao1 richness estimator.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: Rao's quadratic entropy is used by MetaboDirect to measure functional-based
+      diversity.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect performs PERMANOVA for statistical analysis of FT-ICR
+      MS data.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect generates NMDS ordination plots for metabolomic data
+      visualization.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect creates PCA scree plots and biplots based on molecular
+      composition and thermodynamic indices.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect uses mass difference network-based approach to generate
+      molecular transformation networks.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: Mass differences with a maximum error of 1 ppm are kept as putative
+      mass-based transformations in MetaboDirect.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: Microorganisms are responsible for mobilization, transformation, and
+      storage of natural organic matter.
+    claim_type: finding
+    speculative: false
+  - claim_text: Microorganisms can directly assimilate low molecular weight DOM less
+      than 600 Da for metabolic processes.
+    claim_type: finding
+    speculative: false
+  - claim_text: Environmental conditions such as temperature and water availability
+      influence microbial community structure and its interaction with NOM.
+    claim_type: finding
+    speculative: false
+  - claim_text: High-resolution mass spectrometry has allowed high-precision formula
+      assignment of diverse organic compounds based on ultra-high mass accuracy.
+    claim_type: finding
+    speculative: false
+  - claim_text: MetaboDirect is a command-line-based pipeline requiring minimal coding
+      experience.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: The most abundant chemical transformation in the bacterium-phage data
+      set was methylation.
+    claim_type: finding
+    speculative: false
+  - claim_text: MetaboDirect provides all R scripts used in the generation of tables
+      and visualizations for customization.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect can perform all analyses offered by other FT-ICR MS software
+      except raw spectra processing and molecular formula assignment.
+    claim_type: finding
+    speculative: false
+    entity_id: MetaboDirect
+  - claim_text: MetaboDirect integrates metabolomics within microbiome studies to
+      advance understanding of microbial-chemical interactions.
+    claim_type: finding
+    speculative: true
+    entity_id: MetaboDirect
+  - claim_text: Chemodiversity analysis for the bacterium-phage data set found little
+      differences in metabolite diversity between infected and uninfected cells.
+    claim_type: finding
+    speculative: false
+  - claim_text: PERMANOVA analysis showed the phage type produces a significant difference
+      in metabolite content.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: open
+  method_alternatives:
+  - Direct injection mass spectrometry (DI-MS) and FT-ICR MS are alternatives to low-resolution
+    mass spectrometers for analyzing NOM components
+  - 'Formularity alternative: DataAnalysis, Xcalibur, CoreMS, or combination of MassSpecWavelet
+    and MFAssignR for raw spectra processing'
+  - 'Alternative normalization methods: Probabilistic Quotient Normalization (PQN),
+    Quantile Normalization, and Variance Stabilization'
+  - User-specific biochemical transformation list as alternative to predefined biochemical
+    transformation key
+  - User may test various normalization strategies and choose the best one when SPANS
+    may not be appropriate for data sets with systematic differences
+  substitution_constraints:
+  - No coding experience is required to run MetaboDirect, but some experience in R
+    is needed if fully customized plots are desired
+  - PQN requires a conscious selection of a reference spectrum, which are not often
+    available for complex samples or present in exploratory analysis
+  - Chemodiversity analysis depends on the total number of peaks detected and validity
+    requires all spectra within a dataset collected using the same instrument parameters
+  - SPANS may not be appropriate for data sets with systematic differences in intensity
+    distributions among groups
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: "PERMANOVA results table (CSV) containing p-value, F-statistic, and R\xB2\
+    \ for phage-type factor"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: NMDS ordination scores (CSV) for all 36 samples with first two principal components
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: NMDS scatterplot (PNG/PDF) with samples colored by phage type (HP1, HS2, control)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Edge CSV file(s) per sample containing source peak m/z, target peak m/z, mass
+    difference, transformation type (biotic/abiotic), and ppm error
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Node CSV file containing all detected peaks with m/z, molecular formula, compound
+    class, and sample presence
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Transformation statistics CSV reporting number of transformations occurring
+    per sample and transformation frequency
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Network visualization files and statistics tables exported as CSV and bar
+    plots
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: CSV table containing Shannon diversity index, Gini-Simpson index, Chao1 richness
+    estimator, and Rao's quadratic entropy values for each sample, stratified by inoculation
+    status (inoculated vs. control)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Box plot visualization (PNG/PDF) showing distribution of abundance-based (Shannon,
+    Gini-Simpson, Chao1) and functional-based (Rao's quadratic entropy) diversity
+    metrics grouped by inoculation status
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

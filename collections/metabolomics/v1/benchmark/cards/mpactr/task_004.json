@@ -1,0 +1,337 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon.png",
+      "role": "figure",
+      "sha256": "a6f2ba245b962dd9dce35fa3a33fad06e189291254408b29c47184676f5cd9b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/expected_treemap.png",
+      "role": "figure",
+      "sha256": "4b821d08588485dba42f8f9167bb98b1c6128ea4a3e9c855e1ffa5985f7135c4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-96x96.png",
+      "role": "figure",
+      "sha256": "56213353c3a08f75c961592d769f2fb9fcf5af8338c9c27b4dc98ae2803238e3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon.svg",
+      "role": "figure",
+      "sha256": "09ee9737d1318e360e84eea3f2aadabd84cbd2380f3a2fb6503bc136efdc2b8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "405445d48a6b5f5799ebb942153a1b2ec73e7e345d161be3fe178d2c7fa3b51a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-192x192.png",
+      "role": "figure",
+      "sha256": "fc9b2c94db30b485e2aaaa0d1a75d018fd85f7982e2675b1cc52ccb8eb1017d2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-512x512.png",
+      "role": "figure",
+      "sha256": "293ad15edfd27f20182b01a95ae80c53a712f9d30d3c768646df15bc9cd823b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ea07ad29b19e5bb5d99f7d63e1b97e69a8a6ec55aba910b23a7c97830a26bc5d"
+    }
+  ],
+  "created_at": "2026-06-15T13:36:30.070661+00:00",
+  "crossref_doi": "10.1021/acs.analchem.2c04632",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Peak table in Progenesis CSV format (compound, m/z, retention time, raw abundance) and corresponding metadata file with sample information (injection, sample_code, biological_group)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Numeric verification that pre-filter and post-filter row counts are identical in both the original object (data2) and the assigned result object (data2_mispicked), demonstrating reference semantics behavior",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "R6 classes operate on reference semantics, meaning assignment of a filtered object to a new variable does not create a deep copy; the original object is modified in-place when copy_object=FALSE.",
+    "The filter_mispicked_ions() function merges similar ions detected within retention time (trwin=0.005 min), mass (isowin=0.01 m/z), and ring window (ringwin=0.5) thresholds; merge_method='sum' combines intensities of flagged similar ions.",
+    "In-place modification is memory-efficient for chaining multiple filters sequentially, as recommended for metabolomics preprocessing workflows in mpactr.",
+    "The get_peak_table() function returns a data.table with rows as filtered features and columns as feature metadata plus sample intensities; row count reflects ions remaining after all applied filters."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify file exists: github:mums2__mpactr repository is accessible and contains R6 class definition for filter_mispicked_ions()",
+      "Verify script_runs: Load mpactr library and execute filter_mispicked_ions(data2, copy_object=FALSE) on a named R6 object, capturing row counts before and after",
+      "Verify output_matches_reference: Row count of data2 after in-place filter equals row count of separately assigned data2_mispicked object (no canonical answer \u2014 both should show identical filtered row count, multiple valid test datasets defensible)",
+      "Verify value_in_range: Both data2 and data2_mispicked row counts are positive integers and data2_mispicked count \u2264 original data2 count"
+    ],
+    "expert_review": [
+      "Confirm that copy_object=FALSE parameter is correctly implemented to trigger in-place modification via R6 reference semantics rather than deep copy",
+      "Validate that the observed in-place behavior is consistent with R6 class architecture and does not depend on external garbage collection or environment-specific behavior"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Does calling filter_mispicked_ions() with copy_object=FALSE modify the original named object in place, such that both the original object and a separately assigned result object reflect the same post-filter row count?: 'mpactr is built on an R6 class-system, meaning it operates on reference semantics in which data is updated *in-place*. Compared to a shallow copy, where only data pointers are copied, or a deep copy,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Running filter_mispicked_ions with copy_object=FALSE (the default setting) updates the original data object in place: data2 had 1407 ions before filtering, and after assigning the filtered result to data2_mispicked with copy_object=FALSE, both data2_mispicked and the original data2 contain 644 ions, confirming in-place modification rather than creation of independent copies.: 'Running the `filter_mispicked_ions` filter, with default setting `copy_object = FALSE` (operates on reference semantics) results in 644 ions in the feature table. Even though we created an object'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Peak table in Progenesis CSV format (compound, m/z, retention time, raw abundance) and corresponding metadata file with sample information (injection, sample_code, biological_group): 'To export a compatible peak table in Progenesis format is expected. To export a compatible peak table in Progenesis, navigate to the *Review compounds* tab then File -> Export compound Measurements.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Numeric verification that pre-filter and post-filter row counts are identical in both the original object (data2) and the assigned result object (data2_mispicked), demonstrating reference semantics behavior: 'any changes to the original data object, regardless if they are assigned to a new object, result in changes to the original data object'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'This table can be used for a variety of analyses that can be conducted in R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mpactr: 'library(mpactr)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] data.table: 'library(data.table)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mpactr); library(data.table); data_obj <- import_data(peak_table='{inputs.peak_table_csv}', metadata='{inputs.metadata_csv}', format='progenesis'); pre_filter_rows <- nrow(data_obj$get_peak_table()); data2 <- data_obj; data2_mispicked <- data2$filter_mispicked_ions(merge_peaks=TRUE, merge_method='sum', copy_object=FALSE); post_filter_rows_orig <- nrow(data2$get_peak_table()); post_filter_rows_result <- nrow(data2_mispicked$get_peak_table()); cat('Pre-filter row count:', pre_filter_rows, '\\n'); cat('Post-filter row count (original object):', post_filter_rows_orig, '\\n'); cat('Post-filter row count (assigned result):', post_filter_rows_result, '\\n'); cat('Reference semantics verified:', post_filter_rows_orig == post_filter_rows_result, '\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Numeric verification that pre-filter and post-filter row counts are identical in both the original object (data2) and the assigned result object (data2_mispicked), demonstrating reference semantics behavior"
+  ],
+  "finding": "Running filter_mispicked_ions with copy_object=FALSE (the default setting) updates the original data object in place: data2 had 1407 ions before filtering, and after assigning the filtered result to data2_mispicked with copy_object=FALSE, both data2_mispicked and the original data2 contain 644 ions, confirming in-place modification rather than creation of independent copies.",
+  "github_name": "mums2/mpactr",
+  "input_from": "task_001",
+  "inputs": [
+    "Peak table in Progenesis CSV format (compound, m/z, retention time, raw abundance) and corresponding metadata file with sample information (injection, sample_code, biological_group)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "mpactr_object_imported.RData",
+    "pre_filter_row_count.txt",
+    "post_filter_row_count_original.txt",
+    "post_filter_row_count_assigned.txt"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_006",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_023",
+    "result_024",
+    "result_025",
+    "result_026"
+  ],
+  "methodology_summary": [
+    "Import peak table and metadata into an mpactr R6 object using import_data() with Progenesis format.",
+    "Apply filter_mispicked_ions() with merge_peaks=TRUE, merge_method='sum', and copy_object=FALSE to a reference object; assign result to a separate variable name.",
+    "Extract row counts from get_peak_table() on both the original and assigned object references.",
+    "Compare row counts to verify both objects reflect identical post-filter dimensions.",
+    "Validation: both the original object and the separately-assigned result object must report the same post-filter row count, confirming reference-semantic modification rather than deep copy.",
+    "References: source article (DOI: 10.1021/acs.analchem.2c04632)"
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/failed_ions_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does calling filter_mispicked_ions() with copy_object=FALSE modify the original named object in place, such that both the original object and a separately assigned result object reflect the same post-filter row count?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods",
+    "abstract"
+  ],
+  "skills": [
+    "r6-class-reference-semantics-behavior",
+    "metabolomics-feature-table-filtering",
+    "mispicked-ion-detection-and-merging",
+    "peak-table-row-count-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mpactr/synthesized_package",
+  "spine_condition_ids": [
+    "cond_default_reference_semantics",
+    "cond_deep_copy_semantics",
+    "cond_full_filter_pipeline",
+    "cond_pseudocount_fc"
+  ],
+  "spine_entity_ids": [
+    "r6_class_architecture",
+    "filter_pipeline_artifact",
+    "comp_filter_mispicked",
+    "comp_filter_group",
+    "comp_filter_cv",
+    "comp_filter_summary",
+    "cond_default_reference_semantics",
+    "cond_deep_copy_semantics",
+    "cond_full_filter_pipeline",
+    "cond_pseudocount_fc",
+    "result_ions_remaining_cultures",
+    "result_reference_semantics_inplace"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:mums2__mpactr",
+  "task_description": "Verify that the mpactr R6 class filter_mispicked_ions() function operates via reference semantics when copy_object=FALSE, such that filtering a named object (data2) modifies the original object in-place without creating a separate copy. Confirm by comparing pre- and post-filter row counts in both the assigned result variable and the original object.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Peak table in Progenesis CSV format",
+      "port_id": "peak_table_csv",
+      "resolved_via": null,
+      "source": "task_001/failed_ions_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample metadata with injection, sample_code, and biological_group columns",
+      "port_id": "metadata_csv",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Verify that filter_mispicked_ions() with copy_object=FALSE modifies the original object in place, demonstrating R6 reference semantics.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Verification report showing identical row counts in original and assigned objects post-filter",
+      "port_id": "reference_semantics_validation",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "quality-control",
+    "clustering",
+    "correlation-analysis"
+  ],
+  "title": "Reconstruct reference-semantics in-place update behaviour of the R6-based filter_mispicked_ions()",
+  "tools": [
+    "R",
+    "mpactr",
+    "data.table"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Numeric verification that pre-filter and post-filter row counts are identical in both the original object (data2) and the assigned result object (data2_mispicked), demonstrating reference semantics behavior."
+  ],
+  "workflow_description": "1. Import raw LC-MS peak table and metadata using mpactr::import_data() with Progenesis format. 2. Create a reference to the imported mpactr object (data2) and separately assign the result of filter_mispicked_ions(data2, merge_peaks=TRUE, merge_method='sum', copy_object=FALSE) to data2_mispicked. 3. Extract peak table row counts from both data2 and data2_mispicked using mpactr::get_peak_table(). 4. Verify that both objects report the same post-filter row count, demonstrating in-place modification of the original object rather than a deep copy."
+}

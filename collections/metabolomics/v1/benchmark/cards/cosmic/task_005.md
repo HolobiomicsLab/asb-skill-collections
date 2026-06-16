@@ -1,0 +1,176 @@
+# SciTask Card: Reproduce the Build and Publish CI workflow execution status for the SIRIUS release branch
+
+- Task ID: `task_005`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T21:20:51.157086+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_cosmic/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-processing`, `benchmark-evaluation`
+- GitHub: `sirius-ms/sirius`
+- Input from: `task_001`
+- Quality: Score 2/5 — Coherent: false, placeholder, 5 grounding failures
+
+## Classification
+
+- Task kind: `reproduction`
+- Article type: `software-tool`
+- Primary domain: `cheminformatics`
+- Subdomains: `computational-metabolomics`, `artificial-intelligence`
+- Techniques: `in-silico-fragmentation`, `machine-learning`, `metabolite-identification`, `deep-learning`, `database-annotation`, `high-resolution-ms`
+
+## Research Question
+Does the GitHub Actions 'Build and Publish' workflow on the release branch of the sirius-ms/sirius repository execute successfully and produce a passing build status?
+
+## Connected Finding
+The Build and Publish workflow for sirius-ms/sirius is configured to run on the release branch and is accessible via a status badge in the README.
+
+## Task Description
+Trigger the GitHub Actions 'Build and Publish' workflow (distribute.yaml) on the release branch of sirius-ms/sirius and verify that the build completes successfully and the repository README displays a passing build badge.
+
+## Inputs
+- sirius-ms/sirius GitHub repository URL and access credentials
+
+## Expected Outputs
+- Screenshot or JSON report of GitHub Actions workflow run showing passing status
+- README badge screenshot or URL confirming build badge displays passing status
+
+## Artifact References
+
+### Inputs
+
+- `sirius-ms/sirius GitHub repository URL and access credentials` → **github** `sirius-ms/sirius` (score 0.2857)
+
+## Expected Output File
+
+- `workflow_run_status.json`
+
+## Landmark Outputs
+
+- `distribute.yaml`
+- `workflow_run_logs.txt`
+- `readme_badge.png`
+
+## Tools
+- SIRIUS
+- GitHub Actions
+
+## Skills
+- github-actions-workflow-execution
+- ci-cd-pipeline-monitoring
+- build-badge-verification
+- release-branch-management
+- repository-administration
+
+## Workflow Description
+1. Navigate to the sirius-ms/sirius repository on GitHub and identify the release branch. 2. Examine the distribute.yaml workflow file in the .github/workflows directory to understand the build and publish pipeline. 3. Trigger the 'Build and Publish' workflow by creating a release tag or pushing to the release branch, depending on the workflow trigger conditions specified in distribute.yaml. 4. Monitor the GitHub Actions run until completion, tracking logs for any failures or warnings. 5. Verify that the workflow run status shows 'passed' in the Actions tab. 6. Inspect the repository README to confirm the build badge displays a passing status (typically indicated by 'passing' or 'success' label and green coloring).
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/c-add-doc.svg` | figure | False |
+| `figures/c-bug.svg` | figure | False |
+| `figures/c-clipboard.svg` | figure | False |
+| `figures/c-controls-play.svg` | figure | False |
+| `figures/c-db.svg` | figure | False |
+| `figures/c-document.svg` | figure | False |
+| `figures/c-documents.svg` | figure | False |
+| `figures/c-download.svg` | figure | False |
+| `figures/c-dragndrop.svg` | figure | False |
+| `figures/c-export.svg` | figure | False |
+| `figures/c-fbmn.svg` | figure | False |
+| `figures/c-filter-down.svg` | figure | False |
+| `figures/c-filter-up.svg` | figure | False |
+| `figures/c-fingerprint.svg` | figure | False |
+| `figures/c-fmet.svg` | figure | False |
+| `figures/c-folder-close.svg` | figure | False |
+| `figures/c-folder-file.svg` | figure | False |
+| `figures/c-folder-open.svg` | figure | False |
+| `figures/c-folder.svg` | figure | False |
+| `figures/sirius-icon.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No changelog found
+
+## Domain Knowledge
+- GitHub Actions workflows are triggered by specified events (push, pull_request, release) defined in YAML configuration files located in .github/workflows/.
+- Build badges in repository READMEs display the status of the most recent workflow run and typically use shield.io or GitHub's native badge service.
+- A passing build badge indicates all jobs in the workflow completed without errors; a failing badge means at least one job encountered an error or was cancelled.
+- The distribute.yaml file defines the build and publish pipeline for SIRIUS and must complete successfully to generate a valid passing badge.
+- Access to the sirius-ms/sirius repository requires appropriate GitHub credentials; triggering workflows may require maintainer or admin privileges depending on branch protection rules.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: GitHub Actions, Screenshot or JSON report of GitHub Actions workflow run showing passing status, README badge screenshot or URL confirming build badge displays passing status.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] Does the GitHub Actions 'Build and Publish' workflow on the release branch of the sirius-ms/sirius repository execute successfully and produce a passing build status?: '[![Build and Publish](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml/badge.svg?branch=release-4-pre)](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml)'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] The Build and Publish workflow for sirius-ms/sirius is configured to run on the release branch and is accessible via a status badge in the README.: '[![Build and Publish](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml/badge.svg?branch=release-4-pre)](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml)'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [discussion] sirius-ms/sirius GitHub repository URL and access credentials: 'github:sirius-ms__sirius'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [methods] Screenshot or JSON report of GitHub Actions workflow run showing passing status: 'passing build badge, as reported in the repository README'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [methods] README badge screenshot or URL confirming build badge displays passing status: 'passing build badge, as reported in the repository README'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [intro] SIRIUS: 'SIRIUS is a java-based software framework for the analysis of LC-MS/MS data'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [methods] GitHub Actions: 'GitHub Actions 'Build and Publish' workflow (distribute.yaml)'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [discussion] No changelog found: '_No changelog found._'
+
+## Evaluation Strategy
+### Direct Checks
+- verify that github:sirius-ms__sirius repository is accessible and contains a .github/workflows/distribute.yaml file
+- verify that the distribute.yaml workflow defines a 'Build and Publish' job or equivalent release automation step
+- verify that the repository README.md file exists and contains a build badge reference (e.g., markdown image link to workflow status badge)
+- verify that the build badge URL points to the distribute.yaml workflow and resolves to a passing (green) status indicator on the release branch or main branch
+
+### Expert Review
+- confirm that the badge rendering and status endpoint are correctly configured to reflect the actual workflow state (not stale or cached)
+- assess whether the workflow definition and badge linkage constitute adequate evidence of reproducible automated distribution, given the scope of this sub-task
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Execution Profile
+- **Compute tier:** trivial
+
+## Methodology Summary
+1. Access the sirius-ms/sirius repository via GitHub and locate the release branch.
+2. Review the distribute.yaml workflow configuration to identify build triggers and pipeline stages.
+3. Trigger the workflow by creating a release tag or pushing to the release branch according to distribute.yaml trigger conditions.
+4. Monitor the GitHub Actions interface until the workflow run completes.
+5. Validation: Confirm the workflow run status displays 'passed' and the README build badge shows a passing status indicator (green badge with 'passing' or 'success' label).
+
+## Workflow Ports
+
+**Inputs:**
+
+- `github_repo` — sirius-ms/sirius repository URL ← `task_001/sirius_spectra`
+- `github_credentials` — GitHub authentication credentials
+
+**Outputs:**
+
+- `workflow_run_report` — GitHub Actions workflow run status report
+- `badge_verification` — README build badge verification screenshot
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:sirius-ms__sirius`
+- **Synthesized at:** 2026-06-15T21:26:47+00:00
+
+## Extraction Quality
+- Score: 2/5
+- Coherent: false
+- Placeholder detected: true
+- Groundedness failures (5):
+  - expected_outputs[0]: evidence_span not found in section 'methods' (value='Screenshot or JSON report of GitHub Actions workflow run sho', span='passing build badge, as reported in the repository README')
+  - expected_outputs[1]: evidence_span not found in section 'methods' (value='README badge screenshot or URL confirming build badge displa', span='passing build badge, as reported in the repository README')
+  - tools[1]: evidence_span not found in section 'methods' (value='GitHub Actions', span='GitHub Actions 'Build and Publish' workflow (distribute.yaml')
+  - research_question vs finding semantic mismatch: RQ asks about successful execution and passing build status, but finding only confirms configuration accessibility without asserting actual passing status
+  - missing_information field contains placeholder language: '_No changelog found._' with underscore formatting suggests templated/unfilled content
+- Notes: This task card has significant coherence and grounding issues. The core problem is a semantic gap between the research_question (which requires observing successful execution and passing status) and the finding (which only confirms configuration and accessibility). The evidence_span used for both RQ and finding is a single badge image/link, which is insufficient to ground claims about actual workflow execution success. Additionally, three fields fail substring matching against their stated sections, suggesting the card was not fully validated before submission. The expected_outputs use generic placeholder language and fail to capture the specificity promised in the task_objective (e.g., no mention of release-4-pre branch in outputs). The missing_information field contains a literal placeholder format ('_No changelog found._'), suggesting incomplete authoring. For acceptance, this card requires: (1) reframing the finding to directly answer the RQ (e.g., asserting the workflow executed successfully), (2) sourcing all evidence_spans to actual document text, (3) replacing generic artifact descriptions with concrete, branch-specific outputs, and (4) clarifying whether the task is to trigger a new workflow run (execution) or merely verify an existing badge status (verification).
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

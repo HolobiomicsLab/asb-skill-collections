@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that loosolab/TOBIAS repository contains an ATACorrect module or command"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that ATACorrect module accepts a BAM file as input"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that ATACorrect module produces a bigWig output file"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output file has .bw or .bigwig extension"
+    },
+    {
+      "id": "pf_006",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output bigWig file is non-empty and readable by standard bigWig tools (e.g., big"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output bigWig contains numerical signal values (robust to parameter choices in bias correction algorithm)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that loosolab/TOBIAS repository contains an ATACorrect module or command",
+      "verify that ATACorrect module accepts a BAM file as input",
+      "verify that ATACorrect module produces a bigWig output file",
+      "script_runs: ATACorrect executes without fatal errors on a valid ATAC-seq BAM input",
+      "file_format_is: output file has .bw or .bigwig extension",
+      "file_exists: output bigWig file is non-empty and readable by standard bigWig tools (e.g., bigWigInfo)",
+      "verify output bigWig contains numerical signal values (robust to parameter choices in bias correction algorithm)"
+    ],
+    "expert_review": [
+      "evaluate whether bias-corrected signal track shows expected depletion patterns (footprints) consistent with transcription factor binding sites",
+      "assess whether the bias correction meaningfully reduces Tn5 insertion sequence bias (e.g., AT-richness artifacts) compared to raw signal",
+      "confirm that the bigWig signal values are in a reasonable dynamic range for ATAC-seq accessibility quantification"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

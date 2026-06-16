@@ -1,0 +1,367 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "10.1021/acs.jproteome.0c00866",
+      "locator_id": "enrich_doi_10_1021_acs_jproteome_0c00866",
+      "locator_kind": "doi",
+      "name": "The rawrr R Package: Direct Access to Orbitrap Data and Beyond",
+      "prose": "rawrr R package (installed in the local R environment)",
+      "score": 0.2727,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/rawRcolor.png",
+      "role": "figure",
+      "sha256": "7f96efa494c9babadf50d520c8a41ddcf44591ccd6bebbc8c94c3103e0ce6279"
+    },
+    {
+      "indexable": false,
+      "path": "figures/rawRcolor10%.png",
+      "role": "figure",
+      "sha256": "4b9bbc76e4a1173733a19520ba333306a1b574f23e10329200d75cb7cc38f6b4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/rawrr_logo.png",
+      "role": "figure",
+      "sha256": "64b1ae205a2a034f841965ceff48fe7fea2e62291b93fc6d8611bc912b48e59e"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "da445fe2ae38dbc84cf4d22b95cf5bc6f84e325c39ee134c9d6c6f38268d4daa"
+    }
+  ],
+  "created_at": "2026-06-15T13:24:57.919119+00:00",
+  "crossref_doi": "10.1021/acs.jproteome.0c00866",
+  "data_accessions": [
+    {
+      "accession": "MSV000086542",
+      "evidence_span": "ate of 300 nl/min. The file is part of the MassIVE dataset [MSV000086542](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "rawrr R package (installed in the local R environment)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Assembly path string pointing to the rawrr.exe executable location",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Version string of the .NET 8.0 assembly",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation report confirming successful assembly accessor function calls",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "The rawrr package uses a two-layer architecture where R functions invoke precompiled C# wrapper methods via system calls to access Thermo Fisher Scientific raw data formats.",
+    "The .NET 8.0 runtime and precompiled wrapper assembly (rawrr.exe) are bundled with the released R package, eliminating the need for separate .NET installation on end-user systems.",
+    "Assembly accessor functions like rawrr:::.rawrrAssembly() and rawrr:::.getRawrrAssemblyVersion() are internal utilities that return metadata about the embedded managed assembly without requiring raw data file input.",
+    "The RawFileReader dynamic link library (ThermoFisher.CommonCore.*.dll) is the underlying proprietary Thermo Fisher Scientific component that provides the actual low-level raw file parsing capability.",
+    "File I/O is used to transfer data between the C# assembly layer and the R layer: extracted information is written to temporary storage, read back into memory, and parsed into R objects."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file_exists: rawrr R package installation in standard library path",
+      "script_runs: execute R command `rawrr:::.rawrrAssembly()` without error and capture output",
+      "format_is: returned value from rawrr:::.rawrrAssembly() is a non-empty character string representing a file path",
+      "file_exists: assembly file at path returned by rawrr:::.rawrrAssembly() exists on filesystem",
+      "script_runs: execute R command `rawrr:::.getRawrrAssemblyVersion()` without error and capture output",
+      "format_is: returned value from rawrr:::.getRawrrAssemblyVersion() is a non-empty character string conforming to semantic versioning pattern (e.g. 'X.Y.Z')",
+      "contains_substring: assembly file path contains '.NET' or 'net8.0' or similar framework identifier indicating .NET 8.0 assembly",
+      "contains_substring: assembly version string is non-empty and matches pattern of dotted numeric version components"
+    ],
+    "expert_review": [
+      "Verify that the dispatch mechanism correctly routes R function calls through the precompiled assembly without requiring a raw data file input",
+      "Confirm that assembly path and version metadata are retrievable independently of any raw mass spectrometry data file, validating the two-layer architecture claim"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Can the rawrr package's internal assembly dispatch functions (rawrr:::.rawrrAssembly() and rawrr:::.getRawrrAssemblyVersion()) successfully retrieve the assembly path and version string without requiring a raw data file as input?: 'rawrr wraps the functionality of the RawFileReader .NET assembly'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The rawrr package implements a two-layer architecture where R functions invoke compiled C# wrapper methods using system calls, with extracted information written to temporary storage and read back into R objects for parsing.: 'invoke compiled C# wrapper methods using a system call'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] rawrr R package (installed in the local R environment): 'Our implementation consists of two language layers, the top `R` layer and the hidden `C#` layer'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Assembly path string pointing to the rawrr.exe executable location: 'Our `.NET 8.0` precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file and shipped with the released `R` package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Version string of the .NET 8.0 assembly: 'Our `.NET 8.0` [@dotnet] precompiled wrapper methods are bundled'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Validation report confirming successful assembly accessor function calls: 'Our implementation consists of two language layers, the top `R` layer and the hidden `C#` layer. Specifically, `R` functions requesting access to data stored in binary raw files (reader family'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] RawFileReader: 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The exact .NET framework version (e.g., .NET 8.0) and build configuration of the precompiled rawrr assembly are not explicitly stated in the discussion section: 'prints the `rawrr` assembly path'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of whether rawrr:::.rawrrAssembly() and rawrr:::.getRawrrAssemblyVersion() are documented public API functions or internal implementation details (indicated by triple colon naming convention): 'rawrr:::.rawrrAssembly() ... rawrr:::.getRawrrAssemblyVersion()'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The expected or typical assembly version number at the time of publication is not provided in the discussion section: 'prints the `rawrr` assembly version'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(rawrr); cat('Assembly path:', rawrr:::.rawrrAssembly(), '\\n'); cat('Assembly version:', rawrr:::.getRawrrAssemblyVersion(), '\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "assembly_dispatch_validation.txt",
+  "expected_outputs": [
+    "Assembly path string pointing to the rawrr.exe executable location",
+    "Version string of the .NET 8.0 assembly",
+    "Validation report confirming successful assembly accessor function calls"
+  ],
+  "finding": "The rawrr package implements a two-layer architecture where R functions invoke compiled C# wrapper methods using system calls, with extracted information written to temporary storage and read back into R objects for parsing.",
+  "github_name": "fgcz/MsBackendRawFileReader",
+  "input_from": "task_002",
+  "inputs": [
+    "rawrr R package (installed in the local R environment)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "assembly_path.txt",
+    "assembly_version.txt"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_006",
+    "result_007",
+    "result_008",
+    "result_035",
+    "result_036"
+  ],
+  "methodology_summary": [
+    "Load the rawrr R package into the R environment",
+    "Call the internal function rawrr:::.rawrrAssembly() to retrieve the file system path to the bundled .NET 8.0 assembly executable",
+    "Validate that the returned path exists and points to rawrr.exe",
+    "Call the internal function rawrr:::.getRawrrAssemblyVersion() to retrieve the version metadata of the managed assembly",
+    "Verify that a non-empty version string is returned",
+    "Validation: Both accessor functions execute without error and return expected output types (path string and version string) without requiring a raw data file input, confirming the internal dispatch mechanism is operational",
+    "References: source article (DOI: 10.1021/acs.jproteome.0c00866); MSV000086542 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542)"
+  ],
+  "missing_information": [
+    "The exact .NET framework version (e.g., .NET 8.0) and build configuration of the precompiled rawrr assembly are not explicitly stated in the discussion section",
+    "No specification of whether rawrr:::.rawrrAssembly() and rawrr:::.getRawrrAssemblyVersion() are documented public API functions or internal implementation details (indicated by triple colon naming convention)",
+    "The expected or typical assembly version number at the time of publication is not provided in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "proteomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/benchmark_throughput"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can the rawrr package's internal assembly dispatch functions (rawrr:::.rawrrAssembly() and rawrr:::.getRawrrAssemblyVersion()) successfully retrieve the assembly path and version string without requiring a raw data file as input?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "results",
+    "discussion"
+  ],
+  "skills": [
+    "dotnet-assembly-path-verification",
+    "two-layer-architecture-dispatch-testing",
+    "r-internal-function-invocation",
+    "assembly-version-string-retrieval",
+    "c-sharp-wrapper-method-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_rawrr/synthesized_package",
+  "spine_condition_ids": [
+    "cond_benchmark_rawrr"
+  ],
+  "spine_entity_ids": [
+    "sys_rawrr",
+    "arch_two_layer",
+    "comp_rawrr_exe",
+    "cond_benchmark_rawrr",
+    "result_no_conversion_needed"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:fgcz__rawrr",
+  "task_description": "Verify the two-layer architecture dispatch path by calling rawrr internal assembly accessor functions (rawrr:::.rawrrAssembly() and rawrr:::.getRawrrAssemblyVersion()) and confirm that the assembly path and version string are returned correctly without requiring a raw data file as input.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "rawrr R package installation",
+      "port_id": "rawrr_package",
+      "resolved_via": null,
+      "source": "task_002/benchmark_throughput",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Verify that rawrr:::.rawrrAssembly() and rawrr:::.getRawrrAssemblyVersion() return correct assembly path and version string without requiring raw data file input.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Assembly path string",
+      "port_id": "assembly_path",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Version string of .NET assembly",
+      "port_id": "assembly_version",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Validation report of dispatch mechanism",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control"
+  ],
+  "title": "Reconstruct the two-layer R/C# architecture: invoke rawrr.exe wrapper from R and verify .NET assembly dispatch",
+  "tools": [
+    "RawFileReader"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Assembly path string pointing to the rawrr.exe executable location, Version string of the .NET 8.0 assembly, Validation report confirming successful assembly accessor function calls."
+  ],
+  "workflow_description": "1. Load the rawrr R package. 2. Call rawrr:::.rawrrAssembly() to retrieve the path to the precompiled .NET 8.0 assembly bundled with the package. 3. Verify that the returned path points to a valid directory containing the rawrr.exe executable. 4. Call rawrr:::.getRawrrAssemblyVersion() to retrieve the version string of the .NET assembly. 5. Verify that a non-empty version string is returned. 6. Confirm that both functions execute successfully without requiring a raw data file input, demonstrating the internal dispatch mechanism between the R layer and the managed C# assembly layer."
+}

@@ -1,0 +1,426 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/scheme.png",
+      "role": "figure",
+      "sha256": "e7c622951c71be810b654c83fc95efc3c3e4f8bbeec7228f346be5e6163cea76"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "92ad66c17337db77fb80dc97bca8063643688c39a219cf835db6a1c88a4b55e7"
+    }
+  ],
+  "created_at": "2026-06-16T05:39:21.024441+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "RDKit library installation and MSMetaEnhancer package source code with ComputeConverter base class",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reference SMILES strings for validation testing",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ComputeConverter subclass Python module (e.g., MyComputeService.py) with at least one functional conversion method",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "pytest test file (test_MyComputeService.py) demonstrating converter availability and conversion accuracy",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Updated __init__.py in MSMetaEnhancer/libs/converters/compute/ registering the new converter",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test execution report showing all tests passing (pytest output)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "ComputeConverters perform local computations without external API calls, inheriting from the ComputeConverter base class and calling create_top_level_conversion_methods with asynch=False to generate synchronous dynamic methods.",
+    "RDKit is a cheminformatics toolkit that converts molecular representations in-memory; common conversions include SMILES parsing (Chem.MolFromSmiles), InChI generation (Chem.inchi.MolToInchi), and molecular formula derivation (Chem.rdMolDescriptors.CalcMolFormula).",
+    "Converter registration in __init__.py is required for the ConverterBuilder to auto-discover and instantiate converters, making them available to the annotation pipeline.",
+    "Conversion methods must return a dictionary with target attribute names as keys to satisfy the dynamic method contract and integrate with the Job system (source_attribute, target_attribute, converter_name tuples).",
+    "Error handling must gracefully return empty dictionaries when input parsing fails, following the pattern of web converters for consistent behavior across API and compute services."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: ComputeConverter subclass implementation in MSMetaEnhancer repository (e.g., rdkit_converter.py or equivalent)",
+      "verify file_format_is: implementation file contains valid Python syntax, parseable by AST or direct import",
+      "verify script_runs: `python -c 'from msmetaenhancer.converters import ComputeConverter; assert hasattr(ComputeConverter, \"convert\")'` executes without error",
+      "verify script_runs: test suite for ComputeConverter subclass executes via pytest on local repository",
+      "verify output_matches_reference: for at least 3 reference SMILES strings (e.g., 'CCO', 'c1ccccc1', 'CC(=O)O'), the subclass output matches expected InChI or molecular formula strings (exact or robust to canonicalization), no canonical answer \u2014 multiple SMILES representations may convert to same InChI",
+      "verify field_present: ComputeConverter subclass implements at least one method signature matching base-class contract (e.g., `convert(self, query: str, representation: str) -> str`)",
+      "verify contains_substring: implementation documentation or docstring describes which chemical structure conversions are supported (e.g., 'SMILES to InChI', 'SMILES to molecular formula')"
+    ],
+    "expert_review": [
+      "Confirm that the ComputeConverter subclass correctly uses RDKit APIs (Chem.MolFromSmiles, Chem.MolToInchi, Chem.rdMolDescriptors) for local structure conversion and does not fall back to web services",
+      "Validate that the reference SMILES test set covers chemically diverse structures (e.g., aliphatic, aromatic, functional groups) and are correctly converted to intended representations",
+      "Assess whether error handling for invalid SMILES or unsupported conversions is documented and tested (e.g., return of None, exception, or logged warning)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does a ComputeConverter subclass using RDKit perform local chemical structure conversions (e.g., SMILES to InChI) without relying on web services?: 'Use the RDKit converter as a reference implementation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MSMetaEnhancer uses RDKit as a reference implementation for implementing ComputeConverter subclasses that perform local chemical structure conversions.: 'Use the RDKit converter as a reference implementation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] RDKit library installation and MSMetaEnhancer package source code with ComputeConverter base class: 'Use the RDKit converter as a reference implementation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Reference SMILES strings for validation testing: 'Test the conversion functionality'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] ComputeConverter subclass Python module (e.g., MyComputeService.py) with at least one functional conversion method: 'Create a new Python file in `MSMetaEnhancer/libs/converters/compute/` named after your service'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pytest test file (test_MyComputeService.py) demonstrating converter availability and conversion accuracy: 'Create a test file `tests/test_MyService.py`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Updated __init__.py in MSMetaEnhancer/libs/converters/compute/ registering the new converter: 'Add your new converter to `MSMetaEnhancer/libs/converters/compute/__init__.py`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Test execution report showing all tests passing (pytest output): 'make sure the existing tests still work by running ``pytest``'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] RDKit: 'Use the RDKit converter as a reference implementation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pytest: 'make sure the existing tests still work by running ``pytest``'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'A Python package for mass spectra metadata annotation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specific documentation or code examples are provided for the ComputeConverter base-class contract, expected method signatures, or input/output formats.: 'The discussion section does not describe ComputeConverter base-class API or contract requirements.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No reference SMILES strings or expected conversion outputs are provided in the article or discussion section for validation of local chemical structure conversions.: 'The discussion mentions 'CIR: Inchi -> SMILES conversion' and 'support `ISOMERIC_SMILES` and `CANONICAL_SMILES` in PubChem' but does not provide test data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit statement of which chemical structure conversions (SMILES \u2192 InChI, SMILES \u2192 molecular formula, etc.) should be prioritized or are required for a minimal ComputeConverter subclass implementation.: 'The discussion lists conversion types (e.g., 'Inchi -> SMILES', 'ISOMERIC_SMILES', 'CANONICAL_SMILES') but does not specify a required set for the ComputeConverter implementation.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "MyComputeService.py",
+  "expected_outputs": [
+    "ComputeConverter subclass Python module (e.g., MyComputeService.py) with at least one functional conversion method",
+    "pytest test file (test_MyComputeService.py) demonstrating converter availability and conversion accuracy",
+    "Updated __init__.py in MSMetaEnhancer/libs/converters/compute/ registering the new converter",
+    "Test execution report showing all tests passing (pytest output)"
+  ],
+  "finding": "MSMetaEnhancer uses RDKit as a reference implementation for implementing ComputeConverter subclasses that perform local chemical structure conversions.",
+  "github_name": "RECETOX/MSMetaEnhancer",
+  "input_from": null,
+  "inputs": [
+    "RDKit library installation and MSMetaEnhancer package source code with ComputeConverter base class",
+    "Reference SMILES strings for validation testing"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "MSMetaEnhancer/libs/converters/compute/MyComputeService.py",
+    "tests/test_MyComputeService.py",
+    "MSMetaEnhancer/libs/converters/compute/__init__.py",
+    "pytest_output.log"
+  ],
+  "linked_result_ids": [
+    "result_009",
+    "result_012",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_020",
+    "result_021",
+    "result_025",
+    "result_026",
+    "result_028",
+    "result_031"
+  ],
+  "methodology_summary": [
+    "Create a new ComputeConverter subclass file in the compute converters directory.",
+    "Define conversions list (source \u2192 target mappings) and invoke create_top_level_conversion_methods with asynch=False.",
+    "Implement RDKit-based conversion methods (e.g., SMILES to InChI via Chem.MolFromSmiles and Chem.inchi.MolToInchi).",
+    "Return results as dictionaries mapping target attribute names to converted values.",
+    "Register the converter in __init__.py for auto-discovery.",
+    "Write pytest tests validating converter instantiation and conversion accuracy on reference SMILES inputs.",
+    "Validation: all pytest tests pass, including new converter tests and existing test suite, confirming correct implementation of ComputeConverter interface and accurate molecular structure conversions."
+  ],
+  "missing_information": [
+    "No specific documentation or code examples are provided for the ComputeConverter base-class contract, expected method signatures, or input/output formats.",
+    "No reference SMILES strings or expected conversion outputs are provided in the article or discussion section for validation of local chemical structure conversions.",
+    "No explicit statement of which chemical structure conversions (SMILES \u2192 InChI, SMILES \u2192 molecular formula, etc.) should be prioritized or are required for a minimal ComputeConverter subclass implementation."
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does a ComputeConverter subclass using RDKit perform local chemical structure conversions (e.g., SMILES to InChI) without relying on web services?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "chemical-structure-representation-conversion",
+    "rdkit-molecular-descriptor-computation",
+    "compute-converter-interface-implementation",
+    "python-async-method-definition",
+    "unit-test-design-for-cheminformatics",
+    "smiles-inchi-round-trip-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_msmetaenhancer/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "COMP_CONVERTER_BASE",
+    "COMP_COMPUTECONVERTER",
+    "TOOL_RDKIT"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "modeling"
+  ],
+  "synthesized_from": "github:RECETOX__MSMetaEnhancer",
+  "task_description": "Implement a ComputeConverter subclass using RDKit to perform local chemical structure conversions (e.g., SMILES to InChI or molecular formula) following the ComputeConverter base-class contract, and verify correct output for a set of reference SMILES strings.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "RDKit library installation",
+      "port_id": "rdkit_lib",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ComputeConverter base class",
+      "port_id": "compute_converter_base",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Reference SMILES strings for validation",
+      "port_id": "reference_smiles",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement an RDKit-based ComputeConverter subclass that converts SMILES strings to InChI or molecular formula locally and validate output correctness on reference compounds.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ComputeConverter subclass implementation",
+      "port_id": "compute_converter_module",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "pytest test file for converter validation",
+      "port_id": "test_module",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Updated __init__.py with converter registration",
+      "port_id": "updated_init",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "pytest execution report (passing tests)",
+      "port_id": "test_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "metabolite-identification"
+  ],
+  "title": "Reconstruct the RDKit-based ComputeConverter template for local chemical property computation",
+  "tools": [
+    "MSMetaEnhancer",
+    "RDKit",
+    "pytest",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: pytest, ComputeConverter subclass Python module (e.g., MyComputeService.py) with at least one functional conversion method, pytest test file (test_MyComputeService.py) demonstrating converter availability and conversion accuracy, Updated __init__.py in MSMetaEnhancer/libs/converters/compute/ registering the new converter, Test execution report showing all tests passing (pytest output)."
+  ],
+  "workflow_description": "1. Create a new Python file in MSMetaEnhancer/libs/converters/compute/ that inherits from ComputeConverter. 2. Define the conversions list with source and target attributes (e.g., 'smiles' to 'inchi') and call create_top_level_conversion_methods with asynch=False. 3. Implement conversion methods using RDKit to perform local molecular structure transformations (e.g., parse SMILES strings with RDKit Chem.MolFromSmiles and generate InChI with Chem.inchi.MolToInchi). 4. Return converted data as a dictionary with target attribute keys. 5. Register the new converter in MSMetaEnhancer/libs/converters/compute/__init__.py by importing and adding to __all__. 6. Create a pytest test file that validates converter instantiation and tests conversion accuracy against reference SMILES inputs, verifying output structure and chemical correctness. 7. Run pytest to confirm existing tests still pass and new converter tests execute successfully."
+}

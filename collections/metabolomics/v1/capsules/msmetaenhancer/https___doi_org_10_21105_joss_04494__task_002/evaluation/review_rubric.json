@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: MSMetaEnhancer source code repository contains ConverterBuilder class definition"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "generated Job list (source \u2192 target conversion pairs) can be enumerated from dis"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: each Job object in enumerated list contains source identifier, target identifier, and reference to conversion function"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: MSMetaEnhancer source code repository contains ConverterBuilder class definition",
+      "script_runs: instantiate ConverterBuilder and execute automatic discovery of all WebConverter and ComputeConverter subclasses without errors",
+      "output_matches_reference: generated Job list (source \u2192 target conversion pairs) can be enumerated from discovered converters",
+      "verify field_present: each Job object in enumerated list contains source identifier, target identifier, and reference to conversion function",
+      "script_runs: call get_conversion_functions on instantiated converter objects and verify returned functions match Job specifications, robust to order of discovery"
+    ],
+    "expert_review": [
+      "verify that all converter subclasses discovered by ConverterBuilder are legitimate WebConverter or ComputeConverter implementations (no false positives from parent or abstract classes)",
+      "verify that Job enumeration is complete: no supported converter classes are overlooked by the discovery mechanism",
+      "verify that conversion function references in Job objects are callable and semantically correspond to declared source\u2192target pairs"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

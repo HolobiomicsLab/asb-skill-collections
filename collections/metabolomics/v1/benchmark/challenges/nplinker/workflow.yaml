@@ -1,0 +1,475 @@
+schema_version: 0.1.0
+workflow_id: coll_nplinker_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_003
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: "NPLinker is a software framework that links microbial metabolomic and\
+    \ genomic data by combining complementary scoring functions\u2014a standardised\
+    \ strain correlation score and an Input-Output Kernel Regression (IOKR) score\u2014\
+    to prioritize true biosynthetic gene cluster\u2013metabolite associations."
+  pseudo_abstract: "Establishing links between Biosynthetic Gene Clusters (BGCs) and\
+    \ specialized metabolites is crucial for discovering novel natural products, but\
+    \ current automated approaches are ineffective and manual verification remains\
+    \ a bottleneck. This work demonstrates that multiple scoring functions are complementary\
+    \ when used together to rank candidate links. The authors standardize a widely\
+    \ used strain correlation score, introduce a novel IOKR-based scoring approach,\
+    \ and present NPLinker, a software framework for linking genomic and metabolomic\
+    \ data. Validation on publicly available paired datasets shows that the standardised\
+    \ correlation score achieves means of \u22120.0060 for all links and 3.6717 for\
+    \ validated links (p=6.8302 \xD7 10\u221264), while IOKR achieves means of 0.0105\
+    \ and 0.0364 respectively (p=1.7968 \xD7 10\u22129) with top-1 accuracy of 0.1208\
+    \ and AUC of 0.6534. Links scoring above the 90th percentile for both scores show\
+    \ significantly higher enrichment for validated links (p=2.633 \xD7 10\u22124\
+    \ and p=0.0208) compared to either individual score alone, demonstrating their\
+    \ utility when combined for prioritizing metabolite\u2013BGC associations."
+  research_questions:
+  - Does standardising the raw strain correlation score by its hypergeometric expectation
+    and variance improve comparability of scores across GCF-MF links of different
+    sizes?
+  - What is the distribution of IOKR scores across all 2966 MIBiG-GNPS BGC-spectrum
+    pairs, and how do validated links rank within this distribution?
+  - When combining standardised strain correlation and IOKR scores, does the joint
+    top percentile enrichment of validated links exceed that of either individual
+    scoring function alone?
+  - How does NPLinker orchestrate the integration of antiSMASH/BiG-SCAPE genomic outputs
+    and GNPS metabolomic outputs to create and rank hypothetical BGC-metabolite links?
+  - "How does the choice of exponent p in the \u2113p-norm combination function affect\
+    \ the enrichment of validated links in the top-ranking BGC-metabolite predictions?"
+  methods_summary: "Load GCF-MF pairs for each dataset (Cr\xFCsemann, Gross, Le\xE3\
+    o) and extract GCF size, MF size, overlap size, and population size parameters.\
+    \ Compute hypergeometric expected value E[\u03C3_corr] and variance Var[\u03C3\
+    _corr] for each pair by summing over all possible overlap sizes weighted by hypergeometric\
+    \ probabilities. Calculate standardised score s*_corr = (raw_score \u2212 E[\u03C3\
+    _corr]) / \u221AVar[\u03C3_corr] for all GCF-MF pairs. Generate distribution histograms\
+    \ and summary statistics (mean, p-value) for validated versus all links under\
+    \ both raw and standardised scoring. Determine enrichment of validated links at\
+    \ 90th percentile for each dataset and pool across datasets to compute significance.\
+    \ Validation: standardised score demonstrates significantly higher p-value for\
+    \ separation of validated from non-validated links (p < 2.5 \xD7 10\u207B\xB9\xB9\
+    ) and higher proportion of validated links in top 90th percentile, consistent\
+    \ with reported Table 1 and Table 2 values. References: source article (DOI: 10.1371/journal.pcbi.1008920);\
+    \ MSV000078836 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836);\
+    \ MSV000085038 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038)\
+    \ Extract molecular fingerprints (CDK Substructure, PubChem Substructure, Klekota-Roth)\
+    \ from SMILES strings for all 4138 GNPS training spectra and their paired metabolite\
+    \ structures. Train IOKR by learning a kernel-based mapping from the input MS2\
+    \ spectrum kernel space to the output molecular fingerprint space using the paired\
+    \ spectrum-fingerprint training set. Filter evaluation MS2 spectra (6246 total)\
+    \ to retain only peaks present in the GNPS training data using the Probability\
+    \ Product Kernel (PPK) as a denoising step. For each of 6246 evaluation spectra,\
+    \ apply the trained IOKR model to predict a fingerprint and rank candidate BGCs\
+    \ (2242 with MIBiG structure assignments) by computing \u27E8\u0125(spectrum),\
+    \ \u03C6(BGC)\u27E9 in fingerprint space. Evaluate top-n accuracy (n \u2208 {1,5,10,20,200})\
+    \ and AUC by determining the rank of the correct BGC in each ranked list; compare\
+    \ against randomized baseline. Calculate and report mean IOKR scores for all 2966\
+    \ BGC-spectrum pairs and for validated pairs, compute p-values, and generate distribution\
+    \ histograms with validated-link overlay. Validation: reproduce top-n accuracy\
+    \ values (top-1=0.1208, top-5=0.1708, top-200=0.2946, AUC=0.6534) from Table 3\
+    \ and visual alignment with S2 Fig distribution, confirming mean validated-link\
+    \ score (0.0364) significantly exceeds mean all-links score (0.0105, p=1.8\xD7\
+    10\u207B\u2079). References: source article (DOI: 10.1371/journal.pcbi.1008920);\
+    \ MSV000078836 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836);\
+    \ MSV000085038 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038)\
+    \ Load GCF-MF link data with strain membership and validated annotations from\
+    \ three curated microbial datasets. Compute standardised strain correlation score\
+    \ for each GCF-MF pair by calculating raw correlation score and adjusting for\
+    \ expected value and variance under hypergeometric null hypothesis. Compute IOKR\
+    \ scores for BGC-spectrum links via molecular fingerprint space projection, then\
+    \ propagate maximum IOKR score to GCF-MF level. Standardise IOKR scores using\
+    \ expected value and variance computed over all potential links in the dataset.\
+    \ Identify the 90th percentile threshold independently for standardised correlation\
+    \ and IOKR scores, then categorise links as: above neither, above only standardised\
+    \ correlation, above only IOKR, or above both (joint). Calculate the proportion\
+    \ of validated links within each category (total, top raw correlation, top standardised\
+    \ correlation, top IOKR, top combined) for each of the three datasets. Pool validated\
+    \ and unvalidated link counts across the three datasets and apply Fisher exact\
+    \ test to compare enrichment of the joint top-percentile group versus individual\
+    \ top-percentile groups. Validation: Demonstrate that the p-value for enrichment\
+    \ of validated links in the joint top percentile (both scores \u226590th percentile)\
+    \ is significantly lower than the p-values for either score alone (p < 0.05 after\
+    \ Bonferroni correction if multiple tests), confirming complementarity of the\
+    \ two scoring functions. References: source article (DOI: 10.1371/journal.pcbi.1008920);\
+    \ MSV000078836 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836);\
+    \ MSV000085038 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038)\
+    \ Cluster detected BGCs into Gene Cluster Families (GCFs) using BiG-SCAPE, grouping\
+    \ by product class and similarity distance. Generate the complete set of hypothetical\
+    \ GCF\u2013Molecular Family (MF) link combinations from input genomic and metabolomic\
+    \ data. Compute standardised strain correlation score for each link by calculating\
+    \ hypergeometric expected value and variance and z-normalising. Score BGC\u2013\
+    spectrum links using Input-Output Kernel Regression (IOKR) on molecular fingerprints\
+    \ for BGCs with MIBiG structural homology; aggregate to GCF\u2013MF level. Standardise\
+    \ IOKR scores and combine both standardised scores using \u2113\u2081/\u2082-norm\
+    \ with sign adjustment to produce a single ranking. Rank all hypothetical links\
+    \ and export table with filtering and sorting options; calculate enrichment statistics\
+    \ for validated links at 90th percentile. Validation: confirm that joint 90th-percentile\
+    \ links show significantly higher proportion of validated links (p < 0.05) than\
+    \ either score alone. References: source article (DOI: 10.1371/journal.pcbi.1008920);\
+    \ MSV000078836 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836);\
+    \ MSV000085038 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038)\
+    \ Load pre-computed standardised strain correlation and IOKR scores for all links\
+    \ across the three microbial datasets (Cr\xFCsemann, Gross, Le\xE3o) and their\
+    \ validated-link annotations. Compute combined scores using the \u2113_p-norm\
+    \ with sign adjustment across a systematic range of p values (0.5 to 3.0 in 0.1\
+    \ increments, plus fractional values 0 < p < 1) and alternative function forms\
+    \ (weighted linear, Chebyshev, harmonic mean, geometric mean). For each combination\
+    \ function and parameter set, rank all GCF-MF links and calculate validated-link\
+    \ enrichment ratios at the 90th and 95th percentile thresholds. Pool results across\
+    \ the three datasets and perform chi-square contingency tests to determine statistical\
+    \ significance (p < 0.05) of enrichment for each function relative to baseline\
+    \ (individual scores alone) and to the reported \u2113\u2081/\u2082 function.\
+    \ Visualise enrichment and rank metrics as heatmaps and line plots indexed by\
+    \ function type and exponent p. Validation: verify that \u2113\u2081/\u2082 enrichment\
+    \ ratios match Table 4 and Table D of supplementary text; confirm that the best-performing\
+    \ alternative function achieves equal or superior enrichment compared to the three\
+    \ originally reported functions. References: source article (DOI: 10.1371/journal.pcbi.1008920);\
+    \ MSV000078836 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836);\
+    \ MSV000085038 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038)"
+  domain: multi-omics
+  techniques:
+  - correlation-analysis
+  - machine-learning
+  - database-annotation
+  - network-annotation-propagation
+  claims:
+  - claim_text: Using multiple link-scoring functions together makes it easier to
+      prioritise true links relative to others.
+    claim_type: finding
+    speculative: false
+  - claim_text: The raw strain correlation score has a mean of 83.5144 for all links.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: The raw strain correlation score has a mean of 14.667 for validated
+      links.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: Standardising the strain correlation score gives a mean of -0.006
+      for all links.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: Standardising the strain correlation score gives a mean of 3.6717
+      for validated links.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: The raw strain correlation score mean for validated links is lower
+      than for all links, opposite to what would be expected.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: The raw strain correlation score is highly dependent on both total
+      population size and the size of the GCF and number of strains that produce the
+      metabolite.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: A larger GCF with perfect strain correspondence can outscore a smaller
+      GCF and MF pair even when the latter has stronger evidence.
+    claim_type: finding
+    speculative: false
+  - claim_text: IOKR top-1 accuracy on MIBiG data is 0.1208.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_MIBIG
+  - claim_text: Random baseline top-1 accuracy on MIBiG data is 0.0.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_MIBIG
+  - claim_text: Random baseline top-5 accuracy on MIBiG data is 0.0014.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_MIBIG
+  - claim_text: Random baseline AUC on MIBiG data is 0.5209.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_MIBIG
+  - claim_text: IOKR mean score for all links is 0.0105.
+    claim_type: finding
+    speculative: false
+  - claim_text: IOKR mean score for validated links is 0.0364.
+    claim_type: finding
+    speculative: false
+  - claim_text: "The standardised strain correlation score is significantly enriched\
+      \ for validated links at the 90th percentile with a p-value of 2.483 \xD7 10\u2212\
+      11."
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: The IOKR score is significantly enriched for validated links at the
+      90th percentile with a p-value of 0.0139.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_IOKR_SCORE
+  - claim_text: "Links scoring above the 90th percentile on both IOKR and standardised\
+      \ strain correlation scores are significantly enriched for validated links with\
+      \ a p-value of 2.633 \xD7 10\u22124."
+    claim_type: finding
+    speculative: false
+  - claim_text: The combined scoring function assigns the best rank to the validated
+      link in 10 out of 15 cases tested.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_COMBINED_SCORE
+  - claim_text: IOKR does not directly depend on natural product compound class.
+    claim_type: finding
+    speculative: false
+  - claim_text: The strain correlation score cannot distinguish between potential
+      links showing the same pattern of strain presence or absence.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: NPLinker accepts genomic outputs from antiSMASH and BiG-SCAPE.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_NPLINKER
+  - claim_text: NPLinker accepts metabolomic output from GNPS knowledge base.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_NPLINKER
+  - claim_text: NPLinker has been used to putatively link ectoine and chloramphenicol
+      to their producing BGCs.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_NPLINKER
+  - claim_text: The IOKR model is trained on 4138 spectra from GNPS with structural
+      annotations.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_GNPS
+  - claim_text: "The Cr\xFCsemann dataset consists of 120 microbial strains with 8\
+      \ validated links between a BGC and a MF."
+    claim_type: finding
+    speculative: false
+    entity_id: DS_CRUSEMANN
+  - claim_text: The Gross dataset consists of 7 strains with 9 validated links between
+      a BGC and a MF.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_GROSS
+  - claim_text: "The Le\xE3o dataset contains 4 strains with 5 validated links between\
+      \ a BGC and a specific MS2 spectrum."
+    claim_type: finding
+    speculative: false
+    entity_id: DS_LEAO
+  - claim_text: The standardised strain correlation score has mean 0 and variance
+      1.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: A standardised strain correlation score of zero indicates that the
+      degree of overlap between the two strain sets is the same as would be expected
+      if they were chosen at random.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: Standardised scores make comparison between links involving different
+      sizes of GCFs and MFs possible.
+    claim_type: finding
+    speculative: false
+  - claim_text: IOKR requires only spectra and predicted molecular structures as input.
+    claim_type: finding
+    speculative: false
+  - claim_text: IOKR's performance depends heavily on the choice of kernel function
+      on the spectra and on the choice of molecular fingerprint.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MOLECULAR_FINGERPRINT
+  - claim_text: The strain correlation scoring approach clusters BGCs from different
+      strains into Gene Cluster Families based on similarity-based distances.
+    claim_type: finding
+    speculative: false
+  - claim_text: BiG-SCAPE is the state-of-the-art tool for microbial BGC clustering.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_BIGSCAPE
+  - claim_text: The strain correlation score formula assigns +10 for strains that
+      produce metabolites and have BGCs in the GCF.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: The strain correlation score formula assigns -10 for strains that
+      produce metabolites but lack BGCs in the GCF.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: The strain correlation score formula assigns +1 for strains that neither
+      produce metabolites nor have BGCs in the GCF.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: The strain correlation score formula leaves the score unchanged for
+      strains that have BGCs in the GCF but do not produce metabolites.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: The expected value and variance of the raw strain correlation score
+      depend greatly on both the total population size and the number of strains producing
+      the metabolite.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: "The proportion of validated links among all links in the Cr\xFCsemann\
+      \ dataset is enriched above the 90th percentile for the standardised correlation\
+      \ score."
+    claim_type: finding
+    speculative: false
+    entity_id: DS_CRUSEMANN
+  - claim_text: IOKR outperforms a randomised baseline by a considerable margin in
+      top-n accuracy on MIBiG data.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_MIBIG
+  - claim_text: The standardised IOKR score is defined by subtracting the expected
+      value from the IOKR score and dividing by its variance.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_IOKR_SCORE
+  - claim_text: "The combined scoring function \u21131/2 ranks validated link for\
+      \ BGC0001228 (retimycin A) at number 253."
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_COMBINED_SCORE
+  - claim_text: "The combined scoring function \u21131/2 ranks validated link for\
+      \ BGC0000241 (lomaiviticin A) at number 5."
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_COMBINED_SCORE
+  - claim_text: In the case of BGC0000241 (lomaiviticin A), neither scoring function
+      alone assigns an equal or higher score than the correct link.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: Standardisation of the strain correlation score improves its effectiveness
+      at prioritising validated links relative to all links.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRAIN_CORR_SCORE
+  - claim_text: Combining strain correlation and IOKR scores increases the ratio of
+      validated links among high-scoring links.
+    claim_type: finding
+    speculative: false
+  - claim_text: A drawback of IOKR is its reliance on MIBiG homology to assign molecular
+      structures to BGCs.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_MIBIG
+  - claim_text: 'The molecular fingerprint vector is composed of three concatenated
+      sets of fingerprints: CDK Substructure, PubChem Substructure, and Klekota-Roth
+      fingerprints.'
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MOLECULAR_FINGERPRINT
+  - claim_text: 2966 BGC-spectrum pairs were created by matching MIBiG and GNPS databases.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_GNPS
+  - claim_text: The validated links in the MIBiG/GNPS dataset include 2069 unique
+      spectra and 242 unique MIBiG BGCs.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_GNPS
+  - claim_text: BGCs in the validated links are primarily polyketides and nonribosomal
+      peptides, with sizes ranging from 7000 to 20000 nucleotides.
+    claim_type: finding
+    speculative: false
+  - claim_text: Strain correlation and IOKR scores are complementary methods for linking
+      BGCs to metabolites.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: mixed
+  method_alternatives:
+  - BiG-SLICE could be used instead of BiG-SCAPE for BGC clustering, though BiG-SCAPE
+    offers higher precision
+  - "Instead of \u21132 (Euclidean norm), can use \u2113p-norm with varying p values\
+    \ to combine scores"
+  - Can use IOKR score or standardised strain correlation score individually, or vice
+    versa, to order links
+  - Vector embeddings as alternative to Multiple Kernel Learning for kernel optimization
+  - Predicting molecular fingerprints directly from BGCs instead of relying on MIBiG
+    homology
+  - Alternative fingerprints targeting specific molecular substructures
+  substitution_constraints:
+  - IOKR can only rank links involving BGCs that have predicted molecular structures
+    with significant homology to known BGCs
+  - Strain correlation score requires strain information while IOKR requires structural
+    predictions
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: "Ranked hypothetical link table (CSV or TSV) with GCF ID, MF ID, standardised\
+    \ strain correlation score, IOKR score, combined \u2113\u2081/\u2082 score, and\
+    \ metadata (strain count, BGC size, product type) sorted by combined score"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "NPLinker link objects and metadata structure (JSON or Python pickle) persisting\
+    \ GCF\u2013MF and BGC\u2013spectrum relationships with associated scores"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Filtering and ranking statistics: count of links scoring above 90th percentile
+    for each scoring function and their intersections'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Table of validated-link enrichment ratios (proportion of validated links /
+    proportion of all links) indexed by combination function type and exponent p,
+    for 90th and 95th percentiles across all three datasets
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Heatmap visualisation of validated-link enrichment as a function of exponent\
+    \ p (0.5\u20133.0) and combination function type, with colour intensity proportional\
+    \ to enrichment ratio"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Statistical significance test results (chi-square or Fisher exact p-values)\
+    \ comparing validated-link enrichment for each combination function against the\
+    \ baseline (either score alone) and against the reported \u2113\u2081/\u2082 function"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Line plot showing rank improvement (median percentile rank of validated links)\
+    \ as a function of p for the \u2113_p family of norms"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

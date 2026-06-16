@@ -1,0 +1,11 @@
+  figures/Slide1.svg
+  figures/architecture.png
+  figures/architecture.svg
+  figures/nlesc.png
+  figures/slide1.png
+  figures/slide2.png
+  figures/slide3.png
+  figures/slide4.png
+  figures/slide5.png
+  figures/wur.png
+paper.md

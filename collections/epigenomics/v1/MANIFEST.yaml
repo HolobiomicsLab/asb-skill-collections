@@ -1,0 +1,35 @@
+schema: asb-collection-manifest/1.0
+collection: epigenomics
+version: 1
+description: Layered install/release manifest — take any single layer or compose.
+layers:
+  skills:
+    description: Evidence-grounded skills + tool records. Installs to ~/.claude/skills.
+    include:
+    - collection.yaml
+    - CITATION.cff
+    - skills/**
+    - tools/**
+    install_target: ~/.claude/skills
+  bundle:
+    description: Skills + the re-enrichable KB bundle (source corpus + the skill-bundled resources already under skills/).
+    extends:
+    - skills
+    include:
+    - corpus.yaml
+  benchmark:
+    description: SciTask cards + workflow challenges (the benchmark tasks). links.json preserves skill<->task.
+    include:
+    - collection.yaml
+    - corpus.yaml
+    - benchmark/**
+    - links.json
+  full:
+    description: Everything incl. capsules (reproducible claim units) + indicium KG — for ablation experiments.
+    extends:
+    - skills
+    - bundle
+    - benchmark
+    include:
+    - capsules/**
+    - indicium/**

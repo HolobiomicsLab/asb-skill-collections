@@ -1,0 +1,8 @@
+  figures/architecture_diagram.jpg
+  figures/bipartite_matching.svg
+  figures/logo.png
+  figures/matching_workflow.svg
+  figures/old_schematic.png
+  figures/schematic.png
+  figures/spectra.png
+paper.md

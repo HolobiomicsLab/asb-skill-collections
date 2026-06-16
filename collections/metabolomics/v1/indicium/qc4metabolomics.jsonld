@@ -1,0 +1,1764 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/artifact-checksum-verification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/git-repository-tag-checkout",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/github-release-metadata-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metadata-field-verification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/qc-workflow-component-inspection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/release-artifact-generation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/semantic-versioning-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/workflow-definition-schema-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/yaml-json-structural-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "QC4metabolomics is a system for quality control in metabolomics studies.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_QC4Metabolomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Documentation for QC4metabolomics is available at http://stanstrup.github.io/QC4Metabolomics/",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_QC4Metabolomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.0.4 of QC4Metabolomics was released on 2025-07-29.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_QC4Metabolomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.0.4 included a bug fix for better naming.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.0.3 of QC4Metabolomics was released on 2025-07-29.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_QC4Metabolomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.0.3 included a bug fix for updating the filename of release.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.0.2 of QC4Metabolomics was released on 2025-07-29.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_QC4Metabolomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.0.2 included a bug fix for LFS files in release.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_QC4Metabolomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.0.1 of QC4Metabolomics was released on 2025-07-29.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_QC4Metabolomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.0.0 of QC4Metabolomics was released on 2025-07-29.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_QC4Metabolomics_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Version 1.0.0 included a feature to add release and semantic release.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_QC4Metabolomics_system"
+        },
+        {
+          "id": "asb:spine_release_automation_tool"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC4Metabolomics, a real-time quality control monitoring software for untargeted metabolomics data... The Shiny app is available as open-source code at https://github.com/stanstrup/QC4Metabolomics. Docker images and a docker-compose setup file are also provided for easy deployment",
+      "asbval:note": "Paper confirms QC4Metabolomics exists and is open-source on GitHub with Docker deployment, but does NOT mention Semantic Release, v1.0.0 versioning, or release artifact reproduction workflows. The paper describes the software and its deployment, not its release engineering process.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Reproduce the initial QC4Metabolomics v1.0.0 release artifact produced by Semantic Release",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:06:09.933696+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The card explicitly states no research question can be produced. This is a meta-claim about the card itself, not a claim about the paper. The paper's research question concerns QC monitoring in metabolomics, not release artifact reproduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Cannot produce a research_question for this sub-task scope.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:06:09.933696+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Semantic Release is not mentioned anywhere in the paper passages. The paper discusses QC4Metabolomics development, Docker containerization, R packages, and GitHub hosting, but does not reference Semantic Release or any automated release management tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Semantic Release",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:06:09.933696+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss release artifact generation, Semantic Release workflows, or v1.0.0 versioning specifics. The paper is dated 2025 and describes QC4Metabolomics as an operational tool, not its release engineering process.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Versioned release artifact bundle generated by Semantic Release at v1.0.0",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:06:09.933696+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss release metadata, verification reports, or artifact-to-GitHub matching procedures. These are release engineering concerns not addressed in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Release metadata and verification report confirming artifact matches GitHub record",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:06:09.933696+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate task card describes a software release engineering workflow (reproducing a versioned release artifact using Semantic Release), which is entirely outside the scope of the paper.",
+        "The paper is a scientific publication about QC4Metabolomics functionality, quality control monitoring, and real-world analytical examples. It does not address release management, CI/CD pipelines, or artifact reproduction.",
+        "The card appears to be a DevOps/release engineering task, not a scientific research task extractable from this metabolomics paper.",
+        "No mention of Semantic Release, release versioning workflows, or artifact reproduction appears in any passage."
+      ],
+      "asbval:n_drift_notes": 4,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:06:09.933696+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention specific commit hashes (d441874), v1.0.0 release versioning, or QC workflow definition files as discrete artifacts. Paper discusses QC4Metabolomics as a software system with modules and architecture, but does not address release assets, commit history, or structured workflow definition files.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What is the structure and composition of the QC workflow definition file declared in commit d441874 for the v1.0.0 release of QC4metabolomics?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:06:23.458581+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not describe validation reports, schema compliance checking, or structural integrity assessment of workflow components. The paper focuses on QC4Metabolomics as a monitoring dashboard and data processing system, not on validation of workflow definition files.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Validation report documenting schema compliance status, structural integrity of qc_workflow_component, and any detected errors or warnings",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:06:23.458581+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention manual expert review as a tool or methodology. The paper describes automated QC monitoring, data extraction, module-based processing, and dashboard visualization\u2014all programmatic approaches, not manual review workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "manual expert review",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:06:23.458581+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss release assets, workflow component reconstruction, or v1.0.0 versioning. The paper describes the QC4Metabolomics system architecture and modules but does not address release packaging or workflow definition file reconstruction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Reconstruct the QC Workflow component bundled as a release asset in QC4Metabolomics v1.0.0",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:06:23.458581+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate task card appears to describe a software engineering / release artifact validation task (commit inspection, schema validation, release asset analysis) that is entirely orthogonal to the paper's scope.",
+        "The paper is a scientific publication describing QC4Metabolomics as a metabolomics quality control monitoring system. It does not address software release management, commit history, or structured workflow definition file validation.",
+        "The task card's focus on 'commit d441874', 'v1.0.0 release', and 'qc_workflow_component' as a discrete artifact suggests the extractor may have conflated the paper's discussion of QC4Metabolomics modules and workflow architecture with a specific software engineering artifact that is not present in the paper.",
+        "No evidence of version-specific release documentation, commit-level details, or workflow definition schema validation appears in any passage."
+      ],
+      "asbval:n_drift_notes": 4,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:06:23.458581+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/artifact-checksum-verification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper is about QC4Metabolomics, a quality control monitoring software for metabolomics data. No discussion of artifact checksums, GitHub releases, versioning tools, or software release verification. The paper does mention that QC4Metabolomics is available as open-source code at GitHub and provides Docker images, but does not address checksum verification or release artifact validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "artifact-checksum-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verify that versioned release artifacts match their reference checksums and metadata by comparing generated files against a trusted GitHub release record. This ensures reproducibility of automated release processes and detects corruption or tampering.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:14.438658+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/artifact-checksum-verification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss artifact verification, checksums, or release validation workflows. The scope describes a software engineering/DevOps task unrelated to the paper's focus on metabolomics quality control.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "artifact-checksum-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "artifact-checksum-verification: Verify that versioned release artifacts match their reference checksums and metadata by comparing generated files against a trusted GitHub release record.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:14.438658+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/artifact-checksum-verification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Semantic Release is not mentioned anywhere in the paper. The paper does not discuss automated versioning or release generation tools.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "artifact-checksum-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Semantic Release",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:14.438658+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/artifact-checksum-verification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Cryptographic hashing tools are not mentioned in the paper. The paper does not discuss checksum computation or verification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "artifact-checksum-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "shasum / sha256sum / openssl",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:14.438658+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/git-repository-tag-checkout/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper is about QC4Metabolomics, a quality control monitoring software for metabolomics data. No discussion of git tag checkout, version control workflows, or reproducibility via git operations. The paper mentions the software is 'available as open-source code at https://github.com/stanstrup/QC4Metabolomics' and provides 'Docker images' but does not discuss git tag checkout procedures or semantic versioning workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "git-repository-tag-checkout",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Retrieve a specific versioned snapshot of a software repository by checking out a git tag, ensuring reproducibility of a particular release state for validation or replication workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:22.038305+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/git-repository-tag-checkout/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Semantic Release is not mentioned anywhere in the paper. The paper does not discuss automated release generation, semantic versioning tools, or release note generation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "git-repository-tag-checkout",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Semantic Release \u2014 Generates versioned artifacts, release notes, and metadata after source checkout; validates generated outputs against the reference release record",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:22.038305+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/git-repository-tag-checkout/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "While the paper mentions the software is available on GitHub (https://github.com/stanstrup/QC4Metabolomics), there is no discussion of git commands, tag checkout, or version control workflows. The paper does not describe how to use git to retrieve specific versions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "git-repository-tag-checkout",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "git \u2014 Version control command-line tool used to retrieve and check out the tagged repository state",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:22.038305+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/github-release-metadata-comparison/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes QC4Metabolomics, a quality control monitoring software for metabolomics data. It does not address software release validation, artifact checksums, GitHub release metadata comparison, or Semantic Release workflows. The paper focuses on LC\u2013MS data quality monitoring, not software engineering practices or release integrity validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "github-release-metadata-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validate that a locally reproduced software release artifact matches the reference metadata (version number, file contents, checksums) published on GitHub. This skill ensures reproducibility and integrity of versioned releases in scientific software workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:28.907119+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/github-release-metadata-comparison/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper's scope is metabolomics data quality control via real-time and retrospective monitoring. While the paper mentions that QC4Metabolomics is available as open-source code on GitHub (passage [2]: 'The Shiny app is available as open-source code at https://github.com/stanstrup/QC4Metabolomics'), it does not discuss validating release artifacts, checksums, or version metadata matching. The card's scope is entirely orthogonal to the paper's content.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "github-release-metadata-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Validate that a locally reproduced software release artifact matches the reference metadata (version number, file contents, checksums) published on GitHub. This skill ensures reproducibility and integrity of versioned releases in scientific software workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:28.907119+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/github-release-metadata-comparison/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss GitHub release metadata comparison or any related software release validation workflow. This title is not mentioned or implied anywhere in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "github-release-metadata-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "github-release-metadata-comparison",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:28.907119+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/github-release-metadata-comparison/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Semantic Release is not mentioned in the paper. The paper describes QC4Metabolomics' technical stack (R, Shiny, xcms, ProteoWizard, Docker, mariaDB, renv, ggplot2, plotly) but does not reference Semantic Release or any automated versioning/release tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "github-release-metadata-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Semantic Release",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:28.907119+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metadata-field-verification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper describes QC4Metabolomics, a real-time quality control monitoring software for metabolomics data. The paper does not discuss workflow definition files, metadata field validation, YAML/JSON schema validation, or workflow declaration validation. The paper focuses on monitoring LC-MS data quality parameters (m/z, retention time, intensity, peak shape, contaminants) in real-time via a Shiny web application, not on validating workflow metadata structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metadata-field-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validate that all required metadata fields are present, correctly typed, and structurally consistent in workflow definition files for quality control systems.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:37.653430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metadata-field-verification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not address workflow definition validation, schema compliance, or metadata field verification. QC4Metabolomics is a monitoring and dashboard application for metabolomics data quality, not a workflow definition validation system. The paper discusses modules, database structures, and GUI elements, but not workflow metadata validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metadata-field-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Validate that all required metadata fields are present, correctly typed, and structurally consistent in workflow definition files for quality control systems. This skill ensures workflow components declare complete and schema-compliant metadata before deployment.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:37.653430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metadata-field-verification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention YAML/JSON schema validators or schema validation tools. The tools mentioned are: xcms, R packages, Docker, Shiny, ggplot2, plotly, mariaDB, renv, ProteoWizard, MSconvert, and BioRender\u2014none of which are schema validators for workflow definitions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metadata-field-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "YAML/JSON schema validator",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:37.653430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metadata-field-verification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "While the paper mentions that 'An R/Shiny programmer can add new modules without modifying existing QC4Metabolomics code,' this refers to software customization, not manual expert review of workflow metadata fields. The paper does not describe a metadata field verification process or expert review workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metadata-field-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "manual expert review",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:37.653430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metadata-field-verification/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss workflow definition files in YAML or JSON format. QC4Metabolomics uses environmental variables for configuration ('settings are changed by passing environmental variables to the Docker container'), not workflow definition files.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metadata-field-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "workflow definition file (YAML or JSON format)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:37.653430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metadata-field-verification/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention schema specification documents or versioned schema definitions for workflow validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metadata-field-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "schema specification document for the target version",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:37.653430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metadata-field-verification/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss qc_workflow_component declarations or workflow component metadata structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metadata-field-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "qc_workflow_component declaration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:37.653430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metadata-field-verification/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not describe generation of validation reports for schema compliance. QC4Metabolomics outputs quality monitoring dashboards and data quality metrics, not workflow validation reports.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metadata-field-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "outputs",
+      "asbval:target_claim_text": "validation report documenting schema compliance",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:37.653430+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qc-workflow-component-inspection/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper describes QC4Metabolomics as a real-time quality control monitoring software for metabolomics data acquisition, with modules for tracking compounds, monitoring contaminants, and extracting diagnostic information. No mention of workflow component definitions, schema validation, YAML/JSON workflow files, or structural integrity verification of workflow metadata. The paper focuses on runtime QC monitoring, not workflow definition validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "qc-workflow-component-inspection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Reconstruct and validate the structural integrity of QC workflow component definitions bundled in metabolomics software releases. This skill verifies schema compliance, field presence, and type consistency across workflow metadata and step declarations.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:49.182276+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qc-workflow-component-inspection/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not address workflow definition files, schema specifications, YAML/JSON validation, or metadata field verification. The scope describes a software engineering/DevOps task (workflow validation), whereas the paper is about runtime QC monitoring of LC-MS metabolomics data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "qc-workflow-component-inspection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Reconstruct and validate the structural integrity of QC workflow component definitions bundled in metabolomics software releases. This skill verifies schema compliance, field presence, and type consistency across workflow metadata and step declarations.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:49.182276+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qc-workflow-component-inspection/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The Shiny app is available as open-source code at https://github.com/stanstrup/QC4Metabolomics. Docker images and a docker-compose setup file are also provided for easy deployment, along with demo data. The documentation can be found at https://stanstrup.github.io/QC4Metabolomics.",
+      "asbval:note": "QC4Metabolomics is confirmed as a real tool with an open-source repository and documentation site. However, the paper does not describe it as containing 'workflow component definitions' for validation purposes. The tool is a runtime QC monitoring system, not a source of workflow definition files for schema validation. The role assigned in the card does not match the paper's description of the tool's actual function.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "qc-workflow-component-inspection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QC4Metabolomics (repo: http://stanstrup.github.io/QC4Metabolomics/, role: source repository containing workflow component definitions for metabolomics QC systems)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:49.182276+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qc-workflow-component-inspection/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention manual expert review as a tool or method for workflow validation, schema compliance checking, or metadata field verification. The paper describes automated QC monitoring via software modules, not manual review processes for workflow definitions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "qc-workflow-component-inspection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "manual expert review (role: related to metadata-field-verification, qc-workflow-component-inspection, workflow-definition-schema-validation, yaml-json-structural-parsing)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:49.182276+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/release-artifact-generation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper describes QC4Metabolomics, a quality control monitoring software for metabolomics data. No mention of release artifact generation, semantic versioning tools, or automated release processes. The paper does mention the software is 'available as open-source code at https://github.com/stanstrup/QC4Metabolomics' and 'Docker images and a docker-compose setup file are also provided' but does not discuss the release engineering process itself.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "release-artifact-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Generate and validate versioned release artifacts (binaries, source distributions, release notes) from a tagged repository state using automated semantic versioning tools.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:59.677684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/release-artifact-generation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Semantic Release tool is not mentioned anywhere in the paper. The paper discusses QC4Metabolomics deployment via Docker and mentions R packages, ProteoWizard, xcms, Shiny, ggplot2, plotly, mariaDB, and renv, but does not reference Semantic Release or any automated semantic versioning tool.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "release-artifact-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Semantic Release",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:59.677684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/release-artifact-generation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper's scope is entirely focused on quality control monitoring for metabolomics data acquisition and analysis. It does not address software release engineering, artifact generation, or versioning workflows. The mention of open-source availability and Docker deployment is incidental to the main contribution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "release-artifact-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Generate and validate versioned release artifacts (binaries, source distributions, release notes) from a tagged repository state using automated semantic versioning tools.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:07:59.677684+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/semantic-versioning-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes QC4Metabolomics, a quality control monitoring software for metabolomics data. The research question concerns semantic versioning validation and release artifact integrity \u2014 topics entirely absent from the paper. The paper does not address version control validation, release artifact matching, or semantic versioning practices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "semantic-versioning-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validate that a software release artifact (versioned binary, source archive, or metadata) matches its published semantic version tag and reference release record. This skill ensures reproducibility and integrity of versioned deliverables in scientific software projects.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:06.795599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/semantic-versioning-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The scope describes a skill for validating release artifacts against semantic version tags and reference records. The paper makes no mention of release validation, semantic versioning practices, artifact integrity checking, or CI/CD pipeline validation. The paper focuses on real-time and retrospective quality control of metabolomics data acquisition, not software release management.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "semantic-versioning-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Validate that a software release artifact (versioned binary, source archive, or metadata) matches its published semantic version tag and reference release record. This skill ensures reproducibility and integrity of versioned deliverables in scientific software projects.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:06.795599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/semantic-versioning-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention 'Semantic Release' or any tool for generating versioned release artifacts. While the paper does mention that QC4Metabolomics is available as open-source code on GitHub and provides Docker images, there is no discussion of semantic versioning tools, release artifact generation, or version tag management. The paper's focus is on metabolomics data quality control, not release engineering.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "semantic-versioning-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Semantic Release \u2014 Generate versioned release artifacts and metadata from a git repository at a specified semantic version tag",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:06.795599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper is about QC4Metabolomics, a real-time quality control monitoring software for metabolomics data. No mention of workflow definition validation, YAML/JSON schema validation, or workflow specification compliance. The paper focuses on LC-MS data quality monitoring, not workflow definition validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "workflow-definition-schema-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validate the structural integrity and schema compliance of a workflow definition file (YAML or JSON) against a formal specification, ensuring all required metadata fields are present, type-consistent, and free of syntax errors or undefined references.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:14.220212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not address workflow definition validation, schema compliance checking, or versioned release validation of workflow files. The scope describes a software engineering/DevOps task unrelated to metabolomics quality control.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "workflow-definition-schema-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Validate the structural integrity and schema compliance of a workflow definition file (YAML or JSON) in a versioned release or commit against schema specification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:14.220212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention YAML schema validators, yamllint, jsonschema, or any workflow definition validation tools. These are generic software engineering tools not discussed in the metabolomics QC paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "workflow-definition-schema-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "YAML schema validator (e.g., yamllint, jsonschema)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:14.220212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The Shiny app is available as open-source code at https://github.com/stanstrup/QC4Metabolomics. Docker images and a docker-compose setup file are also provided for easy deployment, along with demo data.",
+      "asbval:note": "The repository URL is correct and confirmed in the paper. However, the paper does not describe the repository as a source for 'workflow definition files' or discuss validation of workflow definitions. The repository contains QC4Metabolomics source code, Docker configurations, and demo data\u2014not workflow definition schemas for validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "workflow-definition-schema-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QC4metabolomics repository at https://github.com/stanstrup/QC4Metabolomics as source of workflow definition file and release asset bundles",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:14.220212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss manual expert review of workflow definitions, metadata field verification in the context of workflow schemas, or workflow component inspection for schema compliance. The paper discusses QC monitoring of metabolomics data, not workflow definition validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "workflow-definition-schema-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "manual expert review as a tool with related skills including metadata-field-verification, qc-workflow-component-inspection, workflow-definition-schema-validation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:14.220212+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper is about QC4Metabolomics, a real-time quality control monitoring software for metabolomics data. It does not address YAML/JSON workflow definition file parsing, schema validation, or versioned workflow component auditing. The paper focuses on LC-MS data quality monitoring, not workflow definition validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "yaml-json-structural-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Parse and validate workflow definition files (YAML or JSON) against schema specifications to verify structural integrity, required metadata fields, and type consistency. This skill is essential when reconstructing or auditing versioned workflow components bundled as release asset",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:25.277605+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss YAML/JSON workflow definition file validation. The scope describes a software engineering task unrelated to metabolomics QC monitoring.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "yaml-json-structural-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Parse and validate workflow definition files (YAML or JSON) against schema specifications to verify structural integrity, required metadata fields, and type consistency.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:25.277605+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC4Metabolomics, a real-time quality control monitoring software for untargeted metabolomics data... The Shiny app is available as open-source code at https://github.com/stanstrup/QC4Metabolomics. Docker images and a docker-compose setup file are also provided for easy deployment, along with demo data.",
+      "asbval:note": "QC4Metabolomics is confirmed as an open-source project with versioned components (Docker images, code repository). However, the paper does not describe YAML/JSON workflow definition files as primary artifacts or discuss schema validation of such files. The tool is real but the claimed role (workflow definition file validation) is not supported by the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "yaml-json-structural-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QC4metabolomics as source project implementing QC systems with versioned workflow components; workflow definition file is a primary artifact",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:25.277605+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention YAML schema validators or YAML validation tools. The paper uses R packages (xcms, Shiny, ggplot2, plotly), ProteoWizard, Docker, and mariaDB, but no YAML/JSON schema validation tools.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "yaml-json-structural-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "YAML schema validator for parsing and validating YAML syntax and structural conformance",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:25.277605+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention JSON schema validators or JSON validation tools.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "yaml-json-structural-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "JSON schema validator for parsing and validating JSON syntax and structural conformance",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:25.277605+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss manual expert review in the context of workflow definition validation. The paper focuses on automated QC monitoring via software, not manual review of workflow definitions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "yaml-json-structural-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "manual expert review as a tool for workflow validation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:08:25.277605+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/artifact-checksum-verification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "artifact-checksum-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/git-repository-tag-checkout/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 3,
+      "asbval:target_artifact_id": "git-repository-tag-checkout",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/github-release-metadata-comparison/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "github-release-metadata-comparison",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metadata-field-verification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "metadata-field-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qc-workflow-component-inspection/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "qc-workflow-component-inspection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/release-artifact-generation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 3,
+      "asbval:target_artifact_id": "release-artifact-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/semantic-versioning-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 3,
+      "asbval:target_artifact_id": "semantic-versioning-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "workflow-definition-schema-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "yaml-json-structural-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "QC4metabolomics is a system for quality control in metabolomics studies.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:source_excerpt": "4metabolomics\nQC systems for metabolomics studie",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:05:51.481279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Documentation for QC4metabolomics is available at http://stanstrup.github.io/QC4Metabolomics/",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:source_excerpt": "Please refer to the documentation here: http://stanstrup.github.io/QC4Metabolomics/",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:05:51.481279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Version 1.0.4 of QC4Metabolomics was released on 2025-07-29.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:source_excerpt": "## [1.0.4](https://github.com/stanstrup/QC4Metabolomics/compare/v1.0.3...v1.0.4) (2025-07-29)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:05:51.481279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Version 1.0.4 included a bug fix for better naming.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:source_excerpt": "1.0.4) (2025-07-29)\n\n\n### Bug Fixes\n\n* better naming ([73e779f](https://github.com/stanstrup/QC4Metabolo",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:05:51.481279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Version 1.0.3 of QC4Metabolomics was released on 2025-07-29.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:source_excerpt": "## [1.0.3](https://github.com/stanstrup/QC4Metabolomics/compare/v1.0.2...v1.0.3) (2025-07-29)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:05:51.481279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Version 1.0.3 included a bug fix for updating the filename of release.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:source_excerpt": "ompare/v1.0.2...v1.0.3) (2025-07-29)\n\n\n### Bug Fixes\n\n* update filename of release ([f91398d](https://g",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_006",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:05:51.481279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Version 1.0.2 of QC4Metabolomics was released on 2025-07-29.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:source_excerpt": "## [1.0.2](https://github.com/stanstrup/QC4Metabolomics/compare/v1.0.1...v1.0.2) (2025-07-29)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_007",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:05:51.481279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Version 1.0.2 included a bug fix for LFS files in release.",
+      "asbval:note": "Source excerpt truncated; claim says 'LFS files in release' but excerpt only shows 'LFS fil' without completion",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:source_excerpt": "com/stanstrup/QC4Metabolomics/compare/v1.0.1...v1.0.2) (2025-07-29)\n\n\n### Bug Fixes\n\n* LFS fil",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_008",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:05:51.481279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Version 1.0.1 of QC4Metabolomics was released on 2025-07-29.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:source_excerpt": "## [1.0.1](https://github.com/stanstrup/QC4Metabolomics/compare/v1.0.0...v1.0.1) (2025-07-29)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_009",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:05:51.481279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Version 1.0.0 of QC4Metabolomics was released on 2025-07-29.",
+      "asbval:note": "Source excerpt does not contain version 1.0.0 release header; excerpt shows bug fixes but lacks the version header matching the claim",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:source_excerpt": "\n\n* more ignore ([bc94485](https://github.com/stanstrup/QC4",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "claim_010",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:05:51.481279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Version 1.0.0 included a feature to add release and semantic release.",
+      "asbval:note": "Excerpt shows 'trigger release' bug fix but does not clearly support claim about 'feature to add release and semantic release' \u2014 appears to conflate bug fixes with features",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c07078",
+      "asbval:source_excerpt": "1.0.0...v1.0.1) (2025-07-29)\n\n\n### Bug Fixes\n\n* more ignore ([bc94485](https://github.com/stanstrup/QC4Metabolomics/commit/bc94485b53d89c2a3b02e6b8cde8042e57d3c343))\n* trigger release ([279d33e](https://gith",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_011",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:05:51.481279+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_qc4metabolomics#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "concrete",
+        "orchestration_planning": "event_driven",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_QC4Metabolomics_system",
+      "title": "QC4Metabolomics",
+      "identifier": "urn:asb:spine:QC4Metabolomics_system"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_qc_workflow_component",
+      "title": "QC Workflow",
+      "identifier": "urn:asb:spine:qc_workflow_component"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_release_automation_tool",
+      "title": "Semantic Release",
+      "identifier": "urn:asb:spine:release_automation_tool"
+    }
+  ]
+}

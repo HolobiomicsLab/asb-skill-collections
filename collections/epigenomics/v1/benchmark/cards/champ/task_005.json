@@ -1,0 +1,418 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/CNAimage.jpg",
+      "role": "figure",
+      "sha256": "6cf4632093a908a29288ff30dbc65c5e685f66a2df2d80dcaa17c9e86530f987"
+    },
+    {
+      "indexable": false,
+      "path": "figures/CNAtext.jpg",
+      "role": "figure",
+      "sha256": "b8cb20f4524e95ae743c361a3bc1dcd06844d5e88dd1adc6a3e05bd4b0bbb0f0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DMR.jpg",
+      "role": "figure",
+      "sha256": "c80b1ded509647ce91a3ad6f01bdebd0c10c70003b98afbdf678a40a9aeaaeba"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DMRdistributionplot.png",
+      "role": "figure",
+      "sha256": "a6bd89a36a3cc08462d66e43e8916d30850b4ce3a2fa84aeb77abbebf738541f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DMRoutput.jpg",
+      "role": "figure",
+      "sha256": "99c04b30382f8244fe52b0f73f52b5931701c554e4e894d275d5d33c59333715"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MVP1.jpg",
+      "role": "figure",
+      "sha256": "7137a87e9e82bde62f6cf50ec4a6112aa8c2939ea24c4696bb3ba4ccebeb31d2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MVP2.jpg",
+      "role": "figure",
+      "sha256": "e4fb96c1a84b45fa98dd4e7563e55d5765ba682490394551d9c889593c13f6bc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MVP3.jpg",
+      "role": "figure",
+      "sha256": "4e6ee4e065e1a523e9c2c8729e5980b73085e8ef153ebd1ef7bd5970f47ece65"
+    },
+    {
+      "indexable": false,
+      "path": "figures/checkBMIQ.jpg",
+      "role": "figure",
+      "sha256": "fc14c89a2f8d64dade3e5e8af978f3c739797cc3066cd8d870cee1f512d976e8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/densityPlot.jpg",
+      "role": "figure",
+      "sha256": "ad7e93396f58d9236e08437ccfe0668dc696d01115110c5ef6d7dd34c6bb29ba"
+    },
+    {
+      "indexable": false,
+      "path": "figures/failedProbes.jpg",
+      "role": "figure",
+      "sha256": "b610c68fc3876eca75f8c89393c08ebe826d5d77610122f4f57ffc89457245ac"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lasso.jpg",
+      "role": "figure",
+      "sha256": "c8cc867fd32b2957712be29553bc5c1f4bcdc10c2997a81547bc4ee2a678d146"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo4.jpg",
+      "role": "figure",
+      "sha256": "a2f55c4af9e20b3ba10b238389f24f4e08a1a515db3c130873077a5ac72fd3b6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mdsPlot.jpg",
+      "role": "figure",
+      "sha256": "653bbfee3df9e66f323d30e4a514e5ac1987c5f3b5243f20794ce9e8d210264b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/probeFeatures.jpg",
+      "role": "figure",
+      "sha256": "e0f6ac01084a408baea24fd30630459364c707ef09eef4ef6f2d7573b253541b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/radius.jpg",
+      "role": "figure",
+      "sha256": "05f20f6d3ad70be963a2583ac6630e2ec807e331f3fb1999f690cc2bbc6766f6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/rawSampleCluster.jpg",
+      "role": "figure",
+      "sha256": "4483104a00bebecddafbad353866c14fab7580e60f8d16a51353677b520ba9a4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/sampleSheetexample.jpg",
+      "role": "figure",
+      "sha256": "cb1ceb83225f8d9634c2c5cf6ee2bee168a1310d1f552479f821d36ba47e4dc1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/studyInfo.jpg",
+      "role": "figure",
+      "sha256": "4011b8c232a9b2243c8b49b60088bd1838a4d52351ceb72a0b2575b691ebc5b1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/studyInfo.png",
+      "role": "figure",
+      "sha256": "50eeac18d5d55733b9e52e4d773b4a6528061a6ad2922afcf186867154030cd7"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "5424f3a6c0d2dfbdaf6d97c74c67c1b5880938175e22c4723f43dc143d428db7"
+    }
+  ],
+  "created_at": "2026-06-15T19:16:49.189128+00:00",
+  "crossref_doi": null,
+  "data_accessions": [
+    {
+      "accession": "GSE40279",
+      "evidence_span": "lot looks not complicated. Below we used another plot from [GSE40279](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE4027",
+      "kind": "geo_series",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE40279"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_002.expected_outputs[0]: Filtered methylation matrix with low-quality probes removed",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Normalized beta matrix from HumanMethylation450 test dataset or GSE40279",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SVD analysis report with latent component count capped at 20",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Random Matrix Theory is used to infer the number of true latent components in methylation data; ChAMP caps the reported components at 20 as a practical limit regardless of RMT signal.",
+    "SVD on beta matrices reveals hidden batch effects and technical confounders across methylation samples by decomposing variance into principal components.",
+    "The beta matrix must be normalized (e.g., via BMIQ, SWAN, or Functional Normalization) before SVD analysis to remove technical variation and improve component interpretation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: ChAMP package repository at github:YuanTian1991__ChAMP contains champ.SVD() function definition",
+      "script_runs: load HumanMethylation450 test dataset (8 samples) from ChAMPdata package and execute champ.SVD() on normalized beta matrix without errors",
+      "script_runs: execute champ.SVD() on GSE40279 beta matrix (if publicly accessible via GEO) without errors",
+      "output_matches_reference: when champ.SVD() is run on a normalized beta matrix where Random Matrix Theory detects >20 latent components, verify returned component count is capped at exactly 20 (robust to different input datasets, parameter-sensitive to RMT detection threshold)"
+    ],
+    "expert_review": [
+      "verify that the capping behavior at 20 components is correctly implemented in champ.SVD() source code and matches the stated methods description",
+      "confirm that Random Matrix Theory detection is functioning as intended prior to the cap being applied"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Does champ.SVD() correctly limit the number of reported principal components to a maximum of 20 when Random Matrix Theory detects more than 20 latent components in the data?: 'In champ.SVD() we used Random Matrix Theory from isva package to detect numbers of latent variables. If our method detected more than 20 components, we would select only top 20.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] champ.SVD() implements a component capping mechanism that selects only the top 20 components when Random Matrix Theory detects more than 20 latent variables in the methylation dataset.: 'If our method detected more than 20 components, we would select only top 20.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Normalized beta matrix from HumanMethylation450 test dataset or GSE40279: 'The 450k lung tumor data set contains only 8 samples, 4 lung tumor samples (T) and 4 control samples (C)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SVD analysis report with latent component count capped at 20: 'The singular value decomposition (SVD) method allows an in-depth look at batch effects'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ChAMP: 'ChAMP package is designed for conduct DNA methylation array analysis, providing service from data loading, to final gene set enrichment analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] No methods section content describing champ.SVD() implementation, Random Matrix Theory detection parameters, or component-capping logic is provided in the document.: 'Document contains only title metadata and introduction; no methods section present'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version-specific documentation found that would indicate when the 20-component cap was introduced or modified.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(ChAMP); beta_matrix <- readRDS('{inputs.beta_matrix}'); svd_result <- champ.SVD(beta_matrix); cat('SVD Analysis Report\\n'); cat('Detected Components:', svd_result$ncomp, '\\n'); cat('Components Capped at 20:', svd_result$ncomp <= 20, '\\n'); saveRDS(svd_result, 'svd_analysis_report.rds')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "svd_report.txt",
+  "expected_outputs": [
+    "SVD analysis report with latent component count capped at 20"
+  ],
+  "finding": "champ.SVD() implements a component capping mechanism that selects only the top 20 components when Random Matrix Theory detects more than 20 latent variables in the methylation dataset.",
+  "github_name": "YuanTian1991/ChAMP",
+  "input_from": "task_002",
+  "inputs": [
+    "task_002.expected_outputs[0]: Filtered methylation matrix with low-quality probes removed",
+    "Normalized beta matrix from HumanMethylation450 test dataset or GSE40279"
+  ],
+  "keywords": [
+    "dna methylation",
+    "illumina beadarray",
+    "450k array",
+    "epic array",
+    "differentially methylated positions",
+    "differentially methylated regions",
+    "type-ii probe normalization",
+    "batch effect correction",
+    "gene set enrichment analysis",
+    "quality control",
+    "normalization methods",
+    "idat files",
+    "beta values"
+  ],
+  "landmark_outputs": [],
+  "linked_result_ids": [
+    "result_006",
+    "result_036",
+    "result_037"
+  ],
+  "methodology_summary": [
+    "Load normalized beta matrix (n \u00d7 m: samples \u00d7 probes) into R environment.",
+    "Execute champ.SVD() function on the beta matrix to compute singular value decomposition and detect latent batch components using Random Matrix Theory.",
+    "Retrieve the number of latent components detected; verify that output is capped at maximum 20 components even if RMT identifies more.",
+    "Validation: Confirm that champ.SVD() component count \u2264 20 in all cases where Random Matrix Theory signals detection of components.",
+    "References: GSE40279 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE40279)"
+  ],
+  "missing_information": [
+    "No methods section content describing champ.SVD() implementation, Random Matrix Theory detection parameters, or component-capping logic is provided in the document.",
+    "No changelog or version-specific documentation found that would indicate when the 20-component cap was introduced or modified."
+  ],
+  "parameters": [],
+  "primary_domain": "genomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does champ.SVD() correctly limit the number of reported principal components to a maximum of 20 when Random Matrix Theory detects more than 20 latent components in the data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "methylation-batch-effect-detection",
+    "singular-value-decomposition-interpretation",
+    "random-matrix-theory-application"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_champ/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "champ_system",
+    "arch_champ_pipeline",
+    "comp_champ_load",
+    "comp_champ_import",
+    "comp_champ_filter",
+    "comp_champ_qc",
+    "comp_champ_norm",
+    "comp_champ_svd",
+    "comp_champ_combat",
+    "comp_champ_dmp",
+    "comp_champ_dmr",
+    "comp_champ_block",
+    "comp_champ_gsea",
+    "comp_champ_cna",
+    "comp_champ_refbase",
+    "comp_champ_impute",
+    "comp_champ_process",
+    "dataset_450k_test",
+    "dataset_gse40279",
+    "result_svd_max_components"
+  ],
+  "subdomains": [
+    "gene-regulation",
+    "biomarker-discovery"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:YuanTian1991__ChAMP",
+  "task_description": "Execute champ.SVD() on a normalized beta matrix and verify that the function caps reported latent components at 20 when Random Matrix Theory detects more than 20 components.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Normalized beta matrix",
+      "port_id": "beta_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute champ.SVD() on a normalized methylation dataset and verify that component selection is capped at 20 when RMT detects >20 latent components.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SVD latent component report (capped at 20)",
+      "port_id": "svd_components",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "batch-correction",
+    "differential-abundance-analysis",
+    "normalization",
+    "quality-control",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce the SVD maximum components cap of 20 reported by champ.SVD()",
+  "tools": [
+    "ChAMP"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load a normalized beta matrix (e.g., HumanMethylation450 test dataset or GSE40279) into R. 2. Call champ.SVD() on the beta matrix to perform singular value decomposition analysis for batch effect detection. 3. Inspect the returned component count; verify that when Random Matrix Theory identifies >20 latent components, the function output reports exactly 20 components as the maximum."
+}

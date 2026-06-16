@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the implementation accepts a structured feature list (e.g., CSV or JSON with m/z, retention time, and elemental composition fields) as input"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the implementation computes mass defect per carbon (MD/C) for each feature according to the formula: MD/C = (exact mass \u2212 nominal mass) / carbon count"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the implementation returns a filtered feature list (same format as input) containing only features where MD/C and m/C criteria match thresholds described in the source article"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the output file exists and is readable in the declared format (e.g., CSV, TSV, or JSON)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that row_count_equals: output feature count is less than or equal to input feature count (filtering reduces or preserves set size)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the implementation accepts a structured feature list (e.g., CSV or JSON with m/z, retention time, and elemental composition fields) as input",
+      "verify that the implementation computes mass defect per carbon (MD/C) for each feature according to the formula: MD/C = (exact mass \u2212 nominal mass) / carbon count",
+      "verify that the implementation returns a filtered feature list (same format as input) containing only features where MD/C and m/C criteria match thresholds described in the source article",
+      "verify that the output file exists and is readable in the declared format (e.g., CSV, TSV, or JSON)",
+      "verify that row_count_equals: output feature count is less than or equal to input feature count (filtering reduces or preserves set size)",
+      "script_runs: the standalone filter executes without unhandled exceptions when provided valid inputs and valid parameter values"
+    ],
+    "expert_review": [
+      "confirm that MD/C thresholds and m/C criteria applied match the peer-reviewed definitions and cutoff values documented in the original PF\u0394Screen publication (section=intro); chemical correctness of mass defect interpretation for PFAS enrichment",
+      "assess whether the filtered subset exhibits enrichment for known PFAS structural motifs (e.g., CF\u2082, CF\u2083 groups) compared to the input set, if reference PFAS standards or literature examples are available for validation",
+      "review the numerical precision and rounding behavior of mass defect calculations to ensure they do not introduce spurious inclusions or exclusions at boundary conditions"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

@@ -1,0 +1,360 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/CompMetabolomics_logo.jpg",
+      "role": "figure",
+      "sha256": "f8957fd9b57a80dd3cf4adb35dc6f69768ae8cb52d1685113a7dd48e0244d3b4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_LOGO_black.jpg",
+      "role": "figure",
+      "sha256": "638333f028ef0320582849d948a9d4cb346bbcf7556f0281a833c363a284e1a8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_LOGO_white.jpg",
+      "role": "figure",
+      "sha256": "3d41cf59a641ab5aa51498ec33ef00e7e3c172089d241d7e00accdc4b0308035"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MS2LDA_Workflow.jpg",
+      "role": "figure",
+      "sha256": "1e3133105398930f4ee8670c1cc71d706596e0a8e22b0d8c2a53228be35238ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/WUR_RGB_standard_2021.png",
+      "role": "figure",
+      "sha256": "7779dfcd978f747157e0b0efdeebdfc22a4fa04b73f5255d72e11c659e1db5dd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/WUR_logo.jpg",
+      "role": "figure",
+      "sha256": "8b323663b087d687a8ee0280d7b5938d357bfd3835a7b0ee54447a5188d53939"
+    },
+    {
+      "indexable": false,
+      "path": "figures/pnas.jpg",
+      "role": "figure",
+      "sha256": "5c33b1f48d700c729500ba3e037a48af48799939263339ee9dce43fe81bdf649"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3e5d9784f09bc9c1236c177bd1cf1a004e1f9f304c789693f9e43491bd40fb3f"
+    }
+  ],
+  "created_at": "2026-06-15T21:44:19.295434+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Inferred motifset in JSON format (motifset.json or motifset_optimized.json) from MS2LDA modeling step, containing Mass2Motif definitions with fragment and neutral-loss compositions",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MotifDB reference database library (downloaded from Zenodo, required for MassQL-based lookups)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ranked MotifDB match records per input motif, returned as JSON with per-motif match lists including MotifDB entry ID, name, fragment composition, neutral-loss composition, and match score",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Mass2Motifs are learned fragmentation patterns (combinations of fragment ions and neutral losses) that recur across MS/MS spectra and represent conserved molecular substructures.",
+    "MotifDB is a searchable reference database of curated mass spectrometry motifs with known structural annotations that serves as a gold standard for motif validation and compound class assignment.",
+    "MassQL is a domain-specific query language for mass spectrometry that enables structured searches on fragment and neutral-loss patterns; MassQL4MotifDB integrates this language with the MotifDB reference library.",
+    "Motif-to-database matching relies on compositional similarity of fragment ion peaks and neutral losses; ranking typically reflects cosine similarity, Jaccard overlap, or probabilistic match scores."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the Changelog section text contains no substantive content beyond metadata headers and reference information",
+      "confirm file_exists: github:vdhooftcompmet__MS2LDA repository is accessible and cloneable",
+      "verify that the provided section text does NOT contain any implementation details, API specifications, input/output schemas, or MotifDB query logic that would permit a direct_check-based evaluation of the sub-task"
+    ],
+    "expert_review": [
+      "assess whether MotifDB lookup and result serialisation step is documented elsewhere in the full article (not in this Changelog excerpt) with sufficient detail to enable sub-task specification",
+      "evaluate whether the sub-task scope (MotifDB query and ranked record serialisation) is actually present and scoped in the MS2LDA codebase, methods section, or supplementary materials",
+      "determine if the postprocessing step COMP-MOTIFDB is named, documented, or implemented in the repository"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MS2LDA query a MassQL-searchable MotifDB to retrieve and rank database matches for discovered motifs?: 'Integration with MassQL-searchable MotifDB'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MS2LDA integrates with a MassQL-searchable MotifDB to enable comparison of discovered motifs against known database entries, supporting automated motif annotation and result retrieval.: 'offering users an integrated workflow with improved usability, detailed visualizations, and a searchable motif database (MotifDB)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Inferred motifset in JSON format (motifset.json or motifset_optimized.json) from MS2LDA modeling step, containing Mass2Motif definitions with fragment and neutral-loss compositions: 'motifset.json           # Discovered Mass2Motifs in JSON format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MotifDB reference database library (downloaded from Zenodo, required for MassQL-based lookups): 'download the Spec2Vec model, embeddings, and library DB (See the Zenodo repository)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Ranked MotifDB match records per input motif, returned as JSON with per-motif match lists including MotifDB entry ID, name, fragment composition, neutral-loss composition, and match score: 'Motif Search: Perform motif-motif searches against reference motifs in MotifDB. This updates the Motif annotations in previous tabs.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MassQL: 'Integration with MassQL-searchable MotifDB'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MotifDB: 'Compare motifs to known entries in MotifDB'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MS2LDA: 'MS2LDA's functionality is organized into several main components'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No implementation detail, API specification, or workflow documentation for the MotifDB lookup and result serialisation step is present in the provided Changelog section.: '# Changelog\n\nAll notable changes to this project will be documented in this file.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific input schema, expected format, and computational artifacts for ARTIFACT-MOTIFSET (motif set data structure to be queried) are not documented in this section.: '[Unreleased]\n\n### Added'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The exact query interface, parameters, and output schema for MassQL-searchable MotifDB are not described in the provided Changelog text.: 'The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No ranking algorithm, scoring function, or result serialisation format for per-motif database-match records is specified in this section.: 'This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "motifdb_matches.json",
+  "expected_outputs": [
+    "Ranked MotifDB match records per input motif, returned as JSON with per-motif match lists including MotifDB entry ID, name, fragment composition, neutral-loss composition, and match score"
+  ],
+  "finding": "MS2LDA integrates with a MassQL-searchable MotifDB to enable comparison of discovered motifs against known database entries, supporting automated motif annotation and result retrieval.",
+  "github_name": "vdhooftcompmet/MS2LDA",
+  "input_from": "task_002",
+  "inputs": [
+    "Inferred motifset in JSON format (motifset.json or motifset_optimized.json) from MS2LDA modeling step, containing Mass2Motif definitions with fragment and neutral-loss compositions",
+    "MotifDB reference database library (downloaded from Zenodo, required for MassQL-based lookups)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "motifset_loaded.json",
+    "massql_queries.json",
+    "motifdb_matches.json"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_007",
+    "result_016",
+    "result_027"
+  ],
+  "methodology_summary": [
+    "Load the inferred motifset JSON, extracting Mass2Motif definitions (fragment and neutral-loss compositions).",
+    "For each motif, formulate a MassQL query targeting its characteristic fragment and neutral-loss pattern.",
+    "Execute the MassQL query against the MotifDB library using the MassQL4MotifDB integration layer.",
+    "Rank returned matches by similarity or match score (e.g., cosine similarity on fragment-loss overlap).",
+    "Serialize ranked results to JSON with per-motif match records (MotifDB ID, name, composition, score).",
+    "Validation: Confirm JSON output contains a ranked match list for each input motif; verify presence of MotifDB identifiers, match scores, and composition metadata for each returned entry."
+  ],
+  "missing_information": [
+    "No implementation detail, API specification, or workflow documentation for the MotifDB lookup and result serialisation step is present in the provided Changelog section.",
+    "The specific input schema, expected format, and computational artifacts for ARTIFACT-MOTIFSET (motif set data structure to be queried) are not documented in this section.",
+    "The exact query interface, parameters, and output schema for MassQL-searchable MotifDB are not described in the provided Changelog text.",
+    "No ranking algorithm, scoring function, or result serialisation format for per-motif database-match records is specified in this section."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MS2LDA query a MassQL-searchable MotifDB to retrieve and rank database matches for discovered motifs?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "motif-database-lookup-and-retrieval",
+    "mass-fragment-pattern-querying",
+    "neutral-loss-composition-matching",
+    "motif-similarity-ranking-interpretation",
+    "json-serialization-and-data-structure-design"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ms2lda/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "COMP-MOTIFDB",
+    "COMP-SPEC2VEC",
+    "COMP-MASSQL",
+    "ARTIFACT-MOTIFSET",
+    "REF-FARADAY2019"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics",
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:vdhooftcompmet__MS2LDA",
+  "task_description": "Query the MassQL-searchable MotifDB for database matches against a set of inferred Mass2Motifs and return a ranked list of matching motif records per input motif, serialized in JSON format.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Inferred motifset (JSON)",
+      "port_id": "motifset_json",
+      "resolved_via": null,
+      "source": "task_002/lda_model",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MotifDB reference database",
+      "port_id": "motifdb_library",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement MotifDB lookup and result serialisation to return ranked database-match records per motif using MassQL queries.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ranked MotifDB match records (JSON)",
+      "port_id": "motifdb_matches",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction",
+    "machine-learning",
+    "molecular-networking",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct the MotifDB motif-matching step that retrieves database hits for discovered motifs using MassQL queries",
+  "tools": [
+    "MassQL",
+    "MotifDB",
+    "MS2LDA"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: MassQL, MotifDB, Ranked MotifDB match records per input motif, returned as JSON with per-motif match lists including MotifDB entry ID, name, fragment composition, neutral-loss composition, and match score."
+  ],
+  "workflow_description": "1. Load the inferred motifset (JSON format) produced by the LDA modeling step, extracting mass composition and neutral-loss patterns for each Mass2Motif. 2. For each motif, construct a MassQL query using its fragment and neutral-loss patterns to search the MotifDB reference database. 3. Execute the MassQL search against MotifDB via the MassQL4MotifDB integration module, retrieving ranked matches sorted by similarity or match score. 4. Serialize query results and MotifDB match records (motif ID, name, composition, score) to a JSON output file preserving the per-motif ranking structure."
+}

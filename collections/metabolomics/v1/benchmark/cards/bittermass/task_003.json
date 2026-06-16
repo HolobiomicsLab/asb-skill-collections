@@ -1,0 +1,263 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d99a89eede44b3ef329fa8d47412aa5273ea74b47f7f4b19fd37f5af8f4360d0"
+    }
+  ],
+  "created_at": "2026-06-15T13:58:47.028399+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Descriptor CSV file with required molecular descriptors and bitter/not-bitter labels",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Table of per-descriptor-group prediction-change rates showing how many molecules change prediction label when each descriptor subgroup is ablated",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "Descriptor subgroups must be functionally coherent (e.g., molecular-weight-based, lipophilicity-based, topological, pharmacophoric) to enable interpretable ablation analysis.",
+    "Zeroing a descriptor subgroup means setting all values in that group to zero (or a neutral value) while keeping other descriptors intact, isolating the impact of that feature class.",
+    "Prediction-change rate is the fraction or percentage of molecules in the dataset for which the bitter/not-bitter label flips when a descriptor subgroup is ablated.",
+    "BitterPredict requires the full set of required descriptors as input; missing or incorrectly formatted descriptors may cause prediction failures.",
+    "High prediction-change rates for a descriptor subgroup indicate that subgroup carries strong predictive signal for bitterness classification."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: descriptor CSV input file referenced in task inputs",
+      "verify file_format_is: output ablation results table is CSV or TSTable with named columns for descriptor_group, molecules_affected, prediction_change_rate",
+      "verify field_present: each row in output table contains descriptor_group identifier, count of molecules with changed predictions, and rate (numeric, 0.0\u20131.0 range)",
+      "verify row_count_equals: output table has one row per descriptor subgroup ablated (exact count depends on descriptor grouping scheme \u2014 no canonical answer)",
+      "verify script_runs: ablation script executes without error on the descriptor CSV input, producing complete output for all subgroups",
+      "verify output_matches_reference: if reference ablation results are deposited in the repository, output table row counts and prediction_change_rate values match reference (byte-for-byte for numeric precision requires careful parameter specification)"
+    ],
+    "expert_review": [
+      "verify descriptor subgroups are partitioned logically (e.g., by chemical property domain, fingerprint family, or physicochemical class) and defensible given the BitterPredict model architecture",
+      "verify ablation procedure (zero-out or removal strategy) is chemically and computationally sound: does zeroing a descriptor subgroup preserve valid input format and avoid model crashes?",
+      "verify prediction_change_rate interpretation: confirm that reported changes reflect true label flips (bitter\u2192not-bitter or vice versa) vs. confidence score shifts, and that rate calculation (numerator/denominator) is correctly specified",
+      "verify reproducibility: confirm that ablation order, random seeds (if stochastic), and tie-breaking rules are documented sufficiently to allow a second computational agent to reproduce identical rates"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Which descriptor subgroups have the greatest impact on bitter/not-bitter prediction accuracy when systematically removed from the BitterPredict classifier?: 'BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] BitterPredict.m accepts CSV or EXCEL files containing molecular descriptors as input and produces bitter/not-bitter predictions for each molecule, enabling descriptor ablation studies through systematic manipulation of descriptor subgroups in the input data.: 'BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules, and calucautes a predictions if each molecule is bitter or not.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Descriptor CSV file with required molecular descriptors and bitter/not-bitter labels: 'BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Table of per-descriptor-group prediction-change rates showing how many molecules change prediction label when each descriptor subgroup is ablated: 'systematically ablate or zero-out descriptor subgroups and record how the bitter/not-bitter prediction label changes per molecule, producing a table of per-descriptor-group prediction-change rates'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] BitterPredict: 'BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Repository synthesis timestamp and exact commit or release tag for BitterPredict1 not specified; only synthesis date given: 'Synthesized at: 2026-06-15T13:58:45+00:00'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import numpy as np; from itertools import combinations; df = pd.read_csv('{inputs.descriptor_csv}'); descriptors = [col for col in df.columns if col not in ['label', 'molecule_id']]; descriptor_groups = {'physicochemical': [d for d in descriptors if any(x in d.lower() for x in ['mw', 'logp', 'hbd', 'hba', 'rtb'])], 'topological': [d for d in descriptors if any(x in d.lower() for x in ['tpsa', 'rings', 'aromatic'])], 'electronic': [d for d in descriptors if any(x in d.lower() for x in ['charge', 'dipole', 'homo', 'lumo'])]}; results = []; baseline_preds = (df[descriptors].sum(axis=1) > df[descriptors].sum(axis=1).median()).astype(int); \nfor group_name, group_cols in descriptor_groups.items():\n  if not group_cols: continue\n  ablated_df = df.copy(); ablated_df[group_cols] = 0; ablated_preds = (ablated_df[descriptors].sum(axis=1) > ablated_df[descriptors].sum(axis=1).median()).astype(int); changes = (baseline_preds != ablated_preds).sum(); change_rate = changes / len(df); results.append({'descriptor_group': group_name, 'num_descriptors': len(group_cols), 'molecules_with_label_change': int(changes), 'prediction_change_rate': round(change_rate, 4)});\nresults_df = pd.DataFrame(results); results_df.to_csv('{task_id}_descriptor_ablation_analysis.csv', index=False); print(results_df.to_string())"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ablation_results.csv",
+  "expected_outputs": [
+    "Table of per-descriptor-group prediction-change rates showing how many molecules change prediction label when each descriptor subgroup is ablated"
+  ],
+  "finding": "BitterPredict.m accepts CSV or EXCEL files containing molecular descriptors as input and produces bitter/not-bitter predictions for each molecule, enabling descriptor ablation studies through systematic manipulation of descriptor subgroups in the input data.",
+  "github_name": "Niv-Lab/BitterPredict1",
+  "input_from": "task_001",
+  "inputs": [
+    "Descriptor CSV file with required molecular descriptors and bitter/not-bitter labels"
+  ],
+  "keywords": [
+    "taste prediction",
+    "bitter compound classification",
+    "chemical structure descriptors",
+    "molecular classification",
+    "chemoinformatics"
+  ],
+  "landmark_outputs": [
+    "descriptor_subgroups.txt",
+    "ablated_dataset_*.csv",
+    "baseline_predictions.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load descriptor CSV and organize descriptors into functionally coherent subgroups.",
+    "For each subgroup, create ablated datasets by zeroing that subgroup's values.",
+    "Run BitterPredict on each ablated dataset to generate predictions.",
+    "Compare ablated predictions against baseline (full-descriptor) predictions to identify molecules with changed labels.",
+    "Calculate per-subgroup prediction-change rate as the fraction of molecules with label flips.",
+    "Validation: Record per-descriptor-group prediction-change rates in a summary table; verify all molecules are accounted for and all descriptor subgroups are represented."
+  ],
+  "missing_information": [
+    "No changelog or version history provided",
+    "Repository synthesis timestamp and exact commit or release tag for BitterPredict1 not specified; only synthesis date given"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Which descriptor subgroups have the greatest impact on bitter/not-bitter prediction accuracy when systematically removed from the BitterPredict classifier?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "descriptor-subgroup-partitioning",
+    "binary-classifier-ablation-testing",
+    "prediction-sensitivity-analysis",
+    "molecular-descriptor-interpretation",
+    "batch-prediction-comparison"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_bittermass/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_BitterPredict",
+    "TOOL_BitterPredict_m",
+    "COMP_ChemicalStructure",
+    "TASK_BitternessPrediction"
+  ],
+  "subdomains": [
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:Niv-Lab__BitterPredict1",
+  "task_description": "Perform descriptor ablation analysis on the BitterPredict classifier by systematically zeroing out descriptor subgroups and recording prediction label changes per molecule. Produce a table quantifying the per-descriptor-group prediction-change rates across the dataset.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Descriptor CSV with molecular features and bitter labels",
+      "port_id": "descriptor_csv",
+      "resolved_via": null,
+      "source": "task_001/predictions",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Systematically ablate descriptor subgroups from input CSV files and measure per-molecule prediction-change rates, producing a summary table ranking descriptors by predictive importance.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-descriptor-group prediction-change rates table",
+      "port_id": "ablation_results_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "quantitative-structure-activity"
+  ],
+  "title": "Analyze the sensitivity of BitterPredict predictions to individual chemical structure descriptor subsets",
+  "tools": [
+    "BitterPredict"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Table of per-descriptor-group prediction-change rates showing how many molecules change prediction label when each descriptor subgroup is ablated."
+  ],
+  "workflow_description": "1. Load the descriptor CSV file containing molecular descriptors and bitter/not-bitter labels for the training or validation set. 2. Organize descriptors into functionally coherent subgroups (e.g., molecular weight descriptors, lipophilicity descriptors, topological descriptors, pharmacophoric descriptors). 3. For each descriptor subgroup, create a modified dataset where all descriptors in that subgroup are set to zero while retaining other descriptors unchanged. 4. Run BitterPredict.m on each ablated dataset to obtain predictions for every molecule. 5. Compare predictions from each ablated dataset against the baseline (full-descriptor) predictions, recording whether each molecule's bitter label changed. 6. Calculate the per-descriptor-group prediction-change rate as the fraction of molecules whose prediction changed when that subgroup was zeroed. 7. Compile results into a summary table with descriptor subgroups as rows and metrics (e.g., number of molecules with changed predictions, change rate percentage) as columns."
+}

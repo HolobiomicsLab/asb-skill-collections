@@ -1,0 +1,505 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/annot_fmt.png",
+      "role": "figure",
+      "sha256": "aa131da2eb4a03f3caf34c65d28d9f2d582c6a9efa49cdf2a01207b6fab43eed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/facet.png",
+      "role": "figure",
+      "sha256": "e57e59a644daa6d219a1a655c97392d67c7c53ccefaada676834db3499f037f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ion_types.png",
+      "role": "figure",
+      "sha256": "3689e78338321ae78c8539a57d51429d8fbe5f05f749ab00f8e3ea326a1b3040"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mass_errors.png",
+      "role": "figure",
+      "sha256": "4d0b8529e04b2c5939cecdad599868d4ca9773c22322732fc85f5777067da0ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mirror.png",
+      "role": "figure",
+      "sha256": "32701dbd4d13d84c64d237aee23847c79d67c07f61da2b321dd8d377d01368e2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/neutral_losses_1.png",
+      "role": "figure",
+      "sha256": "f7b624ba1657b23cb0c63a1759a448c55ecc5f0badb718312246fe6f8319925d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/neutral_losses_2.png",
+      "role": "figure",
+      "sha256": "5617bb2da993ae878ddaf3894e11e149637f5c8ea16e64ad010b83c63e125799"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ast.png",
+      "role": "figure",
+      "sha256": "37923b9adda7fc9c3eaaa3e950cc45cc94ec0431ef868a1f4c748b977ceeaf01"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex1.png",
+      "role": "figure",
+      "sha256": "c45d39b10ee03b10a075fa8050fb66b8392d57f9219b5fe7df730b987c1bb034"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex2.png",
+      "role": "figure",
+      "sha256": "ece2c94ae2f27a0f19070045aed63ecb78b715daf321bbebb5959a99e09ebc23"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex3.png",
+      "role": "figure",
+      "sha256": "28d41a86b95b6c72243ecaa9e58ac5767f1eb1c88d808006d1ed0a65dd6a079e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/quickstart.png",
+      "role": "figure",
+      "sha256": "44490275960117903431e424672fdc3c31f5b4afa180c518c144ff18633f63fd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/runtime.png",
+      "role": "figure",
+      "sha256": "4c5df6692e74ad37aec5e8719571aa0972961c4f3032164976cbc7d81d0863ac"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectrum_utils.png",
+      "role": "figure",
+      "sha256": "73d5e118673e38e5efcf597fd07ff1ecc88427f294570dd8613c9b7f4ba675c0"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "0dc02878eada4e3ac6351523d62ecf382dc0914af1caa073734c3f8aead8fbe9"
+    }
+  ],
+  "created_at": "2026-06-16T07:16:56.758905+00:00",
+  "crossref_doi": "10.1021/acs.analchem.9b04884",
+  "data_accessions": [
+    {
+      "accession": "MSV000082283",
+      "evidence_span": "# Retrieve the spectrum by its USI.     usi = \"mzspec:MSV000082283:f07074:scan:5475\"     spectrum = sus.MsmsSpectrum.from_usi(",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000082283"
+    },
+    {
+      "accession": "MSV000079960",
+      "evidence_span": "as sus   peptide = \"DLTDYLM[Oxidation]K\" usi_top = \"mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372\" spectrum_top = sus.MsmsSpectrum.",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000079960"
+    },
+    {
+      "accession": "MSV000080679",
+      "evidence_span": "a(peptide, 0.5, \"Da\", ion_types=\"aby\") usi_bottom = \"mzspec:MSV000080679:j11962_C1orf144:scan:10671\" spectrum_bottom = sus.MsmsSpect",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080679"
+    },
+    {
+      "accession": "PXD000561",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555\" peptide =",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD000561"
+    },
+    {
+      "accession": "PXD014834",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD014834:TCGA-AA-3518-01A-11_W_VU_20120915_A0218_3F_R_FR01:scan:8370",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD014834"
+    },
+    {
+      "accession": "PXD022531",
+      "evidence_span": "as sup import spectrum_utils.spectrum as sus  usi = \"mzspec:PXD022531:j12541_C5orf38:scan:12368\" peptide = \"VAATLEILTLK/2\" spectr",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD022531"
+    },
+    {
+      "accession": "PXD004732",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840\"",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD004732"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "A ProForma 2.0 peptidoform string specifying sequence and modifications (e.g., 'DLTDYLM[Oxidation]K' or 'EM[Oxidation]EVEES[Phospho]PEK')",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "A tandem mass spectrum as a public USI accession or mzspec resource (e.g., mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Fragment ion mass tolerance and tolerance mode (e.g., 10 ppm or 0.5 Da)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "A structured annotation report listing all matched b and y ion peaks with their assigned ion type, charge state, theoretical m/z, observed m/z, and mass error",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "A validation table or JSON structure confirming that each annotated peak's m/z and ion type match expected values within the tolerance window",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "ProForma 2.0 is a standardized notation for representing peptide sequences and modifications using controlled vocabularies (Unimod, PSI-MOD) and allows modifications to be specified by name, CV accession, or delta mass.",
+    "b and y ions are the primary peptide fragments routinely observed in tandem mass spectra; b ions contain the N-terminus while y ions contain the C-terminus.",
+    "Fragment ion mass tolerance (typically 5\u201320 ppm for high-resolution or 0.02\u20130.1 Da for low-resolution instruments) determines the matching window within which an observed peak is considered evidence for a theoretical fragment.",
+    "The Universal Spectrum Identifier (USI) mechanism allows computational retrieval of public spectra from distributed proteomics repositories without manual download.",
+    "Internal spectrum_utils representation uses an abstract syntax tree derived from a formal grammar to robustly parse ProForma strings and handle all optional extensions including cross-linking, glycans, and chemical formulas."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at public accession mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372",
+      "script_runs: Python script that imports spectrum_utils.fragment_annotation, loads the spectrum via USI, calls annotate_proforma() with a valid ProForma 2.0 peptidoform string (default ion_types='by'), and returns annotated peaks",
+      "output_matches_reference: annotated peak m/z values and ion type assignments (b or y) are consistent with theoretical fragment masses calculated from the ProForma peptidoform string, within specified fragment tolerance (no canonical answer \u2014 tolerance depends on instrument calibration and user specification)",
+      "field_present: each annotated peak record contains at least 'mz', 'intensity', and 'ion_type' fields",
+      "value_in_range: all annotated peak m/z values fall within the valid mass range for the given precursor and peptide sequence"
+    ],
+    "expert_review": [
+      "verify that ProForma 2.0 specification parsing correctly handles any post-translational modifications (PTMs) present in the input peptidoform string, including Unimod references",
+      "verify that b and y ion peak assignments are chemically plausible given the peptide sequence and spectrum properties (e.g., no spurious assignments at impossible neutral losses)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does spectrum_utils.fragment_annotation correctly annotate b and y ions for a given ProForma 2.0 peptidoform string when applied to a publicly deposited spectrum?: 'Annotating observed spectrum fragments using the ProForma 2.0 specification for (modified) peptidoforms.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] spectrum_utils provides functionality to annotate observed spectrum fragments using the ProForma 2.0 specification for modified peptidoforms, enabling ion type annotation.: 'Annotating observed spectrum fragments using the ProForma 2.0 specification for (modified) peptidoforms.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] A ProForma 2.0 peptidoform string specifying sequence and modifications (e.g., 'DLTDYLM[Oxidation]K' or 'EM[Oxidation]EVEES[Phospho]PEK'): 'fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] A tandem mass spectrum as a public USI accession or mzspec resource (e.g., mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372): 'usi = \"mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Fragment ion mass tolerance and tolerance mode (e.g., 10 ppm or 0.5 Da): 'fragment_tol_mass, fragment_tol_mode = 10, \"ppm\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] A structured annotation report listing all matched b and y ion peaks with their assigned ion type, charge state, theoretical m/z, observed m/z, and mass error: 'Fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] A validation table or JSON structure confirming that each annotated peak's m/z and ion type match expected values within the tolerance window: 'spectrum_utils uniquely supports the _full_ ProForma 2.0 specification'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] spectrum_utils: 'fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'spectrum = sus.MsmsSpectrum.from_usi(usi)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] ProForma 2.0: 'Modifications are defined by controlled vocabularies (CVs), including [Unimod](https://www.unimod.org/)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Unimod: 'Specify modifications by their name: `EM[Oxidation]EVEES[Phospho]PEK`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import spectrum_utils.spectrum as sus; from pyteomics import proforma; import json; spectrum = sus.MsmsSpectrum.from_usi('{inputs.spectrum_usi}'); peptidoform = proforma.parse('{inputs.proforma_string}'); theoretical_fragments = spectrum_utils.spectrum.fragment(peptidoform.sequence, ion_types=['b', 'y']); tolerance_str = '{inputs.fragment_tolerance}'; is_ppm = 'ppm' in tolerance_str.lower(); tolerance_value = float(tolerance_str.replace('ppm', '').replace('da', '').strip()); annotated_peaks = []; [annotated_peaks.append({'observed_mz': peak[0], 'ion_type': ion_type, 'charge': z, 'theoretical_mz': theo_mz, 'mass_error_ppm' if is_ppm else 'mass_error_da': (peak[0] - theo_mz) / theo_mz * 1e6 if is_ppm else peak[0] - theo_mz}) for peak in spectrum.peaks for ion_type, z, theo_mz in [(ion[0], ion[1], ion[2]) for ion in theoretical_fragments if abs((peak[0] - ion[2]) / ion[2] * 1e6 if is_ppm else peak[0] - ion[2]) <= tolerance_value]]; print(json.dumps({'annotated_peaks': annotated_peaks, 'validation': 'all_peaks_within_tolerance' if all(abs((p[(\"mass_error_ppm\" if is_ppm else \"mass_error_da\")]) <= tolerance_value for p in annotated_peaks) else 'validation_failed'}, indent=2))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "fragment_annotation_report.json",
+  "expected_outputs": [
+    "A structured annotation report listing all matched b and y ion peaks with their assigned ion type, charge state, theoretical m/z, observed m/z, and mass error",
+    "A validation table or JSON structure confirming that each annotated peak's m/z and ion type match expected values within the tolerance window"
+  ],
+  "finding": "spectrum_utils provides functionality to annotate observed spectrum fragments using the ProForma 2.0 specification for modified peptidoforms, enabling ion type annotation.",
+  "github_name": "bittremieuxlab/spectrum_utils",
+  "input_from": "task_001",
+  "inputs": [
+    "A ProForma 2.0 peptidoform string specifying sequence and modifications (e.g., 'DLTDYLM[Oxidation]K' or 'EM[Oxidation]EVEES[Phospho]PEK')",
+    "A tandem mass spectrum as a public USI accession or mzspec resource (e.g., mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372)",
+    "Fragment ion mass tolerance and tolerance mode (e.g., 10 ppm or 0.5 Da)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectrum_metadata.json",
+    "theoretical_fragments.csv",
+    "annotated_peaks.json"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_027",
+    "result_028"
+  ],
+  "methodology_summary": [
+    "Load the target spectrum from a public USI-indexed repository using MsmsSpectrum.from_usi().",
+    "Parse the ProForma 2.0 string to extract sequence, modification sites, and modification types using the internal formal grammar and abstract syntax tree.",
+    "Compute theoretical m/z values for all b and y ions from the annotated peptide.",
+    "Match observed spectrum peaks to theoretical fragments within the specified mass tolerance (default: 10 ppm or 0.5 Da).",
+    "Assign ion type ('b' or 'y'), charge state, and mass error to each matched peak.",
+    "Validation: confirm that all returned annotations have m/z values within the input tolerance and ion types are correctly labeled as 'b' or 'y'.",
+    "References: source article (DOI: 10.1021/acs.analchem.9b04884); MSV000082283 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000082283); MSV000079960 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000079960); MSV000080679 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080679); PXD000561 (https://www.ebi.ac.uk/pride/archive/projects/PXD000561); PXD014834 (https://www.ebi.ac.uk/pride/archive/projects/PXD014834); PXD022531 (https://www.ebi.ac.uk/pride/archive/projects/PXD022531); PXD004732 (https://www.ebi.ac.uk/pride/archive/projects/PXD004732)"
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/filtered_spectrum"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does spectrum_utils.fragment_annotation correctly annotate b and y ions for a given ProForma 2.0 peptidoform string when applied to a publicly deposited spectrum?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "proforma-2-0-peptidoform-parsing",
+    "fragment-ion-annotation-matching",
+    "mass-error-calculation-and-validation",
+    "ion-type-assignment-verification",
+    "spectrum-peak-to-fragment-mapping",
+    "modification-notation-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_spectrumutils/synthesized_package",
+  "spine_condition_ids": [
+    "cond_spectrum_utils_040"
+  ],
+  "spine_entity_ids": [
+    "system_spectrum_utils",
+    "comp_proforma_module",
+    "comp_fragment_annotation",
+    "comp_plot",
+    "comp_iplot",
+    "comp_utils_module",
+    "tool_usi",
+    "tool_proforma",
+    "arch_processing_pipeline",
+    "cond_spectrum_utils_040",
+    "result_speed_comparison",
+    "result_proforma_full_compliance",
+    "dataset_msv000079960"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:bittremieux-lab__spectrum_utils",
+  "task_description": "Annotate b and y fragment ions in a publicly deposited tandem mass spectrum using spectrum_utils' ProForma 2.0 parser, then verify that annotated peak m/z values and ion types match expected fragment assignments.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ProForma 2.0 peptidoform string",
+      "port_id": "proforma_string",
+      "resolved_via": null,
+      "source": "task_001/filtered_spectrum",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mass spectrum USI accession",
+      "port_id": "spectrum_usi",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Fragment ion mass tolerance (mass + mode)",
+      "port_id": "fragment_tolerance",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Annotate b and y ions for a ProForma 2.0 peptidoform using spectrum_utils and verify annotated peak m/z values and ion types match expected results.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structured fragment ion annotation report with ion types and mass errors",
+      "port_id": "annotation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Validation table confirming peak m/z and ion type correctness",
+      "port_id": "validation_result",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "spectral-library-matching",
+    "quality-control",
+    "tandem-ms"
+  ],
+  "title": "Reproduce fragment annotation of a spectrum using ProForma 2.0 peptidoform notation",
+  "tools": [
+    "spectrum_utils",
+    "Python",
+    "ProForma 2.0",
+    "Unimod"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Retrieve the mass spectrum from a public proteomics data repository using its Universal Spectrum Identifier (USI), e.g. mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372. 2. Parse the ProForma 2.0 peptidoform string (e.g. DLTDYLM[Oxidation]K) using spectrum_utils.proforma to extract the peptide sequence and modification positions. 3. Call MsmsSpectrum.annotate_proforma(peptide, fragment_tol_mass, fragment_tol_mode, ion_types='by') to compute theoretical b and y ion m/z values and match them to observed spectrum peaks within the specified tolerance. 4. Iterate through annotated peaks and validate that each peak's assigned ion_type ('b' or 'y'), charge state, and m/z deviation from theoretical mass are correct and consistent with the input parameters."
+}

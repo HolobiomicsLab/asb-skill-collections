@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file exists: constantino-garcia/cmmrt repository is accessible and contains model training code or results"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file_exists: SMRT dataset (80,038 experimental retention times from METLIN) is loaded or referenced in inputs"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file_format_is: alvaDesc-generated feature matrices (5,666 descriptors and 2,214 fingerprints) are present in repository or deposited artifact in standard tabular format (CSV/HDF5/NPZ)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify output_matches_reference: model performance metrics (MAE, RMSE, or correlation) for three feature conditions (descriptors only, fingerprints only, combined) are reported numerically and match deposited results or supplementary tables"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify value_in_range: fingerprints-only model achieves lower mean absolute error than descriptors-only model (robust to exact metric choice, but requires consistent baseline)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify contains_substring: repository documentation or paper supplementary materials explicitly report performance comparison across all three feature conditions with numerical values"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file exists: constantino-garcia/cmmrt repository is accessible and contains model training code or results",
+      "Verify file_exists: SMRT dataset (80,038 experimental retention times from METLIN) is loaded or referenced in inputs",
+      "Verify file_format_is: alvaDesc-generated feature matrices (5,666 descriptors and 2,214 fingerprints) are present in repository or deposited artifact in standard tabular format (CSV/HDF5/NPZ)",
+      "Verify output_matches_reference: model performance metrics (MAE, RMSE, or correlation) for three feature conditions (descriptors only, fingerprints only, combined) are reported numerically and match deposited results or supplementary tables",
+      "Verify value_in_range: fingerprints-only model achieves lower mean absolute error than descriptors-only model (robust to exact metric choice, but requires consistent baseline)",
+      "Verify contains_substring: repository documentation or paper supplementary materials explicitly report performance comparison across all three feature conditions with numerical values"
+    ],
+    "expert_review": [
+      "Assess whether reported performance differences between fingerprints and descriptors are statistically significant given the reported error bars or confidence intervals",
+      "Evaluate whether the choice of DNN architecture and regularization hyperparameters (cosine annealing, stochastic weight averaging) was applied consistently across all three feature conditions or if architectural differences confound the feature comparison",
+      "Judge whether the experimental design (train/validation/test split, cross-validation strategy, random seed handling) ensures fair comparison across feature types"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

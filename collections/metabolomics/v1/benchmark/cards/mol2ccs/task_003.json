@@ -1,0 +1,271 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/enveda/ccs-prediction",
+      "locator_id": "gh_enveda_ccs-prediction",
+      "locator_kind": "github",
+      "name": "enveda/ccs-prediction",
+      "prose": "Raw SMILES strings from CCS dataset (enveda/ccs-prediction repository)",
+      "score": 0.375,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/figure_1.png",
+      "role": "figure",
+      "sha256": "ec9593d5e2bd5f2c3659ac41d3973e4232f7f5f9c61aee36d336fd47d8ed8770"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure_4.png",
+      "role": "figure",
+      "sha256": "0bdedc2eddb80ddc03a823d6ed26539c6cb823d42b9526aa803f75d6c1527431"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure_5.png",
+      "role": "figure",
+      "sha256": "3b6eba801b40e6c642c9a7ba1e99d8f92611bab5f42bf232efc6c3ca12864f44"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "680aeb5b9e2ae88e460cc5e55c212705038edd718d0684f98df1bce42038b685"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:43.788519+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw SMILES strings from CCS dataset (enveda/ccs-prediction repository)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Serialized graph dataset file containing atom/bond feature tensors and molecular graphs in PyTorch or pickle format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "SMILES strings represent molecular structures as linear notation; canonicalization ensures consistent representation of the same molecule across multiple input formats.",
+    "Atom features typically include atomic number, formal charge, hybridization state, and aromaticity; bond features include bond type (single/double/triple/aromatic), stereochemistry, and conjugation status.",
+    "RDKit is the standard open-source library for SMILES parsing, molecular graph construction, and feature extraction in cheminformatics.",
+    "Graph neural networks for molecular property prediction consume node feature matrices (atoms) and edge feature matrices (bonds) as input, requiring proper tensor serialization.",
+    "Feature tensor formats must match the downstream GNN architecture's expected input shape and normalization conventions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the repository github:enveda/ccs-prediction contains a preprocessing script or module that accepts SMILES strings as input",
+      "verify that the preprocessing pipeline produces a serialized graph dataset file in a standard format (.pt, .pkl, or equivalent)",
+      "verify that the output graph objects contain node features (atom features) and edge features (bond features) as tensors or array-like structures",
+      "script_runs: execute the preprocessing pipeline on a subset of the CCS dataset and confirm it completes without errors",
+      "verify that the generated graph dataset file is not empty and contains at least one graph object",
+      "verify that graph objects are compatible with a standard GNN framework (PyTorch Geometric, DGL, or equivalent) by attempting to load and inspect one example graph"
+    ],
+    "expert_review": [
+      "assess whether the atom/bond feature engineering choices (feature dimensionality, encoding scheme, normalization) are appropriate for collision cross section prediction",
+      "evaluate whether the graph construction methodology (bond connectivity rules, handling of implicit hydrogens, stereochemistry encoding) correctly represents the molecular structure",
+      "review whether the dataset preprocessing preserves the chemical validity and integrity of the original SMILES representations"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How are SMILES strings from the CCS dataset preprocessed and converted into graph tensor representations suitable for GNN input?: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The repository contains code for preprocessing raw SMILES strings from the CCS dataset into atom and bond feature tensors (graph objects) that serve as input to the graph neural network.: 'This repository contains code and data described in detail in our paper'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Raw SMILES strings from CCS dataset (enveda/ccs-prediction repository): 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Serialized graph dataset file containing atom/bond feature tensors and molecular graphs in PyTorch or pickle format: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog provided documenting modifications or versions of the preprocessing code: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; from rdkit import Chem; import torch; import pickle; smiles_data = open('{inputs.raw_smiles}').read().strip().split('\\n'); graphs = []; [graphs.append({'smiles': smi, 'mol': Chem.MolFromSmiles(smi), 'atoms': [atom.GetAtomicNum() for atom in Chem.MolFromSmiles(smi).GetAtoms()] if Chem.MolFromSmiles(smi) else []}) for smi in smiles_data if smi]; torch.save({'graphs': graphs, 'metadata': {'count': len(graphs), 'source': 'ccs_dataset'}}, 'molecular_graphs_{task_id}.pt'); print(f'Serialized {len(graphs)} molecular graphs to molecular_graphs_{task_id}.pt')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "graph_dataset.pt",
+  "expected_outputs": [
+    "Serialized graph dataset file containing atom/bond feature tensors and molecular graphs in PyTorch or pickle format"
+  ],
+  "finding": "The repository contains code for preprocessing raw SMILES strings from the CCS dataset into atom and bond feature tensors (graph objects) that serve as input to the graph neural network.",
+  "github_name": "enveda/ccs-prediction",
+  "input_from": "task_001",
+  "inputs": [
+    "Raw SMILES strings from CCS dataset (enveda/ccs-prediction repository)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "canonical_smiles.csv",
+    "molecular_graphs.pkl",
+    "atom_features.npy",
+    "bond_features.npy"
+  ],
+  "linked_result_ids": [
+    "result_001"
+  ],
+  "methodology_summary": [
+    "Load raw SMILES strings from the CCS dataset repository.",
+    "Canonicalize each SMILES string using RDKit to ensure structural uniqueness.",
+    "Convert each canonical SMILES to a molecular graph representation.",
+    "Extract atom-level features (atomic number, charge, hybridization, aromaticity) and bond-level features (type, aromaticity, stereochemistry).",
+    "Construct node and edge feature tensors encoding molecular structure.",
+    "Serialize all graph objects and associated metadata to a standard PyTorch or pickle format.",
+    "Validation: confirm output file exists and contains graph tensors with shapes consistent with expected atom/bond dimensions."
+  ],
+  "missing_information": [
+    "No changelog provided documenting modifications or versions of the preprocessing code"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How are SMILES strings from the CCS dataset preprocessed and converted into graph tensor representations suitable for GNN input?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "smiles-canonicalization-rdkit",
+    "molecular-graph-construction-from-smiles",
+    "atom-feature-extraction-chemistry",
+    "bond-feature-extraction-chemistry",
+    "graph-tensor-serialization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mol2ccs/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "tool_gnn",
+    "dataset_ccs"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:enveda__ccs-prediction",
+  "task_description": "Reconstruct the data-preprocessing pipeline that converts raw SMILES strings from the CCS dataset into atom/bond feature tensors (graph objects) suitable for GNN consumption. Output a serialized graph dataset file in standard format (.pt or .pkl).",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw SMILES strings from CCS dataset",
+      "port_id": "raw_smiles",
+      "resolved_via": null,
+      "source": "task_001/metrics_table",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the data-preprocessing pipeline that converts raw SMILES strings into serialized graph tensor objects (.pt or .pkl format) for GNN consumption.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Serialized graph dataset with atom/bond feature tensors",
+      "port_id": "graph_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "graph-neural-network",
+    "machine-learning",
+    "deep-learning",
+    "transfer-learning"
+  ],
+  "title": "Reconstruct the molecular graph construction step that converts SMILES to GNN input tensors",
+  "tools": [
+    "manual expert review"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Serialized graph dataset file containing atom/bond feature tensors and molecular graphs in PyTorch or pickle format."
+  ],
+  "workflow_description": "1. Load raw SMILES strings from the CCS dataset repository (enveda/ccs-prediction). 2. Canonicalize SMILES using RDKit to ensure structural consistency. 3. Convert each canonical SMILES to a molecular graph representation with atom and bond features. 4. Extract atom-level features (atomic number, formal charge, hybridization, aromaticity) and bond-level features (bond type, aromaticity, stereochemistry). 5. Construct feature tensors encoding atom and bond adjacency matrices. 6. Serialize all graph objects and metadata to a standard PyTorch (.pt) or pickle (.pkl) format."
+}

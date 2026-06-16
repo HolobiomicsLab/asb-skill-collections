@@ -1,0 +1,212 @@
+schema_version: 0.1.0
+workflow_id: coll_lotus_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: "LOTUS is a comprehensive collection of 484,174 (2D) and 588,694 (3D) unique\
+    \ referenced structure\u2013organism pairs curated from 31 open databases, designed\
+    \ to enable computational understanding of organisms and their chemistry."
+  pseudo_abstract: "LOTUS integrates structure\u2013organism pairs from 31 initial\
+    \ open databases through a multi-stage curation pipeline. The dataset comprises\
+    \ 153,956 (2D) and 231,330 (3D) unique curated structures linked to 42,166 unique\
+    \ organisms. The curation workflow standardizes chemical structures through successive\
+    \ transformations including SMILES normalization and sanitization, translates\
+    \ and validates organism names across multiple taxonomic systems, and integrates\
+    \ reference metadata from multiple literature sources. The final curated dataset\
+    \ contains 484,174 (2D) and 588,694 (3D) unique referenced structure\u2013organism\
+    \ pairs, with documented distributions showing that 89,903 2D structures are present\
+    \ in only one organism, 45,640 appear in between 1\u201310 organisms, 3,990 in\
+    \ 10\u2013100 organisms, and 403 in more than 100 organisms."
+  research_questions:
+  - What are the documented headline counts of unique structure-organism pairs, curated
+    structures, organisms, and source databases in the LOTUS dataset?
+  - "What are the distribution counts of unique 2D structures in LOTUS when binned\
+    \ by organism prevalence (appearing in 1, 1\u201310, 10\u2013100, or >100 distinct\
+    \ organisms)?"
+  - "What are the counts of unique organisms binned by the number of distinct 2D structures\
+    \ they contain in the categories: 1 structure, 1\u201310 structures, 10\u2013\
+    100 structures, and >100 structures?"
+  - How do the smiles.py and sanitizing.py scripts transform raw SMILES strings from
+    the gathering layer into standardized, deduplicated structural identifiers?
+  - How does the 5_addingOTL.R script enrich cleaned organism names with Open Tree
+    of Life identifiers?
+  methods_summary: "Download and extract LOTUS dataset deposit from Zenodo record\
+    \ 3778405. Load 3D and 2D structure-organism pair tables into memory. Deduplicate\
+    \ and count unique referenced structure-organism pairs per dimension. Count unique\
+    \ curated structure identifiers and unique organism identifiers across all records.\
+    \ Enumerate source database origins from metadata and verify count against 31\
+    \ reported databases. Validation: All reported counts (588,694 3D pairs, 484,174\
+    \ 2D pairs, 231,330 3D structures, 153,956 2D structures, 42,166 organisms, 31\
+    \ databases) must match actual file-derived counts with zero absolute difference.\
+    \ References: source article (DOI: 10.1007/s00044-016-1764-y) Load LOTUS flat\
+    \ file containing all unique 2D structure-organism associations. For each unique\
+    \ 2D structure, count the number of distinct organisms in which it appears. Assign\
+    \ each structure to one of four bins based on organism-occurrence count: 1 (singleton),\
+    \ 2\u201310 (low), 11\u2013100 (medium), >100 (high). Tabulate the number of structures\
+    \ in each bin. Validation: Verify that bin counts match the reported gold standard\
+    \ (89,903 / 45,640 / 3,990 / 403) and that the four bin totals sum to 153,956\
+    \ unique 2D structures. References: source article (DOI: 10.1007/s00044-016-1764-y)\
+    \ Load the LOTUS flat file as a data frame with structure ID and organism ID columns.\
+    \ For each unique organism, count the number of distinct 2D structures associated\
+    \ with it. Assign each organism to one of four bins: 1 structure, 2\u201310 structures,\
+    \ 11\u2013100 structures, >100 structures. Tally the organism count within each\
+    \ bin. Validation: compare observed bin counts against reported values (7,354,\
+    \ 21,490, 10,683, 374); confirm all four match or report any deviation. References:\
+    \ source article (DOI: 10.1007/s00044-016-1764-y) Load raw SMILES table from the\
+    \ gathering layer output. Translate and standardise SMILES strings using smiles.py\
+    \ to enforce canonical representation. Validate and sanitise chemical structures\
+    \ using sanitizing.py, removing invalid or malformed entries. Deduplicate the\
+    \ sanitised structure table to generate the final unique SMILES identifier set.\
+    \ Validation: output file exists, contains deduplicated SMILES entries, and maintains\
+    \ row integrity across structure-organism mapping. References: source article\
+    \ (DOI: 10.1007/s00044-016-1764-y) Load the cleaned and taxonomy-verified organism\
+    \ table from interim/tables/2_cleaned/organism/cleaned.tsv.gz. Apply OTL name-to-identifier\
+    \ mapping using fuzzy matching and validation heuristics to assign stable taxonomic\
+    \ identifiers to each organism record. Enrich organism records with OTL metadata\
+    \ (identifiers, taxonomic ranks, synonyms, hierarchy). Write the enriched dictionary\
+    \ to interim/dictionaries/organism/otl.sqlite for indexed lookup and validation.\
+    \ Validation: Verify that all records in the cleaned organism table receive OTL\
+    \ identifiers and that the SQLite file is syntactically correct and queryable.\
+    \ References: source article (DOI: 10.1007/s00044-016-1764-y)"
+  domain: cheminformatics
+  techniques:
+  - quantitative-structure-activity
+  claims:
+  - claim_text: LOTUS is a comprehensive collection of documented structure-organism
+      pairs.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRUCTURE_ORGANISM_PAIRS
+  - claim_text: The documented structure-organism pairs in LOTUS should allow a more
+      complete understanding of organisms and their chemistry within current computational
+      approaches in Natural Products research.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_NPLIB
+  - claim_text: LOTUS requires R to run.
+    claim_type: finding
+    speculative: false
+  - claim_text: LOTUS requires Python 3 to run.
+    claim_type: finding
+    speculative: false
+  - claim_text: LOTUS requires Java >= 17 to run.
+    claim_type: finding
+    speculative: false
+  - claim_text: UNIX systems require Make to be installed for LOTUS.
+    claim_type: finding
+    speculative: false
+  - claim_text: LOTUS has a dedicated Wiki for Windows users.
+    claim_type: finding
+    speculative: false
+  - claim_text: LOTUS contains 588694 unique referenced structure-organism pairs in
+      3D.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRUCTURE_ORGANISM_PAIRS
+  - claim_text: LOTUS contains 484174 unique referenced structure-organism pairs in
+      2D.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_STRUCTURE_ORGANISM_PAIRS
+  - claim_text: LOTUS contains 231330 unique curated structures in 3D.
+    claim_type: finding
+    speculative: false
+    entity_id: RESULT_UNIQUE_STRUCTURES_3D
+  - claim_text: LOTUS contains 153956 unique curated structures in 2D.
+    claim_type: finding
+    speculative: false
+    entity_id: RESULT_UNIQUE_STRUCTURES_3D
+  - claim_text: LOTUS contains 42166 unique organisms.
+    claim_type: finding
+    speculative: false
+    entity_id: RESULT_UNIQUE_ORGANISMS
+  - claim_text: LOTUS data originates from 31 initial open databases.
+    claim_type: finding
+    speculative: false
+  - claim_text: Among 2D structures in LOTUS, 89903 are present in only 1 organism.
+    claim_type: finding
+    speculative: false
+  - claim_text: Among 2D structures in LOTUS, 45640 are present in between 1 and 10
+      organisms.
+    claim_type: finding
+    speculative: false
+    entity_id: RESULT_2D_STRUCT_1_10_ORG
+  - claim_text: Among 2D structures in LOTUS, 3990 are present in between 10 and 100
+      organisms.
+    claim_type: finding
+    speculative: false
+    entity_id: RESULT_2D_STRUCT_10_100_ORG
+  - claim_text: Among 2D structures in LOTUS, 403 are present in more than 100 organisms.
+    claim_type: finding
+    speculative: false
+    entity_id: RESULT_2D_STRUCT_GT100_ORG
+  - claim_text: Among organisms in LOTUS, 7354 contain only 1 2D structure.
+    claim_type: finding
+    speculative: false
+  - claim_text: Among organisms in LOTUS, 21490 contain between 1 and 10 2D structures.
+    claim_type: finding
+    speculative: false
+    entity_id: RESULT_ORG_1_10_STRUCT
+  - claim_text: Among organisms in LOTUS, 10683 contain between 10 and 100 2D structures.
+    claim_type: finding
+    speculative: false
+    entity_id: RESULT_ORG_10_100_STRUCT
+  - claim_text: Among organisms in LOTUS, 374 contain more than 100 2D structures.
+    claim_type: finding
+    speculative: false
+    entity_id: RESULT_ORG_GT100_STRUCT
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: "Table or data frame with organism count per bin: 7,354 organisms with 1 structure,\
+    \ 21,490 with 1\u201310, 10,683 with 10\u2013100, 374 with >100"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "interim/tables/1_translated/structure/unique.tsv.gz \u2014 deduplicated,\
+    \ sanitised SMILES table with standardised chemical structures"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: OTL-enriched organism dictionary in SQLite format (interim/dictionaries/organism/otl.sqlite)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

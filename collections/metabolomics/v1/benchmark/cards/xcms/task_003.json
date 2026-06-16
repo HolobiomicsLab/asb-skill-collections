@@ -1,0 +1,353 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "86601462b6f0c575885716815b42ad0a84fd0c8b2e0ef6830db20c97c115f971"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3cd338aea178a6cea4663bb04918d92bc5823b649a8a6d08454b0e192af19016"
+    }
+  ],
+  "created_at": "2026-06-15T12:18:05.623444+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Abundance-correlation-refined feature groups (output from AbundanceSimilarityParam refinement)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Final count of feature groups after EIC similarity refinement",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Overlay EIC plot for feature group FG.013.001",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Overlay EIC plot for feature group FG.045.001",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "EIC (extracted ion chromatogram) similarity is measured by correlation of peak shapes across the m/z-retention time feature space; threshold=0.7 indicates a 70% correlation cutoff for grouping.",
+    "The parameter n=2 specifies the minimum number of features required to form a valid group during EIC similarity-based clustering.",
+    "Features of the same compound should exhibit similar retention time, abundance patterns across samples, and peak shape in their extracted ion chromatograms.",
+    "Feature group identifiers (e.g., FG.013.001) follow a hierarchical nomenclature: the first segment denotes the parent group, the second a sub-group assigned by retention time, and the third a sub-sub-group from abundance or EIC refinement."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the input artifact (abundance-correlation-refined feature groups) exists in the github:sneumann__xcms repository or is a valid chained input from a preceding sub-task",
+      "verify that groupFeatures function runs successfully with EicSimilarityParam(threshold=0.7, n=2) parameters on the input feature groups",
+      "verify that the output feature group count is a single integer value",
+      "verify that overlay EIC plot files for groups FG.013.001 and FG.045.001 exist in the expected_outputs directory",
+      "verify that each EIC plot file is in a standard image format (PNG, PDF, or SVG)"
+    ],
+    "expert_review": [
+      "assess whether the final feature group count is consistent with the expected outcome of applying EIC similarity refinement (threshold=0.7, n=2) to the input groups",
+      "assess whether the overlay EIC plots for FG.013.001 and FG.045.001 show visually coherent peak shapes and retention time alignment consistent with features of the same compound",
+      "assess whether the parameter choices (threshold=0.7, n=2) are appropriate for the data and whether the grouping results are biologically/chemically plausible"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] What is the final count of feature groups after applying EIC similarity-based refinement with a correlation threshold of 0.7 on the top 2 samples, and how do the extracted ion chromatograms visually differ between sub-groups within feature groups FG.013.001 and FG.045.001?: 'The grouping based on EIC correlation on the pre-defined feature groups from the previous sections grouped the `r nrow(featureDefinitions(xmse))` features into `r length(unique(featureGroups(xmse)))`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] After EIC similarity analysis with threshold 0.7 and n=2, features within feature groups FG.013.001 and FG.045.001 were subdivided into separate sub-groups, with one feature in FG.013.001 showing a shifted retention time in EIC plots that distinguished it from co-eluting features, and FG.045.001 being grouped into two distinct sub-groups based on EIC correlation patterns.: 'One of the features (highlighted in red in the plots above) within the original feature group was separated from the other two because of a low similarity of their EICs. In fact, the feature's EIC is'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Abundance-correlation-refined feature groups (output from AbundanceSimilarityParam refinement): 'AbundanceSimilarityParam: perform a feature grouping based on correlation of feature abundances (values) across samples.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Final count of feature groups after EIC similarity refinement: 'EicSimilarityParam: perform a feature grouping based on correlation of EICs.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Overlay EIC plot for feature group FG.013.001: 'plotFeatureGroups function which shows all features in the m/z - retention time space with grouped features being connected with a line.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Overlay EIC plot for feature group FG.045.001: 'plotFeatureGroups function which shows all features in the m/z - retention time space with grouped features being connected with a line.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] xcms: 'The *xcms* R package provides functionality to efficiently preprocess LC-MS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MsFeatures: 'General MS feature grouping functionality if defined by the `r Biocpkg(\"MsFeatures\")` package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting recent changes or versions of the xcms package is available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(xcms); library(MsFeatures); refined_fg <- readRDS('{inputs.refined_feature_groups}'); eic_param <- EicSimilarityParam(threshold=0.7, n=2); grouped_fg <- groupFeatures(refined_fg, eic_param); cat('Final feature group count:', length(grouped_fg), '\\n'); saveRDS(grouped_fg, 'grouped_feature_groups.rds'); if ('FG.013.001' %in% names(grouped_fg)) { png('eic_overlay_FG.013.001.png'); plot(grouped_fg['FG.013.001']); dev.off() }; if ('FG.045.001' %in% names(grouped_fg)) { png('eic_overlay_FG.045.001.png'); plot(grouped_fg['FG.045.001']); dev.off() }"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "eic_similarity_feature_groups.rda",
+  "expected_outputs": [
+    "Final count of feature groups after EIC similarity refinement",
+    "Overlay EIC plot for feature group FG.013.001",
+    "Overlay EIC plot for feature group FG.045.001"
+  ],
+  "finding": "After EIC similarity analysis with threshold 0.7 and n=2, features within feature groups FG.013.001 and FG.045.001 were subdivided into separate sub-groups, with one feature in FG.013.001 showing a shifted retention time in EIC plots that distinguished it from co-eluting features, and FG.045.001 being grouped into two distinct sub-groups based on EIC correlation patterns.",
+  "github_name": "sneumann/xcms",
+  "input_from": "task_002",
+  "inputs": [
+    "Abundance-correlation-refined feature groups (output from AbundanceSimilarityParam refinement)"
+  ],
+  "keywords": [
+    "untargeted metabolomics",
+    "lc-ms/ms",
+    "feature grouping",
+    "compound annotation",
+    "peak detection",
+    "centwave algorithm",
+    "retention time alignment",
+    "abundance correlation",
+    "eic similarity",
+    "swath acquisition",
+    "data-dependent acquisition",
+    "data-independent acquisition",
+    "ms2 spectrum matching",
+    "adduct detection",
+    "isotope detection"
+  ],
+  "landmark_outputs": [
+    "refined_feature_groups.csv",
+    "eic_similarity_grouping_stats.txt",
+    "eic_plot_fg013001.png",
+    "eic_plot_fg045001.png"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_005",
+    "result_007",
+    "result_037",
+    "result_043"
+  ],
+  "methodology_summary": [
+    "Load pre-processed LC-MS data and abundance-correlation-refined feature groups from upstream xcms workflow.",
+    "Apply groupFeatures() with EicSimilarityParam (threshold=0.7, n=2) to perform feature grouping based on EIC correlation.",
+    "Compute and report final feature group count after EIC similarity refinement.",
+    "Extract and visualize overlay EIC plots for specified feature groups (FG.013.001 and FG.045.001) to show peak shape alignment.",
+    "Validation: confirm that final feature group count matches expected output and that overlay EIC plots display correlated peak shapes with similarity \u22650.7 for grouped features."
+  ],
+  "missing_information": [
+    "No changelog documenting recent changes or versions of the xcms package is available"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the final count of feature groups after applying EIC similarity-based refinement with a correlation threshold of 0.7 on the top 2 samples, and how do the extracted ion chromatograms visually differ between sub-groups within feature groups FG.013.001 and FG.045.001?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "eic-similarity-correlation-analysis",
+    "feature-group-refinement-multicriteria",
+    "chromatographic-peak-shape-comparison",
+    "feature-abundance-pattern-matching",
+    "mass-spectrometry-data-visualization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_xcms/synthesized_package",
+  "spine_condition_ids": [
+    "cond_abundance_cor_07",
+    "cond_eic_cor_07_n2"
+  ],
+  "spine_entity_ids": [
+    "faahko_dataset",
+    "group_features_method",
+    "eic_similarity_param",
+    "compounding_workflow",
+    "feature_group_artifact",
+    "cond_abundance_cor_07",
+    "cond_eic_cor_07_n2",
+    "result_rtime_grouping_features",
+    "result_abundance_subgrouping",
+    "result_eic_subgrouping",
+    "result_dda_peak_count",
+    "result_fg040_correlation",
+    "result_eic_shift_separation"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "visualization"
+  ],
+  "synthesized_from": "github:sneumann__xcms",
+  "task_description": "Apply groupFeatures with EicSimilarityParam (threshold=0.7, n=2) to abundance-correlation-refined feature groups and reproduce the final feature group count and overlay EIC plots for groups FG.013.001 and FG.045.001.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Abundance-correlation-refined feature groups",
+      "port_id": "refined_feature_groups",
+      "resolved_via": null,
+      "source": "task_002/subgroup_count",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Apply EicSimilarityParam(threshold=0.7, n=2) to refine abundance-correlation feature groups and reproduce the final feature group count and normalized EIC overlay plots for groups FG.013.001 and FG.045.001.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Final feature group count after EIC similarity refinement",
+      "port_id": "final_group_count",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Overlay EIC plot for feature group FG.013.001",
+      "port_id": "eic_plot_fg013001",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Overlay EIC plot for feature group FG.045.001",
+      "port_id": "eic_plot_fg045001",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "clustering"
+  ],
+  "title": "Reproduce EIC-similarity sub-grouping using EicSimilarityParam(threshold=0.7, n=2) on faahKO feature groups",
+  "tools": [
+    "xcms",
+    "MsFeatures"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Final count of feature groups after EIC similarity refinement, Overlay EIC plot for feature group FG.013.001, Overlay EIC plot for feature group FG.045.001."
+  ],
+  "workflow_description": "1. Load pre-processed LC-MS data and abundance-correlation-refined feature groups (output from AbundanceSimilarityParam refinement step) into R using xcms. 2. Apply groupFeatures() function with EicSimilarityParam specifying threshold=0.7 and n=2 to perform feature grouping based on EIC similarity correlation across the refined groups. 3. Extract and tabulate the final feature group count from the resulting grouped object. 4. Generate overlay EIC plots for feature groups FG.013.001 and FG.045.001 using the plotEICs() or comparable visualization function to display peak shape similarity."
+}

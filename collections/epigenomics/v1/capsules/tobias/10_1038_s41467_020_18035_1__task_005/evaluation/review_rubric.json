@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that inputs include a two-condition ATAC-seq dataset from GEO/SRA with accession number and sample metadata"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for output differential TF occupancy results table (.tsv format)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for output summary plot (.pdf or .png format)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that .tsv output contains at least the following fields: TF name, condition 1 occupancy score, condition 2 occupancy score, differential occupancy metric, and statistical significance (p-value or adjusted p-value)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify row_count_equals for .tsv output is greater than 0 (at least one TF detected)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that all numeric fields in .tsv (occupancy scores, p-values) are in valid ranges: occupancy scores between 0\u20131 or normalized scale, p-values between 0\u20131"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: TOBIAS pipeline commands execute without error on the input dataset (bias correction, footprint scoring, BINDetect modules complete successfully)"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that plot (.pdf/.png) displays at least one visualization comparing differential TF occupancy between the two conditions (e.g., scatter plot, bar chart, or heatmap), parameter-sensitive to visualization design choices and no canonical answer for plot layout"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that inputs include a two-condition ATAC-seq dataset from GEO/SRA with accession number and sample metadata",
+      "verify file_exists for output differential TF occupancy results table (.tsv format)",
+      "verify file_exists for output summary plot (.pdf or .png format)",
+      "verify that .tsv output contains at least the following fields: TF name, condition 1 occupancy score, condition 2 occupancy score, differential occupancy metric, and statistical significance (p-value or adjusted p-value)",
+      "verify row_count_equals for .tsv output is greater than 0 (at least one TF detected)",
+      "verify that all numeric fields in .tsv (occupancy scores, p-values) are in valid ranges: occupancy scores between 0\u20131 or normalized scale, p-values between 0\u20131",
+      "verify script_runs: TOBIAS pipeline commands execute without error on the input dataset (bias correction, footprint scoring, BINDetect modules complete successfully)",
+      "verify that plot (.pdf/.png) displays at least one visualization comparing differential TF occupancy between the two conditions (e.g., scatter plot, bar chart, or heatmap), parameter-sensitive to visualization design choices and no canonical answer for plot layout"
+    ],
+    "expert_review": [
+      "assess whether the selection of the two-condition ATAC-seq dataset and experimental design are appropriate for testing differential TF occupancy",
+      "assess whether the TOBIAS pipeline parameters (bias correction thresholds, footprint scoring windows, BINDetect statistical model) are reasonable and justified for the chosen dataset",
+      "assess whether the differential TF occupancy results are biologically plausible and consistent with known TF biology and the experimental conditions",
+      "assess whether the summary plot effectively communicates the main findings and is suitable for publication or presentation"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

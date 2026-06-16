@@ -1,14 +1,30 @@
 name: matplotlib
 slug: matplotlib
 evidence_spans:
+- from matplotlib import pyplot
+- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib` and `networkx` Python libraries
 - from matplotlib import pyplot as plt
 - It requires the Python dependencies NumPy [40], pandas [41, 42], seaborn [43], py4cytoscape, and matplotlib
+- integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)
+- 'Extension: MATPLOTLIB'
 derived_from:
+- doi: 10.5281/zenodo.14009575
+  title: corems
+- doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
 - doi: 10.1371/journal.pcbi.1011814
   title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
 source_repos:
+- EMSL-Computing/CoreMS
+- OpenMS/pyopenms_viz
+- ablab/npdtools
+- bittremieux-lab/spectrum_utils
 - https://github.com/Coayala/MetaboDirect
 - kopeckylukas/py-mamsi
 schema_version: 0.2.0

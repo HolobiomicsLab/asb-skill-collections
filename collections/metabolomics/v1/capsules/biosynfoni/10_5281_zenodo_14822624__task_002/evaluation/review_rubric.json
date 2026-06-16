@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:lucinamay/biosynfoni or Zenodo deposit 10.5281/zenodo.14822624"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "npy/.npz"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output fingerprint file matches declared format (CSV with numeric columns, or Nu",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_006",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "fingerprint output contains per-molecule identifiers and bit-vector columns/arra",
+      "value": [
+        "/arrays"
+      ]
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "row_count_equals or contains_substring: output row count matches or is traceable to number of molecules in input dataset"
+    },
+    {
+      "id": "pf_008",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "fingerprint bit-vector entries are binary (0 or 1) or normalized numeric values,"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:lucinamay/biosynfoni or Zenodo deposit 10.5281/zenodo.14822624",
+      "script_runs: biosynfoni package imports without error after installation via pip",
+      "script_runs: fingerprint computation completes on sample molecule(s) from deposited dataset without exception",
+      "file_exists: output fingerprint file (CSV or NumPy .npy/.npz array format) is generated",
+      "file_format_is: output fingerprint file matches declared format (CSV with numeric columns, or NumPy binary array)",
+      "field_present: fingerprint output contains per-molecule identifiers and bit-vector columns/arrays",
+      "row_count_equals or contains_substring: output row count matches or is traceable to number of molecules in input dataset",
+      "value_in_range: fingerprint bit-vector entries are binary (0 or 1) or normalized numeric values, robust to parameter choices"
+    ],
+    "expert_review": [
+      "Fingerprint bit-vector semantics: do the substructure bits align with documented biosynfoni natural-product chemical feature definitions?",
+      "Fingerprint correctness on reference molecules: if a ground-truth fingerprint or validation set is available in the deposit, does computed output match expected bit patterns?",
+      "Dataset suitability: does the Zenodo dataset contain molecules (SMILES, SDF, or equivalent) appropriate for biosynfoni fingerprinting?"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

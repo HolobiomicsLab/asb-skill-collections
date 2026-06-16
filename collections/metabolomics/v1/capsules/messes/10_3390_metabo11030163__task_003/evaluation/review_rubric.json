@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: parser implementation in messes repository (github:MoseleyBioinformaticsLab/messes)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: parser accepts tabular input with export tags matching pattern #<table_name>.id and #.<field_name>"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: parser execution on tagged tabular test file without errors"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: generated JSON structure conforms to nested schema consumed by directive resolvers (byte-for-byte matching against reference conversion or schema validation)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: output JSON contains expected nested fields corresponding to input table and field tags"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify format_is: output is valid JSON (parseable by standard JSON parser)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: parser implementation in messes repository (github:MoseleyBioinformaticsLab/messes)",
+      "verify file_format_is: parser accepts tabular input with export tags matching pattern #<table_name>.id and #.<field_name>",
+      "verify script_runs: parser execution on tagged tabular test file without errors",
+      "verify output_matches_reference: generated JSON structure conforms to nested schema consumed by directive resolvers (byte-for-byte matching against reference conversion or schema validation)",
+      "verify field_present: output JSON contains expected nested fields corresponding to input table and field tags",
+      "verify format_is: output is valid JSON (parseable by standard JSON parser)"
+    ],
+    "expert_review": [
+      "assess correctness of tag interpretation logic: does parser correctly map export tags (#<table_name>.id, #.<field_name>) to nested JSON hierarchy",
+      "assess completeness of conversion: does generated JSON structure preserve all information from tagged input and match directives engine consumption expectations",
+      "assess handling of edge cases: nested tables, missing tags, malformed tags, duplicate field names"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

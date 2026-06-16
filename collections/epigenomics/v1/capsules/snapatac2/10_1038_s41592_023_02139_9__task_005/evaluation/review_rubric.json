@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: input differential peaks table (from task_NNN.expected_outputs or public deposit)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: CIS-BP motif database (public accession or downloaded artifact)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table is CSV, TSV, or structured record (Parquet/HDF5)",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_005",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table contains column for motif IDs",
+      "value": [
+        "for motif IDs"
+      ]
+    },
+    {
+      "id": "pf_006",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table contains column for enrichment scores",
+      "value": [
+        "for enrichment scores"
+      ]
+    },
+    {
+      "id": "pf_007",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table contains column for p-values",
+      "value": [
+        "for p-values"
+      ]
+    },
+    {
+      "id": "pf_008",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table has at least one row (robust to dataset size, parameter-sensitive t"
+    },
+    {
+      "id": "pf_009",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "enrichment score values are numeric and finite"
+    },
+    {
+      "id": "pf_010",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "p-values are numeric, in range [0, 1]"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: input differential peaks table (from task_NNN.expected_outputs or public deposit)",
+      "verify file exists: CIS-BP motif database (public accession or downloaded artifact)",
+      "script_runs: SnapATAC2 tl.motif_enrichment invocation on input peaks and motif database completes without error",
+      "file_format_is: output table is CSV, TSV, or structured record (Parquet/HDF5)",
+      "field_present: output table contains column for motif IDs",
+      "field_present: output table contains column for enrichment scores",
+      "field_present: output table contains column for p-values",
+      "row_count_equals: output table has at least one row (robust to dataset size, parameter-sensitive to motif database version and filtering thresholds)",
+      "value_in_range: enrichment score values are numeric and finite",
+      "value_in_range: p-values are numeric, in range [0, 1]"
+    ],
+    "expert_review": [
+      "Enrichment scores and p-values are statistically reasonable given the input peak set and motif database (no implausibly extreme values or systematic biases)",
+      "Motif IDs match expected CIS-BP identifier format and are present in the version of the database used"
+    ]
+  },
+  "max_score": 10.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

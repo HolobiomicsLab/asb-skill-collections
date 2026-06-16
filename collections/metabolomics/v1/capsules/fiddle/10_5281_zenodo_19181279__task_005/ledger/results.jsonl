@@ -1,0 +1,1 @@
+{"result_id": "result_015", "summary": "Precursor m/z is zeroed before the spectrum encoder to prevent the model from learning a mass-based frequency prior.", "result_type": "minor", "claim_ids": ["claim_015"], "support_status": "not_evaluated", "linked_task_ids": ["task_003", "task_005"], "linked_eval_check_ids": [], "task_relevance": "task_linked"}

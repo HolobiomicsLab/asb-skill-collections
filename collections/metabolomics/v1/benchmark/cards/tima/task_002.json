@@ -1,0 +1,416 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-120x120.png",
+      "role": "figure",
+      "sha256": "a8c34f2f2e00b6e572e4db98cb18063b6a0a4e9a383dbd2715771fcc58b10248"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-152x152.png",
+      "role": "figure",
+      "sha256": "5ffa52e1b0069c8923a760b99b77397f7c802426f9244de7102fb01157faab1d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-180x180.png",
+      "role": "figure",
+      "sha256": "db91c9f1aca28345c1387cbac831bfce3ac0ee6af46e9410559907e3fa1fadfa"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-60x60.png",
+      "role": "figure",
+      "sha256": "68f71c0aa4d2705bed50d34e18dba1259512454255e7fb04b305cb4e45e5c5c3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-76x76.png",
+      "role": "figure",
+      "sha256": "ea4b6678e8214c12ad16f0eebd5ca5762ad9d93e773173ef2484662373a063aa"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon.png",
+      "role": "figure",
+      "sha256": "5ecece944e604e855d43e108766d5148996b81787d33ddb9761fb2745785d667"
+    },
+    {
+      "indexable": false,
+      "path": "figures/benchmark_comparison_neg.svg",
+      "role": "figure",
+      "sha256": "3c704c05da1515c604a43c81902b30d7d3acbba4597f3ab381d58f2964acdd1b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-16x16.png",
+      "role": "figure",
+      "sha256": "27d93a4948e5763c5b1f6bce00c16967b4d8012a6e6e5ed0e130d460c3a63928"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-32x32.png",
+      "role": "figure",
+      "sha256": "22ed6b585b98a69e89e9d9888118bdde21e54dc9620c7d3429243ea9b9afa731"
+    },
+    {
+      "indexable": false,
+      "path": "figures/inst-001_.png",
+      "role": "figure",
+      "sha256": "e0216e304ab1ae15bf9ac9d56690fae7a16ebab4acfd7868681b20d789fe0cd2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lifecycle-archived.svg",
+      "role": "figure",
+      "sha256": "a2cc91e521c07c67b3c901b1f95c3db052e2e21352545183d0b91dae3451b2a5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lifecycle-defunct.svg",
+      "role": "figure",
+      "sha256": "f60b8d5704feadf8a9858e688bff025525e258eced1ad966e61dc649ea3d2395"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lifecycle-deprecated.svg",
+      "role": "figure",
+      "sha256": "b325b309900c9843a235f147918eab4f3b9bcca228656ff16c48bfd067337481"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lifecycle-experimental.svg",
+      "role": "figure",
+      "sha256": "ee207407774f49e01a44c86370569aee540c468cfc00b4e1d7fa4c9c9ee626af"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lifecycle-maturing.svg",
+      "role": "figure",
+      "sha256": "519b92046fb808bd11c010c8599fbdb61ee4c73113c49f7f2c2f6d5e7243087b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lifecycle-questioning.svg",
+      "role": "figure",
+      "sha256": "3b9a3ffdc3bbda973a9dc7891ec65ec162e0f675d604e4e3d9c1acff00b73dc8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lifecycle-stable.svg",
+      "role": "figure",
+      "sha256": "14e0bf4e2a6945ac25e73aa3324b47f414fc3055faec1ac20e8f7d2c1badacba"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lifecycle-superseded.svg",
+      "role": "figure",
+      "sha256": "a471d61997868b34d1af241fb4195ab348118046f6df3af21fd8a961ea0c248c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.svg",
+      "role": "figure",
+      "sha256": "1492dcf99ee3345ccfe159e9cd8d73494f596f015e818eaabda15713c8ff2692"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tima.svg",
+      "role": "figure",
+      "sha256": "311255682cd2b31eb7be480352d6b4f131e6f03370c9653616a47c0fc7a319d8"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "6d798423ae6986ba99f4af028caeedb110219c7d7c43af2d2f5ae3737f58efaa"
+    }
+  ],
+  "created_at": "2026-06-15T21:14:17.946829+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "r-universe repository URL for TIMA",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Installation log confirming successful package installation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Package load confirmation with no error messages",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "R-CMD-check report with all tests passing",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "The r-universe platform provides a centralized binary repository for R packages that bypasses the need for local compilation and enables rapid distribution of updates.",
+    "R-CMD-check is the standard validation suite for CRAN submission that checks package structure, documentation completeness, function signatures, and test coverage.",
+    "Package loading via library() or require() returns a logical success indicator and will halt with an error message if the package namespace or dependencies cannot be resolved.",
+    "CI badges in README files reflect the most recent automated test results from the package's continuous integration pipeline (typically GitHub Actions for R packages)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify package 'tima' installs successfully from https://taxonomicallyinformedannotation.r-universe.dev/tima using install.packages('tima', repos='https://taxonomicallyinformedannotation.r-universe.dev')",
+      "verify package loads without errors by executing library('tima') in R session",
+      "verify R CMD check passes by confirming CI badge in repository README indicates passing status or by running R CMD check locally on package source"
+    ],
+    "expert_review": [
+      "confirm that any warnings or notes reported by R CMD check are acceptable (e.g., expected non-fatal notes) and do not indicate functional defects in the package"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the tima R package install successfully from the r-universe repository and pass its R-CMD-check test suite?: '[![R-CMD-check](https://github.com/taxonomicallyinformedannotation/tima/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/taxonomicallyinformedannotation/tima/actions/workflows/R-CMD-c'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The tima package has an active R-CMD-check workflow configured on GitHub that validates the package build and check status.: '[![R-CMD-check](https://github.com/taxonomicallyinformedannotation/tima/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/taxonomicallyinformedannotation/tima/actions/workflows/R-CMD-c'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] r-universe repository URL for TIMA: 'https://taxonomicallyinformedannotation.r-universe.dev/tima'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Installation log confirming successful package installation: 'Install TOOL-TIMA-R-PKG from the r-universe repository'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Package load confirmation with no error messages: 'confirm the package loads without errors'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] R-CMD-check report with all tests passing: 'passes its own R-CMD-check suite as reported by the CI badge in the README'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] R: 'The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "cmd_check_results.txt",
+  "expected_outputs": [
+    "Installation log confirming successful package installation",
+    "Package load confirmation with no error messages",
+    "R-CMD-check report with all tests passing"
+  ],
+  "finding": "The tima package has an active R-CMD-check workflow configured on GitHub that validates the package build and check status.",
+  "github_name": "taxonomicallyinformedannotation/tima",
+  "input_from": "task_001",
+  "inputs": [
+    "r-universe repository URL for TIMA"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "installation_output.log",
+    "package_load_test.Rout"
+  ],
+  "linked_result_ids": [
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Configure R environment to recognize the r-universe TIMA repository as a package source",
+    "Invoke install.packages() targeting the TIMA package from the configured repository",
+    "Execute library(tima) to load the package into the active R session and capture load status",
+    "Run R-CMD-check on the installed package to validate structural integrity and test suite compliance",
+    "Validation: Installation succeeds with exit code 0, package loads without warnings or errors, and R-CMD-check reports all NOTE/WARNING/ERROR categories as zero or explicitly non-blocking"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the tima R package install successfully from the r-universe repository and pass its R-CMD-check test suite?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "r-package-installation-from-repository",
+    "r-package-loading-and-diagnostics",
+    "r-cmd-check-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_tima/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS-TIMA",
+    "ARCH-TIMA-WORKFLOW",
+    "TOOL-TIMA-R-PKG",
+    "TOOL-DOCKER-TIMA",
+    "REF-FPLS2019"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:taxonomicallyinformedannotation__tima",
+  "task_description": "Install the TIMA R package from the r-universe repository and verify successful installation and package integrity by confirming it loads without errors and passes the R-CMD-check suite.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "r-universe repository URL for TIMA",
+      "port_id": "repo_url",
+      "resolved_via": null,
+      "source": "task_001/annotated_features",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Install the tima package from r-universe and verify it loads without errors and passes R-CMD-check validation.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Installation log confirming successful package installation",
+      "port_id": "installation_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Package load confirmation with no error messages",
+      "port_id": "load_confirmation",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "R-CMD-check report with all tests passing",
+      "port_id": "cmd_check_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "machine-learning",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce the tima R package installation and basic execution via r-universe",
+  "tools": [
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Installation log confirming successful package installation, Package load confirmation with no error messages, R-CMD-check report with all tests passing."
+  ],
+  "workflow_description": "1. Configure R to use the r-universe repository (https://taxonomicallyinformedannotation.r-universe.dev/tima) as a package source. 2. Install the TIMA package using install.packages() with the configured repository. 3. Load the installed package into the R environment using library(tima) and confirm no errors occur. 4. Run R-CMD-check on the installed package to validate against the CRAN submission checklist and verify all tests pass as indicated by the CI badge in the README."
+}

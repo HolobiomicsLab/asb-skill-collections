@@ -1,0 +1,152 @@
+# SciTask Card: Analyze t-SNE clustering of MS2DeepScore spectral embeddings by ClassyFire chemical superclass
+
+- Task ID: `task_005`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T07:16:21.763690+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_ms2deepscore`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-analysis`, `visualization`, `model-inference`
+- DOI: `10.1186/s13321-021-00558-4`
+- GitHub: `matchms/ms2deepscore`
+- Input from: `task_002`
+
+## Classification
+
+- Task kind: `analysis`
+- Article type: `research-article`
+- Primary domain: `metabolomics`
+- Subdomains: `artificial-intelligence`, `computational-metabolomics`, `untargeted-metabolomics`
+- Techniques: `deep-learning`, `machine-learning`, `spectral-library-matching`, `tandem-ms`, `metabolite-identification`, `transfer-learning`
+
+## Research Question
+Do the 200-dimensional spectral embeddings learned by MS2DeepScore encode chemically meaningful information that enables molecules of the same chemical class to cluster together in low-dimensional space?
+
+## Connected Finding
+Molecules of the same chemical superclass consistently cluster together in t-SNE visualizations of MS2DeepScore embeddings, and this pattern holds at finer resolution for chemical subclasses, confirming that embeddings contain chemically meaningful molecular features.
+
+## Task Description
+Extract 200-dimensional spectral embeddings from the MS2DeepScore base network for all 3,601 test-set spectra, apply t-SNE dimensionality reduction to 2D coordinates, assign ClassyFire chemical superclass labels, and generate a visualized scatter plot demonstrating that molecules of the same chemical class cluster together.
+
+## Inputs
+- Trained MS2DeepScore model weights and architecture
+- Test-set MS/MS spectra (3,601 spectra with 500 unique InChIKeys in positive ionisation mode)
+- Chemical structure annotations (InChIKey, SMILES, InChI) for test-set molecules
+
+## Expected Outputs
+- Comma-separated or tab-separated table with columns: spectrum_id, t-SNE_x, t-SNE_y, InChIKey, ClassyFire_superclass
+- Scatter plot visualization (PNG or PDF) showing t-SNE 2D coordinates coloured by ClassyFire chemical superclass
+
+## Expected Output File
+
+- `tsne_embeddings_by_superclass.png`
+
+## Landmark Outputs
+
+- `embeddings_200d.npy`
+- `tsne_coordinates_2d.csv`
+- `test_set_with_classyfire.csv`
+
+## Tools
+- matchms
+- MS2DeepScore
+- scikit-learn
+- Python
+- RDKit
+
+## Skills
+- spectral-embedding-extraction-from-neural-networks
+- dimensionality-reduction-t-sne
+- chemical-class-assignment-classyfire
+- embedding-space-visualization-and-interpretation
+- structural-clustering-validation-in-chemical-space
+
+## Workflow Description
+1. Load the trained MS2DeepScore model from the deposited zenodo repository (zenodo.org/record/4699356). 2. Compute 200-dimensional spectral embeddings for all 3,601 test-set spectra using the base network component. 3. Apply t-SNE dimensionality reduction (scikit-learn implementation) with settings: metric='cosine', perplexity=100, learning_rate=200, iterations=1000 to generate 2D coordinates. 4. Retrieve or map ClassyFire chemical superclass annotations for all test-set InChIKeys. 5. Generate a scatter plot with t-SNE coordinates coloured by ClassyFire superclass and verify visual clustering of same-class compounds.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `ms2deepscore.pdf` | main_article | True |
+
+## Missing Information
+- No explicit statement of which t-SNE hyperparameters (perplexity, learning rate, number of iterations) were used or recommended for reproduction
+- No specification of how ClassyFire chemical superclass labels were assigned or retrieved for the 3601 test-set spectra
+- No quantitative metric (e.g., silhouette coefficient, Davies-Bouldin index, or clustering purity) reported to formally evaluate the degree of chemical class clustering in the t-SNE embedding
+- No information on runtime or computational cost to extract embeddings and perform t-SNE reduction on the 3601 test spectra
+
+## Domain Knowledge
+- MS2DeepScore base network encodes spectra into 200-dimensional cosine-normalized embeddings by passing binned spectrum vectors through two 500-node dense layers followed by a 200-node output layer.
+- t-SNE preserves local distance structure in high-dimensional spaces and is sensitive to perplexity; the paper uses perplexity=100 which is appropriate for ~3,600 points.
+- ClassyFire chemical superclass labels are hierarchical chemical taxonomy annotations derived from InChIKey or molecular structure that group molecules by broad functional chemistry (e.g., lipids, alkaloids, phenolics).
+- Chemically meaningful clustering in t-SNE embedding space indicates that the learned 200-dimensional representation preserves structural and chemical similarity relationships without explicit fingerprint computation.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: Comma-separated or tab-separated table with columns: spectrum_id, t-SNE_x, t-SNE_y, InChIKey, ClassyFire_superclass.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [results] Do the 200-dimensional spectral embeddings learned by MS2DeepScore encode chemically meaningful information that enables molecules of the same chemical class to cluster together in low-dimensional space?: 'we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set. Using the t-SNE [28] implementation from scikit-learn [29] we'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [results] Molecules of the same chemical superclass consistently cluster together in t-SNE visualizations of MS2DeepScore embeddings, and this pattern holds at finer resolution for chemical subclasses, confirming that embeddings contain chemically meaningful molecular features.: 'Molecules of the same chemical class tend to cluster together in the resulting t-SNE plot, confirming that the MS2DeepScore embeddings represent chemically meaningful molecular features.'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [methods] Trained MS2DeepScore model weights and architecture: 'The fully trained model used to create Fig. 2, 4, 5, 7, 8 can be downloaded from zenodo: https:// zenodo. org/ record/ 46993 56'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [methods] Test-set MS/MS spectra (3,601 spectra with 500 unique InChIKeys in positive ionisation mode): 'test set (3601 spectra of 500 unique InChIKeys)'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [methods] Chemical structure annotations (InChIKey, SMILES, InChI) for test-set molecules: 'The full cleaned dataset (210,407 spectra, 184,698 annotated with InChIKey and SMILES and/or InChI) can be found on zenodo'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [methods] Comma-separated or tab-separated table with columns: spectrum_id, t-SNE_x, t-SNE_y, InChIKey, ClassyFire_superclass: 'we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [methods] Scatter plot visualization (PNG or PDF) showing t-SNE 2D coordinates coloured by ClassyFire chemical superclass: 'For Fig. 8, we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set. Using the t-SNE [28] implementation from'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [methods] MS2DeepScore: 'we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [methods] scikit-learn: 'Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional coordinates'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [methods] Python: 'Our MS2DeepScore Python library offers two types of data generators'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [methods] RDKit: 'we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities'
+- `ev_012` from `agent2_synthesis` (agent2_traced): [discussion] No explicit statement of which t-SNE hyperparameters (perplexity, learning rate, number of iterations) were used or recommended for reproduction: 'Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional coordinates'
+- `ev_013` from `agent2_synthesis` (agent2_traced): [discussion] No specification of how ClassyFire chemical superclass labels were assigned or retrieved for the 3601 test-set spectra: 'MS2DeepScore can infer structural similarities between fragmentation mass spectral pairs'
+- `ev_014` from `agent2_synthesis` (agent2_traced): [discussion] No quantitative metric (e.g., silhouette coefficient, Davies-Bouldin index, or clustering purity) reported to formally evaluate the degree of chemical class clustering in the t-SNE embedding: 'MS2DeepScore is very fast and scalable. We conclude that this makes MS2DeepScore a powerful novel tool for running large scale comparisons and analyses'
+- `ev_015` from `agent2_synthesis` (agent2_traced): [discussion] No information on runtime or computational cost to extract embeddings and perform t-SNE reduction on the 3601 test spectra: 'MS2DeepScore is very fast and scalable.'
+
+## Evaluation Strategy
+### Direct Checks
+- verify file exists: trained model weights from zenodo.org/record/4699356
+- verify file exists: test-set spectra data (3601 spectra) in deposited dataset or GitHub repository
+- script_runs: Python script that loads MS2DeepScore model, extracts 200-dimensional embeddings for test-set spectra, runs t-SNE dimensionality reduction using scikit-learn t-SNE implementation with default or reported parameters
+- file_format_is: output t-SNE coordinates file contains exactly 3601 rows (one per test spectrum) and 2 columns (x, y coordinates)
+- file_exists: ClassyFire chemical superclass labels for 3601 test-set spectra (must be retrievable or pre-computed from InChIKey annotations)
+- output_matches_reference: generated t-SNE visualization (colored by ClassyFire superclass) matches or closely reproduces Fig. 2, 4, 5, 7, or 8 as reported in article or supplementary materials (robust to visualization library differences, parameter-sensitive to t-SNE random seed and perplexity)
+- value_in_range: silhouette coefficient or Davies-Bouldin index computed on t-SNE clusters grouped by chemical superclass is consistent with visual clustering quality shown in reference figure
+
+### Expert Review
+- assess whether observed chemical class clustering in t-SNE plot is chemically meaningful and consistent with structural similarity expectations (requires domain chemistry knowledge to interpret superclass assignments and their expected co-localization)
+- evaluate whether any chemical superclasses fail to cluster coherently and whether such failures are explainable by inter-class structural similarity or data imbalance (expert judgment on expected chemical class relationships)
+- verify that embedding extraction pipeline correctly preserves spectrum identity and that ClassyFire labels are accurately matched to spectra (requires inspection of intermediate data integrity)
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load pre-trained MS2DeepScore Siamese network base network from zenodo deposit.
+2. Forward-pass test-set binned spectrum vectors through base network to extract 200-dimensional embeddings.
+3. Apply t-SNE dimensionality reduction (cosine metric, perplexity 100, 1000 iterations) to map embeddings to 2D.
+4. Annotate 2D points with ClassyFire chemical superclass labels derived from InChIKey metadata.
+5. Visualization: Plot t-SNE coordinates as scatter with colour-coding by chemical superclass and verify that same-class molecules cluster together.
+6. Validation: Confirm visual clustering consistency with reported Figure 8; verify that distinct chemical superclasses occupy separable regions of t-SNE space.
+7. References: source article (DOI: 10.1186/s13321-021-00558-4)
+
+## Workflow Ports
+
+**Inputs:**
+
+- `trained_model` — Trained MS2DeepScore model weights and architecture ← `task_002/precision_recall_plot`
+- `test_spectra` — Test-set binned spectrum vectors (3,601 spectra)
+- `structure_annotations` — InChIKey and chemical class metadata for test molecules
+
+**Outputs:**
+
+- `embedding_table` — t-SNE coordinates and metadata table with ClassyFire superclass labels
+- `embedding_plot` — Scatter plot visualization of t-SNE embeddings coloured by chemical superclass
+
+**Used:** `urn:asb:port:task_002/precision_recall_plot`
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

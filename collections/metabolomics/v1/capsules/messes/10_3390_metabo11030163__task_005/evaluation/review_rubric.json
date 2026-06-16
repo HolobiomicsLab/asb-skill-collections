@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at the documented example input JSON location"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify protocol table exists in the input JSON"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify str directive with parameters for_each=True, test='type=sample_prep', sort_by=['id'], sort_order='ascending', delimiter=' ' can be applied to the protocol table"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify concatenated SAMPLEPREP_SUMMARY string output matches the expected output shown in the For Each section, byte-for-byte"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at the documented example input JSON location",
+      "verify protocol table exists in the input JSON",
+      "verify str directive with parameters for_each=True, test='type=sample_prep', sort_by=['id'], sort_order='ascending', delimiter=' ' can be applied to the protocol table",
+      "verify concatenated SAMPLEPREP_SUMMARY string output matches the expected output shown in the For Each section, byte-for-byte"
+    ],
+    "expert_review": [
+      "confirm that the directive application logic correctly filters rows where type=sample_prep",
+      "confirm that the sorting by 'id' in ascending order is correctly applied before concatenation",
+      "confirm that the delimiter ' ' is correctly inserted between concatenated values"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

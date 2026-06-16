@@ -1,0 +1,110 @@
+schema_version: 0.1.0
+workflow_id: coll_bam_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: BAM is a biotransformation-based annotation method for molecular structure
+    discovery from untargeted metabolomics data. This repository provides the implementation
+    code and validation dataset to reproduce reported results.
+  pseudo_abstract: This repository contains the implementation of BAM (biotransformation-based
+    annotation method), a computational approach for molecular structure discovery
+    from untargeted metabolomics data that integrates biotransformation rules and
+    global molecular networking. The repository includes both the BAM codebase and
+    the validation dataset used to assess the method's performance, enabling reproduction
+    of the reported validation results.
+  research_questions:
+  - Does the BAM pipeline, when executed end-to-end on the deposited validation dataset,
+    reproduce the reported validation metrics for molecular structure discovery from
+    untargeted metabolomics data?
+  - How does the BAM method apply biotransformation rules to generate candidate molecular
+    structures from input molecules?
+  - How does the global molecular networking component of BAM operate on candidate
+    transformed structures to generate a molecular network file and annotation table?
+  methods_summary: "Obtain the HassounLab/BAM repository and validation dataset (metabolomics\
+    \ data + reference annotations). Configure and initialize the BAM pipeline with\
+    \ biotransformation rules and molecular networking parameters. Execute the BAM\
+    \ pipeline end-to-end to generate structure annotations for validation data. Compute\
+    \ annotation accuracy (percentage of correct predictions) and coverage (percentage\
+    \ of features with assignments) against reference. Validation: Reported validation\
+    \ metrics (annotation accuracy and coverage) must match or closely approximate\
+    \ the paper's published benchmarks for the validation dataset. Load and validate\
+    \ input SMILES using RDKit chemistry library. Access and parse biotransformation\
+    \ rules from the BAM codebase. Apply each rule to every input structure, generating\
+    \ candidate products. Deduplicate and track parent\u2013product relationships\
+    \ with rule metadata. Serialize results as structured JSON/CSV output file. Validation:\
+    \ Verify that all input structures have been processed, no invalid SMILES are\
+    \ output, and parent\u2013product links are traceable. Load candidate structures\
+    \ from biotransformation rules and MS/MS spectral features. Compute pairwise spectral\
+    \ similarity scores across all features using cosine similarity or analogous metric.\
+    \ Apply spectral similarity threshold to filter network edges and retain high-confidence\
+    \ spectral matches. Detect molecular families via graph clustering or community\
+    \ detection on the filtered network. Integrate candidate structures with network\
+    \ nodes and assign feature-to-structure annotations based on mass and spectral\
+    \ consistency. Validation: Confirm molecular network file is properly formatted\
+    \ and parseable; verify annotation table contains all MS features with at least\
+    \ one candidate structure assignment and cluster membership; assess annotation\
+    \ coverage (% of features with predicted structures) and network statistics (number\
+    \ of nodes, edges, clusters) match expected scale."
+  domain: metabolomics
+  techniques:
+  - molecular-networking
+  - metabolite-identification
+  - network-annotation-propagation
+  - database-annotation
+  - high-resolution-ms
+  claims:
+  - claim_text: This repository contains code to implement the biotransformation-based
+      annotation method (BAM).
+    claim_type: finding
+    speculative: false
+  - claim_text: The repository contains data used to validate BAM.
+    claim_type: finding
+    speculative: false
+    entity_id: dataset_validation_data
+  - claim_text: BAM uses biotransformation rules and global molecular networking for
+      molecular structure discovery.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_biotransformation_rules
+  speculative: false
+  task_openness: mixed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Molecular network file in standard graph format (GraphML, JSON, or GXF) containing
+    nodes (features) and edges (spectral similarity links)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Feature annotation table (CSV or TSV) mapping each MS feature to candidate
+    structure(s), molecular family cluster, and annotation confidence metrics
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

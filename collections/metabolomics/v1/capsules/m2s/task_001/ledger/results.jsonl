@@ -1,0 +1,1 @@
+{"result_id": "result_001", "summary": "M2S is a Matlab package designed to match untargeted metabolomic features of two LC-MS datasets.", "result_type": "minor", "claim_ids": ["claim_001"], "support_status": "not_evaluated", "linked_task_ids": ["task_001"], "linked_eval_check_ids": [], "task_relevance": "task_linked"}

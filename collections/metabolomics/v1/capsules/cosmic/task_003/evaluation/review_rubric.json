@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:sirius-ms__sirius repository contains CANOPUS web service client code or endpoint documentation"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "locate a concrete example or integration test file in the repository that demons"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: confirm that the returned annotation structure contains expected fields (e.g., compound class labels, confidence scores, or similar structured metadata) consistent with CANOPUS documentation or published examples"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:sirius-ms__sirius repository contains CANOPUS web service client code or endpoint documentation",
+      "file_exists: locate a concrete example or integration test file in the repository that demonstrates submitting a fingerprint/spectrum query to CANOPUS and parsing the response",
+      "script_runs: execute a minimal reproducible example (if present in repo) that submits a query to the CANOPUS endpoint and confirm it returns a structured compound-class annotation without error",
+      "verify output_matches_reference: confirm that the returned annotation structure contains expected fields (e.g., compound class labels, confidence scores, or similar structured metadata) consistent with CANOPUS documentation or published examples"
+    ],
+    "expert_review": [
+      "assess whether the CANOPUS endpoint query implementation correctly encodes fingerprints or spectra in the format required by the service",
+      "evaluate whether the returned compound-class annotations are chemically and methodologically valid for a representative test case",
+      "verify that error handling and response parsing are robust to edge cases (e.g., ambiguous matches, no-hit scenarios, malformed input)"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

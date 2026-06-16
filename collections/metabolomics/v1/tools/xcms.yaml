@@ -1,16 +1,24 @@
-name: xcms
+name: XCMS
 slug: xcms
 evidence_spans:
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
 - An example of feature annotation using LC-MS AIF chromatograms processed using xcms and RamClustR packages
+- It makes use of an established retention time correction algorithm from the `xcms` package
 - The *xcms* R package provides functionality to efficiently preprocess LC-MS (as well as GC-MS and LC-MS/MS) data.
 - The *xcms* R package provides functionality to efficiently preprocess LC-MS (as well as GC-MS and LC-MS/MS) data
 - The *xcms* R package provides functionality to efficiently preprocess LC-MS
 derived_from:
+- doi: 10.1186/s12859-017-1744-3
+  title: lipidmatch
 - doi: 10.1021/acs.analchem.1c03032
   title: Automated Annotation of Untargeted All-Ion Fragmentation LC–MS Metabolomics Data with MetaboAnnotatoR
+- doi: 10.1021/acs.analchem.5c00567
+  title: Automated Integration and Quality Assessment of Chromatographic Peaks in LC–MS-Based Metabolomics and Lipidomics Using TARDIS
 - doi: 10.1021/acs.analchem.5c04338
   title: xcms
 source_repos:
+- GarrettLab-UF/LipidMatch
+- UGent-LIMET/TARDIS
 - gggraca/MetaboAnnotatoR
 - sneumann/xcms
 schema_version: 0.2.0

@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that the jhhung/PS2MS repository is accessible and contains executable inference code"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that example or test mass spectrometry input data is present in the repository (file_exists for data/ or test_data/ subdirectory or example files with extensions .mzML, .mzXML, .csv, or .txt)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that the inference pipeline script runs without errors on provided test data (script_runs)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that the pipeline produces structured predictions with at least NPS class labels and confidence scores (file_format_is or field_present)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that the output predictions can be parsed into a table with rows corresponding to input samples and columns for predicted substance class and associated metrics (format_is)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Retrieve reported prediction performance metrics (accuracy, precision, recall, F1) from the published article or supplementary materials and verify output_matches_reference for at least one benchmark dataset mentioned in the paper"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify that the jhhung/PS2MS repository is accessible and contains executable inference code",
+      "Verify that example or test mass spectrometry input data is present in the repository (file_exists for data/ or test_data/ subdirectory or example files with extensions .mzML, .mzXML, .csv, or .txt)",
+      "Verify that the inference pipeline script runs without errors on provided test data (script_runs)",
+      "Verify that the pipeline produces structured predictions with at least NPS class labels and confidence scores (file_format_is or field_present)",
+      "Verify that the output predictions can be parsed into a table with rows corresponding to input samples and columns for predicted substance class and associated metrics (format_is)",
+      "Retrieve reported prediction performance metrics (accuracy, precision, recall, F1) from the published article or supplementary materials and verify output_matches_reference for at least one benchmark dataset mentioned in the paper"
+    ],
+    "expert_review": [
+      "Assess whether the reported NPS detection predictions align with the chemical and spectroscopic plausibility of the identified substances and whether the deep learning model's feature importance is interpretable for mass spectrometry domain experts",
+      "Evaluate whether the reproduced predictions on benchmark data achieve reported performance thresholds and whether any discrepancies in metrics are attributable to random initialization, hardware differences, or data preprocessing variations"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

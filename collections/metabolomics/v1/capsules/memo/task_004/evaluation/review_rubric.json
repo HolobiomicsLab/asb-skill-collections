@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: output MemoMatrix object from merged_memo() function"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output must be serializable Python object (pickle or HDF5 format)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: merged MemoMatrix row count equals sum of input MemoMatrix row counts"
+    },
+    {
+      "id": "pf_004",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "merged output contains all columns from first input MemoMatrix",
+      "value": [
+        "from first input MemoMatrix"
+      ]
+    },
+    {
+      "id": "pf_005",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "merged output contains all columns from second input MemoMatrix",
+      "value": [
+        "from second input MemoMatrix"
+      ]
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "input1.shape"
+    },
+    {
+      "id": "pf_007",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: output MemoMatrix object from merged_memo() function",
+      "file_format_is: output must be serializable Python object (pickle or HDF5 format)",
+      "verify output_matches_reference: merged MemoMatrix row count equals sum of input MemoMatrix row counts",
+      "field_present: merged output contains all columns from first input MemoMatrix",
+      "field_present: merged output contains all columns from second input MemoMatrix",
+      "value_in_range: merged MemoMatrix shape[0] (rows) equals input1.shape[0] + input2.shape[0]",
+      "script_runs: merged_memo() function executes without error on two valid MemoMatrix inputs"
+    ],
+    "expert_review": [
+      "Verify that merged MemoMatrix data integrity is preserved: no data corruption or loss of spectral information during merge",
+      "Confirm that column alignment across two MemoMatrix objects follows expected merge semantics (union vs. intersection)"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

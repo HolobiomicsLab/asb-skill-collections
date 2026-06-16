@@ -1,0 +1,176 @@
+schema_version: 0.1.0
+workflow_id: coll_nmr2struct_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: tight
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: This benchmark reproduces an end-to-end multitask machine learning model
+    that predicts molecular structure from 1D NMR spectra by integrating a convolutional
+    neural network with a transformer architecture, and analyzes performance across
+    different NMR input modalities.
+  pseudo_abstract: "The paper introduces a multitask machine learning framework for\
+    \ rapid molecular structure elucidation from routine one-dimensional NMR spectra,\
+    \ addressing the combinatorial challenge of structure determination from limited\
+    \ spectroscopic data. The framework integrates a convolutional neural network\
+    \ with a transformer architecture designed to efficiently assemble molecular fragments\
+    \ into complete structures, automating a task traditionally performed manually\
+    \ by chemists. This benchmark reproduces the reported end-to-end structure prediction\
+    \ capability on molecules up to 19 heavy atoms and analyzes how performance varies\
+    \ when using \xB9H NMR spectra alone, \xB9\xB3C NMR spectra alone, or combined\
+    \ 1D NMR inputs. The transformer fragment assembler mechanism is reconstructed\
+    \ as described in the paper to understand its role in the combinatorial assembly\
+    \ process. Additionally, the benchmark explores the framework's generalization\
+    \ beyond the demonstrated scope of 19 heavy atoms, establishing the known performance\
+    \ boundary of the original work."
+  research_questions:
+  - What are the exact structure recovery accuracy metrics achieved by the end-to-end
+    NMR2Struct model on test molecules containing up to 19 heavy atoms?
+  - How does the transformer architecture assemble molecular fragments into candidate
+    molecular structures?
+  - "How do the individual contributions of \xB9H NMR, \xB9\xB3C NMR, and their combination\
+    \ differ in accuracy for molecular structure elucidation using the multitask machine\
+    \ learning framework?"
+  - Does the NMR2Struct model maintain accurate structure recovery performance when
+    applied to molecules with more than 19 heavy atoms, or does accuracy degrade significantly
+    beyond this training scope?
+  methods_summary: "Load and preprocess test set 1D NMR spectra (1H and/or 13C) for\
+    \ molecules with \u226419 heavy atoms. Encode spectra into feature vectors using\
+    \ the trained convolutional neural network encoder. Feed encoded features into\
+    \ the transformer fragment assembler to predict molecular fragments and connectivity\
+    \ graph. Perform multitask decoding to generate both molecular formula and connectivity\
+    \ predictions. Rank predicted structures and compute top-k exact structure recovery\
+    \ rates by comparing against ground-truth structures. Validation: Accuracy metrics\
+    \ (top-1, top-5 exact recovery rates) match or reproduce the paper's reported\
+    \ performance on the test set. Prepare fragment-structure ground truth pairs from\
+    \ the deposited dataset. Design and implement transformer encoder-decoder architecture\
+    \ to map fragment sets to assembled structures. Train the transformer on fragment-structure\
+    \ pairs using structure prediction loss. Evaluate assembly accuracy on held-out\
+    \ test pairs using exact-match and partial-correctness metrics. Validation: Achieve\
+    \ measurable fragment assembly accuracy on molecules up to 19 heavy atoms, with\
+    \ documented success/failure patterns by structural class. Load trained NMR2Struct\
+    \ model (CNN encoder + transformer decoder) and test set spectra\u2013structure\
+    \ pairs. Partition test inputs into three modality conditions: 1H-only, 13C-only,\
+    \ and 1H+13C combined, preserving ground-truth labels. Run inference through CNN\
+    \ + transformer on each modality condition to generate structure predictions.\
+    \ Compute accuracy metrics (exact-match formula accuracy, connectivity matching)\
+    \ for each modality. Calculate individual contribution (per-modality accuracy)\
+    \ and joint contribution (combined accuracy minus single-modality baseline). Validation:\
+    \ accuracy values are compared side-by-side and reported in a structured table;\
+    \ synergy is confirmed by combined > max(1H, 13C) or reported as null if absent.\
+    \ Load the pretrained transformer + CNN NMR2Struct model from checkpoint Retrieve\
+    \ or construct a held-out test set of molecules with >19 heavy atoms from PubChem\
+    \ or equivalent database Obtain 1D \xB9H and/or \xB9\xB3C NMR spectra for each\
+    \ out-of-scope molecule Generate ranked predictions of molecular formula and connectivity\
+    \ for each spectrum Compute top-1, top-3, and top-5 structure recovery accuracy\
+    \ on out-of-scope test set Compare out-of-scope accuracy to reported in-scope\
+    \ baseline (\u226419 heavy atoms) and quantify absolute and relative degradation\
+    \ Validation: verify that reported accuracy metrics for in-scope and out-of-scope\
+    \ conditions are reproducible and documented, and that degradation is quantified\
+    \ against the published baseline"
+  domain: cheminformatics
+  techniques:
+  - nmr
+  - deep-learning
+  - machine-learning
+  - transformer-model
+  claims:
+  - claim_text: Rapid determination of molecular structures can greatly accelerate
+      workflows across many chemical disciplines.
+    claim_type: finding
+    speculative: false
+  - claim_text: Elucidating structure using only one-dimensional NMR spectra remains
+      an extremely challenging problem because of the combinatorial explosion of the
+      number of possible molecules as the number of constituent atoms is increased.
+    claim_type: finding
+    speculative: false
+  - claim_text: "A multitask machine learning framework can predict molecular structure\
+      \ (formula and connectivity) from 1D \xB9H and/or \xB9\xB3C NMR spectra."
+    claim_type: finding
+    speculative: false
+    entity_id: MultitaskLearningFramework
+  - claim_text: A transformer architecture can be constructed to efficiently solve
+      the task of assembling large numbers of molecular fragments into molecular structures.
+    claim_type: finding
+    speculative: false
+  - claim_text: The framework demonstrates effectiveness on molecules with up to 19
+      heavy (non-hydrogen) atoms.
+    claim_type: finding
+    speculative: false
+  - claim_text: For molecules with up to 19 heavy atoms, there are trillions of possible
+      structures.
+    claim_type: finding
+    speculative: true
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 4-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Trained transformer fragment assembly model weights and configuration
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Fragment assembly accuracy metrics (exact match rate, partial correctness
+    scores)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Test set predictions and evaluation report
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Accuracy comparison table (modality \xD7 accuracy metrics) for 1H-only, 13C-only,\
+    \ and combined conditions"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Quantified individual and joint contribution scores (e.g., absolute accuracy
+    per modality and synergy gain)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Top-1, top-3, and top-5 structure recovery accuracy scores for out-of-scope
+    molecules (>19 heavy atoms)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Comparative accuracy degradation table (out-of-scope vs. in-scope baseline,
+    absolute and relative loss)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Summary report documenting failure modes, error distribution, and molecular
+    size/complexity thresholds at which model performance drops significantly
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

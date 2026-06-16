@@ -1,0 +1,215 @@
+schema_version: 0.1.0
+workflow_id: coll_featurefindermetab_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+narrative:
+  tagline: OpenMS is an open-source software framework for mass spectrometry data
+    analysis. The project welcomes community contributions through issue reporting
+    and pull requests, with guidelines for code quality, testing, and documentation.
+  pseudo_abstract: OpenMS is a community-driven open-source project for mass spectrometry
+    analytics. The documentation describes the contribution process, including procedures
+    for reporting bugs and submitting pull requests. Contributors are expected to
+    adhere to coding conventions, provide unit and functional tests, include proper
+    documentation, and implement Python bindings where applicable. The project emphasizes
+    early communication with core developers to ensure alignment on novel tools or
+    algorithms.
+  research_questions:
+  - '[![License (3-Clause BSD)](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg?logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA1MTIgN...'
+  methods_summary: ''
+  domain: bioinformatics
+  techniques: []
+  claims:
+  - claim_text: OpenMS is licensed under the 3-Clause BSD license.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: Contributors should adhere to the OpenMS Code of Conduct when interacting
+      with other developers, users, or community members.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: OpenMS provides a Contributor Onboarding Guide for beginners new to
+      open source or the project.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: When reporting a bug in OpenMS, users should provide the OpenMS version
+      they are running.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: When reporting a bug in OpenMS, users should provide the platform
+      they are running OpenMS on.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: When reporting a bug in OpenMS, users should describe how to reproduce
+      the bug.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: When reporting a bug in OpenMS, users should provide relevant tool
+      output such as error messages.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: When reporting a bug in OpenMS, users should provide data to reproduce
+      the bug, preferably as a GitHub gist or via platforms like Dropbox or Google
+      Drive.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: OpenMS maintainers assign severity labels to issues to indicate if
+      a bug is a blocker for a new release.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: OpenMS has a developer guide available at https://openms.readthedocs.io/en/latest/manual/develop.html.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: Pull request contributors must adhere to OpenMS coding conventions.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: Pull request contributors must have unit tests and functional tests
+      for their code.
+    claim_type: finding
+    speculative: false
+  - claim_text: Pull request contributors must have proper documentation for their
+      code.
+    claim_type: finding
+    speculative: false
+  - claim_text: Pull request contributors must have Python bindings with nanobind
+      binding files located in src/pyOpenMS/bindings/.
+    claim_type: finding
+    speculative: false
+    entity_id: pyopenms_component
+  - claim_text: OpenMS provides wrapping instructions in src/pyOpenMS/CLAUDE.md.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: A core developer will review changes to the main development branch
+      (develop) in OpenMS.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: OpenMS core developers can be indicated as preferred reviewers using
+      links in a comment section.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: Early contact with OpenMS core developers may provide additional guidance
+      on developing novel tools or algorithms.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  - claim_text: OpenMS provides a Developer Guide with detailed coding conventions,
+      architectural guidelines, and technical documentation.
+    claim_type: finding
+    speculative: false
+    entity_id: openms_system
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 'figure: figures/AxisWidget.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/ColorSelector.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/DeMeanderize.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/ExperimentalSettings.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/HistogramWidget.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/INIFileEditor.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/Kernel.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/Kernel_DataPoints.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/MetaDataBrowser.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/OpenMS_75x55_transparent.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/background.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/category.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/example_header.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/example_wizard.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/logo.drawio.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/openms_logo_corner_small.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/openms_logo_corner_transparent.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/openms_logo_large_transparent.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/openms_logo_small_transparent.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/splash.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'If you found a bug, e.g. an OpenMS tool crashes during data processing, it
+    is essential to provide some basic information: - the OpenMS version you are running
+    - the platform you are running OpenMS on (Windows 10, ...) - how you installed
+    OpenMS (e.g., from within KNIME, binary installers, self compiled) - a description
+    on how to reproduce the bug - relevant tool output (e.g., error messages) - data
+    to repoduce the bug (If possible as a GitHub gist.'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

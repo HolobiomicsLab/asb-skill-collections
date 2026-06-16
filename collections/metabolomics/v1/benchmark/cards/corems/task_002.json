@@ -1,0 +1,334 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/CoreMS.COLOR.png",
+      "role": "figure",
+      "sha256": "39e8bd3ca35b9643bea95c96d31ef0e6886a99f4c2a0c835651c7d1574694f14"
+    },
+    {
+      "indexable": false,
+      "path": "figures/CoreMS.COLOR_small.png",
+      "role": "figure",
+      "sha256": "7068dd12c245c661cc17de6cbae274994694a3df21228643369ae2cd681f6a3f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Direct_Infusion_FTMS_Data_Model.png",
+      "role": "figure",
+      "sha256": "caa9462f4901686e68432ae43badfc71ba00a574d3c06f9a7fe22b5d6e5b4241"
+    },
+    {
+      "indexable": false,
+      "path": "figures/GC_MS_Data_Model.png",
+      "role": "figure",
+      "sha256": "b6b6364bbeb937104c06537343ee65e704b54a08c7f8a5c5b912c87b1b9a19ab"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "02ede3525bbae3d177c8839ea50eef4fe774602ff90bbdf4ea2624fde55822ea"
+    }
+  ],
+  "created_at": "2026-06-16T07:04:21.589353+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mass spectrum data file ESI_NEG_SRFA.d",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reference m/z calibration file SRFA.ref",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured record containing calibration point count, final calibration coefficients, and residuals",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "PPM (parts per million) tolerance is a relative mass accuracy metric critical for matching observed m/z peaks against reference standards; typical starting windows range from 2\u201310 ppm depending on instrument resolution.",
+    "A minimum of 5 calibration points is a standard quality threshold for reliable polynomial mass-to-m/z conversion, as fewer points risk overfitting and poor extrapolation.",
+    "SRFA (Suwannee River Fulvic Acid) is a reference compound standard widely used in Fourier-transform mass spectrometry (FTMS) calibration due to its well-characterized and stable m/z peaks.",
+    "Calibration residuals quantify the fit error between observed m/z values and the polynomial model, and systematic high residuals indicate poor calibration quality or reference-peak misidentification."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file 'tests/tests_data/ftms/ESI_NEG_SRFA.d' exists",
+      "verify file 'tests/tests_data/ftms/SRFA.ref' exists",
+      "verify output structured record contains field 'calibration_points_count' with integer value",
+      "verify output structured record contains field 'calibration_coefficients' with numeric array",
+      "verify output structured record contains field 'residuals' with numeric array or single value",
+      "verify script_runs without exception when loading DS-001 spectrum and DS-002 reference file",
+      "verify calibration_points_count is exactly the number of matched m/z values from SRFA.ref",
+      "verify when matched_count < 5, PPM window is widened (robust to parameter choices, parameter-sensitive on window increment threshold)"
+    ],
+    "expert_review": [
+      "assess whether calibration coefficients are physically reasonable for the mass spectrometry instrument type (FTMS)",
+      "assess whether residuals indicate acceptable fit quality after fallback to wider PPM window",
+      "assess whether the conditional logic correctly triggers window widening at the threshold of fewer than 5 matched reference points",
+      "assess whether calibration results are consistent with standard SRFA calibration practices in mass spectrometry"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does the calibration procedure handle cases where the initial narrow PPM window fails to find sufficient reference m/z matches?: 'if len(mzrefs) < 5:\n        imzmeas, mzrefs = calfn.find_calibration_points(msobj, ref_mass_list_fmt,\n                                                        calib_ppm_error_threshold=(-1.5, 1.5),'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] When fewer than 5 calibration points are found within a given PPM error threshold, the procedure iteratively widens the threshold from \u00b11.0 ppm to \u00b11.5, \u00b13, \u00b15, \u00b17, and \u00b110 ppm until sufficient reference m/z matches are located.: 'if len(mzrefs) < 5:\n        imzmeas, mzrefs = calfn.find_calibration_points(msobj, ref_mass_list_fmt,\n                                                        calib_ppm_error_threshold=(-1.5, 1.5),'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Mass spectrum data file ESI_NEG_SRFA.d: 'file_location =  \"tests/tests_data/ftms/ESI_NEG_SRFA.d\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Reference m/z calibration file SRFA.ref: 'ref_file_location = 'tests/tests_data/ftms/SRFA.ref''"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structured record containing calibration point count, final calibration coefficients, and residuals: 'Output is a structured record containing the number of calibration points found and the final calibration coefficients/residuals.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] CoreMS: 'from corems.encapsulation.factory.parameters import MSParameters'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[results] pandas: 'import pandas as pd'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[results] numpy: 'import numpy as np'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, bug fixes, or feature changes is available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; sys.path.insert(0, '.'); from corems.data_source.ms_reader import MSFileReader; from corems.calibration.calibration_models import MzDomainCalibration; import pandas as pd; import numpy as np; import json; spectrum = MSFileReader('{inputs.spectrum_data}').get_spectrum(); ref_mz = pd.read_csv('{inputs.reference_mz}', sep='\\t', header=None)[0].values; ppm_window = 5; matches = spectrum.find_closest_mz_peaks(ref_mz, ppm_window); if len(matches) < 5: ppm_window = 10; matches = spectrum.find_closest_mz_peaks(ref_mz, ppm_window); cal = MzDomainCalibration(); coeffs, residuals = cal.fit(matches[:, 0], matches[:, 1], 2); output = {'calibration_points': len(matches), 'coefficients': coeffs.tolist(), 'residuals': residuals.tolist(), 'ppm_window_final': ppm_window}; print(json.dumps(output))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "calibration_record.json",
+  "expected_outputs": [
+    "Structured record containing calibration point count, final calibration coefficients, and residuals"
+  ],
+  "finding": "When fewer than 5 calibration points are found within a given PPM error threshold, the procedure iteratively widens the threshold from \u00b11.0 ppm to \u00b11.5, \u00b13, \u00b15, \u00b17, and \u00b110 ppm until sufficient reference m/z matches are located.",
+  "github_name": "EMSL-Computing/CoreMS",
+  "input_from": "task_001",
+  "inputs": [
+    "Mass spectrum data file ESI_NEG_SRFA.d",
+    "Reference m/z calibration file SRFA.ref"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "matched_peaks_initial.csv",
+    "matched_peaks_expanded.csv"
+  ],
+  "linked_result_ids": [
+    "result_001"
+  ],
+  "methodology_summary": [
+    "Load mass spectrum from ESI_NEG_SRFA.d and reference m/z values from SRFA.ref using CoreMS data encapsulation.",
+    "Perform initial reference m/z peak matching using a baseline PPM window (e.g., 5 ppm).",
+    "Evaluate match count; if fewer than 5 points matched, expand PPM tolerance and rematch.",
+    "Fit calibration polynomial (e.g., second-order) to matched points using least-squares regression.",
+    "Compute residuals and export calibration coefficients with metadata to structured output record.",
+    "Validation: Confirm that final calibration point count meets or exceeds 5; verify residual magnitude indicates acceptable fit quality for subsequent mass analysis."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, bug fixes, or feature changes is available"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the calibration procedure handle cases where the initial narrow PPM window fails to find sufficient reference m/z matches?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "mass-calibration-coefficient-computation",
+    "ppm-tolerance-window-adjustment",
+    "reference-peak-matching-and-fallback-logic",
+    "calibration-residual-calculation",
+    "ftms-mass-spectrum-peak-detection"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_corems/synthesized_package",
+  "spine_condition_ids": [
+    "COND-004",
+    "COND-005",
+    "COND-008",
+    "COND-010",
+    "COND-011"
+  ],
+  "spine_entity_ids": [
+    "COMP-003",
+    "COMP-013",
+    "DS-001",
+    "DS-002",
+    "DS-003",
+    "COND-004",
+    "COND-005",
+    "COND-008",
+    "COND-010",
+    "COND-011",
+    "COMP-022"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:EMSL-Computing__CoreMS",
+  "task_description": "Implement a conditional fallback mechanism for mass spectrum calibration that expands the PPM tolerance window when fewer than 5 reference m/z values are matched against SRFA.ref. Output a structured record reporting the number of calibration points found and the final calibration coefficients with residuals.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mass spectrum data file",
+      "port_id": "spectrum_data",
+      "resolved_via": null,
+      "source": "task_001/formula_assignments",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Reference m/z calibration file",
+      "port_id": "reference_mz",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the iterative fallback logic for mass spectrum calibration that progressively widens the PPM error tolerance when initial narrow windows yield fewer than 5 reference m/z matches, then output the matched calibration points and resulting coefficients.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Calibration results with point count, coefficients, and residuals",
+      "port_id": "calibration_record",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "metabolite-identification",
+    "database-annotation",
+    "quality-control",
+    "spectral-library-matching"
+  ],
+  "title": "Reconstruct the MzDomainCalibration fallback PPM-widening step for sparse reference lists",
+  "tools": [
+    "Docker",
+    "CoreMS",
+    "pandas",
+    "numpy"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the mass spectrum from ESI_NEG_SRFA.d and the reference m/z file SRFA.ref using CoreMS data encapsulation modules. 2. Initialize a calibration routine with a standard PPM window (e.g., 5 ppm) and match reference m/z values against the spectrum peaks. 3. Count the number of matched reference points; if the count is fewer than 5, widen the PPM tolerance window (e.g., double to 10 ppm) and rematch reference m/z values. 4. Compute calibration coefficients and residuals from the matched points using least-squares fitting or equivalent polynomial regression. 5. Serialize the results (point count, coefficients, residuals) into a structured record and write to output file."
+}

@@ -1,0 +1,172 @@
+schema_version: 0.1.0
+workflow_id: coll_sirius_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+narrative:
+  tagline: SIRIUS is a Java-based software framework offering freely available methods
+    to the scientific community for the analysis of LC-MS/MS data of metabolites and
+    other small molecules, intended for research and education use.
+  pseudo_abstract: "SIRIUS provides a suite of computational tools and web services\
+    \ (including CSI:FingerID, CANOPUS, and MSNovelist) designed for metabolomics\
+    \ analysis. The methods are distributed as free resources for academic research\
+    \ and educational purposes, with commercial redistribution prohibited. The framework\
+    \ is maintained by the B\xF6cker group and made available through both academic\
+    \ web services and commercial licensing via Bright Giant GmbH for non-academic\
+    \ users."
+  research_questions:
+  - '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blueviolet.svg)](https://www.gnu.org/licenses/agpl-3.0)
+    [![Generic badge](https://img.shields.io/badge/Version-6.3.7-informational.svg)](https://shields.io/)
+    [![Build and Publish](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml/badge.svg?branch=release-4-pre)](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml)
+    [![Join community chat at https://gitter.im/sirius-ms/general](https://badg...'
+  methods_summary: ''
+  domain: metabolomics
+  techniques:
+  - in-silico-fragmentation
+  - machine-learning
+  - metabolite-identification
+  - tandem-ms
+  claims:
+  - claim_text: SIRIUS is licensed under AGPL v3.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: The current version of SIRIUS is 6.3.7.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: SIRIUS is a java-based software framework for the analysis of LC-MS/MS
+      data of metabolites.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: SIRIUS methods are offered to the scientific community as freely available
+      resources.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: Redistribution of SIRIUS methods in whole or in part for commercial
+      purposes is prohibited.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: "The SIRIUS web services CSI:FingerID, CANOPUS, and MSNovelist are\
+      \ hosted by the B\xF6cker group."
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: "SIRIUS web services hosted by the B\xF6cker group are for academic\
+      \ research and education use only."
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: Non-academic users can obtain SIRIUS licenses and services from Bright
+      Giant GmbH.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  - claim_text: Users of SIRIUS tools are asked to cite the corresponding papers in
+      any resulting publications.
+    claim_type: finding
+    speculative: false
+    entity_id: sirius_system
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints:
+  - Commercial redistribution of methods is prohibited
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 'figure: figures/c-add-doc.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-bug.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-clipboard.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-controls-play.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-db.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-document.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-documents.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-download.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-dragndrop.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-export.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-fbmn.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-filter-down.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-filter-up.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-fingerprint.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-fmet.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-folder-close.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-folder-file.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-folder-open.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/c-folder.svg'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'figure: figures/sirius-icon.png'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: We ask that users of our tools cite the corresponding papers in any resulting
+    publications.</span>*
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

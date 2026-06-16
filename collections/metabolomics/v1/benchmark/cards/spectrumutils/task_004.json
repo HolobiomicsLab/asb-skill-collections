@@ -1,0 +1,489 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/annot_fmt.png",
+      "role": "figure",
+      "sha256": "aa131da2eb4a03f3caf34c65d28d9f2d582c6a9efa49cdf2a01207b6fab43eed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/facet.png",
+      "role": "figure",
+      "sha256": "e57e59a644daa6d219a1a655c97392d67c7c53ccefaada676834db3499f037f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ion_types.png",
+      "role": "figure",
+      "sha256": "3689e78338321ae78c8539a57d51429d8fbe5f05f749ab00f8e3ea326a1b3040"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mass_errors.png",
+      "role": "figure",
+      "sha256": "4d0b8529e04b2c5939cecdad599868d4ca9773c22322732fc85f5777067da0ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mirror.png",
+      "role": "figure",
+      "sha256": "32701dbd4d13d84c64d237aee23847c79d67c07f61da2b321dd8d377d01368e2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/neutral_losses_1.png",
+      "role": "figure",
+      "sha256": "f7b624ba1657b23cb0c63a1759a448c55ecc5f0badb718312246fe6f8319925d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/neutral_losses_2.png",
+      "role": "figure",
+      "sha256": "5617bb2da993ae878ddaf3894e11e149637f5c8ea16e64ad010b83c63e125799"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ast.png",
+      "role": "figure",
+      "sha256": "37923b9adda7fc9c3eaaa3e950cc45cc94ec0431ef868a1f4c748b977ceeaf01"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex1.png",
+      "role": "figure",
+      "sha256": "c45d39b10ee03b10a075fa8050fb66b8392d57f9219b5fe7df730b987c1bb034"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex2.png",
+      "role": "figure",
+      "sha256": "ece2c94ae2f27a0f19070045aed63ecb78b715daf321bbebb5959a99e09ebc23"
+    },
+    {
+      "indexable": false,
+      "path": "figures/proforma_ex3.png",
+      "role": "figure",
+      "sha256": "28d41a86b95b6c72243ecaa9e58ac5767f1eb1c88d808006d1ed0a65dd6a079e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/quickstart.png",
+      "role": "figure",
+      "sha256": "44490275960117903431e424672fdc3c31f5b4afa180c518c144ff18633f63fd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/runtime.png",
+      "role": "figure",
+      "sha256": "4c5df6692e74ad37aec5e8719571aa0972961c4f3032164976cbc7d81d0863ac"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectrum_utils.png",
+      "role": "figure",
+      "sha256": "73d5e118673e38e5efcf597fd07ff1ecc88427f294570dd8613c9b7f4ba675c0"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "0dc02878eada4e3ac6351523d62ecf382dc0914af1caa073734c3f8aead8fbe9"
+    }
+  ],
+  "created_at": "2026-06-16T07:16:56.758905+00:00",
+  "crossref_doi": "10.1021/acs.analchem.9b04884",
+  "data_accessions": [
+    {
+      "accession": "MSV000082283",
+      "evidence_span": "# Retrieve the spectrum by its USI.     usi = \"mzspec:MSV000082283:f07074:scan:5475\"     spectrum = sus.MsmsSpectrum.from_usi(",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000082283"
+    },
+    {
+      "accession": "MSV000079960",
+      "evidence_span": "as sus   peptide = \"DLTDYLM[Oxidation]K\" usi_top = \"mzspec:MSV000079960:DY_HS_Exp7-Ad1:scan:30372\" spectrum_top = sus.MsmsSpectrum.",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000079960"
+    },
+    {
+      "accession": "MSV000080679",
+      "evidence_span": "a(peptide, 0.5, \"Da\", ion_types=\"aby\") usi_bottom = \"mzspec:MSV000080679:j11962_C1orf144:scan:10671\" spectrum_bottom = sus.MsmsSpect",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080679"
+    },
+    {
+      "accession": "PXD000561",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555\" peptide =",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD000561"
+    },
+    {
+      "accession": "PXD014834",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD014834:TCGA-AA-3518-01A-11_W_VU_20120915_A0218_3F_R_FR01:scan:8370",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD014834"
+    },
+    {
+      "accession": "PXD022531",
+      "evidence_span": "as sup import spectrum_utils.spectrum as sus  usi = \"mzspec:PXD022531:j12541_C5orf38:scan:12368\" peptide = \"VAATLEILTLK/2\" spectr",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD022531"
+    },
+    {
+      "accession": "PXD004732",
+      "evidence_span": "s sup import spectrum_utils.spectrum as sus   usi = \"mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840\"",
+      "kind": "pride",
+      "url": "https://www.ebi.ac.uk/pride/archive/projects/PXD004732"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Public MS/MS spectrum deposited in PRIDE/MassIVE repository (e.g., mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ProForma 2.0 peptide sequence string (e.g., 'WNQLQAFWGTGK' or with modifications)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Fraction of observed peaks annotated without neutral loss (numeric value between 0 and 1)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Fraction of observed peaks annotated with neutral loss enabled (numeric value between 0 and 1)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparison report showing increase in peak interpretation fraction when neutral losses are enabled",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Neutral losses (NH\u2083 = \u221217.026549 Da, H\u2082O = \u221218.010565 Da) represent common post-translational modifications and peptide fragmentation artifacts that, when included in annotation workflows, increase the number of interpretable peaks in tandem mass spectra.",
+    "Fragment ion annotation relies on matching observed m/z values against theoretical fragment masses within a specified tolerance window (typically 10 ppm or 0.05 Da); the fraction of peaks receiving interpretation is a key quality metric for peptide-spectrum match confidence.",
+    "ProForma 2.0 is a machine-readable, standardized specification for peptidoform notation that integrates modification names (Unimod, PSI-MOD), controlled vocabularies, and delta masses, enabling unambiguous representation of modified peptides across tandem MS experiments.",
+    "Ion types (a, b, c, x, y, z, internal m, immonium I) differ in fragmentation chemistry and frequency; the default annotation focuses on singly-charged b and y ions to reduce label clutter while maximizing peak coverage.",
+    "USI (Universal Spectrum Identifier) is a standardized format for unambiguously retrieving individual tandem MS spectra from public proteomics repositories (PRIDE, MassIVE) without requiring local file downloads or format conversion."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840 is retrievable via USI mechanism",
+      "script_runs: Python script instantiates spectrum_utils.fragment_annotation with neutral_loss parameter set to False",
+      "script_runs: Python script instantiates spectrum_utils.fragment_annotation with neutral_loss parameter set to True",
+      "output_matches_reference: fraction of peaks receiving interpretation (neutral_loss=False) computed and recorded as a single numeric value",
+      "output_matches_reference: fraction of peaks receiving interpretation (neutral_loss=True) computed and recorded as a single numeric value",
+      "value_in_range: difference between fractions (neutral_loss=True minus neutral_loss=False) is a non-negative number, robust to minor numerical precision differences"
+    ],
+    "expert_review": [
+      "reported result for neutral loss annotation effect on peak interpretation fraction matches the article text or supplementary materials \u2014 requires domain knowledge to locate the specific claimed improvement and verify computation matches article methodology"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does enabling neutral loss annotation in spectrum_utils.fragment_annotation affect the fraction of observed peaks that receive an interpretation?: 'Annotating observed spectrum fragments using the ProForma 2.0 specification for (modified) peptidoforms.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] spectrum_utils provides fragment annotation functionality using the ProForma 2.0 specification to interpret observed spectrum peaks, with the capability to enable or disable neutral loss annotation to modulate peak interpretation coverage.: 'Annotating observed spectrum fragments using the ProForma 2.0 specification for (modified) peptidoforms.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Public MS/MS spectrum deposited in PRIDE/MassIVE repository (e.g., mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840): 'Retrieve the spectrum by its USI.\nusi = \"mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] ProForma 2.0 peptide sequence string (e.g., 'WNQLQAFWGTGK' or with modifications): 'Annotate the spectrum with its ProForma string.\npeptide = \"EM[Oxidation]EVEES[Phospho]PEK\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Fraction of observed peaks annotated without neutral loss (numeric value between 0 and 1): 'peaks that correspond to peptide fragments with a neutral loss are highlighted in the matching color'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Fraction of observed peaks annotated with neutral loss enabled (numeric value between 0 and 1): 'Neutral losses need to be specified by a concise label (preferably their molecular formula) and mass difference'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Comparison report showing increase in peak interpretation fraction when neutral losses are enabled: 'the same peptide--spectrum match without considering neutral losses is able to explain far fewer peaks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] spectrum_utils: 'spectrum_utils supports several other ion types'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'import matplotlib.pyplot as plt\nimport spectrum_utils.plot as sup\nimport spectrum_utils.spectrum as sus'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import spectrum_utils.spectrum as sus; import spectrum_utils.utils as suu; from pyteomics import proforma; import urllib.request; import json; usi='{inputs.spectrum_usi}'; peptide='{inputs.peptide_sequence}'; spectrum_dict=json.loads(urllib.request.urlopen(f'https://metabolomics-usi.ucsd.edu/json/?usi={usi}').read()); spec=sus.MsmsSpectrum(spectrum_dict['spectrum']['mz'], spectrum_dict['spectrum']['intensity'], spectrum_dict['precursor_mz'], spectrum_dict['precursor_charge'], spectrum_dict['spectrum_id']); spec=spec.set_mz_range(100, 1400); spec=spec.remove_precursor_peak(10); spec=spec.filter_intensity(0.05, 50); spec=spec.scale_intensity('sqrt'); peptide_obj=proforma.parse(peptide); anno_no_nl=[peak for peak in spec.peaks if any(anno for anno in spec.annotate_peptide(peptide_obj, ion_types=['a','b','y'], neutral_losses=False))]; anno_with_nl=[peak for peak in spec.peaks if any(anno for anno in spec.annotate_peptide(peptide_obj, ion_types=['a','b','y'], neutral_losses=True))]; frac_no_nl=len(anno_no_nl)/len(spec.peaks) if len(spec.peaks)>0 else 0; frac_with_nl=len(anno_with_nl)/len(spec.peaks) if len(spec.peaks)>0 else 0; increase=(frac_with_nl-frac_no_nl)/frac_no_nl*100 if frac_no_nl>0 else 0; print(f'Fraction without neutral loss: {frac_no_nl:.4f}'); print(f'Fraction with neutral loss: {frac_with_nl:.4f}'); print(f'Relative increase: {increase:.2f}%')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "peak_annotation_comparison.csv",
+  "expected_outputs": [
+    "Fraction of observed peaks annotated without neutral loss (numeric value between 0 and 1)",
+    "Fraction of observed peaks annotated with neutral loss enabled (numeric value between 0 and 1)",
+    "Comparison report showing increase in peak interpretation fraction when neutral losses are enabled"
+  ],
+  "finding": "spectrum_utils provides fragment annotation functionality using the ProForma 2.0 specification to interpret observed spectrum peaks, with the capability to enable or disable neutral loss annotation to modulate peak interpretation coverage.",
+  "github_name": "bittremieuxlab/spectrum_utils",
+  "input_from": "task_002",
+  "inputs": [
+    "Public MS/MS spectrum deposited in PRIDE/MassIVE repository (e.g., mzspec:PXD004732:01650b_BC2-TUM_first_pool_53_01_01-3xHCD-1h-R2:scan:41840)",
+    "ProForma 2.0 peptide sequence string (e.g., 'WNQLQAFWGTGK' or with modifications)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectrum_processed.pkl",
+    "annotations_without_nl.json",
+    "annotations_with_nl.json",
+    "peak_counts.csv"
+  ],
+  "linked_result_ids": [
+    "result_014",
+    "result_029",
+    "result_030",
+    "result_031",
+    "result_032",
+    "result_033"
+  ],
+  "methodology_summary": [
+    "Retrieve public MS/MS spectrum via USI and load into spectrum_utils MsmsSpectrum object.",
+    "Apply standard spectrum preprocessing: m/z range filtering (100\u20131400), precursor peak removal (10 ppm tolerance), noise filtering (0.05 min intensity, max 50 peaks), and square-root intensity scaling.",
+    "Annotate fragment ions using ProForma peptide string with default ion types (a, b, y) and neutral losses disabled; count peaks receiving interpretation.",
+    "Re-annotate the same spectrum with common neutral losses (NH\u2083, H\u2082O) enabled; count peaks receiving interpretation.",
+    "Calculate peak annotation fractions for both conditions and compute the relative increase.",
+    "Validation: verify that peak interpretation fraction increase when neutral losses are enabled matches the order-of-magnitude improvement shown in the reported neutral loss example spectra.",
+    "References: source article (DOI: 10.1021/acs.analchem.9b04884); MSV000082283 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000082283); MSV000079960 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000079960); MSV000080679 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080679); PXD000561 (https://www.ebi.ac.uk/pride/archive/projects/PXD000561); PXD014834 (https://www.ebi.ac.uk/pride/archive/projects/PXD014834); PXD022531 (https://www.ebi.ac.uk/pride/archive/projects/PXD022531); PXD004732 (https://www.ebi.ac.uk/pride/archive/projects/PXD004732)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/annotation_report"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does enabling neutral loss annotation in spectrum_utils.fragment_annotation affect the fraction of observed peaks that receive an interpretation?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "spectral-fragment-ion-annotation-with-proforma",
+    "neutral-loss-peak-interpretation",
+    "peptide-spectrum-matching-evaluation",
+    "fragment-mass-tolerance-calibration",
+    "peak-annotation-quantification-and-comparison"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_spectrumutils/synthesized_package",
+  "spine_condition_ids": [
+    "cond_spectrum_utils_040"
+  ],
+  "spine_entity_ids": [
+    "system_spectrum_utils",
+    "comp_proforma_module",
+    "comp_fragment_annotation",
+    "comp_plot",
+    "comp_iplot",
+    "comp_utils_module",
+    "tool_usi",
+    "arch_processing_pipeline",
+    "cond_spectrum_utils_040",
+    "result_speed_comparison",
+    "result_neutral_loss_coverage",
+    "dataset_pxd004732"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-analysis",
+    "information-extraction",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:bittremieux-lab__spectrum_utils",
+  "task_description": "Load a publicly deposited MS/MS spectrum via USI, annotate fragment ions using spectrum_utils with neutral loss disabled and enabled, compute the fraction of observed peaks receiving interpretation in each condition, and verify the increase matches reported results.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Public MS/MS spectrum Universal Spectrum Identifier",
+      "port_id": "spectrum_usi",
+      "resolved_via": null,
+      "source": "task_002/annotation_report",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ProForma 2.0 peptide sequence with optional modifications",
+      "port_id": "peptide_sequence",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Load a spectrum from PXD004732 and measure the fraction of annotated peaks with and without neutral loss annotation enabled, then verify the increase matches reported results.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Fraction of observed peaks annotated without neutral loss",
+      "port_id": "fraction_without_nl",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Fraction of observed peaks annotated with neutral loss enabled",
+      "port_id": "fraction_with_nl",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Comparison report with increase in peak interpretation fraction",
+      "port_id": "comparison_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "spectral-library-matching",
+    "quality-control",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct neutral-loss annotation to verify that neutral losses increase the fraction of interpreted peaks",
+  "tools": [
+    "spectrum_utils",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Retrieve spectrum from public repository using Universal Spectrum Identifier (USI) with spectrum_utils.MsmsSpectrum.from_usi(). 2. Set m/z range to 100\u20131400 using set_mz_range(). 3. Remove precursor peak using remove_precursor_peak() with 10 ppm fragment tolerance. 4. Filter low-intensity noise peaks using filter_intensity() with minimum intensity 0.05 and maximum 50 peaks. 5. Scale peak intensities by square root using scale_intensity('root'). 6. Annotate fragment ions using annotate_proforma() with ProForma peptide string, ion_types='aby', and neutral_losses disabled (default). 7. Count annotated peaks and calculate fraction of observed peaks with interpretation. 8. Repeat annotation step 6 with neutral_losses={'NH3': -17.026549, 'H2O': -18.010565} enabled. 9. Count annotated peaks in neutral-loss condition and recalculate fraction. 10. Compare fractions and verify increase against reported benchmark."
+}

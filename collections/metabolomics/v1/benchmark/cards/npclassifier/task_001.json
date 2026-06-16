@@ -1,0 +1,307 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "576be3e8cc37e286e6c3db044ec75a8d71371b030096346327f67aea076f877f"
+    }
+  ],
+  "created_at": "2026-06-16T07:06:27.996986+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SMILES string for chemical compound (e.g., 'CC(C)Cc1ccc(cc1)C(C)C(O)=O' or similar valid SMILES)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Running NP-Classifier server with TensorFlow Serving backend deployed via Docker Compose",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "JSON response object containing classification results with output field and metadata confirming input/output layer names",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "chemistry / chemoinformatics",
+  "domain_knowledge": [
+    "SMILES notation is a standard linear text notation for representing chemical structures; valid SMILES strings must follow specific syntax rules to be accepted by the classifier endpoint.",
+    "NP-Classifier uses two parallel input layers (input_2048 and input_4096) that process different molecular fingerprint representations simultaneously before merging in downstream layers.",
+    "The /classify endpoint is a RESTful HTTP GET interface that accepts SMILES as a query parameter and returns predictions in JSON format with a single output layer named 'output'.",
+    "TensorFlow Serving is a flexible, high-performance serving system for machine learning models; it communicates with the NP-Classifier API wrapper through a Docker internal network bridge.",
+    "HTTP status code 200 indicates successful request processing; any response other than 200 (4xx, 5xx) indicates a client or server error that must be diagnosed before validating response structure."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:mwang87__NP-Classifier",
+      "script_runs: execute Docker Compose startup sequence (docker network create nginx-net, make server-compose) without errors",
+      "script_runs: send HTTP GET request to /classify endpoint with valid SMILES string (e.g., 'CC(=O)Oc1ccccc1C(=O)O') to running local server",
+      "file_format_is: response body is valid JSON",
+      "field_present: response JSON contains 'output' field",
+      "field_present: response JSON contains 'input_2048' field (or evidence of input layer name)",
+      "field_present: response JSON contains 'input_4096' field (or evidence of input layer name)",
+      "value_in_range: HTTP status code equals 200",
+      "robust to parameter choices: verify endpoint responds with structurally consistent JSON across multiple valid SMILES inputs"
+    ],
+    "expert_review": [
+      "Assess whether returned classification scores or labels are chemically plausible for the input SMILES string (requires natural product chemistry expertise)",
+      "Verify that response structure matches the documented API contract in the repository README or API specification (if available)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the /classify API endpoint accept a SMILES string parameter and return a properly structured classification response?: 'Classify programmatically \n\n```/classify?smiles=<>```'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The NP Classifier provides a /classify API endpoint that accepts SMILES strings as query parameters for programmatic classification requests.: 'Classify programmatically \n\n```/classify?smiles=<>```'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SMILES string for chemical compound (e.g., 'CC(C)Cc1ccc(cc1)C(C)C(O)=O' or similar valid SMILES): '/classify?smiles=<>'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Running NP-Classifier server with TensorFlow Serving backend deployed via Docker Compose: 'We pass through tensorflow serving at this url'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] JSON response object containing classification results with output field and metadata confirming input/output layer names: 'Input layers' names should be \"input_2048\" and \"input_4096\"\n\nOutput layer's name should be \"output\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] docker: 'you need docker and docker-compose'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] docker-compose: 'you need docker and docker-compose'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TensorFlow Serving: 'We pass through tensorflow serving at this url'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'Make sure you have python installed'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Expected JSON response schema for /classify endpoint is not documented in the provided text: 'Source: github:mwang87__NP-Classifier'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import requests; import json; import sys; server_url = '{inputs.running_server}'; smiles = '{inputs.smiles_string}'; response = requests.get(f'{server_url}/classify', params={'smiles': smiles}); assert response.status_code == 200, f'HTTP {response.status_code}'; data = response.json(); assert 'output' in data, 'Missing output field'; print(json.dumps(data, indent=2))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 30,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "classification_response.json",
+  "expected_outputs": [
+    "JSON response object containing classification results with output field and metadata confirming input/output layer names"
+  ],
+  "finding": "The NP Classifier provides a /classify API endpoint that accepts SMILES strings as query parameters for programmatic classification requests.",
+  "github_name": "mwang87/NP-Classifier",
+  "input_from": null,
+  "inputs": [
+    "SMILES string for chemical compound (e.g., 'CC(C)Cc1ccc(cc1)C(C)C(O)=O' or similar valid SMILES)",
+    "Running NP-Classifier server with TensorFlow Serving backend deployed via Docker Compose"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "http_status_code.txt",
+    "response_headers.json",
+    "classification_response.json"
+  ],
+  "linked_result_ids": [
+    "result_011",
+    "result_012"
+  ],
+  "methodology_summary": [
+    "Verify Docker containers (NP-Classifier server and TensorFlow Serving) are running and healthy.",
+    "Construct HTTP GET request to /classify endpoint with valid SMILES string parameter.",
+    "Execute request and capture HTTP response (status code, headers, body).",
+    "Parse JSON response body and validate structure contains 'output' field.",
+    "Confirm input layer names 'input_2048' and 'input_4096' are present in response metadata or model schema.",
+    "Validation: HTTP status is 200, response is valid JSON, and all required layer names match specification."
+  ],
+  "missing_information": [
+    "No changelog or version history provided",
+    "Expected JSON response schema for /classify endpoint is not documented in the provided text"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the /classify API endpoint accept a SMILES string parameter and return a properly structured classification response?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "rest-api-endpoint-querying",
+    "json-response-validation",
+    "smiles-string-formatting",
+    "docker-container-health-verification",
+    "neural-network-layer-metadata-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_npclassifier/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "NP_CLASSIFIER_SYSTEM",
+    "COMP_KERAS_MODEL",
+    "API_CLASSIFY"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "natural-products"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:mwang87__NP-Classifier",
+  "task_description": "Send a SMILES string to the running NP-Classifier /classify endpoint and verify the classification response is returned with the expected JSON structure (input layers 'input_2048' and 'input_4096', output layer 'output').",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SMILES string for chemical compound",
+      "port_id": "smiles_string",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Running NP-Classifier server with TensorFlow Serving backend",
+      "port_id": "running_server",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Send a SMILES string to the /classify endpoint on a running NP-Classifier server and verify the response contains expected classification output structure.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "JSON response object with classification results and layer metadata",
+      "port_id": "classification_response",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "deep-learning"
+  ],
+  "title": "Reproduce the /classify API endpoint response for a SMILES query",
+  "tools": [
+    "docker",
+    "docker-compose",
+    "TensorFlow Serving",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Ensure NP-Classifier Docker services are running (server and TensorFlow Serving). 2. Construct an HTTP GET request to the /classify endpoint with a valid SMILES string parameter. 3. Send the request and capture the JSON response. 4. Validate the response structure contains the expected output field 'output' and verify the presence of input layer names 'input_2048' and 'input_4096' in the response metadata or schema. 5. Confirm the HTTP status code is 200 and the response is well-formed JSON."
+}

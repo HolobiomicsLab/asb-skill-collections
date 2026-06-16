@@ -1,0 +1,163 @@
+# SciTask Card: Reconstruct the Map MS2LDA Substructural Information to Mass Spectral Molecular Network (Classical) component
+
+- Task ID: `task_001`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T21:33:32.377666+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_molnetenhancer/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-processing`, `information-extraction`
+- GitHub: `madeleineernst/RMolNetEnhancer`
+- Quality: Score 2/5 — Coherent: false, placeholder, 4 grounding failures
+
+## Classification
+
+- Task kind: `component_reconstruction`
+- Article type: `software-tool`
+- Primary domain: `metabolomics`
+- Subdomains: `computational-metabolomics`, `natural-products`, `untargeted-metabolomics`
+- Techniques: `molecular-networking`, `network-annotation-propagation`, `database-annotation`, `chemical-class-annotation`
+
+## Research Question
+How does pyMolNetEnhancer map MS2LDA-derived Mass2Motif substructural information onto nodes in classical-mode GNPS mass spectral molecular networks?
+
+## Connected Finding
+pyMolNetEnhancer integrates chemical class and substructure information within mass spectral molecular networks created through the GNPS platform, enabling mapping of MS2LDA substructural information in classical mode.
+
+## Task Description
+Map Mass2Motif substructural information from MS2LDA onto a GNPS-generated mass spectral molecular network using the classical-mode approach, producing an annotated network artifact with motif-to-node assignments.
+
+## Inputs
+- GNPS-generated classical molecular network file (graphml or JSON format)
+- MS2LDA Mass2Motif substructural information output (motif assignments and scores)
+
+## Expected Outputs
+- Annotated molecular network file with embedded Mass2Motif substructural information mapped to network nodes
+
+## Expected Output File
+
+- `annotated_network.graphml`
+
+## Landmark Outputs
+
+- `motif_node_mapping.tsv`
+- `mapping_statistics.json`
+
+## Tools
+- pyMolNetEnhancer
+- GNPS
+- Python
+
+## Skills
+- mass-spectral-network-annotation
+- motif-to-node-mapping
+- substructural-motif-assignment
+- gnps-network-processing
+- molecular-network-graph-manipulation
+
+## Workflow Description
+1. Load the GNPS-generated classical molecular network file (graphml or JSON format) and MS2LDA Mass2Motif output data containing substructural motif assignments. 2. Use pyMolNetEnhancer's classical-mode mapping function to align MS2LDA motif identifiers to corresponding nodes in the molecular network based on precursor m/z and spectral similarity. 3. Annotate each network node with mapped motif IDs and associated confidence or presence indicators. 4. Export the enhanced network as an annotated molecular network file (graphml or JSON) with motif metadata embedded in node attributes.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/ChemicalClassScoreMapped.png` | figure | False |
+| `figures/ChemicalClassesMapped.png` | figure | False |
+| `figures/DereplicatorJobID.png` | figure | False |
+| `figures/DownloadCulsteredMGF.png` | figure | False |
+| `figures/Export_MS2LDA_Summary.jpg` | figure | False |
+| `figures/GNPSJobID.png` | figure | False |
+| `figures/ImportEdges.png` | figure | False |
+| `figures/ImportNodes.png` | figure | False |
+| `figures/MS2LDAJobID.png` | figure | False |
+| `figures/Mass2Motif_2_Network_Parameters.png` | figure | False |
+| `figures/MotifsMappedEdges.png` | figure | False |
+| `figures/MotifsMappedNodes.jpg` | figure | False |
+| `figures/NAPJobID.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No changelog documenting version history, bug fixes, or feature changes
+- No specification of expected input file formats for classical-mode MS2LDA motif mapping (schema for motif file, GNPS network input format, coordinate system)
+- No specification of output artifact schema for annotated network (field names, data types, structure of motif annotations on nodes)
+- No reference to test dataset or worked example demonstrating classical-mode motif mapping on a public GNPS network
+
+## Domain Knowledge
+- Mass2Motif (m/z-based substructural fragment patterns discovered by MS2LDA) must be matched to network nodes using precursor mass and spectral similarity criteria.
+- GNPS classical molecular networks represent sample compounds as nodes and cosine similarity-based spectral relationships as edges; motif annotations enhance nodes by encoding recurrent fragmentation signatures.
+- pyMolNetEnhancer's classical-mode pipeline differs from feature-based mapping in that it operates on pre-computed GNPS networks rather than raw LC-MS feature tables.
+- Motif confidence scores or presence/absence indicators from MS2LDA should be preserved and propagated as node attributes to enable downstream filtering and visualization.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] How does pyMolNetEnhancer map MS2LDA-derived Mass2Motif substructural information onto nodes in classical-mode GNPS mass spectral molecular networks?: 'Map MS2LDA substructural information to mass spectral molecular networks (classical)'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] pyMolNetEnhancer integrates chemical class and substructure information within mass spectral molecular networks created through the GNPS platform, enabling mapping of MS2LDA substructural information in classical mode.: 'pyMolNetEnhancer is a python module integrating chemical class and substructure information within mass spectral molecular networks created through the Global Natural Products Social Molecular'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [intro] GNPS-generated classical molecular network file (graphml or JSON format): 'mass spectral molecular networks created through the Global Natural Products Social Molecular Networking (GNPS)'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [intro] MS2LDA Mass2Motif substructural information output (motif assignments and scores): 'Map MS2LDA substructural information to mass spectral molecular networks (classical)'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [intro] Annotated molecular network file with embedded Mass2Motif substructural information mapped to network nodes: 'integrating chemical class and substructure information within mass spectral molecular networks'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [intro] pyMolNetEnhancer: 'pyMolNetEnhancer is a python module integrating chemical class and substructure information'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [intro] GNPS: 'mass spectral molecular networks created through the Global Natural Products Social Molecular Networking (GNPS) platform'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [intro] Python: 'pyMolNetEnhancer is a python module'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [discussion] No changelog documenting version history, bug fixes, or feature changes: '_No changelog found._'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [discussion] No specification of expected input file formats for classical-mode MS2LDA motif mapping (schema for motif file, GNPS network input format, coordinate system): '_No changelog found._'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [discussion] No specification of output artifact schema for annotated network (field names, data types, structure of motif annotations on nodes): '_No changelog found._'
+- `ev_012` from `agent2_synthesis` (agent2_traced): [discussion] No reference to test dataset or worked example demonstrating classical-mode motif mapping on a public GNPS network: '_No changelog found._'
+
+## Evaluation Strategy
+### Direct Checks
+- verify file exists: pyMolNetEnhancer package accessible from github:madeleineernst__pyMolNetEnhancer
+- script_runs: execute pyMolNetEnhancer classical-mode motif mapping function with valid GNPS network JSON and MS2LDA motif file as inputs without error
+- file_format_is: output network artifact is valid GraphML or JSON (no canonical answer—check documentation for format specification)
+- field_present: output network nodes contain MS2LDA motif annotation fields
+- contains_substring: output network includes node identifiers from input GNPS network matched to motif assignments
+
+### Expert Review
+- verify semantic correctness: MS2LDA motif-to-node mappings are biologically plausible and consistent with mass spectral fragmentation patterns
+- verify annotation fidelity: motif assignments reflect the substructural information from MS2LDA without loss or corruption
+- assess network topology preservation: classical-mode mapping does not alter or introduce spurious edges in the original GNPS network structure
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load GNPS classical molecular network and MS2LDA Mass2Motif output.
+2. Align motif identifiers to network nodes using precursor m/z and spectral similarity matching.
+3. Annotate network nodes with mapped motif metadata and confidence scores.
+4. Validation: Confirm all mapped nodes contain motif attributes and output file is valid graph format.
+
+## Workflow Ports
+
+**Inputs:**
+
+- `gnps_network` — GNPS molecular network (classical mode)
+- `ms2lda_motifs` — MS2LDA Mass2Motif assignments
+
+**Outputs:**
+
+- `annotated_network` — Annotated molecular network with mapped motifs
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:madeleineernst__pyMolNetEnhancer`
+- **Synthesized at:** 2026-06-15T21:37:29+00:00
+
+## Extraction Quality
+- Score: 2/5
+- Coherent: false
+- Placeholder detected: true
+- Groundedness failures (4):
+  - inputs[0]: evidence_span not found in section 'intro' (value='GNPS-generated classical molecular network file (graphml or ', span='mass spectral molecular networks created through the Global ')
+  - tools[1]: evidence_span not found in section 'intro' (value='GNPS', span='mass spectral molecular networks created through the Global ')
+  - finding: evidence_span is truncated ('...created through the Global Natural Products Social Molecular' cuts off mid-phrase; incomplete sentence makes grounding verification impossible)
+  - research_question vs. finding: research_question asks 'HOW does pyMolNetEnhancer map...' (procedural/mechanistic), but finding only asserts 'pyMolNetEnhancer integrates...' (capability statement); finding does not answer the HOW
+- Notes: This card has low coherence between research_question (mechanistic 'how') and finding (capability statement). The research_question asks for an explanation of the mapping procedure, but the finding only asserts that pyMolNetEnhancer performs integration without detailing the algorithm. Evidence spans are incomplete or truncated, preventing substring validation. The task itself is well-articulated in workflow_description and methodology_summary, but the research_question/finding pair do not reflect this rigor. The missing_information section correctly identifies gaps in schema and format specification, which should be resolved before card approval. Recommend: (1) rewrite finding to answer the 'how' question mechanistically, (2) verify and complete all evidence_spans, (3) define output schema explicitly, (4) reconcile artifact naming (graphml vs. tsv vs. json).
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

@@ -1,0 +1,599 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "nplinker.pdf",
+      "role": "main_article",
+      "sha256": "f336b781d4488fcaf350c71aa5cf495c9603fe908229dcc004dede066845eba5"
+    }
+  ],
+  "created_at": "2026-06-15T08:56:40.523217+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1008920",
+  "data_accessions": [
+    {
+      "accession": "MSV000078836",
+      "evidence_span": "Cs a number of strains for the st From this platform we con MSV000078836 [38], MSV Cru\u00a8semann, Gross and Le\u00e3 The Cru\u00a8semann data set",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836"
+    },
+    {
+      "accession": "MSV000085038",
+      "evidence_span": "ets each with numerous validated links: V000085018 [39] and MSV000085038 [40], hereafter referred to as \u00e3o, respectively. et consist",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GNPS library MS2 spectra with structural annotations (4138 spectra)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MIBiG database entries with structural annotations (SMILES/InChI format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MIBiG-GNPS paired BGC-spectrum dataset (2966 pairs)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MS2 spectral data from GNPS for evaluation (6246 spectra restricted to those with structure predictions)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "IOKR model object with learned mapping from MS2 spectrum kernel space to molecular fingerprint space",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ranked list of candidate BGCs for each of 2966 MS2 spectra with IOKR scores",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Top-n accuracy metrics (top-1, top-5, top-10, top-20, top-200) and AUC score for IOKR on MIBiG-GNPS pairs",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Distribution histogram of IOKR scores for all 2966 BGC-spectrum pairs with validated links highlighted",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mean IOKR score for all links (0.0105) and for validated links (0.0364) with statistical significance (p-value)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "IOKR maps input spectra to fingerprint space via kernel functions; the rank of the correct BGC candidate among all ranked candidates determines top-n accuracy.",
+    "Molecular fingerprints (CDK Substructure, PubChem Substructure, Klekota-Roth) are binary vectors encoding presence/absence of chemical substructures and must be concatenated to form the composite feature representation.",
+    "The Probability Product Kernel (PPK) filters training spectra to include only peaks found in the GNPS training library, reducing noise and potential bias toward the training set composition.",
+    "InChIKey matching (first part only) is used to avoid spurious distinctions based on stereoisomerism when pairing MIBiG entries to GNPS spectra; this yields 2966 pairs from 2069 unique spectra and 242 unique BGCs.",
+    "Statistical significance is assessed by comparing IOKR's top-n accuracy (e.g., 0.1208 at top-1) against a randomized baseline (0.0 at top-1), with AUC of 0.6534 versus 0.5209 for the baseline indicating substantial model performance."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: NPLinker repository at https://github.com/sdrogers/nplinker or Zenodo deposit http://doi.org/10.5281/zenodo.4680579",
+      "verify input dataset exists: GNPS training set with 4138 spectra (accessible via GNPS public library or supplementary data S1 Data)",
+      "verify input dataset exists: MIBiG-GNPS paired dataset with 2966 validated BGC-spectrum links from S1 Data",
+      "script_runs: IOKR model training pipeline on GNPS 4138-spectrum training set with default or specified kernel parameters completes without error",
+      "file_exists and file_format_is: IOKR model checkpoint or serialized object (e.g., pickle, joblib, HDF5) produced after training",
+      "script_runs: IOKR scoring script applied to 2966 MIBiG-GNPS BGC-spectrum pairs produces score matrix with shape (2966,) or equivalent",
+      "file_format_is: output score vector is numeric array or table (CSV/TSV) with one score per pair, no missing values",
+      "row_count_equals: output score table has exactly 2966 rows (one per BGC-spectrum pair)",
+      "field_present: score table includes spectrum identifier, BGC identifier, and IOKR score columns",
+      "value_in_range: IOKR scores are continuous values; robust to parameter choices (no exact byte-for-byte match required, kernel and fingerprint function choices may produce slightly different score distributions)",
+      "output_matches_reference: reproduce histogram plot from S2 Fig showing IOKR score distribution with validated-link positions marked; check that validated-link positions are visibly enriched at higher scores relative to all-link distribution (no canonical answer for exact bin edges, but visual enrichment pattern must match figure)",
+      "output_matches_reference: reproduce summary statistics from Table 3 or results text: mean IOKR score for all links \u2248 0.0105, mean for validated links \u2248 0.0364, p-value \u2248 1.7968 \u00d7 10\u207b\u2079 (robust to small numerical precision differences)",
+      "output_matches_reference: reproduce top-n accuracy metrics from Table 3 (top-1: 0.1208, top-5: 0.1708, top-10: 0.1870, top-20: 0.2121, top-200: 0.2946, AUC: 0.6534), parameter-sensitive to model hyperparameters and kernel choice"
+    ],
+    "expert_review": [
+      "verify that IOKR kernel function (Probability Product Kernel applied to molecular fingerprints) is correctly instantiated and hyperparameters match published method description in Methods or supplementary text",
+      "verify that molecular fingerprint representation (type and dimensionality, e.g. Morgan, MACCS, or other) matches the published protocol",
+      "verify that training set of 4138 spectra is correctly filtered (denoising step, peak filtering to training-set peaks only) before IOKR model training",
+      "verify that scoring procedure correctly handles the 2966 MIBiG-GNPS pairs: each spectrum is matched against candidate set of BGC structures with MIBiG homology assignment",
+      "expert assessment: enrichment of validated links in high-scoring region is statistically significant and visually consistent with S2 Fig distribution shape and marked positions",
+      "expert assessment: IOKR score distribution shape, spread, and skewness are reasonable and consistent with reported mean and standard deviation estimates"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] What is the distribution of IOKR scores across all 2966 MIBiG-GNPS BGC-spectrum pairs, and how do validated links rank within this distribution?: 'The MIBiG/GNPS data set consists of sets of associated BGC, metabolite and spectrum... we tested the method on the paired MIBiG/GNPS data by matching each spectrum to the candidate set consisting of'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] IOKR achieves a mean score of 0.0105 for all 2966 BGC-spectrum links and 0.0364 for validated links (p=1.7968 \u00d7 10\u22129), with top-1 accuracy of 0.1208, top-5 accuracy of 0.1708, and AUC of 0.6534 compared to a random baseline AUC of 0.5209.: 'IOKR: 0.0105 (all), 0.0364 (validated), p-value 1.7968 \u00d7 10\u22129... Table 3 shows the top-n performance of IOKR: top-1: 0.1208, top-5: 0.1708, top-10: 0.1870... AUC of 0.6534 compared to 0.5209 for the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GNPS library MS2 spectra with structural annotations (4138 spectra): 'we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model. We use the same training data set as Brouard and co-workers [26], which'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MIBiG database entries with structural annotations (SMILES/InChI format): 'Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]. The fingerprint vector is composed of three concatenated sets of fingerprints: CDK Substructure,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MIBiG-GNPS paired BGC-spectrum dataset (2966 pairs): 'This yields 2966 BGC-spectrum pairs, each with an associated metabolite, which can be used to evaluate the IOKR model proposed in this paper. These pairs include 2069 unique spectra and 242 unique'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MS2 spectral data from GNPS for evaluation (6246 spectra restricted to those with structure predictions): 'Out of 3316 BGCs in the data set, 2242 could be assigned structure based on similarity to MIBiG entries, and used as candidate set for the 6246 MS2 spectra in the data set'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] IOKR model object with learned mapping from MS2 spectrum kernel space to molecular fingerprint space: 'This mapping, along with the function mapping molecular structures to fingerprints, is then used to project similarities in the input space of spectra and the output space (molecular structures) to'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Ranked list of candidate BGCs for each of 2966 MS2 spectra with IOKR scores: 'For each spectrum, IOKR returns an ordered list of all metabolites in the candidate set'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Top-n accuracy metrics (top-1, top-5, top-10, top-20, top-200) and AUC score for IOKR on MIBiG-GNPS pairs: 'Table 3 shows the top-n performance of IOKR, i.e. how often the 'true' BGC match for a given spectrum is among the top n matches returned by IOKR, for a selection of n'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Distribution histogram of IOKR scores for all 2966 BGC-spectrum pairs with validated links highlighted: 'we can observe the distribution of the scores for the validated links among the scores for all potential links. The upper end of the distribution for the IOKR score contains a relatively high'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Mean IOKR score for all links (0.0105) and for validated links (0.0364) with statistical significance (p-value): 'the mean score of 0.0105 for all links and 0.0364 for validated links (Table 1). Results for other data sets can be found in Table C in S1 Text'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GNPS: 'we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MIBiG: 'Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Chemistry Development Kit (CDK): 'Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Probability Product Kernel (PPK): 'we filter the input spectra to include only the peaks found in the training data, before using the Probability Product Kernel (PPK)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] antiSMASH: 'after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] exact kernel function type (e.g., Probability Product Kernel, polynomial, RBF) and hyperparameter values (bandwidth, degree) used for IOKR model training on GNPS 4138-spectrum set: 'IOKR is also highly dependent on the choice of both kernel function and molecular fingerprints'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] specific molecular fingerprint type, dimensionality, and construction method (e.g., Morgan fingerprints, MACCS keys, CDK fingerprints, radius/bit-length parameters) used in IOKR scoring: 'IOKR is also highly dependent on the choice of both kernel function and molecular fingerprints'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[abstract] detailed denoising/filtering procedure applied to spectra before IOKR training and scoring (peak intensity threshold, noise removal method, spectral normalization protocol): 'As a denoising step, to avoid time-consuming computation of fragmentation trees for the spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_020",
+      "source_path": "agent2_synthesis",
+      "text": "[abstract] number of training spectra retained after peak filtering step (spectra with peaks found in training data only) before IOKR model fitting: 'we filter the input spectra to include only the peaks found in the training data, before using the Probability Product Kernel (PPK)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_021",
+      "source_path": "agent2_synthesis",
+      "text": "[results] exact cross-validation or train-test split strategy used for IOKR model development on GNPS training set; whether performance metrics in Table 3 are from held-out test set or resubstitution: 'The training set used to build the IOKR model includes metabolites from sources other than microbial'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_022",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] computational resource requirements and runtime for IOKR model training on 4138-spectrum set and scoring 2966 pairs (memory, CPU/GPU time, software version specifics): '[not present in provided section text]'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "iokr_performance_table.csv",
+  "expected_outputs": [
+    "IOKR model object with learned mapping from MS2 spectrum kernel space to molecular fingerprint space",
+    "Ranked list of candidate BGCs for each of 2966 MS2 spectra with IOKR scores",
+    "Top-n accuracy metrics (top-1, top-5, top-10, top-20, top-200) and AUC score for IOKR on MIBiG-GNPS pairs",
+    "Distribution histogram of IOKR scores for all 2966 BGC-spectrum pairs with validated links highlighted",
+    "Mean IOKR score for all links (0.0105) and for validated links (0.0364) with statistical significance (p-value)"
+  ],
+  "finding": "IOKR achieves a mean score of 0.0105 for all 2966 BGC-spectrum links and 0.0364 for validated links (p=1.7968 \u00d7 10\u22129), with top-1 accuracy of 0.1208, top-5 accuracy of 0.1708, and AUC of 0.6534 compared to a random baseline AUC of 0.5209.",
+  "github_name": "NPLinker/nplinker",
+  "input_from": "task_001",
+  "inputs": [
+    "GNPS library MS2 spectra with structural annotations (4138 spectra)",
+    "MIBiG database entries with structural annotations (SMILES/InChI format)",
+    "MIBiG-GNPS paired BGC-spectrum dataset (2966 pairs)",
+    "MS2 spectral data from GNPS for evaluation (6246 spectra restricted to those with structure predictions)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "fingerprints_extracted.csv",
+    "iokr_model_trained.pkl",
+    "ranked_bgcs_per_spectrum.csv",
+    "top_n_accuracy_metrics.csv",
+    "iokr_score_distribution.png"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_018",
+    "result_024",
+    "result_025",
+    "result_030",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_037",
+    "result_038",
+    "result_039",
+    "result_040"
+  ],
+  "methodology_summary": [
+    "Extract molecular fingerprints (CDK Substructure, PubChem Substructure, Klekota-Roth) from SMILES strings for all 4138 GNPS training spectra and their paired metabolite structures.",
+    "Train IOKR by learning a kernel-based mapping from the input MS2 spectrum kernel space to the output molecular fingerprint space using the paired spectrum-fingerprint training set.",
+    "Filter evaluation MS2 spectra (6246 total) to retain only peaks present in the GNPS training data using the Probability Product Kernel (PPK) as a denoising step.",
+    "For each of 6246 evaluation spectra, apply the trained IOKR model to predict a fingerprint and rank candidate BGCs (2242 with MIBiG structure assignments) by computing \u27e8\u0125(spectrum), \u03c6(BGC)\u27e9 in fingerprint space.",
+    "Evaluate top-n accuracy (n \u2208 {1,5,10,20,200}) and AUC by determining the rank of the correct BGC in each ranked list; compare against randomized baseline.",
+    "Calculate and report mean IOKR scores for all 2966 BGC-spectrum pairs and for validated pairs, compute p-values, and generate distribution histograms with validated-link overlay.",
+    "Validation: reproduce top-n accuracy values (top-1=0.1208, top-5=0.1708, top-200=0.2946, AUC=0.6534) from Table 3 and visual alignment with S2 Fig distribution, confirming mean validated-link score (0.0364) significantly exceeds mean all-links score (0.0105, p=1.8\u00d710\u207b\u2079).",
+    "References: source article (DOI: 10.1371/journal.pcbi.1008920); MSV000078836 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000078836); MSV000085038 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085038)"
+  ],
+  "missing_information": [
+    "exact kernel function type (e.g., Probability Product Kernel, polynomial, RBF) and hyperparameter values (bandwidth, degree) used for IOKR model training on GNPS 4138-spectrum set",
+    "specific molecular fingerprint type, dimensionality, and construction method (e.g., Morgan fingerprints, MACCS keys, CDK fingerprints, radius/bit-length parameters) used in IOKR scoring",
+    "detailed denoising/filtering procedure applied to spectra before IOKR training and scoring (peak intensity threshold, noise removal method, spectral normalization protocol)",
+    "number of training spectra retained after peak filtering step (spectra with peaks found in training data only) before IOKR model fitting",
+    "exact cross-validation or train-test split strategy used for IOKR model development on GNPS training set; whether performance metrics in Table 3 are from held-out test set or resubstitution",
+    "computational resource requirements and runtime for IOKR model training on 4138-spectrum set and scoring 2966 pairs (memory, CPU/GPU time, software version specifics)"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/standardised_scores_all_datasets"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the distribution of IOKR scores across all 2966 MIBiG-GNPS BGC-spectrum pairs, and how do validated links rank within this distribution?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "results",
+    "discussion"
+  ],
+  "skills": [
+    "kernel-regression-learning-from-spectral-fingerprint-pairs",
+    "molecular-fingerprint-extraction-and-vectorization",
+    "bgc-spectrum-ranking-by-kernel-similarity",
+    "spectral-denoising-via-training-data-filtering",
+    "top-n-accuracy-and-auc-metric-calculation",
+    "score-distribution-analysis-and-statistical-significance-testing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_nplinker",
+  "spine_condition_ids": [
+    "COND_STD_STRAIN_CORR_ONLY",
+    "COND_SIZE_LARGE_GCF_MF",
+    "COND_SIZE_SMALL_GCF_MF",
+    "COND_COMBINED_SCORES",
+    "COND_IOKR_ONLY",
+    "COND_MIBIG_GNPS_EVAL",
+    "COND_STRAIN_CORR_ONLY",
+    "COND_CRUSEMANN_EVAL",
+    "COND_GROSS_EVAL",
+    "COND_LEAO_EVAL"
+  ],
+  "spine_entity_ids": [
+    "COMP_STRAIN_CORR_SCORE",
+    "COMP_STD_STRAIN_CORR_SCORE",
+    "COMP_IOKR_SCORE",
+    "COMP_COMBINED_SCORE",
+    "TOOL_GNPS",
+    "TOOL_PAIRED_OMICS_PLATFORM",
+    "DS_MIBIG",
+    "DS_GNPS_TRAINING",
+    "DS_MIBIG_GNPS_PAIRS",
+    "DS_CRUSEMANN",
+    "DS_GROSS",
+    "DS_LEAO",
+    "COND_STRAIN_CORR_ONLY",
+    "COND_STD_STRAIN_CORR_ONLY",
+    "COND_IOKR_ONLY",
+    "COND_COMBINED_SCORES",
+    "COND_MIBIG_GNPS_EVAL",
+    "COND_CRUSEMANN_EVAL",
+    "COND_GROSS_EVAL",
+    "COND_LEAO_EVAL",
+    "METRIC_STD_SCORE_FAVORS_STRONG_CORR",
+    "METRIC_COMBINED_IMPROVES_RATIO",
+    "METRIC_IOKR_TRAINING_SIZE",
+    "METRIC_MIBIG_GNPS_PAIRS_COUNT",
+    "METRIC_IOKR_TRAINING_TIME_REDUCTION",
+    "METRIC_IOKR_CLASSIFICATION_TIME_REDUCTION",
+    "RESULT_SIZE_BIAS_STRAIN_CORR",
+    "RESULT_IOKR_NOT_CLASS_SPECIFIC",
+    "RESULT_COMPLEMENTARITY"
+  ],
+  "subdomains": [
+    "natural-products",
+    "microbiome-metabolomics",
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "benchmark-evaluation",
+    "statistical-analysis"
+  ],
+  "synthesized_from": null,
+  "task_description": "Train the Input-Output Kernel Regression (IOKR) model on 4138 GNPS library spectra with structural annotations, apply it to score 2966 MIBiG-GNPS BGC-spectrum pairs, and reproduce the distribution of IOKR scores showing the position of validated links as reported in Table 3 and supplementary figures.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GNPS library MS2 spectra with structural annotations (4138 spectra)",
+      "port_id": "gnps_training_spectra",
+      "resolved_via": null,
+      "source": "task_001/standardised_scores_all_datasets",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MIBiG database entries with SMILES/InChI structural annotations",
+      "port_id": "mibig_structures",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MIBiG-GNPS paired BGC-spectrum dataset (2966 validated pairs)",
+      "port_id": "mibig_gnps_pairs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MS2 spectral data from GNPS for evaluation (6246 spectra with 2242 structure-assigned BGCs)",
+      "port_id": "gnps_eval_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Train IOKR on 4138 GNPS spectra and score 2966 MIBiG-GNPS BGC-spectrum pairs, reproducing the score distribution and ranked accuracy metrics.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained IOKR model with learned mapping from spectrum space to fingerprint space",
+      "port_id": "iokr_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ranked candidate BGCs for each MS2 spectrum with IOKR scores",
+      "port_id": "ranked_bgc_lists",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Top-n accuracy (top-1 through top-200) and AUC for IOKR on MIBiG-GNPS pairs",
+      "port_id": "performance_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Distribution histogram of IOKR scores with validated link positions",
+      "port_id": "score_distribution",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Table of mean IOKR scores for all links and validated links with p-values",
+      "port_id": "mean_scores_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "correlation-analysis",
+    "machine-learning",
+    "database-annotation",
+    "network-annotation-propagation"
+  ],
+  "title": "Reproduce the IOKR BGC-spectrum scoring on the MIBiG-GNPS paired dataset",
+  "tools": [
+    "GNPS",
+    "MIBiG",
+    "Chemistry Development Kit (CDK)",
+    "Probability Product Kernel (PPK)",
+    "antiSMASH"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the GNPS library training set (4138 spectra with structural annotations) and extract molecular fingerprints (CDK Substructure, PubChem Substructure, Klekota-Roth) from SMILES strings for each annotated metabolite. 2. Construct the IOKR model by learning a mapping from the spectrum kernel space (X, with kernel K_x) to the molecular fingerprint space (F) using the training pairs, implementing operator-valued kernel regression with the paired spectrum-fingerprint training sets. 3. Filter input MS2 spectra using the Probability Product Kernel (PPK) to retain only peaks present in the training data as a denoising step. 4. For the 6246 MS2 spectra in the MIBiG/GNPS evaluation set, apply the trained IOKR model to predict molecular fingerprints and rank candidate BGCs (restricted to 2242 BGCs with MIBiG homology assignments) by computing the inner product \u27e8\u0125(spectrum), \u03c6(BGC_candidate)\u27e9 in fingerprint space. 5. Construct 2966 BGC-spectrum pairs by matching MIBiG entries to GNPS spectra using the first part of the InChIKey to avoid confounding by stereoisomerism. 6. Calculate top-n accuracy (n=1,5,10,20,200) and area-under-curve (AUC) by comparing the rank of the correct BGC relative to all ranked candidates for each spectrum, and compare against a randomized baseline. 7. Generate distribution histograms of IOKR scores for all 2966 pairs and overlay positions of validated links, reporting mean scores, p-values, and visual confirmation against reported S2 Fig and Table 3 results."
+}

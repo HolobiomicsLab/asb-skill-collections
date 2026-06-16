@@ -1,0 +1,483 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b8f14457916bad741d32924527054213ac940e85ead0b0c2ae0a920cfa2ca3c9"
+    }
+  ],
+  "created_at": "2026-06-15T18:27:16.217915+00:00",
+  "crossref_doi": "10.1038/nmeth.4197",
+  "data_accessions": [
+    {
+      "accession": "ERR458493",
+      "evidence_span": "tion correctly) was right all along.  ## Dataset  - Reads: `ERR458493` (Gierli\u0144ski/Schurch *S. cerevisiae* benchmark),   1,093,95",
+      "kind": "sra_run",
+      "url": "https://www.ncbi.nlm.nih.gov/sra/?term=ERR458493"
+    },
+    {
+      "accession": "ERR188044",
+      "evidence_span": "set), so the only variable is the mapper. Reads: GEUVADIS `ERR188044` (36.35M 76bp PE); default selective alignment, `-l A`, no",
+      "kind": "sra_run",
+      "url": "https://www.ncbi.nlm.nih.gov/sra/?term=ERR188044"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GEUVADIS ERR188044 paired-end 76 bp reads (36.35M reads)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Byte-identical GRCh38 cDNA reference index (193,759 transcripts)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mapping rate (%) for default seed representation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mapping rate and NumReads Pearson r for sparse fixed-k anchor variant",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mapping rate and NumReads Pearson r for reference-extended MEM variant",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mapping rate and NumReads Pearson r for unitig-constrained uni-MEM variant",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary table with per-variant mapping rate and Pearson r values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Seed granularity (k-mer anchor density and MEM coverage) affects chaining heuristics and alignment chain selection, but per-transcript read-count quantification (NumReads) should remain stable if the underlying seed landscape supports the same true alignments.",
+    "Pearson correlation coefficient r \u2265 0.99999995 is a stringent threshold (five 9's after the decimal) used to establish near-perfect agreement in read-assignment counts across algorithmic variants, ruling out granularity as a confound.",
+    "Unitig-constrained uni-MEMs represent reference-anchored maximal-exact-matches whose endpoints are bounded by de Bruijn graph unitig boundaries; reference-extended MEMs extend into mismatches or lower-complexity regions; sparse fixed-k anchors are pre-defined k-mer positions \u2014 each represents a different seeding strategy with different computational trade-offs.",
+    "Byte-identical index construction ensures that both algorithm variants operate on the same k-mer hash landscape and reference sequence representation, isolating the effect of seed-collection strategy alone and excluding index randomization or non-ACGT base replacement as confounds.",
+    "Mapping rate is the percentage of input reads achieving at least one confident alignment; it is sensitive to both seed support (seed discovery) and alignment scoring thresholds, so identical mapping rates across seed variants suggest that all strategies discover sufficiently dense seed support for true alignments."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file outputs/ERR188044_sparse_anchors.mapping_rates.txt exists and contains numeric mapping rate and NumReads Pearson values; robust to parameter choices in seed representation",
+      "verify file outputs/ERR188044_fixed_k_anchors.mapping_rates.txt exists and contains numeric mapping rate and NumReads Pearson values; robust to parameter choices in seed representation",
+      "verify file outputs/ERR188044_reference_kmers.mapping_rates.txt exists and contains numeric mapping rate and NumReads Pearson values; robust to parameter choices in seed representation",
+      "value of NumReads Pearson field in outputs/ERR188044_sparse_anchors.mapping_rates.txt is >= 0.99999995",
+      "value of NumReads Pearson field in outputs/ERR188044_fixed_k_anchors.mapping_rates.txt is >= 0.99999995",
+      "value of NumReads Pearson field in outputs/ERR188044_reference_kmers.mapping_rates.txt is >= 0.99999995",
+      "verify that mapping rate (percentage of reads mapped) across all three seed variants differs by < 1% absolute; parameter-sensitive to index and read set"
+    ],
+    "expert_review": [
+      "assess whether the reported NumReads Pearson values (\u22650.99999995) across seed variants are statistically consistent with the claim that seed granularity was not the root cause of mapping discrepancy",
+      "evaluate whether the choice of sparse fixed-k anchors, reference k-mer variants, and unitig-constrained MEMs constitutes a sufficiently comprehensive variant space to establish robustness to seed representation",
+      "review the experimental design to confirm that the alternative seed representations were applied to the same ERR188044 reads and GRCh38 cDNA index used in the reported baseline (36.35M 76bp PE)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Does the mapping rate and NumReads Pearson correlation remain stable when the Rust mapper uses alternative seed representations (sparse fixed-k anchors, reference k-mer variants) instead of the default unitig-constrained approach?: 're-running the Rust mapper with sparse fixed-k anchors, reference-extended MEMs, and true unitig-constrained uni-MEMs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] On byte-identical index, NumReads Pearson correlation between C++ and Rust is 0.99854, demonstrating high quantitative agreement across implementations and seed strategies.: 'NumReads Pearson | 0.99854'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GEUVADIS ERR188044 paired-end 76 bp reads (36.35M reads): 'Reads: GEUVADIS ERR188044 (36.35M 76bp PE)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Byte-identical GRCh38 cDNA reference index (193,759 transcripts): 'byte-identical index \u2014 both tools' indices built from the same clean.fa (deterministic non-ACGT replacement, identical 193,759-transcript set)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Mapping rate (%) for default seed representation: 're-running the Rust mapper with sparse fixed-k anchors, reference-extended MEMs, and true unitig-constrained uni-MEMs gave identical results (85.55%, NumReads r \u2265 0.99999995)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Mapping rate and NumReads Pearson r for sparse fixed-k anchor variant: 'sparse fixed-k anchors, reference-extended MEMs, and true unitig-constrained uni-MEMs gave identical results (85.55%, NumReads r \u2265 0.99999995)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Mapping rate and NumReads Pearson r for reference-extended MEM variant: 'sparse fixed-k anchors, reference-extended MEMs, and true unitig-constrained uni-MEMs gave identical results (85.55%, NumReads r \u2265 0.99999995)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Mapping rate and NumReads Pearson r for unitig-constrained uni-MEM variant: 'sparse fixed-k anchors, reference-extended MEMs, and true unitig-constrained uni-MEMs gave identical results (85.55%, NumReads r \u2265 0.99999995)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Summary table with per-variant mapping rate and Pearson r values: 'identical results (85.55%, NumReads r \u2265 0.99999995)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] salmon 2.0: 're-running the Rust mapper with sparse fixed-k anchors, reference-extended MEMs, and true unitig-constrained uni-MEMs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] piscem-rs: 'The Rust port (built on piscem-rs, which derives orientation correctly) was right all along'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No quantitative mapping rate or NumReads Pearson results are reported for alternative seed representations (sparse fixed-k anchors, reference k-mer variants) on ERR188044.: 'On our benchmarks (human GEUVADIS `ERR188044` against a GRCh38 cDNA index, and yeast `ERR458493`), selective-alignment quantification reproduces C++ salmon to per-transcript Pearson \u2248 0.999'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion reports per-transcript Pearson \u2248 0.999 but does not specify the NumReads Pearson correlation or mapping rate achieved under the tested seed variants.: 'SA quantification agrees at Pearson 0.999 and the entire mapping-rate delta is explained by (1) one describable orphan/post-merge pruning default that is off-by-default in Rust, and (2) benign'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] No methodological details are provided on how alternative seed representations (sparse fixed-k anchors, reference k-mer variants) were generated or parameterized for the experiment.: 're-running the Rust mapper with sparse fixed-k anchors, reference-extended MEMs, and true unitig-constrained uni-MEMs'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "salmon quant -i {inputs.ref_index} -l A -1 {inputs.reads_err188044} -2 {inputs.reads_err188044} --validateMappings -o baseline_default && salmon quant -i {inputs.ref_index} -l A -1 {inputs.reads_err188044} -2 {inputs.reads_err188044} --validateMappings --seedType sparse_fixed_k -o variant_sparse && salmon quant -i {inputs.ref_index} -l A -1 {inputs.reads_err188044} -2 {inputs.reads_err188044} --validateMappings --seedType ref_extended_mem -o variant_refmem && salmon quant -i {inputs.ref_index} -l A -1 {inputs.reads_err188044} -2 {inputs.reads_err188044} --validateMappings --seedType unitig_uni_mem -o variant_unitig && python3 << 'EOF'\nimport json\nimport numpy as np\nfrom scipy.stats import pearsonr\n\nresults = {}\nbaseline_reads = None\nbaseline_rate = None\n\nfor variant_name, variant_dir in [(\"default\", \"baseline_default\"), (\"sparse_fixed_k\", \"variant_sparse\"), (\"ref_extended_mem\", \"variant_refmem\"), (\"unitig_uni_mem\", \"variant_unitig\")]:\n    with open(f\"{variant_dir}/quant.sf\") as f:\n        lines = f.readlines()[1:]\n        num_reads = np.array([float(l.split()[4]) for l in lines])\n        mapping_rate = 100.0 * sum(num_reads) / 36350000\n        results[variant_name] = {\"mapping_rate\": round(mapping_rate, 4), \"num_reads\": num_reads}\n        if variant_name == \"default\":\n            baseline_reads = num_reads\n            baseline_rate = mapping_rate\n\nfor variant_name in [\"sparse_fixed_k\", \"ref_extended_mem\", \"unitig_uni_mem\"]:\n    pearson_r, pval = pearsonr(baseline_reads, results[variant_name][\"num_reads\"])\n    results[variant_name][\"pearson_r\"] = round(pearson_r, 10)\n    results[variant_name][\"meets_threshold\"] = pearson_r >= 0.99999995 and abs(results[variant_name][\"mapping_rate\"] - baseline_rate) <= 0.01\n\nprint(json.dumps(results, indent=2))\nEOF"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "seed_variant_comparison.csv",
+  "expected_outputs": [
+    "Mapping rate (%) for default seed representation",
+    "Mapping rate and NumReads Pearson r for sparse fixed-k anchor variant",
+    "Mapping rate and NumReads Pearson r for reference-extended MEM variant",
+    "Mapping rate and NumReads Pearson r for unitig-constrained uni-MEM variant",
+    "Summary table with per-variant mapping rate and Pearson r values"
+  ],
+  "finding": "On byte-identical index, NumReads Pearson correlation between C++ and Rust is 0.99854, demonstrating high quantitative agreement across implementations and seed strategies.",
+  "github_name": "COMBINE-lab/salmon",
+  "input_from": "task_001",
+  "inputs": [
+    "GEUVADIS ERR188044 paired-end 76 bp reads (36.35M reads)",
+    "Byte-identical GRCh38 cDNA reference index (193,759 transcripts)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "default_baseline_quant.sf",
+    "sparse_k_quant.sf",
+    "refmem_quant.sf",
+    "unimem_quant.sf",
+    "pearson_correlation_matrix.csv"
+  ],
+  "linked_result_ids": [
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_014",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_020",
+    "result_021",
+    "result_022",
+    "result_023",
+    "result_024"
+  ],
+  "methodology_summary": [
+    "Load GEUVADIS ERR188044 (36.35M paired-end 76 bp reads) and byte-identical GRCh38 cDNA reference index (193,759 transcripts).",
+    "Execute salmon 2.0 Rust mapper in selective-alignment mode with default seed representation (libType A, no bias, multi-threaded) and record mapping rate and NumReads per transcript.",
+    "Re-run salmon mapper three times, each with an alternative seed representation (sparse fixed-k anchors, reference-extended MEMs, unitig-constrained uni-MEMs), recording mapping rate and per-transcript NumReads.",
+    "Calculate Pearson correlation coefficient between NumReads vectors from each variant and the baseline default.",
+    "Validation: confirm all variants achieve mapping rate within \u22640.01% of baseline and Pearson r \u2265 0.99999995 for NumReads, establishing seed granularity was not the root cause of prior C++ vs. Rust mapping discrepancies.",
+    "References: source article (DOI: 10.1038/nmeth.4197); ERR458493 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR458493); ERR188044 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR188044)"
+  ],
+  "missing_information": [
+    "No quantitative mapping rate or NumReads Pearson results are reported for alternative seed representations (sparse fixed-k anchors, reference k-mer variants) on ERR188044.",
+    "The discussion reports per-transcript Pearson \u2248 0.999 but does not specify the NumReads Pearson correlation or mapping rate achieved under the tested seed variants.",
+    "No methodological details are provided on how alternative seed representations (sparse fixed-k anchors, reference k-mer variants) were generated or parameterized for the experiment."
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/numreads_pearson"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the mapping rate and NumReads Pearson correlation remain stable when the Rust mapper uses alternative seed representations (sparse fixed-k anchors, reference k-mer variants) instead of the default unitig-constrained approach?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion",
+    "methods"
+  ],
+  "skills": [
+    "read-mapping-rate-calculation",
+    "pearson-correlation-analysis-genomics",
+    "seed-representation-variant-comparison",
+    "selective-alignment-parameter-configuration",
+    "transcript-abundance-correlation-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_salmon/synthesized_package",
+  "spine_condition_ids": [
+    "cond_cpp_salmon_before_fix",
+    "cond_rust_port_yeast",
+    "cond_cpp_salmon_after_fix",
+    "cond_simulated_sample_data",
+    "cond_cpp_1_12_0_human",
+    "cond_rust_human_defaults",
+    "cond_rust_human_matched_thresholds",
+    "cond_seed_representation_variants"
+  ],
+  "spine_entity_ids": [
+    "dataset_err188044",
+    "cond_rust_port_yeast",
+    "cond_cpp_1_12_0_human",
+    "cond_rust_human_defaults",
+    "cond_rust_human_matched_thresholds",
+    "cond_seed_representation_variants",
+    "metric_cpp_mapping_rate_before_fix",
+    "metric_rust_mapping_rate_yeast",
+    "metric_cpp_mapping_rate_after_fix",
+    "metric_numreads_pearson_yeast",
+    "metric_effectivelength_pearson_yeast",
+    "metric_pearson_simulated",
+    "metric_cpp_mapped_human",
+    "metric_rust_mapped_human_defaults",
+    "metric_per_read_agreement_human",
+    "metric_numreads_pearson_human",
+    "metric_tpm_pearson_human",
+    "metric_numreads_diff_human",
+    "metric_rust_matched_thresholds_mapping",
+    "metric_seed_repr_mapping_rate",
+    "metric_seed_repr_numreads_pearson",
+    "result_orientation_fix_impact",
+    "result_chain_thresh_explains_gap",
+    "result_write_mappings_flush_bug",
+    "result_mismatch_seed_skip_false_lead",
+    "result_n_replacement_explains_old_gap"
+  ],
+  "subdomains": [
+    "rna-seq",
+    "differential-expression"
+  ],
+  "subtask_categories": [
+    "benchmark-evaluation",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:COMBINE-lab__salmon",
+  "task_description": "Re-run the Rust salmon mapper on the GEUVADIS ERR188044 dataset using three alternative seed representations (sparse fixed-k anchors, reference-extended MEMs, and true unitig-constrained uni-MEMs), measure mapping rate and NumReads Pearson correlation under each variant, and verify that Pearson r remains \u22650.99999995 across all variants to confirm seed granularity was not the cause of prior mapping discrepancies.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GEUVADIS ERR188044 paired-end 76bp reads (36.35M)",
+      "port_id": "reads_err188044",
+      "resolved_via": null,
+      "source": "task_001/numreads_pearson",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Byte-identical GRCh38 cDNA reference index (193,759 transcripts)",
+      "port_id": "ref_index",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Execute Rust mapper on ERR188044 with sparse fixed-k anchors and reference k-mer variants; record mapping rate and NumReads Pearson for each variant to verify seed granularity does not affect mapping fidelity.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mapping rate (%) for default seed representation",
+      "port_id": "default_mapping_rate",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mapping rate and NumReads Pearson r for sparse fixed-k anchor variant",
+      "port_id": "sparse_k_variant",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mapping rate and NumReads Pearson r for reference-extended MEM variant",
+      "port_id": "refmem_variant",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mapping rate and NumReads Pearson r for unitig-constrained uni-MEM variant",
+      "port_id": "unimem_variant",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Summary table with per-variant mapping rate and Pearson r values",
+      "port_id": "variant_comparison_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quantitative-structure-activity",
+    "statistical-analysis"
+  ],
+  "title": "Analyze the effect of seed representation variants on mapping rate and NumReads Pearson",
+  "tools": [
+    "salmon 2.0",
+    "piscem-rs"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: salmon 2.0, piscem-rs, Mapping rate (%) for default seed representation, Mapping rate and NumReads Pearson r for sparse fixed-k anchor variant, Mapping rate and NumReads Pearson r for reference-extended MEM variant, Mapping rate and NumReads Pearson r for unitig-constrained uni-MEM variant, Summary table with per-variant mapping rate and Pearson r values."
+  ],
+  "workflow_description": "1. Download or retrieve the GEUVADIS ERR188044 paired-end 76 bp reads (36.35M) and byte-identical reference index (GRCh38 cDNA, 193,759 transcripts). 2. Run salmon 2.0 Rust mapper in selective-alignment mode with default seed representation (-l A, no bias correction, -p for multi-threading) and record mapping rate and per-transcript NumReads output. 3. Re-run salmon mapper with sparse fixed-k anchor representation, capturing mapping rate and NumReads correlation (Pearson r) against baseline. 4. Re-run salmon mapper with reference-extended MEM representation, recording mapping rate and NumReads Pearson r. 5. Re-run salmon mapper with true unitig-constrained uni-MEM representation, capturing mapping rate and NumReads Pearson r. 6. Calculate Pearson correlation coefficient (r) between NumReads counts from each variant and the default baseline using correlation analysis, verifying r \u2265 0.99999995 for all variants. 7. Validation: confirm mapping rate remains within \u22640.01% of baseline and Pearson r for all three variants meets or exceeds 0.99999995 threshold, establishing that seed representation granularity does not explain prior C++ vs. Rust mapping differences."
+}

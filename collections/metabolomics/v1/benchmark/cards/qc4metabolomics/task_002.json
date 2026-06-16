@@ -1,0 +1,296 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/stanstrup/QC4Metabolomics",
+      "locator_id": "gh_stanstrup_qc4metabolomics",
+      "locator_kind": "github",
+      "name": "stanstrup/QC4Metabolomics",
+      "prose": "QC4metabolomics repository at commit d441874 (stanstrup/QC4Metabolomics)",
+      "score": 0.4,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/manual_contaminants_poster.svg",
+      "role": "figure",
+      "sha256": "a84fe2332fd57d9ebc99b3e6481ea7abee76092ca26f7502a530ad3cb754bb0a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/qrcode_poster.svg",
+      "role": "code",
+      "sha256": "b6ad00a98b7e5dfb910206cebd2ca482b05e59b936f14fb23b27303154da0b19"
+    },
+    {
+      "indexable": false,
+      "path": "figures/qrcode_preprint.svg",
+      "role": "code",
+      "sha256": "cd342a9ada02354cf3e9ba01917ba60f92ac379c6db527dc284b34c6097d0c25"
+    },
+    {
+      "indexable": false,
+      "path": "figures/trp_settings.png",
+      "role": "figure",
+      "sha256": "69f98fe35a4f41d6469153be21e1eebcb3c4f9193ef6ee11ada737b5d025ff46"
+    },
+    {
+      "indexable": false,
+      "path": "figures/warning_demo.png",
+      "role": "figure",
+      "sha256": "805ba641e7671a3a297ec0ee1a2ff6022911acfdfd03e39e3c662ec7d7987e15"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "c1221249184c53550e8430422d94a98354cb96a425d641984b0744aad856184b"
+    }
+  ],
+  "created_at": "2026-06-15T13:03:49.640231+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "QC4metabolomics repository at commit d441874 (stanstrup/QC4Metabolomics)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation report documenting schema compliance status, structural integrity of qc_workflow_component, and any detected errors or warnings",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "QC4metabolomics workflow specification v1.0.0 defines the structure and required fields for qc_workflow_component declarations.",
+    "Workflow definition files in metabolomics pipelines must declare inputs, outputs, and processing steps in a machine-readable format (YAML or JSON).",
+    "Well-formedness validation checks for syntax errors, type consistency, and absence of undefined component references before execution.",
+    "The qc_workflow_component is a bounded, standalone unit within the broader QC4metabolomics pipeline and does not depend on downstream stage execution for validation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in v1.0.0 release at github.com/stanstrup/QC4Metabolomics tagged v1.0.0",
+      "file_format_is for workflow definition file (YAML, JSON, or XML)",
+      "contains_substring in workflow file of 'workflow' or equivalent root declaration key",
+      "output_matches_reference: workflow schema structure conforms to declared metabolomics QC domain (presence of quality control or metabolomics configuration elements \u2014 multiple defensible approaches to validation)"
+    ],
+    "expert_review": [
+      "whether workflow definition semantically represents 'one complete workflow' as intended for metabolomics QC systems",
+      "whether workflow structure is internally consistent and non-circular",
+      "whether workflow parameters and task definitions are scientifically coherent for metabolomics quality control"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the structure and composition of the QC workflow definition file declared in commit d441874 for the v1.0.0 release of QC4metabolomics?: 'QC systems for metabolomics studies'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] QC4metabolomics is a project that implements QC systems for metabolomics studies, with documentation and source code available in the stanstrup/QC4Metabolomics repository.: 'QC systems for metabolomics studies'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] QC4metabolomics repository at commit d441874 (stanstrup/QC4Metabolomics): 'stanstrup/QC4Metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Validation report documenting schema compliance status, structural integrity of qc_workflow_component, and any detected errors or warnings: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] specific file name, path, and location of the workflow definition file within the v1.0.0 release: 'one complete workflow'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] file format specification (YAML, JSON, XML, or other) of the workflow definition: 'one complete workflow'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] explicit URL or GitHub release asset reference to access the v1.0.0 release and its contents: 'v1.0.0 (2025-07-29)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] description of what constitutes a valid or well-formed workflow definition in this project's context: 'one complete workflow'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "git clone https://github.com/stanstrup/QC4Metabolomics.git && cd QC4Metabolomics && git checkout d441874 && find . -name '*workflow*' -o -name '*qc*' | head -20"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "workflow_validation_report.txt",
+  "expected_outputs": [
+    "Validation report documenting schema compliance status, structural integrity of qc_workflow_component, and any detected errors or warnings"
+  ],
+  "finding": "QC4metabolomics is a project that implements QC systems for metabolomics studies, with documentation and source code available in the stanstrup/QC4Metabolomics repository.",
+  "github_name": "stanstrup/QC4Metabolomics",
+  "input_from": null,
+  "inputs": [
+    "QC4metabolomics repository at commit d441874 (stanstrup/QC4Metabolomics)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "workflow_definition.yaml",
+    "qc_workflow_component_schema_check.json"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Retrieve QC4metabolomics repository at specified commit d441874",
+    "Locate and extract the workflow definition file",
+    "Parse workflow definition against v1.0.0 schema specification",
+    "Validate qc_workflow_component structural integrity and required metadata fields",
+    "Perform syntax and reference consistency checks",
+    "Validation: Report confirms workflow definition file existence, schema compliance, and absence of errors that would prevent downstream execution (no execution required)"
+  ],
+  "missing_information": [
+    "specific file name, path, and location of the workflow definition file within the v1.0.0 release",
+    "file format specification (YAML, JSON, XML, or other) of the workflow definition",
+    "explicit URL or GitHub release asset reference to access the v1.0.0 release and its contents",
+    "description of what constitutes a valid or well-formed workflow definition in this project's context"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the structure and composition of the QC workflow definition file declared in commit d441874 for the v1.0.0 release of QC4metabolomics?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "workflow-definition-schema-validation",
+    "yaml-json-structural-parsing",
+    "metadata-field-verification",
+    "qc-workflow-component-inspection"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_qc4metabolomics/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "QC4Metabolomics_system",
+    "qc_workflow_component",
+    "release_automation_tool"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:stanstrup__QC4Metabolomics",
+  "task_description": "Verify that the QC4metabolomics workflow definition file exists, is well-formed according to v1.0.0 specification, and contains valid workflow component declarations without executing downstream pipeline stages.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "QC4metabolomics repository at commit d441874",
+      "port_id": "repo_commit",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Verify that the qc_workflow_component definition file exists and is well-formed in the v1.0.0 release without executing downstream pipeline stages.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Workflow definition validation report",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quality-control"
+  ],
+  "title": "Reconstruct the QC Workflow component bundled as a release asset in QC4Metabolomics v1.0.0",
+  "tools": [
+    "manual expert review"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Validation report documenting schema compliance status, structural integrity of qc_workflow_component, and any detected errors or warnings."
+  ],
+  "workflow_description": "1. Locate the workflow definition file in the QC4metabolomics repository (commit d441874). 2. Parse the workflow definition using a YAML or JSON schema validator appropriate to v1.0.0 specification. 3. Verify presence and structural integrity of the qc_workflow_component declaration. 4. Validate all required workflow metadata fields (name, version, inputs, outputs, steps). 5. Check for syntax errors, undefined references, and type consistency across component definitions. 6. Generate a validation report documenting schema compliance and any detected issues."
+}

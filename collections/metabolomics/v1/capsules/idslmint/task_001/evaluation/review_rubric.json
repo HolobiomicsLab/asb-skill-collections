@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: idslme/IDSL_MINT repository accessible at github.com"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify PyTorch installation script or requirements file present in repository"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify RDKit installation script or requirements file present in repository"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify forward pass produces output tensor with expected shape (no canonical answer without access to model architecture specification)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output tensor contains numerical values (no NaN or Inf)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "locate transformer model architecture definition file (.py) in codebase"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: idslme/IDSL_MINT repository accessible at github.com",
+      "verify PyTorch installation script or requirements file present in repository",
+      "verify RDKit installation script or requirements file present in repository",
+      "script_runs: execute model instantiation code from repository on representative mass spectrometry input without runtime errors",
+      "verify forward pass produces output tensor with expected shape (no canonical answer without access to model architecture specification)",
+      "verify output tensor contains numerical values (no NaN or Inf)",
+      "file_exists: locate transformer model architecture definition file (.py) in codebase"
+    ],
+    "expert_review": [
+      "confirm model architecture implements 'Attention is All You Need' paradigm components (self-attention, multi-head attention, positional encoding, feed-forward layers)",
+      "validate that forward pass computation is mathematically consistent with transformer specifications",
+      "assess whether input preprocessing pipeline correctly handles mass spectrometry spectrum data format",
+      "evaluate whether output interpretation is appropriate for mass spectrum feature extraction"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

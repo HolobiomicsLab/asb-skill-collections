@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that a GEO accession identifier or public microarray dataset URL is retrievable and contains valid expression matrix data"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that limma package (from github:bioc__limma or CRAN) can be loaded in R environment"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that lmFit function executes without error when passed (i) a valid expression matrix or ExpressionSet object as input, (ii) a design matrix of appropriate dimensions"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that lmFit returns an object of class MArrayLM containing at least the following fields: coefficients (matrix), stdev.unscaled (matrix), sigma (numeric vector)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that coefficients matrix has dimensions matching (number of probes/genes) \u00d7 (number of design matrix columns)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that stdev.unscaled and sigma have lengths and dimensions consistent with the fitted model"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that no NA or NaN values appear in coefficients matrix where data were present in input expression matrix (robust to biological zero-inflation)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that a GEO accession identifier or public microarray dataset URL is retrievable and contains valid expression matrix data",
+      "verify that limma package (from github:bioc__limma or CRAN) can be loaded in R environment",
+      "verify that lmFit function executes without error when passed (i) a valid expression matrix or ExpressionSet object as input, (ii) a design matrix of appropriate dimensions",
+      "verify that lmFit returns an object of class MArrayLM containing at least the following fields: coefficients (matrix), stdev.unscaled (matrix), sigma (numeric vector)",
+      "verify that coefficients matrix has dimensions matching (number of probes/genes) \u00d7 (number of design matrix columns)",
+      "verify that stdev.unscaled and sigma have lengths and dimensions consistent with the fitted model",
+      "verify that no NA or NaN values appear in coefficients matrix where data were present in input expression matrix (robust to biological zero-inflation)"
+    ],
+    "expert_review": [
+      "confirm that design matrix specification is appropriate for the experimental design of the chosen GEO dataset (e.g., matches sample groupings, block structure, or paired design if applicable)",
+      "confirm that coefficient estimates and standard errors are statistically interpretable (e.g., standard errors are positive, coefficients do not show implausible magnitudes relative to the scale of expression values)",
+      "confirm that the MArrayLM object is suitable as input for downstream empirical Bayes shrinkage functions (e.g., eBayes) without requiring additional transformation or filtering"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

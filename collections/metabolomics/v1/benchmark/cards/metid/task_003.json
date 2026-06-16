@@ -1,0 +1,470 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/128x128.png",
+      "role": "figure",
+      "sha256": "0c322947b57ecb8f16a8f66d6f583693d6bd242d4f7bb250d1377305d541f516"
+    },
+    {
+      "indexable": false,
+      "path": "figures/128x128@2x.png",
+      "role": "figure",
+      "sha256": "45b265d0636062d9a1506b02db4e57bfd4310eac0d4d3714675e29726261d9e1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/32x32.png",
+      "role": "figure",
+      "sha256": "0545c0350709808d6641045a5e9426c3f64c6009b437e13578fa0878d3494880"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square107x107Logo.png",
+      "role": "figure",
+      "sha256": "ef0b03b6d81085008c39fd6dc03b1b63bebc6328f4214fc5761b746df374b02f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square142x142Logo.png",
+      "role": "figure",
+      "sha256": "3e750702d2a63ca2c1b706ffb0e8a6ba87dafdaee6fe432a294bef14c190853c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square150x150Logo.png",
+      "role": "figure",
+      "sha256": "d32072425481cfadbf94b65e11400054e07848a892ec6ce84bf69def209f3842"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square284x284Logo.png",
+      "role": "figure",
+      "sha256": "6e90bffdb3a4a6c2056dc02f24817c2ef4eae4724031ae8db02512d49c50b2d9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square30x30Logo.png",
+      "role": "figure",
+      "sha256": "f9f2bf18d9f5dc7d5d8d075a4f2e29bed2c9d40b5aab77223a593d5ba8b95ace"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square310x310Logo.png",
+      "role": "figure",
+      "sha256": "9280433cd7690be2973f66c079c774657d26cd3dcd91a2c08419c37b9254a047"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square44x44Logo.png",
+      "role": "figure",
+      "sha256": "93895cd36ef4cb98892c6751157b6b08bc6af5503a9db8f7d7349c5d77d61bf6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square71x71Logo.png",
+      "role": "figure",
+      "sha256": "0838cc665dcfd6b2213f32554e79ce4cfe95ba1804c84715b1c380de1d0da149"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Square89x89Logo.png",
+      "role": "figure",
+      "sha256": "f190fa00a3b6d9c578220eb8dc00b01919c9ff1077a8a340d0070887ad0c4145"
+    },
+    {
+      "indexable": false,
+      "path": "figures/StoreLogo.png",
+      "role": "figure",
+      "sha256": "3063c33999135a2004b790421b0e30fa0a03c3c129c4f6403420f3b2cc923708"
+    },
+    {
+      "indexable": false,
+      "path": "figures/icon.png",
+      "role": "figure",
+      "sha256": "5e68ed831f8e8ab975ff4343967ebf10846bf9463fd269826cf8c9a8abef8dbb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/metid_logo.png",
+      "role": "figure",
+      "sha256": "255c3b4db86a24dca55d8288454c04395720faa4d301f17e76c63e6ede12e056"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tauri.svg",
+      "role": "figure",
+      "sha256": "e5d2738bbaa5543c4684001a558dc53165da9b636144827b28db1dcfacf81aa8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/typescript.svg",
+      "role": "code",
+      "sha256": "54bddd6580001e14dfbe95b7aef664b5ce366743825362aa15bf0c042581c668"
+    },
+    {
+      "indexable": false,
+      "path": "figures/vite.svg",
+      "role": "figure",
+      "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3d12ff7ca1ef2f37568956093d91058e13c7c755da158fdaf2df39b5bd840b2f"
+    }
+  ],
+  "created_at": "2026-06-15T13:59:56.876471+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Met-ID source code or installed package with extensibility interface",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Documentation or specifications for the second derivatizing matrix (e.g. TAHS reagent properties and ionization modes)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test metabolite dataset with known or reference adduct forms under derivatization",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Configuration file or plugin code for the second derivatizing matrix (e.g. tahs_config.json or tahs_plugin.py)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Adduct annotation table or report (CSV or JSON) produced by Met-ID using the newly registered matrix on test metabolites",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report or summary table comparing predicted adducts to expected ground truth",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Derivatizing matrices alter the ionization pathway of metabolites, producing non-standard adducts ([M+matrix]+ or [M-H2O+matrix]+) that differ from common [M+H]+ in positive mode; proper configuration must specify the mass shift and ionization behavior associated with each matrix.",
+    "Met-ID's extensibility design allows registration of new matrices beyond those currently implemented, enabling adaptation to custom or emerging derivatizing reagents used in mass spectrometry imaging.",
+    "Verification of adduct annotation requires comparison against either literature-reported ion forms for known metabolites or experimentally determined masses from high-resolution MS data to confirm correct matrix recognition.",
+    "Configuration of a new matrix typically requires specifying: matrix molecular weight, charge state, expected adduct formula (e.g. [M+matrix]+ or [M+Na+matrix]+), and ionization mode applicability (positive/negative)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that Met-ID repository (github:pbjarterot/Met-ID) contains configuration or plugin code (file or directory) that defines or registers derivatizing matrices",
+      "verify file_exists for a second derivatizing matrix configuration file (e.g. TAHS.json, tahs_config.py, or equivalent) in the repository",
+      "verify script_runs: execute Met-ID's matrix registration or initialization code with the new matrix configuration without errors",
+      "verify file_format_is: the new matrix configuration adheres to the documented schema used by the first (existing) derivatizing matrix in the codebase",
+      "verify output_matches_reference: run Met-ID with the second matrix on a test metabolite and confirm the output contains adduct annotations (e.g. [M+matrix_adduct]+) distinct from the baseline matrix",
+      "verify contains_substring: adduct annotation strings in Met-ID output include the expected ion form for the second matrix (e.g. presence of TAHS-related ion notation if TAHS is chosen)"
+    ],
+    "expert_review": [
+      "assess whether the second derivatizing matrix is a real, publicly documented reagent with known derivatization chemistry",
+      "evaluate whether the adduct annotations produced by Met-ID for the second matrix are chemically correct and consistent with the reagent's known reaction mechanism",
+      "judge whether the implementation is genuinely extensible (i.e. a new user could add a third matrix following the same pattern without modifying core code)",
+      "assess the clarity and completeness of any documentation or comments in the configuration/plugin code that enable future matrix additions"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Is Met-ID extensible to register and apply derivatizing matrices beyond FMP-10 to produce correct adduct annotations?: 'Met-ID is extendable to use any derivatizing ma'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Met-ID has been designed with extensibility in mind to support any derivatizing matrix, not limited to FMP-10 which was developed in-house.: 'Met-ID is extendable to use any derivatizing matrix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Met-ID source code or installed package with extensibility interface: 'github.com/pbjarterot/Met-ID'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Documentation or specifications for the second derivatizing matrix (e.g. TAHS reagent properties and ionization modes): 'any derivatizing matrix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Test metabolite dataset with known or reference adduct forms under derivatization: 'derivatizing matrices leading to ions other than common [M+H]+ in positive mode and [M-H]- in negative mode'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Configuration file or plugin code for the second derivatizing matrix (e.g. tahs_config.json or tahs_plugin.py): 'any derivatizing matrix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Adduct annotation table or report (CSV or JSON) produced by Met-ID using the newly registered matrix on test metabolites: 'derivatizing matrices leading to ions other than common [M+H]+'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Verification report or summary table comparing predicted adducts to expected ground truth: 'Met-ID has a particular focus on derivatizing matrices'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] RDKit: 'Powered by RDKit'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The discussion section contains no description of Met-ID's configuration format, plugin architecture, extensibility mechanism, or documented steps for registering a new derivatizing matrix: '[Entire discussion section contains only metadata and no technical content]'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "verification_report.csv",
+  "expected_outputs": [
+    "Configuration file or plugin code for the second derivatizing matrix (e.g. tahs_config.json or tahs_plugin.py)",
+    "Adduct annotation table or report (CSV or JSON) produced by Met-ID using the newly registered matrix on test metabolites",
+    "Verification report or summary table comparing predicted adducts to expected ground truth"
+  ],
+  "finding": "Met-ID has been designed with extensibility in mind to support any derivatizing matrix, not limited to FMP-10 which was developed in-house.",
+  "github_name": "pbjarterot/Met-ID",
+  "input_from": "task_001",
+  "inputs": [
+    "Met-ID source code or installed package with extensibility interface",
+    "Documentation or specifications for the second derivatizing matrix (e.g. TAHS reagent properties and ionization modes)",
+    "Test metabolite dataset with known or reference adduct forms under derivatization"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "matrix_config.json",
+    "adduct_predictions.csv",
+    "verification_report.csv"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_004",
+    "result_006",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Review Met-ID's extensibility architecture and existing derivatizing matrix configuration interface",
+    "Define and implement configuration for a second derivatizing matrix using specifications or documentation",
+    "Register the new matrix in Met-ID's configuration loader or plugin system",
+    "Execute Met-ID on test metabolites using the newly registered matrix",
+    "Validate predicted adducts against expected ground truth or literature values",
+    "Validation: adduct annotations produced by Met-ID with the new matrix match expected ions for \u226590% of test metabolites"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "The discussion section contains no description of Met-ID's configuration format, plugin architecture, extensibility mechanism, or documented steps for registering a new derivatizing matrix"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Is Met-ID extensible to register and apply derivatizing matrices beyond FMP-10 to produce correct adduct annotations?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "mass-spectrometry-adduct-annotation",
+    "derivatizing-matrix-configuration",
+    "software-plugin-development",
+    "metabolite-identification-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_metid/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "derivatizing-matrix-support"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:pbjarterot__Met-ID",
+  "task_description": "Implement a configuration or plugin to register a second derivatizing matrix (e.g. TAHS) in Met-ID and verify that the system correctly recognizes and applies it to generate adduct annotations for test metabolites.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Met-ID source code or package",
+      "port_id": "metid_codebase",
+      "resolved_via": null,
+      "source": "task_001/predicted_adducts",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Derivatizing matrix specifications and ionization properties",
+      "port_id": "matrix_specs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Test metabolite dataset with reference adduct forms",
+      "port_id": "test_metabolites",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Implement and verify registration of a second derivatizing matrix in Met-ID to confirm it correctly generates adduct annotations for metabolites.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Configuration or plugin for second derivatizing matrix",
+      "port_id": "matrix_config",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Adduct annotations produced by Met-ID with new matrix",
+      "port_id": "adduct_predictions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Comparison of predicted vs. expected adducts",
+      "port_id": "verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "metabolite-identification",
+    "database-annotation",
+    "in-silico-fragmentation"
+  ],
+  "title": "Extend Met-ID to register a novel derivatizing matrix beyond FMP-10",
+  "tools": [
+    "RDKit"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Review Met-ID's extensibility architecture and existing derivatizing matrix configuration (e.g. the documented matrix currently supported) to understand the plugin or configuration interface. 2. Create a configuration file or plugin module for the second derivatizing matrix (TAHS or similar publicly documented reagent), specifying the matrix composition, ionization behavior, and expected adduct forms. 3. Register the new matrix in Met-ID's system by integrating it into the tool's configuration loader or plugin registry. 4. Run Met-ID on a test set of metabolites (internal standards or reference compounds with known derivatization behavior) using the newly registered matrix. 5. Parse Met-ID's output and verify that adduct annotations match the expected ions produced by the second matrix (e.g. [M+matrix_adduct]+ or other characteristic forms). 6. Compare predicted adducts against ground truth or literature-reported adducts for the test metabolites to confirm correct recognition and application."
+}

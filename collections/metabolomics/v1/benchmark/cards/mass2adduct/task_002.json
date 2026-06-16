@@ -1,0 +1,309 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "5ec722ce6c7d34157c2dccaf42d8443e6f66ade354f4ae1e31ec86adc0ca483e"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:46.430517+00:00",
+  "crossref_doi": "10.1021/acs.analchem.0c04720",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Example MSI data matrix (msi.csv) with m/z values as column names, pixels as rows, and intensity values as entries",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Built-in adducts reference dataset (adducts2) listing chemical species names, formulas, and mass values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Annotated massdiff data frame with columns A (parent ion m/z), B (adduct ion m/z), diff (mass difference), matches (adduct name), Estimate (Pearson correlation coefficient), P.value (uncorrected), and Significance (Bonferroni-corrected boolean)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Adducts form when target molecules bind with matrix or salt ions during MSI sample preparation or ionization, creating ion pairs with characteristic mass differences that are spatially co-localized in tissue imaging.",
+    "Pearson correlation of ion intensity profiles across pixels tests whether parent and putative adduct ions show consistent spatial co-variation, which is biological evidence that they derive from the same molecular species.",
+    "Bonferroni correction multiplies the p-value threshold by the number of tests performed to control false-positive rate across thousands of ion pairs; only p-values below threshold/(total pairs) are deemed significant.",
+    "Mass resolution varies with m/z in most mass spectrometers, so histogram binning with fixed-width bins is less accurate than correlation-based matching for identifying specific adducts; the latter is preferred for detailed analysis."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file inst/extdata/msi.csv exists in github:kbseah__mass2adduct repository",
+      "file_format_is: msi.csv is plain-text CSV with semicolon delimiter",
+      "script_runs: R code `library(mass2adduct); d <- msimat(system.file('extdata','msi.csv',package='mass2adduct'),sep=';'); d.diff <- massdiff(d); d.diff.annot.cor <- corrPairsMSI(d.diff)` executes without error",
+      "field_present: output data frame contains columns 'Estimate', 'P-value', and corrected significance field (e.g., 'adj.p' or similar)",
+      "value_in_range: Estimate values are numeric correlations between -1 and 1",
+      "value_in_range: P-value and corrected significance fields contain numeric values between 0 and 1",
+      "output_matches_reference: corrected P-values are not smaller than uncorrected P-values (Bonferroni correction monotonicity check)"
+    ],
+    "expert_review": [
+      "verify that Bonferroni correction was applied correctly: number of comparisons equals number of pairwise mass differences, and adjustment factor is appropriate",
+      "assess whether Pearson correlation coefficients and their significance are biologically sensible given the MSI imaging context and expected spatial colocalization patterns"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] How does the corrPairsMSI() function compute pairwise correlations between ion pairs in mass spectrometry imaging data with statistical correction?: 'This performs a correlation test (by default two-tailed with Pearson's method) on each pair of peaks in the massdiff object.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] The corrPairsMSI() function performs a two-tailed Pearson correlation test on each pair of peaks in the massdiff object to assess spatial correlation between parent and adduct ions.: 'This performs a correlation test (by default two-tailed with Pearson's method) on each pair of peaks in the massdiff object.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Example MSI data matrix (msi.csv) with m/z values as column names, pixels as rows, and intensity values as entries: 'You can find an example CSV file in the folder `inst/extdata` in the source package. The columns represent mass peaks, with m/z values as column names, and rows represent pixels'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Built-in adducts reference dataset (adducts2) listing chemical species names, formulas, and mass values: 'There are two built-in data sets `adducts` and `adducts2` (shorter), which list biologically-relevant chemical species that might occur in biological samples'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Annotated massdiff data frame with columns A (parent ion m/z), B (adduct ion m/z), diff (mass difference), matches (adduct name), Estimate (Pearson correlation coefficient), P.value (uncorrected), and Significance (Bonferroni-corrected boolean): 'The correlation tests results will be added to the massdiff object, with three values reported: `Estimate` (correlation coefficient), `P.value`, and `Significance` (whether or not p-value is below'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mass2adduct: 'library(mass2adduct)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'library(mass2adduct)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is documented.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mass2adduct); msi <- read.csv('{inputs.msi_csv}', row.names=1); msimat_obj <- msimat(msi); data(adducts2); massdiff <- findMassDiff(msimat_obj); massdiff <- annotateMassDiff(massdiff, adducts2); result <- corrPairsMSI(msimat_obj, massdiff); result$Significance <- p.adjust(result$P.value, method='bonferroni') <= 0.05; write.csv(result, 'massdiff_annotated.csv', row.names=FALSE)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "annotated_corr_massdiff.csv",
+  "expected_outputs": [
+    "Annotated massdiff data frame with columns A (parent ion m/z), B (adduct ion m/z), diff (mass difference), matches (adduct name), Estimate (Pearson correlation coefficient), P.value (uncorrected), and Significance (Bonferroni-corrected boolean)"
+  ],
+  "finding": "The corrPairsMSI() function performs a two-tailed Pearson correlation test on each pair of peaks in the massdiff object to assess spatial correlation between parent and adduct ions.",
+  "github_name": "kbseah/mass2adduct",
+  "input_from": "task_001",
+  "inputs": [
+    "Example MSI data matrix (msi.csv) with m/z values as column names, pixels as rows, and intensity values as entries",
+    "Built-in adducts reference dataset (adducts2) listing chemical species names, formulas, and mass values"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "msi_data.rds",
+    "massdiff_pairs.csv",
+    "adduct_annotated_pairs.csv"
+  ],
+  "linked_result_ids": [
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_033",
+    "result_034",
+    "result_035",
+    "result_036",
+    "result_040",
+    "result_041",
+    "result_042"
+  ],
+  "methodology_summary": [
+    "Load MSI intensity matrix from CSV and construct msimat object for downstream analysis.",
+    "Generate all pairwise mass differences between observed m/z peaks to identify potential adduct candidates.",
+    "Annotate ion pairs by matching observed mass differences to known chemical adducts using adducts2 reference set.",
+    "Compute Pearson correlation coefficients between parent and adduct ion intensity profiles across pixels using corrPairsMSI().",
+    "Apply Bonferroni multiple-testing correction to assess statistical significance of spatial correlations at family-wise error rate.",
+    "Validation: Output massdiff data frame contains non-null Estimate, P.value, and Significance columns for all annotated pairs; Bonferroni-corrected p-values are \u2264 0.05 for rows marked Significance=TRUE.",
+    "References: source article (DOI: 10.1021/acs.analchem.0c04720)"
+  ],
+  "missing_information": [
+    "No changelog or version history is documented."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/massdiff_histogram"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the corrPairsMSI() function compute pairwise correlations between ion pairs in mass spectrometry imaging data with statistical correction?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "msi-data-matrix-import-and-validation",
+    "mass-difference-pairwise-calculation",
+    "adduct-annotation-against-reference-library",
+    "spatial-correlation-analysis-in-imaging-mass-spectrometry",
+    "multiple-testing-correction-bonferroni"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mass2adduct/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_MASS2ADDUCT",
+    "COMP_MSIMAT",
+    "COMP_MASSDIFF_OBJ",
+    "TOOL_MASSDIFF_FN",
+    "TOOL_CORRPAIRSMSI",
+    "CONCEPT_MASSDIFF",
+    "ARCH_WORKFLOW",
+    "RES_BONFERRONI_SIGNIFICANCE",
+    "RES_INTEGER_BACKGROUND"
+  ],
+  "subdomains": [
+    "spatial-metabolomics",
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:kbseah__mass2adduct",
+  "task_description": "Load the example msi.csv file from the mass2adduct package into an msimat object, annotate pairwise mass differences with known adducts, and apply corrPairsMSI() to compute Pearson correlations between parent and adduct ion pairs with Bonferroni multiple-testing correction. Output the annotated massdiff data frame with correlation coefficient, p-value, and corrected significance fields.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Example MSI data matrix (CSV)",
+      "port_id": "msi_csv",
+      "resolved_via": null,
+      "source": "task_001/massdiff_histogram",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Built-in adducts reference dataset",
+      "port_id": "adducts_ref",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Load msi.csv into an msimat object and apply corrPairsMSI() to compute Pearson correlations with Bonferroni correction, producing an annotated massdiff data frame with Estimate, P-value, and corrected significance fields.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Annotated massdiff data frame with correlation statistics",
+      "port_id": "annotated_corr_massdiff",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "adduct-detection",
+    "mass-spectrometry-imaging",
+    "maldi",
+    "metabolite-identification",
+    "feature-detection"
+  ],
+  "title": "Reconstruct corrPairsMSI() correlation filtering step on msi.csv input",
+  "tools": [
+    "mass2adduct",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Annotated massdiff data frame with columns A (parent ion m/z), B (adduct ion m/z), diff (mass difference), matches (adduct name), Estimate (Pearson correlation coefficient), P.value (uncorrected), and Significance (Bonferroni-corrected boolean)."
+  ],
+  "workflow_description": "1. Load the example MSI data (msi.csv) from inst/extdata using the msimat() function with appropriate separator (semicolon). 2. Generate all pairwise mass differences using massdiff() to create a massdiff object. 3. Annotate ion pairs by matching mass differences to the adducts2 reference set using adductMatch() to identify potential chemical transformations. 4. Apply corrPairsMSI() to compute two-tailed Pearson correlation coefficients for each annotated ion pair, extracting spatial intensity covariance from the original msimat object. 5. Extract and report correlation Estimate, raw P.value, and Bonferroni-corrected Significance (boolean) fields in the output massdiff object."
+}

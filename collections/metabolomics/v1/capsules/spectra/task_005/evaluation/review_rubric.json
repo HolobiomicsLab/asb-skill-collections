@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in github:rformassspectrometry__Spectra repository containing backendParallelFactor() method definition for MsBackendMzR class"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify backendParallelFactor() method returns a factor object (R class 'factor')"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify backendParallelFactor() method implementation extracts factor levels from dataStorage file names of spectra"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "memory usage metric from chunk-wise operation is lower than memory usage metric from non-chunked operation (robust to measurement tool, parameter-sensitive to data size and chunk boundaries)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in github:rformassspectrometry__Spectra repository containing backendParallelFactor() method definition for MsBackendMzR class",
+      "verify backendParallelFactor() method returns a factor object (R class 'factor')",
+      "verify backendParallelFactor() method implementation extracts factor levels from dataStorage file names of spectra",
+      "script_runs: execute chunk-wise splitting operation on MsBackendMzR instance with parallel factor applied to Spectra object, no errors",
+      "script_runs: execute operation loading all spectra into memory without chunking on same MsBackendMzR instance, no errors",
+      "memory usage metric from chunk-wise operation is lower than memory usage metric from non-chunked operation (robust to measurement tool, parameter-sensitive to data size and chunk boundaries)"
+    ],
+    "expert_review": [
+      "peak-data memory demand reduction is substantive and not artifactual (accounts for memory allocation overhead, garbage collection timing, measurement precision)",
+      "chunk-wise splitting implementation is correct and complete (no silent data loss, correct reassembly of results across chunks, consistent with Spectra API semantics)"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

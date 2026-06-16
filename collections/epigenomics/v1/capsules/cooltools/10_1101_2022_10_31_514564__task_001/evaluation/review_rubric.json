@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "cooltools/lib module directory exists in the open2c/cooltools repository at the "
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "__init__.py"
+    },
+    {
+      "id": "pf_004",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the function signature and docstring are present in the source file containing a"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that cooltools/lib module directory exists in the open2c/cooltools repository at the documented location",
+      "script_runs: execute Python import statement `from cooltools.lib import adaptive_coarsegrain` and verify script completes without ImportError",
+      "field_present: verify that adaptive_coarsegrain is listed in the __all__ export list or module __init__.py of cooltools.lib",
+      "contains_substring: verify that the function signature and docstring are present in the source file containing adaptive_coarsegrain definition"
+    ],
+    "expert_review": [
+      "confirm that adaptive_coarsegrain is semantically consistent with described functionality as a library utility for coarse-graining operations",
+      "verify that the function's implementation and documentation align with standard Hi-C analysis practices for adaptive resolution adjustment"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

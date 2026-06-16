@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:bihealth__NeatMS containing the default NeatMS model"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify the get_threshold() method is callable on the loaded model object"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify get_threshold() accepts a labelled peak dataset as input"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "value of returned scalar from get_threshold() equals 0.22 (byte-for-byte exact match)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify returned scalar matches result_default_model_threshold field value"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:bihealth__NeatMS containing the default NeatMS model",
+      "verify the get_threshold() method is callable on the loaded model object",
+      "verify get_threshold() accepts a labelled peak dataset as input",
+      "value of returned scalar from get_threshold() equals 0.22 (byte-for-byte exact match)",
+      "verify returned scalar matches result_default_model_threshold field value"
+    ],
+    "expert_review": [
+      "assess whether the criterion documented in result_optimal_threshold_criterion is statistically sound and appropriate for the LCMS signal classification task",
+      "evaluate whether the threshold value 0.22 is reasonable given the neural network model architecture and training data characteristics"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

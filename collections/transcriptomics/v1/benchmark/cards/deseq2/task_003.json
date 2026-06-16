@@ -1,0 +1,382 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/icobra.png",
+      "role": "figure",
+      "sha256": "ade78e8e562c1764605167aef70ab60bb18c616e2589d270ce7eb4fe09f7089a"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "a4965185bfb715d4c05464351e875a0988de6313e052f8297d5395c50c3d62b2"
+    }
+  ],
+  "created_at": "2026-06-15T18:08:54.168626+00:00",
+  "crossref_doi": "10.1186/s13059-014-0550-8",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sample metadata table from tximportData package (samples.txt with run IDs, population, center, and condition information)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Salmon quant.sf.gz quantification files for each sample",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Transcript-to-gene mapping table (tx2gene.gencode.v27.csv)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Gene-level count matrix (txi list object) containing un-normalized estimated gene counts, transcript lengths, and abundance-weighted library size offsets",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "DESeqDataSet object (ddsTxi) with gene-level counts, sample metadata, and design formula ready for differential expression analysis",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "tximport produces a list containing estimated gene-level counts, not normalized values; DESeq2 internally corrects for library size so raw or estimated counts must be provided as input, never normalized or scaled counts.",
+    "The tx2gene table links transcript identifiers from quantification files to gene identifiers and is essential for aggregating transcript-level estimates to gene level; the table must match the identifiers used in the quantification software output.",
+    "Salmon's quant.sf files report transcript-level abundance estimates with effective length and counts; tximport uses these to compute gene-level estimated counts by aggregating at the gene level and computing offsets that correct for average transcript length per gene across samples.",
+    "The design formula specifies the statistical model for downstream analysis; it should include variables of interest (e.g., condition) and technical variables (e.g., batch) and is used to estimate dispersions in DESeq2.",
+    "Un-normalized counts preserve the discrete count structure required for negative binomial statistical testing in DESeq2; any upstream normalization (e.g., library size scaling, FPKM, TPM) would violate the model assumptions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in tximportData package: tximportData/extdata/ directory contains transcript quantification files (Salmon, kallisto, or RSEM format)",
+      "verify script_runs: R script loading tximportData, calling tximport() with type parameter matching quantification tool, and tx2gene mapping produces executable code without errors",
+      "verify output_matches_reference: tximport() output is a list with named element 'counts' (gene-level matrix)",
+      "verify file_format_is: resulting counts matrix is numeric (non-negative integers), rows labeled by gene identifiers, columns labeled by sample identifiers",
+      "verify value_in_range: all values in counts matrix are non-negative integers (un-normalized raw counts, no fractional or negative values)",
+      "verify row_count_equals: gene-level count matrix row count matches expected number of unique genes in tx2gene mapping (no duplicates or missing genes)",
+      "verify field_present: output matrix has row names (gene IDs) and column names (sample IDs) as character vectors"
+    ],
+    "expert_review": [
+      "Confirm that tximport aggregation from transcript to gene level preserves count semantics: summed transcript counts per gene are appropriate for DESeq2 input (not scaled, not normalized by library size, not length-adjusted)",
+      "Verify that un-normalized counts are suitable as input to DESeqDataSetFromTximport() (i.e., counts have not been TPM/FPKM/CPM transformed or offset)",
+      "Confirm tx2gene mapping is correctly constructed and matches the transcript identifiers in the quantification files"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does tximport process transcript-level quantification files from tximportData to produce a gene-level count matrix suitable for DESeqDataSetFromTximport?: 'you could import the data with *tximport*, which produces a list, and then you can use `DESeqDataSetFromTximport()`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] tximport ingests transcript-level quantification files and produces a list object that contains un-normalized counts aggregated to the gene level, which serves as input to DESeqDataSetFromTximport for constructing a DESeqDataSet.: 'you could import the data with *tximport*, which produces a list, and then you can use `DESeqDataSetFromTximport()`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Sample metadata table from tximportData package (samples.txt with run IDs, population, center, and condition information): 'samples <- read.table(file.path(dir,\"samples.txt\"), header=TRUE)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Salmon quant.sf.gz quantification files for each sample: 'files <- file.path(dir,\"salmon\", samples$run, \"quant.sf.gz\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Transcript-to-gene mapping table (tx2gene.gencode.v27.csv): 'tx2gene <- read_csv(file.path(dir, \"tx2gene.gencode.v27.csv\"))'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Gene-level count matrix (txi list object) containing un-normalized estimated gene counts, transcript lengths, and abundance-weighted library size offsets: 'txi <- tximport(files, type=\"salmon\", tx2gene=tx2gene)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] DESeqDataSet object (ddsTxi) with gene-level counts, sample metadata, and design formula ready for differential expression analysis: 'ddsTxi <- DESeqDataSetFromTximport(txi, colData = samples, design = ~ condition)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] tximport: 'txi <- tximport(files, type=\"salmon\", tx2gene=tx2gene)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] DESeq2: 'library(\"DESeq2\") ddsTxi <- DESeqDataSetFromTximport(txi, colData = samples, design = ~ condition)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Salmon: 'files <- file.path(dir,\"salmon\", samples$run, \"quant.sf.gz\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] tximportData: 'library(\"tximportData\") dir <- system.file(\"extdata\", package=\"tximportData\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[other] readr: 'library(\"readr\") tx2gene <- read_csv(file.path(dir, \"tx2gene.gencode.v27.csv\"))'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, updates, or reproducibility artifacts for the tximportData package: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(tximport); library(DESeq2); library(tximportData); library(readr); samples <- read.delim('{inputs.sample_metadata}'); files <- file.path(dirname('{inputs.quant_files}'), basename('{inputs.quant_files}')); names(files) <- samples$run; tx2gene <- read.csv('{inputs.tx2gene_table}', header=TRUE); txi <- tximport(files, type='salmon', tx2gene=tx2gene, ignoreTxVersion=TRUE); dds <- DESeqDataSetFromTximport(txi, colData=samples, design=~condition); saveRDS(txi, 'txi_object.rds'); saveRDS(dds, 'dds_object.rds'); cat('Gene-level count matrix and DESeqDataSet successfully constructed.\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Gene-level count matrix (txi list object) containing un-normalized estimated gene counts, transcript lengths, and abundance-weighted library size offsets",
+    "DESeqDataSet object (ddsTxi) with gene-level counts, sample metadata, and design formula ready for differential expression analysis"
+  ],
+  "finding": "tximport ingests transcript-level quantification files and produces a list object that contains un-normalized counts aggregated to the gene level, which serves as input to DESeqDataSetFromTximport for constructing a DESeqDataSet.",
+  "github_name": "stephens999/ashr",
+  "input_from": "task_001",
+  "inputs": [
+    "Sample metadata table from tximportData package (samples.txt with run IDs, population, center, and condition information)",
+    "Salmon quant.sf.gz quantification files for each sample",
+    "Transcript-to-gene mapping table (tx2gene.gencode.v27.csv)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "samples_metadata_table.txt",
+    "txi_list.rds",
+    "dds_object.rds"
+  ],
+  "linked_result_ids": [
+    "result_009",
+    "result_010"
+  ],
+  "methodology_summary": [
+    "Load sample metadata and assign experimental condition labels (A, B) from tximportData package.",
+    "Construct file paths to Salmon quantification outputs (quant.sf.gz) and load the tx2gene transcript-to-gene mapping table.",
+    "Import transcript-level quantifications using tximport() with type='salmon' to aggregate to gene level, producing estimated gene counts and length offsets.",
+    "Construct a DESeqDataSet from the tximport output (txi list) using DESeqDataSetFromTximport() with sample metadata and design formula.",
+    "Validation: verify that the assay matrix contains un-normalized integer counts (not scaled by library size) by inspecting the count values and confirming they match expected ranges for RNA-seq data.",
+    "References: source article (DOI: 10.1186/s13059-014-0550-8)"
+  ],
+  "missing_information": [
+    "No changelog documenting version history, updates, or reproducibility artifacts for the tximportData package"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/deseq_results"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does tximport process transcript-level quantification files from tximportData to produce a gene-level count matrix suitable for DESeqDataSetFromTximport?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods"
+  ],
+  "skills": [
+    "transcript-abundance-quantification-import",
+    "transcript-to-gene-aggregation",
+    "deseqdataset-construction-from-quantification",
+    "count-matrix-format-validation",
+    "sample-metadata-preparation-and-assignment",
+    "rna-seq-experimental-design-specification"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_deseq2/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "deseq2_system",
+    "deseq2_pipeline_architecture",
+    "tximport_tool",
+    "htseq_tool",
+    "tximportdata_dataset",
+    "result_tximport_recommended",
+    "result_prefilter_count10",
+    "result_unnormalized_counts_required"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "rna-seq"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:thelovelab__DESeq2",
+  "task_description": "Import transcript-level quantification files from tximportData package using tximport to produce a gene-level count matrix, then construct a DESeqDataSet suitable for differential expression analysis. Verify that the resulting matrix contains un-normalized estimated gene counts.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample metadata table with run IDs and condition assignments",
+      "port_id": "sample_metadata",
+      "resolved_via": null,
+      "source": "task_001/deseq_results",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Salmon transcript quantification files (quant.sf.gz)",
+      "port_id": "quant_files",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Transcript-to-gene mapping table",
+      "port_id": "tx2gene_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the tximport ingestion pipeline using tximportData example files to generate a gene-level count matrix with un-normalized counts compatible with DESeqDataSetFromTximport.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Gene-level count matrix and abundance estimates",
+      "port_id": "txi_list",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "DESeqDataSet with counts and sample metadata",
+      "port_id": "dds_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "normalization",
+    "statistical-analysis",
+    "false-discovery-rate-correction"
+  ],
+  "title": "Reconstruct the tximport-based count matrix ingestion step for DESeq2 using tximportData",
+  "tools": [
+    "tximport",
+    "DESeq2",
+    "Salmon",
+    "tximportData",
+    "readr"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: tximport, Salmon, tximportData, readr, Gene-level count matrix (txi list object) containing un-normalized estimated gene counts, transcript lengths, and abundance-weighted library size offsets, DESeqDataSet object (ddsTxi) with gene-level counts, sample metadata, and design formula ready for differential expression analysis."
+  ],
+  "workflow_description": "1. Load the tximportData package and retrieve the sample metadata table, assigning condition labels (A and B) and setting run IDs as row names. 2. Construct the file paths to Salmon quant.sf.gz files and read the tx2gene mapping table (transcript-to-gene linkage) from the tximportData package. 3. Import transcript abundance quantifications using tximport() with type='salmon' and the tx2gene mapping to aggregate to gene level, producing a list object containing estimated gene counts, lengths, and offsets. 4. Construct a DESeqDataSet from the tximport output using DESeqDataSetFromTximport(), specifying the sample metadata and design formula (~condition). 5. Verify that the resulting count matrix contains un-normalized estimated counts by examining the assay data and confirming values are integer counts without library-size scaling or normalization."
+}

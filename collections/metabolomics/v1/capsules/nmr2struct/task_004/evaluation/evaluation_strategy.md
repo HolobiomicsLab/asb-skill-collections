@@ -1,0 +1,17 @@
+# Evaluation Strategy
+
+## Direct Checks
+
+- verify that a held-out test set of molecules with ≥20 heavy atoms exists in the deposited dataset or public chemical database (PubChem/other); file_exists and row_count_equals or field_present for molecule count and heavy atom count field
+- verify that NMR2Struct model checkpoint or weights file exists in the repository or supplementary deposit; file_exists
+- verify that model inference script runs successfully on the held-out set without errors; script_runs
+- verify that top-k structure recovery accuracy metric (e.g., exact match, canonical SMILES match, or graph edit distance threshold) is computed and reported as a single numerical score or per-molecule prediction table; file_exists and format_is for output table/CSV
+- verify that in-scope baseline accuracy (molecules ≤19 heavy atoms) is retrieved from article text, SI, or model evaluation deposit; output_matches_reference or contains_substring of reported number
+- verify that degradation/retention ratio or absolute accuracy difference (out-of-scope vs. in-scope) is computed; value_in_range or exact numerical output artifact
+
+## Expert Review
+
+- assess whether the choice of held-out test set is representative and unbiased (no data leakage from training or hyperparameter tuning); confirm sampling strategy or stratification by molecular properties
+- evaluate the appropriateness of the top-k metric definition (k value, exact vs. relaxed matching criterion) and whether it aligns with chemical validity (e.g., whether isomers or stereochemically distinct structures are penalized equally)
+- interpret the magnitude of accuracy degradation beyond 19 heavy atoms in light of model architecture (receptive field, sequence length limits, training data composition) and chemical complexity
+- confirm that any reported accuracy figures use consistent evaluation protocol and do not conflate different ranking metrics (e.g., top-1 vs. top-10)

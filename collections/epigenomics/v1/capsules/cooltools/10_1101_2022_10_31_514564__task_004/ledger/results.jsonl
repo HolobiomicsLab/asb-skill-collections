@@ -1,0 +1,1 @@
+{"result_id": "result_038", "summary": "v0.4.0 introduced logbin_expected and interpolate_expected functions for smoothing P(s) and derivatives.", "result_type": "minor", "claim_ids": ["claim_043"], "support_status": "not_evaluated", "linked_task_ids": ["task_004"], "linked_eval_check_ids": [], "task_relevance": "task_linked"}

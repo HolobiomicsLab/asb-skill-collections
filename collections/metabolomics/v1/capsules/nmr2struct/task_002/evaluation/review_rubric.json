@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the deposited dataset github:MarklandGroup__NMR2Struct contains at least one fil"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "fragment-structure pair data is in a machine-readable format (CSV, JSON, pickle,",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "compare model-generated assembled structures (SMILES or graph representation) ag"
+    },
+    {
+      "id": "pf_005",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "model outputs include both connectivity graph and atomic formula for each assemb"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that the deposited dataset github:MarklandGroup__NMR2Struct contains at least one file listing molecular fragments paired with ground-truth assembled structures",
+      "file_format_is: verify that fragment-structure pair data is in a machine-readable format (CSV, JSON, pickle, or HDF5)",
+      "script_runs: verify that a Python script can load the transformer module checkpoint from the repository and execute forward inference on a test fragment set without errors",
+      "output_matches_reference: compare model-generated assembled structures (SMILES or graph representation) against ground-truth structures from the deposited dataset using exact string matching or molecular graph isomorphism, with >0% of outputs matching, no canonical answer (multiple valid SMILES representations exist for same molecule)",
+      "field_present: verify that model outputs include both connectivity graph and atomic formula for each assembled candidate structure"
+    ],
+    "expert_review": [
+      "Assess whether the assembled structures are chemically valid (valence rules satisfied, no impossible bonds)",
+      "Evaluate fragment assembly accuracy: does the model correctly combine fragments without dangling bonds or mismatched atom types?",
+      "Judge whether the isolated fragment assembly module's performance is meaningful in isolation or whether it relies on upstream spectral encoding that is not present in this evaluation"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

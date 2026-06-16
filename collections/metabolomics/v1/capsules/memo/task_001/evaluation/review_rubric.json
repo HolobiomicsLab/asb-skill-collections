@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the implementation accepts MS2 spectra files as input (file_format_is: common MS formats such as .mgf, .msp, or .mzML)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the implementation produces a numeric fingerprint vector output for each sample (format_is: numeric array or matrix, e.g., numpy array, CSV, or HDF5)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the fingerprint vector contains counts of MS2 peaks and neutral losses (field_present: vector entries represent peak/loss counts; robust to parameter choices for binning or filtering thresholds)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output fingerprint dimensions match the number of input samples (row_count_equals: one fingerprint per sample)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "compare generated fingerprints against documented reference fingerprints (if ava"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the implementation accepts MS2 spectra files as input (file_format_is: common MS formats such as .mgf, .msp, or .mzML)",
+      "verify that the implementation produces a numeric fingerprint vector output for each sample (format_is: numeric array or matrix, e.g., numpy array, CSV, or HDF5)",
+      "verify that the fingerprint vector contains counts of MS2 peaks and neutral losses (field_present: vector entries represent peak/loss counts; robust to parameter choices for binning or filtering thresholds)",
+      "verify that output fingerprint dimensions match the number of input samples (row_count_equals: one fingerprint per sample)",
+      "script_runs: execute the MS2_FINGERPRINT_COMPONENT on a reference MS2 spectra dataset (e.g., from mandelbrot-project/memo_publication_examples) without errors",
+      "output_matches_reference: compare generated fingerprints against documented reference fingerprints (if available in the publication examples repository) byte-for-byte or within documented numerical tolerance"
+    ],
+    "expert_review": [
+      "assess whether peak and neutral loss counting methodology aligns with MS2 fragmentation mass spectrometry best practices and the MEMO publication intent",
+      "evaluate whether the fingerprint vector dimensionality and binning strategy are appropriate for downstream alignment and sample comparison tasks",
+      "review whether handling of precursor ions and neutral loss calculations is biochemically sound"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file docker-compose.yml exists in expected_outputs[0]"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "file_format_is docker-compose.yml text/yaml or application/x-yaml"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "contains_substring 'magmaweb' in docker-compose.yml"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "contains_substring 'joblauncher' in docker-compose.yml"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "contains_substring 'job' in docker-compose.yml (as a service name distinct from joblauncher)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "contains_substring 'pubchem' in docker-compose.yml"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "contains_substring 'services:' in docker-compose.yml"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "script_runs docker-compose config -f docker-compose.yml without errors (validates YAML syntax and service definitions)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file docker-compose.yml exists in expected_outputs[0]",
+      "file_format_is docker-compose.yml text/yaml or application/x-yaml",
+      "contains_substring 'magmaweb' in docker-compose.yml",
+      "contains_substring 'joblauncher' in docker-compose.yml",
+      "contains_substring 'job' in docker-compose.yml (as a service name distinct from joblauncher)",
+      "contains_substring 'pubchem' in docker-compose.yml",
+      "contains_substring 'services:' in docker-compose.yml",
+      "script_runs docker-compose config -f docker-compose.yml without errors (validates YAML syntax and service definitions)"
+    ],
+    "expert_review": [
+      "expert_review: verify that docker-compose.yml service definitions correctly reflect component responsibilities (magmaweb=web interface, joblauncher=job queue manager, job=compute worker, pubchem=data source) as implied by NLeSC/MAGMa architecture",
+      "expert_review: assess whether inter-service networking (environment variables, ports, volumes) enables the expected data flow among four components; no canonical answer without MAGMa deployment documentation",
+      "expert_review: assess whether the composition extends or decomposes the single deployable artifact mentioned in scope in a chemically/informatically sensible way"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

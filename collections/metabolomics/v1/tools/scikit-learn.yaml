@@ -4,12 +4,16 @@ evidence_spans:
 - from sklearn.model_selection import train_test_split
 - Using the t-SNE [28] implementation from scikit-learn [29]
 - Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional coordinates
+- from sklearn.metrics import auc
 derived_from:
 - doi: 10.1371/journal.pcbi.1011814
   title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
 - doi: 10.1186/s13321-021-00558-4
   title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
 source_repos:
+- bihealth/NeatMS
 - https://github.com/matchms/ms2deepscore
 - kopeckylukas/py-mamsi
 schema_version: 0.2.0

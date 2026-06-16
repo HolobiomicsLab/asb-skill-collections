@@ -1,0 +1,288 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "review",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "78f8979eb0db9fb8e32ffa25ac22f7ef92c9e01d22ec0fa04e3892632e06c012"
+    }
+  ],
+  "created_at": "2026-06-15T09:39:35.903004+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "cwieder/metabolomics-ORA GitHub repository (https://github.com/cwieder/metabolomics-ORA.git)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Python 3.8 runtime environment",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Simulation figures and tables demonstrating ORA pitfalls and best practices in metabolomics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Over-representation Analysis (ORA) is a pathway analysis method in metabolomics that identifies statistically significant metabolite pathway associations from experimental datasets.",
+    "Reproducibility in computational metabolomics requires exact matching of Python version and all dependency versions to ensure simulation outputs are identical to published results.",
+    "Jupyter notebooks in metabolomics research serve as both executable documentation and reproducible computational workflows, requiring sequential cell execution to maintain data flow.",
+    "Pitfalls in ORA include multiple testing correction strategies, background metabolite database selection, and pathway definition choices that significantly impact result interpretation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: src/reproducible_simulations.ipynb in repository github:cwieder__metabolomics-ORA",
+      "file_format_is: src/reproducible_simulations.ipynb is a valid Jupyter notebook (.ipynb)",
+      "script_runs: Jupyter notebook executes without errors using Python 3.8",
+      "verify notebook completes without exceptions or missing dependencies",
+      "verify notebook produces at least one figure or table output artifact"
+    ],
+    "expert_review": [
+      "outputs (figures and tables) match in content and visual structure those reported in DOI:10.1371/journal.pcbi.1009105",
+      "numerical results in simulation outputs are consistent with the article's reported pitfalls and best-practice demonstrations for ORA in metabolomics"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Can the Python simulation code in the reproducible_simulations.ipynb notebook be executed to regenerate the results demonstrating pitfalls and best practices for Over-representation Analysis in metabolomics?: 'The Python code to generate the results is contained within the Jupyter notebook **src/reproducible_simulations.ipynb**.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The study provides Python code in a Jupyter notebook (src/reproducible_simulations.ipynb) that users can adapt to perform simulations, with the code tested using Python 3.8 on MacOS with standard hardware.: 'All code has been tested using Python 3.8 on MacOS (v11.2.3) with standard hardware (16GB RAM).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] cwieder/metabolomics-ORA GitHub repository (https://github.com/cwieder/metabolomics-ORA.git): 'git clone https://github.com/cwieder/metabolomics-ORA.git'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python 3.8 runtime environment: 'The Python code to generate the results is contained within the Jupyter notebook'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Simulation figures and tables demonstrating ORA pitfalls and best practices in metabolomics: 'This repository contains the code to run the simulations presented in the study'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'The Python code to generate the results is contained within the Jupyter notebook'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Jupyter: 'The Python code to generate the results is contained within the Jupyter notebook'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, modifications, or dependencies of the repository: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "jupyter",
+      "nbconvert",
+      "--to",
+      "notebook",
+      "--execute",
+      "{inputs.repo_clone}/src/reproducible_simulations.ipynb"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Simulation figures and tables demonstrating ORA pitfalls and best practices in metabolomics"
+  ],
+  "finding": "The study provides Python code in a Jupyter notebook (src/reproducible_simulations.ipynb) that users can adapt to perform simulations, with the code tested using Python 3.8 on MacOS with standard hardware.",
+  "github_name": null,
+  "input_from": null,
+  "inputs": [
+    "cwieder/metabolomics-ORA GitHub repository (https://github.com/cwieder/metabolomics-ORA.git)",
+    "Python 3.8 runtime environment"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "src/reproducible_simulations.ipynb",
+    "simulation_figures/*.png",
+    "simulation_tables/*.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_003",
+    "result_004",
+    "result_008"
+  ],
+  "methodology_summary": [
+    "Clone the cwieder/metabolomics-ORA repository to obtain the reproducible simulation notebook and dependencies.",
+    "Install Python 3.8 and all required packages specified in the repository environment configuration.",
+    "Execute the Jupyter notebook src/reproducible_simulations.ipynb cell-by-cell to run ORA simulations.",
+    "Collect all generated figures and tables demonstrating ORA pitfalls and best-practice recommendations.",
+    "Validation: regenerated outputs match figures and tables published in DOI:10.1371/journal.pcbi.1009105."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, modifications, or dependencies of the repository"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can the Python simulation code in the reproducible_simulations.ipynb notebook be executed to regenerate the results demonstrating pitfalls and best practices for Over-representation Analysis in metabolomics?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "jupyter-notebook-execution",
+    "python-environment-setup",
+    "metabolomics-ora-methodology",
+    "simulation-output-validation",
+    "git-repository-cloning"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ora/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "system_simulation_pipeline",
+    "tool_jupyter_notebook",
+    "tool_python38",
+    "dataset_metabolomics_pathways",
+    "publication_doi"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:cwieder__metabolomics-ORA",
+  "task_description": "Execute the reproducible_simulations.ipynb Jupyter notebook from the cwieder/metabolomics-ORA GitHub repository using Python 3.8 to regenerate simulation outputs (figures and tables) that demonstrate pitfalls and best-practice recommendations for Over-representation Analysis (ORA) in metabolomics.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "cwieder/metabolomics-ORA repository",
+      "port_id": "repo_clone",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Python 3.8 environment",
+      "port_id": "python_env",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute src/reproducible_simulations.ipynb using Python 3.8 to regenerate all simulation outputs (figures and tables) documenting ORA pitfalls and best practices in metabolomics as published in DOI:10.1371/journal.pcbi.1009105.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Regenerated simulation figures and tables",
+      "port_id": "simulation_outputs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "pathway-analysis",
+    "enrichment-analysis",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce the ORA simulation results reported in the study",
+  "tools": [
+    "Python",
+    "Jupyter"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Jupyter."
+  ],
+  "workflow_description": "1. Clone the cwieder/metabolomics-ORA repository from GitHub. 2. Set up a Python 3.8 environment with all required dependencies listed in the repository. 3. Launch Jupyter and open src/reproducible_simulations.ipynb. 4. Execute all cells in the notebook sequentially to regenerate simulation outputs. 5. Verify that generated figures and tables match those reported in the publication (DOI:10.1371/journal.pcbi.1009105)."
+}

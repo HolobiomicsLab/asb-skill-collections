@@ -1,10 +1,20 @@
 name: pyOpenMS
 slug: pyopenms
+version_used: 2.7.0
 evidence_spans:
 - pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- '.mzML ----- .. toctree:: :maxdepth: 1 pyopenms pymzml'
+- pyopenms ... pymzml ... pyteomics
+- pyOpenMS](https://pyopenms.readthedocs.io/) (version 2.7.0)
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: PFΔScreen — an open-source tool for automated PFAS feature prioritization in non-target HRMS data
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
 source_repos:
 - JonZwe/PFAScreen
+- OpenMS/pyopenms_viz
+- bittremieux-lab/spectrum_utils
 schema_version: 0.2.0

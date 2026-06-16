@@ -1,0 +1,2554 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/annotation-accuracy-and-coverage-metrics-computation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/biotransformation-candidate-integration-with-networking",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/biotransformation-rule-encoding",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/chemical-structure-deduplication",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectral-feature-grouping",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolite-structure-annotation-integration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-network-clustering-and-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-network-construction-for-metabolomics",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/parent-product-relationship-tracking",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/pipeline-end-to-end-execution-and-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/reference-prediction-comparison-evaluation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/smiles-parsing-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-similarity-network-construction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "This repository contains code to implement the biotransformation-based annotation method (BAM).",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The repository contains data used to validate BAM.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_dataset_validation_data"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "BAM uses biotransformation rules and global molecular networking for molecular structure discovery.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_biotransformation_rules"
+        },
+        {
+          "id": "asb:spine_comp_global_molecular_networking"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM was able to assign correct molecular structures to 24.2% of examined anchor\u2013suspect cases, thereby demonstrating remarkable advancement in metabolite annotation.",
+      "asbval:note": "The paper reports validation metrics (24.2% recall, 57.7% top-1 ranking accuracy, average rank 2.1) on a dataset of 60,368 anchor\u2013suspect pairs derived from the global molecular network. The research question aligns with reproducing these metrics.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Does the BAM pipeline, when executed end-to-end on the deposited validation dataset, reproduce the reported validation metrics for molecular structure discovery from untargeted metabolomics data?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:07:49.610089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "All code, examples files, and detailed instructions are available as open source under the MIT license at https://github.com/HassounLab/BAM.",
+      "asbval:note": "The BAM codebase is explicitly made available at the GitHub repository HassounLab/BAM.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/BAM",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:07:49.610089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM systematically employs these rules to generate and rank potential molecular structures ('derivatives') for the 'suspect' molecule\u2014the unknown compound associated with the query spectrum.",
+      "asbval:note": "BAM generates and ranks candidate structures (derivatives) for unknown molecules, which are the primary output of the pipeline.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Annotation predictions (structures assigned by BAM pipeline)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:07:49.610089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM successfully generated the correct suspect structure in 4171 cases, achieving a recall of 24.2% when a derivative is generated. Notably, when the structural similarity between the anchor and suspect was restricted to above 0.9 Tanimoto similarity, the recall increased significantly to 37.7%... BAM demonstrated impressive accuracy in ranking the correct derivatives, achieving an average rank of 2.1 and ranking the correct suspect first in 57.7% of cases.",
+      "asbval:note": "The paper reports multiple validation metrics: recall (24.2%, 37.7% at higher similarity), average rank (2.1), and top-1 ranking accuracy (57.7%).",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Validation metrics (annotation accuracy, coverage scores)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:07:49.610089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We additionally performed a comparative analysis against SIRIUS... Because BAM and SIRIUS both provide structural ranking, we report the number of queries that generated and ranked the true structure within top k ranks, where k = 1, 3, 5, 10, and with all ranks considered (Table 1).",
+      "asbval:note": "The paper includes a detailed comparative analysis of BAM against SIRIUS with performance metrics reported in Tables 1 and 2.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Performance report comparing BAM predictions to reference annotations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:07:49.610089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The task card frames the research question as a reproducibility/validation exercise ('reproduce the reported validation metrics'), which is appropriate given the paper's explicit release of code and data on Zenodo (DOI:10.5281/zenodo.13903946) and GitHub.",
+        "The card does not mention specific dataset details (60,368 anchor\u2013suspect pairs from global molecular network, 30,184 structurally unique annotated spectrum pairs), but this is implicit in 'validation dataset' and the paper provides sufficient detail for reproducibility.",
+        "The card does not specify comparison to SIRIUS, though the paper includes this comparative analysis. This is a minor omission but not a scope drift\u2014the card focuses on BAM's own metrics rather than comparative performance."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:07:49.610089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM operates by applying biotransformation rules to known \"anchor\" molecules, which exhibit high spectral similarity to unknown spectra, thereby hypothesizing and ranking potential structures for the corresponding \"suspect\" molecule.",
+      "asbval:note": "Core research question is directly addressed in abstract and methods sections.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does the BAM method apply biotransformation rules to generate candidate molecular structures from input molecules?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:08:04.436336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM was implemented using two different code environments. First, PROXIMAL2 was applied and its results were analyzed using Python 3.9, PubChemPy (version 1.0.4), BioServices (version 1.11.2), scikit-learn (version 1.1.2), NumPy (version 1.23.2), NetworkX (version 2.5), RDKit (version 2022.03.5), KCF-Convoy (version 0.0.5), Pandas (version 1.4.3), Matplotlib (version 3.5.3), and Seaborn (version 0.12.2). Second, GNN-SOM was applied using Python 3.10, RDKit (version 2022.03.5), PyTorch (version 1.12.1), and PyTorch Geometric (version 2.1.0).",
+      "asbval:note": "RDKit is explicitly listed as a software dependency used in BAM implementation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:08:04.436336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "All code, examples files, and detailed instructions are available as open source under the MIT license at https://github.com/HassounLab/BAM.",
+      "asbval:note": "BAM is the primary method developed in this paper and is available at the HassounLab GitHub repository.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/BAM",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:08:04.436336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM systematically employs these rules to generate and rank potential molecular structures (\"derivatives\") for the \"suspect\" molecule\u2014the unknown compound associated with the query spectrum.",
+      "asbval:note": "The paper describes BAM generating and ranking candidate structures (derivatives) for suspect molecules, but does not explicitly describe output as a 'structured file mapping input structures to biotransformation product candidates.' The functional output is candidate structure generation and ranking, but the specific file format/structure is not detailed in the passages provided.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Structured file mapping input structures to biotransformation product candidates",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:08:04.436336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card's expected_outputs claim is somewhat vague about file format. The paper describes BAM generating ranked candidate structures but does not explicitly detail the output file format or structure.",
+        "The card focuses narrowly on 'the biotransformation rules application module' but BAM is a three-step method (anchor identification, rule application, ranking). The card may be underselling the full scope of BAM's functionality."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:08:04.436336+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM operates by identifying and applying biotransformation rules to an \"anchor\" molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum... BAM systematically employs these rules to generate and rank potential molecular structures (\"derivatives\") for the \"suspect\" molecule\u2014the unknown compound associated with the query spectrum.",
+      "asbval:note": "The paper describes BAM's three-step process: (1) anchor identification via spectral similarity in a precomputed global molecular network, (2) biotransformation rule application via PROXIMAL2, and (3) ranking via GNN-SOM. However, the research question conflates two distinct concepts: BAM does NOT generate a molecular network file as output\u2014rather, it USES a precomputed global molecular network as input for anchor identification. BAM outputs ranked candidate structures for individual suspects, not a new network file. The question mischaracterizes BAM's role in the workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does the global molecular networking component of BAM operate on candidate transformed structures to generate a molecular network file and annotation table?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:08:18.632534+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "BAM does not generate or output a molecular network file. The paper states: 'we utilized a precomputed molecular network, which we refer to as the global molecular network' (passage 4). BAM consumes an existing global molecular network to identify anchor-suspect pairs but does not produce a network file as output. The paper reports BAM outputs ranked candidate structures and their likelihoods, not network files.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Molecular network file in standard graph format (GraphML, JSON, or GXF) containing nodes (features) and edges (spectral similarity links)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:08:18.632534+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM successfully generated the correct suspect structure in 4171 cases, achieving a recall of 24.2% when a derivative is generated... Furthermore, BAM demonstrated impressive accuracy in ranking the correct derivatives, achieving an average rank of 2.1 and ranking the correct suspect first in 57.7% of cases",
+      "asbval:note": "BAM does output ranked candidate structures with ranking metrics (average rank, position k). However, the paper does not explicitly state that outputs are in CSV/TSV format, nor does it mention 'molecular family cluster' as an output. The paper reports results in tables (Table 1, Table 2) but does not specify the format of BAM's actual output files. The claim about 'annotation confidence metrics' is partially supported (ranking likelihood is reported) but 'molecular family cluster' is not mentioned as an output.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Feature annotation table (CSV or TSV) mapping each MS feature to candidate structure(s), molecular family cluster, and annotation confidence metrics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:08:18.632534+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "[SUBSTRING-MATCH for BAM | role: primary method] 'To address this problem, we have developed the Biotransformation-based Annotation Method (BAM).'",
+      "asbval:note": "BAM is the primary tool developed and evaluated in this paper. Confirmed as the main method.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BAM",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:08:18.632534+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The research question fundamentally mischaracterizes BAM's role: BAM does NOT generate a molecular network file. Instead, BAM USES a precomputed global molecular network as input to identify anchor-suspect pairs. The three-step BAM process is: (1) identify anchors from the precomputed global molecular network via spectral similarity, (2) apply biotransformation rules to generate candidate structures, (3) rank candidates using GNN-SOM. The output is ranked candidate structures for individual suspects, not a new network file.",
+        "The expected outputs claim that BAM produces 'molecular network file in standard graph format' is unsupported. BAM's actual outputs are ranked candidate structures with likelihood scores, not network topology files.",
+        "The claim about 'molecular family cluster' as an output is not mentioned in the paper. BAM outputs individual suspect annotations, not cluster assignments.",
+        "The paper does not specify that BAM outputs are in CSV/TSV format, though results are presented in tables for evaluation purposes."
+      ],
+      "asbval:n_drift_notes": 4,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:08:18.632534+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/annotation-accuracy-and-coverage-metrics-computation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM successfully generated the correct suspect structure in 4171 cases, achieving a recall of 24.2% when a derivative is generated... BAM demonstrated impressive accuracy in ranking the correct derivatives, achieving an average rank of 2.1 and ranking the correct suspect first in 57.7% of cases",
+      "asbval:note": "Paper explicitly computes recall (24.2%), ranking accuracy (57.7% at rank 1, average rank 2.1), and coverage metrics against reference annotations from the global molecular network.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "annotation-accuracy-and-coverage-metrics-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute validation metrics (accuracy and coverage) for molecular structure annotations by comparing pipeline predictions against reference annotations.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:34.159120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/annotation-accuracy-and-coverage-metrics-computation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM leverages molecular structural similarities inherent in biochemical reactions... BAM's effectiveness is demonstrated by its success in annotating query spectra in a global molecular network comprising hundreds of millions of spectra.",
+      "asbval:note": "Paper demonstrates BAM as a biotransformation-based annotation method for untargeted metabolomics.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "annotation-accuracy-and-coverage-metrics-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill quantifies the quality of biotransformation-based annotation methods on untargeted metabolomics data.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:34.159120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/annotation-accuracy-and-coverage-metrics-computation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed the Biotransformation-based Annotation Method (BAM)... All code, examples files, and detailed instructions are available as open source under the MIT license at https://github.com/HassounLab/BAM.",
+      "asbval:note": "BAM is confirmed as the primary tool; GitHub repository URL matches.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "annotation-accuracy-and-coverage-metrics-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/BAM - Biotransformation-based annotation pipeline that generates predicted molecular structure annotations for validation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:34.159120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/annotation-accuracy-and-coverage-metrics-computation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To extract and apply these rules, we employed PROXIMAL2. This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center... BAM makes use of PROXIMAL2 to apply the biotransformation rules to the anchor molecule",
+      "asbval:note": "PROXIMAL2 is confirmed as a dependency used by BAM for applying biotransformation rules.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "annotation-accuracy-and-coverage-metrics-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/PROXIMAL2 - Dependency for BAM; generates biotransformation operators used in structure annotation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:34.159120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/annotation-accuracy-and-coverage-metrics-computation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the graph neural network-based GNN-SOM tool is used to predict the site-of-metabolism and rank these putative derivatives based on the likelihood of each atom being a reaction center... For this, we use GNN-SOM, a tool that employs a graph neural network to predict the likelihood of each atom in a molecule being the target of a biotransformation operation.",
+      "asbval:note": "GNN-SOM is confirmed as a dependency used by BAM for ranking candidate structures via site-of-metabolism prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "annotation-accuracy-and-coverage-metrics-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/GNN-SOM - Dependency for BAM; predicts site-of-metabolism for ranking candidate structures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:34.159120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/annotation-accuracy-and-coverage-metrics-computation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To determine a data set of known suspects to evaluate BAM, a set of 30,184 structurally unique, annotated spectrum pairs were derived from neighboring annotated nodes from this global molecular network, yielding 60,368 total anchor\u2013suspect pairs.",
+      "asbval:note": "Paper demonstrates evaluation of BAM on a validation dataset with known reference annotations.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "annotation-accuracy-and-coverage-metrics-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill after executing an end-to-end structure annotation pipeline (such as BAM) on a validation dataset with known reference annotations.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:34.159120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/annotation-accuracy-and-coverage-metrics-computation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We additionally performed a comparative analysis against SIRIUS... As both BAM and SIRIUS provide structural ranking, we report the number of queries that generated and ranked the true structure within top k ranks",
+      "asbval:note": "Paper demonstrates benchmarking against reference tool (SIRIUS) and reporting metrics against ground truth.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "annotation-accuracy-and-coverage-metrics-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use it when you need to benchmark annotation performance, verify reproducibility of reported metrics, or assess the quality of predicted molecular structures against ground truth.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:34.159120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/annotation-accuracy-and-coverage-metrics-computation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "A correct match between a generated derivative and the true suspect identity is defined as an exact match between the first 14 characters of the InChiKeys, which represent a two-dimensional structure.",
+      "asbval:note": "Paper uses InChiKey matching for validation, confirming use of chemical structure identifiers.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "annotation-accuracy-and-coverage-metrics-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "Pipeline output annotations (predicted structure identifiers, SMILES, or InChI strings)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:34.159120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/annotation-accuracy-and-coverage-metrics-computation/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "a set of 30,184 structurally unique, annotated spectrum pairs were derived from neighboring annotated nodes from this global molecular network... Thus, when querying these 60,368 suspects in step 1 of BAM, the corresponding anchors are determined as neighboring nodes to the suspects in the global molecular network.",
+      "asbval:note": "Paper uses annotated spectrum pairs from the global molecular network as ground truth reference.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "annotation-accuracy-and-coverage-metrics-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "Reference annotation dataset (ground-truth molecular structures with SMILES or InChI)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:34.159120+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-candidate-integration-with-networking/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM leverages the principle that reactant and products of biochemical reactions often share molecular substructures, leading to high spectral similarity. This spectral similarity, when analyzed within a biological context, provides a more biologically relevant and comprehensive approach to annotation compared to traditional methods that rely solely on spectral similarity. BAM operates by identifying and applying biotransformation rules to an \"anchor\" molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum.",
+      "asbval:note": "Core research question is well-supported by the paper's description of BAM methodology.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biotransformation-candidate-integration-with-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Integrates candidate structures predicted by biotransformation rules with untargeted MS/MS data via global molecular networking to construct a spectral similarity network and assign putative molecular structures to MS features.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:49.600979+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-candidate-integration-with-networking/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "As is standard methodology in molecular networking, the nodes of the global molecular network were annotated using standard spectral library searching against the default GNPS spectral libraries... From these nodes, we identified paired annotated compounds with high spectral similarity (modified cosine similarity above 0.8).",
+      "asbval:note": "Paper uses molecular networking for spectral similarity clustering and structure prediction via biotransformation rules, but does not explicitly discuss 'network community membership' assignment as a primary output. The networking is used for anchor identification, not for community detection per se.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "biotransformation-candidate-integration-with-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This combines rule-based structure prediction with graph-based clustering to annotate metabolomics features with both predicted structures and network community membership.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:49.600979+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-candidate-integration-with-networking/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To extract and apply these rules, we employed PROXIMAL2. This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center, and then creates a lookup table entry defining the changes at the reaction center and its neighbors... for a given anchor\u2013suspect pair, BAM applies the rules whose mass difference matches the observed precursor mass difference between the anchor and suspect to generate candidate derivatives for the query molecule.",
+      "asbval:note": "PROXIMAL2 is confirmed as the tool for applying biotransformation rules to generate candidate structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biotransformation-candidate-integration-with-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PROXIMAL2 - Generates biotransformation rules and predicts candidate transformed structures for input to the networking step",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:49.600979+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-candidate-integration-with-networking/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Next, the graph neural network-based GNN-SOM tool is used to predict the site-of-metabolism and rank these putative derivatives based on the likelihood of each atom being a reaction center. GNN-SOM, a tool that employs a graph neural network to predict the likelihood of each atom in a molecule being the target of a biotransformation operation.",
+      "asbval:note": "GNN-SOM is confirmed for site-of-metabolism prediction and ranking of candidate structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biotransformation-candidate-integration-with-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNN-SOM - Performs site-of-metabolism prediction and ranking of enzymatic products to refine candidate structure generation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:49.600979+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-candidate-integration-with-networking/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To address this problem, we have developed the Biotransformation-based Annotation Method (BAM). BAM consists of three steps (Figure 1): 1.For a given query spectrum, determine an annotated spectrum associated with an anchor molecule based on high spectral similarity. 2.Apply relevant biotransformation rules that match the observed mass difference between the anchor and suspect to generate candidate structures\u2014derivatives\u2014for the query spectrum. 3.Rank the derivatives based on the likelihoods of the applied biotransformation.",
+      "asbval:note": "BAM is the orchestrating method that integrates biotransformation rules with molecular networking for annotation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biotransformation-candidate-integration-with-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BAM - Orchestrates the complete pipeline integrating biotransformation rules and global molecular networking",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:49.600979+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-candidate-integration-with-networking/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Repository URL not mentioned in provided passages; cannot verify.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "biotransformation-candidate-integration-with-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PROXIMAL2 repo: https://github.com/HassounLab/PROXIMAL2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:49.600979+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-candidate-integration-with-networking/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Repository URL not mentioned in provided passages; cannot verify.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "biotransformation-candidate-integration-with-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNN-SOM repo: https://github.com/HassounLab/GNN-SOM",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:49.600979+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-candidate-integration-with-networking/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "All code, examples files, and detailed instructions are available as open source under the MIT license at https://github.com/HassounLab/BAM.",
+      "asbval:note": "BAM repository URL is explicitly confirmed in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biotransformation-candidate-integration-with-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BAM repo: https://github.com/HassounLab/BAM",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:09:49.600979+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-rule-encoding/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM operates by applying biotransformation rules to known \"anchor\" molecules, which exhibit high spectral similarity to unknown spectra, thereby hypothesizing and ranking potential structures for the corresponding \"suspect\" molecule... These rules, drawn from extensive biochemical databases like RetroRules and KEGG, encapsulate the promiscuous behavior of enzymes toward substrates.",
+      "asbval:note": "The paper describes BAM's core function of applying biotransformation rules from KEGG and RetroRules to generate candidate structures, matching the research question.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biotransformation-rule-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill encodes reaction biotransformation rules from metabolic databases (KEGG, RetroRules) into operator representations that enable systematic generation of candidate molecular structures from input metabolites.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:06.022683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-rule-encoding/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM's application to the global molecular network signals an important step forward in metabolomics, enabling discovery and annotation of novel analog molecules in a data-driven fashion... BAM's methodology, which harnesses vast public MS/MS data and biotransformation rules, paves the way for deeper insights into metabolic processes and significantly enriches the field of metabolite annotation.",
+      "asbval:note": "The paper demonstrates BAM's scalability to hundreds of millions of spectra and its role in exhaustively applying biotransformation rules for large-scale annotation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biotransformation-rule-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "It is essential for scaling molecular structure discovery in untargeted metabolomics when the space of plausible biotransformations must be exhaustively represented.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:06.022683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-rule-encoding/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To extract and apply these rules, we employed PROXIMAL2. This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center, and then creates a lookup table entry defining the changes at the reaction center and its neighbors... BAM systematically employs these rules to generate and rank potential molecular structures (\"derivatives\") for the \"suspect\" molecule\u2014the unknown compound associated with the query spectrum. To do so, BAM makes use of PROXIMAL2 to apply the biotransformation rules to the anchor molecule, identifying suitable reaction centers for the proposed structural changes.",
+      "asbval:note": "PROXIMAL2 is explicitly used for biotransformation rule extraction and application in BAM.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biotransformation-rule-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PROXIMAL2 - Prerequisite tool for biotransformation rule extraction and metabolic pathway prediction; BAM integrates PROXIMAL2 operators to encode biotransformation rules",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:06.022683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-rule-encoding/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Next, the graph neural network-based GNN-SOM tool is used to predict the site-of-metabolism and rank these putative derivatives based on the likelihood of each atom being a reaction center... For this, we use GNN-SOM, a tool that employs a graph neural network to predict the likelihood of each atom in a molecule being the target of a biotransformation operation.",
+      "asbval:note": "GNN-SOM is explicitly used for site-of-metabolism prediction and ranking derivatives in BAM.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biotransformation-rule-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNN-SOM - Graph neural network tool used alongside BAM for site-of-metabolism prediction and enzymatic product ranking; supports biotransformation rule application",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:06.022683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-rule-encoding/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM was implemented using two different code environments. First, PROXIMAL2 was applied and its results were analyzed using Python 3.9, PubChemPy (version 1.0.4), BioServices (version 1.11.2), scikit-learn (version 1.1.2), NumPy (version 1.23.2), NetworkX (version 2.5), RDKit (version 2022.03.5), KCF-Convoy (version 0.0.5), Pandas (version 1.4.3), Matplotlib (version 3.5.3), and Seaborn (version 0.12.2).",
+      "asbval:note": "RDKit is listed as a software dependency for BAM implementation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biotransformation-rule-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit - Chemical informatics library for parsing, validating, and manipulating SMILES structures during biotransformation rule encoding",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:06.022683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-rule-encoding/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "All code, examples files, and detailed instructions are available as open source under the MIT license at https://github.com/HassounLab/BAM.",
+      "asbval:note": "BAM is the main method described in the paper and is available at the GitHub repository.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "biotransformation-rule-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/BAM - Main implementation tool",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:06.022683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-deduplication/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Multiple candidates can be generated for each anchor\u2013suspect pair because biotransformation rules might be applied to different atoms in the anchor molecule or because multiple rules match the observed precursor mass difference. Therefore, a systematic approach is needed to prioritize the suggested chemical identities of the suspect.",
+      "asbval:note": "Paper discusses generation of multiple candidates from biotransformation rules and ranking them, but does not explicitly describe a deduplication step that eliminates redundant candidates while preserving parent\u2013product relationships. The paper focuses on ranking candidates via GNN-SOM, not deduplicating them. The claim assumes a deduplication workflow that is not explicitly documented in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-deduplication",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Deduplicate transformed molecular structures generated by biotransformation rule application, eliminating redundant candidates while preserving parent\u2013product relationships.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:19.309884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-deduplication/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "RDKit (version 2022.03.5)",
+      "asbval:note": "RDKit is confirmed as a tool used in BAM implementation. While the paper does not explicitly state RDKit is used for SMILES canonicalization or deduplication, RDKit is a standard cheminformatics library for these functions, and its inclusion in the BAM software stack is documented.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "chemical-structure-deduplication",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit for parsing, validating, and canonicalizing SMILES strings; implementing deduplication logic via canonical structure representation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:19.309884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-deduplication/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM was implemented using two different code environments... All code, examples files, and detailed instructions are available as open source under the MIT license at https://github.com/HassounLab/BAM.",
+      "asbval:note": "BAM is confirmed as the framework implementing biotransformation rule application. However, the paper does not explicitly describe a 'structure deduplication' step as part of BAM's pipeline. BAM's three documented steps are: (1) anchor identification, (2) biotransformation rule application via PROXIMAL2, and (3) ranking via GNN-SOM. Deduplication is not mentioned as an explicit BAM component.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-deduplication",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/BAM framework implementing biotransformation rule application and structure deduplication as part of the full molecular structure discovery pipeline",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:19.309884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-deduplication/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Multiple candidates can be generated for each anchor\u2013suspect pair because biotransformation rules might be applied to different atoms in the anchor molecule or because multiple rules match the observed precursor mass difference.",
+      "asbval:note": "Paper confirms that multiple candidates can be generated from the same anchor via different rule applications or different reaction centers. However, it does not explicitly address whether the same transformed structure can result from multiple pathways, nor does it describe a deduplication mechanism to handle this scenario.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-deduplication",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "After applying biotransformation rules to generate candidate product structures from input molecules, when the same transformed structure can be produced via multiple transformation pathways or rule applications",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:19.309884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-deduplication/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM successfully generated the correct suspect structure in 4171 cases, achieving a recall of 24.2% when a derivative is generated... BAM demonstrated impressive accuracy in ranking the correct derivatives, achieving an average rank of 2.1 and ranking the correct suspect first in 57.7% of cases",
+      "asbval:note": "Paper demonstrates that BAM produces ranked candidate structures for annotation, but does not explicitly describe deduplication as a mechanism to ensure non-redundancy. The ranking step (via GNN-SOM) prioritizes candidates but does not eliminate duplicates.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "chemical-structure-deduplication",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Ensures a non-redundant candidate pool for downstream molecular structure annotation in untargeted metabolomics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:19.309884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-feature-grouping/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Molecular networking uses spectral alignment via modified cosine similarity to visualize spectra and any corresponding annotations as a network, which enables additional interpretation of query spectra. The global molecular network was recently constructed from 521 million MS/MS spectra... From these nodes, we identified paired annotated compounds with high spectral similarity (modified cosine similarity above 0.8).",
+      "asbval:note": "Paper uses molecular networking with modified cosine similarity threshold (0.8) to construct networks, but the primary task of BAM is not graph-based clustering to identify connected components. Instead, BAM uses the precomputed global molecular network to identify anchor-suspect pairs and applies biotransformation rules for structure prediction. The card conflates molecular networking (network construction) with BAM's actual workflow (biotransformation-based annotation). BAM does not perform de novo clustering; it leverages existing network edges.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectral-feature-grouping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Group MS features into molecular families by constructing a similarity network from MS/MS spectral data, filtering edges by similarity threshold, and applying graph-based clustering to identify connected components.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:32.923109+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-feature-grouping/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To address this problem, we have developed the Biotransformation-based Annotation Method (BAM)... BAM operates by identifying and applying biotransformation rules to an 'anchor' molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum.",
+      "asbval:note": "BAM does implement biotransformation-based annotation and uses the global molecular network, but BAM does not construct the molecular network itself\u2014it reuses a precomputed global molecular network. The paper states: 'As a more efficient alternative, we utilized a precomputed molecular network, which we refer to as the global molecular network.' BAM's role is annotation via biotransformation rules applied to anchor-suspect pairs identified from the network, not network construction or feature grouping per se.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectral-feature-grouping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BAM - Implements the complete biotransformation-based annotation workflow including global molecular networking for feature grouping and structure discovery",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:32.923109+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-feature-grouping/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To extract and apply these rules, we employed PROXIMAL2. This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center, and then creates a lookup table entry defining the changes at the reaction center and its neighbors... Finally, for a given anchor\u2013suspect pair, BAM applies the rules whose mass difference matches the observed precursor mass difference between the anchor and suspect to generate candidate derivatives for the query molecule.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectral-feature-grouping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PROXIMAL2 - Upstream tool used by BAM to generate biotransformation rules and operator sets for candidate structure prediction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:32.923109+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-feature-grouping/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Next, the graph neural network-based GNN-SOM tool is used to predict the site-of-metabolism and rank these putative derivatives based on the likelihood of each atom being a reaction center. For this, we use GNN-SOM, a tool that employs a graph neural network to predict the likelihood of each atom in a molecule being the target of a biotransformation operation.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectral-feature-grouping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNN-SOM - Integrated with BAM for site-of-metabolism prediction and ranking of promiscuous enzymatic products",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:32.923109+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-structure-annotation-integration/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM leverages the principle that reactant and products of biochemical reactions often share molecular substructures, leading to high spectral similarity. This spectral similarity, when analyzed within a biological context, provides a more biologically relevant and comprehensive approach to annotation compared to traditional methods that rely solely on spectral similarity. BAM operates by identifying and applying biotransformation rules to an 'anchor' molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum.",
+      "asbval:note": "The paper describes BAM's core function of integrating biotransformation rules with spectral similarity (molecular networking) for annotation. The research question accurately captures the paper's main contribution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-structure-annotation-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Integrate biotransformation-predicted candidate structures with global molecular networking to annotate untargeted metabolomics features and assign them to molecular families.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:46.056972+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-structure-annotation-integration/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To address this problem, we have developed the Biotransformation-based Annotation Method (BAM). At its core, BAM leverages the principle that reactant and products of biochemical reactions often share molecular substructures, leading to high spectral similarity.",
+      "asbval:note": "BAM is confirmed as the primary tool. The paper explicitly describes it as an end-to-end method integrating biotransformation rules with molecular networking.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-structure-annotation-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BAM - End-to-end pipeline for biotransformation-based annotation and global molecular networking integration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:46.056972+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-structure-annotation-integration/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To extract and apply these rules, we employed PROXIMAL2. This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center, and then creates a lookup table entry defining the changes at the reaction center and its neighbors.",
+      "asbval:note": "PROXIMAL2 is confirmed as used within BAM for applying biotransformation rules to generate candidate structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-structure-annotation-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PROXIMAL2 - Generates biotransformation rules and candidate transformed structures from parent metabolites and reaction databases",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:46.056972+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-structure-annotation-integration/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Next, the graph neural network-based GNN-SOM tool is used to predict the site-of-metabolism and rank these putative derivatives based on the likelihood of each atom being a reaction center. For this, we use GNN-SOM, a tool that employs a graph neural network to predict the likelihood of each atom in a molecule being the target of a biotransformation operation.",
+      "asbval:note": "GNN-SOM is confirmed as used within BAM for ranking candidate structures by predicting site-of-metabolism.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-structure-annotation-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNN-SOM - Predicts site-of-metabolism and assists in ranking enzymatic products for biotransformation annotation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:46.056972+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-structure-annotation-integration/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "All code, examples files, and detailed instructions are available as open source under the MIT license at https://github.com/HassounLab/BAM.",
+      "asbval:note": "This appears to be a duplicate/malformed entry in the tools array. The GitHub repository is confirmed, but the entry structure is inconsistent with the other tool entries and contains metadata fields (related_skills, source_task_ids) that are not validated by the paper passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolite-structure-annotation-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/BAM - duplicate entry with related_skills and source_task_ids",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:46.056972+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-structure-annotation-integration/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM operates by identifying and applying biotransformation rules to an 'anchor' molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum. These rules, drawn from extensive biochemical databases like RetroRules and KEGG, encapsulate the promiscuous behavior of enzymes toward substrates. BAM systematically employs these rules to generate and rank potential molecular structures ('derivatives') for the 'suspect' molecule\u2014the unknown compound associated with the query spectrum.",
+      "asbval:note": "The scope description aligns with BAM's workflow: starting with biotransformation rules applied to anchor molecules, generating candidate structures for unknown (suspect) molecules, and using spectral similarity networks.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-structure-annotation-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - When to use",
+      "asbval:target_claim_text": "You have a set of candidate transformed structures generated by biotransformation rules (e.g., from a parent metabolite and enzymatic reaction rules), paired with untargeted LC-MS/MS data (MS1 precursor masses and MS/MS spectra), and you need to assign each detected feature to a ",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:46.056972+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-structure-annotation-integration/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Although untargeted mass spectrometry-based metabolomics is crucial for understanding life's molecular underpinnings, its effectiveness is hampered by low annotation rates of the generated tandem mass spectra. To address this issue, we introduce a novel data-driven approach, Biotransformation-based Annotation Method (BAM), that leverages molecular structural similarities inherent in biochemical reactions.",
+      "asbval:note": "BAM is designed for untargeted metabolomics with low annotation rates, implying it is not intended for already-annotated features.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-structure-annotation-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - When NOT to use",
+      "asbval:target_claim_text": "Input features are already annotated to known reference standards \u2014 use targeted approaches instead.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:46.056972+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-structure-annotation-integration/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM operates by identifying and applying biotransformation rules to an 'anchor' molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum. These rules, drawn from extensive biochemical databases like RetroRules and KEGG, encapsulate the promiscuous behavior of enzymes toward substrates.",
+      "asbval:note": "BAM fundamentally requires biotransformation rules and anchor molecules; without these, the method cannot function.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-structure-annotation-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - When NOT to use",
+      "asbval:target_claim_text": "No biotransformation rules or parent structure anchors are available for the dataset.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:46.056972+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-structure-annotation-integration/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For a given query MS/MS spectrum, BAM identifies an annotated spectrum associated with an anchor molecule that closely resembles the query spectrum in terms of spectral similarity, a process which we conceptually refer to as 'anchor search'.",
+      "asbval:note": "The paper confirms that BAM requires MS/MS spectral data for similarity computation, but does not explicitly state a minimum peak threshold. The claim about '<4 significant peaks' is not directly supported by the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolite-structure-annotation-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope - When NOT to use",
+      "asbval:target_claim_text": "MS/MS spectral data are not available or are of insufficient quality for similarity computation (e.g., <4 significant peaks per spectrum).",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:10:46.056972+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-clustering-and-analysis/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM operates by identifying and applying biotransformation rules to an \"anchor\" molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum... BAM systematically employs these rules to generate and rank potential molecular structures (\"derivatives\") for the \"suspect\" molecule",
+      "asbval:note": "Paper describes BAM using a precomputed global molecular network (constructed via molecular networking with modified cosine similarity) to identify anchor-suspect pairs, then applying biotransformation rules to generate and rank candidate structures. The card claims BAM 'constructs spectral similarity networks' and 'applies graph-based clustering,' but the paper states BAM 'reused the existing global molecular network' rather than constructing it de novo. BAM does not perform clustering; it identifies anchor-suspect pairs from a pre-existing network. The biotransformation rule application and ranking are confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-network-clustering-and-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "constructs spectral similarity networks from untargeted metabolomics MS/MS data, applies graph-based clustering to identify molecular families, and annotates network nodes with predicted structures from biotransformation rules",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:03.228154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-clustering-and-analysis/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed the Biotransformation-based Annotation Method (BAM)... BAM leverages the principle that reactant and products of biochemical reactions often share molecular substructures... BAM operates by identifying and applying biotransformation rules to an \"anchor\" molecule",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-clustering-and-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BAM - Orchestrates biotransformation-based annotation and global molecular networking for structure discovery",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:03.228154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-clustering-and-analysis/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To extract and apply these rules, we employed PROXIMAL2. This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center... BAM systematically employs these rules to generate and rank potential molecular structures (\"derivatives\") for the \"suspect\" molecule. To do so, BAM makes use of PROXIMAL2 to apply the biotransformation rules to the anchor molecule",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-clustering-and-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PROXIMAL2 - Generates biotransformation rules and candidate structures used as input to molecular network annotation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:03.228154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-clustering-and-analysis/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Next, the graph neural network-based GNN-SOM tool is used to predict the site-of-metabolism and rank these putative derivatives based on the likelihood of each atom being a reaction center... GNN-SOM, a tool that employs a graph neural network to predict the likelihood of each atom in a molecule being the target of a biotransformation operation",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-clustering-and-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNN-SOM - Predicts site-of-metabolism and ranks enzymatic products for biotransformation candidate ranking",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:03.228154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-clustering-and-analysis/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM consists of three steps: 1. For a given query spectrum, determine an annotated spectrum associated with an anchor molecule based on high spectral similarity. 2. Apply relevant biotransformation rules that match the observed mass difference between the anchor and suspect to generate candidate structures\u2014derivatives\u2014for the query spectrum. 3. Rank the derivatives based on the likelihoods of the applied biotransformation.",
+      "asbval:note": "The paper describes BAM as a three-step process that identifies anchors from a precomputed global molecular network, applies biotransformation rules, and ranks candidates. The card's framing suggests BAM 'organizes' spectra into 'molecular families' via clustering, but BAM actually leverages an existing precomputed molecular network and does not perform de novo clustering or family organization. BAM identifies anchor-suspect pairs and generates/ranks structures, not clustering.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-network-clustering-and-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill after generating candidate transformed structures from biotransformation rules and when you have MS/MS spectral feature data that you wish to organize into putative molecular families",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:03.228154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-clustering-and-analysis/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Apply relevant biotransformation rules that match the observed mass difference between the anchor and suspect to generate candidate structures\u2014derivatives\u2014for the query spectrum",
+      "asbval:note": "Confirmed as a prerequisite condition in the paper's methodology.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-clustering-and-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "The biotransformation rules module has not been run; candidate structures are not available",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:03.228154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-construction-for-metabolomics/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The global molecular network was recently constructed from 521 million MS/MS spectra in 1335 public projects deposited to the GNPS/MassIVE... Molecular networking uses spectral alignment via modified cosine similarity to visualize spectra and any corresponding annotations as a network, which enables additional interpretation of query spectra... BAM operates by identifying and applying biotransformation rules to an 'anchor' molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum.",
+      "asbval:note": "The research question accurately describes the paper's approach: constructing global molecular networks from untargeted MS/MS data, using anchor compounds with known structures to seed annotation of unknown suspects via biotransformation rules.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-construction-for-metabolomics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Construct global molecular networks from untargeted metabolomics data to link structurally related compounds and enable propagation of molecular structure annotations. This skill bridges suspect discovery with biotransformation-based annotation by organizing metabolites into netw",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:19.464748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-construction-for-metabolomics/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Next, the graph neural network-based GNN-SOM tool is used to predict the site-of-metabolism and rank these putative derivatives based on the likelihood of each atom being a reaction center. GNN-SOM,12 a tool that employs a graph neural network to predict the likelihood of each atom in a molecule being the target of a biotransformation operation.",
+      "asbval:note": "GNN-SOM is explicitly named and used for ranking candidate structures and predicting site-of-metabolism.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-construction-for-metabolomics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNN-SOM",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:19.464748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-construction-for-metabolomics/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To do so, BAM makes use of PROXIMAL211 to apply the biotransformation rules to the anchor molecule, identifying suitable reaction centers for the proposed structural changes... To extract and apply these rules, we employed PROXIMAL2.11 This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center.",
+      "asbval:note": "PROXIMAL2 is explicitly named and used to apply biotransformation rules and identify reaction centers.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-construction-for-metabolomics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PROXIMAL2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:19.464748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-construction-for-metabolomics/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To address this problem, we have developed the Biotransformation-based Annotation Method (BAM)... BAM consists of three steps (Figure 1): 1.For a given query spectrum, determine an annotated spectrum associated with an anchor molecule based on high spectral similarity. 2.Apply relevant biotransformation rules that match the observed mass difference between the anchor and suspect to generate candidate structures\u2014derivatives\u2014for the query spectrum. 3.Rank the derivatives based on the likelihoods of the applied biotransformation.",
+      "asbval:note": "BAM is the primary method orchestrating the entire workflow described in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-construction-for-metabolomics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BAM",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:19.464748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-construction-for-metabolomics/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "GNN-SOM was trained on enzymatic interactions from the KEGG database to classify each atom within a graph representation of a molecule as the site-of-metabolism for a given enzyme. BAM uses GNN-SOM to rank the generated derivatives based on the likelihood of their corresponding site-of-metabolism.",
+      "asbval:note": "The role description matches the paper's use of GNN-SOM for ranking and site-of-metabolism prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-construction-for-metabolomics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[GNN-SOM].role",
+      "asbval:target_claim_text": "Ranks candidate molecular structures and site-of-metabolism predictions for suspects identified in the molecular network, leveraging graph neural networks trained on biotransformation patterns",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:19.464748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-construction-for-metabolomics/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center, and then creates a lookup table entry defining the changes at the reaction center and its neighbors... for a given anchor\u2013suspect pair, BAM applies the rules whose mass difference matches the observed precursor mass difference between the anchor and suspect to generate candidate derivatives for the query molecule.",
+      "asbval:note": "PROXIMAL2's role in generating and applying biotransformation rules is accurately described.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-construction-for-metabolomics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[PROXIMAL2].role",
+      "asbval:target_claim_text": "Generates biotransformation operators that define chemical transformations between anchor and suspect pairs, constraining the chemical feasibility of structure candidates",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:19.464748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-construction-for-metabolomics/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM operates by identifying and applying biotransformation rules to an 'anchor' molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum... BAM systematically employs these rules to generate and rank potential molecular structures ('derivatives') for the 'suspect' molecule.",
+      "asbval:note": "BAM's orchestrating role is accurately described in the card.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-construction-for-metabolomics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[BAM].role",
+      "asbval:target_claim_text": "Orchestrates end-to-end molecular structure discovery using the constructed network of anchor-suspect pairs combined with biotransformation rules and GNN-SOM ranking",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:19.464748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-construction-for-metabolomics/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Although untargeted mass spectrometry-based metabolomics is crucial for understanding life's molecular underpinnings... BAM operates by identifying and applying biotransformation rules to an 'anchor' molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum... thereby hypothesizing and ranking potential structures for the corresponding 'suspect' molecule.",
+      "asbval:note": "The scope accurately describes the use case: untargeted MS/MS data with anchor compounds used to infer structures of unknown suspects.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-network-construction-for-metabolomics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have untargeted metabolomics data (e.g., LC-MS/MS spectra) and need to organize compounds by structural relatedness to enable structure discovery for unknown metabolites. Specifically, use this skill when you have anchor compounds with known SMILES/InChI and want to infer str",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:19.464748+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/parent-product-relationship-tracking/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM systematically employs these rules to generate and rank potential molecular structures (\"derivatives\") for the \"suspect\" molecule\u2014the unknown compound associated with the query spectrum. To do so, BAM makes use of PROXIMAL2 to apply the biotransformation rules to the anchor molecule, identifying suitable reaction centers for the proposed structural changes.",
+      "asbval:note": "Paper describes generating and ranking derivatives from anchor molecules using biotransformation rules, but does not explicitly discuss 'serializing' or 'maintaining' parent-product relationships as a documented data structure. The paper focuses on generating candidates and ranking them, not on tracking/serializing the transformation pathway as a primary objective. The research question overstates the emphasis on relationship tracking/serialization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "parent-product-relationship-tracking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Maintain and serialize parent\u2013product relationships when applying biotransformation rules to input molecular structures, enabling traceability of how candidate molecules are derived from anchor compounds.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:35.879052+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/parent-product-relationship-tracking/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM was implemented using two different code environments. First, PROXIMAL2 was applied and its results were analyzed using Python 3.9, PubChemPy (version 1.0.4), BioServices (version 1.11.2), scikit-learn (version 1.1.2), NumPy (version 1.23.2), NetworkX (version 2.5), RDKit (version 2022.03.5), KCF-Convoy (version 0.0.5), Pandas (version 1.4.3), Matplotlib (version 3.5.3), and Seaborn (version 0.12.2).",
+      "asbval:note": "RDKit is confirmed as part of BAM implementation. Role is consistent with standard RDKit usage in cheminformatics.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "parent-product-relationship-tracking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit: Parse, validate, and manipulate SMILES strings; execute biotransformation rule application on molecular structures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:35.879052+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/parent-product-relationship-tracking/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To address this problem, we have developed the Biotransformation-based Annotation Method (BAM). At its core, BAM leverages the principle that reactant and products of biochemical reactions often share molecular substructures, leading to high spectral similarity. BAM operates by identifying and applying biotransformation rules to an \"anchor\" molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum.",
+      "asbval:note": "BAM is confirmed as the method that applies biotransformation rules and generates derivatives. However, the paper does not emphasize 'parent-product relationship tracking' as a primary feature; it emphasizes generation and ranking of candidates. The tool does orchestrate rule application but the explicit tracking/serialization of relationships is not a stated design goal.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "parent-product-relationship-tracking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/BAM: Implement biotransformation rule engine and orchestrate parent\u2013product relationship tracking within the annotation method",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:35.879052+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/parent-product-relationship-tracking/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Next, the graph neural network-based GNN-SOM tool is used to predict the site-of-metabolism and rank these putative derivatives based on the likelihood of each atom being a reaction center. The final step involves ranking the generated candidate structures. For this, we use GNN-SOM, a tool that employs a graph neural network to predict the likelihood of each atom in a molecule being the target of a biotransformation operation.",
+      "asbval:note": "GNN-SOM is confirmed to rank candidates by site-of-metabolism likelihood. However, the paper does not describe it as ranking 'by parent-product relationships' explicitly; it ranks by the likelihood of atoms being reaction centers. The ranking is based on transformation plausibility (via KEGG-trained enzyme likelihood), not on explicit parent-product relationship metadata.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "parent-product-relationship-tracking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/GNN-SOM: Predict site-of-metabolism and rank candidate products by their parent\u2013product relationships and transformation plausibility",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:35.879052+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/parent-product-relationship-tracking/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These rules can be sourced from databases like RetroRules, KEGG, or Metacyc. In this case, RetroRules was used due to its sizable collection of biotransformation rules. To extract and apply these rules, we employed PROXIMAL2. Additionally, we utilized RetroRules as the basis for extracting biotransformation rules\u2014yielding 42,307 unique rules\u2014covering a wide range of possible biochemical transformations.",
+      "asbval:note": "Both KEGG and RetroRules are confirmed as sources of biotransformation rules. Paper uses RetroRules in the main evaluation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "parent-product-relationship-tracking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "KEGG or RetroRules: Provide the biotransformation rules (reaction definitions) applied to generate products from parent structures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:35.879052+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/parent-product-relationship-tracking/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM operates by identifying and applying biotransformation rules to an \"anchor\" molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum. These rules, drawn from extensive biochemical databases like RetroRules and KEGG, encapsulate the promiscuous behavior of enzymes toward substrates. Specifically, they include a molecular substructure specifying a reaction center and the structural changes occurring therein. BAM systematically employs these rules to generate and rank potential molecular structures (\"derivatives\") for the \"suspect\" molecule.",
+      "asbval:note": "Paper describes generating derivatives from anchor molecules using biotransformation rules, but does not emphasize 'documenting' or 'serializing' parent-product relationships as a primary use case. The scope overstates the importance of relationship tracking/documentation relative to what the paper actually describes (generation and ranking).",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "parent-product-relationship-tracking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have applied biotransformation rules to generate candidate product structures from a set of input molecules (represented as SMILES strings) and need to document which product structures were derived from which parent structures.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:35.879052+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pipeline-end-to-end-execution-and-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM was able to assign correct molecular structures to 24.2% of examined anchor-suspect cases, thereby demonstrating remarkable advancement in metabolite annotation.",
+      "asbval:note": "Paper explicitly describes BAM execution on validation dataset (60,368 anchor-suspect pairs from global molecular network) and reports performance metrics (24.2% recall, 57.7% top-1 ranking accuracy). Code and data deposited on Zenodo and GitHub.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "pipeline-end-to-end-execution-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Execute a complete bioinformatics pipeline (BAM) on a validation dataset and compare predicted outputs against reference annotations to assess reproduction of reported metrics.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:54.468446+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pipeline-end-to-end-execution-and-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To extract and apply these rules, we employed PROXIMAL2. This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center, and then creates a lookup table entry defining the changes at the reaction center and its neighbors.",
+      "asbval:note": "PROXIMAL2 is explicitly used for biotransformation rule application and candidate generation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "pipeline-end-to-end-execution-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PROXIMAL2 - Dependency for biotransformation operator generation and metabolite pathway prediction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:54.468446+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pipeline-end-to-end-execution-and-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For this, we use GNN-SOM, a tool that employs a graph neural network to predict the likelihood of each atom in a molecule being the target of a biotransformation operation. GNN-SOM was trained on enzymatic interactions from the KEGG database to classify each atom within a graph representation of a molecule as the site-of-metabolism for a given enzyme. BAM uses GNN-SOM to rank the generated derivatives based on the likelihood of their corresponding site-of-metabolism.",
+      "asbval:note": "GNN-SOM is explicitly used for ranking candidate structures by predicting site-of-metabolism.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "pipeline-end-to-end-execution-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNN-SOM - Dependency for site-of-metabolism prediction to rank biotransformation candidates",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:54.468446+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pipeline-end-to-end-execution-and-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To address this problem, we have developed the Biotransformation-based Annotation Method (BAM). At its core, BAM leverages the principle that reactant and products of biochemical reactions often share molecular substructures, leading to high spectral similarity.",
+      "asbval:note": "BAM is the primary method described throughout the paper. Code available at https://github.com/HassounLab/BAM under MIT license.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "pipeline-end-to-end-execution-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BAM - Primary pipeline implementing biotransformation-based annotation method for molecular structure discovery",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:54.468446+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pipeline-end-to-end-execution-and-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "All code, examples files, and detailed instructions are available as open source under the MIT license at https://github.com/HassounLab/BAM.",
+      "asbval:note": "GitHub repository explicitly provided in Software Availability section.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "pipeline-end-to-end-execution-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/BAM repository URL",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:54.468446+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pipeline-end-to-end-execution-and-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To determine a data set of known suspects to evaluate BAM, a set of 30,184 structurally unique, annotated spectrum pairs were derived from neighboring annotated nodes from this global molecular network, yielding 60,368 total anchor\u2013suspect pairs.",
+      "asbval:note": "Paper explicitly describes validation dataset construction and metric reporting (recall, ranking accuracy, comparison with SIRIUS).",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "pipeline-end-to-end-execution-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Execute pipeline on validation dataset and compare against reference annotations to assess reproduction of reported metrics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:54.468446+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pipeline-end-to-end-execution-and-validation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "All code, data, and results relevant to this analysis can be found on Zenodo (DOI:10.5281/zenodo.13903946).",
+      "asbval:note": "Code, data, and results are deposited and reproducible. Metrics reported: 24.2% recall, 57.7% top-1 ranking, average rank 2.1.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "pipeline-end-to-end-execution-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Verify pipeline can be executed end-to-end to reproduce reported validation metrics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:11:54.468446+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-prediction-comparison-evaluation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM successfully generated the correct suspect structure in 4171 cases, achieving a recall of 24.2% when a derivative is generated... BAM demonstrated impressive accuracy in ranking the correct derivatives, achieving an average rank of 2.1 and ranking the correct suspect first in 57.7% of cases",
+      "asbval:note": "The paper explicitly evaluates BAM predictions against reference annotations (known structures from the global molecular network) and reports recall, ranking accuracy, and coverage metrics.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-prediction-comparison-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compare pipeline predictions against reference annotations to compute validation metrics (accuracy, coverage) for molecular structure discovery. This skill quantifies how well a method reproduces known molecular structures in a benchmark dataset.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:09.496358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-prediction-comparison-evaluation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed the Biotransformation-based Annotation Method (BAM)... All code, examples files, and detailed instructions are available as open source under the MIT license at https://github.com/HassounLab/BAM",
+      "asbval:note": "BAM is the primary tool used for structure annotation and prediction ranking in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-prediction-comparison-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/BAM \u2014 Structure annotation pipeline executed end-to-end to generate ranked molecular structure predictions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:09.496358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-prediction-comparison-evaluation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To extract and apply these rules, we employed PROXIMAL2. This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center... BAM systematically employs these rules to generate and rank potential molecular structures ('derivatives') for the 'suspect' molecule\u2014the unknown compound associated with the query spectrum. To do so, BAM makes use of PROXIMAL2 to apply the biotransformation rules to the anchor molecule",
+      "asbval:note": "PROXIMAL2 is explicitly used as a component of BAM for applying biotransformation rules and generating candidate structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-prediction-comparison-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PROXIMAL2 \u2014 Dependency for biotransformation operator generation and metabolite pair enumeration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:09.496358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-prediction-comparison-evaluation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Next, the graph neural network-based GNN-SOM tool is used to predict the site-of-metabolism and rank these putative derivatives based on the likelihood of each atom being a reaction center... For this, we use GNN-SOM, a tool that employs a graph neural network to predict the likelihood of each atom in a molecule being the target of a biotransformation operation.",
+      "asbval:note": "GNN-SOM is explicitly used as the ranking component of BAM to predict site-of-metabolism and rank candidate structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-prediction-comparison-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNN-SOM \u2014 Dependency for graph neural network-based ranking of site-of-metabolism predictions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:09.496358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-prediction-comparison-evaluation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To determine a data set of known suspects to evaluate BAM, a set of 30,184 structurally unique, annotated spectrum pairs were derived from neighboring annotated nodes from this global molecular network, yielding 60,368 total anchor\u2013suspect pairs.",
+      "asbval:note": "The paper explicitly uses a validation dataset with known ground-truth structures derived from the global molecular network.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-prediction-comparison-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have executed a structure annotation pipeline (like BAM) on a validation dataset for which ground-truth molecular structure annotations exist",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:09.496358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-prediction-comparison-evaluation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The generated derivative candidates are ranked based on the predicted likelihood of each atom within the anchor molecule serving as a reaction center... BAM uses GNN-SOM to rank the generated derivatives based on the likelihood of their corresponding site-of-metabolism, with each derivative being assigned the likelihood of the specific atom to which the biotransformation rule was applied.",
+      "asbval:note": "BAM generates ranked candidate structures with likelihood scores for each candidate.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-prediction-comparison-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Inputs: BAM pipeline predictions (ranked candidate structures with scores per query metabolite)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:09.496358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-prediction-comparison-evaluation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "A correct match between a generated derivative and the true suspect identity is defined as an exact match between the first 14 characters of the InChiKeys, which represent a two-dimensional structure.",
+      "asbval:note": "The paper uses InChiKey-based matching to compare predictions against reference structures, confirming use of structured molecular identifiers.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-prediction-comparison-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Inputs: Reference annotations (CSV or structured dataset mapping query metabolites to ground-truth structures as SMILES/InChI)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:09.496358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-prediction-comparison-evaluation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM successfully generated the correct suspect structure in 4171 cases, achieving a recall of 24.2% when a derivative is generated... BAM demonstrated impressive accuracy in ranking the correct derivatives, achieving an average rank of 2.1 and ranking the correct suspect first in 57.7% of cases",
+      "asbval:note": "The paper reports recall, ranking accuracy (average rank and top-k performance), and coverage metrics as outputs of the evaluation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reference-prediction-comparison-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Outputs: Annotation metrics including recall, ranking accuracy, and coverage statistics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:09.496358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM was implemented using two different code environments. First, PROXIMAL2 was applied and its results were analyzed using Python 3.9, PubChemPy (version 1.0.4), BioServices (version 1.11.2), scikit-learn (version 1.1.2), NumPy (version 1.23.2), NetworkX (version 2.5), RDKit (version 2022.03.5), KCF-Convoy (version 0.0.5), Pandas (version 1.4.3), Matplotlib (version 3.5.3), and Seaborn (version 0.12.2).",
+      "asbval:note": "Paper confirms RDKit is used in BAM implementation, but the passages do not explicitly describe SMILES parsing/validation as a prerequisite quality-control step. RDKit is mentioned as part of the software stack, but its specific role in SMILES validation before biotransformation is not detailed in the provided passages. The paper focuses on biotransformation rule application via PROXIMAL2 and ranking via GNN-SOM, not on SMILES validation as a standalone preprocessing step.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "smiles-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Parse and validate SMILES strings using RDKit to ensure chemical validity before applying biotransformation rules or other molecular transformations. This is a prerequisite quality-control step for untargeted metabolomics workflows where input structures must be chemically sound.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:24.115096+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "RDKit (version 2022.03.5)",
+      "asbval:note": "RDKit is explicitly named in the software availability section as part of BAM implementation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "smiles-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:24.115096+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "All code, examples files, and detailed instructions are available as open source under the MIT license at https://github.com/HassounLab/BAM.",
+      "asbval:note": "BAM repository is explicitly cited in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "smiles-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "HassounLab/BAM",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:24.115096+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "RDKit (version 2022.03.5)",
+      "asbval:note": "RDKit is confirmed present in the BAM implementation, but the paper does not explicitly describe RDKit's role as a SMILES parser or validator. The paper states RDKit is used but does not detail its specific function in SMILES validation. The actual biotransformation rule application is performed by PROXIMAL2, not RDKit: 'To extract and apply these rules, we employed PROXIMAL2. This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center...'",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "smiles-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[RDKit].role",
+      "asbval:target_claim_text": "SMILES parser and molecular validity checker; used to parse, canonicalize, and validate chemical structures before biotransformation rule application",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:24.115096+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM operates by identifying and applying biotransformation rules to an 'anchor' molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum. These rules, drawn from extensive biochemical databases like RetroRules and KEGG, encapsulate the promiscuous behavior of enzymes toward substrates.",
+      "asbval:note": "BAM is confirmed as a biotransformation-based annotation pipeline for molecular structure discovery. However, the paper does not explicitly state that BAM requires validated SMILES as input; it describes BAM's workflow starting from anchor molecule identification based on spectral similarity, then applying biotransformation rules via PROXIMAL2. The input format and validation requirements are not detailed in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "smiles-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[HassounLab/BAM].role",
+      "asbval:target_claim_text": "Biotransformation-based annotation pipeline that requires validated SMILES as input for molecular structure discovery",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:24.115096+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM leverages the principle that reactant and products of biochemical reactions often share molecular substructures, leading to high spectral similarity. This spectral similarity, when analyzed within a biological context, provides a more biologically relevant and comprehensive approach to annotation compared to traditional methods that rely solely on spectral similarity.",
+      "asbval:note": "The paper describes BAM's application to untargeted metabolomics and biotransformation rule application, but does not explicitly frame SMILES parsing/validation as a prerequisite quality-control step. The paper focuses on the three-step BAM workflow (anchor identification, rule application via PROXIMAL2, ranking via GNN-SOM) rather than on input SMILES validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "smiles-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Parse and validate SMILES strings using RDKit to ensure chemical validity before applying biotransformation rules or other molecular transformations. This is a prerequisite quality-control step for untargeted metabolomics workflows where input structures must be chemically sound.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:24.115096+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-network-construction/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Molecular networking uses spectral alignment via modified cosine similarity to visualize spectra and any corresponding annotations as a network, which enables additional interpretation of query spectra. The global molecular network was recently constructed from 521 million MS/MS spectra in 1335 public projects deposited to the GNPS/MassIVE... From these nodes, we identified paired annotated compounds with high spectral similarity (modified cosine similarity above 0.8).",
+      "asbval:note": "Spectral similarity network construction via modified cosine similarity with filtering (>0.8 threshold) is explicitly described as the foundation for the BAM workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-network-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Construct a similarity network from untargeted metabolomics MS/MS spectral data by computing pairwise spectral similarity scores and filtering edges to retain high-confidence spectral matches.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:42.220089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-network-construction/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "BAM operates by identifying and applying biotransformation rules to an 'anchor' molecule\u2014a known compound whose MS/MS spectrum exhibits high similarity to a given query spectrum... As a more efficient alternative, we utilized a precomputed molecular network, which we refer to as the global molecular network... we were able to obtain promising structural relationships efficiently.",
+      "asbval:note": "The global molecular network (spectral similarity network) is explicitly used to identify anchor-suspect pairs and enable biotransformation-based annotation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-network-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This network serves as the foundation for identifying molecular families and annotating candidate structures in metabolomic discovery workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:42.220089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-network-construction/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For a given query spectrum, determine an annotated spectrum associated with an anchor molecule based on high spectral similarity... Apply relevant biotransformation rules that match the observed mass difference between the anchor and suspect to generate candidate structures.",
+      "asbval:note": "The paper describes the workflow in reverse order: spectral similarity network construction (step 1) precedes biotransformation rule application (step 2), not after. The card's scope description inverts the actual workflow sequence.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectral-similarity-network-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill after acquiring MS/MS spectral data from untargeted metabolomics experiments and having candidate transformed structures from biotransformation rule application.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:42.220089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-network-construction/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To address this problem, we have developed the Biotransformation-based Annotation Method (BAM)... BAM consists of three steps (Figure 1): 1. For a given query spectrum, determine an annotated spectrum associated with an anchor molecule based on high spectral similarity... we utilized a precomputed molecular network, which we refer to as the global molecular network.",
+      "asbval:note": "BAM explicitly uses global molecular networking (spectral similarity network) as step 1 of its three-step pipeline.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-network-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "BAM orchestrates the complete biotransformation-based annotation pipeline, with spectral-similarity-network-construction as a core global molecular networking component",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:42.220089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-network-construction/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To extract and apply these rules, we employed PROXIMAL2. This tool aligns each reactant\u2013product pair using a maximum common substructure algorithm to identify the reaction center... Finally, for a given anchor\u2013suspect pair, BAM applies the rules whose mass difference matches the observed precursor mass difference between the anchor and suspect to generate candidate derivatives for the query molecule.",
+      "asbval:note": "PROXIMAL2 is used to apply biotransformation rules to generate candidate structures after anchor identification via the spectral similarity network.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-network-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PROXIMAL2 performs upstream biotransformation rule generation and candidate structure prediction feeding into network annotation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:42.220089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-network-construction/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Next, the graph neural network-based GNN-SOM tool is used to predict the site-of-metabolism and rank these putative derivatives based on the likelihood of each atom being a reaction center... For this, we use GNN-SOM, a tool that employs a graph neural network to predict the likelihood of each atom in a molecule being the target of a biotransformation operation.",
+      "asbval:note": "GNN-SOM is used in step 3 of BAM to rank candidate structures generated from biotransformation rules applied to anchor molecules identified via the spectral similarity network.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-network-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNN-SOM performs graph neural network\u2013based site-of-metabolism prediction for ranking and refining candidate structures in the molecular network",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:12:42.220089+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/annotation-accuracy-and-coverage-metrics-computation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "annotation-accuracy-and-coverage-metrics-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-candidate-integration-with-networking/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "biotransformation-candidate-integration-with-networking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.625,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/biotransformation-rule-encoding/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "biotransformation-rule-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/chemical-structure-deduplication/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "chemical-structure-deduplication",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-feature-grouping/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "mass-spectral-feature-grouping",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-structure-annotation-integration/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "metabolite-structure-annotation-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7777777777777778,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-clustering-and-analysis/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "molecular-network-clustering-and-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-network-construction-for-metabolomics/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "molecular-network-construction-for-metabolomics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/parent-product-relationship-tracking/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "parent-product-relationship-tracking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.3333333333333333,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pipeline-end-to-end-execution-and-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "pipeline-end-to-end-execution-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reference-prediction-comparison-evaluation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "reference-prediction-comparison-evaluation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/smiles-parsing-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "smiles-parsing-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.3333333333333333,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-network-construction/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "spectral-similarity-network-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8333333333333334,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "This repository contains code to implement the biotransformation-based annotation method (BAM).",
+      "asbval:note": "Text accurately represents source_excerpt despite substring_in_paper=false; content is directly supported",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:source_excerpt": "This repository contains code to implement the biotransformation-based annotation method (**BAM**)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:07:38.655769+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The repository contains data used to validate BAM.",
+      "asbval:note": "Text accurately represents source_excerpt despite substring_in_paper=false; content is directly supported",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:source_excerpt": "as well as the data used to validate BAM",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:07:38.655769+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "BAM uses biotransformation rules and global molecular networking for molecular structure discovery.",
+      "asbval:note": "Source_excerpt is a title/heading that describes BAM's application domain, not an explicit statement that BAM 'uses' these methods; claim infers implementation details not directly stated in excerpt",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-4c01565",
+      "asbval:source_excerpt": "Molecular structure discovery from untargeted metabolomics data using biotransformation rules and global molecular networking",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T14:07:38.655769+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_bam#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_BAM_system",
+      "title": "BAM",
+      "identifier": "urn:asb:spine:BAM_system"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_biotransformation_rules",
+      "title": "Biotransformation Rules",
+      "identifier": "urn:asb:spine:comp_biotransformation_rules"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_global_molecular_networking",
+      "title": "Global Molecular Networking",
+      "identifier": "urn:asb:spine:comp_global_molecular_networking"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_validation_data",
+      "title": "BAM Validation Dataset",
+      "identifier": "urn:asb:spine:dataset_validation_data"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_bam_codebase",
+      "title": "BAM Codebase",
+      "identifier": "urn:asb:spine:tool_bam_codebase"
+    }
+  ]
+}

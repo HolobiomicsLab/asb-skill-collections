@@ -1,0 +1,308 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "86601462b6f0c575885716815b42ad0a84fd0c8b2e0ef6830db20c97c115f971"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "3cd338aea178a6cea4663bb04918d92bc5823b649a8a6d08454b0e192af19016"
+    }
+  ],
+  "created_at": "2026-06-15T12:18:05.623444+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "FTICR HAM mzML files from Zenodo deposit doi:10.5281/zenodo.18494293",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Calibration difference plot (m/z error before and after edgeshift calibration) for the first FTICR file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "XCMSnExp object with detected chromatographic peaks and calibrated m/z values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MSWParam is a peak detection algorithm suitable for high-resolution FTICR data with expected peak widths and signal-to-noise characteristics specific to the instrument mode.",
+    "CalibrantMassParam with method='edgeshift' corrects systematic m/z bias by aligning observed peak edges to expected calibrant masses, particularly useful for FTICR where drift is common.",
+    "The calibration difference plot visualizes residual m/z error (observed minus expected) before and after calibration; successful calibration should show error distribution centered near zero with reduced variance.",
+    "FTICR (Fourier Transform Ion Cyclotron Resonance) mass spectrometry provides ultra-high mass accuracy but requires careful calibration to maintain sub-ppm error across the m/z range."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at Zenodo doi:10.5281/zenodo.18494293 in mzML format",
+      "verify xcms package is installable and contains findChromPeaks, MSWParam, CalibrantMassParam functions",
+      "script_runs: R script that loads mzML from Zenodo, executes findChromPeaks(MSWParam()), then CalibrantMassParam(method='edgeshift') on first file without errors",
+      "file_exists: calibration difference plot output (PDF, PNG, or SVG format)",
+      "expert_review: calibration difference plot visually matches expected mass calibration artifact patterns for FTICR data"
+    ],
+    "expert_review": [
+      "calibration difference plot interpretation: verify that mass shift magnitudes and distribution are consistent with FTICR instrumental behavior and edgeshift calibration method",
+      "parameter appropriateness: confirm that MSWParam and CalibrantMassParam settings are reasonable for FTICR HAM data characteristics"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Does the 'edgeshift' calibration method successfully correct m/z values of identified peaks in direct injection MS data, and can the magnitude of these corrections be quantified across the m/z range?: 'Next we calibrate the data set using the previously defined *artificial* calibrants. We are using the `\"edgeshift\"` method for calibration that adjusts all peaks within the range of the m/z values of'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The edgeshift calibration method produces measurable m/z corrections that vary as a function of the raw m/z value, with peaks within the calibrant range adjusted via linear interpolation and peaks outside adjusted by constant shift factors, and these differences can be visualized by plotting the difference between calibrated and raw m/z values against raw m/z.: 'To evaluate the calibration we plot below the difference between the adjusted and raw m/z values (y-axis) against the raw m/z values.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] FTICR HAM mzML files from Zenodo deposit doi:10.5281/zenodo.18494293: '10.5281/zenodo.18494293'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Calibration difference plot (m/z error before and after edgeshift calibration) for the first FTICR file: 'calibrate the first file using CalibrantMassParam with method='edgeshift', and reproduce the calibration difference plot'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] XCMSnExp object with detected chromatographic peaks and calibrated m/z values: 'run findChromPeaks with MSWParam'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] xcms: 'The *xcms* R package provides functionality to efficiently preprocess LC-MS (as well as GC-MS and LC-MS/MS) data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting recent changes, versions, or modifications to xcms package available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "calibration_difference_plot.png",
+  "expected_outputs": [
+    "Calibration difference plot (m/z error before and after edgeshift calibration) for the first FTICR file",
+    "XCMSnExp object with detected chromatographic peaks and calibrated m/z values"
+  ],
+  "finding": "The edgeshift calibration method produces measurable m/z corrections that vary as a function of the raw m/z value, with peaks within the calibrant range adjusted via linear interpolation and peaks outside adjusted by constant shift factors, and these differences can be visualized by plotting the difference between calibrated and raw m/z values against raw m/z.",
+  "github_name": "sneumann/xcms",
+  "input_from": "task_002",
+  "inputs": [
+    "FTICR HAM mzML files from Zenodo deposit doi:10.5281/zenodo.18494293"
+  ],
+  "keywords": [
+    "untargeted metabolomics",
+    "lc-ms/ms",
+    "feature grouping",
+    "compound annotation",
+    "peak detection",
+    "centwave algorithm",
+    "retention time alignment",
+    "abundance correlation",
+    "eic similarity",
+    "swath acquisition",
+    "data-dependent acquisition",
+    "data-independent acquisition",
+    "ms2 spectrum matching",
+    "adduct detection",
+    "isotope detection"
+  ],
+  "landmark_outputs": [
+    "ham_peaks_detected.rds",
+    "ham_first_file_precalibration.rds",
+    "ham_first_file_postcalibration.rds"
+  ],
+  "linked_result_ids": [
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012"
+  ],
+  "methodology_summary": [
+    "Load FTICR HAM mzML files from Zenodo into xcms XCMSnExp container.",
+    "Apply MSWParam chromatographic peak detection to all files in the experiment.",
+    "Extract the first mzML file and retrieve its chromatographic peaks.",
+    "Apply mass calibration using CalibrantMassParam with edgeshift method to correct m/z values.",
+    "Extract m/z residuals (observed \u2212 expected) before and after calibration.",
+    "Validation: Calibration difference plot shows reduced m/z error variance post-edgeshift; residuals cluster near zero across the m/z range with no systematic drift."
+  ],
+  "missing_information": [
+    "No changelog documenting recent changes, versions, or modifications to xcms package available"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the 'edgeshift' calibration method successfully correct m/z values of identified peaks in direct injection MS data, and can the magnitude of these corrections be quantified across the m/z range?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "fticr-mass-calibration-edgeshift",
+    "chromatographic-peak-detection-msw",
+    "mass-spectrometry-m-z-accuracy-assessment",
+    "xcms-data-import-preprocessing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_xcms/synthesized_package",
+  "spine_condition_ids": [
+    "cond_msw_peak_detection",
+    "cond_centwave_dda",
+    "edgeshift_calibration"
+  ],
+  "spine_entity_ids": [
+    "fticr_dataset",
+    "mswparam",
+    "calibrant_mass_param",
+    "find_chrom_peaks_method",
+    "cond_msw_peak_detection",
+    "cond_centwave_dda",
+    "result_dda_peak_count",
+    "edgeshift_calibration"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:sneumann__xcms",
+  "task_description": "Load FTICR HAM mzML files from Zenodo (doi:10.5281/zenodo.18494293), detect chromatographic peaks using findChromPeaks with MSWParam, calibrate the first file using CalibrantMassParam with method='edgeshift', and reproduce the calibration difference plot.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "FTICR HAM mzML files from Zenodo",
+      "port_id": "ham_mzml_files",
+      "resolved_via": null,
+      "source": "task_002/subgroup_count",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Load HAM FTICR mzML files from Zenodo, detect peaks with MSWParam, calibrate the first file using CalibrantMassParam with edgeshift method, and generate a calibration difference plot.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Calibration difference plot (m/z error before/after edgeshift)",
+      "port_id": "calibration_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "XCMSnExp object with detected peaks and calibrated m/z",
+      "port_id": "xcms_peaks_calibrated",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "clustering"
+  ],
+  "title": "Reproduce MSWParam peak detection and edgeshift calibration on the FTICR-MS HAM dataset",
+  "tools": [
+    "xcms"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Calibration difference plot (m/z error before and after edgeshift calibration) for the first FTICR file, XCMSnExp object with detected chromatographic peaks and calibrated m/z values."
+  ],
+  "workflow_description": "1. Load FTICR HAM mzML files from Zenodo deposit doi:10.5281/zenodo.18494293 into an xcms XCMSnExp object. 2. Run findChromPeaks() with MSWParam to detect chromatographic peaks across all files. 3. Isolate the first mzML file and apply mass calibration using CalibrantMassParam with method='edgeshift' to correct m/z bias. 4. Generate a calibration difference plot comparing observed vs. expected m/z before and after calibration for the first file."
+}

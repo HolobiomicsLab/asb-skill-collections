@@ -1,0 +1,371 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/features_used.png",
+      "role": "figure",
+      "sha256": "86176a2f7637a4c48b73adebdba17ad404faf26be04070684e04861b7c83b2a4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ms2query_logo.png",
+      "role": "figure",
+      "sha256": "f91f3cd60080e06f473f15a7b5cbd524bda5de0f14830c8e5bd2a726a0636b41"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ms2query_logo.svg",
+      "role": "figure",
+      "sha256": "e7305700ccfd2ea3d8609746bebcc7c967044bbcfdc2fe42a77eb2a0126bfc51"
+    },
+    {
+      "indexable": false,
+      "path": "figures/worflow_average_ms2deepscore.png",
+      "role": "figure",
+      "sha256": "fed65b11b4ad1f780ee4a610c3b4c26bdec7990a5cf00d51b0af85b1edd595d3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/workflow_ms2query.png",
+      "role": "figure",
+      "sha256": "0ad5fe5e17cb8d2e83691b75b2d1d85f71d8d28200f2534a778b19e6a2e6ce62"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "bb1987273b11fa9e3a107b7dc1c567b3d6be06dc40de0303f8c9323112bc976b"
+    }
+  ],
+  "created_at": "2026-06-15T21:30:15.767044+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_001.expected_outputs[0]: Control-flow specification or architectural diagram documenting the two-branch orchestration logic (library-match vs. analogue-search), decision criteria, and routing for MS2Query workflow as introduced in PR #72",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Candidate match records from library-matching step",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Scored candidate matches with average InChIKey score and neighbourhood score fields",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test results verifying score computation correctness",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "InChIKey is a standardized chemical structure identifier; average InChIKey score measures structural similarity between a query spectrum and candidate library entries across multiple InChIKey layers.",
+    "Neighbourhood score quantifies the clustering or density of similar candidate matches in spectral feature space; higher neighbourhood scores indicate robust consensus among spectrally-similar library entries.",
+    "Scoring modules in spectral matching pipelines must balance multiple dimensions (structure, spectral similarity, local density) to rank candidates for downstream annotation confidence.",
+    "Python setuptools test runner (python setup.py test) is the standard validation method for MS2Query module implementations; tests must verify score ranges and record structure completeness."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that PR #78 branch or merged code in iomega/ms2query contains a module or function implementing average InChIKey score computation",
+      "file_exists: verify that PR #78 branch or merged code in iomega/ms2query contains a module or function implementing neighbourhood score computation",
+      "script_runs: execute the scoring module with a synthetic candidate match record (from library-matching step) and verify output_matches_reference by comparing returned score fields against manually computed ground-truth values for both metrics \u2014 robust to parameter choices in candidate inputs",
+      "field_present: verify that the output record structure includes a named field or key for 'average inchikey score' (or exact variant used in codebase)",
+      "field_present: verify that the output record structure includes a named field or key for 'neighbourhood score' (or exact variant used in codebase)",
+      "file_format_is: verify that scoring module outputs are serialized in a format compatible with downstream matching workflow (e.g. JSON, CSV, or Python dict) \u2014 no canonical answer as multiple formats are defensible"
+    ],
+    "expert_review": [
+      "Validate that the mathematical definition and aggregation logic for 'average InChIKey score' aligns with the intended semantics (e.g., is it mean, median, or weighted average across candidates; does it handle missing or null scores)",
+      "Validate that the mathematical definition and computation of 'neighbourhood score' aligns with domain expectations (e.g., what constitutes a 'neighbour' in chemical or spectral space, how is proximity measured, what weighting scheme is used)",
+      "Validate that both scores produce outputs within defensible numerical ranges (e.g., 0\u20131 for similarity scores) and that score scaling/normalization is consistent with library-matching step conventions"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] How does the scoring module compute average InChIKey score and neighbourhood score for candidate matches in MS2Query?: 'No verbatim evidence available in provided text'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The provided document is a README file containing installation and usage instructions, workflow steps, and repository links, but does not include technical descriptions of the scoring module implementation, score computation methods, or output record structures.: 'MS2Query - Reliable and fast MS/MS spectral-based analogue search'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Candidate match records from library-matching step: 'You want to make some kind of change to the code base (e.g. to fix a bug, to add a new feature, to update documentation)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Scored candidate matches with average InChIKey score and neighbourhood score fields: 'add your own tests (if necessary)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Test results verifying score computation correctness: 'make sure the existing tests still work by running ``python setup.py test``'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MS2Query: 'MS2Query - Reliable and fast MS/MS spectral-based analogue search'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'make sure the existing tests still work by running ``python setup.py test``'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GitHub: 'fork the repository to your own Github profile and create your own feature branch off of the latest master commit'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific mathematical definition, aggregation method (e.g., mean, median, weighted average), and input data sources for computing the 'average InChIKey score' are not provided in the changelog entry.: 'Average inchikey score and neighbourhood score [#78]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific mathematical definition, distance/similarity metric, and neighbourhood selection criteria for computing the 'neighbourhood score' are not provided in the changelog entry.: 'Average inchikey score and neighbourhood score [#78]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The structure and field names of the output record produced by the scoring module (e.g., JSON keys, column names if tabular) are not documented in the changelog.: 'Average inchikey score and neighbourhood score [#78]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The relationship between the scoring module (PR #78) and the library-matching refactoring (PR #65) \u2014 specifically how scores are passed between these workflow steps \u2014 is not documented in the changelog.: 'Refactored library matching [#65]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "ms2query.scoring",
+      "--input",
+      "{inputs.candidate_matches}",
+      "--output",
+      "scored_candidates.json"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "scored_candidates.csv",
+  "expected_outputs": [
+    "Scored candidate matches with average InChIKey score and neighbourhood score fields",
+    "Test results verifying score computation correctness"
+  ],
+  "finding": "The provided document is a README file containing installation and usage instructions, workflow steps, and repository links, but does not include technical descriptions of the scoring module implementation, score computation methods, or output record structures.",
+  "github_name": "iomega/ms2query",
+  "input_from": "task_001",
+  "inputs": [
+    "task_001.expected_outputs[0]: Control-flow specification or architectural diagram documenting the two-branch orchestration logic (library-match vs. analogue-search), decision criteria, and routing for MS2Query workflow as introduced in PR #72",
+    "Candidate match records from library-matching step"
+  ],
+  "keywords": [
+    "ms/ms spectral matching",
+    "analogue search",
+    "tandem mass spectrometry",
+    "spectral library search",
+    "metabolomics"
+  ],
+  "landmark_outputs": [
+    "candidate_matches_loaded.json",
+    "inchikey_scores_intermediate.csv",
+    "neighbourhood_scores_intermediate.csv",
+    "scoring_tests_passed.log"
+  ],
+  "linked_result_ids": [
+    "result_014"
+  ],
+  "methodology_summary": [
+    "Load candidate match records from upstream library-matching module, retaining match IDs and InChIKey annotations.",
+    "Compute average InChIKey score per candidate by aggregating structural similarity across InChIKey layers.",
+    "Compute neighbourhood score per candidate by evaluating spectral feature-space density and proximity of similar matches.",
+    "Merge both scores into a single standardized candidate record structure with ID, InChIKey score, and neighbourhood score fields.",
+    "Validate: Unit tests confirm score ranges are within expected bounds (e.g. 0\u20131 or 0\u2013100), record structure matches specification, and output file is machine-readable CSV or JSON."
+  ],
+  "missing_information": [
+    "The specific mathematical definition, aggregation method (e.g., mean, median, weighted average), and input data sources for computing the 'average InChIKey score' are not provided in the changelog entry.",
+    "The specific mathematical definition, distance/similarity metric, and neighbourhood selection criteria for computing the 'neighbourhood score' are not provided in the changelog entry.",
+    "The structure and field names of the output record produced by the scoring module (e.g., JSON keys, column names if tabular) are not documented in the changelog.",
+    "The relationship between the scoring module (PR #78) and the library-matching refactoring (PR #65) \u2014 specifically how scores are passed between these workflow steps \u2014 is not documented in the changelog."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the scoring module compute average InChIKey score and neighbourhood score for candidate matches in MS2Query?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "spectral-library-candidate-ranking",
+    "inchikey-structural-similarity-scoring",
+    "neighbourhood-density-computation",
+    "scoring-module-unit-testing",
+    "candidate-metadata-record-serialization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ms2query/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp_library_matching",
+    "comp_spectrum_processing",
+    "comp_scoring"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:iomega__ms2query",
+  "task_description": "Implement the Scoring Module that computes average InChIKey score and neighbourhood score for candidate matches returned by the library-matching step, and output the scored candidate records.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Candidate match records from library-matching",
+      "port_id": "candidate_matches",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Unable to complete: source material contains no technical specifications of the scoring module's computation logic or output format.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Scored candidate matches with InChIKey and neighbourhood scores",
+      "port_id": "scored_candidates",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Unit test results for scoring module",
+      "port_id": "test_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "analog-search",
+    "cosine-similarity-scoring",
+    "database-annotation",
+    "metabolite-identification",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct the Scoring Module computing average InChIKey and neighbourhood scores",
+  "tools": [
+    "MS2Query",
+    "Python",
+    "GitHub"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Scored candidate matches with average InChIKey score and neighbourhood score fields, Test results verifying score computation correctness."
+  ],
+  "workflow_description": "1. Load candidate matches produced by the library-matching step (including match identifiers and InChIKey annotations). 2. Compute average InChIKey score for each candidate by aggregating structural similarity metrics across matched InChIKey layers. 3. Compute neighbourhood score for each candidate by evaluating the density and proximity of similar candidates in the spectral feature space. 4. Combine both scores into a single candidate record with standardized fields (candidate ID, InChIKey score, neighbourhood score). 5. Validate output record structure and score ranges using unit tests via Python pytest or setuptools. 6. Write scored candidates to output file with complete metadata."
+}

@@ -1,0 +1,253 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "153f0c39c498829247f4347800a7591bc6f2d5be0baa6b2d5a620a5495a0ae29"
+    }
+  ],
+  "created_at": "2026-06-15T09:49:49.938730+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Consensus metabolic reconstructions for community members",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Gap-filled metabolic models for each community member with filled reactions annotated",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Community-dependent gap-filling exploits shared metabolic capabilities and exchange dependencies among co-occurring organisms to infer missing reactions that would be difficult to justify from single-organism data alone.",
+    "Plant metabolic models, particularly for Arabidopsis thaliana, have well-characterized primary metabolism; gap-filling should prioritize reactions consistent with plant biochemistry.",
+    "Metabolic gaps in reconstructions typically represent either missing enzyme annotations in the reference organism's genome or reactions not yet captured in metabolic databases.",
+    "COMMIT's approach integrates community membership information to weight and rank gap-filling proposals, ensuring that filled reactions support observed community function."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that Zenodo deposit 10.5281/zenodo.363932874 is accessible and contains source code or documentation for the COMMIT gap-filling module",
+      "verify that the COMMIT repository contains a gap-filling implementation with documented inputs (consensus metabolic reconstructions) and outputs (gap-filled models)",
+      "script_runs: execute the gap-filling workflow on provided consensus reconstructions and verify it completes without error",
+      "verify that gap-filled metabolic reconstructions are produced in a standard format (SBML, JSON, or tabular) with named output file(s)",
+      "verify output_matches_reference: compare gap-filled reconstructions against any reference outputs or validation sets provided in the deposit"
+    ],
+    "expert_review": [
+      "assess whether the gap-filling procedure correctly leverages community context (metabolic overlap, complementary pathways, or shared gene annotations among community members) as intended by COMMIT",
+      "evaluate whether gaps filled are biochemically plausible and represent genuine missing reactions in the consensus model rather than artifacts of the algorithm",
+      "review gap-filling decisions for metabolic consistency: do filled reactions maintain stoichiometric balance and thermodynamic feasibility across the community model"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does COMMIT's community-dependent gap-filling procedure use metabolic context from multiple community members to fill gaps in individual consensus reconstructions?: 'community-dependent gap-filling using COMMIT for communites sampled from _Arabidopsis thaliana_'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] COMMIT implements community-dependent gap-filling as a module that operates on consensus metabolic reconstructions generated for community members, leveraging shared metabolic context across the community to identify and fill metabolic gaps.: 'Generation of consensus metabolic reconstructions and community-dependent gap-filling using COMMIT for communites sampled from _Arabidopsis thaliana_'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Consensus metabolic reconstructions for community members: 'consensus metabolic reconstructions produced for community members'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Gap-filled metabolic models for each community member with filled reactions annotated: 'community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis thaliana'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] COMMIT: 'community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis thaliana'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting versions, algorithm updates, or modifications to the gap-filling module: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "commit",
+      "--consensus-models",
+      "{inputs.consensus_models}",
+      "--task-id",
+      "{task_id}",
+      "--gap-fill",
+      "--community-dependent"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "gapfilled_models.json",
+  "expected_outputs": [
+    "Gap-filled metabolic models for each community member with filled reactions annotated"
+  ],
+  "finding": "COMMIT implements community-dependent gap-filling as a module that operates on consensus metabolic reconstructions generated for community members, leveraging shared metabolic context across the community to identify and fill metabolic gaps.",
+  "github_name": null,
+  "input_from": "task_001",
+  "inputs": [
+    "Consensus metabolic reconstructions for community members"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "identified_gaps.txt",
+    "proposed_reactions.csv",
+    "gapfilled_model_<member_id>.xml"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load consensus metabolic models for all community members from prior reconstruction step",
+    "Initialize COMMIT gap-filling module with community context specification and identified metabolic gaps",
+    "Execute community-dependent gap-filling algorithm to propose reactions filling gaps using inter-member metabolic dependencies",
+    "Validate proposed reactions against plant metabolism knowledge and community exchange requirements",
+    "Validation: Gap-filled models are accepted when all identified gaps have corresponding proposed reactions ranked by confidence, and validation checks confirm consistency with Arabidopsis thaliana metabolism"
+  ],
+  "missing_information": [
+    "No changelog documenting versions, algorithm updates, or modifications to the gap-filling module"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does COMMIT's community-dependent gap-filling procedure use metabolic context from multiple community members to fill gaps in individual consensus reconstructions?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "metabolic-gap-filling-community-context",
+    "metabolic-model-curation",
+    "plant-metabolic-network-validation",
+    "community-dependent-reaction-inference"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_commit/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_COMMIT",
+    "COMP_CONSENSUS_RECON",
+    "COMP_COMMUNITY_GAPFILL",
+    "ORG_ARABIDOPSIS",
+    "TOOL_COMMIT_SOFTWARE"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "plant-metabolomics",
+    "microbiome-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "modeling"
+  ],
+  "synthesized_from": "github:pwendering__COMMIT",
+  "task_description": "Apply COMMIT's community-dependent gap-filling procedure to consensus metabolic reconstructions of plant community members to identify and fill metabolic gaps using shared metabolic context. Produce a gap-filled metabolic model for each community member.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Consensus metabolic reconstructions for community members",
+      "port_id": "consensus_models",
+      "resolved_via": null,
+      "source": "task_001/consensus_reconstructions",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement COMMIT's community-dependent gap-filling module to fill metabolic gaps in individual consensus reconstructions using metabolic information from co-occurring community members.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Gap-filled metabolic models for each community member",
+      "port_id": "gapfilled_models",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "flux-analysis",
+    "pathway-analysis",
+    "multi-omics-integration"
+  ],
+  "title": "Reconstruct the community-dependent gap-filling step using COMMIT for Arabidopsis thaliana microbial communities",
+  "tools": [
+    "COMMIT"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load consensus metabolic reconstructions for all community members produced from prior step. 2. Initialize COMMIT gap-filling module with community context, specifying which metabolic gaps to address across the member set. 3. Execute community-dependent gap-filling algorithm that leverages metabolic overlap and dependencies between community members to propose reactions filling identified gaps. 4. Validate filled gaps by checking consistency with known plant (Arabidopsis thaliana) metabolism and inter-member exchange requirements. 5. Output gap-filled metabolic models for each community member with annotations indicating source and confidence of filled reactions."
+}

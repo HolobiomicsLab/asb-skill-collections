@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that TOBIAS BINDetect executable is available in the loosolab/TOBIAS repository at the commit or release specified in inputs"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify input file exists: ATAC-seq BAM or bed file (or task output containing aligned reads/peaks)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify input file exists: motif Position Weight Matrix (PWM) file in standard format (JASPAR, MEME, or similar)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify input file exists: file specifying two or more conditions/samples to compare for differential footprint analysis"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "output file exists: structured table (TSV, CSV, or similar tabular format) with one row per TF motif"
+    },
+    {
+      "id": "pf_007",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table contains columns for TF identifier, motif name, and per-condition f",
+      "value": [
+        "for TF identifier",
+        "motif name",
+        "and per-condition footprint scores or statistics"
+      ]
+    },
+    {
+      "id": "pf_008",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output table contains a bound/unbound classification or differential occupancy s"
+    },
+    {
+      "id": "pf_009",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "occupancy predictions or scores are numeric and fall within expected statistical"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that TOBIAS BINDetect executable is available in the loosolab/TOBIAS repository at the commit or release specified in inputs",
+      "verify input file exists: ATAC-seq BAM or bed file (or task output containing aligned reads/peaks)",
+      "verify input file exists: motif Position Weight Matrix (PWM) file in standard format (JASPAR, MEME, or similar)",
+      "verify input file exists: file specifying two or more conditions/samples to compare for differential footprint analysis",
+      "script_runs: BINDetect command executes without fatal errors on provided inputs",
+      "output file exists: structured table (TSV, CSV, or similar tabular format) with one row per TF motif",
+      "field_present: output table contains columns for TF identifier, motif name, and per-condition footprint scores or statistics",
+      "field_present: output table contains a bound/unbound classification or differential occupancy score per TF motif",
+      "value_in_range: occupancy predictions or scores are numeric and fall within expected statistical range (robust to parameter choices)"
+    ],
+    "expert_review": [
+      "evaluate whether the bound/unbound predictions are biologically plausible given the footprint depletion patterns at motif sites",
+      "assess whether differential occupancy rankings align with known or expected TF activity changes across conditions",
+      "review parameter choices (window size, threshold, normalization) for appropriateness given ATAC-seq data characteristics"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

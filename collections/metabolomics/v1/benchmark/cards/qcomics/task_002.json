@@ -1,0 +1,267 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "f97b769a2cba18bc5d5570bf2e0867780e151e1bc1ffae428d52ead8e824d57e"
+    }
+  ],
+  "created_at": "2026-06-15T10:50:21.360243+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "QCpool positional table in txt format exported from Sciex Multiquant (v3.0.3 or later)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Quality overview report (table or figure) showing per-compound CV and signal-trend metrics across QCpool injections",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Coefficient of variation (CV) quantifies technical reproducibility in metabolomics; lower CV indicates better instrumental stability and measurement precision.",
+    "QCpool (pooled quality control sample) is a composite reference material injected at regular intervals during LC-MS/MS sequences to monitor instrumental performance and detect drift.",
+    "Signal-trend metrics track intensity changes across sequential injections to identify instrumental degradation, detector saturation, or column fouling.",
+    "Sciex Multiquant txt export format contains positional data (retention time, compound identifiers, and integrated signal intensity) that can be parsed to extract per-injection measurements."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that inputs include a concrete TXT export file from Sciex Multiquant (> v3.0.3) containing QCpool positional table data",
+      "verify that expected_outputs artifact exists and is a named file (CSV/TSV/PDF table or PNG/PDF figure)",
+      "verify file_exists: the output report file in the specified format",
+      "verify that output report contains at least one column or metric labeled 'CV' or 'coefficient of variation'",
+      "verify that output report contains at least one column or metric labeled 'signal-trend' or equivalent trend metric across QCpool injections",
+      "script_runs: QComics package executes without error on the provided TXT input and produces the report artifact"
+    ],
+    "expert_review": [
+      "whether CV calculations are mathematically correct (standard deviation / mean \u00d7 100 or equivalent definition)",
+      "whether signal-trend metric appropriately captures temporal or injection-order variation in QCpool signal intensity",
+      "whether the per-compound metrics are aggregated or presented at appropriate granularity for a 'quality overview'",
+      "whether the report layout and visualizations align with stated goal of providing 'quick overview of quality' for metabolomics/lipidomics studies"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What metrics does QComics compute from QCpool injection data to assess metabolomics or lipidomics study quality?: 'The goal of the `QComics` package is to have a quick overview of the quality of a metabolomics or lipidomics study.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] QComics processes QCpool samples analyzed with Sciex Multiquant (> v3.0.3) software and exported to txt format, measuring pooled samples at regular intervals during sequences to generate quality assessment data.: 'a pooled sample (QCpool) needs to measured in regular intervals during one or more sequences. These QCpool samples need to be analysed with Sciex Multiquant (> v3.0.3) software and exported to `txt`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] QCpool positional table in txt format exported from Sciex Multiquant (v3.0.3 or later): 'QCpool samples need to be analysed with Sciex Multiquant (> v3.0.3) software and exported to `txt` format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Quality overview report (table or figure) showing per-compound CV and signal-trend metrics across QCpool injections: 'The goal of the `QComics` package is to have a quick overview of the quality of a metabolomics or lipidomics study'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Sciex Multiquant (> v3.0.3): 'analysed with Sciex Multiquant (> v3.0.3) software and exported to `txt` format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] QComics: 'The goal of the `QComics` package is to have a quick overview of the quality of a metabolomics or lipidomics study'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit description of CV and signal-trend metric definitions or computational formulas in discussion section: '[section text contains only references and metadata; no methodological details on metrics]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import numpy as np; df = pd.read_csv('{inputs.qcpool_txt}', sep='\\t'); compounds = df.groupby('Compound')['Signal'].agg(['mean', 'std']); compounds['CV'] = (compounds['std'] / compounds['mean']) * 100; compounds.to_csv('qcpool_quality_overview_{task_id}.csv'); print(compounds)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [
+      "Sciex Multiquant"
+    ],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "qcomics_quality_report.csv",
+  "expected_outputs": [
+    "Quality overview report (table or figure) showing per-compound CV and signal-trend metrics across QCpool injections"
+  ],
+  "finding": "QComics processes QCpool samples analyzed with Sciex Multiquant (> v3.0.3) software and exported to txt format, measuring pooled samples at regular intervals during sequences to generate quality assessment data.",
+  "github_name": null,
+  "input_from": "task_001",
+  "inputs": [
+    "QCpool positional table in txt format exported from Sciex Multiquant (v3.0.3 or later)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "qcpool_intensities.csv",
+    "per_compound_cv.csv",
+    "signal_trends.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Load and parse QCpool positional table from Sciex Multiquant txt export, extracting compound identifiers and signal intensities across sequential injections.",
+    "Calculate per-compound coefficient of variation (CV) to assess technical reproducibility across QCpool replicates.",
+    "Compute signal-trend metrics (drift, stability index, or slope) to detect instrumental performance changes across the injection sequence.",
+    "Aggregate CV and trend results by compound into a summary table with quality classification (e.g., acceptable vs. poor).",
+    "Visualization: generate table or figure presenting per-compound CV, trend metrics, and overall quality assessment for rapid interpretation.",
+    "Validation: output includes per-compound CV values and trend indicators with quality thresholds suitable for literature reporting or protocol standardization."
+  ],
+  "missing_information": [
+    "No changelog found",
+    "No explicit description of CV and signal-trend metric definitions or computational formulas in discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What metrics does QComics compute from QCpool injection data to assess metabolomics or lipidomics study quality?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "qcpool-cv-calculation",
+    "signal-trend-assessment-across-injections",
+    "metabolomics-data-quality-metrics",
+    "instrumental-drift-detection",
+    "quality-overview-visualization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_qcomics/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "sys_qcomics",
+    "comp_qcpool",
+    "tool_r_package",
+    "dataset_txt_export"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:ricoderks__QComics",
+  "task_description": "Using a QCpool positional table exported from Sciex Multiquant txt format, compute per-compound coefficient of variation (CV) and signal-trend metrics across QCpool injections to generate a quality overview report.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "QCpool positional table from Sciex Multiquant txt export",
+      "port_id": "qcpool_txt",
+      "resolved_via": null,
+      "source": "task_001/qcpool_table",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Compute per-compound coefficient of variation and signal-trend metrics from QCpool txt export data to generate a quality overview report.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Quality overview report (table or figure)",
+      "port_id": "quality_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "metabolite-identification",
+    "quality-control"
+  ],
+  "title": "Reconstruct quality overview summary from parsed QCpool positional data",
+  "tools": [
+    "Sciex Multiquant (> v3.0.3)",
+    "QComics"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Sciex Multiquant (> v3.0.3)."
+  ],
+  "workflow_description": "1. Load the QCpool positional table from Sciex Multiquant txt export. 2. Parse compound identifiers and signal intensities across sequential QCpool injections. 3. Calculate per-compound coefficient of variation (CV) as a measure of technical reproducibility. 4. Assess signal-trend metrics (e.g., slope, drift, or stability index) across the injection sequence to detect instrumental drift or signal degradation. 5. Aggregate CV and trend results into a summary table or visualization highlighting compounds with acceptable vs. poor quality metrics. 6. Generate a quality overview report (table and/or figure) suitable for rapid assessment of study metabolomics/lipidomics data quality."
+}

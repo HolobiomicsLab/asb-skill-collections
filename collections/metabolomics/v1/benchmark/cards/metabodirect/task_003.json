@@ -1,0 +1,455 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "metabodirect.pdf",
+      "role": "main_article",
+      "sha256": "8b88de575218bd9c0507dd4d2410cefdbd5f220f618fd3cee717387b195945ea"
+    }
+  ],
+  "created_at": "2026-06-15T08:03:26.683093+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Normalized peak intensity CSV table (post-preprocessing) from MetaboDirect output for marine phage-host dataset (36 samples, ~495 molecular formulas)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sample metadata with phage type assignments (HP1, HS2, control) for 36 samples",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reference PERMANOVA and NMDS results from Supplementary Fig. S7C showing non-significant phage-type effect",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "PERMANOVA results table (CSV) containing p-value, F-statistic, and R\u00b2 for phage-type factor",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NMDS ordination scores (CSV) for all 36 samples with first two principal components",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NMDS scatterplot (PNG/PDF) with samples colored by phage type (HP1, HS2, control)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "PERMANOVA tests the null hypothesis of no difference in multivariate metabolite composition between groups using permutation tests; a non-significant result (p > 0.05) indicates no detectable difference in exometabolite profile between phage types HP1, HS2, and uninfected control.",
+    "NMDS is a rank-based ordination method that preserves pairwise distances between samples in low-dimensional space; it is robust to non-normal data and works with any dissimilarity metric, making it ideal for count-like or intensity-based metabolomics data.",
+    "Bray-Curtis distance is abundance-weighted and appropriate for metabolite intensity data; Jaccard distance is presence-absence only; Euclidean distance is sensitive to magnitude but assumes linearity; choice affects PERMANOVA power and NMDS configuration.",
+    "FT-ICR MS peak intensities reflect relative abundance without absolute quantification; normalization (sum-normalization or other methods) is required before PERMANOVA to account for total ion current variation between samples.",
+    "Viral infection of bacteria can reprogram host central metabolism, altering exometabolite composition; a non-significant PERMANOVA result suggests that phage type (podovirus HP1 vs. siphovirus HS2) does not drive measurable shifts in the exometabolome under nutrient-rich (P-replete) conditions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that peak-abundance list file (formatted for MetaboDirect) is retrievable from OSF deposit https://doi.org/10.17605/OSF.IO/XFHZ9",
+      "file_exists: verify that molecular-formula-assigned file for bacterium-phage dataset is retrievable from OSF deposit https://doi.org/10.17605/OSF.IO/XFHZ9",
+      "file_format_is: confirm peak-abundance file is in format compatible with MetaboDirect pipeline input (XML or tabular format with peak m/z, intensity, and sample identifiers)",
+      "file_format_is: confirm molecular-formula file contains assigned elemental composition (C, H, O, N, S, P counts) and associated peak identifiers matching abundance data",
+      "script_runs: verify MetaboDirect v0.3.4 (from GitHub https://github.com/Coayala/MetaboDirect at commit https://doi.org/10.5281/zenodo.7278253) executes Step 5 (multivariate statistical analysis) without errors on the downloaded OSF files",
+      "value_in_range: extract PERMANOVA p-value for phage-type factor (HP1 vs. HS2 vs. control) from MetaboDirect Step 5 output; verify value is numeric, bounded [0, 1], and matches reported result in Supplementary Fig. S7C (expected: non-significant, p > 0.05)",
+      "contains_substring: verify MetaboDirect Step 5 output log or results table contains PERMANOVA test label and phage-type factor designation",
+      "output_matches_reference: compare computed PERMANOVA p-value against the reported p-value shown in Supplementary Fig. S7C panel (last column of PERMANOVA results); allow tolerance of \u00b10.01 for numerical precision across software versions, parameter-sensitive to effect-size threshold and distance metric choices in PERMANOVA function"
+    ],
+    "expert_review": [
+      "Verify that MetaboDirect's PERMANOVA implementation (using vegan::adonis2 or equivalent) applies the correct statistical model: response = phage type, with appropriate distance metric (Euclidean or Bray-Curtis) and permutation count (typically 999)",
+      "Confirm that the phage-type factor in the analysis correctly encodes the three levels (HP1, HS2, control) from the bacterium-phage dataset design and that sample annotations are properly read from the input files",
+      "Assess whether the reported non-significant result (p > 0.05 for phage-type in Fig. S7C) is consistent with the biological context: evaluate whether the data structure (36 samples, ~495 molecular formulas per sample on average) would support detection of a true phage effect if present, given the observed variance in DOM composition",
+      "Evaluate methodological transparency: confirm that MetaboDirect's Step 5 documentation (GitHub README, User's Guide at https://metabodirect.readthedocs.io, or Supplementary Information Table S3) explicitly specifies the PERMANOVA distance metric, permutation scheme, and statistical assumptions used"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does the phage-type factor (HP1 vs. HS2 vs. control) produce a statistically significant difference in metabolite content in the marine bacterium-phage system according to PERMANOVA analysis?: 'the type of phage (or lack thereof) infecting the cells seems to produce a significant difference in the metabolite/organic compound content of the samples (PERMANOVA p value < 0.05, Supplementary'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] PERMANOVA analysis of the bacterium-phage dataset shows that phage type produces a significant difference in metabolite content with p < 0.05, as displayed in Supplementary Fig. 7C.: 'the type of phage (or lack thereof) infecting the cells seems to produce a significant difference in the metabolite/organic compound content of the samples (PERMANOVA p value < 0.05, Supplementary'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Normalized peak intensity CSV table (post-preprocessing) from MetaboDirect output for marine phage-host dataset (36 samples, ~495 molecular formulas): 'The first came from the exometabolome of a marine phage-host model system that uses a known, ecologically relevant marine bacterium (Pseudoalateromonas) and two contrastingly different infecting'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Sample metadata with phage type assignments (HP1, HS2, control) for 36 samples: 'The data set had an average of 1025 peaks detected across the whole data set (n = 36 samples) and an average of 495 peaks that got assigned a molecular formula'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Reference PERMANOVA and NMDS results from Supplementary Fig. S7C showing non-significant phage-type effect: 'This data set is used here to show how MetaboDirect can help develop foundational approaches to studying how viral infection of bacterial communities could impact ecosystem outputs'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] PERMANOVA results table (CSV) containing p-value, F-statistic, and R\u00b2 for phage-type factor: 'results of the PERMANOVA are exported as a .csv file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NMDS ordination scores (CSV) for all 36 samples with first two principal components: 'NMDS scores are then visualized as scatter plots using the first two components as axis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NMDS scatterplot (PNG/PDF) with samples colored by phage type (HP1, HS2, control): 'NMDS scores are then visualized as scatter plots using the first two components as axis, while the results of the PERMANOVA are exported as a .csv file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MetaboDirect: 'The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1): (i) data pre-processing, (ii) data diagnostics, (iii) data exploration, (iv) chemodiversity analysis, (v) statistical analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] vegan (R package): 'distances (depending on the selected normalization method) using the \"vegdist\" function for the vegan package and then used to perform a permutational analysis of variance (PERMANOVA)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python 3.8: 'The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R 4.0.2: 'The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific PERMANOVA implementation details (distance metric, permutation count, null distribution method) are not explicitly stated in the discussion section: 'The highly reproducible nature of the analysis provided by MetaboDirect, coupled with the detailed user manual, will allow scientists of all skill levels to fully explore and work with FT-ICR MS data.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Threshold or filtering criteria applied during data pre-processing (Step 1) prior to PERMANOVA in Step 5 are not fully detailed in the discussion: 'the development of reproducible open-source tools for the analysis of such data is urgently needed'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Biological interpretation of the non-significant PERMANOVA result for phage type is not provided in the discussion; it is unclear whether lack of significance reflects true absence of phage effect or statistical power limitations: 'This in return will greatly facilitate the integration of metabolomics within current microbiome studies and advance our knowledge of how microbial communities influence and are influenced by the'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(vegan); library(ggplot2); library(readr); intensities <- read_csv('{inputs.normalized_intensities}'); metadata <- read_csv('{inputs.sample_metadata}'); dist_matrix <- vegdist(intensities, method='bray'); permanova_result <- adonis2(dist_matrix ~ phage_type, data=metadata, permutations=999); nmds_result <- metaMDS(dist_matrix, k=2, try=20); nmds_scores <- as.data.frame(nmds_result$points); nmds_scores$phage_type <- metadata$phage_type; write_csv(as.data.frame(permanova_result), 'permanova_results.csv'); write_csv(nmds_scores, 'nmds_scores.csv'); png('nmds_scatterplot.png', width=800, height=600); print(ggplot(nmds_scores, aes(x=MDS1, y=MDS2, color=phage_type)) + geom_point(size=3) + theme_minimal() + labs(title='NMDS Ordination by Phage Type', x='NMDS1', y='NMDS2')); dev.off()"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "permanova_results.csv",
+  "expected_outputs": [
+    "PERMANOVA results table (CSV) containing p-value, F-statistic, and R\u00b2 for phage-type factor",
+    "NMDS ordination scores (CSV) for all 36 samples with first two principal components",
+    "NMDS scatterplot (PNG/PDF) with samples colored by phage type (HP1, HS2, control)"
+  ],
+  "finding": "PERMANOVA analysis of the bacterium-phage dataset shows that phage type produces a significant difference in metabolite content with p < 0.05, as displayed in Supplementary Fig. 7C.",
+  "github_name": "Coayala/MetaboDirect",
+  "input_from": "task_002",
+  "inputs": [
+    "Normalized peak intensity CSV table (post-preprocessing) from MetaboDirect output for marine phage-host dataset (36 samples, ~495 molecular formulas)",
+    "Sample metadata with phage type assignments (HP1, HS2, control) for 36 samples",
+    "Reference PERMANOVA and NMDS results from Supplementary Fig. S7C showing non-significant phage-type effect"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "normalized_peak_intensities.csv",
+    "distance_matrix.csv",
+    "nmds_scores.csv",
+    "permanova_results.csv",
+    "nmds_ordination.png"
+  ],
+  "linked_result_ids": [
+    "result_033",
+    "result_048"
+  ],
+  "methodology_summary": [
+    "Load normalized peak-intensity matrix and sample metadata (phage type grouping) from preprocessed MetaboDirect outputs for the 36-sample marine phage-host dataset.",
+    "Calculate pairwise distances (Bray-Curtis, Euclidean, or Jaccard) between all samples using the vegdist function from the vegan package on normalized peak intensities.",
+    "Execute PERMANOVA (permutational analysis of variance) with phage type as the grouping factor and 999 permutations to test the null hypothesis of no difference in metabolite composition between HP1, HS2, and control groups.",
+    "Generate NMDS ordination using the selected distance metric, extracting the first two principal components as axes for visualization.",
+    "Export PERMANOVA results (p-value, F-statistic, R\u00b2) and NMDS scores to CSV; generate NMDS scatterplot with samples colored by phage type.",
+    "Validation: Confirm that the PERMANOVA p-value matches the non-significant result (p > 0.05) reported in Supplementary Fig. S7C; verify NMDS plot shows no clear separation of samples by phage type."
+  ],
+  "missing_information": [
+    "Specific PERMANOVA implementation details (distance metric, permutation count, null distribution method) are not explicitly stated in the discussion section",
+    "Threshold or filtering criteria applied during data pre-processing (Step 1) prior to PERMANOVA in Step 5 are not fully detailed in the discussion",
+    "Biological interpretation of the non-significant PERMANOVA result for phage type is not provided in the discussion; it is unclear whether lack of significance reflects true absence of phage effect or statistical power limitations"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the phage-type factor (HP1 vs. HS2 vs. control) produce a statistically significant difference in metabolite content in the marine bacterium-phage system according to PERMANOVA analysis?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "intro",
+    "results",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "permanova-statistical-testing-multivariate-groups",
+    "nmds-ordination-distance-metric-selection",
+    "metabolite-abundance-normalization-comparison",
+    "distance-metric-calculation-bray-curtis-euclidean-jaccard",
+    "microbial-phage-infection-experimental-design-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_metabodirect",
+  "spine_condition_ids": [
+    "Cond_PhageDataset_MainOnly",
+    "Cond_PhageDataset_WithKEGG",
+    "Cond_PhageDataset_Full",
+    "Cond_SphagnumDataset_MainOnly",
+    "Cond_SphagnumDataset_Full",
+    "Cond_PhageType_HP1",
+    "Cond_PhageType_HS2",
+    "Cond_PhageType_Control"
+  ],
+  "spine_entity_ids": [
+    "MetaboDirect",
+    "MetaboDirect_Pipeline_Architecture",
+    "Step_DataPreprocessing",
+    "Step_DataDiagnostics",
+    "Step_DataExploration",
+    "Step_ChemodiversityAnalysis",
+    "Step_StatisticalAnalysis",
+    "Step_TransformationNetworks",
+    "TransformationNetwork_GeneratedArtifact",
+    "Dataset_PhageHost",
+    "Dataset_SphagnumLeachate",
+    "Cond_PhageType_HP1",
+    "Cond_PhageType_HS2",
+    "Cond_PhageType_Control",
+    "Cond_PhageDataset_MainOnly",
+    "Cond_PhageDataset_WithKEGG",
+    "Cond_PhageDataset_Full",
+    "Cond_SphagnumDataset_MainOnly",
+    "Cond_SphagnumDataset_Full",
+    "Metric_Runtime_PhageMain",
+    "Metric_Runtime_PhageKEGGTransform",
+    "Metric_Runtime_PhageFull",
+    "Metric_Runtime_SphagnumMain",
+    "Metric_Runtime_SphagnumFull",
+    "Metric_PhageDataset_AvgPeaks",
+    "Metric_PhageDataset_AvgFormulas",
+    "Metric_SphagnumDataset_AvgFormulas",
+    "Metric_PERMANOVA_PhageType",
+    "Result_HS2_CompositionChange",
+    "Result_PhageUniqueMetabolites",
+    "Result_SphagnumUniqueMetabolites",
+    "Result_MetaboDirect_AutomationAdvantage",
+    "Result_MetaboDirect_UniqueNetworkGeneration"
+  ],
+  "subdomains": [
+    "microbiome-metabolomics",
+    "environmental-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "statistical-analysis",
+    "data-analysis"
+  ],
+  "synthesized_from": null,
+  "task_description": "Run MetaboDirect's statistical analysis step (Step 5) on the marine phage-host dataset to calculate PERMANOVA p-values and NMDS ordination scores stratified by phage type (HP1, HS2, control), and verify the non-significant result reported in Supplementary Fig. S7C.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Normalized peak intensity matrix (CSV)",
+      "port_id": "normalized_intensities",
+      "resolved_via": null,
+      "source": "task_002/phage_runtime",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample metadata with phage-type grouping",
+      "port_id": "sample_metadata",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Published PERMANOVA/NMDS results (Supplementary Fig. S7C)",
+      "port_id": "reference_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute MetaboDirect Step 5 (PERMANOVA analysis) on the marine phage-host dataset and verify the reported PERMANOVA p-value for phage-type factor significance.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PERMANOVA p-value, F-statistic, and R\u00b2 table (CSV)",
+      "port_id": "permanova_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NMDS coordinates for all samples (CSV)",
+      "port_id": "nmds_scores",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NMDS ordination scatterplot by phage type (PNG/PDF)",
+      "port_id": "nmds_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "direct-infusion-ms",
+    "high-resolution-ms",
+    "feature-detection",
+    "metabolite-identification",
+    "multivariate-statistics",
+    "molecular-networking"
+  ],
+  "title": "Reproduce the PERMANOVA result for phage-type effect on the marine phage-host exometabolome",
+  "tools": [
+    "MetaboDirect",
+    "vegan (R package)",
+    "Python 3.8",
+    "R 4.0.2"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load normalized peak intensities and sample metadata from preprocessed CSV files generated by MetaboDirect steps 1\u20134 for the 36-sample bacterium-phage dataset. 2. Calculate pairwise distances (Bray-Curtis, Euclidean, or Jaccard) using the vegdist function from the vegan R package on normalized intensities. 3. Execute permutational analysis of variance (PERMANOVA) with phage type (HP1, HS2, control) as the grouping factor using 999 permutations. 4. Generate non-metric multidimensional scaling (NMDS) ordination using the selected distance metric and export NMDS scores as a scatterplot with first two components as axes. 5. Export PERMANOVA results (p-value, F-statistic, R\u00b2) and NMDS coordinates as CSV files and compare reported p-value against the non-significant threshold (\u03b1 = 0.05) reported in Supplementary Fig. S7C."
+}

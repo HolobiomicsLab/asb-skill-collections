@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at path specified in dbpath slot of methylRawListDB object"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "tabix-compressed (bgzip) for all methylation data files referenced in dbpath"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify tabix index file (.tbi) exists for each bgzipped file in dbpath"
+    },
+    {
+      "id": "pf_004",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "tabix header contains 'methylKit' metadata marker",
+      "value": "methylKit"
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "1.13",
+      "value": "version[\\s=]+(\\d+\\.\\d+\\.\\d+)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at path specified in dbpath slot of methylRawListDB object",
+      "file_format_is: tabix-compressed (bgzip) for all methylation data files referenced in dbpath",
+      "verify tabix index file (.tbi) exists for each bgzipped file in dbpath",
+      "contains_substring: tabix header contains 'methylKit' metadata marker",
+      "contains_substring: tabix header contains version string matching pattern 'version[\\s=]+(\\d+\\.\\d+\\.\\d+)' with version >= 1.13.1"
+    ],
+    "expert_review": [
+      "verify that methylRawListDB object structure and slot organization conform to methylKit \u22651.13.1 dbtype='tabix' specification",
+      "confirm tabix header metadata format matches methylKit's documented tabix serialization schema for version \u22651.13.1",
+      "assess whether example CpG input files are compatible with methRead() tabix mode and produce valid methylation records"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

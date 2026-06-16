@@ -1,0 +1,212 @@
+schema_version: 0.1.0
+workflow_id: coll_mistcf_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: MIST-CF ranks chemical formula and adduct assignments for unknown mass
+    spectra in a de novo setting using a formula transformer neural network with an
+    internal subformula assignment protocol and sinusoidal formula embeddings, without
+    requiring spectrum databases or external fragmentation trees.
+  pseudo_abstract: MIST-CF extends the MIST framework for annotating MS1 precursor
+    masses from MS/MS data by employing an internal chemical subformula assignment
+    protocol as an alternative to SIRIUS fragmentation trees, enabling the formula
+    transformer neural network to assign subformulas to peaks in a data-dependent
+    fashion. The model incorporates sinusoidal formula embeddings, a technique developed
+    in prior work (SCARF), as an advance to the chemical formula transformer architecture
+    for improved representation of chemical formulas. MIST-CF considers multiple adduct
+    types beyond [M+H]+ in positive mode ionization, ranking both chemical formula
+    and adduct assignments using an end-to-end energy-based modeling approach without
+    referencing any spectrum databases.
+  research_questions:
+  - How does MIST-CF's end-to-end energy-based formula transformer perform on ranking
+    chemical formula and adduct assignments compared to SIRIUS-based approaches on
+    benchmark MS/MS data?
+  - How does MIST-CF assign chemical subformulas to MS/MS fragment peaks without relying
+    on SIRIUS fragmentation trees?
+  - What is the performance improvement in chemical formula ranking accuracy when
+    MIST-CF incorporates support for multiple adduct types compared to restricting
+    predictions to [M+H]+ only?
+  - How are sinusoidal formula embeddings implemented as a component of the MIST-CF
+    chemical formula transformer architecture?
+  - Can the MIST-CF formula transformer architecture be extended to support negative-mode
+    adducts, and what is the resulting top-k formula ranking accuracy on negative-mode
+    MS/MS spectra?
+  methods_summary: "Load benchmark MS/MS dataset with ground-truth chemical formula\
+    \ annotations and precursor m/z values. Preprocess MS/MS spectra by normalizing\
+    \ intensities, filtering low-intensity noise, and extracting fragment m/z and\
+    \ intensity pairs. Execute MIST-CF formula transformer neural network on preprocessed\
+    \ spectra to generate energy-scored ranked lists of candidate chemical formulas\
+    \ and associated adduct assignments for each spectrum. Compute top-k accuracy\
+    \ metrics (top-1, top-3, top-k) by checking whether the ground-truth formula and\
+    \ adduct appear in the ranked prediction list. Run SIRIUS on the same benchmark\
+    \ dataset using internal chemical subformula assignment protocol and extract its\
+    \ ranked formula predictions. Compare MIST-CF and SIRIUS top-k accuracy scores\
+    \ to reproduce reported performance advantage. Validation: top-k accuracy for\
+    \ MIST-CF formula assignment must be reproducible and rank performance metrics\
+    \ must match or exceed reported baselines in the paper. References: source article\
+    \ (DOI: 10.1021/acs.jcim.3c01082) Load MS/MS test spectra with reference precursor\
+    \ masses and ground-truth subformula annotations. Apply MIST-CF internal subformula\
+    \ assignment (formula transformer neural network) to rank candidate subformulas\
+    \ for each fragment peak without invoking SIRIUS or external databases. Generate\
+    \ per-peak subformula predictions conditioned on precursor formula and observed\
+    \ m/z. Compute per-peak accuracy, exact-match rate per spectrum, and top-k ranking\
+    \ statistics. Validation: Accept predictions if per-peak accuracy and exact-match\
+    \ rates meet or exceed reported benchmark thresholds on the held-out set. References:\
+    \ source article (DOI: 10.1021/acs.jcim.3c01082) Load the published benchmark\
+    \ dataset with ground-truth MS/MS spectra, chemical formulas, and adduct assignments.\
+    \ Configure MIST-CF to restrict predictions to [M+H]+ only (disabling multi-adduct\
+    \ support) and run inference on all benchmark spectra. Configure MIST-CF to enable\
+    \ full multi-adduct support and run inference on the same spectra using energy-based\
+    \ ranking. Compute top-1 and top-k ranking accuracy for both modes (correct formula-adduct\
+    \ pair at rank 1 and within top-k). Calculate performance delta (multi-adduct\
+    \ accuracy minus [M+H]+-only accuracy) to quantify MULTI_ADDUCT_SUPPORT contribution.\
+    \ Validation: Report ranking accuracy metrics and delta with per-spectrum results;\
+    \ confirm multi-adduct and [M+H]+-only runs use identical spectral input and hyperparameters.\
+    \ References: source article (DOI: 10.1021/acs.jcim.3c01082) Load the MIST-CF\
+    \ sinusoidal formula embedding layer from the official repository. Prepare a representative\
+    \ set of chemical formulas for embedding. Compute embedding vectors by invoking\
+    \ the embedding layer forward pass on each formula. Verify embedding dimensionality\
+    \ matches the configured parameter. Verify all embedding values fall within the\
+    \ expected range [-1, 1]. Compare produced embeddings against reference outputs\
+    \ from the repository to confirm numerical reproducibility within tolerance. Validation:\
+    \ embeddings match reference outputs with L2 distance < 1e-6 and all values are\
+    \ in [-1, 1]. References: source article (DOI: 10.1021/acs.jcim.3c01082) Load\
+    \ negative-mode MS/MS spectra with annotated formulas from a public repository\
+    \ (MassIVE or MetaboLights). Preprocess and normalize spectra, filtering by quality\
+    \ thresholds. Extend MIST-CF's adduct layer to tokenize common negative-mode adducts\
+    \ ([M-H]\u2212, [M+Cl]\u2212, [M+FA]\u2212). Fine-tune the formula transformer\
+    \ neural network on negative-mode training data, preserving sinusoidal embeddings.\
+    \ Evaluate on held-out negative-mode test set and compute top-k ranking accuracy.\
+    \ Validation: Report top-1, top-5, and top-10 formula ranking accuracy; success\
+    \ threshold is comparable or improved performance relative to positive-mode baseline.\
+    \ References: source article (DOI: 10.1021/acs.jcim.3c01082)"
+  domain: cheminformatics
+  techniques:
+  - tandem-ms
+  - machine-learning
+  - in-silico-fragmentation
+  - deep-learning
+  - metabolite-identification
+  claims:
+  - claim_text: MIST-CF is an extension of MIST for annotating MS1 precursor masses
+      from MS/MS data in a de novo setting.
+    claim_type: finding
+    speculative: false
+    entity_id: MIST_CF_SYSTEM
+  - claim_text: MIST-CF ranks chemical formula and adduct assignments for an unknown
+      mass spectrum using an end-to-end energy based modeling approach.
+    claim_type: finding
+    speculative: false
+    entity_id: MIST_CF_SYSTEM
+  - claim_text: MIST-CF does not reference any spectrum databases in its approach.
+    claim_type: finding
+    speculative: false
+    entity_id: MIST_CF_SYSTEM
+  - claim_text: MIST-CF adopts a formula transformer neural network architecture.
+    claim_type: finding
+    speculative: false
+    entity_id: MIST_CF_SYSTEM
+  - claim_text: MIST-CF learns in a data dependent fashion instead of computing fragmentation
+      trees.
+    claim_type: finding
+    speculative: false
+    entity_id: MIST_CF_SYSTEM
+  - claim_text: MIST-CF utilizes an internal chemical subformula assignment protocol
+      rather than SIRIUS fragmentation trees.
+    claim_type: finding
+    speculative: false
+    entity_id: MIST_CF_SYSTEM
+  - claim_text: MIST-CF considers multiple adduct types beyond [M+H]+ in positive
+      mode.
+    claim_type: finding
+    speculative: false
+    entity_id: MIST_CF_SYSTEM
+  - claim_text: MIST-CF utilizes sinusoidal formula embeddings as developed in the
+      prior work SCARF.
+    claim_type: finding
+    speculative: false
+    entity_id: MIST_CF_SYSTEM
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - SIRIUS fragmentation trees can be replaced with internal chemical subformula assignment
+    protocol
+  substitution_constraints:
+  - MIST-CF operates only in positive mode
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Per-peak subformula predictions as a structured table (peak m/z, predicted
+    subformula, rank, confidence score)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Evaluation metrics table including per-peak accuracy, exact-match rate per
+    spectrum, and top-k ranking statistics
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: CSV or JSON table with per-spectrum ranking accuracy results for [M+H]+-only
+    and multi-adduct modes
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Numerical comparison report quantifying the performance contribution of MULTI_ADDUCT_SUPPORT
+    (delta in top-1 and top-k accuracy)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Embedding vectors for each input chemical formula with shape (num_formulas,
+    embedding_dimension)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Validation report confirming dimensionality, value range, and reproducibility
+    against reference outputs
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Fine-tuned MIST-CF model checkpoint with negative-mode adduct support
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Top-k formula ranking accuracy metrics (top-1, top-5, top-10) on negative-mode
+    test set, reported as accuracy_metrics.csv
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

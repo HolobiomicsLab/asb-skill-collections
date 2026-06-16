@@ -1,0 +1,1241 @@
+{
+  "abstraction_frame": null,
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "figures/c-add-doc.svg",
+      "locator_id": "pkg_0331b45d",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-add-doc.svg",
+      "prose": "figure: figures/c-add-doc.svg",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-bug.svg",
+      "locator_id": "pkg_9e96e834",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-bug.svg",
+      "prose": "figure: figures/c-bug.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-clipboard.svg",
+      "locator_id": "pkg_928c1120",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-clipboard.svg",
+      "prose": "figure: figures/c-clipboard.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-controls-play.svg",
+      "locator_id": "pkg_5eee7ae9",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-controls-play.svg",
+      "prose": "figure: figures/c-controls-play.svg",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-db.svg",
+      "locator_id": "pkg_e75498f7",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-db.svg",
+      "prose": "figure: figures/c-db.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-document.svg",
+      "locator_id": "pkg_d0fc9c1d",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-document.svg",
+      "prose": "figure: figures/c-document.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-documents.svg",
+      "locator_id": "pkg_3a4e23ef",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-documents.svg",
+      "prose": "figure: figures/c-documents.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-download.svg",
+      "locator_id": "pkg_dda75ebc",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-download.svg",
+      "prose": "figure: figures/c-download.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-dragndrop.svg",
+      "locator_id": "pkg_bed310f5",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-dragndrop.svg",
+      "prose": "figure: figures/c-dragndrop.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-export.svg",
+      "locator_id": "pkg_5eaa07be",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-export.svg",
+      "prose": "figure: figures/c-export.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-fbmn.svg",
+      "locator_id": "pkg_9f5106d2",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-fbmn.svg",
+      "prose": "figure: figures/c-fbmn.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-filter-down.svg",
+      "locator_id": "pkg_e0f2d17b",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-filter-down.svg",
+      "prose": "figure: figures/c-filter-down.svg",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-filter-up.svg",
+      "locator_id": "pkg_a27d3091",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-filter-up.svg",
+      "prose": "figure: figures/c-filter-up.svg",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-fingerprint.svg",
+      "locator_id": "pkg_56c5cff0",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-fingerprint.svg",
+      "prose": "figure: figures/c-fingerprint.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-fmet.svg",
+      "locator_id": "pkg_e72c7c2b",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-fmet.svg",
+      "prose": "figure: figures/c-fmet.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-folder-close.svg",
+      "locator_id": "pkg_35e7588d",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-folder-close.svg",
+      "prose": "figure: figures/c-folder-close.svg",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-folder-file.svg",
+      "locator_id": "pkg_bd1219b5",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-folder-file.svg",
+      "prose": "figure: figures/c-folder-file.svg",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-folder-open.svg",
+      "locator_id": "pkg_a54b3efb",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-folder-open.svg",
+      "prose": "figure: figures/c-folder-open.svg",
+      "score": 0.8333,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-folder.svg",
+      "locator_id": "pkg_2647d3b4",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-folder.svg",
+      "prose": "figure: figures/c-folder.svg",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "figures/sirius-icon.png",
+      "locator_id": "pkg_00f610d0",
+      "locator_kind": "package_artifact",
+      "name": "figures/sirius-icon.png",
+      "prose": "figure: figures/sirius-icon.png",
+      "score": 0.8,
+      "side": "input"
+    },
+    {
+      "locator": "paper.md",
+      "locator_id": "pkg_54999db9",
+      "locator_kind": "package_artifact",
+      "name": "paper.md",
+      "prose": "main_article: paper.md",
+      "score": 0.5,
+      "side": "input"
+    },
+    {
+      "locator": "figures/c-add-doc.svg",
+      "locator_id": "pkg_0331b45d",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-add-doc.svg",
+      "prose": "figure: figures/c-add-doc.svg",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-bug.svg",
+      "locator_id": "pkg_9e96e834",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-bug.svg",
+      "prose": "figure: figures/c-bug.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-clipboard.svg",
+      "locator_id": "pkg_928c1120",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-clipboard.svg",
+      "prose": "figure: figures/c-clipboard.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-controls-play.svg",
+      "locator_id": "pkg_5eee7ae9",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-controls-play.svg",
+      "prose": "figure: figures/c-controls-play.svg",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-db.svg",
+      "locator_id": "pkg_e75498f7",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-db.svg",
+      "prose": "figure: figures/c-db.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-document.svg",
+      "locator_id": "pkg_d0fc9c1d",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-document.svg",
+      "prose": "figure: figures/c-document.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-documents.svg",
+      "locator_id": "pkg_3a4e23ef",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-documents.svg",
+      "prose": "figure: figures/c-documents.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-download.svg",
+      "locator_id": "pkg_dda75ebc",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-download.svg",
+      "prose": "figure: figures/c-download.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-dragndrop.svg",
+      "locator_id": "pkg_bed310f5",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-dragndrop.svg",
+      "prose": "figure: figures/c-dragndrop.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-export.svg",
+      "locator_id": "pkg_5eaa07be",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-export.svg",
+      "prose": "figure: figures/c-export.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-fbmn.svg",
+      "locator_id": "pkg_9f5106d2",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-fbmn.svg",
+      "prose": "figure: figures/c-fbmn.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-filter-down.svg",
+      "locator_id": "pkg_e0f2d17b",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-filter-down.svg",
+      "prose": "figure: figures/c-filter-down.svg",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-filter-up.svg",
+      "locator_id": "pkg_a27d3091",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-filter-up.svg",
+      "prose": "figure: figures/c-filter-up.svg",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-fingerprint.svg",
+      "locator_id": "pkg_56c5cff0",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-fingerprint.svg",
+      "prose": "figure: figures/c-fingerprint.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-fmet.svg",
+      "locator_id": "pkg_e72c7c2b",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-fmet.svg",
+      "prose": "figure: figures/c-fmet.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-folder-close.svg",
+      "locator_id": "pkg_35e7588d",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-folder-close.svg",
+      "prose": "figure: figures/c-folder-close.svg",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-folder-file.svg",
+      "locator_id": "pkg_bd1219b5",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-folder-file.svg",
+      "prose": "figure: figures/c-folder-file.svg",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-folder-open.svg",
+      "locator_id": "pkg_a54b3efb",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-folder-open.svg",
+      "prose": "figure: figures/c-folder-open.svg",
+      "score": 0.8333,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/c-folder.svg",
+      "locator_id": "pkg_2647d3b4",
+      "locator_kind": "package_artifact",
+      "name": "figures/c-folder.svg",
+      "prose": "figure: figures/c-folder.svg",
+      "score": 0.8,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/sirius-icon.png",
+      "locator_id": "pkg_00f610d0",
+      "locator_kind": "package_artifact",
+      "name": "figures/sirius-icon.png",
+      "prose": "figure: figures/sirius-icon.png",
+      "score": 0.8,
+      "side": "expected_output"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/c-add-doc.svg",
+      "role": "figure",
+      "sha256": "0331b45d3f4b3fe94fac53e270c648bd752bdecf7088d393adcad7fc1e3750b5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-bug.svg",
+      "role": "figure",
+      "sha256": "9e96e834682340e83292106e54adcf3fb0bfebfb1b016c4d5759849958f794a3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-clipboard.svg",
+      "role": "figure",
+      "sha256": "928c11204b31b97dea6b501034c8bfb73778157d1e6d7967ae5f789d5f3b14da"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-controls-play.svg",
+      "role": "figure",
+      "sha256": "5eee7ae909a3bdde55bfeffbacd5f07adb3f92745bbbd4fef7a6e61ac1caa5ee"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-db.svg",
+      "role": "figure",
+      "sha256": "e75498f7620d5f0abcef46e541e321e9e2ca675e22569d43843830762e340af5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-document.svg",
+      "role": "figure",
+      "sha256": "d0fc9c1d387f544da1e3707856573ac67772d6e1c91b734b488f4898fd9cceb9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-documents.svg",
+      "role": "figure",
+      "sha256": "3a4e23ef42df760a86709fa57741ec3c45758c19ccbf56f02e80c928f62da5f2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-download.svg",
+      "role": "figure",
+      "sha256": "dda75ebcf71fd10f15cb755e4bf886949e8658989c54280f2e6a807e1fa3b443"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-dragndrop.svg",
+      "role": "figure",
+      "sha256": "bed310f570c7b7507c3aad2b93f0ea31bf27ca2d3a1ccd9b6131007837764403"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-export.svg",
+      "role": "figure",
+      "sha256": "5eaa07befa9ee1eea492f4572a07fa97a59f9b256f9e78bb0f35f643227583c7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fbmn.svg",
+      "role": "figure",
+      "sha256": "9f5106d232858882d3d166e5e2d5718ef6e6e3d36552a03f9a7d5a71f06bf799"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-filter-down.svg",
+      "role": "figure",
+      "sha256": "e0f2d17b87498a3f035a175ad4696dc6dfcbc7001978dc07876bc813a9aadc65"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-filter-up.svg",
+      "role": "figure",
+      "sha256": "a27d30910ff137b58b1041aef3a4d42b8af57a34995d1caceaacc9abf9a8b457"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fingerprint.svg",
+      "role": "figure",
+      "sha256": "56c5cff08cd5ccc615adf833da66a953de49f1f79e2d5b9ab1087a70370de6db"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fmet.svg",
+      "role": "figure",
+      "sha256": "e72c7c2b67996f3385eb4fcbdb224676b46bd3077585ab00652ad8079fb62187"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-close.svg",
+      "role": "figure",
+      "sha256": "35e7588df0d0606f50f40d67bbac994134d9cb0b2c9b663874fa27aadc924f7b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-file.svg",
+      "role": "figure",
+      "sha256": "bd1219b56e6a4e5bafb6bd6b45a46670ccdad9a1ac201bd4f461f7eaefed011b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-open.svg",
+      "role": "figure",
+      "sha256": "a54b3efb697e2fdcfbc65990017c59f1a505ee5fc2990613ea1b5c85fd57da69"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder.svg",
+      "role": "figure",
+      "sha256": "2647d3b4de1fc2c365d4c38429f4325fb003d9421d49252c7e2eb5e97b2844df"
+    },
+    {
+      "indexable": false,
+      "path": "figures/sirius-icon.png",
+      "role": "figure",
+      "sha256": "00f610d0bcbf41600b0280797afe83cf3464f46558f13efa5ec794aa93e8c8aa"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "54999db92b49ea1304dffee26191cf76a417642e180bf9e1426d2ca608c1ec0e"
+    }
+  ],
+  "created_at": "2026-06-15T21:26:06.390523+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-add-doc.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-bug.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-clipboard.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-controls-play.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-db.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-document.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-documents.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-download.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-dragndrop.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-export.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-fbmn.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-filter-down.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-filter-up.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-fingerprint.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-fmet.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-folder-close.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-folder-file.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-folder-open.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-folder.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/sirius-icon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "main_article: paper.md",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-add-doc.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-bug.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-clipboard.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-controls-play.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-db.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-document.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-documents.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-download.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-dragndrop.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-export.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-fbmn.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-filter-down.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-filter-up.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-fingerprint.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-fmet.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-folder-close.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-folder-file.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-folder-open.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/c-folder.svg",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "figure: figures/sirius-icon.png",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "We ask that users of our tools cite the corresponding papers in any resulting publications.</span>*",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "Metabolomics (v2 via asb-domain-core)",
+  "domain_knowledge": [],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Confirm that every cited input artifact exists or is explicitly marked missing.",
+      "Confirm that expected outputs are tied to figures, tables, files, or claims in the package."
+    ],
+    "llm_or_expert_review": [
+      "Judge whether the task description matches the source evidence.",
+      "Judge whether the workflow description is sufficient for a future agent attempt.",
+      "Review uncertainty notes and missing-information claims."
+    ],
+    "not_in_scope_for_mvp": [
+      "Running scientific code or reproducing figures.",
+      "Scoring model-generated scientific outputs."
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "question",
+      "snippet_id": "ev_001",
+      "source_path": "paper.md",
+      "text": "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blueviolet.svg)](https://www.gnu.org/licenses/agpl-3.0) [![Generic badge](https://img.shields.io/badge/Version-6.3.7-informational.svg)](https://shields.io/) [![Build and Publish](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml/badge.svg?branch=release-4-pre)](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml) [![Join community chat at https://gitter.im/sirius-ms/general](https://badg..."
+    },
+    {
+      "reason": "workflow",
+      "snippet_id": "ev_002",
+      "source_path": "paper.md",
+      "text": "*<span style=\"color: #808080;\">Our methods are offered to the scientific community as freely available resources. (Re-)distribution of the methods, in whole or in part, for commercial purposes is prohibited."
+    },
+    {
+      "reason": "output",
+      "snippet_id": "ev_003",
+      "source_path": "paper.md",
+      "text": "We ask that users of our tools cite the corresponding papers in any resulting publications.</span>*"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "cat",
+      "paper.md"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 30,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "figure: figures/c-add-doc.svg",
+    "figure: figures/c-bug.svg",
+    "figure: figures/c-clipboard.svg",
+    "figure: figures/c-controls-play.svg",
+    "figure: figures/c-db.svg",
+    "figure: figures/c-document.svg",
+    "figure: figures/c-documents.svg",
+    "figure: figures/c-download.svg",
+    "figure: figures/c-dragndrop.svg",
+    "figure: figures/c-export.svg",
+    "figure: figures/c-fbmn.svg",
+    "figure: figures/c-filter-down.svg",
+    "figure: figures/c-filter-up.svg",
+    "figure: figures/c-fingerprint.svg",
+    "figure: figures/c-fmet.svg",
+    "figure: figures/c-folder-close.svg",
+    "figure: figures/c-folder-file.svg",
+    "figure: figures/c-folder-open.svg",
+    "figure: figures/c-folder.svg",
+    "figure: figures/sirius-icon.png",
+    "We ask that users of our tools cite the corresponding papers in any resulting publications.</span>*"
+  ],
+  "finding": "SIRIUS methods are offered to the scientific community as freely available resources for research and education use",
+  "github_name": "sirius-ms/sirius",
+  "input_from": null,
+  "inputs": [
+    "figure: figures/c-add-doc.svg",
+    "figure: figures/c-bug.svg",
+    "figure: figures/c-clipboard.svg",
+    "figure: figures/c-controls-play.svg",
+    "figure: figures/c-db.svg",
+    "figure: figures/c-document.svg",
+    "figure: figures/c-documents.svg",
+    "figure: figures/c-download.svg",
+    "figure: figures/c-dragndrop.svg",
+    "figure: figures/c-export.svg",
+    "figure: figures/c-fbmn.svg",
+    "figure: figures/c-filter-down.svg",
+    "figure: figures/c-filter-up.svg",
+    "figure: figures/c-fingerprint.svg",
+    "figure: figures/c-fmet.svg",
+    "figure: figures/c-folder-close.svg",
+    "figure: figures/c-folder-file.svg",
+    "figure: figures/c-folder-open.svg",
+    "figure: figures/c-folder.svg",
+    "figure: figures/sirius-icon.png",
+    "main_article: paper.md"
+  ],
+  "keywords": [],
+  "landmark_outputs": [],
+  "linked_result_ids": [
+    "result_004"
+  ],
+  "methodology_summary": [],
+  "missing_information": [
+    "No local code/script artifact was detected.",
+    "No explicit data-reference artifact was detected."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blueviolet.svg)](https://www.gnu.org/licenses/agpl-3.0) [![Generic badge](https://img.shields.io/badge/Version-6.3.7-informational.svg)](https://shields.io/) [![Build and Publish](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml/badge.svg?branch=release-4-pre)](https://github.com/sirius-ms/sirius/actions/workflows/distribute.yaml) [![Join community chat at https://gitter.im/sirius-ms/general](https://badg...",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "scientific_task_formulation",
+    "evidence_linking",
+    "expert_review_preparation",
+    "output_grounding",
+    "figure_table_interpretation",
+    "workflow_reconstruction",
+    "reproducibility_gap_detection"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_sirius/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [],
+  "synthesized_from": "github:sirius-ms__sirius",
+  "task_description": "Create a bounded scientific task from the article package by linking a research question or finding to available inputs, expected outputs, tools, skills, workflow logic, evidence snippets, missing information, and an evaluation strategy.",
+  "task_id": "task_001",
+  "task_inputs": [],
+  "task_kind": null,
+  "task_objective": "",
+  "task_outputs": [],
+  "techniques": [
+    "in-silico-fragmentation",
+    "machine-learning",
+    "metabolite-identification",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct and evaluate a paper-grounded scientific task",
+  "tools": [
+    "SIRIUS",
+    "CSI:FingerID",
+    "CANOPUS",
+    "MSNovelist",
+    "GitHub"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by deterministic heuristics and needs scientific expert review.",
+    "Workflow steps are descriptive only; no scientific workflow was executed.",
+    "PDFs, images, notebooks, archives, and unknown file types are referenced but not deeply parsed."
+  ],
+  "workflow_description": "*<span style=\"color: #808080;\">Our methods are offered to the scientific community as freely available resources. (Re-)distribution of the methods, in whole or in part, for commercial purposes is prohibited."
+}

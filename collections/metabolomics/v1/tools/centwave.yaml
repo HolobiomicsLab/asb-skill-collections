@@ -1,0 +1,8 @@
+name: Centwave
+slug: centwave
+derived_from:
+- doi: 10.1021/acs.analchem.1c02687
+  title: 'SLAW: A Scalable and Self-Optimizing Processing Workflow for Untargeted LC-MS'
+source_repos:
+- adelabriere/SLAW
+schema_version: 0.2.0

@@ -1,0 +1,291 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "research-article",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/enpkg/enpkg_full",
+      "locator_id": "gh_enpkg_enpkg_full",
+      "locator_kind": "github",
+      "name": "enpkg/enpkg_full",
+      "prose": "enpkg/enpkg_full GitHub repository URL",
+      "score": 0.4,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "2c826cc206cc0d080faa727439138ceb3b38c2de76804c39047c5c2770307dcc"
+    }
+  ],
+  "created_at": "2026-06-15T21:43:52.866079+00:00",
+  "crossref_doi": "10.1021/acscentsci.3c00800",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "enpkg/enpkg_full GitHub repository URL",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Installed conda environment with all ENPKG dependencies at pinned versions",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Environment verification report listing all installed packages and versions",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "ENPKG is a computational framework for natural products drug discovery that requires coordinated installation of multiple interdependent Python packages and external tools.",
+    "Conda environments use pinned version specifications (via environment.yml) to ensure reproducibility across different systems and over time.",
+    "The enpkg_full repository is the canonical source for the complete ENPKG workflow implementation and its authoritative dependency manifest.",
+    "Environment verification must confirm both package presence and version correctness, as API changes between minor versions can break downstream workflows."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify file exists: environment.yml or conda specification file in github:enpkg__enpkg_full root or docs/ directory",
+      "Verify file exists: requirements.txt or setup.py or pyproject.toml in github:enpkg__enpkg_full root",
+      "Verify file_format_is: conda environment specification (YAML or JSON) parses without syntax errors",
+      "Verify script_runs: conda env create -f [environment_spec] completes without unresolved dependency conflicts",
+      "Verify script_runs: pip install -r [requirements_file] completes without version resolution errors",
+      "Verify file_exists: environment lock file (conda-lock.yml, poetry.lock, or Pipfile.lock) documenting pinned transitive dependencies",
+      "Verify contains_substring: environment specification includes Python version constraint (e.g., 'python=3.x' or 'python>=3.x')",
+      "Verify contains_substring: environment specification lists all top-level dependencies named in ENPKG documentation or source imports"
+    ],
+    "expert_review": [
+      "Assess completeness: do all declared dependencies in the specification match actual package imports in enpkg_full source code (no missing transitive deps that would cause import failures)?",
+      "Assess reproducibility: will the specified environment (with pinned versions where present) rebuild consistently across different systems and installation dates?",
+      "Assess documentation alignment: do installation instructions in README or docs match the environment specification provided (no contradictions or outdated step descriptions)?"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the conda and pip dependencies and installation procedures required to establish a functional ENPKG environment?: 'This guide will walk you through the installation, setup, and execution of the ENPKG full workflow.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The ENPKG full workflow guide covers installation and setup procedures as part of a structured workflow process.: 'This guide will walk you through the installation, setup, and execution of the ENPKG full workflow.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] enpkg/enpkg_full GitHub repository URL: 'github.com/enpkg/enpkg_full'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Installed conda environment with all ENPKG dependencies at pinned versions: 'installation, setup, and execution of the ENPKG full workflow'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Environment verification report listing all installed packages and versions: 'installation, setup, and execution of the ENPKG full workflow'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ENPKG: 'Welcome to the ENPKG Full Workflow!'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history log found documenting environment dependency changes across releases: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 1200,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "env_verification_report.txt",
+  "expected_outputs": [
+    "Installed conda environment with all ENPKG dependencies at pinned versions",
+    "Environment verification report listing all installed packages and versions"
+  ],
+  "finding": "The ENPKG full workflow guide covers installation and setup procedures as part of a structured workflow process.",
+  "github_name": "enpkg/enpkg_workflow",
+  "input_from": null,
+  "inputs": [
+    "enpkg/enpkg_full GitHub repository URL"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "environment.yml",
+    "conda_env_packages.txt",
+    "pip_freeze_output.txt"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Clone the enpkg/enpkg_full repository to a local working directory.",
+    "Extract the conda environment specification (environment.yml or equivalent) from the repository.",
+    "Create and activate a new conda environment using the declared dependency manifest.",
+    "Install all pinned Python packages and external dependencies via conda and pip.",
+    "Validation: Verify all declared packages are present at the correct pinned versions and that core ENPKG modules can be imported without error.",
+    "References: source article (DOI: 10.1021/acscentsci.3c00800)"
+  ],
+  "missing_information": [
+    "No changelog or version history log found documenting environment dependency changes across releases"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the conda and pip dependencies and installation procedures required to establish a functional ENPKG environment?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "conda-environment-creation-and-management",
+    "python-dependency-resolution-and-pinning",
+    "repository-cloning-and-structure-navigation",
+    "environment-validation-and-verification",
+    "package-version-compatibility-checking"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_enpkg/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "enpkg_full_system"
+  ],
+  "subdomains": [
+    "natural-products",
+    "artificial-intelligence",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:enpkg__enpkg_full",
+  "task_description": "Reconstruct and verify the conda/pip environment for the ENPKG full workflow by installing all declared dependencies, producing a validated and reproducible computational runtime.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "enpkg/enpkg_full GitHub repository URL",
+      "port_id": "repo_url",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Document and verify the complete conda/pip environment specification and dependency installation steps for ENPKG, ensuring a reproducible, runnable installation.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Installed conda environment",
+      "port_id": "conda_env",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Environment verification report",
+      "port_id": "env_verification",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "database-annotation",
+    "dereplication",
+    "molecular-networking",
+    "deep-learning",
+    "in-silico-fragmentation"
+  ],
+  "title": "Reconstruct the ENPKG full workflow installation and environment setup",
+  "tools": [
+    "ENPKG"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Installed conda environment with all ENPKG dependencies at pinned versions, Environment verification report listing all installed packages and versions."
+  ],
+  "workflow_description": "1. Clone the enpkg/enpkg_full repository from GitHub. 2. Locate and parse the conda environment specification file (environment.yml or requirements.txt) at the repository root or setup documentation. 3. Create a fresh conda environment using the declared specification and pinned dependency versions. 4. Install all Python packages via conda and/or pip as specified in the dependency manifest. 5. Verify environment integrity by checking that all declared packages are installed at the correct versions using conda list and pip show. 6. Validate the environment by running a lightweight test import or diagnostic script that exercises core ENPKG modules."
+}

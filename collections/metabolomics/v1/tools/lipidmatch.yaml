@@ -1,0 +1,10 @@
+name: LipidMatch
+slug: lipidmatch
+evidence_spans:
+- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
+derived_from:
+- doi: 10.1186/s12859-017-1744-3
+  title: lipidmatch
+source_repos:
+- GarrettLab-UF/LipidMatch
+schema_version: 0.2.0

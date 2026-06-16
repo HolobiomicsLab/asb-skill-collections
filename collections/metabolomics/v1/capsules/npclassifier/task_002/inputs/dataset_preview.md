@@ -1,0 +1,74 @@
+### `paper.md`
+```
+# mwang87__NP-Classifier
+
+## Introduction
+
+## NP Classifier
+
+![production-integration](https://github.com/mwang87/NP-Classifier/workflows/production-integration/badge.svg)
+
+We typically will deploy this locally. To bring everything up, 
+you need docker and docker-compose.
+
+### Local Server
+
+#### Downloading NP Classifier Models
+
+```
+cd Classifier/models_folder/models
+sh ./get_models.sh
+```
+NOTE: Make sure you have python installed and tensorflow version 2.3.0 installed to convert the keras models into HDF5 TF2 models.  
+
+#### Building Dockerized Server
+
+If you didn't do it already, you will need a network.
+
+```shell
+docker network create nginx-net
+```
+
+```shell
+make server-compose
+```
+
+### Checking Model Metadata
+
+We pass through tensorflow serving at this url:
+
+```/model/metadata```
+
+If the model input names change, then we need to change it in the code
+
+### Checking input/output layer names.
+Input layers' names should be "input_2048" and "input_4096"
+
+Output layer's name should be "output"
+
+### APIs
+
+Classify programmatically 
+
+```/classify?smiles=<>```
+
+You can also provide cached flag to the params to get the cached version so make it faster
+
+
+## Methods
+
+_No usage/docs found._
+
+## Results
+
+_No examples found._
+
+## Discussion
+
+_No changelog found._
+
+## References
+
+- Source: github:mwang87__NP-Classifier
+- Synthesized at: 2026-06-16T07:06:25+00:00
+```

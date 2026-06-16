@@ -1,0 +1,529 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Lib2NIST_configuration.png",
+      "role": "figure",
+      "sha256": "7d086035ff252e4a8649842bac3d761953850edc9f49a5e52785fb2a258d3b0d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Lib2NIST_define_subset.png",
+      "role": "figure",
+      "sha256": "b81482ceef988d0afe81dc5b0652569e012b9d63cbb9cc4899772f090281750b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/check_number_of_spectra_nist.png",
+      "role": "figure",
+      "sha256": "2f690e0650c5915ec79875a6b3b15a1c5ae3e05ddf4c1b3b43f6f06354e475bd"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "07b08b2cbf191113d234f9369ca97922b48747e137841e7bdb6fa38cc99a6dc0"
+    }
+  ],
+  "created_at": "2026-06-15T13:31:46.023986+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NIST EI library MSP file exported from Lib2NIST",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NIST.MOL folder containing MOL structure files corresponding to NIST library",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "RIKEN EI library MSP file with Kovats RI",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MoNA GC-MS Spectra MSP file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SWGDRUG EI library NIST format (converted to MSP via Lib2NIST) and Agilent format (converted to MOL folder)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NIST ri.dat and USER.DBU files containing experimental RI data",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Combined EI mass spectral library MSP file containing merged records from all four source libraries with SMILES and Kovats RI annotations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "EI (electron ionization) libraries are typically distributed in vendor-specific formats (NIST, Agilent) and must be converted to unified MSP (MASCOT Search Format) for use in open-source tools like MS-DIAL.",
+    "Kovats Retention Index (RI) is a normalized GC retention metric; capillary GC columns are standard, and RI values from different column polarities (non-polar, semi-polar, polar) are not interchangeable.",
+    "SMILES (Simplified Molecular Input Line Entry System) are stored in MOL/SDF files but may need extraction and remapping; InChIKey provides an alternative stable identifier for structure matching across sources.",
+    "When combining multiple curated libraries (NIST, RIKEN, MoNA, SWGDRUG), duplicate or near-duplicate spectra can occur; filtering by RI standard deviation (threshold: SD < 30) reduces spurious or outdated records.",
+    "Parallel computation using future/future.apply is essential for processing NIST libraries, which contain tens of thousands of spectra and MOL files; single-threaded processing can take hours."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that mspcompiler package exists in github:QizhiSu/mspcompiler repository",
+      "verify file_exists for core function definitions: read_lib, read_multilibs, assign_smiles, assign_ri, write_EI_msp in the package source code",
+      "script_runs: load mspcompiler library in R and confirm all five core functions are callable without error",
+      "verify documentation or inline comments describe the ARCH_EI_PIPELINE orchestrator or equivalent fixed control-flow pipeline",
+      "verify write_EI_msp function accepts combined library object and outputs a file with .msp extension"
+    ],
+    "expert_review": [
+      "assess whether the documented pipeline control flow (load via read_lib/read_multilibs \u2192 assign_smiles \u2192 assign_ri \u2192 combine \u2192 write_EI_msp) is complete and free of unspecified intermediate steps or missing transformations",
+      "confirm that the pipeline handles all four library sources (NIST, MoNA, RIKEN, SWGDRUG) as claimed in the scope statement, or identify which sources are actually supported",
+      "review whether assign_ri function correctly assigns Kovats RI values and integrates experimental RI extracted from NIST files, as the scope implies"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the orchestrated sequence of operations for compiling EI mass spectral libraries from multiple sources (NIST, MoNA, RIKEN, SWGDRUG) into a single MSP file in mspcompiler?: 'compile either EI or tandem mass spectral libraries from various sources, such as NIST (if you have it installed), MoNA, and GPNS, and organize them into a neat and up-to-date msp file that can be'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The mspcompiler EI pipeline loads libraries via read_lib or read_multilibs, assigns SMILES structures via assign_smiles, assigns Kovats retention indices via assign_ri, combines the processed libraries, and writes the consolidated result to a single MSP file via write_EI_msp for use in MS-DIAL.: 'compile either EI or tandem mass spectral libraries from various sources, such as NIST (if you have it installed), MoNA, and GPNS, and organize them into a neat and up-to-date msp file that can be'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NIST EI library MSP file exported from Lib2NIST: 'Once you have the \\*.MSP file and the correspondent \\*.MOL folder exported'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NIST.MOL folder containing MOL structure files corresponding to NIST library: 'Once you have the \\*.MSP file and the correspondent \\*.MOL folder exported'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] RIKEN EI library MSP file with Kovats RI: 'Please download \"All records with Kovats RI...EI-MS...\" As it contains Kovats RI'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MoNA GC-MS Spectra MSP file: 'Please download \"GC-MS Spectra\" in \"MSP\" form'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SWGDRUG EI library NIST format (converted to MSP via Lib2NIST) and Agilent format (converted to MOL folder): 'please download both **NIST Format** and **Agilent Format**. Then use *Lib2NIST* to convert'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NIST ri.dat and USER.DBU files containing experimental RI data: 'Extract experimental RI from the \"ri.dat\" and \"USER.DBU\" files. Once you have NIST library installed, these files can be found in, for example, \"~/Programs/nist14/mssearch/nist_ri\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Combined EI mass spectral library MSP file containing merged records from all four source libraries with SMILES and Kovats RI annotations: 'write_EI_msp(combine_ei, \"/D:MS_libraries/combine_ei.msp\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mspcompiler: 'library(mspcompiler)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'library(mspcompiler)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] future: 'library(future)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] future.apply: 'library(future.apply)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] parallel: 'library(parallel)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Lib2NIST: 'you can transformed it into a msp file by *Lib2NIST*'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MS-DIAL: 'MS-DIAL friendly msp file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NIST: 'NIST is the most commonly used **commercial** EI library'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MoNA: 'The MassBank of North America (MoNA) has an EI library available'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] RIKEN: 'The MS-DIAL developers have compiled an EI library with Kovat RI included'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_020",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "R",
+      "--slave",
+      "-e",
+      "library(mspcompiler); nist <- read_msp('{inputs.nist_msp}'); nist_mol <- read_mol_folder('{inputs.nist_mol_folder}'); nist <- assign_smiles(nist, nist_mol); nist_ri <- read_ri_files('{inputs.nist_ri_files}'); nist <- assign_ri(nist, nist_ri); riken <- read_msp('{inputs.riken_msp}'); mona <- read_msp('{inputs.mona_msp}'); swgdrug <- read_msp('{inputs.swgdrug_msp}'); swgdrug_mol <- read_mol_folder('{inputs.swgdrug_mol_folder}'); swgdrug <- assign_smiles(swgdrug, swgdrug_mol); combined <- c(nist, riken, mona, swgdrug); write_msp(combined, 'combined_ei_library.msp')"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [
+      "NIST",
+      "Lib2NIST"
+    ],
+    "compute_tier": "heavy",
+    "open_source_alternatives": [
+      {
+        "closed": "NIST library (proprietary commercial database)",
+        "expected_divergence": "",
+        "oss": "RIKEN, MoNA, SWGDRUG (open-access spectral libraries)"
+      }
+    ]
+  },
+  "expected_artifact_name": "combine_ei.msp",
+  "expected_outputs": [
+    "Combined EI mass spectral library MSP file containing merged records from all four source libraries with SMILES and Kovats RI annotations"
+  ],
+  "finding": "The mspcompiler EI pipeline loads libraries via read_lib or read_multilibs, assigns SMILES structures via assign_smiles, assigns Kovats retention indices via assign_ri, combines the processed libraries, and writes the consolidated result to a single MSP file via write_EI_msp for use in MS-DIAL.",
+  "github_name": "QizhiSu/mspcompiler",
+  "input_from": null,
+  "inputs": [
+    "NIST EI library MSP file exported from Lib2NIST",
+    "NIST.MOL folder containing MOL structure files corresponding to NIST library",
+    "RIKEN EI library MSP file with Kovats RI",
+    "MoNA GC-MS Spectra MSP file",
+    "SWGDRUG EI library NIST format (converted to MSP via Lib2NIST) and Agilent format (converted to MOL folder)",
+    "NIST ri.dat and USER.DBU files containing experimental RI data"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "nist.sdf",
+    "nist_structure.txt",
+    "swgdrug.sdf",
+    "swgdrug_structure.txt",
+    "nist_ri_extracted.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_009",
+    "result_011",
+    "result_012",
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_020",
+    "result_028",
+    "result_033",
+    "result_036"
+  ],
+  "methodology_summary": [
+    "Load and parse four EI libraries (NIST, RIKEN, MoNA, SWGDRUG) from MSP and SDF formats into R objects.",
+    "Extract and assign chemical structure annotations (SMILES) from MOL/SDF files, handling library-specific metadata fields (e.g., MoNA Comment field).",
+    "Retrieve and assign experimental Kovats RI values from NIST reference files, filtering for capillary GC columns and median RI with SD < 30.",
+    "Merge all four annotated libraries into a single combined object using concatenation.",
+    "Validate merged library completeness and write output as MS-DIAL\u2013compatible MSP file."
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the orchestrated sequence of operations for compiling EI mass spectral libraries from multiple sources (NIST, MoNA, RIKEN, SWGDRUG) into a single MSP file in mspcompiler?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "spectral-library-compilation-and-merging",
+    "smiles-structure-annotation-from-molfiles",
+    "retention-index-assignment-and-filtering",
+    "mass-spectral-metadata-harmonization",
+    "msp-file-format-handling-and-validation",
+    "parallel-computation-for-large-library-processing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mspcompiler/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_MSPCOMPILER",
+    "TOOL_READ_LIB",
+    "TOOL_COMBINE_MOL2SDF",
+    "TOOL_ASSIGN_SMILES",
+    "TOOL_ASSIGN_RI",
+    "TOOL_REORGANIZE_MONA",
+    "TOOL_READ_MULTILIBS",
+    "TOOL_WRITE_EI_MSP",
+    "TOOL_WRITE_MS2_MSP",
+    "DS_NIST_EI",
+    "DS_RIKEN_EI",
+    "DS_MONA_EI",
+    "DS_SWGDRUG_EI",
+    "DS_NIST_MS2",
+    "DS_RIKEN_MS2",
+    "DS_MONA_MS2",
+    "DS_GNPS_MS2",
+    "ARCH_EI_PIPELINE",
+    "ARCH_MS2_PIPELINE",
+    "COMP_KOVATS_RI"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:QizhiSu__mspcompiler",
+  "task_description": "Compile four EI mass spectral libraries (NIST, RIKEN, MoNA, SWGDRUG) into a single, structure-annotated combined library with Kovats RI assignments, and write the result as an MS-DIAL\u2013compatible MSP file.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NIST EI library MSP file",
+      "port_id": "nist_msp",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NIST.MOL folder with structure files",
+      "port_id": "nist_mol_folder",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "RIKEN EI library MSP file",
+      "port_id": "riken_msp",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MoNA GC-MS Spectra MSP file",
+      "port_id": "mona_msp",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SWGDRUG EI library MSP file",
+      "port_id": "swgdrug_msp",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SWGDRUG.MOL folder with structure files",
+      "port_id": "swgdrug_mol_folder",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NIST ri.dat and USER.DBU files",
+      "port_id": "nist_ri_files",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the complete EI library compilation pipeline orchestrator that loads multi-source spectral libraries, enriches them with SMILES and retention indices, and outputs a unified MSP file.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Combined EI library MSP file with SMILES and RI",
+      "port_id": "combined_ei_msp",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "gc-ms",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct the EI Library Compilation Pipeline (read \u2192 assign SMILES \u2192 assign RI \u2192 combine \u2192 write MSP)",
+  "tools": [
+    "mspcompiler",
+    "R",
+    "future",
+    "future.apply",
+    "parallel",
+    "Lib2NIST",
+    "MS-DIAL",
+    "NIST",
+    "MoNA",
+    "RIKEN"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: future, future.apply, parallel, Lib2NIST, NIST, MoNA, Combined EI mass spectral library MSP file containing merged records from all four source libraries with SMILES and Kovats RI annotations."
+  ],
+  "workflow_description": "1. Load NIST EI library MSP file using read_lib() with type='EI'; convert NIST.MOL folder to SDF format using combine_mol2sdf(); extract chemical structures from SDF using extract_structure(); assign SMILES to library using assign_smiles() with match='name' parameter. 2. Load RIKEN EI library using read_lib() with type='EI' and remove_ri=FALSE to retain Kovats RI. 3. Load MoNA EI library using read_lib() with type='EI'; reorganize SMILES from Comment field using reorganize_mona(). 4. Load SWGDRUG EI library using read_lib() with type='EI'; convert SWGDRUG.MOL folder to SDF using combine_mol2sdf(); extract structures using extract_structure(); assign SMILES using assign_smiles() with match='name'. 5. Combine all four libraries using c() operator; extract experimental RI data from NIST ri.dat and USER.DBU files using extract_ri(); assign RI to combined library using assign_ri() with polarity='semi-polar', filtering for capillary GC columns only and retaining median RI when standard deviation < 30. 6. Write combined library to MSP file using write_EI_msp(). Validation: output file exists in MSP format with all four source libraries merged, SMILES and RI fields populated for eligible compounds, and no structural duplicates across sources."
+}

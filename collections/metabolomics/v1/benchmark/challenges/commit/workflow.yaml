@@ -1,0 +1,86 @@
+schema_version: 0.1.0
+workflow_id: coll_commit_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: COMMIT is a method that generates consensus metabolic reconstructions and
+    performs community-dependent gap-filling for microbial communities sampled from
+    Arabidopsis thaliana.
+  pseudo_abstract: COMMIT implements two interconnected mechanisms for analyzing microbial
+    communities associated with Arabidopsis thaliana. First, it generates consensus
+    metabolic reconstructions for community members by synthesizing metabolic information
+    across the community. Second, it incorporates a community-dependent gap-filling
+    module that operates on these consensus reconstructions, leveraging shared metabolic
+    context across the community to identify and fill metabolic gaps that individual
+    reconstructions might miss.
+  research_questions:
+  - How does COMMIT generate a single consensus metabolic reconstruction from multiple
+    draft reconstructions of organisms in a microbial community?
+  - How does COMMIT's community-dependent gap-filling procedure use metabolic context
+    from multiple community members to fill gaps in individual consensus reconstructions?
+  methods_summary: 'Load draft metabolic reconstructions for all community member
+    organisms Apply COMMIT consensus algorithm to identify metabolic reactions and
+    metabolites conserved across all input reconstructions per organism Generate consensus
+    metabolic reconstruction containing only agreed-upon reactions and metabolites
+    for each organism Load consensus metabolic models for all community members from
+    prior reconstruction step Initialize COMMIT gap-filling module with community
+    context specification and identified metabolic gaps Execute community-dependent
+    gap-filling algorithm to propose reactions filling gaps using inter-member metabolic
+    dependencies Validate proposed reactions against plant metabolism knowledge and
+    community exchange requirements Validation: Gap-filled models are accepted when
+    all identified gaps have corresponding proposed reactions ranked by confidence,
+    and validation checks confirm consistency with Arabidopsis thaliana metabolism'
+  domain: metabolomics
+  techniques:
+  - flux-analysis
+  - pathway-analysis
+  - multi-omics-integration
+  claims:
+  - claim_text: COMMIT is a tool for generation of consensus metabolic reconstructions
+      and community-dependent gap-filling.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_COMMIT
+  - claim_text: The work applies COMMIT to communities sampled from Arabidopsis thaliana.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_COMMIT
+  - claim_text: The research is sourced from the github repository pwendering__COMMIT.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_COMMIT
+  - claim_text: The document was synthesized on 2026-06-15T09:49:47+00:00.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: mixed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 2-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Gap-filled metabolic models for each community member with filled reactions
+    annotated
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

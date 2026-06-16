@@ -1,0 +1,393 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "5ec722ce6c7d34157c2dccaf42d8443e6f66ade354f4ae1e31ec86adc0ca483e"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:46.430517+00:00",
+  "crossref_doi": "10.1021/acs.analchem.0c04720",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Preprocessed MSI data matrix in CSV format with m/z values as column headers and pixel intensities as entries",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Built-in adducts reference dataset listing biologically-relevant chemical species (name, formula, mass columns)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mass difference histogram object (massdiffhist class) showing distribution of pairwise m/z differences with labeled peaks for known adducts",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Table of top-ranked mass differences with occurrence counts, quantiles, and matches to known adducts from adductMatch() output",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Annotated massdiff object with added 'matches' column indicating closest-matching adduct for each ion pair",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "An adduct is a molecular ion formed by the addition of a chemical moiety (often matrix or salt ions) to a parent ion during MSI processing, and massdiff values represent the mass differences between parent and adduct ion pairs.",
+    "Mass differences histogram bins exhibit peaks at integer values because most chemical masses are close to integers, creating background noise distinct from meaningful adduct transformations.",
+    "The adductMatch() function performs closest-bin matching in a mass difference histogram, accounting for the fact that mass spectrometer resolution varies with m/z value, unlike fixed-width histogram bins.",
+    "Quantile values from adductMatch() are typically high (close to 1.0) because the majority of observed mass differences have zero to few counts, making even modest peaks represent statistically significant transformations."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that mass2adduct package is installable from github:kbseah__mass2adduct",
+      "verify that built-in datasets 'adducts' and 'adducts2' are accessible via data(adducts) and data(adducts2)",
+      "verify file_exists: extdata/msi.csv is present in package",
+      "script_runs: msimat() successfully loads the CSV file and returns an object of class msimat",
+      "script_runs: massdiff() function executes on msimat object and returns object with classes data.frame and massdiff",
+      "script_runs: hist() method executes on massdiff object and returns object with classes histogram and massdiffhist",
+      "script_runs: adductMatch() function executes on histogram object to annotate known adducts",
+      "script_runs: topAdducts() function executes and produces ranked table of mass differences with adduct matches in descending order by occurrence, robust to dataset size variations",
+      "file_format_is: topAdducts() output is a structured table with at least columns for mass difference values, occurrence counts, and adduct annotations",
+      "value_in_range: all computed mass difference values are positive numbers (masses cannot be negative)",
+      "output_matches_reference: topAdducts() table rows are sorted in descending order by occurrence count"
+    ],
+    "expert_review": [
+      "chemical plausibility of matched adducts: verify that adductMatch() correctly identifies biologically-relevant adducts from the built-in datasets for the test dataset",
+      "appropriateness of mass difference histogram binning: confirm that histogram resolution is adequate to resolve distinct adduct types without over- or under-binning",
+      "correctness of massdiff calculation: verify that pairwise mass differences are computed exhaustively and accurately from the input mass list"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the complete computational workflow for detecting and ranking molecular adducts in mass spectrometry imaging data using the mass2adduct package?: 'This package presents tools for counting and identifying possible adducts in MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] The mass2adduct package implements a pipeline that computes mass difference objects, builds histograms of those differences, matches them to known adducts using adductMatch(), and ranks results with topAdducts() to identify the most abundant adducts.: 'd.diff <- massdiff(d) # Returns object of classes data.frame and massdiff; d.diff.hist <- hist(d.diff); The following function looks for known adducts by finding the closest-matching bin in the mass'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Preprocessed MSI data matrix in CSV format with m/z values as column headers and pixel intensities as entries: 'This should be exported as plain-text CSV files from standard MSI software such as SCiLS or MSiReader.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Built-in adducts reference dataset listing biologically-relevant chemical species (name, formula, mass columns): 'There are two built-in data sets `adducts` and `adducts2` (shorter), which list biologically-relevant chemical species that might occur in biological samples.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Mass difference histogram object (massdiffhist class) showing distribution of pairwise m/z differences with labeled peaks for known adducts: 'd.diff.hist <- hist(d.diff) # Object of classes histogram and massdiffhist'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Table of top-ranked mass differences with occurrence counts, quantiles, and matches to known adducts from adductMatch() output: 'The following function looks for known adducts by finding the closest-matching bin in the mass difference histogram produced above. It reports the number of counts (i.e. how many pairs of MS peaks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Annotated massdiff object with added 'matches' column indicating closest-matching adduct for each ion pair: 'We can match massdiffs to specific adduct types using the same function `adductMatch` that we applied to the histogram above. This adds an additional column to the `massdiff` object called `matches`,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mass2adduct: 'This package presents tools for counting and identifying possible adducts in MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'library(mass2adduct)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history documented: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific package version or commit hash for reproducibility: 'Source: github:kbseah__mass2adduct'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mass2adduct); msi <- read.csv('{inputs.msi_csv}', row.names=1); adducts_ref <- read.csv('{inputs.adducts_ref}'); md <- massdiff(msi); mdh <- hist(md); matches <- adductMatch(md, adducts_ref); ranked <- topAdducts(matches); saveRDS(md, 'massdiff_annotated.rds'); write.csv(ranked, 'ranked_adducts.csv', row.names=FALSE); pdf('massdiff_histogram.pdf'); plot(mdh); dev.off(); cat('Pipeline complete: massdiff_annotated.rds, ranked_adducts.csv, massdiff_histogram.pdf\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "topAdducts_ranked_table.csv",
+  "expected_outputs": [
+    "Mass difference histogram object (massdiffhist class) showing distribution of pairwise m/z differences with labeled peaks for known adducts",
+    "Table of top-ranked mass differences with occurrence counts, quantiles, and matches to known adducts from adductMatch() output",
+    "Annotated massdiff object with added 'matches' column indicating closest-matching adduct for each ion pair"
+  ],
+  "finding": "The mass2adduct package implements a pipeline that computes mass difference objects, builds histograms of those differences, matches them to known adducts using adductMatch(), and ranks results with topAdducts() to identify the most abundant adducts.",
+  "github_name": "kbseah/mass2adduct",
+  "input_from": null,
+  "inputs": [
+    "Preprocessed MSI data matrix in CSV format with m/z values as column headers and pixel intensities as entries",
+    "Built-in adducts reference dataset listing biologically-relevant chemical species (name, formula, mass columns)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "massdiff_object.rds",
+    "massdiff_histogram.png",
+    "adductMatch_results.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_020",
+    "result_025",
+    "result_026",
+    "result_027",
+    "result_028",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_034"
+  ],
+  "methodology_summary": [
+    "Load preprocessed MSI data from CSV into msimat object",
+    "Compute all pairwise mass differences using massdiff() to identify potential adduct pairs",
+    "Generate mass difference histogram using hist() to visualize distribution of observed mass differences",
+    "Match histogram peaks to known chemical transformations using adductMatch() with adducts reference dataset, reporting counts and quantiles",
+    "Rank mass differences by occurrence using topAdducts() and annotate with known adduct matches",
+    "Validation: Verify that topAdducts() output includes counts, quantiles, and adduct name matches for top-ranked mass differences; confirm massdiff object subset excludes ion pairs without matched adducts",
+    "References: source article (DOI: 10.1021/acs.analchem.0c04720)"
+  ],
+  "missing_information": [
+    "No changelog or version history documented",
+    "Specific package version or commit hash for reproducibility"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the complete computational workflow for detecting and ranking molecular adducts in mass spectrometry imaging data using the mass2adduct package?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "mass-spectrometry-peak-pair-analysis",
+    "adduct-mass-difference-matching",
+    "mass-spectrum-histogram-interpretation",
+    "chemical-transformation-annotation",
+    "spatial-correlation-assessment-in-imaging-mass-spectrometry"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mass2adduct/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_MASS2ADDUCT",
+    "COMP_MASSDIFF_OBJ",
+    "COMP_ADDUCTS_DATASET",
+    "COMP_ADDUCTS2_DATASET",
+    "TOOL_MASSDIFF_FN",
+    "TOOL_ADDUCTMATCH",
+    "TOOL_TOPADDUCTS",
+    "CONCEPT_MASSDIFF",
+    "CONCEPT_NA_ADDUCT",
+    "ARCH_WORKFLOW",
+    "RES_INTEGER_BACKGROUND",
+    "RES_ADDUCT_PARENT_OVERLAP"
+  ],
+  "subdomains": [
+    "spatial-metabolomics",
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:kbseah__mass2adduct",
+  "task_description": "Execute the full mass2adduct analysis pipeline on preprocessed MSI data: compute pairwise mass differences, generate a mass difference histogram, annotate known adducts using the built-in adducts/adducts2 reference datasets, and produce a ranked table of top mass differences with adduct matches. Output the annotated massdiff object and ranked adducts summary table.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Preprocessed MSI data matrix in CSV format",
+      "port_id": "msi_csv",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Built-in adducts reference dataset",
+      "port_id": "adducts_ref",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the complete mass2adduct analysis pipeline end-to-end: compute massdiff objects, generate histograms, apply adductMatch() annotation, and produce a ranked topAdducts() table of known adducts.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mass difference histogram with known adduct annotations",
+      "port_id": "massdiff_histogram",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ranked table of top mass differences with adduct matches",
+      "port_id": "top_adducts_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Annotated massdiff object with adduct matches per ion pair",
+      "port_id": "annotated_massdiff",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "adduct-detection",
+    "mass-spectrometry-imaging",
+    "maldi",
+    "metabolite-identification",
+    "feature-detection"
+  ],
+  "title": "Reproduce adduct identification and ranking from built-in mass spectrometry imaging datasets",
+  "tools": [
+    "mass2adduct",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Mass difference histogram object (massdiffhist class) showing distribution of pairwise m/z differences with labeled peaks for known adducts, Table of top-ranked mass differences with occurrence counts, quantiles, and matches to known adducts from adductMatch() output, Annotated massdiff object with added 'matches' column indicating closest-matching adduct for each ion pair."
+  ],
+  "workflow_description": "1. Load preprocessed MSI data from CSV into an msimat object using the msimat() function with appropriate file path and delimiter (sep=';'). 2. Compute all pairwise mass differences between peaks using massdiff() to generate a data.frame with parent ion (A), adduct ion (B), and mass difference (diff) columns. 3. Create a mass difference histogram using hist() on the massdiff object to identify peaks representing common chemical transformations. 4. Apply adductMatch() to the histogram with the built-in adducts or adducts2 reference dataset to match observed mass differences to known chemical species, reporting counts and quantile values. 5. Apply topAdducts() to rank the histogram mass differences by occurrence in descending order and report matches to known adducts for the top n peaks (default or user-specified). 6. Optionally apply adductMatch() directly to the massdiff object to annotate individual ion pairs and produce a filtered massdiff object containing only pairs with adduct matches."
+}

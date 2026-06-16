@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:HinesLab__MOCCal repository is accessible and contains calibration data templates and example data files"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for calibration template file(s) in the MOCCal repository root or designated calibration/ subdirectory"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for example arrival-time data file(s) in the MOCCal repository"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: confirm that CCS values produced by the calibration transform are numeric, non-negative, and within physically plausible range for biomolecules (typically 50\u2013500 \u0172)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:HinesLab__MOCCal repository is accessible and contains calibration data templates and example data files",
+      "verify file_exists for calibration template file(s) in the MOCCal repository root or designated calibration/ subdirectory",
+      "verify file_exists for example arrival-time data file(s) in the MOCCal repository",
+      "script_runs: execute MOCCal calibration module with example arrival-time data and calibration template as inputs without errors",
+      "verify output_matches_reference: confirm that CCS values produced by the calibration transform are numeric, non-negative, and within physically plausible range for biomolecules (typically 50\u2013500 \u0172)"
+    ],
+    "expert_review": [
+      "assess whether the calibration transform correctly converts TWIM arrival-time values to CCS values according to the underlying ion-mobility physics (requires domain expertise in mass spectrometry and ion-mobility separation)",
+      "evaluate whether the produced CCS values are consistent with known reference compounds or literature values for the biomolecular classes being calibrated"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

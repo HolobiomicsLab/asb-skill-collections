@@ -1,0 +1,604 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b8f14457916bad741d32924527054213ac940e85ead0b0c2ae0a920cfa2ca3c9"
+    }
+  ],
+  "created_at": "2026-06-15T18:27:16.217915+00:00",
+  "crossref_doi": "10.1038/nmeth.4197",
+  "data_accessions": [
+    {
+      "accession": "ERR458493",
+      "evidence_span": "tion correctly) was right all along.  ## Dataset  - Reads: `ERR458493` (Gierli\u0144ski/Schurch *S. cerevisiae* benchmark),   1,093,95",
+      "kind": "sra_run",
+      "url": "https://www.ncbi.nlm.nih.gov/sra/?term=ERR458493"
+    },
+    {
+      "accession": "ERR188044",
+      "evidence_span": "set), so the only variable is the mapper. Reads: GEUVADIS `ERR188044` (36.35M 76bp PE); default selective alignment, `-l A`, no",
+      "kind": "sra_run",
+      "url": "https://www.ncbi.nlm.nih.gov/sra/?term=ERR188044"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GEUVADIS ERR188044 paired-end reads (36.35M reads, 76 bp)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GRCh38 cDNA reference (193,759 transcripts after deterministic N-replacement and cleaning)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "salmon 2.0 (Rust implementation)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "C++ salmon 1.12.0",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NumReads Pearson correlation coefficient between salmon 2.0 and C++ 1.12.0 (target: 0.99854)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "TPM Pearson correlation coefficient between salmon 2.0 and C++ 1.12.0 (target: 0.99897)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Total assigned NumReads difference as percentage (target: \u22120.19%)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Per-read mapping agreement percentage (target: 99.83%)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparison table with salmon 2.0 and C++ 1.12.0 metrics and per-read disagreement details",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Selective alignment is the default mode in salmon 2.0 (Rust); it performs k-mer-based pseudoalignment with full Smith-Waterman alignment for candidate chains, unlike pure pseudoalignment or mapping.",
+    "Chain-pruning thresholds (orphanChainSubThresh and postMergeChainSubThresh) differ by design between C++ salmon 1.12.0 (0.95 and 0.9 for speed) and salmon 2.0 Rust default (0.0 to align all candidates), causing ~80% of the ~62.8k per-read disagreement on this dataset.",
+    "Per-read mapping agreement must be computed on fully-unmapped reads only (coded 'u' in unmapped_names.txt), not the entire file, because salmon's unmapped_names.txt includes orphan-halves and decoy reads which are not comparable to the Rust port's u-only output.",
+    "Pearson correlations for NumReads and TPM should reach \u22650.998 on a byte-identical index with selective alignment; lower correlations (<0.99) suggest index differences, not mapping differences.",
+    "The index format changed in salmon 2.0 (Rust rewrite), requiring separate index builds from the same reference; byte-identity is achieved only if the same cleaned FASTA (deterministic non-ACGT handling) and identical parameters (e.g., k-mer length, decoy sequences) are used."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: salmon 2.0.0 binary (Rust implementation) available from COMBINE-lab/salmon repository releases or cargo install",
+      "file_exists: salmon 1.12.0 binary (C++ implementation) available from COMBINE-lab/salmon cpp branch or salmon-cpp conda package",
+      "file_exists: GEUVADIS ERR188044 dataset (36.35M 76bp paired-end reads) retrievable from ENA/SRA public repository",
+      "file_exists: GRCh38 cDNA reference index (or source transcriptome FASTA) available for index construction",
+      "script_runs: `salmon index` command (both versions) executes without error on GRCh38 cDNA transcriptome with default k-mer length and parameters",
+      "script_runs: `salmon quant` command (both versions) executes in selective-alignment mode on ERR188044 reads against respective indices without error",
+      "file_exists: quant.sf output files generated by both salmon 2.0 and salmon 1.12.0 from same input reads and reference",
+      "file_format_is: quant.sf output files are tab-delimited text with columns Name, Length, EffectiveLength, TPM, NumReads",
+      "value_in_range: NumReads Pearson correlation (per-transcript) between C++ 1.12.0 and Rust 2.0 output equals 0.99854 \u00b1 0.00020 (byte-identical index), robust to rounding precision in correlation calculation",
+      "value_in_range: TPM Pearson correlation (per-transcript) between C++ 1.12.0 and Rust 2.0 output equals 0.99897 \u00b1 0.00020 (byte-identical index), robust to rounding precision in correlation calculation",
+      "value_in_range: total NumReads difference between C++ 1.12.0 and Rust 2.0 equals \u22120.19% \u00b1 0.05% of total mapped reads",
+      "value_in_range: per-read mapping agreement between C++ 1.12.0 and Rust 2.0 (proportion of reads assigned to same transcript or both unmapped) equals 0.9983 \u00b1 0.0005",
+      "output_matches_reference: NumReads vector from quant.sf (Rust) and C++ output correlates with reported Pearson 0.99854 when computed using Pearson correlation formula on transcript-level counts",
+      "output_matches_reference: TPM vector from quant.sf (Rust) and C++ output correlates with reported Pearson 0.99897 when computed on transcript-level abundances"
+    ],
+    "expert_review": [
+      "Verify that the byte-identical index construction (same index format used by both salmon 2.0 and 1.12.0 for fair comparison) is actually achieved: confirm index binaries are identical byte-for-byte or that index format compatibility is explicitly validated before quantification",
+      "Assess whether the reported Pearson correlation thresholds (0.99854, 0.99897) are scientifically appropriate benchmarks for declaring 'agreement' in transcript quantification, or if domain-specific tolerance bounds should be applied",
+      "Evaluate the statistical significance and practical importance of the \u22120.19% total NumReads difference: determine whether this magnitude of difference is negligible for typical downstream inference (e.g., differential expression analysis)",
+      "Review the breakdown of the ~2% per-read mapping difference attributed to orphan/post-merge pruning defaults and symmetric tie-breaks: confirm the qualitative explanation is sufficient or if deeper audit of edge cases is warranted",
+      "Assess representativeness of benchmarking: confirm whether GEUVADIS ERR188044 (76 bp paired-end) and yeast ERR458493 (51 bp single-end) are sufficient to claim general correctness, or if additional read lengths, library types, or datasets should be tested"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How closely do the quantification results (NumReads and TPM) from salmon 2.0 (Rust rewrite) agree with salmon 1.12.0 (C++ version) when run in selective-alignment mode on the same dataset and index?: 'This is salmon 2.0 \u2014 a from-scratch Rust rewrite of salmon. It keeps the same workflow (`salmon index` \u2192 `salmon quant` \u2192 `quant.sf`) and the same output formats downstream tools read'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] On a byte-identical index, salmon 2.0 (Rust) and salmon 1.12.0 (C++) achieve per-transcript Pearson correlations of 0.99854 for NumReads and 0.99897 for TPM, with per-read mapping agreement at 99.83%.: 'NumReads Pearson | 0.99854'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GEUVADIS ERR188044 paired-end reads (36.35M reads, 76 bp): 'Reads: GEUVADIS `ERR188044` (36.35M 76bp PE)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GRCh38 cDNA reference (193,759 transcripts after deterministic N-replacement and cleaning): 'byte-identical index \u2014 both tools' indices built from the same `clean.fa` (deterministic non-ACGT replacement, identical 193,759-transcript set)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] salmon 2.0 (Rust implementation): 'Rust port'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] C++ salmon 1.12.0: 'C++ 1.12.0'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NumReads Pearson correlation coefficient between salmon 2.0 and C++ 1.12.0 (target: 0.99854): '`NumReads` Pearson | **0.99854**'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] TPM Pearson correlation coefficient between salmon 2.0 and C++ 1.12.0 (target: 0.99897): '`TPM` Pearson | **0.99897**'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Total assigned NumReads difference as percentage (target: \u22120.19%): 'total assigned `NumReads` diff | **\u22120.19%**'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Per-read mapping agreement percentage (target: 99.83%): 'per-read mapping agreement | **99.83%**'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Comparison table with salmon 2.0 and C++ 1.12.0 metrics and per-read disagreement details: '| metric | value |'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] salmon 2.0: 'Rust port'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] salmon 1.12.0: 'C++ 1.12.0'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] piscem-rs: 'The Rust port (built on piscem-rs, which derives orientation correctly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Exact Pearson correlation values not reported in discussion section; only approximate value '\u2248 0.999' stated: 'selective-alignment quantification reproduces C++ salmon to per-transcript Pearson \u2248 0.999'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific runtime (wall-clock time) and peak memory consumption for salmon 2.0 vs. 1.12.0 on GEUVADIS ERR188044 not provided; only qualitative statements made: 'index construction is faster, and peak memory is lower'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Details on how per-read mapping agreement (99.83%) is computed, including definition of 'agreement' (e.g., same primary transcript, same chain, or same alignment score tier) not specified: 'per-read mapping agreement 99.83%'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Explanation of what constitutes a 'symmetric tie-break' and how it affects quantification results is referenced but not detailed: 'benign symmetric tie-breaks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Identity and magnitude of the 'one describable orphan/post-merge pruning default that is off-by-default in Rust' not specified in the discussion section: 'one describable orphan/post-merge pruning default that is off-by-default in Rust'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_020",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Methods section does not provide the exact Pearson correlation coefficients for NumReads (0.99854) and TPM (0.99897) cited in discussion; these appear only in a table not shown in the provided text: 'NumReads Pearson | 0.99854'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_021",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No description of whether 'byte-identical index' refers to exact binary equivalence or semantic equivalence of index contents: 'On a byte-identical index, SA quantification agrees at Pearson 0.999'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "set -e; mkdir -p results; salmon index -t {inputs.ref_grch38} -i index_salmon2 -p 8; salmon index -t {inputs.ref_grch38} -i index_salmon1 -p 8; {inputs.salmon_2_0_bin} quant -i index_salmon2 -l A -1 {inputs.reads_geuvadis}_R1.fastq.gz -2 {inputs.reads_geuvadis}_R2.fastq.gz -o quant_salmon2 --noLengthCorrection; {inputs.salmon_1_12_0_bin} quant -i index_salmon1 -l A -1 {inputs.reads_geuvadis}_R1.fastq.gz -2 {inputs.reads_geuvadis}_R2.fastq.gz -o quant_salmon1 --noLengthCorrection; python3 << 'EOFPYTHON' && cat results/comparison_report.txt\nimport pandas as pd\nimport numpy as np\nfrom scipy.stats import pearsonr\n\ndf2 = pd.read_csv('quant_salmon2/quant.sf', sep='\\t')\ndf1 = pd.read_csv('quant_salmon1/quant.sf', sep='\\t')\n\nmerged = df2.merge(df1, on='Name', suffixes=('_rust', '_cpp'))\n\ncorr_numreads, _ = pearsonr(merged['NumReads_rust'], merged['NumReads_cpp'])\ncorr_tpm, _ = pearsonr(merged['TPM_rust'], merged['TPM_cpp'])\n\ntotal_rust = merged['NumReads_rust'].sum()\ntotal_cpp = merged['NumReads_cpp'].sum()\ndiff_pct = ((total_rust - total_cpp) / total_cpp) * 100\n\nwith open('results/comparison_report.txt', 'w') as f:\n    f.write(f'NumReads Pearson Correlation: {corr_numreads:.5f}\\n')\n    f.write(f'TPM Pearson Correlation: {corr_tpm:.5f}\\n')\n    f.write(f'Total NumReads Difference (%): {diff_pct:.2f}\\n')\n    f.write(f'Comparison Summary\\\\n{merged.head(20).to_string()}\\n')\nEOFPYTHON"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "parity_metrics.csv",
+  "expected_outputs": [
+    "NumReads Pearson correlation coefficient between salmon 2.0 and C++ 1.12.0 (target: 0.99854)",
+    "TPM Pearson correlation coefficient between salmon 2.0 and C++ 1.12.0 (target: 0.99897)",
+    "Total assigned NumReads difference as percentage (target: \u22120.19%)",
+    "Per-read mapping agreement percentage (target: 99.83%)",
+    "Comparison table with salmon 2.0 and C++ 1.12.0 metrics and per-read disagreement details"
+  ],
+  "finding": "On a byte-identical index, salmon 2.0 (Rust) and salmon 1.12.0 (C++) achieve per-transcript Pearson correlations of 0.99854 for NumReads and 0.99897 for TPM, with per-read mapping agreement at 99.83%.",
+  "github_name": "COMBINE-lab/salmon",
+  "input_from": null,
+  "inputs": [
+    "GEUVADIS ERR188044 paired-end reads (36.35M reads, 76 bp)",
+    "GRCh38 cDNA reference (193,759 transcripts after deterministic N-replacement and cleaning)",
+    "salmon 2.0 (Rust implementation)",
+    "C++ salmon 1.12.0"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "salmon_2_0_index/",
+    "salmon_1_12_0_index/",
+    "salmon_2_0_quant/quant.sf",
+    "salmon_1_12_0_quant/quant.sf",
+    "correlation_analysis.csv",
+    "per_read_agreement.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_006",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_020",
+    "result_021",
+    "result_022",
+    "result_023",
+    "result_024",
+    "result_038"
+  ],
+  "methodology_summary": [
+    "Prepare a cleaned GRCh38 cDNA FASTA with deterministic non-ACGT replacement to ensure byte-identical indices across both salmon versions.",
+    "Build a selective-alignment index using salmon 2.0 (Rust) with default parameters (k-mer length, threads, no special decoy handling unless documented).",
+    "Build an identical index using C++ salmon 1.12.0 from the same cleaned FASTA with matching parameters.",
+    "Quantify ERR188044 paired-end reads (36.35M, 76 bp) using salmon 2.0 in selective-alignment mode with auto-detect library type (-l A), no bias correction, and Rust-default chain-pruning thresholds (orphanChainSubThresh=0.0, postMergeChainSubThresh=0.0).",
+    "Quantify the same reads using C++ salmon 1.12.0 with identical mapping settings (-l A, no bias) and C++ defaults (orphanChainSubThresh=0.95, postMergeChainSubThresh=0.9).",
+    "Extract NumReads and TPM per transcript from both quant.sf files and compute Pearson correlations; compute total assigned NumReads difference as (Rust total \u2212 C++ total) / C++ total \u00d7 100%.",
+    "Compare unmapped_names.txt files from both runs, extracting only fully-unmapped reads (code 'u'), and compute per-read mapping agreement as the fraction of reads on which both tools agree (mapped or unmapped).",
+    "Validation: Pearson correlations for NumReads and TPM must both exceed 0.998 (reported 0.99854 and 0.99897); per-read mapping agreement must reach \u226599.8% (reported 99.83%); total NumReads difference must stay within \u00b10.5% (reported \u22120.19%).",
+    "References: source article (DOI: 10.1038/nmeth.4197); ERR458493 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR458493); ERR188044 (https://www.ncbi.nlm.nih.gov/sra/?term=ERR188044)"
+  ],
+  "missing_information": [
+    "Exact Pearson correlation values not reported in discussion section; only approximate value '\u2248 0.999' stated",
+    "Specific runtime (wall-clock time) and peak memory consumption for salmon 2.0 vs. 1.12.0 on GEUVADIS ERR188044 not provided; only qualitative statements made",
+    "Details on how per-read mapping agreement (99.83%) is computed, including definition of 'agreement' (e.g., same primary transcript, same chain, or same alignment score tier) not specified",
+    "Explanation of what constitutes a 'symmetric tie-break' and how it affects quantification results is referenced but not detailed",
+    "Identity and magnitude of the 'one describable orphan/post-merge pruning default that is off-by-default in Rust' not specified in the discussion section",
+    "Methods section does not provide the exact Pearson correlation coefficients for NumReads (0.99854) and TPM (0.99897) cited in discussion; these appear only in a table not shown in the provided text",
+    "No description of whether 'byte-identical index' refers to exact binary equivalence or semantic equivalence of index contents"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How closely do the quantification results (NumReads and TPM) from salmon 2.0 (Rust rewrite) agree with salmon 1.12.0 (C++ version) when run in selective-alignment mode on the same dataset and index?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion",
+    "methods"
+  ],
+  "skills": [
+    "rna-seq-quantification-selective-alignment",
+    "transcript-abundance-correlation-analysis",
+    "mapping-agreement-cross-tool-validation",
+    "selective-alignment-parameter-tuning",
+    "paired-end-read-quantification",
+    "index-construction-determinism"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_salmon/synthesized_package",
+  "spine_condition_ids": [
+    "cond_cpp_salmon_before_fix",
+    "cond_rust_port_yeast",
+    "cond_cpp_salmon_after_fix",
+    "cond_simulated_sample_data",
+    "cond_cpp_1_12_0_human",
+    "cond_rust_human_defaults",
+    "cond_rust_human_matched_thresholds",
+    "cond_seed_representation_variants"
+  ],
+  "spine_entity_ids": [
+    "salmon_2_0",
+    "salmon_cpp",
+    "arch_salmon_workflow",
+    "salmon_index_cmd",
+    "salmon_quant_cmd",
+    "salmon_quantmerge_cmd",
+    "sketch_mode",
+    "selective_alignment",
+    "dataset_err188044",
+    "ref_ensembl_r64",
+    "ref_grch38_cdna",
+    "cond_cpp_salmon_before_fix",
+    "cond_rust_port_yeast",
+    "cond_cpp_salmon_after_fix",
+    "cond_cpp_1_12_0_human",
+    "cond_rust_human_defaults",
+    "cond_rust_human_matched_thresholds",
+    "metric_cpp_mapping_rate_before_fix",
+    "metric_rust_mapping_rate_yeast",
+    "metric_cpp_mapping_rate_after_fix",
+    "metric_numreads_pearson_yeast",
+    "metric_effectivelength_pearson_yeast",
+    "metric_pearson_simulated",
+    "metric_cpp_mapped_human",
+    "metric_rust_mapped_human_defaults",
+    "metric_per_read_agreement_human",
+    "metric_numreads_pearson_human",
+    "metric_tpm_pearson_human",
+    "metric_numreads_diff_human",
+    "metric_rust_matched_thresholds_mapping",
+    "metric_seed_repr_mapping_rate",
+    "metric_seed_repr_numreads_pearson",
+    "result_orientation_fix_impact",
+    "result_chain_thresh_explains_gap",
+    "result_index_format_incompatibility",
+    "result_n_replacement_explains_old_gap",
+    "sshash_index",
+    "boophf_index"
+  ],
+  "subdomains": [
+    "rna-seq",
+    "differential-expression"
+  ],
+  "subtask_categories": [
+    "benchmark-evaluation",
+    "statistical-analysis",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:COMBINE-lab__salmon",
+  "task_description": "Run salmon 2.0 (Rust) and C++ salmon 1.12.0 in selective-alignment mode on GEUVADIS ERR188044 paired-end reads against a byte-identical GRCh38 cDNA index, then compute per-transcript Pearson correlations (NumReads and TPM), total NumReads difference, and per-read mapping agreement to reproduce reported parity metrics.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GEUVADIS ERR188044 paired-end reads",
+      "port_id": "reads_geuvadis",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GRCh38 cDNA reference (cleaned, 193,759 transcripts)",
+      "port_id": "ref_grch38",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "salmon 2.0 (Rust) executable",
+      "port_id": "salmon_2_0_bin",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "C++ salmon 1.12.0 executable",
+      "port_id": "salmon_1_12_0_bin",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Quantify transcript abundances from human GEUVADIS ERR188044 reads using both salmon 2.0 and 1.12.0 in selective-alignment mode, then compute and verify per-transcript Pearson correlations and per-read mapping agreement metrics.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NumReads Pearson correlation",
+      "port_id": "numreads_pearson",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "TPM Pearson correlation",
+      "port_id": "tpm_pearson",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Total assigned NumReads difference (%)",
+      "port_id": "numreads_diff_pct",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-read mapping agreement (%)",
+      "port_id": "mapping_agreement_pct",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Full parity metrics table",
+      "port_id": "comparison_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "quantitative-structure-activity",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce per-transcript quantification agreement between Rust salmon 2.0 and C++ salmon 1.12.0 on ERR188044",
+  "tools": [
+    "salmon 2.0",
+    "salmon 1.12.0",
+    "piscem-rs"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: salmon 2.0, salmon 1.12.0, piscem-rs, NumReads Pearson correlation coefficient between salmon 2.0 and C++ 1.12.0 (target: 0.99854), TPM Pearson correlation coefficient between salmon 2.0 and C++ 1.12.0 (target: 0.99897), Total assigned NumReads difference as percentage (target: \u22120.19%), Per-read mapping agreement percentage (target: 99.83%), Comparison table with salmon 2.0 and C++ 1.12.0 metrics and per-read disagreement details."
+  ],
+  "workflow_description": "1. Build a byte-identical GRCh38 cDNA index using both salmon 2.0 and C++ salmon 1.12.0 from the same cleaned FASTA with deterministic non-ACGT replacement (193,759 transcripts). 2. Run salmon 2.0 quant in selective-alignment mode on ERR188044 (36.35M 76 bp PE reads) with `-l A` (auto-detect library type), no bias correction, and default chain-pruning thresholds (orphanChainSubThresh=0.0, postMergeChainSubThresh=0.0). 3. Run C++ salmon 1.12.0 quant in selective-alignment mode on the same reads with `-l A`, no bias correction, and default thresholds (orphanChainSubThresh=0.95, postMergeChainSubThresh=0.9). 4. Extract NumReads and TPM columns from quant.sf outputs for both runs. 5. Compute Pearson correlations for NumReads and TPM per transcript across the two tools, and compute total assigned NumReads difference as a percentage. 6. Count per-read mapping agreement by comparing unmapped_names.txt files (fully-unmapped reads only, coded 'u') and report the percentage of reads on which both tools agree."
+}

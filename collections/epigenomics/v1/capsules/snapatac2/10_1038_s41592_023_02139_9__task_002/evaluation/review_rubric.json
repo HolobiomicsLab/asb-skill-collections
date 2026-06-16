@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file output exists and has extension .bed or .bed.gz"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is gzip-compressed or plain text BED format"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify row_count_equals greater than 0 (non-empty file)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: file contains at least 3 tab-separated columns (chrom, chromStart, chromEnd per BED standard)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: file contains additional fragment-specific fields (e.g., name/barcode, count, strand information); multiple valid column schemas exist for fragment files"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: fragment file structure aligns with SnapATAC2 fragment file specification (exact schema may vary; no canonical reference deposit provided)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file output exists and has extension .bed or .bed.gz",
+      "verify file_format_is gzip-compressed or plain text BED format",
+      "verify row_count_equals greater than 0 (non-empty file)",
+      "verify field_present: file contains at least 3 tab-separated columns (chrom, chromStart, chromEnd per BED standard)",
+      "verify field_present: file contains additional fragment-specific fields (e.g., name/barcode, count, strand information); multiple valid column schemas exist for fragment files",
+      "script_runs: pp.make_fragment_file executes without error on input BAM with coordinate-sorted property verified",
+      "verify output_matches_reference: fragment file structure aligns with SnapATAC2 fragment file specification (exact schema may vary; no canonical reference deposit provided)"
+    ],
+    "expert_review": [
+      "inspect fragment file for biological plausibility: barcode distribution, fragment length statistics, and per-barcode read counts are reasonable for input BAM",
+      "assess whether fragment file is suitable for downstream SnapATAC2 operations (pp.import_fragments, matrix generation)",
+      "confirm coordinate sorting and overlapping fragment handling are correct relative to BAM input"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

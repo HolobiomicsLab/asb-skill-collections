@@ -1,0 +1,355 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon.png",
+      "role": "figure",
+      "sha256": "a6f2ba245b962dd9dce35fa3a33fad06e189291254408b29c47184676f5cd9b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/expected_treemap.png",
+      "role": "figure",
+      "sha256": "4b821d08588485dba42f8f9167bb98b1c6128ea4a3e9c855e1ffa5985f7135c4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-96x96.png",
+      "role": "figure",
+      "sha256": "56213353c3a08f75c961592d769f2fb9fcf5af8338c9c27b4dc98ae2803238e3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon.svg",
+      "role": "figure",
+      "sha256": "09ee9737d1318e360e84eea3f2aadabd84cbd2380f3a2fb6503bc136efdc2b8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "405445d48a6b5f5799ebb942153a1b2ec73e7e345d161be3fe178d2c7fa3b51a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-192x192.png",
+      "role": "figure",
+      "sha256": "fc9b2c94db30b485e2aaaa0d1a75d018fd85f7982e2675b1cc52ccb8eb1017d2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-512x512.png",
+      "role": "figure",
+      "sha256": "293ad15edfd27f20182b01a95ae80c53a712f9d30d3c768646df15bc9cd823b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ea07ad29b19e5bb5d99f7d63e1b97e69a8a6ec55aba910b23a7c97830a26bc5d"
+    }
+  ],
+  "created_at": "2026-06-15T13:36:30.070661+00:00",
+  "crossref_doi": "10.1021/acs.analchem.2c04632",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_002.expected_outputs[0]: qc_summary data.table with rows corresponding to input compounds and columns: compound ID, status (indicating which filter each ion failed or if the ion passed all applied filters)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Filtered mpactr object (data_filtered) containing peak table and filter metadata",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "qc_summary() output: data.table with compound IDs and ion status (passed/failed filters)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Treemap PNG file showing ion counts and percentages grouped by filter status (mispicked, group, replicability, insource, passed)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Ion status categories in mpactr include mispicked (isotopic pattern splitting errors), group (solvent/media blank contamination), replicability (non-reproducible across technical replicates), insource (fragment ions created during ionization), and passed (ions meeting all filter criteria).",
+    "The qc_summary() function in mpactr returns a data.table where each row represents an input ion and status column indicates which filter(s) the ion failed or if it passed all filters.",
+    "Treemaps display hierarchical data where rectangle area is proportional to ion count and color intensity (Greens palette) represents relative abundance or importance within each status category.",
+    "Reference semantics in R6 objects used by mpactr enable in-place data updates without copying, making memory-efficient chaining of filters and downstream analysis operations.",
+    "Ion filtering workflow typically proceeds in order: mispicked ions \u2192 blank contamination \u2192 replicability \u2192 insource fragments, allowing high-quality ions to be identified before downstream analysis."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: output PNG or PDF treemap file in expected location",
+      "file_format_is: treemap output is valid PNG or PDF (byte-for-byte magic number check)",
+      "script_runs: R script executing qc_summary() aggregation, per-status ion count/percentage computation, and treemap rendering completes without error",
+      "contains_substring: rendered treemap PNG/PDF file size > 10 KB (confirms non-trivial graphical content generated)",
+      "expert_review: treemap visual structure matches vignette exemplar \u2014 Greens palette applied, geom_treemap() and geom_treemap_text() layers present, legend absent as specified"
+    ],
+    "expert_review": [
+      "treemap aesthetic and layout match the vignette reference (Greens color scheme, text labels readable, tile proportions reflect per-status ion percentages correctly)",
+      "per-status ion counts and percentages computed from qc_summary() data.table are numerically consistent with source filtering pipeline state"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How can filtering results from qc_summary() be visualized as a treemap showing the count and percentage of ions in each filter status category?: 'You can visualize filtering results with a tree map using the filtering summary obtained from `qc_summary()` and the packages `ggplot2` and `treemapify`.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Ion counts and percentages by status are computed from qc_summary() output using data.table syntax, then rendered as a treemap with geom_treemap() and geom_treemap_text() to display status labels, ion counts, and percentages; the visualization can be customized with ggplot2 scale_fill_brewer() and theme() functions.: 'ion_counts <- qc_summary(data_filtered)[, .(count = .N), by = status][, percent := (count / sum(count) * 100)]\n\nFinally, we plot the treemap:\n\ntm <- ggplot(ion_counts) +\n  aes(area = percent, fill ='"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Filtered mpactr object (data_filtered) containing peak table and filter metadata: 'Overall, `r nrow(get_peak_table(data_filtered))` ions remain in the feature table. A summary of the filtering, as a tree map is below'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] qc_summary() output: data.table with compound IDs and ion status (passed/failed filters): 'This function returns a `data.table` reporting the ion status for each input ion. This includes which filter each ion failed or passed, or if the ion passed all applied filters.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Treemap PNG file showing ion counts and percentages grouped by filter status (mispicked, group, replicability, insource, passed): 'A summary of the filtering, as a tree map is below'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'This table can be used for a variety of analyses that can be conducted in R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] ggplot: 'creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mpactr: 'library(mpactr)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] data.table: 'library(data.table)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mpactr); library(ggplot2); library(treemapify); library(data.table); data_filtered <- readRDS('{inputs.mpactr_filtered_object}'); qc_dt <- data_filtered@qc_summary; status_counts <- qc_dt[, .N, by=status]; status_counts[, pct := round(100*N/sum(N), 1)]; p <- ggplot(status_counts, aes(area=N, fill=status, label=paste0(status, '\\n', N, ' (', pct, '%)'))) + geom_treemap() + geom_treemap_text(colour='white', place='centre', size=12) + scale_fill_brewer(palette='Greens', type='seq') + theme(legend.position='none') + labs(title='Ion Status Distribution'); ggsave('treemap_qc_status.png', plot=p, width=10, height=8, dpi=300); cat('Treemap saved to treemap_qc_status.png\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "qc_treemap.png",
+  "expected_outputs": [
+    "Treemap PNG file showing ion counts and percentages grouped by filter status (mispicked, group, replicability, insource, passed)"
+  ],
+  "finding": "Ion counts and percentages by status are computed from qc_summary() output using data.table syntax, then rendered as a treemap with geom_treemap() and geom_treemap_text() to display status labels, ion counts, and percentages; the visualization can be customized with ggplot2 scale_fill_brewer() and theme() functions.",
+  "github_name": "mums2/mpactr",
+  "input_from": "task_002",
+  "inputs": [
+    "task_002.expected_outputs[0]: qc_summary data.table with rows corresponding to input compounds and columns: compound ID, status (indicating which filter each ion failed or if the ion passed all applied filters)",
+    "Filtered mpactr object (data_filtered) containing peak table and filter metadata",
+    "qc_summary() output: data.table with compound IDs and ion status (passed/failed filters)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "qc_status_counts.csv",
+    "qc_status_percentages.csv"
+  ],
+  "linked_result_ids": [
+    "result_015",
+    "result_027"
+  ],
+  "methodology_summary": [
+    "Extract qc_summary() data.table from filtered mpactr object and identify all unique ion status values",
+    "Aggregate ion counts by status category and compute total ion population",
+    "Calculate percentage of total ions for each status category",
+    "Construct treemap using ggplot2 with geom_treemap() for rectangles sized by count, geom_treemap_text() for labels, and Greens color palette",
+    "Render and save treemap PNG with no legend, showing status labels and percentages",
+    "Validation: Treemap PNG file exists and displays all ion status categories with rectangle areas proportional to reported ion counts and percentages matching qc_summary() aggregation",
+    "References: source article (DOI: 10.1021/acs.analchem.2c04632)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How can filtering results from qc_summary() be visualized as a treemap showing the count and percentage of ions in each filter status category?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods",
+    "abstract"
+  ],
+  "skills": [
+    "qc-summary-table-extraction",
+    "categorical-ion-status-aggregation",
+    "ion-count-percentage-calculation",
+    "treemap-visualization-construction",
+    "ggplot2-geom-treemap-rendering",
+    "color-palette-application-greens"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mpactr/synthesized_package",
+  "spine_condition_ids": [
+    "cond_pseudocount_fc"
+  ],
+  "spine_entity_ids": [
+    "comp_import_data",
+    "comp_filter_summary",
+    "comp_qc_summary",
+    "comp_get_peak_table",
+    "comp_get_raw_data",
+    "tool_ggplot2",
+    "tool_treemapify",
+    "tool_data_table",
+    "cond_pseudocount_fc"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:mums2__mpactr",
+  "task_description": "Extract per-status ion counts and percentages from qc_summary() data, then render a treemap visualization using geom_treemap() with the Greens color palette. Save the treemap as a PNG file.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Filtered mpactr object with qc metadata",
+      "port_id": "mpactr_filtered_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Compute ion counts and percentages by filter status using qc_summary() and data.table, then render and save a treemap visualization with geom_treemap, Greens palette, and no legend as a PNG/PDF file.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Treemap PNG visualization of ion filter status",
+      "port_id": "treemap_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "quality-control",
+    "clustering",
+    "correlation-analysis"
+  ],
+  "title": "Reproduce treemap visualisation of filtering QC using qc_summary(), ggplot2, and treemapify",
+  "tools": [
+    "R",
+    "ggplot",
+    "mpactr",
+    "data.table"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Treemap PNG file showing ion counts and percentages grouped by filter status (mispicked, group, replicability, insource, passed)."
+  ],
+  "workflow_description": "1. Load filtered mpactr object and extract qc_summary() data.table reporting ion status (passed/failed filters). 2. Aggregate ion counts by status category and calculate percentage of total ions per status. 3. Create a treemap using ggplot2 geom_treemap() and geom_treemap_text() with Greens palette, no legend, sized by ion count and labeled with status and percentage. 4. Save the rendered treemap to PNG file."
+}

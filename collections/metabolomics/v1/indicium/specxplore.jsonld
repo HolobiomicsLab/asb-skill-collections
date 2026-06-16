@@ -1,0 +1,3094 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/dashboard-session-initialization-verification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/fixed-architecture-layer-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/interactive-application-accessibility-testing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/jupyter-notebook-workflow-automation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/lc-ms-spectral-data-import",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectral-data-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-data-coordinate-system-construction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/python-object-serialization-deserialization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/session-object-serialization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-overview-representation-generation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-similarity-distance-metric-selection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/tsne-embedding-dimensionality-reduction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SpecXplore is a python dashboard tool for adjustable LC-MS/MS spectral data exploration.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_specXplore_system"
+        },
+        {
+          "id": "asb:spine_lcmsms_data"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SpecXplore uses a t-SNE embedding to serve as an overview representation of mass spectral similarities.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_specXplore_system"
+        },
+        {
+          "id": "asb:spine_tsne_embedding"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SpecXplore's t-SNE embedding is based on ms2deepscore.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_specXplore_system"
+        },
+        {
+          "id": "asb:spine_tsne_embedding"
+        },
+        {
+          "id": "asb:spine_ms2deepscore"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "SpecXplore includes network views, similarity heatmaps, and fragmentation overview maps.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_specXplore_system"
+        },
+        {
+          "id": "asb:spine_network_views"
+        },
+        {
+          "id": "asb:spine_similarity_heatmaps"
+        },
+        {
+          "id": "asb:spine_fragmentation_overview_maps"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The specXplore workflow is separated into two stages.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_specXplore_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "In the first stage of the specXplore workflow, the user processes spectral data to create a specxplore session data object.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_specXplore_system"
+        },
+        {
+          "id": "asb:spine_session_data_object"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Spectral data processing for specXplore is done in interactive Jupyter notebooks using the specXplore importing pipeline.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_specXplore_system"
+        },
+        {
+          "id": "asb:spine_importing_pipeline"
+        },
+        {
+          "id": "asb:spine_jupyter_notebooks"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The specXplore importing pipeline produces a specXplore session data object that is saved to the hard drive.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_specXplore_system"
+        },
+        {
+          "id": "asb:spine_importing_pipeline"
+        },
+        {
+          "id": "asb:spine_session_data_object"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The specXplore session data object can be fed directly into a specxplore dashboard session instance for visual exploration.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_specXplore_system"
+        },
+        {
+          "id": "asb:spine_dashboard_session"
+        },
+        {
+          "id": "asb:spine_session_data_object"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline. The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms, MS2Query, ms2deepscore, spec2vec, kmedoids, Cython, numpy, pandas, scikit-learn, and scipy. The input data for specXplore spectral data exploration are MS/MS spectral data. LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy. The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples. Spectral data are imported into Python using matchms, and basic specXplore data processing is performed. Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
+      "asbval:note": "The research question is directly addressed in the paper's Materials and Methods section, which describes the importing pipeline architecture and input format (.mgf) for creating a specXplore session object.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What is the input format and processing pipeline architecture for converting raw LC-MS/MS spectral data into a serialized specXplore session data object in the importing stage?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:18.066807+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores. For the machine learning scores, pretrained models provided with MS2Query are used. The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
+      "asbval:note": "The paper describes initialization of a specXplore object from spectral data. While the paper does not explicitly state 'serialized file saved to disk', it describes the creation of a specXplore session object that is subsequently loaded into the dashboard ('Upon opening the app and loading the data'), implying persistence/serialization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Serialized specXplore session data object file saved to disk",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:18.066807+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms, MS2Query, ms2deepscore, spec2vec, kmedoids, Cython, numpy, pandas, scikit-learn, and scipy.",
+      "asbval:note": "Python is explicitly stated as the language for the importing pipeline.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:18.066807+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021), most of which was spent on local library search via MS2Query. Using the same system, the processing time for the larger urine data set was less than 75 min, whereof approximately 62 min was taken up by MS2Query and 9 min for all pairwise spectral similarity computations. Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
+      "asbval:note": "Jupyter notebooks are explicitly mentioned as the tool used for preprocessing and loading spectral data into the specXplore session object.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter notebooks",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:18.066807+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card focuses narrowly on the importing pipeline and session object creation, which is a legitimate subtask of the broader specXplore workflow described in the paper. The paper's primary focus is on the interactive dashboard and exploratory data analysis, but the importing pipeline is well-documented in the Materials and Methods section.",
+        "The card does not mention the specific Python packages (matchms, MS2Query, ms2deepscore, spec2vec, etc.) that are central to the importing pipeline, though these are extensively documented in the paper."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:18.066807+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline... Spectral data are imported into Python using matchms, and basic specXplore data processing is performed... Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities",
+      "asbval:note": "Paper describes initialization of specXplore objects from raw spectral data via the importing pipeline, not from saved session data objects loaded from disk. The paper does not explicitly address session persistence/loading from disk.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does the specXplore dashboard session instance initialize and become accessible after loading a saved session data object from disk?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:36.237785+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "specXplore, an interactive Python dashboard... The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash",
+      "asbval:note": "Paper explicitly identifies specXplore as a Python-based tool with Python data importing pipeline.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:36.237785+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Upon opening the app and loading the data, the user faces an interactive two-dimensional projection of all spectra created by the t-SNE... the user faces an interactive two-dimensional projection of all spectra created by the t-SNE",
+      "asbval:note": "Paper describes the dashboard becoming accessible and displaying visualizations after data loading, but does not explicitly mention a 'status report' output confirming initialization success. The expected output is inferred from general dashboard behavior rather than explicitly documented.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Dashboard session instance status report confirming initialization success and application accessibility",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:36.237785+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores",
+      "asbval:note": "Paper describes instantiation of specXplore objects from raw spectral data, not from saved session data objects. The paper does not document session serialization or deserialization from disk.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Reconstruct the specXplore Dashboard Session instantiation from a saved session data object",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:36.237785+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card's research question focuses on loading a saved session from disk, but the paper only documents the initial data importing and object initialization pipeline from raw .mgf spectral files, not session persistence or recovery.",
+        "The card implies a specific workflow (load saved session \u2192 initialize \u2192 report status) that is not explicitly described in the paper. The paper describes initialization from raw data, not from previously saved session states.",
+        "No evidence in the passages of session serialization, checkpointing, or disk-based session recovery mechanisms."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:36.237785+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
+      "asbval:note": "Directly confirmed in passage 4. The paper explicitly states that specXplore uses t-SNE embedding of ms2deepscore similarity matrix for the central overview.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does specXplore compute a t-SNE embedding from ms2deepscore similarity scores to generate a 2-D overview representation of mass spectral data?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:51.029789+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "specXplore, an interactive Python dashboard",
+      "asbval:note": "Confirmed in abstract and methods sections. SpecXplore is explicitly described as a Python dashboard.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:51.029789+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SpecXplore makes use of state-of-the-art ms2deepscore pairwise spectral similarities as a quantitative backbone",
+      "asbval:note": "Confirmed multiple times. ms2deepscore is the primary similarity metric used for the t-SNE embedding.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ms2deepscore",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:51.029789+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021), most of which was spent on local library search via MS2Query. Using the same system, the processing time for the larger urine data set was less than 75 min, whereof approximately 62 min was taken up by MS2Query and 9 min for all pairwise spectral similarity computations. Upon opening the app and loading the data, the user faces an interactive two-dimensional projection of all spectra created by the t-SNE. Each spectral feature in the data set is represented as either as a circular node or highlighted as darkened diamonds for reference standards in this example. On its own, the t-SNE overview figure is difficult to read. Only a limited view of clustering trends can be observed through denser node regions and positioning of reference standards (Figure 1). This being the case, the t-SNE overview figure still provides an excellent basis for in-depth exploration of the data via interactivity. The most useful top-level exploration features are k-medoid clustering at low values of k (see Supporting Information, Figure S3A in Supporting Information, Section S3.1.4), chemical classification (see Supporting Information, Figure S3B in Supporting Information, Section S3.1.4), and node degree visualizations (see Supporting Information, Figure S2A in Supporting Information, Section S3.1.3). Node degree visualization provides an immediate and uncluttered view of the network topology at current threshold levels, providing insights into topological groupings in the data (see Supporting Information, Figure S2A in Supporting Information, Section S3.1.3). In addition, node degree visualizations provide the most straightforward assessment of the impact of threshold changes on local topology while avoiding the computational cost and visual clutter of potentially large numbers of edges (see Supporting Information, Figure S2A,B in Supporting Information Section, S3.1.3). Color-based highlighting of groupings based on k-medoid clustering or chemical ontology predictions can provide additional means of determining the local areas of interest in the t-SNE overview. Here, k-medoid clustering provides an edge-threshold-independent means of dividing the feature space into smaller groups while still making use of the pairwise similarity matrix. K-medoid clustering tends to show good agreement with both t-SNE projections and topological insights, while it provides a means of determining neighbor sets of nodes of interest (see Supporting Information, Figure S3A). At low k values, k-medoid clustering tends to produce larger data groupings (see Supporting Information, Figure S3A), higher values of k tend to subdivide the data into smaller, localized clusters often corresponding well to topological connectivity at higher thresholds (see Supporting Information, Figure S4 in Supporting Information, Section S3.1.4). Putative chemical classifications may serve a similar means of prioritizing areas of interest in the t-SNE embedding. In addition to the use of various color highlighting approaches to detect groupings of interest or achieve a bird's-eye view of topology, specXplore makes use of edge overlay visualizations granting insights into local node connectivity patterns at adjustable similarity threshold settings (see Supporting Information, Figure S2B in Supporting Information, Section S3.1.3). These views provide insights on what nodes are considered adjacent to one another given the current similarity thresholds. While network views provide simplified views of the similarity relationship between nodes, augmap views provide deeper insights into the similarity matrix and quantitative backbone of all of specXplore's visualizations (see Supporting Information, Figure S1 in Supporting Information, Section S3.1.2). These quantitative insights can be used to adjust the local threshold settings accordingly or be used as an alternative to network views for small node selections altogether. While specXplore's global overviews provide insight into the rough patterns of the data, its localized views provide more detailed insights into the possible relationships between the features in the wheat data. There are numerous ways to delve further into the data, given the areas of interest have been found. One sensible approach in specXplore is to explore connectivity around the known reference standards. For instance, exploring the densely connected feature area around the Procyanidin-A2 corresponding feature (Figure 2 A), we can see the characteristic fragment ion overlap as well as the much higher complexity of the experimental spectra (Figure 2 B,C). Such overlaps in fragmentation patterns and implied substructure overlaps alongside local topology and other metadata information may serve as vital starting points for MS/MS structural hypothesis generation and manual annotation efforts. Which features are considered of interest, and how stringent overlaps will need to be to be useful naturally depend on the analysis goals.",
+      "asbval:note": "Jupyter notebooks are mentioned in the context of preprocessing: 'For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)' and 'Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).' This confirms Jupyter notebooks are used in the workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter notebooks",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:51.029789+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score. Functionalities are provided for users to test a range of values for the perplexity tuning parameter (usually between 5 and 50) and select an appropriate value.",
+      "asbval:note": "The paper confirms that specXplore generates a t-SNE embedding with (x, y) coordinates for spectral features. However, the paper does not explicitly describe the output format as a 'coordinate file' or specify the exact file format/structure. The paper states the t-SNE embedding is used as the central overview and that users interact with it, but does not detail the specific output file format or whether coordinates are explicitly exported as a separate file.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "2-D t-SNE coordinate file mapping spectrum identifiers to (x, y) positions in embedding space",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:51.029789+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card frames the task as 'implementing' the t-SNE embedding component, but the paper describes specXplore as an already-developed tool. The research question is phrased as if asking how to build this component, whereas the paper presents specXplore as a completed system.",
+        "The card does not mention other key tools used in the specXplore workflow (matchms, MS2Query, spec2vec, scikit-learn, scipy, pandas, numpy) that are essential to the full preprocessing and similarity computation pipeline.",
+        "The card does not capture the full scope of specXplore's functionality beyond t-SNE embedding (e.g., augmap, fragmap, ego-network visualizations, k-medoid clustering), which are central to the paper's contribution."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:51.029789+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
+      "asbval:note": "Paper describes the specXplore workflow architecture (importing pipeline + dashboard) and mentions loading data into sessions, but does not explicitly discuss saving/loading session objects from disk or verification of session initialization integrity. The paper focuses on the importing pipeline creating a 'specXplore object' and opening the app, but does not detail session persistence or reconstruction workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "dashboard-session-initialization-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verify that a specXplore dashboard session instance correctly initializes and becomes accessible after loading a saved session data object from disk.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:21.521114+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "specXplore, an interactive Python dashboard providing interactive and complementary visualizations facilitating mass spectral similarity matrix exploration... The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore.",
+      "asbval:note": "specXplore is confirmed as the primary tool; repo URL matches candidate card.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "dashboard-session-initialization-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "specXplore (Provides the dashboard session class and initialization framework for loading and visualizing LC-MS/MS spectral data)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:21.521114+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
+      "asbval:note": "Paper explicitly mentions Jupyter notebooks as the environment for loading data and creating specXplore session objects.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "dashboard-session-initialization-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter notebooks (Runtime environment in which the specXplore session data object is loaded and the dashboard session is instantiated for interactive exploration)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:21.521114+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms, MS2Query, ms2deepscore, spec2vec, kmedoids, Cython, numpy, pandas, scikit-learn, and scipy.",
+      "asbval:note": "Paper confirms Python as the language for specXplore implementation and data processing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "dashboard-session-initialization-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python (Language for loading session data objects from disk and instantiating the dashboard session layer)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:21.521114+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object... Upon opening the app and loading the data, the user faces an interactive two-dimensional projection of all spectra created by the t-SNE.",
+      "asbval:note": "Paper describes creating session objects in Jupyter and opening the app, but does not explicitly discuss saving/loading from disk (.pkl files) or validation procedures for session initialization integrity. The workflow described is: create session object \u2192 open app, not: load saved session \u2192 verify initialization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "dashboard-session-initialization-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "After loading a specXplore session data object (saved .pkl or equivalent file) from disk in a Jupyter notebook or Python environment, use this skill to validate that the dashboard-session architecture layer has instantiated without errors and that the interactive dashboard is res",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:21.521114+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object.",
+      "asbval:note": "Paper confirms that spectral data must be processed via the importing pipeline before dashboard use.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "dashboard-session-initialization-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input spectral data is not yet processed into a session data object; use the Jupyter importing pipeline first to create the session file.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:21.521114+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper mentions Cython as a dependency but does not discuss Windows compatibility issues, Microsoft Visual C++ Redistributable requirements, or platform-specific failures. This claim is not addressed in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "dashboard-session-initialization-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Running on Windows without Microsoft Visual C++ Redistributable and Cython backend installed; current specXplore version fails on Windows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:21.521114+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss session data corruption, file integrity validation, or version compatibility checks. This is a general best-practice claim not grounded in the paper's content.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "dashboard-session-initialization-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Session data object is corrupted or incompatible with the installed specXplore version; validate file integrity before attempting initialization.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:21.521114+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
+      "asbval:note": "Paper describes the two-stage workflow (importing pipeline + dashboard) and session object creation, but does not explicitly discuss validation/testing of dashboard initialization after loading saved session objects from disk. The paper focuses on the workflow design and functionality rather than validation procedures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "fixed-architecture-layer-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verification that a specXplore dashboard session instance initializes correctly and becomes accessible after loading a saved session data object from disk.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:37.477358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
+      "asbval:note": "Paper describes the architecture (importing pipeline + dashboard) but does not explicitly address validation/testing procedures for session initialization or responsiveness checks. The claim about 'critical checkpoint' and validation procedures is not directly supported by the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "fixed-architecture-layer-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Verification that a specXplore dashboard session instance initializes correctly and becomes accessible after loading a saved session data object from disk. This skill ensures the dashboard\u2013session architecture layer is functional and responsive before interactive exploration begi",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:37.477358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "specXplore, an interactive Python dashboard providing interactive and complementary visualizations facilitating mass spectral similarity matrix exploration... The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fixed-architecture-layer-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "specXplore (Python dashboard tool and session architecture layer for interactive LC-MS/MS spectral data visualization and exploration)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:37.477358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SpecXplore makes use of state-of-the-art ms2deepscore pairwise spectral similarities as a quantitative backbone... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fixed-architecture-layer-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ms2deepscore (Produces mass spectral similarity scores used to generate t-SNE embeddings for the dashboard overview representation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:37.477358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fixed-architecture-layer-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter notebooks (Environment for running the specXplore importing pipeline to process spectral data and create the session data object prior to dashboard instantiation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:37.477358+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
+      "asbval:note": "Paper describes the two-layer architecture (importing pipeline + dashboard) and confirms dashboard initialization and interactivity are core functions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "interactive-application-accessibility-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verify that a loaded specXplore dashboard session instance initializes without errors and becomes responsive to user input after ingesting a saved session data object.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:49.855393+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash... The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
+      "asbval:note": "Paper explicitly describes the pipeline-to-dashboard workflow and interactive UI responsiveness.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "interactive-application-accessibility-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "multi-layer dashboard architecture (session instantiation \u2192 visualization rendering \u2192 interactive UI responsiveness)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:49.855393+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data. LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere... The MS/MS feature data are assumed to be in .mgf (mascot generic format) format... Spectral data are imported into Python using matchms, and basic specXplore data processing is performed.",
+      "asbval:note": "Paper describes the workflow of loading LC-MS/MS data and initializing the dashboard session.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "interactive-application-accessibility-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "After instantiating a specXplore dashboard session layer with a loaded session data object from disk, before conducting visual exploration of LC-MS/MS spectral data.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:49.855393+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SpecXplore provides the user with a variety of views and interactive navigation options... the t-SNE overview figure still provides an excellent basis for in-depth exploration of the data via interactivity... specXplore allows for the selection of any node, or collection of nodes, for more in-depth analysis in complementary visualization approaches.",
+      "asbval:note": "Paper confirms interactive node selection, overlay adjustment, and settings modification are core dashboard functionalities.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "interactive-application-accessibility-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "confirm that the dashboard-session architecture layer has initialized correctly and that the interactive interface is ready for user interaction (clicking nodes, selecting overlays, adjusting settings)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:49.855393+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore.",
+      "asbval:note": "[SUBSTRING-MATCH for specXplore | role: primary tool]. Paper confirms specXplore is the dashboard visualization platform.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "interactive-application-accessibility-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "specXplore (name, repo: https://github.com/kevinmildau/specXplore, role: Dashboard visualization and interactive exploration platform)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:49.855393+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
+      "asbval:note": "Paper confirms Jupyter notebooks are used for preprocessing and session object creation, but the specific repo URL in the card (demo.ipynb) is not verbatim in passages; paper references 'illustrative example notebooks' at a different URL. The functional role (Jupyter environment for dashboard testing) is supported, but the exact notebook path differs.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "interactive-application-accessibility-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter notebooks (repo: https://github.com/kevinmildau/specXplore/blob/master/notebooks/demo.ipynb, role: Environment in which the demo.ipynb notebook is run to open and test the specXplore dashboard interactively)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:49.855393+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object.",
+      "asbval:note": "Paper confirms the importing pipeline must be run in Jupyter notebooks before dashboard instantiation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "interactive-application-accessibility-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "The session data object has not yet been created\u2014run the specXplore importing pipeline in Jupyter notebooks to generate it first.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:49.855393+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash... The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
+      "asbval:note": "Paper distinguishes between the importing pipeline and dashboard layers, supporting the distinction made in the card.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "interactive-application-accessibility-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You are testing the spectral data processing pipeline itself rather than the dashboard visualization layer\u2014use unit tests on the importing pipeline code instead.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:49.855393+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Claim is incomplete in the card (text truncated). Passages do not contain OS-specific restrictions for specXplore. Cannot judge without complete claim text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "interactive-application-accessibility-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Your operating system is Windows; the [text cut off]",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:55:49.855393+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object",
+      "asbval:note": "Directly supported: paper describes Jupyter notebook-based preprocessing pipeline that generates specXplore session objects.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Automate multi-stage LC-MS/MS spectral data processing pipelines within Jupyter notebooks to generate serialized session data objects for downstream visualization.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:06.834599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores... For the machine learning scores, pretrained models provided with MS2Query are used.",
+      "asbval:note": "Model inference (ms2deepscore, MS2Query) is integrated into the pipeline. Metadata validation is implicit in the data importing process.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "integrated model inference and metadata validation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:06.834599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix",
+      "asbval:note": "specXplore confirmed as Python package with importing pipeline and t-SNE/ms2deepscore integration.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "specXplore - Python package providing the importing pipeline, session data object serialization, and t-SNE/ms2deepscore integration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:06.834599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SpecXplore makes use of state-of-the-art ms2deepscore pairwise spectral similarities as a quantitative backbone... Rather than being based on modified cosine scores, specXplore is based on ms2deepscore pairwise similarities, which can more accurately represent the structural similarities between compounds based on their spectra via a deep-learning-based embedding representation.",
+      "asbval:note": "ms2deepscore confirmed as neural-network-based similarity metric. t-SNE embedding is computed from ms2deepscore similarity matrix.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ms2deepscore - Computes neural-network-based similarity scores between mass spectra and generates t-SNE embeddings",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:06.834599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
+      "asbval:note": "Jupyter notebooks explicitly mentioned as the environment for preprocessing pipeline execution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter notebooks - Interactive execution environment for running the specXplore importing pipeline",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:06.834599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data are imported into Python using matchms, and basic specXplore data processing is performed",
+      "asbval:note": "matchms confirmed as used for spectral data import and processing. Metadata handling is part of basic data processing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms - Utility library for renaming and adding metadata keys to spectral objects",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:06.834599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy.",
+      "asbval:note": "MZmine3 mentioned as tool for LC-MS/MS preprocessing and .mgf export, though described as pre-processing step before specXplore pipeline.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine3 - Vendor-agnostic data processing tool for converting raw LC-MS/MS files to .mgf format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:06.834599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
+      "asbval:note": "Paper explicitly specifies .mgf as input format and describes conversion to specXplore session objects.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input data in .mgf format that needs to be converted into a specXplore session data object",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:06.834599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
+      "asbval:note": "ms2deepscore similarity computation is part of the automated pipeline.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "apply ms2deepscore similarity embeddings",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:06.834599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Functionalities are provided for users to test a range of values for the perplexity tuning parameter (usually between 5 and 50) and select an appropriate value... Similarly, functionalities are provided to construct a range of k-medoid clustering-based data subdivisions",
+      "asbval:note": "Paper describes parameter iteration capabilities for t-SNE perplexity and k-medoid clustering.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "iterate on preprocessing parameters",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:06.834599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy.",
+      "asbval:note": "Paper confirms that raw vendor file conversion must occur before specXplore pipeline, recommending MZmine3.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Raw instrument vendor files (Thermo .raw, AB .d, Waters .raw) have not been converted to .mgf format \u2014 pre-process via vendor software or MZmine3 export first.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:06.834599+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object",
+      "asbval:note": "Directly supported: paper describes .mgf input, Jupyter notebook processing, and session object creation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Convert raw LC-MS/MS spectral data in .mgf format into a serialized specXplore session data object through an interactive Jupyter notebook pipeline",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:24.705825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores",
+      "asbval:note": "Similarity computation is core to the pipeline.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "computing similarity embeddings",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:24.705825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "processed into a specXplore session object",
+      "asbval:note": "Session object creation is mentioned; persistence to disk is implied by the workflow but not explicitly detailed in passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "persisting a structured session object to disk",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:24.705825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object",
+      "asbval:note": "Jupyter notebooks explicitly mentioned for preprocessing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter Notebook as interactive environment for executing the specXplore importing pipeline",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:24.705825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "specXplore, an interactive Python dashboard... The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard",
+      "asbval:note": "[SUBSTRING-MATCH for specXplore | role: Python dashboard and importing pipeline]",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "specXplore (Python dashboard tool and importing pipeline)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:24.705825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "SpecXplore makes use of state-of-the-art ms2deepscore pairwise spectral similarities as a quantitative backbone... Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores",
+      "asbval:note": "[SUBSTRING-MATCH for ms2deepscore | role: similarity scoring]",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ms2deepscore (computes deep-learning-based similarity scores)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:24.705825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data are imported into Python using matchms, and basic specXplore data processing is performed",
+      "asbval:note": "[SUBSTRING-MATCH for matchms | role: spectrum import and processing]",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms (Python library for spectrum metadata manipulation and feature identifier renaming)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:24.705825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy",
+      "asbval:note": "[SUBSTRING-MATCH for MZmine | role: preprocessing and .mgf export]",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine (vendor-independent tool for converting raw mass spectrometry data to .mgf format)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:24.705825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the machine learning scores, pretrained models provided with MS2Query are used... most of which was spent on local library search via MS2Query",
+      "asbval:note": "[SUBSTRING-MATCH for MS2Query | role: pre-trained models and library search]",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ms2query (provides pre-trained model and library files required by the importing pipeline)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:24.705825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score",
+      "asbval:note": "Both t-SNE and ms2deepscore are core to the overview creation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "t-SNE embedding and ms2deepscore-based similarity scoring to create an overview representation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:24.705825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data... The MS/MS feature data are assumed to be in .mgf (mascot generic format) format",
+      "asbval:note": "Paper confirms .mgf is the required input format; vendor formats must be pre-converted.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input data is in vendor-specific binary format (e.g., .raw, .d) without conversion to .mgf first \u2014 when NOT to use",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:24.705825+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-data-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data. LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy. The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
+      "asbval:note": "Paper states that LC-MS/MS preprocessing and conversion to .mgf is 'assumed to have been done elsewhere' before specXplore import, but does not describe a validation step as a distinct task within specXplore's workflow. The paper describes requirements (.mgf format, unique feature identifier) but not validation as a separate skill/task.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectral-data-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validate LC-MS/MS spectral data integrity and metadata correctness before importing into the specXplore pipeline. This skill ensures raw spectral data conform to required formats (.mgf) and contain essential feature identifiers needed for downstream processing and visualization.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.915154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-data-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy.",
+      "asbval:note": "Paper mentions MZMine3 as a tool for LC-MS/MS preprocessing and feature detection, but does not specify 'GNPS-FBMN export options' or detail the export workflow. The card's specific claim about GNPS-FBMN export is not explicitly supported.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectral-data-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine3 \u2014 Convert raw vendor spectral data to .mgf format with GNPS-FBMN export options",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.915154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-data-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data are imported into Python using matchms, and basic specXplore data processing is performed",
+      "asbval:note": "Paper confirms matchms is used for importing spectral data into Python, but does not explicitly describe using matchms.Spectrum to add or rename metadata keys. The paper states matchms is used for import and basic processing, but the specific metadata-editing role claimed in the card is not detailed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectral-data-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms.Spectrum \u2014 Programmatically add or rename metadata keys (e.g. feature_id) in .mgf spectra using Python",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.915154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-data-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of using a text editor for bulk replacement of feature identifier key names in .mgf files appears in any passage. This is a manual workaround not described in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "mass-spectral-data-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "text editor \u2014 Quick bulk replacement of incorrect feature identifier key names in .mgf files",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.915154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-data-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data. LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy.",
+      "asbval:note": "Paper indicates preprocessing is 'assumed to have been done elsewhere' before specXplore import, but does not frame this as a validation task within specXplore's documented workflow. The card presents validation as a specXplore skill, but the paper treats preprocessing/conversion as external to specXplore.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectral-data-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have raw LC-MS/MS spectral data in vendor formats or unvalidated .mgf files before feeding them into the specXplore importing pipeline.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.915154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-data-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
+      "asbval:note": "Paper requires 'a unique feature identifier' but does not specify the exact key name 'feature_id' or discuss non-standard key names. The requirement for a unique identifier is stated, but the specific validation criteria (key name standardization) is not detailed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectral-data-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Validation is mandatory if feature identifiers are missing, malformed, or use non-standard key names (anything other than 'feature_id')",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:39.915154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
+      "asbval:note": "Verbatim match: t-SNE embedding of ms2deepscore similarity matrix confirmed as core method.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Construct a 2-D coordinate system from LC-MS/MS spectral data by applying t-SNE dimensionality reduction to ms2deepscore-computed pairwise similarity scores.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:53.504566+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The dashboard makes use of a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network of the full pairwise similarity matrix as a jumping board for localized data exploration.",
+      "asbval:note": "Semantic equivalence: t-SNE coordinates explicitly serve as foundation for dashboard and exploratory analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This coordinate system serves as the foundation for interactive dashboard visualization and exploratory analysis of mass spectral relationships.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:53.504566+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
+      "asbval:note": "Verbatim presence (case-insensitive): ms2deepscore confirmed as tool for computing pairwise spectral similarities.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ms2deepscore: computes pairwise similarity scores between mass spectra, which serve as the input distance metric for t-SNE embedding",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:53.504566+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms, MS2Query, ms2deepscore, spec2vec, kmedoids, Cython, numpy, pandas, scikit-learn, and scipy.",
+      "asbval:note": "Verbatim presence: scikit-learn listed as core dependency. t-SNE implementation from scikit-learn is standard and confirmed by context.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "scikit-learn t-SNE: implements the t-SNE dimensionality reduction algorithm applied to ms2deepscore distance matrix",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:53.504566+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In this paper, we introduce specXplore, an interactive Python dashboard aimed at facilitating spectral data exploration in a flexible and local network topology tailored fashion... The dashboard makes use of a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network of the full pairwise similarity matrix as a jumping board for localized data exploration.",
+      "asbval:note": "Verbatim presence: specXplore confirmed as orchestrating tool for t-SNE coordinate generation and dashboard visualization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "specXplore: orchestrates the full LC-MS/MS data exploration workflow including t-SNE coordinate generation and dashboard visualization",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:53.504566+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
+      "asbval:note": "Verbatim presence: Jupyter notebooks explicitly mentioned as environment for running specXplore preprocessing pipeline.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter notebooks: interactive environment for running the specXplore importing pipeline and t-SNE coordinate generation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:53.504566+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data... The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
+      "asbval:note": "Verbatim presence: .mgf format confirmed as input format for specXplore.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have processed LC-MS/MS spectral data in .mgf format with precomputed ms2deepscore similarity matrices",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:53.504566+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
+      "asbval:note": "Semantic equivalence: workflow explicitly divided into importing pipeline (preprocessing) followed by dashboard instantiation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use this skill after data preprocessing produces a specXplore session data object but before instantiating the dashboard for visual analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:53.504566+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy.",
+      "asbval:note": "Semantic equivalence: paper explicitly states preprocessing (feature detection, format conversion) must be done before specXplore input.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input spectral data is in raw vendor format (.raw, .d) rather than converted to .mgf \u2014 perform data format conversion and feature detection first.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:53.504566+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix.",
+      "asbval:note": "Semantic equivalence: similarity matrix computation precedes t-SNE embedding in workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "ms2deepscore similarity scores have not been precomputed \u2014 compute similarity matrix before t-SNE embedding.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:53.504566+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The central overview of specXplore is based on a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network... Alternative approaches such as UMAP or PaCMAP may be more capable at preserving global or even global and local trends.",
+      "asbval:note": "Semantic equivalence: paper acknowledges t-SNE's 2-D limitation and mentions alternative methods (UMAP, PaCMAP) for different use cases.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You need to preserve 3 or more dimensions of spectral relationship information \u2014 t-SNE reduces to 2-D by design; consider alternative methods",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:56:53.504566+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
+      "asbval:note": "Paper describes the workflow as divided into importing pipeline and dashboard, but does not explicitly discuss serialization/deserialization of session objects or loading from disk. The paper focuses on the importing pipeline creating objects that feed into the dashboard, but does not detail persistence mechanisms or object reloading workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "python-object-serialization-deserialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Load a serialized Python session data object from disk and instantiate it into an active dashboard session instance to enable interactive visualization.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:18.538394+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash.",
+      "asbval:note": "Paper describes the workflow pipeline and dashboard instantiation but does not explicitly document serialization/deserialization or disk-loading mechanisms. The claim assumes a persistence layer not explicitly described in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "python-object-serialization-deserialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Load a serialized Python session data object from disk and instantiate it into an active dashboard session instance",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:18.538394+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
+      "asbval:note": "Paper confirms Jupyter notebooks are used for preprocessing and session object creation, but does not explicitly describe saving to disk or reloading workflows. The illustrative examples repository may contain this information but is not quoted in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "python-object-serialization-deserialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have completed spectral data preprocessing in Jupyter notebooks and generated a specXplore session data object saved to disk, use this skill to restore that object into a live specXplore dashboard session instance",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:18.538394+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash.",
+      "asbval:note": "Paper confirms Python is the host language for the entire specXplore workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "python-object-serialization-deserialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python as host language for object deserialization, session instantiation, and dashboard session layer setup",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:18.538394+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "specXplore, an interactive Python dashboard providing interactive and complementary visualizations facilitating mass spectral similarity matrix exploration.",
+      "asbval:note": "Paper confirms specXplore is an interactive dashboard for visualization. The claim about accepting deserialized objects is implied by the workflow description but not explicitly stated.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "python-object-serialization-deserialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "specXplore dashboard framework that accepts deserialized session objects and provides interactive visualization",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:18.538394+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object",
+      "asbval:note": "Paper confirms Jupyter notebooks are used for preprocessing and session object creation, but does not explicitly mention saving to disk or persistence mechanisms.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "python-object-serialization-deserialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter notebooks as preprocessing environment where session data objects are created and saved to disk",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:18.538394+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/session-object-serialization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline... Spectral data are imported into Python using matchms, and basic specXplore data processing is performed... Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
+      "asbval:note": "Paper describes the importing pipeline that creates a specXplore session object with embeddings and similarity scores, and mentions loading data into the dashboard. However, the paper does not explicitly describe serialization/persistence mechanisms or file formats for saving the session object to disk. The paper states 'For the wheat data set, the pipeline preprocessing time was less than 15 min' and references 'illustrative example notebooks' but does not detail how the session object is serialized or what file format is used for persistence.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "session-object-serialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Serialize and persist a specXplore session data object (containing processed LC-MS/MS spectral embeddings, similarity scores, and metadata) to disk as a file artifact that can be loaded into the interactive dashboard for visual exploration.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:29.799276+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/session-object-serialization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
+      "asbval:note": "The paper explicitly describes the two-stage workflow: offline importing/preprocessing pipeline and online dashboard visualization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "session-object-serialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This step bridges the offline Jupyter preprocessing stage and the online dashboard visualization stage.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:29.799276+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/session-object-serialization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "specXplore, an interactive Python dashboard... The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration. The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore.",
+      "asbval:note": "Paper confirms specXplore provides the session object structure and importing pipeline, but does not explicitly describe a 'serialization interface' for persisting the object. The paper mentions loading data into the dashboard but does not detail the serialization mechanism.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "session-object-serialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "specXplore - Provides the session data object structure, importing pipeline, and serialization interface for persisting processed spectral data.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:29.799276+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/session-object-serialization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
+      "asbval:note": "Paper confirms Jupyter notebooks are used for the importing pipeline and session object creation, but does not explicitly describe serialization to disk from the notebooks.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "session-object-serialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter notebooks - Interactive environment in which the specXplore importing pipeline runs and from which the session data object is serialized to disk.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:29.799276+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/session-object-serialization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores. The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
+      "asbval:note": "Paper confirms ms2deepscore is used to compute similarity scores during the importing pipeline that are part of the session object.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "session-object-serialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ms2deepscore - Provides the similarity scores computed during the importing pipeline that are embedded in the serialized session data object.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:29.799276+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The dashboard makes use of a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network of the full pairwise similarity matrix as a jumping board for localized data exploration. Rather than being based on modified cosine scores, specXplore is based on ms2deepscore pairwise similarities... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
+      "asbval:note": "Verbatim match: t-SNE applied to ms2deepscore similarity matrix for 2-D overview.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-overview-representation-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Generate a 2-D overview representation of mass spectral data by applying t-SNE dimensionality reduction to ms2deepscore-computed similarity matrices.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:42.538648+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "specXplore, an interactive Python dashboard providing interactive and complementary visualizations facilitating mass spectral similarity matrix exploration... specXplore can become an integral part of mass spectral data exploration efforts and assist users in the generation of structural hypotheses for compounds of interest.",
+      "asbval:note": "Semantic equivalence: interactive exploration and structural hypothesis generation confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-overview-representation-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill enables interactive visual exploration of LC-MS/MS spectral relationships in a condensed, interpretable format.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:42.538648+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "specXplore is based on ms2deepscore pairwise similarities, which can more accurately represent the structural similarities between compounds based on their spectra via a deep-learning-based embedding representation... Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
+      "asbval:note": "[SUBSTRING-MATCH for ms2deepscore | role: similarity computation]. Deep learning-based, used as backbone for t-SNE.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-overview-representation-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ms2deepscore \u2014 computes deep learning-based similarity scores between mass spectra; output used as distance metric for t-SNE",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:42.538648+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "specXplore, an interactive Python dashboard... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix... The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore.",
+      "asbval:note": "[SUBSTRING-MATCH for specXplore | role: dashboard and t-SNE integration]. Confirmed as Python package managing t-SNE embedding and interactive visualization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-overview-representation-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "specXplore \u2014 hosts the t-SNE embedding computation, manages session data object, and integrates 2-D coordinates into interactive dashboard",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:42.538648+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms, MS2Query, ms2deepscore, spec2vec, kmedoids, Cython, numpy, pandas, scikit-learn, and scipy.",
+      "asbval:note": "scikit-learn explicitly listed as dependency. t-SNE is standard scikit-learn implementation; paper uses t-SNE for embedding but does not explicitly name scikit-learn as the source\u2014however, scikit-learn is the standard Python library for t-SNE and is listed as a core dependency.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-overview-representation-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "scikit-learn / t-SNE \u2014 provides the t-SNE algorithm implementation for non-linear dimensionality reduction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:42.538648+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
+      "asbval:note": "[SUBSTRING-MATCH for jupyter notebooks | role: preprocessing and workflow execution]. Explicitly mentioned as environment for data loading and processing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-overview-representation-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter notebooks \u2014 environment for executing t-SNE computation and managing workflow stages interactively",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:42.538648+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data. LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere... The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
+      "asbval:note": "Verbatim: .mgf format with feature identifiers confirmed as input specification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-overview-representation-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You have processed LC-MS/MS spectral data (as a .mgf file with feature identifiers) and computed pairwise ms2deepscore similarity scores",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:42.538648+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The dashboard makes use of a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network of the full pairwise similarity matrix as a jumping board for localized data exploration... Embeddings produced by t-SNE are built to preserve local neighborhoods in the high-dimensional space in their projection to a two-dimensional space.",
+      "asbval:note": "Semantic equivalence: t-SNE preserves local neighborhood structure; used for dashboard visualization and pattern discovery.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-overview-representation-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "create a 2-D projection suitable for dashboard visualization or high-level pattern discovery without losing similarity structure",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:57:42.538648+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score... Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
+      "asbval:note": "The paper explicitly describes selecting similarity metrics (ms2deepscore, modified cosine, spec2vec) as foundational to t-SNE embedding and interactive visualization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-distance-metric-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Select and apply an appropriate distance metric for computing pairwise mass spectral similarities, which serves as the foundation for downstream dimensionality reduction and interactive visualization in LC-MS/MS data exploration.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:01.952886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Rather than being based on modified cosine scores, specXplore is based on ms2deepscore pairwise similarities, which can more accurately represent the structural similarities between compounds based on their spectra via a deep-learning-based embedding representation... However, ms2deepscore may also introduce a much denser topology.",
+      "asbval:note": "The paper demonstrates that choice of similarity metric (ms2deepscore vs. modified cosine) directly impacts network topology and visualization geometry.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-distance-metric-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill determines how spectral similarity scores are calculated and influences the geometry of the resulting t-SNE embedding.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:01.952886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data... The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
+      "asbval:note": "Paper explicitly specifies .mgf format with feature identifiers as input requirement.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-distance-metric-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have processed LC-MS/MS spectral data in .mgf format with feature identifiers and need to compute a pairwise similarity matrix to support interactive exploration.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:01.952886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix... Embeddings produced by t-SNE are built to preserve local neighborhoods in the high-dimensional space in their projection to a two-dimensional space.",
+      "asbval:note": "Paper confirms t-SNE embedding uses similarity metric and that metric choice impacts 2-D representation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-distance-metric-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Specifically, when preparing data for t-SNE embedding in specXplore or other spectral analysis dashboards where the choice of distance metric directly impacts the resulting 2-D overview representation and clustering patterns.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:01.952886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Rather than being based on modified cosine scores, specXplore is based on ms2deepscore pairwise similarities, which can more accurately represent the structural similarities between compounds based on their spectra via a deep-learning-based embedding representation.",
+      "asbval:note": "ms2deepscore is explicitly described as deep-learning-based similarity computation from spectral data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-distance-metric-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ms2deepscore: Computes deep-learning-based mass spectral similarity scores from fragmentation patterns",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:01.952886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score... SpecXplore provides complementary and interactive visualizations that allow users to explore connections between the spectral features using interactively adjustable network settings.",
+      "asbval:note": "specXplore integrates similarity metrics into t-SNE and interactive dashboard as claimed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-distance-metric-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "specXplore: Integrates similarity metric as input to t-SNE embedding and interactive dashboard visualization",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:01.952886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectral data are imported into Python using matchms, and basic specXplore data processing is performed... The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms.",
+      "asbval:note": "matchms is confirmed as used for spectral data import and processing; metadata handling is consistent with its documented role.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-distance-metric-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matchms: Provides Spectrum module for adding and renaming metadata keys (e.g., feature_id) in .mgf files",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:01.952886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
+      "asbval:note": "Paper explicitly mentions Jupyter notebooks for preprocessing and pipeline execution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-similarity-distance-metric-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter notebooks: Environment for executing the specXplore importing pipeline and computing similarity matrices",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:01.952886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The dashboard makes use of a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network of the full pairwise similarity matrix as a jumping board for localized data exploration. Rather than being based on modified cosine scores, specXplore is based on ms2deepscore pairwise similarities... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
+      "asbval:note": "Claim is directly supported by passage describing t-SNE embedding of ms2deepscore similarity matrix for 2-D visualization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Applies t-SNE algorithm to a precomputed mass spectral similarity matrix (e.g., from ms2deepscore) to reduce high-dimensional spectral relationships into 2-D coordinates for interactive visualization and overview representation of LC-MS/MS data.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:17.745264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "specXplore is based on ms2deepscore pairwise similarities, which can more accurately represent the structural similarities between compounds based on their spectra via a deep-learning-based embedding representation.",
+      "asbval:note": "ms2deepscore is explicitly named and described as the primary similarity metric for the t-SNE embedding.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ms2deepscore",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:17.745264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "scikit-learn,21 and scipy.22... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.21,22,24",
+      "asbval:note": "Paper lists scikit-learn as a dependency and cites it for t-SNE (reference 21), but does not explicitly name 'scikit-learn' as the t-SNE implementation tool. The paper uses scikit-learn for t-SNE but the card's phrasing 'Python (scikit-learn or similar)' is somewhat generic; scikit-learn is confirmed as a dependency used for t-SNE via citations.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Python (scikit-learn or similar)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:17.745264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we propose a fluid means of dealing with mass spectral data using specXplore, an interactive Python dashboard providing interactive and complementary visualizations facilitating mass spectral similarity matrix exploration.",
+      "asbval:note": "specXplore is the primary tool integrating t-SNE embedding and interactive visualization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "specXplore",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:17.745264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
+      "asbval:note": "Jupyter notebooks are explicitly mentioned as the interactive environment for preprocessing and launching specXplore.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Jupyter Notebooks",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:17.745264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Embeddings produced by t-SNE are built to preserve local neighborhoods in the high-dimensional space in their projection to a two-dimensional space.24 This focus may lead to difficulties in interpretation of t-SNE results as neglect of global similarity preservation may render cluster proximity a poor indicator of cluster similarity.",
+      "asbval:note": "Paper confirms t-SNE preserves local neighborhoods but explicitly notes that t-SNE does NOT preserve global similarity well. The card claims t-SNE preserves 'local and global spectral relationships,' but the paper states t-SNE has a 'local focus' and may neglect 'global similarity preservation.' This is a partial match\u2014the tool does preserve local relationships but not global ones as claimed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have a precomputed similarity matrix of mass spectra (e.g., ms2deepscore-based similarities) and need to generate a low-dimensional (2-D) interactive overview representation that preserves local and global spectral relationships for exploratory dashboard visualization or",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:17.745264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
+      "asbval:note": "Scope is consistent with paper's use of t-SNE on high-dimensional similarity matrices; the 'when NOT to use' criterion is logically sound.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input spectral data is already in 2-D or lower-dimensional representation; t-SNE is unnecessary.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:17.745264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "However, ms2deepscore may also introduce a much denser topology. At many reasonable threshold levels, node-link diagram representations of dense matrices tend to become unreadable for the network as a whole.",
+      "asbval:note": "Paper confirms that t-SNE is used with dense similarity matrices (ms2deepscore produces dense topology), supporting the 'when NOT to use' criterion for sparse matrices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Similarity matrix is sparse or contains many zero/missing values; t-SNE requires dense distance estimates.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:17.745264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min... the processing time for the larger urine data set was less than 75 min, whereof approximately 62 min was taken up by MS2Query and 9 min for all pairwise spectral similarity computations.",
+      "asbval:note": "Paper demonstrates that t-SNE computation is part of a batch preprocessing pipeline with significant computational cost, supporting the 'when NOT to use' criterion for real-time/streaming scenarios.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Real-time or streaming spectral data processing is required; t-SNE is computationally expensive and unsuitable for incremental updates.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:17.745264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The t-SNE embedding overview panel of specXplore provides the user with an abstract and condensed representation of the pairwise similarity matrix lacking a clear node grouping structure.",
+      "asbval:note": "Paper describes t-SNE as providing an 'abstract' representation, supporting the claim that t-SNE axes are not directly interpretable.",
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Quantitative interpretation of individual axis values is needed; t-SNE axes are arbitrary and not interpretable as physical or chemical scales.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:58:17.745264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "dashboard-session-initialization-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "fixed-architecture-layer-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "interactive-application-accessibility-testing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7777777777777778,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 10,
+      "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 10,
+      "asbval:target_artifact_id": "lc-ms-spectral-data-import",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectral-data-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "mass-spectral-data-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 10,
+      "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "python-object-serialization-deserialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.3333333333333333,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/session-object-serialization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "session-object-serialization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.4,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "spectral-overview-representation-generation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "spectral-similarity-distance-metric-selection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 10,
+      "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SpecXplore is a python dashboard tool for adjustable LC-MS/MS spectral data exploration.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:source_excerpt": "SpecXplore is a python dashboard tool for adjustable LC-MS/MS spectral data exploration.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:05.544392+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SpecXplore uses a t-SNE embedding to serve as an overview representation of mass spectral similarities.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:source_excerpt": "It joins a t-SNE embedding that serves as an overview representation of mass spectral similarities",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:05.544392+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SpecXplore's t-SNE embedding is based on ms2deepscore.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:source_excerpt": "based on ms2deepscore",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:05.544392+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "SpecXplore includes network views, similarity heatmaps, and fragmentation overview maps.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:source_excerpt": "SpecXplore includes network views, similarity heatmaps, and fragmentation overview maps.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:05.544392+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The specXplore workflow is separated into two stages.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:source_excerpt": "The specXplore workflow is separated into two stages.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:05.544392+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "In the first stage of the specXplore workflow, the user processes spectral data to create a specxplore session data object.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:source_excerpt": "First, the user needs to process their spectral data in order to create a specxplore session data object.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_006",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:05.544392+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Spectral data processing for specXplore is done in interactive Jupyter notebooks using the specXplore importing pipeline.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:source_excerpt": "This is done in interactive Jupyter notebooks using the specXplore importing pipeline.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_007",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:05.544392+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The specXplore importing pipeline produces a specXplore session data object that is saved to the hard drive.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:source_excerpt": "The pipeline produces a specXplore session data object that is saved to the hard drive",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_008",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:05.544392+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The specXplore session data object can be fed directly into a specxplore dashboard session instance for visual exploration.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1021-acs-analchem-3c04444",
+      "asbval:source_excerpt": "and can be fed directly into a specxplore dashboard session instance for visual exploration.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_009",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T13:53:05.544392+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_specxplore#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_specXplore_system",
+      "title": "specXplore",
+      "identifier": "urn:asb:spine:specXplore_system"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_importing_pipeline",
+      "title": "specXplore Importing Pipeline",
+      "identifier": "urn:asb:spine:importing_pipeline",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_dashboard_session",
+      "title": "specXplore Dashboard Session",
+      "identifier": "urn:asb:spine:dashboard_session",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_session_data_object",
+      "title": "specXplore Session Data Object",
+      "identifier": "urn:asb:spine:session_data_object",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_tsne_embedding",
+      "title": "t-SNE Embedding",
+      "identifier": "urn:asb:spine:tsne_embedding"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_network_views",
+      "title": "Network Views",
+      "identifier": "urn:asb:spine:network_views"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_similarity_heatmaps",
+      "title": "Similarity Heatmaps",
+      "identifier": "urn:asb:spine:similarity_heatmaps"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_fragmentation_overview_maps",
+      "title": "Fragmentation Overview Maps",
+      "identifier": "urn:asb:spine:fragmentation_overview_maps"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_ms2deepscore",
+      "title": "ms2deepscore",
+      "identifier": "urn:asb:spine:ms2deepscore"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_jupyter_notebooks",
+      "title": "Jupyter Notebooks",
+      "identifier": "urn:asb:spine:jupyter_notebooks"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_lcmsms_data",
+      "title": "LC-MS/MS Spectral Data",
+      "identifier": "urn:asb:spine:lcmsms_data"
+    }
+  ]
+}

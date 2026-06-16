@@ -1,0 +1,291 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "90ea134d6bd8a3378ac9584a796a2563c54b278063761371ec33ee228a34134d"
+    }
+  ],
+  "created_at": "2026-06-15T13:50:40.898251+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "specXplore session data object containing processed spectral data and precomputed ms2deepscore similarity scores",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "2-D t-SNE coordinate file mapping spectrum identifiers to (x, y) positions in embedding space",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "ms2deepscore is a learned deep-learning similarity metric for tandem mass spectra that captures spectral relatedness beyond simple spectral angle or cosine similarity.",
+    "t-SNE (t-distributed Stochastic Neighbor Embedding) uses a distance or similarity matrix as input and produces a 2-D projection optimized to preserve local neighborhood structure.",
+    "The t-SNE embedding must accept the ms2deepscore pairwise distance matrix as its input metric to ensure consistency with the intended mass spectral similarity topology.",
+    "The resulting 2-D coordinates serve as the visual anchor for the specXplore overview, onto which network views, similarity heatmaps, and other downstream analyses are projected."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify that kevinmildau/specXplore repository is accessible on GitHub and contains source code for t-SNE embedding pipeline",
+      "Verify that ms2deepscore package is importable and callable from the specXplore codebase",
+      "Verify that output file exists and is in a standard 2-D coordinate format (CSV, TSV, NPY, or similar)",
+      "Verify output file contains exactly two numeric columns (or equivalent structured representation of 2-D coordinates)",
+      "Verify that coordinate values are within plausible t-SNE range (typically [-100, 100] or similar bounded space), robust to different random seeds",
+      "Verify that the number of rows in output coordinates matches the number of input spectra"
+    ],
+    "expert_review": [
+      "Expert judgment on whether t-SNE hyperparameters (perplexity, learning rate, n_iter) are documented and appropriate for mass spectral dataset size",
+      "Expert judgment on whether the embedding quality is sufficient to visually separate spectrally distinct compounds and cluster similar spectra",
+      "Expert judgment on whether ms2deepscore distance metric is correctly applied as input to t-SNE (e.g., whether it is used as a precomputed distance matrix or similarity is converted to distance)",
+      "Expert judgment on reproducibility: whether random seed is fixed or documented such that embeddings can be regenerated with equivalent structure"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does specXplore compute a t-SNE embedding from ms2deepscore similarity scores to generate a 2-D overview representation of mass spectral data?: 'It joins a t-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] specXplore uses a t-SNE embedding approach that takes ms2deepscore-computed mass spectral similarities as input and produces a 2-D overview representation, which serves as the foundation for the interactive dashboard visualization.: 'It joins a t-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore with interactive add-on and overlay representations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] specXplore session data object containing processed spectral data and precomputed ms2deepscore similarity scores: 'The specXplore workflow is separated into two stages. First, the user needs to process their spectral data in order to create a specxplore session data object'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] 2-D t-SNE coordinate file mapping spectrum identifiers to (x, y) positions in embedding space: 't-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'SpecXplore is a python dashboard tool for adjustable LC-MS/MS spectral data exploration'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ms2deepscore: 't-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Jupyter notebooks: 'processed in interactive Jupyter notebooks using the specXplore importing pipeline'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided for specXplore: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specific documentation or code location given for the t-SNE embedding computation step: 't-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No details on t-SNE hyperparameters (perplexity, learning rate, iterations, random state): 't-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of input format or preprocessing applied to ms2deepscore similarity/distance matrix before t-SNE: 't-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit documentation of output coordinate file format, naming convention, or storage location within session data object: 't-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pickle; import numpy as np; from sklearn.manifold import TSNE; from ms2deepscore import MS2DeepScore; session = pickle.load(open('{inputs.session_data}', 'rb')); similarity_matrix = session.get('similarity_scores'); distance_matrix = 1 - similarity_matrix; tsne = TSNE(n_components=2, metric='precomputed', random_state=42); embedding = tsne.fit_transform(distance_matrix); spectrum_ids = session.get('spectrum_ids'); output = np.column_stack([spectrum_ids, embedding]); np.savetxt('tsne_embedding.csv', output, delimiter=',', header='spectrum_id,x,y', comments='', fmt='%s,%.6f,%.6f')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "tsne_coordinates.csv",
+  "expected_outputs": [
+    "2-D t-SNE coordinate file mapping spectrum identifiers to (x, y) positions in embedding space"
+  ],
+  "finding": "specXplore uses a t-SNE embedding approach that takes ms2deepscore-computed mass spectral similarities as input and produces a 2-D overview representation, which serves as the foundation for the interactive dashboard visualization.",
+  "github_name": "kevinmildau/specXplore",
+  "input_from": "task_001",
+  "inputs": [
+    "specXplore session data object containing processed spectral data and precomputed ms2deepscore similarity scores"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "ms2deepscore_distance_matrix.npy",
+    "tsne_coordinates.csv"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load the specXplore session data object containing processed spectral features and precomputed ms2deepscore pairwise similarity scores.",
+    "Convert ms2deepscore similarities to distance metric (e.g., 1 \u2212 similarity or equivalent dissimilarity representation) as required by t-SNE.",
+    "Execute t-SNE algorithm with the ms2deepscore distance matrix as input to compute 2-D embedding coordinates for each spectrum.",
+    "Export the t-SNE coordinates (spectrum identifier, x-coordinate, y-coordinate) to a structured file.",
+    "Validation: Confirm that the output file contains one row per spectrum with valid numeric coordinates in the 2-D embedding space and matches the spectrum count from the input session data object."
+  ],
+  "missing_information": [
+    "No changelog or version history provided for specXplore",
+    "No specific documentation or code location given for the t-SNE embedding computation step",
+    "No details on t-SNE hyperparameters (perplexity, learning rate, iterations, random state)",
+    "No specification of input format or preprocessing applied to ms2deepscore similarity/distance matrix before t-SNE",
+    "No explicit documentation of output coordinate file format, naming convention, or storage location within session data object"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does specXplore compute a t-SNE embedding from ms2deepscore similarity scores to generate a 2-D overview representation of mass spectral data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "spectral-similarity-distance-metric-selection",
+    "tsne-embedding-dimensionality-reduction",
+    "mass-spectrometry-data-coordinate-system-construction",
+    "spectral-overview-representation-generation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_specxplore/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "specXplore_system",
+    "importing_pipeline",
+    "dashboard_session",
+    "session_data_object",
+    "tsne_embedding",
+    "fragmentation_overview_maps",
+    "ms2deepscore",
+    "lcmsms_data"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:kevinmildau__specXplore",
+  "task_description": "Compute a 2-D t-SNE embedding of mass spectral data using ms2deepscore similarity scores as input distances, producing coordinate output that serves as the overview representation for specXplore visualization.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "specXplore session data object with spectral data and ms2deepscore matrix",
+      "port_id": "session_data",
+      "resolved_via": null,
+      "source": "task_001/session_object",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the t-SNE embedding computation pipeline that converts ms2deepscore distance matrices into 2-D coordinates for the specXplore overview visualization.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "2-D t-SNE embedding coordinates",
+      "port_id": "tsne_coordinates",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "spectral-library-matching",
+    "dimensionality-reduction",
+    "deep-learning"
+  ],
+  "title": "Implement the ms2deepscore-based t-SNE embedding component within specXplore",
+  "tools": [
+    "Python",
+    "ms2deepscore",
+    "Jupyter notebooks"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load processed spectral data and precomputed ms2deepscore similarity matrix from the specXplore session data object. 2. Apply t-SNE algorithm with ms2deepscore distances as the input distance metric to reduce the high-dimensional spectral similarity space into 2-D coordinates. 3. Save the resulting 2-D t-SNE coordinates (spectrum identifier and x, y positions) to a structured output file for downstream dashboard rendering."
+}

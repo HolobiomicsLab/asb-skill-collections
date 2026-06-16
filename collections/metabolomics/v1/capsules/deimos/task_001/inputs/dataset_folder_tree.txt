@@ -1,0 +1,4 @@
+  figures/icon.png
+  figures/logo.png
+  figures/overview.png
+paper.md

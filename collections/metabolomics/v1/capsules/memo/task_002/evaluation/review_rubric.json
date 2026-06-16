@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: locate unaligned MS2 spectra input file(s) in mandelbrot-project/memo or mandelbrot-project/memo_publication_examples repositories"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output MemoMatrix object is serializable to standard Python pickle or HDF5 forma"
+    },
+    {
+      "id": "pf_004",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "returned MemoMatrix contains 'memo_matrix' attribute as core data structure"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "row_count_equals or value_in_range: validate row count (samples) and column count (m/z features or neutral losses) are consistent with input file cardinality; no canonical answer without seeing test fixture"
+    },
+    {
+      "id": "pf_006",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "unit test references in changelog (test for memo_from_unaligned) exist in reposi"
+    },
+    {
+      "id": "pf_007",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "compare generated MemoMatrix dimensions and sparsity pattern against expected ou"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: locate unaligned MS2 spectra input file(s) in mandelbrot-project/memo or mandelbrot-project/memo_publication_examples repositories",
+      "script_runs: execute memo_from_unaligned() function from memo package on input spectra without errors",
+      "file_format_is: confirm output MemoMatrix object is serializable to standard Python pickle or HDF5 format",
+      "field_present: verify returned MemoMatrix contains 'memo_matrix' attribute as core data structure",
+      "row_count_equals or value_in_range: validate row count (samples) and column count (m/z features or neutral losses) are consistent with input file cardinality; no canonical answer without seeing test fixture",
+      "contains_substring: verify unit test references in changelog (test for memo_from_unaligned) exist in repository test suite and pass",
+      "output_matches_reference: compare generated MemoMatrix dimensions and sparsity pattern against expected outputs from repo test files, robust to minor floating-point precision differences"
+    ],
+    "expert_review": [
+      "examine whether MemoMatrix correctly represents MS2 peak and neutral loss counting as documented ('occurrence of MS2 peaks and neutral losses in each sample is counted')",
+      "validate that fingerprint alignment/comparison semantics are preserved in output matrix structure",
+      "confirm matrix values fall within expected range for occurrence counts (non-negative integers or normalized frequencies)"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

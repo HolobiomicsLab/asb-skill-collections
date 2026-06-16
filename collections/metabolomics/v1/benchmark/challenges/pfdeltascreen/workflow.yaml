@@ -1,0 +1,204 @@
+schema_version: 0.1.0
+workflow_id: coll_pfdeltascreen_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: "PF\u0394Screen is an open-source Python tool that automates prioritization\
+    \ of potential PFAS features in LC- or GC-HRMS data through feature detection\
+    \ and multiple filtering techniques including MD/C-m/C analysis, Kendrick mass\
+    \ defect analysis, and MS2 fragment screening."
+  pseudo_abstract: "PF\u0394Screen provides a graphical user interface for non-target\
+    \ screening of PFAS candidates in high-resolution mass spectrometry data. The\
+    \ software uses pyOpenMS for feature detection in vendor-independent centroided\
+    \ mzML format files and implements several complementary prioritization techniques:\
+    \ the MD/C-m/C approach, Kendrick mass defect (KMD) analysis, and diagnostic fragment\
+    \ mass differences and fragments detected in MS2 data. The tool optionally accepts\
+    \ custom feature lists as input and applies these prioritization filters to identified\
+    \ features regardless of their source, enabling rapid automated candidate identification\
+    \ from LC- or GC-HRMS measurements acquired with ionization methods such as ESI\
+    \ or APCI."
+  research_questions:
+  - How does pyOpenMS ingest centroided mzML files and produce a feature list with
+    m/z, retention time, and intensity values?
+  - How does the MD/C-m/C approach filter and prioritize potential PFAS features from
+    a mass spectrometry feature list?
+  - "How does the Kendrick mass defect (KMD) analysis module calculate and flag homologous\
+    \ PFAS series from a feature list in PF\u0394Screen?"
+  - "How does PF\u0394Screen detect and flag potential PFAS features by identifying\
+    \ diagnostic fragments and characteristic mass differences in MS2 spectral data?"
+  - "Can PF\u0394Screen's prioritization filters (MD/C-m/C, KMD analysis, and MS2\
+    \ fragment diagnostics) correctly process and filter PFAS features supplied via\
+    \ an optional custom feature list, rather than relying solely on pyOpenMS-detected\
+    \ features?"
+  methods_summary: "Load centroided mzML file into pyOpenMS MSExperiment object. Run\
+    \ pyOpenMS FeatureFinderCentroided algorithm to detect 2D features across m/z\
+    \ and retention time dimensions. Extract feature attributes (m/z, retention time,\
+    \ intensity) from the detected feature container. Serialize detected features\
+    \ to mzTab format. Validation: Verify that output file contains at least one feature\
+    \ row with non-null m/z, retention time, and intensity fields; confirm file format\
+    \ conforms to mzTab specification. References: source article (DOI: 10.1007/s00216-023-05070-2)\
+    \ Load feature list containing m/z values and corresponding molecular formula\
+    \ assignments. Calculate exact mass for each molecular formula using standard\
+    \ atomic mass constants. Compute mass defect as the difference between observed\
+    \ m/z and calculated exact mass. Normalize mass defect by dividing by the number\
+    \ of carbon atoms (MD/C metric). Apply MD/C threshold criterion to classify features\
+    \ as potential PFAS or non-PFAS. Validation: Output feature list includes MD/C\
+    \ scores for all input features and binary PFAS flag; correctness verified by\
+    \ checking that MD/C values fall within expected ranges for known PFAS and non-PFAS\
+    \ compounds. References: source article (DOI: 10.1007/s00216-023-05070-2) Parse\
+    \ feature list and extract m/z values Apply Kendrick mass formula to convert each\
+    \ m/z to Kendrick scale Calculate Kendrick mass defect as the difference between\
+    \ nominal and exact Kendrick mass Group features by KMD value within tolerance\
+    \ threshold to identify homologous series Validation: Verify that features within\
+    \ a single assigned group share KMD values within the specified tolerance and\
+    \ that output table contains all input features with non-null KMD and group assignments\
+    \ References: source article (DOI: 10.1007/s00216-023-05070-2) Load centroided\
+    \ MS2 spectra from mzML using pyOpenMS. Define or retrieve known PFAS diagnostic\
+    \ fragment masses and mass difference thresholds. For each spectrum, match precursor\u2013\
+    product mass pairs against diagnostic fragment database within mass tolerance.\
+    \ Flag features with one or more diagnostic fragment matches. Validation: Output\
+    \ feature flagged with diagnostic match identity and mass error within specified\
+    \ tolerance (typically <10 ppm). References: source article (DOI: 10.1007/s00216-023-05070-2)\
+    \ Parse and validate custom feature list CSV/TSV, confirming presence of required\
+    \ columns (m/z, retention time, intensity) and numeric data types. Convert custom\
+    \ feature objects into PF\u0394Screen's internal feature representation to ensure\
+    \ compatibility with downstream filter modules. Calculate mass defect and mass\
+    \ defect / nominal mass ratio (MD/C) for each custom feature; flag features exceeding\
+    \ PFAS-typical MD/C thresholds. Perform Kendrick mass defect clustering to identify\
+    \ homologous series within the custom feature set. Match each custom feature m/z\
+    \ against MS2 fragmentation patterns to detect diagnostic PFAS fragments and confirm\
+    \ structural hypotheses. Validation: Verify that at least 90% of custom features\
+    \ receive a prioritization score and that filter pass/fail status can be independently\
+    \ audited against reference PFAS standards or known-mass spike compounds. References:\
+    \ source article (DOI: 10.1007/s00216-023-05070-2)"
+  domain: metabolomics
+  techniques:
+  - feature-detection
+  - high-resolution-ms
+  - chemical-class-annotation
+  - database-annotation
+  - quality-control
+  claims:
+  - claim_text: "PF\u0394Screen is an open-source Python based non-target screening\
+      \ software tool."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  - claim_text: "PF\u0394Screen prioritizes potential PFAS features in raw data from\
+      \ liquid- or gas chromatography coupled to high-resolution mass spectrometry."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  - claim_text: "PF\u0394Screen has a simple graphical user interface (GUI)."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  - claim_text: "PF\u0394Screen uses pyOpenMS, the Python interface to the C++ OpenMS\
+      \ library, for feature detection in MS raw data."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  - claim_text: "PF\u0394Screen allows optional inclusion of custom feature lists."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  - claim_text: "PF\u0394Screen uses the MD/C-m/C approach for prioritization."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  - claim_text: "PF\u0394Screen uses Kendrick mass defect (KMD) analysis for prioritization."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  - claim_text: "PF\u0394Screen uses fragment mass differences and diagnostic fragments\
+      \ in MS2 data for prioritization."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  - claim_text: "PF\u0394Screen is easily installable via batch files."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  - claim_text: Raw mass spectrometric data can be included vendor-independently in
+      the mzML format.
+    claim_type: finding
+    speculative: false
+    entity_id: mzML_Dataset
+  - claim_text: "PF\u0394Screen accepts data-dependent acquisition with centroided\
+      \ spectra in mzML format."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  - claim_text: "The recommended citation for PF\u0394Screen is Zweigle et al. (2023)\
+      \ published in Analytical and Bioanalytical Chemistry."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  - claim_text: "A detailed Youtube tutorial for PF\u0394Screen is available at https://www.youtube.com/watch?v=mKcWTP7vLV4."
+    claim_type: finding
+    speculative: false
+    entity_id: PFDeltaScreen_System
+  speculative: false
+  task_openness: mixed
+  method_alternatives:
+  - MSConvert as alternative for mzML file generation
+  substitution_constraints:
+  - Raw mass spectrometric data must be in vendor-independent mzML format with data-dependent
+    acquisition and centroided spectra
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Annotated feature table with Kendrick mass defect values and homologous series
+    group assignments
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Feature table or spectrum list with MS2 diagnostic fragment match flags and
+    identified diagnostic masses
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Prioritized feature table (CSV) containing custom input features annotated
+    with MD/C scores, KMD values, and MS2 fragment match status
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Filter validation report (CSV or JSON) showing per-feature pass/fail status
+    for each prioritization criterion (MD/C threshold, KMD clustering, MS2 match)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

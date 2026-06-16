@@ -1,0 +1,10 @@
+name: Nextflow ≥22.10.0
+slug: nextflow-22-10-0
+evidence_spans:
+- '[![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A522.10.0-brightgreen.svg)](https://www.nextflow.io/)'
+derived_from:
+- doi: 10.1021/jasms.4c00364
+  title: nextflow4msdial
+source_repos:
+- Nextflow4Metabolomics/nextflow4ms-dial
+schema_version: 0.2.0

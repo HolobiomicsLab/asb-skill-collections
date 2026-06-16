@@ -1,0 +1,271 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/figure.png",
+      "role": "figure",
+      "sha256": "282ebbc8836ac19e3dba0ae9d051391ea18e2be5d9e0400685b75e5be91d1b51"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "7a2af1abd76feaf323b785bc09170200bc2b46f75b641d7150ee1f000afc0196"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "e18efd0ab9cd81415a15cfb14efdcceb6cd6cc246f5a9fb9dc52f57dcb3adbef"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:54.858707+00:00",
+  "crossref_doi": "10.1021/acs.analchem.3c05019",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SMILES strings of candidate NPS compounds (plain text or CSV with SMILES column)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Encoded feature matrix (NumPy array or HDF5 format) with shape [n_compounds, n_features] ready for PS2MS model input",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "SMILES notation is a line notation for representing chemical structures; canonical SMILES ensure consistent representation of the same molecule.",
+    "RDKit's molecular graph representation is the standard open-source foundation for extracting atom types, bond orders, and topological features needed by neural networks.",
+    "PS2MS encodes NPS structures as fixed-size numerical tensors; feature dimensions must exactly match the model's declared input layer size.",
+    "Molecular descriptor normalization (zero-centering, standard scaling) is critical to prevent feature magnitude bias during deep learning inference.",
+    "Invalid or ambiguous SMILES strings must be filtered before encoding to prevent downstream model errors; validation typically checks for parseable syntax and valid valence."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that inputs directory or github:jhhung__PS2MS repository contains at least one SMILES string file or dataset (file_exists and format_is: text/CSV/JSON with SMILES column)",
+      "verify that the implementation script or module exists in the repository and is executable (file_exists and script_runs: run encoding step on sample SMILES without errors)",
+      "verify that the encoded output is a structured artifact with consistent dimensionality across multiple input molecules (output_matches_reference: row_count_equals and field_present for feature vectors of expected size)",
+      "verify that encoded feature vectors are numerical arrays or tensors with no NaN or infinite values in the output (value_in_range: all feature values are finite numbers)"
+    ],
+    "expert_review": [
+      "assess whether the chosen featurization method (e.g., graph convolution, fingerprint, molecular descriptor encoding) is appropriate for NPS chemical structure representation and consistent with stated deep learning model input requirements",
+      "confirm that the encoded feature dimensionality matches the input layer of the PS2MS model architecture as described in methods",
+      "evaluate whether the encoding preserves chemically relevant information (chirality, aromaticity, functional groups) necessary for discriminating NPS structures"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How are SMILES representations of NPS chemical structures converted into the encoded feature format required as input for the PS2MS deep learning model?: 'Repository for NYCU JHHLab NPS detection project.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The paper describes PS2MS as a deep learning-based prediction system for detecting novel new psychoactive substances using mass spectrometry, which requires conversion of chemical structures into an encoded feature format.: 'A Deep Learning-Based Prediction System for Detecting Novel New Psychoactive Substances Using Mass Spectrometry'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SMILES strings of candidate NPS compounds (plain text or CSV with SMILES column): '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Encoded feature matrix (NumPy array or HDF5 format) with shape [n_compounds, n_features] ready for PS2MS model input: '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] RDKit: 'jhhung/PS2MS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting the input representation step implementation or changes to featurization code: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific SMILES encoding algorithm, feature descriptor type, or vector dimensionality are not documented in the provided section: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; from rdkit import Chem; from rdkit.Chem import Descriptors, AllChem; import numpy as np; import csv; smiles_input = '{inputs.smiles_input}'; molecules = []; valid_smiles = []; f = open(smiles_input) if smiles_input.endswith('.csv') else None; reader = csv.DictReader(f) if f else None; lines = [line.strip() for line in open(smiles_input)] if not f else None; smiles_list = [row.get('SMILES', row.get('smiles', '')) for row in reader] if reader else (lines if lines else []); [molecules.append(Chem.MolFromSmiles(s)) or valid_smiles.append(s) for s in smiles_list if Chem.MolFromSmiles(s) is not None]; descriptors_list = []; descriptor_names = ['MolWt', 'LogP', 'NumRotatableBonds', 'NumHBD', 'NumHBA', 'TPSA', 'NumAromaticRings']; mols = [Chem.MolFromSmiles(s) for s in valid_smiles if Chem.MolFromSmiles(s) is not None]; [[descriptors_list.append(getattr(Descriptors, desc)(mol)) for desc in descriptor_names] for mol in mols]; feature_matrix = np.array(descriptors_list).reshape(len(mols), len(descriptor_names)); feature_matrix = (feature_matrix - np.mean(feature_matrix, axis=0)) / (np.std(feature_matrix, axis=0) + 1e-8); np.save('encoded_features.npy', feature_matrix); print(f'Encoded feature matrix shape: {feature_matrix.shape}'); print(f'Valid compounds: {len(mols)}'); print(f'NaN values: {np.isnan(feature_matrix).sum()}'); print(f'Inf values: {np.isinf(feature_matrix).sum()}')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "encoded_features.h5",
+  "expected_outputs": [
+    "Encoded feature matrix (NumPy array or HDF5 format) with shape [n_compounds, n_features] ready for PS2MS model input"
+  ],
+  "finding": "The paper describes PS2MS as a deep learning-based prediction system for detecting novel new psychoactive substances using mass spectrometry, which requires conversion of chemical structures into an encoded feature format.",
+  "github_name": "jhhung/PS2MS",
+  "input_from": "task_001",
+  "inputs": [
+    "SMILES strings of candidate NPS compounds (plain text or CSV with SMILES column)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "smiles_validated.csv",
+    "molecular_graphs.pkl",
+    "feature_matrix_raw.npy"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Parse SMILES strings and construct RDKit molecule objects with syntax validation.",
+    "Extract molecular graph properties (atoms, bonds, connectivity) from validated structures.",
+    "Compute structural and topological descriptors aligned with PS2MS input schema.",
+    "Encode descriptor values into fixed-size numerical tensor format.",
+    "Apply feature normalization (scaling/centering) using model training statistics.",
+    "Validation: Confirm encoded matrix dimensions match PS2MS input layer specification (n_features) and no NaN or infinite values are present.",
+    "References: source article (DOI: 10.1021/acs.analchem.3c05019)"
+  ],
+  "missing_information": [
+    "No changelog documenting the input representation step implementation or changes to featurization code",
+    "Specific SMILES encoding algorithm, feature descriptor type, or vector dimensionality are not documented in the provided section"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/nps_predictions"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How are SMILES representations of NPS chemical structures converted into the encoded feature format required as input for the PS2MS deep learning model?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "smiles-parsing-and-validation",
+    "molecular-descriptor-extraction",
+    "chemical-structure-featurization",
+    "tensor-encoding-deep-learning",
+    "feature-normalization-standardization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ps2ms/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "sys_ps2ms",
+    "tool_mass_spectrometry",
+    "component_deep_learning",
+    "pub_ps2ms_paper"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:jhhung__PS2MS",
+  "task_description": "Convert candidate NPS chemical structures from SMILES notation into the encoded feature representation consumed by the PS2MS deep learning model. Produce a feature matrix suitable for direct input to the model's neural network layers.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SMILES strings of candidate NPS compounds",
+      "port_id": "smiles_input",
+      "resolved_via": null,
+      "source": "task_001/nps_predictions",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the SMILES-to-feature encoding pipeline that transforms chemical structure representations into the vectorized input format consumed by the PS2MS deep learning model.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Encoded feature matrix for PS2MS model input",
+      "port_id": "encoded_features",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "deep-learning",
+    "machine-learning",
+    "metabolite-identification",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct the SMILES-to-mass-spectrum feature encoding module within PS2MS",
+  "tools": [
+    "RDKit"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: RDKit, Encoded feature matrix (NumPy array or HDF5 format) with shape [n_compounds, n_features] ready for PS2MS model input."
+  ],
+  "workflow_description": "1. Load SMILES strings for candidate NPS structures from input file. 2. Parse and validate SMILES using RDKit molecular toolkit to generate canonical molecule objects. 3. Extract molecular descriptors and structural features (atom types, bond connectivity, graph topology) required by PS2MS architecture. 4. Encode features into fixed-size numerical tensor format matching the model's input layer dimensions. 5. Normalize or standardize feature values according to model training specifications. 6. Output encoded feature matrix in NumPy array or HDF5 format."
+}

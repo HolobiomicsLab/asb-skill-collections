@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "zenodo.org"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "github.com"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "computed per-Tanimoto-bin RMSE values (without IQR filtering) match reported val"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "0.025"
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "0.025"
+    },
+    {
+      "id": "pf_007",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "0.025"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that deposited model file (zenodo.org/record/4699356) is accessible and contains trained weights",
+      "file_exists: verify that GitHub repository (https://github.com/matchms/ms2deepscore) contains Monte-Carlo Dropout implementation and inference scripts",
+      "script_runs: execute Monte-Carlo Dropout ensemble inference (N=100 predictions) on test set (3601 spectra) using deposited model and verify script completes without error",
+      "output_matches_reference: verify computed per-Tanimoto-bin RMSE values (without IQR filtering) match reported values from article figures/tables to within parameter-sensitive tolerance (robust to minor numerical precision variations across platforms)",
+      "output_matches_reference: verify computed per-Tanimoto-bin RMSE values (with IQR < 0.025 filtering) match reported values from article figures/tables to within parameter-sensitive tolerance",
+      "value_in_range: RMSE reduction in low Tanimoto bin (< 0.4) after IQR < 0.025 filtering is positive and exceeds baseline noise floor (no canonical answer; multiple defensible filtering thresholds exist)",
+      "value_in_range: RMSE reduction in high Tanimoto bin (> 0.7) after IQR < 0.025 filtering is positive and exceeds baseline noise floor (no canonical answer; multiple defensible filtering thresholds exist)"
+    ],
+    "expert_review": [
+      "Assess whether reported RMSE drops are statistically significant and meaningful given test set size and score distribution across Tanimoto bins",
+      "Evaluate whether IQR < 0.025 filtering threshold is appropriate and whether alternative uncertainty quantiles would be more defensible",
+      "Verify that Monte-Carlo Dropout with N=100 samples provides adequate convergence of uncertainty estimates and whether reported ensemble size is justified",
+      "Judge whether per-bin RMSE metrics are computed correctly (e.g., bin boundaries, sample counts per bin, treatment of boundary cases)",
+      "Review whether the reported RMSE improvements are practically meaningful for metabolomic workflows (e.g., impact on spectral matching accuracy, network analysis quality)"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

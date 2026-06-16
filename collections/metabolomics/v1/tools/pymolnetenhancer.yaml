@@ -1,0 +1,10 @@
+name: pyMolNetEnhancer
+slug: pymolnetenhancer
+evidence_spans:
+- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+derived_from:
+- doi: 10.3390/metabo9070144
+  title: molnetenhancer
+source_repos:
+- madeleineernst/pyMolNetEnhancer
+schema_version: 0.2.0

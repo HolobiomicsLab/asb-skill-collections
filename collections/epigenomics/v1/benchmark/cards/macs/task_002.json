@@ -1,0 +1,443 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": null,
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/callvar_algorithm.jpeg",
+      "role": "figure",
+      "sha256": "4c755990998723991d4b3a45d34004875c37eb62f2cd14c9941822670eac28ad"
+    },
+    {
+      "indexable": false,
+      "path": "figures/pileup.png",
+      "role": "figure",
+      "sha256": "bce82ef29c898c96fdf7dd6fd8312bf2646226fcfa829617abf68d35c8ba95d5"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "68c10926334dabd75e00252ce2368327cb086f8daa91be1abc61ae5260ab05c6"
+    }
+  ],
+  "created_at": "2026-06-15T17:50:49.716879+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "CTCF_ChIP_200K.bed.gz (gzipped BED file with ChIP-Seq reads)",
+      "detection_method": "prose_regex",
+      "file_extension": ".bed",
+      "format_id": "BED",
+      "format_iri": "http://edamontology.org/format_3003",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "CTCF_Control_200K.bed.gz (gzipped BED file with control reads)",
+      "detection_method": "prose_regex",
+      "file_extension": ".bed",
+      "format_id": "BED",
+      "format_iri": "http://edamontology.org/format_3003",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CTCF_ChIP_200K_filterdup.pileup.bdg (ChIP sample pileup track in BEDGRAPH format with fragment-extended coverage signals)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "local_lambda.bdg (local lambda bias track in BEDGRAPH format scaled to ChIP sequencing depth for statistical comparison)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CTCF_ChIP_200K_qvalue.bdg or CTCF_ChIP_200K_pvalue.bdg (score track in BEDGRAPH format with -log10(q-values) or -log10(p-values) from local Poisson test)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "CTCF_ChIP_200K_peaks.bed (narrowPeak format BED file with called peak coordinates and summit locations)",
+      "detection_method": "prose_regex",
+      "file_extension": ".bed",
+      "format_id": "BED",
+      "format_iri": "http://edamontology.org/format_3003",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Fragment length d represents the actual DNA fragment size bound by the protein and must be estimated from short sequencing reads to accurately locate binding sites; this is predicted using autocorrelation on ChIP data alone.",
+    "Local bias calculation requires computing background noise from multiple window sizes (d, slocal=1kb, llocal=10kb) and the genome-wide background, then taking the maximum at each genomic position to account for local sequencing artifacts and control biases.",
+    "Read depth normalization between ChIP and control samples (scaling down the larger sample to match the smaller) is essential to prevent inflation of small signal values and preserve specificity in differential comparisons.",
+    "Score tracks produced by bdgcmp are in -log10 format; a q-value cutoff of 0.05 corresponds to a score of approximately 1.301, and users must select appropriate thresholds based on sensitivity/specificity trade-offs.",
+    "Peak merging after calling requires knowledge of read length to determine the maximum gap between nearby high-scoring regions that should be joined, reflecting the resolution of the underlying sequencing data."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file CTCF_ChIP_200K.bed.gz exists in github:macs3-project__MACS/test directory",
+      "verify file CTCF_Control_200K.bed.gz exists in github:macs3-project__MACS/test directory",
+      "script_runs: macs3 filterdup on CTCF_ChIP_200K.bed.gz and CTCF_Control_200K.bed.gz without error",
+      "script_runs: macs3 predictd on filtered ChIP file without error",
+      "script_runs: macs3 pileup on filtered ChIP file with fragment length parameter without error",
+      "file_exists: pileup BEDGRAPH output file with format .bdg",
+      "script_runs: macs3 bdgcmp comparing pileup BEDGRAPH and control lambda track without error",
+      "file_exists: local_lambda.bdg file in output directory",
+      "file_exists: p-value or q-value score BEDGRAPH file in output directory",
+      "script_runs: macs3 bdgopt on score BEDGRAPH without error",
+      "script_runs: macs3 bdgpeakcall on optimized score track without error",
+      "file_format_is: all output BEDGRAPH files conform to BEDGRAPH specification (chromosome, start, end, value columns)",
+      "row_count_equals: pileup BEDGRAPH is non-empty (at least one data row beyond header)"
+    ],
+    "expert_review": [
+      "pileup BEDGRAPH coverage values are realistic for ChIP-Seq signal (positive, reasonable magnitude relative to sequencing depth)",
+      "local_lambda.bdg background estimates are appropriate and smaller than or comparable to ChIP pileup signal in non-peak regions",
+      "p/q-value score BEDGRAPH shows expected statistical enrichment pattern (higher scores at true peak regions, lower in background)",
+      "peak calls from bdgpeakcall output align with known or expected CTCF binding sites based on CTCF tutorial dataset documentation"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] How does the MACS3 callpeak pipeline decompose into individual subcommands (filterdup, predictd, pileup, bdgcmp, bdgopt, bdgpeakcall) that progressively transform ChIP-Seq data into peak calls?: 'MACS3 does offer a range of subcommands that allow you to customize every step of your analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] The MACS3 callpeak pipeline operates through sequential subcommands: filterdup removes duplicate reads, predictd estimates fragment length d from ChIP data, pileup generates coverage tracks, bdgcmp compares ChIP and control signals to compute p/q-value scores, bdgopt applies optimization to score tracks, and bdgpeakcall identifies peaks by filtering regions above a score cutoff.: 'we'll explain how you can accomplish this using the `filterdup` subcommand...This can also be accomplished using the `predictd` subcommand...generate a pileup track for the ChIP sample using the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CTCF_ChIP_200K.bed.gz (gzipped BED file with ChIP-Seq reads): 'We'll use two test files, `CTCF_ChIP_200K.bed.gz` and `CTCF_Control_200K.bed.gz`, which you can find in the MACS3 GitHub repository in the `test` directory'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CTCF_Control_200K.bed.gz (gzipped BED file with control reads): 'We'll use two test files, `CTCF_ChIP_200K.bed.gz` and `CTCF_Control_200K.bed.gz`, which you can find in the MACS3 GitHub repository in the `test` directory'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CTCF_ChIP_200K_filterdup.pileup.bdg (ChIP sample pileup track in BEDGRAPH format with fragment-extended coverage signals): 'This command produces a file in BEDGRAPH format, `CTCF_ChIP_200K_filterdup.pileup.bdg`, which contains the fragment pileup signals for the ChIP sample'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] local_lambda.bdg (local lambda bias track in BEDGRAPH format scaled to ChIP sequencing depth for statistical comparison): 'The output file is named `local_lambda.bdg`, as it contains values that represent the lambda (or expected value), which can be compared with ChIP signals using the local Poisson test'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CTCF_ChIP_200K_qvalue.bdg or CTCF_ChIP_200K_pvalue.bdg (score track in BEDGRAPH format with -log10(q-values) or -log10(p-values) from local Poisson test): 'The `CTCF_ChIP_200K_pvalue.bdg` or `CTCF_ChIP_200K_qvalue.bdg` file contains the `-log10(p-values)` or `-log10(q-values)` for each base pair, derived through a local Poisson test'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CTCF_ChIP_200K_peaks.bed (narrowPeak format BED file with called peak coordinates and summit locations): 'The output is essentially a narrowPeak format file (a type of BED file), which includes the locations of peaks with the summit location noted in the last column'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] macs3 filterdup: 'we'll explain how you can accomplish this using the `filterdup` subcommand'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] macs3 predictd: 'This can also be accomplished using the `predictd` subcommand, which we need to apply only to ChIP data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] macs3 pileup: 'generate a pileup track for the ChIP sample using the MACS3 `pileup` subcommand'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] macs3 bdgcmp: 'using the `bdgcmp` module, which outputs a score for each base pair in the genome'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] macs3 bdgopt: 'apply the `bdgopt` subcommand'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] macs3 bdgpeakcall: 'identify regions that surpass a specific score cutoff using the `bdgpeakcall` function for narrow peak calling'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is available for the MACS3 project or this specific tutorial.: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "CTCF_ChIP_200K_qvalue.bdg",
+  "expected_outputs": [
+    "CTCF_ChIP_200K_filterdup.pileup.bdg (ChIP sample pileup track in BEDGRAPH format with fragment-extended coverage signals)",
+    "local_lambda.bdg (local lambda bias track in BEDGRAPH format scaled to ChIP sequencing depth for statistical comparison)",
+    "CTCF_ChIP_200K_qvalue.bdg or CTCF_ChIP_200K_pvalue.bdg (score track in BEDGRAPH format with -log10(q-values) or -log10(p-values) from local Poisson test)",
+    "CTCF_ChIP_200K_peaks.bed (narrowPeak format BED file with called peak coordinates and summit locations)"
+  ],
+  "finding": "The MACS3 callpeak pipeline operates through sequential subcommands: filterdup removes duplicate reads, predictd estimates fragment length d from ChIP data, pileup generates coverage tracks, bdgcmp compares ChIP and control signals to compute p/q-value scores, bdgopt applies optimization to score tracks, and bdgpeakcall identifies peaks by filtering regions above a score cutoff.",
+  "github_name": "macs3-project/MACS",
+  "input_from": "task_001",
+  "inputs": [
+    "CTCF_ChIP_200K.bed.gz (gzipped BED file with ChIP-Seq reads)",
+    "CTCF_Control_200K.bed.gz (gzipped BED file with control reads)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "CTCF_ChIP_200K_filterdup.bed",
+    "CTCF_Control_200K_filterdup.bed",
+    "CTCF_ChIP_200K_filterdup.pileup.bdg",
+    "d_bg.bdg",
+    "1k_bg_norm.bdg",
+    "10k_bg_norm.bdg"
+  ],
+  "linked_result_ids": [
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_020",
+    "result_021",
+    "result_022"
+  ],
+  "methodology_summary": [
+    "Filter duplicate reads from ChIP and control samples to remove redundant reads at identical genomic locations, recording final read counts for normalization.",
+    "Predict the fragment length parameter d from filtered ChIP data using autocorrelation-based fragment length estimation.",
+    "Generate ChIP pileup BEDGRAPH by extending reads in the 5\u2032\u21923\u2032 direction to the predicted fragment length.",
+    "Build multi-scale local background bias tracks from control by computing pileup signals at d, slocal (1 kb), and llocal (10 kb) window sizes, then normalizing by the ratio d/window_size.",
+    "Combine background tracks by iteratively computing maximum values across all scales and the genome-wide background count.",
+    "Scale the combined local lambda bias track to match the ChIP sample sequencing depth using the ratio of final read counts.",
+    "Apply local Poisson test by comparing ChIP pileup against scaled local lambda to generate -log10(q-value) or -log10(p-value) score tracks.",
+    "Validation: Call narrow peaks using bdgpeakcall with user-specified cutoff (e.g., 1.301 for q\u22640.05), minimum peak length equal to fragment length d, and gap parameter set to read length; verify output is in narrowPeak BED format with summit locations."
+  ],
+  "missing_information": [
+    "No changelog or version history is available for the MACS3 project or this specific tutorial."
+  ],
+  "parameters": [],
+  "primary_domain": null,
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the MACS3 callpeak pipeline decompose into individual subcommands (filterdup, predictd, pileup, bdgcmp, bdgopt, bdgpeakcall) that progressively transform ChIP-Seq data into peak calls?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods"
+  ],
+  "skills": [
+    "chip-seq-peak-calling-workflow",
+    "bedgraph-file-format-manipulation",
+    "fragment-length-prediction-and-extension",
+    "local-background-bias-estimation",
+    "poisson-test-statistical-scoring",
+    "duplicate-read-filtering-and-normalization",
+    "macs3-subcommand-chaining"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_macs/synthesized_package",
+  "spine_condition_ids": [
+    "cond_ctcf_tutorial"
+  ],
+  "spine_entity_ids": [
+    "callpeak_subcommand",
+    "filterdup_subcommand",
+    "predictd_subcommand",
+    "pileup_subcommand",
+    "bdgcmp_subcommand",
+    "bdgopt_subcommand",
+    "bdgpeakcall_subcommand",
+    "callpeak_pipeline_architecture",
+    "local_bias_track",
+    "pileup_bdg_artifact",
+    "score_bdg_artifact",
+    "CTCF_ChIP_200K",
+    "CTCF_Control_200K",
+    "CTCF_PE_ChIP_chr22",
+    "bedgraph_format",
+    "local_poisson_test",
+    "cond_ctcf_tutorial",
+    "metric_chip_reads_after_filterdup",
+    "metric_control_reads_after_filterdup",
+    "metric_genome_background",
+    "metric_max_score_datapoints",
+    "result_filterdup_output_format",
+    "result_pileup_direction",
+    "result_callpeak_scales_down_larger"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:macs3-project__MACS",
+  "task_description": "Re-implement the MACS3 callpeak pipeline using individual subcommands (filterdup, predictd, pileup, bdgcmp, bdgopt, bdgpeakcall) on CTCF ChIP-Seq test datasets to produce ChIP pileup, local lambda bias, and p/q-value score BEDGRAPH files.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CTCF ChIP sample reads in BED format",
+      "port_id": "chip_bed_input",
+      "resolved_via": null,
+      "source": "task_001/narrowpeak",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CTCF control sample reads in BED format",
+      "port_id": "control_bed_input",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute the step-by-step callpeak pipeline using filterdup, predictd, pileup, bdgcmp, bdgopt, and bdgpeakcall subcommands on CTCF tutorial datasets to produce pileup BEDGRAPH, local_lambda.bdg, and p/q-value score BEDGRAPH files.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ChIP pileup track in BEDGRAPH format",
+      "port_id": "chip_pileup_bdg",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Local lambda bias track scaled to sequencing depth",
+      "port_id": "local_lambda_bdg",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Q-value score track in BEDGRAPH format",
+      "port_id": "qvalue_score_bdg",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Called peaks in narrowPeak BED format",
+      "port_id": "narrowpeak_bed",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reconstruct the manual callpeak pipeline: pileup, local-lambda, bdgcmp scoring, and bdgpeakcall",
+  "tools": [
+    "MACS3",
+    "macs3 filterdup",
+    "macs3 predictd",
+    "macs3 pileup",
+    "macs3 bdgcmp",
+    "macs3 bdgopt",
+    "macs3 bdgpeakcall"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: macs3 filterdup, macs3 predictd, macs3 pileup, macs3 bdgcmp, macs3 bdgopt, macs3 bdgpeakcall, CTCF_ChIP_200K_filterdup.pileup.bdg (ChIP sample pileup track in BEDGRAPH format with fragment-extended coverage signals), local_lambda.bdg (local lambda bias track in BEDGRAPH format scaled to ChIP sequencing depth for statistical comparison), CTCF_ChIP_200K_qvalue.bdg or CTCF_ChIP_200K_pvalue.bdg (score track in BEDGRAPH format with -log10(q-values) or -log10(p-values) from local Poisson test)."
+  ],
+  "workflow_description": "1. Filter duplicate reads from CTCF ChIP and control BED files using macs3 filterdup with --keep-dup=1, recording the final read counts for each sample. 2. Predict fragment length d from the filtered ChIP sample using macs3 predictd with -g hs and -m 5 50 parameters. 3. Generate ChIP pileup BEDGRAPH by extending filtered ChIP reads to the predicted fragment length d using macs3 pileup with --extsize parameter. 4. Build local bias track from control by creating d, slocal (1kb), and llocal (10kb) background BEDGRAPH files using macs3 pileup with -B option and different --extsize values, then normalize slocal and llocal backgrounds using macs3 bdgopt with multiply mode and d/slocal and d/llocal scaling factors. 5. Combine background tracks by computing maximum bias across d, slocal, and llocal using sequential macs3 bdgcmp -m max operations, then add genome-wide background value using macs3 bdgopt. 6. Scale local lambda bias to ChIP sequencing depth using macs3 bdgopt multiply with the ratio of final ChIP to control read counts. 7. Compare ChIP pileup against scaled local lambda using macs3 bdgcmp with -m qpois or -m ppois to generate q-value or p-value score BEDGRAPH files. 8. Call narrow peaks from score BEDGRAPH using macs3 bdgpeakcall with cutoff value (e.g., -c 1.301 for q-value 0.05), minimum peak length -l set to fragment length d, and gap parameter -g set to read length."
+}

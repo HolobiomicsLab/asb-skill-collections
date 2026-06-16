@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: github:FelinaHildebrand__MobiLipid/MobiLipid_correction.Rmd or analogous R Markdown file in the repository root"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: R Markdown (.Rmd) contains executable code chunks for CCS bias correction"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: execute the CCS correction code chunk(s) on the bias assessment output without errors"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: corrected CCS table has same number of rows as input bias assessment output"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: output table contains columns for original CCS values, correction factor, and corrected CCS values"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify value_in_range: all correction factors are numeric and non-zero (parameter-sensitive to lipid class and instrument tuning)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify format_is: output table is CSV, TSV, or data.frame-serialized format (any of the following acceptable)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: github:FelinaHildebrand__MobiLipid/MobiLipid_correction.Rmd or analogous R Markdown file in the repository root",
+      "verify file_format_is: R Markdown (.Rmd) contains executable code chunks for CCS bias correction",
+      "verify script_runs: execute the CCS correction code chunk(s) on the bias assessment output without errors",
+      "verify output_matches_reference: corrected CCS table has same number of rows as input bias assessment output",
+      "verify field_present: output table contains columns for original CCS values, correction factor, and corrected CCS values",
+      "verify value_in_range: all correction factors are numeric and non-zero (parameter-sensitive to lipid class and instrument tuning)",
+      "verify format_is: output table is CSV, TSV, or data.frame-serialized format (any of the following acceptable)"
+    ],
+    "expert_review": [
+      "inspect corrected CCS values against the DT CCS N2 library for U13C labeled lipids: verify corrections reduce bias relative to reference standards (requires chemistry/lipidomics domain judgment)",
+      "assess whether correction magnitude is appropriate for the detected lipid classes in the input bias assessment (parameter-sensitive to instrument platform and MS acquisition settings)",
+      "confirm that correction methodology preserves the rank order and relative spacing of CCS values across the lipid class distribution"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

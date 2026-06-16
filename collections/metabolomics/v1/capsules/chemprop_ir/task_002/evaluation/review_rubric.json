@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github.com/chemprop/chemprop-IR or equivalent public repository URL"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify repository contains README or documentation describing spectral features component"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify repository contains executable Python code or scripts for spectral feature extraction"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "extracted spectral feature vector has expected dimensionality and numeric type ("
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github.com/chemprop/chemprop-IR or equivalent public repository URL",
+      "verify repository contains README or documentation describing spectral features component",
+      "verify repository contains executable Python code or scripts for spectral feature extraction",
+      "script_runs: execute spectral feature extraction code with a valid molecular input (SMILES or molecular graph format) and confirm no runtime errors",
+      "output_matches_reference: extracted spectral feature vector has expected dimensionality and numeric type (float array or similar) \u2014 robust to parameter choices across reasonable molecular inputs"
+    ],
+    "expert_review": [
+      "chemist or computational chemistry expert: verify that extracted spectral features are chemically sensible and match the named features described in the paper (e.g., functional group indicators, bond type distributions)",
+      "expert: confirm that spectral feature construction aligns with standard infrared spectroscopy principles and the chemprop-IR methodology",
+      "expert: review whether the implementation correctly translates molecular structure (via SMILES or graph) into feature space claimed in the paper"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

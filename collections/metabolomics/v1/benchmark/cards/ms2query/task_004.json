@@ -1,0 +1,416 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/features_used.png",
+      "role": "figure",
+      "sha256": "86176a2f7637a4c48b73adebdba17ad404faf26be04070684e04861b7c83b2a4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ms2query_logo.png",
+      "role": "figure",
+      "sha256": "f91f3cd60080e06f473f15a7b5cbd524bda5de0f14830c8e5bd2a726a0636b41"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ms2query_logo.svg",
+      "role": "figure",
+      "sha256": "e7305700ccfd2ea3d8609746bebcc7c967044bbcfdc2fe42a77eb2a0126bfc51"
+    },
+    {
+      "indexable": false,
+      "path": "figures/worflow_average_ms2deepscore.png",
+      "role": "figure",
+      "sha256": "fed65b11b4ad1f780ee4a610c3b4c26bdec7990a5cf00d51b0af85b1edd595d3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/workflow_ms2query.png",
+      "role": "figure",
+      "sha256": "0ad5fe5e17cb8d2e83691b75b2d1d85f71d8d28200f2534a778b19e6a2e6ce62"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "bb1987273b11fa9e3a107b7dc1c567b3d6be06dc40de0303f8c9323112bc976b"
+    }
+  ],
+  "created_at": "2026-06-15T21:30:15.767044+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw query mass spectra in MS/MS format (e.g., m/z-intensity pairs)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MS2Query repository fork with feature branch",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Cleaned query spectra with normalised intensities and filtered peaks",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pre-processing module source code with test suite",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Updated CHANGELOG.md documenting spectrum processing module changes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Spectrum normalisation standardises intensity values across spectra to enable fair similarity comparison between query and library spectra of different absolute intensities.",
+    "Peak filtering removes noise and low-intensity m/z signals that do not contribute to spectral identity and can increase false-positive matches in library search.",
+    "Pre-processing must preserve the relative abundance patterns that define spectral identity for MS/MS analogue matching.",
+    "MS/MS spectral data consists of precursor m/z and fragment ion m/z-intensity pairs, where intensity normalisation is critical for reproducible cosine similarity calculation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file_exists: PR #61 commit or merged code in iomega/ms2query repository on GitHub",
+      "verify file_format_is: spectrum processing module as .py Python source file(s)",
+      "verify contains_substring: processing module contains function definitions for spectrum normalisation and/or filtering operations",
+      "verify script_runs: spectrum processing functions execute without error on sample spectrum input (no canonical answer for which sample spectra, requires multiple defensible test cases)",
+      "verify output_matches_reference: processed spectrum output format (peaks, intensities, metadata) is consistent with documented spectrum data structure in codebase",
+      "verify field_present: processed spectrum output includes normalized/filtered peak list and intensity array fields",
+      "verify value_in_range: processed spectrum intensity values fall within chemically plausible range (0\u20131 for normalized, or 0\u2013max_intensity for non-normalized; no canonical answer, parameter-sensitive to normalization choice)"
+    ],
+    "expert_review": [
+      "assess whether spectrum normalisation method (if present) is appropriate for MS/MS spectral matching workflows",
+      "assess whether spectrum filtering logic (peak removal, noise threshold) follows standard MS/MS preprocessing practices",
+      "assess whether cleaned spectrum output is fit-for-purpose for downstream library matching operations",
+      "assess consistency of preprocessing step definitions against any published MS2Query method descriptions or prior versions"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What spectrum pre-processing functions are defined and applied to raw query spectra before library matching in MS2Query?: 'MS2Query - Reliable and fast MS/MS spectral-based analogue search'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The document describes MS2Query as a tool for MS/MS spectral-based analogue search, but does not provide explicit details about the specific spectrum pre-processing functions (such as normalisation or filtering) that are applied to raw query spectra.: 'MS2Query - Reliable and fast MS/MS spectral-based analogue search'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw query mass spectra in MS/MS format (e.g., m/z-intensity pairs): 'you want to make some kind of change to the code base (e.g. to fix a bug, to add a new feature, to update documentation)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MS2Query repository fork with feature branch: 'fork the repository to your own Github profile and create your own feature branch off of the latest master commit'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Cleaned query spectra with normalised intensities and filtered peaks: 'you want to make some kind of change to the code base (e.g. to fix a bug, to add a new feature, to update documentation)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pre-processing module source code with test suite: 'add your own tests (if necessary)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Updated CHANGELOG.md documenting spectrum processing module changes: 'update the `CHANGELOG.md` file with change'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MS2Query: 'MS2Query - Reliable and fast MS/MS spectral-based analogue search'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'make sure the existing tests still work by running ``python setup.py test``'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GitHub: 'use the search functionality [here](https://github.com/iomega/ms2query/issues)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No details provided on which spectrum processing functions are defined (e.g., normalisation method, filtering thresholds, peak selection criteria): 'Define spectrum processing functions [#61]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of input spectrum format or data structure expected by the processing module: 'Define spectrum processing functions [#61]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of output spectrum format or cleaned spectrum representation produced by the processing module: 'Define spectrum processing functions [#61]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No indication of whether spectrum processing is integrated with or separate from library matching workflow: 'Define spectrum processing functions [#61]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "preprocessing_module.py",
+  "expected_outputs": [
+    "Cleaned query spectra with normalised intensities and filtered peaks",
+    "Pre-processing module source code with test suite",
+    "Updated CHANGELOG.md documenting spectrum processing module changes"
+  ],
+  "finding": "The document describes MS2Query as a tool for MS/MS spectral-based analogue search, but does not provide explicit details about the specific spectrum pre-processing functions (such as normalisation or filtering) that are applied to raw query spectra.",
+  "github_name": "iomega/ms2query",
+  "input_from": "task_002",
+  "inputs": [
+    "Raw query mass spectra in MS/MS format (e.g., m/z-intensity pairs)",
+    "MS2Query repository fork with feature branch"
+  ],
+  "keywords": [
+    "ms/ms spectral matching",
+    "analogue search",
+    "tandem mass spectrometry",
+    "spectral library search",
+    "metabolomics"
+  ],
+  "landmark_outputs": [
+    "spectrum_normalisation.py",
+    "spectrum_filtering.py",
+    "test_preprocessing_module.py",
+    "cleaned_spectra_sample.csv"
+  ],
+  "linked_result_ids": [
+    "result_012"
+  ],
+  "methodology_summary": [
+    "Define spectral normalisation algorithm signature accepting raw m/z-intensity pairs and output parameters (e.g., TIC normalisation, L2 normalisation)",
+    "Define spectral filtering algorithm signature accepting intensity threshold and minimum peak count parameters",
+    "Implement normalisation function to rescale intensities while preserving relative abundance ratios",
+    "Implement filtering function to remove peaks below noise threshold and handle edge cases",
+    "Chain normalisation and filtering functions into a single pre-processing pipeline function",
+    "Write unit tests validating normalisation output sums to expected value and filtering removes correct peaks",
+    "Validation: cleaned spectra pass format validation (numeric m/z and intensity fields present), test suite passes with 100% coverage of pre-processing functions, and intensity distributions reflect expected normalisation"
+  ],
+  "missing_information": [
+    "No details provided on which spectrum processing functions are defined (e.g., normalisation method, filtering thresholds, peak selection criteria)",
+    "No specification of input spectrum format or data structure expected by the processing module",
+    "No specification of output spectrum format or cleaned spectrum representation produced by the processing module",
+    "No indication of whether spectrum processing is integrated with or separate from library matching workflow"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What spectrum pre-processing functions are defined and applied to raw query spectra before library matching in MS2Query?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "spectral-intensity-normalisation",
+    "peak-filtering-noise-removal",
+    "ms2-data-preprocessing-pipeline",
+    "software-testing-unit-validation",
+    "version-control-feature-branch-management"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ms2query/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp_library_matching",
+    "comp_spectrum_processing",
+    "comp_scoring"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:iomega__ms2query",
+  "task_description": "Reconstruct the spectrum pre-processing module (PR #61) that defines and applies normalisation, filtering, and related functions to raw query spectra before library matching, producing cleaned spectrum outputs suitable for downstream MS/MS analogue search.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw query mass spectra in MS/MS format",
+      "port_id": "raw_spectra",
+      "resolved_via": null,
+      "source": "task_002/candidate_matches",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MS2Query repository fork with feature branch",
+      "port_id": "repo_fork",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Identify and document the spectrum pre-processing functions (normalisation, filtering, etc.) applied to raw query spectra and their implementation in the Spectrum Processing Module.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cleaned query spectra with normalised intensities and filtered peaks",
+      "port_id": "cleaned_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-processing module source code with test suite",
+      "port_id": "preprocessing_module",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Updated CHANGELOG.md documenting spectrum processing module changes",
+      "port_id": "changelog",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "analog-search",
+    "cosine-similarity-scoring",
+    "database-annotation",
+    "metabolite-identification",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct the Spectrum Processing Module defining query-spectrum processing functions",
+  "tools": [
+    "MS2Query",
+    "Python",
+    "GitHub"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Pre-processing module source code with test suite, Updated CHANGELOG.md documenting spectrum processing module changes."
+  ],
+  "workflow_description": "1. Define spectrum pre-processing function signatures for normalisation and filtering operations on raw query spectral data. 2. Implement normalisation logic to standardize spectral intensities across raw query spectra. 3. Implement filtering logic to remove noise and low-intensity peaks from raw query spectra. 4. Apply the complete pre-processing pipeline sequentially to raw query spectra to produce cleaned spectrum outputs. 5. Validate cleaned spectra meet expected format and quality criteria before library matching."
+}

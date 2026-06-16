@@ -1,0 +1,441 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "ms2deepscore.pdf",
+      "role": "main_article",
+      "sha256": "560550148798e3ad7239c262cc8d9b123c815dfd5b5cf0b2a3b8fb740669ab4a"
+    }
+  ],
+  "created_at": "2026-06-15T07:16:21.763690+00:00",
+  "crossref_doi": "10.1186/s13321-021-00558-4",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pretrained MS2DeepScore Siamese network model weights and architecture",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test set spectra (3,601 spectra of 500 unique InChIKeys) with binned peak vectors and structural annotations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ground-truth Tanimoto scores matrix (500 \u00d7 500) computed from RDKit Daylight fingerprints",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spec2Vec and classical spectral similarity baseline predictions on test set pairs",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Precision-recall curve plot comparing MS2DeepScore, Spec2Vec, and classical spectral similarity methods across Tanimoto score thresholds",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Precision in this context is the fraction of predicted high-similarity pairs that have ground-truth Tanimoto \u2265 threshold; recall is the fraction of all ground-truth high-similarity pairs that are retrieved by the method.",
+    "Tanimoto similarity on binary fingerprints ranges from 0 (completely dissimilar) to 1 (identical); RDKit Daylight fingerprints with 2048 bits are the canonical ground truth in this study.",
+    "A left-skewed distribution of Tanimoto scores (most pairs dissimilar) means performance at high thresholds is constrained by fewer positive examples; precision-recall curves are more informative than ROC curves for imbalanced retrieval tasks.",
+    "The Siamese network architecture produces cosine similarity scores directly from spectral embeddings without explicit fingerprint computation, enabling fast inference on large test sets (6.5M pairs).",
+    "Varying the threshold from 0 to near 1 traces the trade-off between selecting more candidate pairs (higher recall, lower precision) and stricter selectivity (lower recall, higher precision)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at zenodo.org/record/4699356 (fully trained model)",
+      "verify file exists at https://github.com/matchms/ms2deepscore (source code repository)",
+      "verify test set file exists and contains 3601 spectra with structural similarity labels",
+      "script_runs: execute precision-recall computation script with test set and model inputs without errors",
+      "output_matches_reference: precision and recall curves (any of the following formats: PNG/PDF figure, CSV table with threshold, precision, recall columns, or pickle serialized curve object) computed from test set match reported results in article figures within \u00b10.02 absolute difference in precision/recall values across thresholds",
+      "value_in_range: computed RMSE of MS2DeepScore predictions on test set is between 0.13 and 0.20 (as stated in results section)",
+      "contains_substring: generated precision-recall output documentation clearly labels which scoring method (MS2DeepScore vs. baseline 1 vs. baseline 2) produced each curve"
+    ],
+    "expert_review": [
+      "assess whether the three scoring methods (MS2DeepScore, baseline 1, baseline 2) are identically configured and fairly compared (same hyperparameters, same data splits, same evaluation protocol)",
+      "judge whether precision and recall curves demonstrate that MS2DeepScore 'clearly outperforms' baselines as claimed\u2014evaluate the magnitude of difference and statistical significance (no canonical answer: depends on domain expectations for 'clear' outperformance)",
+      "evaluate whether the test set (3601 spectra, 500 unique InChIKeys) is sufficiently representative and independent from training/validation to support the claimed generalization",
+      "assess appropriateness of Tanimoto \u2265 threshold definition as the ground-truth label for 'structural similarity' and whether this aligns with chemical domain expectations"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does MS2DeepScore outperform classical spectral similarity measures (modified Cosine) and the unsupervised Spec2Vec method in retrieving chemically related compound pairs from mass spectral datasets?: 'MS2DeepScore clearly outperforms both classical measures (two forms of the modified Cosine) as well as the unsupervised spectral similarity measure Spec2Vec, with respect to identifying high Tanimoto'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] MS2DeepScore demonstrates superior precision and recall across the full range of similarity thresholds compared to modified Cosine and Spec2Vec when identifying structurally related compounds (Tanimoto > 0.6) from the test set of 3601 spectra.: 'MS2DeepScore gives notably better precision/recall combination over the entire range, followed by Spec2Vec and only then modified Cosine'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pretrained MS2DeepScore Siamese network model weights and architecture: 'The fully trained model used to create Fig. 2, 4, 5, 7, 8 can be downloaded from zenodo: https:// zenodo. org/ record/ 46993 56'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Test set spectra (3,601 spectra of 500 unique InChIKeys) with binned peak vectors and structural annotations: 'for the final evaluation on the reserved test set, we used all possible spectrum pairs between the 3601 for the test set (n = 6,485,401 unique spectrum pairs)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Ground-truth Tanimoto scores matrix (500 \u00d7 500) computed from RDKit Daylight fingerprints: 'we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities. For every unique 14-character InChIKey the most common InChI was selected (if different'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Spec2Vec and classical spectral similarity baseline predictions on test set pairs: 'The precision/recall plot in Fig. 4 was created by measuring how many pairs with Tanimoto scores above a set threshold were among a subset of all pairs for which the spectral similarity score was >'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Precision-recall curve plot comparing MS2DeepScore, Spec2Vec, and classical spectral similarity methods across Tanimoto score thresholds: 'The precision/recall plot in Fig. 4 was created by measuring how many pairs with Tanimoto scores above a set threshold were among a subset of all pairs for which the spectral similarity score was >'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MS2DeepScore: 'we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] RDKit: 'we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'Our MS2DeepScore Python library offers two types of data generators'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] scikit-learn: 'Using the t-SNE [28] implementation from scikit-learn [29]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of which two baseline scoring methods are used for comparison in precision-recall curves or their exact parameter configurations: 'MS2DeepScore can generally be used to complement -or replace- common currently used spectral similarity measures'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No reporting of computational time or inference speed benchmarks comparing MS2DeepScore to baseline methods on the test set: 'MS2DeepScore is very fast and scalable.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No discussion of how the Tanimoto threshold parameter affects precision-recall trade-offs or guidance on threshold selection for practical use: 'We demonstrate that the accuracy of the predictions can be improved notably by using various ensemble learning techniques'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No information on model ensemble method details (how many Monte-Carlo Dropout samples, how scores are aggregated, uncertainty filtering thresholds) used during precision-recall evaluation: 'by applying Monte-Carlo Dropout to sample from random model variations'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import matchms; import numpy as np; from sklearn.metrics import precision_recall_curve; import pickle; import matplotlib.pyplot as plt; model = pickle.load(open('{inputs.pretrained_model}', 'rb')); test_spectra = pickle.load(open('{inputs.test_spectra}', 'rb')); tanimoto_labels = np.load('{inputs.tanimoto_labels}'); baseline_scores = np.load('{inputs.baseline_scores}'); embeddings = np.array([model.predict(s) for s in test_spectra]); n = len(embeddings); pair_indices = [(i, j) for i in range(n) for j in range(i+1, n)]; ms2_scores = np.array([np.dot(embeddings[i], embeddings[j]) / (np.linalg.norm(embeddings[i]) * np.linalg.norm(embeddings[j])) for i, j in pair_indices]); tanimoto_flat = np.array([tanimoto_labels[i, j] for i, j in pair_indices]); thresholds = np.linspace(0, 1, 101); fig, ax = plt.subplots(); for method, scores in [('MS2DeepScore', ms2_scores), ('Spec2Vec', baseline_scores[:, 0]), ('Classical Cosine', baseline_scores[:, 1])]: precisions, recalls, _ = precision_recall_curve((tanimoto_flat > thresholds[:, None]).astype(int).flatten(), np.tile(scores, len(thresholds))); ax.plot(recalls, precisions, label=method); ax.set_xlabel('Recall'); ax.set_ylabel('Precision'); ax.set_title('Precision-Recall Comparison: MS2DeepScore vs Baselines'); ax.legend(); ax.grid(True); plt.savefig('precision_recall_comparison_figure4.png', dpi=300, bbox_inches='tight'); print('Precision-recall plot saved as precision_recall_comparison_figure4.png')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "precision_recall_curve.png",
+  "expected_outputs": [
+    "Precision-recall curve plot comparing MS2DeepScore, Spec2Vec, and classical spectral similarity methods across Tanimoto score thresholds"
+  ],
+  "finding": "MS2DeepScore demonstrates superior precision and recall across the full range of similarity thresholds compared to modified Cosine and Spec2Vec when identifying structurally related compounds (Tanimoto > 0.6) from the test set of 3601 spectra.",
+  "github_name": "matchms/ms2deepscore",
+  "input_from": "task_001",
+  "inputs": [
+    "Pretrained MS2DeepScore Siamese network model weights and architecture",
+    "Test set spectra (3,601 spectra of 500 unique InChIKeys) with binned peak vectors and structural annotations",
+    "Ground-truth Tanimoto scores matrix (500 \u00d7 500) computed from RDKit Daylight fingerprints",
+    "Spec2Vec and classical spectral similarity baseline predictions on test set pairs"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "embeddings_test_set.npy",
+    "ms2deepscore_predictions.csv",
+    "tanimoto_ground_truth.csv",
+    "precision_recall_metrics.csv"
+  ],
+  "linked_result_ids": [
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_014",
+    "result_023",
+    "result_026",
+    "result_030",
+    "result_031",
+    "result_044",
+    "result_047"
+  ],
+  "methodology_summary": [
+    "Load pretrained MS2DeepScore base network and test set spectra (3,601 spectra, 500 unique InChIKeys).",
+    "Compute 200-dimensional spectral embeddings for all test spectra via forward pass through the base network.",
+    "Generate all 6,485,401 unique spectrum pair combinations and compute pairwise cosine similarity scores (MS2DeepScore predictions).",
+    "Retrieve ground-truth Tanimoto scores from RDKit Daylight fingerprints (2048 bits) for the same pairs.",
+    "For each method (MS2DeepScore, Spec2Vec, classical similarity), vary Tanimoto threshold from 0 to ~1 and compute precision and recall at each threshold.",
+    "Plot precision versus recall for all three methods on a single curve and save as PNG.",
+    "Validation: Confirm that MS2DeepScore curve dominates (higher precision at matched recall) compared to Spec2Vec and classical methods across the threshold range, matching the reported result in Figure 4.",
+    "References: source article (DOI: 10.1186/s13321-021-00558-4)"
+  ],
+  "missing_information": [
+    "No specification of which two baseline scoring methods are used for comparison in precision-recall curves or their exact parameter configurations",
+    "No reporting of computational time or inference speed benchmarks comparing MS2DeepScore to baseline methods on the test set",
+    "No discussion of how the Tanimoto threshold parameter affects precision-recall trade-offs or guidance on threshold selection for practical use",
+    "No information on model ensemble method details (how many Monte-Carlo Dropout samples, how scores are aggregated, uncertainty filtering thresholds) used during precision-recall evaluation"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/rmse_no_filter"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does MS2DeepScore outperform classical spectral similarity measures (modified Cosine) and the unsupervised Spec2Vec method in retrieving chemically related compound pairs from mass spectral datasets?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods",
+    "results",
+    "intro",
+    "supplementary"
+  ],
+  "skills": [
+    "spectral-embedding-generation-from-neural-networks",
+    "compound-structural-similarity-retrieval",
+    "precision-recall-curve-generation-for-ranking-tasks",
+    "tanimoto-score-threshold-optimization",
+    "deep-learning-model-inference-on-test-sets"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_ms2deepscore",
+  "spine_condition_ids": [
+    "cond_ms2deepscore_no_uncertainty",
+    "cond_daylight_tanimoto",
+    "cond_ms2deepscore_with_uncertainty",
+    "cond_mc_dropout_iqr025",
+    "cond_mc_dropout_iqr02",
+    "cond_median_multiple_spectra",
+    "cond_spec2vec_baseline",
+    "cond_modified_cosine_baseline",
+    "cond_morgan2_tanimoto",
+    "cond_morgan3_tanimoto",
+    "cond_morgan2_dice",
+    "cond_morgan3_dice",
+    "cond_daylight_dice"
+  ],
+  "spine_entity_ids": [
+    "MS2DeepScore_system",
+    "test_set",
+    "spec2vec_tool",
+    "modified_cosine_tool",
+    "cond_ms2deepscore_no_uncertainty",
+    "cond_ms2deepscore_with_uncertainty",
+    "cond_mc_dropout_iqr025",
+    "cond_mc_dropout_iqr02",
+    "cond_median_multiple_spectra",
+    "cond_spec2vec_baseline",
+    "cond_modified_cosine_baseline",
+    "cond_daylight_tanimoto",
+    "cond_morgan2_tanimoto",
+    "cond_morgan3_tanimoto",
+    "cond_morgan2_dice",
+    "cond_morgan3_dice",
+    "cond_daylight_dice",
+    "metric_rmse_tanimoto_bins",
+    "result_ms2deepscore_outperforms_baselines",
+    "result_embeddings_cluster_chemically",
+    "result_all_fingerprints_accurate",
+    "result_daylight_less_skewed",
+    "result_mc_dropout_improves_all_bins",
+    "result_iqr_improves_extreme_bins",
+    "tanimoto_score"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "benchmark-evaluation",
+    "visualization",
+    "data-analysis"
+  ],
+  "synthesized_from": null,
+  "task_description": "Compute precision and recall curves for MS2DeepScore, Spec2Vec, and classical spectral similarity on the reserved test set (3,601 spectra, 6,485,401 unique pairs) by varying Tanimoto score thresholds and measuring retrieval performance for structurally related compounds; save the precision/recall plot reproducing Figure 4.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pretrained MS2DeepScore model weights",
+      "port_id": "pretrained_model",
+      "resolved_via": null,
+      "source": "task_001/rmse_no_filter",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Test set binned spectra with InChIKey annotations",
+      "port_id": "test_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ground-truth Tanimoto score matrix (500\u00d7500)",
+      "port_id": "tanimoto_labels",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spec2Vec and classical similarity predictions on test pairs",
+      "port_id": "baseline_scores",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Compute precision-recall curves for all three scoring methods (MS2DeepScore, Spec2Vec, modified Cosine) on the test set to retrieve compound pairs with Tanimoto \u2265 0.6 and verify MS2DeepScore's superior performance.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Precision-recall curve for structural similarity retrieval",
+      "port_id": "precision_recall_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "deep-learning",
+    "machine-learning",
+    "spectral-library-matching",
+    "tandem-ms",
+    "metabolite-identification",
+    "transfer-learning"
+  ],
+  "title": "Reproduce precision\u2013recall comparison of MS2DeepScore vs. Spec2Vec and Modified Cosine baselines",
+  "tools": [
+    "matchms",
+    "MS2DeepScore",
+    "RDKit",
+    "Python",
+    "scikit-learn"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the reserved test set (3,601 spectra) and the pretrained MS2DeepScore base network from the Zenodo deposit. 2. Compute 200-dimensional spectral embeddings for all test spectra using the MS2DeepScore base network. 3. Generate all possible spectrum pairs from the test set (6,485,401 unique pairs) and compute MS2DeepScore structural similarity predictions using cosine distance between embeddings. 4. Retrieve ground-truth Tanimoto scores (computed from RDKit Daylight fingerprints with 2048 bits) for each test pair using the 14-character InChIKey structural labels. 5. For each scoring method (MS2DeepScore, Spec2Vec, classical similarity), iterate threshold values from 0 to 1 and for each threshold measure precision (high Tanimoto pairs in selection / all selected pairs) and recall (high Tanimoto pairs in selection / all high Tanimoto pairs), where 'high Tanimoto' is defined as Tanimoto \u2265 threshold. 6. Plot precision versus recall for all three methods on a single figure and save as precision_recall_curve.png."
+}

@@ -1,0 +1,21 @@
+  figures/CNAimage.jpg
+  figures/CNAtext.jpg
+  figures/DMR.jpg
+  figures/DMRdistributionplot.png
+  figures/DMRoutput.jpg
+  figures/MVP1.jpg
+  figures/MVP2.jpg
+  figures/MVP3.jpg
+  figures/checkBMIQ.jpg
+  figures/densityPlot.jpg
+  figures/failedProbes.jpg
+  figures/lasso.jpg
+  figures/logo4.jpg
+  figures/mdsPlot.jpg
+  figures/probeFeatures.jpg
+  figures/radius.jpg
+  figures/rawSampleCluster.jpg
+  figures/sampleSheetexample.jpg
+  figures/studyInfo.jpg
+  figures/studyInfo.png
+paper.md

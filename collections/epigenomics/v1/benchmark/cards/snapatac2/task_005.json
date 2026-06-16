@@ -1,0 +1,386 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-0.png",
+      "role": "figure",
+      "sha256": "62b9435f3307fc87f52ef0605b5fb429b904fb7c3008486d5e6a1a3e0ac2ef49"
+    },
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-1.png",
+      "role": "figure",
+      "sha256": "4c20c79eb335c2d7ab728a84f1a22058120bc74ab7192782d770cbbd942dab52"
+    },
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-2.png",
+      "role": "figure",
+      "sha256": "d5eb9377f2a149d7b57d78ca39f60cc51bc16213a568780072657558d22be90d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/func+export_coverage.svg",
+      "role": "figure",
+      "sha256": "b2c54284c113efb517e25ccfd1829a2f548e34db945b512753e130a447d46976"
+    },
+    {
+      "indexable": false,
+      "path": "figures/func+import_data.svg",
+      "role": "figure",
+      "sha256": "248512cdcfb5004f5e114f588183a92fef1e6115d05b1c32a5d917690d1efb66"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "95aea9a378722044cf71a0cc3f6bb553788936ff4c89d5f6c20466b68e804fde"
+    }
+  ],
+  "created_at": "2026-06-15T19:32:53.712417+00:00",
+  "crossref_doi": "10.1038/s41592-023-02139-9",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Differentially accessible peaks (BED format or AnnData object with peak annotations)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CIS-BP motif database",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Reference genome sequence (for motif scanning context)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Motif enrichment table with columns: motif_id, motif_name, enrichment_score, p_value, and adjusted_p_value",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Motif enrichment p-values reflect the statistical significance of over- or under-representation of DNA motifs in a peak set compared to a background model or null distribution.",
+    "The CIS-BP database is a curated compendium of eukaryotic transcription factor DNA-binding specificity data represented as position-weight matrices.",
+    "Differentially accessible peaks are genomic regions with significantly altered chromatin accessibility between cell populations or conditions, typically derived from ATAC-seq or similar assays.",
+    "Enrichment scores quantify the degree to which a given motif is overrepresented in peak sequences relative to the background, often computed via hypergeometric or Fisher exact test statistics.",
+    "Multiple hypothesis correction (e.g., Benjamini\u2013Hochberg FDR) is typically applied to p-values when testing many motifs simultaneously to control false discovery rate."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: input differential peaks table (from task_NNN.expected_outputs or public deposit)",
+      "verify file exists: CIS-BP motif database (public accession or downloaded artifact)",
+      "script_runs: SnapATAC2 tl.motif_enrichment invocation on input peaks and motif database completes without error",
+      "file_format_is: output table is CSV, TSV, or structured record (Parquet/HDF5)",
+      "field_present: output table contains column for motif IDs",
+      "field_present: output table contains column for enrichment scores",
+      "field_present: output table contains column for p-values",
+      "row_count_equals: output table has at least one row (robust to dataset size, parameter-sensitive to motif database version and filtering thresholds)",
+      "value_in_range: enrichment score values are numeric and finite",
+      "value_in_range: p-values are numeric, in range [0, 1]"
+    ],
+    "expert_review": [
+      "Enrichment scores and p-values are statistically reasonable given the input peak set and motif database (no implausibly extreme values or systematic biases)",
+      "Motif IDs match expected CIS-BP identifier format and are present in the version of the database used"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What output does the motif enrichment function (tl.motif_enrichment) produce when applied to differentially accessible peaks?: 'End-to-end analysis pipeline for single-cell ATAC-seq data, including preprocessing, dimension reduction, clustering, data integration, peak calling'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SnapATAC2 includes tl.motif_enrichment for motif analysis as part of its single-cell ATAC-seq analysis pipeline.: 'tl.motif_enrichment for motif analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Differentially accessible peaks (BED format or AnnData object with peak annotations): 'tl.diff_test for differential analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CIS-BP motif database: 'datasets.cis_bp'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Reference genome sequence (for motif scanning context): 'genome.Genome class is added for automatic download of gene annotation files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Motif enrichment table with columns: motif_id, motif_name, enrichment_score, p_value, and adjusted_p_value: 'tl.motif_enrichment for motif analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SnapATAC2: 'SnapATAC2: A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] tl.motif_enrichment: 'tl.motif_enrichment for motif analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] tl.diff_test: 'tl.marker_regions, tl.diff_test for differential analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] datasets.cis_bp: 'datasets.cis_bp'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or discussion of motif enrichment validation results available: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import snapatac2 as snap; import pandas as pd; peaks = snap.read('{inputs.diff_peaks}'); motifs = snap.datasets.cis_bp('{inputs.cis_bp_motifs}'); enrichment = snap.tl.motif_enrichment(peaks, motifs, genome='{inputs.genome_ref}'); enrichment_df = pd.DataFrame(enrichment); enrichment_df.to_csv('motif_enrichment_results.tsv', sep='\\t', index=False); print(enrichment_df)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "motif_enrichment_results.csv",
+  "expected_outputs": [
+    "Motif enrichment table with columns: motif_id, motif_name, enrichment_score, p_value, and adjusted_p_value"
+  ],
+  "finding": "SnapATAC2 includes tl.motif_enrichment for motif analysis as part of its single-cell ATAC-seq analysis pipeline.",
+  "github_name": "scverse/SnapATAC2",
+  "input_from": "task_004",
+  "inputs": [
+    "Differentially accessible peaks (BED format or AnnData object with peak annotations)",
+    "CIS-BP motif database",
+    "Reference genome sequence (for motif scanning context)"
+  ],
+  "keywords": [
+    "single-cell atac-seq",
+    "single-cell epigenomics",
+    "spectral embedding",
+    "multi-omics integration",
+    "dimension reduction",
+    "clustering",
+    "peak calling",
+    "preprocessing",
+    "fragment file conversion",
+    "scalable analysis"
+  ],
+  "landmark_outputs": [
+    "peaks_loaded.log",
+    "motif_database_summary.txt",
+    "motif_enrichment_results.csv"
+  ],
+  "linked_result_ids": [
+    "result_006",
+    "result_030"
+  ],
+  "methodology_summary": [
+    "Load differentially accessible peaks from tl.diff_test output into SnapATAC2 data structure.",
+    "Retrieve CIS-BP motif database using datasets.cis_bp, obtaining position-weight matrices and motif identifiers.",
+    "Scan peak sequences for motif occurrences using SnapATAC2's integrated motif scanner.",
+    "Compute enrichment statistics (scores and p-values) by comparing observed motif frequencies in peaks to background or genome-wide frequencies.",
+    "Validation: verify output table contains all required columns (motif_id, enrichment_score, p_value) with no missing values, and that p-values are properly computed statistics between 0 and 1.",
+    "References: source article (DOI: 10.1038/s41592-023-02139-9)"
+  ],
+  "missing_information": [
+    "No changelog or discussion of motif enrichment validation results available"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_004/anndata_with_clusters"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What output does the motif enrichment function (tl.motif_enrichment) produce when applied to differentially accessible peaks?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "motif-enrichment-statistical-testing",
+    "atac-seq-peak-annotation",
+    "differential-accessibility-interpretation",
+    "motif-database-query-and-matching",
+    "single-cell-epigenomics-peak-analysis"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_snapatac2/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "tl_merge_peaks",
+    "tl_diff_test",
+    "tl_motif_enrichment",
+    "network_analysis"
+  ],
+  "subdomains": [
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:scverse__SnapATAC2",
+  "task_description": "Perform motif enrichment analysis on a set of differentially accessible peaks using SnapATAC2's tl.motif_enrichment function with the CIS-BP motif database, generating an output table with motif identifiers, enrichment scores, and p-values.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Differentially accessible peaks",
+      "port_id": "diff_peaks",
+      "resolved_via": null,
+      "source": "task_004/anndata_with_clusters",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CIS-BP motif database",
+      "port_id": "cis_bp_motifs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Reference genome sequence",
+      "port_id": "genome_ref",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Invoke tl.motif_enrichment on differentially accessible peaks and verify the output table contains motif IDs, enrichment scores, and p-values.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Motif enrichment results with IDs, scores, and p-values",
+      "port_id": "motif_enrichment_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction",
+    "batch-correction",
+    "normalization"
+  ],
+  "title": "Reconstruct motif enrichment analysis using tl.motif_enrichment with the CIS-BP dataset",
+  "tools": [
+    "SnapATAC2",
+    "tl.motif_enrichment",
+    "tl.diff_test",
+    "datasets.cis_bp",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: tl.motif_enrichment, tl.diff_test, datasets.cis_bp, Motif enrichment table with columns: motif_id, motif_name, enrichment_score, p_value, and adjusted_p_value."
+  ],
+  "workflow_description": "1. Load differentially accessible peaks (output from tl.diff_test) as a feature set into SnapATAC2. 2. Load the CIS-BP motif database using datasets.cis_bp to obtain motif definitions and position-weight matrices. 3. Invoke tl.motif_enrichment on the peak set, scanning for motif occurrences within differential regions and computing enrichment statistics against a background model. 4. Retrieve the resulting motif enrichment table containing motif IDs, enrichment scores, and p-values. 5. Validate that all required columns are present and non-null, and that p-values reflect the statistical significance of motif overrepresentation."
+}

@@ -1,0 +1,37 @@
+schema_version: 0.1.0
+workflow_id: coll_hexpmetdb_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+narrative:
+  tagline: HExpMetDB is a benchmark database presented without documented usage examples
+    or clear validation results in the available text.
+  pseudo_abstract: The paper introduces HExpMetDB, a resource whose specific capabilities
+    and experimental validation are not clearly articulated in the provided summary.
+    Expert review is recommended to establish the benchmark's scope and confirmed
+    findings.
+  research_questions:
+  - Assess the scientific task and reproducibility context described by this article
+    package.
+  methods_summary: ''
+  domain: metabolomics
+  techniques: []
+  claims: []
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: A reviewed SciTask Card and capsule describing the benchmarkable task.
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

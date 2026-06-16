@@ -1,0 +1,10 @@
+name: hdf5plugin
+slug: hdf5plugin
+evidence_spans:
+- h5py and optionally hdf5plugin <https://hdf5plugin.readthedocs.io/en/latest/>
+derived_from:
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+source_repos:
+- levitsky/pyteomics
+schema_version: 0.2.0

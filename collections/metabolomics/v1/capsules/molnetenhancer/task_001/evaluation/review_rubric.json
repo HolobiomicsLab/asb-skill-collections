@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: pyMolNetEnhancer package accessible from github:madeleineernst__pyMolNetEnhancer"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output network artifact is valid GraphML or JSON (no canonical answer\u2014check docu",
+      "value": "JSON"
+    },
+    {
+      "id": "pf_004",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output network nodes contain MS2LDA motif annotation fields",
+      "value": [
+        "s"
+      ]
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output network includes node identifiers from input GNPS network matched to moti"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: pyMolNetEnhancer package accessible from github:madeleineernst__pyMolNetEnhancer",
+      "script_runs: execute pyMolNetEnhancer classical-mode motif mapping function with valid GNPS network JSON and MS2LDA motif file as inputs without error",
+      "file_format_is: output network artifact is valid GraphML or JSON (no canonical answer\u2014check documentation for format specification)",
+      "field_present: output network nodes contain MS2LDA motif annotation fields",
+      "contains_substring: output network includes node identifiers from input GNPS network matched to motif assignments"
+    ],
+    "expert_review": [
+      "verify semantic correctness: MS2LDA motif-to-node mappings are biologically plausible and consistent with mass spectral fragmentation patterns",
+      "verify annotation fidelity: motif assignments reflect the substructural information from MS2LDA without loss or corruption",
+      "assess network topology preservation: classical-mode mapping does not alter or introduce spurious edges in the original GNPS network structure"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

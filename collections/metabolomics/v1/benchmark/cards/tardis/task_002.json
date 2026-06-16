@@ -1,0 +1,443 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Component_131.png",
+      "role": "figure",
+      "sha256": "49841ea093c2418dce75e85dd0a4fae55766914f14095539d56f7ba22284f052"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_14.png",
+      "role": "figure",
+      "sha256": "db5149cb16920f5dbd90a7ccd4a131023fcce4c5269adec045605882499f366c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_15.png",
+      "role": "figure",
+      "sha256": "c591c13e7564aa2ccba0a726a74ef897db63aedec774695889f3904ef50009bc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1576.png",
+      "role": "figure",
+      "sha256": "68b9db1ec71495a045b5f27d8bb05591fd644a2f0406383ad9dcd749f9100575"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1577.png",
+      "role": "figure",
+      "sha256": "77a337421706d3bbaf863a4b657a9efe1dde67669f769e3eebf5d6a0f6441288"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1578.png",
+      "role": "figure",
+      "sha256": "e2a5a816bbe9d511c4a533fd7d047ca5ae04ec6b67fa53574672ccef2fd6aba3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1583.png",
+      "role": "figure",
+      "sha256": "d86c987eb9530cad3fbbf8f6093cfdcd46d41a7e2e76630f28c7ac37b60b3e10"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_17.png",
+      "role": "figure",
+      "sha256": "484067618beead61a8937cba2e342448149b25f9a5a5f3ce3fee3c527b4ac6fb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_179.png",
+      "role": "figure",
+      "sha256": "ca7593be96ab92a038fd3bba8e5109722e59cef8ed48c98df7628a8b52db70c3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_183.png",
+      "role": "figure",
+      "sha256": "450029a8080d404d8bf4452316e111cca329b8052efbf365c67f9aecb2f09c80"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_21.png",
+      "role": "figure",
+      "sha256": "0771d4878d7bbc6425dcb9a7390d6882daf3ec84ce38db2a042bf70342734740"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_22.png",
+      "role": "figure",
+      "sha256": "b2a3ad8c85706b9a3c790c95c179a45e3957c342945ced0d5faa577abe37790f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_23.png",
+      "role": "figure",
+      "sha256": "e382f8674c98e4780fc98faf4a72eaa9f502cc88f635be7c66e74e29a3ee5c0e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_24.png",
+      "role": "figure",
+      "sha256": "e8a97419fd4639483cdb06111783a29829e07f23021989b9e8e6dcb2092fc7cb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_25.png",
+      "role": "figure",
+      "sha256": "ea88347302201a23f8b022eb8b9a496fd83ccf0439b546ca90bb9071145b7b97"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_331.png",
+      "role": "figure",
+      "sha256": "d234dcf1f1137bb4a43bc6f97c5239723ed9e2aa2297c4204168d4797363308e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_7.png",
+      "role": "figure",
+      "sha256": "3125b1dddebe3c6b5b0ce8f16e5df494b4070d0049fb377982d40e39d61e2d63"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_9.png",
+      "role": "figure",
+      "sha256": "9338b2919d0fa6f13ab4c1053eb8a4ac5cebbc87114ae218a2366648f39a9f09"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tardis.png",
+      "role": "figure",
+      "sha256": "3753660e6f52ebbe415127dbf72ed680f41d0ebe4de8549bb4cddcfaf18ca806"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tardis_new.png",
+      "role": "figure",
+      "sha256": "3753660e6f52ebbe415127dbf72ed680f41d0ebe4de8549bb4cddcfaf18ca806"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "424fcd032ba74d0180ed7b3853f27a43238247a9db11a9a9dfc3ad6dbfc6cc2e"
+    }
+  ],
+  "created_at": "2026-06-16T07:24:56.964844+00:00",
+  "crossref_doi": "10.1021/acs.analchem.5c00567",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "14 centroided .mzML LC-MS data files (vignette dataset)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Target list data.frame with compound ID, name, m/z, retention time, and polarity",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "10 extracted ion chromatogram (EIC) PNG plots (one per target compound) with peak annotations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Screening mode in TARDIS checks whether target compounds are detectable within predefined m/z and retention time windows before full peak detection, serving as a QC step to validate method parameters.",
+    "EIC plots display intensity versus retention time for a single extracted m/z value, essential for visual confirmation that detected peaks correspond to intended targets and not isobaric interferences.",
+    "Internal standards (typically stable isotope-labeled analogs) and endogenous compounds require separate polarity filtering within TARDIS because they may ionize in positive or negative mode; the tool automates this filtering to avoid manual subsetting.",
+    "Centroiding converts profile-mode (high-resolution continuous) LC-MS data to centroid mode (peak apex m/z and intensity pairs), reducing file size and simplifying peak detection algorithms."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at output/screening/Diagnostic_QCs_Batch_1/ directory",
+      "file_format_is PNG for all 10 EIC plot files in output/screening/Diagnostic_QCs_Batch_1/",
+      "row_count_equals 10 PNG files present in output/screening/Diagnostic_QCs_Batch_1/ (one per component)",
+      "script_runs: tardisPeaks() executes without error when called with screening_mode=TRUE on vignette LC-MS dataset",
+      "file_exists for each expected EIC plot file matching pattern corresponding to the 10 targets (5 internal standards + 5 endogenous)"
+    ],
+    "expert_review": [
+      "visual inspection of EIC plots for correct peak identification and appropriate m/z and retention time windows for each of the 10 targets",
+      "verification that screening mode output correctly flags target visibility within specified m/z and RT windows for all 14 runs",
+      "assessment that EIC plot quality is sufficient for diagnostic inspection (clarity, axis labels, peak prominence relative to noise)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does tardisPeaks() in screening mode successfully generate and save extracted ion chromatogram (EIC) plots for all 10 target compounds (5 internal standards + 5 endogenous metabolites) to the diagnostic QC output folder?: 'We can run screening mode using the argument `screening_mode = TRUE` in the tardis_peaks function.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] tardisPeaks() in screening mode generates EIC plots for all 10 targets that are saved to the output folder and can be inspected, with resulting diagnostic plots for QC runs showing peak detection and integration for each component.: 'The resulting EICs are saved in the output folder and can be inspected'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] 14 centroided .mzML LC-MS data files (vignette dataset): 'Input files need to be converted to the .mzML format and have to be centroided'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Target list data.frame with compound ID, name, m/z, retention time, and polarity: 'compound ID, a unique identifier; A compound Name; Theoretical or measured *m/z*; Expected RT (in minutes); A column that indicates the polarity'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] 10 extracted ion chromatogram (EIC) PNG plots (one per target compound) with peak annotations: 'The resulting EICs are again saved in the output folder and can be inspected'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TARDIS: 'R package for *TArgeted Raw Data Integration In Spectrometry*'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectra: 'loads MS data as `Spectra` objects so it's easily integrated with other tools'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] xcms: 'It makes use of an established retention time correction algorithm from the `xcms` package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'R package for *TArgeted Raw Data Integration In Spectrometry*'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MsExperiment: 'Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[results] knitr: 'knitr::include_graphics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(TARDIS); library(MsExperiment); library(Spectra); mzml_files <- list.files('{inputs.mzml_runs}', pattern='\\.mzML$', full.names=TRUE); target_df <- read.csv('{inputs.target_list}'); dir.create('output/screening/Diagnostic_QCs_Batch_1', recursive=TRUE, showWarnings=FALSE); exp <- MsExperiment::MsExperiment(spectra=Spectra::Spectra(mzml_files)); result <- TARDIS::tardisPeaks(exp, targets=target_df, screening_mode=TRUE, output_dir='output/screening/Diagnostic_QCs_Batch_1'); message('Screening mode diagnostic EIC plots generated successfully')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "10 extracted ion chromatogram (EIC) PNG plots (one per target compound) with peak annotations"
+  ],
+  "finding": "tardisPeaks() in screening mode generates EIC plots for all 10 targets that are saved to the output folder and can be inspected, with resulting diagnostic plots for QC runs showing peak detection and integration for each component.",
+  "github_name": "pablovgd/TARDIS",
+  "input_from": "task_000",
+  "inputs": [
+    "14 centroided .mzML LC-MS data files (vignette dataset)",
+    "Target list data.frame with compound ID, name, m/z, retention time, and polarity"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "screening_results.csv",
+    "target_visibility_summary.txt",
+    "Diagnostic_QCs_Batch_1/*.png"
+  ],
+  "linked_result_ids": [
+    "result_013",
+    "result_014",
+    "result_020"
+  ],
+  "methodology_summary": [
+    "Load 14 centroided .mzML LC-MS runs and target compound metadata (m/z, retention time, polarity) into TARDIS environment.",
+    "Execute tardisPeaks() with screening_mode=TRUE to screen target visibility within m/z and retention time windows, applying automatic polarity filtering.",
+    "Generate and save 10 extracted ion chromatogram (EIC) PNG plots with peak annotations to output/screening/Diagnostic_QCs_Batch_1/ folder.",
+    "Validation: verify that exactly 10 PNG files are generated (one per target), each file exists in the specified output directory, and files are readable PNG images with visible chromatographic traces and peak annotations.",
+    "References: source article (DOI: 10.1021/acs.analchem.5c00567)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does tardisPeaks() in screening mode successfully generate and save extracted ion chromatogram (EIC) plots for all 10 target compounds (5 internal standards + 5 endogenous metabolites) to the diagnostic QC output folder?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "results"
+  ],
+  "skills": [
+    "lcms-target-visibility-screening",
+    "extracted-ion-chromatogram-inspection",
+    "targeted-metabolite-detection-parameter-optimization",
+    "mass-spectrometry-polarity-filtering",
+    "chromatographic-peak-annotation-visualization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_tardis/synthesized_package",
+  "spine_condition_ids": [
+    "cond_screening_mode_true",
+    "cond_screening_mode_false"
+  ],
+  "spine_entity_ids": [
+    "comp_tardisPeaks",
+    "comp_screening_mode",
+    "dataset_vignette_lcms",
+    "dataset_targets_xlsx",
+    "artifact_eic_plots",
+    "artifact_metric_csvs",
+    "cond_screening_mode_true",
+    "cond_screening_mode_false"
+  ],
+  "subdomains": [
+    "lipidomics",
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "visualization"
+  ],
+  "synthesized_from": "github:UGent-LIMET__TARDIS",
+  "task_description": "Execute tardisPeaks() with screening_mode=TRUE on a 14-run LC-MS vignette dataset (10 targets: 5 internal standards + 5 endogenous compounds) to perform target visibility screening and generate 10 diagnostic extracted ion chromatogram (EIC) PNG plots saved to output/screening/Diagnostic_QCs_Batch_1/.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "14 centroided LC-MS .mzML files",
+      "port_id": "mzml_runs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Target list data.frame with compound metadata",
+      "port_id": "target_list",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute tardisPeaks(screening_mode=TRUE) on the vignette dataset and verify that 10 EIC PNG files are generated in the output/screening/Diagnostic_QCs_Batch_1/ folder.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "10 diagnostic EIC PNG plots",
+      "port_id": "eic_plots",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "quality-control",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce the screening-mode Diagnostic EIC Plots for 10 selected targets across one batch",
+  "tools": [
+    "TARDIS",
+    "Spectra",
+    "xcms",
+    "R",
+    "MsExperiment",
+    "knitr"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load 14 centroided .mzML LC-MS runs and a target list data.frame containing compound ID, name, theoretical m/z, expected retention time, and ionization polarity into the TARDIS package environment. 2. Execute tardisPeaks() function with screening_mode=TRUE to detect peaks and screen for target compound visibility within defined m/z and retention time windows across all runs, automatically applying polarity filtering. 3. Generate extracted ion chromatogram (EIC) plots for each of the 10 targets with peak annotation and save as individual PNG files to the output/screening/Diagnostic_QCs_Batch_1/ folder for visual inspection of target detection."
+}

@@ -1,0 +1,452 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/GarrettLab-UF/LipidMatch",
+      "locator_id": "gh_garrettlab-uf_lipidmatch",
+      "locator_kind": "github",
+      "name": "GarrettLab-UF/LipidMatch",
+      "prose": "LipidMatch GitHub repository (https://github.com/GarrettLab-UF/LipidMatch)",
+      "score": 0.4286,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon2.png",
+      "role": "figure",
+      "sha256": "fbd43b41797914abf57f7ecac60c7732200bd9460cf329893364e998b47fd5a0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon3.png",
+      "role": "figure",
+      "sha256": "d82a19c38f3317dff6616e14522d6165284bca0ce392a6844d9ca93f496bdf34"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon4.png",
+      "role": "figure",
+      "sha256": "304f01f87477acee5c7fac2683e60e0d558df82c6e5fb1f1f2e8325c756da79e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidPioneer_Icon.png",
+      "role": "figure",
+      "sha256": "eb23c87a3bd6a161a92944bfa4c032831615db48d187961b4befa3296a21dcb7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidPioneer_Icon2.png",
+      "role": "figure",
+      "sha256": "87b3b9b6c24f809f5dc05bfed6e8c0af7482997dd3d1f2747eecd1bb12613768"
+    },
+    {
+      "indexable": false,
+      "path": "figures/adwaita.png",
+      "role": "figure",
+      "sha256": "2481804d5e75e115991f240b76ba921c205c703fa729c5b3c1691f9ce7557828"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ambiance.png",
+      "role": "figure",
+      "sha256": "a9b6fc7574b456e8444ee205d7f49c5f970fbdbd41bfe83351d388c5c8470e2c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/aqua.png",
+      "role": "figure",
+      "sha256": "ff14e41e680f4030cc611e3f35d08741d9343f489d7f1cf59f5178d0eebe42ef"
+    },
+    {
+      "indexable": false,
+      "path": "figures/arrowStyles.png",
+      "role": "figure",
+      "sha256": "64b54c40e2f61280c5e860427aba5b537e31a9fbb9d21893f99287c0612586c2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/baghira.png",
+      "role": "figure",
+      "sha256": "5d4136bc61c859c5b3661e93f8e866b9500ac3986f46a73d364841e1ff950bb9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/browse.png",
+      "role": "figure",
+      "sha256": "ff29ba02d749bfb7e409d2a5df1ecadd229e9e9266562bfa5bc79002d9771e97"
+    },
+    {
+      "indexable": false,
+      "path": "figures/browseTree.png",
+      "role": "figure",
+      "sha256": "f167c5a8191171fc526070067b35d094034e863663a95ef4a201df94a0ab2bf4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bwidget.png",
+      "role": "figure",
+      "sha256": "9e76c91f4b21bed749b75b597d2bd1b85a5b51c19e16a75869854698c800d582"
+    },
+    {
+      "indexable": false,
+      "path": "figures/config.png",
+      "role": "figure",
+      "sha256": "d3d29dc91af92d7e448ee607ed045a8b42c52251f66b91a717266f0a4bbae4aa"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dirViewer.png",
+      "role": "figure",
+      "sha256": "49ea6516bebda22cfd4b605e0889473036cb23cb790ccd0e9decc13af9f9308a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dust.png",
+      "role": "figure",
+      "sha256": "4a62ef7ede30a0b76c8a6b92ade71c8585047936fe3f66f1c0faa1924a51e3bd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dustSand.png",
+      "role": "figure",
+      "sha256": "d6e3ae873a8c4eabd193961c89867cd4e253bb74cfaa84ec8664bef9be4cadc9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/embeddedWindows.png",
+      "role": "figure",
+      "sha256": "07c2dd2dfe970cfa43dfebd06ea6638e88335888d095cb9b459f6e9f4219392b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/embeddedWindows_tile.png",
+      "role": "figure",
+      "sha256": "98a75dcb881324558602cd4724632caa86c80a49f2ac9a70e1f7621a84b29e77"
+    },
+    {
+      "indexable": false,
+      "path": "figures/scatterplot3d.png",
+      "role": "figure",
+      "sha256": "1836bf22129af1a36967a06ead59f6d6b99b997db7dcfc8d0e4b15a60b8c7283"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "667b13f5130571fe8b138e41a30bd73408e68c8552d2ae6f7a9b97f031cc2f6a"
+    }
+  ],
+  "created_at": "2026-06-16T06:03:34.399740+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LipidMatch GitHub repository (https://github.com/GarrettLab-UF/LipidMatch)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LipidMatch official documentation and README files",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured CSV table enumerating instrument/vendor and acquisition mode combinations with validation status",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Q-Exactive orbitrap instruments support three validated acquisition modes with LipidMatch: targeted, data-dependent top-N (ddMS2-topN), and all ion fragmentation (AIF).",
+    "Agilent, Bruker, and SCIEX Q-TOF platforms are validated for LipidMatch annotation in direct infusion and imaging mass spectrometry experiments.",
+    "Waters mass spectrometry platforms are explicitly unsupported by LipidMatch and cannot be used with the software.",
+    "LipidMatch is modular and platform-agnostic at the peak-picking stage, allowing integration with MZmine, XCMS, MS-DIAL, and Compound Discoverer outputs before lipid annotation.",
+    "The distinction between UHPLC-coupled HRMS/MS (Q-Exactive, Q-TOF instruments) and direct infusion/imaging modes reflects different sample introduction and ionization strategies that affect fragmentation library applicability."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that the GitHub repository github:GarrettLab-UF__LipidMatch is accessible and contains documentation or source code listing instrument/vendor and acquisition mode support",
+      "contains_substring: in repository documentation or README, verify presence of explicit mentions of each of the four validated instrument/vendor types (Q-Exactive, Agilent Q-TOF, Bruker Q-TOF, SCIEX Q-TOF)",
+      "contains_substring: in repository documentation, verify presence of explicit mention of at least three acquisition mode types from the set {targeted, ddMS2-topN, AIF, direct infusion, imaging}",
+      "contains_substring: in repository documentation, verify presence of explicit statement that Waters is unsupported or not currently supported",
+      "output_matches_reference: constructed table row count equals number of valid instrument/vendor and acquisition mode combinations documented in source material (no canonical answer \u2014 dependent on what combinations are explicitly documented as tested/validated vs. inferred)"
+    ],
+    "expert_review": [
+      "assess whether the source documentation provides sufficient detail to distinguish between 'tested and validated,' 'applied,' and 'potentially supported but not documented' for each instrument/vendor \u00d7 acquisition mode pair",
+      "determine whether direct infusion and imaging modes should be attributed to specific instrument/vendor combinations or listed as general capabilities across vendors",
+      "verify that the single documented unsupported case (Waters) is correctly identified and that no other vendor/instrument combinations are negated in the source material"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the complete matrix of instrument/vendor and acquisition mode combinations for which LipidMatch has been validated, and what instrument platforms are explicitly unsupported?: 'LipidMatch has been tested and validated using Q-Exactive orbitrap UHPLC-HRMS/MS data obtained from multiple sample types using targeted, data-dependent top-N (ddMS2-topN), and all ion fragmentation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch validation spans Q-Exactive orbitrap with targeted, ddMS2-topN, and AIF modes; Agilent, Bruker, and SCIEX Q-TOF instruments with direct infusion and imaging; Waters instruments are explicitly unsupported.: 'LipidMatch has been tested and validated using Q-Exactive orbitrap UHPLC-HRMS/MS data obtained from multiple sample types using targeted, data-dependent top-N (ddMS2-topN), and all ion fragmentation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch GitHub repository (https://github.com/GarrettLab-UF/LipidMatch): 'the GitHub page for LipidMatch is: https://github.com/GarrettLab-UF/LipidMatch'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch official documentation and README files: 'LipidMatch is modular, allowing it to fit in various workflows'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Structured CSV table enumerating instrument/vendor and acquisition mode combinations with validation status: 'construct a structured table enumerating every validated instrument/vendor (Q-Exactive, Agilent Q-TOF, Bruker Q-TOF, SCIEX Q-TOF) and acquisition mode (targeted, ddMS2-topN, AIF, direct infusion,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch: 'LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Q-Exactive orbitrap: 'tested and validated using Q-Exactive orbitrap UHPLC-HRMS/MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Agilent Q-TOF UHPLC-HRMS/MS: 'Agilent, Bruker and SCIEX Q-TOF UHPLC-HRMS/MS experiments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Bruker Q-TOF UHPLC-HRMS/MS: 'Agilent, Bruker and SCIEX Q-TOF UHPLC-HRMS/MS experiments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SCIEX Q-TOF UHPLC-HRMS/MS: 'Agilent, Bruker and SCIEX Q-TOF UHPLC-HRMS/MS experiments'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit matrix of validated instrument/vendor and acquisition mode combinations is provided; EnrichedIndex lists four instruments (Q-Exactive, Agilent Q-TOF, Bruker Q-TOF, SCIEX Q-TOF) and multiple modes (targeted, ddMS2-topN, AIF, direct infusion, imaging) but does not specify which modes have been validated for which instruments.: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The documentation provided does not clarify whether Agilent, Bruker, and SCIEX Q-TOF instruments have been tested with all five acquisition modes or only a subset; the direct infusion and imaging mode support may apply to all vendors or only specific ones.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "cd {inputs.lipidmatch_repo} && find . -type f \\( -name '*.md' -o -name '*.txt' -o -name '*.rst' \\) | head -20 && cat README.md 2>/dev/null | grep -i -E '(instrument|vendor|Q-Exactive|Agilent|Bruker|SCIEX|Waters|acquisition|mode|targeted|ddMS2|AIF|infusion|imaging)' || echo 'Documentation files found in repo'"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "lipidmatch_instrument_mode_support_matrix.csv",
+  "expected_outputs": [
+    "Structured CSV table enumerating instrument/vendor and acquisition mode combinations with validation status"
+  ],
+  "finding": "LipidMatch validation spans Q-Exactive orbitrap with targeted, ddMS2-topN, and AIF modes; Agilent, Bruker, and SCIEX Q-TOF instruments with direct infusion and imaging; Waters instruments are explicitly unsupported.",
+  "github_name": "GarrettLab-UF/LipidMatch",
+  "input_from": "task_001",
+  "inputs": [
+    "LipidMatch GitHub repository (https://github.com/GarrettLab-UF/LipidMatch)",
+    "LipidMatch official documentation and README files"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "validated_platforms_list.txt",
+    "acquisition_modes_by_vendor.txt",
+    "lipidmatch_instrument_mode_support_matrix.csv"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_010"
+  ],
+  "methodology_summary": [
+    "Access the LipidMatch GitHub repository and official documentation",
+    "Identify and list all instrument vendors and models explicitly named as supported (Q-Exactive orbitrap, Agilent Q-TOF, Bruker Q-TOF, SCIEX Q-TOF)",
+    "Extract all acquisition modes documented as validated (targeted, ddMS2-topN, AIF, direct infusion, imaging)",
+    "Map each vendor\u2013mode combination found in the documentation",
+    "Record the single documented unsupported platform (Waters) with status annotation",
+    "Validation: Completeness verified by confirmation that all four supported vendors and all five acquisition modes from the EnrichedIndex findings are represented in the table, and Waters is marked as unsupported"
+  ],
+  "missing_information": [
+    "No explicit matrix of validated instrument/vendor and acquisition mode combinations is provided; EnrichedIndex lists four instruments (Q-Exactive, Agilent Q-TOF, Bruker Q-TOF, SCIEX Q-TOF) and multiple modes (targeted, ddMS2-topN, AIF, direct infusion, imaging) but does not specify which modes have been validated for which instruments.",
+    "The documentation provided does not clarify whether Agilent, Bruker, and SCIEX Q-TOF instruments have been tested with all five acquisition modes or only a subset; the direct infusion and imaging mode support may apply to all vendors or only specific ones."
+  ],
+  "parameters": [],
+  "primary_domain": "lipidomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the complete matrix of instrument/vendor and acquisition mode combinations for which LipidMatch has been validated, and what instrument platforms are explicitly unsupported?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "instrument-platform-compatibility-mapping",
+    "acquisition-mode-enumeration-and-validation",
+    "ms-vendor-documentation-extraction",
+    "technical-specification-tabulation",
+    "software-support-matrix-construction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_lipidmatch/synthesized_package",
+  "spine_condition_ids": [
+    "cond_targeted_acquisition",
+    "cond_ddms2_topn",
+    "cond_aif",
+    "cond_direct_infusion",
+    "cond_imaging"
+  ],
+  "spine_entity_ids": [
+    "lipidmatch_system",
+    "instrument_q_exactive",
+    "instrument_agilent_qtof",
+    "instrument_bruker_qtof",
+    "instrument_sciex_qtof",
+    "cond_targeted_acquisition",
+    "cond_ddms2_topn",
+    "cond_aif",
+    "cond_direct_infusion",
+    "cond_imaging",
+    "result_waters_not_supported"
+  ],
+  "subdomains": [
+    "lipidomics"
+  ],
+  "subtask_categories": [
+    "information-extraction",
+    "data-processing"
+  ],
+  "synthesized_from": "github:GarrettLab-UF__LipidMatch",
+  "task_description": "Extract and tabulate all instrument/vendor and acquisition mode combinations supported by LipidMatch from the official repository and documentation, identifying validated platforms (Q-Exactive, Agilent Q-TOF, Bruker Q-TOF, SCIEX Q-TOF) with their tested modes (targeted, ddMS2-topN, AIF, direct infusion, imaging) and documenting the single unsupported platform (Waters). Output as a structured CSV table.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LipidMatch GitHub repository and documentation",
+      "port_id": "lipidmatch_repo",
+      "resolved_via": null,
+      "source": "task_001/library_validation_report",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Extract and tabulate all validated instrument/vendor and acquisition mode combinations from LipidMatch documentation, including the unsupported Waters case.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Validated instrument/vendor and acquisition mode combinations table",
+      "port_id": "instrument_mode_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "high-resolution-ms",
+    "lc-ms",
+    "metabolite-identification",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reproduce the instrument-compatibility matrix reported for LipidMatch across acquisition modes and vendors",
+  "tools": [
+    "LipidMatch",
+    "Q-Exactive orbitrap",
+    "Agilent Q-TOF UHPLC-HRMS/MS",
+    "Bruker Q-TOF UHPLC-HRMS/MS",
+    "SCIEX Q-TOF UHPLC-HRMS/MS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Bruker Q-TOF UHPLC-HRMS/MS, SCIEX Q-TOF UHPLC-HRMS/MS, Structured CSV table enumerating instrument/vendor and acquisition mode combinations with validation status."
+  ],
+  "workflow_description": "1. Clone or download the LipidMatch GitHub repository (GarrettLab-UF/LipidMatch). 2. Scan the repository README, documentation, and any supplementary materials for explicit statements of validated instrument platforms and acquisition modes. 3. Extract from EnrichedIndex findings the confirmed supported combinations: Q-Exactive orbitrap with targeted, ddMS2-topN, and AIF modes; Agilent, Bruker, and SCIEX Q-TOF platforms with direct infusion and imaging modes. 4. Document the unsupported platform (Waters) as a negative case. 5. Construct a tabular CSV file with columns for instrument vendor, instrument model, acquisition mode, validation status, and supporting reference (evidence location). 6. Validate completeness against the EnrichedIndex by cross-checking all named platforms and modes."
+}

@@ -1,0 +1,570 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/conda_asari_screenshot.png",
+      "role": "figure",
+      "sha256": "63a0d4afac544c88c5471e07a1c7b8621b13f42dc929ec51bfe4de7812eab5bc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/viz_screen_shot20220518.png",
+      "role": "figure",
+      "sha256": "8f39467923bd069f89f08ae3cf26aae438fe9cefae58597ac3cd3ec4546a05ce"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "326956a66d39dbea6b07415031b29fd5b0d550197b560a91838eb9f9bd36ba0a"
+    }
+  ],
+  "created_at": "2026-06-16T05:33:42.864961+00:00",
+  "crossref_doi": "10.1038/s41467-023-39889-1",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Centroided mzML files from LC-MS metabolomics experiment in publicly accessible repository (e.g., GitHub, Zenodo, MassIVE, MetaboLights, or local directory)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Optional: custom parameters YAML file specifying ppm tolerance, min_peak_height, and other processing thresholds",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "preferred_Feature_table.tsv: recommended feature intensity table with sample columns and feature rows",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "full_Feature_table.tsv: complete peak table including all features meeting SNR and peakshape thresholds",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "_mass_grid_mapping.csv: m/z alignment results mapping mass tracks across samples",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "cmap.pickle: serialized composite map object for dashboard inspection",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "epd.pickle: serialized empirical compound dictionary for dashboard and downstream analysis",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Annotated_empiricalCompounds.json: pre-annotated empirical compounds with isotope/adduct grouping and database matches",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Mass tracks are intensity vectors of full retention-time range with a single consensus m/z; they differ from mass traces (EICs/XICs) by avoiding RT gaps.",
+    "Peak detection uses local maxima with prominence defined as vertical distance to contour line; prominence is dynamically adjusted per mass track and segment based on noise level and max intensity (min 1/3 of min_peak_height, default 1e5 for Orbitrap).",
+    "Anchor mass tracks (13C/12C isotopes and Na/H adducts) serve as high-confidence landmarks for m/z alignment and are prioritized to reduce ambiguity in pairing non-anchor tracks.",
+    "Composite mass tracks superimpose aligned sample signals post-RT-calibration; peak detection occurs once on the composite rather than per-sample, enhancing signal and reducing computation.",
+    "Feature selectivity comprises mSelectivity (m/z distinctness on a track) and cSelectivity (chromatographic peak distinctness); both are tracked and reported to allow user-defined filtering."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file 'preferred_Feature_table.tsv' exists in pipeline output directory",
+      "verify file 'full_Feature_table.tsv' exists in pipeline output directory",
+      "verify file '_mass_grid_mapping.csv' exists in pipeline output directory",
+      "verify file 'cmap.pickle' exists in pipeline output directory",
+      "verify file 'Annotated_empiricalCompounds.json' exists in pipeline output directory",
+      "file_format_is 'preferred_Feature_table.tsv' TSV with tab-delimited rows",
+      "file_format_is 'full_Feature_table.tsv' TSV with tab-delimited rows",
+      "file_format_is '_mass_grid_mapping.csv' CSV with comma-delimited rows",
+      "file_format_is 'cmap.pickle' binary pickle format (bytes match pickle magic number)",
+      "file_format_is 'Annotated_empiricalCompounds.json' valid JSON (parseable by standard JSON parser)",
+      "row_count_equals 'preferred_Feature_table.tsv' at least 1 (header row present)",
+      "row_count_equals 'full_Feature_table.tsv' at least 1 (header row present)",
+      "row_count_equals '_mass_grid_mapping.csv' at least 1 (header row present)",
+      "script_runs: asari pipeline execution completes without fatal errors on centroided mzML input, robust to minor version variations in dependencies"
+    ],
+    "expert_review": [
+      "Verify that feature identifiers in preferred_Feature_table.tsv correspond to valid mass tracks in _mass_grid_mapping.csv",
+      "Verify that Annotated_empiricalCompounds.json contains plausible compound annotations with mass-to-charge ratios consistent with input data m/z range",
+      "Verify that cmap.pickle deserializes to a valid mass grid object with expected internal structure (dictionary or object with mass alignment metadata)",
+      "Verify that full_Feature_table.tsv contains superset of features in preferred_Feature_table.tsv with expected quality/filtering differences"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the asari pipeline successfully produce all five canonical output artifacts (preferred_Feature_table.tsv, full_Feature_table.tsv, _mass_grid_mapping.csv, cmap.pickle, and Annotated_empiricalCompounds.json) when executed on a publicly deposited centroided mzML dataset?: 'Trackable and scalable Python program for high-resolution metabolomics data processing.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Asari is designed as a transparent, JSON-centric program with reproducible data structures that enable tracking and backtracking between features and mass tracks (EICs), supporting output artifact generation and traceability.: 'Reproducible, track and backtrack between features and mass tracks (EICs); Transparent, JSON centric data structures, easy to chain other tools'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Centroided mzML files from LC-MS metabolomics experiment in publicly accessible repository (e.g., GitHub, Zenodo, MassIVE, MetaboLights, or local directory): 'Input data are centroied mzML files from LC-MS metabolomics.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Optional: custom parameters YAML file specifying ppm tolerance, min_peak_height, and other processing thresholds: 'Users can supply a custom parameter file `xyz.yaml`, via `--parameters xyz.yaml` in command line.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] preferred_Feature_table.tsv: recommended feature intensity table with sample columns and feature rows: 'The recommended feature table is `preferred_Feature_table.tsv`.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] full_Feature_table.tsv: complete peak table including all features meeting SNR and peakshape thresholds: 'All peaks are kept in `export/full_Feature_table.tsv` if they meet signal (snr) and shape standards'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] _mass_grid_mapping.csv: m/z alignment results mapping mass tracks across samples: 'MassGrid is exported as a csv file.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] cmap.pickle: serialized composite map object for dashboard inspection: 'The composite map is exported as a pickle file, which is used by the visual dashboard.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] epd.pickle: serialized empirical compound dictionary for dashboard and downstream analysis: 'The dashboard uses these files under the result folder: 'project.json', 'export/cmap.pickle', 'export/epd.pickle''"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Annotated_empiricalCompounds.json: pre-annotated empirical compounds with isotope/adduct grouping and database matches: 'Annotation is exported into both JSON and tsv formats.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pymzml: 'The default method uses `pymzml` to parse mzML files.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] scipy.signal.find_peaks: 'Asari uses a simple local maxima method (scipy.signal.find_peaks), with prominence control'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] scipy.signal.detrend: 'detrend (scipy.signal.detrend) is performed on the mass track.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] khipu: 'The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] JMS: 'The empirical compounds are searched against known compound database (default HMDB 4) via another package JMS (https://github.com/shuzhao-li/JMS).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] HMDB 4: 'known compound database (default HMDB 4)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog available to document version history, breaking changes, or artifact schema evolution: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "asari.main",
+      "--input",
+      "{inputs.mzml_files}",
+      "--parameters",
+      "{inputs.parameters_yaml}",
+      "--output",
+      "asari_output_{task_id}"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "preferred_Feature_table.tsv",
+  "expected_outputs": [
+    "preferred_Feature_table.tsv: recommended feature intensity table with sample columns and feature rows",
+    "full_Feature_table.tsv: complete peak table including all features meeting SNR and peakshape thresholds",
+    "_mass_grid_mapping.csv: m/z alignment results mapping mass tracks across samples",
+    "cmap.pickle: serialized composite map object for dashboard inspection",
+    "epd.pickle: serialized empirical compound dictionary for dashboard and downstream analysis",
+    "Annotated_empiricalCompounds.json: pre-annotated empirical compounds with isotope/adduct grouping and database matches"
+  ],
+  "finding": "Asari is designed as a transparent, JSON-centric program with reproducible data structures that enable tracking and backtracking between features and mass tracks (EICs), supporting output artifact generation and traceability.",
+  "github_name": "shuzhao-li-lab/asari_pcpfm_tutorials",
+  "input_from": null,
+  "inputs": [
+    "Centroided mzML files from LC-MS metabolomics experiment in publicly accessible repository (e.g., GitHub, Zenodo, MassIVE, MetaboLights, or local directory)",
+    "Optional: custom parameters YAML file specifying ppm tolerance, min_peak_height, and other processing thresholds"
+  ],
+  "keywords": [
+    "high-resolution metabolomics",
+    "lc-ms",
+    "gc-ms",
+    "peak detection",
+    "mass alignment",
+    "extracted ion chromatogram",
+    "untargeted metabolomics",
+    "composite map processing",
+    "peak quality tracking"
+  ],
+  "landmark_outputs": [
+    "mass_tracks_per_sample.json",
+    "_mass_grid_mapping.csv",
+    "composite_mass_tracks_detected_peaks.json",
+    "full_Feature_table.tsv",
+    "Annotated_empiricalCompounds.json"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_019",
+    "result_020",
+    "result_021",
+    "result_022",
+    "result_023",
+    "result_024",
+    "result_025",
+    "result_026",
+    "result_027",
+    "result_028",
+    "result_029",
+    "result_030",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_034",
+    "result_035",
+    "result_036",
+    "result_037",
+    "result_039",
+    "result_040",
+    "result_044",
+    "result_045",
+    "result_046",
+    "result_047",
+    "result_051"
+  ],
+  "methodology_summary": [
+    "Parse mzML files and extract MS1 spectra indexed by binned m/z (0.001 amu) to form mzTree.",
+    "Construct mass tracks per sample by grouping m/z values within 2\u00d7 ppm tolerance (5 ppm default) and applying nearest-neighbor clustering where needed; establish anchor tracks via isotope/adduct patterns.",
+    "Align mass tracks across samples via pairwise anchor-first matching (\u226410 samples) or centroid-based clustering (>10 samples) to form a MassGrid; recalibrate m/z if systematic offset exceeds 1 ppm.",
+    "Calibrate retention time per sample by identifying landmark peaks (mSelectivity >0.99, prominence >20% height) and fitting LOWESS regression to reference sample, storing scan-number mappings in rt_cal_dict.",
+    "Assemble composite mass tracks by summing RT-aligned intensities across samples; detect elution peaks using local maxima with adaptive prominence and noise-based filtering; evaluate peaks for peakshape and SNR.",
+    "Map detected features back to individual samples using RT calibration dictionaries; extract and report peak areas and intensities.",
+    "Perform pre-annotation via khipu to group features into empirical compounds by isotope/adduct relationships; search against HMDB 4 via JMS to obtain formula and isomer matches.",
+    "Validation: verify existence and format of canonical outputs (preferred_Feature_table.tsv, full_Feature_table.tsv, _mass_grid_mapping.csv, cmap.pickle, epd.pickle, Annotated_empiricalCompounds.json) and confirm row/record counts are non-empty and consistent across tables.",
+    "References: source article (DOI: 10.1038/s41467-023-39889-1)"
+  ],
+  "missing_information": [
+    "No changelog available to document version history, breaking changes, or artifact schema evolution"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the asari pipeline successfully produce all five canonical output artifacts (preferred_Feature_table.tsv, full_Feature_table.tsv, _mass_grid_mapping.csv, cmap.pickle, and Annotated_empiricalCompounds.json) when executed on a publicly deposited centroided mzML dataset?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "mass-track-construction-from-centroided-spectra",
+    "m/z-alignment-and-mass-grid-assembly",
+    "retention-time-calibration-via-lowess-regression",
+    "composite-mass-track-assembly-and-peak-detection",
+    "feature-annotation-via-isotope-adduct-grouping",
+    "peak-quality-assessment-by-selectivity-and-snr-metrics",
+    "metabolomics-database-search-and-formula-matching"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_asari/synthesized_package",
+  "spine_condition_ids": [
+    "COND_LOW_INTENSITY_TRACK"
+  ],
+  "spine_entity_ids": [
+    "SYS_ASARI",
+    "ARCH_PIPELINE",
+    "COMP_DASHBOARD",
+    "DS_MZML_INPUT",
+    "ALG_ANCHOR_TRACKS",
+    "COND_LOW_INTENSITY_TRACK",
+    "RESULT_SINGLE_SAMPLE_FEATURE_REPORTING",
+    "ARTIFACT_FEATURE_TABLE",
+    "ARTIFACT_FULL_FEATURE_TABLE",
+    "ARTIFACT_MASSGRID_CSV",
+    "ARTIFACT_CMAP_PICKLE",
+    "ARTIFACT_ANNOTATED_EMPCPDS"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:shuzhao-li-lab__asari",
+  "task_description": "Execute the complete asari pipeline on a publicly deposited centroided mzML metabolomics dataset and verify production of all canonical output artifacts: preferred_Feature_table.tsv, full_Feature_table.tsv, _mass_grid_mapping.csv, cmap.pickle, epd.pickle, and Annotated_empiricalCompounds.json.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Centroided mzML files from LC-MS metabolomics experiment",
+      "port_id": "mzml_files",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Optional custom parameters YAML file",
+      "port_id": "parameters_yaml",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the asari pipeline on a centroided mzML file and validate that all five required output files are generated with correct format and content.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Recommended feature intensity table (TSV)",
+      "port_id": "preferred_feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Complete peak table including all SNR/shape-passing features (TSV)",
+      "port_id": "full_feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "m/z alignment results mapping mass tracks (CSV)",
+      "port_id": "mass_grid_mapping",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Serialized composite map for visualization (pickle)",
+      "port_id": "composite_map_pickle",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Serialized empirical compounds dictionary (pickle)",
+      "port_id": "empirical_compounds_pickle",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-annotated empirical compounds with database matches (JSON)",
+      "port_id": "annotated_compounds_json",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "quality-control",
+    "database-annotation"
+  ],
+  "title": "Reproduce the asari end-to-end LC-MS processing pipeline on a public metabolomics dataset",
+  "tools": [
+    "Python",
+    "pymzml",
+    "scipy.signal.find_peaks",
+    "scipy.signal.detrend",
+    "khipu",
+    "JMS",
+    "HMDB 4"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: pymzml, scipy.signal.find_peaks, scipy.signal.detrend, JMS, HMDB 4, preferred_Feature_table.tsv: recommended feature intensity table with sample columns and feature rows, full_Feature_table.tsv: complete peak table including all features meeting SNR and peakshape thresholds, _mass_grid_mapping.csv: m/z alignment results mapping mass tracks across samples, cmap.pickle: serialized composite map object for dashboard inspection, epd.pickle: serialized empirical compound dictionary for dashboard and downstream analysis, Annotated_empiricalCompounds.json: pre-annotated empirical compounds with isotope/adduct grouping and database matches."
+  ],
+  "workflow_description": "1. Build sample registry from input mzML directory using workflow.register_samples. 2. Extract mass tracks for each sample by parsing MS1 spectra with pymzml, binning m/z values to 0.001 amu using chromatograms.get_thousandth_bins, clustering with mass_functions.nn_cluster_by_mz_seeds where m/z ranges exceed 2\u00d7 tolerance ppm (default 5 ppm), and establishing anchor mass tracks for 13C/12C isotopes and Na/H adducts. 3. Align mass tracks across all samples into a MassGrid using MassGrid.build_grid_sample_wise for \u226410 samples (with pairwise anchor-first alignment) or MassGrid.build_grid_by_centroiding for larger studies, with systematic recalibration when m/z deviation exceeds 1 ppm. 4. Calibrate retention time for each sample by identifying landmark peaks with mSelectivity >0.99 and prominence >20% of peak height, then apply chromatograms.rt_lowess_calibration with 10% boundary extension to obtain per-sample rt_cal_dict. 5. Build composite mass tracks by summing aligned intensity values across all samples after RT calibration. 6. Detect elution peaks on composite mass tracks using peaks.stats_detect_elution_peaks with scipy.signal.find_peaks (local maxima method), adaptive prominence (min 1/3 of min_peak_height, default 1e5), noise-based filtering, and optional detrending or smoothing; evaluate peaks with peaks.evaluate_gaussian_peak_on_intensity_list for peakshape >0.5 and SNR >2. 7. Map detected features back to individual samples via RT alignment dictionaries to extract peak areas and intensities, recording results in CompositeMap.FeatureTable. 8. Perform pre-annotation using khipu to group isotopes and adducts into empirical compounds, then search against HMDB 4 via JMS to obtain matched formulas and isomers. 9. Export results to preferred_Feature_table.tsv, full_Feature_table.tsv, _mass_grid_mapping.csv, cmap.pickle, epd.pickle, and Annotated_empiricalCompounds.json."
+}

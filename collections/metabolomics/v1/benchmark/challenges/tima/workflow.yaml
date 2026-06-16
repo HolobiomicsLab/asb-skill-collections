@@ -1,0 +1,117 @@
+schema_version: 0.1.0
+workflow_id: coll_tima_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: The tima R package implements a taxonomically informed annotation workflow
+    with automated build validation and containerized deployment.
+  pseudo_abstract: 'Reproduces 2 reported results: The tima package has an active
+    R-CMD-check workflow configured on GitHub that validates the package build and
+    check status. A Docker image for tima is available at the repository adafede/tima-r
+    on Docker Hub. Reconstructs 1 described mechanism (described in the paper but
+    not separately evaluated there): The tima package implements a taxonomically informed
+    annotation workflow that builds on initial work published at https://doi.org/10.3389/fpls.2019.01329,
+    with improvements made since the original publication.'
+  research_questions:
+  - What is the complete end-to-end workflow architecture of the TIMA (Taxonomically
+    Informed annotation) system as implemented in the tima R package?
+  - Does the tima R package install successfully from the r-universe repository and
+    pass its R-CMD-check test suite?
+  - Does the tima Docker container (adafede/tima-r) successfully pull and launch without
+    errors?
+  methods_summary: 'Install tima R package from the official GitHub repository (taxonomicallyinformedannotation/tima)
+    or use Docker image. Load example metabolomics dataset (e.g., mass spectrometry
+    feature table or raw instrument data) into R environment. Execute the canonical
+    tima workflow pipeline as illustrated in package documentation, which integrates
+    spectral matching, chemical similarity, and taxonomic context for metabolite annotation.
+    Generate annotated feature table with metabolite identities, chemical classes,
+    and taxonomic predictions ranked by confidence. Validation: Confirm all workflow
+    stages complete without error, annotated features table contains expected columns
+    (metabolite ID, annotation, confidence score), and output files match example
+    dataset expectations. Configure R environment to recognize the r-universe TIMA
+    repository as a package source Invoke install.packages() targeting the TIMA package
+    from the configured repository Execute library(tima) to load the package into
+    the active R session and capture load status Run R-CMD-check on the installed
+    package to validate structural integrity and test suite compliance Validation:
+    Installation succeeds with exit code 0, package loads without warnings or errors,
+    and R-CMD-check reports all NOTE/WARNING/ERROR categories as zero or explicitly
+    non-blocking Retrieve the TIMA Docker image (adafede/tima-r) from Docker Hub.
+    Instantiate and launch the container. Invoke the tima entry point with a help
+    or version flag to confirm availability and correct operation. Validation: Verify
+    that the container starts without errors and the tima help/version command exits
+    with status code 0 and produces non-empty output.'
+  domain: bioinformatics
+  techniques:
+  - database-annotation
+  - machine-learning
+  - spectral-library-matching
+  claims:
+  - claim_text: The tima project's initial work is described in a publication available
+      at https://doi.org/10.3389/fpls.2019.01329.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-TIMA
+  - claim_text: Many improvements have been made to tima since the initial publication.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-TIMA
+  - claim_text: The tima project is in an experimental lifecycle stage.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-TIMA
+  - claim_text: A Docker image for tima is available.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-TIMA
+  - claim_text: The tima package has a Zenodo DOI identifier 10.5281/zenodo.5797920.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-TIMA
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Installation log confirming successful package installation
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Package load confirmation with no error messages
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: R-CMD-check report with all tests passing
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Docker image successfully pulled and container launched; tima entry point
+    responds to help or version command with non-error output
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

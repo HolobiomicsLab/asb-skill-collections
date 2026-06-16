@@ -1,0 +1,345 @@
+schema_version: 0.1.0
+workflow_id: coll_minems2_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: tight
+  composition_modularity: hierarchical
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: mineMS2 couples frequent fragmentation pattern mining with GNPS molecular
+    networks to identify and interpret m/z difference patterns that explain network
+    components in MS/MS spectral libraries.
+  pseudo_abstract: The mineMS2 package enables discovery of frequent patterns in MS/MS
+    spectra by mining fragmentation graphs, where each pattern is a graph of ion peaks
+    connected by m/z differences. When applied to the Penicillium nordicum dataset
+    (51 MS/MS spectra), the workflow extracted nine network components from a precomputed
+    GNPS molecular network and identified explaining patterns for each component using
+    precision, recall, and F1-score metrics. For component 8 (a high-similarity pair
+    with precursor m/z 370.1283 and 404.0891), pattern P70 achieved an F1-score of
+    1, meaning it explained all component spectra without explaining any spectra outside
+    the component, while other top-5 candidate patterns maintained recall of 1 but
+    showed lower precision. The method identified that 19 of 21 spectra in the largest
+    component shared an m/z difference of 99.0683 (consistent with valine loss in
+    tetrapeptides), and discovered that an m/z difference of 186.079 (possibly tryptophan
+    loss) appeared across seven spectra not all directly linked in the molecular network,
+    revealing new similarities independent of network thresholds.
+  research_questions:
+  - When findPatternsExplainingComponents is applied to component 8 (a high-similarity
+    pair of spectra with precursor m/z values 370.1283 and 404.0891) using recall-precision-size
+    metrics and top=5, does pattern P70 achieve perfect F1-score while other top-5
+    patterns maintain recall=1 but exhibit lower precision?
+  methods_summary: "Load pre-processed Penicillium nordicum ms2Lib object with discretized\
+    \ m/z differences and extracted closed subgraph patterns. Load GNPS molecular\
+    \ network as igraph object and extract connected components, cliques, and high-similarity\
+    \ node pairs. Execute findPatternsExplainingComponents algorithm with metric=c('recall','precision','size')\
+    \ and top=5 to rank patterns by their explanatory power. Compute F1-scores for\
+    \ each pattern\u2013component pair as the harmonic mean of recall and precision.\
+    \ Extract and tabulate results for component 8 (m/z 370.1283 and 404.0891), verifying\
+    \ P70 achieves F1=1.0 and all competing top-5 patterns have recall=1.0 but lower\
+    \ precision. Validation: Output must contain verifiable metric values showing\
+    \ P70 with F1-score=1.0 and all other top-5 patterns with recall=1.0 and 0<precision<1.0\
+    \ for component 8."
+  domain: metabolomics
+  techniques:
+  - database-annotation
+  - dereplication
+  - molecular-networking
+  - spectral-library-matching
+  - substructure-mining
+  - tandem-ms
+  claims:
+  - claim_text: mineMS2 patterns are graphs with ion peaks as nodes and m/z differences
+      as edges.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MINEMS2
+  - claim_text: mineMS2 m/z differences include not only neutral losses but also m/z
+      differences between ions that belong to distinct fragmentation paths.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MINEMS2
+  - claim_text: The mineMS2 method is independent of external spectral databases and
+      knowledge of the molecular formula of precursor ions.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MINEMS2
+  - claim_text: mineMS2 patterns are complementary to MS2LDA patterns because they
+      consist of exact graphs rather than probabilistic lists.
+    claim_type: hypothesis
+    speculative: false
+    entity_id: SYS_MINEMS2
+  - claim_text: The dataset contains 51 MS/MS spectra from secondary metabolites of
+      Penicillium nordicum.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_INSTRUMENT
+  - claim_text: The Penicillium nordicum spectra were acquired on a Luna C18 column
+      using HPLC coupled to an LTQ Orbitrap XL hybrid mass spectrometer.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_INSTRUMENT
+  - claim_text: The Penicillium nordicum spectra were acquired in positive ionization
+      mode at HCD20 collision energy with a resolution of 7,500.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_PENICILLIUM_NORDICUM
+  - claim_text: The molecular network was precomputed on the GNPS website and extracted
+      in GraphML format.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MINEMS2
+  - claim_text: mineMS2 can be coupled to GNPS MS/MS molecular networking to focus
+      on patterns that best explain components of the network.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MINEMS2
+  - claim_text: It is recommended to compute the patterns and the GNPS network using
+      the same .mgf input file to avoid matching issues.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_GNPS
+  - claim_text: The ms2Lib class is used throughout the workflow to store the spectra
+      data and metadata, the m/z differences, the fragmentation graphs, and the patterns.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MS2LIB
+  - claim_text: The ms2Lib constructor function can take the collection of MS/MS spectra
+      as input as a single mgf file, a vector of individual mgf file names, the name
+      of a directory containing individual spectra as mgf files, or a list of Spectrum2
+      objects.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MS2LIB
+  - claim_text: Supplementary metadata about the spectra can be provided as a tsv
+      tabular file.
+    claim_type: finding
+    speculative: false
+  - claim_text: The metadata are not used in the computations of m/z differences,
+      fragmentation graphs, or frequent patterns but can be displayed in plot titles.
+    claim_type: finding
+    speculative: false
+  - claim_text: Two columns mz.precursor and file are automatically inserted at the
+      beginning of the metadata table stored in the ms2Lib object.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MS2LIB
+  - claim_text: The discretizeMzDifferences method computes the m/z differences between
+      the peaks in each spectrum and discretizes them for the whole spectra collection.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MINEMS2
+  - claim_text: The m/z differences computed by discretizeMzDifferences include not
+      only neutral losses but also differences between ions that belong to distinct
+      fragmentation paths of the precursor.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_DISCRETIZE
+  - claim_text: The default value of the ppm parameter in discretizeMzDifferences
+      is 15.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_DISCRETIZE
+  - claim_text: The default value of the dmz parameter in discretizeMzDifferences
+      is 0.007 Da.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_DISCRETIZE
+  - claim_text: The default value of the count parameter in discretizeMzDifferences
+      is 2.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_DISCRETIZE
+  - claim_text: The default value of the maxFrags parameter in discretizeMzDifferences
+      is 15.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_DISCRETIZE
+  - claim_text: The default value of the limMzFormula parameter in discretizeMzDifferences
+      is c(14.5, 200).
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_DISCRETIZE
+  - claim_text: The mineClosedSubgraphs method extracts frequent subgraphs among the
+      fragmentation graphs.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MINESUBGRAPHS
+  - claim_text: The default value of the count parameter in mineClosedSubgraphs is
+      2.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MINESUBGRAPHS
+  - claim_text: The default value of the sizeMin parameter in mineClosedSubgraphs
+      is 1.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MINESUBGRAPHS
+  - claim_text: When the number of frequent m/z differences is above 600 and sizeMin
+      is set to 1, the sizeMin value will be automatically increased to 2.
+    claim_type: finding
+    speculative: false
+  - claim_text: The findGNPSComponents function extracts connected components from
+      the molecular network.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_FINDGNPS
+  - claim_text: The findGNPSComponents function can extract cliques from the molecular
+      network.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_FINDGNPS
+  - claim_text: The findGNPSComponents function selects a set of disjoint cliques
+      by decreasing order of size.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MINEMS2
+  - claim_text: The findGNPSComponents function can extract high similarity pairs
+      of nodes from the molecular network.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_FINDGNPS
+  - claim_text: The minSize parameter of findGNPSComponents specifies the minimum
+      size of detected cliques.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_FINDGNPS
+  - claim_text: The pairThreshold parameter of findGNPSComponents specifies the threshold
+      of the cosine score for high similarity pairs of nodes.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_FINDGNPS
+  - claim_text: Nine components were selected from the Penicillium nordicum GNPS molecular
+      network.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_GNPS
+  - claim_text: Components 6, 7, 8 and 9 are the connected components of the Penicillium
+      nordicum network.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_PENICILLIUM_NORDICUM
+  - claim_text: Components 1, 3, and 4 are disjoint cliques from component 6 (the
+      larger cluster).
+    claim_type: finding
+    speculative: false
+  - claim_text: Components 2 and 5 are disjoint cliques from component 7 (the smaller
+      cluster).
+    claim_type: finding
+    speculative: false
+  - claim_text: The recall metric measures the proportion of explained spectra among
+      the component spectra.
+    claim_type: finding
+    speculative: false
+  - claim_text: The precision metric measures the proportion of component spectra
+      among the explained spectra.
+    claim_type: finding
+    speculative: false
+  - claim_text: The F1-score is the harmonic mean of precision and recall.
+    claim_type: finding
+    speculative: false
+  - claim_text: For the pair of spectra with precursor m/z values of 370.1283 and
+      404.0891 (component 8), the best explaining pattern P70 has an F1-score of 1.
+    claim_type: finding
+    speculative: false
+  - claim_text: The largest component in the Penicillium nordicum GNPS network consists
+      of 21 spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_GNPS
+  - claim_text: The m/z difference of 99.0683 is shared by 19 out of 21 fragmentation
+      spectra in the largest component.
+    claim_type: finding
+    speculative: false
+  - claim_text: The m/z difference of 99.0683 has a precision of 1, indicating it
+      is not present in any other spectra of the dataset.
+    claim_type: finding
+    speculative: false
+  - claim_text: The m/z difference of 186.079 has a possible formula of C11H10ON2.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_TRYPTOPHAN
+  - claim_text: A total of multiple patterns include the m/z difference of 186.079.
+    claim_type: hypothesis
+    speculative: false
+    entity_id: COMP_P179
+  - claim_text: A pattern including the m/z difference 186.079 is found in 7 spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_GNPS
+  - claim_text: mineMS2 discovers new similarities between spectra that are not all
+      linked together in the GNPS network.
+    claim_type: hypothesis
+    speculative: false
+    entity_id: SYS_MINEMS2
+  - claim_text: The default ppm tolerance in mineMS2 is 15 ppm.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MINEMS2
+  - claim_text: When ppm tolerance was set to 7 ppm on the LIMS-DB dataset, the average
+      F1-score decreased to 0.47.
+    claim_type: finding
+    speculative: false
+  - claim_text: With the default ppm tolerance of 15 ppm on the LIMS-DB dataset, the
+      average F1-score is 0.53.
+    claim_type: finding
+    speculative: false
+  - claim_text: At 7 ppm tolerance, patterns explaining ChemOnt concepts contained
+      5.2 m/z differences on average.
+    claim_type: finding
+    speculative: false
+  - claim_text: At 15 ppm tolerance, patterns explaining ChemOnt concepts contained
+      6.8 m/z differences on average.
+    claim_type: finding
+    speculative: false
+  - claim_text: The default maximum number of fragments in discretizeMzDifferences
+      is set to 15.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_DISCRETIZE
+  - claim_text: Mining the LIMS-DB dataset with maxFrags of 20 increased running time
+      to 1.5 hours.
+    claim_type: finding
+    speculative: false
+  - claim_text: The default maxFrags of 15 requires 20 minutes to mine the LIMS-DB
+      dataset.
+    claim_type: finding
+    speculative: false
+  - claim_text: The GNPS network for Penicillium nordicum contains 2 clusters of sizes
+      21 and 11, in addition to 2 pairs.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_GNPS
+  speculative: false
+  task_openness: mixed
+  method_alternatives:
+  - MetGem can be used instead of GNPS for molecular network generation, with different
+    node and edge attribute names
+  substitution_constraints:
+  - Patterns and GNPS network should be computed using the same .mgf input file to
+    avoid matching issues
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Table or data frame with pattern identifiers, recall, precision, F1-score,
+    and size metrics for top-5 patterns per component, confirming P70 achieves F1=1.0
+    for component 8
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification report confirming pattern P70 F1-score=1.0 and all other top-5
+    patterns have recall=1.0 with precision<1.0
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

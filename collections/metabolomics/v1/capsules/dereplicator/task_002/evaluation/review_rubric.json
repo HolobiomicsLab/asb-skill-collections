@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: antiSMASH .gbk output for S. griseus SRR3309439 dataset in github:ablab__npdtools repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: contigs.fasta for S. griseus SRR3309439 dataset in github:ablab__npdtools repository"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "MetaMiner output directory structure and log files present after .gbk run"
+    },
+    {
+      "id": "pf_006",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "MetaMiner output directory structure and log files present after .fasta run"
+    },
+    {
+      "id": "pf_007",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "MetaMiner .gbk run output does not contain 'AmfS' in results (no detection), rob",
+      "value": "AmfS"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: antiSMASH .gbk output for S. griseus SRR3309439 dataset in github:ablab__npdtools repository",
+      "verify file exists: contigs.fasta for S. griseus SRR3309439 dataset in github:ablab__npdtools repository",
+      "script_runs: MetaMiner execution with antiSMASH .gbk file as input completes without fatal errors",
+      "script_runs: MetaMiner execution with contigs.fasta file as input completes without fatal errors",
+      "file_format_is: MetaMiner output directory structure and log files present after .gbk run",
+      "file_format_is: MetaMiner output directory structure and log files present after .fasta run",
+      "contains_substring: MetaMiner .gbk run output does not contain 'AmfS' in results (no detection), robust to different output format variations"
+    ],
+    "expert_review": [
+      "Confirm that AmfS absence in .gbk results represents a known/documented failure mode (manual discrepancy between FASTA and antiSMASH input handling)",
+      "Evaluate whether MetaMiner .fasta results correctly detect AmfS and that detection is biologically plausible",
+      "Assess whether the input discrepancy observed is consistent with documented differences in how antiSMASH .gbk and raw .fasta files are parsed by MetaMiner"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

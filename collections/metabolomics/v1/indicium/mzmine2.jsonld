@@ -1,0 +1,1307 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/evidence-linking",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/expert-review-preparation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/figure-table-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/output-grounding",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/reproducibility-gap-detection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/scientific-task-formulation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "All development of MZmine now happens in a new repository called mzmine3.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_mzmine3_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      }
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The mzmine2 repository serves only as a reference to the old MZmine 2.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_mzmine2_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      }
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MZmine 2 is an open-source software for mass-spectrometry data processing.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_mzmine2_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      }
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The goal of MZmine 2 is to provide user-friendly, flexible and easily extendable software with a complete set of modules covering the entire MS data analysis workflow.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_mzmine2_system"
+        },
+        {
+          "id": "asb:spine_ms_data_processing_workflow"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      }
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "MZmine 2 was succeeded by mzmine.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_mzmine2_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We focused on three main aims during the software design and implementation. First, the framework should be flexible and allow for easy and straightforward development of new data processing modules... Second, the graphical interface of the application should be intuitive and easy to use... The current version of the framework is already suitable for processing large batches of data, both for targeted and/or non-targeted analyses",
+      "asbval:note": "Research question is well-supported by the paper's stated design goals and the abstract's emphasis on modularity, usability, and comprehensive workflow coverage.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "The goals of the project is to provide a user-friendly, flexible and easily extendable software with a complete set of modules covering the entire MS data analysis workflow.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:35.168953+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce a new generation of a popular open-source data processing toolbox, MZmine 2.",
+      "asbval:note": "[SUBSTRING-MATCH for MZmine 2 | role: primary software tool]",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine 2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:35.168953+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine 2 was developed using Java technology, and is therefore platform independent.",
+      "asbval:note": "Lowercase variant of MZmine 2; case-insensitive match confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzmine2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:35.168953+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "GitHub is not mentioned anywhere in the provided passages. The paper references SourceForge (http://mzmine.sourceforge.net/) as the project repository, not GitHub.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:35.168953+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine was first introduced in 2005 as an open-source software toolbox for LC-MS data processing",
+      "asbval:note": "MZmine (version 1) is mentioned as the predecessor to MZmine 2; both are discussed in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:35.168953+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not contain file listings or supplementary material inventories. Cannot verify whether these specific figure files are part of the paper's outputs or supplementary materials from the provided text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "figure: figures/DBCustomIcon.png and other icon/logo files (20 items listed)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:35.168953+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The expected_outputs section lists 20 specific image files (icons and logos). These appear to be supplementary materials or assets rather than scientific outputs (results, tables, analyses). The paper itself does not enumerate such files in the provided passages.",
+        "The tools list includes 'GitHub', which is not mentioned in the paper. The paper explicitly references SourceForge as the project repository. This suggests possible conflation or extraction error.",
+        "The research_question is accurately grounded in the paper's stated design goals and is central to the paper's scope."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:35.168953+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The research_question describes a meta-level curation/auditing task about evidence linking and reproducibility. The paper (MZmine 2) is a software tool paper describing MS data processing capabilities, not a task about evidence linking itself. The card appears to conflate the paper's subject matter (MZmine 2 software) with a curation methodology that is not present in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Systematically connect scientific claims, findings, and outputs to concrete source evidence (articles, tools, repositories, materials) and record gaps where evidence is missing or incomplete. This skill surfaces tool provenance, traces workflow assumptions, and identifies undocum",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:21.863233+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The scope describes a meta-curation methodology for auditing workflows and tracing tool provenance. The paper is a technical description of MZmine 2 software features and validation benchmarks, not a methodological paper on evidence linking or reproducibility auditing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Systematically connect scientific claims, findings, and outputs to concrete source evidence (articles, tools, repositories, materials) and record gaps where evidence is missing or incomplete. This skill surfaces tool provenance, traces workflow assumptions, and identifies undocum",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:21.863233+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/. The current version of MZmine 2 is suitable for processing large batches of data and has been applied to both targeted and non-targeted metabolomic analyses.",
+      "asbval:note": "MZmine 2 is confirmed as open-source software for MS data processing in the paper abstract and introduction.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine 2 (open-source mass-spectrometry data processing software being audited for workflow coverage and feature claims)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:21.863233+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper (2010) describes MZmine 2 only. No mention of a successor version or active development fork is present in the passages. The GitHub repository URL cannot be verified from the paper text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzmine (successor) with repo https://github.com/mzmine/mzmine (active development fork; evidence source for tracing feature evolution and module completeness)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:21.863233+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper provides the project website URL (http://mzmine.sourceforge.net/) but does not mention a GitHub repository. The GitHub URL in the card cannot be verified from the paper passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine 2 repo https://github.com/mzmine/mzmine2",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:21.863233+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention GitHub as a repository platform. The project website is listed as http://mzmine.sourceforge.net/, indicating SourceForge was the primary repository at the time of publication (2010).",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub (repositories and issue tracker) as primary artifact repository for tool source code, documentation, and missing signal detection",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:21.863233+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper (MZmine 2, 2010) is a software methods paper describing the design, architecture, and performance of MZmine 2. It does not address or discuss the meta-task of 'preparing a scientific software project for expert review' or the methodology of 'systematically reconstructing and evaluating claims.' The card's research question describes a curation/validation workflow, not a scientific research question or software development goal present in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Prepare a scientific software project for expert review by systematically reconstructing and evaluating claims, tracing outputs to source artifacts, inspecting available materials, and documenting gaps.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:33.307604+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "A key concept of the MZmine 2 software design is the strict separation of core functionality and data processing modules, with emphasis on easy usability and support for high-resolution spectra processing... We focused on three main aims during the software design and implementation. First, the framework should be flexible and allow for easy and straightforward development of new data processing modules... Second, the graphical interface of the application should be intuitive and easy to use... The third goal was to provide good support for processing high-resolution MS data",
+      "asbval:note": "The paper does state goals of flexibility, usability, and extensibility, but the scope description is about a meta-skill for validating software projects before review. The paper itself is the software description, not a guide to the validation process. The example goals cited ('user-friendly, flexible, easily extendable') are present in the paper, but the scope's framing as a skill/workflow for validation is not addressed by the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have indexed a scientific software artifact (paper, repository, or project description) and need to validate that its stated goals (e.g., 'provide user-friendly, flexible, and easily extendable software') are supported by concrete evidence in the codebas",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:33.307604+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
+      "asbval:note": "The paper describes MZmine 2 and references the SourceForge project website (http://mzmine.sourceforge.net/), not a GitHub repository. The card claims the primary tool is 'mzmine' at GitHub, but the paper predates or does not reference GitHub as the canonical repository. The tool exists and is the subject, but the specific repo URL cannot be verified from the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzmine (GitHub repo: https://github.com/mzmine/mzmine) \u2014 Primary subject for review preparation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:33.307604+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper is about MZmine 2 itself (published 2010), not a later version. There is no reference to MZmine 2 as an 'archived predecessor' or to a separate 'mzmine2' GitHub repository. The paper describes MZmine 2 as the current release, not as a historical predecessor.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzmine2 (GitHub repo: https://github.com/mzmine/mzmine2) \u2014 Archived predecessor version referenced as historical context",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:33.307604+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention GitHub Actions, CI/CD pipelines, or automated build verification. The paper states MZmine 2 was 'tested on the Windows, Mac OS X, and Linux platforms' and was 'developed using Java technology' but does not describe CI/CD infrastructure or GitHub Actions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub Actions (CI/CD) \u2014 Auditable build and release artifacts used to verify cross-platform installation and JDK/JavaFX versions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:33.307604+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce a new generation of a popular open-source data processing toolbox, MZmine 2... MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
+      "asbval:note": "MZmine 2 is the primary subject of the paper. The tool is confirmed present and described in detail.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine 2 (tool entry with no repo, version, or install info)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:33.307604+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "GitHub is not mentioned in the paper. The paper references SourceForge (http://mzmine.sourceforge.net/) as the project hosting platform, not GitHub.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub (tool entry with no repo, version, or install info)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:33.307604+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine was first introduced in 2005 as an open-source software toolbox for LC-MS data processing... the new release, MZmine 2, was completely redesigned to support modularity.",
+      "asbval:note": "MZmine (the original version) is mentioned as the predecessor to MZmine 2, confirming its existence and role in the project history.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine (tool entry with no repo, version, or install info)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:33.307604+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/figure-table-interpretation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "This research_question describes a meta-task (validating paper claims) rather than the actual research question of the MZmine 2 paper. The paper's actual research question is to introduce MZmine 2, a new generation data processing toolbox for mass spectrometry, with emphasis on modularity, usability, and high-resolution spectra support. The card's research_question appears to be a generic instruction for the extraction task itself, not the paper's scientific goal.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "figure-table-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Reconstruct and evaluate claims from a scientific paper by connecting research questions and findings to indexed article artifacts (figures, tables, supplementary materials), inspecting available evidence materials, and documenting missing or unverified claims.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.152880+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/figure-table-interpretation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The scope describes a meta-analytical skill for validating papers, not the scope of the MZmine 2 paper itself. The paper's actual scope is to describe the architecture and features of MZmine 2 software for LC-MS data processing, including new modules for peak detection, identification, alignment (RANSAC), and visualization.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "figure-table-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Reconstruct and evaluate claims from a scientific paper by connecting research questions and findings to indexed article artifacts (figures, tables, supplementary materials), inspecting available evidence materials, and documenting missing or unverified claims. This skill validat",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.152880+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/figure-table-interpretation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce a new generation of a popular open-source data processing toolbox, MZmine 2.",
+      "asbval:note": "MZmine 2 is the primary subject of the paper. The paper describes its architecture, modules, and performance.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "figure-table-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine 2 (Reference implementation whose stated goals and modules are evaluated against paper claims)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.152880+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/figure-table-interpretation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper (2010) does not mention a successor project called 'mzmine (current)'. The paper only discusses MZmine (first version, 2005) and MZmine 2 (the new version being introduced). No reference to a later 'current' version or migration is present in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "figure-table-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzmine (current) (Successor project where development migrated; used to trace version alignment and claim inheritance)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.152880+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/figure-table-interpretation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
+      "asbval:note": "The paper indicates MZmine 2 is available on SourceForge (http://mzmine.sourceforge.net/), not GitHub. The card claims GitHub is the primary source, but the paper references SourceForge as the distribution point. GitHub may host the code now, but the paper does not mention it.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "figure-table-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub (Primary source of artifact evidence: READMEs, releases, issue trackers, license files)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.152880+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/figure-table-interpretation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
+      "asbval:note": "The paper discusses 'MZmine 2' (with space and numeral), not 'mzmine2' (lowercase, no space). While semantically equivalent, the card's slug uses a different naming convention than the paper's official name.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "figure-table-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzmine2 (tool entry with slug 'mzmine2')",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.152880+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/figure-table-interpretation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine was first introduced in 2005 as an open-source software toolbox for LC-MS data processing",
+      "asbval:note": "The paper explicitly discusses the original MZmine (version 1) introduced in 2005, which is the predecessor to MZmine 2.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "figure-table-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine (tool entry with slug 'mzmine')",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.152880+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/output-grounding/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/. The current version of MZmine 2 is suitable for processing large batches of data and has been applied to both targeted and non-targeted metabolomic analyses.",
+      "asbval:note": "Paper describes MZmine 2 software and its capabilities, but the research_question as stated is a meta-skill about verification and grounding methodology, not a research question about MZmine itself. The paper is a tool paper describing MZmine 2 implementation, not a paper about the skill of output-grounding. The card appears to conflate the tool description with a methodological skill.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "output-grounding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Systematically connect scientific claims and findings to concrete software outputs, repository artifacts, and documentation by inspecting indexed articles, tracing assertions to tool implementations, and identifying gaps in available evidence.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:03.376754+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/output-grounding/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
+      "asbval:note": "Paper references MZmine 2 and its sourceforge repository (http://mzmine.sourceforge.net/), not the GitHub URL provided in the card. The card lists a modern GitHub repository URL that is not mentioned in this 2010 paper. The tool exists and is described, but the specific repository URL cannot be verified from the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "output-grounding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzmine (GitHub repo: https://github.com/mzmine/mzmine)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:03.376754+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/output-grounding/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
+      "asbval:note": "Paper describes MZmine 2 extensively and confirms it is open-source and available, but the specific GitHub URL (https://github.com/mzmine/mzmine2) is not mentioned in the passages. The paper references sourceforge.net, not GitHub.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "output-grounding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine 2 (GitHub repo: https://github.com/mzmine/mzmine2)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:03.376754+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/output-grounding/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper makes no mention of GitHub as a platform. The paper was published in 2010 and references sourceforge.net as the distribution platform. GitHub is not discussed in any passage.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "output-grounding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub as primary discovery and verification platform",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:03.376754+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/output-grounding/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes MZmine 2 as a software tool for MS data processing, not as a skill or methodology. The card lists 'output-grounding' as a related skill, but the paper does not discuss or teach this skill; it only describes the tool's implementation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "output-grounding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzmine2 tool with related_skills including 'output-grounding'",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:03.376754+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/output-grounding/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "A key concept of the MZmine 2 software design is the strict separation of core functionality and data processing modules, with emphasis on easy usability and support for high-resolution spectra processing... The typical MS data processing workflow comprises raw data file import, filtering/smoothing (optional), peak picking, peak list deisotoping, alignment, gap filling, and normalization. The MZmine 2 modules cover all these workflow stages",
+      "asbval:note": "Paper explicitly describes MZmine 2's design goals (modularity, usability, high-resolution support) and demonstrates implementation across the full MS workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "output-grounding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Verify that stated project goals (e.g., 'provide user-friendly, flexible software covering entire MS data analysis workflow') are actually implemented",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:03.376754+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/. The current version of MZmine 2 is suitable for processing large batches of data and has been applied to both targeted and non-targeted metabolomic analyses.",
+      "asbval:note": "The paper describes MZmine 2 as an open-source software with availability and licensing information, but does NOT discuss reproducibility gaps, missing artifacts, changelogs, version tracking, or dependency specifications. The paper is a software description/methods paper, not a reproducibility audit. The card's research question describes a meta-analytical task (auditing reproducibility barriers) that is not the paper's actual research question.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Identify and document missing or inaccessible artifacts (changelogs, source code versions, dependency specifications, parameter documentation) that prevent independent reproduction of a scientific software project's MS data analysis workflow.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:17.280353+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper is a software methods paper describing MZmine 2's architecture, features, and performance. It does not conduct or discuss reproducibility gap detection, artifact auditing, changelog analysis, or version tracking. The scope describes a meta-analytical/auditing task that is outside the paper's scope.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Identify and document missing or inaccessible artifacts (changelogs, source code versions, dependency specifications, parameter documentation) that prevent independent reproduction of a scientific software project's MS data analysis workflow.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:17.280353+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here we introduce a new generation of a popular open-source data processing toolbox, MZmine 2.",
+      "asbval:note": "MZmine 2 is confirmed present in the paper as the primary subject. However, the paper does NOT identify or discuss reproducibility gaps in MZmine 2. The tool is used as the subject of a methods paper, not as a tool for conducting reproducibility audits.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine 2 (legacy mass-spectrometry data processing software whose reproducibility gaps are identified by this skill)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:17.280353+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention or compare mzmine (current version) against MZmine 2. The paper is about MZmine 2 only and does not discuss subsequent versions or their documentation improvements.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzmine (current version of the MS data analysis platform; comparison against its README and releases section reveals what documentation was added post-MZmine2)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:17.280353+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention GitHub or discuss accessing repository materials, changelogs, or version tags. The paper provides a SourceForge URL (http://mzmine.sourceforge.net/) as the distribution point, not GitHub.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub (as a platform for accessing repository materials, READMEs, changelogs, version tags)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:17.280353+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "This claim describes a meta-skill or methodology for task formulation, not a research question addressed by the paper. The paper is about MZmine 2 software design and implementation for MS data processing, not about formulating scientific tasks or validating workflow coverage claims. The paper does not discuss task formulation methodology, reproducibility gap detection, or bridging research claims to software outputs as a research contribution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Formulate a well-scoped scientific task by connecting research claims to software outputs, reviewing indexed article artifacts, and identifying missing information or unimplemented workflow steps. This skill ensures reproducibility and completeness by bridging the gap between sta",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:29.368877+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/. The current version of MZmine 2 is suitable for processing large batches of data and has been applied to both targeted and non-targeted metabolomic analyses.",
+      "asbval:note": "Paper confirms MZmine 2 is a reference implementation for MS data processing and describes its workflow coverage (peak detection, alignment, identification, etc.). However, the paper provides the SourceForge URL (http://mzmine.sourceforge.net/), not the GitHub URL claimed in the card. The GitHub repository URL cannot be verified from the passages provided.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine 2 (repo: https://github.com/mzmine/mzmine2, role: Reference implementation for mass-spectrometry data processing; used to validate workflow coverage claims)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:29.368877+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper (2010) describes MZmine 2 only. There is no mention of a successor project called 'mzmine (current)' or any GitHub repository for an updated version. The paper predates any such successor and cannot validate claims about current development status or GitHub URLs.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzmine (current) (repo: https://github.com/mzmine/mzmine, role: Successor to MZmine 2; contains all active development and updated module set)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:29.368877+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
+      "asbval:note": "The paper confirms the existence and role of MZmine 2 software, but the card entry 'mzmine2' is incomplete: canonical_url, evidence_spans, install, version_used, source_paper_doi, and source_paper_title are all null or empty. The paper's DOI is 10.1186/1471-2105-11-395 and title is 'MZmine 2: Modular framework for processing, visualizing, and analyzing mass spectrometry-based molecular profile data', which should populate these fields.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "mzmine2 (name, slug, related_skills, source_task_ids)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:29.368877+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "GitHub is not mentioned in the paper. The paper only references the SourceForge project website (http://mzmine.sourceforge.net/). GitHub as a tool is not relevant to the paper's content and appears to be an extraction error or conflation with modern repository practices.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub (name, slug, related_skills, source_task_ids)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:29.368877+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MZmine was first introduced in 2005 as an open-source software toolbox for LC-MS data processing [3]. The first version of MZmine defined the data analysis workflow and implemented simple methods for data processing and visualization [3,4].",
+      "asbval:note": "The paper mentions the original MZmine (version 1, 2005) as a predecessor to MZmine 2, but the card entry 'MZmine' is incomplete and conflates the original version with the current project. The card should clarify whether it refers to MZmine v1 or the current MZmine project. The paper's focus is on MZmine 2, not the original MZmine.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZmine (name, slug, related_skills, source_task_ids)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:29.368877+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.16666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.25,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/figure-table-interpretation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "figure-table-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2857142857142857,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/output-grounding/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "output-grounding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.16666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "All development of MZmine now happens in a new repository called mzmine3.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:source_excerpt": "All development happens in a new repository: [mzmine GitHub](https://github.com/mzmine/mzmine3)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:27.818292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The mzmine2 repository serves only as a reference to the old MZmine 2.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:source_excerpt": "This repository is only there as a reference to the old MZmine 2 that was succeeded by mzmine.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:27.818292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MZmine 2 is an open-source software for mass-spectrometry data processing.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:source_excerpt": "MZmine 2 is an open-source software for mass-spectrometry data processing.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:27.818292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The goal of MZmine 2 is to provide user-friendly, flexible and easily extendable software with a complete set of modules covering the entire MS data analysis workflow.",
+      "asbval:note": "Source excerpt is truncated mid-sentence ('easily extend'); claim completes the thought but cannot be fully verified against the incomplete excerpt",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:source_excerpt": "e/mzmine2)\n\nMZmine 2 is an open-source software for mass-spectrometry data processing. The goals of the project is to provide a user-friendly, flexible and easily extend",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:27.818292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "MZmine 2 was succeeded by mzmine.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-1471-2105-11-395",
+      "asbval:source_excerpt": "This repository is only there as a reference to the old MZmine 2 that was succeeded by mzmine.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:15:27.818292+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_mzmine2_system",
+      "title": "MZmine 2",
+      "identifier": "urn:asb:spine:mzmine2_system"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_mzmine3_system",
+      "title": "mzmine3",
+      "identifier": "urn:asb:spine:mzmine3_system"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_ms_data_processing_workflow",
+      "title": "MS Data Analysis Workflow",
+      "identifier": "urn:asb:spine:ms_data_processing_workflow",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_travis_ci_tool",
+      "title": "Travis CI",
+      "identifier": "urn:asb:spine:travis_ci_tool"
+    }
+  ]
+}

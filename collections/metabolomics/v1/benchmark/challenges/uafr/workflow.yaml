@@ -1,0 +1,264 @@
+schema_version: 0.1.0
+workflow_id: coll_uafr_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: uafR is an R package that automates GC/LC-MS data processing by intelligently
+    selecting sample portions corresponding to query chemicals through retention time
+    sorting, mass-based aggregation, and published reference data. The package implements
+    functions to convert raw mass spectrometry output into structured chemical data
+    and identify target compounds across samples with high precision.
+  pseudo_abstract: "Mass spectrometry data processing typically requires manual labor\
+    \ to prepare raw instrument output for statistical interpretation. uafR addresses\
+    \ this bottleneck through three main functions: spreadOut() converts raw CSV input\
+    \ from mass spectrometry software into structured matrices organized by chemical\
+    \ names, retention times, match factors, m/z values, exact masses, and component\
+    \ areas; mzExacto() searches this structured dictionary using query chemicals\
+    \ to extract m/z, retention time, match factor, and area information for target\
+    \ compounds across samples; and categorate() accesses published categorical data\
+    \ to enable structural matching and chemical similarity assessment. The package\
+    \ integrates cheminformatics tools to perform tasks such as functional group identification\
+    \ and molecular property summarization. Additionally, Match.Factor filtering can\
+    \ be applied at various thresholds (\u226565, \u226580, \u226590) to subset compound\
+    \ lists based on matching quality criteria, supporting both known-compound workflows\
+    \ and exploratory unknown-compound analysis."
+  research_questions:
+  - Does the mzExacto() function correctly retrieve m/z, retention time, match factor,
+    and area values for a set of known query chemicals from mass spectrometry data?
+  - Does the spreadOut() function successfully convert raw CSV input into a properly
+    structured list format with all fields required for downstream processing in the
+    uafR pipeline?
+  - Does the categorate() function correctly identify structurally similar compounds
+    (Ethyl hexanoate and isobutyl hexanoate) when applied under structural-match conditions
+    using a restricted chemical library?
+  - "How many query chemicals are retained in the standard_data.csv compound list\
+    \ when applying Match.Factor filter thresholds of \u226565, \u226580, and \u2265\
+    90?"
+  methods_summary: "Load the pre-processed standard_spread R list object produced\
+    \ by spreadOut(), which contains matrices of compound names, retention times,\
+    \ match factors, m/z values, exact masses, area values, and nested webInfo dictionaries\
+    \ for chemical identifiers. Define an explicit query_chemicals vector as c('Ethyl\
+    \ hexanoate', 'Methyl salicylate', 'Octanal', 'Undecane'). Execute mzExacto(standard_spread,\
+    \ query_chemicals) to perform retention-time and published-mass-based searching\
+    \ of the chemical database, extracting matching sample portions for each query\
+    \ compound. Extract the returned single dataframe containing rows for each query\
+    \ chemical and columns for Compound, Mass, RT, Best Match (match factor), and\
+    \ area values for samples Std_soln_00, Std_soln_07, and Std_soln_00a. Validation:\
+    \ Verify that all six quantitative fields (exact mass, retention time, match factor,\
+    \ and three sample area values) for all four chemicals match the reference table\
+    \ reported in the article within floating-point precision (\xB10.0001 for mass/RT,\
+    \ \xB10.01 for match factor, \xB11 area units). Load and validate raw Agilent\
+    \ peak table structure and column names. Sort peaks by retention time and exact\
+    \ mass; query PubChem/ChemSpider for each detected compound to retrieve published\
+    \ m/z fragments and exact mass. Aggregate peaks by chemical name and top m/z values\
+    \ across all samples; construct eight output matrices indexed by sample. Generate\
+    \ unique rtBYmass codes as RT|mass identifiers and build nested webInfo list containing\
+    \ published names, fragment peaks, exact mass, and literature retention times\
+    \ for each compound. Validation: confirm all eight list components present and\
+    \ non-null for samples with detected peaks; verify rtBYmass codes are unique and\
+    \ webInfo lists contain non-empty published metadata. Load query chemicals (ethyl\
+    \ hexanoate, methyl salicylate, octanal, undecane) and restricted type library\
+    \ with 5 structural categories (A\u2013E). Invoke categorate() to access cheminformatics\
+    \ packages (ChemmineR, fmcsR, webchem) and compute structural fingerprints and\
+    \ similarity scores. Extract structural match outcome matrix (Yes/~/No) where\
+    \ Yes \u22650.95, ~ = 0.85\u20130.95, No <0.85 or no match. Extract best-match\
+    \ compound identifier (CMP1, CMP2, ...) for each query chemical in each type category.\
+    \ Validation: Verify that ethyl hexanoate row in Type D column shows 'CMP2' (isobutyl\
+    \ hexanoate, 2nd compound in Type D set) with match score \u22650.95 in source\
+    \ match-score matrix. Load standard_data.csv and extract Compound.Name and Match.Factor\
+    \ columns Apply three independent Match.Factor filters (\u226565, \u226580, \u2265\
+    90) to the compound list Identify unique compounds retained under each filter\
+    \ condition Count unique compounds for each threshold and construct a summary\
+    \ table Validation: confirm that compound counts are monotonically decreasing\
+    \ or equal as Match.Factor threshold increases (i.e., COND-mf65 \u2265 COND-mf80\
+    \ \u2265 COND-mf90)"
+  domain: metabolomics
+  techniques:
+  - feature-detection
+  - database-annotation
+  - metabolite-identification
+  - spectral-library-matching
+  claims:
+  - claim_text: uafR is the first GC/LC-MS utility that accesses published information
+      for every tentative compound to intelligently select portions of each sample
+      that describe user-specified query chemicals.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-uafR
+  - claim_text: Preparing raw mass spectrometry output for interpretive statistics
+      can require hours or days of trained labor per sample and months per experiment.
+    claim_type: finding
+    speculative: false
+  - claim_text: The original workflow for uafR was developed using Agilent instruments
+      and software.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-uafR
+  - claim_text: Unknowns Analysis is the recommended software for generating data
+      in the default format with correct column names for uafR.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-uafR
+  - claim_text: The spreadOut() function converts raw input to a format for downstream
+      functions by intelligent sorting using retention times and published masses.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-spreadOut
+  - claim_text: The spreadOut() function returns a list containing matrices that store
+      chemical names, retention times, match factors, captured M/Z values, exact mass
+      data, raw area values, unique codes combining retention time and exact mass,
+      and a nested list with published chemical names, top m/z peaks, exact mass,
+      and likely retention times.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-spreadOut
+  - claim_text: mzExacto() collects published information for query chemicals and
+      uses it to precisely search a database for samples that have those chemicals.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-mzExacto
+  - claim_text: categorate() is a function that accesses a broad array of categorical
+      data for searched chemicals.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-categorate
+  - claim_text: categorate() uses ChemmineR, fmcsR, and webchem packages to perform
+      chemical structure matches and summarize atomic features.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-uafR
+  - claim_text: In categorate() output, 'No' means none of the chemicals in a library
+      set had a structural match.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-categorate
+  - claim_text: In categorate() output, '~' refers to at least 1 match between 0.85
+      and 0.95 in structural similarity.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-categorate
+  - claim_text: In categorate() output, 'Yes' means there was at least 1 match exceeding
+      0.95 in structural similarity.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-categorate
+  - claim_text: exactoThese() can return input chemicals with a molecular weight between
+      specified values using FMCS output.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-exactoThese
+  - claim_text: categorate() captures reactive groups from PubChem.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-categorate
+  - claim_text: categorate() captures natural products occurrences from LOTUS.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-categorate
+  - claim_text: categorate() captures bioactivities and risk categories from the Kyoto
+      Encyclopedia of Genes and Genomes (KEGG).
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-categorate
+  - claim_text: categorate() captures flavors and odors from the Flavor and Extract
+      Manufacturers Association (FEMA).
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-categorate
+  - claim_text: categorate() captures whether chemicals exist in the Food and Drug
+      Administration's SPL database.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-categorate
+  - claim_text: exactoThese() can return chemicals that have information on both LOTUS
+      and FEMA databases.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP-exactoThese
+  - claim_text: uafR can access fmcsR output to show atomic features including molecular
+      weight, molecular formula, presence or absence of rings, and functional groups
+      with phosphorus or nitrogen.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS-uafR
+  - claim_text: High stochasticity in mass spectrometry data points is a reason previous
+      algorithms fail when assigning area values across samples.
+    claim_type: finding
+    speculative: true
+  - claim_text: Chemical measurements do not always produce identical results between
+      samples due to stochasticity.
+    claim_type: finding
+    speculative: false
+  - claim_text: By accessing published information, uafR can mirror the optimal manual
+      workflow for chemicals that were either misread in a sample or buried by similarities.
+    claim_type: finding
+    speculative: true
+    entity_id: SYS-uafR
+  - claim_text: The combined Match.Factor and categorate() approach can process complex
+      chemical data faster and with more accuracy than manual protocols for unknown
+      compound selections.
+    claim_type: finding
+    speculative: true
+    entity_id: COMP-categorate
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - personalLib() for creating input chemical lists
+  substitution_constraints:
+  - Software must generate data in correct column format for default compatibility
+    with Agilent output
+instructions: Reproduce the 4-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 'structured R list object (standard_spread) containing eight nested matrices
+    and one nested list: Compounds, RT, MatchFactor, MZ, Mass, Area, rtBYmass (RT|mass
+    codes), and webInfo (published names, top m/z peaks, exact mass, and literature
+    RTs per compound)'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Structural match results dataframe showing query chemicals vs. type categories
+    with match outcome (No, ~, Yes) and matched compound identifier (e.g., CMP1, CMP2)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Best compound match mapping showing which compound in each type matched each
+    query chemical (CMP identifier or blank if no match)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Comparison table (CSV format) with two columns: Match.Factor threshold and
+    count of unique compounds retained'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

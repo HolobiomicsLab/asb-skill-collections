@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in FelinaHildebrand/MobiLipid repository: R Markdown file for CCS bias calculation"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in FelinaHildebrand/MobiLipid repository: DTCCSN2 library artifact (format: .csv, .RData, or equivalent structured data)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify R Markdown script runs without errors on a representative IM-MS lipidomics dataset input"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify bias assessment report output file is generated with expected format (HTML, PDF, or .txt)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify bias assessment report contains at least one quantitative bias metric (e.g., mean error, standard deviation, or percent deviation)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify report includes per-lipid-class bias estimates consistent with DTCCSN2 library reference values"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in FelinaHildebrand/MobiLipid repository: R Markdown file for CCS bias calculation",
+      "verify file exists in FelinaHildebrand/MobiLipid repository: DTCCSN2 library artifact (format: .csv, .RData, or equivalent structured data)",
+      "verify R Markdown script runs without errors on a representative IM-MS lipidomics dataset input",
+      "verify bias assessment report output file is generated with expected format (HTML, PDF, or .txt)",
+      "verify bias assessment report contains at least one quantitative bias metric (e.g., mean error, standard deviation, or percent deviation)",
+      "verify report includes per-lipid-class bias estimates consistent with DTCCSN2 library reference values"
+    ],
+    "expert_review": [
+      "assess whether the CCS bias calculation methodology (as implemented in the R Markdown) is scientifically sound for IM-MS lipidomics",
+      "assess whether the bias assessment report correctly isolates the assessment step without applying corrections",
+      "assess whether the representative input dataset is appropriate in composition and scale for demonstrating CCS bias calculation",
+      "assess whether reported bias values are within expected ranges for typical IM-MS instruments and lipid classes"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

@@ -1,0 +1,344 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/icobra.png",
+      "role": "figure",
+      "sha256": "ade78e8e562c1764605167aef70ab60bb18c616e2589d270ce7eb4fe09f7089a"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "a4965185bfb715d4c05464351e875a0988de6313e052f8297d5395c50c3d62b2"
+    }
+  ],
+  "created_at": "2026-06-15T18:08:54.168626+00:00",
+  "crossref_doi": "10.1186/s13059-014-0550-8",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "airway SummarizedExperiment dataset from Bioconductor airway package",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Results table with log2 fold changes, p-values, and adjusted p-values after automatic independent filtering (default alpha=0.1)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Results table with IHW-adjusted p-values and metadata containing ihwResult object",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary statistics comparing gene counts retained after standard filtering vs. IHW filtering",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Independent filtering in DESeq2 automatically optimizes the number of genes achieving a target FDR threshold by filtering based on the mean of normalized counts, not on p-values themselves.",
+    "IHW (Independent Hypothesis Weighting) weights hypotheses adaptively using an auxiliary covariate (typically mean count) to improve power while controlling FDR under positive regression dependency assumption.",
+    "The results() function with default alpha=0.1 sets genes with low mean count to NA in the padj column, reflecting filtering; IHW instead outputs weights and an FDR-controlled rejection set that may differ from the default independent filtering behavior.",
+    "DESeq2's negative binomial GLM model corrects for library size internally via size factors, so raw counts (not normalized) must be provided as input to preserve measurement precision.",
+    "When comparing filtering strategies, genes with all zero counts across samples will have baseMean=0 and all statistics set to NA; these are filtered regardless of method."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: airway dataset accessible via library('airway'); data('airway')",
+      "verify script runs: R code to load airway data, run DESeq(), call results() with default independent filtering enabled, and extract filtered gene count",
+      "verify file_format_is: results object from results() is a DESeqResults class with columns: baseMean, log2FoldChange, lfcSE, stat, pvalue, padj",
+      "value_in_range: number of genes after independent filtering is less than total genes in airway dataset (robust to parameter choices)",
+      "verify script runs: apply IHW-based p-value adjustment using ihw() function from IHW package on results object p-values",
+      "verify output_matches_reference: filtered gene count and adjusted p-value columns from results() match expected behavior described in DESeq2 vignette section on independent filtering (robust to parameter-sensitive threshold details)",
+      "value_in_range: padj column contains NA values for filtered-out genes and numeric adjusted p-values in [0,1] for retained genes"
+    ],
+    "expert_review": [
+      "verify that independent filtering threshold selection (based on mean normalized counts) aligns with the theoretical justification for filtering low-count genes in RNA-seq differential expression analysis",
+      "verify that IHW adjustment produces p-value ordering and rejection set behavior consistent with its intended multiple-testing control under dependence on filter statistic",
+      "verify that the intersection of genes retained by results() independent filtering and those assigned adjusted p-values via IHW represents a valid subset for downstream interpretation"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does the results() function automatically perform independent filtering based on mean normalized counts, and what are the expected outputs when this filtering is applied to DESeq2 results?: 'the *results* function automatically performs independent filtering based on the mean of normalized counts for each gene'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The results() function automatically performs independent filtering based on the mean of normalized counts for each gene.: 'the *results* function automatically performs independent filtering based on the mean of normalized counts for each gene'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] airway SummarizedExperiment dataset from Bioconductor airway package: 'library(\"airway\"); data(\"airway\"); se <- airway'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Results table with log2 fold changes, p-values, and adjusted p-values after automatic independent filtering (default alpha=0.1): 'the *results* function automatically performs independent filtering based on the mean of normalized counts for each gene, optimizing the number of genes which will have an adjusted *p* value below a'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Results table with IHW-adjusted p-values and metadata containing ihwResult object: 'resIHW <- results(dds, filterFun=ihw); metadata(resIHW)$ihwResult'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Summary statistics comparing gene counts retained after standard filtering vs. IHW filtering: 'summary(res); sum(res$padj < 0.1, na.rm=TRUE); summary(resIHW); sum(resIHW$padj < 0.1, na.rm=TRUE)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] DESeq2: 'The package DESeq2 provides methods to test for differential expression by use of negative binomial generalized linear models'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] IHW: 'A Bioconductor package, [IHW](http://bioconductor.org/packages/IHW), is available that implements the method of *Independent Hypothesis Weighting*'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(DESeq2); library(airway); library(IHW); data(airway); dds <- DESeqDataSet(airway, design = ~ cell + dex); dds <- DESeq(dds); res_standard <- results(dds, alpha=0.1); res_ihw <- results(dds, filterFun=ihw); cat('Standard filtering - genes with padj < 0.1:', sum(!is.na(res_standard$padj) & res_standard$padj < 0.1), '\\n'); cat('IHW filtering - genes with padj < 0.1:', sum(!is.na(res_ihw$padj) & res_ihw$padj < 0.1), '\\n'); summary(res_standard); summary(res_ihw); saveRDS(list(res_standard=res_standard, res_ihw=res_ihw), 'task_004_results.rds')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "filtering_comparison_summary.csv",
+  "expected_outputs": [
+    "Results table with log2 fold changes, p-values, and adjusted p-values after automatic independent filtering (default alpha=0.1)",
+    "Results table with IHW-adjusted p-values and metadata containing ihwResult object",
+    "Summary statistics comparing gene counts retained after standard filtering vs. IHW filtering"
+  ],
+  "finding": "The results() function automatically performs independent filtering based on the mean of normalized counts for each gene.",
+  "github_name": "stephens999/ashr",
+  "input_from": null,
+  "inputs": [
+    "airway SummarizedExperiment dataset from Bioconductor airway package"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "results_standard_alpha01.csv",
+    "results_ihw_adjusted.csv",
+    "filter_summary_stats.txt"
+  ],
+  "linked_result_ids": [
+    "result_026",
+    "result_027",
+    "result_028"
+  ],
+  "methodology_summary": [
+    "Load airway SummarizedExperiment and construct DESeqDataSet with design ~ cell + dex.",
+    "Run DESeq() to fit negative binomial GLM and estimate dispersions across all genes.",
+    "Extract standard results with results(dds, alpha=0.1) to apply automatic independent filtering based on mean normalized count threshold.",
+    "Separately apply IHW-based filtering using results(dds, filterFun=ihw) to obtain hypothesis-weighted p-value adjustments and FDR control.",
+    "Tabulate and compare filtered gene counts, adjusted p-value distributions, and NA assignments between standard filtering and IHW approaches.",
+    "Validation: Verify that the number of genes with padj < 0.1 after standard filtering is at least as many as reported in the vignette summary(res) output, and confirm IHW metadata contains ihwResult object with weights and rejection decisions.",
+    "References: source article (DOI: 10.1186/s13059-014-0550-8)"
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the results() function automatically perform independent filtering based on mean normalized counts, and what are the expected outputs when this filtering is applied to DESeq2 results?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods"
+  ],
+  "skills": [
+    "differential-gene-expression-analysis",
+    "independent-filtering-optimization",
+    "p-value-adjustment-methodology",
+    "hypothesis-weighting-statistical-control",
+    "rnaseq-count-matrix-analysis",
+    "factor-design-specification"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_deseq2/synthesized_package",
+  "spine_condition_ids": [
+    "cond_treated_vs_untreated",
+    "cond_alpha01",
+    "cond_apeglm_shrinkage",
+    "cond_apeglm_fast_nbinomC",
+    "cond_glmgampoi_lrt",
+    "cond_apeglm_fast_nbinomC_star"
+  ],
+  "spine_entity_ids": [
+    "lfcshrink_function",
+    "apeglm_estimator",
+    "pasilla_dataset",
+    "pasilla_gene",
+    "cond_treated_vs_untreated",
+    "cond_apeglm_shrinkage",
+    "cond_glmgampoi_lrt",
+    "cond_apeglm_fast_nbinomC",
+    "cond_apeglm_fast_nbinomC_star",
+    "metric_padj_lt01_default",
+    "metric_apeglm_runtime",
+    "metric_apeglm_fast_speedup",
+    "result_apeglm_default"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "rna-seq"
+  ],
+  "subtask_categories": [
+    "statistical-analysis",
+    "data-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:thelovelab__DESeq2",
+  "task_description": "Apply independent filtering and IHW-based p-value adjustment to DESeq2 results from the airway dataset, reproducing the automatic filtering behavior of results() and separately applying Independent Hypothesis Weighting, then verify that filtered gene counts and adjusted p-value outputs match expected behavior.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "airway SummarizedExperiment dataset",
+      "port_id": "airway_se",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Reconstruct DESeq2's automatic independent filtering mechanism and apply IHW-based p-value adjustment to the airway dataset, validating filtered gene counts and adjusted p-values match expected behavior.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Results table with automatic independent filtering (alpha=0.1)",
+      "port_id": "results_standard_filtering",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Results table with IHW-adjusted p-values",
+      "port_id": "results_ihw",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Summary statistics comparing filtered gene counts and adjusted p-value thresholds",
+      "port_id": "filtering_comparison",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "normalization",
+    "statistical-analysis",
+    "false-discovery-rate-correction"
+  ],
+  "title": "Reproduce the ~10x speedup of apeglm's nbinomC fast mode on the pasilla dataset",
+  "tools": [
+    "DESeq2",
+    "IHW"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: IHW, Results table with IHW-adjusted p-values and metadata containing ihwResult object, Summary statistics comparing gene counts retained after standard filtering vs. IHW filtering."
+  ],
+  "workflow_description": "1. Load the airway SummarizedExperiment dataset and construct a DESeqDataSet with design ~ cell + dex using DESeq2. 2. Run DESeq() to estimate dispersions and fit the negative binomial GLM. 3. Extract results using results(dds) with default alpha=0.1 to obtain log2 fold changes, p-values, and automatically applied independent filtering based on mean normalized count threshold. 4. Separately apply Independent Hypothesis Weighting using results(dds, filterFun=ihw) to generate IHW-adjusted p-values and FDR-controlled rejection set. 5. Compare filtered gene counts between standard independent filtering and IHW approaches, and verify adjusted p-value distributions match expected behavior. 6. Export summary statistics and filtered results tables documenting the number of genes retained after each filtering method."
+}

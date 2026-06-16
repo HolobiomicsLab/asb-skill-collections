@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:comprna__SUPPA repository is accessible and contains SUPPA2 source code"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: GTF input file is loadable and conforms to GTF format specification"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: output ioe file (isoform events) is generated with expected structure"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: output ioi file (isoform-isoform events) is generated with expected structure"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: output GTF file for local events is generated in valid GTF format"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify row_count_equals or value_in_range: output files contain non-zero number of event records (parameter-sensitive to input annotation complexity)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify format_is: ioe file format matches SUPPA2 specification for isoform event output"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify format_is: ioi file format matches SUPPA2 specification for isoform-isoform event output"
+    },
+    {
+      "id": "pf_009",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: SUPPA2 generateEvents subcommand executes without fatal errors on provided GTF input"
+    },
+    {
+      "id": "pf_010",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: output files contain expected event type identifiers (e.g., exon skipping, alternative 5'/3' splice sites)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:comprna__SUPPA repository is accessible and contains SUPPA2 source code",
+      "verify file_exists: GTF input file is loadable and conforms to GTF format specification",
+      "verify file_exists: output ioe file (isoform events) is generated with expected structure",
+      "verify file_exists: output ioi file (isoform-isoform events) is generated with expected structure",
+      "verify file_exists: output GTF file for local events is generated in valid GTF format",
+      "verify row_count_equals or value_in_range: output files contain non-zero number of event records (parameter-sensitive to input annotation complexity)",
+      "verify format_is: ioe file format matches SUPPA2 specification for isoform event output",
+      "verify format_is: ioi file format matches SUPPA2 specification for isoform-isoform event output",
+      "verify script_runs: SUPPA2 generateEvents subcommand executes without fatal errors on provided GTF input",
+      "verify contains_substring: output files contain expected event type identifiers (e.g., exon skipping, alternative 5'/3' splice sites)"
+    ],
+    "expert_review": [
+      "inspect biological plausibility of generated events: verify that isoform events correspond to known alternative splicing mechanisms and are consistent with input GTF transcript structures",
+      "inspect consistency between three outputs: verify that events in ioe file, ioi file, and local-events GTF file are mutually coherent and do not contain logical contradictions",
+      "inspect accuracy of event definition: verify that exon coordinates, splice sites, and event boundaries in output files correctly reflect the input GTF annotation"
+    ]
+  },
+  "max_score": 10.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

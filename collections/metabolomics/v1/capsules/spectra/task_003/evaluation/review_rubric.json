@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file exists: locate MsBackendTest class definition in github:rformassspectrometry__Spectra repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file_format_is: confirm MsBackendTest is an R S4 class definition"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify contains_substring: search MsBackendTest source code for 'mz<-' replacement method definition"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify contains_substring: confirm mz<- method implementation calls is.unsorted() on NumericList input"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify contains_substring: confirm is.unsorted() is used instead of vapply() for vectorised unsorted check"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify script_runs: execute MsBackendTest mz<- replacement with unsorted m/z values and confirm error is raised, exact error message and class must match implementation intent"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file exists: locate MsBackendTest class definition in github:rformassspectrometry__Spectra repository",
+      "Verify file_format_is: confirm MsBackendTest is an R S4 class definition",
+      "Verify contains_substring: search MsBackendTest source code for 'mz<-' replacement method definition",
+      "Verify contains_substring: confirm mz<- method implementation calls is.unsorted() on NumericList input",
+      "Verify contains_substring: confirm is.unsorted() is used instead of vapply() for vectorised unsorted check",
+      "Verify script_runs: execute MsBackendTest mz<- replacement with unsorted m/z values and confirm error is raised, exact error message and class must match implementation intent"
+    ],
+    "expert_review": [
+      "Assess whether is.unsorted() vectorisation approach on NumericList is appropriate and efficient compared to vapply alternative",
+      "Evaluate whether error message raised for unsorted m/z values is informative and aligns with Spectra package design expectations",
+      "Review whether mz<- method correctly enforces the constraint that 'm/z values within each spectrum are expected to be sorted increasingly'"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

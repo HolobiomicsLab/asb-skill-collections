@@ -1,0 +1,374 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/GraphicalAbstract.jpg",
+      "role": "figure",
+      "sha256": "1d4a445d570d0a3aab3d0c9aff56d22689adba22c9624de8f9a531d86ccd9346"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ac9d42e6296e349acda5aee7606424fd48621cf507928dd69e35bdad14ea304c"
+    }
+  ],
+  "created_at": "2026-06-15T12:18:23.894299+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Query chemical list (ethyl hexanoate, methyl salicylate, octanal, undecane)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Restricted type library CSV with 5 chemical type sets (A\u2013E)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structural match results dataframe showing query chemicals vs. type categories with match outcome (No, ~, Yes) and matched compound identifier (e.g., CMP1, CMP2)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Best compound match mapping showing which compound in each type matched each query chemical (CMP identifier or blank if no match)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Structural match scores \u22650.95 indicate high similarity; scores 0.85\u20130.95 indicate moderate similarity (~); scores below 0.85 or no match indicate dissimilarity.",
+    "fmcsR performs flexible maximum common substructure (FMCS) analysis to quantify atomic and functional-group overlap between compounds.",
+    "Isobutyl hexanoate (Butanoate ester with 4-carbon branched alkyl group) shares a hexanoate core ester functionality with ethyl hexanoate, explaining their high structural similarity.",
+    "ChemmineR and webchem retrieve SMILES strings and molecular fingerprints from PubChem and other chemical databases for automated structural comparison.",
+    "CMP indexing in output (CMP1 = first compound in set, CMP2 = second compound) allows users to trace which library compound matched the query chemical."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:castratton__uafR containing categorate() function implementation",
+      "verify categorate() function accepts structural-match condition parameter (COND-categorate-structural-match)",
+      "verify 4-set restricted chemical library file exists and is loadable in R (format: CSV or RData)",
+      "script_runs: execute categorate() with structural-match condition on 4-set library; verify output is a dataframe with no errors",
+      "output includes rows for Ethyl hexanoate and isobutyl hexanoate",
+      "output dataframe contains a column indicating structural similarity or classification type (e.g., 'Type', 'structural_class', 'match_type')",
+      "value in dataframe row for Ethyl hexanoate matches value in row for isobutyl hexanoate in the structural similarity/type column",
+      "output dataframe row(s) contain 'Type D' or equivalent classification label as specified in METRIC-structural-match-ethylhex-typeD"
+    ],
+    "expert_review": [
+      "expert_review: assess whether the structural similarity metric and Type D classification are chemically defensible for the Ethyl hexanoate\u2013isobutyl hexanoate pair (both are aliphatic esters; isobutyl vs. ethyl ester groups differ only in branching of the alcohol moiety)",
+      "expert_review: confirm that the 4-set restricted chemical library composition and molecular structure definitions are appropriate for testing structural-match functionality and consistent with METRIC-structural-match-ethylhex-typeD"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Does the categorate() function correctly identify structurally similar compounds (Ethyl hexanoate and isobutyl hexanoate) when applied under structural-match conditions using a restricted chemical library?: 'categorate() is an overpowered function that accesses a broad array of categorical data for searched chemicals'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] The categorate() function is designed to access categorical data for searched chemicals, enabling structural matching and similarity assessment across chemical compounds.: 'categorate() is an overpowered function that accesses a broad array of categorical data for searched chemicals'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Query chemical list (ethyl hexanoate, methyl salicylate, octanal, undecane): 'query_chemicals = c(\"Ethyl hexanoate\", \"Methyl salicylate\", \"Octanal\", \"Undecane\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Restricted type library CSV with 5 chemical type sets (A\u2013E): 'we have restricted our search to 4 sets of chemicals that we know are structurally similar to our query chemicals from the previous section (Types B, C, D, and E below) and one set that should not'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structural match results dataframe showing query chemicals vs. type categories with match outcome (No, ~, Yes) and matched compound identifier (e.g., CMP1, CMP2): 'Where \"No\" means none of the chemicals had a structural match, \"~\" refers to at least 1 match between 0.85 and 0.95, and \"Yes\" means there was at least 1 match exceeding 0.95.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Best compound match mapping showing which compound in each type matched each query chemical (CMP identifier or blank if no match): 'Where the first compound in a set that had a match exceeding 0.95 is shown. The number following \"CMP\" refers tells the user which compound was a match (i.e. 1 refers to the topmost chemical in the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'any software or utility that generates the necessary information can be used with simple modifications'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] ChemmineR: 'uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] fmcsR: 'uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] webchem: 'uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting updates, versions, or changes to the categorate() function, the 4-set chemical library, or the structural-match condition since initial release.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(ChemmineR); library(fmcsR); library(webchem); query_chemicals <- read.csv('{inputs.query_chemicals}'); type_library <- read.csv('{inputs.type_library}'); results <- categorate(query_chemicals, type_library); print(results); write.csv(results, 'categorate_output_{task_id}.csv', row.names=FALSE)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [
+      "Agilent Unknowns Analysis"
+    ],
+    "compute_tier": "light",
+    "open_source_alternatives": [
+      {
+        "closed": "Agilent Unknowns Analysis",
+        "expected_divergence": "",
+        "oss": "XCMS, MZmine2"
+      }
+    ]
+  },
+  "expected_artifact_name": "structural_match_results.csv",
+  "expected_outputs": [
+    "Structural match results dataframe showing query chemicals vs. type categories with match outcome (No, ~, Yes) and matched compound identifier (e.g., CMP1, CMP2)",
+    "Best compound match mapping showing which compound in each type matched each query chemical (CMP identifier or blank if no match)"
+  ],
+  "finding": "The categorate() function is designed to access categorical data for searched chemicals, enabling structural matching and similarity assessment across chemical compounds.",
+  "github_name": "castratton/uafR",
+  "input_from": "task_001",
+  "inputs": [
+    "Query chemical list (ethyl hexanoate, methyl salicylate, octanal, undecane)",
+    "Restricted type library CSV with 5 chemical type sets (A\u2013E)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "query_chemical_properties.csv",
+    "type_library_processed.csv",
+    "structural_fingerprints.rds",
+    "best_match_mapping.csv"
+  ],
+  "linked_result_ids": [
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_013",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_017"
+  ],
+  "methodology_summary": [
+    "Load query chemicals (ethyl hexanoate, methyl salicylate, octanal, undecane) and restricted type library with 5 structural categories (A\u2013E).",
+    "Invoke categorate() to access cheminformatics packages (ChemmineR, fmcsR, webchem) and compute structural fingerprints and similarity scores.",
+    "Extract structural match outcome matrix (Yes/~/No) where Yes \u22650.95, ~ = 0.85\u20130.95, No <0.85 or no match.",
+    "Extract best-match compound identifier (CMP1, CMP2, ...) for each query chemical in each type category.",
+    "Validation: Verify that ethyl hexanoate row in Type D column shows 'CMP2' (isobutyl hexanoate, 2nd compound in Type D set) with match score \u22650.95 in source match-score matrix."
+  ],
+  "missing_information": [
+    "No changelog documenting updates, versions, or changes to the categorate() function, the 4-set chemical library, or the structural-match condition since initial release."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the categorate() function correctly identify structurally similar compounds (Ethyl hexanoate and isobutyl hexanoate) when applied under structural-match conditions using a restricted chemical library?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods"
+  ],
+  "skills": [
+    "chemical-structure-similarity-matching",
+    "functional-group-classification",
+    "compound-structural-fingerprint-comparison",
+    "cheminformatics-library-querying",
+    "chemical-match-score-interpretation",
+    "structural-type-categorization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_uafr/synthesized_package",
+  "spine_condition_ids": [
+    "COND-known-chemicals-explicit",
+    "COND-known-chemicals-mf89",
+    "COND-categorate-structural-match",
+    "COND-mf65",
+    "COND-mf80",
+    "COND-mf90"
+  ],
+  "spine_entity_ids": [
+    "COMP-categorate",
+    "CHEM-ethyl-hexanoate",
+    "COND-known-chemicals-mf89",
+    "COND-mf65",
+    "COND-mf80",
+    "COND-mf90",
+    "COND-categorate-structural-match",
+    "METRIC-ethylhex-bestmatch",
+    "METRIC-methylsal-bestmatch",
+    "METRIC-undecane-bestmatch",
+    "METRIC-structural-match-ethylhex-typeD",
+    "RES-first-gcms-utility",
+    "RES-categorate-structural-accuracy",
+    "ARTIFACT-spreadOut-output",
+    "ARTIFACT-mzExacto-output",
+    "ARTIFACT-categorate-output"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:castratton__uafR",
+  "task_description": "Execute the categorate() function on a restricted 4-set chemical library to perform structural matching against query chemicals, and verify that the output correctly identifies ethyl hexanoate as structurally similar (match \u22650.95) to isobutyl hexanoate in Type D. Produce a dataframe showing structural match results with compound identifiers.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "List of query chemicals for structural matching",
+      "port_id": "query_chemicals",
+      "resolved_via": null,
+      "source": "task_001/mzexacto_result_df",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Restricted chemical library with 5 structural type sets",
+      "port_id": "type_library",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Run categorate() on the 4-set restricted library under structural-match conditions and validate that the output dataframe correctly classifies Ethyl hexanoate as Type D (structurally similar to isobutyl hexanoate).",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Match outcome dataframe (Yes/~/No per chemical\u2013type pair)",
+      "port_id": "structural_match_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Compound identifier mapping (CMP1, CMP2, etc.) for matched pairs",
+      "port_id": "best_match_mapping",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "database-annotation",
+    "metabolite-identification",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce the categorate output dataframe including structural similarity results for the restricted chemical library",
+  "tools": [
+    "R",
+    "ChemmineR",
+    "fmcsR",
+    "webchem"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Structural match results dataframe showing query chemicals vs. type categories with match outcome (No, ~, Yes) and matched compound identifier (e.g., CMP1, CMP2), Best compound match mapping showing which compound in each type matched each query chemical (CMP identifier or blank if no match)."
+  ],
+  "workflow_description": "1. Load the query chemicals (ethyl hexanoate, methyl salicylate, octanal, undecane) and the restricted type library (Types A\u2013E) into R. 2. Execute categorate() to access cheminformatics packages (ChemmineR, fmcsR, webchem) for structural comparison and atomic feature analysis against each chemical type set. 3. Extract the BestChemMatch dataframe from categorate() output, filtering for match scores and identifying the best-matched compound in each type for each query chemical. 4. Verify that ethyl hexanoate shows a structural match score \u22650.95 to isobutyl hexanoate (Type D compound 2) and that the output table displays 'CMP2' in the Type D column for ethyl hexanoate."
+}

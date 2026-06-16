@@ -1,0 +1,413 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MAMSI_logo.png",
+      "role": "figure",
+      "sha256": "5d152a3231f55e52d950a64438a6adec4abda771d6b57072fe87ef4f043a6e6c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MAMSI_logo.svg",
+      "role": "figure",
+      "sha256": "10f65a4d87333ec40ab016905266e45ed7d11d350c37a0c356be6f9a7bd1a8f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/confusion_matrix.png",
+      "role": "figure",
+      "sha256": "f029e8ce6763d25fe0930fd7922d841584363669565184036078e172822a37d5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/correlation_heatmap.png",
+      "role": "figure",
+      "sha256": "0aba9b581b24e3cdc169f796cb8330ee8ae0623b2fd586482d8f0ec08a882c16"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lv_estimation.png",
+      "role": "figure",
+      "sha256": "818132f2e47c6436a629bc792c6b9303f731ff99d439e9554a3cab316bc75ab8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mb-vip.png",
+      "role": "figure",
+      "sha256": "9003e6cf36fcf877a2ddb82a0c5afb50c27330fa4e1aa65d304b4ca81b34f375"
+    },
+    {
+      "indexable": false,
+      "path": "figures/network.png",
+      "role": "figure",
+      "sha256": "5e81832f010a717a7dedbf4117fd2c6a4447580648197815f76efb1d978cbb92"
+    },
+    {
+      "indexable": false,
+      "path": "figures/null_models_distribution.png",
+      "role": "figure",
+      "sha256": "6d93ecc2898201d658fd53c65d6d8132a940be889fe8fcaa3ea8a96f8fe92032"
+    },
+    {
+      "indexable": false,
+      "path": "figures/silhouette_plot.png",
+      "role": "figure",
+      "sha256": "82c93e55433b9797933a1a2da8cbecb10c94b40ffec4394b372bdb3ff210610c"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "be369df60063664460218e3a884f4ab4b5ff812b9e173007fbd18f6b083cdeff"
+    }
+  ],
+  "created_at": "2026-06-15T13:26:03.540713+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1011814",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Selected LC-MS feature intensity table (rows: samples, columns: features with naming convention (AssayName)_(RTsec)_(m/z)m/z, e.g. HPOS_233.25_149.111m/z)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structural cluster results table containing cluster ID, cluster size, member features, isotopologue group, adduct group, and cross-assay link status for 'all adducts' mode",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structural cluster results table for 'most-common adducts' mode with identical columns as 'all adducts' mode output",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparative summary table with rows for each adduct mode, columns: Total Clusters, Mean Cluster Size, Median Cluster Size, Max Cluster Size, Feature Coverage (%)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Isotopologue signatures are identified by searching mass differences of 1.00335 Da between m/z values within RT windows of 5 seconds.",
+    "Adduct patterns are detected by calculating hypothetical neutral masses from common ESI adducts and matching m/z values within 15 ppm tolerance; 'all adducts' mode uses the complete Fiehn Lab adduct calculator set, while 'most-common' uses Waters ESI documentation standards.",
+    "Overlapping isotopologue and adduct clusters are merged into structural clusters; cross-assay links are established using [M+H]+/[M-H]- as reference ions.",
+    "Cluster size distribution and coverage metrics (percentage of features assigned to at least one cluster) are sensitive to adduct-set selection and may reveal mode-dependent feature groupings.",
+    "The LC-MS column naming convention (AssayName)_(RTsec)_(m/z)m/z is required for metadata extraction; deviations cause parsing failure."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that kopeckylukas/py-mamsi repository exists and is accessible at https://github.com/kopeckylukas/py-mamsi",
+      "verify that kopeckylukas/py-mamsi-tutorials repository exists with sample LC-MS feature list data at https://github.com/kopeckylukas/py-mamsi-tutorials",
+      "script_runs: execute MAMSI structural clustering workflow on provided LC-MS feature list with 'all adducts' parameter configuration without errors",
+      "script_runs: execute MAMSI structural clustering workflow on same LC-MS feature list with 'most-common adducts' parameter configuration without errors",
+      "file_exists: results table comparing cluster count and size distribution between 'all adducts' and 'most-common adducts' conditions",
+      "file_format_is: results table is in a standard tabular format (CSV, TSV, or pandas DataFrame pickle)",
+      "field_present: results table contains at least column headers for 'condition', 'total_cluster_count', and cluster size distribution metrics",
+      "robust to parameter choices: cluster count values are numeric integers \u2265 1, cluster size distribution metrics are numeric and non-negative"
+    ],
+    "expert_review": [
+      "Do differences in cluster counts and size distributions between 'all adducts' vs 'most-common adducts' align with expected adduct ionisation behavior in electrospray LC-MS?",
+      "Are the structural clusters formed by the 'most-common adducts' condition chemically and biochemically meaningful given the metabolomic context?",
+      "Do reported cluster size distributions reflect plausible m/z and retention time groupings for metabolite ion families?"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How do structural cluster outputs (cluster count and size distribution) differ between using all adducts versus only the most-common adducts in the MAMSI framework's adduct signature search?: 'the MAMSI framework provides a platform for linking statistically significant features of untargeted multi-assay liquid chromatography \u2013 mass spectrometry (LC-MS) metabolomics datasets into clusters'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MAMSI enables clustering of LC-MS features by structural properties through adduct signature detection, which can be parameterized to search either all common adducts or a restricted set of most-common adducts.: 'This is followed by a search for common adduct signatures. This is achieved by calculating hypothetical neutral masses based on common adducts in electrospray ionisation.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Selected LC-MS feature intensity table (rows: samples, columns: features with naming convention (AssayName)_(RTsec)_(m/z)m/z, e.g. HPOS_233.25_149.111m/z): 'Load Selected LC-MS Features\nstruct.load_lcms(selected)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structural cluster results table containing cluster ID, cluster size, member features, isotopologue group, adduct group, and cross-assay link status for 'all adducts' mode: 'get_structural_clusters(adducts = 'all', annotate = True)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structural cluster results table for 'most-common adducts' mode with identical columns as 'all adducts' mode output: 'get_structural_clusters(adducts = 'most-common', annotate = True)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Comparative summary table with rows for each adduct mode, columns: Total Clusters, Mean Cluster Size, Median Cluster Size, Max Cluster Size, Feature Coverage (%): 'Overlapping adduct clusters and isotopologue clusters are then merged to form structural clusters'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'MAMSI is a Python framework'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pandas: 'import pandas as pd'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] numpy: 'import numpy as np'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] matplotlib: 'from matplotlib import pyplot as plt'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MAMSI (MamsiStructSearch): 'A class for performing structural search on multi-modal MS data using'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, bug fixes, or feature changes for the py-mamsi package.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; from mamsi import MamsiStructSearch; import pandas as pd; import numpy as np; import matplotlib.pyplot as plt; feature_table = pd.read_csv('{inputs.lcms_feature_table}', index_col=0); results_all = []; results_common = []; stats_all = None; stats_common = None; exec(open('/dev/stdin').read())",
+      "<<'SCRIPT'\nms_all = MamsiStructSearch(feature_table, adduct_mode='all', isotope_threshold=1.00335, ppm_tol=15); clusters_all = ms_all.run(); results_all = ms_all.get_cluster_table(); stats_all = {'mode': 'all_adducts', 'total_clusters': len(clusters_all), 'mean_size': np.mean([len(c) for c in clusters_all.values()]), 'median_size': np.median([len(c) for c in clusters_all.values()]), 'max_size': np.max([len(c) for c in clusters_all.values()]), 'feature_coverage': 100*sum(len(c) for c in clusters_all.values())/len(feature_table.columns)}; results_all.to_csv('structural_clusters_all_adducts.csv', index=False); ms_common = MamsiStructSearch(feature_table, adduct_mode='most-common', isotope_threshold=1.00335, ppm_tol=15); clusters_common = ms_common.run(); results_common = ms_common.get_cluster_table(); stats_common = {'mode': 'most_common_adducts', 'total_clusters': len(clusters_common), 'mean_size': np.mean([len(c) for c in clusters_common.values()]), 'median_size': np.median([len(c) for c in clusters_common.values()]), 'max_size': np.max([len(c) for c in clusters_common.values()]), 'feature_coverage': 100*sum(len(c) for c in clusters_common.values())/len(feature_table.columns)}; results_common.to_csv('structural_clusters_most_common_adducts.csv', index=False); summary = pd.DataFrame([stats_all, stats_common]); summary['cluster_count_diff'] = summary.loc[0, 'total_clusters'] - summary.loc[1, 'total_clusters']; summary['coverage_diff_pct'] = summary.loc[0, 'feature_coverage'] - summary.loc[1, 'feature_coverage']; summary.to_csv('comparison_summary.csv', index=False); print('Task completed: structural clustering and comparison done.')\nSCRIPT"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "cluster_comparison_summary.csv",
+  "expected_outputs": [
+    "Structural cluster results table containing cluster ID, cluster size, member features, isotopologue group, adduct group, and cross-assay link status for 'all adducts' mode",
+    "Structural cluster results table for 'most-common adducts' mode with identical columns as 'all adducts' mode output",
+    "Comparative summary table with rows for each adduct mode, columns: Total Clusters, Mean Cluster Size, Median Cluster Size, Max Cluster Size, Feature Coverage (%)"
+  ],
+  "finding": "MAMSI enables clustering of LC-MS features by structural properties through adduct signature detection, which can be parameterized to search either all common adducts or a restricted set of most-common adducts.",
+  "github_name": "kopeckylukas/py-mamsi",
+  "input_from": "task_001",
+  "inputs": [
+    "Selected LC-MS feature intensity table (rows: samples, columns: features with naming convention (AssayName)_(RTsec)_(m/z)m/z, e.g. HPOS_233.25_149.111m/z)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "structural_clusters_all_adducts.csv",
+    "structural_clusters_most_common_adducts.csv",
+    "cluster_size_distribution_comparison.png"
+  ],
+  "linked_result_ids": [
+    "result_030",
+    "result_031"
+  ],
+  "methodology_summary": [
+    "Load LC-MS feature intensity data with retention time and m/z metadata into MamsiStructSearch.",
+    "Execute structural clustering with 'all adducts' mode: identify isotopologues (1.00335 Da threshold), detect adduct patterns (15 ppm tolerance), merge overlapping clusters.",
+    "Compute cluster statistics for 'all adducts': total count, size distribution (mean, median, max), feature coverage percentage.",
+    "Repeat clustering and statistics with 'most-common adducts' mode.",
+    "Compare outputs: tabulate cluster counts, sizes, and coverage; compute absolute and percentage differences between modes.",
+    "Validation: verify that both modes produce cluster assignments for \u226580% of input features; confirm cluster count and size statistics are computed correctly by manual spot-check on a subset of clusters.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1011814)"
+  ],
+  "missing_information": [
+    "No changelog documenting version history, bug fixes, or feature changes for the py-mamsi package."
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/model_metrics"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How do structural cluster outputs (cluster count and size distribution) differ between using all adducts versus only the most-common adducts in the MAMSI framework's adduct signature search?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "lc-ms-adduct-pattern-detection",
+    "isotopologue-signature-identification",
+    "spectral-feature-clustering-and-comparison",
+    "mass-spectrometry-structural-annotation",
+    "cross-assay-feature-linkage-analysis",
+    "data-summarization-and-tabulation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mamsi/synthesized_package",
+  "spine_condition_ids": [
+    "cond_adducts_all",
+    "cond_adducts_most_common",
+    "cond_silhouette_flattening",
+    "cond_constant_flattening"
+  ],
+  "spine_entity_ids": [
+    "MAMSI_system",
+    "structural_network_artifact",
+    "structural_clusters_artifact",
+    "cond_adducts_all",
+    "cond_adducts_most_common",
+    "cond_silhouette_flattening",
+    "cond_constant_flattening"
+  ],
+  "subdomains": [
+    "multi-omics-integration",
+    "computational-metabolomics",
+    "biomarker-discovery"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:kopeckylukas__py-mamsi",
+  "task_description": "Run the MAMSI structural search pipeline on a selected LC-MS feature list under two adduct-selection modes ('all' vs. 'most-common'), compare the resulting structural cluster counts and size distributions, and produce a summary results table quantifying differences.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Selected LC-MS feature intensity table (rows: samples, columns: features with LC-MS naming convention)",
+      "port_id": "lcms_feature_table",
+      "resolved_via": null,
+      "source": "task_001/model_metrics",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Compare structural cluster counts and size distributions generated under 'all adducts' versus 'most-common adducts' parameter settings and tabulate the differences.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structural cluster assignments using all adducts",
+      "port_id": "clusters_all_adducts",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structural cluster assignments using most-common adducts",
+      "port_id": "clusters_most_common_adducts",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Comparative summary table of cluster statistics across adduct modes",
+      "port_id": "comparison_summary",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "multivariate-statistics",
+    "partial-least-squares",
+    "pathway-analysis",
+    "dimensionality-reduction",
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Analyze the effect of adduct mode selection on structural cluster outputs",
+  "tools": [
+    "Python",
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "MAMSI (MamsiStructSearch)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: pandas, numpy, matplotlib, Structural cluster results table containing cluster ID, cluster size, member features, isotopologue group, adduct group, and cross-assay link status for 'all adducts' mode, Structural cluster results table for 'most-common adducts' mode with identical columns as 'all adducts' mode output, Comparative summary table with rows for each adduct mode, columns: Total Clusters, Mean Cluster Size, Median Cluster Size, Max Cluster Size, Feature Coverage (%)."
+  ],
+  "workflow_description": "1. Load the selected LC-MS feature intensity data into MamsiStructSearch using load_lcms() with column naming convention (AssayName)_(RTsec)_(m/z)m/z. 2. Call get_structural_clusters() with adducts='all' parameter to identify isotopologue signatures (mass difference 1.00335 Da), adduct patterns (ESI-based neutral mass matching at 15 ppm tolerance), and cross-assay links ([M+H]+/[M-H]- references); merge overlapping clusters into structural clusters. 3. Extract cluster metadata (cluster ID, size, member count, feature composition) and compute summary statistics (total cluster count, mean/median/max cluster sizes, size distribution histogram). 4. Repeat steps 2\u20133 using adducts='most-common' parameter. 5. Compare outputs side-by-side: tabulate cluster counts, generate size-distribution plots for both modes, and compute effect-size differences (absolute and percentage change in cluster count and mean cluster size). 6. Produce a consolidated results table with columns: Adduct Mode, Total Clusters, Mean Cluster Size, Median Cluster Size, Max Cluster Size, Feature Coverage (% features in \u22651 cluster)."
+}

@@ -1,0 +1,517 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "integrate.pdf",
+      "role": "main_article",
+      "sha256": "328ab2321c22b4ee4a0b4efd842f16364fb568636f24dea8d4723721f0be109b"
+    }
+  ],
+  "created_at": "2026-06-15T08:26:15.469347+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1009337",
+  "data_accessions": [
+    {
+      "accession": "MTBLS3597",
+      "evidence_span": "etails on data processing the at www.ebi.ac.uk/metabolights/MTBLS3597. Normalized data (on utational analyses are reported in S1",
+      "kind": "metabolights",
+      "url": "https://www.ebi.ac.uk/metabolights/MTBLS3597"
+    },
+    {
+      "accession": "PRJNA767228",
+      "evidence_span": "sing the h abundance was measured i Raw reads are available PRJNA767228. ENGRO2 model recon Starting from ENGRO1 [44 core model of",
+      "kind": "bioproject",
+      "url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA767228"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Five cell-relative metabolic models in SBML format (ENGRO2) with Type 1, Type 2, and Type 3 constraints defined separately",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Experimental growth yield measurements (protein produced over 48h / glucose consumed over 48h) for five cell lines from Bradford assay and YSI bioanalyzer",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ENGRO2 metabolic network model with 494 reactions, 410 metabolites, and gene-protein-reaction associations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 1 constraints alone",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 1+2 constraints",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 1+2+3 constraints",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 3 constraints alone",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Correlation plot with four scatter subplots (one per constraint scenario) showing experimental vs. in silico growth yield with \u03c1 and p-value annotations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Growth yield is computed as the ratio of total biomass (protein) synthesized over the time period to total substrate (glucose) consumed, normalized by the molecular weight of glucose and the protein fraction of biomass (0.131972 in ENGRO2).",
+    "Type 1 constraints define nutrient availability based on medium composition; Type 2 constraints enforce metabolic flux ratios (lactate/glucose, glutamate/glutamine) from extracellular measurements; Type 3 constraints bound internal fluxes proportionally to Reaction Activity Scores derived from transcriptomics via gene-protein-reaction rules.",
+    "Uniform flux sampling via optGpSampler with thinning=10 explores the null space of the stoichiometric matrix under steady-state mass balance; the median of sampled fluxes represents a robust central estimate less sensitive to outliers than mean.",
+    "Spearman rank correlation is robust to non-linear monotonic relationships and is appropriate when sample size is small (n=5 cell lines) and normality cannot be assumed.",
+    "The reported growth yield constraint (Eq. 6) enforces that predicted growth yield lies within the minimum (3.90762 \u00d7 10\u207b\u2075) and maximum (1.67998 \u00d7 10\u207b\u2074) observed experimentally, preventing unrealistic flux distributions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: Verify S1 Compressed File Archive (cell-relative metabolic models in SBML format) is accessible in Zenodo deposit 10.5281/zenodo.5824504",
+      "file_exists: Verify S1 File containing experimental growth yield data, extracellular flux measurements, and protein content for all five cell lines is available",
+      "file_format_is: Verify FFD datasets (Feasible Flux Distributions) from ENGRO2 models are in format specified in Materials and Methods (sampled steady-state solutions)",
+      "value_in_range: Spearman correlation coefficient reported in Fig 3E for constraint scenario C (transcriptomics-derived constraints alone, Type 3) is positive and exceeds correlation from Type 1+2 constraints alone",
+      "value_in_range: Spearman correlation coefficient for all three constraints combined (Type 1+2+3, Fig 3D) shows improvement over Type 3 alone, but Fig 3 caption states Type 3 constraints alone 'result in a good separation of the feasible regions'",
+      "script_runs: Code workflow from https://github.com/qLSLab/integrate executes without error when applied to deposited cell-relative models and experimental inputs",
+      "output_matches_reference: Reconstructed growth yield predictions (median protein synthesis flux over glucose uptake) match values reported in S1 File for all five cell lines under Type 3 constraints, robust to parameter choices in FVA and sampling (thinning=10)"
+    ],
+    "expert_review": [
+      "Assess whether the selection of 20% fold-change threshold for registering variation sign (Materials and Methods, Concordance analysis section) is justified and consistent with prior metabolic pathway sensitivity literature cited",
+      "Evaluate whether constraint-based modeling assumptions (steady-state, pseudo-stoichiometric mass action kinetics without enzyme kinetic parameters) adequately justify the causal interpretation that Type 3 constraints capture transcriptional regulation independent of metabolic regulation",
+      "Examine whether the reported improvement in growth yield correlation under Type 3 constraints versus Type 1 or Type 1+2 (Fig 3E) reflects genuine superior predictive power or confounding from degrees-of-freedom in flux sampling and constraint relaxation",
+      "Review whether the experimental growth yield computation (protein synthesis flux / glucose uptake flux, based on Bradford assay and YSI analysis) adequately controls for non-protein biomass components and whether this affects the correlation baseline"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does integration of transcriptomics-derived constraints alone improve the correlation between predicted and experimental growth yield compared to constraints on nutrient availability alone, and how does adding metabolomics-derived extracellular flux constraints further affect this correlation?: 'However, predictions of growth rates improve when constraints on extracellular fluxes are also added.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Transcriptomics-derived constraints alone (Type 3) result in good separation of feasible flux distributions and better discrimination of growth rates across five cell lines, with further improvement when extracellular flux constraints (Type 1+2) are simultaneously applied.: 'transcriptomics-derived constraints alone (Fig 3C) result in a good separation of the feasible flux regions of the five models. The combination of both kinds of constraints (Fig 3D) decreases the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Five cell-relative metabolic models in SBML format (ENGRO2) with Type 1, Type 2, and Type 3 constraints defined separately: 'The final five cell-relative metabolic models (SBML format) are included in S1 Compressed File Archive'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Experimental growth yield measurements (protein produced over 48h / glucose consumed over 48h) for five cell lines from Bradford assay and YSI bioanalyzer: 'Experimental data (reported in S1 File) was computed for each of the two collected biological replicates as the ratio of the total proteins produced over 48 hours (grams/hour, determined by Bradford'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] ENGRO2 metabolic network model with 494 reactions, 410 metabolites, and gene-protein-reaction associations: 'The ENGRO2 core model consists of 494 reactions, 410 metabolites and 494 genes'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 1 constraints alone: 'The Spearman correlation coefficient and p-value are reported on top of each plot'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 1+2 constraints: 'The Spearman correlation coefficient and p-value are reported on top of each plot'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 1+2+3 constraints: 'The Spearman correlation coefficient and p-value are reported on top of each plot'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 3 constraints alone: 'The Spearman correlation coefficient and p-value are reported on top of each plot'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Correlation plot with four scatter subplots (one per constraint scenario) showing experimental vs. in silico growth yield with \u03c1 and p-value annotations: 'Correlation between the experimental and in silico growth yield on glucose is reported for each of the four settings in panels A, B, C and D'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[results] COBRApy (optGpSampler algorithm): 'we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions of the ENGRO2 model'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Flux Variability Analysis (FVA): 'We performed a Flux Variability Analysis (FVA). FVA [67, 68] is a constraint-based modelling technique aimed at determining the maximal (and minimal) possible flux through any reaction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[abstract] constraint-based stoichiometric metabolic models: 'using constraint-based stoichiometric metabolic models as a scaffold'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Number of sampled Feasible Flux Distribution (FFD) solutions per cell line and constraint scenario used to compute correlation with experimental growth yield in Fig 3: 'we sampled a million steady-state solutions of the ENGRO2 model in all the tested conditions. To get a large number of samples, we used the batch generator option of the algorithm, creating ten'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Exact statistical test employed to determine whether correlation differences between constraint scenarios (Fig 3E, comparing Type 1, Type 1+2, Type 3, Type 1+2+3) are statistically significant: 'The Spearman correlation coefficient and p-value are reported on top of each plot.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Whether experimental growth yield values (S1 File) represent mean and standard deviation across biological and technical replicates, or individual replicate measurements: 'The experimental growth yield (reported in S1 File) was computed for each of the two collected biological replicates as the ratio of the total proteins produced over 48 hours'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "growth_yield_correlation_analysis.pdf",
+  "expected_outputs": [
+    "Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 1 constraints alone",
+    "Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 1+2 constraints",
+    "Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 1+2+3 constraints",
+    "Spearman correlation coefficient and p-value between experimental and in silico growth yield for Type 3 constraints alone",
+    "Correlation plot with four scatter subplots (one per constraint scenario) showing experimental vs. in silico growth yield with \u03c1 and p-value annotations"
+  ],
+  "finding": "Transcriptomics-derived constraints alone (Type 3) result in good separation of feasible flux distributions and better discrimination of growth rates across five cell lines, with further improvement when extracellular flux constraints (Type 1+2) are simultaneously applied.",
+  "github_name": "qLSLab/integrate",
+  "input_from": "task_001",
+  "inputs": [
+    "Five cell-relative metabolic models in SBML format (ENGRO2) with Type 1, Type 2, and Type 3 constraints defined separately",
+    "Experimental growth yield measurements (protein produced over 48h / glucose consumed over 48h) for five cell lines from Bradford assay and YSI bioanalyzer",
+    "ENGRO2 metabolic network model with 494 reactions, 410 metabolites, and gene-protein-reaction associations"
+  ],
+  "keywords": [
+    "constraint-based metabolic modeling",
+    "metabolic flux prediction",
+    "transcriptomics integration",
+    "metabolomics integration",
+    "multi-level metabolic regulation",
+    "gene expression",
+    "substrate availability",
+    "enzyme kinetics",
+    "Michaelis-Menten law",
+    "systems metabolism"
+  ],
+  "landmark_outputs": [
+    "type1_ffd_samples.csv",
+    "type12_ffd_samples.csv",
+    "type3_ffd_samples.csv",
+    "type123_ffd_samples.csv",
+    "experimental_growth_yields.csv",
+    "predicted_growth_yields_all_scenarios.csv"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_005",
+    "result_024",
+    "result_028",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_039",
+    "result_040",
+    "result_041",
+    "result_042",
+    "result_043",
+    "result_045",
+    "result_046",
+    "result_047",
+    "result_048",
+    "result_049"
+  ],
+  "methodology_summary": [
+    "Load ENGRO2 models with Type 1, Type 2, and Type 3 constraints specified separately and in combination.",
+    "Sample 1 million steady-state flux distributions per cell line per constraint scenario using optGpSampler with thinning=10, enforcing growth yield bounds (Eq. 6: 0.001 \u00b7 0.131972 \u00b7 v_Biomass \u2264 max \u00b7 v_ExGlc \u00b7 mw_Glc \u2264 0.001).",
+    "Compute in silico growth yield as median(v_Biomass) / median(v_ExGlc) \u00d7 0.131972 for each scenario.",
+    "Extract experimental growth yield (total protein over 48h / total glucose over 48h) from Bradford and YSI measurements.",
+    "Calculate Spearman \u03c1 and two-tailed p-value for experimental vs. in silico growth yield under each constraint scenario.",
+    "Validation: Confirm that Type 3 constraints alone achieve the highest separation of the five cell lines in t-SNE space (Fig 3C vs 3D) while Type 1+2+3 combined yields the highest Spearman correlation with experimental data.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1009337); MTBLS3597 (https://www.ebi.ac.uk/metabolights/MTBLS3597); PRJNA767228 (https://www.ncbi.nlm.nih.gov/bioproject/PRJNA767228)"
+  ],
+  "missing_information": [
+    "Number of sampled Feasible Flux Distribution (FFD) solutions per cell line and constraint scenario used to compute correlation with experimental growth yield in Fig 3",
+    "Exact statistical test employed to determine whether correlation differences between constraint scenarios (Fig 3E, comparing Type 1, Type 1+2, Type 3, Type 1+2+3) are statistically significant",
+    "Whether experimental growth yield values (S1 File) represent mean and standard deviation across biological and technical replicates, or individual replicate measurements"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/tsne_plot"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does integration of transcriptomics-derived constraints alone improve the correlation between predicted and experimental growth yield compared to constraints on nutrient availability alone, and how does adding metabolomics-derived extracellular flux constraints further affect this correlation?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "intro",
+    "results"
+  ],
+  "skills": [
+    "growth-yield-computation-from-omics",
+    "constraint-based-model-sampling-and-flux-prediction",
+    "correlation-analysis-between-experimental-computational-data",
+    "metabolic-model-constraint-integration-and-comparison",
+    "spearman-rank-correlation-statistical-testing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_integrate",
+  "spine_condition_ids": [
+    "cond_type1_constraints",
+    "cond_type1_2_constraints",
+    "cond_type3_constraints",
+    "cond_type1_2_3_constraints"
+  ],
+  "spine_entity_ids": [
+    "breast_cellline_dataset",
+    "cond_type1_constraints",
+    "cond_type1_2_constraints",
+    "cond_type3_constraints",
+    "cond_type1_2_3_constraints",
+    "result_tsne_separation",
+    "result_growth_yield_correlation",
+    "result_lactate_glucose_ratio"
+  ],
+  "subdomains": [
+    "multi-omics-integration",
+    "computational-metabolomics",
+    "fluxomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis",
+    "simulation"
+  ],
+  "synthesized_from": null,
+  "task_description": "Compute Spearman correlation coefficients between experimental and in silico growth yield on glucose for the five breast cell lines under four constraint scenarios (Type 1 alone, Type 1+2, Type 1+2+3, and Type 3 alone), reproducing the reported finding that transcriptomics-derived constraints (Type 3) alone yield the best discrimination while Type 1+2+3 combined provides the highest correlation.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Five cell-relative ENGRO2 models with Type 1, 2, 3 constraints (SBML)",
+      "port_id": "cell_relative_models",
+      "resolved_via": null,
+      "source": "task_001/tsne_plot",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Experimental growth yield (protein/glucose) for five cell lines",
+      "port_id": "experimental_growth_yield",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ENGRO2 metabolic network (494 reactions, 410 metabolites, GPRs)",
+      "port_id": "engro2_network",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Compute Spearman correlations between experimental and in silico growth yield on glucose for each constraint type combination (Type 1, Type 1+2, Type 3, Type 1+2+3) and reproduce the reported correlation coefficients showing relative improvement with transcriptomics constraints.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spearman \u03c1 and p-value for Type 1 constraints",
+      "port_id": "type1_correlation",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spearman \u03c1 and p-value for Type 1+2 constraints",
+      "port_id": "type12_correlation",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spearman \u03c1 and p-value for Type 1+2+3 constraints",
+      "port_id": "type123_correlation",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spearman \u03c1 and p-value for Type 3 constraints alone",
+      "port_id": "type3_correlation",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Four-panel correlation plot (experimental vs. in silico growth yield)",
+      "port_id": "correlation_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "flux-analysis",
+    "multi-omics-integration",
+    "pathway-analysis",
+    "differential-abundance-analysis"
+  ],
+  "title": "Reproduce growth yield correlation improvement attributable to Type 3 (transcriptomics-derived) constraints",
+  "tools": [
+    "COBRApy (optGpSampler algorithm)",
+    "Flux Variability Analysis (FVA)",
+    "constraint-based stoichiometric metabolic models"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the five cell-relative constraint-based metabolic models (ENGRO2 with Type 1, Type 2, and Type 3 constraints applied separately and in combination) from the Zenodo deposit (10.5281/zenodo.5824504). 2. For each of the four constraint scenarios, uniformly sample the feasible flux region of each model using optGpSampler with 10 batches of 100,000 samples each (1 million total steady-state solutions per model per scenario), retaining the growth yield constraint (Eq. 6: 0.001 \u00b7 0.131972 \u00b7 v_Biomass \u2264 max \u00b7 v_ExGlc \u00b7 mw_Glc \u2264 0.001). 3. Compute the median protein synthesis flux divided by median glucose uptake flux (in silico growth yield) for each cell line under each scenario, converting flux ratio to grams/hour using the biomass protein fraction (0.131972). 4. Load experimental growth yield data (protein produced over 48h / glucose consumed over 48h, in grams/hour from Bradford assay and YSI analysis in S1 File). 5. Calculate Spearman rank correlation coefficient and two-tailed p-value between experimental and in silico growth yield for each constraint scenario. 6. Generate a correlation plot (matching Fig 3E) with Spearman \u03c1 and p-value annotations for all four scenarios, highlighting that Type 3 constraints alone best separate the five cell lines while Type 1+2+3 yields the highest overall correlation."
+}

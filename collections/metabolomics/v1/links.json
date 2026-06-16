@@ -1,0 +1,3915 @@
+{
+ "schema": "asb-skill-task-links/1.0",
+ "links": {
+  "spec2vec/task_001": {
+   "tool": "spec2vec",
+   "task_kind": "reproduction",
+   "title": "Reproduce Spec2Vec vs. cosine score structural similarity correlation (Fig 3B average Tanimoto at top 0.1%)",
+   "skills": [
+    "spectral-similarity-scoring-computation",
+    "word2vec-embedding-training-mass-spectrometry",
+    "peak-intensity-normalization-weighted-aggregation",
+    "molecular-fingerprint-structural-similarity-tanimoto",
+    "spectrum-document-conversion-peak-loss-representation",
+    "neutral-loss-annotation-interpretation",
+    "large-scale-all-pairs-similarity-benchmarking"
+   ]
+  },
+  "spec2vec/task_002": {
+   "tool": "spec2vec",
+   "task_kind": "reproduction",
+   "title": "Reproduce library matching true-to-false-positive performance of Spec2Vec versus cosine scores",
+   "skills": [
+    "mass-spectrometry-library-matching",
+    "word-embedding-based-spectrum-representation",
+    "receiver-operator-characteristic-curve-generation",
+    "structural-similarity-ground-truth-validation",
+    "peak-filtering-and-preprocessing-lc-ms",
+    "chemical-structure-fingerprint-comparison"
+   ]
+  },
+  "spec2vec/task_003": {
+   "tool": "spec2vec",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Spec2Vec spectrum-document construction and weighted vector aggregation step",
+   "skills": [
+    "mass-spectrometry-spectrum-tokenization",
+    "word-embedding-aggregation-for-spectral-data",
+    "neutral-loss-calculation-from-precursor",
+    "word2vec-vocabulary-matching-and-unknown-peak-handling",
+    "spectral-vector-normalization-by-intensity",
+    "missing-fraction-quality-filtering-for-embeddings"
+   ]
+  },
+  "spec2vec/task_004": {
+   "tool": "spec2vec",
+   "task_kind": "analysis",
+   "title": "Analyze missing-fraction metric as a function of training corpus size using the AllPositive dataset",
+   "skills": [
+    "spectral-peak-word-embedding-representation",
+    "word2vec-model-inference-unknown-word-handling",
+    "mass-spectral-missing-word-fraction-computation",
+    "corpus-size-coverage-scaling-analysis",
+    "neutral-loss-extraction-and-weighting"
+   ]
+  },
+  "13c_spacem/task_001": {
+   "tool": "13c_spacem",
+   "task_kind": null,
+   "title": "Reconstruct: Single-cell isotope tracing - 13C-SpaceM",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "reproducibility-gap-detection"
+   ]
+  },
+  "aird/task_001": {
+   "tool": "aird",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Docker multi-stage build pipeline producing the airdpro:cli image",
+   "skills": [
+    "docker-multistage-build-execution",
+    "container-image-size-verification",
+    "wine-environment-initialization-validation",
+    "dotnet-framework-installation-in-containers",
+    "docker-image-registry-inspection"
+   ]
+  },
+  "aird/task_002": {
+   "tool": "aird",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Wine-mediated CLI conversion run and verify first-run initialisation behaviour",
+   "skills": [
+    "vendor-mass-spectrometry-file-format-handling",
+    "aird-format-conversion-and-validation",
+    "docker-container-runtime-execution-and-monitoring",
+    "wine-windows-runtime-initialization-diagnostics",
+    "cli-application-invocation-with-file-io-management",
+    "container-volume-mounting-and-file-persistence"
+   ]
+  },
+  "aird/task_003": {
+   "tool": "aird",
+   "task_kind": "component_reconstruction",
+   "title": "Implement a Docker image size audit across all four airdpro image variants",
+   "skills": [
+    "containerized-application-deployment-validation",
+    "artifact-size-measurement-and-range-verification",
+    "multi-stage-dockerfile-interpretation"
+   ]
+  },
+  "asari/task_001": {
+   "tool": "asari",
+   "task_kind": "reproduction",
+   "title": "Reproduce the asari end-to-end LC-MS processing pipeline on a public metabolomics dataset",
+   "skills": [
+    "mass-track-construction-from-centroided-spectra",
+    "m-z-alignment-and-mass-grid-assembly",
+    "retention-time-calibration-via-lowess-regression",
+    "composite-mass-track-assembly-and-peak-detection",
+    "feature-annotation-via-isotope-adduct-grouping",
+    "peak-quality-assessment-by-selectivity-and-snr-metrics",
+    "metabolomics-database-search-and-formula-matching"
+   ]
+  },
+  "asari/task_002": {
+   "tool": "asari",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the composite-map peak detection step and verify computational efficiency over per-sample detection",
+   "skills": [
+    "composite-mass-track-construction",
+    "retention-time-alignment-index-mapping",
+    "chromatographic-peak-detection-with-prominence-control",
+    "baseline-and-noise-level-estimation-from-quartile-statistics",
+    "peak-evaluation-metrics-cselectivity-snr-gaussian-fit",
+    "computational-efficiency-single-pass-vs-repeated-detection"
+   ]
+  },
+  "asari/task_003": {
+   "tool": "asari",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MassGrid alignment step and verify its conditional pairwise vs. landmark-based routing",
+   "skills": [
+    "m-z-alignment-across-samples",
+    "mass-track-consensus-computation",
+    "pairwise-alignment-with-anchor-prioritization",
+    "nearest-neighbor-clustering-by-mass-difference",
+    "sample-study-size-stratified-algorithm-selection",
+    "mass-grid-construction-and-mapping"
+   ]
+  },
+  "asari/task_004": {
+   "tool": "asari",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the peak quality filtering step and verify SNR, peak-shape, and prominence threshold application",
+   "skills": [
+    "peak-quality-threshold-filtering",
+    "snr-based-signal-validation",
+    "gaussian-peak-shape-evaluation",
+    "prominence-controlled-peak-selection",
+    "feature-table-row-count-validation",
+    "quality-control-metric-distribution-analysis"
+   ]
+  },
+  "asari/task_005": {
+   "tool": "asari",
+   "task_kind": "analysis",
+   "title": "Analyze scalability of asari by running it on increasing sample counts up to >100 mzML files and recording runtime and memory",
+   "skills": [
+    "lc-ms-dataset-acquisition-and-curation",
+    "computational-resource-profiling-and-benchmarking",
+    "software-performance-characterization-and-scaling-analysis",
+    "time-and-memory-complexity-visualization",
+    "scalability-extrapolation-and-throughput-estimation"
+   ]
+  },
+  "bam/task_001": {
+   "tool": "bam",
+   "task_kind": "reproduction",
+   "title": "Reproduce BAM Validation Results Using the BAM Codebase and Validation Dataset",
+   "skills": [
+    "molecular-network-construction-for-metabolomics",
+    "pipeline-end-to-end-execution-and-validation",
+    "annotation-accuracy-and-coverage-metrics-computation",
+    "reference-prediction-comparison-evaluation"
+   ]
+  },
+  "bam/task_002": {
+   "tool": "bam",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Biotransformation Rules Application Module",
+   "skills": [
+    "smiles-parsing-validation",
+    "biotransformation-rule-encoding",
+    "parent-product-relationship-tracking",
+    "chemical-structure-deduplication"
+   ]
+  },
+  "bam/task_003": {
+   "tool": "bam",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Global Molecular Networking Annotation Step",
+   "skills": [
+    "spectral-similarity-network-construction",
+    "metabolite-structure-annotation-integration",
+    "molecular-network-clustering-and-analysis",
+    "mass-spectral-feature-grouping",
+    "biotransformation-candidate-integration-with-networking"
+   ]
+  },
+  "bindiscover/task_001": {
+   "tool": "bindiscover",
+   "task_kind": null,
+   "title": "Reconstruct: BinDiscover",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "output-grounding",
+    "figure-table-interpretation",
+    "reproducibility-gap-detection"
+   ]
+  },
+  "biosynfoni/task_001": {
+   "tool": "biosynfoni",
+   "task_kind": "reproduction",
+   "title": "Reproduce the biosynfoni Python package installation and test suite execution",
+   "skills": [
+    "python-package-installation-from-source",
+    "development-environment-setup",
+    "pytest-test-suite-execution",
+    "package-dependency-management"
+   ]
+  },
+  "biosynfoni/task_002": {
+   "tool": "biosynfoni",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the biosynformatic molecular fingerprint computation for a set of natural product molecules",
+   "skills": [
+    "molecular-fingerprint-computation",
+    "natural-product-chemical-representation",
+    "python-package-installation-and-dependency-management",
+    "molecular-structure-input-format-handling",
+    "bit-vector-substructure-encoding"
+   ]
+  },
+  "biosynfoni/task_003": {
+   "tool": "biosynfoni",
+   "task_kind": "analysis",
+   "title": "Analyze the fingerprint vector distribution across the Zenodo biosynfoni dataset",
+   "skills": [
+    "fingerprint-vector-loading-and-parsing",
+    "molecular-fingerprint-bit-frequency-analysis",
+    "sparsity-metric-computation",
+    "tanimoto-similarity-pairwise-calculation",
+    "distribution-statistics-summarization",
+    "statistical-distribution-visualization"
+   ]
+  },
+  "bittermass/task_001": {
+   "tool": "bittermass",
+   "task_kind": "reproduction",
+   "title": "Reproduce BitterPredict classifier predictions on a set of molecules with known chemical structure descriptors",
+   "skills": [
+    "classifier-prediction-inference",
+    "chemical-structure-feature-encoding",
+    "binary-classification-output-interpretation"
+   ]
+  },
+  "bittermass/task_002": {
+   "tool": "bittermass",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the chemical structure descriptor extraction pipeline feeding BitterPredict",
+   "skills": [
+    "molecular-descriptor-calculation",
+    "smiles-sdf-parsing-validation",
+    "chemical-structure-standardization",
+    "descriptor-table-assembly",
+    "molecular-cheminformatics-pipeline"
+   ]
+  },
+  "bittermass/task_003": {
+   "tool": "bittermass",
+   "task_kind": "analysis",
+   "title": "Analyze the sensitivity of BitterPredict predictions to individual chemical structure descriptor subsets",
+   "skills": [
+    "descriptor-subgroup-partitioning",
+    "binary-classifier-ablation-testing",
+    "prediction-sensitivity-analysis",
+    "batch-prediction-comparison"
+   ]
+  },
+  "chemprop_ir/task_001": {
+   "tool": "chemprop_ir",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the chemprop-IR MPNN architecture as an extension of chemprop base",
+   "skills": [
+    "neural-network-architecture-extension",
+    "message-passing-neural-network-implementation",
+    "pytorch-model-instantiation-and-forward-pass",
+    "spectral-features-module-integration"
+   ]
+  },
+  "chemprop_ir/task_002": {
+   "tool": "chemprop_ir",
+   "task_kind": "component_reconstruction",
+   "title": "Implement the spectral feature extraction step within the chemprop-IR pipeline",
+   "skills": [
+    "molecular-graph-representation-parsing",
+    "spectral-feature-engineering",
+    "molecular-property-prediction-feature-construction",
+    "deep-learning-module-instantiation-and-validation"
+   ]
+  },
+  "cmmrt/task_001": {
+   "tool": "cmmrt",
+   "task_kind": "reproduction",
+   "title": "Reproduce DNN mean and median absolute error on SMRT dataset",
+   "skills": [
+    "descriptor-fingerprint-feature-engineering",
+    "deep-neural-network-training-regularization",
+    "cosine-annealing-schedule-optimization",
+    "stochastic-weight-averaging-implementation",
+    "regression-model-evaluation-mae-metrics"
+   ]
+  },
+  "cmmrt/task_002": {
+   "tool": "cmmrt",
+   "task_kind": "analysis",
+   "title": "Analyze fingerprints-only vs descriptors-only vs combined feature sets on SMRT retention time prediction",
+   "skills": [
+    "molecular-descriptor-fingerprint-generation",
+    "deep-neural-network-training-regularization",
+    "feature-condition-comparative-analysis",
+    "regression-error-metric-evaluation"
+   ]
+  },
+  "cmmrt/task_003": {
+   "tool": "cmmrt",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Bayesian meta-learning RT projection module",
+   "skills": [
+    "retention-time-projection-across-chromatographic-methods",
+    "bayesian-meta-learning-model-fitting",
+    "deep-neural-network-latent-space-mapping"
+   ]
+  },
+  "cmmrt/task_004": {
+   "tool": "cmmrt",
+   "task_kind": "reproduction",
+   "title": "Reproduce meta-learning projection competitive error rates with 10-molecule calibration sets",
+   "skills": [
+    "retention-time-prediction",
+    "bayesian-meta-learning-projection",
+    "chromatographic-method-transfer",
+    "error-metric-comparison-and-benchmarking"
+   ]
+  },
+  "cmmrt/task_005": {
+   "tool": "cmmrt",
+   "task_kind": "extension",
+   "title": "Extend DNN+meta-learned projections integration for probabilistic metabolite annotation scoring",
+   "skills": [
+    "molecular-descriptor-fingerprint-generation",
+    "metabolite-candidate-ranking-likelihood-scoring",
+    "uncertainty-quantification-rt-prediction"
+   ]
+  },
+  "commit/task_001": {
+   "tool": "commit",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the COMMIT consensus metabolic reconstruction pipeline for Arabidopsis thaliana communities",
+   "skills": [
+    "metabolic-model-consensus-integration",
+    "community-metabolic-reconstruction-synthesis",
+    "microbial-genome-annotation-harmonization"
+   ]
+  },
+  "commit/task_002": {
+   "tool": "commit",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the community-dependent gap-filling step using COMMIT for Arabidopsis thaliana microbial communities",
+   "skills": [
+    "metabolic-gap-filling-community-context",
+    "metabolic-model-curation",
+    "plant-metabolic-network-validation",
+    "community-dependent-reaction-inference"
+   ]
+  },
+  "corems/task_001": {
+   "tool": "corems",
+   "task_kind": "reproduction",
+   "title": "Reproduce FT-ICR transient processing and molecular formula assignment for ESI_NEG_SRFA",
+   "skills": [
+    "ftms-raw-data-loading-and-parsing",
+    "time-domain-signal-apodization",
+    "mass-calibration-against-reference-standards",
+    "molecular-formula-assignment-and-validation",
+    "mass-error-calculation-and-reporting"
+   ]
+  },
+  "corems/task_002": {
+   "tool": "corems",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MzDomainCalibration fallback PPM-widening step for sparse reference lists",
+   "skills": [
+    "mass-calibration-coefficient-computation",
+    "ppm-tolerance-window-adjustment",
+    "reference-peak-matching-and-fallback-logic",
+    "calibration-residual-calculation",
+    "ftms-mass-spectrum-peak-detection"
+   ]
+  },
+  "corems/task_003": {
+   "tool": "corems",
+   "task_kind": "reproduction",
+   "title": "Reproduce GC-MS compound identification pipeline using PNNLMetV20191015 reference library",
+   "skills": [
+    "gc-ms-chromatogram-processing",
+    "retention-index-calibration-and-alignment",
+    "low-resolution-mass-spectra-library-matching",
+    "spectral-similarity-scoring",
+    "compound-identification-from-ms-data"
+   ]
+  },
+  "corems/task_004": {
+   "tool": "corems",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the noise threshold method dispatch for relative-abundance, signal-noise, and log modes",
+   "skills": [
+    "mass-spectrum-noise-threshold-parameter-selection",
+    "ionization-mode-peak-retention-comparison",
+    "conditional-dispatch-workflow-implementation",
+    "spectrum-peak-counting-and-reporting"
+   ]
+  },
+  "corems/task_005": {
+   "tool": "corems",
+   "task_kind": "analysis",
+   "title": "Analyze the effect of first-hit versus all-hits search on molecular formula assignment counts for SRFA",
+   "skills": [
+    "mass-spectrum-calibration-validation",
+    "algorithm-parameter-comparison-analysis",
+    "statistical-score-distribution-analysis",
+    "search-mode-configuration-optimization"
+   ]
+  },
+  "cosmic/task_001": {
+   "tool": "cosmic",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the LC-MS/MS metabolite analysis pipeline entry point in SIRIUS",
+   "skills": [
+    "spectral-data-format-parsing",
+    "mass-spectrometry-metadata-validation",
+    "hierarchical-spectrum-object-construction",
+    "vendor-format-to-standard-conversion"
+   ]
+  },
+  "cosmic/task_002": {
+   "tool": "cosmic",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the CSI:FingerID web-service dispatch for molecular fingerprint prediction",
+   "skills": [
+    "spectrum-query-formatting",
+    "web-service-api-integration",
+    "molecular-fingerprint-parsing",
+    "sirius-spectral-request-construction"
+   ]
+  },
+  "cosmic/task_003": {
+   "tool": "cosmic",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the CANOPUS web-service dispatch for compound class prediction",
+   "skills": [
+    "spectral-fingerprint-web-service-query",
+    "compound-class-annotation-parsing",
+    "api-endpoint-communication",
+    "structured-result-validation"
+   ]
+  },
+  "cosmic/task_004": {
+   "tool": "cosmic",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MSNovelist web-service dispatch for de-novo structure generation",
+   "skills": [
+    "mass-spectrometry-query-formulation",
+    "web-service-api-integration",
+    "de-novo-structure-candidate-ranking",
+    "spectral-json-parsing"
+   ]
+  },
+  "cosmic/task_005": {
+   "tool": "cosmic",
+   "task_kind": "reproduction",
+   "title": "Reproduce the Build and Publish CI workflow execution status for the SIRIUS release branch",
+   "skills": [
+    "github-actions-workflow-execution",
+    "ci-cd-pipeline-monitoring",
+    "build-badge-verification",
+    "release-branch-management",
+    "repository-administration"
+   ]
+  },
+  "deepion/task_001": {
+   "tool": "deepion",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Data Augmentation Module for COL and ISO Modes",
+   "skills": [
+    "ion-image-augmentation-design",
+    "col-mode-augmentation-pipeline-implementation",
+    "intensity-dependent-missing-value-simulation",
+    "poisson-noise-injection-for-imaging",
+    "mass-spectrometry-image-preprocessing"
+   ]
+  },
+  "deepion/task_002": {
+   "tool": "deepion",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the ResNet18-Based Encoder Module Producing 512-D Representation Vectors",
+   "skills": [
+    "deep-learning-architecture-implementation",
+    "parameter-sharing-mechanism-design",
+    "convolutional-neural-network-encoding",
+    "representation-vector-dimensionality-reduction",
+    "contrastive-learning-encoder-construction"
+   ]
+  },
+  "deepion/task_003": {
+   "tool": "deepion",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Projection and Prediction Modules with Contrastive Loss",
+   "skills": [
+    "contrastive-learning-loss-implementation",
+    "neural-network-projection-module-design",
+    "representation-collapse-prevention",
+    "ion-image-embedding-optimization",
+    "encoder-output-dimension-reduction"
+   ]
+  },
+  "deepsat/task_001": {
+   "tool": "deepsat",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the TensorFlow Serving model metadata retrieval step in DeepSAT/SMART 3",
+   "skills": [
+    "rest-api-endpoint-querying",
+    "json-response-parsing",
+    "model-metadata-extraction",
+    "api-contract-validation"
+   ]
+  },
+  "deepsat/task_002": {
+   "tool": "deepsat",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the SMART 3 classification API call via /api/smart3/search",
+   "skills": [
+    "restful-api-endpoint-invocation",
+    "json-payload-construction-for-nmr-spectra",
+    "http-post-request-assembly",
+    "api-response-parsing-and-validation",
+    "model-metadata-schema-verification"
+   ]
+  },
+  "deimos/task_001": {
+   "tool": "deimos",
+   "task_kind": "reproduction",
+   "title": "Reproduce CCS Calibration R-squared Values for Positive and Negative Ion Modes",
+   "skills": [
+    "ion-mode-specific-ccs-model-generation",
+    "mass-spectrometry-reference-standard-mapping",
+    "polynomial-regression-quality-assessment",
+    "multi-dimensional-data-loading-and-formatting"
+   ]
+  },
+  "deimos/task_002": {
+   "tool": "deimos",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Peak-Picking Processing Step on mzML Input Data",
+   "skills": [
+    "multi-dimensional-feature-alignment",
+    "hdf5-feature-table-loading",
+    "cross-dataset-feature-matching",
+    "mass-spectrometry-data-integration"
+   ]
+  },
+  "deimos/task_003": {
+   "tool": "deimos",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct Feature Alignment Across Two Sample Datasets Using Reference-based Alignment",
+   "skills": [
+    "isotopologue-mass-offset-calculation",
+    "charge-state-specific-peak-matching",
+    "multidimensional-feature-annotation",
+    "hdf5-file-io-operations",
+    "isotopic-signature-validation-and-filtering"
+   ]
+  },
+  "deimos/task_004": {
+   "tool": "deimos",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct Isotopologue Detection on a Detected Feature Table",
+   "skills": [
+    "mass-spectrometry-workflow-orchestration-snakemake",
+    "lcims-msms-data-preprocessing-peak-detection",
+    "collision-cross-section-calibration-ccs",
+    "tandem-mass-spectrum-deconvolution-isotope-annotation",
+    "hdf5-output-validation-verification"
+   ]
+  },
+  "dereplicator/task_001": {
+   "tool": "dereplicator",
+   "task_kind": "reproduction",
+   "title": "Reproduce AmfS lantibiotic identification via MetaMiner on S. griseus FASTA input",
+   "skills": [
+    "ribosomally-synthesized-peptide-identification",
+    "post-translational-modification-detection",
+    "genome-sequence-mining",
+    "lantibiotic-structure-annotation",
+    "spectral-library-matching-ripp"
+   ]
+  },
+  "dereplicator/task_002": {
+   "tool": "dereplicator",
+   "task_kind": "reproduction",
+   "title": "Reproduce antiSMASH input failure for MetaMiner AmfS detection",
+   "skills": [
+    "ripp-peptide-identification-from-spectra",
+    "biosynthetic-gene-cluster-mining-with-genomic-data",
+    "mass-spectrum-database-matching",
+    "post-translational-modification-pattern-recognition",
+    "genome-annotation-format-comparison"
+   ]
+  },
+  "dereplicator/task_003": {
+   "tool": "dereplicator",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MetaMiner BGC Identifier and RiPP Structure Database Builder pipeline stage",
+   "skills": [
+    "bgc-identification-from-genomic-sequence",
+    "precursor-peptide-extraction-from-clusters",
+    "rippp-candidate-structure-generation",
+    "class-specific-modification-rule-application",
+    "metabologenomic-database-construction"
+   ]
+  },
+  "dereplicator/task_004": {
+   "tool": "dereplicator",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct spectral networking output generation via MetaMiner Spectral Networking component",
+   "skills": [
+    "spectral-network-propagation-analysis",
+    "mass-spectrometry-metadata-interpretation",
+    "rippp-structure-database-matching",
+    "gnps-workflow-result-processing",
+    "spectral-cluster-connectivity-assessment"
+   ]
+  },
+  "dereplicator/task_005": {
+   "tool": "dereplicator",
+   "task_kind": "analysis",
+   "title": "Analyze database search pipeline tool dispatch across Dereplicator, VarQuest, and Dereplicator+ on test spectra",
+   "skills": [
+    "ripp-peptide-sequence-database-construction",
+    "tandem-mass-spectra-peptide-matching",
+    "spectral-scoring-and-significance-assessment",
+    "cross-tool-result-concordance-analysis",
+    "false-discovery-rate-interpretation",
+    "blind-search-mode-parameter-optimization"
+   ]
+  },
+  "enpkg/task_001": {
+   "tool": "enpkg",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the ENPKG full workflow installation and environment setup",
+   "skills": [
+    "conda-environment-creation-and-management",
+    "python-dependency-resolution-and-pinning",
+    "repository-cloning-and-structure-navigation",
+    "environment-validation-and-verification",
+    "package-version-compatibility-checking"
+   ]
+  },
+  "enpkg/task_002": {
+   "tool": "enpkg",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the end-to-end ENPKG pipeline execution on a sample dataset",
+   "skills": [
+    "natural-products-workflow-orchestration",
+    "spectral-data-processing-and-annotation",
+    "molecular-networking-construction",
+    "knowledge-graph-generation-and-validation",
+    "sample-centric-metabolite-annotation"
+   ]
+  },
+  "falcon/task_001": {
+   "tool": "falcon",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Spectrum Binning and Feature Hashing Layer of the falcon pipeline",
+   "skills": [
+    "spectrum-binning-and-normalization",
+    "feature-hashing-vectorization",
+    "high-resolution-mass-spectrometry-data-preprocessing",
+    "spectral-dimensionality-reduction"
+   ]
+  },
+  "falcon/task_002": {
+   "tool": "falcon",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Nearest Neighbor Index Construction Layer of the falcon pipeline",
+   "skills": [
+    "spectrum-vector-serialization",
+    "high-dimensional-data-indexing",
+    "feature-vector-similarity-search-preparation"
+   ]
+  },
+  "falcon/task_003": {
+   "tool": "falcon",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Sparse Pairwise Distance Matrix Computation Layer of the falcon pipeline",
+   "skills": [
+    "nearest-neighbor-index-querying",
+    "sparse-distance-matrix-construction",
+    "spectrum-vector-similarity-searching",
+    "ms-ms-spectrum-pairwise-comparison"
+   ]
+  },
+  "falcon/task_004": {
+   "tool": "falcon",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Density-Based Clustering Layer of the falcon pipeline",
+   "skills": [
+    "spectral-clustering-density-based",
+    "distance-matrix-clustering",
+    "spectrum-cluster-assignment",
+    "ms-spectrum-similarity-grouping"
+   ]
+  },
+  "falcon/task_005": {
+   "tool": "falcon",
+   "task_kind": "reproduction",
+   "title": "Reproduce the end-to-end falcon clustering run on the Bittremieux et al. 2021 dataset",
+   "skills": [
+    "command-line-tool-execution",
+    "python-package-installation-and-dependency-management",
+    "tandem-mass-spectrum-clustering",
+    "spectrum-similarity-nearest-neighbor-indexing"
+   ]
+  },
+  "featurefindermetab/task_001": {
+   "tool": "featurefindermetab",
+   "task_kind": null,
+   "title": "Reconstruct: OpenMS",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "output-grounding",
+    "figure-table-interpretation",
+    "workflow-reconstruction",
+    "reproducibility-gap-detection"
+   ]
+  },
+  "fiddle/task_001": {
+   "tool": "fiddle",
+   "task_kind": "reproduction",
+   "title": "Reproduce the Orbitrap dataset expansion to 28,751 training / 3,195 test compounds",
+   "skills": [
+    "dataset-preprocessing-and-filtering",
+    "instrument-metadata-classification",
+    "train-test-split-verification",
+    "mass-spectrometry-library-curation"
+   ]
+  },
+  "fiddle/task_002": {
+   "tool": "fiddle",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Siamese rescore data augmentation step via prepare_augment_rescore.py",
+   "skills": [
+    "formula-annotation-capping-by-frequency",
+    "cross-spectrum-negative-generation-within-mz-window",
+    "class-imbalance-downsampling-ratio-adjustment",
+    "rescore-training-data-augmentation",
+    "spectra-annotation-parsing-and-pairing"
+   ]
+  },
+  "fiddle/task_003": {
+   "tool": "fiddle",
+   "task_kind": "reproduction",
+   "title": "Reproduce the Siamese rescore model training with train_rescore.py",
+   "skills": [
+    "neural-network-encoder-freezing",
+    "deep-learning-model-training-with-monitoring",
+    "formula-accuracy-metric-evaluation",
+    "binary-cross-entropy-loss-optimization",
+    "checkpoint-selection-based-on-validation-metric",
+    "state-dict-serialization-and-extraction"
+   ]
+  },
+  "fiddle/task_004": {
+   "tool": "fiddle",
+   "task_kind": "reproduction",
+   "title": "Reproduce caffeine inference via test_caffeine.py on GNPS spectra",
+   "skills": [
+    "ms-spectra-inference-with-neural-networks",
+    "molecular-formula-prediction-from-fragmentation",
+    "deep-learning-model-checkpoint-loading",
+    "siamese-architecture-scoring"
+   ]
+  },
+  "fiddle/task_005": {
+   "tool": "fiddle",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the precursor m/z zeroing mechanism in the spectrum encoder to prevent mass-based prior learning",
+   "skills": [
+    "source-code-inspection-for-preprocessing-steps",
+    "cross-script-consistency-verification",
+    "spectrum-feature-engineering-validation",
+    "tcn-encoder-input-preprocessing"
+   ]
+  },
+  "hexpmetdb/task_001": {
+   "tool": "hexpmetdb",
+   "task_kind": null,
+   "title": "Reconstruct: HExpMetDB",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "reproducibility-gap-detection"
+   ]
+  },
+  "idslmint/task_001": {
+   "tool": "idslmint",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the transformer-based mass spectra interpretation pipeline in IDSL_MINT",
+   "skills": [
+    "transformer-architecture-implementation",
+    "multi-head-attention-mechanism-design",
+    "positional-encoding-for-spectral-sequences",
+    "pytorch-model-instantiation-and-forward-pass",
+    "spectral-tensor-representation-and-preprocessing",
+    "attention-mechanism-validation"
+   ]
+  },
+  "iimn/task_001": {
+   "tool": "iimn",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the module dispatch routing for LC, GC, IMS, and MS Imaging input types in mzmine",
+   "skills": [
+    "control-flow-diagram-synthesis",
+    "module-dispatch-architecture-analysis",
+    "data-type-classification-schema-design",
+    "java-source-code-inspection",
+    "conditional-routing-logic-extraction"
+   ]
+  },
+  "iimn/task_002": {
+   "tool": "iimn",
+   "task_kind": "reproduction",
+   "title": "Reproduce the automated development build and release artifact produced by GitHub Actions for mzmine",
+   "skills": [
+    "ci-cd-workflow-triggering",
+    "github-actions-api-integration",
+    "build-artifact-retrieval-and-validation",
+    "java-application-build-verification",
+    "workflow-status-monitoring"
+   ]
+  },
+  "integrate/task_001": {
+   "tool": "integrate",
+   "task_kind": "reproduction",
+   "title": "Reproduce t-SNE separation of breast cell line Feasible Flux Distributions under combined Type 1+2+3 constraints",
+   "skills": [
+    "constraint-based-flux-balance-analysis",
+    "transcriptomics-reaction-activity-scoring",
+    "metabolic-model-constraint-specification",
+    "feasible-flux-distribution-sampling",
+    "dimensionality-reduction-visualization",
+    "multi-omics-data-integration"
+   ]
+  },
+  "integrate/task_002": {
+   "tool": "integrate",
+   "task_kind": "reproduction",
+   "title": "Reproduce concordance analysis between RAS and RPS variants for 81 fully covered reactions",
+   "skills": [
+    "cohen-kappa-inter-rater-reliability",
+    "reaction-activity-score-computation",
+    "feasible-flux-distribution-sampling",
+    "statistical-significance-testing-metabolic-networks"
+   ]
+  },
+  "integrate/task_003": {
+   "tool": "integrate",
+   "task_kind": "reproduction",
+   "title": "Reproduce growth yield correlation improvement attributable to Type 3 (transcriptomics-derived) constraints",
+   "skills": [
+    "growth-yield-computation-from-omics",
+    "constraint-based-model-sampling-and-flux-prediction",
+    "correlation-analysis-between-experimental-computational-data",
+    "spearman-rank-correlation-statistical-testing"
+   ]
+  },
+  "integrate/task_004": {
+   "tool": "integrate",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Reaction Propensity Score (RPS) computation module using mass action law formulation",
+   "skills": [
+    "metabolite-concentration-stoichiometric-mapping",
+    "mass-action-kinetics-formulation",
+    "reaction-propensity-score-computation",
+    "metabolomics-data-integration-with-metabolic-networks",
+    "metabolite-abundance-normalization-across-conditions"
+   ]
+  },
+  "integrate/task_005": {
+   "tool": "integrate",
+   "task_kind": "analysis",
+   "title": "Analyze reaction-level regulatory classification using the intersection of RPS-vs-FFD and RAS-vs-FFD fold-changes",
+   "skills": [
+    "reaction-flux-concordance-analysis",
+    "metabolic-regulation-classification-scheme",
+    "fold-change-sign-determination-statistics",
+    "fdr-correction-multiple-testing",
+    "flux-variability-analysis-interpretation",
+    "constraint-based-model-output-integration"
+   ]
+  },
+  "lipidmatch/task_001": {
+   "tool": "lipidmatch",
+   "task_kind": "reproduction",
+   "title": "Reproduce the in-silico fragmentation library coverage report (500,000+ species, 60+ lipid types)",
+   "skills": [
+    "lipid-species-abundance-counting",
+    "lipid-type-category-enumeration",
+    "csv-data-aggregation-and-deduplication",
+    "threshold-based-library-validation"
+   ]
+  },
+  "lipidmatch/task_002": {
+   "tool": "lipidmatch",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the fragment m/z matching engine that maps experimental to library values",
+   "skills": [
+    "mass-spectrometry-fragment-matching",
+    "lipid-library-annotation-from-mz",
+    "mass-accuracy-tolerance-calibration",
+    "hrms-data-format-parsing",
+    "lipid-identification-scoring"
+   ]
+  },
+  "lipidmatch/task_003": {
+   "tool": "lipidmatch",
+   "task_kind": "reproduction",
+   "title": "Reproduce the instrument-compatibility matrix reported for LipidMatch across acquisition modes and vendors",
+   "skills": [
+    "instrument-platform-compatibility-mapping",
+    "acquisition-mode-enumeration-and-validation",
+    "ms-vendor-documentation-extraction",
+    "technical-specification-tabulation",
+    "software-support-matrix-construction"
+   ]
+  },
+  "lipidmatch/task_004": {
+   "tool": "lipidmatch",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the user-generated library integration module by ingesting a custom .csv lipid library into LipidMatch",
+   "skills": [
+    "lipid-library-format-specification",
+    "library-integration-workflow",
+    "fragmentation-pattern-annotation",
+    "lipid-candidate-matching",
+    "file-format-validation"
+   ]
+  },
+  "lipidmatch/task_005": {
+   "tool": "lipidmatch",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the modular peak-picking dispatch layer connecting MZmine, XCMS, MS-DIAL, or Compound Discoverer output to LipidMatch",
+   "skills": [
+    "file-format-conversion-peak-picking-to-lipidmatch",
+    "peak-table-schema-validation",
+    "batch-script-execution-and-automation",
+    "mass-spectrometry-data-column-mapping"
+   ]
+  },
+  "lipoclean/task_001": {
+   "tool": "lipoclean",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct LipoCLEAN CLI invocation using a TOML options file to filter MS-DIAL lipid identifications",
+   "skills": [
+    "lipid-identification-quality-filtering",
+    "toml-configuration-file-preparation",
+    "command-line-tool-execution",
+    "ms-dial-export-format-handling",
+    "machine-learning-model-application-to-lipidomics"
+   ]
+  },
+  "lipoclean/task_002": {
+   "tool": "lipoclean",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct generation of a default TOML options file for MS-DIAL 4 or MS-DIAL 5 via LipoCLEAN --print argument",
+   "skills": [
+    "command-line-tool-execution",
+    "configuration-file-generation",
+    "toml-format-validation",
+    "ms-dial-version-compatibility"
+   ]
+  },
+  "lotus/task_001": {
+   "tool": "lotus",
+   "task_kind": "reproduction",
+   "title": "Reproduce the aggregate structure-organism pair statistics reported for the LOTUS dataset",
+   "skills": [
+    "structure-organism-pair-counting-and-deduplication",
+    "database-metadata-enumeration",
+    "tsv-csv-file-parsing-and-aggregation",
+    "count-verification-against-published-values",
+    "dataset-integrity-assessment"
+   ]
+  },
+  "lotus/task_002": {
+   "tool": "lotus",
+   "task_kind": "reproduction",
+   "title": "Reproduce the organism-count distribution across 2D structure\u2013organism pairs",
+   "skills": [
+    "frequency-distribution-binning",
+    "count-verification-and-validation",
+    "flat-file-parsing-and-loading",
+    "data-summary-statistics"
+   ]
+  },
+  "lotus/task_003": {
+   "tool": "lotus",
+   "task_kind": "reproduction",
+   "title": "Reproduce the structure-count distribution across organisms in the 2D dataset",
+   "skills": [
+    "structure-organism-pair-binning",
+    "organism-count-distribution-analysis",
+    "natural-product-database-validation",
+    "categorical-grouping-and-aggregation"
+   ]
+  },
+  "lotus/task_004": {
+   "tool": "lotus",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the SMILES-to-InChI structure standardisation step in the curation pipeline",
+   "skills": [
+    "smiles-string-translation-and-standardization",
+    "chemical-structure-sanitization-and-validation",
+    "molecular-duplicate-detection-and-deduplication",
+    "chemical-informatics-data-format-conversion"
+   ]
+  },
+  "lotus/task_005": {
+   "tool": "lotus",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the organism taxonomy enrichment step via Open Tree of Life integration",
+   "skills": [
+    "organism-taxonomy-mapping",
+    "otl-identifier-assignment",
+    "organism-dictionary-enrichment",
+    "taxonomic-metadata-integration"
+   ]
+  },
+  "m2s/task_001": {
+   "tool": "m2s",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the LC-MS feature matching pipeline in M2S",
+   "skills": [
+    "metabolite-feature-matching-across-datasets",
+    "retention-time-mass-alignment",
+    "untargeted-metabolomics-data-processing",
+    "matlab-package-execution"
+   ]
+  },
+  "magma/task_001": {
+   "tool": "magma",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MAGMa subproject component registry from the repository README",
+   "skills": [
+    "repository-structure-parsing",
+    "software-component-identification",
+    "metadata-extraction-from-source-code",
+    "documentation-mining-for-project-architecture",
+    "structured-inventory-compilation"
+   ]
+  },
+  "magma/task_002": {
+   "tool": "magma",
+   "task_kind": "reproduction",
+   "title": "Reproduce the CI/CD badge status for the MAGMa GitHub repository",
+   "skills": [
+    "badge-endpoint-retrieval",
+    "repository-metadata-extraction",
+    "status-value-parsing",
+    "build-system-monitoring"
+   ]
+  },
+  "magma/task_003": {
+   "tool": "magma",
+   "task_kind": "component_reconstruction",
+   "title": "Implement the joblauncher webservice component interface for MAGMa job submission",
+   "skills": [
+    "api-specification-extraction",
+    "http-endpoint-identification",
+    "openapi-schema-generation",
+    "python-source-code-analysis",
+    "rest-api-contract-documentation"
+   ]
+  },
+  "magma/task_004": {
+   "tool": "magma",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the in silico metabolite generation pipeline stage within MAGMa",
+   "skills": [
+    "source-code-analysis-for-algorithm-extraction",
+    "metabolite-generation-logic-mapping",
+    "chemical-structure-transformation-documentation",
+    "call-graph-construction-and-visualization",
+    "chemo-informatics-workflow-reconstruction"
+   ]
+  },
+  "magma/task_005": {
+   "tool": "magma",
+   "task_kind": "extension",
+   "title": "Extend MAGMa to produce a Docker Compose deployment manifest for all subproject components",
+   "skills": [
+    "docker-compose-service-orchestration",
+    "container-networking-configuration",
+    "multi-service-dependency-management",
+    "environment-variable-provisioning",
+    "volume-mount-and-persistence-design",
+    "service-health-check-definition"
+   ]
+  },
+  "mamsi/task_001": {
+   "tool": "mamsi",
+   "task_kind": "reproduction",
+   "title": "Reproduce the MAMSI multi-assay MS integration workflow on metabolomics phenotyping data",
+   "skills": [
+    "multiblock-pls-model-fitting",
+    "mb-vip-feature-importance-ranking",
+    "permutation-test-p-value-estimation",
+    "k-fold-cross-validation-model-selection",
+    "metabolomics-feature-selection-significance-filtering",
+    "multi-assay-data-integration-and-harmonization",
+    "classification-model-performance-evaluation"
+   ]
+  },
+  "mamsi/task_002": {
+   "tool": "mamsi",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the structural cluster generation step using MamsiStructSearch",
+   "skills": [
+    "lc-ms-feature-m-z-rt-extraction",
+    "isotopologue-signature-detection",
+    "adduct-mass-matching-and-clustering",
+    "multi-assay-cross-linking-validation",
+    "metabolite-structural-annotation-integration",
+    "mass-tolerance-calibration-ppm-units"
+   ]
+  },
+  "mamsi/task_003": {
+   "tool": "mamsi",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the structural network graph generation from significant features",
+   "skills": [
+    "structural-cluster-network-construction",
+    "graph-node-edge-attribute-assignment",
+    "isotopologue-adduct-cross-assay-link-encoding",
+    "correlation-cluster-network-integration",
+    "interactive-network-visualization-rendering",
+    "networkx-object-generation-and-export"
+   ]
+  },
+  "mamsi/task_004": {
+   "tool": "mamsi",
+   "task_kind": "analysis",
+   "title": "Analyze the effect of adduct mode selection on structural cluster outputs",
+   "skills": [
+    "lc-ms-adduct-pattern-detection",
+    "spectral-feature-clustering-and-comparison",
+    "mass-spectrometry-structural-annotation",
+    "cross-assay-feature-linkage-analysis",
+    "data-summarization-and-tabulation"
+   ]
+  },
+  "mamsi/task_005": {
+   "tool": "mamsi",
+   "task_kind": "extension",
+   "title": "Extend MAMSI by substituting silhouette-based cluster flattening for constant-threshold flattening",
+   "skills": [
+    "hierarchical-clustering-dendrogram-interpretation",
+    "silhouette-analysis-threshold-optimization",
+    "clustering-solution-comparison-metrics",
+    "correlation-matrix-heatmap-visualization",
+    "metabolite-feature-annotation-aggregation"
+   ]
+  },
+  "mass2adduct/task_001": {
+   "tool": "mass2adduct",
+   "task_kind": "reproduction",
+   "title": "Reproduce adduct identification and ranking from built-in mass spectrometry imaging datasets",
+   "skills": [
+    "mass-spectrometry-peak-pair-analysis",
+    "adduct-mass-difference-matching",
+    "mass-spectrum-histogram-interpretation",
+    "chemical-transformation-annotation"
+   ]
+  },
+  "mass2adduct/task_002": {
+   "tool": "mass2adduct",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct corrPairsMSI() correlation filtering step on msi.csv input",
+   "skills": [
+    "msi-data-matrix-import-and-validation",
+    "mass-difference-pairwise-calculation",
+    "adduct-annotation-against-reference-library",
+    "spatial-correlation-analysis-in-imaging-mass-spectrometry",
+    "multiple-testing-correction-bonferroni"
+   ]
+  },
+  "mass2adduct/task_003": {
+   "tool": "mass2adduct",
+   "task_kind": "analysis",
+   "title": "Analyze adduct-parent ion spatial overlap using pointsAdducts() on Na adduct annotations",
+   "skills": [
+    "mass-spectrometry-imaging-data-interpretation",
+    "adduct-ion-parent-ion-pairing-analysis",
+    "spatial-correlation-filtering-in-msi",
+    "spectral-annotation-and-overlay-visualization",
+    "sodium-adduct-detection-and-classification"
+   ]
+  },
+  "mass2adduct/task_004": {
+   "tool": "mass2adduct",
+   "task_kind": "extension",
+   "title": "Extend mass2adduct workflow to Cardinal-exported MSI data using cardinal2msimat()",
+   "skills": [
+    "cardinal-imaging-object-conversion",
+    "mass-difference-calculation-from-spectral-peaks",
+    "msi-data-format-interoperability"
+   ]
+  },
+  "massql/task_001": {
+   "tool": "massql",
+   "task_kind": "component_reconstruction",
+   "title": "Implement MassQL query parser that encodes mass-spectrometry-centric assumptions from SQL inspiration",
+   "skills": [
+    "domain-specific-language-grammar-design",
+    "lexical-analysis-tokenization",
+    "syntax-tree-construction-parsing",
+    "mass-spectrometry-query-semantics",
+    "parser-error-reporting-diagnostics"
+   ]
+  },
+  "massql/task_002": {
+   "tool": "massql",
+   "task_kind": "reproduction",
+   "title": "Reproduce unit-test suite pass/fail results for the MassQL package",
+   "skills": [
+    "ci-workflow-execution",
+    "unit-test-validation",
+    "repository-source-code-setup",
+    "test-suite-pass-fail-reporting"
+   ]
+  },
+  "massql/task_003": {
+   "tool": "massql",
+   "task_kind": "reproduction",
+   "title": "Reproduce periodic package-testing CI workflow pass/fail results for MassQL",
+   "skills": [
+    "ci-workflow-execution",
+    "package-integration-testing",
+    "test-result-parsing-and-reporting",
+    "github-repository-operations"
+   ]
+  },
+  "matchms/task_001": {
+   "tool": "matchms",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the metadata cleaning and validation pipeline step in matchms",
+   "skills": [
+    "spectral-metadata-standardization",
+    "spectral-file-format-conversion",
+    "python-workflow-scripting"
+   ]
+  },
+  "matchms/task_002": {
+   "tool": "matchms",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the peak filtering pipeline step in matchms",
+   "skills": [
+    "spectral-peak-filtering",
+    "mass-spectrometry-data-import",
+    "spectral-data-quality-assessment",
+    "peak-intensity-threshold-optimization"
+   ]
+  },
+  "matchms/task_003": {
+   "tool": "matchms",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct pairwise cosine similarity scoring with matchms",
+   "skills": [
+    "spectral-similarity-matrix-computation",
+    "cosine-distance-scoring",
+    "large-scale-spectral-matching"
+   ]
+  },
+  "matchms/task_004": {
+   "tool": "matchms",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct molecular fingerprint-based pairwise comparison with matchms",
+   "skills": [
+    "pairwise-spectral-comparison",
+    "similarity-matrix-export"
+   ]
+  },
+  "matchms/task_005": {
+   "tool": "matchms",
+   "task_kind": "reproduction",
+   "title": "Reproduce matchms installation and import across supported distribution channels",
+   "skills": [
+    "python-package-installation-and-management",
+    "package-repository-verification",
+    "module-import-testing",
+    "installation-troubleshooting",
+    "distribution-channel-validation"
+   ]
+  },
+  "memo/task_001": {
+   "tool": "memo",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MS2 fingerprint generation step from raw spectra using MEMO",
+   "skills": [
+    "ms2-peak-detection-and-counting",
+    "neutral-loss-calculation-from-precursor",
+    "spectral-fingerprint-vectorization",
+    "per-sample-spectral-aggregation",
+    "mass-spectrometry-data-parsing"
+   ]
+  },
+  "memo/task_002": {
+   "tool": "memo",
+   "task_kind": "reproduction",
+   "title": "Reproduce the MemoMatrix produced by memo_from_unaligned on the example dataset",
+   "skills": [
+    "ms2-spectra-parsing-and-loading",
+    "mass-spectral-fingerprint-generation",
+    "sample-vectorization-via-spectral-features",
+    "retention-time-agnostic-spectral-alignment",
+    "matrix-structure-validation-and-qc"
+   ]
+  },
+  "memo/task_003": {
+   "tool": "memo",
+   "task_kind": "reproduction",
+   "title": "Reproduce the MemoMatrix produced by memo_from_aligned on the example dataset",
+   "skills": [
+    "neutral-loss-feature-extraction-from-spectra",
+    "feature-table-alignment-and-integration",
+    "spectral-format-parsing-and-validation",
+    "memo-ms-api-usage-and-parameter-configuration"
+   ]
+  },
+  "memo/task_004": {
+   "tool": "memo",
+   "task_kind": "reproduction",
+   "title": "Reproduce the merged MemoMatrix produced by merged_memo() from two input MemoMatrix objects",
+   "skills": [
+    "ms2-fingerprint-matrix-merging",
+    "memomatrix-object-handling",
+    "multi-sample-metabolomics-data-integration",
+    "spectral-feature-consolidation"
+   ]
+  },
+  "memo/task_005": {
+   "tool": "memo",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the sample-comparison visualization step using MDS/PCoA on a MemoMatrix",
+   "skills": [
+    "ms2-fingerprint-distance-calculation",
+    "multidimensional-scaling-embedding",
+    "principal-coordinate-analysis-interpretation",
+    "sample-relationship-visualization",
+    "metabolomics-sample-comparison"
+   ]
+  },
+  "messes/task_001": {
+   "tool": "messes",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the str Directive resolution engine for the Conversion Directives Engine",
+   "skills": [
+    "json-schema-validation",
+    "directive-engine-implementation",
+    "conditional-record-resolution",
+    "string-concatenation-with-delimiters",
+    "field-mapping-and-transformation",
+    "unit-test-design-for-data-processing"
+   ]
+  },
+  "messes/task_002": {
+   "tool": "messes",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the matrix Directive resolution engine including collate and fields_to_headers behaviour",
+   "skills": [
+    "conversion-directive-parsing",
+    "record-field-transformation-and-collation",
+    "custom-code-execution-in-data-pipeline",
+    "multi-key-sorting-and-filtering"
+   ]
+  },
+  "messes/task_003": {
+   "tool": "messes",
+   "task_kind": "component_reconstruction",
+   "title": "Implement tagged-tabular-to-JSON conversion for Conversion Directives input parsing",
+   "skills": [
+    "tabular-data-tag-parsing",
+    "hierarchical-json-structure-construction",
+    "export-tag-syntax-validation",
+    "record-identifier-mapping-to-json",
+    "metadata-field-extraction-from-headers"
+   ]
+  },
+  "messes/task_004": {
+   "tool": "messes",
+   "task_kind": "reproduction",
+   "title": "Reproduce the IC-FTMS collate matrix directive output from the example dataset",
+   "skills": [
+    "matrix-directive-collation-validation",
+    "metadata-structure-transformation",
+    "json-schema-output-verification"
+   ]
+  },
+  "messes/task_005": {
+   "tool": "messes",
+   "task_kind": "reproduction",
+   "title": "Reproduce the SAMPLEPREP_SUMMARY for_each str directive output from the protocol example dataset",
+   "skills": [
+    "json-directive-application",
+    "tabular-record-filtering-and-sorting",
+    "string-concatenation-with-delimiters",
+    "metadata-transformation-verification"
+   ]
+  },
+  "metaboanalystr/task_001": {
+   "tool": "metaboanalystr",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the unified LC-MS data processing pipeline in MetaboAnalystR 4.0",
+   "skills": [
+    "spectral-peak-detection-and-deconvolution",
+    "retention-time-and-mz-based-alignment",
+    "feature-table-generation-from-aligned-spectra",
+    "metabolomics-data-quality-assessment",
+    "lcms-workflow-orchestration"
+   ]
+  },
+  "metaboanalystr/task_002": {
+   "tool": "metaboanalystr",
+   "task_kind": "analysis",
+   "title": "Analyze feature table output produced by the MetaboAnalystR 4.0 LC-MS workflow on a public metabolomics dataset",
+   "skills": [
+    "lcms-feature-detection-and-quantification",
+    "metabolite-feature-table-interpretation",
+    "peak-intensity-distribution-analysis",
+    "metabolomics-data-format-handling"
+   ]
+  },
+  "metaboannotator/task_001": {
+   "tool": "metaboannotator",
+   "task_kind": "reproduction",
+   "title": "Reproduce the lipid annotation results for six ESI+ features using annotateRC with LipidPos libraries",
+   "skills": [
+    "metabolite-identifier-mapping-to-lipids",
+    "fragment-ion-database-matching",
+    "pseudo-ms-ms-spectra-ranking-and-curation",
+    "xcms-ramclustr-data-object-integration",
+    "annotation-candidate-comparative-scoring"
+   ]
+  },
+  "metaboannotator/task_002": {
+   "tool": "metaboannotator",
+   "task_kind": "reproduction",
+   "title": "Reproduce the ranked candidate annotations for feature 3 (468.3095 m/z) from the rankedResult artifact",
+   "skills": [
+    "metabolite-candidate-ranking-interpretation",
+    "fatty-acyl-chain-variant-identification",
+    "lipid-species-annotation-assessment",
+    "ranked-result-extraction-and-display"
+   ]
+  },
+  "metaboannotator/task_003": {
+   "tool": "metaboannotator",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the genFragEntry library-entry generation step for D-Pantothenic Acid [M+H]+",
+   "skills": [
+    "ms-ms-spectrum-peak-annotation",
+    "noise-filtering-threshold-application",
+    "spectral-library-entry-generation"
+   ]
+  },
+  "metaboannotator/task_004": {
+   "tool": "metaboannotator",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the mspToLib conversion step for the bundled MassBank_example.msp file",
+   "skills": [
+    "spectral-library-format-conversion",
+    "msp-to-csv-parsing",
+    "ionization-mode-annotation",
+    "peak-detection-threshold-application",
+    "library-import-validation"
+   ]
+  },
+  "metaboannotator/task_005": {
+   "tool": "metaboannotator",
+   "task_kind": "analysis",
+   "title": "Analyze the saveAnnotations output structure for a completed annotation run",
+   "skills": [
+    "metabolite-annotation-result-export",
+    "file-system-audit-and-validation",
+    "annotation-object-manipulation",
+    "spectral-result-visualization-verification",
+    "metabolomics-data-output-formatting"
+   ]
+  },
+  "metabodirect/task_001": {
+   "tool": "metabodirect",
+   "task_kind": "reproduction",
+   "title": "Reproduce the feature-comparison table of MetaboDirect versus MetaboAnalyst, PyKrev, ftmsRanalysis, and UME",
+   "skills": [
+    "software-feature-inventory-and-comparison",
+    "code-repository-analysis",
+    "ft-icr-ms-analysis-tool-evaluation",
+    "analytical-pipeline-feature-documentation",
+    "cross-platform-software-capability-mapping"
+   ]
+  },
+  "metabodirect/task_002": {
+   "tool": "metabodirect",
+   "task_kind": "reproduction",
+   "title": "Reproduce the runtime benchmark metrics for the MetaboDirect main pipeline across sample-size conditions",
+   "skills": [
+    "ft-icr-ms-data-preprocessing-and-quality-control",
+    "peak-intensity-normalization-method-selection",
+    "thermodynamic-molecular-index-calculation-from-elemental-composition",
+    "metabolite-chemodiversity-index-calculation-and-interpretation",
+    "multivariate-ordination-analysis-nmds-pca",
+    "command-line-pipeline-execution-and-runtime-benchmarking"
+   ]
+  },
+  "metabodirect/task_003": {
+   "tool": "metabodirect",
+   "task_kind": "reproduction",
+   "title": "Reproduce the PERMANOVA result for phage-type effect on the marine phage-host exometabolome",
+   "skills": [
+    "permanova-statistical-testing-multivariate-groups",
+    "nmds-ordination-distance-metric-selection",
+    "metabolite-abundance-normalization-comparison",
+    "distance-metric-calculation-bray-curtis-euclidean-jaccard",
+    "microbial-phage-infection-experimental-design-interpretation"
+   ]
+  },
+  "metabodirect/task_004": {
+   "tool": "metabodirect",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the per-sample molecular transformation network generation step of the MetaboDirect pipeline",
+   "skills": [
+    "mass-difference-network-construction",
+    "biochemical-transformation-matching",
+    "ppm-error-tolerance-filtering",
+    "peak-pairwise-comparison",
+    "transformation-classification-biotic-abiotic",
+    "cytoscape-edge-node-file-formatting",
+    "mass-spectrometry-molecular-formula-handling"
+   ]
+  },
+  "metabodirect/task_005": {
+   "tool": "metabodirect",
+   "task_kind": "analysis",
+   "title": "Analyze chemodiversity differences between inoculated and control S. fallax leachate samples using MetaboDirect outputs",
+   "skills": [
+    "chemodiversity-metric-calculation",
+    "peak-abundance-normalization",
+    "richness-index-computation",
+    "functional-trait-diversity-analysis",
+    "metabolite-abundance-stratification",
+    "diversity-visualization-by-treatment"
+   ]
+  },
+  "metid/task_001": {
+   "tool": "metid",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the derivatizing-matrix ion adduct enumeration module in Met-ID",
+   "skills": [
+    "adduct-mass-calculation-from-smiles",
+    "derivatizing-matrix-ionization-rule-application",
+    "molecular-weight-prediction-with-modifications",
+    "mass-spectrometry-ion-formula-assignment",
+    "reference-dataset-validation-for-metabolite-ions"
+   ]
+  },
+  "metid/task_002": {
+   "tool": "metid",
+   "task_kind": "reproduction",
+   "title": "Reproduce the CI build passing status for the Met-ID GitHub Actions workflow",
+   "skills": [
+    "git-repository-cloning-and-version-control",
+    "github-actions-workflow-inspection-and-execution",
+    "ci-cd-pipeline-reproducibility-verification",
+    "shell-environment-setup-and-dependency-management",
+    "test-output-parsing-and-status-validation"
+   ]
+  },
+  "metid/task_003": {
+   "tool": "metid",
+   "task_kind": "extension",
+   "title": "Extend Met-ID to register a novel derivatizing matrix beyond FMP-10",
+   "skills": [
+    "mass-spectrometry-adduct-annotation",
+    "derivatizing-matrix-configuration",
+    "software-plugin-development",
+    "metabolite-identification-validation"
+   ]
+  },
+  "microbemasst/task_001": {
+   "tool": "microbemasst",
+   "task_kind": "reproduction",
+   "title": "Reproduce the enumeration of domain-specific MASST components and their published URLs from the repository README",
+   "skills": [
+    "repository-metadata-extraction",
+    "web-application-documentation-mining",
+    "url-validation-and-accessibility-verification",
+    "structured-data-compilation-from-readme",
+    "cross-reference-publication-linking"
+   ]
+  },
+  "microbemasst/task_002": {
+   "tool": "microbemasst",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the conditional dispatch routing mechanism that maps a spectrum query to the appropriate domain-specific MASST component",
+   "skills": [
+    "domain-context-to-application-routing",
+    "spectrum-metadata-parsing",
+    "conditional-logic-implementation",
+    "web-application-endpoint-mapping",
+    "routing-module-testing-and-validation"
+   ]
+  },
+  "microbemasst/task_003": {
+   "tool": "microbemasst",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the metadataMASST aggregation step that collects and visualizes search outputs across domain-specific MASST results",
+   "skills": [
+    "cross-domain-masst-output-parsing",
+    "search-result-aggregation-and-normalization",
+    "metadata-harmonization-across-sources",
+    "spectral-match-result-consolidation",
+    "summary-visualization-artifact-generation"
+   ]
+  },
+  "mimenet/task_001": {
+   "tool": "mimenet",
+   "task_kind": "reproduction",
+   "title": "Reproduce MiMeNet vs. linear-model prediction performance across three datasets",
+   "skills": [
+    "microbiome-metabolome-prediction-modeling",
+    "neural-network-hyperparameter-tuning",
+    "cross-validation-benchmark-evaluation",
+    "spearman-correlation-statistical-analysis",
+    "multivariate-regression-comparison",
+    "compositional-data-transformation-clr",
+    "background-distribution-threshold-calibration"
+   ]
+  },
+  "mimenet/task_002": {
+   "tool": "mimenet",
+   "task_kind": "reproduction",
+   "title": "Reproduce MiMeNet external validation on the IBD (External) dataset",
+   "skills": [
+    "microbiome-metabolome-abundance-normalization",
+    "centered-log-ratio-transformation-application",
+    "background-distribution-significance-thresholding",
+    "cross-dataset-model-generalization-assessment",
+    "comparative-machine-learning-benchmarking"
+   ]
+  },
+  "mimenet/task_003": {
+   "tool": "mimenet",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Microbe-Metabolite Feature Attribution and Consensus-Clustering Module Construction pipeline",
+   "skills": [
+    "neural-network-weight-extraction",
+    "olden-method-feature-attribution-calculation",
+    "consensus-clustering-algorithm-selection",
+    "microbe-metabolite-module-construction",
+    "biclustering-for-omics-features",
+    "network-module-interaction-scoring"
+   ]
+  },
+  "mimenet/task_004": {
+   "tool": "mimenet",
+   "task_kind": "analysis",
+   "title": "Analyze the benefit of multivariate (annotated + unannotated) training versus annotated-only training for metabolite prediction",
+   "skills": [
+    "microbe-metabolite-feature-selection-by-annotation-status",
+    "spearman-correlation-coefficient-calculation-cross-validation",
+    "feature-attribution-score-interpretation-neural-networks",
+    "multi-regime-model-performance-comparison-visualization",
+    "data-transformation-centered-log-ratio-with-pseudocounts"
+   ]
+  },
+  "mimenet/task_005": {
+   "tool": "mimenet",
+   "task_kind": "extension",
+   "title": "Extend MiMeNet evaluation to a shared vs. per-partition hyper-parameter tuning ablation",
+   "skills": [
+    "microbiome-metabolome-data-preprocessing-clr-transformation",
+    "metabolite-prediction-correlation-analysis",
+    "background-distribution-null-hypothesis-testing",
+    "ablation-study-design-and-interpretation"
+   ]
+  },
+  "minems2/task_001": {
+   "tool": "minems2",
+   "task_kind": "reproduction",
+   "title": "Reproduce the count of GNPS components extracted from the Penicillium nordicum molecular network",
+   "skills": [
+    "fragmentation-pattern-extraction-and-ranking",
+    "network-component-identification-and-filtering",
+    "precision-recall-optimization-in-spectral-annotation",
+    "graph-based-metabolite-similarity-assessment",
+    "gnps-molecular-network-integration"
+   ]
+  },
+  "mistcf/task_001": {
+   "tool": "mistcf",
+   "task_kind": "reproduction",
+   "title": "Reproduce MIST-CF formula and adduct ranking performance versus SIRIUS baseline",
+   "skills": [
+    "ms-ms-spectrum-preprocessing",
+    "mass-spectrometry-adduct-annotation",
+    "neural-network-based-molecular-formula-inference",
+    "de-novo-precursor-mass-annotation",
+    "benchmarking-and-comparative-performance-evaluation"
+   ]
+  },
+  "mistcf/task_002": {
+   "tool": "mistcf",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the internal chemical subformula assignment protocol replacing SIRIUS fragmentation trees",
+   "skills": [
+    "subformula-assignment-neural-networks",
+    "fragment-peak-chemical-annotation",
+    "de-novo-mass-spectrum-interpretation",
+    "formula-transformer-architecture-application",
+    "ranking-metric-computation-for-spectral-predictions"
+   ]
+  },
+  "mistcf/task_003": {
+   "tool": "mistcf",
+   "task_kind": "analysis",
+   "title": "Analyze the impact of multi-adduct support on formula ranking accuracy",
+   "skills": [
+    "chemical-formula-ranking-evaluation",
+    "adduct-assignment-accuracy-assessment",
+    "mass-spectrometry-benchmark-analysis",
+    "model-ablation-study-design",
+    "tandem-mass-spectra-interpretation"
+   ]
+  },
+  "mistcf/task_004": {
+   "tool": "mistcf",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct sinusoidal formula embeddings from the SCARF component within MIST-CF",
+   "skills": [
+    "sinusoidal-embedding-implementation",
+    "chemical-formula-representation",
+    "neural-network-layer-instantiation",
+    "embedding-vector-validation",
+    "numerical-reproducibility-testing",
+    "repository-code-integration"
+   ]
+  },
+  "mistcf/task_005": {
+   "tool": "mistcf",
+   "task_kind": "extension",
+   "title": "Extend MIST-CF multi-adduct support to negative ionisation mode",
+   "skills": [
+    "negative-adduct-tokenization-in-mass-spectrometry",
+    "neural-network-transfer-learning-for-spectral-models",
+    "formula-ranking-accuracy-evaluation",
+    "tandem-mass-spectrum-preprocessing-and-normalization",
+    "adduct-specific-model-fine-tuning"
+   ]
+  },
+  "mobilipid/task_001": {
+   "tool": "mobilipid",
+   "task_kind": "reproduction",
+   "title": "Reproduce the DTCCSN2 library for U13C labeled lipids as provided with MobiLipid",
+   "skills": [
+    "ccs-library-format-parsing",
+    "lipid-class-coverage-assessment",
+    "u13c-labeled-lipid-identification"
+   ]
+  },
+  "mobilipid/task_002": {
+   "tool": "mobilipid",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the CCS bias assessment component of the MobiLipid R Markdown workflow",
+   "skills": [
+    "ccs-bias-quantification",
+    "reference-library-alignment",
+    "collision-cross-section-measurement-quality-control"
+   ]
+  },
+  "mobilipid/task_003": {
+   "tool": "mobilipid",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the CCS bias correction component of the MobiLipid R Markdown workflow",
+   "skills": [
+    "collision-cross-section-bias-quantification",
+    "im-ms-drift-time-correction",
+    "internal-standardization-lipid-mapping"
+   ]
+  },
+  "mobilipid/task_004": {
+   "tool": "mobilipid",
+   "task_kind": "analysis",
+   "title": "Analyze the minimum lipids-per-class requirement for effective CCS bias calculation in MobiLipid",
+   "skills": [
+    "lipid-class-stratified-analysis",
+    "internal-standardization-with-isotope-labels",
+    "ion-mobility-mass-spectrometry-data-processing",
+    "quality-control-metric-evaluation"
+   ]
+  },
+  "moccal/task_001": {
+   "tool": "moccal",
+   "task_kind": "component_reconstruction",
+   "title": "Implement CCS Calibration module for TWIM-MS arrival-time data",
+   "skills": [
+    "twim-ms-calibration-mapping",
+    "ion-mobility-reference-matching",
+    "collision-cross-section-calculation"
+   ]
+  },
+  "moccal/task_002": {
+   "tool": "moccal",
+   "task_kind": "component_reconstruction",
+   "title": "Implement Biomolecular Class Assignment module operating on unidentified features",
+   "skills": [
+    "ion-mobility-feature-classification",
+    "biomolecular-class-label-assignment",
+    "mass-spectrometry-data-table-formatting"
+   ]
+  },
+  "moccal/task_003": {
+   "tool": "moccal",
+   "task_kind": "component_reconstruction",
+   "title": "Implement Class-Specific CCS Calculation module using assigned class labels",
+   "skills": [
+    "ion-mobility-arrival-time-conversion",
+    "class-stratified-calibration-model-application",
+    "biomolecular-class-ccs-mapping",
+    "twim-ms-data-processing"
+   ]
+  },
+  "moccal/task_004": {
+   "tool": "moccal",
+   "task_kind": "extension",
+   "title": "Extend MOCCal pipeline to process a new multi-omic TWIM-MS dataset end-to-end",
+   "skills": [
+    "class-specific-ccs-calculation",
+    "arrival-time-to-ccs-conversion"
+   ]
+  },
+  "mol2ccs/task_001": {
+   "tool": "mol2ccs",
+   "task_kind": "reproduction",
+   "title": "Reproduce GNN generalizability evaluation for CCS prediction across molecular datasets",
+   "skills": [
+    "gnn-model-inference-and-prediction",
+    "collision-cross-section-prediction-evaluation",
+    "regression-metric-computation-rmse-mae-r2",
+    "molecular-dataset-partitioning-and-preprocessing",
+    "model-generalizability-assessment"
+   ]
+  },
+  "mol2ccs/task_002": {
+   "tool": "mol2ccs",
+   "task_kind": "analysis",
+   "title": "Analyze feature importance and molecular descriptor contributions to GNN CCS predictions",
+   "skills": [
+    "graph-neural-network-model-inference",
+    "feature-ablation-analysis",
+    "gradient-based-saliency-mapping",
+    "atom-bond-feature-importance-ranking",
+    "post-hoc-model-interpretability",
+    "molecular-structure-attribution"
+   ]
+  },
+  "mol2ccs/task_003": {
+   "tool": "mol2ccs",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the molecular graph construction step that converts SMILES to GNN input tensors",
+   "skills": [
+    "smiles-canonicalization-rdkit",
+    "molecular-graph-construction-from-smiles",
+    "atom-feature-extraction-chemistry",
+    "graph-tensor-serialization"
+   ]
+  },
+  "mol2ccs/task_004": {
+   "tool": "mol2ccs",
+   "task_kind": "extension",
+   "title": "Extend CCS prediction by substituting an alternative GNN architecture and comparing held-out performance",
+   "skills": [
+    "graph-neural-network-architecture-implementation",
+    "message-passing-variant-selection-and-adaptation",
+    "molecular-ccs-prediction-model-training",
+    "regression-metric-computation-and-comparison",
+    "model-hyperparameter-transfer-and-tuning",
+    "inference-performance-benchmarking"
+   ]
+  },
+  "moldiscovery/task_001": {
+   "tool": "moldiscovery",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the molDiscovery web service endpoint availability and response",
+   "skills": [
+    "http-connectivity-verification",
+    "web-service-deployment-validation",
+    "response-status-code-interpretation"
+   ]
+  },
+  "molnetenhancer/task_001": {
+   "tool": "molnetenhancer",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Map MS2LDA Substructural Information to Mass Spectral Molecular Network (Classical) component",
+   "skills": [
+    "mass-spectral-network-annotation",
+    "motif-to-node-mapping",
+    "gnps-network-processing",
+    "molecular-network-graph-manipulation"
+   ]
+  },
+  "molnetenhancer/task_002": {
+   "tool": "molnetenhancer",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Map MS2LDA Substructural Information to Mass Spectral Molecular Network (Feature Based) component",
+   "skills": [
+    "ms2lda-motif-to-network-mapping",
+    "substructure-annotation-integration"
+   ]
+  },
+  "molnetenhancer/task_003": {
+   "tool": "molnetenhancer",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Map Chemical Classes to Mass Spectral Molecular Network component",
+   "skills": [
+    "molecular-network-attribute-enrichment",
+    "chemical-metadata-integration"
+   ]
+  },
+  "molnetenhancer/task_004": {
+   "tool": "molnetenhancer",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Map Chemical Classes and MS2LDA Motifs to Mass Spectral Molecular Network component",
+   "skills": [
+    "molecular-network-annotation-integration",
+    "chemical-class-node-mapping",
+    "substructural-motif-annotation",
+    "graph-enrichment-operations",
+    "ms2lda-feature-annotation"
+   ]
+  },
+  "mpactr/task_001": {
+   "tool": "mpactr",
+   "task_kind": "reproduction",
+   "title": "Reproduce ion filtering summary via filter_summary() for mispicked ions filter",
+   "skills": [
+    "isotopic-pattern-mispicking-detection",
+    "r6-object-method-invocation",
+    "filter-output-interpretation"
+   ]
+  },
+  "mpactr/task_002": {
+   "tool": "mpactr",
+   "task_kind": "reproduction",
+   "title": "Reproduce qc_summary() output table for all input ions after full filter pipeline",
+   "skills": [
+    "tandem-ms-feature-table-import-and-parsing",
+    "mispicked-ion-detection-and-merging",
+    "blank-contamination-filtering",
+    "technical-replicate-reproducibility-assessment",
+    "filter-status-data-structure-interpretation"
+   ]
+  },
+  "mpactr/task_003": {
+   "tool": "mpactr",
+   "task_kind": "reproduction",
+   "title": "Reproduce treemap visualisation of filtering QC using qc_summary(), ggplot2, and treemapify",
+   "skills": [
+    "qc-summary-table-extraction",
+    "categorical-ion-status-aggregation",
+    "ion-count-percentage-calculation",
+    "treemap-visualization-construction",
+    "ggplot2-geom-treemap-rendering",
+    "color-palette-application-greens"
+   ]
+  },
+  "mpactr/task_004": {
+   "tool": "mpactr",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct reference-semantics in-place update behaviour of the R6-based filter_mispicked_ions()",
+   "skills": [
+    "metabolomics-feature-table-filtering",
+    "mispicked-ion-detection-and-merging",
+    "peak-table-row-count-validation"
+   ]
+  },
+  "mpactr/task_005": {
+   "tool": "mpactr",
+   "task_kind": "analysis",
+   "title": "Analyze deep-copy vs reference-semantics row counts after filter_mispicked_ions() with copy_object=TRUE vs FALSE",
+   "skills": [
+    "r6-reference-semantics-comparison",
+    "object-state-mutation-detection",
+    "mpactr-filter-application",
+    "metabolomics-peak-table-loading"
+   ]
+  },
+  "ms2decide/task_001": {
+   "tool": "ms2decide",
+   "task_kind": null,
+   "title": "Reconstruct and evaluate a paper-grounded scientific task",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "reproducibility-gap-detection"
+   ]
+  },
+  "ms2deepscore/task_001": {
+   "tool": "ms2deepscore",
+   "task_kind": "reproduction",
+   "title": "Reproduce MS2DeepScore Tanimoto score prediction RMSE on held-out test set",
+   "skills": [
+    "spectral-similarity-prediction-neural-networks",
+    "siamese-network-inference-spectrum-pairs",
+    "monte-carlo-dropout-uncertainty-quantification",
+    "tanimoto-fingerprint-ground-truth-computation",
+    "spectrum-preprocessing-binning-normalization",
+    "root-mean-squared-error-regression-evaluation"
+   ]
+  },
+  "ms2deepscore/task_002": {
+   "tool": "ms2deepscore",
+   "task_kind": "reproduction",
+   "title": "Reproduce precision\u2013recall comparison of MS2DeepScore vs. Spec2Vec and Modified Cosine baselines",
+   "skills": [
+    "compound-structural-similarity-retrieval",
+    "precision-recall-curve-generation-for-ranking-tasks",
+    "tanimoto-score-threshold-optimization",
+    "deep-learning-model-inference-on-test-sets"
+   ]
+  },
+  "ms2deepscore/task_003": {
+   "tool": "ms2deepscore",
+   "task_kind": "reproduction",
+   "title": "Reproduce Monte-Carlo Dropout uncertainty estimation and per-bin RMSE improvement",
+   "skills": [
+    "monte-carlo-dropout-uncertainty-quantification",
+    "mass-spectral-similarity-binning-and-stratification",
+    "root-mean-squared-error-computation-by-bin",
+    "interquartile-range-filtering-for-outlier-rejection",
+    "deep-learning-model-inference-and-ensemble-prediction",
+    "siamese-network-embedding-generation"
+   ]
+  },
+  "ms2deepscore/task_004": {
+   "tool": "ms2deepscore",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Siamese network base-network embedding pipeline",
+   "skills": [
+    "spectral-peak-binning-and-vectorization",
+    "dense-neural-network-layer-construction",
+    "neural-network-regularization-techniques",
+    "batch-normalization-implementation",
+    "dropout-regularization-application",
+    "siamese-network-embedding-generation"
+   ]
+  },
+  "ms2deepscore/task_005": {
+   "tool": "ms2deepscore",
+   "task_kind": "analysis",
+   "title": "Analyze t-SNE clustering of MS2DeepScore spectral embeddings by ClassyFire chemical superclass",
+   "skills": [
+    "spectral-embedding-extraction-from-neural-networks",
+    "dimensionality-reduction-t-sne",
+    "chemical-class-assignment-classyfire",
+    "embedding-space-visualization-and-interpretation",
+    "structural-clustering-validation-in-chemical-space"
+   ]
+  },
+  "ms2lda/task_001": {
+   "tool": "ms2lda",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MS/MS spectral preprocessing step that converts raw spectra into bag-of-fragments format",
+   "skills": [
+    "mass-spectrometry-file-format-parsing",
+    "fragment-ion-peak-detection-and-normalization",
+    "neutral-loss-calculation-from-precursor-fragment-pairs",
+    "spectral-noise-filtering-and-quality-control",
+    "bag-of-words-document-representation-generation",
+    "mass-binning-and-tokenization-for-topic-modeling"
+   ]
+  },
+  "ms2lda/task_002": {
+   "tool": "ms2lda",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the LDA model training step that produces a trained MS2LDA model artifact from bag-of-fragments input",
+   "skills": [
+    "lda-model-training-convergence",
+    "fragmentation-motif-learning",
+    "probabilistic-topic-modeling-mass-spectrometry",
+    "mass2motif-parameter-optimization",
+    "spectral-corpus-representation"
+   ]
+  },
+  "ms2lda/task_003": {
+   "tool": "ms2lda",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MAG automated motif annotation step that maps discovered Mass2Motifs to known substructures via Spec2Vec",
+   "skills": [
+    "spec2vec-similarity-scoring",
+    "mass2motif-annotation-mapping",
+    "spectral-library-matching-and-ranking",
+    "json-data-serialization-and-parsing",
+    "similarity-threshold-interpretation"
+   ]
+  },
+  "ms2lda/task_004": {
+   "tool": "ms2lda",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MotifDB motif-matching step that retrieves database hits for discovered motifs using MassQL queries",
+   "skills": [
+    "motif-database-lookup-and-retrieval",
+    "mass-fragment-pattern-querying",
+    "neutral-loss-composition-matching",
+    "motif-similarity-ranking-interpretation",
+    "json-serialization-and-data-structure-design"
+   ]
+  },
+  "ms2lda/task_005": {
+   "tool": "ms2lda",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the molecular network export step that produces a GraphML network artifact from a trained motifset",
+   "skills": [
+    "mass2motif-network-construction",
+    "spectral-similarity-computation",
+    "graph-serialization-graphml",
+    "motif-metadata-annotation",
+    "json-parsing-motifset-extraction"
+   ]
+  },
+  "ms2query/task_001": {
+   "tool": "ms2query",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MS2Query Search Workflow split into true-match and analogue-search branches",
+   "skills": [
+    "workflow-architecture-documentation",
+    "spectral-search-logic-control-flow",
+    "repository-history-analysis",
+    "library-analogue-search-branching",
+    "pull-request-change-tracking"
+   ]
+  },
+  "ms2query/task_002": {
+   "tool": "ms2query",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Library Matching Module backed by SQLite storage",
+   "skills": [
+    "spectral-library-database-querying",
+    "precursor-mass-filtering",
+    "spectral-similarity-ranking",
+    "candidate-match-retrieval",
+    "ms-ms-spectrum-parsing"
+   ]
+  },
+  "ms2query/task_003": {
+   "tool": "ms2query",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Scoring Module computing average InChIKey and neighbourhood scores",
+   "skills": [
+    "spectral-library-candidate-ranking",
+    "inchikey-structural-similarity-scoring",
+    "neighbourhood-density-computation",
+    "scoring-module-unit-testing",
+    "candidate-metadata-record-serialization"
+   ]
+  },
+  "ms2query/task_004": {
+   "tool": "ms2query",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Spectrum Processing Module defining query-spectrum processing functions",
+   "skills": [
+    "spectral-intensity-normalisation",
+    "peak-filtering-noise-removal",
+    "ms2-data-preprocessing-pipeline",
+    "software-testing-unit-validation",
+    "version-control-feature-branch-management"
+   ]
+  },
+  "ms2query/task_005": {
+   "tool": "ms2query",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the CI pipeline integrating GitHub Actions and Sonarcloud quality gates",
+   "skills": [
+    "ci-cd-pipeline-orchestration",
+    "github-actions-workflow-configuration",
+    "python-automated-test-execution",
+    "sonarcloud-static-code-analysis-integration",
+    "ci-status-badge-deployment",
+    "code-quality-metrics-interpretation"
+   ]
+  },
+  "mshub/task_001": {
+   "tool": "mshub",
+   "task_kind": "reproduction",
+   "title": "Reproduce the auto-deconvolution and molecular networking workflow for GC-MS data via MSHub and GNPS",
+   "skills": [
+    "spectral-library-molecular-networking",
+    "network-topology-comparison",
+    "cosine-similarity-spectral-clustering",
+    "chromatographic-peak-overlap-resolution"
+   ]
+  },
+  "mshub/task_002": {
+   "tool": "mshub",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MSHub auto-deconvolution module for GC-MS raw data",
+   "skills": [
+    "gc-ms-spectral-deconvolution",
+    "raw-chromatography-data-parsing",
+    "coeluting-compound-resolution",
+    "mass-spectrum-extraction-and-formatting"
+   ]
+  },
+  "mshub/task_003": {
+   "tool": "mshub",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the GNPS molecular networking module on deconvolved GC-MS spectra",
+   "skills": [
+    "spectral-batch-submission-to-networking-server",
+    "molecular-network-graph-parsing",
+    "gc-ms-spectral-similarity-clustering",
+    "network-topology-validation"
+   ]
+  },
+  "msmetaenhancer/task_001": {
+   "tool": "msmetaenhancer",
+   "task_kind": "reproduction",
+   "title": "Reproduce the asynchronous annotation pipeline for .msp spectral library files",
+   "skills": [
+    "spectral-metadata-enrichment",
+    "chemical-identifier-mapping",
+    "asynchronous-api-orchestration",
+    "msp-file-parsing-and-writing",
+    "multi-service-integration-testing"
+   ]
+  },
+  "msmetaenhancer/task_002": {
+   "tool": "msmetaenhancer",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the ConverterBuilder automatic service discovery and Job enumeration mechanism",
+   "skills": [
+    "python-class-discovery-reflection",
+    "converter-job-enumeration-and-mapping",
+    "asynchronous-converter-instantiation",
+    "dynamic-method-signature-introspection",
+    "converter-specification-validation"
+   ]
+  },
+  "msmetaenhancer/task_003": {
+   "tool": "msmetaenhancer",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Monitor-based service status tracking during annotation",
+   "skills": [
+    "web-service-health-monitoring",
+    "asynchronous-event-aggregation",
+    "error-state-tracking-across-microservices",
+    "api-response-latency-measurement",
+    "json-structured-reporting"
+   ]
+  },
+  "msmetaenhancer/task_004": {
+   "tool": "msmetaenhancer",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the RDKit-based ComputeConverter template for local chemical property computation",
+   "skills": [
+    "chemical-structure-representation-conversion",
+    "rdkit-molecular-descriptor-computation",
+    "compute-converter-interface-implementation",
+    "python-async-method-definition",
+    "unit-test-design-for-cheminformatics",
+    "smiles-inchi-round-trip-validation"
+   ]
+  },
+  "msmetaenhancer/task_005": {
+   "tool": "msmetaenhancer",
+   "task_kind": "analysis",
+   "title": "Analyze the metadata annotation coverage and logging output produced on a reference .msp dataset",
+   "skills": [
+    "structured-logging-and-metric-extraction",
+    "annotation-coverage-statistics-computation",
+    "converter-pipeline-integration-and-execution"
+   ]
+  },
+  "mspcompiler/task_001": {
+   "tool": "mspcompiler",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the EI Library Compilation Pipeline (read \u2192 assign SMILES \u2192 assign RI \u2192 combine \u2192 write MSP)",
+   "skills": [
+    "spectral-library-compilation-and-merging",
+    "smiles-structure-annotation-from-molfiles",
+    "retention-index-assignment-and-filtering",
+    "mass-spectral-metadata-harmonization",
+    "parallel-computation-for-large-library-processing"
+   ]
+  },
+  "mspcompiler/task_002": {
+   "tool": "mspcompiler",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MS2 Library Compilation Pipeline (read MGF/MSP \u2192 complete \u2192 assign SMILES \u2192 separate polarity \u2192 write MSP)",
+   "skills": [
+    "mgf-metadata-completion-from-smiles",
+    "spectral-library-polarity-separation",
+    "chemical-structure-smiles-assignment",
+    "tandem-ms-data-reorganization"
+   ]
+  },
+  "mspcompiler/task_003": {
+   "tool": "mspcompiler",
+   "task_kind": "component_reconstruction",
+   "title": "Implement the NIST RI Extraction and Assignment Step using extract_ri and assign_ri",
+   "skills": [
+    "retention-index-extraction-from-nist-database",
+    "spectral-library-metadata-assignment",
+    "mass-spectrometry-column-polarity-filtering",
+    "r-object-inspection-and-validation"
+   ]
+  },
+  "mspcompiler/task_004": {
+   "tool": "mspcompiler",
+   "task_kind": "component_reconstruction",
+   "title": "Implement the MoNA EI Library Reorganization Step using reorganize_mona",
+   "skills": [
+    "spectral-library-format-conversion",
+    "metadata-field-extraction-and-restructuring",
+    "smiles-notation-parsing",
+    "library-object-validation"
+   ]
+  },
+  "mspcompiler/task_005": {
+   "tool": "mspcompiler",
+   "task_kind": "extension",
+   "title": "Extend mspcompiler to Support Parallel Library Reading via read_multilibs with Multisession Workers",
+   "skills": [
+    "spectral-library-parallel-ingestion",
+    "msp-file-format-parsing",
+    "r-parallel-backend-configuration",
+    "metabolite-spectral-data-merging"
+   ]
+  },
+  "mummichog/task_001": {
+   "tool": "mummichog",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the metabolic network-based feature-table analysis pipeline in Mummichog 3",
+   "skills": [
+    "metabolic-network-mapping",
+    "feature-to-metabolite-network-propagation",
+    "functional-module-inference-from-networks",
+    "mass-to-charge-tolerance-matching",
+    "untargeted-metabolomics-feature-analysis"
+   ]
+  },
+  "mummichog/task_002": {
+   "tool": "mummichog",
+   "task_kind": "extension",
+   "title": "Extend Mummichog 3 to incorporate the metabolomics-cloud GitHub organization project structure",
+   "skills": [
+    "python-package-migration-and-refactoring",
+    "repository-structure-standardization",
+    "ci-cd-workflow-adaptation-to-organization-standards",
+    "package-installation-verification-and-testing",
+    "metabolomics-functional-prediction-workflow-validation",
+    "documentation-and-metadata-modernization"
+   ]
+  },
+  "mzmine2/task_001": {
+   "tool": "mzmine2",
+   "task_kind": null,
+   "title": "Reconstruct and evaluate a paper-grounded scientific task",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "output-grounding",
+    "figure-table-interpretation",
+    "reproducibility-gap-detection"
+   ]
+  },
+  "mzmine3/task_001": {
+   "tool": "mzmine3",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MS data analysis workflow module coverage across LC, GC, IMS, and MS Imaging input types",
+   "skills": [
+    "software-architecture-documentation-review",
+    "ms-instrument-type-classification",
+    "module-coverage-mapping",
+    "ionisation-method-hardware-correspondence",
+    "separation-technique-workflow-alignment"
+   ]
+  },
+  "mzmine3/task_002": {
+   "tool": "mzmine3",
+   "task_kind": "reproduction",
+   "title": "Reproduce the CI build status of the Development Build Release workflow from the mzmine GitHub repository",
+   "skills": [
+    "ci-cd-workflow-monitoring",
+    "github-actions-artifact-retrieval",
+    "build-status-documentation",
+    "java-build-artifact-validation"
+   ]
+  },
+  "mzpeak/task_001": {
+   "tool": "mzpeak",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the mzPeak CLI Converter tool for transforming existing mass-spectrometry formats into mzPeak",
+   "skills": [
+    "mzml-to-mzpeak-binary-serialization",
+    "command-line-tool-invocation",
+    "rust-build-system-execution",
+    "spectral-data-format-validation"
+   ]
+  },
+  "mzpeak/task_002": {
+   "tool": "mzpeak",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct mzPeak file reading using the Python (pyarrow) implementation",
+   "skills": [
+    "mass-spectrometry-data-format-parsing",
+    "spectral-data-table-conversion",
+    "mzpeak-file-io-operations",
+    "arrow-table-serialization"
+   ]
+  },
+  "mzpeak/task_003": {
+   "tool": "mzpeak",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct mzPeak file reading using the R (arrow) implementation",
+   "skills": [
+    "mzpeak-format-file-parsing",
+    "arrow-tabular-data-reading",
+    "mass-spectrometry-data-structure-interpretation",
+    "spectrum-metadata-extraction"
+   ]
+  },
+  "mzpeak/task_004": {
+   "tool": "mzpeak",
+   "task_kind": "analysis",
+   "title": "Analyze cross-implementation output consistency across Rust, Python, and R mzPeak readers",
+   "skills": [
+    "cross-language-implementation-compatibility",
+    "tabular-data-field-comparison",
+    "spectrum-record-consistency-validation",
+    "data-serialization-format-interoperability"
+   ]
+  },
+  "mzpeak/task_005": {
+   "tool": "mzpeak",
+   "task_kind": "reproduction",
+   "title": "Reproduce the mzPeak specification compliance of the prototype implementations against the published draft specification",
+   "skills": [
+    "file-format-compliance-validation",
+    "mandatory-field-verification",
+    "structured-data-element-checking",
+    "interoperability-testing"
+   ]
+  },
+  "mzquality/task_001": {
+   "tool": "mzquality",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the buildExperiment SummarizedExperiment construction step from a tab-delimited input file",
+   "skills": [
+    "metabolomics-data-input-validation",
+    "summarized-experiment-object-construction",
+    "bioconductor-object-structure-inspection",
+    "tab-delimited-metabolomics-file-parsing"
+   ]
+  },
+  "mzquality/task_002": {
+   "tool": "mzquality",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the doAnalysis quality-control and batch-correction step to produce the ratio_corrected assay",
+   "skills": [
+    "metabolite-ratio-batch-correction",
+    "quality-control-sample-outlier-detection",
+    "internal-standard-area-mis-injection-flagging",
+    "compound-reliability-filtering-by-rsd-threshold",
+    "linear-regression-concentration-calibration"
+   ]
+  },
+  "mzquality/task_003": {
+   "tool": "mzquality",
+   "task_kind": "reproduction",
+   "title": "Reproduce the RSDQC-based internal standard recommendation output from the analysed experiment",
+   "skills": [
+    "internal-standard-selection-optimization",
+    "batch-corrected-data-extraction",
+    "qc-sample-variability-assessment",
+    "compound-standard-ratio-normalization",
+    "metabolomics-quality-metric-interpretation"
+   ]
+  },
+  "mzquality/task_004": {
+   "tool": "mzquality",
+   "task_kind": "reproduction",
+   "title": "Reproduce the createReports file-system export from the analysed experiment",
+   "skills": [
+    "metabolomics-quality-control-report-generation",
+    "r-bioconductor-summarizedexperiment-manipulation",
+    "batch-effect-assessment-via-quality-metrics"
+   ]
+  },
+  "mzquality/task_005": {
+   "tool": "mzquality",
+   "task_kind": "extension",
+   "title": "Extend mzQuality to support a no-internal-standard condition and verify ratio assay defaults to 1",
+   "skills": [
+    "r-package-api-usage",
+    "summarized-experiment-object-construction",
+    "assay-ratio-computation-verification",
+    "numerical-equivalence-testing"
+   ]
+  },
+  "neatms/task_001": {
+   "tool": "neatms",
+   "task_kind": "reproduction",
+   "title": "Reproduce the Peak Matrix Shape from NeatMS Default Preprocessing Parameters",
+   "skills": [
+    "lc-ms-data-preprocessing",
+    "peak-matrix-construction",
+    "mzml-feature-table-parsing",
+    "neural-network-input-preparation",
+    "batch-generation-and-validation"
+   ]
+  },
+  "neatms/task_002": {
+   "tool": "neatms",
+   "task_kind": "reproduction",
+   "title": "Reproduce the Default Model Optimal Threshold Value via get_threshold()",
+   "skills": [
+    "neural-network-threshold-optimization",
+    "probability-threshold-calibration",
+    "sensitivity-specificity-tradeoff-analysis",
+    "receiver-operating-characteristic-curve-interpretation",
+    "peak-classification-validation",
+    "machine-learning-model-evaluation"
+   ]
+  },
+  "neatms/task_003": {
+   "tool": "neatms",
+   "task_kind": "reproduction",
+   "title": "Reproduce the True/False Positive Rates at Threshold 0.01 from the ROC Analysis",
+   "skills": [
+    "neural-network-threshold-optimization",
+    "receiver-operating-characteristic-curve-interpretation",
+    "true-positive-false-positive-rate-calculation",
+    "probability-threshold-tuning-for-chemical-detection"
+   ]
+  },
+  "neatms/task_004": {
+   "tool": "neatms",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Class-Normalized Batch Creation Step for Neural Network Training",
+   "skills": [
+    "peak-quality-label-stratification",
+    "training-validation-test-set-allocation",
+    "class-imbalance-mitigation-via-normalization",
+    "batch-construction-parameter-optimization"
+   ]
+  },
+  "neatms/task_005": {
+   "tool": "neatms",
+   "task_kind": "reproduction",
+   "title": "Reproduce the AUC ROC Score Exceeding 0.9 Under Full Training Condition",
+   "skills": [
+    "neural-network-architecture-design",
+    "deep-learning-training-convergence-monitoring",
+    "overfitting-detection-and-prevention",
+    "roc-curve-auc-metric-evaluation",
+    "hyperparameter-tuning-learning-rate-optimizer-selection",
+    "batch-preparation-class-imbalance-handling",
+    "mass-spectrometry-peak-classification"
+   ]
+  },
+  "nextflow4msdial/task_001": {
+   "tool": "nextflow4msdial",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MS-DIAL to MSFLO containerized processing pipeline for .mzML LC-MS metabolomics data",
+   "skills": [
+    "container-image-selection-and-mounting",
+    "metabolomics-peak-detection-configuration",
+    "lc-hrms-data-preprocessing-pipeline",
+    "sequential-tool-integration-and-data-routing"
+   ]
+  },
+  "nextflow4msdial/task_002": {
+   "tool": "nextflow4msdial",
+   "task_kind": "component_reconstruction",
+   "title": "Implement Docker-based container execution of the Nextflow4MS-DIAL workflow on a sample .mzML dataset",
+   "skills": [
+    "nextflow-workflow-execution",
+    "docker-container-orchestration",
+    "lc-hrms-metabolomics-data-processing",
+    "ms-dial-feature-detection-and-alignment",
+    "workflow-configuration-and-parameterization",
+    "lc-ms-output-validation"
+   ]
+  },
+  "nextflow4msdial/task_003": {
+   "tool": "nextflow4msdial",
+   "task_kind": "component_reconstruction",
+   "title": "Implement Singularity-based container execution of the Nextflow4MS-DIAL workflow for HPC environments",
+   "skills": [
+    "singularity-container-backend-setup",
+    "mzml-metabolomics-data-import",
+    "workflow-output-validation-and-qa"
+   ]
+  },
+  "nmr2struct/task_001": {
+   "tool": "nmr2struct",
+   "task_kind": "reproduction",
+   "title": "Reproduce end-to-end structure prediction accuracy on molecules up to 19 heavy atoms from 1D NMR spectra",
+   "skills": [
+    "nmr-spectra-preprocessing-and-feature-extraction",
+    "spectral-to-structure-mapping-prediction",
+    "molecular-fragment-assembly-from-transformer-predictions",
+    "molecular-structure-ground-truth-matching-and-accuracy-evaluation"
+   ]
+  },
+  "nmr2struct/task_002": {
+   "tool": "nmr2struct",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Transformer Fragment Assembler for combinatorial fragment-to-structure assembly",
+   "skills": [
+    "fragment-assembly-transformer-architecture",
+    "graph-neural-network-design-for-chemistry",
+    "fragment-canonicalization-and-matching"
+   ]
+  },
+  "nmr2struct/task_003": {
+   "tool": "nmr2struct",
+   "task_kind": "analysis",
+   "title": "Analyze the effect of using only 1H NMR vs. only 13C NMR vs. combined 1D NMR inputs on structure prediction performance",
+   "skills": [
+    "multitask-model-inference",
+    "nmr-modality-ablation-analysis",
+    "molecular-structure-prediction-evaluation",
+    "accuracy-metric-computation",
+    "modality-contribution-quantification"
+   ]
+  },
+  "nmr2struct/task_004": {
+   "tool": "nmr2struct",
+   "task_kind": "extension",
+   "title": "Extend NMR2Struct structure prediction to molecules beyond 19 heavy atoms",
+   "skills": [
+    "nmr-spectrum-to-structure-inference",
+    "molecular-structure-prediction-out-of-distribution",
+    "top-k-accuracy-ranking-and-evaluation",
+    "model-generalization-assessment-across-molecular-size-regimes",
+    "chemical-graph-connectivity-validation",
+    "performance-degradation-quantification-and-analysis"
+   ]
+  },
+  "np_analyst/task_001": {
+   "tool": "np_analyst",
+   "task_kind": null,
+   "title": "Reconstruct: npanalyst",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "reproducibility-gap-detection"
+   ]
+  },
+  "npclassifier/task_001": {
+   "tool": "npclassifier",
+   "task_kind": "reproduction",
+   "title": "Reproduce the /classify API endpoint response for a SMILES query",
+   "skills": [
+    "rest-api-endpoint-querying",
+    "json-response-validation",
+    "smiles-string-formatting",
+    "docker-container-health-verification",
+    "neural-network-layer-metadata-interpretation"
+   ]
+  },
+  "npclassifier/task_002": {
+   "tool": "npclassifier",
+   "task_kind": "reproduction",
+   "title": "Reproduce the /model/metadata API response via TensorFlow Serving passthrough",
+   "skills": [
+    "docker-container-orchestration",
+    "tensorflow-serving-endpoint-querying",
+    "model-metadata-validation",
+    "http-api-integration-testing"
+   ]
+  },
+  "npclassifier/task_003": {
+   "tool": "npclassifier",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Keras model conversion step producing a HDF5 TF2 model with named input/output layers",
+   "skills": [
+    "keras-model-conversion-to-hdf5",
+    "tensorflow-model-layer-inspection",
+    "deep-learning-model-architecture-validation",
+    "model-deployment-preparation"
+   ]
+  },
+  "nplinker/task_001": {
+   "tool": "nplinker",
+   "task_kind": "reproduction",
+   "title": "Reproduce the size-bias demonstration and standardised strain correlation score computation on microbial datasets",
+   "skills": [
+    "strain-correlation-score-standardisation",
+    "hypergeometric-distribution-calculation",
+    "gcf-mf-link-scoring",
+    "score-distribution-visualization",
+    "statistical-hypothesis-testing-mean-comparison"
+   ]
+  },
+  "nplinker/task_002": {
+   "tool": "nplinker",
+   "task_kind": "reproduction",
+   "title": "Reproduce the IOKR BGC-spectrum scoring on the MIBiG-GNPS paired dataset",
+   "skills": [
+    "kernel-regression-learning-from-spectral-fingerprint-pairs",
+    "molecular-fingerprint-extraction-and-vectorization",
+    "bgc-spectrum-ranking-by-kernel-similarity",
+    "spectral-denoising-via-training-data-filtering",
+    "top-n-accuracy-and-auc-metric-calculation",
+    "score-distribution-analysis-and-statistical-significance-testing"
+   ]
+  },
+  "nplinker/task_003": {
+   "tool": "nplinker",
+   "task_kind": "reproduction",
+   "title": "Reproduce the complementarity analysis combining standardised strain correlation and IOKR scores on microbial datasets",
+   "skills": [
+    "bgc-mf-link-scoring-standardisation",
+    "strain-correlation-hypergeometric-adjustment",
+    "iokr-fingerprint-space-ranking",
+    "validated-link-enrichment-analysis",
+    "percentile-threshold-based-filtering",
+    "multi-score-complementarity-evaluation",
+    "pooled-statistical-significance-testing"
+   ]
+  },
+  "nplinker/task_004": {
+   "tool": "nplinker",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the NPLinker pipeline fixed processing architecture for loading, scoring, and filtering GCF-MF hypothetical links",
+   "skills": [
+    "biosynthetic-gene-cluster-detection-and-annotation",
+    "gene-cluster-family-formation-and-similarity-clustering",
+    "input-output-kernel-regression-for-metabolite-matching",
+    "multi-criterion-score-combination-and-ranking",
+    "metabolomic-spectral-annotation-and-molecular-family-clustering",
+    "cross-database-structural-homology-matching"
+   ]
+  },
+  "nplinker/task_005": {
+   "tool": "nplinker",
+   "task_kind": "analysis",
+   "title": "Analyze the effect of varying combination function parameters on validated-link enrichment beyond reported p values",
+   "skills": [
+    "combination-function-parameterisation",
+    "enrichment-ratio-calculation",
+    "scoring-function-sensitivity-analysis",
+    "validated-link-ranking-comparison"
+   ]
+  },
+  "ora/task_001": {
+   "tool": "ora",
+   "task_kind": "reproduction",
+   "title": "Reproduce the ORA simulation results reported in the study",
+   "skills": [
+    "jupyter-notebook-execution",
+    "python-environment-setup",
+    "metabolomics-ora-methodology",
+    "simulation-output-validation",
+    "git-repository-cloning"
+   ]
+  },
+  "ora/task_002": {
+   "tool": "ora",
+   "task_kind": "analysis",
+   "title": "Analyze the effect of metabolomics-specific coverage bias on ORA p-value distributions",
+   "skills": [
+    "metabolite-coverage-simulation",
+    "over-representation-analysis-pvalue-interpretation",
+    "false-positive-rate-assessment",
+    "pathway-database-filtering-by-detection",
+    "simulation-parameter-variation",
+    "statistical-distribution-visualization"
+   ]
+  },
+  "ora/task_003": {
+   "tool": "ora",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the background-set selection component of the ORA pipeline",
+   "skills": [
+    "metabolite-background-set-construction",
+    "pathway-database-querying",
+    "ora-statistical-background-definition",
+    "metabolite-set-composition-validation",
+    "pathway-coverage-assessment"
+   ]
+  },
+  "pairedomicsdatapla/task_001": {
+   "tool": "pairedomicsdatapla",
+   "task_kind": "reproduction",
+   "title": "Reproduce the JSON schema validation of uploaded project documents",
+   "skills": [
+    "json-schema-validation",
+    "schema-constraint-checking",
+    "project-metadata-validation",
+    "error-report-generation"
+   ]
+  },
+  "pairedomicsdatapla/task_002": {
+   "tool": "pairedomicsdatapla",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the task-queue project enrichment step that fetches organism names from genome identifiers",
+   "skills": [
+    "genome-identifier-lookup",
+    "json-document-enrichment",
+    "external-registry-querying",
+    "organism-metadata-retrieval",
+    "json-validation-and-formatting"
+   ]
+  },
+  "pairedomicsdatapla/task_003": {
+   "tool": "pairedomicsdatapla",
+   "task_kind": "reproduction",
+   "title": "Reproduce the published project listing from the live Paired Omics Data platform",
+   "skills": [
+    "json-schema-validation",
+    "api-data-retrieval",
+    "data-format-conformance-checking",
+    "batch-document-verification",
+    "structured-data-quality-assessment"
+   ]
+  },
+  "pairedomicsdatapla/task_004": {
+   "tool": "pairedomicsdatapla",
+   "task_kind": "component_reconstruction",
+   "title": "Implement URL-space validation for project JSON fields to detect embedded spaces",
+   "skills": [
+    "json-schema-validation",
+    "url-format-constraint-checking",
+    "whitespace-character-detection",
+    "field-type-identification",
+    "validation-report-generation"
+   ]
+  },
+  "pals/task_001": {
+   "tool": "pals",
+   "task_kind": "reproduction",
+   "title": "Reproduce PALS robustness comparison against ORA and GSEA baselines",
+   "skills": [
+    "metabolite-set-activity-scoring",
+    "pathway-database-integration",
+    "robustness-analysis-under-perturbation",
+    "missing-data-simulation-in-omics",
+    "comparative-enrichment-method-evaluation"
+   ]
+  },
+  "pals/task_002": {
+   "tool": "pals",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct PLAGE-based pathway activity level scoring component of PALS",
+   "skills": [
+    "pathway-level-activity-scoring",
+    "singular-value-decomposition-metabolomics",
+    "metabolite-set-analysis",
+    "principal-component-extraction-from-pathway-subsets",
+    "pathway-ranking-and-prioritization"
+   ]
+  },
+  "pals/task_003": {
+   "tool": "pals",
+   "task_kind": "reproduction",
+   "title": "Reproduce metabolite set analysis generality: Molecular Families and Mass2Motifs inputs",
+   "skills": [
+    "metabolite-set-decomposition-plage",
+    "spectral-fragmentation-motif-analysis",
+    "molecular-family-grouping-analysis",
+    "activity-score-robustness-assessment",
+    "non-pathway-metabolite-classification"
+   ]
+  },
+  "pals/task_004": {
+   "tool": "pals",
+   "task_kind": "analysis",
+   "title": "Analyze sensitivity of PALS pathway rankings under simulated noise and peak dropout",
+   "skills": [
+    "metabolomics-noise-perturbation-simulation",
+    "pathway-rank-stability-assessment",
+    "peak-removal-robustness-testing",
+    "pathway-activity-decomposition-via-plage",
+    "rank-order-correlation-analysis"
+   ]
+  },
+  "pals/task_005": {
+   "tool": "pals",
+   "task_kind": "extension",
+   "title": "Extend PALS to support user-supplied custom metabolite set collections via PALS Viewer API",
+   "skills": [
+    "metabolite-set-file-parsing-and-validation",
+    "custom-metabolite-set-integration",
+    "activity-score-computation-and-reporting"
+   ]
+  },
+  "pcpfm/task_001": {
+   "tool": "pcpfm",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the PCPFM fixed processing pipeline from raw mzML input to annotated feature table output",
+   "skills": [
+    "lc-ms-feature-extraction-and-alignment",
+    "metabolite-quality-control-filtering",
+    "feature-intensity-normalization-and-batch-correction",
+    "missing-value-imputation-in-metabolomics",
+    "empirical-compound-grouping-by-adducts-and-isotopes",
+    "experiment-metadata-organization-and-tracking"
+   ]
+  },
+  "pcpfm/task_002": {
+   "tool": "pcpfm",
+   "task_kind": "component_reconstruction",
+   "title": "Implement the blank masking filter step in PCPFM and verify feature removal by intensity ratio",
+   "skills": [
+    "blank-intensity-ratio-filtering",
+    "metabolomics-feature-table-curation",
+    "background-ion-contaminant-removal",
+    "sample-type-stratified-feature-masking",
+    "quality-control-threshold-application"
+   ]
+  },
+  "pcpfm/task_003": {
+   "tool": "pcpfm",
+   "task_kind": "component_reconstruction",
+   "title": "Implement the imputation filter step and verify output values equal interpolation_ratio times per-feature minimum",
+   "skills": [
+    "metabolomic-feature-table-imputation",
+    "missing-value-replacement-by-feature-minimum",
+    "feature-table-moniker-management",
+    "zero-value-handling-in-mass-spectrometry-data"
+   ]
+  },
+  "pcpfm/task_004": {
+   "tool": "pcpfm",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the EmpCpd construction step and verify the empCpd.json output structure",
+   "skills": [
+    "empirical-compound-construction-from-feature-clustering",
+    "isotope-pattern-and-adduct-assignment",
+    "chromatographic-coelution-detection",
+    "mass-spectrometry-tolerance-calibration",
+    "json-structure-validation-for-metabolomics-data",
+    "ionization-mode-inference-from-acquisition-metadata"
+   ]
+  },
+  "pcpfm/task_005": {
+   "tool": "pcpfm",
+   "task_kind": "extension",
+   "title": "Extend PCPFM batch correction step to validate pycombat output retains sample count and reduces batch variance",
+   "skills": [
+    "batch-effect-variance-quantification",
+    "batch-correction-quality-assessment",
+    "multi-batch-experimental-design-understanding",
+    "inter-sample-variance-calculation"
+   ]
+  },
+  "pfdeltascreen/task_001": {
+   "tool": "pfdeltascreen",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the mzML feature detection step using pyOpenMS",
+   "skills": [
+    "centroided-ms-feature-detection",
+    "mzml-file-parsing",
+    "chromatographic-feature-extraction",
+    "mass-spectrometry-feature-table-construction"
+   ]
+  },
+  "pfdeltascreen/task_002": {
+   "tool": "pfdeltascreen",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MD/C-m/C prioritization filter for PFAS candidate features",
+   "skills": [
+    "mass-defect-calculation",
+    "molecular-formula-validation",
+    "pfas-feature-prioritization",
+    "high-resolution-mass-spectrometry-interpretation",
+    "feature-annotation-filtering"
+   ]
+  },
+  "pfdeltascreen/task_003": {
+   "tool": "pfdeltascreen",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Kendrick Mass Defect (KMD) analysis filter for PFAS feature prioritization",
+   "skills": [
+    "pfas-homologous-series-detection",
+    "feature-grouping-by-mass-defect"
+   ]
+  },
+  "pfdeltascreen/task_004": {
+   "tool": "pfdeltascreen",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the MS2 diagnostic fragment screening filter for PFAS prioritization",
+   "skills": [
+    "ms2-diagnostic-fragment-matching",
+    "mass-spectral-peak-annotation",
+    "precursor-product-mass-pairing",
+    "pfas-characteristic-mass-difference-detection"
+   ]
+  },
+  "pfdeltascreen/task_005": {
+   "tool": "pfdeltascreen",
+   "task_kind": "extension",
+   "title": "Extend PF\u0394Screen prioritization by incorporating a user-supplied custom feature list",
+   "skills": [
+    "feature-list-format-validation",
+    "md-defect-ratio-calculation",
+    "custom-data-schema-mapping",
+    "hrms-feature-annotation-integration"
+   ]
+  },
+  "ps2ms/task_001": {
+   "tool": "ps2ms",
+   "task_kind": "reproduction",
+   "title": "Reproduce PS2MS deep learning model predictions for NPS detection from mass spectrometry data",
+   "skills": [
+    "mass-spectrometry-data-preprocessing",
+    "deep-learning-model-inference",
+    "nps-classification-prediction",
+    "spectrum-feature-vectorization",
+    "confidence-score-interpretation"
+   ]
+  },
+  "ps2ms/task_002": {
+   "tool": "ps2ms",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the SMILES-to-mass-spectrum feature encoding module within PS2MS",
+   "skills": [
+    "smiles-parsing-and-validation",
+    "molecular-descriptor-extraction",
+    "chemical-structure-featurization",
+    "tensor-encoding-deep-learning",
+    "feature-normalization-standardization"
+   ]
+  },
+  "ps2ms/task_003": {
+   "tool": "ps2ms",
+   "task_kind": "analysis",
+   "title": "Analyze the relationship between predicted PS2MS scores and structural novelty of NPS compounds",
+   "skills": [
+    "confidence-score-extraction-from-neural-networks",
+    "structural-similarity-calculation-fingerprint-based",
+    "nps-structural-diversity-stratification",
+    "statistical-distribution-analysis-across-cohorts"
+   ]
+  },
+  "pymzml/task_001": {
+   "tool": "pymzml",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the igzip file format header encoding and index/offset mapping",
+   "skills": [
+    "binary-format-specification-implementation",
+    "igzip-header-structure-encoding",
+    "hex-dump-parsing-and-verification",
+    "byte-level-serialization-validation",
+    "python-struct-packing-for-binary-data"
+   ]
+  },
+  "pymzml/task_002": {
+   "tool": "pymzml",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the GSGW indexed gzip writer for chapter-level block indexing of Moby Dick",
+   "skills": [
+    "database-schema-design-for-sequential-media",
+    "igzip-compression-and-indexed-block-format",
+    "custom-file-wrapper-class-implementation",
+    "random-access-seekable-file-interface-design"
+   ]
+  },
+  "pymzml/task_003": {
+   "tool": "pymzml",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the GSGR indexed gzip reader for random-access chapter retrieval from the Moby Dick igz file",
+   "skills": [
+    "compressed-file-header-parsing",
+    "random-access-index-implementation",
+    "binary-stream-seeking-and-decompression",
+    "python-class-design-with-dunder-methods",
+    "file-handler-interface-integration"
+   ]
+  },
+  "pymzml/task_004": {
+   "tool": "pymzml",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the FileInterface dispatch logic for routing mzML file types to their respective handler classes",
+   "skills": [
+    "file-format-detection-by-extension",
+    "polymorphic-class-dispatch-in-python",
+    "file-handler-instantiation-and-lifecycle",
+    "unit-testing-conditional-branches",
+    "mzml-data-access-abstraction"
+   ]
+  },
+  "pymzml/task_005": {
+   "tool": "pymzml",
+   "task_kind": "component_reconstruction",
+   "title": "Implement the SQLiteDatabase custom file-class connector and verify spectrum retrieval via the pymzml run.Reader interface",
+   "skills": [
+    "database-schema-design-and-implementation",
+    "sqlite-query-execution-and-cursor-management",
+    "xml-element-parsing-and-object-serialization",
+    "pymzml-spectrum-object-instantiation",
+    "random-access-and-sequential-iteration-pattern-implementation"
+   ]
+  },
+  "pyopenmsviz/task_001": {
+   "tool": "pyopenmsviz",
+   "task_kind": "reproduction",
+   "title": "Reproduce the backend execution-time benchmark table across all three plotting backends",
+   "skills": [
+    "script-execution-time-measurement",
+    "python-environment-setup-and-reproducibility",
+    "batch-script-performance-profiling",
+    "mass-spectrometry-visualization-backend-comparison",
+    "computational-execution-table-generation"
+   ]
+  },
+  "pyopenmsviz/task_002": {
+   "tool": "pyopenmsviz",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the layered architecture dispatch from Configuration and Core Base layers to backend-specific rendering",
+   "skills": [
+    "orchestrator-architecture-design",
+    "backend-routing-and-dispatch",
+    "multi-inheritance-class-hierarchy",
+    "configuration-object-pattern",
+    "dataframe-plotting-interface-design",
+    "mass-spectrometry-plot-type-specialization"
+   ]
+  },
+  "pyopenmsviz/task_003": {
+   "tool": "pyopenmsviz",
+   "task_kind": "reproduction",
+   "title": "Reproduce chromatogram, mobilogram, spectrum, and peak-map plot outputs for all three backends",
+   "skills": [
+    "mass-spectrometry-data-visualization-pandas",
+    "chromatogram-plot-generation-retention-time",
+    "spectrum-plot-generation-mz-intensity",
+    "ion-mobility-mobilogram-visualization",
+    "peakmap-heatmap-rendering-mz-rt",
+    "matplotlib-bokeh-plotly-backend-switching",
+    "mzml-data-parsing-pymzml-pyopenms"
+   ]
+  },
+  "pyopenmsviz/task_004": {
+   "tool": "pyopenmsviz",
+   "task_kind": "analysis",
+   "title": "Analyze relative execution-time performance across backends per plot type",
+   "skills": [
+    "execution-time-aggregation-by-category",
+    "performance-metric-comparison-across-backends",
+    "statistical-summary-computation-median-range",
+    "backend-performance-benchmarking",
+    "visualization-comparative-performance-metrics"
+   ]
+  },
+  "pyopenmsviz/task_005": {
+   "tool": "pyopenmsviz",
+   "task_kind": "extension",
+   "title": "Extend pyOpenMS-Viz to produce a 3D PeakMap plot via the Plotly backend using the plot_3d=True flag",
+   "skills": [
+    "mass-spectrometry-data-parsing-mzml-bruker",
+    "pandas-dataframe-manipulation-ms-columns",
+    "plotly-3d-surface-scatter-visualization",
+    "peak-map-rendering-retention-time-mz-intensity",
+    "interactive-html-figure-generation-plotly",
+    "backend-compatibility-verification-visualization-library"
+   ]
+  },
+  "pyteomics/task_001": {
+   "tool": "pyteomics",
+   "task_kind": "reproduction",
+   "title": "Reproduce the Pyteomics installation via pip and verify core module imports",
+   "skills": [
+    "module-import-verification",
+    "python-environment-configuration",
+    "installation-validation-reporting"
+   ]
+  },
+  "pyteomics/task_002": {
+   "tool": "pyteomics",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct optional-dependency resolution for pyteomics.mzmlb using h5py and hdf5plugin",
+   "skills": [
+    "python-package-dependency-installation",
+    "optional-dependency-extra-specifier-usage",
+    "module-import-verification",
+    "hdf5-format-support-validation"
+   ]
+  },
+  "pyteomics/task_003": {
+   "tool": "pyteomics",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct optional-dependency resolution for pyteomics.mass.unimod using sqlalchemy",
+   "skills": [
+    "python-package-dependency-installation",
+    "conditional-dependency-resolution",
+    "module-import-verification",
+    "database-accessor-initialization"
+   ]
+  },
+  "pyteomics/task_004": {
+   "tool": "pyteomics",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct optional-dependency resolution for pyteomics.proforma using psims",
+   "skills": [
+    "proforma-notation-parsing-validation"
+   ]
+  },
+  "pyteomics/task_005": {
+   "tool": "pyteomics",
+   "task_kind": "extension",
+   "title": "Extend Pyteomics installation to Bioconda and verify conda-installed package imports",
+   "skills": [
+    "package-manager-environment-setup",
+    "bioconda-package-installation",
+    "installation-validation-and-diagnostics"
+   ]
+  },
+  "qc4metabolomics/task_001": {
+   "tool": "qc4metabolomics",
+   "task_kind": "reproduction",
+   "title": "Reproduce the initial QC4Metabolomics v1.0.0 release artifact produced by Semantic Release",
+   "skills": [
+    "release-artifact-generation",
+    "semantic-versioning-validation",
+    "git-repository-tag-checkout",
+    "github-release-metadata-comparison",
+    "artifact-checksum-verification"
+   ]
+  },
+  "qc4metabolomics/task_002": {
+   "tool": "qc4metabolomics",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the QC Workflow component bundled as a release asset in QC4Metabolomics v1.0.0",
+   "skills": [
+    "workflow-definition-schema-validation",
+    "yaml-json-structural-parsing",
+    "metadata-field-verification",
+    "qc-workflow-component-inspection"
+   ]
+  },
+  "qcomics/task_001": {
+   "tool": "qcomics",
+   "task_kind": "component_reconstruction",
+   "title": "Implement QCpool interval detection from Sciex Multiquant TXT export",
+   "skills": [
+    "qcpool-sample-identification",
+    "multiquant-file-parsing",
+    "injection-sequence-annotation",
+    "quality-control-interval-detection",
+    "metabolomics-study-design-interpretation"
+   ]
+  },
+  "qcomics/task_002": {
+   "tool": "qcomics",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct quality overview summary from parsed QCpool positional data",
+   "skills": [
+    "qcpool-cv-calculation",
+    "signal-trend-assessment-across-injections",
+    "metabolomics-data-quality-metrics",
+    "instrumental-drift-detection",
+    "quality-overview-visualization"
+   ]
+  },
+  "qemistree/task_001": {
+   "tool": "qemistree",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the LC-MS/MS feature tree construction pipeline in q2-qemistree",
+   "skills": [
+    "metabolomic-feature-tree-construction",
+    "spectral-similarity-network-building",
+    "chemical-phylogenetic-comparison"
+   ]
+  },
+  "qemistree/task_002": {
+   "tool": "qemistree",
+   "task_kind": "analysis",
+   "title": "Analyze the Chemical Feature Tree artifact structure produced by q2-qemistree",
+   "skills": [
+    "qiime2-artifact-inspection",
+    "newick-format-parsing",
+    "phylogenetic-tree-validation",
+    "tree-structural-integrity-assessment",
+    "mass-spectrometry-feature-tree-interpretation"
+   ]
+  },
+  "quantyfey/task_001": {
+   "tool": "quantyfey",
+   "task_kind": "component_reconstruction",
+   "title": "Implement the External Calibration quantification module for MS data in QuantyFey",
+   "skills": [
+    "calibration-curve-fitting-ms-data",
+    "intensity-to-concentration-conversion",
+    "regression-model-validation-quantification",
+    "ms-quantitative-analysis-standards"
+   ]
+  },
+  "quantyfey/task_002": {
+   "tool": "quantyfey",
+   "task_kind": "component_reconstruction",
+   "title": "Implement the Intensity Drift Correction module within the QuantyFey pipeline",
+   "skills": [
+    "intensity-drift-artifact-detection",
+    "ms-signal-correction-strategy-selection",
+    "corrected-intensity-table-validation",
+    "quantitative-ms-data-preprocessing"
+   ]
+  },
+  "quantyfey/task_003": {
+   "tool": "quantyfey",
+   "task_kind": "extension",
+   "title": "Extend QuantyFey's Shiny interface to support Linux/macOS deployment",
+   "skills": [
+    "shiny-application-cross-platform-adaptation",
+    "r-dependency-package-compatibility-auditing",
+    "platform-specific-code-refactoring",
+    "file-path-abstraction-and-normalization",
+    "system-library-dependency-mapping"
+   ]
+  },
+  "rassp/task_001": {
+   "tool": "rassp",
+   "task_kind": null,
+   "title": "Reconstruct and evaluate a paper-grounded scientific task",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "reproducibility-gap-detection"
+   ]
+  },
+  "rawrr/task_001": {
+   "tool": "rawrr",
+   "task_kind": "reproduction",
+   "title": "Reproduce the iRT peptide retention time regression R-squared result from rawrr readSpectrum output",
+   "skills": [
+    "retention-time-extraction-from-raw-spectra",
+    "irt-peptide-calibration-and-scoring",
+    "linear-regression-fitting-for-chromatography",
+    "mass-spectrometry-precursor-identification",
+    "extracted-ion-chromatogram-processing"
+   ]
+  },
+  "rawrr/task_002": {
+   "tool": "rawrr",
+   "task_kind": "reproduction",
+   "title": "Reproduce the readSpectrum throughput benchmark (spectra per second) for rawrr",
+   "skills": [
+    "mass-spectrometry-file-format-handling",
+    "raw-data-throughput-benchmarking",
+    "orbitrap-spectrum-acquisition-interpretation",
+    "r-package-installation-and-runtime-verification",
+    "c-sharp-wrapper-invocation-from-r"
+   ]
+  },
+  "rawrr/task_003": {
+   "tool": "rawrr",
+   "task_kind": "reproduction",
+   "title": "Reproduce the Orbitrap scan 9594 LGGNEQVTR++ PRM spectrum metadata and y-ion S/N characterisation",
+   "skills": [
+    "orbitrap-spectrum-extraction-from-raw-files",
+    "instrumental-parameter-validation-mass-spectrometry",
+    "y-ion-signal-detection-and-noise-assessment",
+    "mass-spectrometry-metadata-interpretation",
+    "spectral-quality-assurance-proteomics"
+   ]
+  },
+  "rawrr/task_004": {
+   "tool": "rawrr",
+   "task_kind": "reproduction",
+   "title": "Reproduce the PRM cycle delta of 22 scans using rawrr::readIndex on the autoQC01 raw file",
+   "skills": [
+    "scan-index-parsing-and-filtering",
+    "prm-acquisition-event-identification",
+    "inter-scan-interval-validation",
+    "mass-spectrometry-method-cycle-verification",
+    "raw-file-data-extraction-via-api"
+   ]
+  },
+  "rawrr/task_005": {
+   "tool": "rawrr",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the two-layer R/C# architecture: invoke rawrr.exe wrapper from R and verify .NET assembly dispatch",
+   "skills": [
+    "dotnet-assembly-path-verification",
+    "two-layer-architecture-dispatch-testing",
+    "r-internal-function-invocation",
+    "assembly-version-string-retrieval",
+    "c-sharp-wrapper-method-validation"
+   ]
+  },
+  "rtmsecho/task_001": {
+   "tool": "rtmsecho",
+   "task_kind": null,
+   "title": "Reconstruct and evaluate a paper-grounded scientific task",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "reproducibility-gap-detection"
+   ]
+  },
+  "sirius/task_001": {
+   "tool": "sirius",
+   "task_kind": null,
+   "title": "Reconstruct and evaluate a paper-grounded scientific task",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "output-grounding",
+    "figure-table-interpretation",
+    "workflow-reconstruction",
+    "reproducibility-gap-detection"
+   ]
+  },
+  "slaw/task_001": {
+   "tool": "slaw",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Automated Parameter Optimization Layer for Peak Picking, Alignment, and Gap-Filling",
+   "skills": [
+    "missing-value-imputation-by-data-recursion",
+    "feature-intensity-recovery-across-samples",
+    "retention-time-mass-proximity-matching",
+    "feature-table-gap-filling"
+   ]
+  },
+  "slaw/task_002": {
+   "tool": "slaw",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Gap-Filling by Data Recursion Component",
+   "skills": [
+    "isotopologue-adduct-cluster-assignment",
+    "mass-difference-pattern-matching",
+    "feature-grouping-by-molecular-ion",
+    "retention-time-alignment-validation"
+   ]
+  },
+  "slaw/task_003": {
+   "tool": "slaw",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Isotopologue and Adduct Grouping Component",
+   "skills": [
+    "ms2-spectrum-consolidation",
+    "isotope-adduct-annotation",
+    "feature-group-spectral-mapping",
+    "mass-spectrometry-data-extraction",
+    "spectral-metadata-integration"
+   ]
+  },
+  "spectra/task_001": {
+   "tool": "spectra",
+   "task_kind": "component_reconstruction",
+   "title": "Implement the MsBackend virtual class API for a new in-memory backend (MsBackendTest)",
+   "skills": [
+    "s4-class-definition-and-inheritance",
+    "mass-spectrometry-data-representation",
+    "peak-data-extraction-and-formatting",
+    "dataframe-and-numericlist-manipulation",
+    "spectrum-subsetting-and-merging"
+   ]
+  },
+  "spectra/task_002": {
+   "tool": "spectra",
+   "task_kind": "reproduction",
+   "title": "Reproduce the fillCoreSpectraVariables() behavior for missing core spectra variables in spectraData()",
+   "skills": [
+    "ms-backend-api-implementation",
+    "s4-class-definition-and-slot-management",
+    "spectra-variable-core-population",
+    "dataframe-construction-from-backend-sources",
+    "missing-value-imputation-with-na"
+   ]
+  },
+  "spectra/task_003": {
+   "tool": "spectra",
+   "task_kind": "reproduction",
+   "title": "Reproduce the NumericList is.unsorted() efficiency check in the mz<- replacement method",
+   "skills": [
+    "vectorized-operation-verification",
+    "error-handling-confirmation",
+    "s4-class-method-inspection",
+    "ms-data-constraint-enforcement"
+   ]
+  },
+  "spectra/task_004": {
+   "tool": "spectra",
+   "task_kind": "reproduction",
+   "title": "Reproduce the spectraData initialization memory tradeoff described for pre-populated vs on-the-fly core spectra variables",
+   "skills": [
+    "s4-class-object-memory-profiling",
+    "spectra-variable-initialization-strategies",
+    "backend-performance-tradeoff-analysis",
+    "dataframe-lazy-loading-comparison",
+    "r-object-size-measurement-and-benchmarking"
+   ]
+  },
+  "spectra/task_005": {
+   "tool": "spectra",
+   "task_kind": "component_reconstruction",
+   "title": "Implement chunk-wise parallel processing via backendParallelFactor() and verify memory-reduction behaviour",
+   "skills": [
+    "s4-class-extension-for-backend-implementation",
+    "spectra-data-extraction-and-subsetting",
+    "parallel-factor-generation-from-metadata",
+    "memory-profiling-and-benchmarking",
+    "chunk-wise-data-processing-optimization"
+   ]
+  },
+  "spectripy/task_001": {
+   "tool": "spectripy",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Cross-Language Integration Layer wrapping Python MS functions as R callables in SpectriPy",
+   "skills": [
+    "cross-language-interface-design",
+    "mass-spectrometry-package-integration",
+    "function-wrapping-and-binding-mechanisms",
+    "data-marshalling-and-type-conversion",
+    "spectral-workflow-validation"
+   ]
+  },
+  "spectripy/task_002": {
+   "tool": "spectripy",
+   "task_kind": "component_reconstruction",
+   "title": "Implement a minimal Spectra-based R workflow that calls a Python MS package function via SpectriPy",
+   "skills": [
+    "r-python-interoperability-via-wrapper",
+    "spectra-object-instantiation-and-manipulation",
+    "mass-spectrometry-data-loading-and-formatting",
+    "cross-language-function-invocation-and-validation"
+   ]
+  },
+  "spectrumutils/task_001": {
+   "tool": "spectrumutils",
+   "task_kind": "reproduction",
+   "title": "Reproduce spectrum processing pipeline using MsmsSpectrum (set_mz_range, remove_precursor_peak, filter)",
+   "skills": [
+    "spectral-mz-range-filtering",
+    "precursor-peak-removal-mass-tolerance",
+    "intensity-threshold-noise-filtering",
+    "peak-count-capping",
+    "intensity-normalization-and-scaling",
+    "spectrum-array-validation"
+   ]
+  },
+  "spectrumutils/task_002": {
+   "tool": "spectrumutils",
+   "task_kind": "reproduction",
+   "title": "Reproduce fragment annotation of a spectrum using ProForma 2.0 peptidoform notation",
+   "skills": [
+    "proforma-2-0-peptidoform-parsing",
+    "mass-error-calculation-and-validation",
+    "ion-type-assignment-verification",
+    "spectrum-peak-to-fragment-mapping",
+    "modification-notation-interpretation"
+   ]
+  },
+  "spectrumutils/task_003": {
+   "tool": "spectrumutils",
+   "task_kind": "reproduction",
+   "title": "Reproduce the speed benchmark showing spectrum_utils v0.4.0 is faster than pymzML v2.5.2 and pyOpenMS v2.7.0",
+   "skills": [
+    "mass-spectrometry-benchmark-design",
+    "spectrum-processing-pipeline-construction",
+    "computational-throughput-measurement",
+    "multi-library-comparative-analysis",
+    "spectrum-filtering-and-normalization",
+    "runtime-performance-profiling"
+   ]
+  },
+  "spectrumutils/task_004": {
+   "tool": "spectrumutils",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct neutral-loss annotation to verify that neutral losses increase the fraction of interpreted peaks",
+   "skills": [
+    "neutral-loss-peak-interpretation",
+    "peptide-spectrum-matching-evaluation",
+    "fragment-mass-tolerance-calibration",
+    "peak-annotation-quantification-and-comparison"
+   ]
+  },
+  "spectrumutils/task_005": {
+   "tool": "spectrumutils",
+   "task_kind": "reproduction",
+   "title": "Reproduce publication-quality spectrum plot using spectrum_utils.plot and Matplotlib",
+   "skills": [
+    "spectral-peak-annotation-using-proforma",
+    "fragment-ion-mass-matching",
+    "peptidoform-representation-and-interpretation",
+    "spectrum-visualization-and-figure-rendering",
+    "usi-spectrum-retrieval-and-loading"
+   ]
+  },
+  "specxplore/task_001": {
+   "tool": "specxplore",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the specXplore importing pipeline to produce a session data object from LC-MS/MS spectral data",
+   "skills": [
+    "lc-ms-spectral-data-import",
+    "mass-spectral-data-validation",
+    "session-object-serialization",
+    "jupyter-notebook-workflow-automation"
+   ]
+  },
+  "specxplore/task_002": {
+   "tool": "specxplore",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the specXplore Dashboard Session instantiation from a saved session data object",
+   "skills": [
+    "dashboard-session-initialization-verification",
+    "python-object-serialization-deserialization",
+    "interactive-application-accessibility-testing",
+    "fixed-architecture-layer-validation"
+   ]
+  },
+  "specxplore/task_003": {
+   "tool": "specxplore",
+   "task_kind": "component_reconstruction",
+   "title": "Implement the ms2deepscore-based t-SNE embedding component within specXplore",
+   "skills": [
+    "spectral-similarity-distance-metric-selection",
+    "tsne-embedding-dimensionality-reduction",
+    "mass-spectrometry-data-coordinate-system-construction",
+    "spectral-overview-representation-generation"
+   ]
+  },
+  "tardis/task_001": {
+   "tool": "tardis",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the createTargetList filtering and formatting step for LC-MS target input files",
+   "skills": [
+    "metabolite-target-list-formatting",
+    "polarity-mode-filtering-lcms",
+    "mass-charge-retention-time-validation"
+   ]
+  },
+  "tardis/task_002": {
+   "tool": "tardis",
+   "task_kind": "reproduction",
+   "title": "Reproduce the screening-mode Diagnostic EIC Plots for 10 selected targets across one batch",
+   "skills": [
+    "lcms-target-visibility-screening",
+    "extracted-ion-chromatogram-inspection",
+    "targeted-metabolite-detection-parameter-optimization",
+    "mass-spectrometry-polarity-filtering",
+    "chromatographic-peak-annotation-visualization"
+   ]
+  },
+  "tardis/task_003": {
+   "tool": "tardis",
+   "task_kind": "reproduction",
+   "title": "Reproduce the QC Feature Table and Metric CSV Output Files from full peak detection mode",
+   "skills": [
+    "chromatographic-peak-detection-and-integration",
+    "retention-time-correction-and-alignment",
+    "lc-ms-quality-metric-computation",
+    "targeted-metabolite-extraction",
+    "spectral-data-format-conversion",
+    "polarity-aware-data-filtering"
+   ]
+  },
+  "tardis/task_004": {
+   "tool": "tardis",
+   "task_kind": "analysis",
+   "title": "Analyze the effect of multiple overlapping m/z scan windows on peak profile quality using the sawtooth diagnostic",
+   "skills": [
+    "scan-window-routing-mass-spectrometry",
+    "targeted-peak-integration-configuration",
+    "chromatographic-profile-quality-assessment",
+    "multi-window-mass-range-parameter-optimization"
+   ]
+  },
+  "tardis/task_005": {
+   "tool": "tardis",
+   "task_kind": "extension",
+   "title": "Extend TARDIS to accept an MsExperiment object as input and reproduce the screening-mode EIC plots",
+   "skills": [
+    "spectral-data-object-construction-and-integration",
+    "targeted-peak-detection-screening-and-validation",
+    "sample-metadata-annotation-for-lcms",
+    "method-equivalence-verification-across-api-invocations"
+   ]
+  },
+  "tima/task_001": {
+   "tool": "tima",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the TIMA annotation workflow as described in the README",
+   "skills": [
+    "metabolite-annotation-taxonomic-integration",
+    "mass-spectrometry-data-processing",
+    "r-package-installation-and-execution",
+    "workflow-pipeline-execution-validation",
+    "spectral-library-matching-and-scoring"
+   ]
+  },
+  "tima/task_002": {
+   "tool": "tima",
+   "task_kind": "reproduction",
+   "title": "Reproduce the tima R package installation and basic execution via r-universe",
+   "skills": [
+    "r-package-loading-and-diagnostics",
+    "r-cmd-check-validation"
+   ]
+  },
+  "tima/task_003": {
+   "tool": "tima",
+   "task_kind": "reproduction",
+   "title": "Reproduce the tima Docker image build and smoke-test execution",
+   "skills": [
+    "docker-image-management",
+    "container-orchestration-verification",
+    "tima-entry-point-validation"
+   ]
+  },
+  "uafr/task_001": {
+   "tool": "uafr",
+   "task_kind": "reproduction",
+   "title": "Reproduce the mzExacto output dataframe for a set of known query chemicals",
+   "skills": [
+    "mass-spectrometry-compound-extraction",
+    "chromatographic-retention-time-matching",
+    "chemical-identifier-verification",
+    "spectral-library-matching-validation",
+    "metabolite-quantification-accuracy-assessment"
+   ]
+  },
+  "uafr/task_002": {
+   "tool": "uafr",
+   "task_kind": "reproduction",
+   "title": "Reproduce the spreadOut output list from the standard_data CSV input",
+   "skills": [
+    "ms-peak-table-format-validation",
+    "retention-time-and-mass-sorting-of-chromatographic-peaks",
+    "exact-mass-lookup-and-aggregation-from-chemical-databases",
+    "spectral-library-matching-and-m-z-peak-ranking",
+    "nested-data-structure-construction-for-chemical-metadata",
+    "chemical-name-normalization-and-publish-database-integration"
+   ]
+  },
+  "uafr/task_003": {
+   "tool": "uafr",
+   "task_kind": "reproduction",
+   "title": "Reproduce the categorate output dataframe including structural similarity results for the restricted chemical library",
+   "skills": [
+    "chemical-structure-similarity-matching",
+    "functional-group-classification",
+    "compound-structural-fingerprint-comparison",
+    "cheminformatics-library-querying",
+    "chemical-match-score-interpretation",
+    "structural-type-categorization"
+   ]
+  },
+  "uafr/task_004": {
+   "tool": "uafr",
+   "task_kind": "analysis",
+   "title": "Analyze the effect of Match.Factor threshold on query chemical set size using standard_data",
+   "skills": [
+    "mass-spectrometry-match-factor-filtering",
+    "compound-data-subsetting-by-threshold",
+    "unique-compound-enumeration",
+    "summary-statistics-table-construction"
+   ]
+  },
+  "vimms/task_001": {
+   "tool": "vimms",
+   "task_kind": "reproduction",
+   "title": "Reproduce Full-Scan mzML Generation from Simulated Chemicals",
+   "skills": [
+    "metabolomics-chemical-mixture-generation-from-hmdb",
+    "ms1-full-scan-acquisition-simulation",
+    "vimms-controller-configuration-and-execution",
+    "mzml-format-export-from-simulator",
+    "chromatogram-and-ionization-intensity-modeling",
+    "evaluation-data-collection-for-simulation-assessment"
+   ]
+  },
+  "vimms/task_002": {
+   "tool": "vimms",
+   "task_kind": "reproduction",
+   "title": "Reproduce Simulated vs Real Beer mzML Comparison via Top-N DDA",
+   "skills": [
+    "mzml-file-parsing-and-loading",
+    "unknown-chemical-extraction-from-spectra",
+    "fragmentation-strategy-comparison-across-datasets",
+    "peak-detection-and-alignment-in-metabolomics"
+   ]
+  },
+  "vimms/task_003": {
+   "tool": "vimms",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the ARCH_SIMULATION_LOOP: Chemicals \u2192 IndependentMassSpectrometer \u2192 Controller Orchestration",
+   "skills": [
+    "virtual-chemical-mixture-generation",
+    "mass-spectrometer-simulator-configuration",
+    "dda-fragmentation-strategy-parameterization",
+    "lc-ms-scan-acquisition-orchestration",
+    "simulation-control-loop-architecture"
+   ]
+  },
+  "vimms/task_004": {
+   "tool": "vimms",
+   "task_kind": "analysis",
+   "title": "Analyze HMDB Formula Sampling: Verify Filtered Database Size",
+   "skills": [
+    "molecular-formula-database-filtering",
+    "hmdb-metabolite-extraction",
+    "mass-range-constraint-application",
+    "formula-sampler-configuration"
+   ]
+  },
+  "vimms/task_005": {
+   "tool": "vimms",
+   "task_kind": "extension",
+   "title": "Extend Simulation to WeightedDEWController with Exclusion Variant and Evaluate via EvaluationData Pickle",
+   "skills": [
+    "tandem-mass-spectrometry-fragmentation-simulation",
+    "data-dependent-acquisition-controller-implementation",
+    "dynamic-exclusion-weighting-strategy-evaluation",
+    "spectral-coverage-and-intensity-metric-computation",
+    "mzml-format-output-generation-and-validation",
+    "metabolite-detection-and-acquisition-performance-benchmarking"
+   ]
+  },
+  "xcms/task_001": {
+   "tool": "xcms",
+   "task_kind": "reproduction",
+   "title": "Reproduce retention-time-based feature grouping using SimilarRtimeParam(20) on the faahKO dataset",
+   "skills": [
+    "retention-time-based-feature-grouping",
+    "xcms-workflow-execution",
+    "mass-chromatogram-alignment",
+    "feature-annotation-consolidation",
+    "metabolomics-data-structure-handling"
+   ]
+  },
+  "xcms/task_002": {
+   "tool": "xcms",
+   "task_kind": "reproduction",
+   "title": "Reproduce abundance-correlation sub-grouping using AbundanceSimilarityParam(threshold=0.7, log2) on faahKO feature groups",
+   "skills": [
+    "feature-abundance-correlation-analysis",
+    "lc-ms-feature-grouping-and-compounding",
+    "retention-time-abundance-correlation-visualization",
+    "multi-sample-abundance-pattern-detection",
+    "feature-sub-group-refinement-and-validation"
+   ]
+  },
+  "xcms/task_003": {
+   "tool": "xcms",
+   "task_kind": "reproduction",
+   "title": "Reproduce EIC-similarity sub-grouping using EicSimilarityParam(threshold=0.7, n=2) on faahKO feature groups",
+   "skills": [
+    "eic-similarity-correlation-analysis",
+    "feature-group-refinement-multicriteria",
+    "chromatographic-peak-shape-comparison",
+    "feature-abundance-pattern-matching",
+    "mass-spectrometry-data-visualization"
+   ]
+  },
+  "xcms/task_004": {
+   "tool": "xcms",
+   "task_kind": "reproduction",
+   "title": "Reproduce MSWParam peak detection and edgeshift calibration on the FTICR-MS HAM dataset",
+   "skills": [
+    "fticr-mass-calibration-edgeshift",
+    "chromatographic-peak-detection-msw",
+    "mass-spectrometry-m-z-accuracy-assessment",
+    "xcms-data-import-preprocessing"
+   ]
+  },
+  "xcms/task_005": {
+   "tool": "xcms",
+   "task_kind": "reproduction",
+   "title": "Reproduce DDA chromatographic peak detection and MS2 spectrum annotation for m/z 304.1131 in PestMix1_DDA",
+   "skills": [
+    "ms2-spectrum-extraction-and-consensus-building",
+    "spectral-similarity-matching-and-comparison",
+    "peak-table-filtering-by-mz-and-retention-time"
+   ]
+  }
+ }
+}

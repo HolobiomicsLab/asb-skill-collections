@@ -1,0 +1,287 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "86f1f18716ef9724c59f6fbd75d53073365a11adffc8bd11d124820af696b93d"
+    }
+  ],
+  "created_at": "2026-06-16T05:33:53.849924+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MassQL query string to be parsed (e.g., a string representing a mass spectrometry search pattern)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured Abstract Syntax Tree (AST) or JSON representation of the parsed MassQL query",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Parser validation report confirming adherence to Expressiveness, Precision, Scalability, and Natural Language design principles",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MassQL extends SQL syntax with mass-spectrometry-specific constructs to enable succinct expression of MS queries.",
+    "The parser must satisfy four design principles: Expressiveness (capture complex MS patterns), Precision (unambiguous specification), Scalability (support from single-spectrum to repository-scale queries), and Natural Language (human-readable and writable syntax).",
+    "The parser output should be a structured representation (AST or JSON) suitable for downstream query execution engines or spectral search workflows.",
+    "MassQL grammar must handle both standard SQL query structures and MS-specific filtering criteria (e.g., m/z windows, intensity constraints, fragmentation rules)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:mwang87__MassQueryLanguage containing parser implementation or grammar definition",
+      "script_runs: execute parser on a valid MassQL query string and confirm it produces structured output (AST or JSON), not an error",
+      "output_matches_reference: parser output for a canonical MassQL query example (if provided in repository) matches the documented or reference AST/JSON structure",
+      "format_is: parser output is valid JSON or valid tree-serialized AST format with labeled nodes",
+      "contains_substring: parser implementation or grammar file contains explicit handling of mass-spectrometry-specific constructs (e.g., precursor mass, fragment ion, spectrum, scan, tolerance keywords or operators beyond standard SQL)"
+    ],
+    "expert_review": [
+      "Does the parser grammar or implementation satisfy all four stated design principles (Expressiveness, Precision, Scalability, Relatively Natural) as applied to the specific MassQL constructs it handles?",
+      "Does the parser correctly handle the extension of SQL syntax with mass-spectrometry-specific operators and constraints (e.g., mass ranges, spectral similarity, retention time windows)?",
+      "Are there edge cases or ambiguous MassQL syntax patterns that the parser does not resolve, contradicting the Precision principle?",
+      "Does the parser implementation scale appropriately from single-spectrum to repository-scale queries without fundamental architectural limits?"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the Mass Spec Query Language parser convert MassQL query strings into structured representations while satisfying the design principles of expressiveness, precision, scalability, and natural language readability?: 'The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion. It is inspired by SQL, but it attempts to'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MassQL is designed according to four core principles: Expressiveness (capture complex mass spectrometry patterns), Precision (exactly prescribe how to find data without ambiguity), Scalability (query from one spectrum to entire repositories), and Relatively Natural (easy to read, write, and use for communication about mass spectrometry).: 'Broadly we attempt to design it according to several principles: 1. Expressiveness - Capture complex mass spectrometry patterns that the community would like to look for 1. Precision - Exactly'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MassQL query string to be parsed (e.g., a string representing a mass spectrometry search pattern): 'The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Structured Abstract Syntax Tree (AST) or JSON representation of the parsed MassQL query: 'The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Parser validation report confirming adherence to Expressiveness, Precision, Scalability, and Natural Language design principles: 'Expressiveness - Capture complex mass spectrometry patterns that the community would like to look for; Precision - Exactly prescribe how to find data without ambiguity; Scalable - Easily facilitating'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MassQL: 'The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting parser grammar changes, versions, or evolution over time is available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "massql.parser",
+      "{inputs.query_string}"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "parsed_query.json",
+  "expected_outputs": [
+    "Structured Abstract Syntax Tree (AST) or JSON representation of the parsed MassQL query",
+    "Parser validation report confirming adherence to Expressiveness, Precision, Scalability, and Natural Language design principles"
+  ],
+  "finding": "MassQL is designed according to four core principles: Expressiveness (capture complex mass spectrometry patterns), Precision (exactly prescribe how to find data without ambiguity), Scalability (query from one spectrum to entire repositories), and Relatively Natural (easy to read, write, and use for communication about mass spectrometry).",
+  "github_name": "mwang87/MassQueryLanguage",
+  "input_from": null,
+  "inputs": [
+    "MassQL query string to be parsed (e.g., a string representing a mass spectrometry search pattern)"
+  ],
+  "keywords": [
+    "mass spectrometry querying",
+    "domain-specific language",
+    "sql-inspired",
+    "spectrum pattern matching",
+    "ms data repository",
+    "natural language query"
+  ],
+  "landmark_outputs": [
+    "grammar_specification.txt",
+    "tokenized_query.json",
+    "parsed_ast.json",
+    "validation_report.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_005",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Define MassQL grammar extending SQL with MS-specific constructs aligned to four design principles (Expressiveness, Precision, Scalability, Natural Language).",
+    "Implement lexer to tokenize MassQL query strings into recognized tokens (SQL keywords, MS operators, literals).",
+    "Implement parser (recursive descent or LALR) to construct an Abstract Syntax Tree from token stream.",
+    "Validate AST against design principles: confirm unambiguous MS pattern expression, support for single-spectrum to repository-scale queries, and human readability.",
+    "Validation: Parser successfully parses conformant MassQL queries without ambiguity and rejects non-conformant input with diagnostic error messages; validation report confirms alignment with all four design principles."
+  ],
+  "missing_information": [
+    "No changelog documenting parser grammar changes, versions, or evolution over time is available"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the Mass Spec Query Language parser convert MassQL query strings into structured representations while satisfying the design principles of expressiveness, precision, scalability, and natural language readability?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "domain-specific-language-grammar-design",
+    "lexical-analysis-tokenization",
+    "syntax-tree-construction-parsing",
+    "mass-spectrometry-query-semantics",
+    "parser-error-reporting-diagnostics"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_massql/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "massql_system",
+    "massql_expressiveness",
+    "massql_precision",
+    "massql_scalability",
+    "massql_naturalness"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:mwang87__MassQueryLanguage",
+  "task_description": "Implement a parser for the Mass Spec Query Language (MassQL) that converts a MassQL query string into a structured Abstract Syntax Tree (AST) or JSON representation, validating conformance to the four design principles: Expressiveness, Precision, Scalability, and Natural Language readability.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MassQL query string to be parsed",
+      "port_id": "query_string",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement a MassQL parser that converts domain-specific query strings into structured representations (AST or JSON) while enforcing the four design principles.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Parsed Abstract Syntax Tree in JSON format",
+      "port_id": "ast_json",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Parser validation report against design principles",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "natural-language-processing"
+  ],
+  "title": "Implement MassQL query parser that encodes mass-spectrometry-centric assumptions from SQL inspiration",
+  "tools": [
+    "MassQL"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Parser validation report confirming adherence to Expressiveness, Precision, Scalability, and Natural Language design principles."
+  ],
+  "workflow_description": "1. Define the MassQL grammar as an extended SQL syntax incorporating mass-spectrometry-specific constructs (e.g., spectrum filters, m/z ranges, intensity thresholds, fragmentation patterns) aligned with the four design principles. 2. Implement a lexer to tokenize the input MassQL query string, identifying SQL keywords, MS-specific operators, and numeric literals. 3. Implement a parser using recursive descent or LALR parsing to build an Abstract Syntax Tree (AST) from the token stream, enforcing syntactic and semantic constraints. 4. Validate the AST against the design criteria: confirm that complex MS patterns can be expressed unambiguously, that queries scale from single spectra to repository-scale searches, and that syntax remains human-readable. 5. Serialize the AST to JSON or canonical text format and report parsing success/failure with diagnostic error messages."
+}

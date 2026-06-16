@@ -7,6 +7,8 @@ metadata:
   edam_topics:
   - http://edamontology.org/topic_3361
   - http://edamontology.org/topic_0091
+  - http://edamontology.org/topic_3372
+  - http://edamontology.org/topic_0625
   tools:
   - GitHub
   - GNPS (Global Natural Products Social Molecular Networking)
@@ -14,7 +16,15 @@ metadata:
   - ISDB-LOTUS
   - MatchMS
   - MZmine 4
+  - MZmine 2
+  - mzmine2
+  - MZmine
+  - mzmine
   - npanalyst
+  - SIRIUS
+  - CSI:FingerID
+  - CANOPUS
+  - MSNovelist
 derived_from:
 - doi: 10.1002/cmtd.202400088
   title: ms2decide
@@ -22,11 +32,15 @@ derived_from:
   title: ''
 - doi: 10.5281/zenodo.5794106
   title: ''
+- doi: 10.1186/1471-2105-11-395
+  title: ''
 - doi: 10.1021/acscentsci.1c01108
   title: ''
 - doi: 10.1021/acs.analchem.2c02093
   title: ''
 - doi: 10.1021/acs.analchem.5c03730
+  title: ''
+- doi: 10.1038/s41592-019-0344-8
   title: ''
 evidence_spans: []
 claims: []
@@ -40,12 +54,18 @@ provenance:
   - build: coll_bindiscover
     doi: 10.1186/s13321-023-00734-8
     title: bindiscover
+  - build: coll_featurefindermetab
+    doi: 10.1074/mcp.M113.031278
+    title: featurefindermetab
   - build: coll_hexpmetdb
     doi: 10.1289/EHP7722
     title: HExpMetDB
   - build: coll_ms2decide
     doi: 10.1002/cmtd.202400088
     title: ms2decide
+  - build: coll_mzmine2
+    doi: 10.1186/1471-2105-11-395
+    title: mzmine2
   - build: coll_np_analyst
     doi: 10.1021/acscentsci.1c01108
     title: NP Analyst
@@ -55,6 +75,9 @@ provenance:
   - build: coll_rtmsecho
     doi: 10.1021/acs.analchem.5c03730
     title: rtmsecho
+  - build: coll_sirius
+    doi: 10.1038/s41592-019-0344-8
+    title: sirius
   dedup_kept_from: coll_ms2decide
 schema_version: 0.2.0
 ---

@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file 'DTCCSN2_library.csv' (or equivalent lipid library file with .csv, .xlsx, .rda, or .txt extension) exists in github:FelinaHildebrand__MobiLipid repository root or designated data directory"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file format is consistent with tabular structure (row_count_equals at least 1 header row plus data rows; field_present for columns: lipid_identifier, CCS_value, lipid_class, isotope_label)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify field 'isotope_label' contains substring 'U13C' or '13C' for all library entries (robust to case variation)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Value of field 'CCS_value' is in_range and numeric (non-null, parseable as float); no canonical answer for absolute range without instrument metadata \u2014 expert review required for physical plausibility"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify lipid_class field contains_substring at least one of: 'PC', 'PE', 'PS', 'PG', 'PA', 'PI', 'LPC', 'LPE', 'SM', 'Cer', 'DAG', 'TAG', 'CE' (or equivalent LIPID MAPS nomenclature) \u2014 multiple defensible class schemes exist"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify row_count_equals is greater than 10 (minimum viable library size for CCS bias assessment across multiple lipid classes)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file 'DTCCSN2_library.csv' (or equivalent lipid library file with .csv, .xlsx, .rda, or .txt extension) exists in github:FelinaHildebrand__MobiLipid repository root or designated data directory",
+      "Verify file format is consistent with tabular structure (row_count_equals at least 1 header row plus data rows; field_present for columns: lipid_identifier, CCS_value, lipid_class, isotope_label)",
+      "Verify field 'isotope_label' contains substring 'U13C' or '13C' for all library entries (robust to case variation)",
+      "Value of field 'CCS_value' is in_range and numeric (non-null, parseable as float); no canonical answer for absolute range without instrument metadata \u2014 expert review required for physical plausibility",
+      "Verify lipid_class field contains_substring at least one of: 'PC', 'PE', 'PS', 'PG', 'PA', 'PI', 'LPC', 'LPE', 'SM', 'Cer', 'DAG', 'TAG', 'CE' (or equivalent LIPID MAPS nomenclature) \u2014 multiple defensible class schemes exist",
+      "Verify row_count_equals is greater than 10 (minimum viable library size for CCS bias assessment across multiple lipid classes)"
+    ],
+    "expert_review": [
+      "Review CCS values for physical plausibility: confirm they fall within expected range for singly or doubly charged lipid ions under nitrogen drift gas (typical range ~200\u2013600 \u0172 for phospholipids, ~300\u2013800 \u0172 for triacylglycerols); requires domain knowledge of ion mobility physics",
+      "Review lipid class coverage: confirm library includes sufficient diversity of lipid classes (phospholipids, glycerolipids, sphingolipids, etc.) to support the stated use case of 'internal standardization across multiple lipid classes'",
+      "Cross-check library entries against abstract claim that DTCCSN2 library is 'newly established': verify entries are not simple duplicates of existing public CCS databases (e.g., LipidBlast, Lipidomics Workbench); inspect metadata or publication date if available",
+      "Validate row consistency: confirm all rows have non-null CCS_value, lipid_class, and isotope_label fields; flag any missing or malformed entries"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

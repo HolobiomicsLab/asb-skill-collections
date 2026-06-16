@@ -1,0 +1,358 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/methylKit_logo.png",
+      "role": "figure",
+      "sha256": "95914611e366169d643f217c61d26f9c19ddd55cf2d5f56ab7767a6f7e4ff6f2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "4c8b270ca6f0e13380a49cca704330aa037d0d68d8583090138549c4186a0806"
+    }
+  ],
+  "created_at": "2026-06-15T18:05:47.772040+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_001.expected_outputs[0]: methylDiff object containing differentially methylated bases with hyper- and hypo-methylated base counts",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "methylDiff object from calculateDiffMeth() containing differentially methylated bases with q-value and methylation difference annotations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "refseq.hg18.bed.txt gene annotation file (BED format) bundled with methylKit package",
+      "detection_method": "prose_regex",
+      "file_extension": ".bed",
+      "format_id": "BED",
+      "format_iri": "http://edamontology.org/format_3003",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "cpgi.hg18.bed.txt CpG island annotation file (BED format) bundled with methylKit package",
+      "detection_method": "prose_regex",
+      "file_extension": ".bed",
+      "format_id": "BED",
+      "format_iri": "http://edamontology.org/format_3003",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Percentage overlap summary table showing the proportion of differentially methylated bases overlapping promoter, exon, and intron regions, and CpG island and shore categories",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Gene annotation BED files contain intervals for promoters, exons, and introns; annotateWithGeneParts() overlaps differentially methylated bases with these features to classify their genomic context.",
+    "CpG islands (typically >300 bp, >50% GC, >0.6 CpG/GpC ratio) and their flanking shores (up to 2 kb) are tracked as distinct classes because methylation patterns differ between island cores and shores.",
+    "Percentage overlap is computed as the count of differentially methylated bases falling within each feature class divided by total bases, expressed as a percentage.",
+    "The hg18 (human genome build 18) coordinate system used in the bundled annotation files must match the reference genome version used in the upstream bisulfite sequencing alignment and calculateDiffMeth() call."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file 'refseq.hg18.bed.txt' exists in package",
+      "verify file 'cpgi.hg18.bed.txt' exists in package",
+      "script_runs: annotateWithGeneParts() executes without error on methylDiff object",
+      "script_runs: annotateWithFeatureFlank() executes without error on methylDiff object",
+      "output_matches_reference: percentage overlap table for promoter/exon/intron categories matches vignette summary statistics (robust to minor floating-point rounding)",
+      "output_matches_reference: percentage overlap table for CpGi/shores categories matches vignette summary statistics (robust to minor floating-point rounding)",
+      "field_present: output table contains columns for promoter, exon, intron categories",
+      "field_present: output table contains columns for CpGi and shores categories"
+    ],
+    "expert_review": [
+      "Verify that annotateWithGeneParts() and annotateWithFeatureFlank() are called with appropriate parameters for hg18 genome version",
+      "Confirm that annotation results are biologically sensible (e.g., percentage values sum to 100% or fall within expected genomic coverage ranges)",
+      "Assess whether reported percentages align with known properties of differential methylation in promoters vs. introns vs. exons and CpG island vs. shore distributions"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] What is the distribution of differentially methylated bases across gene annotation features (promoters, exons, introns) and CpG island contexts (CpGi islands vs. shores)?: 'This annotation operation will tell us what percentage of our differentially methylated regions are on promoters/introns/exons/intergenic region.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The annotateWithGeneParts() and annotateWithFeatureFlank() functions generate percentage overlap tables that classify differentially methylated regions by their overlap with promoter/exon/intron features and CpGi/shore genomic contexts.: 'annotate differentially methylated CpGs with promoter/exon/intron using annotation data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] methylDiff object from calculateDiffMeth() containing differentially methylated bases with q-value and methylation difference annotations: 'Using the methylDiff object from calculateDiffMeth() and the bundled refseq.hg18.bed.txt and cpgi.hg18.bed.txt annotation files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] refseq.hg18.bed.txt gene annotation file (BED format) bundled with methylKit package: 'bundled refseq.hg18.bed.txt and cpgi.hg18.bed.txt annotation files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] cpgi.hg18.bed.txt CpG island annotation file (BED format) bundled with methylKit package: 'bundled refseq.hg18.bed.txt and cpgi.hg18.bed.txt annotation files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Percentage overlap summary table showing the proportion of differentially methylated bases overlapping promoter, exon, and intron regions, and CpG island and shore categories: 'report the percentage overlap table for promoter/exon/intron and CpGi/shores categories, matching the summary statistics shown in the vignette'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] methylKit: 'title: \"methylKit: User Guide v`r packageVersion('methylKit')`\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] genomation: 'We can annotate our differentially methylated regions/bases based on gene annotation using genomation package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] GenomicFeatures: 'This annotation operation will tell us what percentage of our differentially methylated regions are on promoters/introns/exons/intergenic region. In this case we read annotation from a BED file,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'packageVersion('methylKit')'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "R",
+      "--slave",
+      "-e",
+      "library(methylKit); library(genomation); meth_diff <- readRDS('{inputs.methylDiff_object}'); gene_bed <- read.table('{inputs.gene_annotation_bed}', sep='\\t', header=FALSE); cpgi_bed <- read.table('{inputs.cpgi_annotation_bed}', sep='\\t', header=FALSE); gene_parts <- annotateWithGeneParts(meth_diff, gene_bed); cpgi_annot <- annotateWithFeatureFlank(meth_diff, cpgi_bed); summary_table <- data.frame(feature=c('promoter','exon','intron','cpgi','shore'), count=c(sum(gene_parts@feature=='promoter'), sum(gene_parts@feature=='exon'), sum(gene_parts@feature=='intron'), sum(cpgi_annot@flank=='island'), sum(cpgi_annot@flank=='shore')), percentage=c(sum(gene_parts@feature=='promoter')/length(meth_diff)*100, sum(gene_parts@feature=='exon')/length(meth_diff)*100, sum(gene_parts@feature=='intron')/length(meth_diff)*100, sum(cpgi_annot@flank=='island')/length(meth_diff)*100, sum(cpgi_annot@flank=='shore')/length(meth_diff)*100)); write.table(summary_table, file='overlap_summary.txt', sep='\\t', row.names=FALSE, quote=FALSE); cat('Overlap summary table:\\n'); print(summary_table)"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "annotation_overlap_summary.csv",
+  "expected_outputs": [
+    "Percentage overlap summary table showing the proportion of differentially methylated bases overlapping promoter, exon, and intron regions, and CpG island and shore categories"
+  ],
+  "finding": "The annotateWithGeneParts() and annotateWithFeatureFlank() functions generate percentage overlap tables that classify differentially methylated regions by their overlap with promoter/exon/intron features and CpGi/shore genomic contexts.",
+  "github_name": "al2na/methylKit",
+  "input_from": "task_001",
+  "inputs": [
+    "task_001.expected_outputs[0]: methylDiff object containing differentially methylated bases with hyper- and hypo-methylated base counts",
+    "methylDiff object from calculateDiffMeth() containing differentially methylated bases with q-value and methylation difference annotations",
+    "refseq.hg18.bed.txt gene annotation file (BED format) bundled with methylKit package",
+    "cpgi.hg18.bed.txt CpG island annotation file (BED format) bundled with methylKit package"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "gene_parts_annotation.bed",
+    "cpgi_annotation.bed",
+    "annotation_overlap_summary.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_046",
+    "result_051",
+    "result_057"
+  ],
+  "methodology_summary": [
+    "Load the methylDiff object and gene annotation (BED format) into the R environment.",
+    "Execute annotateWithGeneParts() to compute overlaps between differentially methylated bases and promoter/exon/intron regions.",
+    "Execute annotateWithFeatureFlank() to classify bases relative to CpG islands and shore regions.",
+    "Aggregate overlap counts for each genomic feature class and compute percentages relative to total differentially methylated bases.",
+    "Validation: Output table percentages sum to 100% per category (gene parts and CpG island features are mutually exclusive within their respective groups), and counts match vignette reference statistics."
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "genomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the distribution of differentially methylated bases across gene annotation features (promoters, exons, introns) and CpG island contexts (CpGi islands vs. shores)?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "dna-methylation-differential-analysis",
+    "genomic-feature-annotation-overlap",
+    "cpg-island-feature-classification",
+    "methylation-region-genomic-context-assignment",
+    "statistical-overlap-proportion-reporting"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_methylkit/synthesized_package",
+  "spine_condition_ids": [
+    "cond_with_covariates"
+  ],
+  "spine_entity_ids": [
+    "comp_methylDiff",
+    "tool_calculateDiffMeth",
+    "tool_genomation",
+    "dataset_example_CpG_files",
+    "dataset_refseq_hg18",
+    "dataset_cpgi_hg18",
+    "cond_with_covariates"
+  ],
+  "subdomains": [
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "information-extraction",
+    "visualization"
+  ],
+  "synthesized_from": "github:al2na__methylKit",
+  "task_description": "Annotate a methylDiff object from calculateDiffMeth() with gene parts (promoter/exon/intron) and CpG island features using annotateWithGeneParts() and annotateWithFeatureFlank(), then generate and report a percentage overlap summary table matching the vignette reference statistics.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "methylDiff object from calculateDiffMeth()",
+      "port_id": "methylDiff_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "refseq.hg18.bed.txt gene annotation file",
+      "port_id": "gene_annotation_bed",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "cpgi.hg18.bed.txt CpG island annotation file",
+      "port_id": "cpgi_annotation_bed",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Run annotateWithGeneParts() and annotateWithFeatureFlank() on a methylDiff object and produce summary statistics tables showing percentage overlap with gene features and CpG island regions.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Percentage overlap summary table for gene parts and CpG island features",
+      "port_id": "overlap_summary_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "differential-abundance-analysis",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce genomation-based annotation of differentially methylated bases with refseq and CpG island BED files",
+  "tools": [
+    "methylKit",
+    "genomation",
+    "GenomicFeatures",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: genomation, GenomicFeatures."
+  ],
+  "workflow_description": "1. Load the methylDiff object produced by calculateDiffMeth() containing differentially methylated bases. 2. Load the refseq.hg18.bed.txt gene annotation file as a GRanges object using genomation or GenomicFeatures. 3. Execute annotateWithGeneParts() function to overlap differentially methylated bases with promoter, exon, and intron genomic regions, recording the proportion of bases in each category. 4. Load the cpgi.hg18.bed.txt CpG island annotation file as a GRanges object. 5. Execute annotateWithFeatureFlank() function to annotate bases relative to CpG islands and their flanking shores, capturing the percentage overlap for each feature class. 6. Compile and format the percentage overlap statistics into a summary table matching the vignette's reported format and counts."
+}

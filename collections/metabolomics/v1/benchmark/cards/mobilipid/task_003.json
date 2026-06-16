@@ -1,0 +1,344 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MobiLipid_Logo_whiteBackground@300x.png",
+      "role": "figure",
+      "sha256": "f4f4d578fe6d5983f24db86fd33882be0edcdb359a455c87b5d55d2a7ba9c0f0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_after_correction.jpg",
+      "role": "figure",
+      "sha256": "22f59f8dd7a1648b529881f12cdb6c8a5944521bc029a36a54284f500b04c47c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_after_correction_all_results.jpg",
+      "role": "figure",
+      "sha256": "8116e5ccda398092e9de60907ea05f3f7f9084ad50c51fd0fc4b0ba7290dfb32"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_figure.jpg",
+      "role": "figure",
+      "sha256": "669de6c93098a6f8ec5d05a27b6291f80dc710aa18ed93ee004058662eb893e5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_CCS_bias_table.jpg",
+      "role": "figure",
+      "sha256": "e6ab716db3386d37d0837a07744a352f1ca0b77d43814e9f51ada97bb287dfd9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Correction_functions.jpg",
+      "role": "figure",
+      "sha256": "e9842f794ed3de85e541033fc86f858ae5f12bd67c5653014aded0ef9deac71f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Number_Lipids.jpg",
+      "role": "figure",
+      "sha256": "19333851f29b8a7432f3c08b5c7a05cafb4606c9c444c24206a37c2b881c06e5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Resampling.jpg",
+      "role": "figure",
+      "sha256": "40426f9193833adf6d3c57282e87775abc1441d818098c219e7a935bfbf98dbf"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Violin_plot_1.jpg",
+      "role": "figure",
+      "sha256": "8de37ee5843620be802766f7d091a1ce7c8c5b6b0cc6a7e5f4ceb3da43a8e017"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Output_Violin_plot_2.jpg",
+      "role": "figure",
+      "sha256": "8e20acb67ee1fd9a62b3f3b212686ff3bb77a57a8bb302d66225b8593c0599ff"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "052bac31597d2d591d3bd025995fade1add0413a35be358c0512be2f13a2a7d2"
+    }
+  ],
+  "created_at": "2026-06-15T12:36:27.945262+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Bias assessment output (bias factors, statistics, and class-level corrections per lipid class)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MobiLipid R Markdown script with correction implementation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Corrected CCS values in tabular format (CSV or data frame) with original and corrected CCS per lipid, including bias correction metadata",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "CCS bias in IM-MS arises from systematic differences between measured and theoretical collision cross sections, quantifiable per lipid class.",
+    "Internal standardization using U13C labeled lipids provides class-specific correction factors without requiring external calibration beyond vendor instrument calibration.",
+    "Effective CCS bias correction requires calculation of bias factors (slope and/or offset) for each lipid class, derived from comparison of measured CCS to reference values.",
+    "The correction is applied by adjusting measured CCS values using the class-specific bias factors calculated in the assessment phase."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: github:FelinaHildebrand__MobiLipid/MobiLipid_correction.Rmd or analogous R Markdown file in the repository root",
+      "verify file_format_is: R Markdown (.Rmd) contains executable code chunks for CCS bias correction",
+      "verify script_runs: execute the CCS correction code chunk(s) on the bias assessment output without errors",
+      "verify output_matches_reference: corrected CCS table has same number of rows as input bias assessment output",
+      "verify field_present: output table contains columns for original CCS values, correction factor, and corrected CCS values",
+      "verify value_in_range: all correction factors are numeric and non-zero (parameter-sensitive to lipid class and instrument tuning)",
+      "verify format_is: output table is CSV, TSV, or data.frame-serialized format (any of the following acceptable)"
+    ],
+    "expert_review": [
+      "inspect corrected CCS values against the DT CCS N2 library for U13C labeled lipids: verify corrections reduce bias relative to reference standards (requires chemistry/lipidomics domain judgment)",
+      "assess whether correction magnitude is appropriate for the detected lipid classes in the input bias assessment (parameter-sensitive to instrument platform and MS acquisition settings)",
+      "confirm that correction methodology preserves the rank order and relative spacing of CCS values across the lipid class distribution"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does MobiLipid apply CCS bias correction using the automated R Markdown workflow to transform assessed bias measurements into corrected CCS values?: 'MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MobiLipid employs an R Markdown integrated into IM-MS lipidomics workflows that automates CCS bias correction, utilizing a DT CCS N2 library for U13C labeled lipids as internal standards to adjust CCS measurements without requiring additional external calibration.: 'Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows, requiring a low number of lipids detected per lipid class for effective implementation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Bias assessment output (bias factors, statistics, and class-level corrections per lipid class): 'Using the output of the bias assessment step together with the MobiLipid R Markdown, execute only the automated CCS bias correction step'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MobiLipid R Markdown script with correction implementation: 'Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Corrected CCS values in tabular format (CSV or data frame) with original and corrected CCS per lipid, including bias correction metadata: 'execute only the automated CCS bias correction step and produce corrected CCS values as a tabular output'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is available for the MobiLipid code repository.: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific location and format of the CCS correction code within the R Markdown workflow is not documented in the discussion section.: '[UNTRUSTED_DOCUMENT] ... [/UNTRUSTED_DOCUMENT]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "R",
+      "--slave",
+      "-e",
+      "rmarkdown::render('{inputs.mobilipid_script}', params = list(bias_assessment_output = '{inputs.bias_assessment_output}'), output_file = 'corrected_ccs_output.html')"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "corrected_ccs_values.csv",
+  "expected_outputs": [
+    "Corrected CCS values in tabular format (CSV or data frame) with original and corrected CCS per lipid, including bias correction metadata"
+  ],
+  "finding": "MobiLipid employs an R Markdown integrated into IM-MS lipidomics workflows that automates CCS bias correction, utilizing a DT CCS N2 library for U13C labeled lipids as internal standards to adjust CCS measurements without requiring additional external calibration.",
+  "github_name": "FelinaHildebrand/MobiLipid",
+  "input_from": "task_002",
+  "inputs": [
+    "Bias assessment output (bias factors, statistics, and class-level corrections per lipid class)",
+    "MobiLipid R Markdown script with correction implementation"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "bias_factors_per_class.csv",
+    "corrected_ccs_values.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_004",
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Load bias assessment output containing calculated bias factors and correction statistics stratified by lipid class.",
+    "Apply class-specific CCS bias correction factors to measured CCS values using the MobiLipid correction algorithm.",
+    "Generate output table with original CCS, corrected CCS, applied bias factor, and lipid identifiers.",
+    "Validation: corrected CCS values are produced for all lipids with assigned bias factors; output matches expected tabular structure and contains no missing values in corrected CCS column."
+  ],
+  "missing_information": [
+    "No changelog or version history is available for the MobiLipid code repository.",
+    "The specific location and format of the CCS correction code within the R Markdown workflow is not documented in the discussion section."
+  ],
+  "parameters": [],
+  "primary_domain": "lipidomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does MobiLipid apply CCS bias correction using the automated R Markdown workflow to transform assessed bias measurements into corrected CCS values?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "collision-cross-section-bias-quantification",
+    "lipid-class-stratified-calibration",
+    "im-ms-drift-time-correction",
+    "internal-standardization-lipid-mapping"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mobilipid/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "mobil_lipid_system",
+    "ccs_bias_assessment_component",
+    "ccs_bias_correction_component",
+    "r_markdown_tool"
+  ],
+  "subdomains": [
+    "lipidomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:FelinaHildebrand__MobiLipid",
+  "task_description": "Execute the automated CCS bias correction step in MobiLipid using bias assessment output to produce corrected collision cross section values as a tabular file.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Bias assessment results (bias factors and statistics per lipid class)",
+      "port_id": "bias_assessment_output",
+      "resolved_via": null,
+      "source": "task_002/bias_report",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MobiLipid R Markdown correction script",
+      "port_id": "mobilipid_script",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Execute the automated CCS bias correction module in MobiLipid R Markdown using pre-computed bias assessments and output corrected CCS values as a tabular result.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Corrected CCS values in tabular format",
+      "port_id": "corrected_ccs_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "ion-mobility",
+    "quality-control",
+    "stable-isotope-labeling",
+    "high-resolution-ms"
+  ],
+  "title": "Reconstruct the CCS bias correction component of the MobiLipid R Markdown workflow",
+  "tools": [
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load bias assessment results (bias factors and statistics per lipid class) from the upstream bias assessment step. 2. Apply the automated CCS correction algorithm implemented in the MobiLipid R Markdown, which adjusts measured CCS values using the calculated bias factors for each lipid class. 3. Output corrected CCS values with associated metadata (lipid identifiers, m/z, corrected CCS, original CCS, bias factor applied) to a structured table."
+}

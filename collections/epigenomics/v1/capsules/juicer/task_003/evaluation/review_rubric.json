@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the input .hic file exists and is in HIC format"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that juicer_cli_tools command executes without fatal errors on the input .hic artifact"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that expected_outputs file is created with correct extension (.bedpe for loop calls, .bed or .domain for domain calls)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output file is non-empty (row_count > 0)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output file contains expected columns/fields for the annotation type (e.g., chrom1, start1, end1, chrom2, start2, end2 for loop calls)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the input .hic file exists and is in HIC format",
+      "verify that juicer_cli_tools command executes without fatal errors on the input .hic artifact",
+      "verify that expected_outputs file is created with correct extension (.bedpe for loop calls, .bed or .domain for domain calls)",
+      "verify that output file is non-empty (row_count > 0)",
+      "verify that output file contains expected columns/fields for the annotation type (e.g., chrom1, start1, end1, chrom2, start2, end2 for loop calls)",
+      "script_runs: juicer_cli_tools annotation command with specified input .hic and output parameters produces exit code 0"
+    ],
+    "expert_review": [
+      "annotation output contains biologically plausible feature coordinates (no out-of-bounds or malformed genomic ranges)",
+      "feature calls are consistent with known Hi-C contact patterns at expected resolutions and statistical thresholds",
+      "output format and column semantics match Juicer's documented annotation specification for the chosen feature type"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

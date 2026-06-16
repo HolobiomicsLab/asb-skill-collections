@@ -1,0 +1,10 @@
+name: TARDIS
+slug: tardis
+evidence_spans:
+- R package for *TArgeted Raw Data Integration In Spectrometry*
+derived_from:
+- doi: 10.1021/acs.analchem.5c00567
+  title: Automated Integration and Quality Assessment of Chromatographic Peaks in LC–MS-Based Metabolomics and Lipidomics Using TARDIS
+source_repos:
+- UGent-LIMET/TARDIS
+schema_version: 0.2.0

@@ -1,0 +1,355 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/cooltools-logo-futura.png",
+      "role": "figure",
+      "sha256": "726eacd3b3f3226502291e4a9ca7bfbec7a4cd263fe916798fdafb94baf17153"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "dd40b0ce0a98b1e9936f2244a8d5c26417a737bfa619cf5f660f140fad59e89c"
+    }
+  ],
+  "created_at": "2026-06-15T17:50:30.421402+00:00",
+  "crossref_doi": "10.1101/2022.10.31.514564",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Public cooler file (.cool format) from deposited Hi-C dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Window size parameter for insulation score calculation (e.g., 100 kb or 1 Mb)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Optional genomic view dataframe (view_df) to restrict analysis to specific regions",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Insulation score table (TSV or CSV) with columns: region1, region2, insulation_score, is_boundary_{window}, and associated metadata",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "BED-format file of annotated insulating boundaries with genomic coordinates and boundary scores",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Insulation scores quantify local contact enrichment at genomic boundaries and are calculated as the ratio of contacts across a window to contacts within the window.",
+    "Boundary thresholding using Li or Otsu methods converts continuous insulation scores into boolean boundary annotations; Li and Otsu are automatic threshold-selection algorithms from image processing.",
+    "The cooler format stores Hi-C contact matrices as sparse, HDF5-backed data structures with indexed bin tables containing genomic coordinates and optional balancing weights.",
+    "BED (Browser Extensible Data) format requires tab-separated chrom, chromStart, chromEnd columns; cooler bins use 0-based half-open intervals.",
+    "Insulation scores typically increase with genomic distance from strong boundaries and may contain NaN values at chromosome edges or near unmappable regions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that input cooler file exists and is readable in cooler format",
+      "verify output insulation score table file exists",
+      "verify output BED file exists",
+      "file_format_is: insulation score table is TSV or CSV with numeric columns",
+      "file_format_is: BED file conforms to standard BED format (tab-delimited, chrom, chromStart, chromEnd, and optional fields)",
+      "field_present: insulation score table contains per-bin score column",
+      "field_present: BED file contains boundary call coordinates",
+      "value_in_range: insulation scores are numeric and within expected range (no NaN values in output, or NaN handling is documented)",
+      "row_count_equals: number of rows in insulation score table matches number of bins in input cooler file",
+      "script_runs: cooltools.insulation function executes without error on the input cooler file"
+    ],
+    "expert_review": [
+      "insulation score values are biologically plausible for Hi-C contact matrices (expert judgment required on typical insulation score distribution for this data type)",
+      "boundary calls in BED file correspond to expected topologically associating domain (TAD) boundaries or domain insulation patterns",
+      "parameter choices (window size, distance threshold) are appropriate for the resolution and scale of the input cooler file"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the format and valid range of insulation scores produced by cooltools.insulation when applied to Hi-C cooler files?: 'The recently-introduced cooler format readily handles storage of high-resolution datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Cooltools provides computational tools for analyzing high-resolution Hi-C datasets stored in the cooler format, enabling extraction of quantitative genomic features.: 'tools for your .cools'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Public cooler file (.cool format) from deposited Hi-C dataset: 'the recently-introduced cooler format readily handles storage of high-resolution datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Window size parameter for insulation score calculation (e.g., 100 kb or 1 Mb): 'The new cooltools.insulation method includes a thresholding step to detect strong boundaries, using either the Li or the Otsu method'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Optional genomic view dataframe (view_df) to restrict analysis to specific regions: 'Most functions now take an optional view_df argument. A pandas dataframe defining a genomic view can be provided to limit the analyses to regions included in the view.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Insulation score table (TSV or CSV) with columns: region1, region2, insulation_score, is_boundary_{window}, and associated metadata: 'The result of thresholding for each window size is stored as a boolean in a new column is_boundary_{window}.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] BED-format file of annotated insulating boundaries with genomic coordinates and boundary scores: 'cooltools.insulation for insulation score and annotation of insulating boundaries'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] cooler: 'the recently-introduced cooler format readily handles storage of high-resolution datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'enabling high-resolution Hi-C analysis in Python'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] New functionality for smoothing P(s) and derivatives has an API that is not yet stable: 'New functionality for smoothing P(s) and derivatives (API is not yet stable)'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import cooler; import cooltools.insulation; import pandas as pd; cool = cooler.Cooler('{inputs.cooler_file}'); insulation_scores = cooltools.insulation.insulation(cool, window={inputs.window_size}); insulation_scores.to_csv('insulation_scores.tsv', sep='\\t'); boundaries = insulation_scores[insulation_scores['is_boundary'] == True][['chrom', 'start', 'end', 'insulation_score']]; boundaries.to_csv('boundaries.bed', sep='\\t', header=False, index=False)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "insulation_boundaries.bed",
+  "expected_outputs": [
+    "Insulation score table (TSV or CSV) with columns: region1, region2, insulation_score, is_boundary_{window}, and associated metadata",
+    "BED-format file of annotated insulating boundaries with genomic coordinates and boundary scores"
+  ],
+  "finding": "Cooltools provides computational tools for analyzing high-resolution Hi-C datasets stored in the cooler format, enabling extraction of quantitative genomic features.",
+  "github_name": "open2c/cooltools",
+  "input_from": "task_002",
+  "inputs": [
+    "Public cooler file (.cool format) from deposited Hi-C dataset",
+    "Window size parameter for insulation score calculation (e.g., 100 kb or 1 Mb)",
+    "Optional genomic view dataframe (view_df) to restrict analysis to specific regions"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "insulation_table.tsv",
+    "insulation_boundaries.bed"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_028"
+  ],
+  "methodology_summary": [
+    "Load a cooler file from a public Hi-C dataset repository.",
+    "Compute per-bin insulation scores using a sliding-window approach with a specified genomic window size.",
+    "Apply Li or Otsu automatic thresholding to convert insulation scores into binary boundary annotations.",
+    "Export insulation scores and boundary calls to a tabular format (TSV/CSV) and convert boundary coordinates to BED format.",
+    "Validation: verify output tables contain expected columns, all boundary values are boolean, and insulation scores are numeric and within plausible ranges.",
+    "References: source article (DOI: 10.1101/2022.10.31.514564)"
+  ],
+  "missing_information": [
+    "New functionality for smoothing P(s) and derivatives has an API that is not yet stable"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/coverage_track"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the format and valid range of insulation scores produced by cooltools.insulation when applied to Hi-C cooler files?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "hi-c-insulation-score-calculation",
+    "boundary-detection-thresholding",
+    "cooler-file-format-handling",
+    "genomic-coordinate-conversion",
+    "bed-format-generation-from-dataframe",
+    "numeric-range-validation-bioinformatics"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_cooltools/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "cooltools_system",
+    "cooler_format",
+    "component_insulation",
+    "component_rearrange_cooler",
+    "component_lib"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:open2c__cooltools",
+  "task_description": "Apply the cooltools.insulation function to a publicly deposited cooler file to compute per-bin insulation scores and generate a BED-format table of annotated boundary calls, with verification of output format and numeric value ranges.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Public cooler file (.cool format)",
+      "port_id": "cooler_file",
+      "resolved_via": null,
+      "source": "task_002/coverage_track",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Window size parameter for insulation score calculation",
+      "port_id": "window_size",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Optional genomic view dataframe",
+      "port_id": "view_df",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Apply cooltools.insulation to a public cooler file and validate that output insulation scores fall within expected numerical ranges and BED annotations are properly formatted.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Insulation score table with boundary annotations",
+      "port_id": "insulation_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "BED-format file of annotated boundaries",
+      "port_id": "boundaries_bed",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reproduce the insulation score and TAD boundary annotation using cooltools.insulation",
+  "tools": [
+    "cooler",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Insulation score table (TSV or CSV) with columns: region1, region2, insulation_score, is_boundary_{window}, and associated metadata."
+  ],
+  "workflow_description": "1. Load a cooler file from a public repository (e.g., Zenodo or GEO) using the cooler Python API. 2. Apply cooltools.insulation with a specified window size parameter to compute per-bin insulation scores and detect insulating boundaries using either Li or Otsu thresholding. 3. Export the insulation score table as a pandas DataFrame containing bin coordinates, insulation score values, and is_boundary_{window} boolean columns. 4. Convert the annotated boundaries to BED format for visualization and downstream analysis. 5. Verify output file existence, row count, numeric value ranges, and presence of required columns (region1, region2, insulation_score, is_boundary_*). 6. Validate that insulation scores fall within expected numeric ranges and boundary annotations are boolean."
+}

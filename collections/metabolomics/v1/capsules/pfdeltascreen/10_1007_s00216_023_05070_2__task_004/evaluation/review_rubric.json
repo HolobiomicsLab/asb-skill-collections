@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: github:JonZwe__PFAScreen repository is accessible and contains source code for MS2 diagnostic fragment screening module"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "input artifact is a valid mzML file (XML-based mass spectrometry data format)",
+      "value": "MZML"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "feature flagging output (list of feature IDs or scan indices) matches expected f"
+    },
+    {
+      "id": "pf_005",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output contains at least one structured field documenting which diagnostic fragm",
+      "value": [
+        "documenting which diagnostic fragment mass(es) or characteristic mass difference(es) triggered each feature flag"
+      ]
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "diagnostic fragment masses or mass differences reported in output fall within pl",
+      "value": {
+        "max": 500,
+        "min": 50
+      }
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: github:JonZwe__PFAScreen repository is accessible and contains source code for MS2 diagnostic fragment screening module",
+      "file_format_is: input artifact is a valid mzML file (XML-based mass spectrometry data format)",
+      "script_runs: MS2 filter module executes without runtime errors on sample centroided MS2 spectra from mzML input",
+      "output_matches_reference: feature flagging output (list of feature IDs or scan indices) matches expected format with at least one named field identifying flagged features and one field recording diagnostic fragment mass match or mass difference value",
+      "field_present: output contains at least one structured field documenting which diagnostic fragment mass(es) or characteristic mass difference(es) triggered each feature flag",
+      "value_in_range: diagnostic fragment masses or mass differences reported in output fall within plausible PFAS chemical mass range (approximately 50\u2013500 Da for common PFAS diagnostic fragments); robust to minor calibration drift"
+    ],
+    "expert_review": [
+      "chemical validity of diagnostic fragment masses used in the filter: confirm that selected m/z values correspond to known PFAS diagnostic fragments (e.g., CF2 loss, CF3 ion, perfluorocarbon chain fragments) and that mass tolerance windows are appropriate for high-resolution MS",
+      "appropriateness of mass difference thresholds: verify that characteristic mass differences (e.g., CF2 repeating unit \u224848 Da) are chemically meaningful and correctly parameterized for the instrument resolution",
+      "clinical or regulatory relevance of prioritization: assess whether flagged features align with PFAS compound families of toxicological or regulatory concern"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

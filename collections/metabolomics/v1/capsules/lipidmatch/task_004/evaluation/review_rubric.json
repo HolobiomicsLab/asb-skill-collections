@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: LipidMatch repository cloned from github:GarrettLab-UF__LipidMatch contains executable scripts for library integration"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: user-authored .csv lipid library conforms to format specification documented in LipidMatch manual (exact column names and order required)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: library integration script executes without errors when passed valid .csv file as input"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: integrated library file is generated in expected output location after script execution"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: output matching run results file contains at least one custom lipid entry from the integrated .csv library among candidate matches (requires exact lipid identifier match)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: LipidMatch repository cloned from github:GarrettLab-UF__LipidMatch contains executable scripts for library integration",
+      "verify file_format_is: user-authored .csv lipid library conforms to format specification documented in LipidMatch manual (exact column names and order required)",
+      "verify script_runs: library integration script executes without errors when passed valid .csv file as input",
+      "verify file_exists: integrated library file is generated in expected output location after script execution",
+      "verify contains_substring: output matching run results file contains at least one custom lipid entry from the integrated .csv library among candidate matches (requires exact lipid identifier match)"
+    ],
+    "expert_review": [
+      "Confirm that the custom lipid entries correctly appear as valid candidates in the matching output (chemical accuracy of integration and ranking)",
+      "Validate that library integration did not corrupt or duplicate entries from the original in-silico library"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

@@ -1,0 +1,394 @@
+schema_version: 0.1.0
+workflow_id: coll_xcms_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: The xcms package provides comprehensive workflows for preprocessing and
+    analyzing LC-MS, GC-MS, and LC-MS/MS data, including chromatographic peak detection,
+    sample alignment, feature grouping, and MS2-based compound annotation.
+  pseudo_abstract: This benchmark demonstrates five key analytical workflows implemented
+    in the xcms R package for mass spectrometry metabolomics. First, retention-time-based
+    feature grouping using SimilarRtimeParam(20) on the faahKO dataset groups 159
+    features into a series of feature groups of varying sizes. Second, abundance-correlation
+    refinement via AbundanceSimilarityParam(threshold=0.7, transform=log2, filled=TRUE)
+    sub-groups these into 94 feature groups, with within-group correlation analysis
+    (e.g., FG.040) revealing heterogeneous correlation patterns above and below the
+    0.7 threshold. Third, EIC-similarity sub-grouping using EicSimilarityParam(threshold=0.7,
+    n=2) further subdivides feature groups FG.013.001 and FG.045.001 based on peak-shape
+    correlation, with features showing chromatographic misalignment excluded from
+    same-compound groupings. Fourth, direct-injection FTICR-MS analysis on the HAM
+    dataset demonstrates MSWParam peak detection followed by edgeshift calibration,
+    producing m/z corrections that vary systematically with precursor mass via linear
+    interpolation within the calibrant range and constant shift outside it. Fifth,
+    DDA LC-MS/MS analysis of PestMix1 shows that the consensus MS2 spectrum derived
+    from the m/z 304.1131 chromatographic peak exhibits high normalized dot-product
+    similarity to Fenamiphos but not Flumazenil at 40 ppm tolerance, enabling compound
+    identification.
+  research_questions:
+  - When groupFeatures is applied to the faahKO xcms result object with SimilarRtimeParam
+    using a 20-second retention time window, how many distinct feature groups are
+    produced and what is the distribution of features across group sizes?
+  - When applying AbundanceSimilarityParam(threshold=0.7, transform=log2, filled=TRUE)
+    to retention-time-based feature groups, how many feature sub-groups result, and
+    what is the pairwise correlation pattern within the FG.040 feature group?
+  - What is the final count of feature groups after applying EIC similarity-based
+    refinement with a correlation threshold of 0.7 on the top 2 samples, and how do
+    the extracted ion chromatograms visually differ between sub-groups within feature
+    groups FG.013.001 and FG.045.001?
+  - Does the 'edgeshift' calibration method successfully correct m/z values of identified
+    peaks in direct injection MS data, and can the magnitude of these corrections
+    be quantified across the m/z range?
+  - Can an experimental MS2 spectrum derived from a chromatographic peak at m/z 304.1131
+    in DDA data be matched against reference MS2 spectra from Flumazenil and Fenamiphos
+    to identify the compound?
+  methods_summary: "Load preprocessed xcms result object containing detected chromatographic\
+    \ peaks from faahKO samples Apply groupFeatures() with SimilarRtimeParam(window=20)\
+    \ to group features within a 20-second retention time window Extract feature group\
+    \ assignments and compute group-wise statistics (count, size distribution) Validate:\
+    \ verify that the total feature group count and group size table match published\
+    \ reference results Load retention-time-based feature groups and abundance matrix\
+    \ Apply AbundanceSimilarityParam with threshold=0.7, log2 transformation, and\
+    \ gap-filling enabled to refine groups via Pearson correlation Extract and count\
+    \ resulting sub-group assignments Calculate pairwise Pearson correlations for\
+    \ all features in FG.040 Generate and validate correlation plot showing feature\
+    \ clustering under abundance similarity criterion Load pre-processed LC-MS data\
+    \ and abundance-correlation-refined feature groups from upstream xcms workflow.\
+    \ Apply groupFeatures() with EicSimilarityParam (threshold=0.7, n=2) to perform\
+    \ feature grouping based on EIC correlation. Compute and report final feature\
+    \ group count after EIC similarity refinement. Extract and visualize overlay EIC\
+    \ plots for specified feature groups (FG.013.001 and FG.045.001) to show peak\
+    \ shape alignment. Validation: confirm that final feature group count matches\
+    \ expected output and that overlay EIC plots display correlated peak shapes with\
+    \ similarity \u22650.7 for grouped features. Load FTICR HAM mzML files from Zenodo\
+    \ into xcms XCMSnExp container. Apply MSWParam chromatographic peak detection\
+    \ to all files in the experiment. Extract the first mzML file and retrieve its\
+    \ chromatographic peaks. Apply mass calibration using CalibrantMassParam with\
+    \ edgeshift method to correct m/z values. Extract m/z residuals (observed \u2212\
+    \ expected) before and after calibration. Validation: Calibration difference plot\
+    \ shows reduced m/z error variance post-edgeshift; residuals cluster near zero\
+    \ across the m/z range with no systematic drift. Load mzML raw data and apply\
+    \ centWave chromatographic peak detection with specified signal-to-noise and mass\
+    \ accuracy thresholds. Extract all MS2 spectra associated with the target m/z\
+    \ 304.1131 chromatographic peak. Merge multiple MS2 spectra into a single consensus\
+    \ spectrum to improve signal and representation. Compare consensus spectrum against\
+    \ Flumazenil and Fenamiphos reference spectra using spectral similarity scoring.\
+    \ Validation: Mirror-plot successfully aligns experimental consensus peaks with\
+    \ reference spectra; spectral similarity scores (cosine or dot-product) \u2265\
+    \ 0.7 indicate high-confidence match to reference standards."
+  domain: metabolomics
+  techniques:
+  - lc-ms
+  - feature-detection
+  - chromatogram-alignment
+  - clustering
+  claims:
+  - claim_text: The xcms R package provides functionality to efficiently preprocess
+      LC-MS, GC-MS, and LC-MS/MS data.
+    claim_type: finding
+    speculative: false
+    entity_id: xcms_package
+  - claim_text: In LC-MS metabolomics experiments, different multiple ions can be
+      generated from the same compound during ionization.
+    claim_type: finding
+    speculative: false
+  - claim_text: Features of the same compound should have similar retention time.
+    claim_type: finding
+    speculative: false
+  - claim_text: The abundance of features of the same compound should have a similar
+      pattern across samples.
+    claim_type: finding
+    speculative: false
+  - claim_text: The peak shape of extracted ion chromatograms of features of the same
+      compound should be similar.
+    claim_type: finding
+    speculative: false
+  - claim_text: xcms provides AbundanceSimilarityParam for feature grouping based
+      on correlation of feature abundances across samples.
+    claim_type: finding
+    speculative: false
+    entity_id: xcms_package
+  - claim_text: xcms provides EicSimilarityParam for feature grouping based on correlation
+      of EICs.
+    claim_type: finding
+    speculative: false
+    entity_id: xcms_package
+  - claim_text: The faahKO dataset consists of samples from 4 mice with knock-out
+      of the fatty acid amide hydrolase and 4 wild type mice.
+    claim_type: finding
+    speculative: false
+    entity_id: faahko_dataset
+  - claim_text: Features grouped by retention time with a 20-second window were further
+      subdivided into multiple feature groups.
+    claim_type: hypothesis
+    speculative: false
+  - claim_text: Abundance correlation analysis can split retention time-based feature
+      groups further.
+    claim_type: finding
+    speculative: false
+  - claim_text: EIC correlation analysis can provide additional sub-grouping of retention
+      time and abundance-based feature groups.
+    claim_type: finding
+    speculative: false
+  - claim_text: In direct injection mass spectrometry experiments, only a single spectrum
+      with an artificial retention time is available for each sample.
+    claim_type: finding
+    speculative: false
+  - claim_text: xcms uses functionality from the MassSpecWavelet package to identify
+      peaks in the m/z dimension for direct injection MS data.
+    claim_type: finding
+    speculative: false
+    entity_id: xcms_package
+  - claim_text: In peak detection with MSWParam, scales of 1, 4, and 9 were used.
+    claim_type: finding
+    speculative: false
+    entity_id: mswparam
+  - claim_text: The calibrate method can adjust m/z values of identified peaks based
+      on differences between calibrants' m/z values and closest peaks' m/z values.
+    claim_type: finding
+    speculative: false
+  - claim_text: The edgeshift calibration method adjusts peaks within the range of
+      calibrant m/z values using linear interpolation.
+    claim_type: finding
+    speculative: false
+    entity_id: edgeshift_calibration
+  - claim_text: For LC-MS/MS data, data dependent acquisition (DDA) is the most used
+      approach for generating fragmentation spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: In DDA, the top N most intense ions are selected for fragmentation
+      before the cycle starts again.
+    claim_type: finding
+    speculative: false
+  - claim_text: SWATH acquisition uses defined windows of m/z values to reduce overlap
+      of fragment spectra while keeping high coverage.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The example DDA and SWATH data files are from reversed-phase LC-MS/MS
+      runs of the Agilent Pesticide mix.
+    claim_type: finding
+    speculative: false
+    entity_id: swath_acquisition_mode
+  - claim_text: Most signal in the DDA dataset was measured between approximately
+      200 and 600 seconds.
+    claim_type: finding
+    speculative: false
+  - claim_text: In the DDA dataset, chromatographic peak detection identified peaks
+      at specific m/z values.
+    claim_type: hypothesis
+    speculative: false
+  - claim_text: Some MS manufacturers like Sciex do not export precursor intensity
+      values for MS2 spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The estimatePrecursorIntensity function can determine precursor intensity
+      based on the intensity of the ion in the previous MS1 scan.
+    claim_type: finding
+    speculative: false
+  - claim_text: CentWaveParam was used for chromatographic peak detection with snthresh
+      of 5, noise of 100, ppm of 10, and peakwidth of 3 to 30.
+    claim_type: finding
+    speculative: false
+    entity_id: centwave_param
+  - claim_text: The chromPeakSpectra method extracts MS2 spectra with precursor m/z
+      and retention time within the range of chromatographic peaks.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The returned Spectra from chromPeakSpectra contains a chrom_peak_id
+      spectra variable that identifies the associated chromatographic peak.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: An example chromatographic peak of an ion with m/z 304.1131 was identified
+      in the DDA dataset.
+    claim_type: finding
+    speculative: false
+  - claim_text: Flumazenil (Metlin ID 2724) has experimental MS2 spectra available
+      in reference databases.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: Fenamiphos (Metlin ID 72445) has experimental MS2 spectra available
+      in reference databases.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: In the example, 5 MS2 spectra were associated with the candidate chromatographic
+      peak.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The combineSpectra method can reduce multiple fragment spectra into
+      a single consensus spectrum.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: combinePeaks combines mass peaks from input spectra with m/z differences
+      smaller than 20 ppm into one peak.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: With minProp parameter set to 0.8, the resulting spectrum contains
+      only peaks present in 80% of input spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: The example experimental spectrum matches Fenamiphos better than Flumanezil
+      in similarity comparisons.
+    claim_type: finding
+    speculative: false
+    entity_id: fenamiphos_compound
+  - claim_text: In SWATH mode, all ions within pre-defined isolation windows are fragmented
+      and MS2 spectra are measured.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: SWATH isolation window information is available as spectra variables
+      isolationWindowLowerMz and isolationWindowUpperMz.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: Between 422 and 423 MS2 spectra are measured in each isolation window
+      of the SWATH dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: spectra_package
+  - claim_text: An isolation window target m/z of 270.85 was used as an example for
+      extracting chromatograms from SWATH data.
+    claim_type: finding
+    speculative: false
+    entity_id: swath_acquisition_mode
+  - claim_text: findChromPeaksIsolationWindow performs chromatographic peak detection
+      in MS level 2 data separately for each isolation window.
+    claim_type: finding
+    speculative: false
+  - claim_text: CentWaveParam with snthresh of 3, noise of 10, ppm of 10, and peakwidth
+      of 3 to 30 was used for MS2 peak detection.
+    claim_type: finding
+    speculative: false
+    entity_id: centwave_param
+  - claim_text: findChromPeaksIsolationWindow adds peaks to the chromPeaks matrix
+      that can be identified through the isolationWindow column.
+    claim_type: finding
+    speculative: false
+  - claim_text: The EicSimilarityParam is advisable to use as the last refinement
+      step in feature grouping because it is computationally very expensive.
+    claim_type: finding
+    speculative: false
+    entity_id: eic_similarity_param
+  - claim_text: AbundanceSimilarityParam uses a correlation coefficient threshold
+      to group features together.
+    claim_type: finding
+    speculative: false
+    entity_id: abundance_similarity_param
+  - claim_text: The featureDefinitions function extracts results from correspondence
+      analysis.
+    claim_type: finding
+    speculative: false
+  - claim_text: The peakidx column in featureDefinitions provides the index of each
+      chromatographic peak assigned to a feature.
+    claim_type: finding
+    speculative: false
+  - claim_text: featureValues function allows extracting feature abundances in a matrix
+      format with one row per feature.
+    claim_type: finding
+    speculative: false
+  - claim_text: Gap-filled data in featureValues integrates all signal from the m/z-retention
+      time range defined by detected peaks.
+    claim_type: finding
+    speculative: false
+  - claim_text: Any subsequent groupFeature call will sub-group and refine the previously
+      identified feature groups.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - Normalized dot-product similarity metric can be substituted with alternative similarity/distance
+    metrics via FUN parameter in EicSimilarityParam
+  - Interpolation method can be used for estimating precursor intensity instead of
+    previous scan method
+  - return.type = "List" can be used instead of default return type in chromPeakSpectra()
+  substitution_constraints:
+  - Feature grouping based on EIC similarity is computationally expensive and should
+    be applied last; works best when applied to pre-defined feature groups
+  - Abundance correlation-based grouping works best for features with higher variability
+    in concentration across samples
+  - Peak shape correlation should be performed only on subset of samples due to computational
+    intensity and noisy low-intensity peaks
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Final count of feature groups after EIC similarity refinement
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Overlay EIC plot for feature group FG.013.001
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Overlay EIC plot for feature group FG.045.001
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Calibration difference plot (m/z error before and after edgeshift calibration)
+    for the first FTICR file
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: XCMSnExp object with detected chromatographic peaks and calibrated m/z values
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Mirror-plot comparison figure showing consensus MS2 spectrum for m/z 304.1131
+    aligned with Flumazenil and Fenamiphos reference spectra
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Consensus MS2 spectrum for the chromatographic peak at m/z 304.1131
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Peak detection table listing detected chromatographic peaks with retention
+    time, m/z, and intensity
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

@@ -1,0 +1,315 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "review",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "78f8979eb0db9fb8e32ffa25ac22f7ef92c9e01d22ec0fa04e3892632e06c012"
+    }
+  ],
+  "created_at": "2026-06-15T09:39:35.903004+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Metabolomics pathway database (e.g., KEGG, Reactome, or custom database with metabolite-to-pathway mappings)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Experimental detection list: set of metabolites detected in the study",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Background set: structured list of metabolites forming the statistical background for ORA",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Background-set statistics: JSON or CSV report with total count, per-pathway counts, and composition metrics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Over-representation Analysis (ORA) in metabolomics requires careful definition of the statistical background to avoid bias and spurious pathway enrichment.",
+    "The background set must be comprehensive (all metabolites measured or measurable in the study) while excluding the experimental detection list to ensure valid statistical testing.",
+    "Pathway database quality and coverage directly affect background-set composition; missing or incomplete pathway annotations can distort enrichment p-values.",
+    "ORA assumes conditional independence between pathways given the background; pathways with zero or very few background metabolites compromise the validity of enrichment tests."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in github:cwieder__metabolomics-ORA repository containing background-set construction implementation",
+      "verify script runs without errors when executed on a synthetic detection list and pathway database input",
+      "verify output background set is a named artifact (e.g., list, file, or table) with at least one field identifying metabolite identifiers",
+      "robust to parameter choices: background set cardinality matches the documented filtering logic applied to the pathway database"
+    ],
+    "expert_review": [
+      "whether the background-set construction procedure correctly implements the statistical logic for ORA background definition as described in the paper's methods section",
+      "whether the resulting background set composition (metabolite overlap with pathway database, exclusion criteria, filtering order) aligns with best-practice guidance and stated pitfall avoidance"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How is the background set of metabolites constructed for Over-representation Analysis (ORA) in metabolomics, given an experimental detection list and a metabolomics pathway database?: 'This repository contains the code to run the simulations presented in the study.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The study provides Python code within a Jupyter notebook to implement and run simulations for pathway analysis in metabolomics, enabling reproducible construction and evaluation of background sets for ORA.: 'The Python code to generate the results is contained within the Jupyter notebook **src/reproducible_simulations.ipynb**.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Metabolomics pathway database (e.g., KEGG, Reactome, or custom database with metabolite-to-pathway mappings): '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Experimental detection list: set of metabolites detected in the study: '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Background set: structured list of metabolites forming the statistical background for ORA: '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Background-set statistics: JSON or CSV report with total count, per-pathway counts, and composition metrics: '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'The Python code to generate the results is contained within the Jupyter notebook'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Jupyter: 'The Python code to generate the results is contained within the Jupyter notebook'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "jupyter",
+      "nbconvert",
+      "--to",
+      "notebook",
+      "--execute",
+      "ora_background_set_reconstruction.ipynb",
+      "--ExecutePreprocessor.timeout=600",
+      "--output",
+      "ora_background_set_reconstruction_executed.ipynb"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "background_set_stats.csv",
+  "expected_outputs": [
+    "Background set: structured list of metabolites forming the statistical background for ORA",
+    "Background-set statistics: JSON or CSV report with total count, per-pathway counts, and composition metrics"
+  ],
+  "finding": "The study provides Python code within a Jupyter notebook to implement and run simulations for pathway analysis in metabolomics, enabling reproducible construction and evaluation of background sets for ORA.",
+  "github_name": null,
+  "input_from": null,
+  "inputs": [
+    "Metabolomics pathway database (e.g., KEGG, Reactome, or custom database with metabolite-to-pathway mappings)",
+    "Experimental detection list: set of metabolites detected in the study"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "background_set_raw.json",
+    "background_set_stats.csv"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_008"
+  ],
+  "methodology_summary": [
+    "Load the metabolomics pathway database and map metabolites to pathway annotations.",
+    "Load the experimental detection list of metabolites identified in the study.",
+    "Construct the background set by selecting all metabolites in the database that are NOT in the experimental detection list.",
+    "Apply any study-specific filtering rules (e.g., minimum pathway coverage, metabolite measurement feasibility).",
+    "Compute background-set statistics: total size, per-pathway counts, and overlap validation.",
+    "Validation: confirm background set size, pathway coverage distribution, and absence of detection-list metabolites; verify no pathway is empty after background construction."
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How is the background set of metabolites constructed for Over-representation Analysis (ORA) in metabolomics, given an experimental detection list and a metabolomics pathway database?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "metabolite-background-set-construction",
+    "pathway-database-querying",
+    "ora-statistical-background-definition",
+    "metabolite-set-composition-validation",
+    "pathway-coverage-assessment"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ora/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "system_simulation_pipeline",
+    "dataset_metabolomics_pathways"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:cwieder__metabolomics-ORA",
+  "task_description": "Implement the background-set construction procedure for Over-representation Analysis (ORA) in metabolomics given an experimental detection list and a metabolomics pathway database. Produce a background set and verify its size and composition match the expected statistical properties.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Metabolomics pathway database with metabolite-to-pathway mappings",
+      "port_id": "pathway_database",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Experimental detection list of metabolites",
+      "port_id": "detection_list",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the background-set construction procedure for ORA by adapting the provided Python code to define metabolites constituting the statistical background from a detection list and pathway database, then verify the resulting set size and composition.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Background set of metabolites for ORA",
+      "port_id": "background_set",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Background-set statistics and composition metrics",
+      "port_id": "background_stats",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "pathway-analysis",
+    "enrichment-analysis",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct the background-set selection component of the ORA pipeline",
+  "tools": [
+    "Python",
+    "Jupyter"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Jupyter, Background-set statistics: JSON or CSV report with total count, per-pathway counts, and composition metrics."
+  ],
+  "workflow_description": "1. Load the metabolomics pathway database and experimental detection list (metabolites detected in the study). 2. Apply the background-set construction logic to identify which metabolites from the full database constitute the statistical background, excluding those in the experimental detection list and applying any filtering criteria specified in the ORA method. 3. Compute background-set statistics: total count, per-pathway coverage, and overlap metrics with the detection list. 4. Validate that background-set size and composition align with expected properties (pathway coverage, non-zero pathway sizes, absence of experimental metabolites)."
+}

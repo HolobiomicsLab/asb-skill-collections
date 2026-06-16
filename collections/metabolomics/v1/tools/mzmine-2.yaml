@@ -1,0 +1,8 @@
+name: MZmine 2
+slug: mzmine-2
+derived_from:
+- doi: 10.1186/1471-2105-11-395
+  title: mzmine2
+source_repos:
+- mzmine/mzmine2
+schema_version: 0.2.0

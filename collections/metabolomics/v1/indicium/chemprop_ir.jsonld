@@ -1,0 +1,1937 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/deep-learning-module-instantiation-and-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/message-passing-neural-network-implementation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-graph-representation-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-property-prediction-feature-construction",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/neural-network-architecture-extension",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/pytorch-model-instantiation-and-forward-pass",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-feature-engineering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-features-module-integration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The chemprop-IR architecture is an extension of chemprop with new spectral features.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_chemprop_IR_system"
+        },
+        {
+          "id": "asb:spine_chemprop_base"
+        },
+        {
+          "id": "asb:spine_spectral_features"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Message passing neural networks are used for spectral predictions in this repository.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The repository is available at github:gfm-collab__chemprop-IR.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_chemprop_IR_system"
+        },
+        {
+          "id": "asb:spine_chemprop_base"
+        },
+        {
+          "id": "asb:spine_chemprop_ir_paper"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The document was synthesized on 2026-06-15T10:08:50+00:00.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Detailed information on base chemprop functionality is available in README_chemprop.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_chemprop_base"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout. The directed MPNN constructs a learned vector representation, or molecular fingerprint, from a given molecular graph by message passing. Atom and bond features are combined through the message passing steps to generate the learned molecular fingerprint. In the application of directed message passing, the messages and hidden states of the network are associated with directed edges (bonds) instead of nodes (atoms). Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
+      "asbval:note": "The paper explicitly describes Chemprop-IR as an extension of Chemprop that specializes in IR spectral prediction with 1801 output elements representing absorbances at fixed wavenumber positions.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does the chemprop-IR architecture extend the base chemprop message passing neural network with new spectral features?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:41.626313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In this paper, we investigate the application of Chemprop, a state-of-the-art MPNN, toward the prediction of IR spectra.",
+      "asbval:note": "Chemprop is explicitly named as the base MPNN architecture used in this work.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:41.626313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning. This work serves the dual purpose of providing a trained general-purpose model for the prediction of IR spectra with ease and providing the Chemprop-IR software framework for the training of new models.",
+      "asbval:note": "Chemprop-IR is the main software package developed in this paper.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:41.626313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub. An archived version of the software and the trained models associated with this publication are shared through Zenodo. In this repository, the trained models for the computed spectra and for experimental spectra are provided, allowing predictions of new spectra in any of the supported phases. The software provides tools for calculating ensemble uncertainty for predicted spectra and for calculating SIS between predictions and reference spectra. The software enables the training of new models from input spectra, using such features as the SID loss function and spectrum normalization by specified absorbance ranges.",
+      "asbval:note": "The paper provides trained models and software for training new models, but does not explicitly describe a 'spectral features module' as a distinct compilable component. The architecture includes spectral loss functions (SID) and normalization techniques, but the card's phrasing of 'spectral features module' is not explicitly named in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "instantiated chemprop-IR model with spectral features module successfully compiled",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:41.626313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features. The bond and atom features are used to generate hidden states of size 2200 at each of the directed edges. In each message passing step, the hidden states are updated according to the directed message passing procedure described by Yang et al. Following the message passing steps, atom vectors are generated from the associated directed edge hidden states. The atom vectors are averaged to form a molecular fingerprint vector of size 2200. The phase of the molecule is introduced to the molecular fingerprint vector following message passing. The molecular vector following this concatenation is size 2205 for experimental spectra models and 2200 for computed spectra models. After phase feature concatenation, the resulting vector is fed to a FFNN for readout of the model results. For each intermediate layer in the FFNN, the produced vector size is 2200. The final layer of the FFNN provides an output size of 1801.",
+      "asbval:note": "The paper describes the forward pass in detail: SMILES input \u2192 2D graph \u2192 message passing \u2192 molecular fingerprint (2200 or 2205 elements) \u2192 FFNN \u2192 output tensor of 1801 elements (absorbances at wavenumber positions).",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "forward pass output tensor from sample molecule verification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:41.626313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card frames the task as 'reconstructing' the architecture, which implies implementation/coding. The paper is a published research article describing the architecture and providing trained models, not a tutorial or implementation guide. The card's expected outputs suggest a coding/engineering task, but the paper is primarily a scientific publication.",
+        "The card's phrasing 'spectral features module' is not standard terminology in the paper. The paper refers to 'spectral loss functions' (SID, TMSE), 'spectral metrics' (SIS), and 'normalization techniques', but not a discrete 'spectral features module'."
+      ],
+      "asbval:n_drift_notes": 2,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:41.626313+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions... The phase of the molecule is introduced to the molecular fi ngerprint vector following message passing.",
+      "asbval:note": "Paper describes phase features (one-hot vector of size 5 for experimental spectra) concatenated to molecular fingerprint, but does not detail a separate 'spectral feature extraction step' as a distinct pipeline module. The paper focuses on how phase information is incorporated into the MPNN fingerprint, not on extracting spectral features from spectra themselves. The card's framing suggests feature extraction from spectral data, but the paper describes feature engineering for molecular input and phase metadata.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What are the spectral features that chemprop-IR implements to extend the base chemprop architecture for infrared spectral prediction tasks?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:58.919926+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In this paper, we investigate the application of Chemprop, a state-of-the-art MPNN, toward the prediction of IR spectra... Our method builds upon the Chemprop architecture developed by Yang et al.",
+      "asbval:note": "Chemprop is explicitly named as the base architecture upon which Chemprop-IR is built.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:58.919926+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... The Chemprop-IR software is available through a public repository with Git Hub.",
+      "asbval:note": "Chemprop-IR is the main software package developed and discussed throughout the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:58.919926+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not describe extraction of spectral features as a tensor/matrix from test molecules. Instead, it describes: (1) input molecules as SMILES strings converted to 2D graphs, (2) output as predicted absorbance vectors (1801 normalized absorbances), and (3) phase features as one-hot vectors. No intermediate 'spectral features tensor' is extracted from test molecules.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Spectral features tensor or feature matrix extracted from test molecules",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:58.919926+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub... The software provides tools for calculating ensemble uncertainty for predicted spectra and for calculating SIS between predictions and reference spectra. The software enables the training of new models from input spectra, using such features as the SID loss function and spectrum normalization by specified absorbance ranges.",
+      "asbval:note": "Code is available via GitHub and Zenodo, but the paper does not describe a standalone 'feature extraction module' as a separate, reusable component. The software is presented as an end-to-end prediction framework, not as modular feature extraction code.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Feature extraction module code or validated implementation script",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:58.919926+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not describe generation of a verification report for feature extraction. It reports model performance metrics (SIS scores, distributions) and validation set performance, but not a feature-level verification report.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Verification report confirming feature shape, data type, and completeness",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:58.919926+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card frames the task as 'implement the spectral feature extraction step' as if it were a distinct pipeline module, but the paper describes Chemprop-IR as an end-to-end architecture where molecular encoding (via MPNN) and phase metadata concatenation are integrated, not separated into a standalone feature extraction step.",
+        "The card's expected outputs suggest extracting features from test molecules (spectral features tensor), but the paper's actual pipeline takes SMILES strings as input and outputs predicted absorbance vectors. There is no intermediate spectral feature extraction from test data.",
+        "The research question asks about 'spectral features that chemprop-IR implements to extend chemprop,' which could be interpreted as asking what new features are added. The paper identifies phase information (one-hot encoded) as the key extension, but this is metadata concatenation, not spectral feature extraction in the sense the card implies."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:58.919926+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions.",
+      "asbval:note": "Paper describes Chemprop-IR as a software framework for IR spectral prediction using message passing neural networks, but does NOT explicitly discuss instantiation validation procedures, tensor dimensionality checks, or architectural constraint verification as a standalone task. The paper focuses on model training and performance evaluation, not on module instantiation validation as a discrete workflow step.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "deep-learning-module-instantiation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Instantiate and validate a deep-learning feature extraction module (such as spectral feature extractors in chemprop-IR) by loading its implementation, configuring it with molecular inputs, and verifying that output tensors match expected dimensionality, data types, and architectu",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:11:47.511230+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout.",
+      "asbval:note": "Chemprop is confirmed as the base MPNN architecture used in Chemprop-IR.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "deep-learning-module-instantiation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop: Base message-passing neural network architecture for molecular property prediction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:11:47.511230+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
+      "asbval:note": "Chemprop-IR is confirmed as an extension of Chemprop specialized for IR spectral prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "deep-learning-module-instantiation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR: Extension of chemprop with spectral feature extraction for infrared spectral predictions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:11:47.511230+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub.",
+      "asbval:note": "Paper confirms Chemprop-IR is available on GitHub but provides a different repository URL: https://github.com/gfm-collab/chemprop-IR (from reference 64). The card lists the base chemprop repo, not the Chemprop-IR-specific repo.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "deep-learning-module-instantiation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[chemprop-IR].repo",
+      "asbval:target_claim_text": "https://github.com/chemprop/chemprop",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:11:47.511230+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not describe a standalone instantiation-and-validation workflow as a discrete task. The paper focuses on model training (with pretraining strategy, loss functions, ensemble methods) and performance evaluation (SIS scores, test/validation splits), not on module instantiation validation as a separate procedural step. The paper does not discuss tensor dimensionality verification, data type checking, or architectural constraint validation as explicit validation tasks.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "deep-learning-module-instantiation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope: instantiation and validation workflow",
+      "asbval:target_claim_text": "Instantiate and validate a deep-learning feature extraction module by loading its implementation, configuring it with molecular inputs, and verifying that output tensors match expected dimensionality, data types, and architectural constraints.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:11:47.511230+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features.",
+      "asbval:note": "Paper confirms SMILES strings are used as molecular inputs and converted to 2D molecular graphs.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "deep-learning-module-instantiation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope: molecular inputs (SMILES strings or graph representations)",
+      "asbval:target_claim_text": "Molecular inputs (SMILES strings or graph representations)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:11:47.511230+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In this paper, we investigate the application of Chemprop, a state-of-the-art MPNN, toward the prediction of IR spectra... Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... In Chemprop-IR, molecules are encoded using a directed message passing neural network",
+      "asbval:note": "Paper explicitly describes Chemprop as an MPNN and Chemprop-IR as an extension for IR spectral prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "message-passing-neural-network-implementation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Implement and extend message passing neural network (MPNN) architectures for molecular property prediction, such as chemprop-IR for infrared spectral predictions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:01.278359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The directed MPNN constructs a learned vector representation, or molecular fingerprint, from a given molecular graph by message passing... The molecular vector following this concatenation is fed to a FFNN for readout of the model results... The final layer of the FFNN provides an output size of 1801",
+      "asbval:note": "Paper describes MPNN encoding followed by domain-specific spectral output (1801 absorbance values for IR spectra).",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "message-passing-neural-network-implementation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "reconstructing base MPNN architectures, integrating domain-specific spectral feature extractors",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:01.278359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features... Following the message passing steps, atom vectors are generated from the associated directed edge hidden states",
+      "asbval:note": "Paper describes forward pass from SMILES/molecular graph through message passing to output.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "message-passing-neural-network-implementation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "validating forward pass execution on molecular graph inputs",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:01.278359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In this paper, we investigate the application of Chemprop, a state-of-the-art MPNN, toward the prediction of IR spectra... Our method builds upon the Chemprop architecture developed by Yang et al.",
+      "asbval:note": "Chemprop is explicitly identified as the base MPNN framework.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "message-passing-neural-network-implementation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop as base message passing neural network framework",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:01.278359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements",
+      "asbval:note": "Chemprop-IR is explicitly described as an extension of Chemprop for IR spectral prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "message-passing-neural-network-implementation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR as extended MPNN architecture for infrared spectral predictions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:01.278359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not provide the GitHub repository URL for chemprop. Paper cites Yang et al. 2019 as the source but does not give a direct repo link.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "message-passing-neural-network-implementation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop repo URL: https://github.com/chemprop/chemprop",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:01.278359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub. An archived version of the software and the trained models associated with this publication are shared through Zenodo.",
+      "asbval:note": "Paper confirms Chemprop-IR is available on GitHub but provides the actual URL as https://github.com/gfm-collab/chemprop-IR (from reference 64), not https://github.com/chemprop/chemprop. The card's repo URL is incorrect.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "message-passing-neural-network-implementation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR repo URL: https://github.com/chemprop/chemprop",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:01.278359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph... Typical MPNN architectures represent molecular inputs as 2D graphs consisting of node and edge features",
+      "asbval:note": "Paper confirms SMILES and graph representations as inputs for MPNN-based property prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "message-passing-neural-network-implementation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have molecular input data (SMILES strings or graph representations) and need to predict molecular properties or spectra using graph neural networks",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:01.278359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra... The phase of the molecule is introduced to the molecular fingerprint vector following message passing",
+      "asbval:note": "Paper describes extending Chemprop with phase features and spectral-specific output modules.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "message-passing-neural-network-implementation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill specifically when the base chemprop MPNN must be extended with new feature modules (e.g., spectral features for IR prediction)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:01.278359+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features.",
+      "asbval:note": "Paper explicitly describes SMILES-to-graph conversion as core to Chemprop-IR architecture.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-graph-representation-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Parse molecular inputs (SMILES strings or graph structures) into standardized graph representations compatible with message passing neural networks. This skill bridges chemical notation and computational graph formats required for chemprop and chemprop-IR model ingestion.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:16.662366+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout.",
+      "asbval:note": "Paper confirms Chemprop as foundational architecture for MPNN-based molecular representation.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-graph-representation-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop \u2014 Provides the base molecular graph parsing and feature extraction module used to convert SMILES/structure inputs into node-edge tensors for MPNN ingestion",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:16.662366+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
+      "asbval:note": "Paper confirms Chemprop-IR extends Chemprop architecture; graph parsing is inherited from base Chemprop.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-graph-representation-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR \u2014 Extends chemprop's graph parsing with additional spectral feature layers; inherits and builds upon base molecular graph representation parsing",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:16.662366+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features.",
+      "asbval:note": "Paper describes SMILES input and graph conversion as standard workflow for Chemprop-IR.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-graph-representation-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When to use: You have molecular identifiers (SMILES strings or molecular structure files) that need to be converted into node-edge graph tensors for input to message passing neural network models like chemprop or chemprop-IR.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:16.662366+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "These learned fi ngerprints have been shown to outperform engineered representations such as Morgan fi ngerprints.",
+      "asbval:note": "Paper contrasts learned MPNN fingerprints with pre-engineered representations (Morgan fingerprints), supporting the distinction that graph parsing is unnecessary for pre-computed descriptors.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-graph-representation-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: Input is already a feature table or pre-computed molecular descriptor vector",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:16.662366+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "DNN architectures, such as message passing neural networks (MPNNs), have shown promise in surpassing traditional techniques from quantum chemistry in both chemical accuracy and computational expense. Typical MPNN architectures represent molecular inputs as 2D graphs consisting of node and edge features.",
+      "asbval:note": "Paper confirms MPNN-specific requirement for graph-based molecular inputs.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-graph-representation-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: Target model does not accept graph-based inputs \u2014 this skill is specific to message passing neural networks and related graph neural architectures.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:16.662366+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Spectra from any source that could not be linked to valid SMILES strings were not included. Included species were limited to those that existed as a single molecule (e.g., excluding mixtures and salts). Species were also limited to contain only the following atoms: C, H, O, N, Si, P, S, F, Cl, Br, and I.",
+      "asbval:note": "Paper describes data validation and filtering for valid SMILES and supported atom types, supporting the constraint on malformed or unsupported structures.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-graph-representation-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: Molecular structures are malformed, contain invalid atom symbols, or cannot be parsed by the underlying chemprop chemistry library.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:16.662366+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions.",
+      "asbval:note": "The paper describes Chemprop-IR as using MPNN to encode molecules and learn representations for IR spectral prediction. The card's framing of 'domain-specific molecular features' aligns with the paper's approach of learning spectral-optimized representations.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-property-prediction-feature-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Extract and construct domain-specific molecular features (e.g., spectral features for infrared predictions) from molecular graph representations to serve as input to message passing neural networks.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:31.558367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features.",
+      "asbval:note": "Paper explicitly describes SMILES-to-graph conversion and feature generation for molecular representation learning.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-property-prediction-feature-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill bridges raw molecular input (SMILES/graphs) to learned molecular representations suitable for property prediction tasks.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:31.558367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout.",
+      "asbval:note": "Paper confirms Chemprop as the base MPNN architecture that Chemprop-IR extends.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-property-prediction-feature-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop - Base message passing neural network architecture for molecular property prediction; extended by chemprop-IR",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:31.558367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra.",
+      "asbval:note": "Paper explicitly describes Chemprop-IR as an extension of Chemprop specialized for IR spectral prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-property-prediction-feature-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR - Extension of chemprop with spectral feature extraction for infrared spectral predictions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:31.558367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not provide the chemprop repository URL. The paper cites Yang et al. 2019 as the source of Chemprop but does not link to a GitHub repository for chemprop itself.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "molecular-property-prediction-feature-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop repo URL: https://github.com/chemprop/chemprop",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:31.558367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub.",
+      "asbval:note": "Paper confirms Chemprop-IR is available on GitHub but provides a different URL: https://github.com/gfm-collab/chemprop-IR (from reference 64). The card lists the URL as https://github.com/chemprop/chemprop, which appears to be incorrect for Chemprop-IR.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-property-prediction-feature-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR repo URL: https://github.com/chemprop/chemprop",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:31.558367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph... for the task of spectral predictions.",
+      "asbval:note": "Paper confirms SMILES input and IR spectral prediction as the core use case.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-property-prediction-feature-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have molecular structures (SMILES or graph formats) and need to predict a physicochemical or spectral property (e.g., infrared spectra) using a graph neural network architecture.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:31.558367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The bond and atom features are used to generate hidden states of size 2200 at each of the directed edges... The phase of the molecule is introduced to the molecular fi ngerprint vector following message passing.",
+      "asbval:note": "Paper describes domain-specific feature engineering (e.g., phase information concatenation) beyond standard atom/bond features, supporting the card's guidance.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-property-prediction-feature-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use this skill when the base model architecture (e.g., chemprop) requires spectral or domain-specific features beyond standard atom/bond embeddings, or when you are extending an existing model (like chemprop) with new feature extraction logic.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:31.558367+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/neural-network-architecture-extension/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions... The phase of the molecule is introduced to the molecular fi ngerprint vector following message passing.",
+      "asbval:note": "Paper demonstrates integration of phase features (a domain-specific feature module) into the MPNN output, but the research question frames this as a general skill/methodology for extending MPNNs. The paper shows the specific implementation for IR spectra but does not present this as a generalizable extension pattern or methodology tutorial. The claim overstates the scope as a reusable skill framework when the paper focuses on a specific application.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "neural-network-architecture-extension",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Extend an existing message passing neural network (MPNN) architecture by integrating domain-specific feature modules\u2014such as spectral feature encoders\u2014into the base model definition and validating parameter flow and output shapes.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:44.490657+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/neural-network-architecture-extension/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
+      "asbval:note": "Paper clearly demonstrates that extending a general-purpose MPNN (Chemprop) with specialized output layers and feature integration is necessary for IR spectral prediction tasks.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "neural-network-architecture-extension",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill is essential when adapting general-purpose molecular models to specialized prediction tasks (e.g., infrared spectral forecasting) that require learned representations beyond standard molecular graphs.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:44.490657+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/neural-network-architecture-extension/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The phase of the molecule is introduced to the molecular fi ngerprint vector following message passing. This process is carried out for experimental spectra models, where each entry is speci fi ed as one of the fi ve supported phases. The phase features are represented as a one-hot vector of size fi ve. This vector is concatenated to the end of the molecular fi ngerprint vector.",
+      "asbval:note": "Paper demonstrates exactly this pattern: taking the base Chemprop MPNN output (molecular fingerprint) and concatenating domain-specific features (phase information) before feeding to the FFNN readout.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "neural-network-architecture-extension",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have a working base MPNN model (e.g., chemprop) and need to add task-specific feature processing layers (spectral, electronic, or domain features) to improve predictions on a specialized molecular property or spectrum.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:44.490657+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/neural-network-architecture-extension/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR software is available through a public repository with Git Hub... An archived version of the software and the trained models associated with this publication are shared through Zenodo.",
+      "asbval:note": "Paper confirms condition (1) and (3) are met (public repo, clear interface between MPNN fingerprint and phase feature concatenation). However, the paper does not explicitly articulate condition (2) as a prerequisite or methodology step; it is implicit in the work rather than stated as a trigger condition.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "neural-network-architecture-extension",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Trigger conditions: (1) baseline model exists and is versioned in a public repository, (2) a research question articulates what additional learned representations the extension should capture, and (3) you can define a clear interface (input type, output shape) between the base mo",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:44.490657+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/neural-network-architecture-extension/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout... The directed MPNN constructs a learned vector representation, or molecular fi ngerprint, from a given molecular graph by message passing.",
+      "asbval:note": "Chemprop (case-insensitive match) is confirmed as the base MPNN architecture used for molecular graph encoding.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "neural-network-architecture-extension",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop: Base message passing neural network providing molecular graph encoding and initial feature extraction; extended by attaching spectral feature modules",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:44.490657+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/neural-network-architecture-extension/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
+      "asbval:note": "Chemprop-IR (case-insensitive) is confirmed as the extended implementation demonstrating the integration of spectral features into the base Chemprop architecture.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "neural-network-architecture-extension",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR: Reference implementation of extended chemprop with spectral features for infrared spectral predictions; demonstrates integration pattern and expected output behavior",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:44.490657+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/neural-network-architecture-extension/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not cite or reference the chemprop GitHub repository URL. Paper cites Yang et al. 2019 as the source of Chemprop but does not provide the repository link.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "neural-network-architecture-extension",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop repo: https://github.com/chemprop/chemprop",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:44.490657+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/neural-network-architecture-extension/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The molecular vector following this concatenation is size 2205 for experimental spectra models and 2200 for computed spectra models. After phase feature concatenation, the resulting vector is fed to a FFNN for readout of the model results. For each intermediate layer in the FFNN, the produced vector size is 2200. The fi nal layer of the FFNN provides an output size of 1801.",
+      "asbval:note": "Paper explicitly validates parameter flow and output shapes at each stage of the extended architecture, demonstrating the expected output behavior.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "neural-network-architecture-extension",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "The card implies expected outputs include validated parameter flow and output shapes for the extended architecture.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:44.490657+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/neural-network-architecture-extension/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The phase of the molecule is introduced to the molecular fi ngerprint vector following message passing... This vector is concatenated to the end of the molecular fi ngerprint vector.",
+      "asbval:note": "Paper demonstrates the integration method: domain-specific features (phase information) are concatenated to the MPNN-generated molecular fingerprint before passing to the FFNN readout layer.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "neural-network-architecture-extension",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "The card implies the method involves integrating domain-specific feature modules into the base MPNN definition.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:12:44.490657+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions... The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph.",
+      "asbval:note": "Paper describes instantiation and forward pass of Chemprop-IR with SMILES inputs and message passing architecture. However, the paper does NOT describe 'integrated spectral feature modules' as a separate architectural extension being added to a base model. Instead, Chemprop-IR is presented as a complete, unified architecture. The card frames this as validating 'architectural extensions to base models,' but the paper shows Chemprop-IR as an integrated whole, not as a base model with added modules.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "pytorch-model-instantiation-and-forward-pass",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Instantiate a PyTorch message passing neural network model (such as chemprop-IR) with integrated spectral feature modules, then execute a forward pass on molecular graph or SMILES inputs to verify model compilation, parameter flow, and output tensor shapes.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:03.929826+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra",
+      "asbval:note": "Paper confirms Chemprop is the base architecture and Chemprop-IR extends it. However, the 'spectral features' are not described as a separate module added to Chemprop; rather, Chemprop-IR is an extension that specializes the entire architecture for spectral prediction (1801 output elements for absorbance values, phase feature concatenation, SID loss function). The extension is architectural, not modular.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "pytorch-model-instantiation-and-forward-pass",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop (Base message passing neural network architecture extended with spectral features for molecular property prediction)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:03.929826+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
+      "asbval:note": "Chemprop-IR is confirmed as an extended variant of Chemprop for IR spectral prediction. The paper explicitly describes it as a software package and extension.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "pytorch-model-instantiation-and-forward-pass",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR (Extended variant of chemprop that integrates spectral features module for infrared spectral predictions)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:03.929826+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention PyTorch by name. While the paper describes neural network implementation and forward passes, it does not specify PyTorch as the framework. The paper references Hyperopt for hyperparameter optimization and mentions Adam optimizer, but does not explicitly state the deep learning framework used.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "pytorch-model-instantiation-and-forward-pass",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "PyTorch (Deep learning framework used to define, instantiate, and execute forward passes through the neural network model)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:03.929826+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra... The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph.",
+      "asbval:note": "The paper describes Chemprop-IR as an extension of Chemprop for spectral prediction and validates forward passes with SMILES inputs. However, the paper does not describe a workflow of 'implementing a new module' and then 'verifying instantiation'\u2014it presents Chemprop-IR as a complete, published software package. The validation described in the paper is post-hoc performance evaluation on test sets, not pre-training validation of newly added modules.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "pytorch-model-instantiation-and-forward-pass",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill after implementing a new module or architectural extension (e.g., spectral features layer) into an existing PyTorch neural network for molecular property prediction.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:03.929826+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph... The final layer of the FFNN provides an output size of 1801.",
+      "asbval:note": "Paper confirms SMILES input format and output dimensionality (1801 absorbance values). However, the paper does not describe a pre-training validation workflow. Instead, it describes the complete training pipeline with pretraining on computed spectra and refinement on experimental spectra. The paper does not present a use case of 'verifying compilation before training'\u2014it assumes the model is already built and proceeds directly to training.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "pytorch-model-instantiation-and-forward-pass",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use it when you need to verify that the extended model compiles, accepts the expected input format (SMILES or graph representation), and produces outputs with correct dimensionality before initiating model training or inference on a dataset.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:03.929826+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-feature-engineering/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions.",
+      "asbval:note": "Core claim directly supported by abstract and methods sections.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-feature-engineering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Extract and engineer spectral features from molecular structures using message passing neural networks for infrared spectral prediction tasks",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:19.556146+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-feature-engineering/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements. Each element corresponds to the absorbance at a fixed wavenumber position in the spectrum.",
+      "asbval:note": "Paper explicitly describes chemprop-IR as a specialized extension for IR spectral prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-feature-engineering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill implements domain-specific feature construction within the chemprop-IR pipeline",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:19.556146+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-feature-engineering/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout.",
+      "asbval:note": "Chemprop is confirmed as the base MPNN architecture used in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-feature-engineering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop (Base message passing neural network architecture providing molecular graph representation and feature encoding pipeline)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:19.556146+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-feature-engineering/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra.",
+      "asbval:note": "Chemprop-IR is explicitly described as the specialized extension for IR spectral prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-feature-engineering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR (Extended chemprop architecture that implements spectral features specifically designed for infrared spectral predictions)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:19.556146+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-feature-engineering/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not provide the chemprop repository URL. Paper cites Yang et al. 2019 as the source of Chemprop but does not link to a GitHub repository for the base chemprop tool.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "spectral-feature-engineering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop repo URL: https://github.com/chemprop/chemprop",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:19.556146+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-feature-engineering/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub. An archived version of the software and the trained models associated with this publication are shared through Zenodo.",
+      "asbval:note": "Paper confirms chemprop-IR is available on GitHub but provides the actual URL as https://github.com/gfm-collab/chemprop-IR (reference 64), not https://github.com/chemprop/chemprop. The card's URL appears to be incorrect or conflated with the base chemprop repository.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectral-feature-engineering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR repo URL: https://github.com/chemprop/chemprop",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:19.556146+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-feature-engineering/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph.",
+      "asbval:note": "Paper confirms SMILES strings are the primary input format for molecular structures in chemprop-IR.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-feature-engineering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have molecular structures (SMILES or graph representations) and need to predict or analyze infrared spectral properties",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:19.556146+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-feature-engineering/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra... The phase of the molecule is introduced to the molecular fingerprint vector following message passing.",
+      "asbval:note": "Paper describes chemprop-IR as a specialized architecture with domain-specific features (e.g., phase information) for IR prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-feature-engineering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use it specifically when working with the chemprop-IR architecture, which requires spectral features designed for IR spectral prediction",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:19.556146+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-features-module-integration/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions... The structure of Chemprop-IR first encodes molecules with a MPNN before further processing the output in a FFNN.",
+      "asbval:note": "The paper describes exactly this architecture: chemprop (MPNN base) extended with additional layers (FFNN readout) for spectral prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-features-module-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Integrate a spectral features module as an extension layer into the chemprop base message passing neural network architecture to enable infrared spectral predictions on molecular graphs.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:31.744067+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-features-module-integration/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The directed MPNN constructs a learned vector representation, or molecular fingerprint, from a given molecular graph by message passing... The molecular vector following this concatenation is fed to a FFNN for readout of the model results... The final layer of the FFNN provides an output size of 1801.",
+      "asbval:note": "The paper demonstrates composition of MPNN (molecular graph encoder) with FFNN (spectral feature transformer) to produce 1801-element spectral output vectors.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-features-module-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill bridges molecular graph representations with spectral property outputs by composing the base MPNN with learned spectral feature transformations.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:31.744067+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-features-module-integration/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout.",
+      "asbval:note": "Chemprop is confirmed as the base MPNN architecture. The paper cites Yang et al. 2019 as the original Chemprop work.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-features-module-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop: Base message passing neural network architecture that processes molecular graphs and produces learned molecular representations; the foundation to which the spectral features module is attached.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:31.744067+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-features-module-integration/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
+      "asbval:note": "Chemprop-IR is explicitly described as an extension of Chemprop for IR spectral prediction.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-features-module-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "chemprop-IR: Extended architecture combining chemprop base MPNN with spectral features module for infrared spectral predictions.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:31.744067+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-features-module-integration/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Model training incorporates spectra metrics and normalization techniques that offer better performance with spectral predictions than standard practice in regression models... The model makes use of pretraining using quantum chemistry calculations and ensembling of multiple submodels to improve generalizability and performance.",
+      "asbval:note": "The paper demonstrates extending chemprop to predict spectral properties (1801-element vectors) rather than scalar properties, with specialized training techniques.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-features-module-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have a trained or untrained chemprop base model (graph convolution + readout layers) and need to extend it to predict infrared spectral properties rather than scalar molecular properties.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:31.744067+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-features-module-integration/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph... The prediction model is an ensemble of 10 individually trained submodels. Spectra are represented as vectors with 1801 normalized absorbances (one every 2 cm\u22121 from 400 to 4000 cm\u22121).",
+      "asbval:note": "Paper confirms SMILES input and spectral vector targets (1801 absorbance values).",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-features-module-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "The trigger is the availability of a molecular graph representation (SMILES or explicit graph) paired with target infrared spectral data.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:31.744067+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-features-module-integration/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "MPNN weights from the initial model were carried over to the final model training and frozen, holding constant the encoding model learned in the initial model... Each of the 10 final submodels were initialized with different FFNN weights.",
+      "asbval:note": "Paper demonstrates transfer learning where MPNN weights (molecular representation encoder) are frozen and reused, while FFNN weights (spectral feature extractor) are trained separately.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-features-module-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "The goal is to reuse the learned molecular representations from chemprop while adding spectral-specific feature extraction.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:13:31.744067+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "deep-learning-module-instantiation-and-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "message-passing-neural-network-implementation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "molecular-graph-representation-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "molecular-property-prediction-feature-construction",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/neural-network-architecture-extension/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "neural-network-architecture-extension",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.625,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "pytorch-model-instantiation-and-forward-pass",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.16666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-feature-engineering/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "spectral-feature-engineering",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-features-module-integration/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "spectral-features-module-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 1.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The chemprop-IR architecture is an extension of chemprop with new spectral features.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:source_excerpt": "The `chemprop-IR` architecture is an extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:34.838154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Message passing neural networks are used for spectral predictions in this repository.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:source_excerpt": "This repository contains message passing neural networks for spectral predictions",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:34.838154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The repository is available at github:gfm-collab__chemprop-IR.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:source_excerpt": "Source: github:gfm-collab__chemprop-IR",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:34.838154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The document was synthesized on 2026-06-15T10:08:50+00:00.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:source_excerpt": "Synthesized at: 2026-06-15T10:08:50+00:00",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:34.838154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Detailed information on base chemprop functionality is available in README_chemprop.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_jcim_1c00055",
+      "asbval:source_excerpt": "Please see `README_chemprop` for details on base functionality.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:10:34.838154+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_chemprop_ir#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "hierarchical",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_chemprop_IR_system",
+      "title": "chemprop-IR",
+      "identifier": "urn:asb:spine:chemprop_IR_system"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_chemprop_base",
+      "title": "chemprop",
+      "identifier": "urn:asb:spine:chemprop_base"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_mpnn_architecture",
+      "title": "Message Passing Neural Network",
+      "identifier": "urn:asb:spine:mpnn_architecture",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_spectral_features",
+      "title": "Spectral Features",
+      "identifier": "urn:asb:spine:spectral_features"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_chemprop_ir_paper",
+      "title": "chemprop-IR GitHub Repository",
+      "identifier": "urn:asb:spine:chemprop_ir_paper"
+    }
+  ]
+}

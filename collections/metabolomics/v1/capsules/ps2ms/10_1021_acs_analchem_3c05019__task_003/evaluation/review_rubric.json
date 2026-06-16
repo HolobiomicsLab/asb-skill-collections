@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that jhhung/PS2MS repository is accessible and contains trained model artifacts or weights"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that evaluation dataset files exist in the repository with documented NPS analogue structures"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that prediction score outputs (confidence/probability values) can be extracted from the model for test compounds"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that structural diversity metadata or SMILES/InChI strings are present for evaluation set compounds"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that jhhung/PS2MS repository is accessible and contains trained model artifacts or weights",
+      "verify that evaluation dataset files exist in the repository with documented NPS analogue structures",
+      "verify that prediction score outputs (confidence/probability values) can be extracted from the model for test compounds",
+      "verify that structural diversity metadata or SMILES/InChI strings are present for evaluation set compounds",
+      "script_runs: load deposited model, execute inference on evaluation set, and generate per-compound confidence score table with no errors"
+    ],
+    "expert_review": [
+      "classify test compounds as structurally novel or diverse relative to training set; assess whether groupings align with chemical intuition",
+      "interpret confidence score distributions across structural classes; assess whether low-confidence predictions correlate plausibly with greater structural novelty or synthetic complexity",
+      "evaluate whether score variation patterns are consistent with expected model behavior for out-of-distribution or chemically unfamiliar compounds"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file exists: the MIST-CF repository (samgoldman97/mist-cf) contains a sinusoidal formula embedding implementation or module"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify script runs: a computational agent can load the embedding layer from the MIST-CF codebase and execute it on a test set of chemical formulas without errors"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify output_matches_reference: embedding vectors produced by the agent's implementation have the same dimensionality as reported in SCARF or MIST-CF documentation"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify value_in_range: all numerical values in the output embedding vectors fall within a defensible range (e.g. [-1, 1] for sinusoidal embeddings), robust to parameter choices"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify row_count_equals: the number of output embedding vectors equals the number of input chemical formulas"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file exists: the MIST-CF repository (samgoldman97/mist-cf) contains a sinusoidal formula embedding implementation or module",
+      "Verify script runs: a computational agent can load the embedding layer from the MIST-CF codebase and execute it on a test set of chemical formulas without errors",
+      "Verify output_matches_reference: embedding vectors produced by the agent's implementation have the same dimensionality as reported in SCARF or MIST-CF documentation",
+      "Verify value_in_range: all numerical values in the output embedding vectors fall within a defensible range (e.g. [-1, 1] for sinusoidal embeddings), robust to parameter choices",
+      "Verify row_count_equals: the number of output embedding vectors equals the number of input chemical formulas"
+    ],
+    "expert_review": [
+      "Confirm that the sinusoidal embedding formula and hyperparameters (e.g., frequency scaling, periodicity, dimension) match the SCARF paper specification and are correctly transcribed into the implementation",
+      "Assess reproducibility: expert inspection of whether computed embeddings exhibit expected periodicity and symmetry properties characteristic of sinusoidal encodings"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

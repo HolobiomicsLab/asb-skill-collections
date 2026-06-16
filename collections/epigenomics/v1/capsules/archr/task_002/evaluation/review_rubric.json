@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:GreenleafLab__ArchR repository contains source code for addMonocleTrajectory function"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:GreenleafLab__ArchR repository contains source code for addSlingShotTrajectories function"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that both functions accept a prepared ArchR project object as input (file_format_is R object or compatible serialization)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that addMonocleTrajectory produces a trajectory embedding object with trajectory-related slots or metadata fields"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that addSlingShotTrajectories produces a trajectory embedding object with trajectory-related slots or metadata fields"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output object class or type indicates valid ArchR project with trajectory information embedded"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:GreenleafLab__ArchR repository contains source code for addMonocleTrajectory function",
+      "verify that github:GreenleafLab__ArchR repository contains source code for addSlingShotTrajectories function",
+      "verify that both functions accept a prepared ArchR project object as input (file_format_is R object or compatible serialization)",
+      "verify that addMonocleTrajectory produces a trajectory embedding object with trajectory-related slots or metadata fields",
+      "verify that addSlingShotTrajectories produces a trajectory embedding object with trajectory-related slots or metadata fields",
+      "script_runs: execute conditional dispatch logic that selects addMonocleTrajectory OR addSlingShotTrajectories based on user parameter, without sequential execution of both",
+      "verify output object class or type indicates valid ArchR project with trajectory information embedded"
+    ],
+    "expert_review": [
+      "assess whether the conditional dispatch mechanism correctly implements mutual exclusivity (one tool invoked, not both) as stated in sub-task scope",
+      "evaluate whether the trajectory embedding output is biologically interpretable and consistent with expected Monocle3 or Slingshot trajectory representation",
+      "review whether the function signatures and parameter handling for addMonocleTrajectory and addSlingShotTrajectories match documented ArchR API"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

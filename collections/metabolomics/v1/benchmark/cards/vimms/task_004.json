@@ -1,0 +1,336 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/architecture_diagram.jpg",
+      "role": "figure",
+      "sha256": "fdc32fdacf3bfe4a83185b442ca1e896f02bda8e0a19f54907797fde1912f14b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bipartite_matching.svg",
+      "role": "figure",
+      "sha256": "a0da8d92fa15d2a8ceebbc5353a36ee4e268412d0c94509f840ce3ee43a5a1f5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "618713a59feb813219183c37df421296b2ad176c5e0117cd8810536896cd40ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/matching_workflow.svg",
+      "role": "figure",
+      "sha256": "04cfefd4c609db0d59d52111cbdefd870ca34b8dc6c2c609e892bac24c4e0c56"
+    },
+    {
+      "indexable": false,
+      "path": "figures/old_schematic.png",
+      "role": "figure",
+      "sha256": "f893d81169ef4847918c8d449413bf747bfa19be66357fc8e0446801e909905e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/schematic.png",
+      "role": "figure",
+      "sha256": "fd9ef3a7af60dd7feef1dd07039c335b23d0660d21e8bed975f97cb4f7b16112"
+    },
+    {
+      "indexable": false,
+      "path": "figures/spectra.png",
+      "role": "figure",
+      "sha256": "d85c89a571b2cc6f64a083ad86712ffddf16905b1470493ec3dd49c6e12d1c09"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "1bac10c40e955de7761b2d5dc435411bdb7d0aa120f831078cb7be87c7c2382d"
+    }
+  ],
+  "created_at": "2026-06-15T12:40:40.120497+00:00",
+  "crossref_doi": "10.1021/acs.analchem.0c03895",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "HMDB database file (hmdb_metabolites.zip or hmdb_compounds.p pickle)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Count of filtered unique formulas (integer: 73,822)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Log or summary report confirming formula-filtering step completion",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "DatabaseFormulaSampler is a ViMMS class that loads and filters molecular formulas from the HMDB; it applies m/z range and other constraints to produce a set of candidate formulas for chemical sampling.",
+    "The HMDB (Human Metabolome Database) is a public repository of known metabolite structures and properties; downloading the full database dump is the starting point for formula extraction.",
+    "Unique formula count is the total number of distinct molecular formulae that survive all filtering steps; duplicates must be removed before counting to ensure reproducibility.",
+    "The m/z range filter (e.g., 100\u20131000) constrains which formulas are retained based on their computed mass-to-charge ratio; this is a standard pre-processing step in LC-MS metabolomics."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that HMDB database file is accessible from glasgowcompbio/vimms-data repository (hmdb_metabolites.zip or equivalent raw HMDB download)",
+      "script_runs: verify that DatabaseFormulaSampler can be instantiated and executed on the downloaded HMDB file with parameters min_mz=100, max_mz=1000 without runtime errors",
+      "value_in_range: verify that the count of unique formulas returned by DatabaseFormulaSampler after filtering is exactly 73,822",
+      "file_format_is: verify that HMDB input file is in expected format (pickle, CSV, or ZIP archive as used by vimms.ChemicalSamplers.DatabaseFormulaSampler)"
+    ],
+    "expert_review": [
+      "Confirm that the filtering logic applied by DatabaseFormulaSampler (m/z range 100\u20131000 and any intensity or other thresholds) matches the documented formula-filtering step in the methods",
+      "Validate that the count of 73,822 unique formulas is reproducible across multiple runs (no randomness or database state dependency affecting the output)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Can the reported count of 73,822 unique formulas in the HMDB database (filtered for m/z 100\u20131000) be reproduced by running DatabaseFormulaSampler on the downloaded raw HMDB data?: '73822 unique formulas in filtered database'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The DatabaseFormulaSampler successfully filters the HMDB database and reports 73,822 unique formulas when applied to chemical formulae in the m/z range 100\u20131000.: '2023-07-17 12:11:54.756 | DEBUG    | vimms.ChemicalSamplers:sample:90 - Sampled formulas'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] HMDB database file (hmdb_metabolites.zip or hmdb_compounds.p pickle): 'https://github.com/glasgowcompbio/vimms-data/raw/main/hmdb_compounds.p'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Count of filtered unique formulas (integer: 73,822): 'reported count of 73,822 unique formulas in the filtered database'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Log or summary report confirming formula-filtering step completion: 'They can be sampled from databases such as HMDB'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] VIMMS: 'a flexible and modular framework designed to simulate fragmentation strategies in tandem mass spectrometry-based metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python: 'ViMMS is compatible with Python 3+'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "from vimms.ChemicalSamplers.DatabaseFormulaSampler import DatabaseFormulaSampler; from vimms.MassSpecIonisation import EI; import pickle; import zipfile; import os; db_path = '{inputs.hmdb_database}'; db = None; db_name = os.path.basename(db_path).lower(); print(f'Loading HMDB database from {db_path}'); filtered_formulas = set(); try:\n    if db_name.endswith('.zip'):\n        with zipfile.ZipFile(db_path, 'r') as z:\n            for name in z.namelist():\n                if 'hmdb' in name.lower() and name.endswith('.p'):\n                    with z.open(name) as f:\n                        db = pickle.load(f)\n                    break\n    elif db_name.endswith('.p'):\n        with open(db_path, 'rb') as f:\n            db = pickle.load(f)\n    if db is None:\n        raise ValueError('Could not load HMDB database')\n    sampler = DatabaseFormulaSampler(db, ionisation_mode=EI())\n    filtered_formulas = set(sampler.sample(len(db)) if hasattr(sampler, 'sample') else [m.formula for m in db if hasattr(m, 'formula')])\n    unique_count = len(filtered_formulas)\n    print(f'Filtered unique formulas count: {unique_count}')\n    if unique_count == 73822:\n        print('VALIDATION PASSED: Formula count matches expected 73,822')\n    else:\n        print(f'VALIDATION WARNING: Expected 73,822 but got {unique_count}')\nexcept Exception as e:\n    print(f'Error: {e}')\n    raise"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "filtered_formula_count.txt",
+  "expected_outputs": [
+    "Count of filtered unique formulas (integer: 73,822)",
+    "Log or summary report confirming formula-filtering step completion"
+  ],
+  "finding": "The DatabaseFormulaSampler successfully filters the HMDB database and reports 73,822 unique formulas when applied to chemical formulae in the m/z range 100\u20131000.",
+  "github_name": "glasgowcompbio/vimms",
+  "input_from": "task_001",
+  "inputs": [
+    "HMDB database file (hmdb_metabolites.zip or hmdb_compounds.p pickle)"
+  ],
+  "keywords": [
+    "liquid chromatography",
+    "tandem mass spectrometry",
+    "ms/ms fragmentation",
+    "untargeted metabolomics",
+    "fragmentation strategy optimization",
+    "small molecule identification"
+  ],
+  "landmark_outputs": [
+    "hmdb_loaded.p",
+    "formulas_raw.csv",
+    "formulas_filtered.csv"
+  ],
+  "linked_result_ids": [
+    "result_014",
+    "result_015"
+  ],
+  "methodology_summary": [
+    "Download the HMDB database file from the vimms-data public repository.",
+    "Load HMDB data into memory using ViMMS's built-in HMDB loading functions.",
+    "Instantiate DatabaseFormulaSampler with the loaded HMDB data and configure m/z range constraints (or other filter criteria as present in the benchmark).",
+    "Execute the sampler's filtering pipeline to extract and deduplicate molecular formulas.",
+    "Count unique formulas in the filtered output and record the result.",
+    "Validation: verify that the output formula count equals 73,822 as reported in the benchmark.",
+    "References: source article (DOI: 10.1021/acs.analchem.0c03895)"
+  ],
+  "missing_information": [
+    "No changelog or version history provided"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/fullscan_mzml"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can the reported count of 73,822 unique formulas in the HMDB database (filtered for m/z 100\u20131000) be reproduced by running DatabaseFormulaSampler on the downloaded raw HMDB data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "molecular-formula-database-filtering",
+    "hmdb-metabolite-extraction",
+    "mass-range-constraint-application",
+    "formula-sampler-configuration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_vimms/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "DATASET_HMDB",
+    "SAMPLER_DATABASE_FORMULA",
+    "RESULT_HMDB_SAMPLING"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:glasgowcompbio__vimms",
+  "task_description": "Apply DatabaseFormulaSampler to an HMDB database file and verify that the formula-filtering pipeline produces exactly 73,822 unique formulas in the filtered output.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "HMDB database file",
+      "port_id": "hmdb_database",
+      "resolved_via": null,
+      "source": "task_001/fullscan_mzml",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Apply DatabaseFormulaSampler to HMDB data with m/z bounds 100\u20131000 and verify the formula count matches the reported value of 73,822.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Count of unique formulas after filtering",
+      "port_id": "formula_count",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Set of filtered molecular formulas",
+      "port_id": "filtered_formulas",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "data-independent-acquisition",
+    "feature-detection",
+    "machine-learning",
+    "metabolite-identification",
+    "spectral-library-matching"
+  ],
+  "title": "Analyze HMDB Formula Sampling: Verify Filtered Database Size",
+  "tools": [
+    "VIMMS",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Count of filtered unique formulas (integer: 73,822), Log or summary report confirming formula-filtering step completion."
+  ],
+  "workflow_description": "1. Download the HMDB database file (hmdb_metabolites.zip or equivalent pickle file) from the vimms-data repository. 2. Load the HMDB data using ViMMS's HMDB data-loading utilities. 3. Instantiate a DatabaseFormulaSampler with the loaded HMDB database and apply formula-filtering constraints (e.g., m/z range 100\u20131000 if specified). 4. Execute the sampler's internal filtering logic to produce the set of unique molecular formulas that pass all criteria. 5. Count the total number of unique formulas in the filtered result and confirm the count equals 73,822."
+}

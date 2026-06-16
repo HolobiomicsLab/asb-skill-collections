@@ -1,0 +1,140 @@
+schema_version: 0.1.0
+workflow_id: coll_ora_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: This repository provides reproducible Python code in a Jupyter notebook
+    for simulating and analyzing Over-representation Analysis (ORA) in metabolomics
+    pathway analysis, enabling users to examine how metabolite detection coverage
+    affects ORA statistical outcomes.
+  pseudo_abstract: The study presents a Jupyter notebook-based implementation (src/reproducible_simulations.ipynb)
+    containing Python code tested on Python 3.8 with standard hardware that enables
+    reproduction of reported ORA simulation results and analysis of how metabolite
+    detection coverage impacts ORA p-value distributions. The code implements the
+    background-set selection mechanism for ORA pathway analysis in metabolomics and
+    allows users to adapt the simulations for application to their own data.
+  research_questions:
+  - Can the Python simulation code in the reproducible_simulations.ipynb notebook
+    be executed to regenerate the results demonstrating pitfalls and best practices
+    for Over-representation Analysis in metabolomics?
+  - How does the fraction of metabolites detected (coverage) relative to the pathway
+    database affect the distribution of ORA p-values and false-positive rates in metabolomics
+    pathway analysis?
+  - How is the background set of metabolites constructed for Over-representation Analysis
+    (ORA) in metabolomics, given an experimental detection list and a metabolomics
+    pathway database?
+  methods_summary: "Clone the cwieder/metabolomics-ORA repository to obtain the reproducible\
+    \ simulation notebook and dependencies. Install Python 3.8 and all required packages\
+    \ specified in the repository environment configuration. Execute the Jupyter notebook\
+    \ src/reproducible_simulations.ipynb cell-by-cell to run ORA simulations. Collect\
+    \ all generated figures and tables demonstrating ORA pitfalls and best-practice\
+    \ recommendations. Validation: regenerated outputs match figures and tables published\
+    \ in DOI:10.1371/journal.pcbi.1009105. Clone the metabolomics-ORA repository containing\
+    \ the simulation framework and pathway database. Execute the Jupyter notebook\
+    \ simulation workflow, varying the fraction of detected metabolites across coverage\
+    \ levels (e.g., 10\u2013100%). For each coverage level, run ORA on simulated metabolite\
+    \ sets and collect p-value distributions and false-positive counts at p < 0.05\
+    \ threshold. Aggregate simulation results into a summary statistics table containing\
+    \ coverage percentage, ORA p-value summary statistics (mean, median, quartiles),\
+    \ and false-positive rate with confidence intervals. Generate line plots of false-positive\
+    \ rate versus coverage and distribution plots (boxplots or violin plots) of p-values\
+    \ across coverage levels. Validation: confirm that false-positive rate tracks\
+    \ expected behavior with coverage (increasing or decreasing according to the pathway\
+    \ composition), and verify that p-value distributions show systematic shift with\
+    \ coverage level. Load the metabolomics pathway database and map metabolites to\
+    \ pathway annotations. Load the experimental detection list of metabolites identified\
+    \ in the study. Construct the background set by selecting all metabolites in the\
+    \ database that are NOT in the experimental detection list. Apply any study-specific\
+    \ filtering rules (e.g., minimum pathway coverage, metabolite measurement feasibility).\
+    \ Compute background-set statistics: total size, per-pathway counts, and overlap\
+    \ validation. Validation: confirm background set size, pathway coverage distribution,\
+    \ and absence of detection-list metabolites; verify no pathway is empty after\
+    \ background construction."
+  domain: metabolomics
+  techniques:
+  - pathway-analysis
+  - enrichment-analysis
+  - statistical-analysis
+  claims:
+  - claim_text: The study presents code to run simulations in a Jupyter notebook.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_jupyter_notebook
+  - claim_text: Users can adapt the code in the notebook to perform simulations on
+      their own data.
+    claim_type: finding
+    speculative: false
+  - claim_text: All code has been tested using Python 3.8 on MacOS version 11.2.3.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_python38
+  - claim_text: Code testing was performed with 16GB RAM standard hardware.
+    claim_type: finding
+    speculative: false
+  - claim_text: The article addresses pitfalls and best practice for the use of Over-representation
+      Analysis in pathway analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: ORA_method
+  - claim_text: The research is conducted by authors from the Department of Metabolism,
+      Digestion, and Reproduction at Imperial College London.
+    claim_type: finding
+    speculative: false
+  - claim_text: The research involves collaboration with INRA, Toulouse University,
+      INP, UMR 1331, Toxalim Research Centre in Food Toxicology.
+    claim_type: finding
+    speculative: false
+  - claim_text: The repository can be cloned from GitHub at the URL github.com/cwieder/metabolomics-ORA.git.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: open
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Summary statistics table (CSV or TSV) with coverage levels, ORA p-value statistics,
+    and false-positive rates
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Figure(s) showing false-positive rate and ORA p-value distribution as a function
+    of metabolite detection coverage
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Background set: structured list of metabolites forming the statistical background
+    for ORA'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Background-set statistics: JSON or CSV report with total count, per-pathway
+    counts, and composition metrics'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file '.github/workflows/main.yml' exists in cloned repository pbjarterot/Met-ID"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "CI workflow exit code equals 0 (success), or document the specific failure stage"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for any badge/status artifact (e.g., README.md badge markdown) that claims passing CI status"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file '.github/workflows/main.yml' exists in cloned repository pbjarterot/Met-ID",
+      "script_runs: execute the GitHub Actions workflow main.yml locally (using act, tox, or equivalent CI simulator) and capture exit code",
+      "output_matches_reference: CI workflow exit code equals 0 (success), or document the specific failure stage and error message if non-zero",
+      "verify file_exists for any badge/status artifact (e.g., README.md badge markdown) that claims passing CI status"
+    ],
+    "expert_review": [
+      "assess whether the locally-simulated CI environment and dependencies sufficiently mirror the GitHub Actions runner specification (OS, Python version, RDKit version) to confirm reproducibility",
+      "evaluate whether any environment-specific or credential-dependent steps (e.g., API keys, private data) prevent genuine local reproduction and determine if the workflow is truly reproducible without external services"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

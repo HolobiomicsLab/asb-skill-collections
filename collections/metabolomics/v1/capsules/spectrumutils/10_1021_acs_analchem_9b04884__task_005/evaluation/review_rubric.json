@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: output PNG or SVG artifact from spectrum_utils.plot"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output artifact is valid PNG or SVG (byte-for-byte magic number check)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "rendered figure contains annotated b and y ion labels in the output artifact (ro"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: output PNG or SVG artifact from spectrum_utils.plot",
+      "file_format_is: output artifact is valid PNG or SVG (byte-for-byte magic number check)",
+      "script_runs: Python script successfully loads USI mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:1 using spectrum_utils",
+      "script_runs: annotate_proforma method executes without exception when called with ion_types parameter including b and y ions",
+      "output_matches_reference: rendered figure contains annotated b and y ion labels in the output artifact (robust to rendering engine variation in exact pixel placement)"
+    ],
+    "expert_review": [
+      "visual inspection of rendered spectrum confirms b/y ion annotations are chemically plausible and positioned at correct m/z values",
+      "expert assessment that annotated fragment ions follow ProForma 2.0 specification as claimed in package documentation"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

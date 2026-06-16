@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify Docker image adafede/tima-r can be pulled from hub.docker.com without authentication errors"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify container launches without crashing (exit code 0 or expected interactive state within 30 seconds)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify tima entry point is callable within running container (e.g., 'tima --help' or 'tima --version' returns output with exit code 0)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify help or version output contains recognizable tima identifier or version string"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify Docker image adafede/tima-r can be pulled from hub.docker.com without authentication errors",
+      "verify container launches without crashing (exit code 0 or expected interactive state within 30 seconds)",
+      "verify tima entry point is callable within running container (e.g., 'tima --help' or 'tima --version' returns output with exit code 0)",
+      "verify help or version output contains recognizable tima identifier or version string"
+    ],
+    "expert_review": [
+      "confirm that the entry point command and output format align with documented tima R package API expectations",
+      "assess whether any startup warnings or deprecations in container logs indicate functional issues"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

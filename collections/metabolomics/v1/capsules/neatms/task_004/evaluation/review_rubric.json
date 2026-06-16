@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at github:bihealth__NeatMS containing nn_handler module with create_batches() method"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "batch artifacts generated for normalise_class=True condition (train, test, valid"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "batch artifacts generated for normalise_class=False condition (train, test, vali"
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "train/test/validation split proportions are approximately 80:10:10 (\u00b12 percentag"
+    },
+    {
+      "id": "pf_007",
+      "kind": "row_count_equals",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "sum of train + test + validation batch row counts equals total input dataset row"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at github:bihealth__NeatMS containing nn_handler module with create_batches() method",
+      "script_runs: invoke nn_handler.create_batches() with normalise_class=True using default 80:10:10 split and confirm execution completes without error",
+      "script_runs: invoke nn_handler.create_batches() with normalise_class=False using default 80:10:10 split and confirm execution completes without error",
+      "file_exists: batch artifacts generated for normalise_class=True condition (train, test, validation batch files)",
+      "file_exists: batch artifacts generated for normalise_class=False condition (train, test, validation batch files)",
+      "value_in_range: verify train/test/validation split proportions are approximately 80:10:10 (\u00b12 percentage points) for both conditions",
+      "row_count_equals: sum of train + test + validation batch row counts equals total input dataset row count for both conditions"
+    ],
+    "expert_review": [
+      "verify that class-normalized batches (normalise_class=True) satisfy equal-class-count constraint: all classes present in each batch have equal or near-equal peak counts as documented",
+      "verify that non-normalized batches (normalise_class=False) preserve original class distribution without forced equalization",
+      "assess whether batch creation parameters and output structure conform to NeatMS design specification for downstream neural network training"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "github.com"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the Logger component output file exists and is valid JSON or structured text for",
+      "value": "JSON"
+    },
+    {
+      "id": "pf_004",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the Logger output contains per-attribute fill-rate statistics (quantitative prog",
+      "value": "per-attribute fill-rate statistics (quantitative progress metrics)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the summary table structure includes named metadata field columns and numeric co"
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "all fill-rate values in the summary table are between 0 and 100 (or 0 and 1 if n"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that a public .msp test file is accessible in the github.com/RECETOX/MSMetaEnhancer repository (check repository structure or documentation for file location)",
+      "script_runs: execute MSMetaEnhancer annotation pipeline on the .msp file with logging enabled and verify that the process completes without fatal errors",
+      "file_format_is: verify that the Logger component output file exists and is valid JSON or structured text format",
+      "contains_substring: verify that the Logger output contains per-attribute fill-rate statistics (quantitative progress metrics)",
+      "output_matches_reference: verify that the summary table structure includes named metadata field columns and numeric coverage/fill-rate values, robust to ordering and whitespace",
+      "value_in_range: verify that all fill-rate values in the summary table are between 0 and 100 (or 0 and 1 if normalized), parameter-sensitive to normalization convention"
+    ],
+    "expert_review": [
+      "assess whether the per-attribute fill-rate statistics reported in the Logger output are consistent with expected behavior for the annotation services queried (CIR, CTS, PubChem, IDSM, BridgeDb)",
+      "evaluate whether the summary table's coverage metrics reflect realistic annotation success rates given potential service downtime, rate limiting, or malformed input compounds",
+      "assess whether the choice and labeling of metadata fields in the summary table align with the package's stated design (SMILES, InChI, CAS number, and related attributes)"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

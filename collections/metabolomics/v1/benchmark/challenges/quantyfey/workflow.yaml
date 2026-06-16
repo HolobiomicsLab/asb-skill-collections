@@ -1,0 +1,110 @@
+schema_version: 0.1.0
+workflow_id: coll_quantyfey_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: QuantyFey is a Shiny application for visualization, analysis, and quantification
+    of mass spectrometry data using external calibration, designed to address intensity
+    drifts through multiple correction strategies.
+  pseudo_abstract: QuantyFey implements an external calibration quantification module
+    for mass spectrometry data and incorporates multiple correction strategies to
+    address intensity drifts in MS datasets. The application integrates these mechanisms
+    within a Shiny-based pipeline to enable accurate quantification of mass spectrometry
+    data. QuantyFey is currently restricted to Windows operating systems; cross-platform
+    deployment to Linux and macOS would require resolution of unidentified platform-specific
+    dependencies.
+  research_questions:
+  - How does QuantyFey implement external calibration to convert raw mass spectrometry
+    intensity measurements into quantified concentration values?
+  - What correction strategies does QuantyFey implement to address intensity drifts
+    in mass spectrometry datasets?
+  - What platform-specific dependencies currently prevent QuantyFey from running on
+    Linux or macOS?
+  methods_summary: "Load and parse raw MS intensity data and calibration standard\
+    \ reference data Fit a regression model (linear or polynomial) relating MS intensity\
+    \ to known standard concentrations Evaluate model fit quality using R\xB2 and\
+    \ residual diagnostics Apply the calibration model to convert raw sample intensities\
+    \ to quantified concentrations Validation: Calibration model R\xB2 \u2265 0.99\
+    \ and prediction residuals within acceptable range for quantitative accuracy Load\
+    \ raw MS intensity table into QuantyFey Shiny interface Inspect and diagnose intensity\
+    \ drift patterns in the dataset Select appropriate drift correction strategy from\
+    \ QuantyFey's available methods Apply correction algorithm to remove or mitigate\
+    \ intensity drift artifacts Validation: Corrected intensity table exhibits reduced\
+    \ drift while preserving quantitative relationships and peak identity Retrieve\
+    \ and parse the QuantyFey source code from the CDLMarkus/QuantyFey repository.\
+    \ Perform static code analysis to identify Windows-only dependencies, hard-coded\
+    \ file paths, and platform-conditional logic. Document all identified incompatibilities\
+    \ with OS context and severity level. Refactor configuration and application code\
+    \ to use platform-agnostic patterns (file.path, Sys.info(), conditional package\
+    \ loading). Validation: Modified application launches without errors on a Linux\
+    \ or macOS test environment and produces a compatibility report with zero unresolved\
+    \ critical dependencies."
+  domain: bioinformatics
+  techniques: []
+  claims:
+  - claim_text: QuantyFey is a Shiny application for the visualization, analysis,
+      and quantification of mass spectrometry data using external calibration.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_quantyfey
+  - claim_text: QuantyFey is specifically designed to address intensity drifts in
+      datasets.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_quantyfey
+  - claim_text: QuantyFey offers multiple correction strategies to ensure accurate
+      quantification.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_quantyfey
+  - claim_text: QuantyFey is compatible with Windows operating systems only.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_quantyfey
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Corrected MS intensity table with drift correction applied
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Modified Shiny application configuration files with platform-agnostic code
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Platform dependency resolution and compatibility report
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Test log confirming successful application launch on Linux or macOS
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

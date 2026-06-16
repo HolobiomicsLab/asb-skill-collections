@@ -1,0 +1,431 @@
+schema_version: 0.1.0
+workflow_id: coll_scanpy_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: Scanpy is a scalable Python toolkit for analyzing single-cell gene expression
+    data, integrating preprocessing, visualization, clustering, trajectory inference,
+    and differential expression testing with the anndata data structure.
+  pseudo_abstract: Scanpy provides a comprehensive set of computational methods for
+    single-cell analysis, including preprocessing functions for normalization and
+    quality control, graph-based clustering via the Leiden algorithm, embedding techniques
+    such as UMAP and t-SNE, trajectory inference through PAGA, and differential expression
+    testing via rank_genes_groups. The toolkit is designed to handle large datasets
+    efficiently, demonstrated through reproduction of standard workflows on benchmark
+    datasets including PBMC3k and paul15 hematopoiesis data. Testing is performed
+    using pytest with Hatch environment configuration, and the implementation leverages
+    the anndata data structure for organizing and annotating single-cell observations
+    and gene expression matrices.
+  research_questions:
+  - Does Scanpy successfully execute a complete single-cell analysis workflow including
+    preprocessing, clustering, and embedding on standard datasets?
+  - Can preprocessing functions in the scanpy pp module operate on Dask-backed AnnData
+    objects without eagerly loading the entire expression matrix into memory?
+  - Does Scanpy's rank_genes_groups function with Wilcoxon test produce marker gene
+    rankings that match expected documentation examples when applied to leiden-clustered
+    pbmc3k data?
+  - How does the PAGA (Partition-based Graph Abstraction) algorithm construct a connectivity
+    matrix from clustered single-cell data, and what is the expected dimensionality
+    of the resulting abstraction?
+  - Does the Scanpy test suite execute without failures when invoked via the Hatch
+    environment using the standard test command?
+  methods_summary: "Load pbmc3k dataset as an AnnData object containing ~3,000 cells\
+    \ and ~13,000 genes. Apply depth normalization followed by log1p transformation\
+    \ to stabilize variance and scale expression values. Select ~2,000 highly variable\
+    \ genes to reduce noise and focus on genes with biological signal. Scale gene\
+    \ expression to unit variance and compute PCA for dimensionality reduction. Construct\
+    \ k-nearest neighbor graph using Euclidean distance in PCA space (n_neighbors=15).\
+    \ Detect cell clusters using the Leiden community-detection algorithm on the neighbor\
+    \ graph. Embed cells in 2-D space using UMAP for visualization, preserving local\
+    \ and global structure. Validation: Verify that adata.obs contains 'leiden' column\
+    \ with \u22652 unique cluster labels and adata.obsm contains 'X_umap' with shape\
+    \ (n_cells, 2). References: source article (DOI: 10.1186/s13059-017-1382-0) Load\
+    \ or construct an AnnData object with Dask-backed expression matrix. Execute a\
+    \ pp module function with Dask-compatible parameters. Verify lazy evaluation by\
+    \ confirming operation completes without materializing full matrix. Validate AnnData\
+    \ structure: obs/var dimensions, metadata integrity, and array type consistency.\
+    \ Validation: operation completes successfully with Dask array remaining un-materialized\
+    \ and obs/var dimensions matching expected cell and gene counts. References: source\
+    \ article (DOI: 10.1186/s13059-017-1382-0) Load pre-processed pbmc3k dataset with\
+    \ pre-computed leiden clusters Apply Wilcoxon rank-sum test via tl.rank_genes_groups\
+    \ to identify differentially expressed genes per cluster Extract ranked results\
+    \ using sc.get.rank_genes_groups_df or access adata.uns Filter and sort by log\
+    \ fold-change and adjusted p-value to identify top marker genes Compare against\
+    \ known reference marker gene names and score ranges from Scanpy documentation\
+    \ Validation: Top marker gene names and p-value/fold-change ranges match documented\
+    \ examples References: source article (DOI: 10.1186/s13059-017-1382-0) Load paul15\
+    \ dataset into an AnnData object using Scanpy's dataset module. Preprocess by\
+    \ computing k-nearest neighbors graph to establish cell\u2013cell connectivity.\
+    \ Partition cells into clusters using Leiden algorithm to define cluster-level\
+    \ groupings. Apply PAGA to abstract the neighborhood graph into a coarse-grained\
+    \ partition-based graph where nodes are clusters and edges represent inter-cluster\
+    \ connectivity. Validation: confirm that adata.uns['paga'] key exists, contains\
+    \ a 'connectivities' sparse matrix, and matrix dimensions equal (n_unique_clusters,\
+    \ n_unique_clusters). References: source article (DOI: 10.1186/s13059-017-1382-0)\
+    \ Clone the scverse/scanpy repository locally and navigate to the repository root\
+    \ directory. Create and activate the Hatch test environment by invoking `hatch\
+    \ test`, which reads hatch.toml and installs dependencies. Execute the full pytest\
+    \ test suite, which reads pytest configuration and runs all test modules in scanpy/tests\
+    \ with matplotlib plot comparison setup active. Capture and parse the test execution\
+    \ output to confirm exit code is 0 and no non-skipped test failures are reported.\
+    \ Validation: confirm test run exits with code 0 and the summary line reports\
+    \ zero failed tests, matching the CI badge passing state reported by the repository.\
+    \ References: source article (DOI: 10.1186/s13059-017-1382-0)"
+  domain: transcriptomics
+  techniques:
+  - dimensionality-reduction
+  - clustering
+  - batch-correction
+  - normalization
+  - statistical-analysis
+  claims:
+  - claim_text: Scanpy is a scalable toolkit for analyzing single-cell gene expression
+      data built jointly with anndata.
+    claim_type: finding
+    evidence_step: task_001
+    speculative: false
+    source_task_kind: reproduction
+    entity_id: scanpy_system
+  - claim_text: Scanpy includes preprocessing, visualization, clustering, trajectory
+      inference and differential expression testing.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy is built in Python.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Before filing an issue, contributors should search the repository
+      to see if someone has already reported the same issue.
+    claim_type: finding
+    speculative: false
+  - claim_text: A minimal complete verifiable example should be provided for any bug
+      report.
+    claim_type: finding
+    speculative: false
+  - claim_text: Environment information in Scanpy can be obtained via sc.logging.print_versions().
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Code contributions to Scanpy should follow the contribution guide
+      in the main documentation.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: The AnnData class is reexported from the anndata module in Scanpy.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides a Neighbors class to represent data as a neighborhood
+      structure, usually a knn graph.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides dataset loading functions including pbmc3k, pbmc68k_reduced,
+      and paul15.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: The pp.subsample, tl.louvain, and logging.print_versions functions
+      are deprecated in Scanpy.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy has experimental preprocessing methods including normalize_pearson_residuals
+      and highly_variable_genes.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: The sc.get module provides convenience functions for getting values
+      back in useful formats.
+    claim_type: finding
+    speculative: false
+  - claim_text: Scanpy is imported as sc using the command import scanpy as sc.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Additional functionality in Scanpy is available across the broader
+      scverse ecosystem.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides read functions for common file formats including read_10x_h5,
+      read_10x_mtx, and read_visium.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides metrics functions including modularity, confusion_matrix,
+      gearys_c, and morans_i.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: The plotting module scanpy.pl largely parallels the tl.* and some
+      of the pp.* functions.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides generic plotting functions including scatter, heatmap,
+      dotplot, violin, and matrixplot.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides plotting classes DotPlot, MatrixPlot, and StackedViolin
+      for fine tuning of visual parameters.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides preprocessing visualization functions for quality
+      control including highest_expr_genes and highly_variable_genes.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides PCA plotting functions including pca, pca_loadings,
+      pca_variance_ratio, and pca_overview.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides embedding plotting functions including tsne, umap,
+      diffmap, draw_graph, spatial, and embedding.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides trajectory and clustering visualization functions
+      including dpt_groups_pseudotime, dpt_timeseries, paga, paga_path, and paga_compare.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides marker gene visualization functions including rank_genes_groups,
+      rank_genes_groups_violin, rank_genes_groups_heatmap, and rank_genes_groups_dotplot.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy preprocessing includes filtering of highly-variable genes,
+      batch-effect correction, per-cell normalization, and preprocessing recipes.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides basic preprocessing functions including calculate_qc_metrics,
+      filter_cells, filter_genes, highly_variable_genes, log1p, pca, and normalize_total.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides preprocessing recipes including recipe_zheng17, recipe_weinreb17,
+      and recipe_seurat.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides data integration functions including combat and harmony_integrate.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides doublet detection functions including scrublet and
+      scrublet_simulate_doublets.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides a neighbors preprocessing function.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides query functions including biomart_annotations, gene_coordinates,
+      mitochondrial_genes, and enrich.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides a set_figure_params function for setting default matplotlib.rcParams.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides a settings object for configuring Scanpy.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy settings include Preset and Verbosity enumerations.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy settings include figdir, cachedir, datasetdir, file_format_figs,
+      and file_format_data for IO.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides a logging.print_header function to print versions
+      of packages that might influence numerical results.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy tools include embedding methods such as pca, tsne, umap, draw_graph,
+      and diffmap.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides clustering and trajectory inference tools including
+      leiden, dendrogram, dpt, and paga.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides a data integration tool called tl.ingest.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides marker gene tools including rank_genes_groups, filter_rank_genes_groups,
+      and marker_gene_overlap.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy provides gene scoring tools including score_genes and score_genes_cell_cycle.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy is a community driven project embedded in the scverse consortium.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: The scverse Discourse forum is the place to ask usage questions and
+      for longer form discussions around the project.
+    claim_type: finding
+    speculative: false
+  - claim_text: The Scanpy and anndata issue trackers are for reports and discussion
+      of bug reports, documentation issues, and feature requests.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Philipp Angerer is the lead developer of Scanpy since 2023.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Code contributions to Scanpy will be formatted and style checked using
+      Ruff.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: To build Scanpy docs, run hatch run docs:build.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy uses the numpydoc style for writing docstrings.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy uses pytest for testing.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: To run Scanpy tests, run hatch test.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy follows semantic versioning with major.minor.point version
+      numbering.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Point releases in Scanpy should have no changes beyond bug fixes.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Minor releases in Scanpy can include new features.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Major releases in Scanpy can break old APIs.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy external module includes exporting functions spring_project
+      and cellbrowser.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy is no longer accepting new tools into scanpy.external.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy external plotting module provides phate, trimap, sam, and wishbone_marker_trajectory
+      functions.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy external preprocessing module provides data integration functions
+      including bbknn, mnn_correct, and scanorama_integrate.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  - claim_text: Scanpy can be installed using pip with the command pip install 'scanpy[leiden]'.
+    claim_type: finding
+    speculative: false
+    entity_id: scanpy_system
+  speculative: false
+  task_openness: open
+  method_alternatives:
+  - virtual environments or conda environments as alternatives to Hatch for development
+    environments
+  substitution_constraints: []
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: AnnData object with processed expression data, retaining Dask-backed or sparse
+    structure without full materialization
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Verification report confirming obs/var structure integrity and memory efficiency
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: DataFrame of ranked marker genes per leiden cluster with gene names, log fold-change,
+    and adjusted p-values
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Validation report confirming top marker gene names and score ranges match
+    documentation
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: AnnData object with 'paga' key in uns containing partition-based graph abstraction
+    results, including a connectivity matrix of shape (n_clusters, n_clusters)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Test execution report with exit code 0 and zero non-skipped test failures
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Console output log from pytest showing all test results and summary statistics
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

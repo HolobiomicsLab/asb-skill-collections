@@ -1,0 +1,10 @@
+name: Singularity
+slug: singularity
+evidence_spans:
+- Both Docker and Singularity (for high-performance computing) are supported
+derived_from:
+- doi: 10.1021/jasms.4c00364
+  title: nextflow4msdial
+source_repos:
+- Nextflow4Metabolomics/nextflow4ms-dial
+schema_version: 0.2.0

@@ -1,0 +1,869 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "figures/test_chromatogram_plot[ms_matplotlib-kwargs0].png",
+      "locator_id": "pkg_88e7cac7",
+      "locator_kind": "package_artifact",
+      "name": "figures/test_chromatogram_plot[ms_matplotlib-kwargs0].png",
+      "prose": "Chromatogram figure file (PNG or interactive HTML) generated with ms_matplotlib backend",
+      "score": 0.2857,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/test_mobilogram_plot[ms_matplotlib-kwargs0].png",
+      "locator_id": "pkg_50ed52bc",
+      "locator_kind": "package_artifact",
+      "name": "figures/test_mobilogram_plot[ms_matplotlib-kwargs0].png",
+      "prose": "Mobilogram figure file (PNG or interactive HTML) generated with ms_matplotlib backend",
+      "score": 0.2857,
+      "side": "expected_output"
+    },
+    {
+      "locator": "figures/test_peakmap_mz_im[ms_matplotlib].png",
+      "locator_id": "pkg_9476b907",
+      "locator_kind": "package_artifact",
+      "name": "figures/test_peakmap_mz_im[ms_matplotlib].png",
+      "prose": "PeakMap figure file (PNG or interactive HTML) generated with ms_matplotlib backend",
+      "score": 0.2857,
+      "side": "expected_output"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/OpenMS.svg",
+      "role": "figure",
+      "sha256": "0ee26840faa3ce47adc3dce8041a01befdee718de6c4146c94a9c7900ff4ec80"
+    },
+    {
+      "indexable": false,
+      "path": "figures/feature_boundary.png",
+      "role": "figure",
+      "sha256": "c6b79367c06ad83e9d1c8a5c8a268fdfd03479f4daefb5312926770498f79083"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure1.svg",
+      "role": "figure",
+      "sha256": "9d68124b85dbeb8fb438f6c37aa0904bf54490f5a17df865f4e46d41994b806b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/peak_boundary.png",
+      "role": "figure",
+      "sha256": "0af04c72bd8ed0e2f31adb0737f7ebd1cee0c74d6fe386ec66accfdf92b7a65a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/pyOpenMSviz_logo_color.png",
+      "role": "figure",
+      "sha256": "ceaeffc928521e4b5e13793b4ef10d6120410450097fbb8c559d19c4f37b4181"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "88e7cac74aad391687069eb4c4d6edac8ad5e02ff27fe5b73ff4f73271db268f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "7dc214d47e3ba04d49043c711b49edbd77eee331640f2e65ea29ceb41ad0e8a0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "6107f3ae53cf20e2ba220e847ee2dde5f2cd9533c0e8da5ba139e92f12685668"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "d4e105b89963704cb10a1a1aecc3582e85b802f2df675792471dfe6b44ca2c8a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_plot[ms_matplotlib-kwargs4].png",
+      "role": "figure",
+      "sha256": "d953a0140849e75037ab6b0351ec948d5f4340193337f7fc59c1c2067fc2a08d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_chromatogram_with_annotation[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "aa93c54ffae06c504458b99bd3c32db005e56988dff7c48483d6820ebd6a6b00"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "50ed52bc21729c2a755461bb67cb6db3699f1d53497d54663f99692773d472b9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "3a2513944a8eed16c352f3835bb25105a51b81a66ab6bd8da6d31530bc2f745c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "fe4ce3d6644427846010c86faa8777979d05ed2d9fd2810fe38a3c55b2e8b4b9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_mobilogram_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "f9db27c57161026399f082fb93ecc9a3ece656a17f124f94c4ee03be9684a91b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_mz_im[ms_matplotlib].png",
+      "role": "figure",
+      "sha256": "9476b907c61ce2391cc97afb08cc84bd56f527ae45b1674dd6d058a22aea163a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs0].png",
+      "role": "figure",
+      "sha256": "f457beb583e235d069b94c6ff2e0348c05656514e9d4d3578c244aafc269814a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs1].png",
+      "role": "figure",
+      "sha256": "42c8bb546b740e25661992c025c16816849cd375b801f73a65d3e2f7dfc4a097"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs2].png",
+      "role": "figure",
+      "sha256": "50fb29dbdd2f63f513b51a7b5ee91d8a4f973e16e4d35a69904af43ca0df6562"
+    },
+    {
+      "indexable": false,
+      "path": "figures/test_peakmap_plot[ms_matplotlib-kwargs3].png",
+      "role": "figure",
+      "sha256": "843c3ffa9401b0b475f66b6b9868b71e6e949ebf9e10a932833dc1c5f29a861d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d835dc4650ebf688b4204a6596d45f4e99c10eb50db50b32e49eb261ea85b272"
+    }
+  ],
+  "created_at": "2026-06-16T07:19:11.067804+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "mzML mass spectrometry data files loadable via pymzml or pyOpenMS",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Bruker .d format ion mobility data loadable via AlphaTims",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Gallery reference example scripts for spectrum, chromatogram, mobilogram, and peakmap plots",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spectrum figure file (PNG or interactive HTML) generated with ms_matplotlib backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spectrum figure file (PNG or interactive HTML) generated with ms_bokeh backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spectrum figure file (PNG or interactive HTML) generated with ms_plotly backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Chromatogram figure file (PNG or interactive HTML) generated with ms_matplotlib backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Chromatogram figure file (PNG or interactive HTML) generated with ms_bokeh backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Chromatogram figure file (PNG or interactive HTML) generated with ms_plotly backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mobilogram figure file (PNG or interactive HTML) generated with ms_matplotlib backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mobilogram figure file (PNG or interactive HTML) generated with ms_bokeh backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mobilogram figure file (PNG or interactive HTML) generated with ms_plotly backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "PeakMap figure file (PNG or interactive HTML) generated with ms_matplotlib backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "PeakMap figure file (PNG or interactive HTML) generated with ms_bokeh backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "PeakMap figure file (PNG or interactive HTML) generated with ms_plotly backend",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Spectrum plots display m/z ratios (x-axis) versus signal intensity (y-axis), with peaks representing charged molecules detected by the mass spectrometer.",
+    "Chromatograms plot retention time (x-axis) versus intensity (y-axis) and may be separated by the 'by' parameter into distinct mass traces for different ion species or precursor masses.",
+    "Mobilograms are analogous to chromatograms but use ion mobility (inverse reduced mobility or 1/K0) on the x-axis, enabling visualization of conformational separation in drift-tube or traveling-wave ion mobility spectrometry.",
+    "PeakMaps are 2D heatmaps with m/z on x-axis and retention time (or ion mobility) on y-axis, with color or z-axis intensity representing abundance; marginal 1D chromatograms or spectra can be added via add_marginals.",
+    "The three backends (matplotlib, Bokeh, Plotly) produce different output formats: matplotlib generates static PNG/PDF, Bokeh generates interactive HTML with client-side rendering, and Plotly generates interactive HTML with WebGL support for 3D plots."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify file exists for each of: ChromatogramPlot, MobilogramPlot, SpectrumPlot, PeakMapPlot output figures under matplotlib backend",
+      "Verify file exists for each of: ChromatogramPlot, MobilogramPlot, SpectrumPlot, PeakMapPlot output figures under Bokeh backend",
+      "Verify file exists for each of: ChromatogramPlot, MobilogramPlot, SpectrumPlot, PeakMapPlot output figures under Plotly backend",
+      "Verify file_format_is for each generated plot output (PNG, HTML, or SVG as appropriate to backend)",
+      "Verify script_runs: execution of plot generation code using mzML input via pymzml/pyOpenMS without errors",
+      "Verify script_runs: execution of plot generation code using Bruker .d input via AlphaTims without errors",
+      "Output matches reference deposit: byte-for-byte comparison of static plot outputs (matplotlib/SVG) against gallery reference files; robust to parameter choices for interactive outputs (Bokeh/Plotly HTML)"
+    ],
+    "expert_review": [
+      "Visual inspection of generated ChromatogramPlot figures across all three backends for correct intensity vs. retention time representation",
+      "Visual inspection of generated MobilogramPlot figures across all three backends for correct intensity vs. ion mobility representation",
+      "Visual inspection of generated SpectrumPlot figures across all three backends for correct m/z vs. intensity representation",
+      "Visual inspection of generated PeakMapPlot figures across all three backends for correct 2D m/z vs. retention time heatmap/scatter representation",
+      "Verification that interactive features (zoom, pan, hover tooltips) function correctly in Bokeh and Plotly outputs"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Do the four core MS plot components (ChromatogramPlot, MobilogramPlot, SpectrumPlot, PeakMapPlot) successfully render output figures across all three supported plotting backends (matplotlib, Bokeh, Plotly) when executed with publicly available example data?: 'integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] pyOpenMS-Viz integrates seamlessly with multiple plotting library backends including matplotlib, Bokeh, and Plotly, enabling multi-backend visualization of mass spectrometry data.: 'It integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] mzML mass spectrometry data files loadable via pymzml or pyOpenMS: 'Below are a few examples of how to format data as a pandas dataframe from various python libraries'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Bruker .d format ion mobility data loadable via AlphaTims: '.d\n--\n\n.. toctree::\n   :maxdepth: 1\n\n   alphatims'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Gallery reference example scripts for spectrum, chromatogram, mobilogram, and peakmap plots: 'gallery_scripts/ms_matplotlib/plot_spectrum_ms_matplotlib.py\n   gallery_scripts/ms_bokeh/plot_spectrum_ms_bokeh.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Spectrum figure file (PNG or interactive HTML) generated with ms_matplotlib backend: 'gallery_scripts/ms_matplotlib/plot_spectrum_ms_matplotlib.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Spectrum figure file (PNG or interactive HTML) generated with ms_bokeh backend: 'gallery_scripts/ms_bokeh/plot_spectrum_ms_bokeh.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Spectrum figure file (PNG or interactive HTML) generated with ms_plotly backend: 'gallery_scripts/ms_plotly/plot_spectrum_ms_plotly.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Chromatogram figure file (PNG or interactive HTML) generated with ms_matplotlib backend: 'gallery_scripts/ms_matplotlib/plot_chromatogram_ms_matplotlib.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Chromatogram figure file (PNG or interactive HTML) generated with ms_bokeh backend: 'gallery_scripts/ms_bokeh/plot_chromatogram_ms_bokeh.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Chromatogram figure file (PNG or interactive HTML) generated with ms_plotly backend: 'gallery_scripts/ms_plotly/plot_chromatogram_ms_plotly.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Mobilogram figure file (PNG or interactive HTML) generated with ms_matplotlib backend: 'gallery_scripts/ms_matplotlib/plot_mobilogram_ms_matplotlib.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Mobilogram figure file (PNG or interactive HTML) generated with ms_bokeh backend: 'gallery_scripts/ms_bokeh/plot_mobilogram_ms_bokeh.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Mobilogram figure file (PNG or interactive HTML) generated with ms_plotly backend: 'gallery_scripts/ms_plotly/plot_mobilogram_ms_plotly.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[other] PeakMap figure file (PNG or interactive HTML) generated with ms_matplotlib backend: 'gallery_scripts/ms_matplotlib/plot_peakmap_ms_matplotlib.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[other] PeakMap figure file (PNG or interactive HTML) generated with ms_bokeh backend: 'gallery_scripts/ms_bokeh/plot_peakmap_ms_bokeh.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[other] PeakMap figure file (PNG or interactive HTML) generated with ms_plotly backend: 'gallery_scripts/ms_plotly/plot_peakmap_ms_plotly.py'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pyOpenMS-Viz: 'pyOpenMS-Viz is a Python library that provides a simple interface for extending the plotting capabilities of Pandas DataFrames'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Pandas: 'ms_data = pd.read_csv(\"path/to/ms_data.csv\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_020",
+      "source_path": "agent2_synthesis",
+      "text": "[other] matplotlib: 'Extension: MATPLOTLIB'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_021",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Bokeh: 'Extension: BOKEH'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_022",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Plotly: 'Extension: PLOTLY'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_023",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pymzml: '.mzML\n-----\n\n.. toctree::\n   :maxdepth: 1\n\n   pyopenms\n   pymzml'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_024",
+      "source_path": "agent2_synthesis",
+      "text": "[other] pyOpenMS: '.mzML\n-----\n\n.. toctree::\n   :maxdepth: 1\n\n   pyopenms\n   pymzml'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_025",
+      "source_path": "agent2_synthesis",
+      "text": "[other] AlphaTims: '.d\n--\n\n.. toctree::\n   :maxdepth: 1\n\n   alphatims'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_026",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog provided to document version history, feature additions, or breaking changes: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Spectrum figure file (PNG or interactive HTML) generated with ms_matplotlib backend",
+    "Spectrum figure file (PNG or interactive HTML) generated with ms_bokeh backend",
+    "Spectrum figure file (PNG or interactive HTML) generated with ms_plotly backend",
+    "Chromatogram figure file (PNG or interactive HTML) generated with ms_matplotlib backend",
+    "Chromatogram figure file (PNG or interactive HTML) generated with ms_bokeh backend",
+    "Chromatogram figure file (PNG or interactive HTML) generated with ms_plotly backend",
+    "Mobilogram figure file (PNG or interactive HTML) generated with ms_matplotlib backend",
+    "Mobilogram figure file (PNG or interactive HTML) generated with ms_bokeh backend",
+    "Mobilogram figure file (PNG or interactive HTML) generated with ms_plotly backend",
+    "PeakMap figure file (PNG or interactive HTML) generated with ms_matplotlib backend",
+    "PeakMap figure file (PNG or interactive HTML) generated with ms_bokeh backend",
+    "PeakMap figure file (PNG or interactive HTML) generated with ms_plotly backend"
+  ],
+  "finding": "pyOpenMS-Viz integrates seamlessly with multiple plotting library backends including matplotlib, Bokeh, and Plotly, enabling multi-backend visualization of mass spectrometry data.",
+  "github_name": "OpenMS/pyopenms_viz",
+  "input_from": "task_001",
+  "inputs": [
+    "mzML mass spectrometry data files loadable via pymzml or pyOpenMS",
+    "Bruker .d format ion mobility data loadable via AlphaTims",
+    "Gallery reference example scripts for spectrum, chromatogram, mobilogram, and peakmap plots"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectrum_*.png",
+    "chromatogram_*.png",
+    "mobilogram_*.png",
+    "peakmap_*.png",
+    "test_results_summary.txt"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_006",
+    "result_008",
+    "result_010",
+    "result_011",
+    "result_017",
+    "result_018",
+    "result_019"
+  ],
+  "methodology_summary": [
+    "Install pyOpenMS-Viz library from PyPI or source repository.",
+    "Load example mass spectrometry data (mzML or Bruker .d) using pymzml, pyOpenMS, or AlphaTims into a pandas DataFrame.",
+    "For each plot type (spectrum, chromatogram, mobilogram, peakmap), call DataFrame.plot() with appropriate x/y/z columns and plot configuration parameters (SpectrumConfig, ChromatogramConfig, MobilogramConfig, PeakMapConfig).",
+    "Execute plotting sequentially for all three backends (ms_matplotlib, ms_bokeh, ms_plotly) by setting pandas plotting backend option.",
+    "Collect generated figure files and verify existence, format, and visual correspondence to gallery reference outputs.",
+    "Validation: All 12 generated figures (4 plot types \u00d7 3 backends) must exist as files in the expected format and visual content must match reference gallery outputs without errors or missing data."
+  ],
+  "missing_information": [
+    "No changelog provided to document version history, feature additions, or breaking changes"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Do the four core MS plot components (ChromatogramPlot, MobilogramPlot, SpectrumPlot, PeakMapPlot) successfully render output figures across all three supported plotting backends (matplotlib, Bokeh, Plotly) when executed with publicly available example data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "mass-spectrometry-data-visualization-pandas",
+    "chromatogram-plot-generation-retention-time",
+    "spectrum-plot-generation-mz-intensity",
+    "ion-mobility-mobilogram-visualization",
+    "peakmap-heatmap-rendering-mz-rt",
+    "matplotlib-bokeh-plotly-backend-switching",
+    "mzml-data-parsing-pymzml-pyopenms"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pyopenmsviz/synthesized_package",
+  "spine_condition_ids": [
+    "cond_backend_matplotlib",
+    "cond_backend_bokeh",
+    "cond_backend_plotly"
+  ],
+  "spine_entity_ids": [
+    "pyopenms_viz_system",
+    "backend_bokeh_layer",
+    "backend_plotly_layer",
+    "backend_matplotlib_layer",
+    "comp_chromatogram_plot",
+    "comp_mobilogram_plot",
+    "comp_spectrum_plot",
+    "comp_peakmap_plot",
+    "tool_pyopenms",
+    "tool_pymzml",
+    "tool_alphatims",
+    "dataset_mzml",
+    "dataset_bruker_d",
+    "cond_backend_bokeh",
+    "cond_backend_plotly",
+    "cond_backend_matplotlib",
+    "metric_total_gallery_exec_time",
+    "metric_spectrum_binning_matplotlib_time",
+    "metric_spectrum_dia_matplotlib_time",
+    "metric_mobilogram_bokeh_time",
+    "metric_chromatogram_bokeh_time",
+    "metric_mobilogram_matplotlib_time",
+    "metric_spectrum_dia_plotly_time",
+    "metric_chromatogram_matplotlib_time",
+    "metric_spectrum_dia_bokeh_time",
+    "metric_mobilogram_plotly_time",
+    "metric_chromatogram_plotly_time"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "visualization",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:OpenMS__pyopenms_viz",
+  "task_description": "Execute the four core MS plot types (Spectrum, Chromatogram, Mobilogram, PeakMap) using each of the three visualization backends (matplotlib, Bokeh, Plotly) on publicly available example mass spectrometry data, and verify that output figure files match the reference gallery outputs.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "mzML mass spectrometry data files",
+      "port_id": "mzml_data",
+      "resolved_via": null,
+      "source": "task_001/execution_times_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Bruker .d format ion mobility data",
+      "port_id": "bruker_d_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Gallery reference example scripts",
+      "port_id": "gallery_references",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute ChromatogramPlot, MobilogramPlot, SpectrumPlot, and PeakMapPlot components across matplotlib, Bokeh, and Plotly backends using public example data (mzML and Bruker .d formats) and verify output figure files match gallery reference outputs.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spectrum figure from ms_matplotlib backend",
+      "port_id": "spectrum_matplotlib_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spectrum figure from ms_bokeh backend",
+      "port_id": "spectrum_bokeh_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spectrum figure from ms_plotly backend",
+      "port_id": "spectrum_plotly_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Chromatogram figure from ms_matplotlib backend",
+      "port_id": "chromatogram_matplotlib_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Chromatogram figure from ms_bokeh backend",
+      "port_id": "chromatogram_bokeh_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Chromatogram figure from ms_plotly backend",
+      "port_id": "chromatogram_plotly_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mobilogram figure from ms_matplotlib backend",
+      "port_id": "mobilogram_matplotlib_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mobilogram figure from ms_bokeh backend",
+      "port_id": "mobilogram_bokeh_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mobilogram figure from ms_plotly backend",
+      "port_id": "mobilogram_plotly_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PeakMap figure from ms_matplotlib backend",
+      "port_id": "peakmap_matplotlib_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PeakMap figure from ms_bokeh backend",
+      "port_id": "peakmap_bokeh_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PeakMap figure from ms_plotly backend",
+      "port_id": "peakmap_plotly_fig",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reproduce chromatogram, mobilogram, spectrum, and peak-map plot outputs for all three backends",
+  "tools": [
+    "pyOpenMS-Viz",
+    "Pandas",
+    "matplotlib",
+    "Bokeh",
+    "Plotly",
+    "pymzml",
+    "pyOpenMS",
+    "AlphaTims"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Install pyOpenMS-Viz from PyPI using pip install pyopenmsviz --upgrade or clone and install from source (https://github.com/OpenMS/pyopenms_viz) using git clone and pip install -e. 2. Load example mass spectrometry data from publicly available sources (mzML files via pymzml/pyOpenMS, or Bruker .d format via AlphaTims) into a pandas DataFrame. 3. For each of the four plot kinds (spectrum, chromatogram, mobilogram, peakmap), call the DataFrame .plot() method with the appropriate x, y (and z for peakmap) column names, set kind parameter to the plot type, and set backend to ms_matplotlib, ms_bokeh, or ms_plotly sequentially. 4. For spectrum plots, use m/z on x-axis and intensity on y-axis with SpectrumConfig parameters. 5. For chromatogram plots, use retention time on x-axis and intensity on y-axis with optional by parameter for mass trace separation and ChromatogramConfig parameters. 6. For mobilogram plots, use ion mobility on x-axis and intensity on y-axis with optional by parameter for mass trace separation and MobilogramConfig parameters. 7. For peakmap plots, use m/z on x-axis and retention time on y-axis with intensity on z-axis (or color), optionally enabling add_marginals and plot_3d with PeakMapConfig parameters. 8. Verify that each generated figure file matches the corresponding reference output in the gallery (gallery_scripts/ms_matplotlib/, gallery_scripts/ms_bokeh/, gallery_scripts/ms_plotly/) by comparing file existence, format, and visual structure."
+}

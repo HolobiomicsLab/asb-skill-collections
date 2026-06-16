@@ -1,0 +1,294 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ac5523bfc6b2e8e2c15a98fe4ed4b07ab6485b85c309b5adad34916ec78564eb"
+    }
+  ],
+  "created_at": "2026-06-15T13:23:47.986392+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Multi-omic TWIM-MS raw data from a public repository (MassIVE, MetaboLights, or PRIDE accession)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured CCS output file containing calibrated and class-specific collision cross section values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Execution log confirming MOCCal workflow completed without error",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "TWIM platforms record arrival time (ion detection time) rather than drift time (ion residence time in the mobility cell), requiring conversion to derive CCS values.",
+    "MOCCal performs class assignment and CCS calculations without requiring prior feature identification, enabling analysis of raw or minimally preprocessed multi-omic data.",
+    "CCS calibration establishes the relationship between measured arrival time and known collision cross section values, essential for converting experimental data to absolute CCS.",
+    "Class-specific CCS calculations account for biomolecular class identity (lipids, metabolites, proteins, etc.) to improve accuracy of CCS predictions for high-dimensional multi-omic data."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file_exists: the deposited TWIM-MS dataset (accession number or URL) is accessible and downloadable",
+      "verify script_runs: MOCCal workflow executes without error on the external dataset (all three stages: calibration, class assignment, class-specific CCS calculation)",
+      "verify file_exists and file_format_is: structured CCS output file is produced in expected format (CSV, JSON, or HDF5 \u2014 solution_space: any documented output format is acceptable)",
+      "verify output_matches_reference: CCS values in output are numeric, within physically plausible range for the biomolecular classes present (expert-validated ranges or literature cross-checks), robust to minor parameter choices",
+      "verify row_count_equals or field_present: output file contains at least one CCS value record per input feature/compound, with required columns (feature ID, class label, CCS value)"
+    ],
+    "expert_review": [
+      "Confirm that the assigned biomolecular classes are chemically/biologically consistent with the dataset source (e.g., lipids, peptides, metabolites as declared in deposit metadata)",
+      "Review CCS calibration convergence and model diagnostics (residuals, R\u00b2 or equivalent goodness-of-fit) to assess whether calibration quality is acceptable for the external dataset",
+      "Assess whether class-specific CCS calculations show expected within-class consistency and between-class separation, compared to prior literature or the tool's validation cohort"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Can MOCCal successfully execute its complete workflow (CCS calibration, biomolecular class assignment, and class-specific CCS calculations) on a multi-omic TWIM-MS dataset external to its bundled examples?: 'Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MOCCal is a Python application designed to perform collision cross section calibration, experimental data biomolecular class assignment, and class-specific CCS calculations on high-dimensional, multi-omic TWIM-MS data.: 'MOCCal, or Multi-Omic CCS Calibrator, is a Python application for high-dimensional, multi-omic traveling-wave ion mobility mass spectrometry (TWIM-MS) data anlaysis. Functionality includes collision'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Multi-omic TWIM-MS raw data from a public repository (MassIVE, MetaboLights, or PRIDE accession): 'publicly deposited multi-omic TWIM-MS dataset'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structured CCS output file containing calibrated and class-specific collision cross section values: 'produces a structured CCS output file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Execution log confirming MOCCal workflow completed without error: 'verifying that the application runs without error'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'MOCCal, or Multi-Omic CCS Calibrator, is a Python application'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] HinesLab/MOCCal: 'HinesLab/MOCCal'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting MOCCal versions, API stability, or backward compatibility: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "moccal.pipeline",
+      "--input",
+      "{inputs.twim_ms_dataset}",
+      "--output",
+      "ccs_output.csv",
+      "--log",
+      "moccal_execution.log"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "ccs_calibrated_output.csv",
+  "expected_outputs": [
+    "Structured CCS output file containing calibrated and class-specific collision cross section values",
+    "Execution log confirming MOCCal workflow completed without error"
+  ],
+  "finding": "MOCCal is a Python application designed to perform collision cross section calibration, experimental data biomolecular class assignment, and class-specific CCS calculations on high-dimensional, multi-omic TWIM-MS data.",
+  "github_name": "HinesLab/MOCCal",
+  "input_from": "task_002",
+  "inputs": [
+    "Multi-omic TWIM-MS raw data from a public repository (MassIVE, MetaboLights, or PRIDE accession)"
+  ],
+  "keywords": [
+    "traveling-wave ion mobility mass spectrometry",
+    "collision cross section calibration",
+    "multi-omic data analysis",
+    "biomolecular class assignment",
+    "twim-ms",
+    "drift time",
+    "high-dimensional data"
+  ],
+  "landmark_outputs": [
+    "calibration_curve.csv",
+    "class_assignments.csv",
+    "ccs_calibrated_output.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Load multi-omic TWIM-MS raw data from a public repository in the format expected by MOCCal.",
+    "Apply CCS calibration using known reference standards or internal calibrants to establish arrival-time-to-CCS conversion.",
+    "Perform biomolecular class assignment without requiring prior feature identification.",
+    "Calculate class-specific CCS values for each assigned biomolecular class.",
+    "Validation: verify CCS output file exists, contains expected columns (class, CCS, arrival time), and all rows have valid numeric CCS values; confirm execution completed without runtime errors."
+  ],
+  "missing_information": [
+    "No changelog documenting MOCCal versions, API stability, or backward compatibility"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can MOCCal successfully execute its complete workflow (CCS calibration, biomolecular class assignment, and class-specific CCS calculations) on a multi-omic TWIM-MS dataset external to its bundled examples?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "twim-ms-data-import-and-format-validation",
+    "collision-cross-section-calibration",
+    "biomolecular-class-assignment-without-feature-identification",
+    "class-specific-ccs-calculation",
+    "arrival-time-to-ccs-conversion"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_moccal/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MOCCal_system",
+    "comp_ccs_calibration",
+    "comp_class_assignment",
+    "comp_class_specific_ccs",
+    "tool_twim_ms"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:HinesLab__MOCCal",
+  "task_description": "Execute the complete MOCCal workflow (calibration \u2192 class assignment \u2192 class-specific CCS calculation) on a publicly deposited multi-omic TWIM-MS dataset to verify the application runs without error and produces a structured CCS output file.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Multi-omic TWIM-MS raw data",
+      "port_id": "twim_ms_dataset",
+      "resolved_via": null,
+      "source": "task_002/class_assignments",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Execute MOCCal's complete workflow on an external multi-omic TWIM-MS dataset and verify successful completion with structured CCS output.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structured CCS output file",
+      "port_id": "ccs_output",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Execution log",
+      "port_id": "execution_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Extend MOCCal pipeline to process a new multi-omic TWIM-MS dataset end-to-end",
+  "tools": [
+    "Python",
+    "HinesLab/MOCCal"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Execution log confirming MOCCal workflow completed without error."
+  ],
+  "workflow_description": "1. Load the multi-omic TWIM-MS dataset from a public repository (e.g., MassIVE, MetaboLights, or PRIDE). 2. Run MOCCal's CCS calibration module on the raw TWIM data to establish the calibration curve. 3. Execute the biomolecular class assignment step to classify features without prior feature identification. 4. Calculate class-specific CCS values for the assigned biomolecular classes. 5. Validate the output CCS table for completeness and correct field structure."
+}

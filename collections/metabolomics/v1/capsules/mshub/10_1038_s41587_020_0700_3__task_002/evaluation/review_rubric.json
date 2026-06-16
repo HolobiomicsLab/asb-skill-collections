@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the bittremieux/GNPS_GC repository is accessible at github.com/bittremieux/GNPS_GC"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: deconvolved output file (MGF or mzML format) produced by MSHub deconvolution step"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: output file matches declared format (MGF or mzML), byte-for-byte structural validation"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that raw GC-MS input files are present and loadable in the companion repository or deposited dataset"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: MSHub deconvolution module executes without fatal errors on supplied raw GC-MS files"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: deconvolved spectra file contains expected spectrum records (no canonical answer \u2014 multiple valid deconvolution outcomes defensible depending on algorithm parameters), robust to parameter choices"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the bittremieux/GNPS_GC repository is accessible at github.com/bittremieux/GNPS_GC",
+      "verify file_exists: deconvolved output file (MGF or mzML format) produced by MSHub deconvolution step",
+      "verify file_format_is: output file matches declared format (MGF or mzML), byte-for-byte structural validation",
+      "verify that raw GC-MS input files are present and loadable in the companion repository or deposited dataset",
+      "verify script_runs: MSHub deconvolution module executes without fatal errors on supplied raw GC-MS files",
+      "verify output_matches_reference: deconvolved spectra file contains expected spectrum records (no canonical answer \u2014 multiple valid deconvolution outcomes defensible depending on algorithm parameters), robust to parameter choices"
+    ],
+    "expert_review": [
+      "assess whether deconvolved spectra are chemically and spectroscopically valid (mass-to-charge assignments, peak intensities, baseline correction quality)",
+      "evaluate whether MSHub deconvolution settings and parameters are appropriate for the GC-MS data type and chemical analytes",
+      "confirm that deconvolution removes or separates co-eluting compounds and resolves overlapping peaks as intended"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

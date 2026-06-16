@@ -5,16 +5,32 @@ evidence_spans:
 - Spec2Vec by making extensive use of Numpy [24] and Numba [25]
 - by making extensive use of Numpy [24] and Numba [25]
 - import numpy as np
-- It requires the Python dependencies NumPy
+- numpy [section=results; evidence='import numpy as np']
+- pip install numpy
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+- doi: 10.5281/zenodo.14009575
+  title: corems
+- doi: 10.1021/acs.analchem.1c05017
+  title: deimos
 - doi: 10.1371/journal.pcbi.1011814
   title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+- doi: 10.3389/fbinf.2022.842964
+  title: memo
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
 source_repos:
+- EMSL-Computing/CoreMS
+- bihealth/NeatMS
+- bittremieux-lab/spectrum_utils
 - https://github.com/Coayala/MetaboDirect
 - https://github.com/iomega/spec2vec
 - kopeckylukas/py-mamsi
+- mandelbrot-project/memo
+- pnnl/deimos
 schema_version: 0.2.0

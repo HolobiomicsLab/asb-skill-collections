@@ -1,0 +1,322 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/features_used.png",
+      "role": "figure",
+      "sha256": "86176a2f7637a4c48b73adebdba17ad404faf26be04070684e04861b7c83b2a4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ms2query_logo.png",
+      "role": "figure",
+      "sha256": "f91f3cd60080e06f473f15a7b5cbd524bda5de0f14830c8e5bd2a726a0636b41"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ms2query_logo.svg",
+      "role": "figure",
+      "sha256": "e7305700ccfd2ea3d8609746bebcc7c967044bbcfdc2fe42a77eb2a0126bfc51"
+    },
+    {
+      "indexable": false,
+      "path": "figures/worflow_average_ms2deepscore.png",
+      "role": "figure",
+      "sha256": "fed65b11b4ad1f780ee4a610c3b4c26bdec7990a5cf00d51b0af85b1edd595d3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/workflow_ms2query.png",
+      "role": "figure",
+      "sha256": "0ad5fe5e17cb8d2e83691b75b2d1d85f71d8d28200f2534a778b19e6a2e6ce62"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "bb1987273b11fa9e3a107b7dc1c567b3d6be06dc40de0303f8c9323112bc976b"
+    }
+  ],
+  "created_at": "2026-06-15T21:30:15.767044+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MS2Query repository at https://github.com/iomega/ms2query, specifically PR #72 and associated commit history",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Control-flow specification or architectural diagram documenting the two-branch orchestration logic (library-match vs. analogue-search), decision criteria, and routing for MS2Query workflow as introduced in PR #72",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "PR #72 introduced a bifurcation in MS2Query's orchestration logic that separates library-based spectral matching from analogue discovery, fundamentally changing how query spectra are routed through the workflow.",
+    "The two-branch architecture requires explicit decision logic (likely based on spectrum properties, score thresholds, or user parameters) to determine whether a query takes the library-match path, the analogue-search path, or both.",
+    "Control-flow documentation for this split must specify entry conditions, parameter passing, intermediate scoring or filtering stages, and convergence points (if any) where results are merged or reported.",
+    "GitHub PR history and commit messages are the authoritative sources for understanding architectural intent and implementation details of the branch split.",
+    "Validation of the documented architecture requires cross-reference with the actual codebase to ensure the control-flow specification faithfully reflects the runtime routing and does not omit or misrepresent decision nodes."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify that PR #72 is referenced in the repository at https://github.com/iomega/ms2query/pull/72",
+      "Verify file_exists: check that the main workflow entry point or control-flow file exists in the repository checkout at the commit/tag corresponding to the release containing PR #72",
+      "Verify contains_substring: search the workflow control-flow code for explicit conditional branches or separate function/method calls handling 'true matches' and 'analogue search' as distinct execution paths",
+      "Verify output_matches_reference: confirm that the workflow structure in the codebase matches the two-branch architecture described in PR #72 metadata or commit message (retrieve from GitHub API)",
+      "Verify file_format_is: confirm that workflow definition (if using a declarative format like YAML/JSON for DAG or Snakemake) or source code file has valid syntax for its language"
+    ],
+    "expert_review": [
+      "Assess whether the split between 'true library matches' and 'analogue search' branches represents a semantically meaningful architectural decision for the MS/MS spectral search domain",
+      "Evaluate whether the two-branch design aligns with established mass spectrometry informatics practice for compound identification workflows",
+      "Assess the completeness of the control-flow refactoring: confirm that both branches handle appropriate input types and produce expected output types for their respective search modes"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How is the MS2Query search workflow architecturally split into separate processing branches for true library matches versus analogue search?: 'MS2Query - Reliable and fast MS/MS spectral-based analogue search'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MS2Query provides functionality for both reliable true library matching and fast analogue search within its MS/MS spectral-based search workflow.: 'MS2Query - Reliable and fast MS/MS spectral-based analogue search'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MS2Query repository at https://github.com/iomega/ms2query, specifically PR #72 and associated commit history: 'fork the repository to your own Github profile and create your own feature branch off of the latest master commit'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Control-flow specification or architectural diagram documenting the two-branch orchestration logic (library-match vs. analogue-search), decision criteria, and routing for MS2Query workflow as introduced in PR #72: 'announce your plan to the rest of the community *before you start working*. This announcement should be in the form of a (new) issue'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GitHub: 'use the search functionality [here](https://github.com/iomega/ms2query/issues)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MS2Query: 'MS2Query - Reliable and fast MS/MS spectral-based analogue search'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'make sure the existing tests still work by running ``python setup.py test``'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No description of the specific control-flow mechanism (conditional branches, separate pipelines, orchestrator pattern, or other architecture) that implements the split between true library matches and analogue search branches: 'Split workflow into true matches and analog search [#72]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of which input parameters, query properties, or execution conditions trigger routing to the true matches branch versus the analogue search branch: 'Split workflow into true matches and analog search [#72]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No description of whether the two branches execute sequentially, in parallel, or conditionally within a single workflow invocation: 'Split workflow into true matches and analog search [#72]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of output structure or merge strategy for results from both branches (if they run in the same invocation): 'Split workflow into true matches and analog search [#72]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import subprocess; subprocess.run(['git', 'clone', '--depth=1', 'https://github.com/iomega/ms2query.git', '{inputs.ms2query_repo}'], check=True); subprocess.run(['git', '-C', '{inputs.ms2query_repo}', 'log', '--oneline', '--grep=72', '-n', '20'], check=True); subprocess.run(['git', '-C', '{inputs.ms2query_repo}', 'show', 'HEAD'], check=True)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "workflow_architecture_pr72.md",
+  "expected_outputs": [
+    "Control-flow specification or architectural diagram documenting the two-branch orchestration logic (library-match vs. analogue-search), decision criteria, and routing for MS2Query workflow as introduced in PR #72"
+  ],
+  "finding": "MS2Query provides functionality for both reliable true library matching and fast analogue search within its MS/MS spectral-based search workflow.",
+  "github_name": "iomega/ms2query",
+  "input_from": null,
+  "inputs": [
+    "MS2Query repository at https://github.com/iomega/ms2query, specifically PR #72 and associated commit history"
+  ],
+  "keywords": [
+    "ms/ms spectral matching",
+    "analogue search",
+    "tandem mass spectrometry",
+    "spectral library search",
+    "metabolomics"
+  ],
+  "landmark_outputs": [
+    "pr72_commit_list.txt",
+    "branch_decision_logic.py",
+    "workflow_routing_diagram.svg"
+  ],
+  "linked_result_ids": [
+    "result_017"
+  ],
+  "methodology_summary": [
+    "Access the MS2Query repository and retrieve PR #72 metadata, commit history, and code diffs.",
+    "Identify the top-level orchestrator or workflow entry point and trace the control flow that decides between library-match and analogue-search branches.",
+    "Document decision criteria, parameter dependencies, and data routing for each branch.",
+    "Map intermediate scoring, filtering, and result-merging logic that connect the two branches.",
+    "Validation: cross-verify the documented architecture against the actual codebase implementation to confirm all routing logic and decision nodes are accurately represented."
+  ],
+  "missing_information": [
+    "No description of the specific control-flow mechanism (conditional branches, separate pipelines, orchestrator pattern, or other architecture) that implements the split between true library matches and analogue search branches",
+    "No specification of which input parameters, query properties, or execution conditions trigger routing to the true matches branch versus the analogue search branch",
+    "No description of whether the two branches execute sequentially, in parallel, or conditionally within a single workflow invocation",
+    "No specification of output structure or merge strategy for results from both branches (if they run in the same invocation)"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How is the MS2Query search workflow architecturally split into separate processing branches for true library matches versus analogue search?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "workflow-architecture-documentation",
+    "spectral-search-logic-control-flow",
+    "repository-history-analysis",
+    "library-analogue-search-branching",
+    "pull-request-change-tracking"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ms2query/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "ms2query_system",
+    "arch_workflow",
+    "comp_library_matching",
+    "comp_scoring"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "information-extraction",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:iomega__ms2query",
+  "task_description": "Document the architectural split of the MS2Query workflow introduced in PR #72 that bifurcates the search logic into two distinct branches: true library matching and analogue search. Produce a control-flow diagram or specification file describing the top-level orchestration logic, decision points, and routing between these branches.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MS2Query repository with PR #72 history",
+      "port_id": "ms2query_repo",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Document the top-level control flow architecture that bifurcates the MS2Query workflow into distinct true library match and analogue search processing branches.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Two-branch workflow architecture specification and control-flow diagram",
+      "port_id": "workflow_architecture_spec",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "analog-search",
+    "cosine-similarity-scoring",
+    "database-annotation",
+    "metabolite-identification",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reconstruct the MS2Query Search Workflow split into true-match and analogue-search branches",
+  "tools": [
+    "GitHub",
+    "MS2Query",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Review the MS2Query repository history and PR #72 to identify the architectural changes that introduced the two-branch workflow split. 2. Extract the control-flow logic that routes query spectra to either the library-match branch or the analogue-search branch, documenting decision criteria and entry/exit points for each branch. 3. Map the data dependencies and parameter passing between the orchestrator and each branch component. 4. Validate: confirm the documented split matches the codebase implementation in the iomega/ms2query repository and that all decision nodes and routing paths are accounted for."
+}

@@ -1,0 +1,330 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/annot_df.png",
+      "role": "figure",
+      "sha256": "ab9293633dd1b01f892c85e5529b6f6892645f77b0c59a6cdcec7741721ba09b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/int_df.png",
+      "role": "figure",
+      "sha256": "977675938611d366b1dbbbffb5160ef2bd813fdc05fc297c122ad3089169c5e6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "26ea63da24eef76b075614f2a23a6152475dfce509f6c4ab8230f3ccc2d8beed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_transparent.png",
+      "role": "figure",
+      "sha256": "e0f7f4798ee79ee640b1cbbb679f461f0b6b51b0ee1fb96b243eb252db90d2fe"
+    },
+    {
+      "indexable": false,
+      "path": "figures/output.png",
+      "role": "figure",
+      "sha256": "e9be339d1b2eaa1a93785cd4b8f788e9e76e2e5c76392ab4711e70573218cda5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/overall_schematic.png",
+      "role": "figure",
+      "sha256": "1b6442274e14d913cb03467f51a93987ce35d3486b8267e316ee60922379568d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "bee6c8abc440ab2bf1fa768a9ce883b542f853cbb7c9d3daa122ac5f98ff7115"
+    }
+  ],
+  "created_at": "2026-06-15T21:26:46.708623+00:00",
+  "crossref_doi": "10.1186/1471-2105-6-225",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "User-uploaded metabolite set file in CSV or JSON format containing metabolite identifiers and groupings",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "PALS Viewer application and existing PLAGE scoring pipeline infrastructure",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Scored results table with metabolite set names, activity level scores, and associated statistics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "PLAGE (Pathway Level Analysis of Gene Expression) is a singular value decomposition\u2013based method that decomposes activity levels across feature sets and is more robust to noise and missing peaks than ORA and GSEA alternatives.",
+    "The PALS decomposition approach is agnostic to set type and can analyze any group of metabolite sets, not limited to pathways, enabling custom user-defined metabolite groupings.",
+    "Metabolite set files must be validated for consistent identifier format and proper set-membership structure before dispatch through the PLAGE pipeline to ensure compatible scoring.",
+    "PALS Viewer currently ships with three predefined set types (pathways, Molecular Families from GNPS, and Mass2Motifs from MS2LDA); user-uploaded sets represent a functional extension beyond these."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: input CSV or JSON metabolite set file in repository or test data directory",
+      "verify file_format_is: input metabolite set file conforms to documented CSV or JSON schema (field names, required columns present)",
+      "verify script_runs: PALS pipeline dispatcher accepts uploaded metabolite set file without errors on test input",
+      "verify output_matches_reference: scored results table structure matches the format of PLAGE outputs for shipped set types (columns: metabolite_id, set_id, score, p_value or equivalent), robust to parameter choices in PLAGE algorithm",
+      "verify field_present: output table contains at least score and identifier fields for each metabolite set",
+      "verify contains_substring: Web application UI or API endpoint documentation mentions support for user-uploaded metabolite sets beyond the three shipped types (pathways, Molecular Families, Mass2Motifs)"
+    ],
+    "expert_review": [
+      "PLAGE scoring results on uploaded metabolite set are statistically sound and consistent with expected behavior on known positive control sets",
+      "Extension maintains robustness to noise and missing peaks (stated PALS advantage) when applied to user-uploaded sets compared to baseline ORA/GSEA",
+      "User-uploaded metabolite set interpretation and scoring are scientifically valid for the metabolomics domain"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Can the PLAGE decomposition method in PALS be extended to score user-uploaded custom metabolite sets beyond the three currently supported set types (pathways, Molecular Families, and Mass2Motifs)?: 'the [decomposition approach] in PALS is amenable to the analysis of any group of metabolite sets, not just pathways'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS's decomposition approach is amenable to analysis of any group of metabolite sets, not just pathways, suggesting extensibility beyond currently shipped set types.: 'the [decomposition approach] in PALS is amenable to the analysis of any group of metabolite sets, not just pathways'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] User-uploaded metabolite set file in CSV or JSON format containing metabolite identifiers and groupings: 'user-uploaded metabolite set file (CSV/JSON)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS Viewer application and existing PLAGE scoring pipeline infrastructure: 'PALS Viewer'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Scored results table with metabolite set names, activity level scores, and associated statistics: 'returns a scored results table'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS Viewer: 'PALS Viewer'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS (Pathway Activity Level Scoring): 'PALS (Pathway Activity Level Scoring)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting recent changes, version history, or feature additions to PALS Viewer or the core pipeline: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "pals.viewer",
+      "--input",
+      "{inputs.metabolite_set_file}",
+      "--mode",
+      "plage_score",
+      "--output",
+      "scored_results_table.csv"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "scored_metabolite_sets.csv",
+  "expected_outputs": [
+    "Scored results table with metabolite set names, activity level scores, and associated statistics"
+  ],
+  "finding": "PALS's decomposition approach is amenable to analysis of any group of metabolite sets, not just pathways, suggesting extensibility beyond currently shipped set types.",
+  "github_name": "glasgowcompbio/PALS",
+  "input_from": "task_002",
+  "inputs": [
+    "User-uploaded metabolite set file in CSV or JSON format containing metabolite identifiers and groupings",
+    "PALS Viewer application and existing PLAGE scoring pipeline infrastructure"
+  ],
+  "keywords": [
+    "pathway activity scoring",
+    "plage method",
+    "metabolomics peak detection",
+    "untargeted metabolomics",
+    "molecular families",
+    "mass2motifs",
+    "fragmentation spectra analysis"
+  ],
+  "landmark_outputs": [
+    "parsed_metabolite_set.json",
+    "validated_metabolite_set.json",
+    "activity_scores_intermediate.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_005",
+    "result_009"
+  ],
+  "methodology_summary": [
+    "Parse and validate user-uploaded metabolite set file structure and identifiers",
+    "Integrate validated set into PALS pipeline as a new set type",
+    "Execute PLAGE decomposition to compute activity level scores",
+    "Compile results into scored output table with statistical metrics",
+    "Validation: Verify output table contains all input metabolite sets with non-null activity scores and statistical confidence intervals",
+    "References: source article (DOI: 10.1186/1471-2105-6-225)"
+  ],
+  "missing_information": [
+    "No changelog documenting recent changes, version history, or feature additions to PALS Viewer or the core pipeline"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/pathway_scores_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can the PLAGE decomposition method in PALS be extended to score user-uploaded custom metabolite sets beyond the three currently supported set types (pathways, Molecular Families, and Mass2Motifs)?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "metabolite-set-file-parsing-and-validation",
+    "plage-pathway-activity-level-decomposition",
+    "custom-metabolite-set-integration",
+    "activity-score-computation-and-reporting"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pals/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "PALS_system",
+    "PALS_viewer",
+    "PLAGE_method",
+    "molecular_families_component",
+    "mass2motifs_component",
+    "robustness_result",
+    "metabolite_set_analysis_result"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:glasgowcompbio__PALS",
+  "task_description": "Implement an extension to PALS Viewer that accepts user-uploaded metabolite set files (CSV/JSON format) and processes them through the PLAGE scoring pipeline to return a scored results table, extending beyond the three currently shipped set types (pathways, Molecular Families, Mass2Motifs).",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "User-uploaded metabolite set file (CSV/JSON)",
+      "port_id": "metabolite_set_file",
+      "resolved_via": null,
+      "source": "task_002/pathway_scores_table",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Implement a user file upload feature in PALS Viewer that accepts custom metabolite set definitions (CSV/JSON), passes them through the PLAGE scoring pipeline, and returns a scored results table.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Scored results table with activity levels and statistics",
+      "port_id": "scored_results_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dimensionality-reduction",
+    "pathway-analysis",
+    "enrichment-analysis"
+  ],
+  "title": "Extend PALS to support user-supplied custom metabolite set collections via PALS Viewer API",
+  "tools": [
+    "PALS Viewer",
+    "PALS (Pathway Activity Level Scoring)"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Parse user-uploaded metabolite set file (CSV or JSON format) to extract metabolite identifiers and set membership. 2. Validate metabolite set structure and identifiers against the PALS database schema. 3. Dispatch validated metabolite set through the existing PLAGE decomposition pipeline to compute pathway activity scores. 4. Generate scored results table containing metabolite set names, activity level scores, and statistical confidence metrics. 5. Format and return results in a user-friendly tabular output compatible with PALS Viewer display."
+}

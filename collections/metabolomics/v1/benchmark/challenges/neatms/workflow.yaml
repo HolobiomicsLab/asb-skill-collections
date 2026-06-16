@@ -1,0 +1,431 @@
+schema_version: 0.1.0
+workflow_id: coll_neatms_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_004
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: "NeatMS is an open source Python package for automated filtering of false\
+    \ positive MS\u2081 peaks in untargeted LCMS data using neural network-based classification.\
+    \ The package enables users to label peaks, train or fine-tune neural network\
+    \ models, optimize classification thresholds, and export filtered results."
+  pseudo_abstract: "NeatMS provides an end-to-end workflow for untargeted LCMS signal\
+    \ labeling and false positive peak filtering. The software implements neural network-based\
+    \ classification to distinguish true from false positive peaks reported by standard\
+    \ LCMS data processing pipelines such as mzMine and XCMS. Key functionalities\
+    \ include: (1) a Jupyter-based interactive annotation tool for manual peak labeling\
+    \ across three classes (High quality, Low quality, Noise); (2) methods to construct\
+    \ training, test, and validation batches with configurable parameters (matrix\
+    \ size of 120 points, retention time margin of 1, minimum 5 scans per peak); (3)\
+    \ support for full model training from scratch (requiring \u2265500 peaks per\
+    \ class) or transfer learning with frozen convolutional layers; (4) hyperparameter\
+    \ optimization via threshold selection that computes true and false positive rates\
+    \ across probability thresholds to maximize classification accuracy; (5) data\
+    \ export functionality with flexible filtering by peak class, sample presence,\
+    \ and quality criteria. When trained on representative sample subsets using default\
+    \ network architecture, the model achieves AUC scores exceeding 0.95. The software\
+    \ is distributed under the MIT License with tutorials, example data, and pre-trained\
+    \ models available on GitHub."
+  research_questions:
+  - Does applying NeatMS default preprocessing to example mzML and feature-table inputs
+    produce a peak matrix with the documented result_matrix_shape dimensions?
+  - What is the optimal classification threshold value returned by the get_threshold()
+    method when applied to a labelled peak dataset using the default NeatMS neural
+    network model?
+  - What are the True Positive Rate and False Positive Rate values at threshold 0.01
+    when applying the default NeatMS model under full training conditions?
+  - How does the nn_handler.create_batches() method operate when invoked with normalise_class=True
+    versus normalise_class=False, and what are the structural differences in the resulting
+    batch artifacts?
+  - Does training the NeatMS CNN model from scratch on the provided example dataset
+    under full training conditions produce an AUC ROC score exceeding 0.9 without
+    evidence of overfitting?
+  methods_summary: "Load raw mzML and feature table files into a NeatMS Experiment\
+    \ object using the standard import interface. Create a NN_handler with default\
+    \ parameters (matrix_size=120, margin=1, min_scan_num=5) to instantiate the peak\
+    \ matrix construction pipeline. Generate batch arrays by calling create_batches()\
+    \ with default 80:10:10 split ratios and no class normalization. Extract and inspect\
+    \ the shape and binary encoding of the peak matrices to confirm (2, 120) dimensionality\
+    \ and margin/peak signal partitioning. Validation: Confirm that peak matrices\
+    \ have shape (2, 120), binary dimension correctly encodes margin (0) and peak\
+    \ (1) regions with first/last 40 points and middle 40 points respectively, and\
+    \ batch counts match documented 80:10:10 split. Load trained NeatMS model and\
+    \ validation dataset containing labelled peaks across three classes (High_quality,\
+    \ Low_quality, Noise). Invoke get_true_vs_false_positive_df(label='High_quality')\
+    \ to compute true and false positive rates across a range of probability thresholds\
+    \ (0.0\u20131.0). Select the threshold value that maximizes (True positive rate\
+    \ \u2212 False positive rate) as the optimal decision boundary. Return the scalar\
+    \ threshold and the underlying metrics dataframe for downstream use in peak classification.\
+    \ Validation: Verify the returned threshold scalar is within expected range (0.22\
+    \ \xB1 tolerance for default model) and that the metrics dataframe contains complete\
+    \ probability-threshold rows with valid rate values between 0.0 and 1.0. Load\
+    \ the trained NeatMS model and attach it to an NN_handler instance with validation\
+    \ dataset. Invoke get_true_vs_false_positive_df(label='High_quality') to compute\
+    \ the threshold-dependent recall table across probability thresholds [0.00\u2013\
+    0.99]. Extract the row at Probability_threshold=0.01 and read columns True, False,\
+    \ False_low, False_noise. Validate that True=1.0, False=0.440, False_low=0.803,\
+    \ and False_noise\u22480.206, confirming 100% High_quality retention and 44% false\
+    \ positive rate composition. Validation: output metrics must exactly match the\
+    \ reference values reported in the methods text (True=1.0, False=0.44, Low_quality\
+    \ proportion=80%, Noise proportion\u224820%). Load labeled experiment object containing\
+    \ raw LC-MS data (mzML) and feature table (CSV) from 10\u201320 representative\
+    \ samples with manual peak annotations across High_quality, Low_quality, and Noise\
+    \ classes. Instantiate NN_handler with default parameters (matrice_size=120, margin=1,\
+    \ min_scan_num=5) to configure peak matrix extraction and filtering thresholds.\
+    \ Invoke create_batches(validation_split=0.1, normalise_class=False) to generate\
+    \ training (80%), test (10%), and validation (10%) splits preserving original\
+    \ class-frequency distributions. Invoke create_batches(validation_split=0.1, normalise_class=True)\
+    \ to regenerate the same splits with class balancing, reducing all classes to\
+    \ the minority-class size. Extract and compare per-class peak counts across all\
+    \ six batches (three splits \xD7 two normalization modes) to verify that normalized\
+    \ batches enforce equal class cardinality and unnormalized batches preserve imbalance.\
+    \ Validation: Confirm that for each normalized batch, the count of High_quality\
+    \ peaks equals the count of Low_quality peaks equals the count of Noise peaks;\
+    \ and that unnormalized batches retain the original imbalanced distribution without\
+    \ modification. Load raw mzML files and feature table (mzMine or XCMS CSV) into\
+    \ NeatMS Experiment object. Create NN_handler and partition data into training\
+    \ (80%), test (10%), and validation (10%) batches using create_batches(validation_split=0.1)\
+    \ with default normalization (normalise_class=False). Initialize untrained CNN\
+    \ using create_model(lr=0.00001, optimizer='Adam') with default architecture (convolutional\
+    \ base + dense classifier + dropout + kernel regularization). Train model via\
+    \ iterative train_model(epoch_count) calls, monitoring training and validation\
+    \ accuracy logs to detect convergence and absence of overfitting. Compute True\
+    \ Positive Rate and False Positive Rate at multiple probability thresholds using\
+    \ get_true_vs_false_positive_df(). Calculate AUC ROC using scikit-learn auc()\
+    \ function on threshold-swept TPR/FPR curve. Validation: AUC ROC score \u2265\
+    \ 0.95; training accuracy and validation accuracy curves remain closely aligned\
+    \ (no significant divergence indicating overfitting)."
+  domain: metabolomics
+  techniques:
+  - machine-learning
+  - deep-learning
+  - feature-detection
+  - metabolite-identification
+  - dimensionality-reduction
+  claims:
+  - claim_text: NeatMS is an open source python package for untargeted LCMS signal
+      labelling and filtering.
+    claim_type: finding
+    speculative: false
+    entity_id: neatms_system
+  - claim_text: NeatMS enables automated filtering of false positive MS1 peaks reported
+      by commonly used LCMS data processing pipelines.
+    claim_type: finding
+    speculative: false
+    entity_id: neatms_system
+  - claim_text: NeatMS relies on neural network based classification.
+    claim_type: finding
+    speculative: false
+    entity_id: neatms_system
+  - claim_text: NeatMS is distributed as an open source software under the MIT License.
+    claim_type: finding
+    speculative: false
+    entity_id: neatms_system
+  - claim_text: The neural network output uses a softmax activation function that
+      produces a probability distribution of 3 probabilities between 0 and 1.
+    claim_type: finding
+    speculative: false
+  - claim_text: The 3 probabilities in the neural network output add up to 1, with
+      one probability per class.
+    claim_type: finding
+    speculative: false
+  - claim_text: At a 0.01 probability threshold, 100% of High_quality peaks would
+      be correctly predicted but 44% would be false positives.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_label_high_quality
+  - claim_text: At a 0.01 threshold, 80% of Low_quality peaks would be predicted as
+      High_quality.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_label_high_quality
+  - claim_text: At a 0.01 threshold, 20% of Noise peaks would be predicted as High_quality.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_label_high_quality
+  - claim_text: If correctly trained, a model should obtain an AUC higher than 95.0.
+    claim_type: finding
+    speculative: false
+  - claim_text: The matrix size argument represents the number of points used to represent
+      a peak.
+    claim_type: finding
+    speculative: false
+  - claim_text: The margin argument represents the size of the surrounding signal
+      that should be kept on the retention time dimension.
+    claim_type: finding
+    speculative: false
+  - claim_text: A margin of 1 means that the margin size on both sides of the peak
+      will be the same size as the peak width.
+    claim_type: finding
+    speculative: false
+  - claim_text: For a peak with a retention time width of 3 seconds and margin of
+      1, the extracted signal will be 9 seconds.
+    claim_type: finding
+    speculative: false
+  - claim_text: With default argument values, the first and last 40 values of the
+      peak represent the margins, and the middle 40 values represent the peak itself.
+    claim_type: finding
+    speculative: false
+  - claim_text: A second dimension is added to represent the margin portion of the
+      signal (0) or the peak signal (1).
+    claim_type: finding
+    speculative: false
+  - claim_text: The resulting matrix size for one peak is (2, 120) with default arguments.
+    claim_type: finding
+    speculative: false
+  - claim_text: Changing the matrix size or margin argument will automatically adapt
+      the neural network architecture.
+    claim_type: finding
+    speculative: false
+  - claim_text: When using transfer learning on a preexisting model, one should not
+      change the matrix size or margin arguments if intending to use the default model.
+    claim_type: finding
+    speculative: false
+    entity_id: neatms_system
+  - claim_text: The min_scan_number argument filters out peaks with fewer points than
+      the specified value.
+    claim_type: finding
+    speculative: false
+  - claim_text: The default min_scan_number value is 5 because it is difficult to
+      judge if a signal is a peak when it has less than 5 points.
+    claim_type: finding
+    speculative: false
+  - claim_text: A model and the person who trained it will likely underperform for
+      peaks with fewer than 5 points.
+    claim_type: finding
+    speculative: true
+  - claim_text: The min_scan_number argument has no impact on the model architecture.
+    claim_type: finding
+    speculative: false
+  - claim_text: When using an existing model, lowering the min_scan_number parameter
+      is strongly advised against.
+    claim_type: finding
+    speculative: false
+  - claim_text: Increasing the min_scan_number parameter when using an existing model
+      is not a problem.
+    claim_type: finding
+    speculative: false
+  - claim_text: 'Three batches of data are required for neural network training: one
+      for training, one for testing, and one for validation.'
+    claim_type: finding
+    speculative: false
+  - claim_text: The training and test sets are used during the training process while
+      the validation set remains untouched for hyperparameter tuning.
+    claim_type: finding
+    speculative: false
+  - claim_text: The default split between training:test:validation batches is 80:10:10.
+    claim_type: finding
+    speculative: false
+  - claim_text: The validation_split argument allows definition of the size of test
+      and validation sets.
+    claim_type: finding
+    speculative: false
+  - claim_text: The validation_split argument should not exceed 0.2 to ensure at least
+      60% of data is left for training.
+    claim_type: finding
+    speculative: false
+  - claim_text: The normalise_class argument ensures every class has the same number
+      of peaks for training.
+    claim_type: finding
+    speculative: false
+  - claim_text: When normalise_class is set to True, the number of peaks for each
+      class equals the smallest class.
+    claim_type: finding
+    speculative: false
+  - claim_text: Full model training is recommended when there are at least 500 peaks
+      for each class.
+    claim_type: finding
+    speculative: false
+  - claim_text: Transfer learning should be considered if there are fewer than 500
+      peaks in the smallest class.
+    claim_type: finding
+    speculative: false
+    entity_id: cond_transfer_learning
+  - claim_text: NeatMS allows changing the learning rate and optimizer for model training.
+    claim_type: finding
+    speculative: false
+    entity_id: neatms_system
+  - claim_text: The choice of optimizers includes Adam (default) and SGD.
+    claim_type: finding
+    speculative: false
+  - claim_text: During development and testing, the best performances were achieved
+      using the Adam optimizer and a learning rate of 0.00001.
+    claim_type: finding
+    speculative: false
+  - claim_text: The Adam optimizer with learning rate 0.00001 are set as default values.
+    claim_type: finding
+    speculative: false
+  - claim_text: The model argument should be set to None for full model training from
+      scratch.
+    claim_type: finding
+    speculative: false
+    entity_id: cond_full_training
+  - claim_text: The number of epochs can be set when calling the training method with
+      a default of 1000.
+    claim_type: finding
+    speculative: false
+  - claim_text: NeatMS does not currently provide callback functions to automatically
+      stop training.
+    claim_type: finding
+    speculative: false
+    entity_id: neatms_system
+  - claim_text: Calling the training method will resume training for another specified
+      number of epochs.
+    claim_type: finding
+    speculative: false
+  - claim_text: The network architecture uses dropout and kernel regularizer to specifically
+      prevent overfitting.
+    claim_type: finding
+    speculative: false
+  - claim_text: Training should be stopped when there is no increase in the accuracy
+      of the training and test set.
+    claim_type: finding
+    speculative: false
+  - claim_text: If training set accuracy reaches close to 100% while test accuracy
+      lags far behind, this indicates overfitting.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_tensorflow
+  - claim_text: Using the default architecture and parameters, overfitting has never
+      happened during development.
+    claim_type: finding
+    speculative: false
+  - claim_text: Transfer learning is appropriate when hundreds of peaks have been
+      labelled from the dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: cond_transfer_learning
+  - claim_text: The neural network is made of a convolutional base and a classifier.
+    claim_type: finding
+    speculative: false
+    entity_id: layer_conv_base
+  - claim_text: The convolutional base performs feature extraction while the classifier
+      performs classification.
+    claim_type: finding
+    speculative: false
+    entity_id: layer_conv_base
+  - claim_text: Fine tuning the convolutional base requires a bigger dataset than
+      fine tuning only the classifier.
+    claim_type: finding
+    speculative: false
+    entity_id: layer_conv_base
+  - claim_text: The optimal value for the default model's threshold is 0.22.
+    claim_type: finding
+    speculative: false
+  - claim_text: A higher threshold would return more accurate but less sensitive results.
+    claim_type: finding
+    speculative: false
+  - claim_text: A lower threshold would have the opposite effect of a higher threshold.
+    claim_type: finding
+    speculative: false
+  - claim_text: The prediction is performed by batches of peaks, with one batch corresponding
+      to all peaks in one sample.
+    claim_type: finding
+    speculative: false
+  - claim_text: Running the prediction takes approximately 15 to 30 seconds per sample
+      depending on file number and size.
+    claim_type: finding
+    speculative: false
+  - claim_text: 'Every peak in the dataset is labeled with one of 3 default classes:
+      High_quality, Low_quality, or Noise.'
+    claim_type: finding
+    speculative: false
+    entity_id: comp_label_high_quality
+  - claim_text: For optimal training, a representative subset of the dataset being
+      analyzed should be used.
+    claim_type: finding
+    speculative: false
+  - claim_text: Using the same sample type, sample preparation, and instrumentation
+      results in a more specific and accurate model.
+    claim_type: finding
+    speculative: false
+  - claim_text: Pooled samples should be selected for training as they contain a wide
+      variety of peaks.
+    claim_type: finding
+    speculative: false
+  - claim_text: A selection of 10 to 20 samples is enough for creating a training
+      dataset.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - SGD optimizer
+  - Adam optimizer
+  - Use annotation labels instead of predictions
+  substitution_constraints:
+  - Do not change matrix_size or margin arguments if using transfer learning on existing
+    model
+  - Do not lower min_scan_number when using existing model
+  - Annotation tool requires Jupyter Notebook
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Scalar threshold value (float between 0.0 and 1.0)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: True vs. False positive rate dataframe (Probability_threshold, True, False,
+    False_low, False_noise columns)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Recall table (DataFrame) with columns Probability_threshold, True, False,
+    False_low, False_noise, indexed by probability threshold from 0.00 to 0.99
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Extracted metrics at threshold 0.01: True Positive Rate = 1.0, False Positive
+    Rate = 0.440, False_low = 0.803, False_noise = 0.206'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Trained neural network model file (HDF5 format)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "AUC ROC score (numeric value \u2265 0.95)"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: ROC curve plot (PNG or similar)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Training and validation accuracy curves (matplotlib figure)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

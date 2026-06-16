@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists at MassBank accession MSBNK-RIKEN-PR100295 or retrieve MS/MS spectrum record for D-Pantothenic Acid [M+H]+ from public MassBank deposit"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify genFragEntry function is callable within MetaboAnnotatoR package (github:gggraca__MetaboAnnotatoR)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script runs: execute genFragEntry with documented parameters (noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1, mzTol=0.01) on D-Pantothenic Acid spectrum input"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify expected_outputs[0] file_format_is CSV"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify expected_outputs[0] field_present: contains column headers consistent with library entry structure (no canonical answer \u2014 structure depends on MetaboAnnotatoR internal design)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists at MassBank accession MSBNK-RIKEN-PR100295 or retrieve MS/MS spectrum record for D-Pantothenic Acid [M+H]+ from public MassBank deposit",
+      "verify genFragEntry function is callable within MetaboAnnotatoR package (github:gggraca__MetaboAnnotatoR)",
+      "verify script runs: execute genFragEntry with documented parameters (noise=0.005, mpeaksScore=0.9, mpeaksThres=0.1, mzTol=0.01) on D-Pantothenic Acid spectrum input",
+      "verify expected_outputs[0] file_format_is CSV",
+      "verify expected_outputs[0] field_present: contains column headers consistent with library entry structure (no canonical answer \u2014 structure depends on MetaboAnnotatoR internal design)"
+    ],
+    "expert_review": [
+      "expert chemist/metabolomics analyst review: do the peaks retained after noise=0.005 and mpeaksThres=0.1 filtering match known D-Pantothenic Acid fragmentation pattern for [M+H]+ adduct",
+      "expert review: is the mpeaksScore=0.9 threshold appropriately stringent for marker peak selection in this compound class",
+      "expert review: does the output CSV entry align with standard MassBank library entry format and annotation conventions"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

@@ -1,0 +1,480 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/CNAimage.jpg",
+      "role": "figure",
+      "sha256": "6cf4632093a908a29288ff30dbc65c5e685f66a2df2d80dcaa17c9e86530f987"
+    },
+    {
+      "indexable": false,
+      "path": "figures/CNAtext.jpg",
+      "role": "figure",
+      "sha256": "b8cb20f4524e95ae743c361a3bc1dcd06844d5e88dd1adc6a3e05bd4b0bbb0f0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DMR.jpg",
+      "role": "figure",
+      "sha256": "c80b1ded509647ce91a3ad6f01bdebd0c10c70003b98afbdf678a40a9aeaaeba"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DMRdistributionplot.png",
+      "role": "figure",
+      "sha256": "a6bd89a36a3cc08462d66e43e8916d30850b4ce3a2fa84aeb77abbebf738541f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/DMRoutput.jpg",
+      "role": "figure",
+      "sha256": "99c04b30382f8244fe52b0f73f52b5931701c554e4e894d275d5d33c59333715"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MVP1.jpg",
+      "role": "figure",
+      "sha256": "7137a87e9e82bde62f6cf50ec4a6112aa8c2939ea24c4696bb3ba4ccebeb31d2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MVP2.jpg",
+      "role": "figure",
+      "sha256": "e4fb96c1a84b45fa98dd4e7563e55d5765ba682490394551d9c889593c13f6bc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MVP3.jpg",
+      "role": "figure",
+      "sha256": "4e6ee4e065e1a523e9c2c8729e5980b73085e8ef153ebd1ef7bd5970f47ece65"
+    },
+    {
+      "indexable": false,
+      "path": "figures/checkBMIQ.jpg",
+      "role": "figure",
+      "sha256": "fc14c89a2f8d64dade3e5e8af978f3c739797cc3066cd8d870cee1f512d976e8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/densityPlot.jpg",
+      "role": "figure",
+      "sha256": "ad7e93396f58d9236e08437ccfe0668dc696d01115110c5ef6d7dd34c6bb29ba"
+    },
+    {
+      "indexable": false,
+      "path": "figures/failedProbes.jpg",
+      "role": "figure",
+      "sha256": "b610c68fc3876eca75f8c89393c08ebe826d5d77610122f4f57ffc89457245ac"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lasso.jpg",
+      "role": "figure",
+      "sha256": "c8cc867fd32b2957712be29553bc5c1f4bcdc10c2997a81547bc4ee2a678d146"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo4.jpg",
+      "role": "figure",
+      "sha256": "a2f55c4af9e20b3ba10b238389f24f4e08a1a515db3c130873077a5ac72fd3b6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mdsPlot.jpg",
+      "role": "figure",
+      "sha256": "653bbfee3df9e66f323d30e4a514e5ac1987c5f3b5243f20794ce9e8d210264b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/probeFeatures.jpg",
+      "role": "figure",
+      "sha256": "e0f6ac01084a408baea24fd30630459364c707ef09eef4ef6f2d7573b253541b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/radius.jpg",
+      "role": "figure",
+      "sha256": "05f20f6d3ad70be963a2583ac6630e2ec807e331f3fb1999f690cc2bbc6766f6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/rawSampleCluster.jpg",
+      "role": "figure",
+      "sha256": "4483104a00bebecddafbad353866c14fab7580e60f8d16a51353677b520ba9a4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/sampleSheetexample.jpg",
+      "role": "figure",
+      "sha256": "cb1ceb83225f8d9634c2c5cf6ee2bee168a1310d1f552479f821d36ba47e4dc1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/studyInfo.jpg",
+      "role": "figure",
+      "sha256": "4011b8c232a9b2243c8b49b60088bd1838a4d52351ceb72a0b2575b691ebc5b1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/studyInfo.png",
+      "role": "figure",
+      "sha256": "50eeac18d5d55733b9e52e4d773b4a6528061a6ad2922afcf186867154030cd7"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "5424f3a6c0d2dfbdaf6d97c74c67c1b5880938175e22c4723f43dc143d428db7"
+    }
+  ],
+  "created_at": "2026-06-15T19:16:49.189128+00:00",
+  "crossref_doi": null,
+  "data_accessions": [
+    {
+      "accession": "GSE40279",
+      "evidence_span": "lot looks not complicated. Below we used another plot from [GSE40279](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE4027",
+      "kind": "geo_series",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE40279"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "HumanMethylation450 test dataset (450K lung tumor data: 8 samples, 4 tumor + 4 control)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "EPICSimData test dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Loaded 450K dataset object with pre-filter probe count of 485,512 probes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Loaded EPIC dataset object with pre-filter probe count of 867,531 probes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "The HumanMethylation450 (450K) array interrogates 485,512 probes targeting CpG sites across the human genome, distributed across autosomes and sex chromosomes.",
+    "The EPIC array interrogates 867,531 probes, representing an expansion over the 450K platform with additional coverage of regulatory regions.",
+    "ChAMP's champ.load() function accepts either .idat files or beta-value matrices and performs initial data import with automatic detection of array type.",
+    "Pre-filter probe counts reflect the full probe content of each array platform before any filtering or quality-control steps are applied."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:YuanTian1991__ChAMP containing ChAMP package source code",
+      "verify file exists at github:YuanTian1991__ChAMPdata containing test datasets (HumanMethylation450 and EPICSimData)",
+      "script_runs: execute champ.load() or champ.import() on HumanMethylation450 test dataset without errors",
+      "script_runs: execute champ.load() or champ.import() on EPICSimData test dataset without errors",
+      "value_in_range: probe count returned from HumanMethylation450 pre-filter equals 485,512 (exact match required)",
+      "value_in_range: probe count returned from EPICSimData pre-filter equals 867,531 (exact match required)"
+    ],
+    "expert_review": [
+      "Verify that the test datasets (HumanMethylation450 and EPICSimData) are legitimate reference datasets appropriate for validating ChAMP loading functionality",
+      "Confirm that pre-filter probe counts reported in documentation or package vignette match the expected values of 485,512 for 450K and 867,531 for EPIC"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Do champ.load() and champ.import() correctly load the expected numbers of probes before filtering for the HumanMethylation450 and EPIC array types?: 'for 450k bead array data, before filtering for low quality probes, the dataset will include 485,512 probes. And for EPIC bead array data, before filtering probes the dataset, will include 867,531'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The ChAMP loading functions should return 485,512 probes for 450K arrays and 867,531 probes for EPIC arrays before any quality-based filtering is applied.: 'for 450k bead array data, before filtering for low quality probes, the dataset will include 485,512 probes. And for EPIC bead array data, before filtering probes the dataset, will include 867,531'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] HumanMethylation450 test dataset (450K lung tumor data: 8 samples, 4 tumor + 4 control): 'The 450k lung tumor data set contains only 8 samples, 4 lung tumor samples (T) and 4 control samples (C)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] EPICSimData test dataset: 'For the EPIC Simulation Data Set, user may use following code to load it: data(EPICSimData)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Loaded 450K dataset object with pre-filter probe count of 485,512 probes: 'ChAMP package is designed for conduct DNA methylation array analysis, providing service from data loading'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Loaded EPIC dataset object with pre-filter probe count of 867,531 probes: 'ChAMP package is designed for conduct DNA methylation array analysis, providing service from data loading'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ChAMP: 'ChAMP package is designed for conduct DNA methylation array analysis, providing service from data loading, to final gene set enrichment analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog provided in document: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import champ; obj_450k = champ.load(dataset='{inputs.dataset_450k}'); print(f'450K pre-filter probes: {obj_450k.shape[0]}'); assert obj_450k.shape[0] == 485512, f'Expected 485512 but got {obj_450k.shape[0]}'; obj_epic = champ.load(dataset='{inputs.dataset_epic}'); print(f'EPIC pre-filter probes: {obj_epic.shape[0]}'); assert obj_epic.shape[0] == 867531, f'Expected 867531 but got {obj_epic.shape[0]}'; print('All validations passed')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Loaded 450K dataset object with pre-filter probe count of 485,512 probes",
+    "Loaded EPIC dataset object with pre-filter probe count of 867,531 probes"
+  ],
+  "finding": "The ChAMP loading functions should return 485,512 probes for 450K arrays and 867,531 probes for EPIC arrays before any quality-based filtering is applied.",
+  "github_name": "YuanTian1991/ChAMP",
+  "input_from": null,
+  "inputs": [
+    "HumanMethylation450 test dataset (450K lung tumor data: 8 samples, 4 tumor + 4 control)",
+    "EPICSimData test dataset"
+  ],
+  "keywords": [
+    "dna methylation",
+    "illumina beadarray",
+    "450k array",
+    "epic array",
+    "differentially methylated positions",
+    "differentially methylated regions",
+    "type-ii probe normalization",
+    "batch effect correction",
+    "gene set enrichment analysis",
+    "quality control",
+    "normalization methods",
+    "idat files",
+    "beta values"
+  ],
+  "landmark_outputs": [
+    "450k_loaded_object.rds",
+    "epic_loaded_object.rds"
+  ],
+  "linked_result_ids": [
+    "result_009"
+  ],
+  "methodology_summary": [
+    "Load HumanMethylation450 test dataset (450K lung tumor data) into ChAMP environment using champ.load() function.",
+    "Extract and record pre-filter probe count from loaded 450K object.",
+    "Load EPICSimData test dataset using champ.load() or data() function into ChAMP environment.",
+    "Extract and record pre-filter probe count from loaded EPIC object.",
+    "Validation: Verify that 450K pre-filter probe count equals 485,512 and EPIC pre-filter probe count equals 867,531, confirming successful data import and correct array type detection.",
+    "References: GSE40279 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE40279)"
+  ],
+  "missing_information": [
+    "No changelog provided in document"
+  ],
+  "parameters": [],
+  "primary_domain": "genomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Do champ.load() and champ.import() correctly load the expected numbers of probes before filtering for the HumanMethylation450 and EPIC array types?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "dna-methylation-array-data-import",
+    "illumina-450k-epic-dataset-loading",
+    "methylation-probe-count-validation",
+    "r-package-champ-usage"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_champ/synthesized_package",
+  "spine_condition_ids": [
+    "cond_array_450k",
+    "cond_array_epic",
+    "cond_epic_sim_block",
+    "cond_multihit_filter_nordlund"
+  ],
+  "spine_entity_ids": [
+    "champ_system",
+    "arch_champ_pipeline",
+    "comp_champ_load",
+    "comp_champ_import",
+    "comp_champ_filter",
+    "comp_champ_qc",
+    "comp_champ_norm",
+    "comp_champ_svd",
+    "comp_champ_combat",
+    "comp_champ_dmp",
+    "comp_champ_dmr",
+    "comp_champ_block",
+    "comp_champ_gsea",
+    "comp_champ_cna",
+    "comp_champ_refbase",
+    "comp_champ_impute",
+    "comp_champ_process",
+    "tool_probe_lasso",
+    "dataset_450k_test",
+    "dataset_epic_sim",
+    "cond_array_450k",
+    "cond_array_epic",
+    "cond_epic_sim_block",
+    "cond_multihit_filter_nordlund",
+    "result_450k_probe_count",
+    "result_epic_probe_count",
+    "result_epic_sim_dmr_count",
+    "result_epic_sim_no_blocks",
+    "result_svd_max_components",
+    "result_detection_pvalue_threshold",
+    "result_beadcount_filter"
+  ],
+  "subdomains": [
+    "gene-regulation",
+    "biomarker-discovery"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:YuanTian1991__ChAMP",
+  "task_description": "Load HumanMethylation450 and EPICSimData test datasets using champ.load() and verify that pre-filter probe counts match expected values: 485,512 probes for 450K and 867,531 probes for EPIC.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "HumanMethylation450 test dataset",
+      "port_id": "dataset_450k",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "EPICSimData test dataset",
+      "port_id": "dataset_epic",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Load test datasets using champ.load()/champ.import() and verify pre-filter probe counts match 485,512 (450K) and 867,531 (EPIC).",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Loaded 450K dataset with verified probe count",
+      "port_id": "loaded_450k_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Loaded EPIC dataset with verified probe count",
+      "port_id": "loaded_epic_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "batch-correction",
+    "differential-abundance-analysis",
+    "normalization",
+    "quality-control",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce the pre-filter probe counts for 450K and EPIC arrays in champ.load()",
+  "tools": [
+    "ChAMP"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Loaded 450K dataset object with pre-filter probe count of 485,512 probes, Loaded EPIC dataset object with pre-filter probe count of 867,531 probes."
+  ],
+  "workflow_description": "1. Load HumanMethylation450 test dataset (450K lung tumor data with 8 samples) using champ.load() function. 2. Verify pre-filter probe count equals 485,512 for the 450K array. 3. Load EPICSimData test dataset using champ.load() or data() function. 4. Verify pre-filter probe count equals 867,531 for the EPIC array. 5. Compare reported probe counts against output object probe counts to confirm successful data import."
+}

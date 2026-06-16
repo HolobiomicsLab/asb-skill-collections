@@ -1,0 +1,174 @@
+# SciTask Card: Reconstruct the MS/MS spectral preprocessing step that converts raw spectra into bag-of-fragments format
+
+- Task ID: `task_001`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T21:44:19.295434+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ms2lda/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-processing`, `information-extraction`
+- GitHub: `vdhooftcompmet/MS2LDA`
+- Quality: Score 2/5 — Coherent: false, placeholder, 9 grounding failures
+
+## Classification
+
+- Task kind: `component_reconstruction`
+- Article type: `software-tool`
+- Primary domain: `metabolomics`
+- Subdomains: `computational-metabolomics`, `untargeted-metabolomics`, `natural-products`
+- Techniques: `clustering`, `dimensionality-reduction`, `machine-learning`, `molecular-networking`, `spectral-library-matching`, `tandem-ms`
+
+## Research Question
+How does MS2LDA convert mass spectrometry input files in multiple formats (.mgf, .msp, .mzML) into a bag-of-fragments representation suitable for LDA training?
+
+## Connected Finding
+The preprocessing module converts MS/MS spectra into a bag-of-fragments format, extracts neutral losses, and filters out noise to prepare data for LDA modeling.
+
+## Task Description
+Implement the preprocessing module to read MS/MS spectra from .mgf, .msp, or .mzML formats and convert them into a bag-of-fragments representation with extracted neutral losses, suitable for LDA training.
+
+## Inputs
+- MS/MS spectra in .mgf (Mascot Generic Format), .msp (NIST-style), or .mzML format
+
+## Expected Outputs
+- Bag-of-fragments corpus in LDA-compatible format (document-term matrix or serialized Python object)
+- Fragment and neutral loss token inventory with mass-to-token mappings
+- Quality control report documenting noise filtering statistics and retained fragment counts
+
+## Expected Output File
+
+- `corpus.pkl`
+
+## Landmark Outputs
+
+- `raw_spectra_loaded.json`
+- `fragments_and_losses_extracted.csv`
+- `noise_filtered_spectrum_table.csv`
+- `token_vocabulary.json`
+- `corpus_stats.txt`
+
+## Tools
+- MS2LDA
+- MS2LDA.Preprocessing.load_and_clean
+- MS2LDA.Preprocessing.generate_corpus
+- Python
+- Conda
+
+## Skills
+- mass-spectrometry-file-format-parsing
+- fragment-ion-peak-detection-and-normalization
+- neutral-loss-calculation-from-precursor-fragment-pairs
+- spectral-noise-filtering-and-quality-control
+- bag-of-words-document-representation-generation
+- mass-binning-and-tokenization-for-topic-modeling
+
+## Workflow Description
+1. Load MS/MS spectra from input file (.mgf, .msp, or .mzML) using the MS2LDA.Preprocessing.load_and_clean module. 2. Extract fragment ion masses and normalize peak intensities within each spectrum. 3. Calculate neutral loss values for all observed fragment pairs. 4. Filter noise by removing fragments and losses below a minimum intensity threshold or statistical significance cutoff. 5. Generate a bag-of-fragments corpus representation using MS2LDA.Preprocessing.generate_corpus, binning fragments and losses into discrete mass tokens. 6. Output the processed corpus in a format compatible with LDA model input (document-term matrix or equivalent serialized representation).
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/CompMetabolomics_logo.jpg` | figure | False |
+| `figures/MS2LDA_LOGO_black.jpg` | figure | False |
+| `figures/MS2LDA_LOGO_white.jpg` | figure | False |
+| `figures/MS2LDA_Workflow.jpg` | figure | False |
+| `figures/WUR_RGB_standard_2021.png` | figure | False |
+| `figures/WUR_logo.jpg` | figure | False |
+| `figures/pnas.jpg` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- The changelog section provided contains only a header and metadata; no actual version history, feature additions, bug fixes, or changes are documented.
+
+## Domain Knowledge
+- MS/MS fragmentation produces both fragment ions and neutral losses (mass differences between precursor and observed fragments); both are essential for discovering substructure motifs.
+- Bag-of-fragments models treat each spectrum as an unordered collection of mass tokens, losing intensity and order information; this abstraction enables topic-modeling algorithms like LDA.
+- Noise filtering must balance sensitivity (retain low-intensity diagnostic fragments) and specificity (remove chemical noise and instrument artifacts); typical thresholds depend on instrument type and ionization mode.
+- Fragment and neutral loss masses must be binned into discrete tokens (e.g., integer m/z or narrow mass ranges) for LDA to treat them as categorical vocabulary; binning width affects motif granularity.
+- Positive and negative ionization modes produce distinct fragmentation patterns and require separate preprocessing pipelines; MS2LDA can process both but motif interpretation differs between modes.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: MS2LDA.Preprocessing.load_and_clean, MS2LDA.Preprocessing.generate_corpus, Conda, Bag-of-fragments corpus in LDA-compatible format (document-term matrix or serialized Python object), Fragment and neutral loss token inventory with mass-to-token mappings, Quality control report documenting noise filtering statistics and retained fragment counts.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] How does MS2LDA convert mass spectrometry input files in multiple formats (.mgf, .msp, .mzML) into a bag-of-fragments representation suitable for LDA training?: 'MS2LDA is an advanced tool designed for unsupervised substructure discovery in mass spectrometry data, utilizing topic modeling'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [methods] The preprocessing module converts MS/MS spectra into a bag-of-fragments format, extracts neutral losses, and filters out noise to prepare data for LDA modeling.: 'Convert MS/MS spectra into a bag-of-fragments format. Extract neutral losses. Filter out noise.'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [other] MS/MS spectra in .mgf (Mascot Generic Format), .msp (NIST-style), or .mzML format: 'MS2LDA expects preprocessed MS/MS data, typically in: .mgf (Mascot Generic Format) .mzML (via conversion or direct input) .msp (NIST-style spectrum libraries)'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [other] Bag-of-fragments corpus in LDA-compatible format (document-term matrix or serialized Python object): 'Convert MS/MS spectra into a bag-of-fragments format'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [other] Fragment and neutral loss token inventory with mass-to-token mappings: 'Extract neutral losses'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [other] Quality control report documenting noise filtering statistics and retained fragment counts: 'Filter out noise'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [other] MS2LDA: 'MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [other] MS2LDA.Preprocessing.load_and_clean: 'from MS2LDA.Preprocessing import load_and_clean'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [other] MS2LDA.Preprocessing.generate_corpus: 'Generate Corpus'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [other] Python: 'Configure the Python environment (set PYTHONPATH, activate conda, etc.)'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [other] Conda: 'These steps assume you have Conda installed'
+- `ev_012` from `agent2_synthesis` (agent2_traced): [discussion] The changelog section provided contains only a header and metadata; no actual version history, feature additions, bug fixes, or changes are documented.: '## [Unreleased]
+
+### Added'
+
+## Evaluation Strategy
+### Direct Checks
+- verify that the MS2LDA repository (github:vdhooftcompmet__MS2LDA) is accessible and contains a COMP-PREPROCESSING module or equivalent preprocessing code
+- verify file_exists: check that the repository contains documented support for .mgf, .msp, and .mzML input formats in the preprocessing stage
+- verify script_runs: load a minimal example .mgf, .msp, or .mzML file from the repository's test data or documentation and confirm the preprocessing ingestion code executes without error
+- verify output_matches_reference: confirm that the bag-of-fragments output structure (format, fields, fragment representation) matches the documented schema in the repository or methods section
+- verify file_format_is: confirm that the intermediate output from format-ingestion is serializable (e.g., JSON, pickle, CSV) and conforms to the expected bag-of-fragments structure before LDA training
+- verify contains_substring: check that preprocessing code or documentation references fragment binning, neutral loss extraction, or noise filtering as documented in the workflow steps
+
+### Expert Review
+- assess whether the fragment-binning strategy (mass tolerance, binning method) is appropriate for MS/MS fragmentation data and consistent with standard proteomics/metabolomics practice
+- assess whether the noise-filtering thresholds and criteria are biologically/chemically justified and whether they risk removing genuine low-abundance fragments
+- assess whether the bag-of-fragments representation (e.g., term frequency, binary presence/absence, weighted counts) is suitable as input to LDA and matches the model's documented assumptions
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load spectral data from input file (mgf, msp, or mzML) using format-specific parsers.
+2. Extract fragment ion m/z values and peak intensities; calculate neutral loss values for all fragment–precursor pairs.
+3. Apply noise filtering to remove low-intensity fragments and statistically insignificant peaks.
+4. Bin fragment and neutral loss masses into discrete mass tokens via mass-binning discretization.
+5. Generate bag-of-fragments corpus, encoding each spectrum as a document with token frequencies.
+6. Validation: verify corpus dimensionality, token inventory completeness, and that all documents are non-empty; check that at least 80% of input spectra are retained post-filtering.
+
+## Workflow Ports
+
+**Inputs:**
+
+- `raw_spectra` — MS/MS spectra file (.mgf, .msp, or .mzML)
+
+**Outputs:**
+
+- `corpus` — Bag-of-fragments corpus for LDA training
+- `token_map` — Fragment and neutral loss token inventory
+- `qc_report` — Preprocessing quality control report
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:vdhooftcompmet__MS2LDA`
+- **Synthesized at:** 2026-06-15T21:51:02+00:00
+
+## Extraction Quality
+- Score: 2/5
+- Coherent: false
+- Placeholder detected: true
+- Groundedness failures (9):
+  - finding: evidence_span not found in section 'methods' (value='The preprocessing module converts MS/MS spectra into a bag-o', span='Convert MS/MS spectra into a bag-of-fragments format. Extrac')
+  - inputs[0]: evidence_span not found in section 'other' (value='MS/MS spectra in .mgf (Mascot Generic Format), .msp (NIST-st', span='MS2LDA expects preprocessed MS/MS data, typically in: .mgf (')
+  - expected_outputs[0]: evidence_span not found in section 'other' (value='Bag-of-fragments corpus in LDA-compatible format (document-t', span='Convert MS/MS spectra into a bag-of-fragments format')
+  - expected_outputs[1]: evidence_span not found in section 'other' (value='Fragment and neutral loss token inventory with mass-to-token', span='Extract neutral losses')
+  - expected_outputs[2]: evidence_span not found in section 'other' (value='Quality control report documenting noise filtering statistic', span='Filter out noise')
+  - tools[3]: evidence_span not found in section 'other' (value='Python', span='Configure the Python environment (set PYTHONPATH, activate c')
+  - tools[4]: evidence_span not found in section 'other' (value='Conda', span='These steps assume you have Conda installed')
+  - SEMANTIC GAP: research_question asks specifically about MS2LDA's conversion mechanism, but evidence_span only asserts MS2LDA is 'an advanced tool' for 'unsupervised substructure discovery' without explaining the conversion process itself
+  - SEMANTIC GAP: finding describes the preprocessing module's general workflow but does not address the multi-format ingestion (.mgf, .msp, .mzML) that is the primary focus of the research_question
+- Notes: This task card suffers from severe grounding failures and semantic misalignment. The research_question is technically specific and asks about multi-format file conversion, but the finding and evidence cite only a generic introductory statement about MS2LDA's purpose. None of the 7 evidence_spans can be located in the specified source sections, indicating either missing source material or incorrect section assignments. Additionally, the research_question and finding do not address the same scope: the question is about format-agnostic conversion mechanisms, while the finding addresses generic preprocessing (bag-of-fragments, neutral loss, noise filtering) without explaining how different input formats are handled. The tools and expected_outputs rely on placeholder function names (load_and_clean, generate_corpus) that lack substantive documentation. The card would benefit from: (1) re-grounding all claims against actual source text, (2) aligning the finding to specifically address multi-format ingestion and format-specific parsing, (3) providing concrete evidence for the existence and behavior of cited preprocessing functions, and (4) reconsidering whether the card's objective matches the source material. Current quality is unsuitable for task execution.
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

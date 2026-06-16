@@ -1,0 +1,313 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "2885f2a6a210a8e628bb033ef0e84887d58183b27af5f5e09d072fa208d93f64"
+    }
+  ],
+  "created_at": "2026-06-15T21:51:22.650070+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MemoMatrix file (sample-by-MS2-fingerprint counts or vectors)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "2D scatter plot (MDS or PCoA projection) showing sample relationships",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Table of 2D coordinates (or distance matrix) from dimensionality reduction",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MDS and PCoA are complementary ordination methods that reduce high-dimensional distance matrices to 2D/3D coordinates for exploratory sample visualization in metabolomics.",
+    "MS2 fingerprints represent sample-level counts of fragment peaks and neutral losses, and pairwise distances between samples are typically computed using cosine similarity, Jaccard, or Euclidean metrics.",
+    "MDS preserves global distance structure while PCoA explicitly captures variance along orthogonal axes (eigenvectors); choice depends on whether maximizing variance or preserving pairwise distances is the research goal.",
+    "MEMO's RT-agnostic alignment allows comparison of chemodiverse samples or those with strong retention-time drift across different LC methods or instrument platforms (e.g., MaXis Q-ToF vs Q-Exactive)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that input MemoMatrix file exists and is loadable by memo-ms package",
+      "verify that output coordinate table contains at least 2 columns (for 2D embedding) and one row per input sample",
+      "verify that output scatter plot file exists in a standard image format (PNG, PDF, or SVG)",
+      "verify that scatter plot contains plotted points corresponding to each sample in the coordinate table",
+      "verify that the embedding method used (MDS or PCoA) is correctly identified in output metadata or plot labels",
+      "verify output matches reference implementation by comparing embedding coordinates to a reference deposit (if available) with robust tolerance for numerical precision (e.g., within 1% variance explained)"
+    ],
+    "expert_review": [
+      "expert judgment on whether the 2D embedding preserves meaningful sample relationships and separations evident in the original high-dimensional MemoMatrix",
+      "expert judgment on whether the choice between MDS and PCoA is appropriate for the sample collection and biological question being addressed"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How do MDS or PCoA visualization techniques operate on MS2 fingerprint data to produce low-dimensional sample comparison plots?: 'different filtering (remove peaks/losses from blanks for example) and visualization techniques (MDS/PCoA, TMAP, Heatmap, ...) can be used'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MEMO applies MDS/PCoA visualization techniques to aligned MS2 fingerprints to generate low-dimensional embeddings that enable visual comparison of different samples.: 'These fingerprints can in a second stage be aligned to compare different samples. Once obtained, different filtering (remove peaks/losses from blanks for example) and visualization techniques'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MemoMatrix file (sample-by-MS2-fingerprint counts or vectors): 'These fingerprints can in a second stage be aligned to compare different samples'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] 2D scatter plot (MDS or PCoA projection) showing sample relationships: 'visualization techniques (MDS/PCoA, TMAP, Heatmap, ...) can be used'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Table of 2D coordinates (or distance matrix) from dimensionality reduction: 'These fingerprints can in a second stage be aligned to compare different samples'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] memo-ms: 'pip install memo-ms'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Python 3.8: 'conda create --name memo python=3.8'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] numpy: 'pip install numpy'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] scikit-bio: 'conda install -c conda-forge scikit-bio'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No documentation of specific MDS or PCoA implementation parameters (distance metric, standardization method, handling of missing values) is provided in the available text: 'No discussion section present in document'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No reference example, notebook, or expected output file is cited for the visualization step of the MEMO pipeline in the changelog: 'No discussion section present in document'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import numpy as np; from scipy.spatial.distance import pdist, squareform; from sklearn.manifold import MDS; import json; import sys; data = np.loadtxt('{inputs.memomatrix}', delimiter=',', skiprows=1); sample_names = np.genfromtxt('{inputs.memomatrix}', delimiter=',', dtype=str, max_rows=1)[1:]; distances = squareform(pdist(data, metric='euclidean')); mds = MDS(n_components=2, dissimilarity='precomputed', random_state=42); coords = mds.fit_transform(distances); np.savetxt('{task_id}_mds_coords.csv', coords, delimiter=',', header='PC1,PC2', comments=''); print('MDS embedding complete'); print(f'Samples: {len(coords)}'); print(f'Stress: {mds.stress_}')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "mds_pca_plot.png",
+  "expected_outputs": [
+    "2D scatter plot (MDS or PCoA projection) showing sample relationships",
+    "Table of 2D coordinates (or distance matrix) from dimensionality reduction"
+  ],
+  "finding": "MEMO applies MDS/PCoA visualization techniques to aligned MS2 fingerprints to generate low-dimensional embeddings that enable visual comparison of different samples.",
+  "github_name": "mandelbrot-project/memo_publication_examples",
+  "input_from": "task_001",
+  "inputs": [
+    "MemoMatrix file (sample-by-MS2-fingerprint counts or vectors)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "memomatrix.csv",
+    "pairwise_distances.csv",
+    "embedding_coordinates.csv"
+  ],
+  "linked_result_ids": [
+    "result_010",
+    "result_013"
+  ],
+  "methodology_summary": [
+    "Load the MemoMatrix containing sample-level MS2 fingerprint vectors or counts",
+    "Compute pairwise distances between samples using an appropriate metric (cosine, Euclidean, or Jaccard)",
+    "Apply MDS or PCoA to embed the high-dimensional distance matrix into 2D coordinates",
+    "Generate a 2D scatter plot with samples colored or labeled by experimental group or sample type",
+    "Validation: Verify that the embedding preserves expected sample clustering patterns and is interpretable relative to sample metadata or treatment groups"
+  ],
+  "missing_information": [
+    "No documentation of specific MDS or PCoA implementation parameters (distance metric, standardization method, handling of missing values) is provided in the available text",
+    "No reference example, notebook, or expected output file is cited for the visualization step of the MEMO pipeline in the changelog"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How do MDS or PCoA visualization techniques operate on MS2 fingerprint data to produce low-dimensional sample comparison plots?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "ms2-fingerprint-distance-calculation",
+    "multidimensional-scaling-embedding",
+    "principal-coordinate-analysis-interpretation",
+    "sample-relationship-visualization",
+    "metabolomics-sample-comparison"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_memo/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MEMO_SYSTEM",
+    "MEMO_MATRIX_CLASS",
+    "MEMO_FROM_UNALIGNED",
+    "MEMO_FROM_ALIGNED",
+    "MERGED_MEMO",
+    "MEMO_PIPELINE_ARCH",
+    "VISUALIZATION_COMPONENT",
+    "MEMO_MS_PACKAGE"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:mandelbrot-project__memo",
+  "task_description": "Generate a low-dimensional embedding visualization (MDS or PCoA) of a MemoMatrix to produce a 2D scatter plot comparing sample similarity, along with the underlying distance/coordinate table.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MemoMatrix file (sample-by-fingerprint)",
+      "port_id": "memomatrix",
+      "resolved_via": null,
+      "source": "task_001/ms2_fingerprints",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Apply MDS or PCoA to a MemoMatrix to generate a 2D scatter plot and coordinate table for sample distance visualization.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "2D scatter plot (MDS or PCoA)",
+      "port_id": "embedding_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "2D coordinate table or distance matrix",
+      "port_id": "coordinate_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "dimensionality-reduction",
+    "clustering",
+    "spectral-library-matching"
+  ],
+  "title": "Reconstruct the sample-comparison visualization step using MDS/PCoA on a MemoMatrix",
+  "tools": [
+    "MEMO",
+    "memo-ms",
+    "Python 3.8",
+    "numpy",
+    "scikit-bio"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Python 3.8, numpy."
+  ],
+  "workflow_description": "1. Load the MemoMatrix file (sample-by-fingerprint matrix) using memo-ms. 2. Compute pairwise sample distances from the fingerprint vectors. 3. Apply Multidimensional Scaling (MDS) or Principal Coordinate Analysis (PCoA) to reduce the distance matrix to 2D coordinates. 4. Generate a 2D scatter plot with samples as points, colored or labeled by group identity if provided. 5. Export the coordinate table and visualization as separate files."
+}

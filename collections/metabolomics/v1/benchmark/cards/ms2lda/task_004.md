@@ -1,0 +1,165 @@
+# SciTask Card: Reconstruct the MotifDB motif-matching step that retrieves database hits for discovered motifs using MassQL queries
+
+- Task ID: `task_004`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T21:44:19.295434+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ms2lda/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-analysis`, `information-extraction`
+- GitHub: `vdhooftcompmet/MS2LDA`
+- Input from: `task_002`
+- Quality: Score 2/5 — Coherent: false, placeholder, 5 grounding failures
+
+## Classification
+
+- Task kind: `component_reconstruction`
+- Article type: `software-tool`
+- Primary domain: `metabolomics`
+- Subdomains: `computational-metabolomics`, `untargeted-metabolomics`, `natural-products`
+- Techniques: `clustering`, `dimensionality-reduction`, `machine-learning`, `molecular-networking`, `spectral-library-matching`, `tandem-ms`
+
+## Research Question
+How does MS2LDA query a MassQL-searchable MotifDB to retrieve and rank database matches for discovered motifs?
+
+## Connected Finding
+MS2LDA integrates with a MassQL-searchable MotifDB to enable comparison of discovered motifs against known database entries, supporting automated motif annotation and result retrieval.
+
+## Task Description
+Query the MassQL-searchable MotifDB for database matches against a set of inferred Mass2Motifs and return a ranked list of matching motif records per input motif, serialized in JSON format.
+
+## Inputs
+- Inferred motifset in JSON format (motifset.json or motifset_optimized.json) from MS2LDA modeling step, containing Mass2Motif definitions with fragment and neutral-loss compositions
+- MotifDB reference database library (downloaded from Zenodo, required for MassQL-based lookups)
+
+## Expected Outputs
+- Ranked MotifDB match records per input motif, returned as JSON with per-motif match lists including MotifDB entry ID, name, fragment composition, neutral-loss composition, and match score
+
+## Expected Output File
+
+- `motifdb_matches.json`
+
+## Landmark Outputs
+
+- `motifset_loaded.json`
+- `massql_queries.json`
+- `motifdb_matches.json`
+
+## Tools
+- MassQL
+- MotifDB
+- MS2LDA
+
+## Skills
+- motif-database-lookup-and-retrieval
+- mass-fragment-pattern-querying
+- neutral-loss-composition-matching
+- motif-similarity-ranking-interpretation
+- json-serialization-and-data-structure-design
+
+## Workflow Description
+1. Load the inferred motifset (JSON format) produced by the LDA modeling step, extracting mass composition and neutral-loss patterns for each Mass2Motif. 2. For each motif, construct a MassQL query using its fragment and neutral-loss patterns to search the MotifDB reference database. 3. Execute the MassQL search against MotifDB via the MassQL4MotifDB integration module, retrieving ranked matches sorted by similarity or match score. 4. Serialize query results and MotifDB match records (motif ID, name, composition, score) to a JSON output file preserving the per-motif ranking structure.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/CompMetabolomics_logo.jpg` | figure | False |
+| `figures/MS2LDA_LOGO_black.jpg` | figure | False |
+| `figures/MS2LDA_LOGO_white.jpg` | figure | False |
+| `figures/MS2LDA_Workflow.jpg` | figure | False |
+| `figures/WUR_RGB_standard_2021.png` | figure | False |
+| `figures/WUR_logo.jpg` | figure | False |
+| `figures/pnas.jpg` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No implementation detail, API specification, or workflow documentation for the MotifDB lookup and result serialisation step is present in the provided Changelog section.
+- The specific input schema, expected format, and computational artifacts for ARTIFACT-MOTIFSET (motif set data structure to be queried) are not documented in this section.
+- The exact query interface, parameters, and output schema for MassQL-searchable MotifDB are not described in the provided Changelog text.
+- No ranking algorithm, scoring function, or result serialisation format for per-motif database-match records is specified in this section.
+
+## Domain Knowledge
+- Mass2Motifs are learned fragmentation patterns (combinations of fragment ions and neutral losses) that recur across MS/MS spectra and represent conserved molecular substructures.
+- MotifDB is a searchable reference database of curated mass spectrometry motifs with known structural annotations that serves as a gold standard for motif validation and compound class assignment.
+- MassQL is a domain-specific query language for mass spectrometry that enables structured searches on fragment and neutral-loss patterns; MassQL4MotifDB integrates this language with the MotifDB reference library.
+- Motif-to-database matching relies on compositional similarity of fragment ion peaks and neutral losses; ranking typically reflects cosine similarity, Jaccard overlap, or probabilistic match scores.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: MassQL, MotifDB, Ranked MotifDB match records per input motif, returned as JSON with per-motif match lists including MotifDB entry ID, name, fragment composition, neutral-loss composition, and match score.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] How does MS2LDA query a MassQL-searchable MotifDB to retrieve and rank database matches for discovered motifs?: 'Integration with MassQL-searchable MotifDB'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] MS2LDA integrates with a MassQL-searchable MotifDB to enable comparison of discovered motifs against known database entries, supporting automated motif annotation and result retrieval.: 'offering users an integrated workflow with improved usability, detailed visualizations, and a searchable motif database (MotifDB)'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [other] Inferred motifset in JSON format (motifset.json or motifset_optimized.json) from MS2LDA modeling step, containing Mass2Motif definitions with fragment and neutral-loss compositions: 'motifset.json           # Discovered Mass2Motifs in JSON format'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [other] MotifDB reference database library (downloaded from Zenodo, required for MassQL-based lookups): 'download the Spec2Vec model, embeddings, and library DB (See the Zenodo repository)'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [other] Ranked MotifDB match records per input motif, returned as JSON with per-motif match lists including MotifDB entry ID, name, fragment composition, neutral-loss composition, and match score: 'Motif Search: Perform motif-motif searches against reference motifs in MotifDB. This updates the Motif annotations in previous tabs.'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [other] MassQL: 'Integration with MassQL-searchable MotifDB'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [other] MotifDB: 'Compare motifs to known entries in MotifDB'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [other] MS2LDA: 'MS2LDA's functionality is organized into several main components'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [discussion] No implementation detail, API specification, or workflow documentation for the MotifDB lookup and result serialisation step is present in the provided Changelog section.: '# Changelog
+
+All notable changes to this project will be documented in this file.'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [discussion] The specific input schema, expected format, and computational artifacts for ARTIFACT-MOTIFSET (motif set data structure to be queried) are not documented in this section.: '[Unreleased]
+
+### Added'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [discussion] The exact query interface, parameters, and output schema for MassQL-searchable MotifDB are not described in the provided Changelog text.: 'The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).'
+- `ev_012` from `agent2_synthesis` (agent2_traced): [discussion] No ranking algorithm, scoring function, or result serialisation format for per-motif database-match records is specified in this section.: 'This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).'
+
+## Evaluation Strategy
+### Direct Checks
+- verify that the Changelog section text contains no substantive content beyond metadata headers and reference information
+- confirm file_exists: github:vdhooftcompmet__MS2LDA repository is accessible and cloneable
+- verify that the provided section text does NOT contain any implementation details, API specifications, input/output schemas, or MotifDB query logic that would permit a direct_check-based evaluation of the sub-task
+
+### Expert Review
+- assess whether MotifDB lookup and result serialisation step is documented elsewhere in the full article (not in this Changelog excerpt) with sufficient detail to enable sub-task specification
+- evaluate whether the sub-task scope (MotifDB query and ranked record serialisation) is actually present and scoped in the MS2LDA codebase, methods section, or supplementary materials
+- determine if the postprocessing step COMP-MOTIFDB is named, documented, or implemented in the repository
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load the inferred motifset JSON, extracting Mass2Motif definitions (fragment and neutral-loss compositions).
+2. For each motif, formulate a MassQL query targeting its characteristic fragment and neutral-loss pattern.
+3. Execute the MassQL query against the MotifDB library using the MassQL4MotifDB integration layer.
+4. Rank returned matches by similarity or match score (e.g., cosine similarity on fragment-loss overlap).
+5. Serialize ranked results to JSON with per-motif match records (MotifDB ID, name, composition, score).
+6. Validation: Confirm JSON output contains a ranked match list for each input motif; verify presence of MotifDB identifiers, match scores, and composition metadata for each returned entry.
+
+## Workflow Ports
+
+**Inputs:**
+
+- `motifset_json` — Inferred motifset (JSON) ← `task_002/lda_model`
+- `motifdb_library` — MotifDB reference database
+
+**Outputs:**
+
+- `motifdb_matches` — Ranked MotifDB match records (JSON)
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:vdhooftcompmet__MS2LDA`
+- **Synthesized at:** 2026-06-15T21:52:18+00:00
+
+## Extraction Quality
+- Score: 2/5
+- Coherent: false
+- Placeholder detected: true
+- Groundedness failures (5):
+  - research_question: evidence_span not found in section 'intro' (value='How does MS2LDA query a MassQL-searchable MotifDB to retriev', span='Integration with MassQL-searchable MotifDB')
+  - inputs[1]: evidence_span not found in section 'other' (value='MotifDB reference database library (downloaded from Zenodo, ', span='download the Spec2Vec model, embeddings, and library DB (See')
+  - tools[2]: evidence_span not found in section 'other' (value='MS2LDA', span='MS2LDA's functionality is organized into several main compon')
+  - finding: evidence_span is overly generic and does not substantively ground the specific claim about MassQL query mechanics or ranking—span merely mentions 'searchable motif database' without describing HOW queries retrieve and rank matches
+  - expected_outputs[0]: evidence_span 'Motif Search: Perform motif-motif searches against reference motifs in MotifDB' lacks specificity on JSON serialization format, per-motif ranking structure, and output schema
+- Notes: This card exhibits a fundamental disconnect between its grounding claims and actual source material. The research_question and finding reference 'Integration with MassQL-searchable MotifDB' but this exact phrase does not appear in the cited 'intro' section. More critically, the card conflates two distinct types of content: (1) extracted claims about MS2LDA's capabilities (which should be grounded in source) and (2) researcher-authored implementation specifications for a subtask (task_objective, workflow_description, methodology_summary) that are presented as if they have source grounding but do not. The 'task_description' and workflow steps read as a specification document, not an extraction from the article. The domain_knowledge section provides valuable context on Mass2Motifs and MassQL but lacks evidence pointers. The evidence_span substrings provided do not match their claimed sections, and many fields use generic terminology ('a ranked list', 'match score') rather than article-specific detail. Recommendation: Separate this into two distinct cards—(1) a research_question card grounded in actual article claims about MS2LDA's MotifDB integration, and (2) a standalone task_specification card that does not claim source grounding for implementation details.
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

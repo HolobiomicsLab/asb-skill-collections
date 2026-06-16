@@ -1,0 +1,3 @@
+  figures/MetaboAnalystRlogo.png
+  figures/log_v3.0.png
+paper.md

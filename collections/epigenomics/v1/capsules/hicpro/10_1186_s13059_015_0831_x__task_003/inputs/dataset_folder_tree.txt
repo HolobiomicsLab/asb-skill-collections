@@ -1,0 +1,16 @@
+  figures/button_blue.png
+  figures/button_blue.svg
+  figures/button_green.png
+  figures/button_green.svg
+  figures/button_orange.png
+  figures/button_orange.svg
+  figures/hicpro_contactstat_IMR90rep1.png
+  figures/hicpro_filteringstat_IMR90rep1.png
+  figures/hicpro_fragsize_IMR90rep1.png
+  figures/hicpro_mappingstat_IMR90rep1.png
+  figures/hicpro_pairingstat_IMR90rep1.png
+  figures/hicpro_wkflow.png
+  figures/logo_1.png
+  figures/logo_1.svg
+  figures/logos.svg
+paper.md

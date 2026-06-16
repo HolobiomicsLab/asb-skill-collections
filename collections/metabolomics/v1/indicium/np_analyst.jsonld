@@ -1,0 +1,838 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/evidence-linking",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/expert-review-preparation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/reproducibility-gap-detection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/scientific-task-formulation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Complete usage of the npanalyst CLI is documented.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_NPANALYST"
+        },
+        {
+          "id": "asb:spine_TOOL_CLI"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      }
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The npanalyst source code is hosted on GitHub under the liningtonlab organization.",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_NPANALYST"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping",
+      "asbval:note": "Paper describes NP Analyst platform; title appropriately names the tool for reconstruction.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Reconstruct: npanalyst",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
+      "asbval:note": "Paper presents a complete platform with documented workflows, data formats, and validation steps suitable for reproducibility assessment.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Assess the scientific task and reproducibility context described by this article package.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping... This new platform is available at www.npanalyst.org.",
+      "asbval:note": "[SUBSTRING-MATCH for npanalyst | role: primary tool] Case-insensitive match confirmed; paper extensively documents NP Analyst as the central tool.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "npanalyst",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For advanced users, the underlying processing algorithms are freely available as a command line tool via a Docker container at https://github.com/liningtonlab/npanalyst.",
+      "asbval:note": "Paper references GitHub repository (https://github.com/liningtonlab/npanalyst) for Docker container distribution, but GitHub is a hosting platform, not a tool used in the analysis workflow itself. The actual tool is the Docker container with command-line interface. GitHub is the distribution mechanism, not a methodological tool.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "This claim describes the meta-task of creating a task card itself, not an output of the paper's scientific work. The paper does not discuss creating task cards or capsules. This appears to be a procedural instruction for the curation process rather than a claim about the paper's content.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "null",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "A reviewed SciTask Card and capsule describing the benchmarkable task.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The 'expected_outputs' claim is meta-procedural (about creating a task card) rather than describing outputs from the paper's scientific work. This represents scope drift from the paper's actual contributions.",
+        "The 'research_question' is generic and meta-level (assess reproducibility context) rather than the specific scientific question the paper addresses (integrating bioassay and metabolomics data for natural products discovery).",
+        "GitHub is listed as a tool but functions as a code repository/distribution platform, not a computational tool used in the analysis pipeline. The actual tools used are NP Analyst, MZmine 2, GNPS, and various analytical instruments."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format. In addition, NP Analyst will accept processed mass spectrometry data from the MZmine 2 and GNPS open-source platforms, making it a versatile tool for integration with existing discovery workflows.",
+      "asbval:note": "The paper demonstrates evidence linking through detailed workflow documentation, supplementary materials references, and reproducible outputs (job numbers, URLs, downloadable results files).",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Link scientific claims to their supporting evidence by reviewing indexed article artifacts, connecting reported findings to outputs, and identifying missing materials or reproducibility information.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "[SUBSTRING-MATCH for NP Analyst | role: subject platform for compound activity mapping]. 'We now present NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.'",
+      "asbval:note": "NP Analyst is the primary subject of the paper and is extensively documented with inputs, algorithms, outputs, and validation examples.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "npanalyst",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For advanced users, the underlying processing algorithms are freely available as a command line tool via a Docker container at https://github.com/liningtonlab/npanalyst.",
+      "asbval:note": "GitHub repository is explicitly referenced as hosting the Docker container and command-line implementation of NP Analyst algorithms.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Each results file is assigned a unique job number which is used to create a permanent hyperlink to the results pages, providing a facile mechanism for collaborators to retrieve and share data. ... Upon completion, the results section is displayed, including interactive tabs for scatter plot, network, and community views, as well as a downloads page to export the results files. Export options include a graphML network file for use in network visualization tools (Cytoscape, Gephi) and CSV for use in spreadsheets and graph plotting tools (e.g., Excel, Tableau, Jmp, Spotfire).",
+      "asbval:note": "Paper provides extensive reproducibility infrastructure: persistent job URLs, downloadable outputs in multiple formats, detailed documentation links, and public sample data accessible via www.npanalyst.org.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Assess reproducibility and traceability of scientific article's findings by verifying claims are grounded in actual outputs, code, or supplementary materials",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For full instructions on bioassay file formatting requirements see the online documentation at https://liningtonlab.github.io/npanalyst_documentation/NPAnalyst/file-import/ ... Instructions for both of these export methods are provided in the software documentation (https://liningtonlab.github.io/npanalyst_documentation/).",
+      "asbval:note": "Paper references extensive online documentation but does not include complete reproducibility details in the article itself. Some implementation details (e.g., exact R-tree algorithm parameters, statistical thresholds) are not fully specified in the passages provided.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Identify missing materials or reproducibility information",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We validated this new platform by analyzing a 'low-resolution' antimicrobial bioassay data set for 925 natural product prefractions. From these results, three communities were selected for further study, leading to the isolation of three classes of bioactive metabolites including two new compounds (dracolactam C (3) and amychelin C (6)). ... Screening of purified amychelin C in the BioMAP assay recapitulated the spectrum of activity predicted from the original community, confirming this molecule as the predominant active component in this community.",
+      "asbval:note": "Paper provides detailed case studies (Communities 12, 15, 16) tracing from NP Analyst predictions through isolation, characterization, and experimental validation of bioactivity.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Connect reported findings to outputs through validation examples",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper is a primary research article describing NP Analyst platform development and validation. It does not discuss or demonstrate a meta-level skill for preparing articles for expert review, indexing tools, or gap detection in other papers. The research_question describes a methodological skill/workflow that is not the subject of this paper.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Prepare a scientific article package for expert review by systematically indexing tools, workflow steps, and findings, then cross-referencing claims against available materials and available outputs to identify gaps.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes NP Analyst as a platform for compound activity mapping, not a skill or methodology for reviewing other scientific articles. The scope describes a meta-analytical task that is not addressed in this paper.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have a complete or near-complete article package (text + supplementary materials + linked code repositories) and need to assess whether the scientific claims are traceable to concrete tools, data processing steps, and reproducible outputs.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We now present NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
+      "asbval:note": "NP Analyst is the primary subject of the paper. Case-insensitive match confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].name",
+      "asbval:target_claim_text": "npanalyst",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
+      "asbval:note": "The paper describes NP Analyst as a tool for integrating MS data with bioactivity data for compound discovery. The role is accurate regarding MS data and bioactivity correlation, but the phrase 'subject of artifact review in the task context' is not supported\u2014the paper is the primary research article, not a review artifact being examined by another task.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Example tool-chain for metabolite MS data and bio-activity correlation; the subject of artifact review in the task context",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For advanced users, the underlying processing algorithms are freely available as a command line tool via a Docker container at https://github.com/liningtonlab/npanalyst.",
+      "asbval:note": "GitHub is mentioned as the hosting platform for the Docker container, but it is not presented as a primary tool used in the research workflow itself. It is a repository/distribution platform, not a data processing or analysis tool used in the study.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].name",
+      "asbval:target_claim_text": "GitHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "These skill names do not appear in the paper. The paper does not discuss or reference these meta-level analytical skills.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].related_skills",
+      "asbval:target_claim_text": "[\"evidence-linking\", \"expert-review-preparation\", \"reproducibility-gap-detection\", \"scientific-task-formulation\"]",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No task IDs are referenced in the paper. This appears to be an internal identifier not grounded in the paper content.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].source_task_ids",
+      "asbval:target_claim_text": "[\"task_001\"]",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes NP Analyst as a platform for compound activity mapping and bioactive compound discovery. It does not present a workflow for reproducibility gap detection, missing information assessment, or methodological reproducibility evaluation. The paper's focus is on integrating bioassay and MS data for natural products discovery, not on assessing reproducibility gaps in scientific studies.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "A structured assessment workflow for identifying and documenting missing information, unavailable materials, or underdescribed methodological steps that prevent independent reproduction of a scientific study.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We now present NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
+      "asbval:note": "NP Analyst is confirmed as the primary tool in the paper. Case-insensitive match: 'NP Analyst' in paper = 'npanalyst' in card.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].name",
+      "asbval:target_claim_text": "npanalyst",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
+      "asbval:note": "NP Analyst does relate metabolite MS data with bioactivity data (confirmed), but the paper uses it for bioactive compound discovery and dereplication, not for reproducibility assessment. The tool's actual role is compound activity mapping and bioactive metabolite prioritization from complex mixtures, not reproducibility gap detection.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Example tool-chain component that relates metabolite MS data with bio-activity data; used to illustrate reproducibility assessment of multi-modal data integration workflows",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For advanced users, the underlying processing algorithms are freely available as a command line tool via a Docker container at https://github.com/liningtonlab/npanalyst.",
+      "asbval:note": "GitHub is mentioned as a repository platform for the NP Analyst Docker container, but the paper's primary distribution mechanism is the web platform at www.npanalyst.org. GitHub is used for code distribution, not as the primary repository platform for indexing and verifying availability of code and data artifacts as the card claims.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].name",
+      "asbval:target_claim_text": "GitHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "This new platform is available at www.npanalyst.org.",
+      "asbval:note": "The paper's primary distribution mechanism is the web platform www.npanalyst.org, not GitHub. GitHub is mentioned only as a secondary option for advanced users deploying the Docker container. GitHub is not presented as the primary repository platform for the work.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].role",
+      "asbval:target_claim_text": "Primary repository platform for indexing and verifying availability of code, configuration files, and linked data artifacts claimed in the article",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper's scope is natural products discovery through compound activity mapping, integrating bioassay and MS data. It does not address reproducibility gap detection or assessment of methodological reproducibility in scientific studies. The scope described in the card is fundamentally misaligned with the paper's actual research domain and objectives.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "A structured assessment workflow for identifying and documenting missing information, unavailable materials, or underdescribed methodological steps that prevent independent reproduction of a scientific study.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper describes NP Analyst, a platform for compound activity mapping integrating bioassay and MS data. The paper does not address task formulation, reproducibility assessment, or computational artifact evaluation as a research question. The card's research_question appears to be a generic meta-task description unrelated to the paper's actual scientific contribution.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Formulate a well-scoped scientific task by assessing the reproducibility context, data provenance, and available computational artifacts described in a research article package.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:08:24.193264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We now present NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
+      "asbval:note": "NP Analyst is the primary tool developed and described in the paper. Case-insensitive match confirmed.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].name",
+      "asbval:target_claim_text": "npanalyst",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:08:24.193264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
+      "asbval:note": "The role accurately describes NP Analyst's function: integrating MS metabolite data with bioactivity profiles.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Tool-chain for relating metabolite MS data with bio-activity data; target of task formulation in the example article",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:08:24.193264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "For advanced users, the underlying processing algorithms are freely available as a command line tool via a Docker container at https://github.com/liningtonlab/npanalyst.",
+      "asbval:note": "GitHub is mentioned as the hosting platform for the Docker container (https://github.com/liningtonlab/npanalyst), but the paper does not discuss GitHub as a tool in the context of the task formulation skill. GitHub is a repository platform, not a computational tool used within the NP Analyst workflow itself. The card's inclusion of GitHub with related_skills=['evidence-linking', 'expert-review-preparation', 'reproducibility-gap-detection', 'scientific-task-formulation'] is not supported by the paper's content.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].name",
+      "asbval:target_claim_text": "GitHub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:08:24.193264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss or reference any of these skills. These appear to be meta-level reproducibility and documentation skills not addressed in the NP Analyst paper.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].related_skills",
+      "asbval:target_claim_text": "['evidence-linking', 'expert-review-preparation', 'reproducibility-gap-detection', 'scientific-task-formulation']",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:08:24.193264+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/evidence-linking/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "evidence-linking",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8333333333333334,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/expert-review-preparation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "expert-review-preparation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.14285714285714285,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/reproducibility-gap-detection/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "reproducibility-gap-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.16666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/scientific-task-formulation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "scientific-task-formulation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.4,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Complete usage of the npanalyst CLI is documented.",
+      "asbval:note": "substring_in_paper=false; text claims documentation exists but excerpt only references it without confirming completeness",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:source_excerpt": "For complete usage of the CLI [see our documentation]",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:05.526117+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The npanalyst source code is hosted on GitHub under the liningtonlab organization.",
+      "asbval:note": "substring_in_paper=false; GitHub reference format suggests hosting location but does not explicitly state 'liningtonlab organization' in natural language",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acscentsci_1c01108",
+      "asbval:source_excerpt": "Source: github:liningtonlab__npanalyst",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:07:05.526117+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SYS_NPANALYST",
+      "title": "npanalyst",
+      "identifier": "urn:asb:spine:SYS_NPANALYST"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_CLI",
+      "title": "npanalyst CLI",
+      "identifier": "urn:asb:spine:TOOL_CLI"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_MS_DATA",
+      "title": "Metabolite MS Data Input",
+      "identifier": "urn:asb:spine:TOOL_MS_DATA"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_BIOACTIVITY_DATA",
+      "title": "Bio-activity Data Input",
+      "identifier": "urn:asb:spine:TOOL_BIOACTIVITY_DATA"
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "figures/mzpeak_file_sizes_2026.svg",
+      "locator_id": "pkg_49c9ad31",
+      "locator_kind": "package_artifact",
+      "name": "figures/mzpeak_file_sizes_2026.svg",
+      "prose": "Valid mzPeak file (mzPeak format)",
+      "score": 0.25,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/chunked_layout.png",
+      "role": "figure",
+      "sha256": "3ca8575ebd762e124c0f15a6fe60c603efe6da3f44154f894242396b419a85e1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mzpeak_extract_times_2026.svg",
+      "role": "figure",
+      "sha256": "e2a7c053512e6231b8c0b63b4c8fe8a0bb9402a64a5624c8d5d5d40790a9c624"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mzpeak_file_sizes_2026.svg",
+      "role": "figure",
+      "sha256": "49c9ad31b3a37ba32d1e1956ebbc7f16223a514a4b259c88abbcb0a6a01369ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/packed_tables.png",
+      "role": "figure",
+      "sha256": "66c65c79dd27a99c36b3c6a40fe2378c9ecfa4bca0f7541d6c5e25d3f2853538"
+    },
+    {
+      "indexable": false,
+      "path": "figures/point_layout.png",
+      "role": "figure",
+      "sha256": "684ab13e3bd27efbfca849fbc0790aac5095ebd70bfd5c8e48036177346a6d8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/sciex_null_marking_delta_encoding_error.png",
+      "role": "figure",
+      "sha256": "46939a56a60e6477195b6dd6df5cb62dceed3d415bc24854cda2833ca38f2ebb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/sparse_tables.png",
+      "role": "figure",
+      "sha256": "ffb91f0ee9291ca6e47eae86170b167959cfafbb9ae5ba8147b568ad396453ac"
+    },
+    {
+      "indexable": false,
+      "path": "figures/thermo_null_marking_err.png",
+      "role": "figure",
+      "sha256": "67df7eca5cb325551682a2d1c5a55fd68deefb871bbafea509f500593ba8cdeb"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b1e401c385b9a6960c4061f6465f82185e921e1f0543efa486fb446b9647e804"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:33.864303+00:00",
+  "crossref_doi": "10.1021/acs.jproteome.5c00435",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Valid mzPeak file (mzPeak format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "R implementation from mobiusklein/mzpeak_prototyping repository, R/ subdirectory",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured tabular artifact (R data frame) containing spectrum data fields",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "mzPeak is a draft specification for mass spectrometry data interchange, with read-only support currently available in the R implementation via the arrow package.",
+    "The R implementation at mobiusklein/mzpeak_prototyping is read-only and does not support writing mzPeak files at this time.",
+    "Arrow (Apache Arrow) provides columnar in-memory data structures and serialization, enabling efficient reading of mzPeak files into structured R data frames.",
+    "Spectrum data in mass spectrometry formats typically includes fields such as retention time, m/z values, intensity arrays, and precursor information."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:mobiusklein__mzpeak_prototyping/R/ subdirectory",
+      "verify arrow R package is installed and loadable",
+      "verify a valid mzPeak file artifact is available as input (file_exists and file_format_is mzPeak)",
+      "script_runs: R read operation completes without error",
+      "output_matches_reference: returned tabular artifact contains at least one named column representing spectrum data (field_present)",
+      "verify output is a structured table format (data.frame or arrow Table equivalent)",
+      "row_count_equals or value_in_range: tabular output contains \u22651 row of spectrum records"
+    ],
+    "expert_review": [
+      "verify that the tabular representation correctly preserves all essential spectrum metadata (m/z, intensity, retention time if applicable)",
+      "confirm that the arrow R implementation faithfully deserializes mzPeak binary structure without data loss or corruption",
+      "assess whether the column naming and data types are semantically consistent with mzPeak specification"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the R implementation using the arrow package read and parse a valid mzPeak file into a structured tabular representation of spectrum data?: 'There is also an R implementation in `R/`, which is also a complete re-implementation using the [`arrow`](https://arrow.apache.org/docs/r/) for _reading_ only at this time.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The R implementation provides a complete re-implementation for reading mzPeak files using the arrow package, enabling loading of valid mzPeak files into structured tabular format.: 'There is also an R implementation in `R/`, which is also a complete re-implementation using the [`arrow`](https://arrow.apache.org/docs/r/) for _reading_ only at this time.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Valid mzPeak file (mzPeak format): 'a library for reading and writing mzPeak files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R implementation from mobiusklein/mzpeak_prototyping repository, R/ subdirectory: 'There is also an R implementation in `R/`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Structured tabular artifact (R data frame) containing spectrum data fields: 'complete re-implementation using the [`arrow`] for _reading_ only'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] arrow: 'complete re-implementation using the [`arrow`] for _reading_ only'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'There is also an R implementation in `R/`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog provided for the document: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R implementation does not support writing mzPeak files, only reading: 'which is also a complete re-implementation using the [`arrow`] for _reading_ only at this time'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(arrow); df <- read_table('{inputs.mzpeak_file}'); print(df); saveRDS(df, 'spectrum_data.rds')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "spectrum_data.csv",
+  "expected_outputs": [
+    "Structured tabular artifact (R data frame) containing spectrum data fields"
+  ],
+  "finding": "The R implementation provides a complete re-implementation for reading mzPeak files using the arrow package, enabling loading of valid mzPeak files into structured tabular format.",
+  "github_name": "HUPO-PSI/mzPeak-specification",
+  "input_from": "task_001",
+  "inputs": [
+    "Valid mzPeak file (mzPeak format)",
+    "R implementation from mobiusklein/mzpeak_prototyping repository, R/ subdirectory"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "mzpeak_file_loaded.rds",
+    "spectrum_data.csv"
+  ],
+  "linked_result_ids": [
+    "result_010",
+    "result_005",
+    "result_001",
+    "result_011"
+  ],
+  "methodology_summary": [
+    "Access the R implementation in the mobiusklein/mzpeak_prototyping repository.",
+    "Load the arrow R package for mzPeak file I/O.",
+    "Invoke the R read function to load a valid mzPeak file into memory.",
+    "Convert the in-memory representation to a structured data frame with spectrum fields.",
+    "Validation: Output contains spectrum records with expected schema (m/z, intensity, metadata fields) and row count \u2265 1.",
+    "References: source article (DOI: 10.1021/acs.jproteome.5c00435)"
+  ],
+  "missing_information": [
+    "No changelog provided for the document",
+    "R implementation does not support writing mzPeak files, only reading"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/mzpeak_output"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the R implementation using the arrow package read and parse a valid mzPeak file into a structured tabular representation of spectrum data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "mzpeak-format-file-parsing",
+    "arrow-tabular-data-reading",
+    "mass-spectrometry-data-structure-interpretation",
+    "spectrum-metadata-extraction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mzpeak/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "mzPeak_format",
+    "rust_impl",
+    "python_impl",
+    "r_impl",
+    "dotnet_impl",
+    "tool_arrow_r",
+    "mzpeak_spec_doc",
+    "ref_publication",
+    "cli_converter"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:mobiusklein__mzpeak_prototyping",
+  "task_description": "Load a valid mzPeak file using the R implementation with the arrow package and produce a structured tabular artifact (data frame or table) representing the spectrum data.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Valid mzPeak file",
+      "port_id": "mzpeak_file",
+      "resolved_via": null,
+      "source": "task_001/mzpeak_output",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "R implementation from mobiusklein/mzpeak_prototyping",
+      "port_id": "r_implementation",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Load a valid mzPeak file using the R implementation and arrow package, producing a structured tabular artifact of spectrum data.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structured tabular spectrum data",
+      "port_id": "spectrum_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "quality-control"
+  ],
+  "title": "Reconstruct mzPeak file reading using the R (arrow) implementation",
+  "tools": [
+    "OpenMS",
+    "arrow",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: arrow, R, Structured tabular artifact (R data frame) containing spectrum data fields."
+  ],
+  "workflow_description": "1. Clone or access the mobiusklein/mzpeak_prototyping repository and navigate to the R/ subdirectory. 2. Load the arrow R package for reading mzPeak files. 3. Use the R read function from the R/ implementation to open a valid mzPeak file. 4. Extract spectrum data and convert to a structured tabular format (data frame). 5. Validate that the output contains expected spectrum fields and rows."
+}

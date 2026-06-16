@@ -1,0 +1,491 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Component_131.png",
+      "role": "figure",
+      "sha256": "49841ea093c2418dce75e85dd0a4fae55766914f14095539d56f7ba22284f052"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_14.png",
+      "role": "figure",
+      "sha256": "db5149cb16920f5dbd90a7ccd4a131023fcce4c5269adec045605882499f366c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_15.png",
+      "role": "figure",
+      "sha256": "c591c13e7564aa2ccba0a726a74ef897db63aedec774695889f3904ef50009bc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1576.png",
+      "role": "figure",
+      "sha256": "68b9db1ec71495a045b5f27d8bb05591fd644a2f0406383ad9dcd749f9100575"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1577.png",
+      "role": "figure",
+      "sha256": "77a337421706d3bbaf863a4b657a9efe1dde67669f769e3eebf5d6a0f6441288"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1578.png",
+      "role": "figure",
+      "sha256": "e2a5a816bbe9d511c4a533fd7d047ca5ae04ec6b67fa53574672ccef2fd6aba3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1583.png",
+      "role": "figure",
+      "sha256": "d86c987eb9530cad3fbbf8f6093cfdcd46d41a7e2e76630f28c7ac37b60b3e10"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_17.png",
+      "role": "figure",
+      "sha256": "484067618beead61a8937cba2e342448149b25f9a5a5f3ce3fee3c527b4ac6fb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_179.png",
+      "role": "figure",
+      "sha256": "ca7593be96ab92a038fd3bba8e5109722e59cef8ed48c98df7628a8b52db70c3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_183.png",
+      "role": "figure",
+      "sha256": "450029a8080d404d8bf4452316e111cca329b8052efbf365c67f9aecb2f09c80"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_21.png",
+      "role": "figure",
+      "sha256": "0771d4878d7bbc6425dcb9a7390d6882daf3ec84ce38db2a042bf70342734740"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_22.png",
+      "role": "figure",
+      "sha256": "b2a3ad8c85706b9a3c790c95c179a45e3957c342945ced0d5faa577abe37790f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_23.png",
+      "role": "figure",
+      "sha256": "e382f8674c98e4780fc98faf4a72eaa9f502cc88f635be7c66e74e29a3ee5c0e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_24.png",
+      "role": "figure",
+      "sha256": "e8a97419fd4639483cdb06111783a29829e07f23021989b9e8e6dcb2092fc7cb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_25.png",
+      "role": "figure",
+      "sha256": "ea88347302201a23f8b022eb8b9a496fd83ccf0439b546ca90bb9071145b7b97"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_331.png",
+      "role": "figure",
+      "sha256": "d234dcf1f1137bb4a43bc6f97c5239723ed9e2aa2297c4204168d4797363308e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_7.png",
+      "role": "figure",
+      "sha256": "3125b1dddebe3c6b5b0ce8f16e5df494b4070d0049fb377982d40e39d61e2d63"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_9.png",
+      "role": "figure",
+      "sha256": "9338b2919d0fa6f13ab4c1053eb8a4ac5cebbc87114ae218a2366648f39a9f09"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tardis.png",
+      "role": "figure",
+      "sha256": "3753660e6f52ebbe415127dbf72ed680f41d0ebe4de8549bb4cddcfaf18ca806"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tardis_new.png",
+      "role": "figure",
+      "sha256": "3753660e6f52ebbe415127dbf72ed680f41d0ebe4de8549bb4cddcfaf18ca806"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "424fcd032ba74d0180ed7b3853f27a43238247a9db11a9a9dfc3ad6dbfc6cc2e"
+    }
+  ],
+  "created_at": "2026-06-16T07:24:56.964844+00:00",
+  "crossref_doi": "10.1021/acs.analchem.5c00567",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Centroided mzML vignette files",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Target list data.frame with compound ID, name, m/z, RT, and polarity",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "EIC plots with sawtooth artefact (incorrect mass_range routing)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "EIC plots with clean peak profiles (correct mass_range routing)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Data.frame with AUC metrics for each target across both runs",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Sawtooth artefacts in EIC plots arise from incorrect scan-window routing when multi-window mass_range configurations fail to segregate overlapping m/z windows across successive scans.",
+    "TARDIS performs polarity filtering internally, so input target lists must include polarity annotations but do not require pre-filtered raw data.",
+    "Centroiding is a mandatory preprocessing step for mzML inputs; profile-mode MS data must be converted before peak integration.",
+    "Clean peak profiles in EIC output indicate that scan-window separation correctly isolates target m/z ranges from adjacent acquisition windows without crosstalk."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that vignette mzML files exist in the package repository at documented location",
+      "verify that tardisPeaks() function exists and is callable with mass_range parameter",
+      "verify that EIC output plots are generated as files (format: PDF or PNG) when tardisPeaks() runs without scan-window separation",
+      "verify that sawtooth artefact is visibly present in EIC plots from first run \u2014 expert judgment required on visual pattern; no canonical quantitative threshold",
+      "verify that EIC output plots are generated as files (format: PDF or PNG) when tardisPeaks() runs with corrected mass_range argument",
+      "verify that peak profiles in second run show absence of sawtooth artefact \u2014 expert judgment required on visual pattern comparison between runs"
+    ],
+    "expert_review": [
+      "inspect EIC plots from tardisPeaks() without scan-window separation and confirm sawtooth artefact is present and characteristic of incorrect mass_range routing",
+      "inspect EIC plots from tardisPeaks() with corrected mass_range argument and confirm peak profiles are clean and sawtooth pattern is eliminated",
+      "assess whether the visual difference between the two EIC sets adequately demonstrates the effect of scan-window routing on peak profile quality"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does the sawtooth artefact appear in extracted ion chromatogram (EIC) output when tardisPeaks() is run on LC-MS data with multiple overlapping m/z scan windows without proper mass_range separation?: 'if your data contains multiple (overlapping) *m/z* scan windows, it is necessary to analyze these separately through the \"mass_range\" argument. If not, you will notice that peaks will have a sawtooth'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Peaks display a sawtooth profile when tardisPeaks() processes data with multiple overlapping m/z scan windows without mass_range separation, due to filtering of empty spectra within TARDIS.: 'if your data contains multiple (overlapping) *m/z* scan windows, it is necessary to analyze these separately through the \"mass_range\" argument. If not, you will notice that peaks will have a sawtooth'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Centroided mzML vignette files: 'Input files need to be converted to the .mzML format and have to be centroided'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Target list data.frame with compound ID, name, m/z, RT, and polarity: 'compound ID, a unique identifier; A compound Name; Theoretical or measured *m/z*; Expected RT (in minutes); A column that indicates the polarity'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] EIC plots with sawtooth artefact (incorrect mass_range routing): 'The resulting EICs are again saved in the output folder and can be inspected'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] EIC plots with clean peak profiles (correct mass_range routing): 'The resulting EICs are again saved in the output folder and can be inspected'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Data.frame with AUC metrics for each target across both runs: 'The `results` object is a `list` that contains a `data.frame` with the AUC of each target in each run'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectra: 'loads MS data as `Spectra` objects so it's easily integrated with other tools'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'R package for *TArgeted Raw Data Integration In Spectrometry*'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[results] knitr: 'knitr::include_graphics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided for the TARDIS package, limiting traceability of changes to tardisPeaks() function signature and mass_range parameter behavior: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(xcms); library(Spectra); library(knitr); mzml_files <- list.files('{inputs.vignette_mzml}', pattern='\\.mzML$', full.names=TRUE); sps <- Spectra(mzml_files); targets <- read.csv('{inputs.target_list}'); results_bad <- tardisPeaks(sps, mz=targets$mz, rt=targets$rt, polarity=targets$polarity); eic_bad <- plotEIC(results_bad); results_good <- tardisPeaks(sps, mz=targets$mz, rt=targets$rt, polarity=targets$polarity, mass_range=TRUE); eic_good <- plotEIC(results_good); metrics <- data.frame(target_id=targets$id, auc_bad=sapply(results_bad, function(x) sum(x$intensity)), auc_good=sapply(results_good, function(x) sum(x$intensity))); write.csv(metrics, 'auc_metrics_{task_id}.csv', row.names=FALSE); pdf('eic_sawtooth_{task_id}.pdf'); print(eic_bad); dev.off(); pdf('eic_clean_{task_id}.pdf'); print(eic_good); dev.off();"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "eic_comparison_report.html",
+  "expected_outputs": [
+    "EIC plots with sawtooth artefact (incorrect mass_range routing)",
+    "EIC plots with clean peak profiles (correct mass_range routing)",
+    "Data.frame with AUC metrics for each target across both runs"
+  ],
+  "finding": "Peaks display a sawtooth profile when tardisPeaks() processes data with multiple overlapping m/z scan windows without mass_range separation, due to filtering of empty spectra within TARDIS.",
+  "github_name": "pablovgd/TARDIS",
+  "input_from": "task_001",
+  "inputs": [
+    "Centroided mzML vignette files",
+    "Target list data.frame with compound ID, name, m/z, RT, and polarity"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "eic_artefact_*.png",
+    "eic_clean_*.png",
+    "results_artefact.RDS",
+    "results_clean.RDS"
+  ],
+  "linked_result_ids": [
+    "result_011",
+    "result_012",
+    "result_001"
+  ],
+  "methodology_summary": [
+    "Load centroided mzML vignette files and parse as Spectra objects.",
+    "Define target compound list with m/z, RT, and polarity annotations.",
+    "Execute tardisPeaks() with multi-window mass_range but without scan-window separation to trigger sawtooth artefacts.",
+    "Re-execute tardisPeaks() with correct mass_range argument routing to enable scan-window segregation.",
+    "Generate and compare EIC plots from both runs to visualize artefact elimination.",
+    "Validation: Confirm sawtooth oscillations present in first EIC set and absent in second set; verify AUC and peak-shape metrics improve with correct routing.",
+    "References: source article (DOI: 10.1021/acs.analchem.5c00567)"
+  ],
+  "missing_information": [
+    "No changelog or version history provided for the TARDIS package, limiting traceability of changes to tardisPeaks() function signature and mass_range parameter behavior"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/target_dataframe"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the sawtooth artefact appear in extracted ion chromatogram (EIC) output when tardisPeaks() is run on LC-MS data with multiple overlapping m/z scan windows without proper mass_range separation?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "results"
+  ],
+  "skills": [
+    "scan-window-routing-mass-spectrometry",
+    "extracted-ion-chromatogram-artefact-diagnosis",
+    "targeted-peak-integration-configuration",
+    "chromatographic-profile-quality-assessment",
+    "multi-window-mass-range-parameter-optimization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_tardis/synthesized_package",
+  "spine_condition_ids": [
+    "cond_screening_mode_false",
+    "cond_multiple_scan_windows"
+  ],
+  "spine_entity_ids": [
+    "comp_tardisPeaks",
+    "dataset_vignette_lcms",
+    "artifact_eic_plots",
+    "artifact_metric_csvs",
+    "metric_peak_cor",
+    "metric_pop",
+    "cond_screening_mode_false",
+    "cond_multiple_scan_windows",
+    "result_sawtooth_artefact"
+  ],
+  "subdomains": [
+    "lipidomics",
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "visualization",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:UGent-LIMET__TARDIS",
+  "task_description": "Run tardisPeaks() on vignette mzML files with a multi-window mass_range configuration to demonstrate the sawtooth artefact that appears when scan-window separation is omitted, then re-run with correct mass_range routing to produce clean peak profiles and EIC plots.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Centroided mzML vignette files",
+      "port_id": "vignette_mzml",
+      "resolved_via": null,
+      "source": "task_001/target_dataframe",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Target list data.frame with compound metadata",
+      "port_id": "target_list",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Demonstrate that improper mass_range routing in tardisPeaks() produces sawtooth EIC artefacts and confirm correction by re-running with proper mass_range separation.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "EIC plots exhibiting sawtooth artefact",
+      "port_id": "eic_artefact_plots",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "EIC plots with clean peak profiles",
+      "port_id": "eic_clean_plots",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Data.frame with AUC metrics for both runs",
+      "port_id": "auc_results_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "quality-control",
+    "spectral-library-matching"
+  ],
+  "title": "Analyze the effect of multiple overlapping m/z scan windows on peak profile quality using the sawtooth diagnostic",
+  "tools": [
+    "xcms",
+    "Spectra",
+    "R",
+    "knitr"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load centroided mzML vignette files as Spectra objects. 2. Define a target list data.frame with compound ID, name, m/z, RT, and polarity columns. 3. Execute tardisPeaks() with multi-window mass_range configuration without scan-window separation enabled, generating EIC plots that exhibit sawtooth artefacts. 4. Re-execute tardisPeaks() with correct mass_range argument routing to segregate scan windows by mass range, producing clean chromatographic peak profiles. 5. Save both sets of EIC plots and inspect for artefact presence/absence as visual confirmation of scan-window routing impact."
+}

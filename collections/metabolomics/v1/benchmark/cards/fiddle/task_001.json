@@ -1,0 +1,384 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/fiddle_logo.png",
+      "role": "figure",
+      "sha256": "b3a240b5acc490ee66008501fdba7b3e6231f1d2011c98a1f94d2170004424e6"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "f65164b799de86c48e2278fd20a124cd91aabf04f75b2d43697befed3cd34928"
+    }
+  ],
+  "created_at": "2026-06-16T07:03:35.842382+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw GNPS public library spectral dataset and compound metadata",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Original instrument allowlist configuration (before 'ftms' addition)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Training set compound count: 28,751",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test set compound count: 3,195",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report confirming dataset split matches reported counts",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "The gnps_orbitrap allowlist categorizes high-resolution mass spectrometry instruments; 'ftms' (Fourier-transform mass spectrometry) is a detection mode used by Orbitrap instruments and must be explicitly included to avoid filtering out valid spectra.",
+    "Dataset splitting reproducibility in machine learning benchmarks requires exact compound counts to validate data curation changes and ensure comparability with reported baselines.",
+    "GNPS (Global Natural Products Social Molecular Networking) library contains curated tandem MS spectra with heterogeneous instrument metadata that requires careful filtering to avoid biasing training/test distributions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify file config/fiddle_tcn_orbitrap.yml exists",
+      "Verify file config/fiddle_tcn_orbitrap.yml contains the substring 'ftms' within the gnps_orbitrap instrument allowlist",
+      "Verify file config/fiddle_tcn_orbitrap.yml contains the substring 'gnps_orbitrap' (allowlist definition present)",
+      "Script runs: execute the data preparation pipeline (prepare_augment_rescore.py or equivalent TCN dataset loader) with the updated config/fiddle_tcn_orbitrap.yml as input",
+      "Verify output training split row count equals 28,751 compounds (exact match required)",
+      "Verify output test split row count equals 3,195 compounds (exact match required)",
+      "Verify that the only instrument type change between the config baseline and updated config is the addition of 'ftms' to gnps_orbitrap allowlist (no other modifications introduced)"
+    ],
+    "expert_review": [
+      "Confirm that 'ftms' is a valid Orbitrap instrument designation in GNPS ontology and that its addition is scientifically appropriate for the Orbitrap dataset",
+      "Verify that the compound count increase from the prior baseline to 28,751 training / 3,195 test is solely attributable to inclusion of 'ftms' spectra, with no other data filtering or augmentation changes",
+      "Confirm that the reported split (28,751 / 3,195) represents a reproducible and deterministic outcome given a fixed random seed or deterministic train-test split logic"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does applying the updated instrument allowlist fix (adding 'ftms' to gnps_orbitrap) to the dataset result in the reported training and test split counts of 28,751 and 3,195 compounds respectively?: 'Breaking change (v2.0.0): The rescore model has been redesigned (Siamese architecture)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The provided document does not contain explicit reporting of dataset split counts (28,751 training and 3,195 test compounds) or details of the instrument allowlist fix methodology needed to verify this sub-task.: 'FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Raw GNPS public library spectral dataset and compound metadata: 'GNPS public library'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Original instrument allowlist configuration (before 'ftms' addition): 'instrument allowlist fix (adding 'ftms' to gnps_orbitrap)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Training set compound count: 28,751: '28,751 training'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Test set compound count: 3,195: '3,195 test compounds'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Verification report confirming dataset split matches reported counts: 'verify that the resulting dataset split matches the reported counts'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] msfiddle: 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No baseline dataset counts are provided for the Orbitrap dataset before the 'ftms' allowlist fix was applied, making it impossible to quantitatively verify that the reported 28,751 / 3,195 counts are a direct result of this fix alone.: 'Orbitrap dataset expanded to 28,751 training / 3,195 test compounds.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The exact location and format of the GNPS Orbitrap source data, including the raw spectra deposit URL or accession number, is not provided, preventing independent verification of instrument type filtering.: 'inference scripts for caffeine (C8H10N4O2) GNPS spectra.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No specification is provided for the random seed, train-test split ratio, or deterministic sorting logic used to generate the 28,751 / 3,195 split, limiting reproducibility assurance.: 'prepare_augment_rescore.py: unified rescore data preparation script. Takes the TCN train and test sets directly'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "msfiddle",
+      "preprocess",
+      "--gnps-data",
+      "{inputs.raw_gnps_data}",
+      "--instrument-config",
+      "{inputs.instrument_config}",
+      "--add-instrument",
+      "ftms",
+      "--instrument-category",
+      "gnps_orbitrap",
+      "--train-size",
+      "28751",
+      "--test-size",
+      "3195",
+      "--output-dir",
+      "output_{task_id}",
+      "--verify"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "dataset_split_verification.txt",
+  "expected_outputs": [
+    "Training set compound count: 28,751",
+    "Test set compound count: 3,195",
+    "Verification report confirming dataset split matches reported counts"
+  ],
+  "finding": "The provided document does not contain explicit reporting of dataset split counts (28,751 training and 3,195 test compounds) or details of the instrument allowlist fix methodology needed to verify this sub-task.",
+  "github_name": "josiehong/FIDDLE",
+  "input_from": null,
+  "inputs": [
+    "Raw GNPS public library spectral dataset and compound metadata",
+    "Original instrument allowlist configuration (before 'ftms' addition)"
+  ],
+  "keywords": [
+    "molecular formula prediction",
+    "mass spectrometry",
+    "ms/ms spectra",
+    "deep learning",
+    "siamese network",
+    "tandem mass spectrometry"
+  ],
+  "landmark_outputs": [
+    "filtered_dataset.csv",
+    "training_set_compounds.csv",
+    "test_set_compounds.csv",
+    "split_counts.json"
+  ],
+  "linked_result_ids": [
+    "result_018"
+  ],
+  "methodology_summary": [
+    "Load raw GNPS spectral dataset with instrument metadata annotations.",
+    "Update instrument allowlist configuration by adding 'ftms' to gnps_orbitrap category.",
+    "Apply filtering logic to select compounds matching the updated allowlist.",
+    "Execute train-test split using msfiddle preprocessing module with the corrected configuration.",
+    "Extract training set size (target: 28,751) and test set size (target: 3,195) from split output.",
+    "Validation: Verify training count equals 28,751 and test count equals 3,195 exactly; output passes if both counts match reported baseline."
+  ],
+  "missing_information": [
+    "No baseline dataset counts are provided for the Orbitrap dataset before the 'ftms' allowlist fix was applied, making it impossible to quantitatively verify that the reported 28,751 / 3,195 counts are a direct result of this fix alone.",
+    "The exact location and format of the GNPS Orbitrap source data, including the raw spectra deposit URL or accession number, is not provided, preventing independent verification of instrument type filtering.",
+    "No specification is provided for the random seed, train-test split ratio, or deterministic sorting logic used to generate the 28,751 / 3,195 split, limiting reproducibility assurance."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does applying the updated instrument allowlist fix (adding 'ftms' to gnps_orbitrap) to the dataset result in the reported training and test split counts of 28,751 and 3,195 compounds respectively?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "dataset-preprocessing-and-filtering",
+    "instrument-metadata-classification",
+    "train-test-split-verification",
+    "mass-spectrometry-library-curation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_fiddle/synthesized_package",
+  "spine_condition_ids": [
+    "cond_orbitrap_expanded"
+  ],
+  "spine_entity_ids": [
+    "dataset_gnps_orbitrap",
+    "dataset_gnps_qtof",
+    "cond_orbitrap_expanded",
+    "metric_orbitrap_train_size",
+    "metric_orbitrap_test_size"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:JosieHong__FIDDLE",
+  "task_description": "Apply the instrument allowlist fix (adding 'ftms' to gnps_orbitrap) to the FIDDLE dataset preprocessing pipeline and verify that the resulting training/test split produces exactly 28,751 training and 3,195 test compounds.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw GNPS public library spectral dataset",
+      "port_id": "raw_gnps_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Instrument allowlist configuration",
+      "port_id": "instrument_config",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Apply the 'ftms' instrument allowlist fix to gnps_orbitrap and validate that the resulting training/test split yields exactly 28,751 and 3,195 compounds.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Training set compound count",
+      "port_id": "training_count",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Test set compound count",
+      "port_id": "test_count",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Dataset split verification report",
+      "port_id": "split_verification",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "gnps-workflow",
+    "spectral-library-matching",
+    "database-annotation",
+    "metabolite-identification"
+  ],
+  "title": "Reproduce the Orbitrap dataset expansion to 28,751 training / 3,195 test compounds",
+  "tools": [
+    "msfiddle"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the raw GNPS spectral dataset and instrument metadata used in FIDDLE preprocessing. 2. Update the instrument allowlist configuration to include 'ftms' in the gnps_orbitrap category. 3. Re-run the dataset filtering and splitting logic with the updated allowlist using msfiddle. 4. Extract and verify the training set compound count (expected: 28,751) and test set compound count (expected: 3,195) from the preprocessed output. 5. Compare counts against the reported baseline to confirm the fix resolves the previous discrepancy."
+}

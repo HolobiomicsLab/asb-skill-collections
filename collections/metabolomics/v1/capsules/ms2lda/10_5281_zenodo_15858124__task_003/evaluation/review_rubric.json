@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: trained motifset artifact (ARTIFACT-MOTIFSET) in input package or referenced deposit"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: Spec2Vec model checkpoint from https://zenodo.org/records/15688609"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script runs: load Spec2Vec model from DATASET-ZENODO without errors"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script runs: load trained motifset and instantiate annotation lookup module without errors"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify format_is: per-motif annotation output as structured record (JSON, CSV, or table) containing fields: motif_id, label, similarity_score"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: each annotation record includes at least motif_id, label, and similarity_score fields"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify value_in_range: all similarity scores are numeric and fall within [0.0, 1.0] or model's native range"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify row_count_equals or robust_to_dataset_size: number of output annotation records matches or is traceable to input motifset cardinality"
+    },
+    {
+      "id": "pf_009",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: annotation output structure and Spec2Vec scoring logic align with method description (no canonical answer\u2014multiple valid annotation formats acceptable if fields are present)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: trained motifset artifact (ARTIFACT-MOTIFSET) in input package or referenced deposit",
+      "verify file exists: Spec2Vec model checkpoint from https://zenodo.org/records/15688609",
+      "verify script runs: load Spec2Vec model from DATASET-ZENODO without errors",
+      "verify script runs: load trained motifset and instantiate annotation lookup module without errors",
+      "verify format_is: per-motif annotation output as structured record (JSON, CSV, or table) containing fields: motif_id, label, similarity_score",
+      "verify field_present: each annotation record includes at least motif_id, label, and similarity_score fields",
+      "verify value_in_range: all similarity scores are numeric and fall within [0.0, 1.0] or model's native range",
+      "verify row_count_equals or robust_to_dataset_size: number of output annotation records matches or is traceable to input motifset cardinality",
+      "verify output_matches_reference: annotation output structure and Spec2Vec scoring logic align with method description (no canonical answer\u2014multiple valid annotation formats acceptable if fields are present)"
+    ],
+    "expert_review": [
+      "assess semantic correctness: do assigned labels and similarity scores reflect genuine spectral/structural similarity as inferred by Spec2Vec, or are they arbitrary/nonsensical?",
+      "assess completeness: does the annotation output cover all motifs in the input motifset, or are some unexpectedly missing?",
+      "assess methodological alignment: verify that the Spec2Vec-based scoring mechanism matches the published MAG algorithm description for automated annotation"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

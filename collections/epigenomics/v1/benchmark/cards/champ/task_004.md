@@ -1,0 +1,151 @@
+# SciTask Card: Reproduce the absence of differential methylation blocks in EPICSimData using champ.Block()
+
+- Task ID: `task_004`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T19:16:49.189128+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_champ/synthesized_package`
+- Domain: `bioinformatics`
+- Subtask categories: `data-analysis`, `benchmark-evaluation`
+- GitHub: `YuanTian1991/ChAMP`
+- Input from: `task_001`
+
+## Classification
+
+- Task kind: `reproduction`
+- Article type: `software-tool`
+- Primary domain: `genomics`
+- Subdomains: `gene-regulation`, `biomarker-discovery`
+- Techniques: `batch-correction`, `differential-abundance-analysis`, `normalization`, `quality-control`, `statistical-analysis`
+- Keywords: `dna methylation` · `illumina beadarray` · `450k array` · `epic array` · `differentially methylated positions` · `differentially methylated regions` · `type-ii probe normalization` · `batch effect correction` · `gene set enrichment analysis` · `quality control` · `normalization methods` · `idat files` · `beta values`
+
+## Research Question
+When champ.Block() is applied to the EPICSimData simulation dataset with arraytype='EPIC', are any differentially methylated blocks detected?
+
+## Connected Finding
+No differentially methylated blocks are detected when champ.Block() is executed on the EPICSimData simulation dataset with arraytype='EPIC' parameter.
+
+## Task Description
+Execute champ.Block() on the EPICSimData dataset with arraytype='EPIC' parameter and validate via Block.GUI() that the analysis correctly identifies zero differentially methylated blocks, confirming the expected behavior for this simulation dataset.
+
+## Inputs
+- EPICSimData (built-in simulation dataset)
+
+## Expected Outputs
+- Block detection result object with zero differentially methylated blocks
+- Interactive Block.GUI() visualization confirming no blocks detected
+
+## Tools
+- ChAMP
+
+## Skills
+- dna-methylation-block-detection-analysis
+- illumina-array-data-processing-epic
+- interactive-visualization-interpretation-methylation-results
+- simulation-dataset-validation-benchmarking
+
+## Workflow Description
+1. Load EPICSimData into R environment using data(EPICSimData). 2. Call champ.Block() function with arraytype='EPIC' to perform differentially methylated block detection on the simulation dataset. 3. Launch Block.GUI() interactive interface to visualize and inspect the block detection results. 4. Verify that no differentially methylated blocks are reported in the output, confirming agreement with documented expected behavior for this synthetic dataset.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/CNAimage.jpg` | figure | False |
+| `figures/CNAtext.jpg` | figure | False |
+| `figures/DMR.jpg` | figure | False |
+| `figures/DMRdistributionplot.png` | figure | False |
+| `figures/DMRoutput.jpg` | figure | False |
+| `figures/MVP1.jpg` | figure | False |
+| `figures/MVP2.jpg` | figure | False |
+| `figures/MVP3.jpg` | figure | False |
+| `figures/checkBMIQ.jpg` | figure | False |
+| `figures/densityPlot.jpg` | figure | False |
+| `figures/failedProbes.jpg` | figure | False |
+| `figures/lasso.jpg` | figure | False |
+| `figures/logo4.jpg` | figure | False |
+| `figures/mdsPlot.jpg` | figure | False |
+| `figures/probeFeatures.jpg` | figure | False |
+| `figures/radius.jpg` | figure | False |
+| `figures/rawSampleCluster.jpg` | figure | False |
+| `figures/sampleSheetexample.jpg` | figure | False |
+| `figures/studyInfo.jpg` | figure | False |
+| `figures/studyInfo.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Data Deposits
+
+| Kind | Accession | URL | Evidence |
+|---|---|---|---|
+| geo_series | `GSE40279` | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE40279 | lot looks not complicated. Below we used another plot from [GSE40279](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE4027 |
+
+## Missing Information
+- No changelog or version-specific documentation of Block() function behavior provided in available sections
+- Methods section absent; no technical details on Block detection algorithm, parameters, thresholds, or validation criteria against EPICSimData
+
+## Domain Knowledge
+- Differentially methylated blocks (DMBs) represent contiguous genomic regions with coordinated methylation changes, distinct from individual CpG sites or smaller DMRs.
+- EPICSimData is a synthetic benchmark dataset designed to test ChAMP's block detection workflow; it contains known characteristics including the absence of true differential methylation blocks.
+- The Block.GUI() interactive interface is a Shiny/Plotly-based browser application that allows visual inspection and quality assessment of detected blocks.
+- ChAMP version 2.29.1 or later supports EPIC array analysis and must be paired with ChAMPdata ≥ 2.23.1 for access to built-in datasets.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: Block detection result object with zero differentially methylated blocks, Interactive Block.GUI() visualization confirming no blocks detected.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [results] When champ.Block() is applied to the EPICSimData simulation dataset with arraytype='EPIC', are any differentially methylated blocks detected?: 'For this simulation data, not Differential Methylation Block is detected.'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [results] No differentially methylated blocks are detected when champ.Block() is executed on the EPICSimData simulation dataset with arraytype='EPIC' parameter.: 'myBlock <- champ.Block(arraytype="EPIC")
+Block.GUI(arraytype="EPIC") # For this simulation data, not Differential Methylation Block is detected.'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [intro] EPICSimData (built-in simulation dataset): 'For the EPIC Simulation Data Set, user may use following code to load it: data(EPICSimData)'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [intro] Block detection result object with zero differentially methylated blocks: 'For users who need to find Differentially Methylated Blocks, the new version of ChAMP includes a function to detect these'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [intro] Interactive Block.GUI() visualization confirming no blocks detected: 'The new version ChAMP also provides a series of Shiny and Plotly-based WebBrower Interactive analysis functions'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [intro] ChAMP: 'ChAMP package is designed for conduct DNA methylation array analysis, providing service from data loading, to final gene set enrichment analysis'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [discussion] No changelog or version-specific documentation of Block() function behavior provided in available sections: 'No changelog found.'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [methods] Methods section absent; no technical details on Block detection algorithm, parameters, thresholds, or validation criteria against EPICSimData: 'Document contains only title metadata and introduction; no methods section present'
+
+## Evaluation Strategy
+### Direct Checks
+- verify file exists: EPICSimData dataset loadable via data(EPICSimData) in R/ChAMP environment
+- script_runs: champ.Block(arraytype='EPIC') executes without error on EPICSimData input
+- verify output_matches_reference: Block.GUI() graphical output displays zero differentially methylated blocks detected for EPICSimData, as expected for simulation dataset with no true signal
+- verify file_format_is: Block.GUI() output is a valid interactive Shiny/Plotly web interface (HTML or R Shiny object)
+
+### Expert Review
+- Confirm that the simulation design of EPICSimData is appropriate for a null-signal test case (i.e., that the dataset was intentionally constructed to contain no true differentially methylated blocks)
+- Assess whether zero blocks detected is the correct expected outcome given EPICSimData's documented provenance and construction parameters
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load EPICSimData simulation dataset into R environment
+2. Execute champ.Block() with arraytype='EPIC' to detect differentially methylated blocks
+3. Launch Block.GUI() to visualize and inspect block detection results interactively
+4. Validation: Confirm that zero differentially methylated blocks are detected, matching expected behavior for this synthetic dataset
+5. References: GSE40279 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE40279)
+
+## Workflow Ports
+
+**Inputs:**
+
+- `epic_sim_data` — EPICSimData simulation dataset ← `task_001/loaded_450k_object`
+
+**Outputs:**
+
+- `block_detection_result` — Block detection result object with zero blocks
+- `block_gui_output` — Interactive visualization from Block.GUI()
+
+**Used:** `urn:asb:port:task_001/loaded_450k_object`
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:YuanTian1991__ChAMP`
+- **Synthesized at:** 2026-06-15T19:25:01+00:00
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

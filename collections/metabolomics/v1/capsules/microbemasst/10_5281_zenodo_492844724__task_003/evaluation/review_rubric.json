@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: metadataMASST aggregation script or entry point in github.com/mwang87/GNPS_MASST or Zenodo 492844724"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: aggregation script accepts as input one or more MASST search output files (JSON, CSV, or native MASST format) and executes without error on test data"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: aggregation script produces a single named output file in a documented format (e.g., JSON, CSV, HTML, interactive visualization artifact)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: output artifact contains merged or concatenated records from all input search outputs (robust to record order and field names)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: aggregated summary matches structure and field names shown in metadataMASST web application UI (if UI screenshot or schema is available in repository)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file_exists: metadataMASST aggregation script or entry point in github.com/mwang87/GNPS_MASST or Zenodo 492844724",
+      "verify script_runs: aggregation script accepts as input one or more MASST search output files (JSON, CSV, or native MASST format) and executes without error on test data",
+      "verify file_format_is: aggregation script produces a single named output file in a documented format (e.g., JSON, CSV, HTML, interactive visualization artifact)",
+      "verify contains_substring: output artifact contains merged or concatenated records from all input search outputs (robust to record order and field names)",
+      "verify output_matches_reference: aggregated summary matches structure and field names shown in metadataMASST web application UI (if UI screenshot or schema is available in repository)"
+    ],
+    "expert_review": [
+      "Confirm that the aggregation logic correctly handles overlapping spectra, duplicate entries, or conflicting annotations across multiple domain-specific MASST runs without data loss or silent conflicts",
+      "Evaluate whether the combined visualization artifact is usable and interpretable by a domain scientist (visual hierarchy, labeling, interactivity match the live metadataMASST web application)",
+      "Assess whether the aggregation preserves provenance or metadata indicating which domain-specific MASST (microbeMASST, plantMASST, etc.) contributed each result"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

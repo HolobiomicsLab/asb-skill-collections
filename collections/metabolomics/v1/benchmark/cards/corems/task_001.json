@@ -1,0 +1,346 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/CoreMS.COLOR.png",
+      "role": "figure",
+      "sha256": "39e8bd3ca35b9643bea95c96d31ef0e6886a99f4c2a0c835651c7d1574694f14"
+    },
+    {
+      "indexable": false,
+      "path": "figures/CoreMS.COLOR_small.png",
+      "role": "figure",
+      "sha256": "7068dd12c245c661cc17de6cbae274994694a3df21228643369ae2cd681f6a3f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Direct_Infusion_FTMS_Data_Model.png",
+      "role": "figure",
+      "sha256": "caa9462f4901686e68432ae43badfc71ba00a574d3c06f9a7fe22b5d6e5b4241"
+    },
+    {
+      "indexable": false,
+      "path": "figures/GC_MS_Data_Model.png",
+      "role": "figure",
+      "sha256": "b6b6364bbeb937104c06537343ee65e704b54a08c7f8a5c5b912c87b1b9a19ab"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "02ede3525bbae3d177c8839ea50eef4fe774602ff90bbdf4ea2624fde55822ea"
+    }
+  ],
+  "created_at": "2026-06-16T07:04:21.589353+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "ESI_NEG_SRFA.d raw FT-ICR mass spectrometry data file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "SRFA.ref calibration reference file for mass calibration",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CSV table of assigned molecular formulas with mass error and score fields",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Hanning apodization is a windowing function applied to time-domain FT-ICR transients before FFT to reduce spectral leakage; zero-filling (padding with zeros) increases frequency-domain resolution.",
+    "Mass-domain calibration uses reference compounds of known exact mass to establish a calibration curve that corrects systematic mass errors across the spectrum.",
+    "CHO elemental constraints (carbon, hydrogen, oxygen only) restrict the molecular formula search space for small organic molecules, reducing false positive assignments.",
+    "Mass error is typically expressed in parts-per-million (ppm) and represents the difference between measured m/z and theoretical m/z; smaller absolute error indicates better formula confidence.",
+    "CoreMS MSParameters encapsulation allows parametrized configuration of the entire processing pipeline including apodization, noise threshold, calibration tolerance, and formula search settings."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at path 'tests/tests_data/ftms/ESI_NEG_SRFA.d'",
+      "verify file exists at path 'tests/tests_data/ftms/SRFA.ref'",
+      "script_runs: execute CoreMS FT-ICR pipeline (apodization with Hanning window and one zero-fill, noise thresholding, MzDomainCalibration, SearchMolecularFormulas with CHO constraints) on ESI_NEG_SRFA.d without raising exceptions",
+      "file_format_is: output is a CSV or pandas-compatible table",
+      "field_present: output table contains columns for molecular formula assignments",
+      "field_present: output table contains a mass error field",
+      "field_present: output table contains a score field",
+      "row_count_equals: output table has at least one row of assigned molecular formula data (no empty result sets)"
+    ],
+    "expert_review": [
+      "verify that assigned molecular formulas respect CHO atom constraints (only Carbon, Hydrogen, Oxygen atoms present)",
+      "verify that mass error values are within physically plausible range for FT-ICR MS (typically < 5 ppm for high-resolution instruments)",
+      "verify that score values reflect confidence metrics appropriate to molecular formula assignment algorithms",
+      "expert judgment on whether Hanning apodization with one zero-fill is correctly applied to the FT-ICR time-domain data",
+      "expert judgment on whether MzDomainCalibration against SRFA.ref produces reasonable calibration (inspect calibration residuals if available)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does the CoreMS FT-ICR data processing pipeline (Hanning apodization, log-based noise thresholding, MzDomainCalibration, and SearchMolecularFormulas) successfully assign molecular formulas to ESI_NEG_SRFA.d data with quantified mass error metrics?: 'MSParameters.transient.apodization_method = \"Hanning\"\nMSParameters.transient.number_of_zero_fills = 1\nMSParameters.mass_spectrum.noise_threshold_method ='"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The pipeline executes complete molecular formula assignment by applying Hanning apodization with zero-fill, noise thresholding, MzDomainCalibration against SRFA.ref reference data, and SearchMolecularFormulas with CHO constraints, producing assigned peaks with mass error and abundance metrics exportable to CSV.: 'mass_spectrum.to_csv(\"test\")\ndf = mass_spectrum.to_dataframe()\ndf.head()'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[results] ESI_NEG_SRFA.d raw FT-ICR mass spectrometry data file: 'file_location =  \"tests/tests_data/ftms/ESI_NEG_SRFA.d\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[results] SRFA.ref calibration reference file for mass calibration: 'ref_file_location = 'tests/tests_data/ftms/SRFA.ref''"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] CSV table of assigned molecular formulas with mass error and score fields: 'from corems.encapsulation.factory.parameters import MSParameters'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] CoreMS: 'from corems.encapsulation.factory.parameters import MSParameters'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[results] pandas: 'import pandas as pd'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[results] numpy: 'import numpy as np'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; from corems.data_source.factory import MorningstarMSFileFactory; from corems.mass_spectrum.calc import ChemicalFormula; import pandas as pd; import numpy as np; raw = MorningstarMSFileFactory(\"{inputs.raw_ftms_data}\").file; raw.apply_apodization(window='hanning'); raw.zero_filling(1); raw.noise_threshold(); raw.calibrate_mass_axis(reference_file=\"{inputs.calibration_ref}\"); spectrum = raw.spectrum; assignments = []; [assignments.append({'m_z': peak.mz, 'formula': str(peak.best_formula), 'mass_error_ppm': peak.mass_error, 'score': peak.formula_score}) for peak in spectrum if peak.best_formula and all(peak.best_formula.composition.get(e, 0) >= 0 for e in ['C', 'H', 'O'])]; df = pd.DataFrame(assignments); df.to_csv('{task_id}_formulas.csv', index=False)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "assigned_molecular_formulas.csv",
+  "expected_outputs": [
+    "CSV table of assigned molecular formulas with mass error and score fields"
+  ],
+  "finding": "The pipeline executes complete molecular formula assignment by applying Hanning apodization with zero-fill, noise thresholding, MzDomainCalibration against SRFA.ref reference data, and SearchMolecularFormulas with CHO constraints, producing assigned peaks with mass error and abundance metrics exportable to CSV.",
+  "github_name": "EMSL-Computing/CoreMS",
+  "input_from": null,
+  "inputs": [
+    "ESI_NEG_SRFA.d raw FT-ICR mass spectrometry data file",
+    "SRFA.ref calibration reference file for mass calibration"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "processed_spectrum_mz_intensity.csv",
+    "calibration_residuals.csv",
+    "assigned_molecular_formulas.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Load FT-ICR raw data (ESI_NEG_SRFA.d) and calibration reference (SRFA.ref) into CoreMS factory.",
+    "Apply Hanning window apodization with single zero-fill to time-domain transient.",
+    "Remove noise via intensity thresholding on frequency-domain spectrum.",
+    "Calibrate m/z axis using MzDomainCalibration against reference compounds in SRFA.ref.",
+    "Search and assign molecular formulas using CHO elemental constraints; compute mass error and formula score for each assignment.",
+    "Validation: Output CSV contains formula assignments with mass error values; all assigned formulas obey CHO elemental constraints and exhibit mass error consistent with FT-ICR instrumental resolution."
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the CoreMS FT-ICR data processing pipeline (Hanning apodization, log-based noise thresholding, MzDomainCalibration, and SearchMolecularFormulas) successfully assign molecular formulas to ESI_NEG_SRFA.d data with quantified mass error metrics?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "ftms-raw-data-loading-and-parsing",
+    "time-domain-signal-apodization",
+    "mass-calibration-against-reference-standards",
+    "molecular-formula-assignment-and-validation",
+    "mass-error-calculation-and-reporting"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_corems/synthesized_package",
+  "spine_condition_ids": [
+    "COND-001",
+    "COND-002",
+    "COND-003",
+    "COND-009",
+    "COND-010",
+    "COND-011"
+  ],
+  "spine_entity_ids": [
+    "ARCH-001",
+    "ARCH-002",
+    "ARCH-003",
+    "COMP-003",
+    "COMP-004",
+    "COMP-017",
+    "COMP-018",
+    "TOOL-005",
+    "DS-001",
+    "DS-002",
+    "DS-003",
+    "COND-001",
+    "COND-002",
+    "COND-003",
+    "COND-009",
+    "COND-010",
+    "COND-011",
+    "COMP-022"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:EMSL-Computing__CoreMS",
+  "task_description": "Execute the complete FT-ICR data processing pipeline on ESI_NEG_SRFA.d raw data: apply Hanning apodization with one zero-fill, perform noise thresholding, calibrate mass domain against SRFA.ref reference, and assign molecular formulas with CHO constraints. Output a CSV table of assigned formulas with mass error and score fields.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ESI_NEG_SRFA.d raw FT-ICR data",
+      "port_id": "raw_ftms_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "SRFA.ref calibration reference",
+      "port_id": "calibration_ref",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the complete FT-ICR pipeline on ESI_NEG_SRFA.d with specified parameters and export assigned molecular formulas with mass error scores to a CSV table.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Assigned molecular formulas with mass error and score",
+      "port_id": "formula_assignments",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "metabolite-identification",
+    "database-annotation",
+    "quality-control",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce FT-ICR transient processing and molecular formula assignment for ESI_NEG_SRFA",
+  "tools": [
+    "Docker",
+    "CoreMS",
+    "pandas",
+    "numpy"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load ESI_NEG_SRFA.d FT-ICR raw data and SRFA.ref calibration reference using CoreMS data factory. 2. Apply Hanning apodization with one zero-fill to the time-domain spectrum. 3. Apply noise thresholding to remove low-intensity peaks. 4. Perform mass-domain calibration using MzDomainCalibration against SRFA.ref reference data. 5. Execute SearchMolecularFormulas with elemental constraints limited to C, H, O atoms. 6. Export assigned molecular formulas with calculated mass error and formula score metrics to CSV format."
+}

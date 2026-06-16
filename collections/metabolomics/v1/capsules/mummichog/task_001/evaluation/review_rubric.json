@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the mummichog package can be loaded from metabolomics-cloud/mummichog GitHub repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the core pipeline accepts a feature table file (CSV or tabular format) as input"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the pipeline outputs a structured result containing functional activity predictions"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the pipeline executes without requiring a metabolite identification step as an obligatory prerequisite"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the pipeline produces network mapping artifacts (e.g., feature-to-reaction or feature-to-pathway assignments)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_007",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output artifact contains structured predictions (JSON, TSV, or similar); no cano",
+      "value": "JSON"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the mummichog package can be loaded from metabolomics-cloud/mummichog GitHub repository",
+      "verify that the core pipeline accepts a feature table file (CSV or tabular format) as input",
+      "verify that the pipeline outputs a structured result containing functional activity predictions",
+      "verify that the pipeline executes without requiring a metabolite identification step as an obligatory prerequisite",
+      "verify that the pipeline produces network mapping artifacts (e.g., feature-to-reaction or feature-to-pathway assignments)",
+      "script_runs: execute the main pipeline entry point on a provided test feature table and confirm non-error exit",
+      "file_format_is: output artifact contains structured predictions (JSON, TSV, or similar); no canonical answer for exact output format without specification"
+    ],
+    "expert_review": [
+      "assess whether the fixed architecture layer correctly implements the intended metabolic network topology and mass-neutral loss propagation logic",
+      "assess whether functional activity predictions are scientifically plausible given the input feature masses and network structure",
+      "assess whether the bypass of metabolite identification genuinely preserves predictive power or introduces unacceptable bias",
+      "evaluate the reproducibility and robustness of network mapping results across different feature table subsets"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

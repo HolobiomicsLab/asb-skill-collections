@@ -1,0 +1,390 @@
+schema_version: 0.1.0
+workflow_id: coll_rawrr_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_003
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: rawrr is an R package providing direct access to proprietary Thermo Fisher
+    Scientific Orbitrap mass spectrometry data via vendor APIs, enabling modular end-to-end
+    proteomics analysis pipelines in R without format conversion. The package wraps
+    RawFileReader .NET assemblies through a two-layer architecture and demonstrates
+    bottom-up proteomics applications including spectrum analysis and retention time
+    calibration.
+  pseudo_abstract: "This work presents rawrr, an R package that provides direct access\
+    \ to binary Thermo Fisher Scientific Orbitrap raw data files by wrapping the vendor-supplied\
+    \ RawFileReader API through compiled C# wrapper methods. The package implements\
+    \ S3 objects (rawrrSpectrum, rawrrChromatogram) and reader functions (readFileHeader,\
+    \ readSpectrum, readChromatogram, readIndex, readTrailer) that extract spectral\
+    \ and chromatographic data without requiring conversion to exchange formats. Two\
+    \ use cases demonstrate practical application: (1) direct spectrum analysis of\
+    \ a 40.5-minute parallel reaction monitoring (PRM) run on a Q Exactive HF yielded\
+    \ scan 9594 with resolving power of 30,000 at 200 m/z and AGC injection time of\
+    \ 2.8 ms; y-ion signals for the doubly-charged LGGNEQVTR peptide were tens to\
+    \ hundreds of times above noise. (2) iRT regression using 11 reference peptides\
+    \ extracted via readChromatogram showed highly linear retention time behavior\
+    \ (high R\xB2) across a 20-minute C18 gradient, with consecutive PRM scans consistently\
+    \ spaced 22 scans apart. Benchmark testing of readSpectrum throughput across multiple\
+    \ runs with random scan IDs demonstrated spectra-per-second performance with total\
+    \ runtime of approximately 0.5 seconds. The package architecture comprises an\
+    \ R layer invoking compiled C# wrapper methods via system calls, with data written\
+    \ to temporary storage and parsed back into R objects."
+  research_questions:
+  - Does the linear regression model fitted to iRT peptide retention times (rtFittedAPEX
+    ~ iRTscore) demonstrate highly linear RT behavior as indicated by R-squared value?
+  - What is the measured throughput of rawrr::readSpectrum in spectra per second when
+    benchmarked on the sample raw file provided with the package?
+  - Does rawrr::readSpectrum successfully extract scan 9594 from the raw file with
+    reported Orbitrap parameters (resolving power of 30,000 at 200 m/z and AGC injection
+    time of 2.8 ms) and signal-to-noise characteristics consistent with high-quality
+    peptide fragmentation?
+  - Does the parallel reaction monitoring (PRM) acquisition in the example raw file
+    maintain consistent scan spacing across all cycles targeting the LGGNEQVTR++ precursor
+    ion?
+  - Can the rawrr package's internal assembly dispatch functions (rawrr:::.rawrrAssembly()
+    and rawrr:::.getRawrrAssemblyVersion()) successfully retrieve the assembly path
+    and version string without requiring a raw data file as input?
+  methods_summary: "Retrieve the public raw LC-MS file 20181113_010_autoQC01.raw from\
+    \ MassIVE (MSV000086542) and verify file integrity. Read file header metadata\
+    \ using rawrr::readFileHeader() to confirm instrument configuration and run time\
+    \ range. Extract precursor m/z chromatograms for known iRT peptides using rawrr::readChromatogram()\
+    \ with type='xic', mass tolerance 10 ppm, and MS-level filter. Fit intensity traces\
+    \ within each rawrrChromatogram object to identify retention time at peak maximum\
+    \ (rtFittedAPEX) for each iRT standard. Construct and fit linear regression model\
+    \ lm(rtFittedAPEX ~ iRTscore) using extracted retention times and reference iRT\
+    \ scores. Validation: Report R-squared value; confirm R\xB2 \u2265 0.99 to establish\
+    \ highly linear retention-time behavior as reported in the paper. References:\
+    \ source article (DOI: 10.1021/acs.jproteome.0c00866); MSV000086542 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542)\
+    \ Install rawrr package and verify .NET 8.0 runtime availability. Load example\
+    \ Orbitrap raw file (20181113_010_autoQC01.raw) containing centroided FTMS and\
+    \ HCD MS2 spectra. Execute rawrr:::.benchmark using rawrr::readSpectrum, which\
+    \ triggers C# wrapper method invocation via system call to RawFileReader assembly.\
+    \ Capture measured spectra-per-second throughput from benchmark execution output.\
+    \ Validation: Confirm reported throughput metric is present and numerically reasonable\
+    \ (consistent with paper's reported performance under identical experimental conditions).\
+    \ References: source article (DOI: 10.1021/acs.jproteome.0c00866); MSV000086542\
+    \ (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542) Load\
+    \ raw file 20181113_010_autoQC01.raw (Thermo Fisher Q Exactive HF, Orbitrap FTMS)\
+    \ from MassIVE MSV000086542. Call rawrr::readSpectrum(scan=9594) to invoke C#\
+    \ wrapper and RawFileReader API, returning centroided spectrum object with 119\
+    \ metadata items. Extract instrumental parameters (resolving power at 200 m/z,\
+    \ AGC target, injection time) from spectrum metadata and verify against reported\
+    \ hardware specifications. Parse m/z and intensity arrays; identify y-ion fragments\
+    \ by theoretical m/z matching for peptide LGGNEQVTR. Compute signal-to-noise ratio\
+    \ for each y-ion relative to local baseline and confirm all exceed tens-to-hundreds\
+    \ counts above noise. Validation: Confirm resolving power = 30,000, injection\
+    \ time = 2.8 ms, and all y-ion SNR \u2265 10:1 (tens of counts above baseline\
+    \ for high-quality MS/MS data). References: source article (DOI: 10.1021/acs.jproteome.0c00866);\
+    \ MSV000086542 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542)\
+    \ Install and initialize the rawrr package with compiled C# wrapper methods bound\
+    \ to the RawFileReader .NET assembly. Invoke rawrr::readIndex() to extract the\
+    \ complete scan metadata index from the binary .raw file via system call to the\
+    \ managed C# layer. Parse the scanType field to identify and filter rows matching\
+    \ the PRM acquisition pattern (fixed precursor m/z and HCD collision energy).\
+    \ Compute inter-scan deltas as the difference between consecutive scan numbers\
+    \ in the filtered PRM subset. Validate that all deltas equal 22 scans, confirming\
+    \ single-cycle consistency across the acquisition run. Validation: Pass criterion\
+    \ is 100% of observed inter-scan deltas equal 22 scans; any deviation flags acquisition\
+    \ irregularity. References: source article (DOI: 10.1021/acs.jproteome.0c00866);\
+    \ MSV000086542 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542)\
+    \ Load the rawrr R package into the R environment Call the internal function rawrr:::.rawrrAssembly()\
+    \ to retrieve the file system path to the bundled .NET 8.0 assembly executable\
+    \ Validate that the returned path exists and points to rawrr.exe Call the internal\
+    \ function rawrr:::.getRawrrAssemblyVersion() to retrieve the version metadata\
+    \ of the managed assembly Verify that a non-empty version string is returned Validation:\
+    \ Both accessor functions execute without error and return expected output types\
+    \ (path string and version string) without requiring a raw data file input, confirming\
+    \ the internal dispatch mechanism is operational References: source article (DOI:\
+    \ 10.1021/acs.jproteome.0c00866); MSV000086542 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086542)"
+  domain: proteomics
+  techniques:
+  - quality-control
+  claims:
+  - claim_text: The rawrr package provides access to proprietary Thermo Fisher Scientific
+      Orbitrap instrument data as a stand-alone R package or serves as a backend for
+      the Bioconductor Spectra package.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: rawrr wraps the functionality of the RawFileReader .NET assembly.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: Existing proteomics libraries for R mainly support high-level statistical
+      analysis once raw measurement data has undergone extensive preprocessing and
+      aggregation by external software tools.
+    claim_type: finding
+    speculative: false
+  - claim_text: A gap exists in the R ecosystem for libraries providing direct raw
+      data reading to facilitate modular end-to-end analysis pipeline development.
+    claim_type: finding
+    speculative: true
+  - claim_text: High-throughput genomic data analysis is primarily conducted in R
+      due to the Bioconductor project.
+    claim_type: finding
+    speculative: false
+  - claim_text: 'The rawrr implementation consists of two language layers: a top R
+      layer and a hidden C# layer.'
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: R functions requesting access to raw file data invoke compiled C#
+      wrapper methods using a system call.
+    claim_type: finding
+    speculative: false
+  - claim_text: Extracted information is written to a temporary location on the hard
+      drive, read back into memory and parsed into R objects.
+    claim_type: finding
+    speculative: false
+  - claim_text: The rawrr package implements S3 objects named rawrrSpectrum and rawrrChromatogram
+      to represent mass spectra and mass chromatograms.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: The content of rawrrSpectrum instances partially depends on the instrument
+      model and installed instrument control software version.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_rawrrspectrum
+  - claim_text: The example file 20181113_010_autoQC01.raw contains Fourier-transformed
+      Orbitrap spectra recorded on a Thermo Fisher Scientific Q Exactive HF mass spectrometer
+      in positive mode.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_spectra
+  - claim_text: MS2 spectra in the example file were generated by HCD fragmentation
+      at normalized collision energy of 27.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_spectra
+  - claim_text: The analyzed sample consisted of the iRT peptide mix in a tryptic
+      BSA digest separated using a 20 min linear gradient on C18 reversed-phase material.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_irt_peptides
+  - claim_text: The example file is part of the MassIVE dataset MSV000086542.
+    claim_type: finding
+    speculative: false
+    entity_id: ds_msv000086542
+  - claim_text: The readFileHeader function returns a simple R object of type list
+      containing meta information from a raw file header.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_readfilehead
+  - claim_text: The readSpectrum function returns a rawrrSpectrum object or rawrrSpectrumSet.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_rawrrspectrum
+  - claim_text: The Orbitrap detector offers high-resolution accurate mass data on
+      a time scale compatible with chromatographic analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_orbitrap
+  - claim_text: Analyzing Orbitrap data in R prior to rawrr has only been possible
+      after raw data conversion to exchange formats like mzML.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: Conversion of raw data to exchange formats is accompanied by a loss
+      of Orbitrap-specific information.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_orbitrap
+  - claim_text: Scan 9594 was acquired using a transient of 64 ms, equal to a resolving
+      power of 30,000 at 200 m/z.
+    claim_type: finding
+    speculative: false
+  - claim_text: Scan 9594 was acquired with an AGC target of 1e5 elementary charges.
+    claim_type: finding
+    speculative: false
+  - claim_text: The API provides 119 data items for the scan shown in the example,
+      covering ion optics settings, mass calibration, and other diagnostic data.
+    claim_type: finding
+    speculative: false
+  - claim_text: For the scan example, the C-trap collected 100,000 charges within
+      2.8 milliseconds.
+    claim_type: finding
+    speculative: false
+  - claim_text: "Orbitrap detectors follow the relationship S/N \u221D charges \xB7\
+      \ \u221AR."
+    claim_type: finding
+    speculative: false
+    entity_id: comp_orbitrap
+  - claim_text: The readChromatogram function can return a rawrrChromatogramSet object
+      of type xic for extracted ion chromatograms.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_readchromatogram
+  - claim_text: The example LC-MS run was recorded by parallel reaction monitoring
+      (PRM) with the parent ion 487.2567 isolated in regularly-spaced intervals.
+    claim_type: finding
+    speculative: false
+  - claim_text: The delta between consecutive scans in the PRM example is always 22
+      scans (one PRM cycle).
+    claim_type: finding
+    speculative: false
+  - claim_text: Linear regression can convert observed peptide retention times into
+      iRT values and vice versa for retention time calibration.
+    claim_type: finding
+    speculative: false
+  - claim_text: Fitted iRT regression models provide information about LC-MS run performance.
+    claim_type: finding
+    speculative: false
+  - claim_text: The iRT peptides were separated on a 20 minute linear gradient from
+      5% buffer B to 35% buffer B using C18 reversed-phase material.
+    claim_type: finding
+    speculative: false
+  - claim_text: The iRT peptide GAGSSEPVTGLDAK is defined to have a zero score on
+      the iRT scale.
+    claim_type: finding
+    speculative: false
+  - claim_text: The iRT regression R-squared indicates that RTs behave highly linearly
+      for the example data.
+    claim_type: finding
+    speculative: false
+    entity_id: result_rsquared_irt
+  - claim_text: The web page showing extended use cases automatically updates every
+      30 minutes using the most recent two files per system as input data.
+    claim_type: finding
+    speculative: false
+  - claim_text: The code for the extended use case web page is executed in full parallel
+      fashion with each core processing one raw file on a Linux server with network-attached
+      storage.
+    claim_type: finding
+    speculative: false
+  - claim_text: The rawrr package is implemented with .NET 8.0 runtime and precompiled
+      wrapper methods bundled in an executable file.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: The rawrr package contains C# source code (rawrr.cs) for transparency
+      and improvement by other developers.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: The keys FAIMS Voltage On and FAIMS CV are only written by instruments
+      that support FAIMS acquisition.
+    claim_type: finding
+    speculative: false
+  - claim_text: The rawrr package implements basic generics for printing and plotting
+      of objects in base R to minimize dependencies.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: The mass spectrometer used for the example file was operated in line
+      with a nano UPLC and a nano electrospray source (NSI).
+    claim_type: finding
+    speculative: false
+  - claim_text: All spectra in the example file were written after applying centroiding
+      and lock mass correction.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_spectra
+  - claim_text: Centroided data allows graphing spectra using signal-to-noise as response
+      value.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_spectra
+  - claim_text: The rawrr package design makes data handling relatively easy and intuitive
+      with little knowledge required about internal technical details.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: rawrr uses vendor API methods whenever possible while maintaining
+      ease-of-use without impairing performance.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: The rawrr implementation aligns with common R conventions and styles.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: The ThermoFisher.CommonCore dlls can be obtained through the RawFileReader
+      GitHub repository or by contacting Jim Shofstahl at Thermo Fisher.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_rawfilereader
+  - claim_text: Installation of .NET 8.0 is required to compile rawrr.exe from C#
+      source code.
+    claim_type: finding
+    speculative: false
+    entity_id: sys_rawrr
+  - claim_text: The Bioconductor project currently provides over 1900 open-source
+      software packages.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - MaxQuant or Skyline outputs can be processed by MSstats for statistical analysis
+  - ProteoWizard or ThermoRawFileParser can convert raw data to mzML format for use
+    with R libraries
+  - Mono (instead of .NET 8.0)
+  - Base peak chromatogram (BPC) instead of total ion chromatogram (TIC)
+  - Deriving retention time from maximum intensity as alternative to peak fitting
+  substitution_constraints:
+  - rawrr requires Thermo Fisher Scientific Orbitrap instrument data in proprietary
+    raw file format
+  - ThermoFisher.CommonCore dlls must be obtained through RawFileReader repository
+    or by contacting Jim Shofstahl
+  - rawrrSpectrum content partially depends on the instrument model and installed
+    instrument control software version
+  - Windows systems require decimal symbol configured as '.' for mZ and intensity
+    vector extraction
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 'Filtered scan index data frame (CSV or R object) containing only PRM scans
+    with columns: scan, scanType, rtmin, rtmax, and computed delta (inter-scan interval)'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Summary statistics report documenting total PRM scan count, delta distribution
+    (mean, min, max), and boolean pass/fail for 22-scan-cycle consistency
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Assembly path string pointing to the rawrr.exe executable location
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Version string of the .NET 8.0 assembly
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Validation report confirming successful assembly accessor function calls
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

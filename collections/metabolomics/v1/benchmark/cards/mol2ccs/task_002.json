@@ -1,0 +1,374 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "research-article",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/enveda/ccs-prediction",
+      "locator_id": "gh_enveda_ccs-prediction",
+      "locator_kind": "github",
+      "name": "enveda/ccs-prediction",
+      "prose": "Trained GNN model checkpoint and molecular graph dataset from enveda/ccs-prediction repository",
+      "score": 0.2727,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/figure_1.png",
+      "role": "figure",
+      "sha256": "ec9593d5e2bd5f2c3659ac41d3973e4232f7f5f9c61aee36d336fd47d8ed8770"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure_4.png",
+      "role": "figure",
+      "sha256": "0bdedc2eddb80ddc03a823d6ed26539c6cb823d42b9526aa803f75d6c1527431"
+    },
+    {
+      "indexable": false,
+      "path": "figures/figure_5.png",
+      "role": "figure",
+      "sha256": "3b6eba801b40e6c642c9a7ba1e99d8f92611bab5f42bf232efc6c3ca12864f44"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "680aeb5b9e2ae88e460cc5e55c212705038edd718d0684f98df1bce42038b685"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:43.788519+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Trained GNN model checkpoint and molecular graph dataset from enveda/ccs-prediction repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Input molecular graphs (node features, edge features, connectivity) for test molecules",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ground-truth or reference CCS values for evaluation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ranked feature-importance table (CSV or TSV) listing node/edge features sorted by ablation or saliency score",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature-importance visualization (bar plot or heatmap) showing relative contribution of top structural features to CCS prediction",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Feature ablation iteratively removes or masks input features and measures prediction change; gradient-based saliency uses backpropagation to compute input-feature sensitivity.",
+    "CCS (collision cross section) is an instrumental property sensitive to molecular size, shape, and charge state; structural features include atomic number, hybridization, formal charge, bond type, and topology.",
+    "GNN node features typically encode atom properties; edge features encode bond properties and connectivity; attribution must distinguish local atomic contributions from global graph structure effects.",
+    "Aggregating attribution scores across a diverse test set requires accounting for molecular size variation (larger molecules have more features) and using relative or normalized importance metrics."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:enveda/ccs-prediction repository is accessible and contains trained model artifacts",
+      "verify that input molecular graphs (in common formats such as .sdf, .mol, .graph, or .json) exist in the repository",
+      "verify that model outputs (predictions or intermediate activations) are retrievable from the repository or can be computed from stored model weights and input graphs",
+      "verify that a post-hoc attribution method (node ablation, edge ablation, gradient-based saliency, or SHAP) can execute without errors on the model and input data",
+      "verify that the attribution analysis produces a ranked feature-importance table or figure with named features and quantitative importance scores",
+      "verify that the importance scores are in a valid numeric range appropriate to the attribution method (e.g., non-negative for ablation-based methods, bounded for normalized saliency)",
+      "verify that the output includes at least one structural feature class (e.g., atom type, bond type, degree, functional group, or graph property) with an assigned importance rank or score"
+    ],
+    "expert_review": [
+      "assess whether the choice of attribution method (ablation, gradient, SHAP, or other) is justified and appropriate for the GNN architecture and task",
+      "assess whether the ranked features identified as driving CCS predictions are chemically and biophysically plausible (e.g., molecular weight, spatial extent, polarity-related features)",
+      "assess whether the feature-importance results show consistency across different molecular subsets or test splits if multiple attribution runs are reported",
+      "assess whether the interpretation of feature importance aligns with known physical principles governing collision cross section in mass spectrometry"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Which molecular structural features are most important for driving graph neural network predictions of collision cross section?: 'Evaluating the generalizability of graph neural networks for predicting collision cross section'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[abstract] The repository contains code and data for evaluating graph neural networks trained to predict collision cross section, enabling post-hoc attribution analysis to identify key structural drivers.: 'This repository contains code and data described in detail in our paper (Engler et al., 2024).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Trained GNN model checkpoint and molecular graph dataset from enveda/ccs-prediction repository: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Input molecular graphs (node features, edge features, connectivity) for test molecules: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Ground-truth or reference CCS values for evaluation: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Ranked feature-importance table (CSV or TSV) listing node/edge features sorted by ablation or saliency score: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Feature-importance visualization (bar plot or heatmap) showing relative contribution of top structural features to CCS prediction: 'enveda/ccs-prediction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] PyTorch or TensorFlow: 'graph neural networks'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] RDKit: 'molecular graph'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; sys.exit('ERROR: No code files provided in capsule. Task requires custom GNN attribution analysis script (node/edge ablation, gradient-based saliency, feature ranking, and visualization). Capsule author must provide: (1) GNN model loading and inference logic, (2) ablation/saliency computation against inputs.model_checkpoint and inputs.molecular_graphs, (3) ranking and CSV output, (4) matplotlib/seaborn visualization. Recommend materializing scripts/gnn_attribution.py with PyTorch/TensorFlow and RDKit dependencies, then invoke: python scripts/gnn_attribution.py --model {inputs.model_checkpoint} --graphs {inputs.molecular_graphs} --reference {inputs.ccs_reference} --output-table features.csv --output-plot features.png')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "feature_importance_table.csv",
+  "expected_outputs": [
+    "Ranked feature-importance table (CSV or TSV) listing node/edge features sorted by ablation or saliency score",
+    "Feature-importance visualization (bar plot or heatmap) showing relative contribution of top structural features to CCS prediction"
+  ],
+  "finding": "The repository contains code and data for evaluating graph neural networks trained to predict collision cross section, enabling post-hoc attribution analysis to identify key structural drivers.",
+  "github_name": "enveda/ccs-prediction",
+  "input_from": "task_001",
+  "inputs": [
+    "Trained GNN model checkpoint and molecular graph dataset from enveda/ccs-prediction repository",
+    "Input molecular graphs (node features, edge features, connectivity) for test molecules",
+    "Ground-truth or reference CCS values for evaluation"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "ablation_scores.csv",
+    "gradient_saliency_maps.npz",
+    "feature_importance_table.csv",
+    "feature_importance_plot.png"
+  ],
+  "linked_result_ids": [
+    "result_001"
+  ],
+  "methodology_summary": [
+    "Load trained GNN model and test molecular graphs from repository",
+    "Perform node and edge feature ablation by iterative masking and prediction delta measurement",
+    "Compute gradient-based saliency via backpropagation through model",
+    "Aggregate ablation and saliency scores across test set; normalize by feature frequency or molecular properties",
+    "Rank features by total importance and produce ranked table and bar/heatmap visualization",
+    "Validation: output table contains \u226510 ranked features with non-zero importance scores; visualization clearly labels top features and shows relative magnitudes"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Which molecular structural features are most important for driving graph neural network predictions of collision cross section?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "graph-neural-network-model-inference",
+    "feature-ablation-analysis",
+    "gradient-based-saliency-mapping",
+    "atom-bond-feature-importance-ranking",
+    "post-hoc-model-interpretability",
+    "molecular-structure-attribution"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mol2ccs/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [],
+  "subdomains": [
+    "artificial-intelligence",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "model-interpretation",
+    "visualization"
+  ],
+  "synthesized_from": "github:enveda__ccs-prediction",
+  "task_description": "Perform post-hoc attribution analysis on trained graph neural network models to identify and rank the molecular structural features (nodes, edges, atom/bond properties) that drive CCS predictions. Produce a ranked feature-importance table or visualization.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained GNN model weights",
+      "port_id": "model_checkpoint",
+      "resolved_via": null,
+      "source": "task_001/metrics_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Input molecular graph representations with node and edge features",
+      "port_id": "molecular_graphs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ground-truth CCS values",
+      "port_id": "ccs_reference",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Perform attribution analysis on trained GNN models to quantify and rank which molecular structural features drive CCS predictions.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ranked feature-importance table",
+      "port_id": "importance_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature-importance visualization",
+      "port_id": "importance_visualization",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "graph-neural-network",
+    "machine-learning",
+    "deep-learning",
+    "transfer-learning"
+  ],
+  "title": "Analyze feature importance and molecular descriptor contributions to GNN CCS predictions",
+  "tools": [
+    "PyTorch or TensorFlow",
+    "RDKit"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: PyTorch or TensorFlow, Ranked feature-importance table (CSV or TSV) listing node/edge features sorted by ablation or saliency score, Feature-importance visualization (bar plot or heatmap) showing relative contribution of top structural features to CCS prediction."
+  ],
+  "workflow_description": "1. Load trained GNN model weights and molecular graph representations from the repository (enveda/ccs-prediction). 2. Select a representative test set of molecules with ground-truth CCS values. 3. Apply node and edge feature ablation by systematically removing or masking individual structural features and measuring the change in predicted CCS value. 4. Compute gradient-based saliency maps with respect to input node and edge features using backpropagation through the trained model. 5. Aggregate ablation and gradient scores across the test set to rank features by importance. 6. Generate a ranked feature-importance table and visualization (bar plot or heatmap) sorted by contribution magnitude."
+}

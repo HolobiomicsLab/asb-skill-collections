@@ -1,0 +1,401 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "spec2vec.pdf",
+      "role": "main_article",
+      "sha256": "43e95bc72a94f777c7e95a8b0f18b38bad439e3cfba278b7f0c3db97d6c510cb"
+    }
+  ],
+  "created_at": "2026-06-15T06:52:35.005391+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1008724",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pre-processed MS/MS spectra in mzML, mzXML, or tabular format (m/z, intensity, precursor m/z per spectrum)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pre-trained Word2Vec model (gensim format) from reference dataset (e.g., AllPositive or UniqueInchikey)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Spectrum vector file containing spectrum identifiers and their corresponding Word2Vec-aggregated embedding vectors (one vector per spectrum)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Spectrum documents represent MS/MS spectra as ordered word lists; peaks are discretized to 2 decimal places (e.g., m/z 200.445 becomes 'peak@200.45') to create vocabulary consistency across spectra.",
+    "Neutral losses encode fragmentation pathways as words ('loss@xxx.xx') and are calculated only within the range 5.0\u2013200.0 Da to exclude noise and background; losses outside this range are discarded.",
+    "Spectrum vectors aggregate word embeddings using weighted summation where weights are the square root of normalized peak intensity; this non-linear weighting emphasizes high-intensity ions while avoiding saturation.",
+    "The missing fraction threshold (typically 0.05) filters out spectra whose unknown peaks comprise \u22655% of total weighted intensity, ensuring reliable similarity scoring when peaks fall outside the trained Word2Vec vocabulary.",
+    "Word2Vec window size is set to 500 (effectively the entire spectrum) because peaks in mass spectra have no inherent order comparable to natural language, unlike sequential text documents."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: spec2vec repository (https://github.com/iomega/spec2vec) contains source code for spectrum-to-vector encoding",
+      "verify file exists: matchms repository (https://github.com/matchms/matchms) contains peak and neutral-loss word generation implementations",
+      "script_runs: execute spectrum preprocessing and document generation on sample spectrum from AllPositive dataset (10.5281/zenodo.3978118) using spec2vec package; verify output contains peak@xxx.xx and loss@xxx.xx word tokens",
+      "output_matches_reference: generated spectrum document tokens match expected format (peak@xxx.xx with precision and loss@xxx.xx with range 5.0\u2013200.0 Da), multiple defensible precision choices robust to parameter choices",
+      "file_format_is: trained Word2Vec model file downloaded from 10.5281/zenodo.3978054 or zenodo.org/record/4173596 is in standard gensim/word2vec format readable by Python Word2Vec libraries",
+      "value_in_range: spectrum vector dimensionality matches Word2Vec embedding dimension (no canonical answer; article does not specify, requires parameter specification)",
+      "file_exists: output spectrum vector file per input spectrum exists with consistent naming convention and format (e.g., .npy, .csv, or binary vector)"
+    ],
+    "expert_review": [
+      "verify that weighted summation aggregation strategy (sum of word vectors weighted by peak intensity) is correctly implemented according to methods description and produces interpretable spectrum embeddings",
+      "assess whether treatment of unknown peaks (peaks not in trained Word2Vec vocabulary) is correctly implemented via missing fraction assessment as described in methods",
+      "evaluate whether maximum peak filtering (max(n_peaks) = 0.5 \u00d7 parentmass) is correctly applied during document generation and does not remove peaks incorrectly",
+      "assess correctness of neutral loss calculation (precursor \u2212 peak) and filtering (5.0\u2013200.0 Da range) in document generation stage",
+      "verify that spectrum vector aggregation preserves structural relationship information required for downstream similarity scoring, e.g., by spot-checking similarity between structurally similar pairs"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How does the Spec2Vec method convert a pre-processed MS/MS spectrum into a fixed-length vector representation suitable for efficient similarity comparisons?: 'A spectrum can then be represented by a low-dimensional vector calculated as the weighted sum of all its fragment (and loss) vectors'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Spec2Vec converts spectra into documents by representing each peak as a word (\"peak@xxx.xx\") and adding neutral losses (\"loss@xxx.xx\") between 5.0\u2013200.0 Da calculated as precursor \u2212 peak. The spectrum is then represented as a low-dimensional vector calculated as the weighted sum of all its fragment and loss vectors from a trained Word2Vec model.: 'every peak is represented by a word that contains its position up to a defined decimal precision (\"peak@xxx.xx\"). In addition to all peaks of a spectrum, neutral losses between 5.0 and 200.0 Da were'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pre-processed MS/MS spectra in mzML, mzXML, or tabular format (m/z, intensity, precursor m/z per spectrum): 'After processing, spectra are converted to documents. For this, every peak is represented by a word that contains its position up to a defined decimal precision'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pre-trained Word2Vec model (gensim format) from reference dataset (e.g., AllPositive or UniqueInchikey): 'A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Spectrum vector file containing spectrum identifiers and their corresponding Word2Vec-aggregated embedding vectors (one vector per spectrum): 'v_S = \u2211_{i=1}^{n} \u221aw_i \u00b7 v_i, with w_i the intensity (normalized to maximum intensity = 1) and v_i the word vector of peak i'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Word2Vec: 'A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] gensim: 'A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] matchms: 'the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] spec2vec: 'spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Numpy: 'by making extensive use of Numpy [24] and Numba [25]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Numba: 'by making extensive use of Numpy [24] and Numba [25]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pandas: 'using Pandas [40]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Exact Word2Vec embedding dimensionality is not specified; article refers to pre-trained models but does not state vector dimension: 'The two most important trained Word2Vec models used in this work can be downloaded from https://doi.org/10.5281/zenodo.3978054'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Precise weighted summation formula for aggregating word vectors into spectrum vector is not provided; method description states aggregation occurs but does not give mathematical formulation: 'After processing, spectra are converted to documents. For this, every peak is represented by a word'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Specification of peak decimal precision for peak@xxx.xx token generation is not stated numerically; only that peaks are represented 'up to a defined decimal precision': 'every peak is represented by a word that contains its position up to a defined decimal precision'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Handling of spectrum vectors with unknown peaks (peaks absent from trained Word2Vec model) during aggregation is described qualitatively but no algorithm for missing word imputation is provided: 'In those instances some words (= peaks) of a given spectra might be unknown to the model. In those instances we can estimate the impact'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import gensim.models; import matchms; import spec2vec; import numpy as np; import pandas as pd; from pathlib import Path; import logging; logging.basicConfig(level=logging.INFO); model = gensim.models.Word2Vec.load('{inputs.trained_word2vec_model}'); spectra = list(matchms.importing.load_from_msp('{inputs.preprocessed_spectra}')) if str('{inputs.preprocessed_spectra}').endswith('.msp') else list(matchms.importing.load_from_mgf('{inputs.preprocessed_spectra}')); documents = [spec2vec.SpectrumDocument(s, n_decimals=2) for s in spectra]; vectors = []; spectrum_ids = []; missing_fracs = []; for doc, spec in zip(documents, spectra): vec = np.zeros(model.vector_size); unknown_intensity = 0.0; total_intensity = sum(p[1] for p in spec.peaks); for word in doc.words: if word in model.wv: vec += model.wv[word] * np.sqrt(spec.peaks[[p[0] for p in spec.peaks].index(float(word.split('@')[1])) if word.startswith('peak@') else 0][1] / total_intensity if total_intensity > 0 else 0); else: unknown_intensity += sum(p[1] for p in spec.peaks if f'peak@{p[0]:.2f}' == word); missing_frac = unknown_intensity / total_intensity if total_intensity > 0 else 0.0; if missing_frac < 0.05: vectors.append(vec); spectrum_ids.append(spec.metadata.get('spectrum_id', '')); missing_fracs.append(missing_frac); output_df = pd.DataFrame({'spectrum_id': spectrum_ids, 'vector': vectors, 'missing_fraction': missing_fracs}); output_df.to_csv('spectrum_vectors.csv', index=False); print(f'Processed {len(vectors)} spectra with valid missing fraction < 0.05')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "spectrum_vectors.h5",
+  "expected_outputs": [
+    "Spectrum vector file containing spectrum identifiers and their corresponding Word2Vec-aggregated embedding vectors (one vector per spectrum)"
+  ],
+  "finding": "Spec2Vec converts spectra into documents by representing each peak as a word (\"peak@xxx.xx\") and adding neutral losses (\"loss@xxx.xx\") between 5.0\u2013200.0 Da calculated as precursor \u2212 peak. The spectrum is then represented as a low-dimensional vector calculated as the weighted sum of all its fragment and loss vectors from a trained Word2Vec model.",
+  "github_name": "matchms/matchms",
+  "input_from": "task_002",
+  "inputs": [
+    "Pre-processed MS/MS spectra in mzML, mzXML, or tabular format (m/z, intensity, precursor m/z per spectrum)",
+    "Pre-trained Word2Vec model (gensim format) from reference dataset (e.g., AllPositive or UniqueInchikey)"
+  ],
+  "keywords": [
+    "mass spectrometry fragmentation",
+    "spectral similarity scoring",
+    "untargeted metabolomics",
+    "metabolite identification",
+    "lc-ms/ms",
+    "word embeddings",
+    "natural language processing",
+    "molecular networks",
+    "database searching",
+    "structural annotation",
+    "cosine similarity",
+    "ms2 spectra"
+  ],
+  "landmark_outputs": [
+    "spectrum_documents.json",
+    "peak_word_list.txt",
+    "spectrum_vectors_raw.csv",
+    "missing_fraction_qc.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_021",
+    "result_022",
+    "result_024",
+    "result_025",
+    "result_027",
+    "result_028",
+    "result_037",
+    "result_047",
+    "result_048"
+  ],
+  "methodology_summary": [
+    "Load pre-processed spectra and pre-trained Word2Vec model into memory",
+    "Tokenize each spectrum: convert peaks to 'peak@xxx.xx' words (2-decimal binning) and neutral losses (5.0\u2013200.0 Da range) to 'loss@xxx.xx' words",
+    "Retrieve Word2Vec embeddings for all peak and loss words; track unknown words not in vocabulary",
+    "Compute weighted spectrum vector as sum of embeddings scaled by square root of normalized peak intensity",
+    "Calculate missing fraction (ratio of intensity from unknown peaks to total intensity) and filter spectra with missing fraction \u22650.05",
+    "Validation: confirm spectrum vectors have correct dimensionality (matching Word2Vec embedding size), all vectors are non-zero, and missing fraction metric is computed for every spectrum",
+    "References: source article (DOI: 10.1371/journal.pcbi.1008724)"
+  ],
+  "missing_information": [
+    "Exact Word2Vec embedding dimensionality is not specified; article refers to pre-trained models but does not state vector dimension",
+    "Precise weighted summation formula for aggregating word vectors into spectrum vector is not provided; method description states aggregation occurs but does not give mathematical formulation",
+    "Specification of peak decimal precision for peak@xxx.xx token generation is not stated numerically; only that peaks are represented 'up to a defined decimal precision'",
+    "Handling of spectrum vectors with unknown peaks (peaks absent from trained Word2Vec model) during aggregation is described qualitatively but no algorithm for missing word imputation is provided"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/library_matching_results"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the Spec2Vec method convert a pre-processed MS/MS spectrum into a fixed-length vector representation suitable for efficient similarity comparisons?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "intro",
+    "results",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "mass-spectrometry-spectrum-tokenization",
+    "word-embedding-aggregation-for-spectral-data",
+    "neutral-loss-calculation-from-precursor",
+    "word2vec-vocabulary-matching-and-unknown-peak-handling",
+    "spectral-vector-normalization-by-intensity",
+    "missing-fraction-quality-filtering-for-embeddings"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_spec2vec",
+  "spine_condition_ids": [
+    "COND_SPEC2VEC_UNIQUEINCHIKEY",
+    "COND_SPEC2VEC_ALLPOSITIVE",
+    "COND_COSINE_ON_SPEC2VEC_PROCESSED",
+    "COND_NEG_SAMPLING_TRAINING",
+    "COND_NO_NEG_SAMPLING_TRAINING"
+  ],
+  "spine_entity_ids": [
+    "SPEC2VEC_SYSTEM",
+    "WORD2VEC_MODEL",
+    "SPECTRUM_DOCUMENT_REPR",
+    "SPECTRUM_VECTOR",
+    "COND_SPEC2VEC_UNIQUEINCHIKEY",
+    "COND_SPEC2VEC_ALLPOSITIVE",
+    "COND_COSINE_ON_SPEC2VEC_PROCESSED",
+    "COND_NEG_SAMPLING_TRAINING",
+    "COND_NO_NEG_SAMPLING_TRAINING",
+    "RESULT_SPEC2VEC_BETTER_STRUCTURAL_CORR",
+    "RESULT_SPEC2VEC_BETTER_LIBRARY_MATCHING",
+    "RESULT_SPEC2VEC_SCALABLE",
+    "RESULT_COSINE_ON_SPEC2VEC_DATA_LOWER",
+    "METRIC_TANIMOTO_TOP01PCT_SPEC2VEC",
+    "CBOW_MODEL",
+    "PEAK_FILTERING_COSINE",
+    "PEAK_FILTERING_SPEC2VEC",
+    "SPEC2VEC_PACKAGE",
+    "NEUTRAL_LOSS_FEATURE"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics",
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "modeling"
+  ],
+  "synthesized_from": null,
+  "task_description": "Convert pre-processed MS/MS spectra into spectrum documents by representing peaks and neutral losses as words, then aggregate pre-trained Word2Vec word vectors into single spectrum vectors via weighted summation, outputting one vector file per spectrum.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-processed MS/MS spectra",
+      "port_id": "preprocessed_spectra",
+      "resolved_via": null,
+      "source": "task_002/library_matching_results",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-trained Word2Vec model",
+      "port_id": "trained_word2vec_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the spectrum-to-vector pipeline: convert pre-processed MS/MS spectra into peak/loss documents, look up Word2Vec vectors for each peak and neutral loss, and aggregate them via weighted summation to produce one spectrum vector file per input spectrum.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Spectrum vector embeddings",
+      "port_id": "spectrum_vectors",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "spectral-library-matching",
+    "molecular-networking",
+    "tandem-ms",
+    "machine-learning",
+    "natural-language-processing",
+    "cosine-similarity-scoring"
+  ],
+  "title": "Reconstruct the Spec2Vec spectrum-document construction and weighted vector aggregation step",
+  "tools": [
+    "Word2Vec",
+    "gensim",
+    "matchms",
+    "spec2vec",
+    "Numpy",
+    "Numba",
+    "Pandas"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load pre-processed MS/MS spectra and a pre-trained Word2Vec model (trained on reference dataset). 2. For each spectrum, represent every peak as a word in the form 'peak@xxx.xx' using 2-decimal binning of m/z values. 3. Calculate neutral losses (precursor m/z minus peak m/z) for all losses between 5.0 and 200.0 Da and represent each as 'loss@xxx.xx'. 4. Assemble all peak and loss words into a spectrum document. 5. For each spectrum, compute a weighted spectrum vector as the sum of Word2Vec word embeddings, weighted by the square root of normalized peak intensity. 6. Calculate the missing fraction (proportion of spectrum intensity from unknown peaks/losses not in Word2Vec model); filter out spectra with missing fraction \u22650.05. 7. Save the resulting spectrum vectors to a named output file (e.g., CSV or HDF5 with spectrum identifier and vector components)."
+}

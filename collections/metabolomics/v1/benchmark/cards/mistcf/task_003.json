@@ -1,0 +1,316 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/mist_cf_graphic.png",
+      "role": "figure",
+      "sha256": "25a3a1f8ede8b904a87e343f4d141c3b3e9d412e958fd454627b9923981e1882"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "26d4d1faf8d11b33e158b91bb16cd0aafa63b7c4bb2f629454982eed545fcd4b"
+    }
+  ],
+  "created_at": "2026-06-16T07:03:45.812462+00:00",
+  "crossref_doi": "10.1021/acs.jcim.3c01082",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Published benchmark dataset with MS/MS spectra, ground-truth chemical formulas, and adduct annotations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CSV or JSON table with per-spectrum ranking accuracy results for [M+H]+-only and multi-adduct modes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Numerical comparison report quantifying the performance contribution of MULTI_ADDUCT_SUPPORT (delta in top-1 and top-k accuracy)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MIST-CF uses an energy-based transformer neural network that ranks formulas without relying on fragmentation-tree databases, making it suitable for de novo formula inference from MS/MS data.",
+    "The [M+H]+ adduct is the most common positive-mode ionization but represents only one of multiple possible adduct types; multi-adduct support expands the search space and may improve or degrade ranking depending on data quality and model calibration.",
+    "Formula-ranking accuracy is typically measured as top-1 (exact match of formula and adduct at rank 1) and top-k (correct formula-adduct pair within top-k predictions), where k is often 5 or 10.",
+    "Ablation studies isolating individual model components (like MULTI_ADDUCT_SUPPORT) require identical experimental conditions (same dataset, same hyperparameters, same inference procedure) except for the single toggled feature."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify that github:samgoldman97__mist-cf repository contains trained MIST-CF model checkpoint(s) and code to load them",
+      "Verify that a published benchmark dataset is deposited and accessible (check Zenodo DOI 10.1021/acs.jcim.3c01082 supplementary materials or linked repository for dataset file or accession)",
+      "Verify script runs: execute formula-ranking evaluation pipeline on benchmark data with MULTI_ADDUCT_SUPPORT disabled (single [M+H]+ mode only) and produces a ranked-formula output file or metrics table",
+      "Verify script runs: execute formula-ranking evaluation pipeline on benchmark data with MULTI_ADDUCT_SUPPORT enabled (full multi-adduct mode) and produces a ranked-formula output file or metrics table",
+      "Value in range: accuracy/recall metric for [M+H]+-only ranking must be a number between 0 and 1 (or 0\u2013100 if percentage)",
+      "Value in range: accuracy/recall metric for multi-adduct ranking must be a number between 0 and 1 (or 0\u2013100 if percentage)",
+      "Verify output matches reference: compare reported performance gap (multi-adduct vs [M+H]+-only) to any ablation or sensitivity analysis reported in article text or supplementary materials"
+    ],
+    "expert_review": [
+      "Assess whether the experimental protocol correctly isolates MULTI_ADDUCT_SUPPORT contribution by disabling only that component and holding all other hyperparameters, training data, and model architecture constant",
+      "Evaluate whether the benchmark dataset used is appropriate for measuring adduct-ranking contribution (sufficient diversity of compounds and adduct types, representative of real unknown samples)",
+      "Judge whether the reported improvement in ranking accuracy from multi-adduct support is scientifically meaningful and consistent with prior literature on adduct-aware formula annotation"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the performance improvement in chemical formula ranking accuracy when MIST-CF incorporates support for multiple adduct types compared to restricting predictions to [M+H]+ only?: 'Considering multiple adduct types beyond [M+H]+ (still only positive mode)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MIST-CF was developed with the capability to consider multiple adduct types beyond [M+H]+ in positive mode ionization.: 'Considering multiple adduct types beyond [M+H]+ (still only positive mode)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Published benchmark dataset with MS/MS spectra, ground-truth chemical formulas, and adduct annotations: 'MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CSV or JSON table with per-spectrum ranking accuracy results for [M+H]+-only and multi-adduct modes: 'evaluate formula-ranking accuracy restricted to [M+H]+ only versus the full multi-adduct setting'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Numerical comparison report quantifying the performance contribution of MULTI_ADDUCT_SUPPORT (delta in top-1 and top-k accuracy): 'isolating the contribution of the MULTI_ADDUCT_SUPPORT component'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MIST-CF: 'MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No changelog or version history provided; unclear which version of MIST-CF (if multiple releases exist) is the subject of evaluation and whether results are reproducible with the latest commit: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Article text does not appear in the provided discussion section; cannot verify whether benchmark dataset location, ablation methodology, or baseline [M+H]+-only results are explicitly reported: 'Section text is minimal; references only source repository and synthesis metadata, no experimental details or findings section content'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "mist_cf.benchmark",
+      "--dataset",
+      "{inputs.benchmark_dataset}",
+      "--output-dir",
+      "results_{task_id}",
+      "--compare-modes",
+      "mh_only",
+      "multi_adduct",
+      "--metrics",
+      "top1_accuracy,topk_accuracy",
+      "--report-format",
+      "csv,json"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "adduct_ablation_comparison.csv",
+  "expected_outputs": [
+    "CSV or JSON table with per-spectrum ranking accuracy results for [M+H]+-only and multi-adduct modes",
+    "Numerical comparison report quantifying the performance contribution of MULTI_ADDUCT_SUPPORT (delta in top-1 and top-k accuracy)"
+  ],
+  "finding": "MIST-CF was developed with the capability to consider multiple adduct types beyond [M+H]+ in positive mode ionization.",
+  "github_name": "samgoldman97/mist-cf",
+  "input_from": "task_001",
+  "inputs": [
+    "Published benchmark dataset with MS/MS spectra, ground-truth chemical formulas, and adduct annotations"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "mist_cf_predictions_[M+H]_only.json",
+    "mist_cf_predictions_multi_adduct.json",
+    "ranking_accuracy_metrics.csv"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Load the published benchmark dataset with ground-truth MS/MS spectra, chemical formulas, and adduct assignments.",
+    "Configure MIST-CF to restrict predictions to [M+H]+ only (disabling multi-adduct support) and run inference on all benchmark spectra.",
+    "Configure MIST-CF to enable full multi-adduct support and run inference on the same spectra using energy-based ranking.",
+    "Compute top-1 and top-k ranking accuracy for both modes (correct formula-adduct pair at rank 1 and within top-k).",
+    "Calculate performance delta (multi-adduct accuracy minus [M+H]+-only accuracy) to quantify MULTI_ADDUCT_SUPPORT contribution.",
+    "Validation: Report ranking accuracy metrics and delta with per-spectrum results; confirm multi-adduct and [M+H]+-only runs use identical spectral input and hyperparameters.",
+    "References: source article (DOI: 10.1021/acs.jcim.3c01082)"
+  ],
+  "missing_information": [
+    "No changelog or version history provided; unclear which version of MIST-CF (if multiple releases exist) is the subject of evaluation and whether results are reproducible with the latest commit",
+    "Article text does not appear in the provided discussion section; cannot verify whether benchmark dataset location, ablation methodology, or baseline [M+H]+-only results are explicitly reported"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/top_k_accuracy_scores"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the performance improvement in chemical formula ranking accuracy when MIST-CF incorporates support for multiple adduct types compared to restricting predictions to [M+H]+ only?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "chemical-formula-ranking-evaluation",
+    "adduct-assignment-accuracy-assessment",
+    "mass-spectrometry-benchmark-analysis",
+    "model-ablation-study-design",
+    "tandem-mass-spectra-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mistcf/synthesized_package",
+  "spine_condition_ids": [
+    "DENOVO_CONDITION"
+  ],
+  "spine_entity_ids": [
+    "MIST_CF_SYSTEM",
+    "MIST_SYSTEM",
+    "FORMULA_TRANSFORMER_ARCH",
+    "SINUSOIDAL_FORMULA_EMBEDDINGS",
+    "MULTI_ADDUCT_SUPPORT",
+    "DENOVO_CONDITION",
+    "MIST_CF_VS_SIRIUS_RESULT",
+    "MIST_CF_ADDUCT_RESULT"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "benchmark-evaluation",
+    "model-training",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:samgoldman97__mist-cf",
+  "task_description": "Evaluate MIST-CF formula-ranking accuracy on a published benchmark dataset comparing [M+H]+ only predictions versus multi-adduct predictions, quantifying the contribution of the MULTI_ADDUCT_SUPPORT component to ranking performance.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Published benchmark dataset with MS/MS spectra and ground-truth formulas/adducts",
+      "port_id": "benchmark_dataset",
+      "resolved_via": null,
+      "source": "task_001/top_k_accuracy_scores",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Quantify the formula-ranking accuracy improvement attributable to multi-adduct support by comparing [M+H]+-only predictions against full multi-adduct mode on the benchmark dataset.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Per-spectrum ranking accuracy for [M+H]+-only and multi-adduct modes",
+      "port_id": "ranking_results_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Quantified performance delta from MULTI_ADDUCT_SUPPORT component",
+      "port_id": "adduct_support_contribution",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "tandem-ms",
+    "machine-learning",
+    "in-silico-fragmentation",
+    "deep-learning",
+    "metabolite-identification"
+  ],
+  "title": "Analyze the impact of multi-adduct support on formula ranking accuracy",
+  "tools": [
+    "MIST",
+    "MIST-CF"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the published benchmark dataset containing MS/MS spectra with known formula and adduct ground truth. 2. Run MIST-CF inference in [M+H]+-only mode, restricting the model to rank formulas without multi-adduct support, and record ranked formula predictions and adduct assignments. 3. Run MIST-CF inference in full multi-adduct mode using the complete energy-based modeling approach, allowing ranking across multiple positive-mode adduct types, and record ranked predictions. 4. Compute ranking accuracy metrics (top-1 and top-k correct formula-adduct pair identification) for both modes. 5. Calculate the performance delta (multi-adduct accuracy minus [M+H]+-only accuracy) to isolate MULTI_ADDUCT_SUPPORT contribution and generate a comparison report."
+}

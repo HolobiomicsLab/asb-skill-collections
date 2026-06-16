@@ -1,0 +1,257 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "f97b769a2cba18bc5d5570bf2e0867780e151e1bc1ffae428d52ead8e824d57e"
+    }
+  ],
+  "created_at": "2026-06-15T10:50:21.360243+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sciex Multiquant TXT export file containing sample metadata and injection sequence",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured table of QCpool sample positions, injection indices, sequence IDs, and regularity metrics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "QCpool samples are pooled quality control reference materials measured at regular intervals across analytical sequences to monitor instrumental performance and drift in metabolomics and lipidomics studies.",
+    "Sciex Multiquant TXT exports contain tabular data with sample identifiers, injection order, and metadata fields that must be parsed to locate QCpool entries within the sequence.",
+    "Regular interval insertion of QCpool samples assumes a fixed spacing (e.g., every N injections) or predefined positions within and across sequences.",
+    "Identification of QCpool samples relies on naming convention or annotation field in the Sciex export, typically containing keywords like 'QCpool', 'QC', 'pool', or similar standardized labels."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that inputs include a concrete Sciex Multiquant TXT export file (from github:ricoderks__QComics repository or a publicly deposited dataset)",
+      "verify file_format_is TXT or plain text",
+      "verify that expected_outputs table contains at least these named fields: sample_name, injection_index, sequence_position, qcpool_status (or equivalent structured record)",
+      "verify row_count_equals is non-zero (at least one QCpool identified)",
+      "verify script_runs successfully on the input TXT file without errors",
+      "verify output_matches_reference if a reference QCpool annotation file exists in the repository; otherwise, no canonical answer \u2014 multiple valid parsing strategies may exist depending on Multiquant TXT format version and QCpool naming conventions"
+    ],
+    "expert_review": [
+      "confirm that sample identification logic correctly distinguishes QCpool samples from analytical samples (relies on domain knowledge of metabolomics nomenclature and Sciex Multiquant export conventions)",
+      "confirm that injection_index and sequence_position assignments are accurate and semantically meaningful for quality control assessment",
+      "confirm that detected QCpool interval regularity is biologically and analytically plausible (expert judgment on what constitutes 'regular intervals')"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the QComics package parse Sciex Multiquant TXT export files to identify and locate QCpool samples that were injected at regular intervals across metabolomics or lipidomics sequences?: 'QCpool samples need to be analysed with Sciex Multiquant (> v3.0.3) software and exported to `txt` format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The QComics package processes pooled QCpool samples that must be measured at regular intervals during one or more analytical sequences and exported from Sciex Multiquant software as text files for quality assessment.: 'a pooled sample (QCpool) needs to measured in regular intervals during one or more sequences. These QCpool samples need to be analysed with Sciex Multiquant (> v3.0.3) software and exported to `txt`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Sciex Multiquant TXT export file containing sample metadata and injection sequence: 'QCpool samples need to be analysed with Sciex Multiquant (> v3.0.3) software and exported to `txt` format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Structured table of QCpool sample positions, injection indices, sequence IDs, and regularity metrics: 'a pooled sample (QCpool) needs to be measured in regular intervals during one or more sequences'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Sciex Multiquant (> v3.0.3): 'analysed with Sciex Multiquant (> v3.0.3) software and exported to `txt` format'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] ricoderks/QComics: 'codecov.io/gh/ricoderks/QComics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided for the QComics package, limiting ability to confirm stability and reproducibility of the TXT parsing logic across different Multiquant versions.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; import re; import pandas as pd; txt_file = '{inputs.multiquant_txt}'; lines = open(txt_file).readlines(); data = []; in_sample_section = False; for i, line in enumerate(lines): line = line.strip(); ('Sample' in line or 'Injection' in line) and (in_sample_section := True); in_sample_section and line and not line.startswith('#') and (match := re.search(r'(QCpool|QC_pool|qcpool)', line, re.I)) and data.append({'line_num': i, 'content': line, 'injection_index': i}); df = pd.DataFrame(data) if data else pd.DataFrame({'line_num': [], 'content': [], 'injection_index': []}); df.to_csv('qcpool_intervals.csv', index=False); print(f'Detected {len(df)} QCpool entries'); print(df)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [
+      "Sciex Multiquant"
+    ],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "qcpool_positions.csv",
+  "expected_outputs": [
+    "Structured table of QCpool sample positions, injection indices, sequence IDs, and regularity metrics"
+  ],
+  "finding": "The QComics package processes pooled QCpool samples that must be measured at regular intervals during one or more analytical sequences and exported from Sciex Multiquant software as text files for quality assessment.",
+  "github_name": null,
+  "input_from": null,
+  "inputs": [
+    "Sciex Multiquant TXT export file containing sample metadata and injection sequence"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "raw_sample_list.txt",
+    "qcpool_candidates.csv",
+    "qcpool_positions.csv"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_003",
+    "result_004"
+  ],
+  "methodology_summary": [
+    "Load and parse the Sciex Multiquant TXT export to extract sample names and injection sequence metadata.",
+    "Scan sample identifiers and metadata fields to locate QCpool entries using naming patterns or annotations.",
+    "Map each QCpool sample to its injection index, sequence identifier, and position within the analytical run.",
+    "Analyze QCpool spacing to confirm regularity of insertion intervals.",
+    "Validation: Output table contains all QCpool samples with correct injection indices and documented intervals match expected study design spacing."
+  ],
+  "missing_information": [
+    "No changelog or version history provided for the QComics package, limiting ability to confirm stability and reproducibility of the TXT parsing logic across different Multiquant versions."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the QComics package parse Sciex Multiquant TXT export files to identify and locate QCpool samples that were injected at regular intervals across metabolomics or lipidomics sequences?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "qcpool-sample-identification",
+    "multiquant-file-parsing",
+    "injection-sequence-annotation",
+    "quality-control-interval-detection",
+    "metabolomics-study-design-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_qcomics/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp_qcpool",
+    "tool_sciex_multiquant",
+    "dataset_txt_export"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:ricoderks__QComics",
+  "task_description": "Parse a Sciex Multiquant TXT export file to identify QCpool (quality control pooled) samples inserted at regular intervals across one or more analytical sequences, and produce a structured table documenting QCpool sample positions and injection indices.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sciex Multiquant TXT export file",
+      "port_id": "multiquant_txt",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Parse Sciex Multiquant TXT export files to identify QCpool sample positions and generate a structured table mapping QCpool injection indices across sequences.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "QCpool positions and injection indices table",
+      "port_id": "qcpool_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "metabolite-identification",
+    "quality-control"
+  ],
+  "title": "Implement QCpool interval detection from Sciex Multiquant TXT export",
+  "tools": [
+    "Sciex Multiquant (> v3.0.3)",
+    "ricoderks/QComics"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Sciex Multiquant (> v3.0.3), ricoderks/QComics, Structured table of QCpool sample positions, injection indices, sequence IDs, and regularity metrics."
+  ],
+  "workflow_description": "1. Load the Sciex Multiquant TXT export file and extract the sample metadata and injection sequence information. 2. Scan the injection sequence to identify samples marked or annotated as QCpool or quality control pool samples. 3. Record the injection index, sample position within sequence, and any sequence identifier for each detected QCpool sample. 4. Validate that QCpool samples occur at regular intervals as expected from study design. 5. Compile results into a structured table with columns for sample name, injection index, sequence ID, and interval position."
+}

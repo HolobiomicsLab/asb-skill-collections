@@ -1,0 +1,308 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/methylKit_logo.png",
+      "role": "figure",
+      "sha256": "95914611e366169d643f217c61d26f9c19ddd55cf2d5f56ab7767a6f7e4ff6f2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "4c8b270ca6f0e13380a49cca704330aa037d0d68d8583090138549c4186a0806"
+    }
+  ],
+  "created_at": "2026-06-15T18:05:47.772040+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "methylKit package with dataSim() and calculateDiffMeth() functions available in R environment",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "methylDiff object containing differential methylation test statistics, p-values, and q-values from the overdispersion-corrected run",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparison report or figure showing q-value distributions (corrected vs. uncorrected) demonstrating that MN-corrected q-values are higher on average",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Overdispersion in methylation data arises from biological variation beyond sampling variance; the MN (Methylation-specific Negative Binomial) method accounts for this heterogeneity to produce more conservative p-value and q-value estimates.",
+    "The methylBase object is a unified data structure representing methylation calls across multiple samples at the same genomic bases, with coverage and methylation percentage per base.",
+    "Q-values (adjusted p-values) control false discovery rate; more stringent correction results in higher q-values for the same raw test statistic, reducing false positives at the cost of statistical power.",
+    "The Chi-square test is appropriate for testing differential methylation when sample sizes or site counts are sufficient; it tests whether the observed methylation proportion differences are statistically significant.",
+    "dataSim() generates synthetic methylation data with realistic properties (coverage, methylation ratios, replicate structure) to allow reproducible testing and validation of differential methylation workflows."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: methylKit R package available from github:al2na__methylKit",
+      "script_runs: R script instantiates methylBase object using dataSim() with parameters (replicates=6, sites=1000)",
+      "script_runs: calculateDiffMeth() executes on simulated methylBase with overdispersion='MN' and test='Chisq'",
+      "output_matches_reference: returned object is of class methylDiff (verify class attribute)",
+      "file_format_is: output object serializable and loadable as R methylDiff object, robust to R version within supported range"
+    ],
+    "expert_review": [
+      "expert_review: Compare q-value distributions (histogram, median, mean) from overdispersion='MN' run versus uncorrected baseline run (overdispersion='none' or default); verify that 'MN'-corrected run produces higher q-values on average (more stringent), consistent with vignette claim that overdispersion correction increases test stringency",
+      "expert_review: Assess whether observed q-value shift magnitude and direction align with known behavior of M\u00f6bius-Nobrega overdispersion correction in differential methylation testing"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does overdispersion correction in calculateDiffMeth() with overdispersion='MN' produce more stringent statistical tests (higher q-values) compared to uncorrected differential methylation analysis?: 'This scaling parameter also effects the statistical tests and if there is overdispersion correction the tests will be more stringent in general.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The calculateDiffMeth() function with overdispersion='MN' parameter calculates a scaling parameter \u03c6 = X\u00b2/(N-P) to adjust variance as \u03c6\u00b7n_i\u00b7\u03c0\u0302_i\u00b7(1-\u03c0\u0302_i), which makes statistical tests more stringent by correcting for variance in excess of binomial expectations and automatically switches from Chisq to F-test.: 'This can be corrected by calculating a scaling parameter \u03c6 and adjusting the variance as \u03c6 n_i \\hat{\\pi_i}(1-\\hat{\\pi_i}). `calculateDiffMeth` can calculate that scaling parameter and use it in'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] methylKit package with dataSim() and calculateDiffMeth() functions available in R environment: 'title: \"methylKit: User Guide v`r packageVersion('methylKit')`\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] methylDiff object containing differential methylation test statistics, p-values, and q-values from the overdispersion-corrected run: 'The calculateDiffMeth() function is the main function to calculate differential methylation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Comparison report or figure showing q-value distributions (corrected vs. uncorrected) demonstrating that MN-corrected q-values are higher on average: 'Depending on the sample size per each set it will either use Fisher's exact or logistic regression'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] methylKit: 'title: \"methylKit: User Guide v`r packageVersion('methylKit')`\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'packageVersion('methylKit')'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(methylKit); set.seed(42); mBase <- dataSim(replicates=6, sites=1000, treatment=c(0,0,0,1,1,1)); mDiff_corrected <- calculateDiffMeth(mBase, overdispersion='MN', test='chisq'); mDiff_uncorrected <- calculateDiffMeth(mBase, overdispersion='none', test='chisq'); q_corrected <- mDiff_corrected@data$qvalue; q_uncorrected <- mDiff_uncorrected@data$qvalue; cat('Corrected mean q-value:', mean(q_corrected, na.rm=TRUE), '\\n'); cat('Uncorrected mean q-value:', mean(q_uncorrected, na.rm=TRUE), '\\n'); pdf('q_value_comparison.pdf'); par(mfrow=c(1,2)); hist(q_corrected, main='MN-Corrected q-values', xlab='q-value', breaks=50); hist(q_uncorrected, main='Uncorrected q-values', xlab='q-value', breaks=50); dev.off(); saveRDS(mDiff_corrected, 'methylDiff_corrected.rds'); cat('Task completed successfully.\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "qvalue_distribution_comparison.csv",
+  "expected_outputs": [
+    "methylDiff object containing differential methylation test statistics, p-values, and q-values from the overdispersion-corrected run",
+    "Comparison report or figure showing q-value distributions (corrected vs. uncorrected) demonstrating that MN-corrected q-values are higher on average"
+  ],
+  "finding": "The calculateDiffMeth() function with overdispersion='MN' parameter calculates a scaling parameter \u03c6 = X\u00b2/(N-P) to adjust variance as \u03c6\u00b7n_i\u00b7\u03c0\u0302_i\u00b7(1-\u03c0\u0302_i), which makes statistical tests more stringent by correcting for variance in excess of binomial expectations and automatically switches from Chisq to F-test.",
+  "github_name": "al2na/methylKit",
+  "input_from": "task_002",
+  "inputs": [
+    "methylKit package with dataSim() and calculateDiffMeth() functions available in R environment"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "simulated_methylbase.rds",
+    "methyldiff_corrected.rds",
+    "methyldiff_uncorrected.rds",
+    "qvalue_stats_comparison.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_044",
+    "result_046",
+    "result_052",
+    "result_053",
+    "result_054"
+  ],
+  "methodology_summary": [
+    "Generate synthetic methylation data using dataSim() with 6 replicates and 1000 genomic sites to create a methylBase object.",
+    "Run calculateDiffMeth() with overdispersion correction method set to MN and statistical test set to Chi-square.",
+    "Run calculateDiffMeth() again without overdispersion correction (baseline) on the same methylBase object.",
+    "Extract and tabulate q-value statistics from both runs and compare distributions.",
+    "Validation: Confirm that average q-values from the MN-corrected run are higher than the uncorrected baseline, confirming more stringent multiple-testing control."
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "genomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does overdispersion correction in calculateDiffMeth() with overdispersion='MN' produce more stringent statistical tests (higher q-values) compared to uncorrected differential methylation analysis?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "dna-methylation-differential-analysis",
+    "overdispersion-correction-application",
+    "statistical-test-comparison",
+    "simulation-based-validation",
+    "methylbase-object-handling"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_methylkit/synthesized_package",
+  "spine_condition_ids": [
+    "cond_logistic_regression",
+    "cond_fishers_exact",
+    "cond_overdispersion_MN",
+    "cond_no_overdispersion",
+    "cond_with_covariates"
+  ],
+  "spine_entity_ids": [
+    "comp_methylBase",
+    "comp_methylDiff",
+    "tool_calculateDiffMeth",
+    "tool_reconstruct",
+    "tool_dataSim",
+    "cond_logistic_regression",
+    "cond_fishers_exact",
+    "cond_overdispersion_MN",
+    "cond_no_overdispersion",
+    "cond_with_covariates",
+    "result_logistic_regression_replicate_auto",
+    "result_overdispersion_stringency"
+  ],
+  "subdomains": [
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis",
+    "model-training"
+  ],
+  "synthesized_from": "github:al2na__methylKit",
+  "task_description": "Simulate a methylBase object using dataSim() with 6 replicates and 1000 methylation sites, then run calculateDiffMeth() with overdispersion correction (MN method) and Chi-square test. Verify that the function returns a methylDiff object and that the q-value distribution is more stringent (higher average q-values) compared to an uncorrected baseline run.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "methylKit R package with dataSim and calculateDiffMeth functions",
+      "port_id": "methylkit_package",
+      "resolved_via": null,
+      "source": "task_002/methylrawlistdb_object",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Simulate methylation data with dataSim(), apply calculateDiffMeth() with overdispersion correction enabled, and verify the function returns a methylDiff object with statistically more stringent results than the uncorrected baseline.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "methylDiff object with overdispersion-corrected test statistics",
+      "port_id": "methyldiff_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Q-value distribution comparison (corrected vs. uncorrected)",
+      "port_id": "qvalue_comparison",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "differential-abundance-analysis",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct overdispersion-corrected differential methylation using dataSim and calculateDiffMeth with overdispersion='MN'",
+  "tools": [
+    "methylKit",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: methylDiff object containing differential methylation test statistics, p-values, and q-values from the overdispersion-corrected run, Comparison report or figure showing q-value distributions (corrected vs. uncorrected) demonstrating that MN-corrected q-values are higher on average."
+  ],
+  "workflow_description": "1. Generate a simulated methylBase object using methylKit's dataSim() function with parameters set to 6 replicates and 1000 methylation sites. 2. Execute calculateDiffMeth() on the methylBase object with overdispersion parameter set to 'MN' (Methylation-specific Negative Binomial) and test parameter set to 'Chisq' (Chi-square test). 3. Extract and compare the q-value distributions from the corrected run (overdispersion='MN') against a parallel uncorrected run (overdispersion=FALSE or default) to verify that the corrected method produces higher average q-values, indicating more stringent multiple-testing correction."
+}

@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the adduct computation module accepts a derivatizing matrix identifier (e.g., 'FMP-10') and a metabolite SMILES string as inputs"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the module returns a structured list or table of predicted adduct ions with their m/z values"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output includes adducts beyond [M+H]+ and [M-H]- (e.g., [M+Na]+, [M+K]+, or matrix-specific adducts)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script runs without errors on a test case with FMP-10 and a standard metabolite SMILES"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "output matches reference adduct masses for FMP-10 reported in Nature Methods paper \u2014 robust to minor mass tolerance (\u00b10.01 Da or \u00b110 ppm, multiple defensible tolerances acceptable)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the adduct computation module accepts a derivatizing matrix identifier (e.g., 'FMP-10') and a metabolite SMILES string as inputs",
+      "verify that the module returns a structured list or table of predicted adduct ions with their m/z values",
+      "verify that output includes adducts beyond [M+H]+ and [M-H]- (e.g., [M+Na]+, [M+K]+, or matrix-specific adducts)",
+      "verify script runs without errors on a test case with FMP-10 and a standard metabolite SMILES",
+      "output matches reference adduct masses for FMP-10 reported in Nature Methods paper \u2014 robust to minor mass tolerance (\u00b10.01 Da or \u00b110 ppm, multiple defensible tolerances acceptable)"
+    ],
+    "expert_review": [
+      "verify that predicted adduct ions are chemically plausible for the given derivatizing matrix FMP-10",
+      "verify that fragmentation or ionization logic follows established mass spectrometry principles for the matrix type",
+      "assess whether adduct coverage is complete relative to known FMP-10 ionization pathways in the referenced Nature Methods study"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

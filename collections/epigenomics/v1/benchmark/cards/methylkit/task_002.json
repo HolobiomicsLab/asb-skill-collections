@@ -1,0 +1,305 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/methylKit_logo.png",
+      "role": "figure",
+      "sha256": "95914611e366169d643f217c61d26f9c19ddd55cf2d5f56ab7767a6f7e4ff6f2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "4c8b270ca6f0e13380a49cca704330aa037d0d68d8583090138549c4186a0806"
+    }
+  ],
+  "created_at": "2026-06-15T18:05:47.772040+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Example CpG methylation call files in methylKit-compatible format (e.g., from bisulfite sequencing via Bismark)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "methylRawListDB object with dbpath slot populated and pointing to bgzipped tabix files on disk",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Tabix file header containing methylKit metadata and version information (\u2265 1.13.1)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "The dbtype='tabix' parameter in methRead() enables disk-backed storage of methylation data using tabix compression and indexing, allowing efficient random access without loading entire datasets into memory.",
+    "The dbpath slot in a methylRawListDB object stores file-system paths to the underlying bgzipped tabix files; population of this slot confirms successful database-mode initialization.",
+    "Tabix file headers in methylKit include package version metadata; version \u2265 1.13.1 indicates support for modern database-backed workflows and compatibility with recent methylKit features.",
+    "methylKit reads methylation call data from bisulfite sequencing (e.g., Bismark output) in a standard format where methylation status is recorded as a percentage reflecting sample heterogeneity and sequencing error."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at path specified in dbpath slot of methylRawListDB object",
+      "file_format_is: tabix-compressed (bgzip) for all methylation data files referenced in dbpath",
+      "verify tabix index file (.tbi) exists for each bgzipped file in dbpath",
+      "contains_substring: tabix header contains 'methylKit' metadata marker",
+      "contains_substring: tabix header contains version string matching pattern 'version[\\s=]+(\\d+\\.\\d+\\.\\d+)' with version >= 1.13.1"
+    ],
+    "expert_review": [
+      "verify that methylRawListDB object structure and slot organization conform to methylKit \u22651.13.1 dbtype='tabix' specification",
+      "confirm tabix header metadata format matches methylKit's documented tabix serialization schema for version \u22651.13.1",
+      "assess whether example CpG input files are compatible with methRead() tabix mode and produce valid methylation records"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does the methylKit package support storing methylation data in tabix-indexed bgzipped files on disk, and if so, how are the database path and metadata header configured?: 'We can now create a `methylRawListDB` object, which stores the same content as *myobj* from above. But the single `methylRaw` objects retrieve their data from the tabix-file linked under `dbpath`.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The methRead() function with dbtype='tabix' parameter creates a methylRawListDB object that stores methylation data in bgzipped tabix files indexed on disk. The dbpath slot of each methylRaw object within the list is populated with the file path to the tabix file, enabling data retrieval from the external file rather than memory storage.: 'myobjDB=methRead(file.list,\n           sample.id=list(\"test1\",\"test2\",\"ctrl1\",\"ctrl2\"),\n           assembly=\"hg18\",\n           treatment=c(1,1,0,0),\n           context=\"CpG\",\n           dbtype ='"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Example CpG methylation call files in methylKit-compatible format (e.g., from bisulfite sequencing via Bismark): 'Using the same example CpG files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] methylRawListDB object with dbpath slot populated and pointing to bgzipped tabix files on disk: 'methylRawListDB object stored as bgzipped tabix files on disk. Verify that the dbpath slot is populated'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Tabix file header containing methylKit metadata and version information (\u2265 1.13.1): 'the tabix file header contains the expected methylKit metadata (version >= 1.13.1 behaviour)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] methylKit: 'title: \"methylKit: User Guide v`r packageVersion('methylKit')`\"'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'packageVersion('methylKit')'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version-specific behavior changes or tabix feature introduction timeline: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] No methods section provided describing methRead() function signature, dbtype parameter options, or dbpath slot initialization: 'Document contains only vignette header and setup code, no methods section text'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(methylKit); cpg_files <- list.files('{inputs.cpg_files}', full.names=TRUE, pattern='\\\\.(txt|cov|bedGraph)'); obj <- methRead(cpg_files, sample.id=as.list(basename(cpg_files)), assembly='hg19', treatment=rep(0, length(cpg_files)), dbtype='tabix', mincov=1); cat('dbpath slot:', obj@dbpath, '\\n'); cat('Files exist:', all(file.exists(obj@dbpath)), '\\n'); if(length(obj@dbpath) > 0) { header <- system(paste('bgzip -cd', obj@dbpath[1], '| head -1'), intern=TRUE); cat('Header:', header, '\\n'); }; saveRDS(obj, 'methylRawListDB_tabix.rds')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "methylRawListDB object with dbpath slot populated and pointing to bgzipped tabix files on disk",
+    "Tabix file header containing methylKit metadata and version information (\u2265 1.13.1)"
+  ],
+  "finding": "The methRead() function with dbtype='tabix' parameter creates a methylRawListDB object that stores methylation data in bgzipped tabix files indexed on disk. The dbpath slot of each methylRaw object within the list is populated with the file path to the tabix file, enabling data retrieval from the external file rather than memory storage.",
+  "github_name": "al2na/methylKit",
+  "input_from": "task_001",
+  "inputs": [
+    "Example CpG methylation call files in methylKit-compatible format (e.g., from bisulfite sequencing via Bismark)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "methylRawListDB_object.rds",
+    "*.bgz",
+    "*.bgz.tbi"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_020",
+    "result_021",
+    "result_022"
+  ],
+  "methodology_summary": [
+    "Load example CpG methylation files into R using methylKit's methRead() function with dbtype='tabix' parameter to enable tabix-backed database storage mode.",
+    "Inspect the resulting methylRawListDB object to confirm the dbpath slot contains file-system paths to bgzipped tabix files.",
+    "Read and parse tabix file headers to extract and verify methylKit version metadata.",
+    "Validation: Confirm dbpath slot is non-empty, all referenced tabix files exist on disk with valid .bgz and .tbi extensions, and header version field is \u2265 1.13.1."
+  ],
+  "missing_information": [
+    "No changelog documenting version-specific behavior changes or tabix feature introduction timeline",
+    "No methods section provided describing methRead() function signature, dbtype parameter options, or dbpath slot initialization"
+  ],
+  "parameters": [],
+  "primary_domain": "genomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the methylKit package support storing methylation data in tabix-indexed bgzipped files on disk, and if so, how are the database path and metadata header configured?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "dna-methylation-file-format-handling",
+    "methylkit-database-mode-configuration",
+    "tabix-index-validation-and-inspection",
+    "bisulfite-sequencing-data-loading"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_methylkit/synthesized_package",
+  "spine_condition_ids": [
+    "cond_with_covariates",
+    "cond_methylDB_tabix"
+  ],
+  "spine_entity_ids": [
+    "methylKit_system",
+    "comp_methylRawListDB",
+    "tool_methRead",
+    "tool_reconstruct",
+    "tool_AMP_pipeline",
+    "tool_tabix",
+    "dataset_example_CpG_files",
+    "cond_with_covariates",
+    "cond_methylDB_tabix",
+    "arch_analysis_workflow",
+    "result_tabix_header_metadata"
+  ],
+  "subdomains": [
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:al2na__methylKit",
+  "task_description": "Call methRead() with dbtype='tabix' on CpG methylation files to produce a methylRawListDB object persisted as bgzipped tabix files, and verify that the dbpath slot is correctly populated with tabix file headers containing methylKit metadata (version \u2265 1.13.1).",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CpG methylation call files",
+      "port_id": "cpg_files",
+      "resolved_via": null,
+      "source": "task_001/methyldiff_object",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Call methRead() with dbtype='tabix' on example CpG files to produce a methylRawListDB object, then verify the dbpath slot is populated and confirm tabix file header contains methylKit metadata.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "methylRawListDB object with dbpath slot",
+      "port_id": "methylrawlistdb_object",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Tabix file headers with methylKit metadata",
+      "port_id": "tabix_headers",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "differential-abundance-analysis",
+    "statistical-analysis"
+  ],
+  "title": "Reconstruct the methylRawListDB tabix-backed storage pipeline for memory-efficient sample loading",
+  "tools": [
+    "methylKit",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: methylRawListDB object with dbpath slot populated and pointing to bgzipped tabix files on disk, Tabix file header containing methylKit metadata and version information (\u2265 1.13.1)."
+  ],
+  "workflow_description": "1. Load CpG methylation call files using methRead() function with parameter dbtype='tabix' to create a methylRawListDB object backed by tabix-indexed disk files. 2. Verify that the resulting methylRawListDB object's dbpath slot references valid bgzipped tabix file paths. 3. Inspect the tabix file headers to confirm presence of methylKit metadata and version information (\u2265 1.13.1). 4. Validate that the object structure and file integrity match expected methylKit standards for database-mode storage."
+}

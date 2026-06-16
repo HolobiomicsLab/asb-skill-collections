@@ -1,0 +1,346 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/ESCIENCE_logo_C_nl_small_cyanblack.png",
+      "role": "figure",
+      "sha256": "104646ff81ee4600d919e14864067bbe19a46009997a63e709145186db87d86f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nlesc.jpg",
+      "role": "figure",
+      "sha256": "ce1c0d7d06029965b49527cd659c444b9aa2c6f2cf0099fd922b6f30fd61c0e3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nmc.png",
+      "role": "figure",
+      "sha256": "fa530f7aadcec8c9b041bc4886afdddf73b99b8deac4ec92403edecc42158a1b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_0_aaaaaa_40x100.png",
+      "role": "figure",
+      "sha256": "9a8492a580bf85d3e98ae8861fbd45567e5a1f83eeafcf9574da0399d5f602ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_0_eeeeee_40x100.png",
+      "role": "figure",
+      "sha256": "a86f3a2b5b124bfca91a6ca96f44f9b1ce04e34ed3fc7f6313ab2ce2cc030c4b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_55_c0402a_40x100.png",
+      "role": "figure",
+      "sha256": "ec42d64ef88ef8efcc56f44f74cd162bb6bab14c8ed88ac3b361a6a622eecbfc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_flat_55_eeeeee_40x100.png",
+      "role": "figure",
+      "sha256": "a86f3a2b5b124bfca91a6ca96f44f9b1ce04e34ed3fc7f6313ab2ce2cc030c4b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_100_f8f8f8_1x400.png",
+      "role": "figure",
+      "sha256": "6e26bee28fa44d1d46cba6101120a011b26c7b18d2b8ef98799e8d9acb3e7ee7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_35_dddddd_1x400.png",
+      "role": "figure",
+      "sha256": "c78e86894dc105b0acbfc824c8d84764a1e66d943aa940c4a5efb9f585432e11"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_glass_60_eeeeee_1x400.png",
+      "role": "figure",
+      "sha256": "96de36a90580c09160c0ad471622b5eead5e0800113071d5450aba02879d3ecb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_inset-hard_75_999999_1x100.png",
+      "role": "figure",
+      "sha256": "a705209de7d974f8df5a468f93a95a2192399ff22f8920c42af67225505882eb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-bg_inset-soft_50_c9c9c9_1x100.png",
+      "role": "figure",
+      "sha256": "9f7e3cd2c01fc23b2c4b085488d2e909739ccfda3f938665c820e8ba40eb0c5a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_3383bb_256x240.png",
+      "role": "figure",
+      "sha256": "ffd288472dc15e2f77f90a835ded1d117f336d39021889968b41a064bd120e8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_454545_256x240.png",
+      "role": "figure",
+      "sha256": "cb36e80beaf2a527d463da552a5c679a46c4ff8c881318a194bb0ccb61cb2d5c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_70b2e1_256x240.png",
+      "role": "figure",
+      "sha256": "68c0578580411218f323ef69e1d52b4de7292afdc1b942aebb20afa0127dbd82"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_999999_256x240.png",
+      "role": "figure",
+      "sha256": "5127e3620735237313c23cca2b80a17f716c87ef371eb85086e7dd8a256a20c8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ui-icons_fbc856_256x240.png",
+      "role": "figure",
+      "sha256": "016b41155ac08b5c2d9f01d7ec127621417e103e620fe9127f09d3a2945ee4b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "728f5cdb8fddbed5c636832db5e7f3181f5bb5bda8141b9205c8e52574ccb952"
+    }
+  ],
+  "created_at": "2026-06-16T07:32:39.548179+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NLeSC/MAGMa GitHub repository (https://github.com/NLeSC/MAGMa), specifically the job subproject source code",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured flowchart or annotated call-graph JSON file documenting the in silico metabolite generation workflow, including function names, transformation logic, and data flow edges",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MAGMa performs in silico metabolite generation by fragmentation and enumeration of parent chemical structures to produce candidate sets for MS annotation.",
+    "The job subproject contains the core chemo-informatics logic for metabolite candidate generation, separate from the MS matching and annotation pipeline.",
+    "Metabolite generation workflows typically include structure parsing, fragmentation rule application, molecular property computation (mass, polarity, functional groups), and filtering by chemical feasibility constraints.",
+    "Static code analysis of closed-source or minimally documented bioinformatics software requires reverse-engineering function dependencies, parameter flow, and data transformation by examining call chains and intermediate variable assignments."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in github:NLeSC__MAGMa repository at path containing metabolite generation logic (e.g., magma/job or similar job subproject directory)",
+      "file_format_is: identify and confirm format of primary generation-logic artifact (Python source, JSON flowchart, XML call-graph, or annotated text file)",
+      "script_runs: if artifact is executable code, verify that import statements and function definitions parse without syntax error",
+      "field_present: if output is structured (JSON/XML), verify presence of expected keys documenting function call sequence, parameter names, and dependency order for metabolite candidate generation",
+      "contains_substring: verify that documented workflow explicitly references chemo-informatics operations (e.g., 'fragment', 'generate', 'candidate', 'metabolite', 'in silico') \u2014 no canonical answer; multiple defensible phrasings acceptable"
+    ],
+    "expert_review": [
+      "confirm that extracted workflow correctly represents the metabolite-generation stage and does not conflate it with MS annotation or matching stages",
+      "assess whether the documented flowchart/call-graph captures sufficient detail for a computational agent to independently trace metabolite generation; multiple valid levels of abstraction exist",
+      "evaluate whether chemo-informatics operations (functional group rules, fragmentation patterns, reaction templates) are correctly characterized"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What is the chemo-informatics workflow that MAGMa uses to generate candidate metabolites in silico?: 'MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The eMetabolomics project develops chemo-informatics based methods for metabolite identification, which includes in silico generation of metabolites as part of an integrative metabolomics data analysis workflow.: 'The project develops chemo-informatics based methods for metabolite identification and biochemical network reconstruction in an integrative metabolomics data analysis workflow.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NLeSC/MAGMa GitHub repository (https://github.com/NLeSC/MAGMa), specifically the job subproject source code: 'To contribute contact me via Github issue or pull request at https://github.com/NLeSC/MAGMa'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Structured flowchart or annotated call-graph JSON file documenting the in silico metabolite generation workflow, including function names, transformation logic, and data flow edges: 'producing a structured description (flowchart JSON or annotated call-graph file) of the generation logic'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MAGMa: 'MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites''"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No version history or documentation of changes to metabolite-generation workflow logic is available in the provided section: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "metabolite_generation_workflow.json",
+  "expected_outputs": [
+    "Structured flowchart or annotated call-graph JSON file documenting the in silico metabolite generation workflow, including function names, transformation logic, and data flow edges"
+  ],
+  "finding": "The eMetabolomics project develops chemo-informatics based methods for metabolite identification, which includes in silico generation of metabolites as part of an integrative metabolomics data analysis workflow.",
+  "github_name": "NLeSC/MAGMa",
+  "input_from": "task_001",
+  "inputs": [
+    "NLeSC/MAGMa GitHub repository (https://github.com/NLeSC/MAGMa), specifically the job subproject source code"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "function_inventory.txt",
+    "call_graph.dot",
+    "algorithm_nodes.json"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_007"
+  ],
+  "methodology_summary": [
+    "Retrieve the MAGMa source repository from GitHub and navigate to the job subproject directory.",
+    "Perform static analysis of Python/source files to identify metabolite generation entry points and function signatures.",
+    "Trace call chains and data flow through fragmentation, enumeration, and property-filtering modules.",
+    "Extract transformation logic, parameter definitions, and decision points that govern metabolite candidate generation.",
+    "Construct a directed acyclic graph representation as JSON, annotating nodes with function identifiers and algorithm names.",
+    "Validation: Verify that the generated flowchart covers the complete path from input parent structure to output candidate metabolite set, with all major computational steps and data dependencies explicitly documented."
+  ],
+  "missing_information": [
+    "No changelog found",
+    "No version history or documentation of changes to metabolite-generation workflow logic is available in the provided section"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the chemo-informatics workflow that MAGMa uses to generate candidate metabolites in silico?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "source-code-analysis-for-algorithm-extraction",
+    "metabolite-generation-logic-mapping",
+    "chemical-structure-transformation-documentation",
+    "call-graph-construction-and-visualization",
+    "chemo-informatics-workflow-reconstruction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_magma/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "MAGMa_System",
+    "ArchLayer_InSilicoMetaboliteGeneration",
+    "ArchLayer_MSAnnotation"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "information-extraction",
+    "data-processing"
+  ],
+  "synthesized_from": "github:NLeSC__MAGMa",
+  "task_description": "Analyze the MAGMa repository source code to extract and document the chemo-informatics workflow that generates candidate metabolites in silico. Produce a structured flowchart or annotated call-graph JSON file describing the metabolite generation logic and data flow.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NLeSC/MAGMa repository job subproject source code",
+      "port_id": "magma_repo_source",
+      "resolved_via": null,
+      "source": "task_001/component_manifest",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Document the metabolite in silico generation logic from the MAGMa job subproject as a structured flowchart or call-graph showing transformation stages, inputs, and outputs.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structured flowchart or call-graph JSON of metabolite generation logic",
+      "port_id": "metabolite_generation_workflow",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "in-silico-fragmentation",
+    "metabolite-identification",
+    "database-annotation",
+    "spectral-library-matching"
+  ],
+  "title": "Reconstruct the in silico metabolite generation pipeline stage within MAGMa",
+  "tools": [
+    "MAGMa"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Clone the NLeSC/MAGMa GitHub repository and locate the job subproject source files. 2. Perform static code analysis on the metabolite generation modules to identify algorithm entry points, function call chains, and data transformations. 3. Map chemical structure fragmentation logic, molecular property computation, and in silico metabolite enumeration steps. 4. Extract parameter definitions, conditional branches, and transformation rules that control metabolite candidate generation. 5. Construct a directed acyclic graph or flowchart JSON representation showing inputs (parent structures, generation rules), intermediate computations (fragmentation, isomer enumeration, property filters), and outputs (candidate metabolite sets). 6. Annotate nodes with function names, algorithm identifiers, and key computational steps from the source."
+}

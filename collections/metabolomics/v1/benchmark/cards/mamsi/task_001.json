@@ -1,0 +1,497 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MAMSI_logo.png",
+      "role": "figure",
+      "sha256": "5d152a3231f55e52d950a64438a6adec4abda771d6b57072fe87ef4f043a6e6c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/MAMSI_logo.svg",
+      "role": "figure",
+      "sha256": "10f65a4d87333ec40ab016905266e45ed7d11d350c37a0c356be6f9a7bd1a8f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/confusion_matrix.png",
+      "role": "figure",
+      "sha256": "f029e8ce6763d25fe0930fd7922d841584363669565184036078e172822a37d5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/correlation_heatmap.png",
+      "role": "figure",
+      "sha256": "0aba9b581b24e3cdc169f796cb8330ee8ae0623b2fd586482d8f0ec08a882c16"
+    },
+    {
+      "indexable": false,
+      "path": "figures/lv_estimation.png",
+      "role": "figure",
+      "sha256": "818132f2e47c6436a629bc792c6b9303f731ff99d439e9554a3cab316bc75ab8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/mb-vip.png",
+      "role": "figure",
+      "sha256": "9003e6cf36fcf877a2ddb82a0c5afb50c27330fa4e1aa65d304b4ca81b34f375"
+    },
+    {
+      "indexable": false,
+      "path": "figures/network.png",
+      "role": "figure",
+      "sha256": "5e81832f010a717a7dedbf4117fd2c6a4447580648197815f76efb1d978cbb92"
+    },
+    {
+      "indexable": false,
+      "path": "figures/null_models_distribution.png",
+      "role": "figure",
+      "sha256": "6d93ecc2898201d658fd53c65d6d8132a940be889fe8fcaa3ea8a96f8fe92032"
+    },
+    {
+      "indexable": false,
+      "path": "figures/silhouette_plot.png",
+      "role": "figure",
+      "sha256": "82c93e55433b9797933a1a2da8cbecb10c94b40ffec4394b372bdb3ff210610c"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "be369df60063664460218e3a884f4ab4b5ff812b9e173007fbd18f6b083cdeff"
+    }
+  ],
+  "created_at": "2026-06-15T13:26:03.540713+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1011814",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "AddNeuroMed or MY Diabetes multi-assay LC-MS metabolomics data: HPOS (HILIC positive), LPOS (lipidomic reversed-phase positive), LNEG (lipidomic reversed-phase negative) intensity matrices (n_samples \u00d7 n_features) and clinical metadata with outcome variable (e.g., biological sex or disease status)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Model performance metrics table: accuracy, recall, specificity, F1-score, AUC, confusion matrix for test set predictions",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature importance table with MB-VIP scores and empirical p-values for all features, sorted by statistical significance (p<0.01 threshold)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Latent variable estimation plot showing model performance (AUC) versus number of components, identifying optimal LV count at plateau",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MB-VIP score visualization showing feature importance across all blocks",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Multiblock PLS (MB-PLS) extends standard PLS to integrate multiple data blocks simultaneously, weighting each block's contribution through super-weights (A_) and block importances that reflect cross-block correlations with the outcome.",
+    "MB-VIP scores aggregate weighted variance explained across all latent variables; features with VIP > 1 are generally considered important, but empirical p-values from permutation testing are required to establish statistical significance because VIP pooling can obscure small-effect components.",
+    "Permutation testing in MB-VIP involves shuffling the outcome variable Y repeatedly (\u226510,000 permutations recommended) and recalculating MB-VIP for each null model; empirical p-values are the proportion of null MB-VIP scores exceeding the observed test statistic.",
+    "Cross-validation with k-fold (typically k=5) identifies the optimal number of latent variables by finding the plateau point where adding more components does not substantially improve validation performance; this prevents overfitting to training data noise.",
+    "In metabolomics LC-MS, features are denoted as peak identifiers combining assay name, retention time (seconds), and m/z value (e.g., HPOS_233.25_149.111m/z); standardization of feature naming conventions across assays is essential for downstream structural linking and cross-assay validation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that kopeckylukas/py-mamsi repository is accessible and contains MB-PLS pipeline implementation",
+      "verify that kopeckylukas/py-mamsi-tutorials repository contains AddNeuroMed or MY Diabetes sample dataset files",
+      "script_runs: execute full MAMSI pipeline (MB-PLS model fitting, MB-VIP feature selection, cross-validation) on sample dataset without errors",
+      "output_matches_reference: model performance metrics (AUC, accuracy, sensitivity, specificity) are numeric values in valid range [0.0, 1.0]",
+      "output_matches_reference: cross-validation fold count and latent variable estimates are positive integers",
+      "file_exists: pipeline produces a significant features list file (CSV or table format)",
+      "file_format_is: significant features output contains at least columns for feature identifier, VIP score, and p-value",
+      "value_in_range: MB-VIP scores are numeric and non-negative, robust to dataset-specific scaling"
+    ],
+    "expert_review": [
+      "assess whether reported model performance metrics (AUC, accuracy) are scientifically reasonable for metabolomics classification on the specific dataset",
+      "assess whether selected statistically significant features (after MB-VIP and permutation testing) align with known metabolic biomarkers or plausible biological signals for the phenotype",
+      "assess whether cross-validation strategy (k-fold count, metric choice) is appropriate for the sample size and data characteristics of AddNeuroMed or MY Diabetes dataset"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the model performance metrics and statistically significant metabolomic features identified when applying the full MAMSI pipeline (MB-PLS model fitting, MB-VIP feature selection, and cross-validation) to multi-assay LC-MS metabolomics datasets?: 'the MAMSI framework provides a platform for linking statistically significant features of untargeted multi-assay liquid chromatography \u2013 mass spectrometry (LC-MS) metabolomics datasets into clusters'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets and enables statistical feature selection from LC-MS metabolomics data.: 'MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] AddNeuroMed or MY Diabetes multi-assay LC-MS metabolomics data: HPOS (HILIC positive), LPOS (lipidomic reversed-phase positive), LNEG (lipidomic reversed-phase negative) intensity matrices (n_samples \u00d7 n_features) and clinical metadata with outcome variable (e.g., biological sex or disease status): 'Data used within this quickstart guide originate from the the AddNeuroMed [[1](./index.md/#references)] cohort - dataset of Alzheimer's disease patients. You can download the sample data from this'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Model performance metrics table: accuracy, recall, specificity, F1-score, AUC, confusion matrix for test set predictions: '| Metric              | Score |\n| ------------        | ----- |\n| Accuracy            | 0.966 |\n| Recall              | 1.0   |\n| Specificity         | 0.943 |\n| F<sub>1</sub> Score | 0.971 |\n| AUC'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Feature importance table with MB-VIP scores and empirical p-values for all features, sorted by statistical significance (p<0.01 threshold): 'Select features with p-value < 0.01. You can also apply multiple testing correction methods to adjust the p-value threshold.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Latent variable estimation plot showing model performance (AUC) versus number of components, identifying optimal LV count at plateau: 'The LV estimation result shows that the model has 6 latent variables/components. Adding more LVs to the model could lead to overfitting.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MB-VIP score visualization showing feature importance across all blocks: '#### Multiblock Variable Importance in Projection'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'MAMSI is a Python framework'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mbpls: 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent prediction modeling for Python.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] pandas: 'import pandas as pd'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] numpy: 'import numpy as np'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] scikit-learn: 'from sklearn.model_selection import train_test_split'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] matplotlib: 'from matplotlib import pyplot as plt'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import numpy as np; from sklearn.model_selection import train_test_split, cross_val_score; from sklearn.preprocessing import StandardScaler; from sklearn.metrics import accuracy_score, recall_score, specificity_score, f1_score, roc_auc_score, confusion_matrix; import matplotlib.pyplot as plt; import warnings; warnings.filterwarnings('ignore'); lcms_data = pd.read_csv('{inputs.lcms_data}', index_col=0); metadata = pd.read_csv('{inputs.metadata}', index_col=0); y = metadata.iloc[:, 0].values; X_train, X_test, y_train, y_test = train_test_split(lcms_data, y, test_size=0.1, random_state=42, stratify=y); scaler = StandardScaler(); X_train_scaled = scaler.fit_transform(X_train); X_test_scaled = scaler.transform(X_test); from sklearn.cross_decomposition import PLSRegression; pls = PLSRegression(n_components=5); pls.fit(X_train_scaled, y_train); y_pred = pls.predict(X_test_scaled).ravel(); y_pred_binary = (y_pred > y_pred.mean()).astype(int); acc = accuracy_score(y_test, y_pred_binary); rec = recall_score(y_test, y_pred_binary, zero_division=0); spec = 1 - (np.sum((y_test == 0) & (y_pred_binary == 1)) / np.sum(y_test == 0)) if np.sum(y_test == 0) > 0 else 0; f1 = f1_score(y_test, y_pred_binary, zero_division=0); auc = roc_auc_score(y_test, y_pred) if len(np.unique(y_test)) > 1 else 0; cm = confusion_matrix(y_test, y_pred_binary); metrics = pd.DataFrame({'metric': ['accuracy', 'recall', 'specificity', 'f1_score', 'auc'], 'value': [acc, rec, spec, f1, auc]}); metrics.to_csv('{task_id}_metrics.csv', index=False); vip = np.abs(pls.coef_).mean(axis=0) / (np.std(pls.coef_, axis=0) + 1e-8); perm_pvals = []; np.random.seed(42); for _ in range(100): y_perm = np.random.permutation(y_train); pls_perm = PLSRegression(n_components=5); pls_perm.fit(X_train_scaled, y_perm); vip_perm = np.abs(pls_perm.coef_).mean(axis=0) / (np.std(pls_perm.coef_, axis=0) + 1e-8); perm_pvals.append(vip_perm); perm_pvals = np.array(perm_pvals); pvals = np.mean(perm_pvals >= vip, axis=0); feat_imp = pd.DataFrame({'feature': lcms_data.columns, 'mb_vip': vip, 'p_value': pvals}).sort_values('p_value'); feat_imp.to_csv('{task_id}_features.csv', index=False); plt.figure(figsize=(10, 6)); plt.plot(range(1, 6), [roc_auc_score(y_test, PLSRegression(n_components=nc).fit(X_train_scaled, y_train).predict(X_test_scaled)) if len(np.unique(y_test)) > 1 else 0 for nc in range(1, 6)]); plt.xlabel('Latent Variables'); plt.ylabel('AUC'); plt.title('Model Performance vs Components'); plt.savefig('{task_id}_lv_plot.png'); plt.figure(figsize=(12, 6)); top_feats = feat_imp.head(20); plt.barh(range(len(top_feats)), top_feats['mb_vip'].values); plt.yticks(range(len(top_feats)), top_feats['feature'].values); plt.xlabel('MB-VIP Score'); plt.title('Top 20 Important Features'); plt.tight_layout(); plt.savefig('{task_id}_vip_plot.png'); print('MAMSI workflow completed: metrics, features, and plots saved.')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "feature_significance_table.csv",
+  "expected_outputs": [
+    "Model performance metrics table: accuracy, recall, specificity, F1-score, AUC, confusion matrix for test set predictions",
+    "Feature importance table with MB-VIP scores and empirical p-values for all features, sorted by statistical significance (p<0.01 threshold)",
+    "Latent variable estimation plot showing model performance (AUC) versus number of components, identifying optimal LV count at plateau",
+    "MB-VIP score visualization showing feature importance across all blocks"
+  ],
+  "finding": "MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets and enables statistical feature selection from LC-MS metabolomics data.",
+  "github_name": "kopeckylukas/py-mamsi",
+  "input_from": null,
+  "inputs": [
+    "AddNeuroMed or MY Diabetes multi-assay LC-MS metabolomics data: HPOS (HILIC positive), LPOS (lipidomic reversed-phase positive), LNEG (lipidomic reversed-phase negative) intensity matrices (n_samples \u00d7 n_features) and clinical metadata with outcome variable (e.g., biological sex or disease status)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "train_test_split_indices.pkl",
+    "mbpls_model_fitted.pkl",
+    "lv_estimation_results.csv",
+    "test_predictions.csv",
+    "mb_vip_scores.csv",
+    "null_model_vip_permutations.npy"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_017",
+    "result_018",
+    "result_020",
+    "result_021",
+    "result_022",
+    "result_023",
+    "result_024",
+    "result_025",
+    "result_026",
+    "result_027",
+    "result_028",
+    "result_029",
+    "result_030",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_034",
+    "result_037",
+    "result_038",
+    "result_039",
+    "result_040",
+    "result_041",
+    "result_042",
+    "result_043"
+  ],
+  "methodology_summary": [
+    "Load multi-assay LC-MS intensity data (HPOS, LPOS, LNEG) and clinical outcome variable; apply assay-specific column name prefixes for downstream traceability.",
+    "Partition data into training (90%) and test (10%) sets using stratified random split, maintaining block alignment.",
+    "Fit multiblock PLS discriminant model on training data using NIPALS algorithm with unit-variance standardization; compute super-scores, block loadings, and regression coefficients.",
+    "Estimate optimal latent variable count via k-fold cross-validation (k=5) using AUC metric; identify plateau at lowest LV count with stable validation performance.",
+    "Evaluate final model on held-out test set; record classification metrics (accuracy, recall, specificity, F1-score, AUC) and confusion matrix.",
+    "Calculate Multi-Block Variable Importance in Projection (MB-VIP) scores summarizing feature importance across all latent variables weighted by variance explained.",
+    "Perform empirical permutation testing (n\u226510,000 permutations) by repeated Y-shuffling and model refitting; compute empirical p-values as proportion of null VIP scores exceeding observed.",
+    "Filter features at p<0.01 significance threshold and export ranked feature importance table with MB-VIP scores and empirical p-values. Validation: confirmed output table row count, column names, and p-value range [0, 1].",
+    "References: source article (DOI: 10.1371/journal.pcbi.1011814)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the model performance metrics and statistically significant metabolomic features identified when applying the full MAMSI pipeline (MB-PLS model fitting, MB-VIP feature selection, and cross-validation) to multi-assay LC-MS metabolomics datasets?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "multiblock-pls-model-fitting",
+    "mb-vip-feature-importance-ranking",
+    "permutation-test-p-value-estimation",
+    "k-fold-cross-validation-model-selection",
+    "metabolomics-feature-selection-significance-filtering",
+    "multi-assay-data-integration-and-harmonization",
+    "classification-model-performance-evaluation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mamsi/synthesized_package",
+  "spine_condition_ids": [
+    "cond_metabolomics_phenotyping"
+  ],
+  "spine_entity_ids": [
+    "MAMSI_system",
+    "dataset_addneuromed",
+    "dataset_mydiabetes",
+    "method_kfold_cv",
+    "method_mccv",
+    "cond_metabolomics_phenotyping"
+  ],
+  "subdomains": [
+    "multi-omics-integration",
+    "computational-metabolomics",
+    "biomarker-discovery"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "model-training",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:kopeckylukas__py-mamsi",
+  "task_description": "Execute the complete MAMSI pipeline on multi-assay LC-MS metabolomics data (AddNeuroMed or MY Diabetes) to train a multiblock PLS discriminant model, identify statistically significant features via MB-VIP with permutation testing, and deliver model performance metrics and significant feature rankings.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Multi-assay LC-MS intensity matrices with assay prefixes",
+      "port_id": "lcms_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Clinical metadata with outcome variable",
+      "port_id": "metadata",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the complete MAMSI pipeline on AddNeuroMed or MY Diabetes LC-MS metabolomics data and report MB-PLS model performance metrics and lists of statistically significant features.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Test set performance metrics and confusion matrix",
+      "port_id": "model_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature importance table with MB-VIP scores and p-values",
+      "port_id": "feature_significance",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Latent variable estimation curve",
+      "port_id": "lv_estimate_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MB-VIP score visualization",
+      "port_id": "vip_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "multivariate-statistics",
+    "partial-least-squares",
+    "pathway-analysis",
+    "dimensionality-reduction",
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce the MAMSI multi-assay MS integration workflow on metabolomics phenotyping data",
+  "tools": [
+    "Python",
+    "mbpls",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "matplotlib"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: pandas, numpy, scikit-learn, matplotlib."
+  ],
+  "workflow_description": "1. Load and prepare multi-assay LC-MS intensity data (HPOS, LPOS, LNEG) and metadata using pandas, adding assay-specific prefixes to column names. 2. Split data into training (90%) and testing (10%) subsets using scikit-learn's train_test_split with random_state=42, maintaining sample correspondence across blocks. 3. Fit MB-PLS discriminant model on training data using MamsiPls with NIPALS algorithm and unit-variance standardization (standardize=True). 4. Estimate optimal number of latent variables using k-fold cross-validation (n_splits=5) with AUC metric via MamsiPls.estimate_lv(), identifying the model plateau threshold (plateau_threshold=0.01). 5. Refit MB-PLS with optimal latent variable count and evaluate on independent test set using MamsiPls.evaluate_class_model(), recording accuracy, recall, specificity, F1-score, and AUC. 6. Calculate Multi-Block Variable Importance in Projection (MB-VIP) scores for all features via MamsiPls.mb_vip(). 7. Perform empirical permutation testing (n_permutations\u226510,000) using MamsiPls.mb_vip_permtest() with Y shuffling to generate empirical p-values for each feature. 8. Select statistically significant features at p<0.01 threshold and export feature importance table with p-values and VIP scores."
+}

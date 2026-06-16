@@ -1,0 +1,378 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "metabodirect.pdf",
+      "role": "main_article",
+      "sha256": "8b88de575218bd9c0507dd4d2410cefdbd5f220f618fd3cee717387b195945ea"
+    }
+  ],
+  "created_at": "2026-06-15T08:03:26.683093+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "S. fallax leachate peak-abundance matrix (CSV): rows = detected peaks with assigned molecular formulas, columns = samples; metadata table mapping sample identifiers to inoculation status (inoculated vs. control)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "CSV table containing Shannon diversity index, Gini-Simpson index, Chao1 richness estimator, and Rao's quadratic entropy values for each sample, stratified by inoculation status (inoculated vs. control)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Box plot visualization (PNG/PDF) showing distribution of abundance-based (Shannon, Gini-Simpson, Chao1) and functional-based (Rao's quadratic entropy) diversity metrics grouped by inoculation status",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Shannon diversity index and Gini-Simpson index measure abundance-based diversity by accounting for both the number of metabolites detected and their relative evenness across samples.",
+    "Chao1 richness estimator provides a non-parametric estimate of total metabolite diversity, accounting for rare species that may not be fully sampled.",
+    "Rao's quadratic entropy measures functional diversity by incorporating elemental composition, decomposability potential (NOSC, GFE, AImod, DBE), and unsaturation traits of metabolites alongside their abundance.",
+    "Sum-normalization (dividing peak intensities by the total sum across all peaks per sample) is required before applying diversity indices to account for differences in total ion current across samples.",
+    "FT-ICR MS using soft electrospray ionization (ESI) produces minimal fragmentation, allowing peak-based diversity metrics to be valid when all spectra are collected under identical instrument parameters."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at https://doi.org/10.17605/OSF.IO/XFHZ9 containing S. fallax leachate peak-abundance data",
+      "verify MetaboDirect version 0.3.4 (or later) is accessible at https://github.com/Coayala/MetaboDirect",
+      "verify chemodiversity analysis step (Step 4) executes without runtime errors on S. fallax peak-abundance input files",
+      "verify output contains numeric values for Shannon index, Gini-Simpson index, Chao1 richness estimator for both inoculated and control samples",
+      "verify output contains numeric values for Rao's quadratic entropy computed using elemental composition, DBE, AImod, and Gibbs free energy as traits",
+      "value of Chao1 richness estimator for inoculated samples is greater than control samples (higher metabolite richness in inoculated condition); exact threshold and statistical significance require expert review",
+      "value of Rao's quadratic entropy (functional diversity) for inoculated samples is lower than control samples (lower functional diversity in inoculated condition); exact threshold and statistical significance require expert review"
+    ],
+    "expert_review": [
+      "evaluate whether reported differences in richness and functional diversity between inoculated and control conditions match the quantitative results from Step 4 chemodiversity analysis",
+      "assess biological plausibility: whether the pattern of higher richness but lower functional diversity in inoculated S. fallax leachate is consistent with known metabolic responses to microbial inoculation",
+      "review trait selection for Rao's quadratic entropy calculation (elemental composition, DBE, AImod, Gibbs free energy) as appropriate proxies for functional diversity in dissolved organic matter context",
+      "confirm that the S. fallax dataset structure and pre-processing (filtering, normalization) are correctly applied before chemodiversity step and match documented methods (Additional file 1, Table S3)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does inoculation of S. fallax leachate with microorganisms increase metabolite richness but decrease functional diversity compared to uninoculated control samples?: 'For the S. fallax incubation data set, inoculating the S. fallax leachate with microorganisms increased the diversity of the metabolites (i.e., richness) but decreased the functional diversity'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Inoculation of S. fallax leachate with microorganisms increased metabolite richness but decreased functional diversity, suggesting that inoculated samples contained more diverse metabolites overall but were less diverse in terms of decomposability, reactivity, aromaticity, and elemental composition.: 'inoculating the S. fallax leachate with microorganisms increased the diversity of the metabolites (i.e., richness) but decreased the functional diversity, suggesting that the metabolites in the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] S. fallax leachate peak-abundance matrix (CSV): rows = detected peaks with assigned molecular formulas, columns = samples; metadata table mapping sample identifiers to inoculation status (inoculated vs. control): 'The second data set was obtained from an incubation experiment of S. fallax leachate that was conducted in the presence and absence of microorganisms'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CSV table containing Shannon diversity index, Gini-Simpson index, Chao1 richness estimator, and Rao's quadratic entropy values for each sample, stratified by inoculation status (inoculated vs. control): 'All diversity indices are visualized as box plots grouped by the user's defined grouping variables and exported as .csv files.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Box plot visualization (PNG/PDF) showing distribution of abundance-based (Shannon, Gini-Simpson, Chao1) and functional-based (Rao's quadratic entropy) diversity metrics grouped by inoculation status: 'All diversity indices are visualized as box plots grouped by the user's defined grouping variables and exported as .csv files.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MetaboDirect: 'the MetaboDirect pipeline calculates indices that were originally designed for biological species'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] vegan: 'diversity metrics using functions from the R packages vegan [63]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SYNCSA: 'diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The exact numeric expected outputs (Shannon, Gini-Simpson, Chao1, Rao's entropy values) for inoculated versus control S. fallax samples are not provided in the discussion section.: 'Supplementary Information section references 'Fig. S6. Results of the chemodiversity analysis of the FT\u2011ICR MS data. A) and B) Abundance\u2011based diversity metrics including the Chao1 richness'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] The specific filtering parameters, normalization method, and trait definitions used for the S. fallax chemodiversity analysis are not explicitly stated in the discussion; they are referenced in supplementary materials (Additional files 2 and 3) which are not fully reproduced in the provided text.: 'Discussion states 'The highly reproducible nature of the analysis provided by MetaboDirect, coupled with the detailed user manual' but does not enumerate the exact parameters (e.g., sample presence'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Statistical significance testing (p-values, confidence intervals) for differences in richness and functional diversity between inoculated and control conditions is not stated in the discussion section provided.: 'The discussion section does not include quantitative statistical comparisons or p-values for the S. fallax chemodiversity results; Fig. S6 legend indicates results exist but the statistical tests'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(vegan); library(SYNCSA); peak_matrix <- read.csv('{inputs.peak_abundance_matrix}', row.names=1); metadata <- read.csv('{inputs.sample_metadata}', row.names=1); norm_matrix <- sweep(peak_matrix, 2, colSums(peak_matrix), '/'); shannon <- diversity(t(norm_matrix), index='shannon'); gini_simpson <- diversity(t(norm_matrix), index='simpson'); chao1 <- estimateR(t(norm_matrix))['S.chao1',]; rao_qe <- apply(norm_matrix, 2, function(x) sum(dist(rbind(x, x))^2) / (2*sum(x)^2)); diversity_df <- data.frame(sample=colnames(norm_matrix), shannon=shannon, gini_simpson=gini_simpson, chao1=chao1[colnames(norm_matrix)], rao_qe=rao_qe, inoculation_status=metadata[colnames(norm_matrix), 'inoculation_status'], stringsAsFactors=FALSE); write.csv(diversity_df, 'diversity_indices_{task_id}.csv', row.names=FALSE); png('diversity_boxplot_{task_id}.png', width=1200, height=800); par(mfrow=c(2,2)); boxplot(shannon ~ inoculation_status, data=diversity_df, main='Shannon Diversity Index'); boxplot(gini_simpson ~ inoculation_status, data=diversity_df, main='Gini-Simpson Index'); boxplot(chao1 ~ inoculation_status, data=diversity_df, main='Chao1 Richness'); boxplot(rao_qe ~ inoculation_status, data=diversity_df, main=\"Rao's Quadratic Entropy\"); dev.off(); cat('Chemodiversity analysis complete. Results exported to diversity_indices_{task_id}.csv and diversity_boxplot_{task_id}.png\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "s_fallax_chemodiversity_metrics.csv",
+  "expected_outputs": [
+    "CSV table containing Shannon diversity index, Gini-Simpson index, Chao1 richness estimator, and Rao's quadratic entropy values for each sample, stratified by inoculation status (inoculated vs. control)",
+    "Box plot visualization (PNG/PDF) showing distribution of abundance-based (Shannon, Gini-Simpson, Chao1) and functional-based (Rao's quadratic entropy) diversity metrics grouped by inoculation status"
+  ],
+  "finding": "Inoculation of S. fallax leachate with microorganisms increased metabolite richness but decreased functional diversity, suggesting that inoculated samples contained more diverse metabolites overall but were less diverse in terms of decomposability, reactivity, aromaticity, and elemental composition.",
+  "github_name": "Coayala/MetaboDirect",
+  "input_from": "task_002",
+  "inputs": [
+    "S. fallax leachate peak-abundance matrix (CSV): rows = detected peaks with assigned molecular formulas, columns = samples; metadata table mapping sample identifiers to inoculation status (inoculated vs. control)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "normalized_peak_abundances.csv",
+    "richness_indices.csv",
+    "functional_diversity_rao_entropy.csv",
+    "diversity_metrics_boxplots.png"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_019",
+    "result_020",
+    "result_021",
+    "result_022",
+    "result_025",
+    "result_028",
+    "result_029",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_034",
+    "result_035",
+    "result_036"
+  ],
+  "methodology_summary": [
+    "Load S. fallax leachate peak-abundance matrix (CSV) and sample metadata with inoculation status annotations.",
+    "Apply sum-normalization to raw peak intensities within each sample to standardize total abundance across samples.",
+    "Compute abundance-based richness and diversity indices (Shannon, Gini-Simpson, Chao1) from normalized peak intensities using vegan package functions.",
+    "Compute functional-based diversity (Rao's quadratic entropy) using SYNCSA package, integrating elemental composition, decomposability indices (NOSC, GFE, AImod, DBE), and aromaticity traits.",
+    "Stratify all diversity metrics by inoculation status (inoculated vs. control) and generate grouped box plot visualizations.",
+    "Export diversity metric values and grouped summary statistics to CSV and export visualizations as PNG/PDF.",
+    "Validation: Verify that median/mean values of abundance-based richness indices (Chao1, Shannon) are higher in inoculated samples and that Rao's quadratic entropy is lower in inoculated samples relative to controls, consistent with reported patterns in the paper."
+  ],
+  "missing_information": [
+    "The exact numeric expected outputs (Shannon, Gini-Simpson, Chao1, Rao's entropy values) for inoculated versus control S. fallax samples are not provided in the discussion section.",
+    "The specific filtering parameters, normalization method, and trait definitions used for the S. fallax chemodiversity analysis are not explicitly stated in the discussion; they are referenced in supplementary materials (Additional files 2 and 3) which are not fully reproduced in the provided text.",
+    "Statistical significance testing (p-values, confidence intervals) for differences in richness and functional diversity between inoculated and control conditions is not stated in the discussion section provided."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does inoculation of S. fallax leachate with microorganisms increase metabolite richness but decrease functional diversity compared to uninoculated control samples?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "intro",
+    "results",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "chemodiversity-metric-calculation",
+    "peak-abundance-normalization",
+    "richness-index-computation",
+    "functional-trait-diversity-analysis",
+    "metabolite-abundance-stratification",
+    "diversity-visualization-by-treatment"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_metabodirect",
+  "spine_condition_ids": [
+    "Cond_Benchmark_40samples",
+    "Cond_Benchmark_120samples",
+    "Cond_PhageDataset_Full",
+    "Cond_SphagnumDataset_MainOnly",
+    "Cond_SphagnumDataset_Full",
+    "Cond_PhageType_Control",
+    "Cond_Sphagnum_Inoculated",
+    "Cond_Sphagnum_Control"
+  ],
+  "spine_entity_ids": [
+    "MetaboDirect",
+    "MetaboDirect_Pipeline_Architecture",
+    "Step_DataPreprocessing",
+    "Step_DataDiagnostics",
+    "Step_DataExploration",
+    "Step_ChemodiversityAnalysis",
+    "Step_StatisticalAnalysis",
+    "Step_TransformationNetworks",
+    "Dataset_SphagnumLeachate",
+    "Sphagnum_fallax",
+    "Cond_PhageType_Control",
+    "Cond_Sphagnum_Inoculated",
+    "Cond_Sphagnum_Control",
+    "Cond_Benchmark_40samples",
+    "Cond_Benchmark_120samples",
+    "Cond_PhageDataset_Full",
+    "Cond_SphagnumDataset_MainOnly",
+    "Cond_SphagnumDataset_Full",
+    "Metric_Runtime_40samples",
+    "Metric_Runtime_120samples",
+    "Metric_Runtime_PhageFull",
+    "Metric_Runtime_SphagnumMain",
+    "Metric_Runtime_SphagnumFull",
+    "Metric_SphagnumDataset_AvgFormulas",
+    "Result_SphagnumUniqueMetabolites",
+    "Result_PhageChemodiversity",
+    "Result_SphagnumChemodiversity",
+    "Result_MetaboDirect_AutomationAdvantage",
+    "Result_MetaboDirect_UniqueNetworkGeneration"
+  ],
+  "subdomains": [
+    "microbiome-metabolomics",
+    "environmental-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis",
+    "visualization"
+  ],
+  "synthesized_from": null,
+  "task_description": "Run MetaboDirect's chemodiversity analysis step on S. fallax leachate peak-abundance data to compute richness (Shannon, Gini-Simpson, Chao1) and functional diversity (Rao's quadratic entropy) metrics stratified by inoculation status (inoculated vs. control). Export diversity indices as CSV tables and box plots; verify that inoculated samples exhibit higher metabolite richness but lower functional diversity relative to controls.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "S. fallax leachate peak-abundance CSV with molecular formulas",
+      "port_id": "peak_abundance_matrix",
+      "resolved_via": null,
+      "source": "task_002/phage_runtime",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample metadata table mapping sample IDs to inoculation status",
+      "port_id": "sample_metadata",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Run MetaboDirect Step 4 (chemodiversity analysis) on S. fallax leachate data and compute richness and functional diversity indices to verify the reported pattern of higher richness but lower functional diversity in inoculated versus control samples.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "CSV table of richness and functional diversity indices by sample",
+      "port_id": "diversity_metrics_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Box plot PNG/PDF visualizations grouped by inoculation status",
+      "port_id": "diversity_boxplots",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "direct-infusion-ms",
+    "high-resolution-ms",
+    "feature-detection",
+    "metabolite-identification",
+    "multivariate-statistics",
+    "molecular-networking"
+  ],
+  "title": "Analyze chemodiversity differences between inoculated and control S. fallax leachate samples using MetaboDirect outputs",
+  "tools": [
+    "MetaboDirect",
+    "vegan",
+    "SYNCSA"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load filtered peak-abundance matrix and sample metadata from S. fallax leachate OSF deposit (https://doi.org/10.17605/OSF.IO/XFHZ9), ensuring CSV format with peaks as rows and samples as columns. 2. Sum-normalize raw peak intensities across each sample using MetaboDirect's sum-normalization function. 3. Calculate abundance-based diversity metrics (Shannon diversity index, Gini-Simpson index, Chao1 richness estimator) using vegan package functions on normalized peak intensities. 4. Calculate functional-based diversity (Rao's quadratic entropy) using SYNCSA package, incorporating elemental composition, decomposability indices, and aromaticity/unsaturation traits of detected peaks. 5. Group all diversity indices by inoculation status (inoculated vs. control) and generate box plots with grouping variable. 6. Export diversity metric values and statistical summaries as CSV tables."
+}

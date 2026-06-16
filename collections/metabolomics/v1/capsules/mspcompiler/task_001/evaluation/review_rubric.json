@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that mspcompiler package exists in github:QizhiSu/mspcompiler repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for core function definitions: read_lib, read_multilibs, assign_smiles, assign_ri, write_EI_msp in the package source code"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify documentation or inline comments describe the ARCH_EI_PIPELINE orchestrator or equivalent fixed control-flow pipeline"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify write_EI_msp function accepts combined library object and outputs a file with .msp extension"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that mspcompiler package exists in github:QizhiSu/mspcompiler repository",
+      "verify file_exists for core function definitions: read_lib, read_multilibs, assign_smiles, assign_ri, write_EI_msp in the package source code",
+      "script_runs: load mspcompiler library in R and confirm all five core functions are callable without error",
+      "verify documentation or inline comments describe the ARCH_EI_PIPELINE orchestrator or equivalent fixed control-flow pipeline",
+      "verify write_EI_msp function accepts combined library object and outputs a file with .msp extension"
+    ],
+    "expert_review": [
+      "assess whether the documented pipeline control flow (load via read_lib/read_multilibs \u2192 assign_smiles \u2192 assign_ri \u2192 combine \u2192 write_EI_msp) is complete and free of unspecified intermediate steps or missing transformations",
+      "confirm that the pipeline handles all four library sources (NIST, MoNA, RIKEN, SWGDRUG) as claimed in the scope statement, or identify which sources are actually supported",
+      "review whether assign_ri function correctly assigns Kovats RI values and integrates experimental RI extracted from NIST files, as the scope implies"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

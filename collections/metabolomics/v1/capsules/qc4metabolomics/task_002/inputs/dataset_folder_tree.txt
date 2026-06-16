@@ -1,0 +1,6 @@
+  figures/manual_contaminants_poster.svg
+  figures/qrcode_poster.svg
+  figures/qrcode_preprint.svg
+  figures/trp_settings.png
+  figures/warning_demo.png
+paper.md

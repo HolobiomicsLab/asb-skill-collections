@@ -1,0 +1,516 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/ADAP_threshold_all_vs_recall_training_500.png",
+      "role": "figure",
+      "sha256": "868d10e2aecc68ae27a8abe7b7f85ee31ad224864e52fc405cb1fcddbd726cfb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ROC_recall_High_vs_all.png",
+      "role": "figure",
+      "sha256": "b9732f3ed13d7b6d42f72b01dabecb0bda260db84756b8323cae7802289db13f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Screenshot 2020-04-28 at 16.43.33.png",
+      "role": "figure",
+      "sha256": "22b0f91065b4f4a7e7d4baf49bd8b522b55dc20a1b98052fc4874a1dc6ad61ce"
+    },
+    {
+      "indexable": false,
+      "path": "figures/annotation_tool.png",
+      "role": "figure",
+      "sha256": "26705aa01e0b11cdfb1ea6cbbe06bdfff05798c8813391e1d65d955fac84ae4f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/recall_table.png",
+      "role": "figure",
+      "sha256": "07eee0f4265e683e1a82eae4b619bcb4c5108119166946dea371406b06c51194"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "26027a71cfce773fea3597ffb312bfd500abd6eb40992e0b3e76a37854ce6226"
+    }
+  ],
+  "created_at": "2026-06-16T07:11:40.529655+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_001.expected_outputs[0]: Peak matrix arrays with shape (2, 120) per peak, where dimension 0 encodes signal intensity and dimension 1 encodes binary margin/peak classification",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Labeled LC-MS experiment object with raw mzML files and feature table (CSV format from mzMine or XCMS) containing 10\u201320 representative pooled samples and manually annotated peak labels (High_quality, Low_quality, Noise)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Training batch artifact (80% of peaks, class-imbalanced distribution)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test batch artifact (10% of peaks, class-imbalanced distribution)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation batch artifact (10% of peaks, class-imbalanced distribution)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Training batch artifact with equal class counts (80% of normalized peaks, all classes equal to smallest class size)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test batch artifact with equal class counts (10% of normalized peaks, all classes equal to smallest class size)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation batch artifact with equal class counts (10% of normalized peaks, all classes equal to smallest class size)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report documenting per-class peak counts in each batch condition (normalise_class=False vs True)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "NeatMS classifies LC-MS peaks into three mutually exclusive classes: High_quality, Low_quality, and Noise; all peaks must be assigned exactly one label for batch construction.",
+    "The normalise_class=True flag automatically rebalances training data by downsampling all classes to the size of the smallest class, which prevents minority-class under-fitting but discards data.",
+    "Default validation_split=0.1 allocates 80% training, 10% test, and 10% validation; the test set (called 'validation' in TensorFlow output) is used during model training to detect overfitting.",
+    "The min_scan_num=5 default threshold filters out peaks with fewer than 5 points before batch assembly, removing signal-to-noise ambiguous cases that degrade model robustness.",
+    "Batch construction operates on peaks extracted from raw mzML via a two-dimensional matrix: dimension 1 encodes margin vs. peak signal (binary 0/1), dimension 2 represents the peak (interpolated to matrice_size=120 points) with surrounding context controlled by margin=1 (margins = peak width on each side)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:bihealth__NeatMS containing nn_handler module with create_batches() method",
+      "script_runs: invoke nn_handler.create_batches() with normalise_class=True using default 80:10:10 split and confirm execution completes without error",
+      "script_runs: invoke nn_handler.create_batches() with normalise_class=False using default 80:10:10 split and confirm execution completes without error",
+      "file_exists: batch artifacts generated for normalise_class=True condition (train, test, validation batch files)",
+      "file_exists: batch artifacts generated for normalise_class=False condition (train, test, validation batch files)",
+      "value_in_range: verify train/test/validation split proportions are approximately 80:10:10 (\u00b12 percentage points) for both conditions",
+      "row_count_equals: sum of train + test + validation batch row counts equals total input dataset row count for both conditions"
+    ],
+    "expert_review": [
+      "verify that class-normalized batches (normalise_class=True) satisfy equal-class-count constraint: all classes present in each batch have equal or near-equal peak counts as documented",
+      "verify that non-normalized batches (normalise_class=False) preserve original class distribution without forced equalization",
+      "assess whether batch creation parameters and output structure conform to NeatMS design specification for downstream neural network training"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] How does the nn_handler.create_batches() method operate when invoked with normalise_class=True versus normalise_class=False, and what are the structural differences in the resulting batch artifacts?: 'The `normalise_class` argument allows you to make sure every class has the same number of peaks for the training, when set to `True`, the number of peaks for each class will be equal to the smallest'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] When normalise_class is set to True, the create_batches() method ensures that every class has an equal number of peaks in the resulting training batches, with the total number of peaks per class equal to the smallest class count; when set to False, class counts remain unequal, reflecting the original distribution in the dataset.: 'The `normalise_class` argument allows you to make sure every class has the same number of peaks for the training, when set to `True`, the number of peaks for each class will be equal to the smallest'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Labeled LC-MS experiment object with raw mzML files and feature table (CSV format from mzMine or XCMS) containing 10\u201320 representative pooled samples and manually annotated peak labels (High_quality, Low_quality, Noise): 'create our experiment object and load the data, we can do that the exact same way as we have done before'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Training batch artifact (80% of peaks, class-imbalanced distribution): 'By default, the split between training:test:validation batches is 80:10:10'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Test batch artifact (10% of peaks, class-imbalanced distribution): 'By default, the split between training:test:validation batches is 80:10:10'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Validation batch artifact (10% of peaks, class-imbalanced distribution): 'By default, the split between training:test:validation batches is 80:10:10'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Training batch artifact with equal class counts (80% of normalized peaks, all classes equal to smallest class size): 'when set to `True`, the number of peaks for each class will be equal to the smallest'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Test batch artifact with equal class counts (10% of normalized peaks, all classes equal to smallest class size): 'when set to `True`, the number of peaks for each class will be equal to the smallest'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Validation batch artifact with equal class counts (10% of normalized peaks, all classes equal to smallest class size): 'when set to `True`, the number of peaks for each class will be equal to the smallest'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Verification report documenting per-class peak counts in each batch condition (normalise_class=False vs True): 'The `normalise_class` argument allows you to make sure every class has the same number of peaks for the training'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] NeatMS: 'NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object and call the batch creation method'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'open source python package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pickle; from NeatMS.NN_handler import NN_handler; exp = pickle.load(open('{inputs.labeled_experiment}', 'rb')); handler = NN_handler(matrice_size=120, margin=1, min_scan_num=5); train_imb, val_imb, test_imb = handler.create_batches(validation_split=0.1, normalise_class=False); train_bal, val_bal, test_bal = handler.create_batches(validation_split=0.1, normalise_class=True); import json; report = {'imbalanced': {'train': {c: (train_imb[0][train_imb[1]==i]).shape[0] for i, c in enumerate(['High_quality', 'Low_quality', 'Noise'])}, 'val': {c: (val_imb[0][val_imb[1]==i]).shape[0] for i, c in enumerate(['High_quality', 'Low_quality', 'Noise'])}, 'test': {c: (test_imb[0][test_imb[1]==i]).shape[0] for i, c in enumerate(['High_quality', 'Low_quality', 'Noise'])}}, 'balanced': {'train': {c: (train_bal[0][train_bal[1]==i]).shape[0] for i, c in enumerate(['High_quality', 'Low_quality', 'Noise'])}, 'val': {c: (val_bal[0][val_bal[1]==i]).shape[0] for i, c in enumerate(['High_quality', 'Low_quality', 'Noise'])}, 'test': {c: (test_bal[0][test_bal[1]==i]).shape[0] for i, c in enumerate(['High_quality', 'Low_quality', 'Noise'])}}}; pickle.dump(train_imb, open('train_imbalanced.pkl', 'wb')); pickle.dump(val_imb, open('val_imbalanced.pkl', 'wb')); pickle.dump(test_imb, open('test_imbalanced.pkl', 'wb')); pickle.dump(train_bal, open('train_balanced.pkl', 'wb')); pickle.dump(val_bal, open('val_balanced.pkl', 'wb')); pickle.dump(test_bal, open('test_balanced.pkl', 'wb')); print(json.dumps(report, indent=2)); open('verification_report.json', 'w').write(json.dumps(report, indent=2))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "batch_verification_report.txt",
+  "expected_outputs": [
+    "Training batch artifact (80% of peaks, class-imbalanced distribution)",
+    "Test batch artifact (10% of peaks, class-imbalanced distribution)",
+    "Validation batch artifact (10% of peaks, class-imbalanced distribution)",
+    "Training batch artifact with equal class counts (80% of normalized peaks, all classes equal to smallest class size)",
+    "Test batch artifact with equal class counts (10% of normalized peaks, all classes equal to smallest class size)",
+    "Validation batch artifact with equal class counts (10% of normalized peaks, all classes equal to smallest class size)",
+    "Verification report documenting per-class peak counts in each batch condition (normalise_class=False vs True)"
+  ],
+  "finding": "When normalise_class is set to True, the create_batches() method ensures that every class has an equal number of peaks in the resulting training batches, with the total number of peaks per class equal to the smallest class count; when set to False, class counts remain unequal, reflecting the original distribution in the dataset.",
+  "github_name": "bihealth/NeatMS",
+  "input_from": "task_001",
+  "inputs": [
+    "task_001.expected_outputs[0]: Peak matrix arrays with shape (2, 120) per peak, where dimension 0 encodes signal intensity and dimension 1 encodes binary margin/peak classification",
+    "Labeled LC-MS experiment object with raw mzML files and feature table (CSV format from mzMine or XCMS) containing 10\u201320 representative pooled samples and manually annotated peak labels (High_quality, Low_quality, Noise)"
+  ],
+  "keywords": [
+    "untargeted lcms",
+    "signal labelling",
+    "peak filtering",
+    "false positive detection",
+    "neural network classification",
+    "ms1 peaks",
+    "metabolomics data processing"
+  ],
+  "landmark_outputs": [
+    "train_batch_unnormalized.pkl",
+    "test_batch_unnormalized.pkl",
+    "val_batch_unnormalized.pkl",
+    "train_batch_normalized.pkl",
+    "test_batch_normalized.pkl",
+    "val_batch_normalized.pkl"
+  ],
+  "linked_result_ids": [
+    "result_023",
+    "result_024",
+    "result_025",
+    "result_026",
+    "result_027",
+    "result_028",
+    "result_029"
+  ],
+  "methodology_summary": [
+    "Load labeled experiment object containing raw LC-MS data (mzML) and feature table (CSV) from 10\u201320 representative samples with manual peak annotations across High_quality, Low_quality, and Noise classes.",
+    "Instantiate NN_handler with default parameters (matrice_size=120, margin=1, min_scan_num=5) to configure peak matrix extraction and filtering thresholds.",
+    "Invoke create_batches(validation_split=0.1, normalise_class=False) to generate training (80%), test (10%), and validation (10%) splits preserving original class-frequency distributions.",
+    "Invoke create_batches(validation_split=0.1, normalise_class=True) to regenerate the same splits with class balancing, reducing all classes to the minority-class size.",
+    "Extract and compare per-class peak counts across all six batches (three splits \u00d7 two normalization modes) to verify that normalized batches enforce equal class cardinality and unnormalized batches preserve imbalance.",
+    "Validation: Confirm that for each normalized batch, the count of High_quality peaks equals the count of Low_quality peaks equals the count of Noise peaks; and that unnormalized batches retain the original imbalanced distribution without modification."
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the nn_handler.create_batches() method operate when invoked with normalise_class=True versus normalise_class=False, and what are the structural differences in the resulting batch artifacts?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "peak-quality-label-stratification",
+    "training-validation-test-set-allocation",
+    "class-imbalance-mitigation-via-normalization",
+    "batch-construction-parameter-optimization",
+    "neural-network-training-data-preparation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_neatms/synthesized_package",
+  "spine_condition_ids": [
+    "cond_full_training",
+    "cond_default_threshold",
+    "cond_batch_split_80_10_10",
+    "cond_normalise_class_false",
+    "cond_normalise_class_true"
+  ],
+  "spine_entity_ids": [
+    "arch_nn_handler",
+    "dataset_example_model",
+    "comp_get_true_vs_false_positive_df",
+    "cond_full_training",
+    "cond_default_threshold",
+    "cond_batch_split_80_10_10",
+    "cond_normalise_class_false",
+    "cond_normalise_class_true",
+    "metric_threshold_001_true",
+    "metric_threshold_001_false",
+    "result_default_model_threshold",
+    "result_training_time",
+    "result_no_overfitting_observed"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "artificial-intelligence",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "modeling"
+  ],
+  "synthesized_from": "github:bihealth__NeatMS",
+  "task_description": "Create training/validation/test batches from a labeled LC-MS peak dataset using NeatMS.NN_handler.create_batches() with both class-normalization modes (normalise_class=True and False) at the default 80:10:10 split, producing batch artifacts and validating that class-normalized batches enforce equal peak counts across all classes.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Labeled LC-MS experiment object with raw mzML files and feature tables",
+      "port_id": "labeled_experiment",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Create balanced and unbalanced training/test/validation batch sets using nn_handler.create_batches() with normalise_class True and False, then verify that class-normalized batches achieve equal per-class peak counts.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Training batch (80%, class-imbalanced)",
+      "port_id": "train_batch_unnormalized",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Test batch (10%, class-imbalanced)",
+      "port_id": "test_batch_unnormalized",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Validation batch (10%, class-imbalanced)",
+      "port_id": "val_batch_unnormalized",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Training batch (80%, equal class counts)",
+      "port_id": "train_batch_normalized",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Test batch (10%, equal class counts)",
+      "port_id": "test_batch_normalized",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Validation batch (10%, equal class counts)",
+      "port_id": "val_batch_normalized",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Batch class-distribution verification report",
+      "port_id": "batch_verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "deep-learning",
+    "feature-detection",
+    "metabolite-identification",
+    "dimensionality-reduction"
+  ],
+  "title": "Reconstruct the Class-Normalized Batch Creation Step for Neural Network Training",
+  "tools": [
+    "NeatMS",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load a labeled experiment object into NeatMS using ntms.Experiment(raw_data_folder_path, feature_table_path, input_data) with 10\u201320 pooled representative samples and their corresponding feature tables. 2. Instantiate an NN_handler object with ntms.NN_handler(experiment, matrice_size=120, margin=1, min_scan_num=5) using default matrix size, margin, and minimum scan filtering. 3. Call nn_handler.create_batches(validation_split=0.1, normalise_class=False) to generate training (80%), test (10%), and validation (10%) batches without class balancing, recording class distributions in each batch. 4. Call nn_handler.create_batches(validation_split=0.1, normalise_class=True) to regenerate batches with class normalization, verifying that all three classes have equal peak counts within each batch (set to the size of the smallest class). 5. Export or inspect batch metadata (peak counts per class per batch) to verify that normalized batches satisfy the constraint 'number of peaks for each class will be equal to the smallest class' while unnormalized batches preserve original class imbalance."
+}

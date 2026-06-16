@@ -1,0 +1,316 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "review",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "78f8979eb0db9fb8e32ffa25ac22f7ef92c9e01d22ec0fa04e3892632e06c012"
+    }
+  ],
+  "created_at": "2026-06-15T09:39:35.903004+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "metabolomics-ORA repository (github:cwieder/metabolomics-ORA)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Jupyter notebook with simulation code and pathway database",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary statistics table (CSV or TSV) with coverage levels, ORA p-value statistics, and false-positive rates",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Figure(s) showing false-positive rate and ORA p-value distribution as a function of metabolite detection coverage",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "ORA depends critically on the completeness of metabolite detection relative to the pathway database; incomplete coverage systematically inflates or deflates p-values depending on which pathways are enriched in the undetected fraction.",
+    "False-positive rate in pathway analysis is typically evaluated at a nominal significance threshold (e.g., p < 0.05) across simulated datasets with no true pathway enrichment.",
+    "Coverage is defined as the fraction of pathway database metabolites successfully detected in the experimental measurement; a coverage of 50% means only half the pathway members are observable.",
+    "The simulation framework must use consistent random seeding and replicate count across coverage levels to ensure valid comparison of statistical distributions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: github:cwieder__metabolomics-ORA repository is accessible and contains Jupyter notebook(s)",
+      "file_format_is: notebook file(s) in repository use .ipynb extension",
+      "script_runs: execute the simulation notebook(s) without errors on Python environment with dependencies installed",
+      "field_present: output table or figure contains columns/axes representing metabolite coverage fraction, ORA p-values, and false-positive rates",
+      "output_matches_reference: summary statistics table rows correspond to distinct coverage levels tested in simulation (robust to row ordering)",
+      "contains_substring: notebook code cells contain logic that varies metabolite detection fraction as a parameter"
+    ],
+    "expert_review": [
+      "evaluate whether the simulation framework appropriately models the relationship between metabolite coverage and ORA statistical performance",
+      "assess whether the summary statistics table or figure meaningfully communicates how coverage affects false-positive rates and p-value distributions",
+      "judge whether the experimental design (choice of coverage fractions, number of simulations, statistical metrics reported) follows best practices for pathway analysis validation"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the fraction of metabolites detected (coverage) relative to the pathway database affect the distribution of ORA p-values and false-positive rates in metabolomics pathway analysis?: 'This repository contains the code to run the simulations presented in the study. The Python code to generate the results is contained within the Jupyter notebook'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The study provides reproducible simulation code in a Jupyter notebook that enables analysis of how metabolite detection coverage impacts ORA statistical outcomes.: 'The Python code to generate the results is contained within the Jupyter notebook **src/reproducible_simulations.ipynb**. Users may adapt the code in the notebook to perform the simulations on their'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] metabolomics-ORA repository (github:cwieder/metabolomics-ORA): 'git clone https://github.com/cwieder/metabolomics-ORA.git'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Jupyter notebook with simulation code and pathway database: 'The Python code to generate the results is contained within the Jupyter notebook'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Summary statistics table (CSV or TSV) with coverage levels, ORA p-value statistics, and false-positive rates: 'Simulations are presented in the study with Python code for reproducibility'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Figure(s) showing false-positive rate and ORA p-value distribution as a function of metabolite detection coverage: 'This repository contains the code to run the simulations presented in the study'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'The Python code to generate the results is contained within the Jupyter notebook'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Jupyter: 'The Python code to generate the results is contained within the Jupyter notebook'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history is documented: 'No changelog found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific notebook filename(s) and their location within the repository structure are not stated: 'Source: github:cwieder__metabolomics-ORA'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "jupyter",
+      "nbconvert",
+      "--to",
+      "notebook",
+      "--execute",
+      "{inputs.ora_notebook}"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "coverage_fpr_summary.csv",
+  "expected_outputs": [
+    "Summary statistics table (CSV or TSV) with coverage levels, ORA p-value statistics, and false-positive rates",
+    "Figure(s) showing false-positive rate and ORA p-value distribution as a function of metabolite detection coverage"
+  ],
+  "finding": "The study provides reproducible simulation code in a Jupyter notebook that enables analysis of how metabolite detection coverage impacts ORA statistical outcomes.",
+  "github_name": null,
+  "input_from": "task_001",
+  "inputs": [
+    "metabolomics-ORA repository (github:cwieder/metabolomics-ORA)",
+    "Jupyter notebook with simulation code and pathway database"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "simulation_results_raw.pkl",
+    "coverage_stats_table.csv",
+    "fpr_vs_coverage.png",
+    "pvalue_distribution_boxplots.png"
+  ],
+  "linked_result_ids": [
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Clone the metabolomics-ORA repository containing the simulation framework and pathway database.",
+    "Execute the Jupyter notebook simulation workflow, varying the fraction of detected metabolites across coverage levels (e.g., 10\u2013100%).",
+    "For each coverage level, run ORA on simulated metabolite sets and collect p-value distributions and false-positive counts at p < 0.05 threshold.",
+    "Aggregate simulation results into a summary statistics table containing coverage percentage, ORA p-value summary statistics (mean, median, quartiles), and false-positive rate with confidence intervals.",
+    "Generate line plots of false-positive rate versus coverage and distribution plots (boxplots or violin plots) of p-values across coverage levels.",
+    "Validation: confirm that false-positive rate tracks expected behavior with coverage (increasing or decreasing according to the pathway composition), and verify that p-value distributions show systematic shift with coverage level."
+  ],
+  "missing_information": [
+    "No changelog or version history is documented",
+    "Specific notebook filename(s) and their location within the repository structure are not stated"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the fraction of metabolites detected (coverage) relative to the pathway database affect the distribution of ORA p-values and false-positive rates in metabolomics pathway analysis?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "metabolite-coverage-simulation",
+    "over-representation-analysis-pvalue-interpretation",
+    "false-positive-rate-assessment",
+    "pathway-database-filtering-by-detection",
+    "simulation-parameter-variation",
+    "statistical-distribution-visualization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ora/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "system_simulation_pipeline",
+    "tool_jupyter_notebook",
+    "dataset_metabolomics_pathways"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "simulation",
+    "data-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:cwieder__metabolomics-ORA",
+  "task_description": "Re-run the ORA simulation framework to quantify how metabolite detection coverage (fraction of pathway database detected) affects ORA p-value distributions and false-positive rates. Generate a summary statistics table and visualization of coverage-dependent FPR trends.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "ORA simulation Jupyter notebook with pathway database",
+      "port_id": "ora_notebook",
+      "resolved_via": null,
+      "source": "task_001/simulation_outputs",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Execute the simulation framework to quantify how metabolite coverage fraction affects ORA p-value distributions and false-positive rates, generating summary statistics and visualizations.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Summary statistics table: coverage vs. ORA p-values and FPR",
+      "port_id": "coverage_stats_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Figure: false-positive rate and p-value distributions vs. coverage",
+      "port_id": "coverage_fpr_figure",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "pathway-analysis",
+    "enrichment-analysis",
+    "statistical-analysis"
+  ],
+  "title": "Analyze the effect of metabolomics-specific coverage bias on ORA p-value distributions",
+  "tools": [
+    "Python",
+    "Jupyter"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Jupyter, Summary statistics table (CSV or TSV) with coverage levels, ORA p-value statistics, and false-positive rates, Figure(s) showing false-positive rate and ORA p-value distribution as a function of metabolite detection coverage."
+  ],
+  "workflow_description": "1. Clone the metabolomics-ORA repository and load the Jupyter notebook containing the simulation framework. 2. Execute the simulation workflow varying the fraction of detected metabolites across a range of coverage values (e.g., 10\u2013100% of pathway database). 3. For each coverage level, run ORA on simulated metabolite sets and record the distribution of p-values and count false positives (p < 0.05 threshold). 4. Aggregate results into a summary statistics table with columns for coverage percentage, mean/median ORA p-value, false-positive rate, and confidence intervals. 5. Generate a line or scatter plot showing false-positive rate as a function of coverage with error bands, and produce boxplots or violin plots of p-value distributions across coverage levels."
+}

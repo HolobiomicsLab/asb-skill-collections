@@ -1,0 +1,22 @@
+name: pip
+slug: pip
+evidence_spans:
+- pip install -e .[dev]
+- 'Install DEIMoS using pip: pip install -e .'
+- Verify new release is on [PyPi](https://pypi.org/project/matchms/#history)
+- The main way to obtain Pyteomics is via `pip Python package manager
+derived_from:
+- doi: 10.1186/s13321-025-01081-6
+  title: biosynfoni
+- doi: 10.1021/acs.analchem.1c05017
+  title: deimos
+- doi: 10.21105/joss.02411
+  title: matchms
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+source_repos:
+- levitsky/pyteomics
+- lucinamay/biosynfoni
+- matchms/matchms
+- pnnl/deimos
+schema_version: 0.2.0

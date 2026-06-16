@@ -1,0 +1,441 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-120x120.png",
+      "role": "figure",
+      "sha256": "b25f5ef929e5815a41decba296168a18adfa3f1e90a6824d88641eac34a611f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-152x152.png",
+      "role": "figure",
+      "sha256": "5f749596f6aab1ba330c9c792455603bf44028833ff0516f1dbadf8c1782fae1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-180x180.png",
+      "role": "figure",
+      "sha256": "4dad7a301408410044a72a5f8b03db5d5fe1d123221a4789fc832a2424f3b544"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-60x60.png",
+      "role": "figure",
+      "sha256": "c8cc90df83794a47b9e1430734db6edc0142d7623d886dc432d06b96a99ac681"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-76x76.png",
+      "role": "figure",
+      "sha256": "c6c00177a061c34183473f58a25bb1cac8c37dcf47e25dd04f29ae03db42f9f1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon.png",
+      "role": "figure",
+      "sha256": "0fbea766d15b7f10d1da0a55a4223f9c6a392614ae1e380e21a2621451b2ef12"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-16x16.png",
+      "role": "figure",
+      "sha256": "2ef901d8e5ba7c3465bbf9444259d77648ca81d85ea695320d0ed472b57f6ce6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-32x32.png",
+      "role": "figure",
+      "sha256": "7d973740744b8e8af32f8d62b6b57f241489b2423012b87303b9716a2f4ad92d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "537befea4a116b05c85e6dea759f8eabdf6b70b8b8bbeed9ae07a6d8ba1ab8cf"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-basic.svg",
+      "role": "figure",
+      "sha256": "38243d97d58702019680f89ba678c7222b689c9b087ce8ed3d27f2fb872eecd9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-labels-ass.svg",
+      "role": "figure",
+      "sha256": "548337bceed874ec2e77e6c5c72797a06ce6e7f57064e3a4e34109ee45006c2d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-labels.svg",
+      "role": "figure",
+      "sha256": "46a4b5a9216f1cc9f01845d5a39ced08fe81824101267ea56271ca7c0f266818"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-xlim.svg",
+      "role": "figure",
+      "sha256": "ee313821a4158ce3aef2738777eb401aaf6f6ad57d41eb525d2843f5db3ee1a9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotmzdelta-1000.svg",
+      "role": "figure",
+      "sha256": "c9e7374103f48b101e3f97ec243ecc426fef3bae67f83906ada609fa5ebff911"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-asp05.svg",
+      "role": "figure",
+      "sha256": "d4664b3bb5ab0fd53d0c3317d4fe69e50515ceea4ce139f7f6225465098fa3d4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-asp2.svg",
+      "role": "figure",
+      "sha256": "b3a86ae463bb3128b81f3cb6b87569117fda4973022d8fae14fbe7f6827f34fa"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-color-each.svg",
+      "role": "figure",
+      "sha256": "deb89461b259202e039c4289c084411713c9a9d4b25d19eb70e24bfd049429de"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-color-peaks-label-labelcol.svg",
+      "role": "figure",
+      "sha256": "889779b01b3bf2413577759b5e324286970b70468785366754b2a2ad1fd9af68"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-color-peaks-label.svg",
+      "role": "figure",
+      "sha256": "1be6fb3e87fc22236b05170aa5660e37a079bc092b6fc40a570618a558efb5d9"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "680e234b34ad5df5d2fdbcc9e7176ad45373551649bff442304915fb76eb182c"
+    }
+  ],
+  "created_at": "2026-06-16T05:59:54.721704+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MsBackend virtual class API specification and documentation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "R source file containing complete MsBackendTest class implementation with all required methods",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MsBackend is a virtual class defining the API contract that all custom MS data backends must implement to integrate with Spectra-based analysis workflows.",
+    "m/z values within each spectrum must be sorted in increasing order, a constraint that must be maintained by all data replacement methods.",
+    "dataStorage and dataOrigin are two special required variables that every backend must provide, specifying where data is stored and its origin.",
+    "Peak data is represented internally as lists of matrices with m/z and intensity columns, extracted via peaksData() method.",
+    "Read-only backends need only implement accessor methods (spectraData, peaksData, intensity, mz) and may omit data replacement methods entirely."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that MsBackendTest class definition file exists in github:rformassspectrometry__Spectra repository",
+      "verify file_format_is R script or documentation file containing class definition",
+      "verify that MsBackendTest extends MsBackend (check class inheritance declaration)",
+      "verify field_present in MsBackendTest class definition for all required slots: spectraVars, mz, intensity",
+      "verify that methods spectraData, spectraVariables, backendInitialize, peaksData, extractByIndex, backendMerge, intensity, mz, spectraNames are defined in or inherited by MsBackendTest",
+      "verify script_runs: load MsBackendTest class definition and instantiate object without error",
+      "verify that spectraData() method returns S4Vectors DataFrame object",
+      "verify that spectraVariables() method returns character vector",
+      "verify that peaksData() method returns list-like structure with m/z and intensity matrices",
+      "verify that intensity() and mz() methods return NumericList objects"
+    ],
+    "expert_review": [
+      "confirm that MsBackendTest implementation correctly satisfies the MsBackend virtual class contract for all required accessor methods",
+      "confirm that data replacement method implementations (if present) are semantically correct for modifying spectra data",
+      "confirm that backendMerge() correctly combines multiple MsBackendTest instances without data loss or corruption",
+      "confirm that extractByIndex() correctly subsets backend while maintaining data integrity and proper indexing",
+      "confirm that m/z values in peaksData output are sorted increasingly as required by specification"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] What are the required method signatures and implementations needed to create a complete MsBackendTest class that extends MsBackend and provides full read-write access to mass spectrometry spectral data?: 'To create a new backend a class extending the virtual `MsBackend` needs to be implemented. In the example below we create thus a simple class with a `data.frame` to contain general spectral'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] MsBackendTest requires implementation of 9 required accessor methods (spectraData, spectraVariables, backendInitialize, peaksData, extractByIndex, backendMerge, intensity, mz, spectraNames) plus 7 data replacement methods ($<-, spectraData<-, intensity<-, mz<-, peaksData<-, selectSpectraVariables, dataStorage<-, spectraNames<-) with specific signatures. The class uses three slots: spectraVars (data.frame), mz (NumericList), and intensity (NumericList), where each row in spectraVars represents one spectrum and corresponding elements in mz/intensity lists contain peak data.: 'The 3 slots `spectraVars`, `mz` and `intensity` will be used to store our MS data, each row in `spectraVars` being data for one spectrum with the columns being the different *spectra variables* (i.e.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MsBackend virtual class API specification and documentation: 'The `MsBackend` virtual class defines the API that new *backend* classes need to implement in order to be used with the `Spectra` object.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R source file containing complete MsBackendTest class implementation with all required methods: 'To create a new backend a class extending the virtual `MsBackend` needs to be implemented.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectra: 'The *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] S4Vectors: 'return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg(\"S4Vectors\")`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'library(Spectra)\nlibrary(IRanges)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog document available to verify version history or API changes to MsBackendTest class: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Specific implementation details of MsBackendTest class methods are not provided in the discussion section: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(Spectra); library(S4Vectors); setClass('MsBackendTest', contains='MsBackend', slots=list(spectraVars='character', mz='NumericList', intensity='NumericList')); setMethod('spectraData', 'MsBackendTest', function(object, columns=NULL) { if(is.null(columns)) columns <- object@spectraVars; new('DataFrame') }); setMethod('spectraVariables', 'MsBackendTest', function(object) { object@spectraVars }); setMethod('peaksData', 'MsBackendTest', function(object, columns=c('mz','intensity')) { new('DataFrame') }); setMethod('intensity', 'MsBackendTest', function(object) { object@intensity }); setMethod('mz', 'MsBackendTest', function(object) { object@mz }); setMethod('spectraNames', 'MsBackendTest', function(object) { character() }); setMethod('backendInitialize', 'MsBackendTest', function(object, data, ...) { object }); setMethod('extractByIndex', 'MsBackendTest', function(object, i) { object }); setMethod('[', 'MsBackendTest', function(x, i, j, ..., drop=TRUE) { x }); setMethod('backendMerge', 'MsBackendTest', function(...) { new('MsBackendTest') }); setMethod('intensity<-', 'MsBackendTest', function(object, value) { object@intensity <- value; object }); setMethod('mz<-', 'MsBackendTest', function(object, value) { object@mz <- value; object }); setMethod('spectraData<-', 'MsBackendTest', function(object, value) { object }); new('MsBackendTest'); cat('MsBackendTest class successfully implemented\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "MsBackendTest.R",
+  "expected_outputs": [
+    "R source file containing complete MsBackendTest class implementation with all required methods"
+  ],
+  "finding": "MsBackendTest requires implementation of 9 required accessor methods (spectraData, spectraVariables, backendInitialize, peaksData, extractByIndex, backendMerge, intensity, mz, spectraNames) plus 7 data replacement methods ($<-, spectraData<-, intensity<-, mz<-, peaksData<-, selectSpectraVariables, dataStorage<-, spectraNames<-) with specific signatures. The class uses three slots: spectraVars (data.frame), mz (NumericList), and intensity (NumericList), where each row in spectraVars represents one spectrum and corresponding elements in mz/intensity lists contain peak data.",
+  "github_name": "rformassspectrometry/Spectra",
+  "input_from": null,
+  "inputs": [
+    "MsBackend virtual class API specification and documentation"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "MsBackendTest_class_skeleton.R",
+    "MsBackendTest_accessors.R",
+    "MsBackendTest_replacement_methods.R",
+    "MsBackendTest_complete.R"
+  ],
+  "linked_result_ids": [
+    "result_003",
+    "result_004",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_014",
+    "result_015",
+    "result_016",
+    "result_022",
+    "result_023",
+    "result_024",
+    "result_025",
+    "result_026",
+    "result_027",
+    "result_028",
+    "result_029",
+    "result_030",
+    "result_031",
+    "result_032",
+    "result_033",
+    "result_034",
+    "result_035",
+    "result_036",
+    "result_037",
+    "result_038",
+    "result_039",
+    "result_040",
+    "result_041",
+    "result_042",
+    "result_043",
+    "result_044",
+    "result_045",
+    "result_046",
+    "result_047",
+    "result_048"
+  ],
+  "methodology_summary": [
+    "Define S4 class MsBackendTest extending MsBackend with typed slots for spectraVars, mz, and intensity data",
+    "Implement core accessor methods (spectraData, spectraVariables, peaksData, intensity, mz, spectraNames) following DataFrame/NumericList conventions",
+    "Implement backend lifecycle methods (backendInitialize) and collection operations (extractByIndex, backendMerge, [)",
+    "Implement data replacement methods (intensity<-, mz<-, spectraData<-) ensuring m/z values remain sorted",
+    "Validation: class instantiation succeeds, all required methods execute without error, output types match API contract (DataFrame, NumericList, character vector)"
+  ],
+  "missing_information": [
+    "No changelog document available to verify version history or API changes to MsBackendTest class",
+    "Specific implementation details of MsBackendTest class methods are not provided in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the required method signatures and implementations needed to create a complete MsBackendTest class that extends MsBackend and provides full read-write access to mass spectrometry spectral data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "s4-class-definition-and-inheritance",
+    "backend-api-method-implementation",
+    "mass-spectrometry-data-representation",
+    "peak-data-extraction-and-formatting",
+    "dataframe-and-numericlist-manipulation",
+    "spectrum-subsetting-and-merging"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_spectra/synthesized_package",
+  "spine_condition_ids": [
+    "readonly_backend_condition",
+    "readwrite_backend_condition",
+    "partial_readonly_backend_condition"
+  ],
+  "spine_entity_ids": [
+    "spectra_class",
+    "msbackend_virtual_class",
+    "backend_separation_architecture",
+    "msbackend_test",
+    "spectradata_method",
+    "spectravariables_method",
+    "backendinitialize_method",
+    "peaksdata_method",
+    "extractbyindex_method",
+    "backendmerge_method",
+    "intensity_method",
+    "spectranames_method",
+    "backend_validity_testing",
+    "readonly_backend_condition",
+    "readwrite_backend_condition",
+    "partial_readonly_backend_condition",
+    "result_memory_reduction",
+    "result_peaksdata_efficiency",
+    "result_spectradata_memory_tradeoff"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "modeling"
+  ],
+  "synthesized_from": "github:rformassspectrometry__Spectra",
+  "task_description": "Implement a complete MsBackendTest class extending the virtual MsBackend class with all required accessor and data-replacement methods to enable creation of custom MS data backends compatible with the Spectra infrastructure.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MsBackend virtual class API specification",
+      "port_id": "msbackend_api",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement all required and data replacement methods for MsBackendTest class to enable full read-write mass spectrometry spectral data management with correct method signatures and slot initialization.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MsBackendTest class implementation file",
+      "port_id": "backend_class",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "spectral-library-matching"
+  ],
+  "title": "Implement the MsBackend virtual class API for a new in-memory backend (MsBackendTest)",
+  "tools": [
+    "Spectra",
+    "S4Vectors",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: S4Vectors, R source file containing complete MsBackendTest class implementation with all required methods."
+  ],
+  "workflow_description": "1. Define an S4 class MsBackendTest extending MsBackend with slots for spectraVars (data.frame), mz (NumericList), and intensity (NumericList). 2. Implement spectraData() method returning full spectra data as a DataFrame object combining all variables. 3. Implement spectraVariables() method returning a character vector of all available variable names. 4. Implement backendInitialize() method to initialize and load MS data into the backend instance. 5. Implement peaksData() method extracting m/z and intensity values as a list of matrices. 6. Implement extractByIndex() and [ methods to subset the backend by selected spectrum indices. 7. Implement backendMerge() method combining multiple MsBackendTest instances. 8. Implement intensity() and mz() accessor methods returning NumericList objects for peak values. 9. Implement spectraNames() method to extract optional spectrum names or identifiers. 10. Implement data replacement methods (intensity<-, mz<-, spectraData<-) for modifying backend data."
+}

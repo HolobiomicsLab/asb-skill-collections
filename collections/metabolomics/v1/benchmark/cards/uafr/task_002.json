@@ -1,0 +1,298 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/GraphicalAbstract.jpg",
+      "role": "figure",
+      "sha256": "1d4a445d570d0a3aab3d0c9aff56d22689adba22c9624de8f9a531d86ccd9346"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ac9d42e6296e349acda5aee7606424fd48621cf507928dd69e35bdad14ea304c"
+    }
+  ],
+  "created_at": "2026-06-15T12:18:23.894299+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "standard_data.csv \u2013 raw peak table from Agilent Unknowns Analysis with columns: Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.Name",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "structured R list object (standard_spread) containing eight nested matrices and one nested list: Compounds, RT, MatchFactor, MZ, Mass, Area, rtBYmass (RT|mass codes), and webInfo (published names, top m/z peaks, exact mass, and literature RTs per compound)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "GC/LC-MS peak tables from Agilent instruments contain retention time, base peak m/z, peak area, tentative compound name from library matching, match factor (0\u2013100 quality score), and sample file identifier; spreadOut() must preserve these as-is while enriching with exact masses and literature metadata.",
+    "Match factor \u226585 generally indicates high-confidence library spectral matches; exact mass validation using ChemSpider/PubChem confirms chemical identity independent of retention time variation across instrumental conditions.",
+    "Retention time can shift \u00b10.1\u20130.3 min between instruments and methods; spreadOut() uses published RT ranges from literature to help disambiguate co-eluting isomers or similarly-named compounds.",
+    "The rtBYmass unique code (RT | exact_mass) serves as a stable peak fingerprint for aggregating multiple detections of the same compound across samples, even if compound names differ slightly or retention times drift.",
+    "webInfo nested lists must be non-empty for all queried chemicals; missing published m/z peaks or exact masses indicate incomplete chemical metadata and may require manual curation or database augmentation before downstream mzExacto() extraction."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file standard_data.csv exists in github:castratton__uafR repository",
+      "script_runs: execute spreadOut(standard_data.csv) function without error in R environment",
+      "output_matches_reference: returned list structure contains all fields specified in ARTIFACT-spreadOut-output documentation (byte-for-byte field names and count)",
+      "field_present: verify each required output field is non-null in returned list object",
+      "verify output list is compatible with downstream function inputs (mzExacto, categorate, exactoThese) \u2014 robust to parameter choices in downstream calls"
+    ],
+    "expert_review": [
+      "assess whether spreadOut() output semantics (retention time sorting, m/z aggregation, CSV normalization) align with documented contract and support claimed data preparation workflow",
+      "evaluate whether field names and structure match Agilent Unknowns Analysis default format as described"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Does the spreadOut() function successfully convert raw CSV input into a properly structured list format with all fields required for downstream processing in the uafR pipeline?: 'The first step in the process is to convert the raw input to a format that downstream functions can work with. spreadOut() prepares the read in .CSV for intelligent sorting'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] spreadOut() is designed to prepare CSV input for intelligent sorting and downstream processing by converting raw data into a format compatible with retention time and mass-based analysis.: 'spreadOut() prepares the read in .CSV for intelligent sorting (using retention times and published masses)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] standard_data.csv \u2013 raw peak table from Agilent Unknowns Analysis with columns: Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.Name: 'The recommended software for generating the necessary data in the default format (i.e. with correct column names) is Unknowns Analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] structured R list object (standard_spread) containing eight nested matrices and one nested list: Compounds, RT, MatchFactor, MZ, Mass, Area, rtBYmass (RT|mass codes), and webInfo (published names, top m/z peaks, exact mass, and literature RTs per compound): 'Contents of the list include matrices (here focused on methyl salicylate) that store: 1. chemical names 2. retention times 3. match factors 4. captured M/Z value 5. exact mass data (if published) 6.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Agilent Unknowns Analysis: 'The recommended software for generating the necessary data in the default format (i.e. with correct column names) is Unknowns Analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] ChemmineR: 'uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] fmcsR: 'uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] webchem: 'uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] ARTIFACT-spreadOut-output specification and field contract not provided in discussion or accessible context: 'Source: github:castratton__uafR'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(webchem); library(ChemmineR); data <- read.csv('{inputs.raw_peak_table}'); standard_spread <- spreadOut(data); saveRDS(standard_spread, 'standard_spread.rds')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [
+      "Agilent Unknowns Analysis"
+    ],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "standard_spread.rds",
+  "expected_outputs": [
+    "structured R list object (standard_spread) containing eight nested matrices and one nested list: Compounds, RT, MatchFactor, MZ, Mass, Area, rtBYmass (RT|mass codes), and webInfo (published names, top m/z peaks, exact mass, and literature RTs per compound)"
+  ],
+  "finding": "spreadOut() is designed to prepare CSV input for intelligent sorting and downstream processing by converting raw data into a format compatible with retention time and mass-based analysis.",
+  "github_name": "castratton/uafR",
+  "input_from": "task_001",
+  "inputs": [
+    "standard_data.csv \u2013 raw peak table from Agilent Unknowns Analysis with columns: Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.Name"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spreadout_compounds_matrix.csv",
+    "spreadout_retention_times_matrix.csv",
+    "spreadout_rt_by_mass_codes.csv"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_006"
+  ],
+  "methodology_summary": [
+    "Load and validate raw Agilent peak table structure and column names.",
+    "Sort peaks by retention time and exact mass; query PubChem/ChemSpider for each detected compound to retrieve published m/z fragments and exact mass.",
+    "Aggregate peaks by chemical name and top m/z values across all samples; construct eight output matrices indexed by sample.",
+    "Generate unique rtBYmass codes as RT|mass identifiers and build nested webInfo list containing published names, fragment peaks, exact mass, and literature retention times for each compound.",
+    "Validation: confirm all eight list components present and non-null for samples with detected peaks; verify rtBYmass codes are unique and webInfo lists contain non-empty published metadata."
+  ],
+  "missing_information": [
+    "No changelog found",
+    "ARTIFACT-spreadOut-output specification and field contract not provided in discussion or accessible context"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the spreadOut() function successfully convert raw CSV input into a properly structured list format with all fields required for downstream processing in the uafR pipeline?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods"
+  ],
+  "skills": [
+    "ms-peak-table-format-validation",
+    "retention-time-and-mass-sorting-of-chromatographic-peaks",
+    "exact-mass-lookup-and-aggregation-from-chemical-databases",
+    "spectral-library-matching-and-m-z-peak-ranking",
+    "nested-data-structure-construction-for-chemical-metadata",
+    "chemical-name-normalization-and-publish-database-integration"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_uafr/synthesized_package",
+  "spine_condition_ids": [
+    "COND-known-chemicals-explicit"
+  ],
+  "spine_entity_ids": [
+    "ARCH-pipeline",
+    "COMP-spreadOut",
+    "DS-standard-data",
+    "COND-known-chemicals-explicit",
+    "RES-automation-bottleneck",
+    "ARTIFACT-spreadOut-output",
+    "ARTIFACT-mzExacto-output",
+    "ARTIFACT-categorate-output"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:castratton__uafR",
+  "task_description": "Execute the spreadOut() function on standard_data.csv to transform raw GC/LC-MS peak data into a structured list containing sorted and aggregated chemical information indexed by retention time and mass, verifying the output matches the documented contract with all eight required nested components.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "standard_data.csv \u2013 raw Agilent peak detection output",
+      "port_id": "raw_peak_table",
+      "resolved_via": null,
+      "source": "task_001/mzexacto_result_df",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute spreadOut() on standard_data.csv and validate that the returned list structure contains all required fields for downstream mzExacto(), categorate(), and exactoThese() functions.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "structured R list (standard_spread) with eight matrices and webInfo nested list",
+      "port_id": "spreadout_list",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "database-annotation",
+    "metabolite-identification",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce the spreadOut output list from the standard_data CSV input",
+  "tools": [
+    "R",
+    "Agilent Unknowns Analysis",
+    "ChemmineR",
+    "fmcsR",
+    "webchem"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: structured R list object (standard_spread) containing eight nested matrices and one nested list: Compounds, RT, MatchFactor, MZ, Mass, Area, rtBYmass (RT|mass codes), and webInfo (published names, top m/z peaks, exact mass, and literature RTs per compound)."
+  ],
+  "workflow_description": "1. Load standard_data.csv (raw Agilent Unknowns Analysis output) into R, ensuring columns match expected schema (Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.Name). 2. Execute spreadOut() function to sort peaks by retention time and exact mass, aggregate by published chemical names and top m/z peaks, and construct eight output matrices: Compounds (chemical identifiers), RT (retention times), MatchFactor (match factors), MZ (observed m/z values), Mass (exact masses from PubChem/ChemSpider), Area (raw peak areas), rtBYmass (unique RT|mass codes), and webInfo (nested list of published names, top m/z fragments, exact mass, and literature retention times). 3. Validate output list structure: confirm all eight components present, verify no null matrices for samples with detected peaks, check that rtBYmass codes uniquely identify each peak, and ensure webInfo nested lists contain non-empty published metadata for each queried compound. 4. Return structured list object ready for downstream mzExacto() processing."
+}

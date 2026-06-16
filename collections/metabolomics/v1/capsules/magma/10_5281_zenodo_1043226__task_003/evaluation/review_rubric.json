@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "joblauncher source files are present in github:NLeSC/MAGMa repository under a jo"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "produced artifact is valid JSON or YAML (OpenAPI 3.0 or 3.1 specification)",
+      "value": "JSON"
+    },
+    {
+      "id": "pf_003",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output schema contains at least one 'paths' or 'endpoints' key documenting HTTP ",
+      "value": "paths"
+    },
+    {
+      "id": "pf_004",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output schema declares HTTP methods (GET, POST, PUT, DELETE, PATCH) for joblaunc"
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output schema includes 'components' or 'definitions' section with request/respon",
+      "value": "components"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that joblauncher source files are present in github:NLeSC/MAGMa repository under a joblauncher/ or equivalent subdirectory",
+      "file_format_is: verify that produced artifact is valid JSON or YAML (OpenAPI 3.0 or 3.1 specification)",
+      "contains_substring: verify that output schema contains at least one 'paths' or 'endpoints' key documenting HTTP routes",
+      "contains_substring: verify that output schema declares HTTP methods (GET, POST, PUT, DELETE, PATCH) for joblauncher endpoints",
+      "contains_substring: verify that output schema includes 'components' or 'definitions' section with request/response model schemas",
+      "script_runs: verify that produced OpenAPI artifact passes validation against openapi-generator or swagger-cli validate command without fatal errors"
+    ],
+    "expert_review": [
+      "Verify that extracted endpoint signatures (paths, parameters, request bodies, response codes) accurately reflect joblauncher source code; require spot-check of 3+ endpoints against raw implementation",
+      "Assess completeness of parameter documentation (required vs optional, data types, constraints) relative to actual function signatures in joblauncher source",
+      "Evaluate semantic accuracy of request and response schema definitions against actual data structures used in joblauncher handlers"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

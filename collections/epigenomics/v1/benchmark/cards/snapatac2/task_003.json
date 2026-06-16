@@ -1,0 +1,332 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-0.png",
+      "role": "figure",
+      "sha256": "62b9435f3307fc87f52ef0605b5fb429b904fb7c3008486d5e6a1a3e0ac2ef49"
+    },
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-1.png",
+      "role": "figure",
+      "sha256": "4c20c79eb335c2d7ab728a84f1a22058120bc74ab7192782d770cbbd942dab52"
+    },
+    {
+      "indexable": false,
+      "path": "figures/docker-windows-tutorial-2.png",
+      "role": "figure",
+      "sha256": "d5eb9377f2a149d7b57d78ca39f60cc51bc16213a568780072657558d22be90d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/func+export_coverage.svg",
+      "role": "figure",
+      "sha256": "b2c54284c113efb517e25ccfd1829a2f548e34db945b512753e130a447d46976"
+    },
+    {
+      "indexable": false,
+      "path": "figures/func+import_data.svg",
+      "role": "figure",
+      "sha256": "248512cdcfb5004f5e114f588183a92fef1e6115d05b1c32a5d917690d1efb66"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "95aea9a378722044cf71a0cc3f6bb553788936ff4c89d5f6c20466b68e804fde"
+    }
+  ],
+  "created_at": "2026-06-15T19:32:53.712417+00:00",
+  "crossref_doi": "10.1038/s41592-023-02139-9",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Backed AnnData object with fragment data in .obsm",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Count matrix with tile coordinates and paired-insertion counts",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Matrix dimensions (n_cells \u00d7 n_tiles) and sparsity statistics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Paired-insertion counting quantifies chromatin accessibility by counting DNA fragment insertions at both ends, differing from insertion-based counting which counts single insertion sites and fragment-based counting which counts whole fragments.",
+    "Tile-based matrices partition the genome into fixed-size intervals (typically 5 kb) for efficient large-scale analysis, enabling scalability to millions of cells.",
+    "Backed AnnData objects store data on disk rather than in memory, enabling analysis of datasets larger than available RAM; fragment data is stored in .obsm['fragment_paired'] for paired-end data or .obsm['fragment_single'] for single-end data.",
+    "The counting_strategy parameter in pp.add_tile_matrix was introduced in Release 2.6.0 to allow flexible choice between insertion-based, fragment-based, and paired-insertion strategies for feature quantification."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: AnnData object with .uns['fragment_file'] or .obm containing fragment data",
+      "script_runs: pp.add_tile_matrix(adata, counting_strategy='paired_insertion') executes without error on the input AnnData object",
+      "file_format_is: resulting count matrix is stored in adata.X or adata.obm as sparse matrix or dense array",
+      "row_count_equals: count matrix has number of rows equal to number of observations (cells) in input AnnData",
+      "field_present: verify 'tile_matrix' or equivalent matrix key exists in adata.obm after function call",
+      "value_in_range: count matrix contains at least one non-zero entry (sparsity < 100%), robust to different tile sizes and fragment distributions",
+      "output_matches_reference: if reference output matrix exists in repository test data or documentation, byte-for-byte comparison for exact parameter set"
+    ],
+    "expert_review": [
+      "verify that paired_insertion counting logic correctly counts both read1 and read2 insertions from paired-end fragments, not total fragment count",
+      "assess whether tile matrix dimensions (number of tiles \u00d7 cells) are biologically reasonable for the input fragment file size and genome coverage",
+      "confirm that non-zero entries in count matrix correspond to tiles with actual fragment coverage and do not represent computational artifacts"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the paired_insertion counting strategy in pp.add_tile_matrix process fragment data to generate a tile-based count matrix?: 'Blazingly fast preprocessing tools for BAM to fragment files conversion and count matrix generation.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SnapATAC2 provides a pp.add_tile_matrix function that generates count matrices from fragment data as part of its matrix operation workflow for single-cell ATAC-seq analysis.: 'Matrix operation including pp.add_tile_matrix, pp.make_peak_matrix, pp.make_gene_matrix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Backed AnnData object with fragment data in .obsm: 'Fragments are now stored in `.obms['fragment_single']` or `.obsm['fragment_paired']`, depending on whether the data is single-end or paired-end.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Count matrix with tile coordinates and paired-insertion counts: 'pp.add_tile_matrix, pp.make_peak_matrix, pp.make_gene_matrix, which allows one to use different strategies (insertion-based, fragment-based, or paired insertion counting) to compute feature counts.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Matrix dimensions (n_cells \u00d7 n_tiles) and sparsity statistics: 'pp.add_tile_matrix adds an easily interpretable annotation to the data matrix'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] SnapATAC2: 'SnapATAC2: A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'A Python/Rust package for single-cell epigenomics analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version-specific documentation provided for pp.add_tile_matrix function behavior: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import snapatac2 as snap; import anndata as ad; adata = ad.read_h5ad('{inputs.adata_backed}', backed='r'); snap.pp.add_tile_matrix(adata, paired_insertion=True); print(f'Tile matrix shape: {adata.obsm[\"tile_matrix\"].shape}'); print(f'Non-zero entries: {adata.obsm[\"tile_matrix\"].nnz}'); print(f'Sparsity: {1 - adata.obsm[\"tile_matrix\"].nnz / (adata.obsm[\"tile_matrix\"].shape[0] * adata.obsm[\"tile_matrix\"].shape[1])}')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "tile_matrix_metrics.csv",
+  "expected_outputs": [
+    "Count matrix with tile coordinates and paired-insertion counts",
+    "Matrix dimensions (n_cells \u00d7 n_tiles) and sparsity statistics"
+  ],
+  "finding": "SnapATAC2 provides a pp.add_tile_matrix function that generates count matrices from fragment data as part of its matrix operation workflow for single-cell ATAC-seq analysis.",
+  "github_name": "scverse/SnapATAC2",
+  "input_from": "task_002",
+  "inputs": [
+    "Backed AnnData object with fragment data in .obsm"
+  ],
+  "keywords": [
+    "single-cell atac-seq",
+    "single-cell epigenomics",
+    "spectral embedding",
+    "multi-omics integration",
+    "dimension reduction",
+    "clustering",
+    "peak calling",
+    "preprocessing",
+    "fragment file conversion",
+    "scalable analysis"
+  ],
+  "landmark_outputs": [
+    "tile_coordinates.bed",
+    "count_matrix_shape.txt",
+    "nonzero_entries_distribution.csv"
+  ],
+  "linked_result_ids": [
+    "result_015"
+  ],
+  "methodology_summary": [
+    "Load backed AnnData object with fragment data stored in .obsm array",
+    "Apply pp.add_tile_matrix with paired_insertion counting strategy to genomic tiles",
+    "Extract count matrix dimensions and validate shape consistency with tile coordinates",
+    "Compute sparsity and distribution statistics of paired-insertion counts across cells and tiles",
+    "Validation: verify that matrix dimensions match expected tile count and that paired-insertion entries are non-zero and consistent with biological signal distribution",
+    "References: source article (DOI: 10.1038/s41592-023-02139-9)"
+  ],
+  "missing_information": [
+    "No changelog or version-specific documentation provided for pp.add_tile_matrix function behavior"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/fragment_file"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the paired_insertion counting strategy in pp.add_tile_matrix process fragment data to generate a tile-based count matrix?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "fragment-based-count-matrix-generation",
+    "paired-insertion-counting-strategy",
+    "tile-based-chromatin-accessibility-quantification",
+    "anndata-backed-object-manipulation",
+    "sparse-matrix-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_epigenomics/coll_snapatac2/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "anndata_rs",
+    "pp_make_fragment_file",
+    "pp_add_tile_matrix",
+    "pp_make_peak_matrix",
+    "pp_make_gene_matrix",
+    "counting_strategy_paired_insertion"
+  ],
+  "subdomains": [
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis"
+  ],
+  "synthesized_from": "github:scverse__SnapATAC2",
+  "task_description": "Starting from a backed AnnData object containing single-cell ATAC-seq fragment data, generate a tile-based count matrix using paired-insertion counting strategy and verify the output matrix has the expected dimensions and non-zero entries.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Backed AnnData object with fragment data",
+      "port_id": "adata_backed",
+      "resolved_via": null,
+      "source": "task_002/fragment_file",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Invoke pp.add_tile_matrix with paired_insertion counting strategy on fragment-backed AnnData and validate output matrix dimensions and non-zero entry distribution.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Tile-based count matrix with paired-insertion counts",
+      "port_id": "tile_count_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Matrix shape and sparsity statistics",
+      "port_id": "matrix_metadata",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "clustering",
+    "dimensionality-reduction",
+    "batch-correction",
+    "normalization"
+  ],
+  "title": "Reconstruct tile-matrix generation with paired-insertion counting strategy using pp.add_tile_matrix",
+  "tools": [
+    "SnapATAC2",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Count matrix with tile coordinates and paired-insertion counts, Matrix dimensions (n_cells \u00d7 n_tiles) and sparsity statistics."
+  ],
+  "workflow_description": "1. Load backed AnnData object containing fragment data (stored in .obsm['fragment_paired'] or .obsm['fragment_single']). 2. Invoke pp.add_tile_matrix with counting_strategy='paired_insertion' to quantify chromatin accessibility at fixed genomic intervals. 3. Extract the resulting count matrix and verify matrix shape (n_obs \u00d7 n_vars) matches tile coordinates. 4. Validate that count matrix contains non-zero entries and that paired-insertion counts are distributed across cells and genomic tiles as expected."
+}

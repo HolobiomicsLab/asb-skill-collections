@@ -1,0 +1,2118 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/injection-sequence-annotation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/instrumental-drift-detection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolomics-data-quality-metrics",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolomics-study-design-interpretation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/multiquant-file-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/qcpool-cv-calculation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/qcpool-sample-identification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/quality-control-interval-detection",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/quality-overview-visualization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/signal-trend-assessment-across-injections",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The QComics package is designed to provide a quick overview of the quality of a metabolomics or lipidomics study.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_sys_qcomics"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "QComics requires a pooled sample (QCpool) to be measured in regular intervals during one or more sequences.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_sys_qcomics"
+        },
+        {
+          "id": "asb:spine_comp_qcpool"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "QCpool samples must be analysed with Sciex Multiquant software version greater than 3.0.3.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_comp_qcpool"
+        },
+        {
+          "id": "asb:spine_tool_sciex_multiquant"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "QCpool samples analysed with Sciex Multiquant must be exported to txt format for use with QComics.",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_sys_qcomics"
+        },
+        {
+          "id": "asb:spine_comp_qcpool"
+        },
+        {
+          "id": "asb:spine_tool_sciex_multiquant"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper describes QComics as a QC protocol/workflow for metabolomics data quality assessment, but does not mention parsing Sciex Multiquant TXT export files, file format handling, or automated detection of QCpool sample positions from instrument output. The paper focuses on QC strategy implementation (blank inspection, drift detection, missing value handling, outlier removal, quality markers) rather than software parsing of vendor instrument files.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does the QComics package parse Sciex Multiquant TXT export files to identify and locate QCpool samples that were injected at regular intervals across metabolomics or lipidomics sequences?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:52:08.254516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Sciex Multiquant is not mentioned anywhere in the paper. The paper does not discuss vendor-specific software tools or instrument data export formats.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant (> v3.0.3)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:52:08.254516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality",
+      "asbval:note": "Paper describes QComics as a QC protocol/method, not as a software package with a GitHub repository name 'ricoderks/QComics'. The paper states QComics 'can easily be performed in software that is available to most researchers (e.g., Microsoft Excel and MetaboAnalyst webtool)' \u2014 it is a workflow/protocol, not a named software tool with a specific GitHub identifier. The card conflates the QC protocol with a software implementation.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ricoderks/QComics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:52:08.254516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The injection order of samples in the MS system should follow this sequence: (1) Inject five consecutive procedural blank samples... (2) Inject several consecutive QC samples... (3) Analyze real samples in random order and intercalate QCs across the sequence (e.g., one QC after every 10 samples)... (4) Inject five procedural blank samples at the end of the sequence run",
+      "asbval:note": "Paper describes QC sample injection strategy and monitoring (e.g., time series plots, PCA plots, control charts), but does not describe generation of a 'structured table of QCpool sample positions, injection indices, sequence IDs, and regularity metrics' as a specific output. The paper focuses on visual outputs (plots, figures) and tabulated RSD estimations, not on parsing and tabulating injection sequence metadata.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Structured table of QCpool sample positions, injection indices, sequence IDs, and regularity metrics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:52:08.254516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate card describes a software tool for parsing vendor instrument files (Sciex Multiquant TXT exports) to extract QCpool injection metadata. The paper describes QComics as a QC protocol/workflow for assessing metabolomics data quality post-acquisition, not as a file parser or sequence metadata extractor.",
+        "The card implies QComics is a named software package (with GitHub identifier 'ricoderks/QComics'), but the paper presents QComics as a methodological protocol that can be implemented in generic tools (Excel, MetaboAnalyst) without specialized software.",
+        "The card's research question focuses on automated parsing and detection of QCpool positions from instrument output files. The paper's scope is QC assessment of already-acquired metabolomics data (background correction, drift detection, missing value handling, outlier removal, quality marker monitoring)."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:52:08.254516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality. The protocol operates in various sequential steps aimed to (i) correct for background noise and carryover, (ii) detect signal drifts and \"out-of-control\" observations, (iii) deal with missing data, (iv) remove outliers, (v) monitor quality markers to identify samples affected by improper collection, preprocessing, or storage, and (vi) assess overall data quality in terms of precision and accuracy.",
+      "asbval:note": "The research question is semantically aligned with the paper's core purpose. QComics does compute metrics from QC samples (pooled QC samples are the standard approach mentioned) to assess data quality.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What metrics does QComics compute from QCpool injection data to assess metabolomics or lipidomics study quality?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:52:24.744908+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Sciex Multiquant is not mentioned anywhere in the provided passages. The paper states QComics can be implemented in 'software that is available to most researchers (e.g., Microsoft Excel and MetaboAnalyst webtool)' but does not name Sciex Multiquant.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant (> v3.0.3)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:52:24.744908+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality",
+      "asbval:note": "QComics is the primary tool described throughout the paper and is explicitly named as the method for quality control assessment.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:52:24.744908+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "method precision and accuracy must be estimated by applying the following acceptance criteria to chemical descriptors detected in QC samples: (i) RSD < 30% for peak intensity, (ii) RSD < 2% for RT, (iii) RSD < 15% for peak width, (iv) m/z error <10 ppm... Additionally, time series plots with predefined tolerance windows can be used to visualize the reproducibility and stability of every quality metrics across the experiment (Figure 4B\u2013E), thereby facilitating the identification of abnormal data points for potential exclusion or reanalysis.",
+      "asbval:note": "The paper does compute per-compound metrics (RSD/CV for peak intensity, RT, peak width, m/z error) and generates figures/plots showing these metrics across the analytical run. However, the card claims 'CV' (coefficient of variation) while the paper uses 'RSD' (relative standard deviation) \u2014 these are equivalent metrics but the terminology differs. The outputs are described as 'time series plots' and 'tabulated RSD estimations' rather than a single 'quality overview report,' though the functional intent aligns.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Quality overview report (table or figure) showing per-compound CV and signal-trend metrics across QCpool injections",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:52:24.744908+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card specifies 'QCpool positional data' which aligns with the paper's use of pooled QC samples analyzed at intermittent points throughout the analytical run.",
+        "The card mentions 'metabolomics or lipidomics' but the paper focuses primarily on metabolomics; lipidomics is not explicitly discussed, though the method is stated to be adaptable to other omics data.",
+        "The card's expected output describes a single 'quality overview report' but the paper generates multiple outputs: time series plots, PCA plots, tabulated RSD estimations, and control charts \u2014 not a unified report."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:52:24.744908+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/injection-sequence-annotation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC samples are analyzed at the beginning of the analytical run to equilibrate the instrument, as well as at intermittent points throughout the experiment to monitor system stability and correct experimental variability sources during data processing.",
+      "asbval:note": "Paper discusses QC sample injection at regular intervals and their role in quality assessment, but does NOT mention Sciex Multiquant software, TXT export formats, or automated annotation of QCpool samples. The paper describes manual QC workflows and uses generic software (Excel, MetaboAnalyst) for QC implementation, not vendor-specific Sciex tools.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "injection-sequence-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Identifies and annotates quality control pool (QCpool) samples within metabolomics or lipidomics injection sequences exported from Sciex Multiquant, recording their positions and validating regular interval spacing to support quality assessment workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/injection-sequence-annotation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Analyze real samples in random order and intercalate QCs across the sequence (e.g., one QC after every 10 samples). If the sample size is small, the frequency of QC injection may be increased to ensure a minimum of 10% QC samples across the analytical run.",
+      "asbval:note": "Paper describes regular interval QC injection and validation of spacing, but does not mention Sciex Multiquant or automated annotation workflows. QComics protocol uses Excel and MetaboAnalyst, not vendor-specific software.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "injection-sequence-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Identifies and annotates quality control pool (QCpool) samples within metabolomics or lipidomics injection sequences exported from Sciex Multiquant, recording their positions and validating regular interval spacing to support quality assessment workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/injection-sequence-annotation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Sciex Multiquant is not mentioned anywhere in the paper. The paper describes QComics as implementable in 'software that is available to most researchers (e.g., Microsoft Excel and MetaboAnalyst webtool)' without vendor-specific tools.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "injection-sequence-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant (role: Generates and exports the TXT file containing sample metadata and injection sequence that is parsed to locate QCpool samples)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/injection-sequence-annotation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality. The protocol operates in various sequential steps aimed to (i) correct for background noise and carryover, (ii) detect signal drifts and \"out-of-control\" observations, (iii) deal with missing data, (iv) remove outliers, (v) monitor quality markers to identify samples affected by improper collection, preprocessing, or storage, and (vi) assess overall data quality in terms of precision and accuracy.",
+      "asbval:note": "QComics is confirmed as the primary QC tool in the paper. However, the paper does not describe QComics as consuming 'parsed QCpool annotations from Sciex Multiquant exports'\u2014it operates on metabolomics data post-analysis using generic software.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "injection-sequence-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics (role: Downstream package that consumes parsed QCpool annotations and injection sequence metadata for quality assessment and visualization of metabolomics/lipidomics study quality)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/injection-sequence-annotation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed QComics",
+      "asbval:note": "Paper confirms QComics exists and is authored by Gonz\u00e1lez-Dom\u00ednguez et al. (2024), but does NOT identify the GitHub repository 'ricoderks/QComics' or confirm that ricoderks is the maintainer. The paper does not provide a GitHub URL or repository information.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "injection-sequence-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[2].name",
+      "asbval:target_claim_text": "ricoderks/QComics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/injection-sequence-annotation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not provide any GitHub repository URL or repository information for QComics. The paper is a 2024 analytical chemistry publication and does not cite a specific code repository.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "injection-sequence-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[2].repo",
+      "asbval:target_claim_text": "https://github.com/ricoderks/QComics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/injection-sequence-annotation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Sciex Multiquant, TXT export formats, or version specifications. The paper describes QComics as operating on metabolomics data from UHPLC-MS analysis but does not specify input file formats or vendor software.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "injection-sequence-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "Sciex Multiquant TXT export file (version > 3.0.3) containing sample metadata and injection sequence",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/injection-sequence-annotation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "This tool generates easily interpretable outputs in the form of figures (e.g., Figures 2\u20134) and tables (e.g., tabulated RSD estimations), which could be annexed to scientific publications for consistent reporting of the data quality.",
+      "asbval:note": "Paper confirms QComics generates structured outputs including tables, but does not specify that outputs include 'sample name, injection index' columns or QCpool-specific annotation tables. The paper focuses on QC metrics (RSD, m/z error, RT) rather than injection sequence annotation.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "injection-sequence-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "outputs",
+      "asbval:target_claim_text": "Structured annotation table with columns: sample name, injection index, [truncated in card]",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/instrumental-drift-detection/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To verify the presence of gradual changes along the analytical run, and thus evaluating the need of implementing data normalization approaches, the peak intensity of each chemical descriptor should be plotted with respect to their run order to check for time-related trends in the data (Figure 2A,B). Then, the examination of PCA scores plots enables exploring if samples show a continuous drift (Figure 2C) or a homogeneous distribution (Figure 2D) in the PCA space.",
+      "asbval:note": "Paper explicitly addresses detection of signal drifts and time-related trends in QC samples via plotting peak intensity against run order.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "instrumental-drift-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Detect and quantify instrumental signal drift or degradation across sequential metabolomics/lipidomics QC injections by computing trend metrics (slope, drift index, stability) from pooled sample intensities.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/instrumental-drift-detection/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the most frequent origin of systematic errors in metabolomics is deficient instrumental stability (e.g., loss in MS sensitivity or deterioration of chromatographic columns), which is ultimately mirrored in signal drifts according to the run order.",
+      "asbval:note": "Paper addresses systematic errors and signal drifts that compromise data quality.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "instrumental-drift-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "flagging compounds or time windows where signal loss or systematic bias would compromise data quality",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/instrumental-drift-detection/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Sciex Multiquant or any specific instrument software by name. The paper describes a general metabolomics workflow using UHPLC-MS but does not specify data export software or format requirements.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "instrumental-drift-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant (v3.0.3+) software that analyzes QCpool samples and exports compound identifiers and signal intensities in txt format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/instrumental-drift-detection/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality. The protocol operates in various sequential steps aimed to (i) correct for background noise and carryover, (ii) detect signal drifts and \"out-of-control\" observations, (iii) deal with missing data, (iv) remove outliers, (v) monitor quality markers to identify samples affected by improper collection, preprocessing, or storage, and (vi) assess overall data quality in terms of precision and accuracy.",
+      "asbval:note": "QComics is confirmed as a tool for detecting signal drifts and assessing data quality. However, the paper describes QComics as 'a robust, easily implementable and reportable method' that 'can easily be performed in software that is available to most researchers (e.g., Microsoft Excel and MetaboAnalyst webtool), without the need of advanced statistical and programming skills.' The paper does not identify QComics as an R/Python package or specify a GitHub repository. The card's claim about it being an R/Python package with a specific GitHub repo cannot be verified from the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "instrumental-drift-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics R/Python package that ingests parsed QCpool positional data and computes coefficient of variation, signal-trend metrics, and quality overview summaries including instrumental drift assessment",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/instrumental-drift-detection/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC samples are analyzed at the beginning of the analytical run to equilibrate the instrument, as well as at intermittent points throughout the experiment to monitor system stability and correct experimental variability sources during data processing.",
+      "asbval:note": "Paper confirms use of QC samples at intermittent points throughout analytical sequences.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "instrumental-drift-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have a time-series of repeated QCpool (pooled quality control) injections measured at regular intervals during one or more LC-MS/MS sequences",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/instrumental-drift-detection/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not specify Sciex Multiquant or any particular instrument software/version for data export.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "instrumental-drift-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "exported from Sciex Multiquant software (v3.0.3+) in txt format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/instrumental-drift-detection/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the peak intensity of each chemical descriptor should be plotted with respect to their run order to check for time-related trends in the data",
+      "asbval:note": "Paper explicitly describes assessing signal stability via peak intensity trends over run order.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "instrumental-drift-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "assess whether signal intensity for individual compounds remained stable or showed degradation/drift over the sequence duration",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/instrumental-drift-detection/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the implementation of quality control strategies is crucial to ensure the reproducibility, accuracy, and meaningfulness of metabolomics data",
+      "asbval:note": "Paper emphasizes QC as a prerequisite step to ensure data quality before downstream analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "instrumental-drift-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "before proceeding to statistical analysis or metabolite quantification, to rule out instrumental artifacts as confounders",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-data-quality-metrics/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To verify the presence of gradual changes along the analytical run, and thus evaluating the need of implementing data normalization approaches, the peak intensity of each chemical descriptor should be plotted with respect to their run order to check for time-related trends in the data... Then, the examination of PCA scores plots enables exploring if samples show a continuous drift... method precision and accuracy must be estimated by applying the following acceptance criteria to chemical descriptors detected in QC samples: (i) RSD < 30% for peak intensity, (ii) RSD < 2% for RT, (iii) RSD < 15% for peak width, (iv) m/z error <10 ppm",
+      "asbval:note": "Paper uses RSD (relative standard deviation), not CV (coefficient of variation), though these are mathematically equivalent (CV = RSD). Paper assesses drift and reproducibility via RSD and time-series plots, not explicitly 'QCpool' terminology. The concept is supported but the specific term 'QCpool' and explicit CV naming differ from paper's RSD language.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolomics-data-quality-metrics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute coefficient of variation (CV) and signal-trend metrics from QCpool (quality control pool) samples injected at regular intervals during liquid chromatography\u2013mass spectrometry (LC-MS) sequences to rapidly assess technical reproducibility and instrumental drift in metabolom",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-data-quality-metrics/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the precision estimators can also be employed to discard peaks with a technical variation exceeding biological interindividual differences, as these molecular features are likely to introduce great variability in data and, consequently, hinder subsequent statistical modeling.",
+      "asbval:note": "Paper explicitly supports filtering compounds based on quality metrics prior to downstream analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolomics-data-quality-metrics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "detection of compounds with poor quality metrics before downstream analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-data-quality-metrics/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Sciex Multiquant or any specific vendor instrument software. Paper describes a generic metabolomics workflow using UHPLC-MS but does not specify Sciex Multiquant as the data processing tool.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolomics-data-quality-metrics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant (\u2265v3.0.3) txt export",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-data-quality-metrics/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality... To simplify its implementation, this QC protocol can easily be performed in software that is available to most researchers (e.g., Microsoft Excel and MetaboAnalyst webtool), without the need of advanced statistical and programming skills.",
+      "asbval:note": "Paper confirms QComics exists and computes quality metrics (RSD, signal trends, outlier detection) and generates visualizations. However, paper explicitly states QComics can be implemented in Microsoft Excel and MetaboAnalyst webtool, NOT as a dedicated R/Python package. Paper does not mention Sciex Multiquant integration or txt export ingestion as a specific input format. The tool's core function (quality metrics computation) is supported, but the implementation details (R/Python package, Sciex Multiquant input) are not.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolomics-data-quality-metrics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics R/Python package that ingests Sciex Multiquant txt exports, computes per-compound CV and signal-trend metrics, and generates quality overview visualizations and summaries",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-data-quality-metrics/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not provide repository URLs or implementation details. Cannot verify GitHub link from passages.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "metabolomics-data-quality-metrics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics repo: https://github.com/ricoderks/QComics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-data-quality-metrics/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not specify Sciex Multiquant as the required input format. Paper describes generic QC workflow applicable to any LC-MS metabolomics data, not vendor-specific Sciex output.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolomics-data-quality-metrics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have a Sciex Multiquant (\u2265v3.0.3) txt export containing QCpool sample measurements at multiple timepoints within a sequence",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-data-quality-metrics/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Analyze real samples in random order and intercalate QCs across the sequence (e.g., one QC after every 10 samples)... the peak intensity of each chemical descriptor should be plotted with respect to their run order to check for time-related trends in the data",
+      "asbval:note": "Paper confirms that regular QC injection intervals and time-series analysis are essential for drift detection.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolomics-data-quality-metrics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "QCpool samples were not injected at regular intervals during the sequence \u2014 CV and trend metrics require time-series structure to detect drift",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-study-design-interpretation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC samples are analyzed at the beginning of the analytical run to equilibrate the instrument, as well as at intermittent points throughout the experiment to monitor system stability and correct experimental variability sources during data processing.",
+      "asbval:note": "Paper discusses QC sample injection strategy and interval-based monitoring, but does not address parsing of Sciex Multiquant TXT exports or automated sequence validation. The functional concept (validating QC intervals) is present; the specific tool workflow (Multiquant parsing) is not mentioned.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolomics-study-design-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Interpret and validate the quality control design of metabolomics or lipidomics studies by parsing exported analytical sequences, locating pooled QC samples (QCpool), and verifying their regular injection intervals across one or more measurement sequences.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-study-design-interpretation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Sciex Multiquant is not mentioned anywhere in the paper. The paper describes metabolomics workflows using UHPLC-MS but does not name or reference Sciex Multiquant software.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolomics-study-design-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant \u2014 Instrument software that analyzes metabolomics/lipidomics samples and exports sequence metadata and QCpool annotations to TXT format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-study-design-interpretation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality. The protocol operates in various sequential steps aimed to (i) correct for background noise and carryover, (ii) detect signal drifts and 'out-of-control' observations, (iii) deal with missing data, (iv) remove outliers, (v) monitor quality markers to identify samples affected by improper collection, preprocessing, or storage, and (vi) assess overall data quality in terms of precision and accuracy.",
+      "asbval:note": "QComics is confirmed as a real tool in the paper for metabolomics QC assessment. However, the paper describes it as implementable in 'software that is available to most researchers (e.g., Microsoft Excel and MetaboAnalyst webtool), without the need of advanced statistical and programming skills' (passage 4), not specifically as an R/Python package. The card's claim that it 'consumes parsed QCpool interval tables' is not explicitly stated; the paper describes QComics as a protocol/workflow, not as a software package with specific input format requirements.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolomics-study-design-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics \u2014 R/Python package that consumes parsed QCpool interval tables and annotated sequences to generate quality overview and trend plots for metabolomics studies",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-study-design-interpretation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not contain information about GitHub repositories or software implementation details. Cannot verify repository URL from provided text.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "metabolomics-study-design-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[ricoderks/QComics]",
+      "asbval:target_claim_text": "GitHub repository: https://github.com/ricoderks/QComics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-study-design-interpretation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Sciex Multiquant or TXT export formats. The paper describes QComics as implementable in Excel and MetaboAnalyst, not as a tool that parses Multiquant exports.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolomics-study-design-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When to use: Input is Sciex Multiquant TXT export files from a completed metabolomics or lipidomics analytical run",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-study-design-interpretation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the QC sample is prepared by mixing equal aliquots of each of the samples under investigation... QC samples are analyzed at the beginning of the analytical run to equilibrate the instrument, as well as at intermittent points throughout the experiment to monitor system stability",
+      "asbval:note": "Paper confirms that pooled QC samples at regular intervals are a core component of the QComics protocol.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolomics-study-design-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Study design does not include pooled QC samples (QCpool) measured at regular intervals",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/multiquant-file-parsing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC samples are analyzed at the beginning of the analytical run to equilibrate the instrument, as well as at intermittent points throughout the experiment to monitor system stability and correct experimental variability sources during data processing.",
+      "asbval:note": "Paper discusses QC sample injection strategy and monitoring across analytical sequences (core concept), but does NOT mention Sciex Multiquant software, text export file parsing, or any specific instrument vendor. The paper uses UHPLC-MS data but does not specify Sciex as the instrument platform or discuss Multiquant software.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "multiquant-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Parse Sciex Multiquant text export files to extract sample metadata, injection sequence information, and quality control pool (QCpool) sample positions for metabolomics and lipidomics quality assessment workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/multiquant-file-parsing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Inject several consecutive QC samples to condition the system for the study matrix (i.e., stable chromatographic pressure, reproducible RT, peak area, and peak shape for selected metabolites). This conditioning step usually requires at least five QC samples, although this number might be increased (e.g., 10 injections) when studying complex matrices (e.g., tissues) and when applying less robust analytical approaches (e.g., hydrophilic interaction liquid chromatography, HILIC). (3) Analyze real samples in random order and intercalate QCs across the sequence (e.g., one QC after every 10 samples).",
+      "asbval:note": "Paper explicitly describes QC sample injection at regular intervals and monitoring across sequences, which is the core concept of the claim.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "multiquant-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "systematic identification and validation of QCpool samples injected at regular intervals across analytical sequences",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/multiquant-file-parsing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Sciex Multiquant software, any version thereof, or any specific instrument vendor software. The paper describes a generic UHPLC-MS workflow but does not specify the instrument platform or data acquisition software used.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "multiquant-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant (> v3.0.3)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/multiquant-file-parsing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To address current limitations in this respect, we have developed QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality. The protocol operates in various sequential steps aimed to (i) correct for background noise and carryover, (ii) detect signal drifts and \"out-of-control\" observations, (iii) deal with missing data, (iv) remove outliers, (v) monitor quality markers to identify samples affected by improper collection, preprocessing, or storage, and (vi) assess overall data quality in terms of precision and accuracy.",
+      "asbval:note": "QComics is confirmed as the paper's primary tool for QC assessment. The paper describes it as a comprehensive protocol for quality control of metabolomics data with sequential multistep workflow generating quality metrics and visualizations.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "multiquant-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics (role: Downstream R/Bioconductor package that consumes parsed QCpool sample tables and sequence metadata to generate quality overview plots and metrics)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/multiquant-file-parsing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not provide a GitHub repository URL or any implementation repository link. The paper is a methods paper describing QComics protocol but does not cite a specific code repository.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "multiquant-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[ricoderks/QComics]",
+      "asbval:target_claim_text": "GitHub repository: https://github.com/ricoderks/QComics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/multiquant-file-parsing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Sciex Multiquant or any specific instrument vendor software. The scope claim is vendor-specific but the paper is vendor-agnostic.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "multiquant-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When to use: You have Sciex Multiquant text export files from one or more metabolomics or lipidomics analytical sequences",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/multiquant-file-parsing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "After MS-based analysis, a set of metabolites that can regularly be detected in QC samples (hereinafter referred to as \"chemical descriptors\") must be selected to assess method reproducibility and data quality.",
+      "asbval:note": "Paper emphasizes working with raw sequence data and QC sample metadata before feature extraction and statistical analysis, consistent with the 'raw sequence metadata' scope boundary.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "multiquant-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When NOT to use: The analytical sequence data is already preprocessed into a feature table or peak intensity matrix (use this skill only on raw sequence metadata)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-cv-calculation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "After MS-based analysis, a set of metabolites that can regularly be detected in QC samples (hereinafter referred to as \"chemical descriptors\") must be selected to assess method reproducibility and data quality... Then, the examination of PCA scores plots enables exploring if samples show a continuous drift... the peak intensity of each chemical descriptor should be plotted with respect to their run order to check for time-related trends in the data... method precision and accuracy must be estimated by applying the following acceptance criteria to chemical descriptors detected in QC samples: (i) RSD < 30% for peak intensity",
+      "asbval:note": "The paper uses RSD (relative standard deviation, equivalent to CV) as the primary metric for assessing reproducibility of QC samples injected at regular intervals. This directly supports the research question.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "qcpool-cv-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Calculate per-compound coefficient of variation (CV) from pooled quality control (QCpool) sample intensities measured at regular intervals during a metabolomics or lipidomics sequence. CV quantifies technical reproducibility and is a primary metric for assessing data quality befo",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-cv-calculation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Sciex Multiquant is not mentioned anywhere in the paper. The paper does not specify any particular instrument vendor or software for acquiring raw data.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "qcpool-cv-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-cv-calculation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To address current limitations in this respect, we have developed QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality... The protocol operates in various sequential steps aimed to (i) correct for background noise and carryover, (ii) detect signal drifts and \"out-of-control\" observations, (iii) deal with missing data, (iv) remove outliers, (v) monitor quality markers to identify samples affected by improper collection, preprocessing, or storage, and (vi) assess overall data quality in terms of precision and accuracy.",
+      "asbval:note": "QComics is the primary tool developed in this paper for quality control assessment in metabolomics, including CV/RSD calculation and visualization.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "qcpool-cv-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-cv-calculation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "This tool generates easily interpretable outputs in the form of figures (e.g., Figures 2\u20134) and tables (e.g., tabulated RSD estimations), which could be annexed to scientific publications for consistent reporting of the data quality... time series plots with predefined tolerance windows can be used to visualize the reproducibility and stability of every quality metrics across the experiment",
+      "asbval:note": "QComics aggregates RSD (CV) values and generates visualizations and tables for quality assessment, matching the claimed role.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "qcpool-cv-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[QComics].role",
+      "asbval:target_claim_text": "Downstream package that aggregates per-compound CV values and signal-trend metrics into quality overview summaries and visualizations for rapid metabolomics/lipidomics study quality assessment",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-cv-calculation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC samples are analyzed at the beginning of the analytical run to equilibrate the instrument, as well as at intermittent points throughout the experiment to monitor system stability... Analyze real samples in random order and intercalate QCs across the sequence (e.g., one QC after every 10 samples).",
+      "asbval:note": "The paper confirms that QC samples are injected at regular intervals (e.g., every 10 samples) and that signal intensities are used for quality assessment. However, the paper does not specify Sciex Multiquant as the source of input data; it describes a generic UHPLC-MS workflow without vendor specification.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "qcpool-cv-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have Sciex Multiquant txt exports containing signal intensities from QCpool samples injected at regular intervals",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-cv-calculation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC samples are usually prepared by pooling equal volumes of all samples under investigation... Then, QC samples are analyzed at the beginning of the analytical run to equilibrate the instrument, as well as at intermittent points throughout the experiment to monitor system stability and correct experimental variability sources during data processing.",
+      "asbval:note": "The paper confirms that pooled QC samples are analyzed multiple times across the analytical run, providing replicate measurements necessary for CV/RSD calculation.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "qcpool-cv-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "CV calculation requires multiple measurements of the same biological or chemical composition",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-sample-identification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC samples are analyzed at the beginning of the analytical run to equilibrate the instrument, as well as at intermittent points throughout the experiment to monitor system stability",
+      "asbval:note": "Paper discusses QC sample injection at regular intervals and monitoring, but does NOT mention Sciex Multiquant software, TXT export files, or any specific vendor platform. The paper is platform-agnostic and focuses on QC methodology generally. The specific tool (Sciex Multiquant) and file format (TXT export) are not mentioned in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "qcpool-sample-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Identifies and locates quality control pooled (QCpool) samples from Sciex Multiquant text export files to validate their injection at regular intervals across metabolomics or lipidomics sequences.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-sample-identification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the peak intensity of each chemical descriptor should be plotted with respect to their run order to check for time-related trends in the data",
+      "asbval:note": "Paper explicitly discusses temporal/run-order analysis of QC samples for quality assessment.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "qcpool-sample-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "extracts injection metadata and validates temporal distribution for downstream quality assessment",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-sample-identification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention Sciex Multiquant, version numbers, or TXT export format. No vendor-specific software is named.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "qcpool-sample-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Sciex Multiquant (\u2265v3.0.3) TXT export files containing metabolomics or lipidomics analytical sequences",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-sample-identification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Analyze real samples in random order and intercalate QCs across the sequence (e.g., one QC after every 10 samples). If the sample size is small, the frequency of QC injection may be increased to ensure a minimum of 10% QC samples across the analytical run.",
+      "asbval:note": "Paper explicitly recommends regular interval injection of QC samples.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "qcpool-sample-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "QCpool samples were injected at the designed regular intervals",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-sample-identification/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Sciex Multiquant is not mentioned anywhere in the paper. The paper is platform-agnostic and does not specify any particular vendor software for data acquisition or export.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "qcpool-sample-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant - Source software that acquires and exports metabolomics/lipidomics data and QCpool injection sequences in TXT format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-sample-identification/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality. The protocol operates in various sequential steps aimed to (i) correct for background noise and carryover, (ii) detect signal drifts and \"out-of-control\" observations, (iii) deal with missing data, (iv) remove outliers, (v) monitor quality markers to identify samples affected by improper collection, preprocessing, or storage, and (vi) assess overall data quality in terms of precision and accuracy.",
+      "asbval:note": "QComics is confirmed as the paper's main contribution. However, the paper does not explicitly state it is an R/Python package or that it 'consumes parsed QCpool metadata'\u2014it describes QComics as a protocol/method that can be implemented in Excel or MetaboAnalyst. The functional role (quality overview) is correct.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "qcpool-sample-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics - R/Python package that consumes parsed QCpool metadata to provide quick quality overview of metabolomics or lipidomics studies",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-sample-identification/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention GitHub, ricoderks username, or codecov.io. The paper is a 2024 analytical chemistry publication describing QComics as a protocol; no software repository or implementation details are provided in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "qcpool-sample-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ricoderks/QComics GitHub repository and codecov.io evidence",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-interval-detection/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC samples are analyzed at the beginning of the analytical run to equilibrate the instrument, as well as at intermittent points throughout the experiment to monitor system stability and correct experimental variability sources during data processing.",
+      "asbval:note": "Paper discusses QC sample injection intervals and monitoring, but does NOT mention Sciex Multiquant software or TXT export format. Paper uses UHPLC-MS with unspecified instrument vendor. QC interval validation is a general metabolomics practice described in the paper, but the specific tool (Sciex Multiquant) and file format (TXT export) are not mentioned.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "quality-control-interval-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Identifies and validates regular injection intervals of pooled QC samples (QCpool) within metabolomics or lipidomics analytical sequences exported from Sciex Multiquant.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-interval-detection/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Inject several consecutive QC samples to condition the system for the study matrix (i.e., stable chromatographic pressure, reproducible RT, peak area, and peak shape for selected metabolites). This conditioning step usually requires at least five QC samples, although this number might be increased (e.g., 10 injections) when studying complex matrices (e.g., tissues) and when applying less robust analytical approaches (e.g., hydrophilic interaction liquid chromatography, HILIC). (3) Analyze real samples in random order and intercalate QCs across the sequence (e.g., one QC after every 10 samples).",
+      "asbval:note": "Paper describes QC sample injection intervals and validation as core QComics functionality, but does NOT specify Sciex Multiquant as the instrument software or TXT export format. The paper's case study used UHPLC-MS with unspecified vendor.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "quality-control-interval-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Identifies and validates regular injection intervals of pooled QC samples (QCpool) within metabolomics or lipidomics analytical sequences exported from Sciex Multiquant.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-interval-detection/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Sciex Multiquant is not mentioned anywhere in the paper. The paper describes a case study using 'reversed-phase ultrahigh-performance liquid chromatography coupled to high-resolution mass spectrometry (UHPLC-MS)' but does not name the instrument vendor or software. No TXT export format is mentioned.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "quality-control-interval-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant \u2014 Instrument software that analyzes pooled QC samples and exports injection sequence to TXT format for interval detection",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-interval-detection/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To simplify its implementation, this QC protocol can easily be performed in software that is available to most researchers (e.g., Microsoft Excel and MetaboAnalyst webtool), without the need of advanced statistical and programming skills.",
+      "asbval:note": "QComics is confirmed as the paper's main contribution and is described as a QC protocol for metabolomics. However, the paper explicitly states QComics can be implemented in Microsoft Excel and MetaboAnalyst webtool, NOT as an R/Python package. The paper does not describe QComics as processing Sciex Multiquant TXT exports specifically. The GitHub repo (ricoderks/QComics) is not mentioned in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "quality-control-interval-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics \u2014 R/Python package that processes Sciex Multiquant TXT exports to identify QCpool samples and provide quick overview of metabolomics or lipidomics study quality",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-interval-detection/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No GitHub repository URL is mentioned in the paper. The paper does not provide implementation details or code repository links.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "quality-control-interval-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[ricoderks/QComics].repo",
+      "asbval:target_claim_text": "https://github.com/ricoderks/QComics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-interval-detection/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No codecov or code coverage information is mentioned in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "quality-control-interval-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[ricoderks/QComics].evidence_spans",
+      "asbval:target_claim_text": "codecov.io/gh/ricoderks/QComics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-overview-visualization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To assess method reproducibility, most QC approaches solely rely on (i) inspecting the clustering of QCs in principal component analysis (PCA) scores plots and (ii) computing the relative standard deviation (RSD) for metabolites of interest across QC samples.",
+      "asbval:note": "Paper computes RSD (relative standard deviation, equivalent to CV) for QC samples and uses visual inspection (PCA plots, time series plots). However, the paper does not specifically mention 'signal-trend metrics' as a distinct computed metric\u2014it uses visual inspection of time series plots and PCA for drift detection, not a quantified trend metric. The card's framing of 'signal-trend metrics' as a computed output is not explicitly supported; the paper uses qualitative visual trend assessment.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "quality-overview-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Generate a rapid visual and tabular assessment of metabolomics or lipidomics study quality by computing per-compound coefficient of variation (CV) and signal-trend metrics from QCpool injection sequences.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-overview-visualization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the peak intensity of each chemical descriptor should be plotted with respect to their run order to check for time-related trends in the data (Figure 2A,B). Then, the examination of PCA scores plots enables exploring if samples show a continuous drift (Figure 2C) or a homogeneous distribution (Figure 2D) in the PCA space.",
+      "asbval:note": "Paper explicitly describes identification of reproducibility and drift via visual and quantitative assessment of QC samples.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-overview-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill enables quick identification of compounds and instrumental phases with acceptable versus poor reproducibility and drift characteristics.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-overview-visualization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC samples are analyzed at the beginning of the analytical run to equilibrate the instrument, as well as at intermittent points throughout the experiment to monitor system stability",
+      "asbval:note": "Paper describes use of pooled QC samples at sequential intervals throughout the run. However, the paper does NOT mention Sciex Multiquant or any specific software for data acquisition/export. The paper states QComics 'can easily be performed in software that is available to most researchers (e.g., Microsoft Excel and MetaboAnalyst webtool)' but does not specify Sciex Multiquant as the input source. The card's requirement for Sciex Multiquant \u2265v3.0.3 txt export is not supported by the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "quality-overview-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have sequential QCpool (pooled quality control) samples analyzed with Sciex Multiquant (\u2265v3.0.3) and exported to txt format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-overview-visualization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Analyze real samples in random order and intercalate QCs across the sequence (e.g., one QC after every 10 samples). If the sample size is small, the frequency of QC injection may be increased to ensure a minimum of 10% QC samples across the analytical run.",
+      "asbval:note": "Paper explicitly describes the requirement for regular QCpool injections at intervals throughout the sequence as a core part of the QComics protocol.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-overview-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Study design does not include regular QCpool injections at intervals throughout the analytical sequence.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-overview-visualization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Sciex Multiquant is not mentioned anywhere in the paper. The paper describes QComics as a protocol that 'can easily be performed in software that is available to most researchers (e.g., Microsoft Excel and MetaboAnalyst webtool)' but does not specify Sciex Multiquant as a required or recommended input tool. The paper does mention 'UHPLC-MS' analysis but does not name the instrument control or data processing software.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "quality-overview-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant (name: 'Sciex Multiquant', role: 'Data acquisition and export; processes QCpool samples and exports positional data to txt format for downstream quality assessment')",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-overview-visualization/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality. The protocol operates in various sequential steps aimed to (i) correct for background noise and carryover, (ii) detect signal drifts and 'out-of-control' observations, (iii) deal with missing data, (iv) remove outliers, (v) monitor quality markers to identify samples affected by improper collection, preprocessing, or storage, and (vi) assess overall data quality in terms of precision and accuracy.",
+      "asbval:note": "QComics is confirmed as the tool for quality assessment. The paper confirms it computes RSD (equivalent to CV) and produces visualizations and reports. However, the paper does NOT state that QComics 'parses Sciex Multiquant txt exports'\u2014it states the protocol can be performed in Excel or MetaboAnalyst. The GitHub repository URL is not mentioned in the paper and cannot be verified from the passages provided.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "quality-overview-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics (name: 'QComics', repo: 'https://github.com/ricoderks/QComics', role: 'Quality overview generation; parses Sciex Multiquant txt exports, computes CV and trend metrics per compound, and produces summary visualizations and reports')",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-overview-visualization/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "method precision and accuracy must be estimated by applying the following acceptance criteria to chemical descriptors detected in QC samples: (i) RSD < 30% for peak intensity, (ii) RSD < 2% for RT, (iii) RSD < 15% for peak width, (iv) m/z error <10 ppm",
+      "asbval:note": "Paper explicitly defines RSD thresholds for acceptable quality: <30% for peak intensity, <2% for RT, <15% for peak width.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-overview-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "parameters (implicit)",
+      "asbval:target_claim_text": "Coefficient of variation (CV) or relative standard deviation (RSD) threshold for acceptable reproducibility",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-overview-visualization/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "This tool generates easily interpretable outputs in the form of figures (e.g., Figures 2\u20134) and tables (e.g., tabulated RSD estimations), which could be annexed to scientific publications for consistent reporting of the data quality.",
+      "asbval:note": "Paper confirms QComics produces figures and tables including RSD estimations. However, the paper does not explicitly describe 'signal-trend metrics' as a quantified output\u2014it describes visual inspection of time series plots and PCA plots for trend detection, not a computed trend metric.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "quality-overview-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Summary visualizations and reports of per-compound CV and signal-trend metrics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-overview-visualization/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "As implemented in QComics, the analysis of PCA scores using the Hotelling T2 statistics enables easily identifying outliers as those study samples located far-away the 95% Hotelling T2 ellipse in the PCA scores plot",
+      "asbval:note": "Paper explicitly describes use of PCA and Hotelling T2 test for outlier detection in QComics.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-overview-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "PCA-based clustering and Hotelling T2 ellipse for outlier detection",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-overview-visualization/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "time series plots with predefined tolerance windows can be used to visualize the reproducibility and stability of every quality metrics across the experiment (Figure 4B\u2013E), thereby facilitating the identification of abnormal data points for potential exclusion or reanalysis.",
+      "asbval:note": "Paper explicitly describes time series plots with tolerance windows for drift and stability assessment.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "quality-overview-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "Time series plots with tolerance windows for drift detection",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/signal-trend-assessment-across-injections/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To verify the presence of gradual changes along the analytical run, and thus evaluating the need of implementing data normalization approaches, the peak intensity of each chemical descriptor should be plotted with respect to their run order to check for time-related trends in the data",
+      "asbval:note": "Paper explicitly addresses detection of batch drifts and signal trends across QC sample injections using time-series plots and PCA.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "signal-trend-assessment-across-injections",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Assess instrumental drift and signal degradation in metabolomics/lipidomics quality control by computing trend metrics (slope, drift, stability index) across sequential QCpool injection data.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/signal-trend-assessment-across-injections/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The most frequent origin of systematic errors in metabolomics is deficient instrumental stability (e.g., loss in MS sensitivity or deterioration of chromatographic columns), which is ultimately mirrored in signal drifts according to the run order.",
+      "asbval:note": "Paper directly connects instrumental stability issues and signal drifts to reproducibility and accuracy concerns.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "signal-trend-assessment-across-injections",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill detects temporal instability in mass spectrometry signal that may compromise study reproducibility.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/signal-trend-assessment-across-injections/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we have developed QComics, a robust, easily implementable and reportable method for monitoring and controlling data quality. The protocol operates in various sequential steps aimed to (i) correct for background noise and carryover, (ii) detect signal drifts and \"out-of-control\" observations",
+      "asbval:note": "[SUBSTRING-MATCH for QComics | role: primary QC tool]. Paper confirms QComics detects signal drifts and implements trend assessment via time-series plots and PCA.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "signal-trend-assessment-across-injections",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "QComics \u2014 Primary tool for computing and aggregating signal-trend metrics (slope, drift, stability index) and generating quality overview visualizations from QCpool injection data.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/signal-trend-assessment-across-injections/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Sciex Multiquant is not mentioned anywhere in the paper. The paper describes QComics as implementable in 'software that is available to most researchers (e.g., Microsoft Excel and MetaboAnalyst webtool)' but does not name Sciex Multiquant as a required input source or upstream tool.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "signal-trend-assessment-across-injections",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Sciex Multiquant \u2014 Upstream software (version > v3.0.3) that analyzes QCpool samples and exports positional data in txt format; required input source for trend assessment.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/signal-trend-assessment-across-injections/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "QC samples are analyzed at the beginning of the analytical run to equilibrate the instrument, as well as at intermittent points throughout the experiment to monitor system stability and correct experimental variability sources during data processing.",
+      "asbval:note": "Paper describes QC sample injection strategy at regular intervals to monitor system stability and detect drifts.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "signal-trend-assessment-across-injections",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have QCpool (pooled quality control) samples measured at regular intervals across one or more LC-MS/MS sequences and need to detect whether instrument performance degrades, drifts, or destabilizes during the analytical run.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/signal-trend-assessment-across-injections/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the peak intensity of each chemical descriptor should be plotted with respect to their run order to check for time-related trends in the data",
+      "asbval:note": "Paper focuses on raw peak intensity signals from QC samples during the analytical run, not post-processed feature tables.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "signal-trend-assessment-across-injections",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input is already a quality-filtered feature table or normalized metabolite abundance matrix \u2014 signal trend assessment targets raw instrumental signals, not processed abundances.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/signal-trend-assessment-across-injections/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Analyze real samples in random order and intercalate QCs across the sequence (e.g., one QC after every 10 samples). If the sample size is small, the frequency of QC injection may be increased to ensure a minimum of 10% QC samples across the analytical run.",
+      "asbval:note": "Paper specifies regular intercalation of QC samples throughout the sequence as a requirement for drift detection.",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "signal-trend-assessment-across-injections",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "QCpool samples were not measured at regular intervals throughout the sequence \u2014 trend assessment requires evenly-spaced or well-documented temporal distribution to detect drift reliably.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/injection-sequence-annotation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "injection-sequence-annotation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.125,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/instrumental-drift-detection/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "instrumental-drift-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.625,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-data-quality-metrics/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "metabolomics-data-quality-metrics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2857142857142857,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolomics-study-design-interpretation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "metabolomics-study-design-interpretation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.16666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/multiquant-file-parsing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "multiquant-file-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2857142857142857,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-cv-calculation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "qcpool-cv-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.6666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/qcpool-sample-identification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "qcpool-sample-identification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2857142857142857,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-control-interval-detection/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "quality-control-interval-detection",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/quality-overview-visualization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "quality-overview-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.4444444444444444,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/signal-trend-assessment-across-injections/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "signal-trend-assessment-across-injections",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.8571428571428571,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The QComics package is designed to provide a quick overview of the quality of a metabolomics or lipidomics study.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:source_excerpt": "The goal of the `QComics` package is to have a quick overview of the\nquality of a metabolomics or lipidomics study.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:51:55.781492+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "QComics requires a pooled sample (QCpool) to be measured in regular intervals during one or more sequences.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:source_excerpt": "For this, a pooled sample\n(QCpool) needs to measured in regular intervals during one or more\nsequences.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:51:55.781492+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "QCpool samples must be analysed with Sciex Multiquant software version greater than 3.0.3.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:source_excerpt": "These QCpool samples need to be analysed with Sciex\nMultiquant (> v3.0.3) software",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:51:55.781492+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "QCpool samples analysed with Sciex Multiquant must be exported to txt format for use with QComics.",
+      "asbval:note": "Source excerpt is incomplete fragment; claim adds context about Sciex Multiquant that isn't in the provided excerpt, though likely consistent with full paper context",
+      "asbval:perspicacite_kb": "asb-paper-10_1021_acs_analchem_3c03660",
+      "asbval:source_excerpt": "and exported to `txt` format.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T10:51:55.781492+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_qcomics#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "implicit",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_sys_qcomics",
+      "title": "QComics",
+      "identifier": "urn:asb:spine:sys_qcomics"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_comp_qcpool",
+      "title": "QCpool",
+      "identifier": "urn:asb:spine:comp_qcpool"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_sciex_multiquant",
+      "title": "Sciex Multiquant",
+      "identifier": "urn:asb:spine:tool_sciex_multiquant"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_r_package",
+      "title": "QComics R package",
+      "identifier": "urn:asb:spine:tool_r_package"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_txt_export",
+      "title": "Sciex Multiquant TXT export",
+      "identifier": "urn:asb:spine:dataset_txt_export"
+    }
+  ]
+}

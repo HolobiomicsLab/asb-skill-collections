@@ -1,0 +1,3236 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/bit-vector-substructure-encoding",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/development-environment-setup",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/distribution-statistics-summarization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/fingerprint-vector-loading-and-parsing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-fingerprint-bit-frequency-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-fingerprint-computation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-structure-input-format-handling",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/natural-product-chemical-representation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/package-dependency-management",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/pytest-test-suite-execution",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/python-package-installation-from-source",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/sparsity-metric-computation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/statistical-distribution-visualization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/tanimoto-similarity-pairwise-calculation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Biosynfoni is a biosynformatic molecular fingerprint tailored to natural product chemistry and bioinformatic research.",
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_biosynfoni_system"
+        },
+        {
+          "id": "asb:spine_component_molecular_fingerprint"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The project is available on PyPI.",
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_biosynfoni_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Biosynfoni supports multiple Python versions.",
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_biosynfoni_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "implicit",
+      "subject": "implicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The project is licensed under an MIT license.",
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The code follows the black code style standard.",
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_black"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Development installation can be performed by running pip install -e .[dev] from the project root.",
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_biosynfoni_pkg"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Tests can be run locally using the pytest tests/ command.",
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_pytest"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Code should be formatted with black before submitting a pull request.",
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_tool_black"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Tests are run automatically when a pull request is pushed.",
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The project source is hosted on GitHub at lucinamay/biosynfoni.",
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_biosynfoni_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Contributions to biosynfoni development are welcomed through issues or pull requests.",
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_biosynfoni_system"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.14822624",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
+      "asbval:note": "Paper describes creation and testing of Biosynfoni but does not explicitly document a pytest test suite or package installation procedures. The paper is a research article describing the fingerprint method, not a software engineering document with reproducibility instructions.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Reproduce the biosynfoni Python package installation and test suite execution",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:52.629819+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention pytest, package installation procedures, or test suite execution. The paper focuses on the scientific validation of the Biosynfoni fingerprint method (biosynthetic similarity, classification performance, etc.) rather than software testing infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Does the biosynfoni package install successfully from source and pass its full pytest test suite?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:52.629819+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pip is not mentioned in the paper. Paper mentions Python and RDKit but not package management tools.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:52.629819+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pytest is not mentioned anywhere in the paper. No testing framework is explicitly named.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:52.629819+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
+      "asbval:note": "Biosynfoni is the primary subject of the paper and is discussed extensively throughout.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:52.629819+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not describe pytest test execution or test reports. No mention of automated testing infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "pytest test execution report showing all tests passed",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:52.629819+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not describe package installation procedures, development mode setup, or dependency management. The paper is a scientific publication, not a software deployment guide.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Installed biosynfoni package in development mode with dev dependencies",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:52.629819+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate task card describes a software engineering / reproducibility task (package installation and pytest execution), but the paper is a scientific research article describing the Biosynfoni fingerprint method and its validation.",
+        "The paper validates Biosynfoni through scientific experiments (biosynthetic similarity estimation, natural product classification, chemical space visualization) rather than through automated test suites.",
+        "No evidence in the paper of a public Python package repository, PyPI distribution, or CI/CD testing infrastructure.",
+        "The paper mentions tools used (Python 3.13.1, RDKit 2024.09.4) but does not document how to install or test the Biosynfoni implementation as a standalone package."
+      ],
+      "asbval:n_drift_notes": 4,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:52.629819+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds, moving beyond purely structural characteristics... Biosynfoni is a compact substructure-based molecular fingerprint providing increased interpretability for various natural product cheminformatic applications.",
+      "asbval:note": "The research question directly aligns with the paper's core contribution: developing a biosynthesis-informed fingerprint for natural products.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "How does the biosynfoni package compute a molecular fingerprint representation tailored for natural product chemistry and bioinformatic research?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:04.566319+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt)... Biosynfoni is a compact substructure-based molecular fingerprint",
+      "asbval:note": "Biosynfoni is the primary tool/fingerprint developed and evaluated in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:04.566319+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of pip package manager in the provided passages. The paper discusses tools used (Python, RDKit, Prot\u00e9g\u00e9, etc.) but does not mention pip for installation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:04.566319+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of pytest testing framework in the provided passages. The paper does not discuss testing infrastructure or pytest.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:04.566319+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys... Biosynfoni can also be used like other fingerprints to visualise chemical space.",
+      "asbval:note": "The paper confirms that Biosynfoni generates fingerprints with substructure counts (not strictly bit-vectors, but counted representations) for molecules. However, the paper does not explicitly specify CSV or NumPy format as output formats. The fingerprint is described as a counted array of 39 substructure keys, which is semantically similar but the specific output format (CSV/NumPy) is not documented in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Fingerprint file in CSV or NumPy format containing molecule identifiers and corresponding substructure bit-vector representations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:04.566319+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card frames the task as 'reconstructing' the fingerprint computation, which is appropriate given the paper's methodological focus.",
+        "The card does not mention key dependencies like RDKit, which is explicitly stated as a main tool in the paper ('We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools').",
+        "The card's inclusion of pip and pytest suggests a software engineering/deployment context, but the paper is a research publication focused on the fingerprint algorithm itself, not on packaging or testing infrastructure."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:04.566319+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys. We investigated Biosynfoni's applicability domain and its performance in biosynthetic similarity representation, chemical space visualisation, and natural product classification.",
+      "asbval:note": "Paper analyzes fingerprint properties (substructure occurrence, co-occurrence, similarity patterns via Tanimoto) but does NOT analyze a 'deposited dataset' on Zenodo. The paper uses COCONUT, ChEBI, MetaCyc, and ZINC databases. No mention of a Zenodo deposit or dataset deposition in passages. The statistical analyses performed (occurrence heatmaps, pointwise mutual information, Tanimoto similarity) are present, but the scope is the paper's own analysis, not a separate deposited dataset.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What are the statistical properties of the biosynfoni fingerprint vectors in the deposited dataset, including bit-frequency distributions, sparsity characteristics, and pairwise similarity patterns?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:21.998109+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The average atom coverage of 97% indicates Biosynfoni captures almost all of the atoms in the natural products' structures at least once with its 39 substructure keys (Online Figures A1 and A2). The average counts and count variation differ between substructure keys, with acetate pathway substructure keys showing the highest average counts and count variations (Fig. 1a, top)... We calculated Tanimoto similarity scores for compounds from biosynthetic reaction chains, for pairs with increasing numbers of metabolic reaction steps between them (Fig. 2b).",
+      "asbval:note": "Paper reports substructure occurrence statistics (average counts, count variation) and Tanimoto similarity metrics, but these are presented as figures and online figures, not as a formal summary statistics table. Sparsity is not explicitly quantified as a metric in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Summary statistics table containing bit-frequency per position, sparsity, and pairwise Tanimoto similarity distribution metrics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:21.998109+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Fig. 1a, top... Occurrences are shown as bottomless box plots due to the logarithmic scale of the y-axis... We visualised the similarity scores per n through kernel density estimate plots of the similarities (Fig. 2c).",
+      "asbval:note": "Paper presents box plots of substructure occurrence (bit-frequency analogue) and kernel density estimate plots of Tanimoto similarity. However, sparsity is not explicitly visualized as a distribution plot in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Distribution plots (histogram/density) visualizing bit-frequency, sparsity, and Tanimoto similarity across fingerprint vectors",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:21.998109+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
+      "asbval:note": "Biosynfoni is the primary fingerprint method developed and analyzed in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:21.998109+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pip (Python package installer) is not mentioned in any passage. While Python is used, pip is not explicitly named as a tool in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:21.998109+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The card assumes analysis of a 'deposited dataset' on Zenodo, but the paper does not mention depositing a dataset to Zenodo in the provided passages. The paper analyzes fingerprints using COCONUT, ChEBI, MetaCyc, and ZINC databases.",
+        "The card frames the task as analyzing 'the Zenodo biosynfoni dataset', implying a pre-existing external dataset. The paper is about developing and validating Biosynfoni itself, not analyzing a separate deposited dataset.",
+        "Expected outputs reference 'bit-frequency' which is not the correct terminology for Biosynfoni\u2014the fingerprint uses 'substructure counts' (not bits), as it is a counted fingerprint, not a binary fingerprint."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:21:21.998109+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys.",
+      "asbval:note": "Paper describes Biosynfoni as a counted (integer-valued) substructure fingerprint, not a bit-vector. Passage [3] states 'Biosynfoni's fingerprint contains the number of substructure matches' (counts), and passage [5] confirms 'the fact that the fingerprint is counted'. The card incorrectly characterizes it as 'bit-vector'; it is actually a count-based fingerprint with 39 integer features.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "bit-vector-substructure-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute a biosynfoni bit-vector molecular fingerprint that encodes biosynthetic substructural information from chemical structure input.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:22:46.307516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... We show that in comparison to other widely-used fingerprints, Biosynfoni better reflects biosynthetic distance... and performs on par in natural product-specific applications",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "bit-vector-substructure-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This specialized fingerprint representation is designed for natural product classification and bioinformatic analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:22:46.307516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
+      "asbval:note": "Biosynfoni is confirmed as the fingerprint method, but it computes a counted (integer) fingerprint, not a bit-vector. The tool role description incorrectly specifies 'bit-vector' when the paper explicitly uses count-based representation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "bit-vector-substructure-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni \u2014 Core package that computes the bit-vector fingerprint representation from molecular structures",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:22:46.307516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "bit-vector-substructure-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit \u2014 Chemistry toolkit dependency for loading and parsing molecular structures (SMILES, InChI, SDF)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:22:46.307516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not mention pip or package installation procedures. Cannot confirm or deny from provided text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "bit-vector-substructure-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip \u2014 Package installer to deploy biosynfoni and its dependencies",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:22:46.307516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Black is not mentioned anywhere in the paper or methods. No evidence of its use in Biosynfoni development.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "bit-vector-substructure-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "black \u2014 Code formatter for development workflows (optional, for code quality during implementation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:22:46.307516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To assess natural product class prediction, we trained Random Forest multilabel classifiers on the ChEBI-annotated labels and assessed performance using 5-fold cross-validation.",
+      "asbval:note": "Paper confirms use for natural product class prediction via machine learning, but the fingerprint is count-based (fixed-length integer array), not bit-vector.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "bit-vector-substructure-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you need to represent natural product molecules as fixed-length bit vectors for downstream machine learning (e.g., biosynthetic class prediction)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:22:46.307516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "To visualise the differences in Biosynfoni fingerprints between natural products and synthetic compounds, we used the non-biogenic ZINC database subset (3,019,372 compounds)",
+      "asbval:note": "Paper demonstrates that Biosynfoni is optimized for natural products and compares against synthetic compounds, supporting the scope guidance.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "bit-vector-substructure-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input molecules are synthetic compounds not related to natural product chemistry; standard fingerprints (Morgan, ECFP) are more generalizable.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:22:46.307516+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/development-environment-setup/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing. Table A2 and A3 contain a detailed list of other tools and materials used, and their respective versions.",
+      "asbval:note": "Paper mentions Python and RDKit tools used in creation and testing, but does not describe a development environment setup workflow with pip editable install (-e flag) or pytest test suite execution. The paper is a research article describing Biosynfoni's design and validation, not a development guide.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "development-environment-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Install a Python package in development mode with optional dev dependencies, then execute the full test suite to verify functional integrity.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:01.869862+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/development-environment-setup/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pip is not mentioned anywhere in the paper. The paper does not discuss package installation procedures or dependency management.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "development-environment-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:01.869862+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/development-environment-setup/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pytest is not mentioned in the paper. While the paper describes testing and validation of Biosynfoni, it does not name pytest as the test runner used.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "development-environment-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:01.869862+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/development-environment-setup/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
+      "asbval:note": "Biosynfoni is the subject of the paper and is described as a molecular fingerprint tool. However, the paper does not describe it as a package to be installed in development mode.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "development-environment-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:01.869862+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/development-environment-setup/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "black code formatter is not mentioned in the paper. The paper does not discuss code style tools or linting.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "development-environment-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "black",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:01.869862+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/development-environment-setup/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper is a scientific research article describing Biosynfoni's design, validation, and applications. It does not provide guidance on cloning repositories, setting up development environments, or contributing to package development.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "development-environment-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have cloned a Python package repository and need to prepare a working environment for development, debugging, or contribution.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:01.869862+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/development-environment-setup/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss setup.py, pyproject.toml, dev dependencies, or test directory structure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "development-environment-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Specifically when the package declares dev dependencies in setup.py or pyproject.toml and maintains a pytest test suite in a tests/ directory.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:01.869862+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/development-environment-setup/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss cloning repositories or local source code management.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "development-environment-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "Python package source repository (cloned locally)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:01.869862+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/development-environment-setup/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention setup.py, pyproject.toml, or dev extras configuration.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "development-environment-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "setup.py or pyproject.toml with [dev] extras defined",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:01.869862+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/development-environment-setup/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not describe a tests/ directory or pytest test suite structure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "development-environment-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "inputs",
+      "asbval:target_claim_text": "tests/ directory containing pytest test suite",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:01.869862+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/distribution-statistics-summarization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We investigated Biosynfoni's applicability domain and its performance in biosynthetic similarity representation, chemical space visualisation, and natural product classification... The average atom coverage of 97% indicates Biosynfoni captures almost all of the atoms in the natural products' structures at least once with its 39 substructure keys... We calculated Tanimoto similarity scores for compounds from biosynthetic reaction chains... we computed Tanimoto similarity between the two compounds for each fingerprint type.",
+      "asbval:note": "Paper does compute pairwise similarity coefficients (Tanimoto) and analyzes distributional properties (atom coverage, substructure occurrence, co-occurrence patterns shown in Fig. 1a). However, the paper does not explicitly compute or report 'bit-frequency distributions' or 'sparsity metrics' in the traditional sense\u2014instead it reports substructure occurrence counts and atom coverage. The research question conflates fingerprint statistics with fingerprint application/validation tasks.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "distribution-statistics-summarization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute summary statistics and distributional characteristics of molecular fingerprint vector collections, including bit-frequency distributions, sparsity metrics, and pairwise similarity coefficients.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:15.524809+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/distribution-statistics-summarization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt)... We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
+      "asbval:note": "Biosynfoni is the primary fingerprint method developed and tested in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "distribution-statistics-summarization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:15.524809+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/distribution-statistics-summarization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of pip or package installation procedures in the provided passages. The paper describes the tools used (Python, RDKit) but does not discuss installation via pip or development mode installation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "distribution-statistics-summarization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:15.524809+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/distribution-statistics-summarization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... To implement the fingerprint, we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection.",
+      "asbval:note": "RDKit is explicitly used for molecular structure parsing and substructure matching, consistent with the card's claim about parsing molecular structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "distribution-statistics-summarization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:15.524809+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/distribution-statistics-summarization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys... We investigated Biosynfoni's applicability domain and its performance in biosynthetic similarity representation, chemical space visualisation, and natural product classification.",
+      "asbval:note": "Biosynfoni does convert structures to fingerprint vectors and the paper analyzes their statistical properties (occurrence counts, co-occurrence, similarity). However, the primary use case in the paper is not 'statistical analysis' per se but rather biosynthetic similarity estimation, chemical space visualization, and natural product classification. Statistical characterization is a secondary analytical step, not the primary role.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "distribution-statistics-summarization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].role",
+      "asbval:target_claim_text": "Load and convert molecular structures to biosynfoni fingerprint vectors for statistical analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:15.524809+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/distribution-statistics-summarization/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No installation instructions or development mode setup mentioned in the paper. The paper does not discuss pip or package installation procedures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "distribution-statistics-summarization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].role",
+      "asbval:target_claim_text": "Install biosynfoni package in development mode (pip install -e .[dev]) to access fingerprint computation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:15.524809+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/distribution-statistics-summarization/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used the second version (September 2024) of the COCONUT database [15, 33] as our primary natural product structure source. Any compounds from the .sdf+ file that could not be read by RDKit were left out... We matched the three-star database compounds to the extracted classifications using their compound IDs... Natural products were identified through InChI comparison to COCONUT compounds... Substructure keys are defined in SMILES ARbitrary Target Specification (SMARTS)...",
+      "asbval:note": "RDKit is used to parse SDF files and InChI identifiers; SMILES/SMARTS are used for substructure definition. This aligns with the card's claim about parsing molecular structures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "distribution-statistics-summarization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[2].role",
+      "asbval:target_claim_text": "Parse molecular structures (SMILES, InChI, SDF) required as input to biosynfoni fingerprinting",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:15.524809+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
+      "asbval:note": "Paper describes Biosynfoni fingerprint generation and testing on COCONUT and ChEBI datasets, but does not explicitly discuss loading pre-computed fingerprint vectors from Zenodo deposits or archived datasets. The paper focuses on fingerprint creation and application, not on parsing archived fingerprint data. No mention of Zenodo deposit workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "fingerprint-vector-loading-and-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Load and parse molecular fingerprint vectors from biosynfoni datasets (e.g., Zenodo deposits) into memory for downstream statistical and similarity analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:33.957192+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
+      "asbval:note": "Paper confirms Biosynfoni fingerprint generation and testing, but does not describe an API for loading or parsing pre-computed fingerprint vectors from archived datasets. The paper focuses on fingerprint creation from molecular structures, not on ingesting archived fingerprint data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "fingerprint-vector-loading-and-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni \u2014 Fingerprint generation and vector data loading; provides API to ingest and parse molecular fingerprint vectors from archived datasets",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:33.957192+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of pip, package installation, or development mode workflows in the paper. The paper does not discuss installation or deployment procedures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "fingerprint-vector-loading-and-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip \u2014 Package manager for installing biosynfoni in development mode to enable local dataset loading and API access",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:33.957192+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... To implement the fingerprint, we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection.",
+      "asbval:note": "RDKit is confirmed as a core dependency for Biosynfoni, used for molecular parsing and substructure detection. However, the paper does not specifically discuss RDKit's role in 'fingerprint loading pipelines' from archived data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "fingerprint-vector-loading-and-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit \u2014 Dependency for biosynfoni; handles molecular parsing and structure representation required for fingerprint loading pipelines",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:33.957192+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not describe workflows for loading pre-computed fingerprint vectors from Zenodo or other archives. The paper focuses on fingerprint generation from molecular structures (COCONUT, ChEBI, MetaCyc datasets) and their application to classification and similarity tasks, not on ingesting archived fingerprint data.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "fingerprint-vector-loading-and-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Load and parse molecular fingerprint vectors from biosynfoni datasets (e.g., Zenodo deposits) into memory for downstream statistical and similarity analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:33.957192+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys... The average atom coverage of 97% indicates Biosynfoni captures almost all of the atoms in the natural products' structures at least once with its 39 substructure keys.",
+      "asbval:note": "Paper describes fingerprint feature extraction and characterization (substructure counts, atom coverage, co-occurrence patterns), but in the context of generating fingerprints from molecular structures, not loading pre-computed vectors from archives.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "fingerprint-vector-loading-and-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "extraction of fingerprint bit patterns and metadata required for characterizing molecular representation properties",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:33.957192+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys. We investigated Biosynfoni's applicability domain and its performance in biosynthetic similarity representation, chemical space visualisation, and natural product classification.",
+      "asbval:note": "Paper characterizes Biosynfoni fingerprint distributions (occurrences, co-occurrences, counts) but does not explicitly frame this as 'bit-frequency analysis' or 'statistical distribution characterization' as a standalone methodological task. The paper analyzes fingerprint properties but as part of validation of the fingerprint itself, not as a general analytical skill for deposited fingerprint datasets.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-fingerprint-bit-frequency-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute and characterize the statistical distribution of bit frequencies across molecular fingerprint vectors in a deposited dataset.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:50.021998+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The average atom coverage of 97% indicates Biosynfoni captures almost all of the atoms in the natural products' structures at least once with its 39 substructure keys... The average counts and count variation differ between substructure keys... we calculated Tanimoto similarity scores for compounds from biosynthetic reaction chains",
+      "asbval:note": "Paper explicitly measures coverage (sparsity proxy), substructure count distributions (activation patterns), and Tanimoto similarity (pairwise similarity).",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-fingerprint-bit-frequency-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill quantifies sparsity, bit-level activation patterns, and pairwise similarity to validate fingerprint properties",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:50.021998+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used the second version (September 2024) of the COCONUT database [15, 33] as our primary natural product structure source.",
+      "asbval:note": "Paper uses COCONUT database and ChEBI dataset, not explicitly Zenodo-deposited biosynfoni fingerprints. The paper generates fingerprints from source databases rather than loading pre-computed deposited fingerprints.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-fingerprint-bit-frequency-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have loaded a collection of molecular fingerprint vectors (e.g., from biosynfoni fingerprints deposited in Zenodo)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:50.021998+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Fig. 1a Occurrences (top) and co-occurrences (pointwise mutual information, bottom) of Biosynfoni substructure keys... we calculated Tanimoto similarity scores for compounds from biosynthetic reaction chains, for pairs with increasing numbers of metabolic reaction steps between them",
+      "asbval:note": "Paper explicitly characterizes bit (substructure key) occurrences, co-occurrences, and Tanimoto similarity patterns.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-fingerprint-bit-frequency-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Use it to establish baseline characterization of bit-frequency distributions, sparsity metrics, and pairwise Tanimoto similarity patterns across the full dataset.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:50.021998+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys.",
+      "asbval:note": "Biosynfoni is the primary fingerprint tool developed and used throughout the paper; it generates count-based fingerprints.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-fingerprint-bit-frequency-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni \u2014 Generate or load molecular fingerprint vectors and provide the count-based fingerprint format for analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:50.021998+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss pip, package installation, or development workflows. Insufficient information to judge whether pip is used in the paper's methodology.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "molecular-fingerprint-bit-frequency-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip \u2014 Install biosynfoni and its development dependencies in editable mode",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:50.021998+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Black is not mentioned anywhere in the paper. Paper does not discuss code formatting tools.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "molecular-fingerprint-bit-frequency-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "black \u2014 Code formatting utility for maintaining consistent style during analysis script development",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:50.021998+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Pytest is not mentioned in the paper. Paper does not discuss unit testing frameworks.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "molecular-fingerprint-bit-frequency-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest \u2014 Unit testing framework for validating correctness of statistical computations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:23:50.021998+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... Biosynfoni can be used like other fingerprints to visualise chemical space... Biosynfoni can also be used to visualise molecular datasets... To assess natural product class prediction, we trained Random Forest multilabel classifiers on the ChEBI-annotated labels",
+      "asbval:note": "Paper confirms biosynfoni fingerprints are designed for natural products, support biosynthetic class prediction, and can be computed from molecular structures. Input formats (SMILES, InChI, SDF) are confirmed in methods section.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute biosynfoni fingerprints\u2014a biosynformatic molecular representation tailored for natural product chemistry\u2014from molecular structures (SMILES, InChI, or SDF) to generate bit-vector or count fingerprints suitable for downstream bioinformatic analysis and biosynthetic class pr",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:05.678062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt)... Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys.",
+      "asbval:note": "Biosynfoni is the core subject of the paper and is used throughout for fingerprint computation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:05.678062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... To implement the fingerprint, we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection.",
+      "asbval:note": "RDKit is explicitly stated as a main tool for Biosynfoni's creation and is used for molecular structure parsing and substructure matching.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:05.678062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not mention pip or package installation procedures. Cannot confirm or deny presence of pip in the paper's workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:05.678062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Black (code formatter) is not mentioned anywhere in the provided passages. No evidence of its use in the paper's development workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "black",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:05.678062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Pytest is not mentioned in the provided passages. No evidence of its use for testing in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:05.678062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... In total, this added up to 39 substructure keys (Online Figure A26).",
+      "asbval:note": "The paper explicitly states Biosynfoni uses 39 substructure keys throughout.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "parameters",
+      "asbval:target_claim_text": "39 substructure keys",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:05.678062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys... we implemented a counted Tanimoto similarity, also known as the multiset Tanimoto coefficient",
+      "asbval:note": "Paper confirms count fingerprints (substructure match counts). Bit-vector format is not explicitly mentioned; the fingerprint is described as 'counted' rather than binary/bit-vector.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "bit-vector or count fingerprints",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:05.678062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Substructure keys are defined in SMILES ARbitrary Target Specification (SMARTS) to allow for regular expression-like detection.",
+      "asbval:note": "SMILES/SMARTS are mentioned as the format for substructure key definition. Input handling of SMILES is confirmed in methods.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "SMILES input format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:05.678062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Natural products were identified through InChI comparison to COCONUT compounds, where InChI parts 1\u20133 are identical",
+      "asbval:note": "InChI is used in the paper's workflow for compound matching and identification.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "InChI input format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:05.678062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used the second version (September 2024) of the COCONUT database [15, 33] as our primary natural product structure source. Any compounds from the .sdf+ file that could not be read by RDKit were left out",
+      "asbval:note": "SDF file format is explicitly mentioned as a source for molecular structures in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "SDF input format",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:05.678062+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-structure-input-format-handling/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used the second version (September 2024) of the COCONUT database [15, 33] as our primary natural product structure source. Any compounds from the .sdf+ file that could not be read by RDKit were left out, leaving us with 695,129 compounds... We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
+      "asbval:note": "Paper confirms RDKit is used to parse SDF files and convert to internal representation. However, the paper does not explicitly describe a task/skill for 'accepting multiple input formats and converting them' as a standalone operation. The paper uses RDKit to read SDF files from COCONUT, but does not document SMILES or InChI parsing as part of the Biosynfoni workflow in the passages provided. The research_question describes a general data-handling skill, but the paper's focus is on fingerprint design and evaluation, not on input format conversion as a primary research contribution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-structure-input-format-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Accept molecular structures in multiple standardized input formats (SMILES, InChI, SDF files) and convert them to a common internal representation (RDKit Mol objects) for downstream fingerprint computation or analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:22.212650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-structure-input-format-handling/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not describe biosynfoni as a command-line tool for parsing multiple input formats. Biosynfoni is presented as a molecular fingerprint (a data structure with 39 substructure keys), not as a parser or input-format converter. The paper states 'we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection' but does not position biosynfoni itself as a CLI for format conversion.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "molecular-structure-input-format-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni (role: Command-line interface for parsing SMILES, InChI, and SDF inputs and converting them to internal molecular representation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:22.212650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-structure-input-format-handling/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... We used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection. Substructure keys are defined in SMILES ARbitrary Target Specification (SMARTS)... Any compounds from the .sdf+ file that could not be read by RDKit were left out",
+      "asbval:note": "Paper confirms RDKit is used and that it parses SDF files. SMARTS (SMILES Arbitrary Target Specification) is mentioned, confirming SMILES-related functionality. However, the paper does not explicitly document InChI parsing by RDKit in the provided passages, though InChI is mentioned in the context of compound matching: 'Natural products were identified through InChI comparison to COCONUT compounds, where InChI parts 1\u20133 are identical'. The role described in the card (parsing multiple formats into Mol objects) is partially supported but not comprehensively documented in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "molecular-structure-input-format-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit (role: Underlying chemistry toolkit used by biosynfoni to parse SMILES, InChI, and SDF formats into Mol objects)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:22.212650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-structure-input-format-handling/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The evidence_span 'pip install -e .[dev]' does not appear in any of the provided passages. The paper does not discuss pip or package installation instructions. This appears to be an extraction artifact or reference to supplementary material not included in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "molecular-structure-input-format-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip (role: package installation; evidence_spans: 'pip install -e .[dev]')",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:22.212650+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/natural-product-chemical-representation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds, moving beyond purely structural characteristics... Biosynfoni is a compact substructure-based molecular fingerprint providing increased interpretability for various natural product cheminformatic applications.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "natural-product-chemical-representation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute biosynfoni fingerprints\u2014a molecular representation tailored specifically for natural product chemistry and bioinformatic analysis\u2014that encode biosynthetic structural features distinct from generic molecular descriptors.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:38.889452+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/natural-product-chemical-representation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Biosynfoni can be used for chemical space visualisation and interpretable natural product class prediction... To assess natural product class prediction, we trained Random Forest multilabel classifiers on the ChEBI-annotated labels... Biosynfoni can also be used like other fingerprints to visualise chemical space.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "natural-product-chemical-representation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Use this skill when you need a feature representation of natural product molecules optimized for downstream biosynthetic class prediction, chemical similarity search, or machine learning on natural product datasets.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:38.889452+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/natural-product-chemical-representation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt)... Biosynfoni is a compact substructure-based molecular fingerprint providing increased interpretability for various natural product cheminformatic applications.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "natural-product-chemical-representation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni - Core package for computing molecular fingerprints tailored to natural product chemistry; provides the Biosynfoni class API and command-line interface for fingerprint generation.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:38.889452+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/natural-product-chemical-representation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... To implement the fingerprint, we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "natural-product-chemical-representation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit - Dependency for molecular structure parsing and manipulation; required to load and represent molecules from SMILES, InChI, or SDF formats before fingerprint computation.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:38.889452+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/natural-product-chemical-representation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pip is not mentioned in the provided passages. While it is a standard Python package manager, its use for biosynfoni installation is not explicitly documented in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "natural-product-chemical-representation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip - Package manager for installing biosynfoni and its dependencies in development or production mode.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:38.889452+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/natural-product-chemical-representation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "black is not mentioned in the provided passages. While it may be used in the biosynfoni repository, its use is not documented in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "natural-product-chemical-representation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "black - Code formatter used during development and testing of the biosynfoni package; not required for end-user fingerprint computation but ensures code quality standards.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:38.889452+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/natural-product-chemical-representation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pytest is not mentioned in the provided passages. While it may be used in the biosynfoni repository, its use is not documented in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "natural-product-chemical-representation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest - Testing framework used in biosynfoni development to verify fingerprint computation correctness and package functionality.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:38.889452+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-dependency-management/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper is a scientific research article describing the Biosynfoni fingerprint method and its applications. It does not discuss package dependency management, development mode installation, or CI/CD workflows. The Methods section mentions tools used (Python, RDKit, etc.) but does not address installation procedures or dependency management as a research task or skill.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-dependency-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Install and manage Python package dependencies in development mode, ensuring all required tooling and test infrastructure are available for reproducible builds and local validation.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:51.444592+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-dependency-management/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention pip, editable mode installation, or [dev] dependencies. While Python is used, no package installation instructions or dependency management workflows are discussed.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-dependency-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0]",
+      "asbval:target_claim_text": "pip \u2014 Package installer and dependency resolver; used to install the package and all [dev] dependencies in editable mode via `pip install -e .[dev]`",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:51.444592+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-dependency-management/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention pytest or any test runner. While the paper describes validation of Biosynfoni's performance (e.g., cross-validation for classification), this is scientific validation of the method itself, not automated testing infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-dependency-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1]",
+      "asbval:target_claim_text": "pytest \u2014 Test runner; executes the test suite declared in tests/ to validate installation and package functionality",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:51.444592+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-dependency-management/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention black, code formatting, or development dependencies. No discussion of code style enforcement or contribution workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "package-dependency-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[2]",
+      "asbval:target_claim_text": "black \u2014 Code formatter; installed as part of [dev] dependencies to enforce consistent code style before contribution or release",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:51.444592+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-dependency-management/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
+      "asbval:note": "Biosynfoni is the subject of the paper and is described as a molecular fingerprint tool. However, the card's framing of it as 'the package being installed and tested' in a development workflow context is not supported by the paper\u2014the paper describes the scientific method and results, not installation or testing procedures.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "package-dependency-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[3]",
+      "asbval:target_claim_text": "biosynfoni \u2014 The package being installed and tested",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:24:51.444592+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytest-test-suite-execution/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss pytest, test suite execution, or testing workflows. The paper is about Biosynfoni, a molecular fingerprint tool, and describes its development, validation, and applications in natural product research. No mention of pytest, test frameworks, or test execution procedures appears in any passage.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "pytest-test-suite-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Execute a Python package's complete test suite using pytest to verify functional correctness and identify failures before deployment or contribution.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:03.893484+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytest-test-suite-execution/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pytest is not mentioned anywhere in the paper. The paper uses Python and RDKit for development but does not discuss testing frameworks or pytest.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "pytest-test-suite-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest \u2014 Test discovery, execution, and reporting framework for running the complete test suite",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:03.893484+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytest-test-suite-execution/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "pip is not mentioned in the paper. The paper does not discuss package installation procedures or dependency management.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "pytest-test-suite-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip \u2014 Package installer used to install the package and its development dependencies before test execution",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:03.893484+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytest-test-suite-execution/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
+      "asbval:note": "Biosynfoni is indeed the subject of the paper and is a real Python package. However, the paper does not describe executing its test suite with pytest or any testing procedures. The paper validates Biosynfoni's functionality through empirical experiments (biosynthetic similarity assessment, chemical space visualization, classification tasks) rather than through test suite execution.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "pytest-test-suite-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni \u2014 Example package whose test suite is executed by pytest to validate molecular fingerprint functionality",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:03.893484+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytest-test-suite-execution/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss development mode installation, pip commands, or test suite execution workflows. It focuses on the scientific validation of Biosynfoni through computational experiments.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "pytest-test-suite-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill after installing a package in development mode (e.g., via `pip install -e .[dev]`) to verify the package functions as intended",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:03.893484+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytest-test-suite-execution/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not discuss pull requests, code contribution workflows, or regression testing.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "pytest-test-suite-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "before submitting pull requests to confirm no regressions were introduced by code changes",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:03.893484+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-installation-from-source/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper is about Biosynfoni, a molecular fingerprint for natural products. It does not discuss Python package installation workflows, development mode setup, or pip/pytest usage. The paper focuses on the fingerprint's design, performance, and applications in cheminformatics.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "python-package-installation-from-source",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Install a Python package directly from its source repository in development mode, with optional dev dependencies, to enable local testing and modification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:14.219683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-installation-from-source/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not address package installation workflows, development environments, or CI/CD testing procedures. It is a scientific paper describing a cheminformatics tool, not a software engineering or DevOps tutorial.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "python-package-installation-from-source",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Install a Python package directly from its source repository in development mode, with optional dev dependencies, to enable local testing and modification. This skill is essential for validating that a package builds correctly, its test suite passes, and the codebase is functiona",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:14.219683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-installation-from-source/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention pip or package installation commands. While Python is used (passage [5] states 'We used Python [32] (v3.13.1)'), there is no discussion of pip or editable mode installation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "python-package-installation-from-source",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip \u2014 Package manager used to install the package in editable mode with optional dev dependencies via `pip install -e .[dev]`",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:14.219683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-installation-from-source/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention pytest or any test execution framework. No testing methodology is described in the passages provided.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "python-package-installation-from-source",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pytest \u2014 Test runner used to execute the complete test suite on the tests/ directory via `pytest tests/`",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:14.219683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-installation-from-source/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention black or any code formatting tools.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "python-package-installation-from-source",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "black \u2014 Code formatter recommended for formatting source code before committing changes (invoked pre-submission, optional during dev installation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:14.219683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-installation-from-source/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
+      "asbval:note": "Biosynfoni is indeed a Python package described in the paper (passage [5] confirms it was created using Python and RDKit). However, the paper does not discuss its CI workflow, dev dependency structure, or use it as an example for teaching package installation from source. The paper is the scientific publication of the tool, not a tutorial on how to install it from source.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "python-package-installation-from-source",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni \u2014 Example package demonstrating the skill; provides CI workflow reference and dev dependency structure",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:14.219683+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/sparsity-metric-computation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss computing sparsity metrics or zero-bit proportions. Paper focuses on Biosynfoni fingerprint design, biosynthetic similarity capture, and classification performance. No mention of sparsity analysis or zero-bit proportion computation.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "sparsity-metric-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute the proportion of zero bits (sparsity metric) across a collection of molecular fingerprint vectors to characterize their distributional sparseness.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:39.980734+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/sparsity-metric-computation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss sparsity as a metric for understanding information density. Paper discusses interpretability, biosynthetic relevance, and classification performance instead.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "sparsity-metric-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This metric is essential for understanding the information density and statistical properties of fingerprint-based molecular representations.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:39.980734+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/sparsity-metric-computation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used the second version (September 2024) of the COCONUT database [15, 33] as our primary natural product structure source.",
+      "asbval:note": "Paper uses COCONUT database for fingerprints, not a Zenodo deposit. Paper does not discuss computing sparsity metrics on fingerprint collections.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "sparsity-metric-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When you have loaded a dataset of molecular fingerprint vectors (such as biosynfoni fingerprints from a Zenodo deposit) and need to quantify how sparse the bit-representations are",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:39.980734+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/sparsity-metric-computation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
+      "asbval:note": "Biosynfoni is confirmed as a fingerprint tool in the paper. However, the paper does not use it for sparsity analysis\u2014it uses Biosynfoni for biosynthetic similarity estimation, chemical space visualization, and natural product classification. The functional role claimed (sparsity analysis) is not supported by the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "sparsity-metric-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni - Load and compute molecular fingerprints; provides the fingerprint vectors for sparsity analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:39.980734+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/sparsity-metric-computation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not mention pip or package installation procedures. Paper mentions using Python and RDKit but does not discuss installation via pip or development mode setup.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "sparsity-metric-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip - Install biosynfoni package in development mode to access fingerprint loading functions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:39.980734+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-visualization/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We visualised the similarity scores per n through kernel density estimate plots of the similarities (Fig. 2c). To additionally visualise individual values per fingerprint, we plotted similarities for each molecule pair in scatter plots (Online Figures A21, A22 and A23).",
+      "asbval:note": "Paper does perform distribution visualization of similarity scores using kernel density estimate plots and scatter plots, but the primary focus is on biosynthetic similarity visualization rather than general exploratory analysis of fingerprint bit-frequency or sparsity distributions. The paper does not explicitly discuss histograms or density curves for bit-frequency distributions or sparsity metrics as a general exploratory skill.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "statistical-distribution-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Generate and display distribution plots (histograms, density curves) for computed statistical metrics to characterize the shape, spread, and shape of a dataset's key properties. This skill is essential for exploratory analysis of fingerprint or molecular feature datasets where un",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:51.128639+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-visualization/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys.",
+      "asbval:note": "Biosynfoni is the primary fingerprint tool developed in the paper and generates substructure-based vectors with counts (bit-frequencies).",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "statistical-distribution-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni as source of molecular fingerprint vectors and computed bit-frequency, sparsity, and similarity metrics to be visualized",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:51.128639+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-visualization/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "matplotlib is not mentioned anywhere in the provided passages. The paper mentions t-SNE and UMAP for dimensionality reduction visualization and kernel density estimate plots, but does not explicitly name matplotlib as the plotting library used.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "statistical-distribution-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "matplotlib as core plotting library for generating histograms and density curves",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:51.128639+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-visualization/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "seaborn is not mentioned in the provided passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "statistical-distribution-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "seaborn as high-level statistical visualization wrapper for polished distribution plots",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:51.128639+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-visualization/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "numpy is not mentioned in the provided passages. The paper mentions Python and RDKit as main tools but does not explicitly list numpy.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "statistical-distribution-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "numpy as numerical array operations for computing histogram bins and percentiles",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:51.128639+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-visualization/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The evidence_spans field references 'pip install -e .[dev]' but this text does not appear in any of the provided passages. While pip is a standard Python package manager, it is not explicitly mentioned in the paper passages provided.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "statistical-distribution-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip for package installation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:25:51.128639+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we computed Tanimoto similarity between the two compounds for each fingerprint type... To calculate similarity we used the metric of choice in cheminformatics, the Tanimoto coefficient",
+      "asbval:note": "Paper explicitly computes Tanimoto similarity for fingerprint pairs; methodology directly matches claim.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tanimoto-similarity-pairwise-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Compute pairwise Tanimoto similarity coefficients across a collection of molecular fingerprint vectors to characterize structural similarity patterns.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:26:11.011613+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Fingerprint similarity as a proxy for biosynthetic similarity per fingerprint... Biosynthetically related compounds also show higher similarity compared to non-related compounds",
+      "asbval:note": "Paper uses Tanimoto similarity to characterize structural/biosynthetic relationships and diversity patterns in fingerprint datasets.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tanimoto-similarity-pairwise-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill quantifies how similar pairs of fingerprints are, enabling downstream analysis of fingerprint sparsity and structural diversity in molecular datasets.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:26:11.011613+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "we generated Morgan, RDKit, MACCS, and Biosynfoni fingerprints for all molecules included in the MetaCyc reaction chain pairs dataset. For each molecule pair... we computed Tanimoto similarity",
+      "asbval:note": "Paper explicitly applies Tanimoto similarity calculation to Biosynfoni count fingerprints across molecular collections.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tanimoto-similarity-pairwise-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have a collection of molecular fingerprint vectors (such as biosynfoni count fingerprints) and need to measure structural similarity between all pairs of molecules.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:26:11.011613+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys... we generated Morgan, RDKit, MACCS, and Biosynfoni fingerprints for all molecules",
+      "asbval:note": "Paper confirms Biosynfoni generates count-based fingerprints used as input to Tanimoto similarity calculations.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tanimoto-similarity-pairwise-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni generates molecular fingerprint vectors (count fingerprints) that serve as input to pairwise similarity calculation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:26:11.011613+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "We used Python (v3.13.1) and the cheminformatic RDKit package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection",
+      "asbval:note": "Paper confirms RDKit is used for fingerprint generation and substructure matching; Tanimoto similarity is standard RDKit functionality.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tanimoto-similarity-pairwise-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "RDKit provides molecular fingerprint generation and similarity metric implementations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:26:11.011613+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Passages do not mention pip or package installation procedures. Cannot confirm or deny from provided text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "tanimoto-similarity-pairwise-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "pip package manager for installing biosynfoni and its dependencies",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:26:11.011613+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Repository URL not mentioned in passages. Cannot verify from provided text.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": null,
+      "asbval:target_artifact_id": "tanimoto-similarity-pairwise-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "biosynfoni repo: https://github.com/lucinamay/biosynfoni",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:26:11.011613+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Because most Tanimoto similarity implementations treat arrays as binary rather than counted (Eq. 1), we implemented a counted Tanimoto similarity, also known as the multiset Tanimoto coefficient calculation as defined in Eq. 2.",
+      "asbval:note": "Paper explicitly implements and uses multiset Tanimoto coefficient for counted fingerprints like Biosynfoni.",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "tanimoto-similarity-pairwise-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "methods",
+      "asbval:target_claim_text": "Tanimoto similarity calculation uses multiset (counted) Tanimoto coefficient for count fingerprints",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:26:11.011613+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "bit-vector-substructure-encoding",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.375,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/development-environment-setup/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 10,
+      "asbval:target_artifact_id": "development-environment-setup",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.1,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/distribution-statistics-summarization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "distribution-statistics-summarization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.42857142857142855,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "fingerprint-vector-loading-and-parsing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.16666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "molecular-fingerprint-bit-frequency-analysis",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.375,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 11,
+      "asbval:target_artifact_id": "molecular-fingerprint-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.7272727272727273,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/molecular-structure-input-format-handling/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "molecular-structure-input-format-handling",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/natural-product-chemical-representation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "natural-product-chemical-representation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.5714285714285714,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/package-dependency-management/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "package-dependency-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/pytest-test-suite-execution/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "pytest-test-suite-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/python-package-installation-from-source/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "python-package-installation-from-source",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/sparsity-metric-computation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "sparsity-metric-computation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/statistical-distribution-visualization/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "statistical-distribution-visualization",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.16666666666666666,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "tanimoto-similarity-pairwise-calculation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "promoted",
+      "asbval:yes_rate": 0.75,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Biosynfoni is a biosynformatic molecular fingerprint tailored to natural product chemistry and bioinformatic research.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:source_excerpt": "a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:34.999631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The project is available on PyPI.",
+      "asbval:note": "substring_in_paper=false; URL presence suggests availability on PyPI but doesn't explicitly state it",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:source_excerpt": "https://pypi.org/project/biosynfoni",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:34.999631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Biosynfoni supports multiple Python versions.",
+      "asbval:note": "substring_in_paper=false; metadata field reference doesn't confirm actual support for multiple versions",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:source_excerpt": "PyPI - Python Version",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:34.999631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The project is licensed under an MIT license.",
+      "asbval:note": "substring_in_paper=false; metadata field reference doesn't confirm MIT license specifically",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:source_excerpt": "PyPI - License",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:34.999631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The code follows the black code style standard.",
+      "asbval:note": "substring_in_paper=false; partial excerpt 'ode style: black' is incomplete and doesn't fully support the claim",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:source_excerpt": "ode style: black",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:34.999631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Development installation can be performed by running pip install -e .[dev] from the project root.",
+      "asbval:note": "substring_in_paper=false; excerpt confirms development installation guidance exists but doesn't include the specific command",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:source_excerpt": "Run the following command from the root of the project to install the project for development:",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_006",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:34.999631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Tests can be run locally using the pytest tests/ command.",
+      "asbval:note": "substring_in_paper=false; excerpt confirms local test running is possible but doesn't specify the exact pytest command",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:source_excerpt": "You can also run the tests locally with the following command:",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_007",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:34.999631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Code should be formatted with black before submitting a pull request.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:source_excerpt": "Please use `black` to format your code before submitting a pull request",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_008",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:34.999631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Tests are run automatically when a pull request is pushed.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:source_excerpt": "Tests will be run automatically when you push a pull request.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_009",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:34.999631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The project source is hosted on GitHub at lucinamay/biosynfoni.",
+      "asbval:note": "substring_in_paper=false; source reference uses double underscore notation rather than forward slash, unclear if this represents the same repository path",
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:source_excerpt": "Source: github:lucinamay__biosynfoni",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "claim_010",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:34.999631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Contributions to biosynfoni development are welcomed through issues or pull requests.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-1186-s13321-025-01081-6",
+      "asbval:source_excerpt": "If you would like to contribute to the development of `biosynfoni`, please open an issue or a pull request. We welcome contributions from the community.",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_011",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:20:34.999631+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_biosynfoni#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "flat",
+        "abstraction_level": "concrete",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:statistical-distribution-visualization--EDAM:operation_2939",
+      "subject_id": "asb.skill:statistical-distribution-visualization",
+      "subject_label": "statistical-distribution-visualization",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_2939",
+      "object_label": "Principal component visualisation",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.0
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_biosynfoni_system",
+      "title": "biosynfoni",
+      "identifier": "urn:asb:spine:biosynfoni_system"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_biosynfoni_pkg",
+      "title": "biosynfoni Python package",
+      "identifier": "urn:asb:spine:tool_biosynfoni_pkg"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_pytest",
+      "title": "pytest",
+      "identifier": "urn:asb:spine:tool_pytest"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_black",
+      "title": "black",
+      "identifier": "urn:asb:spine:tool_black"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_tool_github_actions",
+      "title": "GitHub Actions",
+      "identifier": "urn:asb:spine:tool_github_actions"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_component_molecular_fingerprint",
+      "title": "Biosynformatic Molecular Fingerprint",
+      "identifier": "urn:asb:spine:component_molecular_fingerprint"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_dataset_zenodo",
+      "title": "Zenodo biosynfoni dataset/release",
+      "identifier": "urn:asb:spine:dataset_zenodo"
+    }
+  ]
+}

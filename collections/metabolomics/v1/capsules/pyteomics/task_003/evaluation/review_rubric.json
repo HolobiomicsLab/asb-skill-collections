@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: sqlalchemy package installable via pip in the current Python environment"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "setup.py"
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "pyteomics.mass",
+      "value": "conditional import or feature-gating logic for sqlalchemy dependency"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: sqlalchemy package installable via pip in the current Python environment",
+      "script_runs: Python script that executes 'import pyteomics.mass.unimod' completes without ImportError or ModuleNotFoundError",
+      "script_runs: Python script that instantiates the Unimod database accessor (pyteomics.mass.unimod.Unimod()) completes without exception",
+      "file_exists: sqlalchemy is listed in pyteomics package dependencies or optional extras (setup.py, pyproject.toml, or requirements file)",
+      "contains_substring: pyteomics.mass.unimod module source code contains conditional import or feature-gating logic for sqlalchemy dependency"
+    ],
+    "expert_review": [
+      "Verify that the conditional dependency wiring correctly handles sqlalchemy availability and gracefully reports missing dependency if sqlalchemy is absent",
+      "Confirm that Unimod database accessor initialization logic is sound and does not mask upstream sqlalchemy import failures"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

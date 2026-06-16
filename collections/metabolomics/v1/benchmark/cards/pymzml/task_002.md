@@ -1,0 +1,165 @@
+# SciTask Card: Reconstruct the GSGW indexed gzip writer for chapter-level block indexing of Moby Dick
+
+- Task ID: `task_002`
+- Schema version: `0.18.0`
+- Created at: `2026-06-16T07:28:47.137382+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pymzml/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-processing`, `implementation`
+- GitHub: `pymzml/pymzML`
+- Input from: `task_001`
+- Quality: Score 2/5 — Coherent: false, placeholder, 6 grounding failures
+
+## Classification
+
+- Task kind: `component_reconstruction`
+- Article type: `software-tool`
+- Primary domain: `bioinformatics`
+- Techniques: `feature-detection`, `quality-control`
+
+## Research Question
+How does the GSGW class structure indexed gzip files to enable chapter-by-chapter seekability of Moby Dick text, and what is the format of the resulting file header?
+
+## Connected Finding
+The GSGW class writes indexed gzip files where each chapter is indexed by chapter number and stored in independently accessible compressed blocks. The igzip file header contains ID bytes, version, index length, and offset length fields, followed by chapter-to-offset mappings terminated by a zero byte, enabling random access retrieval.
+
+## Task Description
+Implement a custom file wrapper class (GSGW) that parses Moby Dick chapter-by-chapter, writes each chapter as an independently seekable compressed block, and produces an indexed .gz file conforming to the igzip specification with a functioning __getitem__ method for random access and read() method for sequential iteration.
+
+## Inputs
+- Moby Dick plain text file or chapter-segmented text source
+- SQLite3 database connection configuration and path specification
+
+## Expected Outputs
+- Indexed .gz file with igzip-compatible header containing chapter offsets and block metadata
+- GSGW wrapper class implementation with __getitem__, read(), and get_spectrum_count() methods
+- Modified FileInterface._open() method with elif statement for .db file detection and GSGW instantiation
+
+## Expected Output File
+
+- `moby_dick_indexed.db.gz`
+
+## Landmark Outputs
+
+- `moby_dick.db`
+- `chapter_offsets.json`
+- `moby_dick_indexed.db.gz`
+- `gsgw_wrapper.py`
+- `fileinterface_patch.py`
+
+## Tools
+- pymzML
+- sqlite3
+- Python
+- xml.etree.ElementTree
+
+## Skills
+- database-schema-design-for-sequential-media
+- igzip-compression-and-indexed-block-format
+- custom-file-wrapper-class-implementation
+- random-access-seekable-file-interface-design
+- file-format-detection-and-handler-registration
+
+## Workflow Description
+1. Create a database schema with two columns (ID for chapter number, xml TEXT for chapter content as string) using sqlite3. 2. Load Moby Dick text file and parse into chapters, storing each chapter's text and ID into the database using INSERT statements. 3. Implement the GSGW wrapper class with __init__ to connect to the sqlite3 database, __getitem__(key) to retrieve chapters by ID and convert to igzip-compatible block format, read(size=-1) to sequentially iterate through chapters, and get_spectrum_count() to return total chapter count. 4. Compress each chapter block independently using igzip-compatible compression format and construct indexed .gz header containing chapter offsets and identifiers. 5. Register the GSGW class in FileInterface._open() via an elif statement checking for .db file extension, importing and instantiating the wrapper. 6. Validate random access by retrieving specific chapters via db[chapter_id] and verify sequential iteration via for loop over wrapper instance.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/plot.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No changelog documenting GSGW class implementation, API, version history, or breaking changes is available
+
+## Domain Knowledge
+- igzip is a compression format that supports indexed random access through block-level offsets and headers stored in the .gz file structure, enabling seeking without decompressing the entire file.
+- SQLite3 provides row-by-row insertion and query-by-primary-key retrieval that enables both sequential iteration (via ORDER BY id) and random access (via WHERE id=?) on the same underlying table.
+- A custom file wrapper must implement __getitem__(key) for random access and read(size=-1) for sequential I/O to be compatible with pymzML's Reader and FileInterface abstraction layers.
+- The FileInterface._open() method detects file type by path extension and returns the appropriate handler instance, so registration requires an elif branch that matches the file extension pattern.
+- Chapter-by-chapter parsing requires atomic block compression and offset metadata recording so that each chapter's block can be independently decompressed and sought without scanning preceding chapters.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [other] How does the GSGW class structure indexed gzip files to enable chapter-by-chapter seekability of Moby Dick text, and what is the format of the resulting file header?: 'To utilze :py:func:`~pymzml.utils.GSGW.GSGW` for other data, one simply needs to parse the data blockwise, so every piece of data, which should be accessible by indexing is written in one go.'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [other] The GSGW class writes indexed gzip files where each chapter is indexed by chapter number and stored in independently accessible compressed blocks. The igzip file header contains ID bytes, version, index length, and offset length fields, followed by chapter-to-offset mappings terminated by a zero byte, enabling random access retrieval.: 'by setting the 'Comment Flag' in FLG, an additional headerfield can be activated...This field is then used to save the Uniq IDs, version, index/offset length and is terminated with a zero byte...The'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [methods] Moby Dick plain text file or chapter-segmented text source: 'At first, a database with a specific layout needs to be created. Here, we use a single mzML file and store each spectrum in a table'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [methods] SQLite3 database connection configuration and path specification: 'conn = sqlite3.connect(db_name+'.db')'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [methods] Indexed .gz file with igzip-compatible header containing chapter offsets and block metadata: 'In order to allow pymzML to use this new file class, the filehandler needs to be able to detect when to use this class'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [methods] GSGW wrapper class implementation with __getitem__, read(), and get_spectrum_count() methods: 'After this, we need to implement a class, which needs to implement the __getitem__ function for random access, and a read function used to sequentiallly read in data'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [methods] Modified FileInterface._open() method with elif statement for .db file detection and GSGW instantiation: 'elif path.endswith('db'):
+            from SQLiteConnector import SQLiteDatabase
+            self.file_handler = SQLiteDatabase(path, encoding)'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [methods] sqlite3: 'import sqlite3'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [methods] Python: 'import sqlite3
+    import os
+    from pymzml import spec'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [methods] xml.etree.ElementTree: 'import xml.etree.ElementTree as et'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [discussion] No changelog documenting GSGW class implementation, API, version history, or breaking changes is available: '_No changelog found._'
+
+## Evaluation Strategy
+### Direct Checks
+- verify file exists: github:pymzML__pymzML repository is accessible and contains GSGW class implementation
+- verify file_format_is: output file has .gz extension and is a valid gzip archive
+- verify format_is: gzip header matches igzip specification (magic bytes 1f 8b and compression method byte)
+- verify script_runs: GSGW class can be instantiated and accepts Moby Dick text file as input without runtime errors
+- verify output_matches_reference: each chapter is stored as independently seekable compressed block (robust to block boundary alignment)
+- verify file_exists: indexed .gz file contains valid index structure allowing random access to chapter boundaries
+- verify contains_substring: .gz file header contains igzip-compliant index metadata (no canonical answer — multiple index formats valid if igzip-compliant)
+
+### Expert Review
+- confirm GSGW class implementation correctly partitions Moby Dick into chapter boundaries (requires manual verification of chapter detection logic)
+- assess whether compression efficiency and seek performance meet practical standards for chapter-by-chapter access
+- validate igzip specification compliance against RFC 1952 and igzip documentation standards
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Create and populate a SQLite database with chapters as rows (ID, text_content), parsing Moby Dick into chapter units.
+2. Implement GSGW class with __getitem__() for random chapter retrieval, read() for sequential iteration, and get_spectrum_count() for chapter enumeration.
+3. Compress each chapter independently into igzip-compatible blocks and construct indexed .gz header with block offsets and chapter identifiers.
+4. Register GSGW in FileInterface._open() via elif branch detecting .db extension and instantiating the wrapper.
+5. Validation: verify random access by retrieving chapters via db[id] and confirm sequential iteration via for loop; verify igzip header conforms to specification and all chapter offsets resolve correctly.
+
+## Workflow Ports
+
+**Inputs:**
+
+- `moby_dick_source` — Moby Dick plain text file or chapter-segmented source ← `task_001/igzip_header_module`
+- `sqlite_config` — SQLite3 connection path and database configuration
+
+**Outputs:**
+
+- `indexed_gz_file` — Indexed .gz file with igzip-compatible header
+- `gsgw_class` — GSGW wrapper class implementation
+- `fileinterface_registration` — Modified FileInterface._open() with .db handler registration
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:pymzML__pymzML`
+- **Synthesized at:** 2026-06-16T07:34:51+00:00
+
+## Extraction Quality
+- Score: 2/5
+- Coherent: false
+- Placeholder detected: true
+- Groundedness failures (6):
+  - finding: evidence_span not found in section 'other' (value='The GSGW class writes indexed gzip files where each chapter ', span='by setting the 'Comment Flag' in FLG, an additional headerfi')
+  - research_question: evidence_span does not substantiate the specific claim about 'chapter-by-chapter seekability of Moby Dick text' — the span discusses generic data blockwise parsing, not Moby Dick specifically
+  - finding: the evidence_span is incomplete/truncated ('terminated with a zero byte...The' ends mid-sentence), making verification impossible
+  - inputs[0]: evidence_span references 'mzML file' and 'spectrum' storage, but the task is about Moby Dick chapters — domain mismatch suggests generic placeholder text
+  - expected_outputs[0]: evidence_span does not describe indexed .gz file format; it only discusses file handler detection, which is unrelated to output format specification
+  - expected_outputs[1]: evidence_span correctly mentions __getitem__ and read functions but lacks context tying them to GSGW specifically
+- Notes: This card exhibits severe coherence issues. The research_question asks about Moby Dick chapter-by-chapter seekability, but the evidence spans discuss generic gzip/igzip mechanics without Moby Dick context. The finding claims specific igzip header fields (ID bytes, version, index length, offset length) but the evidence is incomplete/truncated. More critically, inputs[0] evidence_span references 'mzML file' and 'spectrum' — mass-spectrometry domain terminology — while the task is about literary text. This suggests the card was scaffolded from a mass-spectrometry example (pymzML) without proper domain adaptation. The domain field lists 'mass-spectrometry / metabolomics' yet the task is text processing. The finding's evidence_span is mid-sentence ('...terminated with a zero byte...The'), indicating truncation or copy-paste error. RQ and finding are not fully aligned: RQ emphasizes structure and Moby Dick, while finding emphasizes header format details. Expected outputs do not have grounding evidence matching their specific format claims. Recommend: (1) provide complete, section-matched evidence spans, (2) rewrite inputs/outputs to reference Moby Dick explicitly rather than generic/mass-spec domain terms, (3) realign research_question and finding on a coherent claim, (4) verify all evidence_span substrings are actually present in cited sections.
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

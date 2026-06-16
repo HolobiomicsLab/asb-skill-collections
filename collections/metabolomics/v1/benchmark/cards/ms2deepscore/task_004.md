@@ -1,0 +1,134 @@
+# SciTask Card: Reconstruct the Siamese network base-network embedding pipeline
+
+- Task ID: `task_004`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T07:16:21.763690+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_ms2deepscore`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `modeling`
+- DOI: `10.1186/s13321-021-00558-4`
+- GitHub: `matchms/ms2deepscore`
+
+## Classification
+
+- Task kind: `component_reconstruction`
+- Article type: `research-article`
+- Primary domain: `metabolomics`
+- Subdomains: `artificial-intelligence`, `computational-metabolomics`, `untargeted-metabolomics`
+- Techniques: `deep-learning`, `machine-learning`, `spectral-library-matching`, `tandem-ms`, `metabolite-identification`, `transfer-learning`
+
+## Research Question
+How does the Siamese neural network base network convert a binned MS/MS spectrum into a 200-dimensional spectral embedding?
+
+## Connected Finding
+The base network accepts a binned spectrum (peaks binned into 10,000 equally-sized m/z bins from 10 to 1000) as input and produces a 200-dimensional spectral embedding vector through dense neural network layers. Data augmentation is applied during training, including low-intensity peak removal (0–20% of bins below 0.4 intensity), peak intensity jitter (0–40% changes), and new peak addition (0–10 random bins with values 0–0.01).
+
+## Task Description
+Implement the Siamese base network to accept a binned MS/MS spectrum vector (up to 9948 non-zero bins from 10–1000 m/z range) and produce a 200-dimensional spectral embedding via two densely connected hidden layers (500 nodes each), applying L1/L2 regularization, dropout, and batch normalization as specified. Output the embedding vector for use in downstream cosine-similarity scoring.
+
+## Inputs
+- Binned MS/MS spectrum vector (9948-dimensional feature representation with peak intensities in 10–1000 m/z range)
+
+## Expected Outputs
+- 200-dimensional spectral embedding vector (abstract feature representation from base network)
+
+## Landmark Outputs
+
+- `model_weights.h5`
+- `embedding_200d.npy`
+
+## Tools
+- matchms
+- Python
+
+## Skills
+- spectral-peak-binning-and-vectorization
+- dense-neural-network-layer-construction
+- neural-network-regularization-techniques
+- batch-normalization-implementation
+- dropout-regularization-application
+- siamese-network-embedding-generation
+
+## Workflow Description
+1. Load a binned MS/MS spectrum vector (9948-dimensional, with peaks binned into 10–1000 m/z range at 10,000 equally-spaced bins, square-root-transformed intensities). 2. Pass the input vector through the first dense layer (500 nodes) with L1 (10⁻⁶) and L2 (10⁻⁶) regularization applied. 3. Apply batch normalization after the first dense layer. 4. Apply dropout with rate 0.2 to regularize the layer. 5. Pass through the second dense layer (500 nodes) followed by batch normalization and dropout (0.2). 6. Pass through the final dense layer (200 nodes) to produce the spectral embedding without batch normalization or dropout. 7. Return the 200-dimensional embedding vector as the output representation.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `ms2deepscore.pdf` | main_article | True |
+
+## Missing Information
+- No specification of the base network architecture (number of dense layers, layer sizes, activation functions, dropout rates, or regularization parameters) is provided in the discussion section.
+- No computational requirements, runtime benchmarks, or hardware specifications are reported in the discussion section, despite claiming MS2DeepScore is 'very fast and scalable.'
+- No discussion of limitations, failure modes, false positive/negative rates, or applicability constraints is provided in the discussion section.
+- No explicit statement of the input spectrum format expected by the base network (e.g., whether it accepts pre-binned 10,000-dimensional vectors or raw m/z–intensity pairs) is provided in the discussion section.
+
+## Domain Knowledge
+- MS/MS spectrum intensity peaks are square-root-transformed before binning to reduce dominance of the highest-intensity peaks during model training.
+- The Siamese base network produces a shared embedding space where structurally similar compounds are projected to nearby regions, enabling cosine-similarity scoring between pairs.
+- L1 and L2 regularization coefficients of 10⁻⁶ and a dropout rate of 0.2 are applied to prevent overfitting on the training set of 109,734 spectra across 15,062 unique molecules.
+- Batch normalization is applied after each hidden dense layer except the final output layer to stabilize training and accelerate convergence.
+- The 9948-dimensional input vector results from binning 10,000 possible m/z bins; empty bins are pruned before model training, leaving only bins that contain at least one spectrum in the training data.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [results] How does the Siamese neural network base network convert a binned MS/MS spectrum into a 200-dimensional spectral embedding?: 'The Siamese network uses the same "base network" twice during training and prediction to convert a binned spectrum into a spectral embedding (200-dimensional vector).'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [results] The base network accepts a binned spectrum (peaks binned into 10,000 equally-sized m/z bins from 10 to 1000) as input and produces a 200-dimensional spectral embedding vector through dense neural network layers. Data augmentation is applied during training, including low-intensity peak removal (0–20% of bins below 0.4 intensity), peak intensity jitter (0–40% changes), and new peak addition (0–10 random bins with values 0–0.01).: 'The Siamese network uses the same "base network" twice during training and prediction to convert a binned spectrum into a spectral embedding (200-dimensional vector). The network is trained on'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [other] Binned MS/MS spectrum vector (9948-dimensional feature representation with peak intensities in 10–1000 m/z range): 'the binned spectrum vector is passed through a series of densely connected layers until an abstract embedding vector of desired dimension is created as output'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [other] 200-dimensional spectral embedding vector (abstract feature representation from base network): 'a final dense layer of 200 nodes for creating the spectral embedding'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [other] Python: 'Our MS2DeepScore Python library'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [discussion] No specification of the base network architecture (number of dense layers, layer sizes, activation functions, dropout rates, or regularization parameters) is provided in the discussion section.: 'MS2DeepScore is a deep learning technique to predict structural similarity scores between fragmentation mass spectral pairs.'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [discussion] No computational requirements, runtime benchmarks, or hardware specifications are reported in the discussion section, despite claiming MS2DeepScore is 'very fast and scalable.': 'MS2DeepScore is very fast and scalable.'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [discussion] No discussion of limitations, failure modes, false positive/negative rates, or applicability constraints is provided in the discussion section.: 'We conclude that this makes MS2DeepScore a powerful novel tool for running large scale comparisons and analyses, for instance on complex mixtures rich in spectra of unknown compounds.'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [discussion] No explicit statement of the input spectrum format expected by the base network (e.g., whether it accepts pre-binned 10,000-dimensional vectors or raw m/z–intensity pairs) is provided in the discussion section.: 'MS2DeepScore can infer structural similarities between mass spectra with high overall precision, without requiring any additional metadata or library data.'
+
+## Evaluation Strategy
+### Direct Checks
+- verify that the implementation accepts a binned MS/MS spectrum (210,000-dimensional vector or equivalent sparse representation after 10,000 bin transformation) as input
+- verify that the base network produces a 200-dimensional output vector (spectral embedding)
+- verify that the implementation applies the three data-augmentation strategies during training: (1) low-intensity peak removal (0–20% of bins), (2) peak intensity jitter (0–40%), (3) new peak addition (0–10 bins with values 0–0.01)
+- verify that dense layer weights are trainable and initialized appropriately for the Siamese architecture
+- verify that the base network is not shared or modified per-query; it remains fixed throughout inference
+- file_exists: verify that a trained model checkpoint or weights file is retrievable from https://zenodo.org/record/4699356
+- file_exists: verify that source code for base network implementation is accessible at https://github.com/matchms/ms2deepscore
+- script_runs: verify that the base network can be instantiated and forward pass completes in <1 second on a single CPU or GPU for a batch of 32 spectra (parameter-sensitive to hardware; no canonical answer for absolute runtime)
+- format_is: verify that output embedding is a floating-point vector of exactly 200 dimensions with values in a reasonable range (e.g., −1 to +1 or 0 to 1; multiple defensible approaches depending on activation function)
+- output_matches_reference: verify that when applied to the test set spectra (3601 spectra from zenodo.org/record/4699356), computed embeddings can be used to reconstruct the t-SNE visualization shown in the article's supplementary materials (robust to t-SNE parameter choices, but exact dimensionality 200 is required)
+
+### Expert Review
+- assess whether the choice of 200 embedding dimensions is justified and whether this choice aligns with the reported RMSE performance (~0.15) on Tanimoto score prediction
+- assess whether the data-augmentation strategies (low-intensity peak removal, jitter, new peak addition) are applied consistently and whether their ranges (0–20%, 0–40%, 0–10 bins) are appropriate for avoiding distribution shift during inference
+- assess whether the base network architecture (number and size of dense layers, activation functions, dropout placement) is appropriate for learning structural similarity from spectral data, given no detailed architecture diagram is provided in the discussion section
+- assess whether the fixed (non-ensemble) base network achieves the claimed RMSE of ~0.15 when evaluated on the test set, and whether this baseline is consistent with the ensemble results reported in the introduction and abstract
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load a binned MS/MS spectrum as a 9948-dimensional vector with square-root-transformed peak intensities.
+2. Pass the input through a dense layer with 500 nodes, applying L1 (10⁻⁶) and L2 (10⁻⁶) regularization to the weights.
+3. Apply batch normalization and dropout (rate 0.2) after the first dense layer.
+4. Pass through a second dense layer with 500 nodes, again followed by batch normalization and dropout (0.2).
+5. Pass through a final dense layer with 200 nodes (no regularization) to generate the spectral embedding.
+6. Validation: verify that the output embedding has shape (1, 200) and that the model correctly propagates gradients during training on paired spectra with Tanimoto-score labels.
+7. References: source article (DOI: 10.1186/s13321-021-00558-4)
+
+## Workflow Ports
+
+**Inputs:**
+
+- `binned_spectrum` — Binned MS/MS spectrum vector (9948 dimensions)
+
+**Outputs:**
+
+- `spectral_embedding` — 200-dimensional spectral embedding
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

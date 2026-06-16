@@ -1,0 +1,2 @@
+{"result_id": "result_008", "summary": "LOTUS contains 42166 unique organisms.", "result_type": "major", "claim_ids": ["claim_012"], "support_status": "not_evaluated", "linked_task_ids": ["task_001", "task_005"], "linked_eval_check_ids": [], "task_relevance": "task_linked"}
+{"result_id": "result_009", "summary": "LOTUS data originates from 31 initial open databases.", "result_type": "major", "claim_ids": ["claim_013"], "support_status": "not_evaluated", "linked_task_ids": ["task_001", "task_005"], "linked_eval_check_ids": [], "task_relevance": "task_linked"}

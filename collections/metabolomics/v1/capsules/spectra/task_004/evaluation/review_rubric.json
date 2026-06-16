@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that MsBackendTest class is defined in the Spectra package source repository (github:rformassspectrometry__Spectra)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that MsBackendTest has @spectraVars slot capable of storing a data.frame"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that fillCoreSpectraVariables() function exists and is callable on MsBackendTest instances"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that spectraData() method is implemented for MsBackendTest and returns a DataFrame object"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "memory size measurements (in bytes) must be numeric values; pre-populated varian"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the size difference or ratio between the two variants is documented in output (robust to parameter choices in test data construction)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that MsBackendTest class is defined in the Spectra package source repository (github:rformassspectrometry__Spectra)",
+      "verify that MsBackendTest has @spectraVars slot capable of storing a data.frame",
+      "verify that fillCoreSpectraVariables() function exists and is callable on MsBackendTest instances",
+      "verify that spectraData() method is implemented for MsBackendTest and returns a DataFrame object",
+      "script_runs: R script that instantiates two MsBackendTest objects (one with pre-populated @spectraVars, one without), calls spectraData() on each, and measures in-memory size using object.size() \u2014 script must execute without error",
+      "output_matches_reference: memory size measurements (in bytes) must be numeric values; pre-populated variant size must be comparable and interpretable relative to on-the-fly variant size (no canonical answer \u2014 various valid outputs depending on test data size, but both must be positive integers)",
+      "verify that the size difference or ratio between the two variants is documented in output (robust to parameter choices in test data construction)"
+    ],
+    "expert_review": [
+      "whether the observed memory tradeoff (pre-populated versus on-the-fly) aligns with the documented design intent in the spectraData() section",
+      "whether the choice between pre-population and on-the-fly filling represents a meaningful practical tradeoff worth documenting"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

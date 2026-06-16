@@ -1,0 +1,274 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/GraphicalAbstract.jpg",
+      "role": "figure",
+      "sha256": "1d4a445d570d0a3aab3d0c9aff56d22689adba22c9624de8f9a531d86ccd9346"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ac9d42e6296e349acda5aee7606424fd48621cf507928dd69e35bdad14ea304c"
+    }
+  ],
+  "created_at": "2026-06-15T12:18:23.894299+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "standard_data.csv containing Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, and File.Name columns",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparison table (CSV format) with two columns: Match.Factor threshold and count of unique compounds retained",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Match.Factor is a spectral library matching confidence score in GC/LC-MS data; higher values indicate stronger spectral similarity between observed and reference spectra.",
+    "Match.Factor thresholds of 65, 80, and 90 represent progressively stringent quality cutoffs; the text demonstrates that increasing the threshold reduces retained compounds but improves data quality by removing 'junk' compounds.",
+    "In automated GC/LC-MS processing, Match.Factor filtering is applied upstream of compound annotation to exclude low-confidence identifications before downstream analysis.",
+    "Unique compound enumeration must account for the fact that the same chemical may appear multiple times in raw data (across different retention times or file replicates) but should be counted only once per filter condition."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file standard_data.csv exists in github:castratton__uafR repository",
+      "verify standard_data.csv contains column 'Match.Factor'",
+      "verify standard_data.csv contains column 'Compound.Name'",
+      "verify row_count_equals for compounds with Match.Factor >= 65 against COND-mf65 output",
+      "verify row_count_equals for compounds with Match.Factor >= 80 against COND-mf80 output",
+      "verify row_count_equals for compounds with Match.Factor >= 90 against COND-mf90 output",
+      "verify output table contains exactly three rows (one per threshold: 65, 80, 90)",
+      "verify output table contains columns for threshold value and retained compound count",
+      "verify retained_count(>=90) <= retained_count(>=80) <= retained_count(>=65) (monotonic decrease with stricter threshold)",
+      "script_runs: R script applying Match.Factor filters to standard_data.csv and producing comparison table executes without error"
+    ],
+    "expert_review": [
+      "assess whether the Match.Factor thresholds (65, 80, 90) are scientifically appropriate and well-justified for mass spectrometry compound identification quality control",
+      "evaluate whether the comparison table format and labeling are clear and suitable for presenting filtering results"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] How many query chemicals are retained in the standard_data.csv compound list when applying Match.Factor filter thresholds of \u226565, \u226580, and \u226590?: 'query_chems = standard_dat$Compound.Name[standard_dat$Match.Factor >= 65]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Match.Factor filtering can be applied to standard_data.csv at multiple threshold levels (\u226565, \u226580, \u226590) to subset the compound list based on matching quality criteria.: 'query_chems = standard_dat$Compound.Name[standard_dat$Match.Factor >= 65]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] standard_data.csv containing Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, and File.Name columns: 'The original workflow for uafR was developed using Agilent instruments and software. The recommended software for generating the necessary data in the default format (i.e. with correct column names)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Comparison table (CSV format) with two columns: Match.Factor threshold and count of unique compounds retained: 'query_chems = standard_dat$Compound.Name[standard_dat$Match.Factor >= 65]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog was found in the discussion section, indicating potential undocumented changes or updates to the repository or dataset: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "data <- read.csv('{inputs.raw_compound_data}'); thresholds <- c(65, 80, 90); results <- data.frame(Match.Factor.Threshold = paste0('>= ', thresholds), Unique.Compounds.Count = sapply(thresholds, function(t) length(unique(data$Compound.Name[data$Match.Factor >= t])))); write.csv(results, 'match_factor_comparison.csv', row.names = FALSE)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "match_factor_threshold_comparison.csv",
+  "expected_outputs": [
+    "Comparison table (CSV format) with two columns: Match.Factor threshold and count of unique compounds retained"
+  ],
+  "finding": "Match.Factor filtering can be applied to standard_data.csv at multiple threshold levels (\u226565, \u226580, \u226590) to subset the compound list based on matching quality criteria.",
+  "github_name": "castratton/uafR",
+  "input_from": "task_001",
+  "inputs": [
+    "standard_data.csv containing Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, and File.Name columns"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "filtered_compounds_mf65.txt",
+    "filtered_compounds_mf80.txt",
+    "filtered_compounds_mf90.txt"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_006",
+    "result_023"
+  ],
+  "methodology_summary": [
+    "Load standard_data.csv and extract Compound.Name and Match.Factor columns",
+    "Apply three independent Match.Factor filters (\u226565, \u226580, \u226590) to the compound list",
+    "Identify unique compounds retained under each filter condition",
+    "Count unique compounds for each threshold and construct a summary table",
+    "Validation: confirm that compound counts are monotonically decreasing or equal as Match.Factor threshold increases (i.e., COND-mf65 \u2265 COND-mf80 \u2265 COND-mf90)"
+  ],
+  "missing_information": [
+    "No changelog was found in the discussion section, indicating potential undocumented changes or updates to the repository or dataset"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How many query chemicals are retained in the standard_data.csv compound list when applying Match.Factor filter thresholds of \u226565, \u226580, and \u226590?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods"
+  ],
+  "skills": [
+    "mass-spectrometry-match-factor-filtering",
+    "compound-data-subsetting-by-threshold",
+    "unique-compound-enumeration",
+    "summary-statistics-table-construction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_uafr/synthesized_package",
+  "spine_condition_ids": [
+    "COND-known-chemicals-explicit",
+    "COND-known-chemicals-mf89",
+    "COND-categorate-structural-match",
+    "COND-mf65",
+    "COND-mf80",
+    "COND-mf90"
+  ],
+  "spine_entity_ids": [
+    "DS-standard-data",
+    "COND-known-chemicals-mf89",
+    "COND-known-chemicals-explicit",
+    "COND-mf65",
+    "COND-mf80",
+    "COND-mf90",
+    "COND-categorate-structural-match",
+    "METRIC-ethylhex-bestmatch",
+    "METRIC-methylsal-bestmatch",
+    "METRIC-undecane-bestmatch",
+    "METRIC-structural-match-ethylhex-typeD",
+    "RES-categorate-structural-accuracy",
+    "ARTIFACT-spreadOut-output"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:castratton__uafR",
+  "task_description": "Filter compound data from standard_data.csv by three Match.Factor thresholds (\u226565, \u226580, \u226590) and produce a comparison table showing the number of query chemicals retained under each condition.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Standard data CSV with compound names and Match.Factor scores",
+      "port_id": "raw_compound_data",
+      "resolved_via": null,
+      "source": "task_001/mzexacto_result_df",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Filter standard_data.csv by Match.Factor thresholds (\u226565, \u226580, \u226590) and generate a comparison table showing retained compound counts for each condition.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Match.Factor threshold vs. retained compound count comparison table",
+      "port_id": "threshold_comparison_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "database-annotation",
+    "metabolite-identification",
+    "spectral-library-matching"
+  ],
+  "title": "Analyze the effect of Match.Factor threshold on query chemical set size using standard_data",
+  "tools": [
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Comparison table (CSV format) with two columns: Match.Factor threshold and count of unique compounds retained."
+  ],
+  "workflow_description": "1. Load standard_data.csv into R and extract the Compound.Name and Match.Factor columns. 2. Apply three independent filters: Match.Factor >= 65, Match.Factor >= 80, and Match.Factor >= 90, retaining unique compound names for each filter. 3. Count the number of unique compounds retained under each threshold condition (COND-mf65, COND-mf80, COND-mf90). 4. Construct a summary table with three rows (one per threshold) and two columns (threshold value and compound count). 5. Save the comparison table as a CSV file."
+}

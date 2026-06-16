@@ -1,0 +1,2387 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/container-orchestration-verification",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/docker-image-management",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/mass-spectrometry-data-processing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolite-annotation-taxonomic-integration",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/r-cmd-check-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/r-package-installation-and-execution",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/r-package-loading-and-diagnostics",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-library-matching-and-scoring",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/tima-entry-point-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/workflow-pipeline-execution-validation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The tima project's initial work is described in a publication available at https://doi.org/10.3389/fpls.2019.01329.",
+      "asserted_by": "doi:10.5281/zenodo.5797920",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-TIMA"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.5797920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Many improvements have been made to tima since the initial publication.",
+      "asserted_by": "doi:10.5281/zenodo.5797920",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-TIMA"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.5797920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The tima project is in an experimental lifecycle stage.",
+      "asserted_by": "doi:10.5281/zenodo.5797920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-TIMA"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.5797920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A Docker image for tima is available.",
+      "asserted_by": "doi:10.5281/zenodo.5797920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-TIMA"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.5797920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The tima package has a Zenodo DOI identifier 10.5281/zenodo.5797920.",
+      "asserted_by": "doi:10.5281/zenodo.5797920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS-TIMA"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.5281/zenodo.5797920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... Scripts are available at https://github.com/oolonek/taxo_scorer.",
+      "asbval:note": "Paper describes a taxonomically informed scoring system implemented as R scripts (markdown notebooks), not a formal R package named 'tima'. The workflow exists but is distributed as individual scripts rather than a packaged system. The research question conflates the methodology with a specific package implementation that is not named or described in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "What is the complete end-to-end workflow architecture of the TIMA (Taxonomically Informed annotation) system as implemented in the tima R package?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:38.892914+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... An R notebook to analyze the results of the taxonomically informed scoring process and plot the figures of this manuscript is available online (taxo_figures.Rmd)",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:38.892914+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "An R script was written to proceed to the taxonomically informed scoring on GNPS outputs and return an attribute table which can be directly loaded in Cytoscape.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Annotated metabolite feature table with taxonomic and chemical annotations",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:38.892914+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No mention of workflow execution logs or pipeline step completion logs in the paper. The paper describes outputs but not execution logs.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Workflow execution log demonstrating successful completion of tima pipeline steps",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:38.892914+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The F1 score was calculated for each evaluated metabolite annotation tool before and after the taxonomically informed scoring step... An R notebook to analyze the results of the taxonomically informed scoring process and plot the figures of this manuscript is available online (taxo_figures.Rmd)",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Annotation summary report with metabolite identities and confidence metrics",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:38.892914+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The research question references a 'tima R package' which does not appear to exist as a named package in the paper. The paper describes R scripts and markdown notebooks implementing taxonomically informed scoring, but these are distributed as individual scripts on GitHub (https://github.com/oolonek/taxo_scorer), not as a formal R package.",
+        "The card title 'Reconstruct the TIMA annotation workflow as described in the README' assumes a README exists for a 'tima' package, but the paper only references GitHub scripts without evidence of a formal package with README documentation.",
+        "The card frames this as reconstructing a specific package implementation, but the paper presents the methodology and its implementation as research contributions, not as a pre-existing package to be reconstructed."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_001",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:38.892914+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper makes no mention of 'tima' R package, r-universe repository, or R-CMD-check testing. The paper focuses on taxonomically informed metabolite annotation using existing tools (ISDB-DNP, MS-Finder, Sirius) and develops R scripts for taxonomic scoring, but does not describe or test an R package called 'tima'.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Does the tima R package install successfully from the r-universe repository and pass its R-CMD-check test suite?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.757507+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... An R notebook to analyze the results of the taxonomically informed scoring process and plot the figures of this manuscript is available online (taxo_figures.Rmd)",
+      "asbval:note": "Paper uses R for scripting and analysis (R markdown notebooks, R scripts for data processing), but does not involve installation or testing of an R package from r-universe. The R usage is for custom analysis scripts, not package development or installation testing.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.757507+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No package installation logs or installation testing procedures are described in the paper. The paper provides R scripts and datasets but does not document package installation processes.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Installation log confirming successful package installation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.757507+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No package loading tests or error message documentation are present in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Package load confirmation with no error messages",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.757507+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No R-CMD-check testing or formal package validation procedures are described in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "R-CMD-check report with all tests passing",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.757507+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not address R package installation, r-universe repositories, or reproduction of a 'tima' package. The paper is about taxonomically informed metabolite annotation methodology and benchmarking, not R package distribution or installation.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Reproduce the tima R package installation and basic execution via r-universe",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.757507+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate task card describes an R package installation and testing workflow (tima from r-universe), which is entirely absent from the paper.",
+        "The paper is a scientific research article on metabolite annotation methodology (Rutz et al., 2019), not a software engineering or package distribution task.",
+        "While the paper does use R for data analysis and provides R scripts on GitHub, it does not package these as a formal R package or distribute via r-universe.",
+        "The task card appears to be extracted from a completely different paper or context unrelated to this metabolomics/natural products research."
+      ],
+      "asbval:n_drift_notes": 4,
+      "asbval:target_artifact_id": "task_002",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:50.757507+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_003/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper makes no mention of Docker, containers, or any tool named 'tima' or 'adafede/tima-r'. The paper focuses on taxonomically informed metabolite annotation using computational tools (ISDB-DNP, MS-Finder, Sirius) applied to natural products research.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Does the tima Docker container (adafede/tima-r) successfully pull and launch without errors?",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:02.048290+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_003/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "No Docker-related content, container testing, or 'tima' tool execution procedures appear in the paper. The paper does not describe containerization workflows or entry point testing.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Docker image successfully pulled and container launched; tima entry point responds to help or version command with non-error output",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:02.048290+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_003/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
+      "asbval:note": "R is confirmed as a tool used in the paper for scripting and data analysis. However, the card's claim about R is disconnected from the actual research question and expected outputs, which concern Docker and 'tima'.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:02.048290+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_003/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper contains no information about Docker image builds, 'tima' tool, or smoke-testing procedures. The paper's focus is on taxonomically informed scoring for metabolite annotation, not containerization or tool deployment testing.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "asbval:target_claim_field": "title",
+      "asbval:target_claim_text": "Reproduce the tima Docker image build and smoke-test execution",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:02.048290+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_003/scope_drift",
+      "@type": "asbval:ScopeDriftAssertion",
+      "asbval:drift_notes": [
+        "The candidate task card describes a Docker containerization and smoke-test task that is entirely absent from the paper. The paper is about metabolite annotation methodology using computational tools (ISDB-DNP, MS-Finder, Sirius) with taxonomic information integration.",
+        "The only element with paper support is the mention of R as a tool, but this is used for data processing scripts in the metabolite annotation workflow, not for Docker container testing.",
+        "The card appears to describe a software engineering/DevOps task (Docker image validation) that is orthogonal to the scientific content of the paper."
+      ],
+      "asbval:n_drift_notes": 3,
+      "asbval:target_artifact_id": "task_003",
+      "asbval:target_artifact_kind": "card",
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:02.048290+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/container-orchestration-verification/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss Docker, containerization, or container orchestration. The paper focuses on metabolite annotation using computational tools (ISDB-DNP, MS-Finder, Sirius) applied to mass spectrometry data. No mention of Docker image verification, container runtime, or entry point testing.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "container-orchestration-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verify that a containerized software environment (Docker image) successfully pulls, launches, and executes its entry point without errors.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:58.387886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/container-orchestration-verification/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Docker is not mentioned anywhere in the paper. The paper describes computational metabolite annotation workflows but does not discuss containerization or Docker.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "container-orchestration-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Docker \u2014 Container runtime and orchestration engine used to pull, build, and run container images",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:58.387886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/container-orchestration-verification/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention 'tima', the GitHub repository, or any Docker image (adafede/tima-r). The paper describes the taxonomically informed scoring system and benchmarks three tools (ISDB-DNP, MS-Finder, Sirius) but does not reference tima or any containerized implementation of these methods.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "container-orchestration-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "tima (https://github.com/taxonomicallyinformedannotation/tima) \u2014 Example containerized application (R package for metabolite annotation) whose Docker image (adafede/tima-r) serves as the subject of verification",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:58.387886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/container-orchestration-verification/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
+      "asbval:note": "The paper does use R for scripting and data processing (R notebooks, R scripts for taxonomic scoring). However, the paper does not discuss Docker, container orchestration, or container verification. The evidence_spans correctly cite the paper's DOI, but the related_skills list (including 'container-orchestration-verification', 'docker-image-management', 'tima-entry-point-validation') are not supported by the paper content. The paper is about taxonomically informed metabolite annotation, not container orchestration.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "container-orchestration-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R \u2014 with evidence_spans referencing DOI 10.3389/fpls.2019.01329 and related_skills including 'container-orchestration-verification'",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:17:58.387886+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/docker-image-management/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper contains no mention of Docker, containerization, or container management. The paper focuses on taxonomically informed scoring for metabolite annotation using computational tools (ISDB-DNP, MS-Finder, Sirius) and does not discuss Docker or container deployment.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "docker-image-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verify and launch a Docker container image for a scientific tool to confirm that the containerized environment is accessible and functional without manual installation overhead.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:08.881894+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/docker-image-management/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Docker is not mentioned anywhere in the paper passages. The paper discusses computational metabolite annotation tools but not containerization technology.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "docker-image-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Docker",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:08.881894+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/docker-image-management/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Docker Hub is not mentioned in the paper. The paper does not discuss container registries or image hosting platforms.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "docker-image-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Docker Hub",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:08.881894+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/docker-image-management/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention 'tima' or any R package by that name. The paper discusses ISDB-DNP, MS-Finder, and Sirius as metabolite annotation tools, but does not reference tima or its containerization.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "docker-image-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "tima (R package) - containerized as adafede/tima-r",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:08.881894+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/docker-image-management/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
+      "asbval:note": "The paper does use R for scripting and data processing (R scripts, markdown notebooks, Bayesian optimization in R). However, the card's claim that R is the 'target scientific tool' for Docker containerization is not supported. R is used as a scripting language for post-processing metabolite annotation outputs, not as the primary focus of the work. The paper's DOI is correct (10.3389/fpls.2019.01329), but the card's framing of R as a containerized tool with entry point validation is not present in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "docker-image-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (with evidence_spans referencing DOI 10.3389/fpls.2019.01329)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:08.881894+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/docker-image-management/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper's scope is taxonomically informed scoring for metabolite annotation. While the paper emphasizes reproducibility (scripts available on GitHub, datasets on OSF), it does not address Docker containerization, container portability, or container runtime verification.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "docker-image-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Docker container image verification and launch for reproducibility and portability across heterogeneous computational environments",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:08.881894+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MS data were converted from .RAW (Thermo) standard data format to .mzXML format using the MSConvert software... The converted files were treated using the MZMine software suite v. 2.38... Eventually the resulting aligned peaklist was filtered using the peak-list rows filter option in order to keep only features associated with MS2 scans.",
+      "asbval:note": "Paper performs MS data conversion and validation using MZMine (v2.38) and MSConvert, not a dedicated 'tima' R package. The paper does convert to standardized formats (.mzXML, .mgf) and validates data, but uses different tools than claimed in the card.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Prepare and validate raw mass spectrometry data (feature quantification tables and MS/MS spectra) for taxonomically informed metabolite annotation by converting to standardized formats (CSV/TSV and MGF) and verifying structural integrity before downstream analysis.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:18.328300+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention 'tima' R package or any 'validate_inputs()' function. The paper was published in 2019 and describes a taxonomically informed scoring system but does not reference a tool called 'tima'. No evidence of this package exists in the passages.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "tima R package with validate_inputs() function",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:18.328300+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... An R notebook to analyze the results of the taxonomically informed scoring process and plot the figures of this manuscript is available online (taxo_figures.Rmd)",
+      "asbval:note": "Paper does use R for data processing and taxonomically informed scoring, but the specific functions and workflow described in the card (validate_inputs, tima package orchestration) are not present. R is used for cleaning, standardization, and scoring, but not via a 'tima' package.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R programming environment for running tima validation and annotation functions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:18.328300+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MS data were converted from .RAW (Thermo) standard data format to .mzXML format using the MSConvert software, part of the ProteoWizard package... The converted files were treated using the MZMine software suite v. 2.38... Eventually the resulting aligned peaklist was filtered using the peak-list rows filter option in order to keep only features associated with MS2 scans.",
+      "asbval:note": "The paper clearly describes MS data preparation and validation for taxonomically informed metabolite annotation, though using MZMine and MSConvert rather than the 'tima' package claimed.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Prepare and validate raw mass spectrometry data (feature quantification tables and MS/MS spectra) for taxonomically informed metabolite annotation",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:18.328300+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The MS data were converted from .RAW (Thermo) standard data format to .mzXML format using the MSConvert software... A python Jupyter notebook (mgf_filterer.ipynb) was created to filter.mgf spectral file according to specific parameters... The spectral file was filtered to retain only entries having at least 6 fragments.",
+      "asbval:note": "Paper converts to .mzXML and .mgf formats and creates TSV/CSV outputs for metadata, matching the standardized format requirement.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Converting to standardized formats (CSV/TSV and MGF)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:18.328300+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "A python Jupyter notebook (GNPS_parser_cleaner.ipynb) was written to proceed to 1) extraction of relevant metadata... 2) filtering entries having at least one structural information associated (SMILES and/or InChI) and corresponding to protonated adducts and 3) converting structures to their InChIKey",
+      "asbval:note": "Paper validates structural integrity by filtering for structural information (SMILES/InChI) and verifying adduct types before downstream analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Verifying structural integrity before downstream analysis",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:18.328300+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The spectra in the network were then searched against GNPS' spectral libraries... The output was visualised using Cytoscape 3.6 software... The spectral file (.mgf) and attributes metadata (.clustersummary) obtained after the MN step were annotated using the ISDB-DNP",
+      "asbval:note": "Paper uses GNPS molecular networking and ISDB-DNP annotation as downstream steps, but the card's framing of these as 'optional additions' is not explicitly stated in the paper. The paper treats them as integral parts of the workflow.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Input is already a processed feature table with pre-computed annotations from another tool (SIRIUS or GNPS-FBMN results are optional additions)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:18.328300+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper emphasizes the importance of biological source metadata and taxonomic information throughout. It does not discuss scenarios where metadata is optional or single-organism analysis without metadata. The paper's central hypothesis depends on taxonomic metadata availability.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "You are only analyzing a single organism and do not have sample metadata (tima allows this, making metadata optional)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:18.328300+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Here, we show that integrating the taxonomic position of analyzed samples and candidate structures enhances confidence in metabolite annotation... the consideration of the taxonomic distance allowed an efficient re-ranking of the candidate structures leading to a systematic enhancement of the recall and precision rates",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-annotation-taxonomic-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Integrate taxonomic metadata with mass spectrometry spectral data to improve metabolite annotation confidence by constraining candidate compound lists to those known to occur in the sampled organism or tissue.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:36.584047+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "A script is proposed to automatically input such information at various granularity levels (species, genus, and family) and complement the score obtained between experimental spectral data and output of available computational metabolite annotation tools (ISDB-DNP, MS-Finder, Sirius)",
+      "asbval:note": "Paper uses Dictionary of Natural Products (DNP) and GNPS spectral libraries for structure-organism pairing and spectral data, not LOTUS. LOTUS is not mentioned in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolite-annotation-taxonomic-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "This skill leverages structure-organism pairing libraries (e.g. LOTUS) and spectral databases to perform taxonomically informed metabolite identification.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:36.584047+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention 'tima' or any R package by that name. The paper describes custom R scripts (1_taxo_cleaner.Rmd, 2_taxo_scorer.Rmd, 3_taxo_optimizer.Rmd) written by the authors to perform taxonomically informed scoring, but these are not packaged as 'tima'.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolite-annotation-taxonomic-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "tima (R package) - Core workflow engine: orchestrates feature validation, spectral matching, taxonomic filtering, and annotation ranking using integrated knowledge bases",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:36.584047+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "LOTUS is not mentioned anywhere in the paper. The paper uses Dictionary of Natural Products (DNP) as the structure-organism pairing source: 'A curation process using the Global Names index, kept biological sources resolved against the Catalogue of Life and resulted in 219,800 entries' from DNP.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolite-annotation-taxonomic-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "LOTUS - Default structure-organism pairing library (>650k pairs) used to filter candidate metabolites by taxon",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:36.584047+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "the outputs of three different computational MS-based metabolite annotation solutions were considered (ISDB-DNP, MS-Finder and Sirius)... Sirius 4.0.1 is considered as a state-of-the-art metabolite annotation solution, which combines molecular formula calculation and the prediction of a molecular fingerprint",
+      "asbval:note": "Paper uses Sirius 4.0.1, not v5/v6. Sirius is used as a core benchmarking tool (not optional) alongside ISDB-DNP and MS-Finder for metabolite annotation.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "metabolite-annotation-taxonomic-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SIRIUS v5/v6 - Optional external tool for in silico structure prediction and molecular formula scoring to improve candidate ranking",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:36.584047+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The GNPS libraries agglomerate a wide and publicly available ensemble of MS/MS spectra coming from various analytical platforms... All GNPS libraries and publicly accessible third-party libraries were retrieved online",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "metabolite-annotation-taxonomic-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS - Optional external spectral networking and annotation source to augment spectral matching results",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:36.584047+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention an R package called 'Spectra'. The paper uses custom Python Jupyter notebooks and R scripts for processing spectral data in MGF format, but does not name a specific 'Spectra' R package.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolite-annotation-taxonomic-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Spectra (R package) - Backend library for reading and processing MS/MS spectra (MGF format)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:36.584047+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>",
+      "asbval:note": "The DOI 10.3389/fpls.2019.01329 is the paper's publication identifier, not an R version number. R version is not specified in the paper. The paper uses R scripts but does not declare a specific R version.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "metabolite-annotation-taxonomic-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R - version 10.3389 used",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:36.584047+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-cmd-check-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper is about taxonomically informed scoring for metabolite annotation in natural products research using mass spectrometry. No mention of R package validation, CRAN compliance, GitHub Actions, or R-CMD-check. This task card describes software engineering practices entirely unrelated to the paper's content.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-cmd-check-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Automated validation of R package build integrity and CRAN compliance using the R-CMD-check test suite, typically run via GitHub Actions CI/CD workflows.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:54.801045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-cmd-check-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "R-CMD-check is not mentioned or used in the paper. The paper uses R scripts for data processing and taxonomic scoring, but does not employ R-CMD-check for package validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-cmd-check-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R-CMD-check: Automated test harness validating package build, dependencies, and CRAN compliance",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:54.801045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-cmd-check-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "GitHub Actions is not mentioned in the paper. The paper does reference GitHub repositories for code availability (e.g., https://github.com/oolonek/taxo_scorer) but does not describe CI/CD workflows or GitHub Actions usage.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-cmd-check-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GitHub Actions: CI/CD workflow engine executing R-CMD-check on every commit/PR and publishing badge status",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:54.801045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-cmd-check-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "r-universe is not mentioned in the paper. The paper does not discuss package repositories or pre-built binaries.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-cmd-check-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "r-universe: Package repository providing pre-built binaries and automated R-CMD-check results",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:54.801045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-cmd-check-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "While the paper uses R scripts and mentions GitHub repositories for code availability, it does not discuss install.packages() or package installation workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-cmd-check-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "install.packages(): R base function to download and install package from specified repository",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:54.801045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-cmd-check-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention library() function or package loading verification.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-cmd-check-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "library(): R base function to load installed package into environment and verify no load-time errors",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:54.801045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-cmd-check-validation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
+      "asbval:note": "The paper does use R for data processing and analysis (R scripts, Bayesian optimization, figure generation). However, '10.3389' is not an R version number\u2014it is the paper's DOI (10.3389/fpls.2019.01329). The version_used field conflates the paper's DOI with an R version. The paper does perform metabolite annotation and mass spectrometry data processing with R, but the version identifier is incorrect.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "r-cmd-check-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (version 10.3389): with related_skills including mass-spectrometry-data-processing, metabolite-annotation-taxonomic-integration, etc.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:18:54.801045+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-installation-and-execution/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss R package installation, custom repositories, or R-CMD-check validation. The paper focuses on metabolite annotation using computational tools (ISDB-DNP, MS-Finder, Sirius) and taxonomically informed scoring, not on R package development or installation workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-installation-and-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Install an R package from a custom repository and verify successful execution through package loading and validation checks.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:06.210090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-installation-and-execution/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "r-universe is not mentioned anywhere in the paper. The paper does not discuss R package repositories or distribution platforms.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-installation-and-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[0].name",
+      "asbval:target_claim_text": "r-universe",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:06.210090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-installation-and-execution/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "R-CMD-check is not mentioned in the paper. The paper does not discuss R package validation workflows or CRAN submission standards.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-installation-and-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[1].name",
+      "asbval:target_claim_text": "R-CMD-check",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:06.210090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-installation-and-execution/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "GitHub Actions is not mentioned in the paper. The paper does not discuss CI/CD platforms or automated testing workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-installation-and-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[2].name",
+      "asbval:target_claim_text": "GitHub Actions",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:06.210090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-installation-and-execution/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Docker is not mentioned in the paper. The paper does not discuss containerization or Docker images.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-installation-and-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[3].name",
+      "asbval:target_claim_text": "Docker",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:06.210090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-installation-and-execution/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
+      "asbval:note": "Paper uses R for scripting and data analysis (R scripts, R notebooks mentioned), but the card's claim about 'R package installation and execution' is not supported. The paper uses R as a programming language for analysis, not as a package to be installed from a repository. The version_used field claims '10.3389' which appears to be a DOI fragment, not an R version.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "r-package-installation-and-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[4].name",
+      "asbval:target_claim_text": "R",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:06.210090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-installation-and-execution/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper's scope is metabolite annotation using taxonomically informed scoring with computational tools (ISDB-DNP, MS-Finder, Sirius), not R package installation or validation. The paper uses R as a tool for data processing but does not address package installation workflows.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-installation-and-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Install an R package from a custom repository and verify successful execution through package loading and validation checks.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:06.210090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-installation-and-execution/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper's DOI is 10.3389/fpls.2019.01329 (from passage [1]), not null. However, this DOI is about metabolite annotation, not about R package installation.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-installation-and-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[4].source_paper_doi",
+      "asbval:target_claim_text": "null (expected to be filled)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:06.210090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-installation-and-execution/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Taxonomically Informed Scoring Enhances Confidence in Natural Products Annotation",
+      "asbval:note": "The paper title is 'Taxonomically Informed Scoring Enhances Confidence in Natural Products Annotation', which is about metabolite annotation, not R package installation. The card's task is not aligned with the paper's content.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-installation-and-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools[4].source_paper_title",
+      "asbval:target_claim_text": "null (expected to be filled)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:06.210090+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper does not discuss R package installation, r-universe repositories, or R-CMD-check workflows. The paper focuses on metabolite annotation using computational mass spectrometry tools (ISDB-DNP, MS-Finder, Sirius) and taxonomically informed scoring. No mention of package deployment or CI/CD validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-loading-and-diagnostics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Install an R package from a custom repository (such as r-universe) and validate that it loads without errors and passes R-CMD-check compliance testing.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:17.756133+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "r-universe is not mentioned anywhere in the paper. The paper does not discuss custom R package repositories or CI/CD infrastructure.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-loading-and-diagnostics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "r-universe (Custom CRAN-compatible repository hosting development versions of R packages with automated R-CMD-check CI)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:17.756133+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "R-CMD-check and GitHub Actions workflows are not mentioned in the paper. The paper does not discuss automated testing pipelines or GitHub CI/CD.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-loading-and-diagnostics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R-CMD-check GitHub Actions workflow",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:17.756133+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... An R notebook to analyze the results of the taxonomically informed scoring process and plot the figures of this manuscript is available online (taxo_figures.Rmd)",
+      "asbval:note": "Paper uses R for scripting and analysis (R markdown notebooks, R scripts), but does not discuss R package installation, loading validation, or R-CMD-check compliance testing. The R usage is for data processing and analysis, not package diagnostics.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "r-package-loading-and-diagnostics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (Core runtime environment for package installation, loading, and diagnostic validation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:17.756133+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not address R package deployment, CRAN submission standards, or package build reproducibility validation. The scope describes a software engineering task unrelated to the paper's metabolite annotation research.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-loading-and-diagnostics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "When deploying an R package from a non-CRAN repository (e.g., r-universe, Bioconductor, GitHub), or when verifying that a package build is reproducible and meets CRAN submission standards",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:17.756133+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not produce or discuss R package loading diagnostics, R-CMD-check reports, or installation logs. The paper's outputs are metabolite annotation results, benchmarking datasets, and performance metrics (F1 scores).",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "r-package-loading-and-diagnostics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "expected_outputs",
+      "asbval:target_claim_text": "Loaded R package object in global environment, R-CMD-check report (HTML or text) documenting test results, Installation log confirming successful library() call",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:17.756133+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Computational metabolite annotation automatically links spectral data to candidate structures via a score, which is usually established between the acquired data and experimental or theoretical spectral databases (DB)... The design of a metascore is a way to capture complementary experimental attributes and improve the annotation process. Here, we show that integrating the taxonomic position of analyzed samples and candidate structures enhances confidence in metabolite annotation.",
+      "asbval:note": "Paper demonstrates spectral matching and scoring with taxonomic integration (ISDB-DNP, MS-Finder, Sirius), but does not mention LOTUS, MassBank, or in-house libraries. The core concept of spectral matching with taxonomic scoring is present; the specific databases named in the card are not all validated in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Match experimental MS/MS spectra against reference spectral libraries and score similarity to identify metabolites. This skill integrates multiple spectral databases (LOTUS, ISDB, MassBank, in-house libraries) with customizable scoring algorithms to rank candidate compound matche",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:28.594996+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "LOTUS is not mentioned anywhere in the paper. The paper uses Dictionary of Natural Products (DNP) and GNPS libraries for structural and spectral data, not LOTUS.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "LOTUS \u2014 Provides >650k structure\u2013organism pairs as default spectral and structural reference library for matching and filtering candidates by taxonomy",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:28.594996+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "complement the score obtained between experimental spectral data and output of available computational metabolite annotation tools (ISDB-DNP, MS-Finder, Sirius)",
+      "asbval:note": "ISDB-DNP is explicitly used in the paper as one of three metabolite annotation tools benchmarked.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ISDB \u2014 In Silico spectral database for matching experimental spectra against computationally predicted fragment patterns",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:28.594996+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "MassBank is not mentioned in the paper. The paper uses GNPS libraries as the spectral reference source.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MassBank \u2014 Community spectral reference library integrated into tima for experimental MS/MS spectrum matching",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:28.594996+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The third tool to be used is Sirius 4.0. It is considered as a state-of-the-art metabolite annotation solution, which combines molecular formula calculation and the prediction of a molecular fingerprint of a query from its fragmentation tree and spectrum",
+      "asbval:note": "Paper uses Sirius 4.0.1, not v5/v6 as claimed in the card. The functional role (molecular formula and structure prediction) matches.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SIRIUS \u2014 External annotation tool (v5/v6) providing molecular formula and structure predictions that can be integrated alongside spectral library matches",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:28.594996+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Initiatives such as the Global Natural Products Social (GNPS) molecular networking (MN) project offer both a living MS repository and the possibility to establish MN organizing MS data",
+      "asbval:note": "GNPS molecular networking is used in the paper for spectral data organization and contextualization.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS-FBMN \u2014 External spectral networking results that can be incorporated to contextualize and validate spectral matches",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:28.594996+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The 'tima' R package is not mentioned in the paper. The paper uses custom R scripts (1_taxo_cleaner.Rmd, 2_taxo_scorer.Rmd, 3_taxo_optimizer.Rmd) for taxonomically informed scoring, not a pre-built tima package.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "tima R package \u2014 Orchestrates spectral matching workflow, scoring, and library integration via command-line, YAML, or interactive Shiny interface",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:28.594996+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)",
+      "asbval:note": "R is used in the paper, but '10.3389' is not a valid R version number\u2014it is the DOI of the paper itself. The paper does not specify an R version.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R \u2014 version_used: 10.3389",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:28.594996+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Computational metabolite annotation automatically links spectral data to candidate structures via a score, which is usually established between the acquired data and experimental or theoretical spectral databases (DB).",
+      "asbval:note": "Core scope is directly supported by the paper's abstract and methods.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Match experimental MS/MS spectra against reference spectral libraries and score similarity to identify metabolites",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:28.594996+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Specialized metabolites, as products of biosynthetic clusters themselves part of the genome, are tightly linked to the taxonomic position of the producing organisms... the taxonomic distance between the biological source of the queried compound and the biological source of the candidate structures is a valuable attribute to integrate into the metabolite annotation process.",
+      "asbval:note": "Paper explicitly demonstrates using taxonomic information (organism/sample type) to filter and rank candidates.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill after feature detection and spectra acquisition, particularly when analyzing organisms or sample types with known metabolite compositions that can be leveraged for filtering candidates",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:28.594996+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tima-entry-point-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Paper makes no mention of Docker, containerization, or the tima-r Docker image. The paper is about taxonomically informed scoring for metabolite annotation using computational tools (ISDB-DNP, MS-Finder, Sirius), not about Docker container validation.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "tima-entry-point-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Verify that a tima Docker container (adafede/tima-r) successfully pulls from Docker Hub and launches without errors, confirming the container's entry point is accessible and functional.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:45.595398+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tima-entry-point-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "Docker is not mentioned anywhere in the paper. The paper discusses computational metabolite annotation tools but not containerization platforms.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "tima-entry-point-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Docker \u2014 Container platform used to pull and launch the tima-r image",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:45.595398+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tima-entry-point-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention tima, tima-r, or any Docker image. The paper predates or is unrelated to the tima project.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "tima-entry-point-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "tima-r Docker image \u2014 Containerized R environment with tima package and dependencies pre-installed",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:45.595398+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tima-entry-point-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "tima is not mentioned in the paper. The paper discusses ISDB-DNP, MS-Finder, and Sirius as metabolite annotation tools, not an R package called tima.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "tima-entry-point-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "tima \u2014 R package executed within the container to validate entry point functionality",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:45.595398+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tima-entry-point-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
+      "asbval:note": "The paper does use R for scripting and analysis (R notebooks, R scripts mentioned in passages 9-12), but the card's evidence_spans incorrectly cite the paper's own DOI as if it were an external reference. The card claims source_paper_doi is null when it should reference the paper being validated (10.3389/fpls.2019.01329). The version_used field '10.3389' appears to be a malformed DOI fragment, not an R version number.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "tima-entry-point-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R \u2014 with evidence_spans referencing 'The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>' and source_paper_doi null",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:45.595398+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/000",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The massive and complex sets of spectral data generated by such platforms require computational approaches for their interpretation. Computational metabolite annotation automatically links spectral data to candidate structures via a score, which is usually established between the acquired data and experimental or theoretical spectral databases (DB).",
+      "asbval:note": "Paper describes metabolomics annotation pipeline and validation of outputs (F1 scores, precision/recall metrics), but does not explicitly address 'input data file validation' as a distinct preliminary step. The paper focuses on validating annotation quality post-execution rather than pre-execution data integrity checks.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "research_question",
+      "asbval:target_claim_text": "Validate input data files and confirm successful execution of a complete metabolomics annotation pipeline by checking intermediate and final outputs against expected structure and content.",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention 'tima' or 'tima R package' anywhere. The paper describes ISDB-DNP, MS-Finder, and Sirius as the three metabolite annotation tools evaluated, but does not reference a tool called 'tima'.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "tima R package",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The third tool to be used is Sirius 4.0. It is considered as a state-of-the-art metabolite annotation solution, which combines molecular formula calculation and the prediction of a molecular fingerprint of a query from its fragmentation tree and spectrum (D\u00fchrkop et al., 2019). Sirius uses a DB of 73,444,774 unique structures for its annotations.",
+      "asbval:note": "Paper uses Sirius 4.0.1, not v5/v6. The version specified in the card (v5/v6) does not match the paper's actual version (4.0.1). Sirius is used as a primary annotation tool, not as 'optional external predictions'.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "SIRIUS (v5/v6 for optional external metabolite structure predictions)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "Initiatives such as the Global Natural Products Social (GNPS) molecular networking (MN) project offer both a living MS repository and the possibility to establish MN organizing MS data (Wang et al., 2016)... A feature based molecular network (https://ccms-ucsd.github.io/GNPSDocumentation/featurebasedmolecularnetworking/) was created using the .mgf file resulting from the MZMine pretreatment step... Spectral data was uploaded on the GNPS molecular networking platform.",
+      "asbval:note": "Paper uses GNPS molecular networking (MN) and feature-based molecular networking (FBMN), but as an intermediate processing step integrated into the workflow, not as 'optional' external results. The paper describes GNPS as part of the core pipeline for Glaucium analysis.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "GNPS-FBMN (provides optional spectral networking results for annotation validation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention LOTUS database. Instead, it uses the Dictionary of Natural Products (DNP) as the primary structure-organism pairs database, which was curated to 219,800 entries with accepted scientific names and full taxonomy.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "LOTUS database (>650k structure-organism pairs for organism-aware metabolite annotation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": null,
+      "asbval:note": "The paper does not mention Docker or any containerized execution environment. The paper describes R scripts and computational tools but does not reference Docker or container-based deployment.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "no",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "Docker (adafede/tima-r image) for containerized execution environment",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/006",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... Scripts are available at https://github.com/oolonek/taxo_scorer.",
+      "asbval:note": "Paper uses R for taxonomically informed scoring scripts, but the version '10.3389' listed in the card is actually the paper's DOI (10.3389/fpls.2019.01329), not an R version. No specific R version is mentioned in the paper.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "R (version 10.3389, related to taxonomically informed annotation)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/007",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The spectral file (.mgf) and attributes metadata (.clustersummary) obtained after the MN step were annotated using the ISDB-DNP with the following parameters: parent mass tolerance 0.005 Da, minimum cosine score 0.2, maximal number of returned candidates: 50.",
+      "asbval:note": "Paper describes MGF format input and metadata handling for annotation, but the pipeline is ISDB-DNP (not TIMA). The paper does not reference a tool called TIMA.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "partial",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Apply this skill when you have prepared metabolomics input files (feature quantification table, MS/MS spectra in MGF format, sample metadata) and are about to execute the TIMA taxonomically informed annotation pipeline",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/008",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The prerequisite to apply a taxonomically informed scoring in a metabolite annotation process is to dispose of the biological source information of 1) the queried MS/MS spectra and 2) the candidate structures... This study uses the DNP which is commercially available and allows export of structures and biological sources as associated metadata.",
+      "asbval:note": "Paper explicitly states that taxonomic metadata is a prerequisite for the taxonomically informed scoring system, confirming the scope statement.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "scope",
+      "asbval:target_claim_text": "Sample metadata does not link to organism taxonomy information (single organism analysis may proceed, but organism annotation will be limited)",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/009",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "[SUBSTRING-MATCH for ISDB-DNP | role: primary metabolite annotation tool] The first tool, denominated hereafter ISDB-DNP (In Silico DataBase\u2014Dictionary of Natural Products) is a metabolite annotation strategy that we previously developed (Allard et al., 2016). This approach is focused on specialized metabolites annotation and is constituted by a pre-fragmented theoretical spectral DB version of the DNP.",
+      "asbval:note": "ISDB-DNP is explicitly described as a metabolite annotation tool in the paper, though not listed in the candidate card's tools array.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "ISDB-DNP (In Silico DataBase\u2014Dictionary of Natural Products) as primary annotation tool",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/010",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "[SUBSTRING-MATCH for MS-Finder | role: metabolite annotation tool] The second tool is MS-Finder. This in silico fragmentation approach considers multiple parameters such as bond dissociation energies, mass accuracies, fragment linkages and various hydrogen rearrangement rules at the candidate ranking phase (Tsugawa et al., 2016).",
+      "asbval:note": "MS-Finder is explicitly described as a metabolite annotation tool in the paper, though not listed in the candidate card's tools array.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MS-Finder as metabolite annotation tool",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/011",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:evidence_quote": "The converted files were treated using the MZMine software suite v. 2.38 (Pluskal et al., 2010). The parameters were adjusted as following: the centroid mass detector was used for mass detection...",
+      "asbval:note": "MZMine is used for MS data pretreatment in the paper, though not listed in the candidate card's tools array.",
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:target_claim_field": "tools",
+      "asbval:target_claim_text": "MZMine for MS data preprocessing",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:19:58.538401+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/container-orchestration-verification/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 4,
+      "asbval:target_artifact_id": "container-orchestration-verification",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/docker-image-management/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "docker-image-management",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "mass-spectrometry-data-processing",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.375,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "metabolite-annotation-taxonomic-integration",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.25,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-cmd-check-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 7,
+      "asbval:target_artifact_id": "r-cmd-check-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-installation-and-execution/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 8,
+      "asbval:target_artifact_id": "r-package-installation-and-execution",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 6,
+      "asbval:target_artifact_id": "r-package-loading-and-diagnostics",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 9,
+      "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.4444444444444444,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/tima-entry-point-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 5,
+      "asbval:target_artifact_id": "tima-entry-point-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.0,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/triage",
+      "@type": "asbval:SkillTriageAssertion",
+      "asbval:n_claims": 11,
+      "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
+      "asbval:target_artifact_kind": "skill_bundle",
+      "asbval:threshold": 0.6,
+      "asbval:triage_status": "critique",
+      "asbval:yes_rate": 0.2727272727272727,
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_001",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The tima project's initial work is described in a publication available at https://doi.org/10.3389/fpls.2019.01329.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:source_excerpt": "The initial work is available at\n<https://doi.org/10.3389/fpls.2019.01329>",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_001",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:32.533514+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_002",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "Many improvements have been made to tima since the initial publication.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:source_excerpt": "with many improvements made\nsince then",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_002",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:32.533514+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_003",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The tima project is in an experimental lifecycle stage.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:source_excerpt": "Lifecycle:\nexperimental",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_003",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:32.533514+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_004",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "A Docker image for tima is available.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:source_excerpt": "[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white.png)](https://hub.docker.com/r/adafede/tima-r/)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_004",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:32.533514+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@id": "asbval:assertion/claim/claim_005",
+      "@type": "asbval:ClaimAssessment",
+      "asbval:claim_text": "The tima package has a Zenodo DOI identifier 10.5281/zenodo.5797920.",
+      "asbval:note": null,
+      "asbval:perspicacite_kb": "asb-paper-10-3389-fpls-2019-01329",
+      "asbval:source_excerpt": "[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5797920.svg)](https://doi.org/10.5281/zenodo.5797920)",
+      "asbval:substring_in_paper": false,
+      "asbval:supported_raw": "yes",
+      "asbval:target_artifact_id": "claim_005",
+      "asbval:target_artifact_kind": "ledger_claim",
+      "eco:evidence_type": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
+      "prov:wasGeneratedAtTime": "2026-06-15T21:16:32.533514+00:00",
+      "sepio:credibility_status": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      }
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_tima#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "hierarchical",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SYS-TIMA",
+      "title": "TIMA",
+      "identifier": "urn:asb:spine:SYS-TIMA"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_ARCH-TIMA-WORKFLOW",
+      "title": "TIMA Annotation Workflow",
+      "identifier": "urn:asb:spine:ARCH-TIMA-WORKFLOW",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL-TIMA-R-PKG",
+      "title": "tima R package",
+      "identifier": "urn:asb:spine:TOOL-TIMA-R-PKG"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL-DOCKER-TIMA",
+      "title": "tima Docker image",
+      "identifier": "urn:asb:spine:TOOL-DOCKER-TIMA"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_REF-FPLS2019",
+      "title": "Initial TIMA publication",
+      "identifier": "urn:asb:spine:REF-FPLS2019"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "bc84382d8d1ba2f5b768ba328a98b08d8b11d8cb516228cc0860e018d124e931"
+    }
+  ],
+  "created_at": "2026-06-16T07:34:22.306994+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LipoCLEAN CLI tool (from stavis1/LipoCLEAN repository or installed executable/Docker container)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Target MS-DIAL version (4 or 5)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "medium",
+      "content_signature": null,
+      "description": "options.txt file in TOML format containing default configuration keys for the specified MS-DIAL version",
+      "detection_method": "prose_regex",
+      "file_extension": ".txt",
+      "format_id": "MaxQuant_evidence_TXT",
+      "format_iri": "http://edamontology.org/format_3475",
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "LipoCLEAN accepts configuration via TOML-formatted text files with version-specific defaults for MS-DIAL 4 and 5.",
+    "The `--print MSD4` and `--print MSD5` flags generate default configuration files tailored to each MS-DIAL version's data structure.",
+    "The generated options.txt file is the primary configuration artifact required before running lipid quality filtering on MS-DIAL output."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file 'options.txt' exists in the working directory after CLI execution",
+      "verify file 'options.txt' has format TOML (text file parseable as TOML key-value pairs)",
+      "verify options.txt contains field 'msdial_version' with value '4' or '5' matching the --print argument",
+      "verify options.txt contains at least one configuration key expected for MS-DIAL lipid filtering (e.g., thresholds, model paths, or feature columns); no canonical answer for exact key set without seeing reference file",
+      "script_runs: LipoCLEAN CLI invocation with '--print MSD4' argument completes without error",
+      "script_runs: LipoCLEAN CLI invocation with '--print MSD5' argument completes without error"
+    ],
+    "expert_review": [
+      "Confirm that the keys and structure present in options.txt are appropriate for configuring MS-DIAL version 4 or 5 lipid filtering (requires domain knowledge of MS-DIAL configuration format and LipoCLEAN expected parameters)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the LipoCLEAN CLI generate default configuration files for different MS-DIAL versions?: 'Default options files for MS-DIAL 4 and 5 can be obtained using the `--print MSD4` or `--print MSD5` command line arguments, respectively. These will create an `options.txt` file that you can edit.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The `--print MSD4` or `--print MSD5` command line arguments generate version-specific default configuration files named `options.txt` that users can subsequently edit.: 'Default options files for MS-DIAL 4 and 5 can be obtained using the `--print MSD4` or `--print MSD5` command line arguments, respectively. These will create an `options.txt` file that you can edit.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipoCLEAN CLI tool (from stavis1/LipoCLEAN repository or installed executable/Docker container): 'There are three ways to install and run LipoCLEAN: as an executable, as a Python package, and as a Docker container'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Target MS-DIAL version (4 or 5): 'Default options files for MS-DIAL 4 and 5 can be obtained'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] options.txt file in TOML format containing default configuration keys for the specified MS-DIAL version: 'all options are given to the tool in a TOML formatted text file. Default options files for MS-DIAL 4 and 5 can be obtained'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipoCLEAN: 'LipoCLEAN is a command line tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided in discussion section: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "{inputs.lipoclean_executable}",
+      "--print",
+      "{inputs.msdial_version}"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "options.txt",
+  "expected_outputs": [
+    "options.txt file in TOML format containing default configuration keys for the specified MS-DIAL version"
+  ],
+  "finding": "The `--print MSD4` or `--print MSD5` command line arguments generate version-specific default configuration files named `options.txt` that users can subsequently edit.",
+  "github_name": "stavis1/LipoCLEAN",
+  "input_from": "task_001",
+  "inputs": [
+    "LipoCLEAN CLI tool (from stavis1/LipoCLEAN repository or installed executable/Docker container)",
+    "Target MS-DIAL version (4 or 5)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [],
+  "linked_result_ids": [
+    "result_001",
+    "result_003",
+    "result_004",
+    "result_005"
+  ],
+  "methodology_summary": [
+    "Invoke LipoCLEAN CLI with `--print MSD4` or `--print MSD5` flag to retrieve default configuration for the target MS-DIAL version",
+    "Capture or redirect the generated TOML-formatted options output to options.txt file",
+    "Validation: Confirm that options.txt file exists and contains valid TOML syntax with all expected configuration keys for the specified MS-DIAL version"
+  ],
+  "missing_information": [
+    "No changelog or version history provided in discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "lipidomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the LipoCLEAN CLI generate default configuration files for different MS-DIAL versions?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "command-line-tool-execution",
+    "configuration-file-generation",
+    "toml-format-validation",
+    "ms-dial-version-compatibility"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_lipoclean/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "lipoclean_system",
+    "msdial_tool",
+    "toml_config",
+    "lipoclean_cli"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "lipidomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:stavis1__LipoCLEAN",
+  "task_description": "Run the LipoCLEAN CLI with either `--print MSD4` or `--print MSD5` flag to generate a default configuration file (options.txt) and verify that the output file is created with all expected configuration keys.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LipoCLEAN CLI tool",
+      "port_id": "lipoclean_executable",
+      "resolved_via": null,
+      "source": "task_001/filtered_lipids",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Target MS-DIAL version (4 or 5)",
+      "port_id": "msdial_version",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Run the LipoCLEAN CLI with `--print MSD4` or `--print MSD5` and verify that an `options.txt` configuration file is generated.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Generated options.txt configuration file",
+      "port_id": "options_config",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "machine-learning",
+    "quality-control",
+    "metabolite-identification"
+  ],
+  "title": "Reconstruct generation of a default TOML options file for MS-DIAL 4 or MS-DIAL 5 via LipoCLEAN --print argument",
+  "tools": [
+    "LipoCLEAN"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Execute LipoCLEAN command-line interface with `--print MSD4` or `--print MSD5` flag to generate default options for the target MS-DIAL version. 2. Verify that an options.txt file is created in the output directory. 3. Parse the generated options.txt file and confirm the presence of all expected TOML-formatted configuration keys required for lipid quality filtering."
+}

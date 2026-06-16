@@ -1,0 +1,447 @@
+schema_version: 0.1.0
+workflow_id: spec2vec_grounded_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: Spec2Vec is a novel spectral similarity score inspired by Word2Vec that
+    learns fragmental relationships from large MS/MS datasets to better correlate
+    with structural similarity than cosine-based scores. The method enables improved
+    library matching and molecular networking with greater computational scalability.
+  pseudo_abstract: Spectral similarity scoring is fundamental to metabolomics analyses
+    such as library matching and molecular networking, yet cosine-based scores, the
+    current standard, show only partial correlation with true structural similarity.
+    This work introduces Spec2Vec, which adapts Word2Vec algorithms from natural language
+    processing to learn abstract spectral embeddings from co-occurrences of peaks
+    and neutral losses across large MS/MS datasets. Using GNPS data from approximately
+    13,000 unique molecules, Spec2Vec similarity scores demonstrate stronger correlation
+    with structural similarity (measured by Tanimoto fingerprint similarity) than
+    cosine or modified cosine scores when evaluated across the top 0.1% of scoring
+    pairs in the UniqueInchikey dataset. In library matching experiments, Spec2Vec
+    achieved notably better true-to-false-positive ratios at all thresholds compared
+    to cosine-based methods, reaching up to 88% accuracy with higher retrieval rates.
+    A Word2Vec model trained on the AllPositive dataset for 15 iterations achieves
+    approximately 97% peak coverage. The method is computationally more scalable than
+    cosine-based approaches, enabling rapid screening of unknown compounds against
+    large spectral databases and improving clustering performance in molecular network
+    analysis.
+  research_questions:
+  - How do Spec2Vec, cosine, and modified cosine similarity scores compare in their
+    correlation with structural similarity when computed across all spectral pairs
+    in the UniqueInchikey dataset?
+  - How do Spec2Vec similarity scores compare to cosine and modified cosine scores
+    in terms of true-to-false-positive rate during library matching on the AllPositive
+    dataset?
+  - How does the Spec2Vec method convert a pre-processed MS/MS spectrum into a fixed-length
+    vector representation suitable for efficient similarity comparisons?
+  - How does the fraction of peak coverage achieved by a Spec2Vec Word2Vec model vary
+    as a function of training corpus size, and can a 97% coverage threshold be reproduced
+    with the AllPositive dataset trained for 15 epochs?
+  methods_summary: "Load pre-processed spectral datasets (AllPositive: 95,320 spectra;\
+    \ UniqueInchiKeys: 12,797 spectra) from Zenodo. Obtain or train Word2Vec models\
+    \ using gensim (CBOW, window 500, 15\u201350 epochs, negative sampling=5). Convert\
+    \ all spectra to documents: represent peaks as 'peak@xxx.xx' (2-decimal binning)\
+    \ and add neutral losses ('loss@xxx.xx') between 5.0\u2013200.0 Da. Compute all-pairs\
+    \ Spec2Vec similarities via weighted spectrum vectors (weight = sqrt-normalized\
+    \ intensity) and cosine distance; filter peaks by parent-mass scaling (max_peaks=0.5\xD7\
+    parent_mass). Compute all-pairs cosine and modified cosine similarities using\
+    \ matchms with intensity threshold <0.01. Compute all-pairs Tanimoto structural\
+    \ similarity from RDKit daylight fingerprints (2048 bits) for annotated pairs.\
+    \ Rank similarities in descending order, select top 0.1% of pairs, and calculate\
+    \ mean Tanimoto for each method. Validation: mean Tanimoto values for Spec2Vec\
+    \ must exceed those for cosine and modified cosine at top 0.1% percentile, confirming\
+    \ stronger correlation with structural similarity. References: source article\
+    \ (DOI: 10.1371/journal.pcbi.1008724) Load and filter AllPositive dataset: remove\
+    \ peaks with m/z outside [0, 1000], discard spectra with <10 peaks, remove spectra\
+    \ without InChIKey annotation. Pre-select library candidate spectra using precursor\
+    \ m/z matching (1 ppm tolerance) to reduce computational cost. Compute cosine\
+    \ similarity scores with relative intensity threshold <0.01, tolerance 0.005,\
+    \ and min_match=6; compute modified cosine with tolerance 0.005 and min_match=10.\
+    \ Compute Spec2Vec similarity scores using both 15-epoch and 50-epoch pre-trained\
+    \ Word2Vec models on parent-mass-scaled peak subsets. For each similarity method,\
+    \ rank query spectra and classify hits as true positives (matching planar InChIKey)\
+    \ or false positives (non-matching structure) to construct ROC curves. Calculate\
+    \ true-positive rate, false-positive rate, and area-under-curve for each method\
+    \ and compare against reported paper benchmarks. Validation: ROC curve performance\
+    \ metrics (AUC, TP/FP rates) must show Spec2Vec (especially 50-epoch model) superior\
+    \ to cosine and modified cosine, with lower false-positive rates at equivalent\
+    \ true-positive thresholds, matching patterns reported in the paper. References:\
+    \ source article (DOI: 10.1371/journal.pcbi.1008724) Load pre-processed spectra\
+    \ and pre-trained Word2Vec model into memory Tokenize each spectrum: convert peaks\
+    \ to 'peak@xxx.xx' words (2-decimal binning) and neutral losses (5.0\u2013200.0\
+    \ Da range) to 'loss@xxx.xx' words Retrieve Word2Vec embeddings for all peak and\
+    \ loss words; track unknown words not in vocabulary Compute weighted spectrum\
+    \ vector as sum of embeddings scaled by square root of normalized peak intensity\
+    \ Calculate missing fraction (ratio of intensity from unknown peaks to total intensity)\
+    \ and filter spectra with missing fraction \u22650.05 Validation: confirm spectrum\
+    \ vectors have correct dimensionality (matching Word2Vec embedding size), all\
+    \ vectors are non-zero, and missing fraction metric is computed for every spectrum\
+    \ References: source article (DOI: 10.1371/journal.pcbi.1008724) Load AllPositive\
+    \ dataset (95,320 spectra, pre-filtered to m/z \u2208 [0, 1000], \u226510 peaks)\
+    \ and pre-trained Word2Vec model (15 epochs, CBOW, window=500, negative=5). Convert\
+    \ each spectrum to a document: represent peaks as 'peak@xxx.xx' words (2-decimal\
+    \ binning) and add neutral losses (5.0\u2013200.0 Da) as 'loss@xxx.xx' words.\
+    \ Normalize peak intensities to maximum = 1 per spectrum; compute missing fraction\
+    \ as 1 \u2212 (\u03A3\u221Aw_i for words in model vocabulary) / (\u03A3\u221A\
+    w_i for all words). Aggregate missing-fraction statistics across all spectra and\
+    \ compute mean coverage (1 \u2212 mean missing fraction). Vary effective corpus\
+    \ size by progressively adding spectra in order and recompute coverage metrics\
+    \ at each step to generate a corpus-size scaling curve. Validation: verify that\
+    \ final mean coverage reaches \u226597% when corpus includes all 95,320 spectra,\
+    \ matching the reported 97% peak coverage for the AllPositive 15-epoch model;\
+    \ confirm no missing-fraction value exceeds the recommended threshold of 0.05\
+    \ for \u226595% of spectra. References: source article (DOI: 10.1371/journal.pcbi.1008724)"
+  domain: metabolomics
+  techniques:
+  - spectral-library-matching
+  - molecular-networking
+  - tandem-ms
+  - machine-learning
+  - natural-language-processing
+  - cosine-similarity-scoring
+  claims:
+  - claim_text: Spec2Vec is a novel spectral similarity score inspired by Word2Vec,
+      a natural language processing algorithm.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Spec2Vec learns fragmental relationships within a large set of spectral
+      data to derive abstract spectral embeddings.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Spec2Vec scores correlate better with structural similarity than cosine-based
+      scores using data from nearly 13,000 unique molecules.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Spec2Vec is computationally more scalable, allowing structural analogue
+      searches in large databases within seconds.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Cosine-based similarity scores are the most widely used measures of
+      spectral similarity.
+    claim_type: finding
+    speculative: false
+  - claim_text: Studies investigating whether molecules with high structural similarity
+      result in spectra with high spectral cosine similarity show only partial support
+      for this relationship.
+    claim_type: finding
+    speculative: false
+  - claim_text: Modifications of cosine-based scores have been proposed including
+      raising the m/z and intensity components to different powers and shifting fragment
+      peaks by the difference in precursor m/z.
+    claim_type: finding
+    speculative: false
+  - claim_text: Despite limitations of cosine-based methods, no fundamentally different
+      spectral similarity scores have been proposed.
+    claim_type: finding
+    speculative: false
+  - claim_text: The AllPositive dataset comprised 95,320 positive ionization mode
+      mass spectra, of which 77,092 had InChIKey annotations.
+    claim_type: finding
+    speculative: false
+    entity_id: ALLPOSITIVE_DATASET
+  - claim_text: The UniqueInchikey dataset consisted of 12,797 spectra with unique
+      InChIKeys.
+    claim_type: finding
+    speculative: false
+  - claim_text: Spec2Vec spectrum similarity score correlates stronger with structural
+      similarity than cosine or modified cosine scores.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: The poor correlation between cosine and modified cosine similarity
+      scores and structural similarity can largely be explained by high false positive
+      rates.
+    claim_type: finding
+    speculative: false
+  - claim_text: Spec2Vec library matching achieved up to 88% accuracy compared to
+      cosine similarity score based library matching.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Training a Spec2Vec model on the UniqueInchikey dataset takes about
+      30 minutes on an Intel i7-8550U CPU.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Querying 1030 spectra against 76,062 spectra took 140 seconds on an
+      Intel i7-8550U CPU, or 0.14 seconds per query spectrum.
+    claim_type: finding
+    speculative: false
+  - claim_text: For 60% of queries for unknown molecules, the top-10 list contained
+      suggested molecules with a structural similarity score of greater than 0.6.
+    claim_type: finding
+    speculative: false
+  - claim_text: For molecules with masses larger than 200 Da, Spec2Vec was often able
+      to detect highly related molecules for unknown queries.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Spec2Vec is able to cluster higher fractions of spectra into high
+      structural similarity clusters when compared to the modified cosine score.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Computing spectral similarities between all possible spectra pairs
+      (approximately 82 million unique pairs) took 300 seconds on an Intel i7-8550U
+      CPU using Spec2Vec.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Spec2Vec is an unsupervised method that can be trained on any collection
+      of spectra, independent of whether chemical structures are known.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Peaks in mass spectra have no particular order comparable to word
+      order in a document, so Spec2Vec sets window-size to 500 meaning the entire
+      spectrum counts as context.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Continuous bag of words (CBOW) was generally observed to perform better
+      than skip gram for Spec2Vec.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Model performance for Spec2Vec does not necessarily improve with longer
+      training runs when using negative sampling.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Training a Spec2Vec model with negative sampling (negative = 5) and
+      15 iterations on AllPositive or up to 50 epochs on UniqueInchikey achieves optimal
+      model performance.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Spec2Vec represents a spectrum as a weighted sum of its fragment and
+      loss word vectors.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: The structural similarity between two molecules was measured using
+      Tanimoto similarity based on daylight-like molecular fingerprints.
+    claim_type: finding
+    speculative: false
+    entity_id: TANIMOTO_SIMILARITY
+  - claim_text: Neutral losses between 5.0 and 200.0 Da were added as features in
+      Spec2Vec document representation.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Peaks are represented in Spec2Vec documents with their position up
+      to a defined decimal precision, using a binning of two decimals.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Models trained on AllPositive with 2-decimal binning contained about
+      97% of all possible peaks and losses.
+    claim_type: finding
+    speculative: false
+    entity_id: ALLPOSITIVE_DATASET
+  - claim_text: Spec2Vec is not meant to be the endpoint but rather the start of a
+      new direction in spectral similarity scoring.
+    claim_type: finding
+    speculative: true
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Spec2Vec is particularly suited to act as a pre-selection funnel for
+      selecting promising candidates for further exploration using computationally
+      more expensive similarity measures.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Spec2Vec can be applied to molecular networking, which is becoming
+      an increasingly popular tool for exploring metabolomic datasets.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: GNPS users can calculate Spec2Vec scores for spectra in their positive
+      ionisation mode datasets using a pretrained model.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Training the Spec2Vec embedding on 95,320 spectra took 40 minutes
+      when training for 15 iterations.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Spec2Vec requires training on a large spectra dataset to work effectively,
+      but this does not necessarily need to be library spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Cosine-based methods are very good at revealing nearly equal spectra
+      but are not well-suited to handle molecules with multiple local chemical modifications.
+    claim_type: finding
+    speculative: false
+  - claim_text: Spec2Vec takes relationships between fragments into account rather
+      than relying only on binary assessment of each fragment match.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Spec2Vec is unsupervised and can be trained on any collection of spectra,
+      unlike database searching methods that require known structural information.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: The probability of randomly picking a spectral pair with structural
+      similarity score greater than 0.6 is p = 0.0103.
+    claim_type: finding
+    speculative: false
+  - claim_text: Spec2Vec improved performance for larger compounds (greater than 400
+      Da) is likely explained by the higher number of relevant fragments.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: The current study used a large LC-MS dataset from GNPS containing
+      154,820 spectra.
+    claim_type: finding
+    speculative: false
+    entity_id: GNPS_TOOL
+  - claim_text: After data cleaning and automated lookup, 128,042 out of 154,820 spectra
+      could be linked to an InChIKey.
+    claim_type: finding
+    speculative: false
+    entity_id: INCHIKEY_ANNOTATION
+  - claim_text: The AllPositive dataset contains 112,956 spectra with positive ionization
+      mode, of which 92,954 have InChIKey annotations.
+    claim_type: finding
+    speculative: false
+    entity_id: ALLPOSITIVE_DATASET
+  - claim_text: All peaks with m/z ratios outside the range [0, 1000] were removed
+      from spectra.
+    claim_type: finding
+    speculative: false
+  - claim_text: All spectra with fewer than 10 peaks were discarded from the analysis.
+    claim_type: finding
+    speculative: false
+  - claim_text: Different peak filtering procedures were used for Spec2Vec and cosine-based
+      similarity scores to ensure fair comparison.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: For cosine score calculations, all peaks with relative intensities
+      less than 0.01 compared to the highest intensity peak were ignored.
+    claim_type: finding
+    speculative: false
+    entity_id: COSINE_SCORE
+  - claim_text: The maximum number of peaks kept per spectrum in Spec2Vec was set
+      to scale linearly with the estimated parent mass.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: Spec2Vec can estimate the impact of unknown words (peaks) by assessing
+      the uncovered weighted part of a spectrum.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: By setting a missing fraction threshold at less than 0.05, Spec2Vec
+      similarity scores for spectra far outside the learned peaks can be avoided.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: A two-step verbatim-first discipline was used to ensure that spectral
+      similarity claims are grounded in the actual data.
+    claim_type: finding
+    speculative: false
+    entity_id: COSINE_SCORE
+  - claim_text: The modified cosine score combines matching peak m/z and the m/z shifted
+      by the difference in precursor m/z.
+    claim_type: finding
+    speculative: false
+    entity_id: COSINE_SCORE
+  - claim_text: Spec2Vec and modified cosine score matchms packages are freely available
+      and can be installed via conda.
+    claim_type: finding
+    speculative: false
+    entity_id: SPEC2VEC_SYSTEM
+  - claim_text: All-vs-all similarity score matrices for cosine score, modified cosine
+      score, and fingerprint-based similarity are available on Zenodo for the UniqueInchikey
+      dataset.
+    claim_type: finding
+    speculative: false
+    entity_id: COSINE_SCORE
+  - claim_text: 'The two most important trained Word2Vec models can be downloaded
+      from Zenodo: one trained on UniqueInchikey and one trained on AllPositive.'
+    claim_type: finding
+    speculative: false
+    entity_id: WORD2VEC_MODEL
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - cosine-based similarity score
+  - Modified cosine score can raise m/z and intensity components to different powers
+    and shift fragment peaks
+  - Cosine and modified cosine scores could be used together with Spec2Vec for library
+    matching
+  - SIRIUS/CSI:FingerID scores could be combined with Spec2Vec
+  - In silico fragmentation trees (SIRIUS, IOKR) as computationally more expensive
+    alternative approaches for compound identification
+  - Hypothetical neutral losses as input to train Spec2Vec model, following approach
+    of Kreitzberg et al.
+  - Combining Spec2Vec with hypothetical neutral losses concept as proposed by reference
+    [30]
+  - Continuous Bag of Words (CBOW) vs Skip-gram Word2Vec architecture
+  - Training with negative sampling vs without negative sampling
+  - Different peak filtering for Spec2Vec vs cosine-like similarity
+  substitution_constraints:
+  - Spec2Vec requires model training on a spectral library; cannot be applied without
+    a training dataset
+  - Spec2Vec requires training on large reference datasets to capture structural relationships
+  - Missing words problematic for Spec2Vec models trained on smaller datasets
+instructions: Reproduce the 4-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Spectrum vector file containing spectrum identifiers and their corresponding
+    Word2Vec-aggregated embedding vectors (one vector per spectrum)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Missing-fraction statistics table (CSV) with columns: spectrum_id, missing_fraction,\
+    \ coverage (1 \u2212 missing_fraction), cumulative_corpus_size"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Coverage-vs-corpus-size curve (PNG/PDF) showing mean peak/loss coverage increasing
+    from 0 to 97% as corpus size grows to 95,320 spectra
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Summary metrics JSON: mean_missing_fraction, median_missing_fraction, final_coverage_percent,
+    spectra_with_coverage_above_95_percent'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

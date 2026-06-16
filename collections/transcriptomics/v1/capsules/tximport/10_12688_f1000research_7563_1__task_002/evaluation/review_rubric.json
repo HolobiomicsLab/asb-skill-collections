@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: tximportData salmon quantification files (input directory from github:thelovelab__tximport)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: tx2gene mapping object (tx2gene data.frame from tximportData or article SI)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_005",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_006",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "count matrix from (txOut=TRUE + summarizeToGene) is byte-for-byte identical to c"
+    },
+    {
+      "id": "pf_007",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "both resulting count matrices are in standard R matrix or SummarizedExperiment f"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: tximportData salmon quantification files (input directory from github:thelovelab__tximport)",
+      "verify file exists: tx2gene mapping object (tx2gene data.frame from tximportData or article SI)",
+      "script_runs: execute tximport() with txOut=TRUE on salmon files and store result",
+      "script_runs: execute summarizeToGene() on txOut=TRUE result using tx2gene mapping",
+      "script_runs: execute tximport() with txOut=FALSE (default) on same salmon files",
+      "output_matches_reference: verify count matrix from (txOut=TRUE + summarizeToGene) is byte-for-byte identical to count matrix from txOut=FALSE, robust to floating-point representation choices in matrix serialization",
+      "file_format_is: both resulting count matrices are in standard R matrix or SummarizedExperiment format"
+    ],
+    "expert_review": [
+      "verify that the tximport parameters (type, countsFromAbundance, etc.) match those used in the article's reported equivalence test",
+      "assess whether numerical precision and rounding in the two pipelines are sufficiently aligned to justify claimed equivalence"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

@@ -1,0 +1,231 @@
+schema_version: 0.1.0
+workflow_id: coll_lipidmatch_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_003
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: LipidMatch is a comprehensive open-source lipid identification software
+    that matches experimental fragment m/z values against in-silico fragmentation
+    libraries containing over 500,000 lipid species across 60+ lipid types. The tool
+    has been validated across multiple instrument platforms and acquisition modes,
+    including Q-Exactive orbitrap, Agilent, Bruker, and SCIEX Q-TOF systems.
+  pseudo_abstract: LipidMatch performs lipid identification by matching experimental
+    fragment m/z values against simulated m/z values from in-silico fragmentation
+    libraries containing over 500,000 lipid species across over 60 lipid types. The
+    software has been validated using Q-Exactive orbitrap UHRLC-HRMS/MS data with
+    targeted, data-dependent top-N (ddMS2-topN), and all-ion fragmentation (AIF) acquisition
+    approaches, as well as Agilent, Bruker, and SCIEX Q-TOF UHRLC-HRMS/MS instruments
+    in both direct infusion and imaging experiments; Waters instruments are explicitly
+    unsupported. LipidMatch is modular and accepts input from external peak-picking
+    tools including MZmine, XCMS, MS-DIAL, and Compound Discoverer. The software provides
+    functionality to integrate user-generated lipid libraries in .csv format, enabling
+    custom lipid entries to be incorporated into the matching workflow for specialized
+    applications.
+  research_questions:
+  - Do the LipidMatch library files deposited in the GitHub repository contain at
+    least 500,000 distinct lipid species across 60 or more lipid-type categories?
+  - How does LipidMatch match experimental fragment m/z values to in-silico library
+    m/z values to identify lipids?
+  - What is the complete matrix of instrument/vendor and acquisition mode combinations
+    for which LipidMatch has been validated, and what instrument platforms are explicitly
+    unsupported?
+  - Does LipidMatch successfully load and integrate user-authored .csv lipid libraries
+    such that custom lipid entries become available as matching candidates in subsequent
+    analyses?
+  - How does LipidMatch convert and ingest peak-picking output from MZmine into its
+    analysis pipeline?
+  methods_summary: "Obtain the LipidMatch library files from the official GitHub repository.\
+    \ Parse all .csv library files and extract lipid species identifiers and category\
+    \ assignments. Deduplicate lipid species identifiers across all files to obtain\
+    \ a count of distinct species. Enumerate all unique lipid-type categories present\
+    \ in the aggregated data. Compare aggregated counts against reported thresholds\
+    \ (\u2265500,000 species, \u226560 types). Validation: Confirm that distinct species\
+    \ count \u2265500,000 AND distinct category count \u226560; output counts and\
+    \ pass/fail status. Load experimental fragment m/z peaklist from Q-Exactive or\
+    \ Q-TOF instrument output Load LipidMatch pre-computed in-silico fragmentation\
+    \ library (500,000+ species, 60+ lipid classes) Apply m/z matching algorithm with\
+    \ mass tolerance threshold to compare experimental fragments against library entries\
+    \ Score and rank candidate lipid matches by similarity and confidence metrics\
+    \ Validation: output table contains matched lipid identifications with m/z error\
+    \ within instrument tolerance specification and match scores above confidence\
+    \ threshold Access the LipidMatch GitHub repository and official documentation\
+    \ Identify and list all instrument vendors and models explicitly named as supported\
+    \ (Q-Exactive orbitrap, Agilent Q-TOF, Bruker Q-TOF, SCIEX Q-TOF) Extract all\
+    \ acquisition modes documented as validated (targeted, ddMS2-topN, AIF, direct\
+    \ infusion, imaging) Map each vendor\u2013mode combination found in the documentation\
+    \ Record the single documented unsupported platform (Waters) with status annotation\
+    \ Validation: Completeness verified by confirmation that all four supported vendors\
+    \ and all five acquisition modes from the EnrichedIndex findings are represented\
+    \ in the table, and Waters is marked as unsupported Retrieve LipidMatch software\
+    \ from GitHub repository and install according to documentation. Author a test\
+    \ lipid library in .csv format with custom entries including lipid identifiers,\
+    \ m/z values, and fragmentation patterns. Load the custom library into LipidMatch\
+    \ by placing the .csv file in the library directory and executing the library\
+    \ integration step. Run a test matching workflow on sample MS/MS data (or synthetic\
+    \ fragment list) with the integrated library active. Validate: inspect the output\
+    \ candidate list to confirm custom library entries appear ranked among the matching\
+    \ results (at least one custom entry must be present and retrievable). Load peak\
+    \ table output from the peak-picking tool in its native format. Apply the LipidMatch\
+    \ batch file or conversion script to standardize column structure and data types.\
+    \ Map peak-picker columns (m/z, retention time, intensity) to LipidMatch input\
+    \ schema. Validation: confirm output file structure matches LipidMatch input schema\
+    \ (required columns present, correct data types, non-zero row count)."
+  domain: lipidomics
+  techniques:
+  - database-annotation
+  - high-resolution-ms
+  - lc-ms
+  - metabolite-identification
+  - spectral-library-matching
+  - tandem-ms
+  claims:
+  - claim_text: LipidMatch contains in-silico fragmentation libraries of over 500,000
+      lipid species across over 60 lipid types.
+    claim_type: finding
+    evidence_step: task_001
+    speculative: false
+    source_task_kind: reproduction
+    entity_id: lipidmatch_system
+    condition_id: cond_aif
+  - claim_text: LipidMatch uses in-silico fragmentation libraries containing over
+      500,000 lipid species.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch covers over 60 lipid types.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch is described as one of the most comprehensive open-source
+      software in its domain.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch has been validated using Q-Exactive orbitrap UHPLC-HRMS/MS
+      data.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch has been validated using targeted LC-MS/MS approaches.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch has been tested and validated using Agilent Q-TOF UHPLC-HRMS/MS
+      experiments.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch has been tested and validated using Bruker Q-TOF UHPLC-HRMS/MS
+      experiments.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch has been tested and validated using SCIEX Q-TOF UHPLC-HRMS/MS
+      experiments.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch has been applied for annotation of direct infusion experiments.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch has been applied for annotation of imaging experiments.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch does not currently support Waters files.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch allows integration of user-generated libraries.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch is modular in design.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch can be used with MZmine peak picking software.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch can be used with XCMS peak picking software.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch can be used with MS-DIAL peak picking software.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch can be used with Compound Discoverer peak picking software.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  - claim_text: LipidMatch can combine results from other lipidomics software.
+    claim_type: finding
+    speculative: false
+    entity_id: lipidmatch_system
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - MZmine, XCMS, MS-DIAL, or Compound Discoverer can be used as alternative peak
+    picking software
+  substitution_constraints:
+  - Waters files are not supported
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 'Matched lipid identifications table (CSV or TSV) with columns: lipid name/class,
+    experimental m/z, library m/z, mass error, match score, and confidence metrics'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Custom library integration log or status report confirming successful loading
+    of user entries
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Matching results file (e.g. .csv or .txt) listing candidate lipids from the
+    integrated library for the test dataset
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: LipidMatch-formatted input file ready for lipid identification (CSV or tab-delimited
+    format with standardized m/z, retention time, and intensity columns)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

@@ -1,0 +1,373 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/c-add-doc.svg",
+      "role": "figure",
+      "sha256": "0331b45d3f4b3fe94fac53e270c648bd752bdecf7088d393adcad7fc1e3750b5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-bug.svg",
+      "role": "figure",
+      "sha256": "9e96e834682340e83292106e54adcf3fb0bfebfb1b016c4d5759849958f794a3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-clipboard.svg",
+      "role": "figure",
+      "sha256": "928c11204b31b97dea6b501034c8bfb73778157d1e6d7967ae5f789d5f3b14da"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-controls-play.svg",
+      "role": "figure",
+      "sha256": "5eee7ae909a3bdde55bfeffbacd5f07adb3f92745bbbd4fef7a6e61ac1caa5ee"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-db.svg",
+      "role": "figure",
+      "sha256": "e75498f7620d5f0abcef46e541e321e9e2ca675e22569d43843830762e340af5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-document.svg",
+      "role": "figure",
+      "sha256": "d0fc9c1d387f544da1e3707856573ac67772d6e1c91b734b488f4898fd9cceb9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-documents.svg",
+      "role": "figure",
+      "sha256": "3a4e23ef42df760a86709fa57741ec3c45758c19ccbf56f02e80c928f62da5f2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-download.svg",
+      "role": "figure",
+      "sha256": "dda75ebcf71fd10f15cb755e4bf886949e8658989c54280f2e6a807e1fa3b443"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-dragndrop.svg",
+      "role": "figure",
+      "sha256": "bed310f570c7b7507c3aad2b93f0ea31bf27ca2d3a1ccd9b6131007837764403"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-export.svg",
+      "role": "figure",
+      "sha256": "5eaa07befa9ee1eea492f4572a07fa97a59f9b256f9e78bb0f35f643227583c7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fbmn.svg",
+      "role": "figure",
+      "sha256": "9f5106d232858882d3d166e5e2d5718ef6e6e3d36552a03f9a7d5a71f06bf799"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-filter-down.svg",
+      "role": "figure",
+      "sha256": "e0f2d17b87498a3f035a175ad4696dc6dfcbc7001978dc07876bc813a9aadc65"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-filter-up.svg",
+      "role": "figure",
+      "sha256": "a27d30910ff137b58b1041aef3a4d42b8af57a34995d1caceaacc9abf9a8b457"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fingerprint.svg",
+      "role": "figure",
+      "sha256": "56c5cff08cd5ccc615adf833da66a953de49f1f79e2d5b9ab1087a70370de6db"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-fmet.svg",
+      "role": "figure",
+      "sha256": "e72c7c2b67996f3385eb4fcbdb224676b46bd3077585ab00652ad8079fb62187"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-close.svg",
+      "role": "figure",
+      "sha256": "35e7588df0d0606f50f40d67bbac994134d9cb0b2c9b663874fa27aadc924f7b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-file.svg",
+      "role": "figure",
+      "sha256": "bd1219b56e6a4e5bafb6bd6b45a46670ccdad9a1ac201bd4f461f7eaefed011b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder-open.svg",
+      "role": "figure",
+      "sha256": "a54b3efb697e2fdcfbc65990017c59f1a505ee5fc2990613ea1b5c85fd57da69"
+    },
+    {
+      "indexable": false,
+      "path": "figures/c-folder.svg",
+      "role": "figure",
+      "sha256": "2647d3b4de1fc2c365d4c38429f4325fb003d9421d49252c7e2eb5e97b2844df"
+    },
+    {
+      "indexable": false,
+      "path": "figures/sirius-icon.png",
+      "role": "figure",
+      "sha256": "00f610d0bcbf41600b0280797afe83cf3464f46558f13efa5ec794aa93e8c8aa"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "792d8276cd43aa8522a3b3ab934482485212a6f7ee69f7ca284a8be748f0aef8"
+    }
+  ],
+  "created_at": "2026-06-15T21:20:51.157086+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw LC-MS/MS data file(s) in mzML, mzXML, or vendor instrument format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Parsed and structured spectral data representation in SIRIUS-native format with validated MS1 and MS/MS hierarchies",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "SIRIUS is a Java-based framework designed to ingest and structure LC-MS/MS data into a validated, indexable internal representation before downstream analysis.",
+    "Input data may arrive in multiple formats (mzML, mzXML, vendor-specific) and must be normalized to a common spectral hierarchy with linked precursor and fragment ion annotations.",
+    "Metadata fields including precursor m/z, retention time, collision energy, and polarity must be extracted and validated for completeness and chemical plausibility.",
+    "SIRIUS framework methods are offered freely for research and education use; commercial redistribution is prohibited, and non-academic licenses are provided by Bright Giant GmbH."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that github:sirius-ms__sirius repository is accessible and contains Java source code for LC-MS/MS data ingestion",
+      "verify that the SIRIUS codebase contains a data loader or parser module with file_exists check for input spectrum file handlers (e.g., mzML, mzXML, or proprietary formats)",
+      "verify that SIRIUS can execute a bounded ingestion operation on a test LC-MS/MS dataset (public deposit or example file from repository) and produce structured spectrum output (JSON, binary object, or serialized format)",
+      "script_runs: execute SIRIUS ingestion API or CLI on a minimal test input and confirm exit code indicates successful parsing without errors",
+      "verify output_matches_reference: structured spectrum representation contains required fields (m/z values, intensities, retention time, precursor mass, collision energy) matching SIRIUS schema documentation or example output"
+    ],
+    "expert_review": [
+      "assess whether the parsed spectrum representation (molecular formula, fragment annotations, metadata) is chemically valid and consistent with LC-MS/MS acquisition parameters",
+      "evaluate whether the ingestion layer correctly handles edge cases (empty scans, malformed headers, missing metadata fields) without data loss or corruption",
+      "confirm that the structured output format is sufficient for downstream SIRIUS modules (CSI:FingerID, CANOPUS, MSNovelist) to consume without re-parsing"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does SIRIUS ingest and parse LC-MS/MS data into a structured representation within its Java framework?: 'SIRIUS is a java-based software framework for the analysis of LC-MS/MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SIRIUS is implemented as a Java-based software framework designed to accept LC-MS/MS data as input for downstream analysis.: 'SIRIUS is a java-based software framework for the analysis of LC-MS/MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw LC-MS/MS data file(s) in mzML, mzXML, or vendor instrument format: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Parsed and structured spectral data representation in SIRIUS-native format with validated MS1 and MS/MS hierarchies: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] SIRIUS: 'SIRIUS is a java-based software framework for the analysis of LC-MS/MS data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting input format support, API changes, or evolution of the spectrum parsing module across SIRIUS versions: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No explicit documentation provided on the structure of parsed spectrum objects or the internal representation used by the Java framework after ingestion: 'Source: github:sirius-ms__sirius'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "sirius",
+      "lcms-align",
+      "-i",
+      "{inputs.raw_lcms_data}",
+      "-o",
+      "sirius_output"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": null,
+  "expected_outputs": [
+    "Parsed and structured spectral data representation in SIRIUS-native format with validated MS1 and MS/MS hierarchies"
+  ],
+  "finding": "SIRIUS is implemented as a Java-based software framework designed to accept LC-MS/MS data as input for downstream analysis.",
+  "github_name": "sirius-ms/sirius",
+  "input_from": null,
+  "inputs": [
+    "Raw LC-MS/MS data file(s) in mzML, mzXML, or vendor instrument format"
+  ],
+  "keywords": [],
+  "landmark_outputs": [],
+  "linked_result_ids": [
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_009"
+  ],
+  "methodology_summary": [
+    "Load raw LC-MS/MS data files into SIRIUS Java framework",
+    "Parse and extract spectral metadata (precursor m/z, retention time, collision energy, fragment assignments)",
+    "Construct hierarchical spectrum objects with indexed MS1 and MS/MS data",
+    "Validate spectral quality (non-zero ion counts, valid mass ranges, metadata completeness)",
+    "Validation: All input spectra successfully parsed with no missing mandatory metadata fields and ion counts verified as non-zero"
+  ],
+  "missing_information": [
+    "No changelog documenting input format support, API changes, or evolution of the spectrum parsing module across SIRIUS versions",
+    "No explicit documentation provided on the structure of parsed spectrum objects or the internal representation used by the Java framework after ingestion"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does SIRIUS ingest and parse LC-MS/MS data into a structured representation within its Java framework?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "spectral-data-format-parsing",
+    "mass-spectrometry-metadata-validation",
+    "hierarchical-spectrum-object-construction",
+    "vendor-format-to-standard-conversion"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_cosmic/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "sirius_system",
+    "lcmsms_data"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "artificial-intelligence"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:sirius-ms__sirius",
+  "task_description": "Ingest LC-MS/MS spectral data into the SIRIUS Java framework and produce a parsed, structured representation of input spectra suitable for downstream analysis. Output the loaded and validated spectral data object(s) in SIRIUS-native format.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw LC-MS/MS data file(s)",
+      "port_id": "raw_lcms_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the data ingestion pipeline that reads raw LC-MS/MS spectra files and produces parsed, normalized spectrum objects in the SIRIUS Java framework.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Parsed spectral data in SIRIUS format",
+      "port_id": "sirius_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "in-silico-fragmentation",
+    "machine-learning",
+    "metabolite-identification",
+    "deep-learning",
+    "database-annotation",
+    "high-resolution-ms"
+  ],
+  "title": "Reconstruct the LC-MS/MS metabolite analysis pipeline entry point in SIRIUS",
+  "tools": [
+    "SIRIUS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load raw LC-MS/MS data files (mzML, mzXML, or vendor formats) into the SIRIUS Java framework using the built-in data importer. 2. Parse and validate spectral metadata (precursor m/z, retention time, collision energy, fragment ion assignments) from the input files. 3. Construct structured spectrum objects with properly indexed MS1 and MS/MS data hierarchies within the SIRIUS in-memory representation. 4. Perform basic quality checks (non-zero ion counts, valid mass ranges, metadata completeness) and output the validated spectral dataset in SIRIUS serialized format."
+}

@@ -1,0 +1,472 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/annot_df.png",
+      "role": "figure",
+      "sha256": "ab9293633dd1b01f892c85e5529b6f6892645f77b0c59a6cdcec7741721ba09b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/int_df.png",
+      "role": "figure",
+      "sha256": "977675938611d366b1dbbbffb5160ef2bd813fdc05fc297c122ad3089169c5e6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "26ea63da24eef76b075614f2a23a6152475dfce509f6c4ab8230f3ccc2d8beed"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo_transparent.png",
+      "role": "figure",
+      "sha256": "e0f7f4798ee79ee640b1cbbb679f461f0b6b51b0ee1fb96b243eb252db90d2fe"
+    },
+    {
+      "indexable": false,
+      "path": "figures/output.png",
+      "role": "figure",
+      "sha256": "e9be339d1b2eaa1a93785cd4b8f788e9e76e2e5c76392ab4711e70573218cda5"
+    },
+    {
+      "indexable": false,
+      "path": "figures/overall_schematic.png",
+      "role": "figure",
+      "sha256": "1b6442274e14d913cb03467f51a93987ce35d3486b8267e316ee60922379568d"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "bee6c8abc440ab2bf1fa768a9ce883b542f853cbb7c9d3daa122ac5f98ff7115"
+    }
+  ],
+  "created_at": "2026-06-15T21:26:46.708623+00:00",
+  "crossref_doi": "10.1186/1471-2105-6-225",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Metabolomics expression data (e.g., peak intensity or abundance matrix with samples \u00d7 metabolites)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Non-pathway metabolite set definitions: Molecular Families from GNPS",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Non-pathway metabolite set definitions: Mass2Motifs from MS2LDA",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Activity score matrix decomposed by PLAGE for Molecular Families (samples \u00d7 families with PLAGE scores)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Activity score matrix decomposed by PLAGE for Mass2Motifs (samples \u00d7 motifs with PLAGE scores)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparative results demonstrating robustness of non-pathway decomposition to noise and missing peaks",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Results presentation confirming PLAGE generalisation to non-pathway metabolite groupings",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "PLAGE (Pathway Level Analysis using Gene Expression) decomposes multivariate activity across groups via singular value decomposition of normalised expression within each group; when applied to non-pathway sets, it extracts dominant activity patterns in the same manner.",
+    "Molecular Families (GNPS) are co-occurrence groups of metabolite fragmentation patterns detected through spectral networking, representing metabolite relationships derived from MS/MS fragmentation data rather than curated pathway databases.",
+    "Mass2Motifs (MS2LDA) represent latent fragmentation patterns learned via probabilistic topic modelling on MS/MS spectra, capturing recurring fragmentation themes that may cut across traditional metabolite classifications.",
+    "Robustness to noise and missing peaks in metabolomics is critical because peak detection can be incomplete or error-prone; PLAGE's multivariate approach tolerates missing data better than set-overlap methods (ORA) or single-feature statistics (GSEA)."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify that PALS repository (github:glasgowcompbio/PALS) contains documented implementation of PLAGE decomposition method",
+      "Verify file_exists: locate example or test data in PALS repository using GNPS Molecular Families format",
+      "Verify file_exists: locate example or test data in PALS repository using MS2LDA Mass2Motifs format",
+      "Script_runs: execute PALS decomposition on GNPS Molecular Families input and confirm output artifact is produced",
+      "Script_runs: execute PALS decomposition on MS2LDA Mass2Motifs input and confirm output artifact is produced",
+      "Verify output_matches_reference: compare decomposition scores/loadings from both non-pathway metabolite sets against any published reference results or supplementary tables reporting PLAGE application to these data types"
+    ],
+    "expert_review": [
+      "Confirm that reported decomposition results for Molecular Families and Mass2Motifs demonstrate statistically and biologically meaningful variance decomposition consistent with the PLAGE method's theoretical properties",
+      "Assess whether the generalization to fragmentation-spectrum-derived groupings (GNPS and MS2LDA) is substantively different from pathway-based analysis and whether results validate the claim of generalization",
+      "Evaluate robustness claims: verify that PLAGE scores on these non-pathway metabolite sets show comparable or superior noise tolerance relative to ORA/GSEA baselines if such comparisons are reported"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the PLAGE decomposition method in PALS generalise to non-pathway metabolite groupings such as Molecular Families from GNPS and Mass2Motifs from MS2LDA?: 'the [decomposition approach] in PALS is amenable to the analysis of any group of metabolite sets, not just pathways. As demonstrated in PALS Viewer, metabolite sets obtained from the grouping of'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS's decomposition approach is amenable to analysis of any group of metabolite sets beyond pathways, including Molecular Families from GNPS and Mass2Motifs from MS2LDA.: 'the [decomposition approach] in PALS is amenable to the analysis of any group of metabolite sets, not just pathways. As demonstrated in PALS Viewer, metabolite sets obtained from the grouping of'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Metabolomics expression data (e.g., peak intensity or abundance matrix with samples \u00d7 metabolites): 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Non-pathway metabolite set definitions: Molecular Families from GNPS: 'Molecular Families from GNPS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Non-pathway metabolite set definitions: Mass2Motifs from MS2LDA: 'Mass2Motifs from MS2LDA'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Activity score matrix decomposed by PLAGE for Molecular Families (samples \u00d7 families with PLAGE scores): 'decomposes activity levels in pathways via the PLAGE method'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Activity score matrix decomposed by PLAGE for Mass2Motifs (samples \u00d7 motifs with PLAGE scores): 'decomposes activity levels in pathways via the PLAGE method'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Comparative results demonstrating robustness of non-pathway decomposition to noise and missing peaks: 'more robust to noise and missing peaks compared to the alternatives'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Results presentation confirming PLAGE generalisation to non-pathway metabolite groupings: 'presents the results in a user-friendly manner'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PALS (Pathway Activity Level Scoring): 'we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs database queries of pathways, decomposes activity levels in pathways'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] GNPS: 'Molecular Families from GNPS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MS2LDA: 'Mass2Motifs from MS2LDA'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[other] specific published results (tables, figures, or supplementary files) demonstrating PLAGE decomposition applied to GNPS Molecular Families: 'N/A \u2014 section text does not report quantitative results or point to supplementary data for this generalization'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[other] specific published results (tables, figures, or supplementary files) demonstrating PLAGE decomposition applied to MS2LDA Mass2Motifs: 'N/A \u2014 section text does not report quantitative results or point to supplementary data for this generalization'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[other] reference to or location of the exact test dataset(s) used to validate decomposition on these non-pathway metabolite sets: 'N/A \u2014 no concrete accession, URL, or file path is cited in the discussion section'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "plage_generalization_results.csv",
+  "expected_outputs": [
+    "Activity score matrix decomposed by PLAGE for Molecular Families (samples \u00d7 families with PLAGE scores)",
+    "Activity score matrix decomposed by PLAGE for Mass2Motifs (samples \u00d7 motifs with PLAGE scores)",
+    "Comparative results demonstrating robustness of non-pathway decomposition to noise and missing peaks",
+    "Results presentation confirming PLAGE generalisation to non-pathway metabolite groupings"
+  ],
+  "finding": "PALS's decomposition approach is amenable to analysis of any group of metabolite sets beyond pathways, including Molecular Families from GNPS and Mass2Motifs from MS2LDA.",
+  "github_name": "glasgowcompbio/PALS",
+  "input_from": null,
+  "inputs": [
+    "Metabolomics expression data (e.g., peak intensity or abundance matrix with samples \u00d7 metabolites)",
+    "Non-pathway metabolite set definitions: Molecular Families from GNPS",
+    "Non-pathway metabolite set definitions: Mass2Motifs from MS2LDA"
+  ],
+  "keywords": [
+    "pathway activity scoring",
+    "plage method",
+    "metabolomics peak detection",
+    "untargeted metabolomics",
+    "molecular families",
+    "mass2motifs",
+    "fragmentation spectra analysis"
+  ],
+  "landmark_outputs": [
+    "gnps_families_activity_scores.csv",
+    "ms2lda_motifs_activity_scores.csv",
+    "robustness_noise_comparison.csv"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_008"
+  ],
+  "methodology_summary": [
+    "Load metabolomics data and non-pathway metabolite groupings (Molecular Families and Mass2Motifs).",
+    "Apply PALS decomposition using PLAGE algorithm to calculate activity scores for each metabolite set across samples.",
+    "Assess robustness of PLAGE scores by introducing noise or simulating missing peaks and comparing stability to pathway-based results.",
+    "Validation: PLAGE successfully decomposes non-pathway metabolite sets with comparable or superior robustness to noise/missing peaks as pathway-based analyses, confirming generalisation beyond curated pathway annotations.",
+    "References: source article (DOI: 10.1186/1471-2105-6-225)"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "specific published results (tables, figures, or supplementary files) demonstrating PLAGE decomposition applied to GNPS Molecular Families",
+    "specific published results (tables, figures, or supplementary files) demonstrating PLAGE decomposition applied to MS2LDA Mass2Motifs",
+    "reference to or location of the exact test dataset(s) used to validate decomposition on these non-pathway metabolite sets"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the PLAGE decomposition method in PALS generalise to non-pathway metabolite groupings such as Molecular Families from GNPS and Mass2Motifs from MS2LDA?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "metabolite-set-decomposition-plage",
+    "spectral-fragmentation-motif-analysis",
+    "molecular-family-grouping-analysis",
+    "activity-score-robustness-assessment",
+    "non-pathway-metabolite-classification"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pals/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "PALS_system",
+    "PALS_viewer",
+    "PLAGE_method",
+    "GNPS_tool",
+    "MS2LDA_tool",
+    "molecular_families_component",
+    "mass2motifs_component",
+    "robustness_result",
+    "metabolite_set_analysis_result"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "gene-regulation"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:glasgowcompbio__PALS",
+  "task_description": "Demonstrate that PALS decomposition using PLAGE generalises beyond pathway analysis to non-pathway metabolite groupings (Molecular Families from GNPS and Mass2Motifs from MS2LDA). Reproduce reported results showing that the approach successfully decomposes activity levels across these spectrum-derived metabolite sets.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Metabolomics expression data (peak intensity or abundance matrix)",
+      "port_id": "metabolomics_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Molecular Families from GNPS",
+      "port_id": "gnps_families",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mass2Motifs from MS2LDA",
+      "port_id": "ms2lda_motifs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Demonstrate that PALS successfully applies PLAGE decomposition to Molecular Families and Mass2Motifs as non-pathway metabolite groupings.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PLAGE activity scores for GNPS Molecular Families",
+      "port_id": "gnps_plage_scores",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "PLAGE activity scores for MS2LDA Mass2Motifs",
+      "port_id": "ms2lda_plage_scores",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Robustness evaluation against noise and missing peaks",
+      "port_id": "robustness_comparison",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Results confirming PLAGE generalisation beyond pathways",
+      "port_id": "generalization_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dimensionality-reduction",
+    "pathway-analysis",
+    "enrichment-analysis"
+  ],
+  "title": "Reproduce metabolite set analysis generality: Molecular Families and Mass2Motifs inputs",
+  "tools": [
+    "PALS (Pathway Activity Level Scoring)",
+    "GNPS",
+    "MS2LDA"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load metabolomics expression data and non-pathway metabolite sets (Molecular Families from GNPS and Mass2Motifs from MS2LDA) into PALS. 2. Apply PALS decomposition using the PLAGE method to compute activity scores for each metabolite grouping across samples. 3. Evaluate robustness of PLAGE-derived activity scores against noise and missing peaks, comparing qualitatively to pathway-based results. 4. Present decomposed activity levels and comparative results in output tables or figures confirming generalisation beyond pathway analysis."
+}

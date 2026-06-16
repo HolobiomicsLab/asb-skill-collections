@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: github:FelinaHildebrand/MobiLipid repository is accessible and contains DTCCSN2 library artifact"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: DTCCSN2 library is in a format compatible with R (e.g., .csv, .rds, or documented data structure)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: R Markdown workflow in MobiLipid codebase executes without error when provided with lipid detection counts and CCS measurements as inputs"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: computational workflow produces a quantitative metric (bias estimate, root mean square error, or correlation coefficient) that demonstrates relationship between lipid count per class and CCS bias quality"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: output includes explicit statement or table row showing minimum lipid count per class threshold below which bias estimation remains effective"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: github:FelinaHildebrand/MobiLipid repository is accessible and contains DTCCSN2 library artifact",
+      "verify file_format_is: DTCCSN2 library is in a format compatible with R (e.g., .csv, .rds, or documented data structure)",
+      "verify script_runs: R Markdown workflow in MobiLipid codebase executes without error when provided with lipid detection counts and CCS measurements as inputs",
+      "verify output_matches_reference: computational workflow produces a quantitative metric (bias estimate, root mean square error, or correlation coefficient) that demonstrates relationship between lipid count per class and CCS bias quality",
+      "verify field_present: output includes explicit statement or table row showing minimum lipid count per class threshold below which bias estimation remains effective"
+    ],
+    "expert_review": [
+      "Assess whether the reported finding (low number of lipids per class suffices for effective CCS bias estimation) is scientifically defensible given the computational results and DTCCSN2 reference data",
+      "Evaluate the statistical rigor of the relationship analysis (e.g., linearity, saturation behavior, confidence bounds) between lipid count per class and bias estimation quality",
+      "Review whether the CCS bias estimation method is appropriate for ion mobility-mass spectrometry lipidomics and whether internal standardization with U13C labeled lipids is correctly implemented in the computational workflow"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

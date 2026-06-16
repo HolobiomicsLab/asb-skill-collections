@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that mspcompiler package contains extract_ri function (file_exists: function definition in package source or documentation)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that mspcompiler package contains assign_ri function (file_exists: function definition in package source or documentation)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify script_runs: R script that calls library(mspcompiler); extract_ri() on a NIST ri.dat file completes without error"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify script_runs: R script that calls assign_ri() to populate RI field in compiled EI library object completes without error"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify field_present: resulting R object or MSP output file contains 'RI' field or equivalent retention index metadata field"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify value_in_range or contains_substring: RI values in output are numeric and match expected format for Kovats retention indices (typically integer or decimal values in range ~500\u20133500)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify that mspcompiler package contains extract_ri function (file_exists: function definition in package source or documentation)",
+      "Verify that mspcompiler package contains assign_ri function (file_exists: function definition in package source or documentation)",
+      "Verify script_runs: R script that calls library(mspcompiler); extract_ri() on a NIST ri.dat file completes without error",
+      "Verify script_runs: R script that calls assign_ri() to populate RI field in compiled EI library object completes without error",
+      "Verify field_present: resulting R object or MSP output file contains 'RI' field or equivalent retention index metadata field",
+      "Verify value_in_range or contains_substring: RI values in output are numeric and match expected format for Kovats retention indices (typically integer or decimal values in range ~500\u20133500)"
+    ],
+    "expert_review": [
+      "Confirm that RI values extracted from NIST ri.dat file are chemically and analytically plausible for the corresponding compounds (expert judgment of retention index correctness)",
+      "Confirm that RI assignment to library entries is chemically consistent \u2014 i.e., compounds are matched to correct RI values and not transposed or corrupted"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

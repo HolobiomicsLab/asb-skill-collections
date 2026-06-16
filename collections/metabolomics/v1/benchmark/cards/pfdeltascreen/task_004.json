@@ -1,0 +1,274 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/logo.jpg",
+      "role": "figure",
+      "sha256": "71bce88a8c368752824edde4511954dd9c5403b3e20a4bc993ddcbf0120ee7f8"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "4edf5fbad132b38a70dc2febd2892a1258d4ccc00edde341d64a0c786a44a59e"
+    }
+  ],
+  "created_at": "2026-06-15T12:20:13.915230+00:00",
+  "crossref_doi": "10.1007/s00216-023-05070-2",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Centroided MS2 spectra in mzML format",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature table or spectrum list with MS2 diagnostic fragment match flags and identified diagnostic masses",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "PFAS diagnostic fragments are characteristic product ions (e.g., CF\u2083\u207b, CF\u2082\u207b, SO\u2082\u207b) that appear in MS2 spectra and serve as biomarkers for PFAS compound classes.",
+    "Mass tolerance (typically 5\u201310 ppm in high-resolution HRMS) determines whether an observed product ion mass matches a known diagnostic fragment within instrumental accuracy.",
+    "Characteristic mass differences (e.g., loss of functional groups) between precursor and product ions provide additional diagnostic signatures beyond exact fragment masses.",
+    "Centroided MS2 spectra have peaks represented as m/z\u2013intensity pairs rather than profile mode raw data, enabling direct mass matching against fragment databases."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: github:JonZwe__PFAScreen repository is accessible and contains source code for MS2 diagnostic fragment screening module",
+      "file_format_is: input artifact is a valid mzML file (XML-based mass spectrometry data format)",
+      "script_runs: MS2 filter module executes without runtime errors on sample centroided MS2 spectra from mzML input",
+      "output_matches_reference: feature flagging output (list of feature IDs or scan indices) matches expected format with at least one named field identifying flagged features and one field recording diagnostic fragment mass match or mass difference value",
+      "field_present: output contains at least one structured field documenting which diagnostic fragment mass(es) or characteristic mass difference(es) triggered each feature flag",
+      "value_in_range: diagnostic fragment masses or mass differences reported in output fall within plausible PFAS chemical mass range (approximately 50\u2013500 Da for common PFAS diagnostic fragments); robust to minor calibration drift"
+    ],
+    "expert_review": [
+      "chemical validity of diagnostic fragment masses used in the filter: confirm that selected m/z values correspond to known PFAS diagnostic fragments (e.g., CF2 loss, CF3 ion, perfluorocarbon chain fragments) and that mass tolerance windows are appropriate for high-resolution MS",
+      "appropriateness of mass difference thresholds: verify that characteristic mass differences (e.g., CF2 repeating unit \u224848 Da) are chemically meaningful and correctly parameterized for the instrument resolution",
+      "clinical or regulatory relevance of prioritization: assess whether flagged features align with PFAS compound families of toxicological or regulatory concern"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does PF\u0394Screen detect and flag potential PFAS features by identifying diagnostic fragments and characteristic mass differences in MS2 spectral data?: 'fragment mass differences and diagnostic fragments in the MS2 data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PF\u0394Screen uses diagnostic fragments and fragment mass differences detected in MS2 data as one of several prioritization techniques to identify potential PFAS features alongside the MD/C-m/C approach and Kendrick mass defect analysis.: 'PF\u0394Screen uses several techniques for prioritization such as the MD/C-m/C approach, Kendrick mass defect (KMD) analysis and fragment mass differences and diagnostic fragments in the MS2 data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Centroided MS2 spectra in mzML format: 'mzML files can be generated via the MSConvert software tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Feature table or spectrum list with MS2 diagnostic fragment match flags and identified diagnostic masses: 'fragment mass differences and diagnostic fragments in the MS2 data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] pyOpenMS: 'pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Python: 'PF\u0394Screen is an open-source Python based non-target screening software tool'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found documenting version history, parameter changes, or updates to diagnostic fragment mass lists: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pyopenms; from pyopenms import MzMLFile, MSSpectrum; import sys; mzml_file = '{inputs.ms2_spectra_mzml}'; exp = pyopenms.MSExperiment(); MzMLFile().load(mzml_file, exp); pfas_diagnostics = [86.0394, 119.0031, 169.0347]; ppm_tol = 10; results = []; [results.append({'spectrum_idx': i, 'precursor_mz': spec.getPrecursors()[0].getMZ() if spec.getPrecursors() else None, 'diagnostic_matches': [f for f in pfas_diagnostics if any(abs((pk.getMZ() - f) / f * 1e6) < ppm_tol for pk in spec.get_peaks()[1])], 'flagged': any(abs((pk.getMZ() - f) / f * 1e6) < ppm_tol for f in pfas_diagnostics for pk in spec.get_peaks()[1])}) for i, spec in enumerate(exp) if spec.getMSLevel() == 2]; import json; print(json.dumps(results, indent=2))"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "diagnostic_flagged_features.csv",
+  "expected_outputs": [
+    "Feature table or spectrum list with MS2 diagnostic fragment match flags and identified diagnostic masses"
+  ],
+  "finding": "PF\u0394Screen uses diagnostic fragments and fragment mass differences detected in MS2 data as one of several prioritization techniques to identify potential PFAS features alongside the MD/C-m/C approach and Kendrick mass defect analysis.",
+  "github_name": "JonZwe/PFAScreen",
+  "input_from": null,
+  "inputs": [
+    "Centroided MS2 spectra in mzML format"
+  ],
+  "keywords": [
+    "pfas screening",
+    "non-target hrms",
+    "lc-hrms",
+    "gc-hrms",
+    "feature detection",
+    "kendrick mass defect analysis",
+    "fragment mass differences",
+    "ms2 diagnostics",
+    "esi ionization",
+    "apci ionization",
+    "untargeted metabolomics"
+  ],
+  "landmark_outputs": [
+    "diagnostic_fragment_database.csv",
+    "ms2_spectra_parsed.json",
+    "fragment_matches_per_spectrum.csv"
+  ],
+  "linked_result_ids": [
+    "result_008"
+  ],
+  "methodology_summary": [
+    "Load centroided MS2 spectra from mzML using pyOpenMS.",
+    "Define or retrieve known PFAS diagnostic fragment masses and mass difference thresholds.",
+    "For each spectrum, match precursor\u2013product mass pairs against diagnostic fragment database within mass tolerance.",
+    "Flag features with one or more diagnostic fragment matches.",
+    "Validation: Output feature flagged with diagnostic match identity and mass error within specified tolerance (typically <10 ppm).",
+    "References: source article (DOI: 10.1007/s00216-023-05070-2)"
+  ],
+  "missing_information": [
+    "No changelog found documenting version history, parameter changes, or updates to diagnostic fragment mass lists"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does PF\u0394Screen detect and flag potential PFAS features by identifying diagnostic fragments and characteristic mass differences in MS2 spectral data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "ms2-diagnostic-fragment-matching",
+    "mass-spectral-peak-annotation",
+    "precursor-product-mass-pairing",
+    "pfas-characteristic-mass-difference-detection",
+    "mzml-spectrum-data-parsing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pfdeltascreen/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "mzML_Dataset",
+    "PFAS_Prioritization_Architecture",
+    "KMD_Component",
+    "MS2_Diagnostic_Component"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:JonZwe__PFAScreen",
+  "task_description": "Implement a standalone MS2 diagnostic fragment screening filter that accepts centroided MS2 spectra from mzML files and returns features flagged by the presence of known PFAS diagnostic fragment masses or characteristic mass differences.",
+  "task_id": "task_004",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Centroided MS2 spectra in mzML format",
+      "port_id": "ms2_spectra_mzml",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement a standalone MS2 filter module that parses centroided MS2 spectra from mzML files and flags features matching known PFAS diagnostic fragment masses or characteristic mass differences.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature table with MS2 diagnostic fragment match flags",
+      "port_id": "diagnostic_flagged_features",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "high-resolution-ms",
+    "chemical-class-annotation",
+    "database-annotation",
+    "quality-control"
+  ],
+  "title": "Reconstruct the MS2 diagnostic fragment screening filter for PFAS prioritization",
+  "tools": [
+    "pyOpenMS",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load centroided MS2 spectra from mzML file using pyOpenMS. 2. Define or retrieve known PFAS diagnostic fragment masses and characteristic mass difference thresholds. 3. For each MS2 spectrum, scan precursor\u2013product mass pairs against the diagnostic fragment database using mass tolerance matching. 4. Flag features whose MS2 spectra contain one or more diagnostic fragment matches or mass differences within tolerance. 5. Output a filtered feature table or annotated spectrum list with diagnostic match flags and fragment identities."
+}

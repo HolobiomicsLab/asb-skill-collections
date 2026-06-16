@@ -1,0 +1,297 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/figure.png",
+      "role": "figure",
+      "sha256": "282ebbc8836ac19e3dba0ae9d051391ea18e2be5d9e0400685b75e5be91d1b51"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "7a2af1abd76feaf323b785bc09170200bc2b46f75b641d7150ee1f000afc0196"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "e18efd0ab9cd81415a15cfb14efdcceb6cd6cc246f5a9fb9dc52f57dcb3adbef"
+    }
+  ],
+  "created_at": "2026-06-15T13:12:54.858707+00:00",
+  "crossref_doi": "10.1021/acs.analchem.3c05019",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mass spectrometry data (raw spectra in mzML/mzXML/MS2 format or pre-processed feature matrix)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pre-trained PS2MS deep learning model weights and architecture definition",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "NPS classification predictions table with spectrum identifiers, predicted compound classes, and confidence scores per prediction",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "PS2MS uses mass spectrometry spectral data as input to predict novel psychoactive substance identity through deep learning classification.",
+    "NPS predictions require proper m/z and intensity normalization to match the training distribution expected by the pre-trained model.",
+    "Deep learning inference produces per-class probability outputs that must be post-processed to assign final NPS class labels and confidence thresholds.",
+    "The PS2MS model is distributed via the jhhung/PS2MS repository and includes both architecture and pre-trained weights for direct inference use."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify that the jhhung/PS2MS repository is accessible and contains executable inference code",
+      "Verify that example or test mass spectrometry input data is present in the repository (file_exists for data/ or test_data/ subdirectory or example files with extensions .mzML, .mzXML, .csv, or .txt)",
+      "Verify that the inference pipeline script runs without errors on provided test data (script_runs)",
+      "Verify that the pipeline produces structured predictions with at least NPS class labels and confidence scores (file_format_is or field_present)",
+      "Verify that the output predictions can be parsed into a table with rows corresponding to input samples and columns for predicted substance class and associated metrics (format_is)",
+      "Retrieve reported prediction performance metrics (accuracy, precision, recall, F1) from the published article or supplementary materials and verify output_matches_reference for at least one benchmark dataset mentioned in the paper"
+    ],
+    "expert_review": [
+      "Assess whether the reported NPS detection predictions align with the chemical and spectroscopic plausibility of the identified substances and whether the deep learning model's feature importance is interpretable for mass spectrometry domain experts",
+      "Evaluate whether the reproduced predictions on benchmark data achieve reported performance thresholds and whether any discrepancies in metrics are attributable to random initialization, hardware differences, or data preprocessing variations"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Can the PS\u00b2MS deep learning system successfully predict and identify new psychoactive substances from mass spectrometry data when applied to test inputs?: 'A Deep Learning-Based Prediction System for Detecting Novel New Psychoactive Substances Using Mass Spectrometry'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] PS\u00b2MS is a deep learning-based prediction system designed for detecting novel new psychoactive substances using mass spectrometry data.: 'A Deep Learning-Based Prediction System for Detecting Novel New Psychoactive Substances Using Mass Spectrometry'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Mass spectrometry data (raw spectra in mzML/mzXML/MS2 format or pre-processed feature matrix): '_No usage/docs found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Pre-trained PS2MS deep learning model weights and architecture definition: 'jhhung/PS2MS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] NPS classification predictions table with spectrum identifiers, predicted compound classes, and confidence scores per prediction: 'A Deep Learning-Based Prediction System for Detecting Novel New Psychoactive Substances Using Mass Spectrometry'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] PS2MS: 'jhhung/PS2MS'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting model versions, training data updates, or inference pipeline modifications: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "ps2ms",
+      "predict",
+      "--ms-data",
+      "{inputs.ms_spectra}",
+      "--model",
+      "{inputs.pretrained_model}",
+      "--output",
+      "nps_predictions.csv"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "nps_predictions.csv",
+  "expected_outputs": [
+    "NPS classification predictions table with spectrum identifiers, predicted compound classes, and confidence scores per prediction"
+  ],
+  "finding": "PS\u00b2MS is a deep learning-based prediction system designed for detecting novel new psychoactive substances using mass spectrometry data.",
+  "github_name": "jhhung/PS2MS",
+  "input_from": null,
+  "inputs": [
+    "Mass spectrometry data (raw spectra in mzML/mzXML/MS2 format or pre-processed feature matrix)",
+    "Pre-trained PS2MS deep learning model weights and architecture definition"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "preprocessed_spectra.pkl",
+    "model_outputs_raw.npy",
+    "nps_predictions.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Load mass spectrometry spectral data from input files in standard formats (mzML/mzXML/MS2 or pre-processed matrices).",
+    "Preprocess spectra through normalization and feature vectorization to match PS2MS input requirements.",
+    "Load pre-trained deep learning model architecture and weights from the PS2MS repository.",
+    "Execute forward inference pass on all preprocessed spectra to generate classification logits and probability scores.",
+    "Assign NPS class labels based on maximum predicted probability and apply confidence filtering.",
+    "Validation: Verify that prediction output format matches expected schema (spectrum_id, predicted_class, confidence_score columns) and that confidence scores are valid probabilities (0\u20131 range).",
+    "References: source article (DOI: 10.1021/acs.analchem.3c05019)"
+  ],
+  "missing_information": [
+    "No changelog documenting model versions, training data updates, or inference pipeline modifications"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Can the PS\u00b2MS deep learning system successfully predict and identify new psychoactive substances from mass spectrometry data when applied to test inputs?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "mass-spectrometry-data-preprocessing",
+    "deep-learning-model-inference",
+    "nps-classification-prediction",
+    "spectrum-feature-vectorization",
+    "confidence-score-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_ps2ms/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "sys_ps2ms",
+    "tool_mass_spectrometry",
+    "component_deep_learning",
+    "pub_ps2ms_paper"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "modeling"
+  ],
+  "synthesized_from": "github:jhhung__PS2MS",
+  "task_description": "Run the PS2MS deep learning inference pipeline on mass spectrometry data to predict and classify new psychoactive substances (NPS). Produce structured NPS predictions with confidence scores matching the reported detection performance.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mass spectrometry data",
+      "port_id": "ms_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-trained PS2MS model",
+      "port_id": "pretrained_model",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the PS\u00b2MS inference pipeline on mass spectrometry data and generate NPS detection predictions matching the system's reported performance.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "NPS classification predictions with confidence scores",
+      "port_id": "nps_predictions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "deep-learning",
+    "machine-learning",
+    "metabolite-identification",
+    "tandem-ms"
+  ],
+  "title": "Reproduce PS2MS deep learning model predictions for NPS detection from mass spectrometry data",
+  "tools": [
+    "PS2MS"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: NPS classification predictions table with spectrum identifiers, predicted compound classes, and confidence scores per prediction."
+  ],
+  "workflow_description": "1. Load mass spectrometry input data (raw spectra or processed feature matrices) compatible with PS2MS input schema. 2. Preprocess spectra according to PS2MS normalization and feature extraction requirements (tokenization/vectorization of m/z and intensity pairs). 3. Load the pre-trained PS2MS deep learning model from the jhhung/PS2MS repository. 4. Execute forward inference pass on preprocessed spectra to generate NPS classification predictions and confidence scores. 5. Post-process predictions to assign NPS class labels and filter by model confidence threshold. 6. Export results as a structured prediction table with spectrum identifiers, predicted NPS classes, and per-class probabilities."
+}

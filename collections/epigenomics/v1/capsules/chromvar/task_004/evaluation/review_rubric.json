@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that input is a chromVARDeviations object (or SummarizedExperiment with deviation assays) loadable from the chromVAR package"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that getAnnotationCorrelation function executes without error on the input object"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that getAnnotationSynergy function executes without error on the input object"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "correlation matrix output file (CSV, TSV, or RDS format)",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "synergy score table output file (CSV, TSV, or RDS format)",
+      "value": "CSV"
+    },
+    {
+      "id": "pf_006",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "correlation matrix contains row and column labels corresponding to annotation se",
+      "value": [
+        "labels corresponding to annotation sets"
+      ]
+    },
+    {
+      "id": "pf_007",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "synergy score table contains columns for annotation pair identifiers and numeric",
+      "value": [
+        "for annotation pair identifiers",
+        "numeric synergy scores"
+      ]
+    },
+    {
+      "id": "pf_008",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "correlation coefficients in output matrix are between \u22121.0 and +1.0"
+    },
+    {
+      "id": "pf_009",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "synergy scores are numeric (verify absence of NA/NaN where data should be presen"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that input is a chromVARDeviations object (or SummarizedExperiment with deviation assays) loadable from the chromVAR package",
+      "verify that getAnnotationCorrelation function executes without error on the input object",
+      "verify that getAnnotationSynergy function executes without error on the input object",
+      "file_format_is: correlation matrix output file (CSV, TSV, or RDS format)",
+      "file_format_is: synergy score table output file (CSV, TSV, or RDS format)",
+      "field_present: correlation matrix contains row and column labels corresponding to annotation sets",
+      "field_present: synergy score table contains columns for annotation pair identifiers and numeric synergy scores",
+      "value_in_range: correlation coefficients in output matrix are between \u22121.0 and +1.0",
+      "value_in_range: synergy scores are numeric (verify absence of NA/NaN where data should be present), robust to parameter choices in function calls"
+    ],
+    "expert_review": [
+      "evaluate whether correlation matrix and synergy scores are biologically plausible given the annotation sets used (e.g., JASPAR motifs vs. kmers)",
+      "assess whether high correlation or synergy values correspond to expected redundancy or complementarity between the two annotation modalities",
+      "verify that the choice of correlation metric and synergy computation method are appropriate for the sparse accessibility data context"
+    ]
+  },
+  "max_score": 9.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

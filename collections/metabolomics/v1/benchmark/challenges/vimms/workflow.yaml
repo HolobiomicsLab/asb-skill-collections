@@ -1,0 +1,422 @@
+schema_version: 0.1.0
+workflow_id: coll_vimms_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: "ViMMS is a flexible simulation framework for prototyping and comparing\
+    \ fragmentation strategies in liquid chromatography\u2013tandem mass spectrometry-based\
+    \ metabolomics without requiring real instrument time."
+  pseudo_abstract: "ViMMS (Virtual Metabolomics Mass Spectrometer) is a modular framework\
+    \ designed to simulate fragmentation strategies in LC-MS/MS metabolomics. The\
+    \ framework enables researchers to generate virtual chemicals through various\
+    \ sampling methods (e.g., from HMDB databases or uniform m/z distributions), configure\
+    \ virtual mass spectrometers with customizable noise models, and execute fragmentation\
+    \ strategies via controller implementations such as Top-N data-dependent acquisition\
+    \ (DDA) and data-independent acquisition (DIA) methods including SWATH and all-ion\
+    \ fragmentation. An Environment class orchestrates the interaction between chemicals,\
+    \ mass spectrometer, and controller, executing the acquisition simulation and\
+    \ exporting results to mzML format for downstream analysis. The framework supports\
+    \ evaluation of simulation outputs through coverage and intensity metrics, and\
+    \ can interface with real instruments via the vimms_fusion extension. Demonstrated\
+    \ applications include generating full-scan MS1 data from simulated chemicals,\
+    \ reproducing Top-N fragmentation on real beer metabolomics data for validation,\
+    \ and sampling 73,822 filtered HMDB formulae in the m/z range 100\u20131000 for\
+    \ chemical generation."
+  research_questions:
+  - Can ViMMS simulate a full-scan MS1 acquisition on a set of known chemical compounds
+    sampled from the HMDB database and produce a valid mzML output file?
+  - Can ViMMS simulate Top-N MS/MS acquisition on real beer samples and reproduce
+    the fragmentation coverage observed in the original experimental data?
+  - How are the three core components (Chemicals, IndependentMassSpectrometer, and
+    Controller) orchestrated by the Environment class to execute a complete simulation
+    control loop?
+  - "Can the reported count of 73,822 unique formulas in the HMDB database (filtered\
+    \ for m/z 100\u20131000) be reproduced by running DatabaseFormulaSampler on the\
+    \ downloaded raw HMDB data?"
+  - How do evaluation metrics from WeightedDEWController differ from the baseline
+    TopNController when both are run through the ViMMS simulation framework?
+  methods_summary: "Load or initialize HMDB compound database and sample 100 chemical\
+    \ formulas within m/z 100\u20131000 range. Generate KnownChemical objects with\
+    \ simulated retention times, intensities, and MS1 chromatograms. Instantiate virtual\
+    \ mass spectrometer and configure FullScanController for MS1-only (no MS2) acquisition.\
+    \ Execute Environment simulation loop to record scans at 1\u20135 second intervals\
+    \ across 0\u20131200 second run time. Export simulated scans to mzML format and\
+    \ optionally pickle EvaluationData for ground-truth reference. Validation: Verify\
+    \ mzML file is valid and contains MS1 scans only with correct polarity, retention\
+    \ time range, and m/z values matching sampled chemicals. References: source article\
+    \ (DOI: 10.1021/acs.analchem.0c03895) Download and load the Beer1pos real mzML\
+    \ file from the vimms-data repository. Extract unknown chemical objects (m/z,\
+    \ retention time, intensity profiles) from the real mzML using ChemicalMixtureFromMZML.\
+    \ Instantiate an IndependentMassSpectrometer with the extracted chemicals and\
+    \ positive polarity mode. Configure a TopNController with N=5, isolation_width=1,\
+    \ and match the real acquisition intensity thresholds. Run the simulation via\
+    \ Environment.run() and export the simulated mzML. Apply consistent peak detection\
+    \ (OpenMS parameters) to both real and simulated mzML files. Compute fragmentation\
+    \ coverage and intensity metrics and compare across datasets. Validation: reproduce\
+    \ the reported Top-N fragmentation coverage and intensity comparison for Beer1pos\
+    \ from the demo notebook, confirming consistency of simulated versus real acquisition\
+    \ metrics. References: source article (DOI: 10.1021/acs.analchem.0c03895) Instantiate\
+    \ a formula sampler (UniformMZFormulaSampler) with m/z bounds 100\u2013500 Da.\
+    \ Create a chemical mixture from the sampler using ChemicalMixtureCreator, sampling\
+    \ 100 chemicals with MS1 and MS2 levels. Construct an IndependentMassSpectrometer\
+    \ in positive polarity mode with the chemical list. Configure a TopNController\
+    \ with fixed parameters: N=3, isolation_width=1, mz_tol=10, rt_tol=15, min_ms1_intensity=1.75E5.\
+    \ Build an Environment object spanning 0\u20131440 s, register the mass spectrometer\
+    \ and controller, and invoke run(). Validation: confirm that env.scans is a non-empty\
+    \ list containing both MS1 and MS2 Scan objects with valid m/z, intensity, and\
+    \ retention-time fields. References: source article (DOI: 10.1021/acs.analchem.0c03895)\
+    \ Download the HMDB database file from the vimms-data public repository. Load\
+    \ HMDB data into memory using ViMMS's built-in HMDB loading functions. Instantiate\
+    \ DatabaseFormulaSampler with the loaded HMDB data and configure m/z range constraints\
+    \ (or other filter criteria as present in the benchmark). Execute the sampler's\
+    \ filtering pipeline to extract and deduplicate molecular formulas. Count unique\
+    \ formulas in the filtered output and record the result. Validation: verify that\
+    \ the output formula count equals 73,822 as reported in the benchmark. References:\
+    \ source article (DOI: 10.1021/acs.analchem.0c03895) Sample 100 virtual metabolites\
+    \ across m/z 100\u2013500 with two MS levels using UniformMZFormulaSampler. Instantiate\
+    \ IndependentMassSpectrometer with POSITIVE polarity and the generated chemicals.\
+    \ Configure WeightedDEWController with use_weighteddew_exclusion=True, N=3, isolation_width=1\
+    \ m/z, mz_tol=10 ppm, rt_tol=15 s, and min_ms1_intensity=1.75E5. Run the Environment\
+    \ simulation loop from t=0 to 1440 s with save_eval=True to capture fragmentation\
+    \ events and scan traces. Serialize the mzML output and pickled EvaluationData\
+    \ object to disk. Compute evaluation metrics (times_fragmented_summary, cumulative\
+    \ intensity) from the pickle and compare against baseline TopNController result\
+    \ to verify performance differentiation. Validation: Confirm that the WeightedDEW\
+    \ run produces a non-zero times_fragmented_summary metric with at least one chemical\
+    \ fragmented at least twice, and that cumulative intensity and fragmentation breadth\
+    \ metrics differ measurably from the baseline TopN run. References: source article\
+    \ (DOI: 10.1021/acs.analchem.0c03895)"
+  domain: metabolomics
+  techniques:
+  - data-independent-acquisition
+  - feature-detection
+  - machine-learning
+  - metabolite-identification
+  - spectral-library-matching
+  claims:
+  - claim_text: ViMMS is a flexible and modular framework designed to simulate fragmentation
+      strategies in tandem mass spectrometry-based metabolomics.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: Devising new MS/MS fragmentation methods is challenging due to the
+      absence of a structured environment where researchers can prototype, compare,
+      and optimize strategies before testing on real equipment.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_ENVIRONMENT
+  - claim_text: ViMMS allows you to simulate fragmentation strategies, generate virtual
+      chemicals through various methods, and evaluate the performance of different
+      strategies or controllers in either single or multi-sample settings.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: ViMMS is compatible with Python 3+.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: ViMMS can be installed using pip.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: ViMMS dependencies are managed with Poetry.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: ViMMS uses MkDocs to build its documentation, which is hosted at vimms.readthedocs.io.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: ViMMS uses pyTest as the testing framework.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: ViMMS follows PEP8 coding style with linewidth set to 99 characters.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: flake8 and autopep8 tools have been installed as part of the virtual
+      environment to ensure PEP8 compliance.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_ENVIRONMENT
+  - claim_text: Contributors to ViMMS must submit code under the MIT License.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: ViMMS is designed to serve as a unified platform for the development,
+      testing, and optimization of fragmentation strategies in LC-MS metabolomics.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: ViMMS offers an extension that allows controllers to operate directly
+      on the Thermo Orbitrap Fusion Tribrid instrument.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: A license for IAPI is required to use ViMMS on the Thermo Orbitrap
+      Fusion Tribrid instrument.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: Known chemicals in ViMMS are represented by their chemical formulae
+      and can be sampled from databases such as HMDB.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: DatabaseFormulaSampler samples formulas from a provided database.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: UniformMZFormulaSampler samples formulas uniformly in a defined m/z
+      range.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: PickEverythingFormulaSampler samples all formulas from a database.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: EvenMZFormulaSampler creates evenly spaced m/z values, primarily for
+      test cases.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: MZMLFormulaSampler samples m/z values from a histogram of m/z derived
+      from a user-supplied mzML file.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: ChemicalMixtureCreator class is used to produce chemical datasets
+      for simulation.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: Unknown chemicals in ViMMS are typically extracted from existing mzML
+      files.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: Each peak picked from mzML files is presumed to correspond to a chemical
+      in ViMMS simulation.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: CleanColumn applies reproducible offsets to all chemicals, keeping
+      their elution order fixed.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CHEMICALS
+  - claim_text: LinearColumn extends CleanColumn with a retention time drift function,
+      allowing systematic shifts across injections.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CLEAN_COLUMN
+  - claim_text: TopNController is a standard fragmentation strategy in ViMMS where
+      the top N most intense ions in the survey scan are fragmented.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: ViMMS implements data-independent acquisition (DIA) strategies including
+      All-ion-fragmentation (AIF) and SWATH-MS.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: Environment class orchestrates interaction between the mass spectrometer
+      and the controller in ViMMS.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: GaussianPeakNoise adds normally distributed variation to peak intensities
+      in ViMMS.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: AdditiveBaselineNoise injects a constant baseline across the m/z range
+      in ViMMS.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: RetentionTimeDeviation introduces random jitter in retention times
+      in ViMMS.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: The vimms_fusion extension allows ViMMS controllers to be deployed
+      directly on the Thermo Orbitrap Fusion Tribrid instrument.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: GitHub Actions automatically publishes the vimms package to PyPI whenever
+      a GitHub release is published.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: The version number in pyproject.toml must be updated before creating
+      a release.
+    claim_type: finding
+    speculative: false
+  - claim_text: A simulation in ViMMS involves Chemicals, Mass Spectrometer, Controller,
+      and Environment components.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: Running the environment in ViMMS produces a list of scans that can
+      be written to mzML.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: EvaluationData object stores the chemicals, generated scans and fragmentation
+      events.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CHEMICALS
+  - claim_text: vimms.Evaluation provides several evaluator classes that compute coverage
+      and intensity statistics across multiple runs.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: The evaluation helpers in ViMMS rely on peak picking using MZMine
+      parameters defined in PeakPicking.py.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: WeightedDEWController is a Top-N variant with dynamic exclusion weighting
+      in ViMMS.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: SmartROIController implements ROI guided fragmentation using adaptive
+      scoring in ViMMS.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: FullScanController in ViMMS is useful for creating full scan datasets
+      through MS1 only acquisition.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: All controllers in ViMMS share a common interface and can be extended
+      to implement new fragmentation logic.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  - claim_text: Environment class provides write_mzML to export the generated scans.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_ENVIRONMENT
+  - claim_text: MultipleMixtureCreator can introduce group specific intensity changes
+      and missing values for multi-sample experiments.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MULTIPLE_MIXTURE_CREATOR
+  - claim_text: ChemicalMixtureFromMZML converts existing mzML files into chemical
+      lists using ROI extraction.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_UNKNOWN_CHEMICAL
+  - claim_text: openms_optimise.py runs grid searches over controller parameters and
+      evaluates each run with OpenMS.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_CONTROLLER
+  - claim_text: openms_evaluate.py processes mzML output from a simulation to compute
+      fragmentation coverage using OpenMS feature detection.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_OPENMS
+  - claim_text: data_generation.py generates example chemical mixtures and mzML files
+      useful for testing pipelines or benchmarking fragmenters.
+    claim_type: finding
+    speculative: false
+  - claim_text: Noise objects in ViMMS live in vimms.Noise and can be passed directly
+      to a mass spectrometer instance.
+    claim_type: finding
+    speculative: false
+    entity_id: VIMMS_SYSTEM
+  speculative: false
+  task_openness: mixed
+  method_alternatives:
+  - Sample formulas uniformly in defined m/z range using UniformMZFormulaSampler
+  - Sample all formulas from a database using PickEverythingFormulaSampler
+  - Create evenly spaced m/z using EvenMZFormulaSampler
+  - Sample m/z values from histogram using MZMLFormulaSampler
+  - Apply CleanColumn for reproducible offsets
+  - Apply LinearColumn with retention time drift
+  - GaussianPeakNoise for peak intensity variation
+  - UniformPeakNoise alternative for peak noise
+  - AdditiveBaselineNoise for baseline injection
+  - RetentionTimeDeviation for RT jitter
+  - WeightedDEWController for Top-N variant with dynamic exclusion
+  - SmartROIController for ROI-guided fragmentation
+  - FullScanController for MS1 only acquisition
+  - MZDIAL could be used instead of custom chemical extraction
+  - XCMS or MZmine can be used for peak picking
+  substitution_constraints:
+  - Requires Thermo Fisher IAPI license for running on real instrument
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Scans list (Python list object) containing MS1 and MS2 scan records from the
+    Environment run, retrievable via env.scans
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Count of filtered unique formulas (integer: 73,822)'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Log or summary report confirming formula-filtering step completion
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: mzML file containing simulated MS1 and MS2 scans generated by WeightedDEWController
+    fragmentation strategy
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Pickled EvaluationData object containing chemicals, scans, and fragmentation
+    events for downstream evaluation
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Evaluation report dictionary with metrics including times_fragmented_summary,
+    cumulative coverage, and intensity statistics
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

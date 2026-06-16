@@ -1,0 +1,10 @@
+name: TensorFlow 2.3.0
+slug: tensorflow-2-3-0
+evidence_spans:
+- tensorflow version 2.3.0 installed to convert the keras models into HDF5 TF2 models
+derived_from:
+- doi: 10.1021/acs.jnatprod.1c00399
+  title: npclassifier
+source_repos:
+- mwang87/NP-Classifier
+schema_version: 0.2.0

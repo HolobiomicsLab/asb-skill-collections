@@ -1,0 +1,10 @@
+name: SCARF
+slug: scarf
+evidence_spans:
+- Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
+derived_from:
+- doi: 10.1021/acs.jcim.3c01082
+  title: 'MIST-CF: Chemical Formula Inference from Tandem Mass Spectra'
+source_repos:
+- samgoldman97/mist-cf
+schema_version: 0.2.0

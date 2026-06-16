@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that champ.filter() function exists in the ChAMP package source code at github:YuanTian1991__ChAMP"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that HumanMethylation450 test dataset is loadable from ChAMPdata package (version >= 2.23.1)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output is a filtered methylation matrix or object with reduced probe count compared to input"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "expert_review required: confirm that probes with detection p-value > 0.01 were removed by comparing probe counts pre- and post-filtering (requires validation against filtering source code or documentation)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that champ.filter() function exists in the ChAMP package source code at github:YuanTian1991__ChAMP",
+      "verify that HumanMethylation450 test dataset is loadable from ChAMPdata package (version >= 2.23.1)",
+      "script_runs: execute champ.filter() on HumanMethylation450 test dataset with default parameters and confirm no errors occur",
+      "verify that output is a filtered methylation matrix or object with reduced probe count compared to input",
+      "expert_review required: confirm that probes with detection p-value > 0.01 were removed by comparing probe counts pre- and post-filtering (requires validation against filtering source code or documentation)"
+    ],
+    "expert_review": [
+      "inspect ChAMP package source code or documentation to confirm that champ.filter() removes probes with detection p-value > 0.01 by default",
+      "inspect ChAMP package source code or documentation to confirm that champ.filter() removes probes with fewer than 3 beads in at least 5% of samples by default",
+      "validate that the reported filtering thresholds (detection p-value > 0.01, bead count < 3 in \u22655% samples) match the actual implementation in default parameters"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

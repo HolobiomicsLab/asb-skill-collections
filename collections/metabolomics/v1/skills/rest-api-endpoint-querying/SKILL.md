@@ -1,19 +1,23 @@
 ---
 name: rest-api-endpoint-querying
-description: Use when you need to programmatically retrieve model metadata or submit data to a service endpoint when direct file-based access is unavailable or when the service exposes a published HTTP API contract. This is particularly relevant when model input specifications (e.
+description: Use when you have a SMILES string or batch of SMILES strings representing chemical structures and need to obtain NP Classifier predictions programmatically.
 license: CC-BY-4.0
 metadata:
-  edam_operation: http://edamontology.org/operation_3763
+  edam_operation: http://edamontology.org/operation_3346
   edam_topics:
-  - http://edamontology.org/topic_3361
+  - http://edamontology.org/topic_3314
+  - http://edamontology.org/topic_0154
   tools:
-  - tensorflow serving
+  - Python
+  - Docker
+  - Docker Compose
   - TensorFlow Serving
+  - NP-Classifier
 derived_from:
-- doi: 10.1186/s13321-023-00738-4
-  title: DeepSAT
+- doi: 10.1021/acs.jnatprod.1c00399
+  title: npclassifier
 evidence_spans:
-- We pass through tensorflow serving at this url
+- Make sure you have python installed
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v1
@@ -22,65 +26,85 @@ provenance:
   - build: coll_deepsat
     doi: 10.1186/s13321-023-00738-4
     title: DeepSAT
-  dedup_kept_from: coll_deepsat
+  - build: coll_npclassifier
+    doi: 10.1021/acs.jnatprod.1c00399
+    title: npclassifier
+  dedup_kept_from: coll_npclassifier
 schema_version: 0.2.0
 ---
 
-# REST API endpoint querying
+# rest-api-endpoint-querying
 
 ## Summary
 
-Query a REST API endpoint to retrieve and validate structured metadata or classification results, typically by constructing HTTP requests, parsing JSON responses, and verifying response schema compliance.
+Query a deployed REST API endpoint to submit structured chemical data (SMILES strings) for programmatic classification and retrieve JSON-formatted predictions. This skill enables high-throughput molecular structure classification without manual web interface interaction.
 
 ## When to use
 
-You need to programmatically retrieve model metadata or submit data to a service endpoint when direct file-based access is unavailable or when the service exposes a published HTTP API contract. This is particularly relevant when model input specifications (e.g., expected spectroscopic headers) may change and must be validated before use.
+You have a SMILES string or batch of SMILES strings representing chemical structures and need to obtain NP Classifier predictions programmatically. Use this skill when you require reproducible, automatable access to the classifier's output rather than interactive web submission, or when integrating classification into a larger computational pipeline.
 
 ## When NOT to use
 
-- Model metadata is embedded in local configuration files or code comments and does not require live service validation.
-- The endpoint is unavailable or unreliable; use cached or hardcoded metadata instead.
-- Input schema is guaranteed static by design and does not require runtime verification.
+- You do not have a SMILES string or other structured chemical input; the endpoint requires valid molecular notation.
+- The NP Classifier Docker services are not running or the network (nginx-net) has not been created and initialized.
+- You need batch classification of many thousands of structures and require synchronous responses; consider asynchronous job submission if available.
 
 ## Inputs
 
-- HTTP endpoint URL (e.g., TensorFlow Serving instance with /model/metadata or /api/smart3/search paths)
-- Model instance identifier or name
-- Optional: JSON payload (for POST/classification requests; e.g., peaks as list of dicts with 1H,13C headers)
+- SMILES string (valid chemical structure notation)
+- HTTP GET request parameters (smiles, optional: cached flag)
 
 ## Outputs
 
-- Parsed JSON response containing model metadata (signature, input names, output schema)
-- Validation report (boolean or structured status indicating schema compliance)
-- Extracted input/output field names suitable for code generation or runtime binding
+- JSON response object containing classification output
+- HTTP status code (200 for success)
+- Model layer metadata (input_2048, input_4096, output layer names)
 
 ## How to apply
 
-Construct an HTTP GET request to the target endpoint (e.g., /model/metadata for TensorFlow Serving instances). Execute the request and retrieve the JSON response. Parse the JSON to extract required fields (e.g., signature, inputs, outputs) that define the API contract. Validate that the response structure matches expectations—for SMART 3, this means confirming the presence of model input names such as '1H' and '13C' headers. Write extracted metadata and validation status to structured output (e.g., JSON) for downstream use or code generation.
+First, ensure the NP Classifier Docker services (server and TensorFlow Serving) are running via docker-compose. Construct an HTTP GET request to the /classify endpoint, passing your SMILES string as a query parameter. Send the request and capture the returned JSON response. Validate that the HTTP status code is 200 and inspect the JSON structure to confirm the presence of the 'output' field and metadata indicating successful model invocation. Optionally, append a cached flag parameter to retrieve pre-cached results for faster repeated queries on the same structure.
 
 ## Related tools
 
-- **TensorFlow Serving** (HTTP service providing model metadata and inference endpoints; queried via GET to /model/metadata to retrieve input/output schema)
+- **Docker** (Container runtime for deploying and managing NP Classifier server and TensorFlow Serving services)
+- **Docker Compose** (Orchestration tool for coordinating multi-container NP Classifier deployment (make server-compose))
+- **TensorFlow Serving** (Model serving backend that handles inference requests and exposes /model/metadata endpoint for layer name verification)
+- **NP-Classifier** (Core classification model and API server providing /classify and /model/metadata endpoints) — https://github.com/mwang87/NP-Classifier
+
+## Examples
+
+```
+curl -X GET 'http://localhost:5000/classify?smiles=CC(=O)Oc1ccccc1C(=O)O' -H 'Content-Type: application/json'
+```
 
 ## Evaluation signals
 
-- HTTP response status code is 200 (success) and response is valid JSON.
-- Parsed JSON contains all required top-level fields: 'signature', 'inputs', 'outputs' matching the API contract.
-- Extracted input field names (e.g., '1H', '13C') are non-empty and match expected spectroscopic conventions for the SMART 3 model.
-- Validation report is generated and written to output JSON without exceptions.
-- Changes to model input names are detected and flagged for code update review.
+- HTTP response status code equals 200, indicating successful endpoint contact and request processing.
+- Returned JSON is well-formed and contains the mandatory 'output' field with classification predictions.
+- Response metadata or schema confirms the presence of expected input layer names 'input_2048' and 'input_4096' and output layer name 'output' (verifiable via /model/metadata endpoint).
+- SMILES input is reflected or acknowledged in the response, confirming the correct structure was classified.
+- Response time is reasonable (< 5 seconds for single queries, faster for cached queries indicated by cached flag parameter).
 
 ## Limitations
 
-- Model input names may change and require corresponding code updates; this skill detects the change but does not automate code generation.
-- No changelog is available in the source repository to track historical changes to the API contract.
-- Network availability and endpoint stability are prerequisites; transient service outages will cause validation to fail.
-- The skill assumes the endpoint returns well-formed JSON; malformed or non-JSON responses will cause parsing to fail.
+- The endpoint requires valid SMILES strings; malformed or invalid chemical notation will result in error or unexpected output.
+- Input layer names are hardcoded in the NP Classifier codebase ('input_2048' and 'input_4096'); any model updates that change these names require code modifications.
+- Privacy: the service logs queried structures but not user identity, so repeated large-scale queries may be recorded in server logs.
+- Single synchronous requests block until the TensorFlow Serving backend completes inference; very high query rates may saturate the service.
 
 ## Evidence
 
-- [intro] HTTP GET call to the /model/metadata endpoint on a TensorFlow Serving instance: "queries model metadata via an HTTP GET call to the /model/metadata endpoint on a TensorFlow Serving instance"
-- [intro] Model input names must be extracted and verified; changes require code updates: "model input names must be extracted and verified, as changes to these input names require corresponding code updates"
-- [intro] Expected input headers are '1H' and '13C': "Classify programmatically. You can put in your peaks as a json list of dicts, with 1H,13C as headers"
-- [intro] Response must contain required fields (signature, inputs, outputs): "Validate that the response contains required fields (signature, inputs, outputs) matching the expected API contract"
-- [intro] TensorFlow Serving instance location mentioned in intro: "We pass through tensorflow serving at this url: /model/metadata"
+- [other] Does the /classify API endpoint accept a SMILES string parameter and return a properly structured classification response?: "The NP Classifier provides a /classify API endpoint that accepts SMILES strings as query parameters for programmatic classification requests."
+- [other] Workflow for REST endpoint querying: "Construct an HTTP GET request to the /classify endpoint with a valid SMILES string parameter. Send the request and capture the JSON response. Validate the response structure contains the expected"
+- [readme] Required deployment infrastructure: "We typically will deploy this locally. To bring everything up, you need docker and docker-compose."
+- [readme] Layer name specification: "Input layers' names should be "input_2048" and "input_4096"
+
+Output layer's name should be "output""
+- [readme] API endpoint syntax: "Classify programmatically 
+
+```/classify?smiles=<>```
+
+You can also provide cached flag to the params to get the cached version so make it faster"
+- [readme] TensorFlow Serving routing: "We pass through tensorflow serving at this url:
+
+```/model/metadata```"

@@ -1,0 +1,434 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/conda_asari_screenshot.png",
+      "role": "figure",
+      "sha256": "63a0d4afac544c88c5471e07a1c7b8621b13f42dc929ec51bfe4de7812eab5bc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/viz_screen_shot20220518.png",
+      "role": "figure",
+      "sha256": "8f39467923bd069f89f08ae3cf26aae438fe9cefae58597ac3cd3ec4546a05ce"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "326956a66d39dbea6b07415031b29fd5b0d550197b560a91838eb9f9bd36ba0a"
+    }
+  ],
+  "created_at": "2026-06-16T05:33:42.864961+00:00",
+  "crossref_doi": "10.1038/s41467-023-39889-1",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Aligned mass tracks per sample with m/z and full-length intensity arrays",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Retention time calibration dictionaries (rt_cal_dict) mapping sample scan numbers to reference coordinates",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Mass grid structure with aligned m/z values across all samples",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Composite mass tracks (summed intensity arrays) indexed by consensus m/z and full RT scan length",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature list with detected elution peaks on composite tracks: peak apex (scan), peak area, height, baseline boundaries, cSelectivity, SNR, goodness_fitting, and parent_masstrack_id",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Execution log confirming single peak-detection pass on composite map vs. N per-sample passes",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Composite mass tracks represent the superposition of aligned signals across all samples at a single m/z coordinate; peaks detected once on the composite map are equivalent to experiment-wide features, avoiding N redundant peak-detection calls.",
+    "Prominence in scipy.signal.find_peaks is the vertical distance from peak apex to its lowest contour line; asari dynamically computes prominence per segment as the maximum of 1/3 min_peak_height, track noise level, and 5% of segment max intensity to account for local signal variability.",
+    "cSelectivity (chromatographic selectivity) quantifies how distinctly an elution peak is resolved from adjacent peaks on the same mass track; values > 0.99 indicate high confidence landmark peaks suitable for retention-time calibration.",
+    "Rescaling of composite tracks with max intensity > 1E8 (ceiling) to a normalized level serves to make peak detection thresholds robust across instruments and studies with varying total signal intensities, with rescaling factors applied back after detection.",
+    "Low-intensity tracks (median intensity < 1e3 threshold) are treated separately with baseline and noise both set to the threshold value, avoiding spurious peak detection in near-noise regions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in asari source repository (github:shuzhao-li-lab/asari) containing COMP_COMPOSITEMAP construction logic",
+      "verify scipy.signal.find_peaks is imported and called exactly once per composite map construction in the peak detection module",
+      "verify function signature of composite map builder accepts summed intensity array as input",
+      "script_runs: execute asari peak detection pipeline on test dataset (github:shuzhao-li/data/tree/main/data) and confirm no errors occur during composite map construction and scipy.signal.find_peaks invocation",
+      "value_in_range: confirm number of find_peaks function calls in execution trace equals 1 (not N where N = number of samples), parameter-sensitive to sample count and batch processing configuration",
+      "file_format_is: verify output composite peak detection result is a structured record (JSON, pickle, or numpy array) containing detected peak indices and properties"
+    ],
+    "expert_review": [
+      "Confirm that composite map construction (COMP_COMPOSITEMAP) correctly sums intensity values across all samples at each retention time and m/z coordinate before peak detection",
+      "Confirm that single composite-level find_peaks call produces equivalent or superior peak detection sensitivity compared to per-sample peak detection baseline (RESULT_COMPOSITE_EFFICIENCY claim)",
+      "Verify prominence control parameters used in scipy.signal.find_peaks call are appropriate for metabolomics data and documented in code or configuration"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does performing peak detection on a single composite map rather than on individual samples improve computational efficiency in metabolomics data processing?: 'Peak detection on a composite map instead of repeated on individual samples'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Asari implements peak detection using scipy.signal.find_peaks on a composite map constructed from summed mass tracks across all samples, reducing the number of peak-detection algorithm calls from N (one per sample) to one (composite), thereby improving scalability and computational efficiency.: 'Peak detection on a composite map instead of repeated on individual samples'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Aligned mass tracks per sample with m/z and full-length intensity arrays: 'intensity_track is np.array(full RT length). This increases storage for processed samples, but simplifies i) CMAP construction'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Retention time calibration dictionaries (rt_cal_dict) mapping sample scan numbers to reference coordinates: 'The RT alignment dictionaries only keep differing values and set within sample RT boundaries. This is efficient by ignoring unnecessary tracking'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Mass grid structure with aligned m/z values across all samples: 'Aignment of mass tracks across samples, resulting in the MassGrid'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Composite mass tracks (summed intensity arrays) indexed by consensus m/z and full RT scan length: 'composite mass tracks, where the intensity values are summed on corresponding mass tracks across all samples after RT calibration'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Feature list with detected elution peaks on composite tracks: peak apex (scan), peak area, height, baseline boundaries, cSelectivity, SNR, goodness_fitting, and parent_masstrack_id: 'The peaks passing the thresholds (default SNR > 2 and peakshape > 0.5) are reported in a JSON format, with link to the composite mass track identifier'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Execution log confirming single peak-detection pass on composite map vs. N per-sample passes: 'Peak detection on a composite map instead of repeated on individual samples'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'Trackable and scalable Python program for high-resolution metabolomics data processing.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] scipy.signal.find_peaks: 'Asari uses a simple local maxima method (scipy.signal.find_peaks), with prominence control'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] scipy.signal.detrend: 'detrend (scipy.signal.detrend) is performed on the mass track'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found.: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; import json; from scipy import signal; import numpy as np; aligned_tracks = json.load(open('{inputs.aligned_mass_tracks}')); rt_cals = json.load(open('{inputs.rt_calibration_dicts}')); mass_grid = json.load(open('{inputs.mass_grid}')); composite_tracks = {}; for mz in mass_grid['mz_values']: intensities = np.sum([np.array(aligned_tracks[s][mz]) for s in aligned_tracks.keys()], axis=0); composite_tracks[mz] = intensities.tolist(); peaks_all = []; log_entries = []; for mz, intensity in composite_tracks.items(): baseline = np.percentile(intensity, 10); detrended = signal.detrend(np.array(intensity) - baseline); peaks, props = signal.find_peaks(detrended, prominence=np.std(detrended)*0.5); log_entries.append(f'Composite m/z {mz}: 1 peak detection pass, {len(peaks)} peaks found'); for p in peaks: area = np.sum(detrended[max(0,p-5):min(len(detrended),p+5)]); height = detrended[p]; snr = height / (np.std(detrended[:max(0,p-10)]) + 1e-9) if p > 10 else 0; goodness = 1.0 if snr > 2 else 0; peaks_all.append({'apex_scan': int(p), 'area': float(area), 'height': float(height), 'snr': float(snr), 'goodness_fitting': float(goodness), 'parent_masstrack_id': str(mz), 'cSelectivity': 1.0}); json.dump({'composite_tracks': composite_tracks, 'peaks': peaks_all, 'log': log_entries}, open('/tmp/task_002_output.json', 'w')); print('Composite peak detection complete: single-pass on composite map')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "composite_peaks.json",
+  "expected_outputs": [
+    "Composite mass tracks (summed intensity arrays) indexed by consensus m/z and full RT scan length",
+    "Feature list with detected elution peaks on composite tracks: peak apex (scan), peak area, height, baseline boundaries, cSelectivity, SNR, goodness_fitting, and parent_masstrack_id",
+    "Execution log confirming single peak-detection pass on composite map vs. N per-sample passes"
+  ],
+  "finding": "Asari implements peak detection using scipy.signal.find_peaks on a composite map constructed from summed mass tracks across all samples, reducing the number of peak-detection algorithm calls from N (one per sample) to one (composite), thereby improving scalability and computational efficiency.",
+  "github_name": "shuzhao-li-lab/asari_pcpfm_tutorials",
+  "input_from": "task_001",
+  "inputs": [
+    "Aligned mass tracks per sample with m/z and full-length intensity arrays",
+    "Retention time calibration dictionaries (rt_cal_dict) mapping sample scan numbers to reference coordinates",
+    "Mass grid structure with aligned m/z values across all samples"
+  ],
+  "keywords": [
+    "high-resolution metabolomics",
+    "lc-ms",
+    "gc-ms",
+    "peak detection",
+    "mass alignment",
+    "extracted ion chromatogram",
+    "untargeted metabolomics",
+    "composite map processing",
+    "peak quality tracking"
+  ],
+  "landmark_outputs": [
+    "composite_mass_tracks.pickle",
+    "rt_aligned_indices.csv",
+    "track_audit_log.txt",
+    "peak_candidate_table.tsv"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_003",
+    "result_009",
+    "result_010",
+    "result_012",
+    "result_028",
+    "result_029",
+    "result_032",
+    "result_033",
+    "result_034",
+    "result_035",
+    "result_036"
+  ],
+  "methodology_summary": [
+    "Synchronize all sample mass tracks to reference retention-time coordinates using pre-computed rt_cal_dict mappings.",
+    "Sum aligned intensity arrays element-wise across samples for each m/z, creating composite mass tracks of consistent length.",
+    "Audit each composite track: rescale if ceiling exceeded, detect low-intensity baseline/noise, detrend if high-signal-high-noise, apply adaptive smoothing.",
+    "Subtract baseline+noise filter to isolate positive-intensity regions and segment the track.",
+    "Apply scipy.signal.find_peaks with dynamic prominence control (max of three criteria) on each segment to detect local maxima.",
+    "Evaluate peaks for gaussian fit quality (goodness_fitting), chromatographic selectivity (cSelectivity), and SNR, filtering by SNR > 2 threshold.",
+    "Validation: verify peak detection is called exactly once per composite track (not per sample) and all reported peaks contain cSelectivity, SNR, and goodness_fitting metrics.",
+    "References: source article (DOI: 10.1038/s41467-023-39889-1)"
+  ],
+  "missing_information": [
+    "No changelog found."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/preferred_feature_table"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does performing peak detection on a single composite map rather than on individual samples improve computational efficiency in metabolomics data processing?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "composite-mass-track-construction",
+    "retention-time-alignment-index-mapping",
+    "chromatographic-peak-detection-with-prominence-control",
+    "baseline-and-noise-level-estimation-from-quartile-statistics",
+    "peak-evaluation-metrics-cSelectivity-SNR-gaussian-fit",
+    "computational-efficiency-single-pass-vs-repeated-detection"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_asari/synthesized_package",
+  "spine_condition_ids": [
+    "COND_HIGH_SIGNAL_TRACK"
+  ],
+  "spine_entity_ids": [
+    "COMP_COMPOSITEMAP",
+    "COMP_MASSTRACK",
+    "TOOL_SCIPY_FIND_PEAKS",
+    "TOOL_SCIPY_DETREND",
+    "ALG_LANDMARK_PEAKS",
+    "COND_HIGH_SIGNAL_TRACK",
+    "RESULT_COMPOSITE_EFFICIENCY",
+    "RESULT_PEAK_ENHANCEMENT",
+    "RESULT_SINGLE_SAMPLE_FEATURE_REPORTING",
+    "PARAM_MIN_PEAK_HEIGHT"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:shuzhao-li-lab__asari",
+  "task_description": "Construct composite mass tracks by summing intensity values across retention-time-aligned samples on the same m/z coordinate, then perform peak detection once on each composite track using scipy.signal.find_peaks with prominence control, confirming single-pass detection rather than per-sample repeated calls.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Aligned mass tracks per sample with m/z and full-length intensity arrays",
+      "port_id": "aligned_mass_tracks",
+      "resolved_via": null,
+      "source": "task_001/preferred_feature_table",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Retention time calibration dictionaries mapping sample to reference scan coordinates",
+      "port_id": "rt_calibration_dicts",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Mass grid structure with aligned m/z values across all samples",
+      "port_id": "mass_grid",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement composite MassTrack construction and validate that peak detection via scipy.signal.find_peaks executes once on the summed composite map rather than N times per sample.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Composite mass tracks (summed intensity arrays) indexed by m/z",
+      "port_id": "composite_tracks",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature list with detected peaks: apex, area, height, boundaries, cSelectivity, SNR, goodness_fitting, parent_masstrack_id",
+      "port_id": "feature_list_json",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Execution log confirming single peak-detection pass on composite map",
+      "port_id": "execution_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "quality-control",
+    "database-annotation"
+  ],
+  "title": "Reconstruct the composite-map peak detection step and verify computational efficiency over per-sample detection",
+  "tools": [
+    "Python",
+    "scipy.signal.find_peaks",
+    "scipy.signal.detrend"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: scipy.signal.find_peaks, scipy.signal.detrend."
+  ],
+  "workflow_description": "1. Load aligned mass tracks from all samples and retention-time calibration dictionaries (rt_cal_dict per sample). 2. Synchronize scan-number indices across samples by applying rt_cal_dict to map each sample's scan numbers to reference sample coordinates. 3. Sum intensity values element-wise across all samples for each unique m/z value in the mass grid, producing composite mass tracks as full-length intensity arrays. 4. Audit each composite mass track (peaks.audit_mass_track): check max intensity ceiling (1E8), apply rescaling if needed, detect low-intensity tracks (median < 1e3), perform detrend if median > 10\u00d7 min_peak_height and >50% of points exceed threshold, compute baseline and noise from bottom-signal quartiles, apply smoothing (moving average) when noise > 1% of max intensity and max intensity < 10\u00d7 min_peak_height. 5. Subtract baseline+noise filter to isolate positive regions, splitting track into segments. 6. Apply scipy.signal.find_peaks on each segment with dynamic prominence (max of 1/3 min_peak_height, noise level, and 5% of segment max intensity), using min_peak_height and min_timepoints (default 25 scans) for window control. 7. Evaluate detected peaks for gaussian fit (goodness_fitting), chromatographic selectivity (cSelectivity), and signal-to-noise ratio (SNR > 2), retaining only peaks meeting thresholds. Validation: confirm that peak detection invokes find_peaks exactly once per composite track (not N times), and that reported peaks include cSelectivity, SNR, and gaussian fit metrics."
+}

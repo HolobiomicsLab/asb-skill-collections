@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:mzmine__mzmine repository is accessible and contains README or documentation files"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "README.md"
+    },
+    {
+      "id": "pf_003",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "README or primary documentation contains explicit description of conditional rou",
+      "value": "explicit description of conditional routing logic for LC, GC, IMS, and MS Imaging module selection"
+    },
+    {
+      "id": "pf_004",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "documentation specifies the input data type parameter or field that triggers rou"
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "documentation describes at least one complete if-then or case-based routing rule"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:mzmine__mzmine repository is accessible and contains README or documentation files",
+      "file_exists: locate README.md or similar documentation artifact in mzmine/mzmine repository",
+      "contains_substring: README or primary documentation contains explicit description of conditional routing logic for LC, GC, IMS, and MS Imaging module selection",
+      "contains_substring: documentation specifies the input data type parameter or field that triggers routing decisions",
+      "contains_substring: documentation describes at least one complete if-then or case-based routing rule mapping input type to processing module"
+    ],
+    "expert_review": [
+      "assess whether the documented routing logic is complete and covers all declared module types (LC, GC, IMS, MS Imaging)",
+      "verify that the routing dispatch mechanism correctly distinguishes between supported chromatography and imaging modalities based on standard MS data formats or metadata fields",
+      "confirm that the routing logic is actually implemented as described in the README by sampling relevant source code (e.g., factory classes, plugin loaders, or main entry point)"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

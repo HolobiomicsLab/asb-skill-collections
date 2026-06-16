@@ -1,0 +1,51 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: ChAMP package repository at github:YuanTian1991__ChAMP contains champ.SVD() function definition"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "champ.SVD"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: ChAMP package repository at github:YuanTian1991__ChAMP contains champ.SVD() function definition",
+      "script_runs: load HumanMethylation450 test dataset (8 samples) from ChAMPdata package and execute champ.SVD() on normalized beta matrix without errors",
+      "script_runs: execute champ.SVD() on GSE40279 beta matrix (if publicly accessible via GEO) without errors",
+      "output_matches_reference: when champ.SVD() is run on a normalized beta matrix where Random Matrix Theory detects >20 latent components, verify returned component count is capped at exactly 20 (robust to different input datasets, parameter-sensitive to RMT detection threshold)"
+    ],
+    "expert_review": [
+      "verify that the capping behavior at 20 components is correctly implemented in champ.SVD() source code and matches the stated methods description",
+      "confirm that Random Matrix Theory detection is functioning as intended prior to the cap being applied"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

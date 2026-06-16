@@ -1,0 +1,121 @@
+# Workflow Challenge: `coll_m2s_workflow`
+
+
+> M2S is a Matlab package designed to match untargeted metabolomic features across two LC-MS datasets.
+
+**Mode:** `actual`  
+**Reproducibility tier:** `type-checked`
+
+## Mission
+
+Reproduce the methodology of the source paper as faithfully as possible using the steps below. Where a step's reproducibility tier is `bypassed`, `manual-only`, or `experimental`, use the cached output declared in its resumption contract; do not attempt to re-execute.
+
+## Tier promise
+
+_Every step has typed I/O ports declared; executable optional. Filesystem presence check + type-port resolution._
+
+## Instructions
+
+Reproduce the 1-step workflow below. Honor each step's IO contract; produce the files listed under 'Final expected outputs'.
+
+## Background
+
+M2S implements a feature matching pipeline for untargeted metabolomics that takes two LC-MS feature datasets as input and produces matched features as output. The package provides a mechanism for aligning metabolomic features between LC-MS analyses to facilitate comparative metabolomic studies.
+
+## Research questions
+
+- How does the M2S Matlab package match untargeted metabolomic features across two LC-MS datasets?
+
+## Methods overview
+
+Load two LC-MS untargeted metabolomic feature tables into Matlab environment Parse feature identifiers (m/z, retention time) from both datasets Apply M2S matching algorithm to identify corresponding features across datasets using m/z and RT similarity criteria Compute matching scores reflecting confidence in feature correspondence Export matched feature table with linked feature pairs and scores
+
+**Domain:** bioinformatics
+
+## Claims to address (CLAIM_VALIDATION rubric)
+Your output should make each binding claim checkable:
+- **(finding)** M2S is a Matlab package designed to match untargeted metabolomic features of two LC-MS datasets. _[grounded: tool_matlab]_
+- **(finding)** M2S was developed by Rui Climaco Pinto in 2021 at Imperial College London.
+- **(finding)** The M2S source code is available on GitHub as rjdossan__M2S.
+
+## Steps
+
+### Step `task_001`
+- Title: Reconstruct the LC-MS feature matching pipeline in M2S
+- Task kind: `component_reconstruction`
+- Task: Run the M2S Matlab package end-to-end on two LC-MS untargeted metabolomic feature datasets to produce a matched feature table linking corresponding features across the two datasets.
+- Inputs:
+  - First LC-MS untargeted metabolomic feature dataset (feature table with m/z and retention time)
+  - Second LC-MS untargeted metabolomic feature dataset (feature table with m/z and retention time)
+- Expected outputs:
+  - Matched feature table containing linked features from both datasets with matching scores
+- Tools: Matlab
+- Landmark output files: dataset_1_loaded.mat, dataset_2_loaded.mat, matching_scores.csv
+- Primary expected artifact: `matched_features.csv`
+
+## Final expected outputs
+
+- `Matched feature table containing linked features from both datasets with matching scores` (type: file, tolerance: hash)
+
+## How your attempt will be scored
+
+ASB defines seven rubrics in `workflow_rubric.py` (STEP_ORDERING, INTERMEDIATE_FIDELITY, END_TO_END_OUTPUT, TOOL_SELECTION, EFFICIENCY, CLAIM_VALIDATION, ADVERSARIAL_TRAP_AVOIDANCE). Which of them bind for *this* challenge depends on the tier and openness below.
+
+### Tier evaluation profile
+
+**Evaluator:** automated — filesystem presence + type-port resolution; END_TO_END_OUTPUT with declared per-output tolerance.
+**Binding rubrics:** STEP_ORDERING, END_TO_END_OUTPUT (typed/tolerance), TOOL_SELECTION, CLAIM_VALIDATION.
+
+### Openness stance
+
+**Openness: closed — reproduction-first.** The deterministic rubrics above bind. A different method is acceptable ONLY if it appears under *Sanctioned method substitutions*; outputs are compared with the declared tolerance. Different is wrong here only when it departs from the sanctioned set or breaks an invariant.
+
+## Workflow characterisation
+
+_Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)._
+
+- **Coupling:** loose
+
+- **Composition modularity:** flat
+
+- **Abstraction level:** implicit
+
+- **Orchestration planning:** static
+
+- **Data transport:** file
+
+- **Characterisation confidence:** inferred
+
+
+## Submission
+
+Produce two artifacts in your output directory:
+
+1. The output files at the paths declared under **Final expected outputs**.
+2. An `attempt.json` matching the schema below.
+3. _(Optional)_ `attempt_metrics.json` with `wall_time_s`, `total_tokens`, `cost_usd` for the EFFICIENCY rubric.
+
+### `attempt.json` schema
+
+```json
+{
+  "workflow_id": "coll_m2s_workflow",
+  "agent_order": [
+    "task_001"
+  ],
+  "intermediate_outputs": {
+    "task_001": {
+      "<output_name>": "<locator>"
+    }
+  },
+  "final_outputs": {
+    "Matched feature table containing linked features from both datasets with matching scores": "<locator>"
+  },
+  "chosen_tools": {
+    "task_001": "<tool_name>"
+  }
+}
+```
+
+---
+_Generated by `asb workflow-challenge` (see ASB docs/superpowers/specs/2026-05-12-workflow-evaluation-and-reviewer-ui-design.md)._

@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 'build-docker.sh' exists in github:CSi-Studio__AirdPro repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify Docker image 'airdpro:cli' exists after build completion"
+    },
+    {
+      "id": "pf_004",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "22.04"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify Docker image airdpro:cli is built from Ubuntu 22.04 base (inspect image layers or Dockerfile)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file 'build-docker.sh' exists in github:CSi-Studio__AirdPro repository",
+      "script_runs: execute build-docker.sh without errors",
+      "verify Docker image 'airdpro:cli' exists after build completion",
+      "value_in_range: Docker image airdpro:cli size is between 5.5 GB and 7.5 GB (parameter-sensitive to base Ubuntu 22.04 + Wine + .NET Framework 4.8 layers)",
+      "verify Docker image airdpro:cli is built from Ubuntu 22.04 base (inspect image layers or Dockerfile)"
+    ],
+    "expert_review": [
+      "Assess whether multi-stage build architecture follows best practices for minimizing final image size while maintaining functionality",
+      "Verify that airdpro:cli image is functional for CLI batch processing (requires domain knowledge of AirdPro vendor file conversion workflow)"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

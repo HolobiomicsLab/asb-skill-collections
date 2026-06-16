@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file tximportData salmon files exist in the package or referenced deposit"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify DESeqDataSet object contains 'offset' matrix (field_present: object@assays[['offset']] or equivalent accessor)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify offset matrix dimensions match gene count matrix (row and column counts equal between counts and offset)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify offset matrix is numeric and finite (no NaN or Inf values), robust to numerical precision"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify offset matrix derives from tximport length matrix (output_matches_reference: offset approximately equals log(length matrix) with standard DESeq2 transformation)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file tximportData salmon files exist in the package or referenced deposit",
+      "script_runs: execute R code calling tximport() on salmon files to produce txi list object",
+      "script_runs: execute R code calling DESeq2::DESeqDataSetFromTximport() with txi list and two-condition sample table",
+      "verify DESeqDataSet object contains 'offset' matrix (field_present: object@assays[['offset']] or equivalent accessor)",
+      "verify offset matrix dimensions match gene count matrix (row and column counts equal between counts and offset)",
+      "verify offset matrix is numeric and finite (no NaN or Inf values), robust to numerical precision",
+      "verify offset matrix derives from tximport length matrix (output_matches_reference: offset approximately equals log(length matrix) with standard DESeq2 transformation)"
+    ],
+    "expert_review": [
+      "confirm offset matrix embedding method matches 'original counts and offset' approach described in Soneson et al. article",
+      "confirm two-condition sample table specification is valid (correct column names, factor levels, sample counts)",
+      "confirm DESeqDataSet construction did not discard or alter the offset information from tximport",
+      "assess whether downstream DESeq analysis using this offset object produces sensible results (e.g., length bias correction is applied)"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

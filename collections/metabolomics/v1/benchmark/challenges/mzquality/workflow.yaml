@@ -1,0 +1,326 @@
+schema_version: 0.1.0
+workflow_id: coll_mzquality_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: in_memory
+  characterisation_confidence: inferred
+narrative:
+  tagline: mzQuality is a user-friendly R package that performs quality control of
+    targeted metabolomics data through outlier detection, batch correction using pooled
+    study quality control samples, and compound filtering, with support for internal
+    standard recommendation and absolute concentration calculation.
+  pseudo_abstract: mzQuality provides a comprehensive workflow for quality control
+    of targeted mass spectrometry metabolomics data. The package implements data import
+    from tab-delimited and vendor formats, constructs SummarizedExperiment objects
+    with automatic calculation of compound/internal standard ratios, and performs
+    quality control analysis that tests pooled QC samples for outliers using compound/internal
+    standard ratio and study samples for mis-injections using internal standard peak
+    areas. Following analysis, mzQuality exhaustively calculates relative standard
+    deviation of batch-corrected ratios (RSDQC) across all internal standard candidates
+    for each compound to identify and recommend the internal standard yielding the
+    lowest RSDQC. The package generates multiple visualization types including aliquot
+    plots, compound plots, PCA plots, and violin plots for inspecting batch effects
+    and data quality. Results are exported via the createReports function into organized
+    folders containing plots and tab-delimited reports alongside human-friendly Excel
+    summaries. The package supports optional absolute concentration calculation when
+    calibration samples with known spiked concentrations are supplied, enabling downstream
+    metabolic pathway modeling and between-cohort analyses.
+  research_questions:
+  - Does the buildExperiment function correctly construct a SummarizedExperiment object
+    with a computed ratio assay when given a data frame with specified column mappings
+    for compounds, samples, and internal standards?
+  - How does the doAnalysis function process a SummarizedExperiment object to identify
+    outliers and mis-injections, and what corrected assay does it produce?
+  - Which internal standard achieves the lowest Relative Standard Deviation of QC
+    samples (RSDQC) for each compound when calculated across all internal standard
+    candidates on batch-corrected data?
+  - Does the createReports function generate the expected directory structure with
+    Plots and Reports sub-folders and the correct file types when called with specified
+    parameters?
+  - When the secondaryAssay column is not provided to buildExperiment, does the resulting
+    'ratio' assay equal the primary assay values unchanged?
+  methods_summary: 'Load example.tsv from mzQuality package using readData function
+    with built-in column validation. Map required columns (aliquot, compound, area,
+    type, injection_time, batch) and optional concentration column to data frame.
+    Call buildExperiment to construct a SummarizedExperiment object with features
+    (compounds) as rows and samples (aliquots) as columns. Verify SummarizedExperiment
+    structure: rowData contains compound identifiers, colData contains sample metadata,
+    and assays include the computed ratio (area / area_is). Validation: SummarizedExperiment
+    object can be created without errors, contains non-empty rowData and colData frames,
+    and ratio assay is present and numeric. Load SummarizedExperiment object containing
+    raw compound areas, internal standard areas, and sample metadata. Apply outlier
+    detection on QC samples by evaluating Compound/Internal Standard ratios against
+    control thresholds (qcPercentage=80). Test study samples for mis-injections using
+    internal standard area thresholds (backgroundPercentage=40). Perform batch correction
+    of Compound/Internal Standard ratios using pooled SQC samples within batch strata
+    (useWithinBatch=TRUE). Filter out compounds with batch-corrected ratio RSD exceeding
+    nonReportableRSD=30 threshold (removeBadCompounds=TRUE). Optionally calculate
+    absolute concentrations via linear regression from calibration samples (single
+    sample type only). Validation: output SummarizedExperiment contains ''ratio_corrected''
+    assay with numeric batch-corrected ratio values, and metadata annotations identify
+    all flagged outliers and mis-injections; concentration column (if input provided)
+    contains numeric or NA values matching calibration line sample counts. Load batch-corrected
+    SummarizedExperiment containing QC sample assays and compound/internal standard
+    ratios. For each compound, compute relative standard deviation (RSD) of QC sample
+    ratios across all internal standard candidates. Construct RSDQC matrix with compounds
+    as rows and internal standards as columns. Identify minimum RSDQC internal standard
+    for each compound. Validation: recommendation table contains all compounds with
+    non-missing RSDQC values and internal standard assignments; RSDQC matrix is complete
+    and consistent with recommendation selections. Load the pre-processed SummarizedExperiment
+    object from the mzQuality analysis pipeline. Invoke createReports with summary
+    and compound report flags enabled, quality thresholds (backgroundPercent=40, cautionRSD=15,
+    nonReportableRSD=30), and assay specification (area). Generate Plots subdirectory
+    containing quality-control visualizations and Reports subdirectory containing
+    text and Excel files. Validation: Confirm directory structure exists with expected
+    subdirectories and file extensions (*.png in Plots; *.txt and *.xlsx in Reports).
+    Load example.tsv using readData function to validate column structure and data
+    integrity. Construct SummarizedExperiment object via buildExperiment without secondaryAssay
+    parameter. Extract ''ratio'' and primary assays from the experiment object. Perform
+    element-wise numerical comparison of ratio assay to primary assay values. Validation:
+    all ratio values must equal primary assay values within double-precision floating-point
+    tolerance (relative difference < 1e-14).'
+  domain: metabolomics
+  techniques:
+  - quality-control
+  - feature-detection
+  - lc-ms
+  - normalization
+  - statistical-analysis
+  claims:
+  - claim_text: mzQuality features outlier detection, batch-correction using pooled
+      study quality control samples (SQC), filters for removing unreliable compounds,
+      various plots for inspecting, and generating reports for further processing.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: mzQuality is available as an interactive Shiny dashboard application
+      called mzQualityDashboard.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: Quality Control is an important step in the analysis of mass spectrometry
+      data.
+    claim_type: finding
+    speculative: false
+  - claim_text: Existing tools phenomis and qmtools are designed with access to a
+      phenotype in mind.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_phenomis
+  - claim_text: mzQuality was developed to perform outlier detection, batch correction
+      and other quality control steps without the need for defined phenotypes.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: mzQuality follows the recommendations of the mQACC for quality control
+      by leveraging on proper batch design and the addition of various quality control
+      samples.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: mzQuality is capable of recommending different internal standards
+      by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC)
+      of batch-corrected ratios.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: By supplying calibration line samples and known concentrations for
+      spiked compounds, mzQuality is able to calculate absolute concentrations.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: mzQuality features import of data from a variety of formats, including
+      a generalized tab-delimited format and Sciex OS text exports.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: phenomis provides tools for post-processing like quality control and
+      normalization, as well as univariate statistics.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_phenomis
+  - claim_text: qmtools contains functions for processing quantitative metabolomics
+      data, including imputation, normalization and filtering.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_qmtools
+  - claim_text: MatrixQCvis features interactive visualization of data quality metrics
+      for various -omics datasets and uses the SummarizedExperiment object.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_summarized_experiment
+  - claim_text: mQACC is the Metabolomics Quality Assurance and Control Consortium.
+    claim_type: finding
+    speculative: false
+    entity_id: org_mqacc
+  - claim_text: HUPO is the Human Proteome Organization.
+    claim_type: finding
+    speculative: false
+  - claim_text: HUPO has a Quality Control working group that focuses on quality control
+      in proteomics.
+    claim_type: finding
+    speculative: false
+  - claim_text: mzQuality requires input data to be in a tab-delimited format.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: The required columns for mzQuality input data include aliquot, compound,
+      area, type, injection_time, and batch.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: The readData function reads in data and checks for any missing or
+      incorrect columns.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_readData
+  - claim_text: The buildExperiment function creates a SummarizedExperiment object
+      from a data frame.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_summarized_experiment
+  - claim_text: In the current version of mzQuality, only one sample type can be used
+      for calculating concentrations.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: mzQuality internally uses Bioconductor's SummarizedExperiment object
+      to store data.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: The buildExperiment function automatically calculates the compound
+      / Internal Standard ratio for each sample and stores it in the ratio assay.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_buildExperiment
+  - claim_text: The convertExperiment function converts names in an already built
+      SummarizedExperiment object to the ones mzQuality uses.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: The doAnalysis function tests QC samples for outliers using their
+      Compound / Internal Standard ratio.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_doAnalysis
+  - claim_text: The doAnalysis function tests Study Samples for mis-injections using
+      their Internal Standard areas.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_doAnalysis
+  - claim_text: aliquotPlot shows the distribution of the selected assay per aliquot,
+      colored per sample type.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_aliquotPlot
+  - claim_text: The aliquotPlot can be used to inspect technical replicates for similar
+      peak areas and peak ratios within a batch.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_aliquotPlot
+  - claim_text: All plots in mzQuality can be faceted using the facetPlot function.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  - claim_text: The facetPlot function allows faceting by any column present in colData.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_facetPlot
+  - claim_text: compoundPlot is a scatter plot of a selected compound across samples.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_compoundPlot
+  - claim_text: PCA plot can be used to inspect variation within- and between batches.
+    claim_type: finding
+    speculative: false
+  - claim_text: In the PCA plot, Quality Control samples used for batch correction
+      should ideally be centered and form a tight cluster.
+    claim_type: finding
+    speculative: false
+  - claim_text: The violin plot can be used to inspect the distribution of sample
+      types.
+    claim_type: finding
+    speculative: false
+  - claim_text: The Concentration Plot shows a linear model based on calculated ratio
+      and known concentration.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_ratio_assay
+  - claim_text: The createReports function creates a folder containing the results
+      of analysis separated by Plots and Reports.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_createReports
+  - claim_text: mzQuality is designed to be used by anyone with basic knowledge of
+      R.
+    claim_type: finding
+    speculative: false
+    entity_id: mzQuality_system
+  speculative: false
+  task_openness: mixed
+  method_alternatives:
+  - phenomis or qmtools can be used as alternatives for post-processing and quality
+    control
+  substitution_constraints:
+  - mzQuality is designed for use without access to defined phenotypes to remain unbiased,
+    distinguishing it from tools like phenomis and qmtools.
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 'Recommendation table (tab-delimited or CSV) with columns: compound, recommended_internal_standard,
+    min_RSDQC'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Full RSDQC matrix (tab-delimited or CSV) with compounds as rows and internal
+    standard candidates as columns, showing RSDQC for each pair
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Plots subdirectory containing quality-control visualization files
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Reports subdirectory containing tab-delimited text files and Excel exports
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Validation report (CSV or text) confirming that all 'ratio' assay values equal
+    corresponding primary assay values within numerical tolerance (machine epsilon)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

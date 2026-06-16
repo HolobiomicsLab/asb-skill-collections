@@ -1,0 +1,372 @@
+{
+  "abstraction_frame": "result",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon2.png",
+      "role": "figure",
+      "sha256": "fbd43b41797914abf57f7ecac60c7732200bd9460cf329893364e998b47fd5a0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon3.png",
+      "role": "figure",
+      "sha256": "d82a19c38f3317dff6616e14522d6165284bca0ce392a6844d9ca93f496bdf34"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidMatch_Icon4.png",
+      "role": "figure",
+      "sha256": "304f01f87477acee5c7fac2683e60e0d558df82c6e5fb1f1f2e8325c756da79e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidPioneer_Icon.png",
+      "role": "figure",
+      "sha256": "eb23c87a3bd6a161a92944bfa4c032831615db48d187961b4befa3296a21dcb7"
+    },
+    {
+      "indexable": false,
+      "path": "figures/LipidPioneer_Icon2.png",
+      "role": "figure",
+      "sha256": "87b3b9b6c24f809f5dc05bfed6e8c0af7482997dd3d1f2747eecd1bb12613768"
+    },
+    {
+      "indexable": false,
+      "path": "figures/adwaita.png",
+      "role": "figure",
+      "sha256": "2481804d5e75e115991f240b76ba921c205c703fa729c5b3c1691f9ce7557828"
+    },
+    {
+      "indexable": false,
+      "path": "figures/ambiance.png",
+      "role": "figure",
+      "sha256": "a9b6fc7574b456e8444ee205d7f49c5f970fbdbd41bfe83351d388c5c8470e2c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/aqua.png",
+      "role": "figure",
+      "sha256": "ff14e41e680f4030cc611e3f35d08741d9343f489d7f1cf59f5178d0eebe42ef"
+    },
+    {
+      "indexable": false,
+      "path": "figures/arrowStyles.png",
+      "role": "figure",
+      "sha256": "64b54c40e2f61280c5e860427aba5b537e31a9fbb9d21893f99287c0612586c2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/baghira.png",
+      "role": "figure",
+      "sha256": "5d4136bc61c859c5b3661e93f8e866b9500ac3986f46a73d364841e1ff950bb9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/browse.png",
+      "role": "figure",
+      "sha256": "ff29ba02d749bfb7e409d2a5df1ecadd229e9e9266562bfa5bc79002d9771e97"
+    },
+    {
+      "indexable": false,
+      "path": "figures/browseTree.png",
+      "role": "figure",
+      "sha256": "f167c5a8191171fc526070067b35d094034e863663a95ef4a201df94a0ab2bf4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/bwidget.png",
+      "role": "figure",
+      "sha256": "9e76c91f4b21bed749b75b597d2bd1b85a5b51c19e16a75869854698c800d582"
+    },
+    {
+      "indexable": false,
+      "path": "figures/config.png",
+      "role": "figure",
+      "sha256": "d3d29dc91af92d7e448ee607ed045a8b42c52251f66b91a717266f0a4bbae4aa"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dirViewer.png",
+      "role": "figure",
+      "sha256": "49ea6516bebda22cfd4b605e0889473036cb23cb790ccd0e9decc13af9f9308a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dust.png",
+      "role": "figure",
+      "sha256": "4a62ef7ede30a0b76c8a6b92ade71c8585047936fe3f66f1c0faa1924a51e3bd"
+    },
+    {
+      "indexable": false,
+      "path": "figures/dustSand.png",
+      "role": "figure",
+      "sha256": "d6e3ae873a8c4eabd193961c89867cd4e253bb74cfaa84ec8664bef9be4cadc9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/embeddedWindows.png",
+      "role": "figure",
+      "sha256": "07c2dd2dfe970cfa43dfebd06ea6638e88335888d095cb9b459f6e9f4219392b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/embeddedWindows_tile.png",
+      "role": "figure",
+      "sha256": "98a75dcb881324558602cd4724632caa86c80a49f2ac9a70e1f7621a84b29e77"
+    },
+    {
+      "indexable": false,
+      "path": "figures/scatterplot3d.png",
+      "role": "figure",
+      "sha256": "1836bf22129af1a36967a06ead59f6d6b99b997db7dcfc8d0e4b15a60b8c7283"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "667b13f5130571fe8b138e41a30bd73408e68c8552d2ae6f7a9b97f031cc2f6a"
+    }
+  ],
+  "created_at": "2026-06-16T06:03:34.399740+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "LipidMatch GitHub repository lipid library .csv files",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary report documenting distinct lipid species count, distinct lipid-type category count, and threshold validation (\u2265500,000 species, \u226560 types)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "LipidMatch libraries are organized as .csv files in the GitHub repository and contain discrete entries for each lipid species annotated with lipid-type classification.",
+    "A distinct lipid species is a unique entry defined by its systematic nomenclature or identifier within the library; duplicates across multiple files or within a single file must be deduplicated.",
+    "Lipid-type categories (e.g., TAG, DAG, PC, PE, etc.) are categorical labels assigned to each lipid species and the total count of unique categories across the entire aggregated library is the relevant metric.",
+    "The reported thresholds are \u2265500,000 lipid species and \u226560 distinct lipid types; meeting or exceeding both thresholds confirms the library scope matches the publication's claim."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists at github:GarrettLab-UF/LipidMatch in .csv format containing lipid library data",
+      "file_format_is .csv for all lipid library files retrieved from the repository",
+      "row_count_equals or exceeds 500,000 across all distinct lipid species entries in aggregated library files",
+      "field_present: lipid-type or category column exists in library .csv files",
+      "value_in_range: count of distinct lipid-type categories is >= 60 (exact count reported)",
+      "script_runs: computational agent can load, parse, and aggregate .csv files without errors",
+      "output_matches_reference: reported threshold values (500,000 species, 60 types) are met or exceeded by direct enumeration from files"
+    ],
+    "expert_review": [
+      "Verify that the lipid species and lipid-type definitions used in the .csv files align with standard lipidomics nomenclature and the article's stated scope",
+      "Confirm that the aggregation method (e.g., de-duplication logic, category consolidation) correctly captures 'distinct' species as intended by the authors"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Do the LipidMatch library files deposited in the GitHub repository contain at least 500,000 distinct lipid species across 60 or more lipid-type categories?: 'in-silico fragmentation libraries of over 500,000 lipid species across over 60 lipid types'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch contains in-silico fragmentation libraries of over 500,000 lipid species across over 60 lipid types.: 'in-silico fragmentation libraries of over 500,000 lipid species across over 60 lipid types'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch GitHub repository lipid library .csv files: 'the GitHub page for LipidMatch is: https://github.com/GarrettLab-UF/LipidMatch'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Summary report documenting distinct lipid species count, distinct lipid-type category count, and threshold validation (\u2265500,000 species, \u226560 types): 'in-silico fragmentation libraries of over 500,000 lipid species across over 60 lipid types'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] LipidMatch: 'LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting updates, versions, or modifications to the lipid library files is available: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "lipidmatch_library_validation_report.txt",
+  "expected_outputs": [
+    "Summary report documenting distinct lipid species count, distinct lipid-type category count, and threshold validation (\u2265500,000 species, \u226560 types)"
+  ],
+  "finding": "LipidMatch contains in-silico fragmentation libraries of over 500,000 lipid species across over 60 lipid types.",
+  "github_name": "GarrettLab-UF/LipidMatch",
+  "input_from": null,
+  "inputs": [
+    "LipidMatch GitHub repository lipid library .csv files"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "lipid_species_list.csv",
+    "lipid_type_categories.csv",
+    "lipidmatch_library_validation_report.txt"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Obtain the LipidMatch library files from the official GitHub repository.",
+    "Parse all .csv library files and extract lipid species identifiers and category assignments.",
+    "Deduplicate lipid species identifiers across all files to obtain a count of distinct species.",
+    "Enumerate all unique lipid-type categories present in the aggregated data.",
+    "Compare aggregated counts against reported thresholds (\u2265500,000 species, \u226560 types).",
+    "Validation: Confirm that distinct species count \u2265500,000 AND distinct category count \u226560; output counts and pass/fail status."
+  ],
+  "missing_information": [
+    "No changelog documenting updates, versions, or modifications to the lipid library files is available"
+  ],
+  "parameters": [],
+  "primary_domain": "lipidomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Do the LipidMatch library files deposited in the GitHub repository contain at least 500,000 distinct lipid species across 60 or more lipid-type categories?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "lipid-species-abundance-counting",
+    "lipid-type-category-enumeration",
+    "csv-data-aggregation-and-deduplication",
+    "threshold-based-library-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_lipidmatch/synthesized_package",
+  "spine_condition_ids": [
+    "cond_aif"
+  ],
+  "spine_entity_ids": [
+    "lipidmatch_system",
+    "insilico_fragmentation_library",
+    "user_library_integration",
+    "cond_aif",
+    "result_library_coverage",
+    "result_waters_not_supported"
+  ],
+  "subdomains": [
+    "lipidomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:GarrettLab-UF__LipidMatch",
+  "task_description": "Load the LipidMatch lipid libraries from the GitHub repository in .csv format and verify that the aggregated library contains at least 500,000 distinct lipid species across at least 60 lipid-type categories. Output a summary report with the counts.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "LipidMatch GitHub repository lipid library .csv files",
+      "port_id": "lipidmatch_repo",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Count and categorize all lipid species in the deposited .csv library files to verify that the total reaches at least 500,000 species across minimum 60 distinct lipid types.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Library size and category validation report",
+      "port_id": "library_validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "high-resolution-ms",
+    "lc-ms",
+    "metabolite-identification",
+    "spectral-library-matching",
+    "tandem-ms"
+  ],
+  "title": "Reproduce the in-silico fragmentation library coverage report (500,000+ species, 60+ lipid types)",
+  "tools": [
+    "LipidMatch"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Clone or download the LipidMatch GitHub repository (GarrettLab-UF/LipidMatch). 2. Locate and load all .csv library files from the repository. 3. Parse each .csv file to extract lipid species identifiers and lipid-type category assignments. 4. Aggregate distinct lipid species across all files using a set or unique count operation. 5. Enumerate distinct lipid-type categories present in the aggregated data. 6. Compare total species count against the threshold of 500,000 and lipid-type category count against 60. 7. Generate a summary report documenting species count, category count, and pass/fail status for each threshold."
+}

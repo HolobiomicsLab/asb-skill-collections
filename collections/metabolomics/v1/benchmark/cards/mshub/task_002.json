@@ -1,0 +1,272 @@
+{
+  "abstraction_frame": "unknown",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d43e3eff7122e22ce2ba50c0a639965e9b4b462e74cc1df8c3e360477b938251"
+    }
+  ],
+  "created_at": "2026-06-16T05:56:17.861848+00:00",
+  "crossref_doi": "10.1038/s41587-020-0700-3",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Raw GC-MS data files (netCDF or vendor format) from bittremieux/GNPS_GC repository or equivalent deposited dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "File of deconvolved spectra in MGF or mzML format ready for molecular networking",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "GC-MS data is often represented in netCDF format with retention time and m/z dimensions; deconvolution separates co-eluting ions into individual spectra.",
+    "Auto-deconvolution algorithms decompose overlapping mass spectra by inferring pure component profiles from mixed chromatographic peaks.",
+    "Output in MGF (Mascot Generic Format) or mzML (open standard) enables compatibility with downstream molecular networking platforms such as GNPS."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the bittremieux/GNPS_GC repository is accessible at github.com/bittremieux/GNPS_GC",
+      "verify file_exists: deconvolved output file (MGF or mzML format) produced by MSHub deconvolution step",
+      "verify file_format_is: output file matches declared format (MGF or mzML), byte-for-byte structural validation",
+      "verify that raw GC-MS input files are present and loadable in the companion repository or deposited dataset",
+      "verify script_runs: MSHub deconvolution module executes without fatal errors on supplied raw GC-MS files",
+      "verify output_matches_reference: deconvolved spectra file contains expected spectrum records (no canonical answer \u2014 multiple valid deconvolution outcomes defensible depending on algorithm parameters), robust to parameter choices"
+    ],
+    "expert_review": [
+      "assess whether deconvolved spectra are chemically and spectroscopically valid (mass-to-charge assignments, peak intensities, baseline correction quality)",
+      "evaluate whether MSHub deconvolution settings and parameters are appropriate for the GC-MS data type and chemical analytes",
+      "confirm that deconvolution removes or separates co-eluting compounds and resolves overlapping peaks as intended"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the auto-deconvolution method process raw gas chromatography\u2013mass spectrometry data to separate and identify individual chemical components from complex mixtures?: 'Auto-deconvolution and molecular networking of gas chromatography\u2013mass spectrometry data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The manuscript describes auto-deconvolution and molecular networking methods for gas chromatography\u2013mass spectrometry data analysis, with implementation available in the companion repository (bittremieux/GNPS_GC).: 'Auto-deconvolution and molecular networking of gas chromatography\u2013mass spectrometry data. Nature Biotechnology (2020)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Raw GC-MS data files (netCDF or vendor format) from bittremieux/GNPS_GC repository or equivalent deposited dataset: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] File of deconvolved spectra in MGF or mzML format ready for molecular networking: 'No usage/docs found.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] MSHub: 'Auto-deconvolution and molecular networking of gas chromatography\u2013mass spectrometry data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The specific location of raw GC-MS input files (within the repository or external deposit) is not stated: 'Source: github:bittremieux__GNPS_GC'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] The exact file format and naming convention for the deconvolved output (MGF, mzML, or other) is not specified: 'Source: github:bittremieux__GNPS_GC'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] MSHub deconvolution algorithm parameters, version, and configuration details are not provided in the discussion section: 'Source: github:bittremieux__GNPS_GC'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "mshub",
+      "deconvolve",
+      "--input",
+      "{inputs.raw_gcms_files}",
+      "--output",
+      "deconvolved_spectra.mgf",
+      "--format",
+      "mgf"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "deconvolved_spectra.mgf",
+  "expected_outputs": [
+    "File of deconvolved spectra in MGF or mzML format ready for molecular networking"
+  ],
+  "finding": "The manuscript describes auto-deconvolution and molecular networking methods for gas chromatography\u2013mass spectrometry data analysis, with implementation available in the companion repository (bittremieux/GNPS_GC).",
+  "github_name": "bittremieux/GNPS_GC",
+  "input_from": null,
+  "inputs": [
+    "Raw GC-MS data files (netCDF or vendor format) from bittremieux/GNPS_GC repository or equivalent deposited dataset"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "raw_gcms_loaded.txt",
+    "deconvolution_log.txt"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load raw GC-MS chromatography data from deposited files.",
+    "Apply MSHub auto-deconvolution to resolve co-eluting spectral components.",
+    "Export deconvolved spectra to standardized format (MGF or mzML).",
+    "Validation: Verify output file exists, contains valid spectrum records, and is compatible with downstream GNPS molecular networking input requirements.",
+    "References: source article (DOI: 10.1038/s41587-020-0700-3)"
+  ],
+  "missing_information": [
+    "No changelog found",
+    "The specific location of raw GC-MS input files (within the repository or external deposit) is not stated",
+    "The exact file format and naming convention for the deconvolved output (MGF, mzML, or other) is not specified",
+    "MSHub deconvolution algorithm parameters, version, and configuration details are not provided in the discussion section"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the auto-deconvolution method process raw gas chromatography\u2013mass spectrometry data to separate and identify individual chemical components from complex mixtures?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "gc-ms-spectral-deconvolution",
+    "raw-chromatography-data-parsing",
+    "coeluting-compound-resolution",
+    "mass-spectrum-extraction-and-formatting"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mshub/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_MSHUB",
+    "COMP_AUTO_DECONV",
+    "COMP_MOL_NETWORKING"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:bittremieux__GNPS_GC",
+  "task_description": "Implement auto-deconvolution of raw GC-MS data using MSHub to resolve co-eluting compounds and produce a file of deconvolved spectra in standard format (MGF or mzML).",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Raw GC-MS data files",
+      "port_id": "raw_gcms_files",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement the auto-deconvolution stage on raw GC-MS files and output deconvolved spectra in a standard format (MGF or mzML).",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Deconvolved spectra file",
+      "port_id": "deconvolved_spectra",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "gc-ms",
+    "spectral-deconvolution",
+    "molecular-networking",
+    "feature-detection",
+    "metabolite-identification",
+    "gnps-workflow"
+  ],
+  "title": "Reconstruct the MSHub auto-deconvolution module for GC-MS raw data",
+  "tools": [
+    "MSHub"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load raw GC-MS files (netCDF or vendor format) from the companion repository or deposited dataset. 2. Apply MSHub auto-deconvolution algorithm to resolve overlapping peaks and extract individual component spectra. 3. Export deconvolved spectra to a standardized output format (MGF or mzML) suitable for downstream molecular networking analysis."
+}

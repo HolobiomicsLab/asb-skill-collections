@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "the GitHub repository github:GarrettLab-UF__LipidMatch is accessible and contain"
+    },
+    {
+      "id": "pf_002",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "in repository documentation or README, verify presence of explicit mentions of e"
+    },
+    {
+      "id": "pf_003",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "in repository documentation, verify presence of explicit mention of at least thr"
+    },
+    {
+      "id": "pf_004",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "in repository documentation, verify presence of explicit statement that Waters i"
+    },
+    {
+      "id": "pf_005",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "constructed table row count equals number of valid instrument/vendor and acquisi"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that the GitHub repository github:GarrettLab-UF__LipidMatch is accessible and contains documentation or source code listing instrument/vendor and acquisition mode support",
+      "contains_substring: in repository documentation or README, verify presence of explicit mentions of each of the four validated instrument/vendor types (Q-Exactive, Agilent Q-TOF, Bruker Q-TOF, SCIEX Q-TOF)",
+      "contains_substring: in repository documentation, verify presence of explicit mention of at least three acquisition mode types from the set {targeted, ddMS2-topN, AIF, direct infusion, imaging}",
+      "contains_substring: in repository documentation, verify presence of explicit statement that Waters is unsupported or not currently supported",
+      "output_matches_reference: constructed table row count equals number of valid instrument/vendor and acquisition mode combinations documented in source material (no canonical answer \u2014 dependent on what combinations are explicitly documented as tested/validated vs. inferred)"
+    ],
+    "expert_review": [
+      "assess whether the source documentation provides sufficient detail to distinguish between 'tested and validated,' 'applied,' and 'potentially supported but not documented' for each instrument/vendor \u00d7 acquisition mode pair",
+      "determine whether direct infusion and imaging modes should be attributed to specific instrument/vendor combinations or listed as general capabilities across vendors",
+      "verify that the single documented unsupported case (Waters) is correctly identified and that no other vendor/instrument combinations are negated in the source material"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the enpkg_full repository (github:enpkg__enpkg_full) is accessible and contains executable workflow code"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for a test or example dataset directory within the repository"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "expected annotated output files are generated in the designated output directory"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "output files conform to knowledge-graph-ready formats (e.g., GraphML, JSON, TSV,",
+      "value": "JSON"
+    },
+    {
+      "id": "pf_006",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "compare generated outputs against reference outputs (if provided in the reposito"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the enpkg_full repository (github:enpkg__enpkg_full) is accessible and contains executable workflow code",
+      "verify file_exists for a test or example dataset directory within the repository",
+      "script_runs: execute the ENPKG full workflow against the provided example/test dataset without errors",
+      "file_exists: verify that expected annotated output files are generated in the designated output directory after workflow completion",
+      "file_format_is: verify that output files conform to knowledge-graph-ready formats (e.g., GraphML, JSON, TSV, or other structured formats documented in the repository)",
+      "output_matches_reference: compare generated outputs against reference outputs (if provided in the repository) byte-for-byte or robust to minor formatting variations depending on output specification"
+    ],
+    "expert_review": [
+      "evaluate whether the generated knowledge graph outputs are scientifically coherent and contain expected natural products annotations (structures, metadata, relationships)",
+      "assess whether the workflow execution demonstrates successful integration of all stated pipeline components (sample annotation, chemical annotation, network inference)"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

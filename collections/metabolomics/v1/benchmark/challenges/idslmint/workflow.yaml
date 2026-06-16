@@ -1,0 +1,93 @@
+schema_version: 0.1.0
+workflow_id: coll_idslmint_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: implicit
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: IDSL_MINT is a mass spectrometry data processing framework constructed
+    upon transformer models following the 'Attention is All You Need' paradigm for
+    interpreting mass spectra.
+  pseudo_abstract: IDSL_MINT, developed by the Integrated Data Science Laboratory
+    for Metabolomics and Exposomics (IDSL.ME), is a mass spectrometry data processing
+    framework that builds upon transformer-based architectures as described in the
+    'Attention is All You Need' framework. The paper describes the underlying transformer-based
+    mechanism for mass spectra interpretation that forms the foundation of IDSL_MINT's
+    approach to metabolomics data processing.
+  research_questions:
+  - How is the transformer model architecture from 'Attention is All You Need' adapted
+    and implemented within IDSL_MINT to process mass spectrometry data?
+  methods_summary: 'Define a multi-head self-attention layer with learnable query,
+    key, value projections and output projection. Implement a feed-forward network
+    with ReLU activation and two linear transformations. Stack transformer encoder
+    blocks with residual connections, layer normalization, and dropout. Add sinusoidal
+    positional encoding to spectrum embeddings to preserve order information. Instantiate
+    the complete transformer model in PyTorch with specified hyperparameters. Convert
+    representative mass spectrum (m/z and intensity) into a tensor of shape (sequence_length,
+    embedding_dimension). Execute model.eval() and perform a forward pass on the input
+    spectrum tensor. Validation: Verify that the output tensor has correct shape,
+    contains no NaN/Inf values, and model parameters are learnable.'
+  domain: metabolomics
+  techniques:
+  - deep-learning
+  - machine-learning
+  - metabolite-identification
+  - in-silico-fragmentation
+  - spectral-library-matching
+  - tandem-ms
+  claims:
+  - claim_text: IDSL_MINT is a mass spectrometry data processing framework developed
+      by the Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME).
+    claim_type: finding
+    speculative: false
+    entity_id: IDSL_MINT_system
+  - claim_text: IDSL_MINT's approach for mass spectrometry data processing is constructed
+      upon transformer models.
+    claim_type: finding
+    speculative: false
+    entity_id: IDSL_MINT_system
+  - claim_text: IDSL_MINT is powered by RDKit.
+    claim_type: finding
+    speculative: false
+    entity_id: IDSL_MINT_system
+  - claim_text: IDSL_MINT uses PyTorch.
+    claim_type: finding
+    speculative: false
+    entity_id: IDSL_MINT_system
+  - claim_text: IDSL_MINT is developed by Sadjad Fakouri Baygi.
+    claim_type: finding
+    speculative: false
+    entity_id: IDSL_MINT_system
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 1-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: PyTorch model instance in evaluation mode, successfully initialized
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Forward pass output tensor with validated shape and numerical content
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Model instantiation and forward pass execution log (including input/output
+    shapes and timing)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

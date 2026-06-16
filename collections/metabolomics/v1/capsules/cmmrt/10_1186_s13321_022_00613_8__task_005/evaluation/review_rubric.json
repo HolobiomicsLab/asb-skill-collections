@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:constantino-garcia/cmmrt repository is accessible and contains source code for the CMM-RT system"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the repository contains implementation of DNN-based retention time prediction model"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the repository contains implementation of Bayesian meta-learning projection module"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the repository contains a working example or script that accepts a query mass spectrum and outputs a ranked candidate list"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that expected_outputs[0] (ranked candidate list with RT probability scores) is a structured file (JSON, CSV, or TSV format) with at least three columns: candidate_identifier, RT_probability_score, and rank"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that RT probability scores in expected_outputs[0] are numeric values in range [0.0, 1.0]"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: that a computational agent can execute the CMM-RT annotation pipeline with the example query spectrum without errors"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output_matches_reference: the number and order of candidate annotations in the ranked list are consistent with the meta-learned projection methodology (no canonical answer for exact ordering, but output must be deterministic and defensible)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:constantino-garcia/cmmrt repository is accessible and contains source code for the CMM-RT system",
+      "verify that the repository contains implementation of DNN-based retention time prediction model",
+      "verify that the repository contains implementation of Bayesian meta-learning projection module",
+      "verify that the repository contains a working example or script that accepts a query mass spectrum and outputs a ranked candidate list",
+      "verify that expected_outputs[0] (ranked candidate list with RT probability scores) is a structured file (JSON, CSV, or TSV format) with at least three columns: candidate_identifier, RT_probability_score, and rank",
+      "verify that RT probability scores in expected_outputs[0] are numeric values in range [0.0, 1.0]",
+      "verify script_runs: that a computational agent can execute the CMM-RT annotation pipeline with the example query spectrum without errors",
+      "verify that output_matches_reference: the number and order of candidate annotations in the ranked list are consistent with the meta-learned projection methodology (no canonical answer for exact ordering, but output must be deterministic and defensible)"
+    ],
+    "expert_review": [
+      "assess whether the RT probability scores assigned to each candidate metabolite annotation are mathematically sound and properly calibrated from the DNN predictions and meta-learned projections",
+      "assess whether the ranked candidate list reflects appropriate integration of DNN-predicted retention times with meta-learned chromatographic method projections",
+      "assess whether the RT probability scores are meaningful for discriminating true metabolite identities from incorrect candidates in the example query spectrum",
+      "assess whether the example query spectrum and its ranked results are representative of typical metabolomics use cases"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

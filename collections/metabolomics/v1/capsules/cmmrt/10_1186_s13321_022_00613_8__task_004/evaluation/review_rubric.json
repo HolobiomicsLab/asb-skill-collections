@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in constantino-garcia/cmmrt repository containing trained cond_meta_learning_10mol model or checkpoint"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: execute meta-learning model inference pipeline on a held-out test set of molecules with known retention times"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: mean absolute error (MAE) and median absolute error (MdAE) from 10-molecule calibration set match or fall within reported competitive range against baseline projections"
+    },
+    {
+      "id": "pf_004",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "number of calibration molecules used in cond_meta_learning_10mol evaluation equa"
+    },
+    {
+      "id": "pf_005",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "model weights and hyperparameters are stored in standard format (HDF5, pickle, P"
+    },
+    {
+      "id": "pf_006",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "repository documentation or paper supplementary materials explicitly reference '",
+      "value": "cond_meta_learning_10mol"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in constantino-garcia/cmmrt repository containing trained cond_meta_learning_10mol model or checkpoint",
+      "verify script_runs: execute meta-learning model inference pipeline on a held-out test set of molecules with known retention times",
+      "verify output_matches_reference: mean absolute error (MAE) and median absolute error (MdAE) from 10-molecule calibration set match or fall within reported competitive range against baseline projections",
+      "value_in_range: number of calibration molecules used in cond_meta_learning_10mol evaluation equals 10",
+      "file_format_is: model weights and hyperparameters are stored in standard format (HDF5, pickle, PT, or documented custom format)",
+      "contains_substring: repository documentation or paper supplementary materials explicitly reference 'cond_meta_learning_10mol' or equivalent model identifier"
+    ],
+    "expert_review": [
+      "assess whether reported error rates (MAE, MdAE) from 10-molecule meta-learning projection are statistically competitive with baseline projection approaches (e.g., linear regression, PLS, other meta-learning variants) when accounting for method differences and dataset characteristics",
+      "evaluate appropriateness of the 10-molecule calibration set selection: whether molecules are representative of chemical diversity and retention time range needed for reliable projection",
+      "judge whether comparison against baseline projections is fair and controlled (same training data, same test molecules, same evaluation metric definitions)"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file config/fiddle_tcn_orbitrap.yml exists"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file config/fiddle_tcn_orbitrap.yml contains the substring 'ftms' within the gnps_orbitrap instrument allowlist"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify file config/fiddle_tcn_orbitrap.yml contains the substring 'gnps_orbitrap' (allowlist definition present)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Script runs: execute the data preparation pipeline (prepare_augment_rescore.py or equivalent TCN dataset loader) with the updated config/fiddle_tcn_orbitrap.yml as input"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify output training split row count equals 28,751 compounds (exact match required)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify output test split row count equals 3,195 compounds (exact match required)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "Verify that the only instrument type change between the config baseline and updated config is the addition of 'ftms' to gnps_orbitrap allowlist (no other modifications introduced)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "Verify file config/fiddle_tcn_orbitrap.yml exists",
+      "Verify file config/fiddle_tcn_orbitrap.yml contains the substring 'ftms' within the gnps_orbitrap instrument allowlist",
+      "Verify file config/fiddle_tcn_orbitrap.yml contains the substring 'gnps_orbitrap' (allowlist definition present)",
+      "Script runs: execute the data preparation pipeline (prepare_augment_rescore.py or equivalent TCN dataset loader) with the updated config/fiddle_tcn_orbitrap.yml as input",
+      "Verify output training split row count equals 28,751 compounds (exact match required)",
+      "Verify output test split row count equals 3,195 compounds (exact match required)",
+      "Verify that the only instrument type change between the config baseline and updated config is the addition of 'ftms' to gnps_orbitrap allowlist (no other modifications introduced)"
+    ],
+    "expert_review": [
+      "Confirm that 'ftms' is a valid Orbitrap instrument designation in GNPS ontology and that its addition is scientifically appropriate for the Orbitrap dataset",
+      "Verify that the compound count increase from the prior baseline to 28,751 training / 3,195 test is solely attributable to inclusion of 'ftms' spectra, with no other data filtering or augmentation changes",
+      "Confirm that the reported split (28,751 / 3,195) represents a reproducible and deterministic outcome given a fixed random seed or deterministic train-test split logic"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

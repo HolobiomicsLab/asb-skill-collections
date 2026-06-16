@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that inputs include a concrete Sciex Multiquant TXT export file (from github:ricoderks__QComics repository or a publicly deposited dataset)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is TXT or plain text"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that expected_outputs table contains at least these named fields: sample_name, injection_index, sequence_position, qcpool_status (or equivalent structured record)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify row_count_equals is non-zero (at least one QCpool identified)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs successfully on the input TXT file without errors"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference if a reference QCpool annotation file exists in the repository; otherwise, no canonical answer \u2014 multiple valid parsing strategies may exist depending on Multiquant TXT format version and QCpool naming conventions"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that inputs include a concrete Sciex Multiquant TXT export file (from github:ricoderks__QComics repository or a publicly deposited dataset)",
+      "verify file_format_is TXT or plain text",
+      "verify that expected_outputs table contains at least these named fields: sample_name, injection_index, sequence_position, qcpool_status (or equivalent structured record)",
+      "verify row_count_equals is non-zero (at least one QCpool identified)",
+      "verify script_runs successfully on the input TXT file without errors",
+      "verify output_matches_reference if a reference QCpool annotation file exists in the repository; otherwise, no canonical answer \u2014 multiple valid parsing strategies may exist depending on Multiquant TXT format version and QCpool naming conventions"
+    ],
+    "expert_review": [
+      "confirm that sample identification logic correctly distinguishes QCpool samples from analytical samples (relies on domain knowledge of metabolomics nomenclature and Sciex Multiquant export conventions)",
+      "confirm that injection_index and sequence_position assignments are accurate and semantically meaningful for quality control assessment",
+      "confirm that detected QCpool interval regularity is biologically and analytically plausible (expert judgment on what constitutes 'regular intervals')"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

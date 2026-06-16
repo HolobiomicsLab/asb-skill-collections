@@ -1,0 +1,325 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ee5480be63c91439469b81e562a3617ebc83f50e9c31e6e4ed1a9df64a89838f"
+    }
+  ],
+  "created_at": "2026-06-15T12:44:57.617706+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1011912",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_001.expected_outputs[0]: Processed feature table (TSV/CSV) with normalized, imputed, and filtered metabolomic features ready for statistical analysis",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Feature table (identified by table_moniker parameter)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "interpolation_ratio parameter (multiplier for minimum feature value)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Imputed feature table saved with new_moniker in experiment feature_tables directory",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Missing values in metabolomics data represent features not detected in certain samples and must be imputed rather than left as zero to avoid bias in downstream statistical testing.",
+    "The interpolation_ratio parameter is a multiplier applied to each feature's minimum non-zero value, allowing user control over imputation stringency; lower ratios (e.g., 0.5) produce more conservative estimates.",
+    "Moniker-based table naming enables tracking of multiple versions of the same feature table through the pipeline without overwriting intermediate results.",
+    "In mass spectrometry metabolomics, feature intensity errors are often multiplicative, making minimum-value-based imputation more appropriate than constant imputation across features."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file_exists for input feature table artifact (CSV, TSV, or JSON format)",
+      "verify file_format_is correct for output imputed table (same format as input)",
+      "verify row_count_equals: output table has same number of features as input table",
+      "verify field_present: output table contains all original feature columns",
+      "script_runs: ARCH-IMPUTE impute command executes without error on input table with specified interpolation_ratio parameter",
+      "output_matches_reference: for each feature in output table, verify that all zero/missing values are replaced with (interpolation_ratio \u00d7 minimum non-zero observed value for that feature) \u2014 requires sampling verification on representative features (no canonical answer for which features to spot-check; multiple defensible random sampling strategies acceptable)",
+      "value_in_range: all imputed values in output table are greater than zero and less than or equal to (interpolation_ratio \u00d7 maximum observed value per feature)",
+      "verify contains_substring: output artifact filename or metadata indicates imputation was applied with the specified interpolation_ratio value"
+    ],
+    "expert_review": [
+      "evaluate whether interpolation_ratio parameter value is scientifically reasonable for metabolomics missing-value imputation (typical metabolomics practice uses ratios between 0.1 and 0.5 of minimum non-zero values)",
+      "assess whether replacement strategy (ratio \u00d7 minimum non-zero) is appropriate for the metabolomics context and preserves statistical properties needed for downstream analysis",
+      "confirm that imputation method does not introduce artificial patterns or bias in feature abundance distributions"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] How does the impute command replace zero and missing values in a metabolomics feature table using a minimum-value-based interpolation strategy?: 'Missing features can complicate statistical testing since zeros will skew analyses towards significant results. It is often proper to impute values to 'fill in' these missing values. Currently, the'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The impute command fills missing values by calculating an imputation value as the interpolation_ratio parameter multiplied by the minimum non-zero value observed for each feature, with a default interpolation ratio of 0.5.: 'the imputed value is a multiple of the minimum non-zero value observed for that feature in the feature table. This example command imputes missing values as .5 * the min value: `pcpfm impute'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Feature table (identified by table_moniker parameter): 'Tables are specififed for processing by their moniker and saved to a new moniker.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] interpolation_ratio parameter (multiplier for minimum feature value): 'Currently, the imputed value is a multiple of the minimum non-zero value observed for that feature in the feature table.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Imputed feature table saved with new_moniker in experiment feature_tables directory: 'Tables are specififed for processing by their moniker and saved to a new moniker.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'The Python-Centric Pipeline for Metabolomics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history found for the pipeline or ARCH-IMPUTE module: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specific documentation or parameter guidance provided in the supplied text for the ARCH-IMPUTE impute command's interpolation_ratio parameter or default value: '_No changelog found._'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No example feature table input artifact or reference output artifact provided in the supplied text to validate the imputation procedure: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import numpy as np; ft = pd.read_csv('{inputs.feature_table}', index_col=0); ratio = float('{inputs.interpolation_ratio}'); mins = ft.replace(0, np.nan).min(axis=0); impute_vals = ratio * mins; ft_imputed = ft.replace(0, np.nan).fillna(impute_vals); ft_imputed.to_csv('imputed_feature_table.tsv', sep='\t'); print('Imputation complete'); assert (ft_imputed.shape == ft.shape), 'Shape mismatch'; assert ft_imputed.isnull().sum().sum() == 0, 'Null values remain'; print('Validation passed')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "feature_table_imputed.tsv",
+  "expected_outputs": [
+    "Imputed feature table saved with new_moniker in experiment feature_tables directory"
+  ],
+  "finding": "The impute command fills missing values by calculating an imputation value as the interpolation_ratio parameter multiplied by the minimum non-zero value observed for each feature, with a default interpolation ratio of 0.5.",
+  "github_name": "shuzhao-li-lab/PythonCentricPipelineForMetabolomics",
+  "input_from": "task_001",
+  "inputs": [
+    "task_001.expected_outputs[0]: Processed feature table (TSV/CSV) with normalized, imputed, and filtered metabolomic features ready for statistical analysis",
+    "Feature table (identified by table_moniker parameter)",
+    "interpolation_ratio parameter (multiplier for minimum feature value)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "feature_table_original.tsv",
+    "feature_minima.json"
+  ],
+  "linked_result_ids": [
+    "result_036"
+  ],
+  "methodology_summary": [
+    "Load the input feature table from disk using the provided table_moniker identifier.",
+    "Compute the minimum non-zero intensity value for each feature across all samples, handling missing/zero values as absent.",
+    "Apply the interpolation formula: imputation_value = interpolation_ratio \u00d7 feature_minimum for each feature.",
+    "Replace all zero and missing (NaN) values in the feature table with the calculated feature-specific imputation values.",
+    "Save the imputed feature table to the experiment feature_tables directory under the new_moniker name.",
+    "Validation: verify that all zero and missing values are replaced, all imputed values equal interpolation_ratio \u00d7 feature_minimum, and the output table has identical dimensions to the input.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1011912)"
+  ],
+  "missing_information": [
+    "No changelog or version history found for the pipeline or ARCH-IMPUTE module",
+    "No specific documentation or parameter guidance provided in the supplied text for the ARCH-IMPUTE impute command's interpolation_ratio parameter or default value",
+    "No example feature table input artifact or reference output artifact provided in the supplied text to validate the imputation procedure"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the impute command replace zero and missing values in a metabolomics feature table using a minimum-value-based interpolation strategy?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "metabolomic-feature-table-imputation",
+    "missing-value-replacement-by-feature-minimum",
+    "feature-table-moniker-management",
+    "zero-value-handling-in-mass-spectrometry-data"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pcpfm/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "ARCH-PREPROCESS",
+    "ARCH-ASSEMBLE",
+    "ARCH-CONVERT",
+    "ARCH-ASARI-STEP",
+    "ARCH-QAQC",
+    "ARCH-BLANK-MASKING",
+    "ARCH-DROP-SAMPLES",
+    "ARCH-NORMALIZE",
+    "ARCH-DROP-MISSING",
+    "ARCH-IMPUTE",
+    "ARCH-BATCH-CORRECT",
+    "ARCH-LOG-TRANSFORM",
+    "ARCH-BUILD-EMPCPDS",
+    "ARCH-L4-ANNOTATE",
+    "ARCH-L1B-ANNOTATE",
+    "ARCH-MAP-MS2",
+    "ARCH-L2-ANNOTATE",
+    "ARCH-L1A-ANNOTATE",
+    "ARCH-OUTPUT",
+    "ARTIFACT-FEATURE-TABLE"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing"
+  ],
+  "synthesized_from": "github:shuzhao-li-lab__PythonCentricPipelineForMetabolomics",
+  "task_description": "Apply the impute command to a feature table using a specified interpolation_ratio parameter, replacing all zero and missing values with the interpolation_ratio multiplied by the minimum non-zero value for each feature, and save the result to a named output table artifact.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Feature table identified by table_moniker",
+      "port_id": "feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Interpolation ratio (multiplier for minimum feature value)",
+      "port_id": "interpolation_ratio",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement and execute the impute command on a feature table with a specified interpolation_ratio to replace all zeros and missing values with interpolation_ratio \u00d7 minimum non-zero value per feature.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Imputed feature table with missing values replaced",
+      "port_id": "imputed_feature_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "tandem-ms",
+    "feature-detection",
+    "database-annotation",
+    "spectral-library-matching",
+    "metabolite-identification"
+  ],
+  "title": "Implement the imputation filter step and verify output values equal interpolation_ratio times per-feature minimum",
+  "tools": [
+    "ThermoRawFileParser",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the input feature table (identified by table_moniker) from the experiment directory. 2. Identify the minimum non-zero value for each feature across all samples. 3. For each feature, calculate the imputation value as interpolation_ratio \u00d7 minimum non-zero value. 4. Replace all zero and missing values in the feature table with the corresponding imputation values. 5. Save the imputed feature table to a new moniker (new_moniker) in the experiment's feature_tables subdirectory."
+}

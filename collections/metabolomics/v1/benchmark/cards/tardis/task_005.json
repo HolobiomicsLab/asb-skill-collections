@@ -1,0 +1,509 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Component_131.png",
+      "role": "figure",
+      "sha256": "49841ea093c2418dce75e85dd0a4fae55766914f14095539d56f7ba22284f052"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_14.png",
+      "role": "figure",
+      "sha256": "db5149cb16920f5dbd90a7ccd4a131023fcce4c5269adec045605882499f366c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_15.png",
+      "role": "figure",
+      "sha256": "c591c13e7564aa2ccba0a726a74ef897db63aedec774695889f3904ef50009bc"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1576.png",
+      "role": "figure",
+      "sha256": "68b9db1ec71495a045b5f27d8bb05591fd644a2f0406383ad9dcd749f9100575"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1577.png",
+      "role": "figure",
+      "sha256": "77a337421706d3bbaf863a4b657a9efe1dde67669f769e3eebf5d6a0f6441288"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1578.png",
+      "role": "figure",
+      "sha256": "e2a5a816bbe9d511c4a533fd7d047ca5ae04ec6b67fa53574672ccef2fd6aba3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_1583.png",
+      "role": "figure",
+      "sha256": "d86c987eb9530cad3fbbf8f6093cfdcd46d41a7e2e76630f28c7ac37b60b3e10"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_17.png",
+      "role": "figure",
+      "sha256": "484067618beead61a8937cba2e342448149b25f9a5a5f3ce3fee3c527b4ac6fb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_179.png",
+      "role": "figure",
+      "sha256": "ca7593be96ab92a038fd3bba8e5109722e59cef8ed48c98df7628a8b52db70c3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_183.png",
+      "role": "figure",
+      "sha256": "450029a8080d404d8bf4452316e111cca329b8052efbf365c67f9aecb2f09c80"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_21.png",
+      "role": "figure",
+      "sha256": "0771d4878d7bbc6425dcb9a7390d6882daf3ec84ce38db2a042bf70342734740"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_22.png",
+      "role": "figure",
+      "sha256": "b2a3ad8c85706b9a3c790c95c179a45e3957c342945ced0d5faa577abe37790f"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_23.png",
+      "role": "figure",
+      "sha256": "e382f8674c98e4780fc98faf4a72eaa9f502cc88f635be7c66e74e29a3ee5c0e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_24.png",
+      "role": "figure",
+      "sha256": "e8a97419fd4639483cdb06111783a29829e07f23021989b9e8e6dcb2092fc7cb"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_25.png",
+      "role": "figure",
+      "sha256": "ea88347302201a23f8b022eb8b9a496fd83ccf0439b546ca90bb9071145b7b97"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_331.png",
+      "role": "figure",
+      "sha256": "d234dcf1f1137bb4a43bc6f97c5239723ed9e2aa2297c4204168d4797363308e"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_7.png",
+      "role": "figure",
+      "sha256": "3125b1dddebe3c6b5b0ce8f16e5df494b4070d0049fb377982d40e39d61e2d63"
+    },
+    {
+      "indexable": false,
+      "path": "figures/Component_9.png",
+      "role": "figure",
+      "sha256": "9338b2919d0fa6f13ab4c1053eb8a4ac5cebbc87114ae218a2366648f39a9f09"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tardis.png",
+      "role": "figure",
+      "sha256": "3753660e6f52ebbe415127dbf72ed680f41d0ebe4de8549bb4cddcfaf18ca806"
+    },
+    {
+      "indexable": false,
+      "path": "figures/tardis_new.png",
+      "role": "figure",
+      "sha256": "3753660e6f52ebbe415127dbf72ed680f41d0ebe4de8549bb4cddcfaf18ca806"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "424fcd032ba74d0180ed7b3853f27a43238247a9db11a9a9dfc3ad6dbfc6cc2e"
+    }
+  ],
+  "created_at": "2026-06-16T07:24:56.964844+00:00",
+  "crossref_doi": "10.1021/acs.analchem.5c00567",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "mzML files (centroided) corresponding to LC-MS runs for targeted analysis",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Target list data frame with columns: compound ID, compound name, m/z, expected retention time (minutes), and polarity",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Sample metadata including type labels (e.g., QC, sample) for each mzML file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "EIC PNG diagnostic figures saved to output folder for visual inspection of target peak detection in screening mode",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Verification report confirming EIC PNG files from MsExperiment-based invocation match file-path-based reference invocation",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MsExperiment is a container class that combines Spectra objects with sample-level metadata, enabling integrated downstream analysis without separate file-path indexing.",
+    "Screening mode in tardisPeaks() checks whether targets are detectable within their defined m/z and retention-time windows before performing full peak integration across all samples.",
+    "EIC (Extracted Ion Chromatogram) PNG files are diagnostic outputs that visualize the actual chromatographic signal for each target, enabling manual quality assessment and troubleshooting of detection parameters.",
+    "Centroiding converts raw profile-mode mass spectrometry data to centroid-mode by reducing each peak cluster to a single m/z\u2013intensity pair, which is required for TARDIS input files in mzML format.",
+    "API equivalence testing verifies that two functionally identical code paths (object-based vs. file-path-based invocation) produce identical or visually indistinguishable results, confirming correct wrapper implementation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that vignette mzML files exist in the package distribution",
+      "verify that tardisPeaks() function accepts both MsExperiment object and file-path inputs",
+      "verify that screening_mode parameter is accepted by tardisPeaks() function",
+      "verify that output directory contains Diagnostic EIC PNG files after execution",
+      "file_format_is: output files are PNG format",
+      "verify that PNG files generated from MsExperiment object invocation exist in expected output directory",
+      "verify that PNG files generated from file-path-based invocation exist in expected output directory",
+      "robust comparison of PNG file dimensions, byte-for-byte matching not required due to potential compression variations"
+    ],
+    "expert_review": [
+      "visual inspection and quantitative comparison of EIC chromatograms from MsExperiment-based vs. file-path-based invocations for equivalence in peak detection patterns, retention time accuracy, and ion intensity representation",
+      "assessment of whether minor rendering differences (e.g., color profiles, font rendering, metadata) constitute meaningful divergence from expected reproducibility"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Do MsExperiment objects with annotated sampleData$type produce identical screening-mode EIC diagnostic outputs compared to file-path-based invocation of tardisPeaks()?: 'Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object. Here it is necessary to include at least sample type in the sampleData to distinguish'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The tardisPeaks() function accepts both file paths and MsExperiment objects as input when screening_mode=TRUE, with the MsExperiment approach requiring sampleData$type to be populated to distinguish QC from sample runs.: 'results <- tardisPeaks(\n    lcmsData = ms_data,\n    dbData = targets,\n    mass_range = NULL,\n    polarity = \"positive\",\n    output_directory = \"vignette_data/output/screening/\",\n    batch_positions ='"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mzML files (centroided) corresponding to LC-MS runs for targeted analysis: 'Input files need to be converted to the .mzML format and have to be centroided'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Target list data frame with columns: compound ID, compound name, m/z, expected retention time (minutes), and polarity: 'compound ID, a unique identifier; A compound Name; Theoretical or measured *m/z*; Expected RT (in minutes); A column that indicates the polarity'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Sample metadata including type labels (e.g., QC, sample) for each mzML file: 'sampleData$type labels'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] EIC PNG diagnostic figures saved to output folder for visual inspection of target peak detection in screening mode: 'The resulting EICs are again saved in the output folder and can be inspected'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Verification report confirming EIC PNG files from MsExperiment-based invocation match file-path-based reference invocation: 'verify that the resulting Diagnostic EIC PNG files match those produced from the file-path-based invocation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectra: 'loads MS data as `Spectra` objects so it's easily integrated with other tools'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MsExperiment: 'Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] TARDIS: 'R package for *TArgeted Raw Data Integration In Spectrometry*'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'R package for *TArgeted Raw Data Integration In Spectrometry*'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[results] knitr: 'knitr::include_graphics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, breaking changes, or API modifications available: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(xcms); library(Spectra); library(MsExperiment); library(TARDIS); mzml_files <- list.files('{inputs.mzml_files}', pattern='\\.mzML$', full.names=TRUE); spc <- Spectra(mzml_files); metadata <- read.csv('{inputs.sample_metadata}'); rownames(metadata) <- basename(mzml_files); mse <- MsExperiment(spectra=spc, sampleData=metadata); targets <- read.csv('{inputs.target_list}'); result <- tardisPeaks(lcmsData=mse, targets=targets, screening_mode=TRUE, output_dir='output'); cat('Task completed: EIC PNGs generated and comparison performed\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "eic_equivalence_verification_report.txt",
+  "expected_outputs": [
+    "EIC PNG diagnostic figures saved to output folder for visual inspection of target peak detection in screening mode",
+    "Verification report confirming EIC PNG files from MsExperiment-based invocation match file-path-based reference invocation"
+  ],
+  "finding": "The tardisPeaks() function accepts both file paths and MsExperiment objects as input when screening_mode=TRUE, with the MsExperiment approach requiring sampleData$type to be populated to distinguish QC from sample runs.",
+  "github_name": "pablovgd/TARDIS",
+  "input_from": "task_004",
+  "inputs": [
+    "mzML files (centroided) corresponding to LC-MS runs for targeted analysis",
+    "Target list data frame with columns: compound ID, compound name, m/z, expected retention time (minutes), and polarity",
+    "Sample metadata including type labels (e.g., QC, sample) for each mzML file"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "spectra_object.rds",
+    "msexperiment_object.rds",
+    "screening_mode_eics/*.png",
+    "reference_eics/*.png"
+  ],
+  "linked_result_ids": [
+    "result_009",
+    "result_010",
+    "result_013",
+    "result_014"
+  ],
+  "methodology_summary": [
+    "Load vignette mzML files into a Spectra object via the Spectra package.",
+    "Prepare sample metadata with type labels and combine with Spectra to construct an MsExperiment object.",
+    "Define a target list with compound identifiers, chemical names, m/z values, retention times, and ion polarity.",
+    "Execute tardisPeaks() in screening mode (screening_mode=TRUE) using the MsExperiment object as lcmsData to check target visibility within expected m/z and RT windows.",
+    "Extract and compare diagnostic EIC PNG files from MsExperiment-based invocation against reference EICs from file-path-based invocation to confirm functional equivalence.",
+    "Validation: EIC PNG files produced by both invocation methods are identical in file content and visual representation, confirming correct MsExperiment integration.",
+    "References: source article (DOI: 10.1021/acs.analchem.5c00567)"
+  ],
+  "missing_information": [
+    "No changelog documenting version history, breaking changes, or API modifications available"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_004/eic_artefact_plots"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Do MsExperiment objects with annotated sampleData$type produce identical screening-mode EIC diagnostic outputs compared to file-path-based invocation of tardisPeaks()?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "results"
+  ],
+  "skills": [
+    "spectral-data-object-construction-and-integration",
+    "targeted-peak-detection-screening-and-validation",
+    "extracted-ion-chromatogram-interpretation",
+    "sample-metadata-annotation-for-lcms",
+    "method-equivalence-verification-across-api-invocations"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_tardis/synthesized_package",
+  "spine_condition_ids": [
+    "cond_screening_mode_true",
+    "cond_screening_mode_false"
+  ],
+  "spine_entity_ids": [
+    "TARDIS_system",
+    "arch_tardis_pipeline",
+    "comp_tardisPeaks",
+    "comp_screening_mode",
+    "tool_msexperiment",
+    "dataset_vignette_lcms",
+    "artifact_eic_plots",
+    "artifact_metric_csvs",
+    "cond_screening_mode_true",
+    "cond_screening_mode_false",
+    "result_sawtooth_artefact"
+  ],
+  "subdomains": [
+    "lipidomics",
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:UGent-LIMET__TARDIS",
+  "task_description": "Construct an MsExperiment object from vignette mzML files with sample type labels, execute tardisPeaks() in screening mode using the MsExperiment object as lcmsData input, and verify that the resulting diagnostic EIC PNG files match those from file-path-based invocation.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Centroided mzML chromatography-mass spectrometry data files",
+      "port_id": "mzml_files",
+      "resolved_via": null,
+      "source": "task_004/eic_artefact_plots",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Target compound list with ID, name, m/z, RT, and polarity",
+      "port_id": "target_list",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Sample metadata with type labels",
+      "port_id": "sample_metadata",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "extension",
+  "task_objective": "Validate that MsExperiment-based and file-path-based tardisPeaks() invocations produce identical screening-mode EIC PNG outputs.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "EIC PNG diagnostic figures from screening mode",
+      "port_id": "diagnostic_eics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Equivalence verification summary for MsExperiment vs file-path invocation",
+      "port_id": "verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "chromatogram-alignment",
+    "quality-control",
+    "spectral-library-matching"
+  ],
+  "title": "Extend TARDIS to accept an MsExperiment object as input and reproduce the screening-mode EIC plots",
+  "tools": [
+    "xcms",
+    "Spectra",
+    "MsExperiment",
+    "TARDIS",
+    "R",
+    "knitr"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load mzML files into a Spectra object using the Spectra package. 2. Create a sampleData data frame with type labels (e.g., QC, sample) for each mzML file. 3. Construct an MsExperiment object combining the Spectra object and sampleData. 4. Prepare a target list data frame containing compound ID, name, theoretical m/z, expected retention time in minutes, and polarity annotation. 5. Execute tardisPeaks() with the MsExperiment object as the lcmsData argument, screening_mode=TRUE to check target visibility within m/z and RT windows, and specify the output folder path. 6. Extract diagnostic EIC PNG files from the output folder generated by the MsExperiment-based invocation. 7. Compare the EIC PNG file set and visual content against reference EIC PNGs produced from the equivalent file-path-based tardisPeaks() invocation to verify functional equivalence."
+}

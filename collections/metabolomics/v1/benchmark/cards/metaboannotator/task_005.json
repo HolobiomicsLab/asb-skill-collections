@@ -1,0 +1,398 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MetaboAnnotatoR.jpeg",
+      "role": "figure",
+      "sha256": "7581280c2f229e63ffef877fb14954a2b892a821bc2ef16311e9cb49721a1168"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b329d5cb032d2f7b1bdbe9c972021138eb0f4425c5e272b57e78a796bd4d422e"
+    }
+  ],
+  "created_at": "2026-06-15T12:33:51.764194+00:00",
+  "crossref_doi": "10.1021/acs.analchem.1c03032",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MetaboAnnotatoR annotations object (output from annotateRC function)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Global results table (all annotated features and top candidate per feature)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ranked results table (all candidate annotations per feature with scores)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Ranked spectra PDF files (one per feature showing matched ions for each candidate)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pseudo-MS/MS MGF file (pseudo-MS/MS spectra in MGF format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "File audit report (inventory of all output files with metadata)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MetaboAnnotatoR saveAnnotations function exports ranked candidate annotations alongside global results and visual PDF spectra for each feature for manual validation.",
+    "Pseudo-MS/MS MGF format is a standard text-based spectral library format that must be parseable and non-empty to be valid.",
+    "Ranked spectra PDFs are generated one per feature and visualize matched fragment ions between the observed pseudo-MS/MS spectrum and each candidate compound.",
+    "The global results file contains the single top-ranked annotation per feature, while ranked results include all candidates with scoring metrics for downstream filtering."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file_exists for each of: global results file, ranked results file, ranked spectra PDF file, pseudo-MS/MS MGF file in the temporary directory specified as saveAnnotations output",
+      "verify each output file is non-empty (file size > 0 bytes)",
+      "verify file_format_is correct: results files parseable as data frame/table, PDF file contains valid PDF header, MGF file contains valid MGF structure (PEPMASS, TITLE, BEGIN IONS/END IONS blocks)",
+      "verify script_runs: saveAnnotations function executes without error on annotations object with specified temporary directory as output path"
+    ],
+    "expert_review": [
+      "verify that the content and structure of saved results match the vignette-reported expectations for global results, ranked results, ranked spectra PDFs, and pseudo-MS/MS MGF outputs \u2014 requires inspection of vignette documentation for expected field names, row counts, spectrum count, and MGF entry structure"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does the saveAnnotations function successfully write all expected output file types (global results table, ranked results, ranked spectra PDFs, and pseudo-MS/MS MGF file) to the specified directory without errors?: 'saveAnnotations(annotations, DirPath=exampleDir, saveOptions=TRUE, saveXCMSoptions=FALSE, saveRanked=TRUE, saveRankedSpec=TRUE, savePseudoMSMS=TRUE)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] The saveAnnotations function is invoked with parameters to save global annotations, ranked results, ranked spectra as PDFs, and pseudo-MS/MS spectra as MGF files to a temporary directory, with all save flags enabled to write the full set of annotation outputs.: 'saveAnnotations(annotations, DirPath=exampleDir, saveOptions=TRUE, saveXCMSoptions=FALSE, saveRanked=TRUE, saveRankedSpec=TRUE, savePseudoMSMS=TRUE)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MetaboAnnotatoR annotations object (output from annotateRC function): 'annotations can be performed using the *annotateRC* function'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Global results table (all annotated features and top candidate per feature): 'It is possible to save the annotation results to a user-specified directory'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Ranked results table (all candidate annotations per feature with scores): 'It is also possible to inspect if there were other candidate annotations for a given feature'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Ranked spectra PDF files (one per feature showing matched ions for each candidate): 'It is possible to visualise the spectra containing the matched ions to each candidate'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Pseudo-MS/MS MGF file (pseudo-MS/MS spectra in MGF format): 'a processed dataset composed of two objects: RAMClustR (object containing the pseudo-MS/MS spectra)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] File audit report (inventory of all output files with metadata): 'It is possible to save the annotation results to a user-specified directory'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MetaboAnnotatoR: 'MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'To install this package, start R (version \"4.5.0\" or higher)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(MetaboAnnotatoR); load('{inputs.annotations_object}'); tmpdir <- tempdir(); saveAnnotations(annotations, tmpdir); files <- list.files(tmpdir, recursive=TRUE, full.names=TRUE); cat('Output files:\\n'); for(f in files) { sz <- file.size(f); cat(sprintf('%s (%d bytes)\\n', f, sz)); }; report <- data.frame(file=files, size=sapply(files, file.size)); write.csv(report, file.path(tmpdir, 'file_audit_report.csv'), row.names=FALSE); cat('\\nAudit report written to:', file.path(tmpdir, 'file_audit_report.csv'), '\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "file_audit_report.txt",
+  "expected_outputs": [
+    "Global results table (all annotated features and top candidate per feature)",
+    "Ranked results table (all candidate annotations per feature with scores)",
+    "Ranked spectra PDF files (one per feature showing matched ions for each candidate)",
+    "Pseudo-MS/MS MGF file (pseudo-MS/MS spectra in MGF format)",
+    "File audit report (inventory of all output files with metadata)"
+  ],
+  "finding": "The saveAnnotations function is invoked with parameters to save global annotations, ranked results, ranked spectra as PDFs, and pseudo-MS/MS spectra as MGF files to a temporary directory, with all save flags enabled to write the full set of annotation outputs.",
+  "github_name": "gggraca/MetaboAnnotatoR",
+  "input_from": "task_002",
+  "inputs": [
+    "MetaboAnnotatoR annotations object (output from annotateRC function)"
+  ],
+  "keywords": [
+    "metabolite annotation",
+    "lc-ms all-ion fragmentation",
+    "centroid mode",
+    "pseudo-ms/ms spectra",
+    "lipidomics",
+    "esi+ ionisation",
+    "feature table",
+    "fragment databases",
+    "peak-picking",
+    "library matching"
+  ],
+  "landmark_outputs": [
+    "global_results.csv",
+    "ranked_results.csv",
+    "pseudo_msms_spectra.mgf",
+    "ranked_spectra_*.pdf"
+  ],
+  "linked_result_ids": [
+    "result_012",
+    "result_020"
+  ],
+  "methodology_summary": [
+    "Load MetaboAnnotatoR annotations object containing annotated features and ranked candidate matches",
+    "Execute saveAnnotations function to export results, PDFs, and spectral data to a specified directory",
+    "Enumerate and list all files generated in the output directory",
+    "Verify file presence and non-zero file size for each expected output type",
+    "Validation: Confirm that global results, ranked results, ranked spectra PDFs (one per feature), and pseudo-MS/MS MGF file all exist and contain data (file size > 0 bytes)",
+    "References: source article (DOI: 10.1021/acs.analchem.1c03032)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_002/ranked_candidates_feature3"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the saveAnnotations function successfully write all expected output file types (global results table, ranked results, ranked spectra PDFs, and pseudo-MS/MS MGF file) to the specified directory without errors?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "metabolite-annotation-result-export",
+    "file-system-audit-and-validation",
+    "annotation-object-manipulation",
+    "spectral-result-visualization-verification",
+    "metabolomics-data-output-formatting"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_metaboannotator/synthesized_package",
+  "spine_condition_ids": [
+    "COND-001"
+  ],
+  "spine_entity_ids": [
+    "ARCH-001",
+    "COMP-005",
+    "COND-001",
+    "RES-002",
+    "COMP-009"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:gggraca__MetaboAnnotatoR",
+  "task_description": "Execute the saveAnnotations function on a MetaboAnnotatoR annotations object to export global results, ranked results, ranked spectra PDFs, and pseudo-MS/MS MGF files to a temporary directory. Verify that all expected output files are present and non-empty.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MetaboAnnotatoR annotations object from annotateRC",
+      "port_id": "annotations_object",
+      "resolved_via": null,
+      "source": "task_002/ranked_candidates_feature3",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Execute saveAnnotations on the annotations object with all output flags enabled and audit the temporary directory for presence and non-empty status of all expected output files.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Global results table",
+      "port_id": "global_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ranked results table",
+      "port_id": "ranked_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Ranked spectra PDF files",
+      "port_id": "ranked_spectra_pdfs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pseudo-MS/MS MGF file",
+      "port_id": "pseudo_msms_mgf",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "File audit report",
+      "port_id": "audit_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "lc-ms",
+    "feature-detection",
+    "database-annotation",
+    "metabolite-identification",
+    "clustering"
+  ],
+  "title": "Analyze the saveAnnotations output structure for a completed annotation run",
+  "tools": [
+    "MetaboAnnotatoR",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Pseudo-MS/MS MGF file (pseudo-MS/MS spectra in MGF format), File audit report (inventory of all output files with metadata)."
+  ],
+  "workflow_description": "1. Load a MetaboAnnotatoR annotations object (output from annotateRC function) containing annotated features and ranked candidate matches. 2. Call saveAnnotations with the annotations object and a temporary directory path as output destination. 3. Enumerate all files generated in the temporary directory. 4. Verify presence of global results file, ranked results file, ranked spectra PDF files (one per feature), and pseudo-MS/MS MGF file. 5. Check that each file is non-empty (file size > 0 bytes). 6. Produce an audit report documenting file names, formats, sizes, and completion status."
+}

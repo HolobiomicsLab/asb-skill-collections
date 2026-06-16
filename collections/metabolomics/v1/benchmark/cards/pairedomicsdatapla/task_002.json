@@ -1,0 +1,333 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/Slide1.svg",
+      "role": "figure",
+      "sha256": "80c2b1f28251e97ceccbf3c6bf1dac9c87e2909daa015295ae08d5d27ebf189c"
+    },
+    {
+      "indexable": false,
+      "path": "figures/architecture.png",
+      "role": "figure",
+      "sha256": "47a4ac54cacb7c8aa6dbd66d604a38b463eef8a945b02a057afe4804fe782cae"
+    },
+    {
+      "indexable": false,
+      "path": "figures/architecture.svg",
+      "role": "figure",
+      "sha256": "88440540f16ee2c841a769b3540b119c7b4485fa4abb1736a242c998bc045c8a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/nlesc.png",
+      "role": "figure",
+      "sha256": "948238d0fb8706a610c9703eb5fd55a28de68703e05c079c16e6790d024f0f6b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide1.png",
+      "role": "figure",
+      "sha256": "dad7f28a55aacb51c3d96305d73543dbc53c10cbdff46b7b7238f462e353efe3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide2.png",
+      "role": "figure",
+      "sha256": "85b33f400db3e669746b64d8b8eda3c8f2eeb0dc1c58e4363089d8c9fddda6ab"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide3.png",
+      "role": "figure",
+      "sha256": "a8e884bba7e906abbdb011f0fad3f24ac2f3ef6bb8ca9c0f13cebaf4fd462667"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide4.png",
+      "role": "figure",
+      "sha256": "afc1aa5c3c5e250fa10ab86e5187200213dff0bc1dc84f3d8a337fe97c1c1b64"
+    },
+    {
+      "indexable": false,
+      "path": "figures/slide5.png",
+      "role": "figure",
+      "sha256": "62b48629a51c1950a9642d64030dfa87298673b8c2d569c75b3a790c6040c9da"
+    },
+    {
+      "indexable": false,
+      "path": "figures/wur.png",
+      "role": "figure",
+      "sha256": "e9da6f0b6e7ac61a4d02b4fb417d567f8d3eea50c1cffd6d954983459d4eebb8"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "d4fdafd858db9ef873ed914a2a6aa220a5a256ddacd25827ddcf412c814c7ee0"
+    }
+  ],
+  "created_at": "2026-06-16T06:05:14.068972+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Project JSON document with genome identifier field",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Enriched project JSON document with organism name populated from external registry",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Project JSON documents in the Paired Omics Data Platform encode genome identifiers that must be resolved to organism names via external taxonomic or genomic databases.",
+    "The enrichment operation is part of a task queue system that processes projects asynchronously; this sub-task executes the organism-name lookup only and does not orchestrate the full queue infrastructure.",
+    "External genome registries (NCBI Taxonomy, IMG, KEGG, or domain-specific databases) are the authoritative source for organism name validation and standardization.",
+    "The enriched JSON must preserve all original project fields while adding or updating the organism name field to maintain data integrity and downstream compatibility."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the task queue implementation exists in the iomega/paired-data-form repository",
+      "verify that project JSON documents can be loaded and contain a genome identifier field",
+      "verify that the enrichment function accepts a project JSON document with a genome identifier as input",
+      "verify that the enrichment function returns a project JSON document with an organism name field added or populated",
+      "verify that the organism name lookup calls an external registry API (e.g., NCBI, ENA, or similar) with the genome identifier",
+      "verify that the returned organism name matches the external registry record for the given genome identifier \u2014 requires manual spot-check against at least 3 distinct genome identifiers",
+      "verify that the enriched JSON output file format is valid JSON and preserves all input fields from the original project document",
+      "script_runs: test the enrichment function on a sample project JSON with known genome identifier and verify it produces output without errors"
+    ],
+    "expert_review": [
+      "confirm that the external registry queried for organism name lookup is appropriate and current for the target genome domain",
+      "confirm that the mapping between genome identifier field name(s) in project JSON and the registry query parameter is correct and complete",
+      "confirm that error handling is appropriate when a genome identifier does not resolve in the external registry"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] How does the paired-data-form platform enrich a project JSON document by linking a genome identifier to organism name information from an external registry?: 'Links MS/MS mass spectra with genome, sample preparation, extraction method and instrumentation method'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The platform links MS/MS mass spectra with genome identifiers and other metadata, enabling integration of genomic information with mass spectrometry data within stored project JSON documents.: 'Links MS/MS mass spectra with genome, sample preparation, extraction method and instrumentation method'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Project JSON document with genome identifier field: 'the project will be reviewed and if approved will appear in the [list of projects](https://pairedomicsdata.bioinformatics.nl/projects)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Enriched project JSON document with organism name populated from external registry: 'Each project page on [https://pairedomicsdata.bioinformatics.nl](https://pairedomicsdata.bioinformatics.nl) has a download button, which gives you the JSON document of the project'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] npm: 'make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] Which external registry or API is queried to fetch organism names from genome identifiers, and what is the exact query mechanism?: 'Enrich project by fetching organism name based on genome identifier ([#46]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] What is the exact field name and schema for the genome identifier input in the project JSON document?: 'Enrich project by fetching organism name based on genome identifier ([#46]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] What is the exact field name and schema for the organism name output added to the enriched project JSON?: 'Enrich project by fetching organism name based on genome identifier ([#46]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] How does the task queue schedule and execute the organism name enrichment, and is it a synchronous or asynchronous operation?: 'Task queue to enrich projects ([#46]'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "scripts/run.sh"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "enriched_project.json",
+  "expected_outputs": [
+    "Enriched project JSON document with organism name populated from external registry"
+  ],
+  "finding": "The platform links MS/MS mass spectra with genome identifiers and other metadata, enabling integration of genomic information with mass spectrometry data within stored project JSON documents.",
+  "github_name": "iomega/paired-data-form",
+  "input_from": "task_001",
+  "inputs": [
+    "Project JSON document with genome identifier field"
+  ],
+  "keywords": [
+    "mass spectrometry",
+    "ms/ms spectra",
+    "genomic data",
+    "biosynthetic gene clusters",
+    "paired omics",
+    "metabolomics",
+    "data integration"
+  ],
+  "landmark_outputs": [
+    "parsed_genome_id.txt",
+    "registry_query_result.json",
+    "enriched_project.json"
+  ],
+  "linked_result_ids": [
+    "result_021"
+  ],
+  "methodology_summary": [
+    "Load the input project JSON document and extract the genome identifier field.",
+    "Query an external organism/genome registry using the extracted identifier to retrieve the standardized organism name.",
+    "Merge the retrieved organism name into the project JSON document as a new or updated field.",
+    "Serialize and validate the enriched JSON document for well-formedness and required field presence.",
+    "Validation: Verify that the enriched JSON is well-formed, contains the original genome identifier, and has a non-empty organism name field populated from the registry."
+  ],
+  "missing_information": [
+    "Which external registry or API is queried to fetch organism names from genome identifiers, and what is the exact query mechanism?",
+    "What is the exact field name and schema for the genome identifier input in the project JSON document?",
+    "What is the exact field name and schema for the organism name output added to the enriched project JSON?",
+    "How does the task queue schedule and execute the organism name enrichment, and is it a synchronous or asynchronous operation?"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How does the paired-data-form platform enrich a project JSON document by linking a genome identifier to organism name information from an external registry?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "genome-identifier-lookup",
+    "json-document-enrichment",
+    "external-registry-querying",
+    "organism-metadata-retrieval",
+    "json-validation-and-formatting"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_pairedomicsdatapla/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "comp-task-queue",
+    "comp-json-schema",
+    "artifact-project-json"
+  ],
+  "subdomains": [
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:iomega__paired-data-form",
+  "task_description": "Given a project JSON document containing a genome identifier, enrich it by fetching the corresponding organism name from an external genome registry and return the augmented project JSON with the organism name field populated.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Project JSON document with genome identifier",
+      "port_id": "project_json",
+      "resolved_via": null,
+      "source": "task_001/validation_report",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Implement a function that retrieves organism name from an external registry given a genome identifier and returns the enriched project JSON document with the organism name field populated.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Enriched project JSON with organism name",
+      "port_id": "enriched_project_json",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [],
+  "title": "Reconstruct the task-queue project enrichment step that fetches organism names from genome identifiers",
+  "tools": [
+    "npm"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: npm, Enriched project JSON document with organism name populated from external registry."
+  ],
+  "workflow_description": "1. Parse the input project JSON document to extract the genome identifier field. 2. Query an external genome registry (e.g. NCBI Taxonomy, IMG, or equivalent) using the genome identifier to retrieve the organism name. 3. Inject the retrieved organism name into the project JSON document as a new or updated field. 4. Validate that the enriched JSON is well-formed and contains both the original genome identifier and the newly populated organism name. 5. Write the enriched project JSON to the output file."
+}

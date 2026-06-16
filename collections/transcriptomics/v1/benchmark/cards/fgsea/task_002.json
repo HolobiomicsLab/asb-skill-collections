@@ -1,0 +1,430 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/geseca-spatial-top.png",
+      "role": "figure",
+      "sha256": "e7504e6c8aae4c35620459ba9fdc033e69ef31f16969b25f9a09eef84d77ca24"
+    },
+    {
+      "indexable": false,
+      "path": "figures/geseca-vignette-score-toy-example.png",
+      "role": "figure",
+      "sha256": "9481b44ce8ef679fed4cbd921cf96eb1f7cb386e173a57e415900e90f063d029"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "f2268172ed8b77a932469afaeb28d0611cb1e3160ebbe722394a4b0fad3d6772"
+    }
+  ],
+  "created_at": "2026-06-15T19:18:01.563888+00:00",
+  "crossref_doi": null,
+  "data_accessions": [
+    {
+      "accession": "GSE200250",
+      "evidence_span": "sider a time course data of Th2 activation from the dataset GSE200250.  First, let prepare the dataset. We load it from Gene Expr",
+      "kind": "geo_series",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200250"
+    },
+    {
+      "accession": "GSE116240",
+      "evidence_span": "ges(library(Seurat)) ```  As an example dataset we will use GSE116240 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1162",
+      "kind": "geo_series",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240"
+    },
+    {
+      "accession": "GSE14308",
+      "evidence_span": "exampleExpressionMatrix` - numeric expression matrix of the GSE14308 dataset. Rows correspond to genes (ENTREZID is used as iden",
+      "kind": "geo_series",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14308"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GSE200250 dataset from NCBI GEO (publicly accessible via GEOquery)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "HALLMARK gene set collection from MSigDB via msigdbr",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "GESECA results table with pathway names, scores, p-values, and adjusted p-values sorted by significance",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Temporal activation pattern confirmation for top pathways showing E2F targets active at 24h and hypoxia genes active at 48h",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "GESECA measures gene set coregulation via summed squared colSums of centered expression, identifying pathways with high gene-to-gene correlation independent of explicit contrasts.",
+    "HALLMARK gene sets represent well-curated biological pathways (e.g., cell-cycle, hypoxia) and are appropriate for mouse studies when species parameter is set to 'mouse' in msigdbr.",
+    "Log-transformation and quantile normalization are prerequisite steps for microarray data; failure to normalize causes inflated variance and spurious enrichment scores.",
+    "minSize=15 and maxSize=500 are standard filtering thresholds to exclude pathways too small to be statistically robust or too large to be biologically specific.",
+    "Temporal patterns in Th2 activation (E2F targets peaking at 24h, hypoxia genes at 48h) reflect the time-course biology of T-cell differentiation and metabolic reprogramming."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: GSE200250 can be retrieved via GEOquery::getGEO()",
+      "verify GEOquery script runs: library(GEOquery); gse200250 <- getGEO('GSE200250', AnnotGPL = TRUE) executes without error",
+      "verify limma script runs: library(limma); normalized_exprs <- normalizeBetweenArrays(log2(exprs(es)), method='quantile') executes without error",
+      "verify fgsea script runs: library(fgsea); gesecaRes <- geseca(normalized_expression_matrix, hallmark_gene_sets, minSize=15, maxSize=500) executes without error",
+      "verify output structure: gesecaRes contains columns 'pathway', 'NES', 'pval', 'padj' with numeric values",
+      "verify top pathway identification: HALLMARK_E2F_TARGETS appears in gesecaRes pathways at 24h timepoint, robust to minor ranking shifts",
+      "verify top pathway identification: HALLMARK_HYPOXIA appears in gesecaRes pathways at 48h timepoint, robust to minor ranking shifts",
+      "verify NES and p-value retrieval: extract NES and pval for HALLMARK_E2F_TARGETS at 24h and HALLMARK_HYPOXIA at 48h, any of the following numeric formats acceptable"
+    ],
+    "expert_review": [
+      "assess whether reported NES and p-values for HALLMARK_E2F_TARGETS (24h) and HALLMARK_HYPOXIA (48h) align with computed scores from geseca() on normalized GSE200250 data within acceptable tolerance (parameter-sensitive: tolerance bounds require domain judgment)",
+      "assess whether limma normalization (log2 + quantile) is the appropriate preprocessing for GSE200250 gene expression matrix prior to GESECA analysis",
+      "assess biological plausibility: whether E2F_TARGETS activation at 24h and HYPOXIA activation at 48h are consistent with the experimental design and known biology of GSE200250"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does fgsea produce consistent enrichment scores and p-values for known pathway activations when applied to normalized gene expression data from a time-course experiment?: 'This package allows to quickly and accurately calculate arbitrarily low GSEA P-values for a collection of gene sets.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] fgsea enables fast and accurate calculation of arbitrarily low GSEA P-values for gene set collections, supporting reproducible pathway enrichment analysis.: 'This package allows to quickly and accurately calculate arbitrarily low GSEA P-values for a collection of gene sets.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GSE200250 dataset from NCBI GEO (publicly accessible via GEOquery): 'gse200250 <- getGEO(\"GSE200250\", AnnotGPL = TRUE)[[1]]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] HALLMARK gene set collection from MSigDB via msigdbr: 'pathwaysDF <- msigdbr(species=\"mouse\", collection=\"H\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GESECA results table with pathway names, scores, p-values, and adjusted p-values sorted by significance: 'gesecaRes <- geseca(pathways, exprs(es), minSize = 15, maxSize = 500)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Temporal activation pattern confirmation for top pathways showing E2F targets active at 24h and hypoxia genes active at 48h: 'plotCoregulationProfile(pathway=pathways[[\"HALLMARK_E2F_TARGETS\"]], E=exprs(es), titles = es$title, conditions=es$`time point:ch1`)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] GEOquery: 'library(GEOquery)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] limma: 'exprs(es) <- normalizeBetweenArrays(log2(exprs(es)), method=\"quantile\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] fgsea: 'gesecaRes <- geseca(pathways, exprs(es), minSize = 15, maxSize = 500)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] msigdbr: 'pathwaysDF <- msigdbr(species=\"mouse\", collection=\"H\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] data.table: 'library(data.table)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] ggplot2: 'library(ggplot2)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'fgsea is an R-package for fast preranked gene set enrichment analysis'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog available to document version history or changes to fgsea package used for analysis: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(GEOquery); library(limma); library(fgsea); library(msigdbr); library(data.table); library(ggplot2); gse <- getGEO('GSE200250', GSEMatrix=TRUE); eset <- gse[[1]]; expr <- exprs(eset); expr <- log2(expr + 1); expr <- normalizeBetweenArrays(expr, method='quantile'); expr <- expr[!duplicated(rownames(expr)),]; expr <- expr[rowSums(is.na(expr)) == 0,]; gene_means <- rowMeans(expr); expr <- expr[order(gene_means, decreasing=TRUE)[1:min(12000, nrow(expr))],]; hallmark <- msigdbr(species='Mus musculus', category='H'); pathways <- split(hallmark$gene_symbol, hallmark$gs_name); geseca_res <- fgsea(pathways=pathways, stats=setNames(gene_means[rownames(expr)], rownames(expr)), minSize=15, maxSize=500); geseca_res <- geseca_res[order(padj)]; print(geseca_res[, .(pathway, ES, NES, pval, padj)]); write.csv(geseca_res, 'geseca_results.csv', row.names=FALSE)"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "geseca_results_table.csv",
+  "expected_outputs": [
+    "GESECA results table with pathway names, scores, p-values, and adjusted p-values sorted by significance",
+    "Temporal activation pattern confirmation for top pathways showing E2F targets active at 24h and hypoxia genes active at 48h"
+  ],
+  "finding": "fgsea enables fast and accurate calculation of arbitrarily low GSEA P-values for gene set collections, supporting reproducible pathway enrichment analysis.",
+  "github_name": "alserglab/fgsea",
+  "input_from": null,
+  "inputs": [
+    "GSE200250 dataset from NCBI GEO (publicly accessible via GEOquery)",
+    "HALLMARK gene set collection from MSigDB via msigdbr"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "normalized_expression_matrix.RData",
+    "filtered_expression_matrix.RData",
+    "geseca_results_sorted_by_pvalue.csv",
+    "temporal_activation_plot_E2F_targets.png",
+    "temporal_activation_plot_hypoxia.png"
+  ],
+  "linked_result_ids": [
+    "result_005",
+    "result_006",
+    "result_007",
+    "result_008",
+    "result_010",
+    "result_011",
+    "result_012",
+    "result_013",
+    "result_016",
+    "result_031"
+  ],
+  "methodology_summary": [
+    "Load GSE200250 from NCBI GEO and extract Th2 time-course samples.",
+    "Apply log-transformation and quantile normalization using limma.",
+    "Filter duplicates, invalid identifiers, and retain top 12,000 genes by mean expression.",
+    "Obtain HALLMARK gene sets from MSigDB for mouse.",
+    "Run GESECA with minSize=15, maxSize=500 to score gene set coregulation across time points.",
+    "Validation: confirm that top pathways show expected temporal activation (E2F at 24h, hypoxia at 48h) with p-values and enrichment scores matching published ranges.",
+    "References: GSE200250 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200250); GSE116240 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116240); GSE14308 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14308)"
+  ],
+  "missing_information": [
+    "No changelog available to document version history or changes to fgsea package used for analysis"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does fgsea produce consistent enrichment scores and p-values for known pathway activations when applied to normalized gene expression data from a time-course experiment?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "gene-expression-matrix-normalization",
+    "pathway-set-enrichment-analysis",
+    "temporal-gene-expression-dynamics",
+    "gene-identifier-deduplication-and-filtering",
+    "multi-conditional-data-coregulation-scoring"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_fgsea/synthesized_package",
+  "spine_condition_ids": [
+    "cond_geseca_full_matrix",
+    "cond_geseca_pca_reduced",
+    "cond_geseca_scrna_kegg",
+    "cond_geseca_spatial_visium",
+    "cond_geseca_xenium_ovarian",
+    "cond_geseca_quick_run"
+  ],
+  "spine_entity_ids": [
+    "geseca_system",
+    "geseca_func",
+    "geseca_score",
+    "tool_geoquery",
+    "tool_limma",
+    "dataset_gse200250",
+    "dataset_hallmark",
+    "dataset_kegg_legacy",
+    "pathway_e2f_targets",
+    "pathway_hypoxia",
+    "pathway_ifn_gamma",
+    "pathway_oxphos",
+    "cond_geseca_full_matrix",
+    "cond_geseca_pca_reduced",
+    "cond_geseca_scrna_kegg",
+    "cond_geseca_spatial_visium",
+    "cond_geseca_xenium_ovarian",
+    "cond_geseca_quick_run",
+    "result_cell_cycle_pval",
+    "result_cell_cycle_mitotic_pval",
+    "result_e2f_targets_24h",
+    "result_hypoxia_48h",
+    "result_pca_reduced_similar",
+    "result_leishmania_non_foamy",
+    "result_hypoxia_spatial",
+    "result_ifn_gamma_immune",
+    "result_oxphos_normal_tissue",
+    "gene_permutation_pvalue"
+  ],
+  "subdomains": [
+    "functional-genomics",
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "statistical-analysis"
+  ],
+  "synthesized_from": "github:alserglab__fgsea",
+  "task_description": "Load the GSE200250 Th2 activation time-course dataset via GEOquery, apply log and quantile normalization with limma, run GESECA analysis on the full expression matrix using HALLMARK gene sets, and verify that top enriched pathways match reported temporal activation patterns and p-values.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GSE200250 expression data from GEO",
+      "port_id": "gse200250_raw",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "HALLMARK gene sets from MSigDB",
+      "port_id": "hallmark_pathways",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Load GSE200250, normalize with limma, run geseca() on the full expression matrix with HALLMARK gene sets, and validate that reported top pathway scores and p-values match expected biological activations at specified timepoints.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "GESECA enrichment results with p-values and pathway scores",
+      "port_id": "geseca_results",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Temporal activation plots for top pathways",
+      "port_id": "temporal_patterns",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "enrichment-analysis",
+    "pathway-analysis",
+    "statistical-analysis",
+    "false-discovery-rate-correction"
+  ],
+  "title": "Reproduce GESECA analysis on GSE200250 Th2 time-course full expression matrix and verify top pathway scores",
+  "tools": [
+    "GEOquery",
+    "limma",
+    "fgsea",
+    "msigdbr",
+    "data.table",
+    "ggplot2",
+    "R"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: GEOquery, limma, msigdbr, data.table, ggplot2, GESECA results table with pathway names, scores, p-values, and adjusted p-values sorted by significance, Temporal activation pattern confirmation for top pathways showing E2F targets active at 24h and hypoxia genes active at 48h."
+  ],
+  "workflow_description": "1. Load GSE200250 dataset using getGEO from GEOquery, selecting Th2 samples and ordering by time point. 2. Extract and log-transform gene expression, then apply quantile normalization using normalizeBetweenArrays from limma with method='quantile'. 3. Filter the expression matrix by removing duplicate genes based on Gene ID, removing genes with missing or '///' identifiers, and retaining the top 12,000 genes by mean expression. 4. Load HALLMARK gene sets from msigdbr with species='mouse' and collection='H', converting to a named list split by pathway name. 5. Run geseca on the filtered expression matrix with minSize=15 and maxSize=500, using default centering. 6. Sort results by p-value and extract enrichment scores and temporal activation patterns for top pathways (e.g., HALLMARK_E2F_TARGETS, HALLMARK_HYPOXIA). 7. Validate that reported pathway scores and p-values match expected ranges and temporal patterns from the publication."
+}

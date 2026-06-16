@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file test_caffeine.py exists in github:JosieHong__FIDDLE repository"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is CSV or TSV for the inference output produced by test_caffeine.py"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output contains at least one column with formula predictions or scored candidates"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output contains at least one row of data (beyond headers) for caffeine compound"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: output includes a score, probability, or ranking column for formula candidates"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file test_caffeine.py exists in github:JosieHong__FIDDLE repository",
+      "verify file_format_is CSV or TSV for the inference output produced by test_caffeine.py",
+      "script_runs: test_caffeine.py executes without fatal errors against GNPS spectra for caffeine (C8H10N4O2) using v2.0.0 checkpoint",
+      "verify output contains at least one column with formula predictions or scored candidates",
+      "verify output contains at least one row of data (beyond headers) for caffeine compound",
+      "verify field_present: output includes a score, probability, or ranking column for formula candidates"
+    ],
+    "expert_review": [
+      "expert_review: caffeine molecular formula C8H10N4O2 is correctly identified or ranked within top-k predictions by the model",
+      "expert_review: the Siamese rescore architecture (FormulaEncoder + RescoreHead) produces chemically plausible formula rankings compared to ground truth or reference mass spectroscopy data"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

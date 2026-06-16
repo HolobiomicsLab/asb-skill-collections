@@ -1,0 +1,178 @@
+# SciTask Card: Reconstruct the Docker multi-stage build pipeline producing the airdpro:cli image
+
+- Task ID: `task_001`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T14:04:46.383725+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_aird/synthesized_package`
+- Domain: `mass-spectrometry / metabolomics`
+- Subtask categories: `data-processing`, `benchmark-evaluation`
+- GitHub: `CSi-Studio/AirdPro`
+- Quality: Score 2/5 — Coherent: false, placeholder, 6 grounding failures
+
+## Classification
+
+- Task kind: `component_reconstruction`
+- Article type: `software-tool`
+- Primary domain: `bioinformatics`
+
+## Research Question
+What is the multi-stage Docker build process that produces the airdpro:cli image from a Ubuntu 22.04 base with Wine environment?
+
+## Connected Finding
+The document describes that AirdPro is built using Docker with Wine to run the C#-based application in Linux containers, leveraging .NET Framework 4.8 and pwiz_bindings_cli.dll from ProteoWizard, but the specific multi-stage Dockerfile build steps and image size metrics are not detailed in the provided text.
+
+## Task Description
+Execute the multi-stage Dockerfile build process to produce the airdpro:cli Docker image from Ubuntu 22.04 + Wine base, then verify the image exists and matches the expected ~6–7 GB size metric.
+
+## Inputs
+- Build-docker.sh script and Dockerfile multi-stage configuration from AirdPro project root directory
+- System with Docker Engine version 20.10 or later installed and running
+
+## Expected Outputs
+- airdpro:cli Docker image, verified to exist in local Docker image registry with reported size metric in the range 6–7 GB
+- Build log output confirming successful multi-stage build completion with no fatal errors
+
+## Landmark Outputs
+
+- `Dockerfile (source file confirming multi-stage structure)`
+- `docker build output log (showing Ubuntu download, Wine installation, .NET Framework installation steps)`
+
+## Tools
+- AirdPro V5
+- Docker Desktop for Mac
+- Wine
+- .NET Framework 4.8
+- Docker Compose
+
+## Skills
+- docker-multistage-build-execution
+- container-image-size-verification
+- wine-environment-initialization-validation
+- dotnet-framework-installation-in-containers
+- docker-image-registry-inspection
+
+## Workflow Description
+1. Run the build-docker.sh script with the --linux-only flag to initiate the multi-stage Docker build targeting the runtime-cli stage. 2. Monitor the build process as it downloads the Ubuntu 22.04 base image, installs Wine and dependencies, initializes the Wine environment, and installs .NET Framework 4.8. 3. Verify successful image creation by querying Docker for the airdpro:cli image and confirm its size falls within the expected 6–7 GB range using docker images command. 4. Optionally test image functionality by running a basic container instantiation from airdpro:cli to ensure the compiled AirdPro CLI binary is executable and responds to --help.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/AIR.png` | figure | False |
+| `figures/AIR_01.png` | figure | False |
+| `figures/AirdManager.png` | figure | False |
+| `figures/AirdPro.png` | figure | False |
+| `figures/AirdProLogo.png` | figure | False |
+| `figures/AirdProTrans.png` | figure | False |
+| `figures/AirdPro_ 2.png` | figure | False |
+| `figures/AirdPro_ 3.png` | figure | False |
+| `figures/Arrows.png` | figure | False |
+| `figures/CleanErrors.png` | figure | False |
+| `figures/CleanFinished.png` | figure | False |
+| `figures/Computation.png` | figure | False |
+| `figures/Connected.png` | figure | False |
+| `figures/Conversion.png` | figure | False |
+| `figures/ConversionCenter.png` | figure | False |
+| `figures/Help.png` | figure | False |
+| `figures/MetaboLights.jpg` | figure | False |
+| `figures/Proteomexchange.png` | figure | False |
+| `figures/SearchEngine.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No changelog documenting Docker build process, versioning, or layer structure changes
+
+## Domain Knowledge
+- Multi-stage Dockerfile builds allow separate build and runtime stages; the runtime-cli stage produces a minimal image excluding GUI dependencies, reducing size to 6–7 GB vs. 8–10 GB for the full Linux variant.
+- Wine initialization on first container run requires downloading and configuring .NET Framework 4.8 components, which may take >30 minutes; subsequent runs on the same image are faster as the Wine prefix is cached.
+- The airdpro:cli image targets command-line batch processing; it excludes X11 and XQuartz dependencies needed for GUI mode, making it suitable for headless and automated analysis workflows.
+- Docker image size is reported by `docker images` in the SIZE column and reflects the compressed layer sizes; a 6–7 GB image decompresses to larger uncompressed size when instantiated.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: Docker Desktop for Mac, Wine, .NET Framework 4.8, Docker Compose, airdpro:cli Docker image, verified to exist in local Docker image registry with reported size metric in the range 6–7 GB, Build log output confirming successful multi-stage build completion with no fatal errors.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] What is the multi-stage Docker build process that produces the airdpro:cli image from a Ubuntu 22.04 base with Wine environment?: 'AirdPro is a GUI client for conversion from vendor files to Aird files. AirdPro is written in C# and is based on pwiz_bindings_cli.dll from the ProteoWizard project.'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] The document describes that AirdPro is built using Docker with Wine to run the C#-based application in Linux containers, leveraging .NET Framework 4.8 and pwiz_bindings_cli.dll from ProteoWizard, but the specific multi-stage Dockerfile build steps and image size metrics are not detailed in the provided text.: 'AirdPro is written in C# and is based on pwiz_bindings_cli.dll from the ProteoWizard project.'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [methods] Build-docker.sh script and Dockerfile multi-stage configuration from AirdPro project root directory: 'Build all images (first build may take longer)
+./build-docker.sh'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [methods] System with Docker Engine version 20.10 or later installed and running: 'Docker Desktop for Mac (version 20.10+)'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [methods] airdpro:cli Docker image, verified to exist in local Docker image registry with reported size metric in the range 6–7 GB: 'CLI Version (For batch processing tasks)
+Size: ~6-7GB'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [methods] Build log output confirming successful multi-stage build completion with no fatal errors: 'Build process explanation:
+- Download Ubuntu base image
+- Install Wine and dependencies
+- Initialize Wine environment
+- Install .NET Framework 4.8
+- Compile AirdPro application'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [methods] Docker Desktop for Mac: 'Docker Desktop for Mac (version 20.10+)'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [methods] Wine: 'Wine to run Windows applications in Linux containers'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [methods] .NET Framework 4.8: '.NET Framework 4.8 installed and run through Wine'
+- `ev_010` from `agent2_synthesis` (agent2_traced): [methods] Docker Compose: 'Docker Compose configuration'
+- `ev_011` from `agent2_synthesis` (agent2_traced): [discussion] No changelog documenting Docker build process, versioning, or layer structure changes: '_No changelog found._'
+
+## Evaluation Strategy
+### Direct Checks
+- verify file 'build-docker.sh' exists in github:CSi-Studio__AirdPro repository
+- script_runs: execute build-docker.sh without errors
+- verify Docker image 'airdpro:cli' exists after build completion
+- value_in_range: Docker image airdpro:cli size is between 5.5 GB and 7.5 GB (parameter-sensitive to base Ubuntu 22.04 + Wine + .NET Framework 4.8 layers)
+- verify Docker image airdpro:cli is built from Ubuntu 22.04 base (inspect image layers or Dockerfile)
+
+### Expert Review
+- Assess whether multi-stage build architecture follows best practices for minimizing final image size while maintaining functionality
+- Verify that airdpro:cli image is functional for CLI batch processing (requires domain knowledge of AirdPro vendor file conversion workflow)
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Execution Profile
+- **Compute tier:** heavy
+
+## Methodology Summary
+1. Invoke the build-docker.sh script to trigger Docker's multi-stage build pipeline targeting the runtime-cli stage.
+2. Download and configure the Ubuntu 22.04 base image, then install Wine and all required Linux dependencies for Windows application support.
+3. Initialize the Wine environment and install .NET Framework 4.8 within the Wine prefix so that compiled C# binaries can execute.
+4. Compile the AirdPro application using the .NET SDK during the build stage, then copy the CLI executable into the runtime-cli final image.
+5. Verification: Query docker images to confirm airdpro:cli exists and report its size; confirm the reported size falls within 6–7 GB range.
+
+## Workflow Ports
+
+**Inputs:**
+
+- `dockerfile_config` — Dockerfile multi-stage build configuration
+- `build_script` — build-docker.sh build automation script
+
+**Outputs:**
+
+- `cli_image` — airdpro:cli Docker image in local registry
+- `build_log` — Docker build execution log with build status
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:CSi-Studio__AirdPro`
+- **Synthesized at:** 2026-06-15T14:09:27+00:00
+
+## Extraction Quality
+- Score: 2/5
+- Coherent: false
+- Placeholder detected: true
+- Groundedness failures (6):
+  - expected_outputs[1]: evidence_span not found in section 'methods' (value='Build log output confirming successful multi-stage build com', span='Build process explanation:
+- Download Ubuntu base image
+- In')
+  - tools[2]: evidence_span not found in section 'methods' (value='.NET Framework 4.8', span='.NET Framework 4.8 installed and run through Wine')
+  - research_question: evidence_span does not address 'multi-stage Docker build process' or 'airdpro:cli image'—only describes AirdPro as a GUI client based on C# and ProteoWizard
+  - finding: contradicts task_objective—claims 'specific multi-stage Dockerfile build steps and image size metrics are not detailed' but task expects execution and verification of these details
+  - inputs[0]: evidence_span is generic instruction ('Build all images') without specificity to Dockerfile multi-stage configuration or --linux-only flag
+  - tools[3]: Docker Compose evidence_span missing entirely (generic placeholder tool without grounding)
+- Notes: This card exhibits severe coherence and grounding problems. The research_question asks about the Docker build process but its evidence_span only describes AirdPro's application role (C#, ProteoWizard), creating a semantic mismatch. The finding contradicts the task by claiming build details are absent when the task expects to execute and verify them. Multiple tools and expected_outputs have missing or generic evidence_spans. The card conflates what should be known (Dockerfile content) with what should be discovered (image size verification), without distinguishing between. Domain knowledge is presented as fact (inferred=false) despite being expert synthesis. Recommend: (1) align research_question to actual grounding evidence (e.g., 'What does the documentation reveal about AirdPro's architecture?'), (2) rewrite finding to acknowledge task assumptions, (3) replace generic placeholders with artifact-specific references, (4) ground domain_knowledge as inferred, (5) provide actual Dockerfile or link to repository source.
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

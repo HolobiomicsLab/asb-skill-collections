@@ -1,0 +1,349 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon.png",
+      "role": "figure",
+      "sha256": "a6f2ba245b962dd9dce35fa3a33fad06e189291254408b29c47184676f5cd9b8"
+    },
+    {
+      "indexable": false,
+      "path": "figures/expected_treemap.png",
+      "role": "figure",
+      "sha256": "4b821d08588485dba42f8f9167bb98b1c6128ea4a3e9c855e1ffa5985f7135c4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-96x96.png",
+      "role": "figure",
+      "sha256": "56213353c3a08f75c961592d769f2fb9fcf5af8338c9c27b4dc98ae2803238e3"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon.svg",
+      "role": "figure",
+      "sha256": "09ee9737d1318e360e84eea3f2aadabd84cbd2380f3a2fb6503bc136efdc2b8b"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "405445d48a6b5f5799ebb942153a1b2ec73e7e345d161be3fe178d2c7fa3b51a"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-192x192.png",
+      "role": "figure",
+      "sha256": "fc9b2c94db30b485e2aaaa0d1a75d018fd85f7982e2675b1cc52ccb8eb1017d2"
+    },
+    {
+      "indexable": false,
+      "path": "figures/web-app-manifest-512x512.png",
+      "role": "figure",
+      "sha256": "293ad15edfd27f20182b01a95ae80c53a712f9d30d3c768646df15bc9cd823b2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "ea07ad29b19e5bb5d99f7d63e1b97e69a8a6ec55aba910b23a7c97830a26bc5d"
+    }
+  ],
+  "created_at": "2026-06-15T13:36:30.070661+00:00",
+  "crossref_doi": "10.1021/acs.analchem.2c04632",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "A filtered mpactr R6 object that has undergone filter_mispicked_ions with merge_peaks=TRUE and merge_method='sum'",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Data table of ions that failed the mispicked filter (removed or merged due to isotopic pattern misidentification)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Data table of ions that passed the mispicked filter (retained in feature table)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Mispicked ions result from incorrect splitting of isotopic patterns during peak picking or detector saturation artifacts in tandem MS/MS preprocessing.",
+    "filter_summary() returns a named list with separate vectors for failed and passed ion identifiers, enabling downstream tracking of ion fate through the filtering pipeline.",
+    "Merge method 'sum' combines intensity values from similar ions during mispicked ion consolidation, which affects the final feature table abundance values.",
+    "Reference semantics in mpactr R6 objects means filter_summary() inspects the in-place modified state; separate copies are not needed to track filter history."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists in mums2/mpactr repository: vignette or documentation describing filter_summary() applied to 'mispicked' filter output structure",
+      "script_runs: R code loading mpactr library, importing cultures_peak_table.csv and cultures_metadata.csv via example_path(), applying filter_mispicked_ions(merge_peaks = TRUE, merge_method = \"sum\"), then calling filter_summary() on the result",
+      "output_matches_reference: verify returned object contains exactly two named lists with keys 'passed_ions' and 'failed_ions' (or equivalent), robust to column ordering within each list",
+      "file_format_is: both passed_ions and failed_ions outputs are data tables (data.frame or data.table class)",
+      "row_count_equals: verify row counts in passed_ions and failed_ions tables are non-negative integers and sum to total number of ions in input peak table"
+    ],
+    "expert_review": [
+      "verify structure and field names of passed_ions and failed_ions tables match the vignette specification for the 'mispicked' filter (requires domain knowledge of expected ion metadata fields)",
+      "assess whether filter_summary() output correctly identifies ions that failed vs. passed the mispicked-ion detection logic as documented in the vignette"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] What is the structure and content of the output returned by filter_summary() when applied to a filtered mpactr object with the 'mispicked' filter?: 'If you are interested in viewing the passing and failing ions for a single filter, use the `filter_summary()` function.  You must specify which filter you are interested in, either \"mispicked\",'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] filter_summary() returns a named list containing two components: failed_ions and passed_ions, both of which can be displayed as data tables using head() to view a subset of ions.: 'Failed ions: \n```{r}\nhead(mispicked_summary$failed_ions, 100)\n```\n\nPassing ions:\n```{r}\nhead(mispicked_summary$passed_ions, 100)\n```'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] A filtered mpactr R6 object that has undergone filter_mispicked_ions with merge_peaks=TRUE and merge_method='sum': 'data_filtered <- data |> filter_mispicked_ions(merge_peaks = TRUE, merge_method = \"sum\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Data table of ions that failed the mispicked filter (removed or merged due to isotopic pattern misidentification): 'filter_summary(data_mispicked, \"mispicked\")$failed_ions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Data table of ions that passed the mispicked filter (retained in feature table): 'filter_summary(data_mispicked, \"mispicked\")$passed_ions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] R: 'This table can be used for a variety of analyses that can be conducted in R'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] mpactr: 'library(mpactr)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] data.table: 'library(data.table)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting mpactr versions, filter_summary() function signature changes, or expected output schema over time.: 'No changelog found.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(mpactr); library(data.table); obj <- readRDS('{inputs.filtered_mpactr_obj}'); summary_result <- obj$filter_summary(filter='mispicked'); failed_ions_dt <- data.table(ion_id=summary_result$failed_ions, filter_status='failed'); passed_ions_dt <- data.table(ion_id=summary_result$passed_ions, filter_status='passed'); saveRDS(failed_ions_dt, 'failed_ions_mispicked.rds'); saveRDS(passed_ions_dt, 'passed_ions_mispicked.rds'); cat('Filter summary extraction complete\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 300,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "mispicked_filter_summary.csv",
+  "expected_outputs": [
+    "Data table of ions that failed the mispicked filter (removed or merged due to isotopic pattern misidentification)",
+    "Data table of ions that passed the mispicked filter (retained in feature table)"
+  ],
+  "finding": "filter_summary() returns a named list containing two components: failed_ions and passed_ions, both of which can be displayed as data tables using head() to view a subset of ions.",
+  "github_name": "mums2/mpactr",
+  "input_from": null,
+  "inputs": [
+    "A filtered mpactr R6 object that has undergone filter_mispicked_ions with merge_peaks=TRUE and merge_method='sum'"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "failed_ions_mispicked.csv",
+    "passed_ions_mispicked.csv"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_006",
+    "result_014"
+  ],
+  "methodology_summary": [
+    "Load the filtered mpactr object that has undergone mispicked ions filter with merge_peaks=TRUE and merge_method='sum'.",
+    "Invoke filter_summary() method on the mpactr object with filter parameter set to 'mispicked' to retrieve the named list of ion fate outcomes.",
+    "Extract failed_ions and passed_ions vectors from the returned named list.",
+    "Convert each vector to a data.table structure with compound identifiers and corresponding filter status columns.",
+    "Validation: Confirm that the sum of failed and passed ion counts equals the total number of input ions processed by the filter, and that all compound identifiers are non-empty strings.",
+    "References: source article (DOI: 10.1021/acs.analchem.2c04632)"
+  ],
+  "missing_information": [
+    "No changelog documenting mpactr versions, filter_summary() function signature changes, or expected output schema over time."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What is the structure and content of the output returned by filter_summary() when applied to a filtered mpactr object with the 'mispicked' filter?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods",
+    "abstract"
+  ],
+  "skills": [
+    "metabolomics-feature-filtering-workflow",
+    "isotopic-pattern-mispicking-detection",
+    "r6-object-method-invocation",
+    "filter-output-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_mpactr/synthesized_package",
+  "spine_condition_ids": [
+    "cond_default_reference_semantics",
+    "cond_deep_copy_semantics",
+    "cond_full_filter_pipeline"
+  ],
+  "spine_entity_ids": [
+    "mpactr_system",
+    "filter_pipeline_artifact",
+    "comp_import_data",
+    "comp_filter_mispicked",
+    "comp_filter_group",
+    "comp_filter_cv",
+    "comp_filter_summary",
+    "comp_qc_summary",
+    "comp_get_raw_data",
+    "tool_data_table",
+    "cond_default_reference_semantics",
+    "cond_deep_copy_semantics",
+    "cond_full_filter_pipeline",
+    "result_ions_remaining_cultures",
+    "result_reference_semantics_inplace"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction"
+  ],
+  "synthesized_from": "github:mums2__mpactr",
+  "task_description": "Apply filter_summary() to a filtered mpactr object to retrieve the ion fate data (passed and failed ions) for the 'mispicked' filter and output two structured data tables.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Filtered mpactr object after mispicked ions filtering",
+      "port_id": "filtered_mpactr_obj",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute filter_summary() on a filtered mpactr object with the 'mispicked' filter and verify the returned named list contains properly structured failed_ions and passed_ions data tables.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Data table of ions flagged and removed by mispicked filter",
+      "port_id": "failed_ions_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Data table of ions passing the mispicked filter",
+      "port_id": "passed_ions_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "quality-control",
+    "clustering",
+    "correlation-analysis"
+  ],
+  "title": "Reproduce ion filtering summary via filter_summary() for mispicked ions filter",
+  "tools": [
+    "R",
+    "mpactr",
+    "data.table"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Data table of ions that failed the mispicked filter (removed or merged due to isotopic pattern misidentification), Data table of ions that passed the mispicked filter (retained in feature table)."
+  ],
+  "workflow_description": "1. Load a filtered mpactr object (previously processed with filter_mispicked_ions). 2. Call filter_summary(data_object, 'mispicked') to extract a named list containing failed_ions and passed_ions vectors. 3. Convert each vector to a data.table with compound identifiers and filter status columns. 4. Export both tables to CSV format for downstream analysis or visualization."
+}

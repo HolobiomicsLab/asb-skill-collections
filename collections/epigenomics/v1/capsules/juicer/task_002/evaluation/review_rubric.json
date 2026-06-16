@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that ENCODE-DCC/hic-pipeline repository is accessible and contains executable pipeline code"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that a public Hi-C FASTQ accession (SRA/GEO format) can be retrieved and loaded"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that pipeline execution completes without fatal errors on the selected accession"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output Hi-C map file exists in expected format (e.g., .hic or standard matrix format)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output checksum or file hash can be computed and compared against documented ENCODE reference checksum (if reference checksum is available in repository or documentation)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that ENCODE-DCC/hic-pipeline repository is accessible and contains executable pipeline code",
+      "verify that a public Hi-C FASTQ accession (SRA/GEO format) can be retrieved and loaded",
+      "verify that pipeline execution completes without fatal errors on the selected accession",
+      "verify that output Hi-C map file exists in expected format (e.g., .hic or standard matrix format)",
+      "verify that output checksum or file hash can be computed and compared against documented ENCODE reference checksum (if reference checksum is available in repository or documentation)"
+    ],
+    "expert_review": [
+      "assess whether the computed Hi-C map reflects expected contact frequency patterns and chromosome structure characteristic of valid Hi-C data",
+      "review whether pipeline parameter settings align with ENCODE uniform processing standards",
+      "evaluate whether any deviations from reference output (if detected) are attributable to software versions, reference genome builds, or acceptable preprocessing variations rather than pipeline failure"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

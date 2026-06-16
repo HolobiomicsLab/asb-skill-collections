@@ -1,0 +1,108 @@
+schema_version: 0.1.0
+workflow_id: coll_ps2ms_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: "PS\xB2MS is a deep learning-based prediction system designed for detecting\
+    \ novel new psychoactive substances using mass spectrometry data."
+  pseudo_abstract: "Reproduces 1 reported result: PS\xB2MS is a deep learning-based\
+    \ prediction system designed for detecting novel new psychoactive substances using\
+    \ mass spectrometry data. Analyses 1 derived result: The PS2MS system is designed\
+    \ as a deep learning-based prediction system for detecting novel new psychoactive\
+    \ substances using mass spectrometry data. Reconstructs 1 described mechanism\
+    \ (described in the paper but not separately evaluated there): The paper describes\
+    \ PS2MS as a deep learning-based prediction system for detecting novel new psychoactive\
+    \ substances using mass spectrometry, which requires conversion of chemical structures\
+    \ into an encoded feature format."
+  research_questions:
+  - "Can the PS\xB2MS deep learning system successfully predict and identify new psychoactive\
+    \ substances from mass spectrometry data when applied to test inputs?"
+  - How are SMILES representations of NPS chemical structures converted into the encoded
+    feature format required as input for the PS2MS deep learning model?
+  - How do prediction confidence scores from the PS2MS deep learning model vary across
+    structurally diverse or novel NPS analogues in the evaluation dataset?
+  methods_summary: "Load mass spectrometry spectral data from input files in standard\
+    \ formats (mzML/mzXML/MS2 or pre-processed matrices). Preprocess spectra through\
+    \ normalization and feature vectorization to match PS2MS input requirements. Load\
+    \ pre-trained deep learning model architecture and weights from the PS2MS repository.\
+    \ Execute forward inference pass on all preprocessed spectra to generate classification\
+    \ logits and probability scores. Assign NPS class labels based on maximum predicted\
+    \ probability and apply confidence filtering. Validation: Verify that prediction\
+    \ output format matches expected schema (spectrum_id, predicted_class, confidence_score\
+    \ columns) and that confidence scores are valid probabilities (0\u20131 range).\
+    \ References: source article (DOI: 10.1021/acs.analchem.3c05019) Parse SMILES\
+    \ strings and construct RDKit molecule objects with syntax validation. Extract\
+    \ molecular graph properties (atoms, bonds, connectivity) from validated structures.\
+    \ Compute structural and topological descriptors aligned with PS2MS input schema.\
+    \ Encode descriptor values into fixed-size numerical tensor format. Apply feature\
+    \ normalization (scaling/centering) using model training statistics. Validation:\
+    \ Confirm encoded matrix dimensions match PS2MS input layer specification (n_features)\
+    \ and no NaN or infinite values are present. References: source article (DOI:\
+    \ 10.1021/acs.analchem.3c05019) Load the PS2MS deep learning model and evaluation\
+    \ dataset from the public repository. Compute prediction confidence scores for\
+    \ all compounds in the evaluation set via forward inference. Calculate structural\
+    \ similarity of each compound to training set using molecular fingerprints and\
+    \ Tanimoto distance. Stratify compounds into structural novelty tiers based on\
+    \ similarity thresholds. Aggregate confidence statistics (mean, median, std, range)\
+    \ within each novelty stratum. Validation: Confirm that confidence scores are\
+    \ stratified by novelty category (lower confidence for more novel structures)\
+    \ and produce publication-ready summary statistics and visualizations. References:\
+    \ source article (DOI: 10.1021/acs.analchem.3c05019)"
+  domain: cheminformatics
+  techniques:
+  - deep-learning
+  - machine-learning
+  - metabolite-identification
+  - tandem-ms
+  claims:
+  - claim_text: "PS\xB2MS is a repository for an NYCU JHHLab NPS detection project."
+    claim_type: finding
+    speculative: false
+    entity_id: domain_nps
+  - claim_text: "PS\xB2MS is a deep learning-based prediction system for detecting\
+      \ novel new psychoactive substances using mass spectrometry."
+    claim_type: finding
+    speculative: false
+    entity_id: tool_mass_spectrometry
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Table of prediction confidence score statistics (mean, median, std, min, max,
+    quartiles) stratified by structural novelty category
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Visualization (box plot or violin plot) of confidence score distributions
+    across structural novelty strata
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

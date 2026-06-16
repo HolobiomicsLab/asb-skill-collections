@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that inputs directory or github:jhhung__PS2MS repository contains at least one SMILES string file or dataset (file_exists and format_is: text/CSV/JSON with SMILES column)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the implementation script or module exists in the repository and is executable (file_exists and script_runs: run encoding step on sample SMILES without errors)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the encoded output is a structured artifact with consistent dimensionality across multiple input molecules (output_matches_reference: row_count_equals and field_present for feature vectors of expected size)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that encoded feature vectors are numerical arrays or tensors with no NaN or infinite values in the output (value_in_range: all feature values are finite numbers)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that inputs directory or github:jhhung__PS2MS repository contains at least one SMILES string file or dataset (file_exists and format_is: text/CSV/JSON with SMILES column)",
+      "verify that the implementation script or module exists in the repository and is executable (file_exists and script_runs: run encoding step on sample SMILES without errors)",
+      "verify that the encoded output is a structured artifact with consistent dimensionality across multiple input molecules (output_matches_reference: row_count_equals and field_present for feature vectors of expected size)",
+      "verify that encoded feature vectors are numerical arrays or tensors with no NaN or infinite values in the output (value_in_range: all feature values are finite numbers)"
+    ],
+    "expert_review": [
+      "assess whether the chosen featurization method (e.g., graph convolution, fingerprint, molecular descriptor encoding) is appropriate for NPS chemical structure representation and consistent with stated deep learning model input requirements",
+      "confirm that the encoded feature dimensionality matches the input layer of the PS2MS model architecture as described in methods",
+      "evaluate whether the encoding preserves chemically relevant information (chirality, aromaticity, functional groups) necessary for discriminating NPS structures"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

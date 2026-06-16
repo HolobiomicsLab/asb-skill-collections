@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the input SummarizedExperiment object exists and is loadable from task_NNN.expected_outputs (from prior buildExperiment step)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that doAnalysis function is callable from the mzQuality package (script_runs with documented default parameters: removeOutliers=TRUE, useWithinBatch=TRUE, removeBadCompounds=TRUE, qcPercentage=80, backgroundPercentage=40, nonReportableRSD=30)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the output SummarizedExperiment object contains an assay named 'ratio_corrected' (field_present)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the output SummarizedExperiment object contains column metadata with outlier annotations for QC samples (field_present)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the output SummarizedExperiment object contains column metadata with mis-injection annotations for study samples (field_present)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that row count and column count of output assays are consistent with input (robust to parameter choices)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the input SummarizedExperiment object exists and is loadable from task_NNN.expected_outputs (from prior buildExperiment step)",
+      "verify that doAnalysis function is callable from the mzQuality package (script_runs with documented default parameters: removeOutliers=TRUE, useWithinBatch=TRUE, removeBadCompounds=TRUE, qcPercentage=80, backgroundPercentage=40, nonReportableRSD=30)",
+      "verify that the output SummarizedExperiment object contains an assay named 'ratio_corrected' (field_present)",
+      "verify that the output SummarizedExperiment object contains column metadata with outlier annotations for QC samples (field_present)",
+      "verify that the output SummarizedExperiment object contains column metadata with mis-injection annotations for study samples (field_present)",
+      "verify that row count and column count of output assays are consistent with input (robust to parameter choices)"
+    ],
+    "expert_review": [
+      "assess whether batch-correction using pooled SQC samples has been correctly applied in the 'ratio_corrected' assay by inspecting a subset of QC sample ratios before and after correction",
+      "assess whether outlier detection thresholds (including qcPercentage=80, backgroundPercentage=40, nonReportableRSD=30) have been appropriately applied to flag QC sample outliers",
+      "assess whether compound filtering (removeBadCompounds=TRUE) has removed only truly unreliable compounds based on the quality metrics applied"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

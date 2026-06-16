@@ -1,0 +1,11 @@
+name: Python 3
+slug: python-3
+evidence_spans:
+- 221[[smiles.py]], 260[[3_cleaningAndEnriching/sanitizing.py]], 280[[3_cleaningAndEnriching/stereocounting.py]]
+- R - Python 3 - Java >= 17
+derived_from:
+- doi: 10.1007/s00044-016-1764-y
+  title: 'Binding of anti-Trypanosoma natural products from African flora against selected drug targets: a docking study'
+source_repos:
+- lotusnprod/lotus-processor
+schema_version: 0.2.0

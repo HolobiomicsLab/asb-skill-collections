@@ -1,0 +1,374 @@
+schema_version: 0.1.0
+workflow_id: coll_macs_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: MACS3 is a model-based ChIP-Seq peak-calling tool that implements duplicate
+    filtering, fragment-length prediction, and local-background normalization to identify
+    enriched genomic regions.
+  pseudo_abstract: "MACS3 performs ChIP-Seq peak calling through a multi-step pipeline\
+    \ beginning with duplicate filtering of aligned reads and prediction of fragment\
+    \ length d from ChIP data using cross-correlation analysis. The pipeline then\
+    \ generates coverage tracks via pileup, constructs local-background lambda tracks\
+    \ from control data at multiple scales (d, 1kb, 10kb, and genome-wide), and compares\
+    \ ChIP and control signals using a Poisson model to compute p-value or q-value\
+    \ scores at each genomic position. Final peak identification is achieved by applying\
+    \ score cutoffs to identify contiguous enriched regions. MACS3 also provides granular\
+    \ subcommands\u2014filterdup, predictd, pileup, bdgcmp, bdgopt, and bdgpeakcall\u2014\
+    that enable users to execute and customize each analysis step independently, supporting\
+    \ both single-end and paired-end sequencing data."
+  research_questions:
+  - What are the read counts after duplicate filtering and the predicted fragment
+    length d when running MACS3 callpeak on CTCF ChIP-Seq data?
+  - How does the MACS3 callpeak pipeline decompose into individual subcommands (filterdup,
+    predictd, pileup, bdgcmp, bdgopt, bdgpeakcall) that progressively transform ChIP-Seq
+    data into peak calls?
+  - Does MACS3 callpeak correctly estimate the average insertion length (~253 bp)
+    when processing paired-end ChIP-Seq data in the CTCF_PE_ChIP_chr22_50k.bedpe.gz
+    file?
+  methods_summary: "Filter duplicate reads from ChIP and control samples using macs3\
+    \ filterdup with --keep-dup=1 to remove PCR artifacts. Estimate fragment length\
+    \ d from filtered ChIP data using macs3 predictd with mfold parameters 5 50. Generate\
+    \ multi-scale background models (d, 1 kb, 10 kb, genome-wide) from control pileup\
+    \ using macs3 pileup with -B extension and macs3 bdgopt normalization. Combine\
+    \ background tracks via maximum operation with macs3 bdgcmp and scale by ChIP-to-control\
+    \ read count ratio. Compute base-pair q-values using macs3 bdgcmp qpois comparing\
+    \ ChIP pileup against local lambda via local Poisson test. Call narrow peaks with\
+    \ macs3 bdgpeakcall using cutoff 1.301 (-log10 q-value 0.05), minimum length 245\
+    \ bp, and gap 100 bp. Validation: output narrowPeak file exists with non-zero\
+    \ peak count, q-value scores in BedGraph span expected range, and peak intervals\
+    \ do not overlap read artifacts. Filter duplicate reads from ChIP and control\
+    \ samples to remove redundant reads at identical genomic locations, recording\
+    \ final read counts for normalization. Predict the fragment length parameter d\
+    \ from filtered ChIP data using autocorrelation-based fragment length estimation.\
+    \ Generate ChIP pileup BEDGRAPH by extending reads in the 5\u2032\u21923\u2032\
+    \ direction to the predicted fragment length. Build multi-scale local background\
+    \ bias tracks from control by computing pileup signals at d, slocal (1 kb), and\
+    \ llocal (10 kb) window sizes, then normalizing by the ratio d/window_size. Combine\
+    \ background tracks by iteratively computing maximum values across all scales\
+    \ and the genome-wide background count. Scale the combined local lambda bias track\
+    \ to match the ChIP sample sequencing depth using the ratio of final read counts.\
+    \ Apply local Poisson test by comparing ChIP pileup against scaled local lambda\
+    \ to generate -log10(q-value) or -log10(p-value) score tracks. Validation: Call\
+    \ narrow peaks using bdgpeakcall with user-specified cutoff (e.g., 1.301 for q\u2264\
+    0.05), minimum peak length equal to fragment length d, and gap parameter set to\
+    \ read length; verify output is in narrowPeak BED format with summit locations.\
+    \ Estimate average insertion length (fragment length d) from paired-end read pairs\
+    \ using macs3 predictd with -f BEDPE flag. Generate ChIP signal pileup track using\
+    \ macs3 pileup with paired-end input (no --extsize needed); pileup automatically\
+    \ spans between read pair 5' positions. Build local background noise tracks from\
+    \ control data at multiple scales (d, slocal=1kb, llocal=10kb) using macs3 pileup\
+    \ with -B option and compute genome-wide background. Normalize and combine background\
+    \ tracks using macs3 bdgopt and macs3 bdgcmp to generate maximum local bias (lambda)\
+    \ track scaled to match ChIP sequencing depth. Compare ChIP pileup to local lambda\
+    \ using macs3 bdgcmp with Poisson model (-m qpois) to generate q-value score track\
+    \ at each genomic position. Call narrow peaks by identifying regions exceeding\
+    \ a q-value cutoff using macs3 bdgpeakcall with read length (-g) and fragment\
+    \ length (-l) parameters; output narrowPeak format with summit coordinates. Validation:\
+    \ confirm narrowPeak file exists, contains proper BED format with 5 required columns\
+    \ plus summit position, and reported average insertion length from predictd matches\
+    \ expected ~253 bp metric."
+  domain: unknown
+  techniques: []
+  claims:
+  - claim_text: MACS v3 requires Python3, with testing conducted on Python versions
+      3.9 to 3.12.
+    claim_type: finding
+    speculative: false
+  - claim_text: MACS3 requires NumPy version 1.25 or higher.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 requires hmmlearn version 0.3.2 or higher.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 requires scikit-learn version 1.3 or higher.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 requires SciPy version 1.12 or higher.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: Cython version must be 3.0 or higher for MACS3.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 requires cykhash version 2.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: In the MACS3 peak calling workflow, ChIP and control samples are filtered
+      to allow only one duplicate read per location by default.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: In the example MACS3 analysis, the ChIP sample retained 199,583 reads
+      after duplicate filtering.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: In the example MACS3 analysis, the control sample retained 199,867
+      reads after duplicate filtering.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: The ratio of ChIP to control reads in the example MACS3 analysis is
+      approximately 0.99858.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: The predictd subcommand in MACS3 determined a fragment length of 254
+      base pairs for the CTCF ChIP sample.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: For paired-end data in MACS3, the predictd function reports an average
+      insertion length of 253 base pairs.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: The default slocal window size in MACS3 callpeak is 1 kilobase.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: The default llocal window size in MACS3 callpeak is 10 kilobases.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: In the example MACS3 analysis, the normalization factor for the 1kb
+      background is 0.254, calculated as d/slocal (254/1000).
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: In the example MACS3 analysis, the normalization factor for the 10kb
+      background is 0.0254, calculated as d/llocal (254/10000).
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: "In the example MACS3 analysis, the whole genome background is calculated\
+      \ as 0.0188023, derived from 199,867 reads \xD7 254 bp / 2,700,000,000 bp."
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: In the example MACS3 analysis, the control bias is scaled down by
+      a factor of 0.99858 to match the ChIP sequencing depth.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 bdgcmp provides a ppois function that calculates Poisson p-value
+      in -log10(pvalue) form.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 bdgcmp provides a qpois function that calculates q-value through
+      a Benjamini-Hochberg process for Poisson p-values.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 bdgcmp provides an FE function that calculates linear scale
+      fold enrichment.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 bdgcmp provides a logFE function that calculates log10 fold
+      enrichment.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 bdgcmp provides a logLR function that calculates log10 likelihood
+      between ChIP-enriched and open chromatin models.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 bdgcmp provides a slogLR function that calculates symmetric
+      log10 likelihood between two ChIP-enrichment models.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 bdgcmp provides a max function that returns the maximum value
+      between two tracks.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: In MACS3 bdgbroadcall, the default cutoff for stronger and narrower
+      peaks is 2.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: In MACS3 bdgbroadcall, the default cutoff for weaker and broader regions
+      is 1.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: In MACS3 bdgbroadcall, the default minimum length for stronger peaks
+      is 200 base pairs.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: In MACS3 bdgbroadcall, the default maximum gap between stronger peaks
+      is 30 base pairs.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: In MACS3 bdgbroadcall, the default maximum gap between weaker peaks
+      is 800 base pairs.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 will discard unmapped reads as bad alignments.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 will discard non-primary alignments as bad alignments.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 will discard reads that fail quality control as bad alignments.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 will discard supplementary alignments as bad alignments.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: For paired-end reads in MACS3, the second read in the pair is discarded
+      during processing.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 provides a filterdup subcommand for removing duplicate reads.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 provides a predictd subcommand for estimating DNA fragment length.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 provides a pileup subcommand for generating pileup tracks.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 provides a bdgopt subcommand for performing operations on bedGraph
+      files.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 provides a bdgcmp subcommand for comparing bedGraph files.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 provides a bdgpeakcall subcommand for calling narrow peaks.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 provides a bdgbroadcall subcommand for calling broad peaks.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 peak calling workflow applies cross-correlation model analysis
+      to estimate fragment length.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: The BED format is widely used to store genome annotations.
+    claim_type: finding
+    speculative: false
+    entity_id: bed_format
+  - claim_text: 'BEDPE format contains three columns: chromosome, leftmost position
+      of read pair, and rightmost position of read pair.'
+    claim_type: finding
+    speculative: false
+    entity_id: bedpe_format
+  - claim_text: FRAG format contains the chromosome, leftmost position of aligned
+      fragment, rightmost position of aligned fragment, barcode information, and fragment
+      counts.
+    claim_type: finding
+    speculative: false
+    entity_id: frag_format
+  - claim_text: Only Linux and Mac OS systems are currently supported for MACS3 installation.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 can be installed through PyPI using pip.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  - claim_text: MACS3 can be installed through conda using the bioconda channel.
+    claim_type: finding
+    speculative: false
+    entity_id: MACS3
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - finding a tool that's more suited to their data type, as `callpeak` is specifically
+    optimized for ChIP-Seq
+  - use the -B option for DNAse-Seq data or when cutting site is believed to be centrally
+    located
+  - skip predictd step if you have more accurate estimate of fragment length
+  - bdgpeakcall for narrow peaks or bdgbroadcall for broad marks
+  - if you only want to call broader peak and not interested in nested peak structure,
+    simply use `bdgpeakcall` with weaker cutoff
+  substitution_constraints:
+  - bedGraph files from MACS3 are required to use in bdgbroadcall command, as all
+    regions on the same chromosome should be continuous
+  - for paired-end data in BAM format, must specify -f BAMPE option to get BEDPE format
+    output
+  - for paired-end data, BAM file for callvar must be sorted and indexed
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: CTCF_ChIP_200K_filterdup.pileup.bdg (ChIP sample pileup track in BEDGRAPH
+    format with fragment-extended coverage signals)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: local_lambda.bdg (local lambda bias track in BEDGRAPH format scaled to ChIP
+    sequencing depth for statistical comparison)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: CTCF_ChIP_200K_qvalue.bdg or CTCF_ChIP_200K_pvalue.bdg (score track in BEDGRAPH
+    format with -log10(q-values) or -log10(p-values) from local Poisson test)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: CTCF_ChIP_200K_peaks.bed (narrowPeak format BED file with called peak coordinates
+    and summit locations)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: narrowPeak format peak file containing called peak locations with summit coordinates
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Average insertion length metric reported as ~253 bp from predictd step
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

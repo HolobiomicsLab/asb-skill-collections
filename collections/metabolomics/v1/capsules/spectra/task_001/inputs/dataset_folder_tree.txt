@@ -1,0 +1,20 @@
+  figures/apple-touch-icon-120x120.png
+  figures/apple-touch-icon-152x152.png
+  figures/apple-touch-icon-180x180.png
+  figures/apple-touch-icon-60x60.png
+  figures/apple-touch-icon-76x76.png
+  figures/apple-touch-icon.png
+  figures/favicon-16x16.png
+  figures/favicon-32x32.png
+  figures/logo.png
+  figures/plot-single-spectrum-basic.svg
+  figures/plot-single-spectrum-labels-ass.svg
+  figures/plot-single-spectrum-labels.svg
+  figures/plot-single-spectrum-xlim.svg
+  figures/plotmzdelta-1000.svg
+  figures/plotspectra-asp05.svg
+  figures/plotspectra-asp2.svg
+  figures/plotspectra-color-each.svg
+  figures/plotspectra-color-peaks-label-labelcol.svg
+  figures/plotspectra-color-peaks-label.svg
+paper.md

@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 'tests/tests_data/ftms/ESI_NEG_SRFA.d' exists"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file 'tests/tests_data/ftms/SRFA.ref' exists"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output structured record contains field 'calibration_points_count' with integer value"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output structured record contains field 'calibration_coefficients' with numeric array"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output structured record contains field 'residuals' with numeric array or single value"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs without exception when loading DS-001 spectrum and DS-002 reference file"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify calibration_points_count is exactly the number of matched m/z values from SRFA.ref"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify when matched_count < 5, PPM window is widened (robust to parameter choices, parameter-sensitive on window increment threshold)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file 'tests/tests_data/ftms/ESI_NEG_SRFA.d' exists",
+      "verify file 'tests/tests_data/ftms/SRFA.ref' exists",
+      "verify output structured record contains field 'calibration_points_count' with integer value",
+      "verify output structured record contains field 'calibration_coefficients' with numeric array",
+      "verify output structured record contains field 'residuals' with numeric array or single value",
+      "verify script_runs without exception when loading DS-001 spectrum and DS-002 reference file",
+      "verify calibration_points_count is exactly the number of matched m/z values from SRFA.ref",
+      "verify when matched_count < 5, PPM window is widened (robust to parameter choices, parameter-sensitive on window increment threshold)"
+    ],
+    "expert_review": [
+      "assess whether calibration coefficients are physically reasonable for the mass spectrometry instrument type (FTMS)",
+      "assess whether residuals indicate acceptable fit quality after fallback to wider PPM window",
+      "assess whether the conditional logic correctly triggers window widening at the threshold of fewer than 5 matched reference points",
+      "assess whether calibration results are consistent with standard SRFA calibration practices in mass spectrometry"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

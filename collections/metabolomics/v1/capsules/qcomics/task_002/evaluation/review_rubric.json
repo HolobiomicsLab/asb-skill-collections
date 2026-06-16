@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that inputs include a concrete TXT export file from Sciex Multiquant (> v3.0.3) containing QCpool positional table data"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that expected_outputs artifact exists and is a named file (CSV/TSV/PDF table or PNG/PDF figure)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: the output report file in the specified format"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output report contains at least one column or metric labeled 'CV' or 'coefficient of variation'"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that output report contains at least one column or metric labeled 'signal-trend' or equivalent trend metric across QCpool injections"
+    },
+    {
+      "id": "pf_006",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that inputs include a concrete TXT export file from Sciex Multiquant (> v3.0.3) containing QCpool positional table data",
+      "verify that expected_outputs artifact exists and is a named file (CSV/TSV/PDF table or PNG/PDF figure)",
+      "verify file_exists: the output report file in the specified format",
+      "verify that output report contains at least one column or metric labeled 'CV' or 'coefficient of variation'",
+      "verify that output report contains at least one column or metric labeled 'signal-trend' or equivalent trend metric across QCpool injections",
+      "script_runs: QComics package executes without error on the provided TXT input and produces the report artifact"
+    ],
+    "expert_review": [
+      "whether CV calculations are mathematically correct (standard deviation / mean \u00d7 100 or equivalent definition)",
+      "whether signal-trend metric appropriately captures temporal or injection-order variation in QCpool signal intensity",
+      "whether the per-compound metrics are aggregated or presented at appropriate granularity for a 'quality overview'",
+      "whether the report layout and visualizations align with stated goal of providing 'quick overview of quality' for metabolomics/lipidomics studies"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

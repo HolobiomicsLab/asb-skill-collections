@@ -4,9 +4,17 @@ evidence_spans:
 - we introduce Spec2Vec, a novel spectral similarity score
 - spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda
 - The underlying code was developed into two Python packages to handle and compare mass spectra, matchms (https://github.com/matchms/matchms) and spec2vec (https://github.com/iomega/spec2vec)
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
+- Automated Mass2Motif Annotation Guidance (MAG) with Spec2Vec
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+- doi: 10.3389/fbinf.2022.842964
+  title: memo
+- doi: 10.1093/bioinformatics/btx582
+  title: ms2lda
 source_repos:
 - https://github.com/iomega/spec2vec
+- mandelbrot-project/memo
+- vdhooftcompmet/MS2LDA
 schema_version: 0.2.0

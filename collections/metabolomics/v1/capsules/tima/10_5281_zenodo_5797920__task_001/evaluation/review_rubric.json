@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the tima R package can be installed from github:taxonomicallyinformedannotation__tima or from CRAN"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that a Docker image is available and can be pulled for the tima workflow"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that a publicly deposited example dataset exists and is accessible (check Zenodo, GitHub, or package-bundled data)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the canonical workflow from the README executes without error when run against the example dataset"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that the workflow produces named output artifacts (annotated table, structured record, or report file) as documented in the README"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: the workflow README documents the complete end-to-end pipeline steps"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: the README or package documentation includes worked example with input and output specification"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that the tima R package can be installed from github:taxonomicallyinformedannotation__tima or from CRAN",
+      "verify that a Docker image is available and can be pulled for the tima workflow",
+      "verify that a publicly deposited example dataset exists and is accessible (check Zenodo, GitHub, or package-bundled data)",
+      "verify that the canonical workflow from the README executes without error when run against the example dataset",
+      "verify that the workflow produces named output artifacts (annotated table, structured record, or report file) as documented in the README",
+      "verify file_exists: the workflow README documents the complete end-to-end pipeline steps",
+      "verify contains_substring: the README or package documentation includes worked example with input and output specification"
+    ],
+    "expert_review": [
+      "assess whether the executed workflow faithfully reproduces the taxonomically informed annotation architecture as illustrated in the paper",
+      "assess whether all intermediate and final outputs match the expected data structure and biological/taxonomic content quality reported in the associated publication",
+      "assess whether the workflow is reproducible across different execution environments (native R vs. Docker) with byte-for-byte or semantically equivalent outputs"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

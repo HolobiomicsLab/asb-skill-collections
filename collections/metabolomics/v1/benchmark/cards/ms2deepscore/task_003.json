@@ -1,0 +1,421 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "ms2deepscore.pdf",
+      "role": "main_article",
+      "sha256": "560550148798e3ad7239c262cc8d9b123c815dfd5b5cf0b2a3b8fb740669ab4a"
+    }
+  ],
+  "created_at": "2026-06-15T07:16:21.763690+00:00",
+  "crossref_doi": "10.1186/s13321-021-00558-4",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Trained MS2DeepScore base network model (200-dimensional embedding layer) and test-set spectrum pair labels from Zenodo deposit zenodo.org/record/4699356",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Test set of 3,601 spectra with 500 unique InChIKeys and corresponding reference Tanimoto scores computed from RDKit Daylight fingerprints (2048 bits)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Per-Tanimoto-bin RMSE table (10 bins from 0.0\u20131.0) before uncertainty filtering, showing RMSE values for each bin across all 6,485,401 test pairs",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Per-Tanimoto-bin RMSE table (10 bins from 0.0\u20131.0) after IQR < 0.025 filtering, showing RMSE reduction and pair count per bin",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary comparison figure or table showing RMSE values and improvements (unfiltered vs. IQR-filtered) for low (< 0.4) and high (> 0.7) Tanimoto bins, matching reported findings",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Monte-Carlo Dropout at inference time requires dropout layers to remain active (not in inference/eval mode) and multiple forward passes (N=10 here) to generate a distribution of predictions from which median and IQR are derived.",
+    "Interquartile range (IQR) reflects the spread between the 25th and 75th percentiles of the 10 predictions; IQR < 0.025 indicates high confidence/low uncertainty in the predicted structural similarity score.",
+    "Tanimoto similarity score based on RDKit Daylight fingerprints (2048 bits) ranges from 0 (completely dissimilar) to 1 (identical); the reference ground truth is computed from molecular fingerprints, not spectral data.",
+    "RMSE computation per Tanimoto bin requires stratifying all 6.48M spectrum pairs by their reference (ground-truth) Tanimoto bin, then measuring prediction error within each stratum; low and high bins (< 0.4 and > 0.7) are particularly important for detecting structural similarity.",
+    "IQR-based filtering trades off precision (lower RMSE from removing uncertain predictions) against recall (fewer pairs retained); the reported drop from ~0.15 RMSE to ~0.1 is achieved by retaining only high-confidence (low-IQR) predictions."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that deposited model file (zenodo.org/record/4699356) is accessible and contains trained weights",
+      "file_exists: verify that GitHub repository (https://github.com/matchms/ms2deepscore) contains Monte-Carlo Dropout implementation and inference scripts",
+      "script_runs: execute Monte-Carlo Dropout ensemble inference (N=100 predictions) on test set (3601 spectra) using deposited model and verify script completes without error",
+      "output_matches_reference: verify computed per-Tanimoto-bin RMSE values (without IQR filtering) match reported values from article figures/tables to within parameter-sensitive tolerance (robust to minor numerical precision variations across platforms)",
+      "output_matches_reference: verify computed per-Tanimoto-bin RMSE values (with IQR < 0.025 filtering) match reported values from article figures/tables to within parameter-sensitive tolerance",
+      "value_in_range: RMSE reduction in low Tanimoto bin (< 0.4) after IQR < 0.025 filtering is positive and exceeds baseline noise floor (no canonical answer; multiple defensible filtering thresholds exist)",
+      "value_in_range: RMSE reduction in high Tanimoto bin (> 0.7) after IQR < 0.025 filtering is positive and exceeds baseline noise floor (no canonical answer; multiple defensible filtering thresholds exist)"
+    ],
+    "expert_review": [
+      "Assess whether reported RMSE drops are statistically significant and meaningful given test set size and score distribution across Tanimoto bins",
+      "Evaluate whether IQR < 0.025 filtering threshold is appropriate and whether alternative uncertainty quantiles would be more defensible",
+      "Verify that Monte-Carlo Dropout with N=100 samples provides adequate convergence of uncertainty estimates and whether reported ensemble size is justified",
+      "Judge whether per-bin RMSE metrics are computed correctly (e.g., bin boundaries, sample counts per bin, treatment of boundary cases)",
+      "Review whether the reported RMSE improvements are practically meaningful for metabolomic workflows (e.g., impact on spectral matching accuracy, network analysis quality)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Does applying Monte-Carlo Dropout ensemble filtering (IQR < 0.025) to MS2DeepScore predictions significantly reduce root mean squared error across different Tanimoto score ranges, particularly in low (< 0.4) and high (> 0.8) bins?: 'For instance, all predictions within IQR < 0.025\u2014which will discard about 75% of the scores\u2014will result in a drop of the average RMSE from about 0.17 to about 0.11 (Fig. 7A). It is important to note,'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Monte-Carlo Dropout filtering at IQR < 0.025 reduces average RMSE from 0.17 to 0.11 (34% improvement) with most significant RMSE reductions in low (< 0.4) and high (> 0.8) Tanimoto score ranges, while slightly increasing error in the mid score range (0.5\u20130.7).: 'all predictions within IQR < 0.025\u2014which will discard about 75% of the scores\u2014will result in a drop of the average RMSE from about 0.17 to about 0.11 (Fig. 7A). The RMSE drops most significantly in'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Trained MS2DeepScore base network model (200-dimensional embedding layer) and test-set spectrum pair labels from Zenodo deposit zenodo.org/record/4699356: 'The fully trained model used to create Fig. 2, 4, 5, 7, 8 can be downloaded from zenodo'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Test set of 3,601 spectra with 500 unique InChIKeys and corresponding reference Tanimoto scores computed from RDKit Daylight fingerprints (2048 bits): 'For the final evaluation on the reserved test set, we used all possible spectrum pairs between the 3601 for the test set (n = 6,485,401 unique spectrum pairs)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Per-Tanimoto-bin RMSE table (10 bins from 0.0\u20131.0) before uncertainty filtering, showing RMSE values for each bin across all 6,485,401 test pairs: 'MS2DeepScore generally performs very well and can predict Tanimoto scores between 0.1 and 0.9 with a RMSE between 0.13 and 0.2'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Per-Tanimoto-bin RMSE table (10 bins from 0.0\u20131.0) after IQR < 0.025 filtering, showing RMSE reduction and pair count per bin: 'filtered out scores, according to increasingly stringent interquartile range (IQR) thresholds'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Summary comparison figure or table showing RMSE values and improvements (unfiltered vs. IQR-filtered) for low (< 0.4) and high (> 0.7) Tanimoto bins, matching reported findings: 'we achieve a root mean squared error for predicted Tanimoto scores of about 0.15 when run without uncertainty restrictions, and down to 0.1 with stronger restrictions on model uncertainty'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MS2DeepScore: 'Our MS2DeepScore Python library offers two types of data generators'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'Our MS2DeepScore Python library offers two types of data generators'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Monte-Carlo Dropout: 'To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles [17]. At inference time, dropout was applied to all but the first layer of the base network. N = 10 embeddings were'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] RDKit: 'we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] scikit-learn: 'Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional coordinates'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No specification of the number of Monte-Carlo Dropout iterations or ensemble size for uncertainty quantification: 'by applying Monte-Carlo Dropout to sample from random model variations'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No definition of IQR filtering threshold or justification for the specific cutoff value used: 'by merging predicted scores of spectra belonging to the same compound pair or by applying Monte-Carlo Dropout'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No quantitative RMSE results reported in discussion; claims about accuracy improvement lack specific numerical values: 'the accuracy of the predictions can be improved notably by using various ensemble learning techniques'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No information on which specific Tanimoto score bins (e.g., low < 0.4, high > 0.7) show the most improvement: 'The accuracy of the predictions can be improved notably by using various ensemble learning techniques'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "heavy",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "rmse_comparison_iqr_filtered.csv",
+  "expected_outputs": [
+    "Per-Tanimoto-bin RMSE table (10 bins from 0.0\u20131.0) before uncertainty filtering, showing RMSE values for each bin across all 6,485,401 test pairs",
+    "Per-Tanimoto-bin RMSE table (10 bins from 0.0\u20131.0) after IQR < 0.025 filtering, showing RMSE reduction and pair count per bin",
+    "Summary comparison figure or table showing RMSE values and improvements (unfiltered vs. IQR-filtered) for low (< 0.4) and high (> 0.7) Tanimoto bins, matching reported findings"
+  ],
+  "finding": "Monte-Carlo Dropout filtering at IQR < 0.025 reduces average RMSE from 0.17 to 0.11 (34% improvement) with most significant RMSE reductions in low (< 0.4) and high (> 0.8) Tanimoto score ranges, while slightly increasing error in the mid score range (0.5\u20130.7).",
+  "github_name": "matchms/ms2deepscore",
+  "input_from": "task_001",
+  "inputs": [
+    "Trained MS2DeepScore base network model (200-dimensional embedding layer) and test-set spectrum pair labels from Zenodo deposit zenodo.org/record/4699356",
+    "Test set of 3,601 spectra with 500 unique InChIKeys and corresponding reference Tanimoto scores computed from RDKit Daylight fingerprints (2048 bits)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "mc_dropout_predictions.csv",
+    "rmse_by_tanimoto_bin_unfiltered.csv",
+    "rmse_by_tanimoto_bin_iqr_filtered.csv"
+  ],
+  "linked_result_ids": [
+    "result_010",
+    "result_014",
+    "result_015",
+    "result_017",
+    "result_009"
+  ],
+  "methodology_summary": [
+    "Load trained MS2DeepScore model (base network + Siamese head) and test-set spectrum pairs with reference Tanimoto labels.",
+    "Run Monte-Carlo Dropout inference with N=10 forward passes per spectrum pair, generating 10 predictions and computing median and IQR.",
+    "Stratify predictions into 10 equally-sized Tanimoto bins (0.0\u20130.1, 0.1\u20130.2, \u2026, 0.9\u20131.0) by reference Tanimoto score.",
+    "Compute per-bin RMSE for unfiltered predictions and separately for IQR-filtered predictions (retain IQR < 0.025 only).",
+    "Calculate RMSE reduction (improvement) by bin, with focus on low (< 0.4) and high (> 0.7) Tanimoto regions.",
+    "Validation: verify that reported RMSE drop from ~0.15 (unfiltered) to ~0.1 (IQR < 0.025 filtered) is reproduced in published figures.",
+    "References: source article (DOI: 10.1186/s13321-021-00558-4)"
+  ],
+  "missing_information": [
+    "No specification of the number of Monte-Carlo Dropout iterations or ensemble size for uncertainty quantification",
+    "No definition of IQR filtering threshold or justification for the specific cutoff value used",
+    "No quantitative RMSE results reported in discussion; claims about accuracy improvement lack specific numerical values",
+    "No information on which specific Tanimoto score bins (e.g., low < 0.4, high > 0.7) show the most improvement"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/rmse_no_filter"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does applying Monte-Carlo Dropout ensemble filtering (IQR < 0.025) to MS2DeepScore predictions significantly reduce root mean squared error across different Tanimoto score ranges, particularly in low (< 0.4) and high (> 0.8) bins?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods",
+    "results",
+    "intro",
+    "supplementary"
+  ],
+  "skills": [
+    "monte-carlo-dropout-uncertainty-quantification",
+    "mass-spectral-similarity-binning-and-stratification",
+    "root-mean-squared-error-computation-by-bin",
+    "interquartile-range-filtering-for-outlier-rejection",
+    "deep-learning-model-inference-and-ensemble-prediction",
+    "siamese-network-embedding-generation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_ms2deepscore",
+  "spine_condition_ids": [
+    "cond_ms2deepscore_no_uncertainty",
+    "cond_daylight_tanimoto",
+    "cond_ms2deepscore_with_uncertainty",
+    "cond_mc_dropout_iqr025",
+    "cond_mc_dropout_iqr02",
+    "cond_mc_dropout_ensemble100",
+    "cond_median_multiple_spectra",
+    "cond_morgan2_tanimoto",
+    "cond_morgan3_tanimoto"
+  ],
+  "spine_entity_ids": [
+    "mc_dropout_component",
+    "test_set",
+    "cond_ms2deepscore_no_uncertainty",
+    "cond_ms2deepscore_with_uncertainty",
+    "cond_mc_dropout_iqr025",
+    "cond_mc_dropout_iqr02",
+    "cond_mc_dropout_ensemble100",
+    "cond_median_multiple_spectra",
+    "cond_daylight_tanimoto",
+    "cond_morgan2_tanimoto",
+    "cond_morgan3_tanimoto",
+    "metric_rmse_no_uncertainty",
+    "metric_rmse_with_uncertainty",
+    "metric_rmse_tanimoto_bins",
+    "metric_rmse_iqr025",
+    "result_median_multiple_spectra_improves",
+    "result_mc_dropout_improves_all_bins",
+    "result_iqr_improves_extreme_bins",
+    "tanimoto_score"
+  ],
+  "subdomains": [
+    "artificial-intelligence",
+    "computational-metabolomics",
+    "untargeted-metabolomics"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "benchmark-evaluation",
+    "statistical-analysis"
+  ],
+  "synthesized_from": null,
+  "task_description": "Apply Monte-Carlo Dropout ensemble inference (N=10 predictions per spectrum pair) to the 3,601 test-set spectra, compute per-Tanimoto-bin RMSE before and after filtering predictions with IQR < 0.025, and verify the reported RMSE reduction in low (< 0.4) and high (> 0.7) Tanimoto bins matches published results.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Trained MS2DeepScore model with base network and Siamese head",
+      "port_id": "trained_model",
+      "resolved_via": null,
+      "source": "task_001/rmse_no_filter",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Test set spectrum pairs (3,601 spectra, 6.48M pairs) with reference Tanimoto labels",
+      "port_id": "test_spectra_pairs",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Apply 100-prediction Monte-Carlo Dropout ensembles to test spectra, compute per-bin RMSE with/without IQR < 0.025 filtering, and verify reported RMSE improvements match deposited Figure 7 outputs.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "RMSE per Tanimoto bin (0.0\u20131.0) without IQR filtering",
+      "port_id": "rmse_unfiltered",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "RMSE per Tanimoto bin after IQR < 0.025 filtering",
+      "port_id": "rmse_iqr_filtered",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "RMSE improvement table and figure (low/high Tanimoto bins)",
+      "port_id": "rmse_comparison",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "deep-learning",
+    "machine-learning",
+    "spectral-library-matching",
+    "tandem-ms",
+    "metabolite-identification",
+    "transfer-learning"
+  ],
+  "title": "Reproduce Monte-Carlo Dropout uncertainty estimation and per-bin RMSE improvement",
+  "tools": [
+    "matchms",
+    "MS2DeepScore",
+    "Python",
+    "Monte-Carlo Dropout",
+    "RDKit",
+    "scikit-learn"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the trained MS2DeepScore model and test-set spectrum embeddings (3,601 spectra) from the published Zenodo deposit. 2. Run Monte-Carlo Dropout inference with dropout enabled (N=10 forward passes per spectrum pair) on all 6,485,401 unique test-set spectrum pairs to generate 10 structural similarity predictions per pair. 3. For each pair, compute the median prediction and interquartile range (IQR) from the 10 predictions. 4. Stratify all predictions into 10 equally-sized bins by reference Tanimoto score (0.0\u20130.1, 0.1\u20130.2, \u2026, 0.9\u20131.0). 5. Compute RMSE (root mean squared error) for each bin using all predictions. 6. Filter predictions by IQR threshold (retain only those with IQR < 0.025) and recompute per-bin RMSE. 7. Calculate the RMSE difference (improvement) between unfiltered and IQR-filtered predictions for each Tanimoto bin, with particular focus on bins < 0.4 and > 0.7. 8. Compare computed RMSE values and reduction patterns against the reported figures."
+}

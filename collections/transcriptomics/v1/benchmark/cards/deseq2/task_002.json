@@ -1,0 +1,416 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/icobra.png",
+      "role": "figure",
+      "sha256": "ade78e8e562c1764605167aef70ab60bb18c616e2589d270ce7eb4fe09f7089a"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "a4965185bfb715d4c05464351e875a0988de6313e052f8297d5395c50c3d62b2"
+    }
+  ],
+  "created_at": "2026-06-15T18:08:54.168626+00:00",
+  "crossref_doi": "10.1186/s13059-014-0550-8",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "airway SummarizedExperiment dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "DESeqDataSet object after DESeq() analysis",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Shrunken LFC results table from apeglm estimator",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Shrunken LFC results table from normal estimator",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Shrunken LFC results table from ashr estimator",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Comparative MA-plots for three shrinkage estimators",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Log fold change shrinkage uses data-driven prior distributions to improve effect size estimation, particularly reducing noise from low-count genes without requiring arbitrary filtering thresholds.",
+    "The apeglm estimator uses an adaptive t-prior and is the default as of DESeq2 version 1.28.0; it requires ~5 seconds for typical datasets (~10,000 genes, 7 samples) and can be accelerated 10-fold with apeMethod='nbinomC' at the cost of losing posterior standard deviation estimates.",
+    "The normal estimator uses an adaptive normal prior centered at zero, which can sometimes produce overly strong shrinkage for certain datasets; ashr uses a mixture of normals to provide adaptive shrinkage with potentially less aggressive smoothing.",
+    "Shrunken log fold changes are recommended for visualization and ranking of genes because they remove noise associated with low-count genes, improving interpretability of MA-plots and gene-level summaries."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: airway dataset accessible via R library('airway'); data('airway')",
+      "verify script_runs: R script executing DESeq() on airway dds object completes without error",
+      "verify script_runs: lfcShrink(dds, coef='condition_trt_vs_untrt', type='apeglm') executes and returns results object",
+      "verify script_runs: lfcShrink(dds, coef='condition_trt_vs_untrt', type='normal') executes and returns results object",
+      "verify script_runs: lfcShrink(dds, coef='condition_trt_vs_untrt', type='ashr') executes and returns results object",
+      "verify field_present: each output results object contains columns 'log2FoldChange', 'lfcSE', 'stat', 'pvalue', 'padj'",
+      "verify value_in_range: log2FoldChange values are numeric and finite (no NaN/Inf) for all three shrinkage estimators",
+      "verify output_matches_reference: shrunken LFC tables for treated-vs-untreated contrast match reported summaries in article text or supplementary materials (multiple defensible approaches to exact match tolerance)",
+      "verify robust to parameter choices: shrinkage results are reproducible across DESeq2 version compatibility within same major release"
+    ],
+    "expert_review": [
+      "Assess whether shrinkage magnitude (reduction in log2FoldChange from unshrunk to shrunken estimates) is biologically plausible and consistent with expected behavior of each estimator (apeglm, normal, ashr)",
+      "Evaluate whether the three shrinkage estimators produce qualitatively similar ranking of genes by effect size, or whether differences reflect expected estimator properties",
+      "Confirm that reported p-values and adjusted p-values after shrinkage are appropriate (should remain unchanged or reflect only reordering, not recomputation)",
+      "Verify that the treated-vs-untreated contrast is correctly specified (reference level 'untreated', compared against 'treated')"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] How do the three shrinkage estimators (apeglm, normal, ashr) in lfcShrink() differ in their shrunken log fold change estimates for the airway dataset treated-vs-untreated contrast?: 'Shrink log fold changes  [section=other; evidence='res <- lfcShrink(dds, coef=\"condition_trt_vs_untrt\", type=\"apeglm\")']'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] lfcShrink() can be applied with three different shrinkage estimator types (apeglm, normal, ashr) to produce shrunken log fold change estimates from DESeq2 results objects.: 'res <- lfcShrink(dds, coef=\"condition_trt_vs_untrt\", type=\"apeglm\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] airway SummarizedExperiment dataset: 'library(\"airway\") data(\"airway\") se <- airway'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] DESeqDataSet object after DESeq() analysis: 'dds <- DESeq(dds)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Shrunken LFC results table from apeglm estimator: 'resLFC <- lfcShrink(dds, coef=\"condition_treated_vs_untreated\", type=\"apeglm\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Shrunken LFC results table from normal estimator: 'resNorm <- lfcShrink(dds, coef=2, type=\"normal\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Shrunken LFC results table from ashr estimator: 'resAsh <- lfcShrink(dds, coef=2, type=\"ashr\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Comparative MA-plots for three shrinkage estimators: 'plotMA(resLFC, xlim=xlim, ylim=ylim, main=\"apeglm\") plotMA(resNorm, xlim=xlim, ylim=ylim, main=\"normal\") plotMA(resAsh, xlim=xlim, ylim=ylim, main=\"ashr\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] DESeq2: 'The package DESeq2 provides methods to test for differential expression by use of negative binomial generalized linear models'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided for the DESeq2 source repository: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(DESeq2); library(airway); library(apeglm); library(ashr); data(airway); dds <- DESeqDataSet(airway, design = ~ cell + dex); dds <- DESeq(dds); res <- results(dds, contrast=c('dex','treated','untreated')); res_apeglm <- lfcShrink(dds, contrast=c('dex','treated','untreated'), type='apeglm'); res_normal <- lfcShrink(dds, contrast=c('dex','treated','untreated'), type='normal'); res_ashr <- lfcShrink(dds, contrast=c('dex','treated','untreated'), type='ashr'); write.csv(as.data.frame(res_apeglm), 'results_apeglm.csv'); write.csv(as.data.frame(res_normal), 'results_normal.csv'); write.csv(as.data.frame(res_ashr), 'results_ashr.csv'); pdf('ma_plots_shrinkage.pdf', width=12, height=4); par(mfrow=c(1,3)); plotMA(res, main='Base Results', ylim=c(-3,3)); plotMA(res_apeglm, main='apeglm Shrinkage', ylim=c(-3,3)); plotMA(res_ashr, main='ashr Shrinkage', ylim=c(-3,3)); dev.off()"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "shrunken_lfc_comparison_results.RData",
+  "expected_outputs": [
+    "Shrunken LFC results table from apeglm estimator",
+    "Shrunken LFC results table from normal estimator",
+    "Shrunken LFC results table from ashr estimator",
+    "Comparative MA-plots for three shrinkage estimators"
+  ],
+  "finding": "lfcShrink() can be applied with three different shrinkage estimator types (apeglm, normal, ashr) to produce shrunken log fold change estimates from DESeq2 results objects.",
+  "github_name": "stephens999/ashr",
+  "input_from": "task_001",
+  "inputs": [
+    "airway SummarizedExperiment dataset",
+    "DESeqDataSet object after DESeq() analysis"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "results_base.csv",
+    "resLFC_apeglm.csv",
+    "resNorm_normal.csv",
+    "resAsh_ashr.csv",
+    "ma_plots_comparison.png"
+  ],
+  "linked_result_ids": [
+    "result_023",
+    "result_024",
+    "result_025",
+    "result_026"
+  ],
+  "methodology_summary": [
+    "Load airway dataset and construct DESeqDataSet with cell and dex design factors.",
+    "Execute DESeq() to estimate dispersions and fit negative binomial generalized linear models.",
+    "Extract base results table containing unshrunk log fold changes and p-values for dex effect.",
+    "Apply lfcShrink with apeglm method (adaptive t-prior, ~5 seconds runtime) to shrink effect sizes.",
+    "Apply lfcShrink with normal method (adaptive normal prior) for comparison.",
+    "Apply lfcShrink with ashr method (mixture of normals prior) for additional estimator comparison.",
+    "Generate MA-plots for each shrunken result to visualize shrinkage strength and effect on visualization.",
+    "Validation: confirm that each lfcShrink call produces a DESeqResults object with log2FoldChange, lfcSE, and padj columns; verify MA-plots show reduced noise in low-count genes relative to base results; confirm apeglm shrinkage is more conservative than normal prior and ashr produces intermediate shrinkage strength.",
+    "References: source article (DOI: 10.1186/s13059-014-0550-8)"
+  ],
+  "missing_information": [
+    "No changelog or version history provided for the DESeq2 source repository"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/deseq_results"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "How do the three shrinkage estimators (apeglm, normal, ashr) in lfcShrink() differ in their shrunken log fold change estimates for the airway dataset treated-vs-untreated contrast?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "methods"
+  ],
+  "skills": [
+    "rna-seq-differential-expression-analysis",
+    "log-fold-change-shrinkage-estimation",
+    "adaptive-prior-distribution-selection",
+    "bayesian-effect-size-moderation",
+    "ma-plot-visualization-and-interpretation",
+    "results-table-extraction-and-comparison"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_deseq2/synthesized_package",
+  "spine_condition_ids": [
+    "cond_treated_vs_untreated",
+    "cond_alpha01",
+    "cond_apeglm_shrinkage",
+    "cond_apeglm_fast_nbinomC",
+    "cond_normal_shrinkage",
+    "cond_ashr_shrinkage",
+    "cond_glmgampoi_lrt",
+    "cond_apeglm_fast_nbinomC_star"
+  ],
+  "spine_entity_ids": [
+    "deseq2_system",
+    "deseq2_pipeline_architecture",
+    "lfcshrink_function",
+    "results_function",
+    "apeglm_estimator",
+    "ashr_estimator",
+    "normal_estimator",
+    "airway_dataset",
+    "cond_treated_vs_untreated",
+    "cond_apeglm_shrinkage",
+    "cond_normal_shrinkage",
+    "cond_ashr_shrinkage",
+    "cond_glmgampoi_lrt",
+    "cond_apeglm_fast_nbinomC",
+    "cond_apeglm_fast_nbinomC_star",
+    "metric_padj_lt01_default",
+    "metric_apeglm_runtime",
+    "metric_apeglm_fast_speedup",
+    "result_apeglm_default",
+    "result_tximport_recommended",
+    "result_unnormalized_counts_required"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "rna-seq"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis",
+    "visualization"
+  ],
+  "synthesized_from": "github:thelovelab__DESeq2",
+  "task_description": "Apply lfcShrink() with three shrinkage estimators (apeglm, normal, ashr) to DESeq2 results from the airway dataset and produce shrunken log fold change tables for the treated-vs-untreated contrast.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "airway SummarizedExperiment",
+      "port_id": "airway_dataset",
+      "resolved_via": null,
+      "source": "task_001/deseq_results",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "DESeqDataSet after DESeq analysis",
+      "port_id": "dds_analyzed",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Apply lfcShrink() with apeglm, normal, and ashr estimators to the airway dataset DESeq2 results and generate shrunken LFC summary tables for each method.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Shrunken LFC results (apeglm)",
+      "port_id": "shrunken_lfc_apeglm",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Shrunken LFC results (normal)",
+      "port_id": "shrunken_lfc_normal",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Shrunken LFC results (ashr)",
+      "port_id": "shrunken_lfc_ashr",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Comparative MA-plots",
+      "port_id": "ma_plot_comparison",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "normalization",
+    "statistical-analysis",
+    "false-discovery-rate-correction"
+  ],
+  "title": "Reproduce LFC shrinkage results for apeglm, normal, and ashr estimators on the airway dataset",
+  "tools": [
+    "DESeq2"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Shrunken LFC results table from apeglm estimator, Shrunken LFC results table from ashr estimator, Comparative MA-plots for three shrinkage estimators."
+  ],
+  "workflow_description": "1. Load the airway SummarizedExperiment dataset and construct a DESeqDataSet with design ~ cell + dex. 2. Run DESeq() to perform differential expression analysis and estimate dispersions. 3. Extract the base results table using results() for the dex variable (treated vs untreated). 4. Apply lfcShrink() with type='apeglm' to shrink log fold changes using the adaptive t-prior estimator. 5. Apply lfcShrink() with type='normal' to shrink log fold changes using the original adaptive normal prior. 6. Apply lfcShrink() with type='ashr' to shrink log fold changes using the adaptive shrinkage estimator with mixture of normals. 7. Compare and visualize the three shrunken LFC results using MA-plots and summary statistics."
+}

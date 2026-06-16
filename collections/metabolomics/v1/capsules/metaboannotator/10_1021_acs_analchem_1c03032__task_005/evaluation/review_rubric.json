@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists for each of: global results file, ranked results file, ranked spectra PDF file, pseudo-MS/MS MGF file in the temporary directory specified as saveAnnotations output"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify each output file is non-empty (file size > 0 bytes)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is correct: results files parseable as data frame/table, PDF file contains valid PDF header, MGF file contains valid MGF structure (PEPMASS, TITLE, BEGIN IONS/END IONS blocks)"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: saveAnnotations function executes without error on annotations object with specified temporary directory as output path"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file_exists for each of: global results file, ranked results file, ranked spectra PDF file, pseudo-MS/MS MGF file in the temporary directory specified as saveAnnotations output",
+      "verify each output file is non-empty (file size > 0 bytes)",
+      "verify file_format_is correct: results files parseable as data frame/table, PDF file contains valid PDF header, MGF file contains valid MGF structure (PEPMASS, TITLE, BEGIN IONS/END IONS blocks)",
+      "verify script_runs: saveAnnotations function executes without error on annotations object with specified temporary directory as output path"
+    ],
+    "expert_review": [
+      "verify that the content and structure of saved results match the vignette-reported expectations for global results, ranked results, ranked spectra PDFs, and pseudo-MS/MS MGF outputs \u2014 requires inspection of vignette documentation for expected field names, row counts, spectrum count, and MGF entry structure"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_005"
+}

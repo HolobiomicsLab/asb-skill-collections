@@ -1,0 +1,140 @@
+schema_version: 0.1.0
+workflow_id: coll_biosynfoni_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: concrete
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: Biosynfoni is a biosynformatic molecular fingerprint tool tailored for
+    natural product chemistry and bioinformatic research. The paper describes the
+    package's design and demonstrates its test suite execution through GitHub Actions
+    CI.
+  pseudo_abstract: This work presents biosynfoni, a molecular fingerprint resource
+    designed specifically for natural product chemistry and bioinformatic research
+    applications. The paper reproduces the biosynfoni Python package installation
+    and test suite execution via a GitHub Actions CI workflow. It further analyzes
+    the fingerprint vector distribution across the Zenodo biosynfoni dataset to characterize
+    fingerprint properties. The biosynformatic molecular fingerprint computation for
+    natural product molecules is described as a mechanism underlying the tool, though
+    separate evaluation of this computation is not reported.
+  research_questions:
+  - Does the biosynfoni package install successfully from source and pass its full
+    pytest test suite?
+  - How does the biosynfoni package compute a molecular fingerprint representation
+    tailored for natural product chemistry and bioinformatic research?
+  - What are the statistical properties of the biosynfoni fingerprint vectors in the
+    deposited dataset, including bit-frequency distributions, sparsity characteristics,
+    and pairwise similarity patterns?
+  methods_summary: 'Obtain biosynfoni source code from the published repository (GitHub
+    or Zenodo). Install biosynfoni in development mode with development dependencies
+    using pip. Execute the pytest test suite against the tests/ directory. Validation:
+    All pytest tests must pass with exit code 0, confirming package installation and
+    functional correctness. Retrieve biosynfoni source from GitHub or Zenodo deposit.
+    Install package in development mode with all dependencies. Load sample molecular
+    structures from dataset. Invoke biosynfoni fingerprint computation on molecule
+    set. Serialize fingerprints to structured output (CSV or NumPy array with molecule
+    identifiers and bit-vectors). Validation: Verify output file format, row count
+    matches molecule count, and fingerprints are non-empty bit-vectors. Install biosynfoni
+    package from source repository using pip in development mode. Load fingerprint
+    vectors from the Zenodo dataset deposit. Compute bit-frequency distribution across
+    all bit positions. Calculate sparsity (zero-bit proportion) for the dataset. Compute
+    all pairwise Tanimoto similarity coefficients. Summarize statistics (mean, median,
+    std dev) for each metric. Generate histogram and density plots for distributions.
+    Validation: confirm all metrics are computed without missing values and visualizations
+    display expected distributional characteristics.'
+  domain: cheminformatics
+  techniques:
+  - molecular-networking
+  - database-annotation
+  - dereplication
+  claims:
+  - claim_text: Biosynfoni is a biosynformatic molecular fingerprint tailored to natural
+      product chemistry and bioinformatic research.
+    claim_type: finding
+    speculative: false
+    entity_id: biosynfoni_system
+  - claim_text: The project is available on PyPI.
+    claim_type: finding
+    speculative: false
+    entity_id: biosynfoni_system
+  - claim_text: Biosynfoni supports multiple Python versions.
+    claim_type: finding
+    speculative: false
+    entity_id: biosynfoni_system
+  - claim_text: The project is licensed under an MIT license.
+    claim_type: hypothesis
+    speculative: false
+  - claim_text: The code follows the black code style standard.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_black
+  - claim_text: Development installation can be performed by running pip install -e
+      .[dev] from the project root.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_biosynfoni_pkg
+  - claim_text: Tests can be run locally using the pytest tests/ command.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_pytest
+  - claim_text: Code should be formatted with black before submitting a pull request.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_black
+  - claim_text: Tests are run automatically when a pull request is pushed.
+    claim_type: finding
+    speculative: false
+  - claim_text: The project source is hosted on GitHub at lucinamay/biosynfoni.
+    claim_type: finding
+    speculative: false
+    entity_id: biosynfoni_system
+  - claim_text: Contributions to biosynfoni development are welcomed through issues
+      or pull requests.
+    claim_type: finding
+    speculative: false
+    entity_id: biosynfoni_system
+  speculative: false
+  task_openness: open
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Fingerprint file in CSV or NumPy format containing molecule identifiers and
+    corresponding substructure bit-vector representations
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Summary statistics table containing bit-frequency per position, sparsity,
+    and pairwise Tanimoto similarity distribution metrics
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Distribution plots (histogram/density) visualizing bit-frequency, sparsity,
+    and Tanimoto similarity across fingerprint vectors
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

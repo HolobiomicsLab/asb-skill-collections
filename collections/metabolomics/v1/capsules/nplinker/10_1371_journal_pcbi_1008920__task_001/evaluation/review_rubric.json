@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "S1 Fig exists in supplementary materials or deposited package"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "S1 Fig output format is PDF or PNG",
+      "value": "PDF"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "histogram distributions for raw and standardised strain correlation scores in re"
+    },
+    {
+      "id": "pf_005",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "0.0060"
+    },
+    {
+      "id": "pf_006",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "3.6717"
+    },
+    {
+      "id": "pf_007",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "reproduced figure caption or metadata explicitly identifies validated link posit"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "format_is: computed \u03c3*_corr scores are numeric, real-valued, with no missing values across all three datasets"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify S1 Fig exists in supplementary materials or deposited package",
+      "file_format_is: S1 Fig output format is PDF or PNG",
+      "script_runs: NPLinker implementation of standardised strain correlation score (\u03c3*_corr) executes without errors on Cr\u00fcsemann, Gross, and Le\u00e3o datasets from Paired Omics Data Platform",
+      "output_matches_reference: histogram distributions for raw and standardised strain correlation scores in reproduced S1 Fig match published S1 Fig (visually robust to minor plotting parameter choices)",
+      "value_in_range: computed standardised strain correlation score for all links in Cr\u00fcsemann dataset is approximately \u22120.0060 (parameter-sensitive; exact match not required, allow \u00b15% tolerance)",
+      "value_in_range: computed standardised strain correlation score for validated links in Cr\u00fcsemann dataset is approximately 3.6717 (parameter-sensitive; exact match not required, allow \u00b15% tolerance)",
+      "contains_substring: reproduced figure caption or metadata explicitly identifies validated link positions marked within score distribution histogram",
+      "format_is: computed \u03c3*_corr scores are numeric, real-valued, with no missing values across all three datasets"
+    ],
+    "expert_review": [
+      "Verify that hypergeometric expectation and variance calculations used to standardise raw strain correlation score are statistically sound and correctly map the raw score distribution to zero-mean standardised form",
+      "Confirm that the standardised score formula correctly implements the reported mathematical definition of \u03c3*_corr (trace back to Methods section for exact formula; not present in discussion excerpt)",
+      "Validate that validated link positions in reproduced histograms align with expected enrichment signal reported in text (e.g., p-value of 2.483 \u00d7 10\u221211 at 90th percentile)",
+      "Review whether handling of ties, missing data, or edge cases in strain correlation (e.g., links with single shared strain) is consistent with article description"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

@@ -1,0 +1,396 @@
+{
+  "abstraction_frame": "result",
+  "article_type": "software-tool",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/rformassspectrometry/Spectra",
+      "locator_id": "gh_rformassspectrometry_spectra",
+      "locator_kind": "github",
+      "name": "rformassspectrometry/Spectra",
+      "prose": "MsBackendTest source code from Spectra package (RforMassSpectrometry/Spectra repository)",
+      "score": 0.2857,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-120x120.png",
+      "role": "figure",
+      "sha256": "b25f5ef929e5815a41decba296168a18adfa3f1e90a6824d88641eac34a611f9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-152x152.png",
+      "role": "figure",
+      "sha256": "5f749596f6aab1ba330c9c792455603bf44028833ff0516f1dbadf8c1782fae1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-180x180.png",
+      "role": "figure",
+      "sha256": "4dad7a301408410044a72a5f8b03db5d5fe1d123221a4789fc832a2424f3b544"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-60x60.png",
+      "role": "figure",
+      "sha256": "c8cc90df83794a47b9e1430734db6edc0142d7623d886dc432d06b96a99ac681"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon-76x76.png",
+      "role": "figure",
+      "sha256": "c6c00177a061c34183473f58a25bb1cac8c37dcf47e25dd04f29ae03db42f9f1"
+    },
+    {
+      "indexable": false,
+      "path": "figures/apple-touch-icon.png",
+      "role": "figure",
+      "sha256": "0fbea766d15b7f10d1da0a55a4223f9c6a392614ae1e380e21a2621451b2ef12"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-16x16.png",
+      "role": "figure",
+      "sha256": "2ef901d8e5ba7c3465bbf9444259d77648ca81d85ea695320d0ed472b57f6ce6"
+    },
+    {
+      "indexable": false,
+      "path": "figures/favicon-32x32.png",
+      "role": "figure",
+      "sha256": "7d973740744b8e8af32f8d62b6b57f241489b2423012b87303b9716a2f4ad92d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/logo.png",
+      "role": "figure",
+      "sha256": "537befea4a116b05c85e6dea759f8eabdf6b70b8b8bbeed9ae07a6d8ba1ab8cf"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-basic.svg",
+      "role": "figure",
+      "sha256": "38243d97d58702019680f89ba678c7222b689c9b087ce8ed3d27f2fb872eecd9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-labels-ass.svg",
+      "role": "figure",
+      "sha256": "548337bceed874ec2e77e6c5c72797a06ce6e7f57064e3a4e34109ee45006c2d"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-labels.svg",
+      "role": "figure",
+      "sha256": "46a4b5a9216f1cc9f01845d5a39ced08fe81824101267ea56271ca7c0f266818"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plot-single-spectrum-xlim.svg",
+      "role": "figure",
+      "sha256": "ee313821a4158ce3aef2738777eb401aaf6f6ad57d41eb525d2843f5db3ee1a9"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotmzdelta-1000.svg",
+      "role": "figure",
+      "sha256": "c9e7374103f48b101e3f97ec243ecc426fef3bae67f83906ada609fa5ebff911"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-asp05.svg",
+      "role": "figure",
+      "sha256": "d4664b3bb5ab0fd53d0c3317d4fe69e50515ceea4ce139f7f6225465098fa3d4"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-asp2.svg",
+      "role": "figure",
+      "sha256": "b3a86ae463bb3128b81f3cb6b87569117fda4973022d8fae14fbe7f6827f34fa"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-color-each.svg",
+      "role": "figure",
+      "sha256": "deb89461b259202e039c4289c084411713c9a9d4b25d19eb70e24bfd049429de"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-color-peaks-label-labelcol.svg",
+      "role": "figure",
+      "sha256": "889779b01b3bf2413577759b5e324286970b70468785366754b2a2ad1fd9af68"
+    },
+    {
+      "indexable": false,
+      "path": "figures/plotspectra-color-peaks-label.svg",
+      "role": "figure",
+      "sha256": "1be6fb3e87fc22236b05170aa5660e37a079bc092b6fc40a570618a558efb5d9"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "680e234b34ad5df5d2fdbcc9e7176ad45373551649bff442304915fb76eb182c"
+    }
+  ],
+  "created_at": "2026-06-16T05:59:54.721704+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_001.expected_outputs[0]: R source file containing complete MsBackendTest class implementation with all required methods",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MsBackendTest source code from Spectra package (RforMassSpectrometry/Spectra repository)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation report documenting mz<- method correctness: confirmation of vectorised is.unsorted() usage, successful assignment of sorted m/z values, and error raised on unsorted input",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "M/z values within each spectrum must be stored in strictly increasing (sorted) order to ensure correct spectral interpretation and downstream analysis.",
+    "The NumericList container (from S4Vectors) is the standard data structure for storing variable-length numeric vectors across multiple spectra in Bioconductor MS packages.",
+    "The is.unsorted() function in R detects whether a vector violates increasing order; vectorised application across a NumericList ensures each spectrum's m/z values are checked independently.",
+    "The mz<- replacement method is a core accessor that must validate input constraints before modifying backend state to prevent silent data corruption."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "Verify file exists: locate MsBackendTest class definition in github:rformassspectrometry__Spectra repository",
+      "Verify file_format_is: confirm MsBackendTest is an R S4 class definition",
+      "Verify contains_substring: search MsBackendTest source code for 'mz<-' replacement method definition",
+      "Verify contains_substring: confirm mz<- method implementation calls is.unsorted() on NumericList input",
+      "Verify contains_substring: confirm is.unsorted() is used instead of vapply() for vectorised unsorted check",
+      "Verify script_runs: execute MsBackendTest mz<- replacement with unsorted m/z values and confirm error is raised, exact error message and class must match implementation intent"
+    ],
+    "expert_review": [
+      "Assess whether is.unsorted() vectorisation approach on NumericList is appropriate and efficient compared to vapply alternative",
+      "Evaluate whether error message raised for unsorted m/z values is informative and aligns with Spectra package design expectations",
+      "Review whether mz<- method correctly enforces the constraint that 'm/z values within each spectrum are expected to be sorted increasingly'"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Does the mz<- replacement method for MsBackendTest correctly validate that m/z values are increasingly sorted within each spectrum, and does it use an efficient vectorised is.unsorted() implementation on NumericList objects rather than vapply?: 'm/z values within each spectrum need to be increasingly ordered. We thus also check that this is the case for the provided m/z values. We take here the advantage that a efficient `is.unsorted()`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[other] The mz<- replacement method uses the efficient is.unsorted() implementation for NumericList rather than vapply, and raises a stop error when any spectrum has unsorted m/z values: 'if (any(is.unsorted(value))) stop(\"m/z values need to be increasingly sorted within each spectrum\")': 'if (any(is.unsorted(value)))\n        stop(\"m/z values need to be increasingly sorted within each spectrum\")'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MsBackendTest source code from Spectra package (RforMassSpectrometry/Spectra repository): 'https://github.com/RforMassSpectrometry/Spectra/workflows/R-CMD-check-bioc'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Validation report documenting mz<- method correctness: confirmation of vectorised is.unsorted() usage, successful assignment of sorted m/z values, and error raised on unsorted input: 'm/z values within each spectrum are expected to be sorted increasingly.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Spectra: 'The *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] R: 'library(Spectra)\nlibrary(IRanges)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] S4Vectors: 'return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg(\"S4Vectors\")`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting the mz<- method implementation or changes to MsBackendTest: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(Spectra); library(S4Vectors); source('{inputs.msbackendtest_source}'); backend <- new('MsBackendTest'); cat('Testing mz<- method with is.unsorted() validation\\n'); tryCatch({mz(backend) <- c(100.5, 200.3, 150.1); cat('ERROR: Should have raised error for unsorted m/z\\n')}, error=function(e){cat('PASS: Unsorted m/z rejected with error:', conditionMessage(e), '\\n')}); tryCatch({mz(backend) <- c(100.5, 150.1, 200.3); cat('PASS: Sorted m/z accepted successfully\\n')}, error=function(e){cat('ERROR: Sorted m/z should not raise error:', conditionMessage(e), '\\n')}); cat('Validation complete: mz<- method correctly uses is.unsorted() on NumericList\\n')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 120,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "mz_replacement_validation_report.txt",
+  "expected_outputs": [
+    "Validation report documenting mz<- method correctness: confirmation of vectorised is.unsorted() usage, successful assignment of sorted m/z values, and error raised on unsorted input"
+  ],
+  "finding": "The mz<- replacement method uses the efficient is.unsorted() implementation for NumericList rather than vapply, and raises a stop error when any spectrum has unsorted m/z values: 'if (any(is.unsorted(value))) stop(\"m/z values need to be increasingly sorted within each spectrum\")'",
+  "github_name": "rformassspectrometry/Spectra",
+  "input_from": "task_001",
+  "inputs": [
+    "task_001.expected_outputs[0]: R source file containing complete MsBackendTest class implementation with all required methods",
+    "MsBackendTest source code from Spectra package (RforMassSpectrometry/Spectra repository)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "mz_method_source_inspection.R",
+    "valid_mz_assignment_test.log",
+    "invalid_mz_error_confirmation.log"
+  ],
+  "linked_result_ids": [
+    "result_007",
+    "result_024"
+  ],
+  "methodology_summary": [
+    "Retrieve MsBackendTest implementation from the Spectra package repository.",
+    "Extract and inspect the mz<- replacement method code to verify vectorised is.unsorted() usage on NumericList input.",
+    "Test assignment of correctly sorted m/z values and confirm no error is raised.",
+    "Test assignment of unsorted m/z values and confirm an appropriate error is raised.",
+    "Validation: method correctly detects unsorted input via is.unsorted() and rejects invalid m/z assignments while accepting valid sorted assignments."
+  ],
+  "missing_information": [
+    "No changelog documenting the mz<- method implementation or changes to MsBackendTest"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the mz<- replacement method for MsBackendTest correctly validate that m/z values are increasingly sorted within each spectrum, and does it use an efficient vectorised is.unsorted() implementation on NumericList objects rather than vapply?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "backend-method-implementation-validation",
+    "vectorized-operation-verification",
+    "error-handling-confirmation",
+    "s4-class-method-inspection",
+    "ms-data-constraint-enforcement"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_spectra/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "msbackend_test",
+    "numeric_list_class",
+    "result_peaksdata_efficiency",
+    "result_isunsorted_efficiency"
+  ],
+  "subdomains": [],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:rformassspectrometry__Spectra",
+  "task_description": "Verify that the mz<- replacement method on MsBackendTest correctly uses vectorised is.unsorted() on a NumericList and raises an appropriate error when unsorted m/z values are supplied.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MsBackendTest source code from Spectra package",
+      "port_id": "msbackendtest_source",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Verify the mz<- method implementation uses vectorised is.unsorted() on NumericList and correctly enforces m/z sorting constraints.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "mz<- method validation report",
+      "port_id": "validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "feature-detection",
+    "spectral-library-matching"
+  ],
+  "title": "Reproduce the NumericList is.unsorted() efficiency check in the mz<- replacement method",
+  "tools": [
+    "Spectra",
+    "R",
+    "S4Vectors"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: S4Vectors, Validation report documenting mz<- method correctness: confirmation of vectorised is.unsorted() usage, successful assignment of sorted m/z values, and error raised on unsorted input."
+  ],
+  "workflow_description": "1. Locate the MsBackendTest class definition and its mz<- replacement method implementation in the Spectra package source code. 2. Inspect the method to confirm it applies is.unsorted() in vectorised form to detect unsorted m/z values within each spectrum's NumericList. 3. Execute the mz<- method with valid sorted m/z values and verify assignment succeeds without error. 4. Execute the mz<- method with intentionally unsorted m/z values and confirm an informative error is raised. 5. Document the validation results confirming conformance to the specification."
+}

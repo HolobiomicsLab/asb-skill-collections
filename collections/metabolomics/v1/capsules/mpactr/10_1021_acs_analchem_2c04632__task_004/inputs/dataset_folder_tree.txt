@@ -1,0 +1,8 @@
+  figures/apple-touch-icon.png
+  figures/expected_treemap.png
+  figures/favicon-96x96.png
+  figures/favicon.svg
+  figures/logo.png
+  figures/web-app-manifest-192x192.png
+  figures/web-app-manifest-512x512.png
+paper.md

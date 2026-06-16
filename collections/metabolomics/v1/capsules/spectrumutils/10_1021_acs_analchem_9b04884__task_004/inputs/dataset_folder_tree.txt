@@ -1,0 +1,15 @@
+  figures/annot_fmt.png
+  figures/facet.png
+  figures/ion_types.png
+  figures/mass_errors.png
+  figures/mirror.png
+  figures/neutral_losses_1.png
+  figures/neutral_losses_2.png
+  figures/proforma_ast.png
+  figures/proforma_ex1.png
+  figures/proforma_ex2.png
+  figures/proforma_ex3.png
+  figures/quickstart.png
+  figures/runtime.png
+  figures/spectrum_utils.png
+paper.md

@@ -1,0 +1,529 @@
+schema_version: 0.1.0
+workflow_id: coll_integrate_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: hierarchical
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: INTEGRATE is a computational pipeline that integrates transcriptomics and
+    intracellular metabolomics data with constraint-based metabolic modeling to uncover
+    whether metabolic flux variations across cell lines are governed by transcriptional
+    regulation, substrate availability, or both.
+  pseudo_abstract: 'Metabolism is regulated through multiple hierarchical layers:
+    gene expression controls enzyme abundance, while metabolite concentrations modulate
+    enzymatic activity through substrate availability and allosteric effects. The
+    paper presents INTEGRATE, a model-based framework that combines transcriptomics-derived
+    Reaction Activity Scores (RAS), intracellular metabolomics-derived Reaction Propensity
+    Scores (RPS) computed via mass action kinetics, and constraint-based steady-state
+    metabolic modeling to characterize which regulatory layer controls each metabolic
+    reaction. Applied to five breast cell lines (one non-tumorigenic and four cancer-derived),
+    the authors generated transcriptomics and metabolomics datasets and integrated
+    them into a manually curated constraint-based model of human central carbon metabolism
+    (ENGRO2). By assessing concordance between RAS and flux variations, and between
+    RPS and flux variations using Cohen''s kappa, INTEGRATE classified reactions as
+    controlled by transcriptional regulation, metabolic regulation only, or combined
+    control. Constraint integration on nutrient availability (Type 1), extracellular
+    flux ratios (Type 2), and transcriptomics-derived flux bounds (Type 3) progressively
+    improved segregation of cell-line-specific feasible flux distributions and growth
+    yield predictions, with Type 3 constraints alone achieving good cell-line discrimination.
+    Among 81 reactions with complete substrate abundance data, concordance analysis
+    identified distinct regulatory signatures across the five cell lines, providing
+    a framework for identifying metabolic intervention points in personalized therapeutic
+    strategies for multifactorial diseases.'
+  research_questions:
+  - Can the INTEGRATE pipeline with all three constraint types (nutrient availability,
+    extracellular fluxes, and transcriptomics-derived constraints) successfully segregate
+    the feasible flux distributions of five breast cancer cell lines with distinct
+    metabolic profiles?
+  - What are the Cohen's kappa concordance values between RAS and RPS directional
+    changes for metabolic reactions with complete substrate metabolomics coverage
+    across the five breast cell lines?
+  - Does integration of transcriptomics-derived constraints alone improve the correlation
+    between predicted and experimental growth yield compared to constraints on nutrient
+    availability alone, and how does adding metabolomics-derived extracellular flux
+    constraints further affect this correlation?
+  - How does the mass action law formulation translate intracellular metabolomics
+    data into Reaction Propensity Scores (RPS) that quantify the expected relative
+    metabolic flux changes across cell lines based purely on substrate availability
+    differences?
+  - How can RAS, RPS, and FFD datasets be intersected to classify each metabolic reaction
+    into regulatory categories (transcriptional, metabolic, combined, or unclassified)?
+  methods_summary: "Compute normalized Reaction Activity Scores from RNA-seq transcriptomics\
+    \ data using GPR logical rules and scale to [0, 1]. Define and apply three nested\
+    \ constraint types to the ENGRO2 model: (1) nutrient availability from medium\
+    \ composition, (2) extracellular flux ratios from YSI bioanalyzer data, (3) transcriptomics-derived\
+    \ internal flux boundaries from RAS and FVA. Uniformly sample 1 million steady-state\
+    \ flux vectors from the constrained null space of each of five cell-relative models\
+    \ using optGpSampler. Apply t-SNE nonlinear dimensionality reduction to the high-dimensional\
+    \ FFD to visualize separation of cell-line clusters in 2D space. Validation: Confirm\
+    \ t-SNE clusters show distinct, non-overlapping separation of the five cell lines\
+    \ when all three constraint types are applied together, with improved Spearman\
+    \ correlation (r \u2265 0.85) between experimental and in silico growth yield\
+    \ on glucose relative to constraint-type subsets. References: source article (DOI:\
+    \ 10.1371/journal.pcbi.1009337); MTBLS3597 (https://www.ebi.ac.uk/metabolights/MTBLS3597);\
+    \ PRJNA767228 (https://www.ncbi.nlm.nih.gov/bioproject/PRJNA767228) Load RAS vectors\
+    \ (derived from RNA-seq and GPR rules) and RPS vectors (derived from LC-MS metabolomics\
+    \ and stoichiometry) for five cell lines from the Zenodo deposit. For each of\
+    \ 10 pairwise cell-line comparisons and each reaction, perform Mann-Whitney U\
+    \ test to assign directional change sign (+1 up, \u22121 down, 0 no-change) to\
+    \ RAS, RPS, and FFD distributions. Filter to 81 reactions with complete substrate\
+    \ metabolomics coverage, excluding reactions missing any substrate quantification.\
+    \ Compute Cohen's kappa agreement between RAS and RPS directional signs for each\
+    \ reaction, accounting for chance agreement. Compute Cohen's kappa agreement between\
+    \ RPS and FFD directional signs (RPSvsFFD) and between RAS and FFD signs (RASvsFFD)\
+    \ for each reaction. Assign empirical p-values by permuting RPS variation signs\
+    \ 1000 times and comparing the distribution of kappa values to the original; apply\
+    \ Benjamini-Hochberg FDR correction (threshold \u03B1 = 0.05). Validation: verify\
+    \ that reactions flagged as statistically significant (post-FDR) match the subset\
+    \ identified in the published paper (ACONT, ASPTA, RPI, RPE) and that the empirical\
+    \ agreement distribution significantly exceeds the Q\u2013Q quantile distribution\
+    \ of two independent random datasets. References: source article (DOI: 10.1371/journal.pcbi.1009337);\
+    \ MTBLS3597 (https://www.ebi.ac.uk/metabolights/MTBLS3597); PRJNA767228 (https://www.ncbi.nlm.nih.gov/bioproject/PRJNA767228)\
+    \ Load ENGRO2 models with Type 1, Type 2, and Type 3 constraints specified separately\
+    \ and in combination. Sample 1 million steady-state flux distributions per cell\
+    \ line per constraint scenario using optGpSampler with thinning=10, enforcing\
+    \ growth yield bounds (Eq. 6: 0.001 \xB7 0.131972 \xB7 v_Biomass \u2264 max \xB7\
+    \ v_ExGlc \xB7 mw_Glc \u2264 0.001). Compute in silico growth yield as median(v_Biomass)\
+    \ / median(v_ExGlc) \xD7 0.131972 for each scenario. Extract experimental growth\
+    \ yield (total protein over 48h / total glucose over 48h) from Bradford and YSI\
+    \ measurements. Calculate Spearman \u03C1 and two-tailed p-value for experimental\
+    \ vs. in silico growth yield under each constraint scenario. Validation: Confirm\
+    \ that Type 3 constraints alone achieve the highest separation of the five cell\
+    \ lines in t-SNE space (Fig 3C vs 3D) while Type 1+2+3 combined yields the highest\
+    \ Spearman correlation with experimental data. References: source article (DOI:\
+    \ 10.1371/journal.pcbi.1009337); MTBLS3597 (https://www.ebi.ac.uk/metabolights/MTBLS3597);\
+    \ PRJNA767228 (https://www.ncbi.nlm.nih.gov/bioproject/PRJNA767228) Load intracellular\
+    \ metabolomics data and ENGRO2 stoichiometric model with reaction-metabolite associations.\
+    \ For each reaction and cell line, retrieve all substrate metabolite concentrations\
+    \ from the model stoichiometry. Omit reactions with any missing substrate abundance\
+    \ measurements from the metabolomics dataset. Compute Reaction Propensity Score\
+    \ for each eligible reaction in each cell line using mass action law: RPS = product\
+    \ of [substrate_i]^(stoichiometric_coeff_i). Aggregate RPS across biological replicates\
+    \ within each cell line using median or mean. Normalize RPS within each reaction\
+    \ across cell lines by dividing by the maximum RPS value for that reaction. Validation:\
+    \ verify that RPS dataset contains no reactions with missing substrate abundances,\
+    \ that all values are non-negative, and that normalization produces scores in\
+    \ the range [0, 1] for each reaction. References: source article (DOI: 10.1371/journal.pcbi.1009337);\
+    \ MTBLS3597 (https://www.ebi.ac.uk/metabolights/MTBLS3597); PRJNA767228 (https://www.ncbi.nlm.nih.gov/bioproject/PRJNA767228)\
+    \ Load pre-computed RAS, RPS, and FFD datasets from deposited repositories for\
+    \ all reactions and pairwise cell-line comparisons. Compute signed fold-change\
+    \ directions (up/down/no-change) for each reaction across 10 pairwise cell-line\
+    \ comparisons using statistical tests (Mann\u2013Whitney U for FFD, t-test for\
+    \ RAS/RPS) with p<0.05 and \u226520% fold-change threshold. Calculate two Cohen's\
+    \ kappa coefficients per reaction quantifying concordance between RAS-vs-FFD and\
+    \ RPS-vs-RAS fold-change sign patterns. Classify reactions into regulatory categories\
+    \ based on quadrant assignment: positive RASvsFFD + positive RPSvsRAS = combined;\
+    \ positive RPSvsFFD + negative RPSvsRAS = metabolic-only; negative both + high\
+    \ RASvsFFD = transcriptional-only; other = unclassified. Compute empirical p-values\
+    \ by repeated random sampling (1000 iterations) of RPS variation distributions\
+    \ and derive FDR-adjusted p-values using Benjamini\u2013Hochberg procedure with\
+    \ target FDR <5%. Validation: reactions ACONT, ASPTA, RPI, and RPE show statistically\
+    \ significant concordance (FDR<5%) in both core and genome-wide models, confirming\
+    \ robustness of classification scheme. References: source article (DOI: 10.1371/journal.pcbi.1009337);\
+    \ MTBLS3597 (https://www.ebi.ac.uk/metabolights/MTBLS3597); PRJNA767228 (https://www.ncbi.nlm.nih.gov/bioproject/PRJNA767228)"
+  domain: multi-omics
+  techniques:
+  - flux-analysis
+  - multi-omics-integration
+  - pathway-analysis
+  - differential-abundance-analysis
+  claims:
+  - claim_text: Metabolism is directly and indirectly fine-tuned by a complex web
+      of interacting regulatory mechanisms that fall into two major classes.
+    claim_type: finding
+    speculative: false
+  - claim_text: The expression level of metabolic enzymes sets the maximal theoretical
+      flux level for each enzyme-controlled reaction.
+    claim_type: finding
+    speculative: false
+  - claim_text: Metabolic regulation controls the interactions of metabolites with
+      enzymes, including substrates, cofactors, and allosteric modulators.
+    claim_type: finding
+    speculative: false
+  - claim_text: High-throughput omics data analyzed separately do not accurately characterize
+      the hierarchical regulation of metabolism.
+    claim_type: finding
+    speculative: false
+  - claim_text: INTEGRATE computes differential reaction expression from transcriptomics
+      data using constraint-based modeling to predict if differential enzyme expression
+      originates differences in metabolic fluxes.
+    claim_type: finding
+    speculative: false
+    entity_id: INTEGRATE_system
+  - claim_text: INTEGRATE uses metabolomics to predict how differences in substrate
+      availability translate into differences in metabolic fluxes.
+    claim_type: finding
+    speculative: false
+    entity_id: INTEGRATE_system
+  - claim_text: INTEGRATE discriminates fluxes regulated at the metabolic and/or gene
+      expression level by intersecting output datasets from transcriptomics and metabolomics
+      analysis.
+    claim_type: finding
+    speculative: false
+    entity_id: INTEGRATE_system
+  - claim_text: The pipeline was demonstrated on a set of immortalized normal and
+      cancer breast cell lines.
+    claim_type: finding
+    speculative: false
+  - claim_text: Knowing the regulatory level at which a given metabolic reaction is
+      controlled will be valuable to inform targeted, truly personalized therapies
+      in cancer patients.
+    claim_type: finding
+    speculative: true
+  - claim_text: INTEGRATE can be applied to different fields where metabolism plays
+      a driving role, including cancer and neurodegeneration.
+    claim_type: finding
+    speculative: true
+    entity_id: INTEGRATE_system
+  - claim_text: 'Each metabolic flux depends on at least two intertwined regulatory
+      layers: one regulating the flux of each enzyme-catalyzed metabolic reaction,
+      and another through auto-regulation via metabolite interactions.'
+    claim_type: finding
+    speculative: false
+  - claim_text: The upper level flux for each enzyme-catalyzed metabolic reaction
+      depends on the levels and catalytic activities of metabolic enzymes, which are
+      set by complex mechanisms orchestrated by signal transduction pathways.
+    claim_type: finding
+    speculative: false
+  - claim_text: Regulatory mechanisms of metabolic enzyme expression include epigenetic
+      control of chromatin, transcription factors, transcription rate, and post-transcriptional/post-translational
+      events.
+    claim_type: finding
+    speculative: false
+  - claim_text: Auto-regulation of metabolism occurs through the interactions of metabolites
+      (substrates, cofactors, allosteric modulators) with responsible enzymes.
+    claim_type: finding
+    speculative: false
+  - claim_text: The flux of an enzyme-catalyzed reaction depends on the concentration
+      of its substrate(s).
+    claim_type: finding
+    speculative: false
+  - claim_text: The Michaelis-Menten law approximates the dependence of reaction rate
+      on substrate concentration for non-allosteric enzymes.
+    claim_type: finding
+    speculative: false
+  - claim_text: The Michaelis constant K_m describes the substrate concentration at
+      which the reaction rate is equal to V_max/2.
+    claim_type: finding
+    speculative: false
+  - claim_text: At substrate concentrations below K_m, there is a linear increase
+      in reaction rate with increasing substrate concentration.
+    claim_type: finding
+    speculative: false
+  - claim_text: Metabolites within the same pathway or belonging to related biochemical
+      pathways can fine-tune enzyme-catalyzed reactions through allosteric effects.
+    claim_type: finding
+    speculative: false
+  - claim_text: Differences in metabolic fluxes are only partially determined by variations
+      in protein/gene expression.
+    claim_type: finding
+    speculative: false
+  - claim_text: In transcriptional control scenario, variations in flux through a
+      metabolic reaction are mainly determined by variations in enzyme abundance when
+      substrate is in large excess.
+    claim_type: finding
+    speculative: false
+  - claim_text: In metabolic control scenario, variations in flux are mainly determined
+      by variations in substrate abundance when enzyme is in large excess.
+    claim_type: finding
+    speculative: false
+  - claim_text: Combined metabolic and transcriptional control occurs when variations
+      in fluxes are determined by concerted variations in both substrate and enzyme
+      abundance.
+    claim_type: finding
+    speculative: false
+  - claim_text: Direct determination of metabolic fluxes through labeled substrates
+      lags behind other omics technologies, mainly due to technical difficulties at
+      the sub-cellular level.
+    claim_type: finding
+    speculative: false
+  - claim_text: Integration of transcriptomics with metabolomics datasets has been
+      limited mainly to gene-metabolite correlation analysis or pathway enrichment
+      analysis.
+    claim_type: finding
+    speculative: false
+  - claim_text: Constraint-based steady-state models represent a valuable framework
+      to predict metabolic fluxes from high-throughput omics data.
+    claim_type: finding
+    speculative: false
+  - claim_text: Methods using cross-sectional metabolomics data to predict fluxes
+      require a priori assumptions on the relationship between metabolites and fluxes.
+    claim_type: finding
+    speculative: false
+  - claim_text: INTEGRATE's novel hypothesis is that evidence for a monotonic relationship
+      between fluxes and substrate abundances, and for a concurrent non-monotonic
+      relationship between flux variation and enzyme abundance, indicates that a reaction
+      is controlled metabolically.
+    claim_type: finding
+    speculative: false
+    entity_id: INTEGRATE_system
+  - claim_text: Current model-based approaches to discern transcriptionally from metabolically
+      controlled fluxes have limitations in directly using metabolomics data.
+    claim_type: finding
+    speculative: false
+  - claim_text: INTEGRATE takes as input a metabolic network model with Gene-Protein-Reaction
+      associations, transcriptomics data, intracellular metabolomics data, and extracellular
+      flux data.
+    claim_type: finding
+    speculative: false
+    entity_id: INTEGRATE_system
+  - claim_text: 'INTEGRATE returns two lists of metabolic fluxes: fluxes that vary
+      across cells consistently with both metabolic and transcriptional regulation,
+      and fluxes that vary consistently with metabolic regulation only.'
+    claim_type: finding
+    speculative: false
+    entity_id: INTEGRATE_system
+  - claim_text: 'INTEGRATE generates three comparable datasets centered around the
+      object reaction: Reaction Activity Scores, Feasible Flux Distributions, and
+      Reaction Propensity Scores.'
+    claim_type: finding
+    speculative: false
+    entity_id: INTEGRATE_system
+  - claim_text: Reaction Activity Score (RAS) is computed for each input model reaction
+      based on the expression value and relationship among genes encoding catalyzing
+      enzymes.
+    claim_type: finding
+    speculative: false
+    entity_id: RAS_component
+  - claim_text: Feasible Flux Distributions (FFD) dataset includes a large number
+      of flux distributions obtained by uniformly sampling the feasible flux region
+      of the metabolic model.
+    claim_type: finding
+    speculative: false
+    entity_id: FFD_component
+  - claim_text: Reaction Propensity Score (RPS) is computed based on the availability
+      of reaction substrates, calculated as the product of substrate concentrations
+      with each raised to a power equal to its stoichiometric coefficient.
+    claim_type: finding
+    speculative: false
+    entity_id: RPS_component
+  - claim_text: 'Five breast cell lines were selected for study: one non-tumorigenic
+      and four breast cancer cell lines with different molecular classifications.'
+    claim_type: finding
+    speculative: false
+  - claim_text: Cell lines present significant differences in terms of metabolic profile.
+    claim_type: finding
+    speculative: false
+  - claim_text: The ratio of lactate produced over glucose consumed is quite similar
+      across the five cell lines.
+    claim_type: finding
+    speculative: false
+  - claim_text: Lactate and glutamate over glutamine ratios are more heterogeneous
+      across the five cell lines compared to lactate/glucose ratio.
+    claim_type: finding
+    speculative: false
+  - claim_text: ENGRO2 core model consists of 494 reactions, 410 metabolites, and
+      494 genes.
+    claim_type: finding
+    speculative: false
+    entity_id: ENGRO2_model
+  - claim_text: ENGRO1 model consisted of 84 reactions, 67 metabolites, and 216 genes
+      in comparison to ENGRO2.
+    claim_type: finding
+    speculative: false
+    entity_id: ENGRO2_model
+  - claim_text: Transcriptomics-derived constraints alone well discriminate the five
+      cell line models.
+    claim_type: finding
+    speculative: false
+  - claim_text: Combination of transcriptomics-derived and extracellular flux constraints
+      improves separation of feasible solutions between cell lines.
+    claim_type: finding
+    speculative: false
+  - claim_text: Growth rate predictions improve when transcriptomics-derived constraints
+      are combined with extracellular flux constraints.
+    claim_type: finding
+    speculative: false
+  - claim_text: 44 reactions resulted from consistent transcriptional and metabolic
+      regulation.
+    claim_type: finding
+    speculative: false
+  - claim_text: 13 reactions resulted only metabolically regulated because of positive
+      RPSvsFFD score above 0.2 and negative RPSvsRAS score below threshold.
+    claim_type: finding
+    speculative: false
+  - claim_text: Cohen's kappa values are considered to indicate fair concordance between
+      0.21 and 0.40.
+    claim_type: finding
+    speculative: false
+    entity_id: cohens_kappa_tool
+  - claim_text: After FDR correction of p-values, concordance between RPSs and FFDs
+      resulted statistically significant for 4 reactions.
+    claim_type: finding
+    speculative: false
+  - claim_text: ACONT reaction catalyzes the production of cytosolic isocitrate from
+      citrate and is metabolically controlled.
+    claim_type: finding
+    speculative: false
+  - claim_text: RPI reaction catalyzes the conversion of ribulose 5-phosphate to ribose
+      5-phosphate within the non-oxidative phase of the pentose phosphate pathway.
+    claim_type: finding
+    speculative: false
+  - claim_text: Concordance scores are robust to the choice of sample, with standard
+      deviation of Cohen's kappa values across batches being negligible for most reactions.
+    claim_type: finding
+    speculative: false
+    entity_id: cohens_kappa_tool
+  - claim_text: Some flux variations show concordance between independent datasets
+      beyond reasonable doubt according to empirical probability analysis.
+    claim_type: finding
+    speculative: false
+  - claim_text: INTEGRATE integration of transcriptomics and metabolomics data enriches
+      their expressive power by providing complementary views of metabolic state.
+    claim_type: finding
+    speculative: false
+    entity_id: INTEGRATE_system
+  - claim_text: Metabolic fluxes predicted by constraint-based modeling complement
+      information on differential activity of reactions derived from gene expression
+      data.
+    claim_type: finding
+    speculative: false
+  - claim_text: INTEGRATE indicated that aconitase (ACONT) metabolic regulation involves
+      the cytosolic reaction while the aconitase flux itself is not regulated at transcriptional
+      level.
+    claim_type: finding
+    speculative: false
+    entity_id: INTEGRATE_system
+  - claim_text: INTEGRATE does not have the ambition to predict exact flux values,
+      but rather the sign of variation across cell lines.
+    claim_type: finding
+    speculative: false
+    entity_id: INTEGRATE_system
+  - claim_text: The main novelty of INTEGRATE is the direct exploitation of metabolomics
+      data to determine whether a flux is regulated at the metabolic level.
+    claim_type: finding
+    speculative: false
+    entity_id: INTEGRATE_system
+  - claim_text: The pipeline can be extended to integrate proteomics and phosphoproteomics
+      data alongside transcriptomics-derived RAS.
+    claim_type: finding
+    speculative: true
+    entity_id: INTEGRATE_system
+  - claim_text: Knowing whether a flux is controlled at the metabolic or enzymatic
+      level is mandatory in designing therapeutic strategies and identifying metabolic
+      reactions that indirectly affect target reactions.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: mixed
+  method_alternatives:
+  - iReMet, Pandey et al., Katzir et al., and Cakir et al. are alternative approaches
+    to integrate metabolomics and transcriptomics data
+  - Any available method can be used in principle to set flux boundaries as a function
+    of gene expression, with eFlux and TRFBA cited as examples
+  - Proteomics and phosphoproteomics data can be integrated as alternatives to transcriptomics
+    data
+  - Genome-wide model Recon3D can be used as alternative to core model ENGRO2
+  substitution_constraints:
+  - INTEGRATE sets constraints on selected extracellular fluxes according to exo-metabolomics
+    data to improve model predictions
+  - Transcriptomics-derived RAS must be used for reactions without proteomics coverage
+  - SBML format does not embed type 2 constraints on extracellular fluxes, which must
+    be specified separately
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Cohen's kappa concordance scores (RPSvsRAS and RPSvsFFD) for all 81 reactions
+    with complete substrate coverage, formatted as a two-column numeric table with
+    reaction names and kappa values
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Scatter plot (RPSvsFFD kappa vs. RPSvsRAS kappa) with reactions colored by\
+    \ RASvsFFD concordance score and labeled for kappa \u2265 0.2"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Heatmap of RPSvsRAS and RPSvsFFD Cohen's kappa values for reactions with RPSvsFFD
+    concordance > 0.2, ordered by RPSvsFFD score
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Empirical p-values and Benjamini-Hochberg adjusted p-values (FDR < 5%) for
+    each reaction's kappa concordance, assessed against the null distribution from
+    random permutation of RPS variations
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Spearman correlation coefficient and p-value between experimental and in silico
+    growth yield for Type 1 constraints alone
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Spearman correlation coefficient and p-value between experimental and in silico
+    growth yield for Type 1+2 constraints
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Spearman correlation coefficient and p-value between experimental and in silico
+    growth yield for Type 1+2+3 constraints
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Spearman correlation coefficient and p-value between experimental and in silico
+    growth yield for Type 3 constraints alone
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Correlation plot with four scatter subplots (one per constraint scenario)\
+    \ showing experimental vs. in silico growth yield with \u03C1 and p-value annotations"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Reaction Propensity Scores (RPS) dataset: a matrix (or table) with metabolic\
+    \ reactions as rows, cell lines as columns, and normalized RPS values (0\u2013\
+    1 range) as entries, computed from mass action law applied to substrate concentrations"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: 'Reaction classification table (XLSX or CSV) with columns: reaction identifier,
+    Cohen''s kappa RPSvsFFD score, Cohen''s kappa RPSvsRAS score, empirical p-value,
+    FDR-adjusted p-value, regulatory class label (transcriptional/metabolic/combined/other),
+    and confidence intervals'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: "Q\u2013Q plot comparing empirical probability distribution of Cohen's kappa\
+    \ agreement between independent datasets versus INTEGRATE RPS-vs-FFD concordance\
+    \ results"
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Heatmap visualization of RPSvsRAS and RPSvsFFD concordance scores for reactions
+    with fair concordance (score >0.2), annotated with reaction names and regulatory
+    class assignments
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

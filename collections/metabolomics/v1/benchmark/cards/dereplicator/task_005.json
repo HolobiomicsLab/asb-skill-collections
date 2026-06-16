@@ -1,0 +1,486 @@
+{
+  "abstraction_frame": "mixed",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/MetaMiner_fig.png",
+      "role": "figure",
+      "sha256": "8946d4837ea7a20ec1249c27dc3f7ef063c863d643d54dd2d0db9e2c683965a3"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "0c3d467eac6f9863989454dc554174c55680e2ab8691086c3a13f57cf83dfc0b"
+    }
+  ],
+  "created_at": "2026-06-16T05:40:21.538092+00:00",
+  "crossref_doi": null,
+  "data_accessions": [
+    {
+      "accession": "MSV000080102",
+      "evidence_span": "twork of identified RiPP.  It is based on a few files from [MSV000080102 dataset](https://gnps.ucsd.edu/ProteoSAFe/result.jsp?task=6",
+      "kind": "massive",
+      "url": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080102"
+    },
+    {
+      "accession": "SRR3309439",
+      "evidence_span": "ces griseus ATCC 12648](https://www.ebi.ac.uk/ena/data/view/SRR3309439)),  and `spades_outdir` is the directory containing the gen",
+      "kind": "sra_run",
+      "url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR3309439"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Three LC-MS/MS spectra files (C18p_5uL_NASA_Sample_BB2_01_25958.mzML, C18p_5uL_NASA_Sample_BB3_01_25959.mzML, C18p_5uL_NASA_Sample_BB4_01_25960.mzML) from MSV000080102 dataset",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Example RiPP sequence file (example_RiPP.fasta) containing predicted amino acid sequences",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Precomputed spectral network output files from GNPS (MSV000080102 clustered spectra data)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "significant_matches.tsv from MetaMiner standard mode run",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "significant_matches.tsv from MetaMiner blind mode run",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Dereplicator match results table (format: tab-separated value file with columns for scan, spectrum mass, score, p-value, FDR, peptide mass, and sequence)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "VarQuest match results table (format: tab-separated value file with standardized columns for comparison)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Cross-tool comparison table summarizing hits per tool, detection concordance, and mode-dependent sensitivity differences",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "RiPP metabolites are ribosomally synthesized and post-translationally modified peptides requiring specialized peptide-mass databases and spectral matching algorithms distinct from small-molecule compound identification.",
+    "Blind mode search enables detection of unanticipated post-translational modifications by allowing arbitrary mass shifts during spectral matching, at the cost of substantially increased computational time and false-positive rate.",
+    "Significant_matches.tsv output format standardizes compound\u2013spectrum match reporting across NPDtools pipelines with mandatory columns for scan number, spectrum mass, score, p-value, FDR, peptide mass, and modified sequence annotation.",
+    "Mass spectrometry data must be centroided (not profile mode) and in open formats (MGF, mzXML, mzML, or mzData) for accurate spectral matching; unconverted raw proprietary formats cannot be processed.",
+    "Tool concordance analysis requires normalized scoring schemes across pipelines; direct score comparison is invalid because Dereplicator, VarQuest, and MetaMiner may use different scoring metrics despite outputting standardized TSV columns."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file significant_matches.tsv exists in Dereplicator output directory",
+      "verify file significant_matches.tsv exists in VarQuest output directory",
+      "verify file significant_matches.tsv exists in Dereplicator+ output directory",
+      "file_format_is: each significant_matches.tsv is tab-separated with at least columns for match_id, score, and query_spectrum",
+      "row_count_equals or value_in_range: compare row counts across three pipelines' significant_matches.tsv outputs (no canonical answer \u2014 different tools may return different numbers of hits)",
+      "contains_substring: verify each significant_matches.tsv contains at least one row of hit data (not header-only)",
+      "verify input spectra MSV000080102-derived test dataset is accessible and identical across all three pipeline runs",
+      "script_runs: NPDtools 2.5.0 Dereplicator pipeline executes without error on test spectra",
+      "script_runs: NPDtools 2.5.0 VarQuest pipeline executes without error on test spectra",
+      "script_runs: NPDtools 2.5.0 Dereplicator+ pipeline executes without error on test spectra"
+    ],
+    "expert_review": [
+      "assess whether differences in significant_matches.tsv hit counts across pipelines reflect genuine algorithmic differences or implementation artifacts",
+      "evaluate whether blind mode vs. standard mode differences in hit detection are consistent with documented tool design goals",
+      "judge whether the three pipelines' hit signatures (which compounds are detected under which conditions) are chemically and statistically reasonable given the spectra source material"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Which of the three NPDtools database search pipelines (Dereplicator, VarQuest, Dereplicator+) successfully identify matches in MSV000080102-derived test spectra, and how do their hit patterns differ across search modes?: 'NPDtools \u2013 Natural Product Discovery tools \u2013 is a toolkit containing various pipelines for _in silico_ analysis of natural product mass spectrometry data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] NPDtools version 2.5.0 includes multiple database search pipelines (Dereplicator, VarQuest, Dereplicator+) within its toolkit for natural product mass spectrometry analysis.: 'NPDtools version 2.5.0 was released under the Apache 2.0 License on November 28, 2019 and can be downloaded from <https://github.com/ablab/npdtools/releases>'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Three LC-MS/MS spectra files (C18p_5uL_NASA_Sample_BB2_01_25958.mzML, C18p_5uL_NASA_Sample_BB3_01_25959.mzML, C18p_5uL_NASA_Sample_BB4_01_25960.mzML) from MSV000080102 dataset: 'Download `C18p_5uL_NASA_Sample_BB2_01_25958.mzML`, `C18p_5uL_NASA_Sample_BB3_01_25959.mzML` and `C18p_5uL_NASA_Sample_BB4_01_25960.mzML` files from [MSV000080102]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Example RiPP sequence file (example_RiPP.fasta) containing predicted amino acid sequences: 'an example RiPP `DATITTVTVTSTSIWASTVSNHC` (available in `test_data/metaminer/molnet/example_RiPP.fasta`)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Precomputed spectral network output files from GNPS (MSV000080102 clustered spectra data): 'Run spectral networks on the downloaded spectra or download their precomputed spectral network from [GNPS]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] significant_matches.tsv from MetaMiner standard mode run: 'The identification results will be saved in `metaminer_outdir`. ... you will see identification ... in `metaminer_outdir/significant_matches.tsv`'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] significant_matches.tsv from MetaMiner blind mode run: 'Enable search in a blind mode, i.e. search for new PTMs with arbitrary mass shifts'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Dereplicator match results table (format: tab-separated value file with columns for scan, spectrum mass, score, p-value, FDR, peptide mass, and sequence): 'matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] VarQuest match results table (format: tab-separated value file with standardized columns for comparison): 'All the detected RiPPs are reported in plain text tab-separated value files (`.tsv`). Each file starts with a header line containing column descriptions.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Cross-tool comparison table summarizing hits per tool, detection concordance, and mode-dependent sensitivity differences: 'Each file starts with a header line containing column descriptions. The rest lines represent compound\u2013spectrum matches'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MetaMiner: 'MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Dereplicator: 'matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] ProteoWizard: 'uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'MetaMiner requires a 64-bit Linux system or macOS and Python (versions 2.6-2.7, 3.3 and higher are supported)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog found: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "tool_comparison_summary.tsv",
+  "expected_outputs": [
+    "significant_matches.tsv from MetaMiner standard mode run",
+    "significant_matches.tsv from MetaMiner blind mode run",
+    "Dereplicator match results table (format: tab-separated value file with columns for scan, spectrum mass, score, p-value, FDR, peptide mass, and sequence)",
+    "VarQuest match results table (format: tab-separated value file with standardized columns for comparison)",
+    "Cross-tool comparison table summarizing hits per tool, detection concordance, and mode-dependent sensitivity differences"
+  ],
+  "finding": "NPDtools version 2.5.0 includes multiple database search pipelines (Dereplicator, VarQuest, Dereplicator+) within its toolkit for natural product mass spectrometry analysis.",
+  "github_name": "ablab/npdtools",
+  "input_from": "task_003",
+  "inputs": [
+    "Three LC-MS/MS spectra files (C18p_5uL_NASA_Sample_BB2_01_25958.mzML, C18p_5uL_NASA_Sample_BB3_01_25959.mzML, C18p_5uL_NASA_Sample_BB4_01_25960.mzML) from MSV000080102 dataset",
+    "Example RiPP sequence file (example_RiPP.fasta) containing predicted amino acid sequences",
+    "Precomputed spectral network output files from GNPS (MSV000080102 clustered spectra data)"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "metaminer_standard_mode/significant_matches.tsv",
+    "metaminer_blind_mode/significant_matches.tsv",
+    "dereplicator_output/matches.tsv",
+    "varquest_output/matches.tsv"
+  ],
+  "linked_result_ids": [
+    "result_014"
+  ],
+  "methodology_summary": [
+    "Convert MSV000080102 spectra from mzML to MGF format using ProteoWizard msconvert to ensure compatibility across all three pipelines.",
+    "Index and validate the RiPP sequence database (example_RiPP.fasta) for consistency before parallel pipeline execution.",
+    "Execute MetaMiner in standard mode (default lantibiotic class) on test spectra and sequences, capturing all significant_matches.tsv records with scan IDs, scores, p-values, and FDRs.",
+    "Re-execute MetaMiner with --blind flag to enable arbitrary post-translational modification detection and compare output cardinality and score distributions to standard mode.",
+    "Run Dereplicator and VarQuest pipelines independently on the same spectral and sequence inputs, standardizing output to TSV format with equivalent columns.",
+    "Merge and deduplicate match records across all three tools by scan identifier, score rank, and peptide sequence identity.",
+    "Validation: Cross-tool comparison table correctly enumerates per-tool hit counts, identifies scans with tool-specific vs. shared identifications, and confirms that blind-mode MetaMiner results are a superset or equal-cardinality to standard-mode results.",
+    "References: MSV000080102 (https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000080102); SRR3309439 (https://www.ncbi.nlm.nih.gov/sra/?term=SRR3309439)"
+  ],
+  "missing_information": [
+    "No changelog found"
+  ],
+  "parameters": [],
+  "primary_domain": "bioinformatics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_003/rippp_candidate_db"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Which of the three NPDtools database search pipelines (Dereplicator, VarQuest, Dereplicator+) successfully identify matches in MSV000080102-derived test spectra, and how do their hit patterns differ across search modes?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods"
+  ],
+  "skills": [
+    "ripp-peptide-sequence-database-construction",
+    "tandem-mass-spectra-peptide-matching",
+    "post-translational-modification-mass-shift-detection",
+    "spectral-scoring-and-significance-assessment",
+    "cross-tool-result-concordance-analysis",
+    "false-discovery-rate-interpretation",
+    "blind-search-mode-parameter-optimization"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_dereplicator/synthesized_package",
+  "spine_condition_ids": [
+    "COND_FASTA_INPUT",
+    "COND_ANTISMASH_INPUT",
+    "COND_BLIND_MODE",
+    "COND_LANTIBIOTIC_CLASS"
+  ],
+  "spine_entity_ids": [
+    "SYS_NPDTOOLS",
+    "ARCH_METAMINER_PIPELINE",
+    "COMP_DEREPLICATOR",
+    "COMP_VARQUEST",
+    "COMP_DEREPLICATOR_PLUS",
+    "COMP_RIPP_DB_BUILDER",
+    "DATASET_TEST_DATA",
+    "DATASET_MSV000080102",
+    "COND_FASTA_INPUT",
+    "COND_ANTISMASH_INPUT",
+    "COND_BLIND_MODE",
+    "COND_LANTIBIOTIC_CLASS",
+    "ARTIFACT_SIGNIFICANT_MATCHES"
+  ],
+  "subdomains": [
+    "natural-products",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "data-analysis",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:ablab__npdtools",
+  "task_description": "Run MetaMiner, Dereplicator, and VarQuest pipelines independently on MSV000080102-derived test spectra with the same RiPP sequences; compare significant_matches.tsv outputs to characterize tool-specific hit patterns across standard and blind search modes.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Three centroided LC-MS/MS spectra files in mzML format",
+      "port_id": "spectra_files",
+      "resolved_via": null,
+      "source": "task_003/rippp_candidate_db",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Predicted RiPP amino acid sequences in FASTA format",
+      "port_id": "ripp_sequences",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Precomputed GNPS spectral network output directory",
+      "port_id": "spectral_network_data",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Execute Dereplicator, VarQuest, and Dereplicator+ pipelines on MSV000080102 test spectra and compare significant_matches.tsv outputs to identify which tools return hits and characterise hit distribution across search modes.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MetaMiner significant_matches.tsv from standard mode",
+      "port_id": "metaminer_standard_matches",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MetaMiner significant_matches.tsv from blind mode",
+      "port_id": "metaminer_blind_matches",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Dereplicator match results table",
+      "port_id": "dereplicator_matches",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "VarQuest match results table",
+      "port_id": "varquest_matches",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cross-tool comparison summary of hits and detection patterns",
+      "port_id": "comparison_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "dereplication",
+    "database-annotation",
+    "in-silico-fragmentation"
+  ],
+  "title": "Analyze database search pipeline tool dispatch across Dereplicator, VarQuest, and Dereplicator+ on test spectra",
+  "tools": [
+    "NPDtools 2.5.0",
+    "MetaMiner",
+    "Dereplicator",
+    "ProteoWizard",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: MetaMiner, ProteoWizard, Python, significant_matches.tsv from MetaMiner standard mode run, significant_matches.tsv from MetaMiner blind mode run, Dereplicator match results table (format: tab-separated value file with columns for scan, spectrum mass, score, p-value, FDR, peptide mass, and sequence), VarQuest match results table (format: tab-separated value file with standardized columns for comparison), Cross-tool comparison table summarizing hits per tool, detection concordance, and mode-dependent sensitivity differences."
+  ],
+  "workflow_description": "1. Prepare test spectra (three .mzML files from MSV000080102 converted to MGF using ProteoWizard msconvert) and example RiPP sequence file (example_RiPP.fasta). 2. Execute MetaMiner with standard parameters (default lantibiotic class) on test spectra and RiPP sequences, generate significant_matches.tsv. 3. Execute MetaMiner again with --blind flag enabled to search for arbitrary post-translational modifications. 4. Execute Dereplicator pipeline on the same test spectra and RiPP structure database, output match results. 5. Execute VarQuest pipeline on the same inputs with standard parameters. 6. Parse and tabulate significant_matches.tsv outputs from all three tools, recording scan identifiers, match scores, p-values, and false discovery rates. 7. Cross-compare hit sets to identify tool-specific detections, common identifications, and mode-dependent sensitivity differences."
+}

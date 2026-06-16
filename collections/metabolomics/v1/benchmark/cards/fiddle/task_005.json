@@ -1,0 +1,333 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/fiddle_logo.png",
+      "role": "figure",
+      "sha256": "b3a240b5acc490ee66008501fdba7b3e6231f1d2011c98a1f94d2170004424e6"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "f65164b799de86c48e2278fd20a124cd91aabf04f75b2d43697befed3cd34928"
+    }
+  ],
+  "created_at": "2026-06-16T07:03:35.842382+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "run_fiddle.py source code from FIDDLE repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "train_rescore.py source code from FIDDLE repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "test_caffeine.py source code from FIDDLE repository",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Preprocessing verification report documenting precursor m/z zeroing across all three scripts",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "Precursor m/z (mass-to-charge ratio) is a critical feature in tandem MS spectra; zeroing it removes absolute mass context and forces the model to rely on fragment ion patterns for molecular formula prediction.",
+    "The TCN (Temporal Convolutional Network) encoder in FIDDLE expects normalized or preprocessed input; zeroing one feature dimension is a common practice to prevent certain attributes from biasing the learning signal.",
+    "Consistency of preprocessing across train, validation, and test scripts is essential for reproducibility and prevents data leakage or distribution mismatch during inference."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that run_fiddle.py exists in the github:JosieHong__FIDDLE repository",
+      "file_exists: verify that train_rescore.py exists in the github:JosieHong__FIDDLE repository",
+      "file_exists: verify that test_caffeine.py exists in the github:JosieHong__FIDDLE repository",
+      "contains_substring: in run_fiddle.py, search for code pattern matching 'env[:, 0]' assignment or zeroing operation",
+      "contains_substring: in train_rescore.py, search for code pattern matching 'env[:, 0]' assignment or zeroing operation",
+      "contains_substring: in test_caffeine.py, search for code pattern matching 'env[:, 0]' assignment or zeroing operation",
+      "contains_substring: verify all three files contain or reference the zeroing operation before spectrum encoder invocation",
+      "script_runs: execute test_caffeine.py with caffeine (C8H10N4O2) GNPS spectra as input and confirm no runtime errors occur during env preprocessing"
+    ],
+    "expert_review": [
+      "Verify that the zeroing of env[:, 0] is semantically correct and prevents the TCN spectrum encoder from learning mass-based frequency priors, as intended by the design change",
+      "Confirm that the preprocessing step does not inadvertently corrupt or lose information critical to formula prediction in the spectrum encoder pathway",
+      "Assess whether the implementation is consistent with the stated rationale in the changelog: preventing mass-dependent bias in the encoder"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Is the precursor m/z value (env[:, 0]) consistently zeroed before spectrum encoding across the three main execution scripts in the FIDDLE codebase?: 'FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The FIDDLE repository contains code for model training, evaluation, and paper reproduction, with full research codebase available for inspection of preprocessing steps including spectrum handling.: 'This repository contains the full research codebase for model training, evaluation, and paper reproduction.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] run_fiddle.py source code from FIDDLE repository: 'github:JosieHong__FIDDLE'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] train_rescore.py source code from FIDDLE repository: 'github:JosieHong__FIDDLE'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] test_caffeine.py source code from FIDDLE repository: 'github:JosieHong__FIDDLE'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Preprocessing verification report documenting precursor m/z zeroing across all three scripts: 'env[:, 0] (precursor m/z) is set to zero before passing the spectrum to the TCN encoder'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] msfiddle: 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No explicit specification of when in the pipeline the zeroing occurs (e.g., before TCN input, after data loading, during batch preparation): 'Rescore pipeline (`train_rescore.py`, `run_fiddle.py`, `test_caffeine.py`): `env[:, 0]` (precursor m/z) is zeroed before the spectrum encoder'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No validation criteria or test cases documented to verify that zeroing is applied and does not cause downstream model failures: 'Rescore pipeline (`train_rescore.py`, `run_fiddle.py`, `test_caffeine.py`): `env[:, 0]` (precursor m/z) is zeroed before the spectrum encoder'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No clarification on whether env[:, 0] zeroing applies only to the rescore pipeline or also to the base TCN training pipeline (train_tcn_gpus_cl.py): 'Rescore pipeline (`train_rescore.py`, `run_fiddle.py`, `test_caffeine.py`): `env[:, 0]` (precursor m/z) is zeroed before the spectrum encoder'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "preprocessing_verification_report.txt",
+  "expected_outputs": [
+    "Preprocessing verification report documenting precursor m/z zeroing across all three scripts"
+  ],
+  "finding": "The FIDDLE repository contains code for model training, evaluation, and paper reproduction, with full research codebase available for inspection of preprocessing steps including spectrum handling.",
+  "github_name": "josiehong/FIDDLE",
+  "input_from": "task_002",
+  "inputs": [
+    "run_fiddle.py source code from FIDDLE repository",
+    "train_rescore.py source code from FIDDLE repository",
+    "test_caffeine.py source code from FIDDLE repository"
+  ],
+  "keywords": [
+    "molecular formula prediction",
+    "mass spectrometry",
+    "ms/ms spectra",
+    "deep learning",
+    "siamese network",
+    "tandem mass spectrometry"
+  ],
+  "landmark_outputs": [
+    "run_fiddle_preprocessing_check.txt",
+    "train_rescore_preprocessing_check.txt",
+    "test_caffeine_preprocessing_check.txt"
+  ],
+  "linked_result_ids": [
+    "result_015"
+  ],
+  "methodology_summary": [
+    "Retrieve the three Python execution scripts (run_fiddle.py, train_rescore.py, test_caffeine.py) from the FIDDLE repository.",
+    "Locate the preprocessing block in each script where the spectrum feature array (env) is prepared before TCN encoder input.",
+    "Extract and document the exact code line(s) that set env[:, 0] to zero, including surrounding context and parameter names.",
+    "Compare the implementation across all three scripts to verify that the zeroing operation is identical in index, operation type, and timing.",
+    "Validation: Confirm that all three scripts implement env[:, 0] = 0 (or equivalent) consistently before TCN encoder invocation; report pass if all three match, fail if any divergence is found."
+  ],
+  "missing_information": [
+    "No explicit specification of when in the pipeline the zeroing occurs (e.g., before TCN input, after data loading, during batch preparation)",
+    "No validation criteria or test cases documented to verify that zeroing is applied and does not cause downstream model failures",
+    "No clarification on whether env[:, 0] zeroing applies only to the rescore pipeline or also to the base TCN training pipeline (train_tcn_gpus_cl.py)"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Is the precursor m/z value (env[:, 0]) consistently zeroed before spectrum encoding across the three main execution scripts in the FIDDLE codebase?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "source-code-inspection-for-preprocessing-steps",
+    "cross-script-consistency-verification",
+    "spectrum-feature-engineering-validation",
+    "tcn-encoder-input-preprocessing"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_fiddle/synthesized_package",
+  "spine_condition_ids": [
+    "cond_orbitrap_expanded"
+  ],
+  "spine_entity_ids": [
+    "FIDDLE_system",
+    "TCN_encoder",
+    "siamese_rescore_arch",
+    "tool_huggingface_demo",
+    "metric_orbitrap_test_size",
+    "result_precursor_mz_zeroing",
+    "compound_caffeine",
+    "tool_prepare_augment_rescore",
+    "tool_train_rescore",
+    "tool_run_fiddle"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:JosieHong__FIDDLE",
+  "task_description": "Verify that the precursor m/z value (env[:, 0]) is consistently zeroed before TCN encoder input across all three FIDDLE execution scripts (run_fiddle.py, train_rescore.py, and test_caffeine.py). Produce a verification report documenting the zeroing implementation in each script.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "run_fiddle.py source code",
+      "port_id": "run_fiddle_src",
+      "resolved_via": null,
+      "source": "task_002/augmented_train_set",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "train_rescore.py source code",
+      "port_id": "train_rescore_src",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "test_caffeine.py source code",
+      "port_id": "test_caffeine_src",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "component_reconstruction",
+  "task_objective": "Verify that precursor m/z zeroing (env[:, 0] \u2192 0) is implemented identically in run_fiddle.py, train_rescore.py, and test_caffeine.py.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Preprocessing verification report",
+      "port_id": "verification_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "gnps-workflow",
+    "spectral-library-matching",
+    "database-annotation",
+    "metabolite-identification"
+  ],
+  "title": "Reconstruct the precursor m/z zeroing mechanism in the spectrum encoder to prevent mass-based prior learning",
+  "tools": [
+    "msfiddle"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load and inspect run_fiddle.py, train_rescore.py, and test_caffeine.py from the FIDDLE repository (github:JosieHong__FIDDLE). 2. Locate the spectrum preprocessing section in each script where env (input feature array) is prepared before passing to the TCN encoder. 3. Confirm that env[:, 0] is set to zero in each script and document the exact line(s) and context. 4. Verify consistency of the zeroing operation across all three scripts (same index, same operation, same timing relative to encoder input). 5. Generate a structured verification report listing each script, the preprocessing code location, and a pass/fail status for consistent zeroing."
+}

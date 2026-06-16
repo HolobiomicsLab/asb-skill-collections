@@ -1,0 +1,2209 @@
+{
+  "@context": {
+    "asb": "https://holobiomicslab.eu/ns/asb#",
+    "asbext": "https://w3id.org/asb/indicium-ext#",
+    "asbval": "https://w3id.org/asb/validation#",
+    "indicium": "https://w3id.org/indicium/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "eco": {
+      "@id": "http://purl.obolibrary.org/obo/ECO_",
+      "@prefix": true
+    },
+    "sepio": {
+      "@id": "http://purl.obolibrary.org/obo/SEPIO_",
+      "@prefix": true
+    },
+    "doco": "http://purl.org/spar/doco/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "sssom": "https://w3id.org/sssom/",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "schema": "https://schema.org/",
+    "IAO": {
+      "@id": "http://purl.obolibrary.org/obo/IAO_",
+      "@prefix": true
+    },
+    "id": "@id",
+    "subject": "asb:subject",
+    "object": "asb:object",
+    "relation": "asb:relation",
+    "context": "asb:context",
+    "qualifier": "asb:qualifier",
+    "asserted_by": "prov:wasAttributedTo",
+    "source_task_kind": "asb:sourceTaskKind",
+    "source_task_kind_status": "asb:sourceTaskKindStatus",
+    "identifier": "dct:identifier",
+    "title": "dct:title",
+    "abstraction_level": "asb:abstractionLevel",
+    "about_entity": "schema:about",
+    "text_selector": "indicium:text_selector",
+    "exact": "oa:exact",
+    "subject_id": "indicium:subject_id",
+    "predicate_id": "indicium:predicate_id",
+    "object_id": "indicium:object_id"
+  },
+  "@graph": [
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "reproduction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "component_reconstruction",
+      "@type": "prov:Activity"
+    },
+    {
+      "id": "task_unknown",
+      "question": "",
+      "task_kind": "analysis",
+      "@type": "prov:Activity"
+    },
+    {
+      "identifier": "urn:asb:skill/bgc-mf-link-scoring-standardisation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/bgc-spectrum-ranking-by-kernel-similarity",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/biosynthetic-gene-cluster-detection-and-annotation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/combination-function-parameterisation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/cross-database-structural-homology-matching",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/enrichment-ratio-calculation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/gcf-mf-link-scoring",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/gene-cluster-family-formation-and-similarity-clustering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/hypergeometric-distribution-calculation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/input-output-kernel-regression-for-metabolite-matching",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/iokr-fingerprint-space-ranking",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/kernel-regression-learning-from-spectral-fingerprint-pairs",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/metabolomic-spectral-annotation-and-molecular-family-clustering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/molecular-fingerprint-extraction-and-vectorization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/multi-criterion-score-combination-and-ranking",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/multi-score-complementarity-evaluation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/percentile-threshold-based-filtering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/pooled-statistical-significance-testing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/score-distribution-analysis-and-statistical-significance-testing",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/score-distribution-visualization",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/scoring-function-sensitivity-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/spectral-denoising-via-training-data-filtering",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/statistical-hypothesis-testing-mean-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/strain-correlation-hypergeometric-adjustment",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/strain-correlation-score-standardisation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/top-n-accuracy-and-auc-metric-calculation",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/validated-link-enrichment-analysis",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "identifier": "urn:asb:skill/validated-link-ranking-comparison",
+      "version": "0.0.0",
+      "@type": "fabio:ComputerProgram"
+    },
+    {
+      "id": "claim_001",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Using multiple link-scoring functions together makes it easier to prioritise true links relative to others.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_001_evidence",
+      "evidence_for": "claim_001",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_002",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The raw strain correlation score has a mean of 83.5144 for all links.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_002_evidence",
+      "evidence_for": "claim_002",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_003",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The raw strain correlation score has a mean of 14.667 for validated links.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_003_evidence",
+      "evidence_for": "claim_003",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_004",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Standardising the strain correlation score gives a mean of -0.006 for all links.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_004_evidence",
+      "evidence_for": "claim_004",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_005",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Standardising the strain correlation score gives a mean of 3.6717 for validated links.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_005_evidence",
+      "evidence_for": "claim_005",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_006",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The raw strain correlation score mean for validated links is lower than for all links, opposite to what would be expected.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_006_evidence",
+      "evidence_for": "claim_006",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_007",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The raw strain correlation score is highly dependent on both total population size and the size of the GCF and number of strains that produce the metabolite.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_007_evidence",
+      "evidence_for": "claim_007",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_008",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A larger GCF with perfect strain correspondence can outscore a smaller GCF and MF pair even when the latter has stronger evidence.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_008_evidence",
+      "evidence_for": "claim_008",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_009",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR top-1 accuracy on MIBiG data is 0.1208.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_009_evidence",
+      "evidence_for": "claim_009",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_010",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR top-5 accuracy on MIBiG data is 0.1708.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_010_evidence",
+      "evidence_for": "claim_010",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_011",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR top-10 accuracy on MIBiG data is 0.1870.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_011_evidence",
+      "evidence_for": "claim_011",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_012",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR top-20 accuracy on MIBiG data is 0.2121.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_012_evidence",
+      "evidence_for": "claim_012",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_013",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR top-200 accuracy on MIBiG data is 0.2946.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_013_evidence",
+      "evidence_for": "claim_013",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_014",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR AUC on MIBiG data is 0.6534.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_014_evidence",
+      "evidence_for": "claim_014",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_015",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Random baseline top-1 accuracy on MIBiG data is 0.0.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_015_evidence",
+      "evidence_for": "claim_015",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_016",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Random baseline top-5 accuracy on MIBiG data is 0.0014.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_016_evidence",
+      "evidence_for": "claim_016",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_017",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Random baseline AUC on MIBiG data is 0.5209.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_017_evidence",
+      "evidence_for": "claim_017",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_018",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR mean score for all links is 0.0105.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_018_evidence",
+      "evidence_for": "claim_018",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_019",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR mean score for validated links is 0.0364.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_019_evidence",
+      "evidence_for": "claim_019",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_020",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The standardised strain correlation score is significantly enriched for validated links at the 90th percentile with a p-value of 2.483 \u00d7 10\u221211.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        },
+        {
+          "id": "asb:spine_COMP_STD_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_020_evidence",
+      "evidence_for": "claim_020",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_021",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The IOKR score is significantly enriched for validated links at the 90th percentile with a p-value of 0.0139.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_IOKR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_021_evidence",
+      "evidence_for": "claim_021",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_022",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Links scoring above the 90th percentile on both IOKR and standardised strain correlation scores are significantly enriched for validated links with a p-value of 2.633 \u00d7 10\u22124.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_022_evidence",
+      "evidence_for": "claim_022",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_023",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The combined scoring function assigns the best rank to the validated link in 10 out of 15 cases tested.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_COMBINED_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_023_evidence",
+      "evidence_for": "claim_023",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_024",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR does not directly depend on natural product compound class.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_024_evidence",
+      "evidence_for": "claim_024",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_025",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The strain correlation score cannot distinguish between potential links showing the same pattern of strain presence or absence.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_025_evidence",
+      "evidence_for": "claim_025",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_026",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "NPLinker accepts genomic outputs from antiSMASH and BiG-SCAPE.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_NPLINKER"
+        },
+        {
+          "id": "asb:spine_TOOL_ANTISMASH"
+        },
+        {
+          "id": "asb:spine_TOOL_BIGSCAPE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_026_evidence",
+      "evidence_for": "claim_026",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_027",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "NPLinker accepts metabolomic output from GNPS knowledge base.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_NPLINKER"
+        },
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_027_evidence",
+      "evidence_for": "claim_027",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_028",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "NPLinker has been used to putatively link ectoine and chloramphenicol to their producing BGCs.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_SYS_NPLINKER"
+        },
+        {
+          "id": "asb:spine_COMP_ECTOINE"
+        },
+        {
+          "id": "asb:spine_COMP_CHLORAMPHENICOL"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_028_evidence",
+      "evidence_for": "claim_028",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_029",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The IOKR model is trained on 4138 spectra from GNPS with structural annotations.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_029_evidence",
+      "evidence_for": "claim_029",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_030",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Cr\u00fcsemann dataset consists of 120 microbial strains with 8 validated links between a BGC and a MF.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_CRUSEMANN"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_030_evidence",
+      "evidence_for": "claim_030",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_031",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Gross dataset consists of 7 strains with 9 validated links between a BGC and a MF.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_GROSS"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_031_evidence",
+      "evidence_for": "claim_031",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_032",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The Le\u00e3o dataset contains 4 strains with 5 validated links between a BGC and a specific MS2 spectrum.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_LEAO"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_032_evidence",
+      "evidence_for": "claim_032",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_033",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The standardised strain correlation score has mean 0 and variance 1.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        },
+        {
+          "id": "asb:spine_COMP_STD_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_033_evidence",
+      "evidence_for": "claim_033",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_034",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A standardised strain correlation score of zero indicates that the degree of overlap between the two strain sets is the same as would be expected if they were chosen at random.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        },
+        {
+          "id": "asb:spine_COMP_STD_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_034_evidence",
+      "evidence_for": "claim_034",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_035",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Standardised scores make comparison between links involving different sizes of GCFs and MFs possible.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_035_evidence",
+      "evidence_for": "claim_035",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_036",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR requires only spectra and predicted molecular structures as input.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_036_evidence",
+      "evidence_for": "claim_036",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_037",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR's performance depends heavily on the choice of kernel function on the spectra and on the choice of molecular fingerprint.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_MOLECULAR_FINGERPRINT"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_037_evidence",
+      "evidence_for": "claim_037",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_038",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The strain correlation scoring approach clusters BGCs from different strains into Gene Cluster Families based on similarity-based distances.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_038_evidence",
+      "evidence_for": "claim_038",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_039",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "BiG-SCAPE is the state-of-the-art tool for microbial BGC clustering.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_TOOL_BIGSCAPE"
+        },
+        {
+          "id": "asb:spine_TOOL_BIGSLICE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_039_evidence",
+      "evidence_for": "claim_039",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_040",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The strain correlation score formula assigns +10 for strains that produce metabolites and have BGCs in the GCF.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_040_evidence",
+      "evidence_for": "claim_040",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_041",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The strain correlation score formula assigns -10 for strains that produce metabolites but lack BGCs in the GCF.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_041_evidence",
+      "evidence_for": "claim_041",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_042",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The strain correlation score formula assigns +1 for strains that neither produce metabolites nor have BGCs in the GCF.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_042_evidence",
+      "evidence_for": "claim_042",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_043",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The strain correlation score formula leaves the score unchanged for strains that have BGCs in the GCF but do not produce metabolites.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "component_reconstruction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_043_evidence",
+      "evidence_for": "claim_043",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_044",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The expected value and variance of the raw strain correlation score depend greatly on both the total population size and the number of strains producing the metabolite.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_044_evidence",
+      "evidence_for": "claim_044",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_045",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The proportion of validated links among all links in the Cr\u00fcsemann dataset is enriched above the 90th percentile for the standardised correlation score.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_CRUSEMANN"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_045_evidence",
+      "evidence_for": "claim_045",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_046",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "IOKR outperforms a randomised baseline by a considerable margin in top-n accuracy on MIBiG data.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_046_evidence",
+      "evidence_for": "claim_046",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_047",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The standardised IOKR score is defined by subtracting the expected value from the IOKR score and dividing by its variance.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_IOKR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_047_evidence",
+      "evidence_for": "claim_047",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_048",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The combined scoring function \u21131/2 ranks validated link for BGC0001228 (retimycin A) at number 253.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_COMBINED_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_048_evidence",
+      "evidence_for": "claim_048",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_049",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The combined scoring function \u21131/2 ranks validated link for BGC0000241 (lomaiviticin A) at number 5.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_COMBINED_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_049_evidence",
+      "evidence_for": "claim_049",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_050",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "In the case of BGC0000241 (lomaiviticin A), neither scoring function alone assigns an equal or higher score than the correct link.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        },
+        {
+          "id": "asb:spine_COMP_STD_STRAIN_CORR_SCORE"
+        },
+        {
+          "id": "asb:spine_COMP_IOKR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_050_evidence",
+      "evidence_for": "claim_050",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_051",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Standardisation of the strain correlation score improves its effectiveness at prioritising validated links relative to all links.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_STRAIN_CORR_SCORE"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_051_evidence",
+      "evidence_for": "claim_051",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_052",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Combining strain correlation and IOKR scores increases the ratio of validated links among high-scoring links.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_052_evidence",
+      "evidence_for": "claim_052",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_053",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "A drawback of IOKR is its reliance on MIBiG homology to assign molecular structures to BGCs.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "task_agnostic",
+      "about_entity": [
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_053_evidence",
+      "evidence_for": "claim_053",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_054",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The molecular fingerprint vector is composed of three concatenated sets of fingerprints: CDK Substructure, PubChem Substructure, and Klekota-Roth fingerprints.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_COMP_MOLECULAR_FINGERPRINT"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_054_evidence",
+      "evidence_for": "claim_054",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_055",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "2966 BGC-spectrum pairs were created by matching MIBiG and GNPS databases.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        },
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_055_evidence",
+      "evidence_for": "claim_055",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_056",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "The validated links in the MIBiG/GNPS dataset include 2069 unique spectra and 242 unique MIBiG BGCs.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved",
+      "about_entity": [
+        {
+          "id": "asb:spine_TOOL_GNPS"
+        },
+        {
+          "id": "asb:spine_DS_MIBIG"
+        }
+      ]
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_056_evidence",
+      "evidence_for": "claim_056",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_057",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "BGCs in the validated links are primarily polyketides and nonribosomal peptides, with sizes ranging from 7000 to 20000 nucleotides.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind": "reproduction",
+      "source_task_kind_status": "resolved"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_057_evidence",
+      "evidence_for": "claim_057",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "id": "claim_058",
+      "context": "explicit",
+      "subject": "explicit",
+      "qualifier": "consistent_with",
+      "relation": "describes",
+      "object": "Strain correlation and IOKR scores are complementary methods for linking BGCs to metabolites.",
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "@type": "asb:Claim",
+      "source_task_kind_status": "ambiguous_multi_kind"
+    },
+    {
+      "@type": "sepio:0000002",
+      "id": "claim_058_evidence",
+      "evidence_for": "claim_058",
+      "text_selector": {
+        "@type": "oa:TextQuoteSelector",
+        "exact": null
+      },
+      "asserted_by": "doi:10.1371/journal.pcbi.1008920",
+      "workflow_coupling": "loose"
+    },
+    {
+      "@type": "asbext:WorkflowCharacterisation",
+      "@id": "coll_nplinker#workflow-characterisation",
+      "asbext:axes": {
+        "coupling": "loose",
+        "composition_modularity": "hierarchical",
+        "abstraction_level": "intermediate",
+        "orchestration_planning": "static",
+        "data_transport": "file",
+        "characterisation_confidence": "inferred"
+      },
+      "asbext:characterises": [
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown",
+        "task_unknown"
+      ],
+      "prov:wasDerivedFrom": "Suter et al. 2025 (DOI 10.1016/j.future.2025.107974)"
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:biosynthetic-gene-cluster-detection-and-annotation--EDAM:operation_3092",
+      "subject_id": "asb.skill:biosynthetic-gene-cluster-detection-and-annotation",
+      "subject_label": "biosynthetic-gene-cluster-detection-and-annotation",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_3092",
+      "object_label": "Protein feature detection",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.1429
+    },
+    {
+      "@type": "sssom:Mapping",
+      "id": "asb.skill:score-distribution-visualization--EDAM:operation_2939",
+      "subject_id": "asb.skill:score-distribution-visualization",
+      "subject_label": "score-distribution-visualization",
+      "predicate_id": "skos:closeMatch",
+      "object_id": "EDAM:operation_2939",
+      "object_label": "Principal component visualisation",
+      "mapping_justification": "semapv:LexicalMatching",
+      "confidence": 0.0
+    },
+    {
+      "@type": "asb:System",
+      "id": "asb:spine_SYS_NPLINKER",
+      "title": "NPLinker",
+      "identifier": "urn:asb:spine:SYS_NPLINKER"
+    },
+    {
+      "@type": "p-plan:Step",
+      "id": "asb:spine_ARCH_NPLINKER_PIPELINE",
+      "title": "NPLinker Fixed Processing Pipeline",
+      "identifier": "urn:asb:spine:ARCH_NPLINKER_PIPELINE",
+      "abstraction_level": "asb:FixedArchitecture"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_STRAIN_CORR_SCORE",
+      "title": "Strain Correlation Score",
+      "identifier": "urn:asb:spine:COMP_STRAIN_CORR_SCORE"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_STD_STRAIN_CORR_SCORE",
+      "title": "Standardised Strain Correlation Score",
+      "identifier": "urn:asb:spine:COMP_STD_STRAIN_CORR_SCORE"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_IOKR_SCORE",
+      "title": "IOKR Score",
+      "identifier": "urn:asb:spine:COMP_IOKR_SCORE"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_COMBINED_SCORE",
+      "title": "Combined Scoring Function",
+      "identifier": "urn:asb:spine:COMP_COMBINED_SCORE"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_ANTISMASH",
+      "title": "antiSMASH",
+      "identifier": "urn:asb:spine:TOOL_ANTISMASH"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_BIGSCAPE",
+      "title": "BiG-SCAPE",
+      "identifier": "urn:asb:spine:TOOL_BIGSCAPE"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_BIGSLICE",
+      "title": "BiG-SLICE",
+      "identifier": "urn:asb:spine:TOOL_BIGSLICE"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_GNPS",
+      "title": "GNPS",
+      "identifier": "urn:asb:spine:TOOL_GNPS"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_SANDPUMA",
+      "title": "SANDPUMA",
+      "identifier": "urn:asb:spine:TOOL_SANDPUMA"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_GNP",
+      "title": "GNP",
+      "identifier": "urn:asb:spine:TOOL_GNP"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_METAMINER",
+      "title": "MetaMiner",
+      "identifier": "urn:asb:spine:TOOL_METAMINER"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_CSI_FINGERID",
+      "title": "CSI:FingerId",
+      "identifier": "urn:asb:spine:TOOL_CSI_FINGERID"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_CDK",
+      "title": "Chemistry Development Kit",
+      "identifier": "urn:asb:spine:TOOL_CDK"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_PPK",
+      "title": "Probability Product Kernel",
+      "identifier": "urn:asb:spine:TOOL_PPK"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_PAIRED_OMICS_PLATFORM",
+      "title": "Paired Omics Data Platform",
+      "identifier": "urn:asb:spine:TOOL_PAIRED_OMICS_PLATFORM"
+    },
+    {
+      "@type": "fabio:ComputerProgram",
+      "id": "asb:spine_TOOL_DEEPBGC",
+      "title": "DeepBGC",
+      "identifier": "urn:asb:spine:TOOL_DEEPBGC"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DS_MIBIG",
+      "title": "MIBiG",
+      "identifier": "urn:asb:spine:DS_MIBIG"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DS_GNPS_TRAINING",
+      "title": "GNPS IOKR Training Set",
+      "identifier": "urn:asb:spine:DS_GNPS_TRAINING"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DS_MIBIG_GNPS_PAIRS",
+      "title": "MIBiG-GNPS BGC-Spectrum Pairs",
+      "identifier": "urn:asb:spine:DS_MIBIG_GNPS_PAIRS"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DS_CRUSEMANN",
+      "title": "Cr\u00fcsemann Dataset",
+      "identifier": "urn:asb:spine:DS_CRUSEMANN"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DS_GROSS",
+      "title": "Gross Dataset",
+      "identifier": "urn:asb:spine:DS_GROSS"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "id": "asb:spine_DS_LEAO",
+      "title": "Le\u00e3o Dataset",
+      "identifier": "urn:asb:spine:DS_LEAO"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_GCF",
+      "title": "GCF",
+      "identifier": "urn:asb:spine:COMP_GCF"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_MF",
+      "title": "MF",
+      "identifier": "urn:asb:spine:COMP_MF"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_BGC",
+      "title": "BGC",
+      "identifier": "urn:asb:spine:COMP_BGC"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_MOLECULAR_FINGERPRINT",
+      "title": "Molecular Fingerprint",
+      "identifier": "urn:asb:spine:COMP_MOLECULAR_FINGERPRINT"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_STRAIN_CORR_ONLY",
+      "title": "Strain Correlation Score Only",
+      "identifier": "urn:asb:spine:COND_STRAIN_CORR_ONLY"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_STD_STRAIN_CORR_ONLY",
+      "title": "Standardised Strain Correlation Score Only",
+      "identifier": "urn:asb:spine:COND_STD_STRAIN_CORR_ONLY"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_IOKR_ONLY",
+      "title": "IOKR Score Only",
+      "identifier": "urn:asb:spine:COND_IOKR_ONLY"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_COMBINED_SCORES",
+      "title": "Combined Strain Correlation and IOKR Scores",
+      "identifier": "urn:asb:spine:COND_COMBINED_SCORES"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_SIZE_LARGE_GCF_MF",
+      "title": "Large GCF and MF Size",
+      "identifier": "urn:asb:spine:COND_SIZE_LARGE_GCF_MF"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_SIZE_SMALL_GCF_MF",
+      "title": "Small GCF and MF Size",
+      "identifier": "urn:asb:spine:COND_SIZE_SMALL_GCF_MF"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_MIBIG_GNPS_EVAL",
+      "title": "MIBiG-GNPS Paired Evaluation",
+      "identifier": "urn:asb:spine:COND_MIBIG_GNPS_EVAL"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_CRUSEMANN_EVAL",
+      "title": "Cr\u00fcsemann Dataset Evaluation",
+      "identifier": "urn:asb:spine:COND_CRUSEMANN_EVAL"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_GROSS_EVAL",
+      "title": "Gross Dataset Evaluation",
+      "identifier": "urn:asb:spine:COND_GROSS_EVAL"
+    },
+    {
+      "@type": "asb:ExperimentalCondition",
+      "id": "asb:spine_COND_LEAO_EVAL",
+      "title": "Le\u00e3o Dataset Evaluation",
+      "identifier": "urn:asb:spine:COND_LEAO_EVAL"
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_STD_SCORE_FAVORS_STRONG_CORR",
+      "title": "Standardised Score Comparison (Fig 2A example)",
+      "identifier": "urn:asb:spine:METRIC_STD_SCORE_FAVORS_STRONG_CORR",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_STD_STRAIN_CORR_ONLY"
+        },
+        {
+          "id": "asb:spine_COND_SIZE_LARGE_GCF_MF"
+        },
+        {
+          "id": "asb:spine_COND_SIZE_SMALL_GCF_MF"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_COMBINED_IMPROVES_RATIO",
+      "title": "Improved Validated Link Ratio (Combined vs Individual)",
+      "identifier": "urn:asb:spine:METRIC_COMBINED_IMPROVES_RATIO",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_COMBINED_SCORES"
+        },
+        {
+          "id": "asb:spine_COND_STD_STRAIN_CORR_ONLY"
+        },
+        {
+          "id": "asb:spine_COND_IOKR_ONLY"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_IOKR_TRAINING_SIZE",
+      "title": "IOKR Training Set Size",
+      "identifier": "urn:asb:spine:METRIC_IOKR_TRAINING_SIZE",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_MIBIG_GNPS_EVAL"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_MIBIG_GNPS_PAIRS_COUNT",
+      "title": "MIBiG-GNPS BGC-Spectrum Pair Count",
+      "identifier": "urn:asb:spine:METRIC_MIBIG_GNPS_PAIRS_COUNT",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_MIBIG_GNPS_EVAL"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_IOKR_TRAINING_TIME_REDUCTION",
+      "title": "IOKR Training Time Reduction",
+      "identifier": "urn:asb:spine:METRIC_IOKR_TRAINING_TIME_REDUCTION",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_IOKR_ONLY"
+        }
+      ]
+    },
+    {
+      "@type": "IAO:0000109",
+      "id": "asb:spine_METRIC_IOKR_CLASSIFICATION_TIME_REDUCTION",
+      "title": "IOKR Classification Time Reduction",
+      "identifier": "urn:asb:spine:METRIC_IOKR_CLASSIFICATION_TIME_REDUCTION",
+      "asb:appliesUnderCondition": [
+        {
+          "id": "asb:spine_COND_IOKR_ONLY"
+        }
+      ]
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_SIZE_BIAS_STRAIN_CORR",
+      "title": "Size Bias in Strain Correlation Score",
+      "identifier": "urn:asb:spine:RESULT_SIZE_BIAS_STRAIN_CORR"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_STD_SCORE_FIXES_BIAS",
+      "title": "Standardisation Fixes Size Bias",
+      "identifier": "urn:asb:spine:RESULT_STD_SCORE_FIXES_BIAS"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_IOKR_NOT_CLASS_SPECIFIC",
+      "title": "IOKR is Not Product-Class Specific",
+      "identifier": "urn:asb:spine:RESULT_IOKR_NOT_CLASS_SPECIFIC"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_COMPLEMENTARITY",
+      "title": "Strain Correlation and IOKR are Complementary",
+      "identifier": "urn:asb:spine:RESULT_COMPLEMENTARITY"
+    },
+    {
+      "@type": "asb:Result",
+      "id": "asb:spine_RESULT_NPLINKER_UTILITY",
+      "title": "NPLinker Demonstrated Utility",
+      "identifier": "urn:asb:spine:RESULT_NPLINKER_UTILITY"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_ECTOINE",
+      "title": "ectoine",
+      "identifier": "urn:asb:spine:COMP_ECTOINE"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_CHLORAMPHENICOL",
+      "title": "chloramphenicol",
+      "identifier": "urn:asb:spine:COMP_CHLORAMPHENICOL"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_TAMBROMYCIN",
+      "title": "tambromycin",
+      "identifier": "urn:asb:spine:COMP_TAMBROMYCIN"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_TIKITERICICIN",
+      "title": "tikitericicin",
+      "identifier": "urn:asb:spine:COMP_TIKITERICICIN"
+    },
+    {
+      "@type": "asb:Component",
+      "id": "asb:spine_COMP_SCLERIC_ACID",
+      "title": "scleric acid",
+      "identifier": "urn:asb:spine:COMP_SCLERIC_ACID"
+    },
+    {
+      "@type": "p-plan:Plan",
+      "id": "asb:spine_ARTIFACT_GCF_MF_LINKS",
+      "title": "GCF-MF Hypothetical Links",
+      "identifier": "urn:asb:spine:ARTIFACT_GCF_MF_LINKS",
+      "abstraction_level": "asb:GeneratedArtifactLevel"
+    }
+  ]
+}

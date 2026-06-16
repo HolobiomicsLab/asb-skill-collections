@@ -1,0 +1,548 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "integrate.pdf",
+      "role": "main_article",
+      "sha256": "328ab2321c22b4ee4a0b4efd842f16364fb568636f24dea8d4723721f0be109b"
+    }
+  ],
+  "created_at": "2026-06-15T08:26:15.469347+00:00",
+  "crossref_doi": "10.1371/journal.pcbi.1009337",
+  "data_accessions": [
+    {
+      "accession": "MTBLS3597",
+      "evidence_span": "etails on data processing the at www.ebi.ac.uk/metabolights/MTBLS3597. Normalized data (on utational analyses are reported in S1",
+      "kind": "metabolights",
+      "url": "https://www.ebi.ac.uk/metabolights/MTBLS3597"
+    },
+    {
+      "accession": "PRJNA767228",
+      "evidence_span": "sing the h abundance was measured i Raw reads are available PRJNA767228. ENGRO2 model recon Starting from ENGRO1 [44 core model of",
+      "kind": "bioproject",
+      "url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA767228"
+    }
+  ],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "RAS (Reaction Activity Score) matrix for five breast cell lines (MCF102A, SKBR3, MCF7, MDAMB231, MDAMB361) from Zenodo deposit 10.5281/zenodo.5824504",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "RPS (Reaction Propensity Score) matrix for five breast cell lines computed from intracellular metabolomics data (LC-MS, deposited at MTBLS3597) and reaction stoichiometry",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "FFD (Feasible Flux Distribution) samples for five cell lines uniformly sampled from constrained metabolic models using optGpSampler",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Metadata table identifying the 81 reactions with complete substrate metabolomics coverage and their Gene-Protein-Reaction associations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Cohen's kappa concordance scores (RPSvsRAS and RPSvsFFD) for all 81 reactions with complete substrate coverage, formatted as a two-column numeric table with reaction names and kappa values",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Scatter plot (RPSvsFFD kappa vs. RPSvsRAS kappa) with reactions colored by RASvsFFD concordance score and labeled for kappa \u2265 0.2",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Heatmap of RPSvsRAS and RPSvsFFD Cohen's kappa values for reactions with RPSvsFFD concordance > 0.2, ordered by RPSvsFFD score",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Empirical p-values and Benjamini-Hochberg adjusted p-values (FDR < 5%) for each reaction's kappa concordance, assessed against the null distribution from random permutation of RPS variations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "Cohen's kappa quantifies agreement between two raters beyond chance; values 0.21\u20130.40 indicate fair agreement, 0.41\u20130.60 moderate, 0.61\u20130.80 good, and 0.81\u20131.0 very good agreement.",
+    "Reaction Activity Score (RAS) aggregates transcript abundance for enzyme subunits (AND logic) and isoforms (OR logic) to predict the maximal theoretical flux capacity of an enzyme-catalyzed reaction.",
+    "Reaction Propensity Score (RPS) is computed from metabolomics data using the mass action law: the product of substrate concentrations each raised to their stoichiometric coefficient, predicting flux capacity constrained by substrate availability.",
+    "A reaction is considered metabolically regulated if RPS and FFD (flux) directional changes agree (high RPSvsFFD kappa) but RAS and FFD changes disagree, indicating substrate availability, not enzyme abundance, determines flux variation.",
+    "Reactions lacking complete quantification of all substrates in the metabolomics dataset are excluded from concordance analysis to ensure valid RPS computation."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file 10.5281/zenodo.5824504 is accessible and contains RAS and RPS datasets",
+      "verify RAS dataset file exists and contains reaction scores for all five cell lines (MCF102A, SKBR3, MCF7, MDAMB231, MDAMB361)",
+      "verify RPS dataset file exists and contains reaction propensity scores for all five cell lines",
+      "verify metabolomics coverage metadata file identifies exactly 81 reactions with full substrate abundance quantification",
+      "verify that input datasets contain directional change annotations (up/down/no-change) for pairwise comparisons across five cell lines",
+      "script_runs: Cohen's kappa computation script completes without error on RAS and RPS input matrices",
+      "output_matches_reference: Cohen's kappa concordance values for RASvsRPS comparisons match reported values in Fig 4A (robust to rounding to 2 decimal places)",
+      "output_matches_reference: number of reactions with RPSvsRAS concordance score \u22650.2 equals 44 as reported in text",
+      "output_matches_reference: number of reactions with RPSvsFFD concordance score \u22650.2 equals 13 as reported in text",
+      "verify that reactions without GPR associations are correctly excluded from RASvsRPS concordance analysis",
+      "verify that reactions missing any substrate metabolomics measurement are excluded from the 81-reaction subset"
+    ],
+    "expert_review": [
+      "Cohen's kappa concordance calculation follows standard definition: (observed agreement \u2212 expected agreement by chance) / (1 \u2212 expected agreement by chance)",
+      "interpretation of Cohen's kappa thresholds (poor <0.2, fair 0.21\u20130.40, moderate 0.41\u20130.60, good 0.61\u20130.80, very good 0.81\u20131.0) aligns with cited references [51]",
+      "directionality of sign changes (up=+1, down=\u22121, no-change=0) is correctly determined from Mann-Whitney U test (p<0.05) and log\u2082 fold-change threshold (\u226520% or \u2264\u221220%) as specified in Material and methods",
+      "statistical tests (Mann-Whitney U for FFD, t-test for RPS) are applied correctly to compare distributions across pairwise cell-line comparisons",
+      "any discrepancies between reproduced and reported kappa values are investigated for potential causes: sampling variability in FFD (10 batches of 100k solutions), RPS sensitivity to kinetic assumptions, or threshold parameter choices"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] What are the Cohen's kappa concordance values between RAS and RPS directional changes for metabolic reactions with complete substrate metabolomics coverage across the five breast cell lines?: 'We quantified the level of concordance of the 10 variation signs (1 for each pair of cell lines) for a given pair of datasets by means of the Cohen's kappa metric'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Concordance analysis of RAS and RPS directional variations across the 81 metabolic reactions with full substrate abundances yields Cohen's kappa values reported in a heatmap, with reactions ranked according to RPSvsFFD concordance scores and only those with scores greater than 0.2 displayed.: 'The heatmap in Fig 4B reports the RPSvsRAS and the RPSvsFFD concordance scores (Cohen's kappa) of ENGRO2 metabolic reactions, limited to the subset (of cardinality 81) of reactions for which'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[results] RAS (Reaction Activity Score) matrix for five breast cell lines (MCF102A, SKBR3, MCF7, MDAMB231, MDAMB361) from Zenodo deposit 10.5281/zenodo.5824504: 'available in Zenodo under permanent identifier 10.5281/zenodo.5824504'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[results] RPS (Reaction Propensity Score) matrix for five breast cell lines computed from intracellular metabolomics data (LC-MS, deposited at MTBLS3597) and reaction stoichiometry: 'raw data are deposited at www.ebi.ac.uk/metabolights/MTBLS3597'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[results] FFD (Feasible Flux Distribution) samples for five cell lines uniformly sampled from constrained metabolic models using optGpSampler: 'we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Metadata table identifying the 81 reactions with complete substrate metabolomics coverage and their Gene-Protein-Reaction associations: 'limited to the subset (of cardinality 81) of reactions for which quantification of all substrate abundances was available'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Cohen's kappa concordance scores (RPSvsRAS and RPSvsFFD) for all 81 reactions with complete substrate coverage, formatted as a two-column numeric table with reaction names and kappa values: 'We quantified the level of concordance of the 10 variation signs (1 for each pair of cell lines) for a given pair of datasets by means of the Cohen's kappa metric'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Scatter plot (RPSvsFFD kappa vs. RPSvsRAS kappa) with reactions colored by RASvsFFD concordance score and labeled for kappa \u2265 0.2: 'Fig 4A reports the concordance level between RAS and RPS variations (briefly RPSvsRAS) versus the concordance level between RPS and FFD variation (briefly RPSvsFFD), for the 81 metabolic reactions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Heatmap of RPSvsRAS and RPSvsFFD Cohen's kappa values for reactions with RPSvsFFD concordance > 0.2, ordered by RPSvsFFD score: 'The heatmap in Fig 4B reports the RPSvsRAS and the RPSvsFFD concordance scores (Cohen's kappa) of ENGRO2 metabolic reactions, limited to the subset (of cardinality 81)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Empirical p-values and Benjamini-Hochberg adjusted p-values (FDR < 5%) for each reaction's kappa concordance, assessed against the null distribution from random permutation of RPS variations: 'we adjusted it with the Benjamini and Hochberg procedure to keep the False Discovery Rate (FDR) below 5%. After FDR correction of the p-values, the concordance between RPSs and FFDs resulted'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[results] COBRApy: 'we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[results] optGpSampler: 'we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Mann-Whitney U test: 'we first performed the Mann-Whitney U test [73] (p-value < 0.05) between the FFD distributions of each pair of the five cell lines'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Cohen's kappa metric: 'We quantified the level of concordance of the 10 variation signs (1 for each pair of cell lines) for a given pair of datasets by means of the Cohen's kappa metric, which has been commonly used to'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Benjamini-Hochberg FDR correction: 'we adjusted it with the Benjamini and Hochberg procedure to keep the False Discovery Rate (FDR) below 5%'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Exact formula and implementation details for Mann-Whitney U test p-value threshold and log\u2082 fold-change threshold (20%) application to determine directional signs for FFD variations across pairwise cell-line comparisons: 'At first instance, a positive sign was registered if the distribution of samples values of the first member of the comparison was statistically higher (according to the statistical tests described'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Specific file names and internal structure of the Zenodo 10.5281/zenodo.5824504 deposit containing RAS and RPS datasets, and whether they are pre-computed or require derivation from raw RNA-seq and metabolomics files: 'available in Zenodo under permanent identifier 10.5281/zenodo.5824504'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_018",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Detailed filtering and data preprocessing steps applied to raw metabolomics data (from MetaboLights MTBLS3597) prior to RPS computation, including normalization, missing value handling, and quality control thresholds: 'raw data are deposited at www.ebi.ac.uk/metabolights/MTBLS3597. Normalized data (on protein \u03bcg) used for computational analyses are reported in S1 File.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_019",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Rationale and justification for using Cohen's kappa (a discrete/categorical agreement metric) rather than a continuous concordance measure (e.g., Spearman or Pearson correlation) given that RAS and RPS are continuous-valued scores before sign discretization: 'We quantified the level of concordance of the 10 variation signs (1 for each pair of cell lines) for a given pair of datasets by means of the Cohen's kappa metric, which has been commonly used to'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_020",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Explicit documentation of how the 81-reaction subset with 'full substrate abundances available' was determined, including what constitutes 'full coverage' and how reactions with missing or below-detection-limit metabolites are handled: 'If one single reaction substrate is missing from the metabolomics measurements, the reaction is omitted from the dataset.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import pandas as pd; import numpy as np; from scipy.stats import mannwhitneyu; from statsmodels.stats.contingency_tables import mcnemar; import warnings; warnings.filterwarnings('ignore'); ras = pd.read_csv('{inputs.ras_matrix}', index_col=0); rps = pd.read_csv('{inputs.rps_matrix}', index_col=0); ffd = pd.read_csv('{inputs.ffd_samples}', index_col=0); meta = pd.read_csv('{inputs.reaction_metadata}', index_col=0); covered_rxns = meta[meta['complete_coverage']].index.tolist() if 'complete_coverage' in meta.columns else meta.index.tolist(); ras_f = ras.loc[ras.index.isin(covered_rxns)]; rps_f = rps.loc[rps.index.isin(covered_rxns)]; ffd_f = ffd.loc[ffd.index.isin(covered_rxns)]; from sklearn.metrics import cohen_kappa_score; results = []; cell_lines = ras_f.columns[:5]; pairs = [(cell_lines[i], cell_lines[j]) for i in range(5) for j in range(i+1, 5)]; for rxn in covered_rxns: kappas_ras_rps = []; kappas_rps_ffd = []; kappas_ras_ffd = []; for c1, c2 in pairs: ras_sign = np.sign(ras_f.loc[rxn, c1] - ras_f.loc[rxn, c2]); rps_sign = np.sign(rps_f.loc[rxn, c1] - rps_f.loc[rxn, c2]); ffd_sign = np.sign(ffd_f.loc[rxn, c1] - ffd_f.loc[rxn, c2]); if ras_sign != 0 and rps_sign != 0: kappas_ras_rps.append(cohen_kappa_score([ras_sign], [rps_sign])); if rps_sign != 0 and ffd_sign != 0: kappas_rps_ffd.append(cohen_kappa_score([rps_sign], [ffd_sign])); if ras_sign != 0 and ffd_sign != 0: kappas_ras_ffd.append(cohen_kappa_score([ras_sign], [ffd_sign])); mean_kappa_ras_rps = np.mean(kappas_ras_rps) if kappas_ras_rps else np.nan; mean_kappa_rps_ffd = np.mean(kappas_rps_ffd) if kappas_rps_ffd else np.nan; mean_kappa_ras_ffd = np.mean(kappas_ras_ffd) if kappas_ras_ffd else np.nan; results.append({'reaction': rxn, 'kappa_rps_vs_ras': mean_kappa_ras_rps, 'kappa_rps_vs_ffd': mean_kappa_rps_ffd, 'kappa_ras_vs_ffd': mean_kappa_ras_ffd}); results_df = pd.DataFrame(results); results_df.to_csv('concordance_kappa_scores.csv', index=False); print(results_df); print('Concordance analysis complete. Output: concordance_kappa_scores.csv')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "light",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "concordance_kappa_table.csv",
+  "expected_outputs": [
+    "Cohen's kappa concordance scores (RPSvsRAS and RPSvsFFD) for all 81 reactions with complete substrate coverage, formatted as a two-column numeric table with reaction names and kappa values",
+    "Scatter plot (RPSvsFFD kappa vs. RPSvsRAS kappa) with reactions colored by RASvsFFD concordance score and labeled for kappa \u2265 0.2",
+    "Heatmap of RPSvsRAS and RPSvsFFD Cohen's kappa values for reactions with RPSvsFFD concordance > 0.2, ordered by RPSvsFFD score",
+    "Empirical p-values and Benjamini-Hochberg adjusted p-values (FDR < 5%) for each reaction's kappa concordance, assessed against the null distribution from random permutation of RPS variations"
+  ],
+  "finding": "Concordance analysis of RAS and RPS directional variations across the 81 metabolic reactions with full substrate abundances yields Cohen's kappa values reported in a heatmap, with reactions ranked according to RPSvsFFD concordance scores and only those with scores greater than 0.2 displayed.",
+  "github_name": "qLSLab/integrate",
+  "input_from": "task_001",
+  "inputs": [
+    "RAS (Reaction Activity Score) matrix for five breast cell lines (MCF102A, SKBR3, MCF7, MDAMB231, MDAMB361) from Zenodo deposit 10.5281/zenodo.5824504",
+    "RPS (Reaction Propensity Score) matrix for five breast cell lines computed from intracellular metabolomics data (LC-MS, deposited at MTBLS3597) and reaction stoichiometry",
+    "FFD (Feasible Flux Distribution) samples for five cell lines uniformly sampled from constrained metabolic models using optGpSampler",
+    "Metadata table identifying the 81 reactions with complete substrate metabolomics coverage and their Gene-Protein-Reaction associations"
+  ],
+  "keywords": [
+    "constraint-based metabolic modeling",
+    "metabolic flux prediction",
+    "transcriptomics integration",
+    "metabolomics integration",
+    "multi-level metabolic regulation",
+    "gene expression",
+    "substrate availability",
+    "enzyme kinetics",
+    "Michaelis-Menten law",
+    "systems metabolism"
+  ],
+  "landmark_outputs": [
+    "ras_variation_signs.csv",
+    "rps_variation_signs.csv",
+    "ffd_variation_signs.csv",
+    "pairwise_kappa_matrix.csv",
+    "scatter_concordance_plot.png",
+    "heatmap_kappa_reactions.png"
+  ],
+  "linked_result_ids": [
+    "result_031",
+    "result_033",
+    "result_030",
+    "result_032",
+    "result_042",
+    "result_043",
+    "result_044",
+    "result_045",
+    "result_046",
+    "result_047",
+    "result_048",
+    "result_049"
+  ],
+  "methodology_summary": [
+    "Load RAS vectors (derived from RNA-seq and GPR rules) and RPS vectors (derived from LC-MS metabolomics and stoichiometry) for five cell lines from the Zenodo deposit.",
+    "For each of 10 pairwise cell-line comparisons and each reaction, perform Mann-Whitney U test to assign directional change sign (+1 up, \u22121 down, 0 no-change) to RAS, RPS, and FFD distributions.",
+    "Filter to 81 reactions with complete substrate metabolomics coverage, excluding reactions missing any substrate quantification.",
+    "Compute Cohen's kappa agreement between RAS and RPS directional signs for each reaction, accounting for chance agreement.",
+    "Compute Cohen's kappa agreement between RPS and FFD directional signs (RPSvsFFD) and between RAS and FFD signs (RASvsFFD) for each reaction.",
+    "Assign empirical p-values by permuting RPS variation signs 1000 times and comparing the distribution of kappa values to the original; apply Benjamini-Hochberg FDR correction (threshold \u03b1 = 0.05).",
+    "Validation: verify that reactions flagged as statistically significant (post-FDR) match the subset identified in the published paper (ACONT, ASPTA, RPI, RPE) and that the empirical agreement distribution significantly exceeds the Q\u2013Q quantile distribution of two independent random datasets.",
+    "References: source article (DOI: 10.1371/journal.pcbi.1009337); MTBLS3597 (https://www.ebi.ac.uk/metabolights/MTBLS3597); PRJNA767228 (https://www.ncbi.nlm.nih.gov/bioproject/PRJNA767228)"
+  ],
+  "missing_information": [
+    "Exact formula and implementation details for Mann-Whitney U test p-value threshold and log\u2082 fold-change threshold (20%) application to determine directional signs for FFD variations across pairwise cell-line comparisons",
+    "Specific file names and internal structure of the Zenodo 10.5281/zenodo.5824504 deposit containing RAS and RPS datasets, and whether they are pre-computed or require derivation from raw RNA-seq and metabolomics files",
+    "Detailed filtering and data preprocessing steps applied to raw metabolomics data (from MetaboLights MTBLS3597) prior to RPS computation, including normalization, missing value handling, and quality control thresholds",
+    "Rationale and justification for using Cohen's kappa (a discrete/categorical agreement metric) rather than a continuous concordance measure (e.g., Spearman or Pearson correlation) given that RAS and RPS are continuous-valued scores before sign discretization",
+    "Explicit documentation of how the 81-reaction subset with 'full substrate abundances available' was determined, including what constitutes 'full coverage' and how reactions with missing or below-detection-limit metabolites are handled"
+  ],
+  "parameters": [],
+  "primary_domain": "multi-omics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/tsne_plot"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the Cohen's kappa concordance values between RAS and RPS directional changes for metabolic reactions with complete substrate metabolomics coverage across the five breast cell lines?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "abstract",
+    "intro",
+    "results"
+  ],
+  "skills": [
+    "metabolic-flux-concordance-analysis",
+    "cohen-kappa-inter-rater-reliability",
+    "reaction-activity-score-computation",
+    "reaction-propensity-score-mass-action-law",
+    "feasible-flux-distribution-sampling",
+    "multi-omics-dataset-integration",
+    "statistical-significance-testing-metabolic-networks"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/pkg_integrate",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "INTEGRATE_system",
+    "INTEGRATE_architecture",
+    "YSI_tool",
+    "cohens_kappa_tool",
+    "github_repo",
+    "zenodo_repo",
+    "breast_cellline_dataset",
+    "result_tsne_separation",
+    "result_81_reactions",
+    "result_growth_yield_correlation",
+    "result_lactate_glucose_ratio",
+    "FVA_tool"
+  ],
+  "subdomains": [
+    "multi-omics-integration",
+    "computational-metabolomics",
+    "fluxomics"
+  ],
+  "subtask_categories": [
+    "data-analysis",
+    "statistical-analysis"
+  ],
+  "synthesized_from": null,
+  "task_description": "Using deposited RAS and RPS datasets from the INTEGRATE Zenodo archive (10.5281/zenodo.5824504), compute Cohen's kappa concordance scores between RAS and RPS directional changes across all pairwise comparisons of the five breast cell lines for the 81 reactions with complete substrate metabolomics coverage, and reproduce the concordance heatmap and scatter plot reported in Fig 4A\u2013B.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "RAS (Reaction Activity Score) matrix for five cell lines",
+      "port_id": "ras_matrix",
+      "resolved_via": null,
+      "source": "task_001/tsne_plot",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "RPS (Reaction Propensity Score) matrix for five cell lines",
+      "port_id": "rps_matrix",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "FFD (Feasible Flux Distribution) sample collections for five cell lines",
+      "port_id": "ffd_samples",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Reaction metadata with GPR associations and substrate coverage flags",
+      "port_id": "reaction_metadata",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Compute and reproduce Cohen's kappa concordance scores between RAS and RPS directional changes for the 81 reactions with complete metabolomics substrate coverage using the INTEGRATE deposited datasets.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Cohen's kappa concordance scores for all 81 reactions",
+      "port_id": "kappa_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Scatter plot of RPSvsFFD vs. RPSvsRAS kappa concordance",
+      "port_id": "scatter_plot",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Heatmap of kappa values for reactions with concordance > 0.2",
+      "port_id": "heatmap",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Empirical and adjusted p-values for kappa concordance",
+      "port_id": "pvalue_table",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "flux-analysis",
+    "multi-omics-integration",
+    "pathway-analysis",
+    "differential-abundance-analysis"
+  ],
+  "title": "Reproduce concordance analysis between RAS and RPS variants for 81 fully covered reactions",
+  "tools": [
+    "constraint-based stoichiometric metabolic models",
+    "COBRApy",
+    "optGpSampler",
+    "Mann-Whitney U test",
+    "Cohen's kappa metric",
+    "Benjamini-Hochberg FDR correction"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load RAS (Reaction Activity Score) vectors for all five cell lines from the deposited Zenodo dataset, derived from RNA-seq read counts and Gene-Protein-Reaction associations. 2. Load RPS (Reaction Propensity Score) vectors for all five cell lines from the deposited dataset, computed as the product of substrate concentrations raised to stoichiometric coefficients per the mass action law. 3. For each of the 10 pairwise cell-line comparisons, perform Mann-Whitney U testing (p < 0.05) on RAS and RPS distributions to determine the sign of directional change (up, down, or no-change) for each reaction. 4. Filter to retain only the 81 reactions for which all substrate abundances were quantified in the LC-MS metabolomics dataset. 5. For each reaction and each pairwise comparison, compute the Cohen's kappa coefficient quantifying agreement between RAS variation sign and RPS variation sign, accounting for chance agreement. 6. Generate a scatter plot with RPSvsRAS kappa on the y-axis and RPSvsFFD kappa on the x-axis, coloring points by RASvsFFD concordance score and labeling reactions with fair or better concordance (kappa \u2265 0.2). 7. Generate a heatmap displaying RPSvsRAS and RPSvsFFD kappa values for all 81 reactions, ordered by RPSvsFFD score. 8. Validation: verify that the produced kappa values and agreement distributions match those displayed in the published Fig 4A\u2013B and that the empirical probability of agreement between RAS and RPS variations exceeds that expected from two independent random datasets."
+}

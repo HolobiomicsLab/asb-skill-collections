@@ -1,0 +1,11 @@
+name: Bokeh
+slug: bokeh
+evidence_spans:
+- integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)
+- 'Extension: BOKEH'
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+source_repos:
+- OpenMS/pyopenms_viz
+schema_version: 0.2.0

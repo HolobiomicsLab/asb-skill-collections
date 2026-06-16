@@ -1,0 +1,21 @@
+  figures/c-add-doc.svg
+  figures/c-bug.svg
+  figures/c-clipboard.svg
+  figures/c-controls-play.svg
+  figures/c-db.svg
+  figures/c-document.svg
+  figures/c-documents.svg
+  figures/c-download.svg
+  figures/c-dragndrop.svg
+  figures/c-export.svg
+  figures/c-fbmn.svg
+  figures/c-filter-down.svg
+  figures/c-filter-up.svg
+  figures/c-fingerprint.svg
+  figures/c-fmet.svg
+  figures/c-folder-close.svg
+  figures/c-folder-file.svg
+  figures/c-folder-open.svg
+  figures/c-folder.svg
+  figures/sirius-icon.png
+paper.md

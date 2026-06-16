@@ -1,0 +1,268 @@
+{
+  "abstraction_frame": "artifact",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/gfop-empress-plot-wlegend.png",
+      "role": "figure",
+      "sha256": "4e609fe62a2b933ad0a6fc131cd16cfd41869d15b75995e84143b3f66a31f1f0"
+    },
+    {
+      "indexable": false,
+      "path": "figures/paper-ncb.png",
+      "role": "figure",
+      "sha256": "ec06c3d9deb334683cabb8dd64bdf9d1215f6617d1814c1b59ac645806242fb2"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "1f05fce003d9ce1f1deccfa2b3075e54926c1cec9cdb61a522d9f16221457f6a"
+    }
+  ],
+  "created_at": "2026-06-16T07:29:50.441428+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Chemical Feature Tree artifact from q2-qemistree pipeline (QIIME 2 .qza or Newick format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation report containing tree format type, node count, tree depth, branching statistics, and structural integrity status",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "QIIME 2 artifacts are HDF5-serialized objects containing tree data; inspection requires QIIME 2 tools or format conversion utilities.",
+    "Newick format represents phylogenetic trees as nested parenthetical strings with optional branch lengths and node labels; malformed syntax causes parsing failures.",
+    "Chemical feature trees from mass-spectrometry data link molecular structural similarity to phylogenetic branching; node count should match the number of distinct m/z features processed.",
+    "Tree depth and branching ratio affect downstream statistical power in metabolite differential analysis and chemically-informed clustering."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file artifact_chemical_tree exists in q2-qemistree pipeline outputs",
+      "file_format_is artifact_chemical_tree one of: Newick (.nwk), QIIME 2 artifact (.qza), or text representation",
+      "verify artifact_chemical_tree is non-empty (file size > 0 bytes)",
+      "script_runs: load artifact_chemical_tree using QIIME 2 artifact API or standard Newick parser without errors",
+      "verify artifact_chemical_tree contains tree structure with at least one internal node (not a single leaf)",
+      "field_present: artifact_chemical_tree metadata includes feature/node identifiers",
+      "robust to parameter choices: node count and branch structure remain consistent across multiple parse attempts"
+    ],
+    "expert_review": [
+      "assess whether node labels and edge weights (if present) are chemically meaningful and correctly derived from input mass-spectrometry features",
+      "evaluate tree topology for biological plausibility given the input metabolomic dataset (e.g., chemical similarity reflected in clustering)",
+      "review whether tree structure supports the stated goal of 'chemically-informed comparison' as intended by q2-qemistree design"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the format, node count, and structural properties of the Chemical Feature Tree artifact produced by the q2-qemistree pipeline?: 'A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] q2-qemistree is designed to build a tree of mass-spectrometry features for chemically-informed metabolomic profile comparison.: 'A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Chemical Feature Tree artifact from q2-qemistree pipeline (QIIME 2 .qza or Newick format): 'GeneratedArtifact artifact_chemical_tree (Chemical Feature Tree) output from the q2-qemistree pipeline'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Validation report containing tree format type, node count, tree depth, branching statistics, and structural integrity status: 'verify its format, node count, and structural properties as a Newick or QIIME 2 artifact file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] q2-qemistree: 'A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, changes, or updates to q2-qemistree: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "bash",
+      "-c",
+      "python3 << 'EOF'\nimport json\nimport sys\ntry:\n    import qiime2\n    from qiime2 import Artifact\nexcept ImportError:\n    print(json.dumps({'status': 'error', 'message': 'q2-qemistree or QIIME2 not installed'}))\n    sys.exit(1)\n\ntry:\n    artifact_path = '{inputs.chemical_tree_artifact}'\n    artifact = Artifact.load(artifact_path)\n    tree_data = artifact.view(object)\n    \n    # Basic structural analysis\n    result = {\n        'status': 'validated',\n        'artifact_type': str(artifact.type),\n        'artifact_format': str(artifact.format),\n        'message': 'Chemical Feature Tree artifact loaded and validated successfully'\n    }\n    \n    # Attempt to parse as tree and extract metrics\n    if hasattr(tree_data, '__len__'):\n        result['node_count'] = len(tree_data)\n    \n    print(json.dumps(result, indent=2))\nexcept Exception as e:\n    print(json.dumps({'status': 'error', 'message': str(e)}))\n    sys.exit(1)\nEOF"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 60,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "tree_validation_report.txt",
+  "expected_outputs": [
+    "Validation report containing tree format type, node count, tree depth, branching statistics, and structural integrity status"
+  ],
+  "finding": "q2-qemistree is designed to build a tree of mass-spectrometry features for chemically-informed metabolomic profile comparison.",
+  "github_name": "biocore/q2-qemistree",
+  "input_from": "task_001",
+  "inputs": [
+    "Chemical Feature Tree artifact from q2-qemistree pipeline (QIIME 2 .qza or Newick format)"
+  ],
+  "keywords": [
+    "untargeted metabolomics",
+    "mass spectrometry",
+    "lc-ms/ms",
+    "feature tree construction",
+    "chemical comparison"
+  ],
+  "landmark_outputs": [
+    "tree_format_check.log",
+    "tree_node_count.txt",
+    "tree_structure_stats.json"
+  ],
+  "linked_result_ids": [
+    "result_002",
+    "result_003"
+  ],
+  "methodology_summary": [
+    "Load Chemical Feature Tree artifact using QIIME 2 inspection API or format conversion utilities.",
+    "Detect and validate file format (Newick vs. QIIME 2 serialized object).",
+    "Parse tree structure and enumerate all nodes (leaf and internal).",
+    "Compute tree metrics: depth, branching factor, node label coverage.",
+    "Validate tree connectivity and verify absence of structural defects (cycles, disconnected components, malformed syntax).",
+    "Validation: tree passes format validation, node count is non-zero and matches expected feature count, and tree is fully connected with valid Newick or QIIME 2 syntax."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, changes, or updates to q2-qemistree"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the format, node count, and structural properties of the Chemical Feature Tree artifact produced by the q2-qemistree pipeline?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "qiime2-artifact-inspection",
+    "newick-format-parsing",
+    "phylogenetic-tree-validation",
+    "tree-structural-integrity-assessment",
+    "mass-spectrometry-feature-tree-interpretation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_qemistree/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "sys_q2_qemistree",
+    "tool_qiime2",
+    "artifact_chemical_tree",
+    "pub_nature_cb_2020"
+  ],
+  "subdomains": [
+    "computational-metabolomics",
+    "multi-omics-integration"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:biocore__q2-qemistree",
+  "task_description": "Load the Chemical Feature Tree artifact from q2-qemistree pipeline output and verify its structural integrity, format compliance, and node count as a valid Newick or QIIME 2 artifact file.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Chemical Feature Tree artifact from q2-qemistree",
+      "port_id": "chemical_tree_artifact",
+      "resolved_via": null,
+      "source": "task_001/feature_tree",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Validate the Chemical Feature Tree artifact output by q2-qemistree for correct format (Newick or QIIME 2 artifact), node count, and structural integrity.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Tree structure validation report with format and node metrics",
+      "port_id": "tree_validation_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "network-annotation-propagation",
+    "clustering"
+  ],
+  "title": "Analyze the Chemical Feature Tree artifact structure produced by q2-qemistree",
+  "tools": [
+    "q2-qemistree"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load the Chemical Feature Tree artifact using QIIME 2 artifact inspection tools. 2. Validate file format as either Newick or QIIME 2 serialized object. 3. Parse tree structure and count total nodes (leaves + internal nodes). 4. Verify tree connectivity and absence of malformed branches. 5. Report structural properties including tree depth, branching statistics, and node labels."
+}

@@ -1,0 +1,441 @@
+{
+ "schema": "asb-skill-task-links/1.0",
+ "links": {
+  "deseq2/task_001": {
+   "tool": "deseq2",
+   "task_kind": "reproduction",
+   "title": "Reproduce the count of genes with adjusted p-value < 0.1 in the airway dataset DESeq2 analysis",
+   "skills": [
+    "differential-gene-expression-analysis",
+    "count-data-normalization-rna-seq",
+    "dispersion-estimation-negative-binomial",
+    "statistical-hypothesis-testing-rna-seq",
+    "independent-filtering-multiple-testing-correction",
+    "fold-change-interpretation-and-ranking"
+   ]
+  },
+  "deseq2/task_002": {
+   "tool": "deseq2",
+   "task_kind": "reproduction",
+   "title": "Reproduce LFC shrinkage results for apeglm, normal, and ashr estimators on the airway dataset",
+   "skills": [
+    "rna-seq-differential-expression-analysis",
+    "log-fold-change-shrinkage-estimation",
+    "adaptive-prior-distribution-selection",
+    "bayesian-effect-size-moderation",
+    "ma-plot-visualization-and-interpretation",
+    "results-table-extraction-and-comparison"
+   ]
+  },
+  "deseq2/task_003": {
+   "tool": "deseq2",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the tximport-based count matrix ingestion step for DESeq2 using tximportData",
+   "skills": [
+    "transcript-abundance-quantification-import",
+    "transcript-to-gene-aggregation",
+    "deseqdataset-construction-from-quantification",
+    "count-matrix-format-validation",
+    "sample-metadata-preparation-and-assignment",
+    "rna-seq-experimental-design-specification"
+   ]
+  },
+  "deseq2/task_004": {
+   "tool": "deseq2",
+   "task_kind": "reproduction",
+   "title": "Reproduce the ~10x speedup of apeglm's nbinomC fast mode on the pasilla dataset",
+   "skills": [
+    "differential-gene-expression-analysis",
+    "independent-filtering-optimization",
+    "p-value-adjustment-methodology",
+    "hypothesis-weighting-statistical-control",
+    "rnaseq-count-matrix-analysis",
+    "factor-design-specification"
+   ]
+  },
+  "fgsea/task_001": {
+   "tool": "fgsea",
+   "task_kind": "reproduction",
+   "title": "Reproduce fgsea enrichment analysis on examplePathways and exampleRanks with default parameters",
+   "skills": [
+    "gene-set-enrichment-analysis",
+    "pathway-enrichment-statistical-ranking",
+    "gene-expression-ranking-preparation",
+    "gsea-result-interpretation-visualization",
+    "multiple-testing-correction-visualization"
+   ]
+  },
+  "fgsea/task_002": {
+   "tool": "fgsea",
+   "task_kind": "reproduction",
+   "title": "Reproduce GESECA analysis on GSE200250 Th2 time-course full expression matrix and verify top pathway scores",
+   "skills": [
+    "gene-expression-matrix-normalization",
+    "pathway-set-enrichment-analysis",
+    "temporal-gene-expression-dynamics",
+    "gene-identifier-deduplication-and-filtering",
+    "multi-conditional-data-coregulation-scoring"
+   ]
+  },
+  "fgsea/task_003": {
+   "tool": "fgsea",
+   "task_kind": "reproduction",
+   "title": "Reproduce GESECA PCA-reduced analysis on GSE200250 and verify score similarity to full-matrix results",
+   "skills": [
+    "microarray-expression-normalization-log-quantile",
+    "gene-filtering-by-expression-level",
+    "principal-component-analysis-dimensionality-reduction",
+    "gene-set-enrichment-scoring-coregulation",
+    "pathway-activity-correlation-analysis",
+    "statistical-comparison-p-value-conservation"
+   ]
+  },
+  "fgsea/task_004": {
+   "tool": "fgsea",
+   "task_kind": "reproduction",
+   "title": "Reproduce GESECA scRNA-seq analysis on GSE116240 atherosclerosis data with KEGG_LEGACY pathways",
+   "skills": [
+    "single-cell-rna-seq-quality-control-and-normalization",
+    "seurat-workflow-orchestration-for-scrnaseq",
+    "dimensionality-reduction-via-reverse-pca",
+    "pathway-cell-type-association-validation",
+    "reduction-plot-interpretation-and-visualization"
+   ]
+  },
+  "fgsea/task_005": {
+   "tool": "fgsea",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the fgseaMultilevel adaptive multilevel MCMC P-value estimation component under eps=0 exact mode",
+   "skills": [
+    "monte-carlo-p-value-estimation-adaptive",
+    "statistical-precision-comparison-ranked-outputs",
+    "genomic-database-identifier-mapping"
+   ]
+  },
+  "limmavoom/task_001": {
+   "tool": "limmavoom",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct voom precision-weight computation for RNA-seq count data",
+   "skills": [
+    "empirical-bayes-variance-estimation",
+    "moderated-t-statistic-computation",
+    "gene-expression-statistical-testing",
+    "differential-expression-result-interpretation",
+    "prior-distribution-fitting-for-genomics"
+   ]
+  },
+  "limmavoom/task_002": {
+   "tool": "limmavoom",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct empirical Bayes moderated t-statistic computation via limma's eBayes",
+   "skills": [
+    "microarray-expression-data-loading",
+    "linear-model-fitting-for-gene-expression",
+    "coefficient-and-standard-error-interpretation"
+   ]
+  },
+  "limmavoom/task_003": {
+   "tool": "limmavoom",
+   "task_kind": "reproduction",
+   "title": "Reproduce limma linear-model fitting on a public microarray dataset via lmFit",
+   "skills": [
+    "rna-seq-count-normalization-tmm",
+    "gene-expression-linear-modeling",
+    "differential-expression-empirical-bayes-moderation",
+    "precision-weight-calculation-rna-seq",
+    "method-comparison-differential-calls",
+    "design-matrix-construction-experiments"
+   ]
+  },
+  "salmon/task_001": {
+   "tool": "salmon",
+   "task_kind": "reproduction",
+   "title": "Reproduce per-transcript quantification agreement between Rust salmon 2.0 and C++ salmon 1.12.0 on ERR188044",
+   "skills": [
+    "rna-seq-quantification-selective-alignment",
+    "transcript-abundance-correlation-analysis",
+    "mapping-agreement-cross-tool-validation",
+    "selective-alignment-parameter-tuning",
+    "paired-end-read-quantification",
+    "index-construction-determinism"
+   ]
+  },
+  "salmon/task_002": {
+   "tool": "salmon",
+   "task_kind": "reproduction",
+   "title": "Reproduce mapping-rate parity between Rust salmon port and C++ salmon after pufferfish orientation fix on ERR458493",
+   "skills": [
+    "read-mapping-rate-calculation",
+    "rna-seq-quantification-validation",
+    "k-mer-orientation-bug-diagnosis",
+    "selective-alignment-parameter-tuning",
+    "pearson-correlation-computation-across-tools",
+    "sam-bam-mapping-record-inspection"
+   ]
+  },
+  "salmon/task_003": {
+   "tool": "salmon",
+   "task_kind": "reproduction",
+   "title": "Reproduce the chain sub-threshold default as the primary explanation of the human mapping-rate gap",
+   "skills": [
+    "rna-seq-read-mapping-parameter-tuning",
+    "chain-pruning-threshold-optimization",
+    "transcript-quantification-benchmark-comparison",
+    "selective-alignment-sensitivity-evaluation",
+    "per-read-mapping-agreement-assessment",
+    "boundary-case-read-classification-via-sequence-alignment"
+   ]
+  },
+  "salmon/task_004": {
+   "tool": "salmon",
+   "task_kind": "analysis",
+   "title": "Analyze the effect of seed representation variants on mapping rate and NumReads Pearson",
+   "skills": [
+    "read-mapping-rate-calculation",
+    "pearson-correlation-analysis-genomics",
+    "seed-representation-variant-comparison"
+   ]
+  },
+  "salmon/task_005": {
+   "tool": "salmon",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the writeMappings SAM-flush bug fix and verify output record completeness",
+   "skills": [
+    "sam-record-parsing-and-validation",
+    "c-stream-io-debugging",
+    "buffer-management-and-flush-protocols",
+    "salmon-quantification-output-verification",
+    "biological-sequence-read-mapping"
+   ]
+  },
+  "scanpy/task_001": {
+   "tool": "scanpy",
+   "task_kind": "reproduction",
+   "title": "Reproduce the basic clustering and UMAP visualization pipeline on the PBMC3k tutorial dataset",
+   "skills": [
+    "single-cell-rna-seq-normalization",
+    "gene-expression-log-transformation",
+    "highly-variable-gene-selection",
+    "dimensionality-reduction-via-pca",
+    "k-nearest-neighbor-graph-construction",
+    "leiden-clustering-of-cells",
+    "umap-embedding-visualization"
+   ]
+  },
+  "scanpy/task_002": {
+   "tool": "scanpy",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the Dask Array support layer for pp preprocessing functions",
+   "skills": [
+    "dask-array-lazy-evaluation-verification",
+    "anndata-object-structure-validation",
+    "scanpy-preprocessing-pipeline-execution",
+    "memory-efficient-single-cell-computation",
+    "sparse-matrix-format-handling"
+   ]
+  },
+  "scanpy/task_003": {
+   "tool": "scanpy",
+   "task_kind": "reproduction",
+   "title": "Reproduce differential expression results from tl.rank_genes_groups on the pbmc3k_processed dataset",
+   "skills": [
+    "differential-gene-expression-analysis",
+    "marker-gene-identification-by-clustering",
+    "statistical-ranking-wilcoxon-test",
+    "anndata-object-manipulation"
+   ]
+  },
+  "scanpy/task_004": {
+   "tool": "scanpy",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the PAGA trajectory graph on the paul15 hematopoiesis dataset",
+   "skills": [
+    "single-cell-graph-construction-neighborhood",
+    "leiden-clustering-partitioning",
+    "paga-graph-abstraction",
+    "anndata-object-manipulation",
+    "trajectory-inference-preprocessing"
+   ]
+  },
+  "scanpy/task_005": {
+   "tool": "scanpy",
+   "task_kind": "reproduction",
+   "title": "Reproduce the CI workflow by running the pytest test suite via Hatch",
+   "skills": [
+    "git-repository-cloning-and-fork-management",
+    "hatch-environment-configuration-and-activation",
+    "pytest-test-suite-execution-and-result-interpretation",
+    "test-failure-diagnosis-and-logging-analysis",
+    "matplotlib-plot-reference-image-comparison",
+    "ci-pipeline-reproducibility-verification"
+   ]
+  },
+  "sctransform/task_001": {
+   "tool": "sctransform",
+   "task_kind": null,
+   "title": "Reconstruct and evaluate a paper-grounded scientific task",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "reproducibility-gap-detection"
+   ]
+  },
+  "squidpy/task_001": {
+   "tool": "squidpy",
+   "task_kind": "reproduction",
+   "title": "Reproduce the spatial neighbor graph construction using gr.spatial_neighbors on an example dataset",
+   "skills": [
+    "sparse-matrix-verification-and-validation",
+    "adjacency-matrix-sparsity-analysis",
+    "spatial-neighbor-graph-properties-validation"
+   ]
+  },
+  "squidpy/task_002": {
+   "tool": "squidpy",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the PynndescentKNNBuilder as a GraphBuilderCSR subclass for approximate KNN graph construction",
+   "skills": [
+    "nearest-neighbor-graph-construction-pynndescent",
+    "sparse-matrix-csr-format-assembly",
+    "euclidean-distance-computation-approximation",
+    "graph-builder-subclassing-squidpy",
+    "spatial-coordinate-indexing-dense-to-sparse"
+   ]
+  },
+  "squidpy/task_003": {
+   "tool": "squidpy",
+   "task_kind": "reproduction",
+   "title": "Reproduce neighborhood enrichment analysis using gr.nhood_enrichment on the Visium dataset",
+   "skills": [
+    "spatial-neighbor-graph-construction",
+    "neighborhood-enrichment-computation",
+    "anndata-object-manipulation-and-inspection",
+    "spatial-statistics-interpretation",
+    "categorical-annotation-handling-in-omics-data"
+   ]
+  },
+  "squidpy/task_004": {
+   "tool": "squidpy",
+   "task_kind": "reproduction",
+   "title": "Reproduce the SEPAL spatial variable gene detection using gr.sepal on an example dataset",
+   "skills": [
+    "spatial-gene-ranking-computation",
+    "anndata-object-manipulation-and-inspection",
+    "spatial-enrichment-score-validation",
+    "python-data-structure-verification",
+    "spatial-omics-dataset-loading"
+   ]
+  },
+  "squidpy/task_005": {
+   "tool": "squidpy",
+   "task_kind": "analysis",
+   "title": "Analyze lazy dask-backed image processing via im.calculate_image_features on the ImageContainer",
+   "skills": [
+    "image-feature-extraction-from-tissue-sections",
+    "lazy-computation-orchestration-with-dask",
+    "spatial-coordinate-integration-with-imaging-data",
+    "dask-array-materialization-and-collection"
+   ]
+  },
+  "suppa2/task_001": {
+   "tool": "suppa2",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the generateEvents command to produce ioe, ioi, and gtf artifacts from a GTF input",
+   "skills": [
+    "gtf-file-parsing",
+    "transcript-event-extraction",
+    "isoform-structure-annotation",
+    "local-splicing-event-detection"
+   ]
+  },
+  "suppa2/task_002": {
+   "tool": "suppa2",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the PSI calculation step from transcript quantification and ioe/ioi event files",
+   "skills": [
+    "transcript-quantification-integration",
+    "alternative-splicing-event-parsing",
+    "psi-calculation-from-isoform-abundance",
+    "splicing-matrix-normalization"
+   ]
+  },
+  "suppa2/task_003": {
+   "tool": "suppa2",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct the differential splicing analysis command from PSI matrices across multiple conditions",
+   "skills": [
+    "psi-matrix-loading-and-normalization",
+    "transcript-expression-quantification-handling",
+    "differential-splicing-statistical-testing",
+    "alternative-splicing-event-comparison-across-conditions",
+    "uncertainty-aware-significance-assessment"
+   ]
+  },
+  "tximport/task_001": {
+   "tool": "tximport",
+   "task_kind": "reproduction",
+   "title": "Reproduce tx2gene table construction from Gencode v27 and tximport gene-level count matrix",
+   "skills": [
+    "transcript-to-gene-mapping",
+    "transcript-abundance-quantification-import",
+    "gene-level-summarization-from-transcripts",
+    "salmon-output-parsing",
+    "rna-seq-count-matrix-generation"
+   ]
+  },
+  "tximport/task_002": {
+   "tool": "tximport",
+   "task_kind": "reproduction",
+   "title": "Reproduce equivalence of txOut=TRUE followed by summarizeToGene versus txOut=FALSE in tximport",
+   "skills": [
+    "quantification-output-parsing",
+    "rna-seq-abundance-matrix-handling",
+    "matrix-equivalence-validation"
+   ]
+  },
+  "tximport/task_003": {
+   "tool": "tximport",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct DESeqDataSetFromTximport offset creation for DESeq2 downstream analysis",
+   "skills": [
+    "gene-length-offset-matrix-computation",
+    "deseq2-object-initialization-from-transcript-data",
+    "isoform-usage-bias-correction"
+   ]
+  },
+  "tximport/task_004": {
+   "tool": "tximport",
+   "task_kind": "component_reconstruction",
+   "title": "Reconstruct DGEListFromTximport with divided counts for edgeR transcript-level DGE",
+   "skills": [
+    "transcript-level-abundance-import",
+    "inferential-replicate-handling",
+    "edger-dgeobject-construction",
+    "rna-seq-count-normalization",
+    "overdispersion-estimation-validation"
+   ]
+  },
+  "tximport/task_005": {
+   "tool": "tximport",
+   "task_kind": "reproduction",
+   "title": "Reproduce tximport import of oarfish long-read SG-Nex samples at transcript level",
+   "skills": [
+    "oarfish-quantification-format-handling",
+    "transcript-level-count-aggregation",
+    "bioconductor-package-operation"
+   ]
+  },
+  "wgcna/task_001": {
+   "tool": "wgcna",
+   "task_kind": null,
+   "title": "Reconstruct and evaluate a paper-grounded scientific task",
+   "skills": [
+    "scientific-task-formulation",
+    "evidence-linking",
+    "expert-review-preparation",
+    "reproducibility-gap-detection"
+   ]
+  }
+ }
+}

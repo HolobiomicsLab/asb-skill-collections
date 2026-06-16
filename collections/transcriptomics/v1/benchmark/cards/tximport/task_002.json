@@ -1,0 +1,352 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "b41ca01ee34b6dde0c912eea02dee2daafda73e90db3c861c66ac04bb32144c7"
+    }
+  ],
+  "created_at": "2026-06-15T19:03:30.531922+00:00",
+  "crossref_doi": "10.12688/f1000research.7563.1",
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Salmon quantification output files (quant.sf) from tximportData package",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Transcript-to-gene mapping data.frame (tx2gene) with transcript IDs and corresponding gene IDs",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Gene-level count matrix from two-step workflow (transcript import + summarizeToGene)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Gene-level count matrix from direct single-step import (txOut=FALSE)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Boolean confirmation that both matrices are identical",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "bioinformatics",
+  "domain_knowledge": [
+    "The txOut parameter controls whether tximport returns transcript-level (txOut=TRUE) or gene-level (txOut=FALSE, default) matrices; both workflows should produce identical gene-level counts when summarizeToGene is applied downstream.",
+    "A tx2gene data.frame must contain at minimum two columns: transcript identifiers (matching the row names of the quantification output) and corresponding gene identifiers for proper aggregation.",
+    "Gene-level summarization collapses transcript-level abundance, counts, and length estimates; the length matrix is particularly important as it accounts for differential isoform usage across samples.",
+    "Salmon quantification files (quant.sf) contain per-transcript estimates of abundance (TPM), estimated counts, and effective transcript length; tximport reads and structures these into matrix form."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify file exists: tximportData salmon quantification files (input directory from github:thelovelab__tximport)",
+      "verify file exists: tx2gene mapping object (tx2gene data.frame from tximportData or article SI)",
+      "script_runs: execute tximport() with txOut=TRUE on salmon files and store result",
+      "script_runs: execute summarizeToGene() on txOut=TRUE result using tx2gene mapping",
+      "script_runs: execute tximport() with txOut=FALSE (default) on same salmon files",
+      "output_matches_reference: verify count matrix from (txOut=TRUE + summarizeToGene) is byte-for-byte identical to count matrix from txOut=FALSE, robust to floating-point representation choices in matrix serialization",
+      "file_format_is: both resulting count matrices are in standard R matrix or SummarizedExperiment format"
+    ],
+    "expert_review": [
+      "verify that the tximport parameters (type, countsFromAbundance, etc.) match those used in the article's reported equivalence test",
+      "assess whether numerical precision and rounding in the two pipelines are sufficiently aligned to justify claimed equivalence"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Do transcript-level estimates obtained via tximport with txOut=TRUE produce identical gene-level count matrices after summarization with summarizeToGene as compared to direct gene-level import using txOut=FALSE?: 'These matrices can then be summarized afterwards using the function `summarizeToGene`. This then gives the identical list of matrices as using `txOut=FALSE` (default) in the first `tximport` call.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[results] Gene-level count matrices derived from transcript-level tximport output (txOut=TRUE) followed by summarizeToGene are identical to those produced by direct gene-level tximport (txOut=FALSE), as verified by all.equal() comparison.: 'all.equal(txi$counts, txi.sum$counts)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Salmon quantification output files (quant.sf) from tximportData package: 'tximportData salmon files'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Transcript-to-gene mapping data.frame (tx2gene) with transcript IDs and corresponding gene IDs: 'Transcripts need to be associated with gene IDs for gene-level summarization'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Gene-level count matrix from two-step workflow (transcript import + summarizeToGene): 'resulting count matrix is identical to a direct tximport call'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Gene-level count matrix from direct single-step import (txOut=FALSE): 'direct tximport call with txOut=FALSE'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Boolean confirmation that both matrices are identical: 'verify the resulting count matrix is identical'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] tximport: 'Importing transcript abundance with tximport'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] readr: 'significantly faster to read in files using the readr package'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog or version history provided for tximport package or source repository: '_No changelog found._'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "Rscript",
+      "-e",
+      "library(tximport); library(readr); salmon_files <- list.files('{inputs.salmon_quant_files}', pattern='quant.sf', full.names=TRUE); tx2gene <- read_csv('{inputs.tx2gene_mapping}'); txOut_true <- tximport(salmon_files, type='salmon', txOut=TRUE, tx2gene=tx2gene); gene_level_two_step <- summarizeToGene(txOut_true); txOut_false <- tximport(salmon_files, type='salmon', txOut=FALSE, tx2gene=tx2gene); are_identical <- all.equal(gene_level_two_step$abundance, txOut_false$abundance); cat('Gene-level matrices identical:', are_identical, '\n'); saveRDS(list(two_step=gene_level_two_step$abundance, direct=txOut_false$abundance, identical=isTRUE(are_identical)), 'tximport_equivalence_result_{task_id}.rds')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "trivial",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "equivalence_report.txt",
+  "expected_outputs": [
+    "Gene-level count matrix from two-step workflow (transcript import + summarizeToGene)",
+    "Gene-level count matrix from direct single-step import (txOut=FALSE)",
+    "Boolean confirmation that both matrices are identical"
+  ],
+  "finding": "Gene-level count matrices derived from transcript-level tximport output (txOut=TRUE) followed by summarizeToGene are identical to those produced by direct gene-level tximport (txOut=FALSE), as verified by all.equal() comparison.",
+  "github_name": "thelovelab/tximport",
+  "input_from": "task_001",
+  "inputs": [
+    "Salmon quantification output files (quant.sf) from tximportData package",
+    "Transcript-to-gene mapping data.frame (tx2gene) with transcript IDs and corresponding gene IDs"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "transcript_level_counts_txout_true.csv",
+    "gene_level_counts_summarized.csv",
+    "gene_level_counts_direct.csv"
+  ],
+  "linked_result_ids": [
+    "result_021",
+    "result_022"
+  ],
+  "methodology_summary": [
+    "Load salmon quantification files and tx2gene mapping, then import with tximport (type='salmon', txOut=TRUE) to obtain transcript-level matrices.",
+    "Apply summarizeToGene to collapse transcript-level counts to gene level using the tx2gene mapping.",
+    "Separately import the same salmon files with tximport (txOut=FALSE, default) to generate gene-level matrices directly.",
+    "Compare gene-level count matrices from both routes using all-equal or matrix-equality check.",
+    "Validation: Report success when both gene-level count matrices are bit-for-bit identical.",
+    "References: source article (DOI: 10.12688/f1000research.7563.1)"
+  ],
+  "missing_information": [
+    "No changelog or version history provided for tximport package or source repository"
+  ],
+  "parameters": [],
+  "primary_domain": "transcriptomics",
+  "project_id": null,
+  "prov": {
+    "used": [
+      "urn:asb:port:task_001/gene_counts_matrix"
+    ],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Do transcript-level estimates obtained via tximport with txOut=TRUE produce identical gene-level count matrices after summarization with summarizeToGene as compared to direct gene-level import using txOut=FALSE?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "transcript-to-gene-count-aggregation",
+    "quantification-output-parsing",
+    "rna-seq-abundance-matrix-handling",
+    "matrix-equivalence-validation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_tximport/synthesized_package",
+  "spine_condition_ids": [
+    "cond_txout_true"
+  ],
+  "spine_entity_ids": [
+    "sys_tximport",
+    "tool_salmon",
+    "ds_tximportdata",
+    "comp_tximport_fn",
+    "comp_summarize_to_gene",
+    "comp_tx2gene",
+    "cond_txout_true",
+    "res_summarize_equivalence"
+  ],
+  "subdomains": [
+    "differential-expression",
+    "rna-seq"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:thelovelab__tximport",
+  "task_description": "Run tximport on salmon transcript-abundance files with txOut=TRUE to obtain transcript-level counts, then apply summarizeToGene with a tx2gene mapping to collapse to gene level, and verify the resulting gene-level count matrix is identical to direct import with txOut=FALSE.",
+  "task_id": "task_002",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Salmon quantification outputs (quant.sf)",
+      "port_id": "salmon_quant_files",
+      "resolved_via": null,
+      "source": "task_001/gene_counts_matrix",
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Transcript-to-gene mapping data.frame",
+      "port_id": "tx2gene_mapping",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute tximport with txOut=TRUE on salmon quantification files, apply summarizeToGene, and verify count matrix equivalence to direct gene-level tximport output.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Gene-level counts from transcript import + summarizeToGene",
+      "port_id": "gene_counts_txout_true",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Gene-level counts from direct import",
+      "port_id": "gene_counts_txout_false",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Boolean equivalence verification",
+      "port_id": "equivalence_check",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "normalization",
+    "statistical-analysis"
+  ],
+  "title": "Reproduce equivalence of txOut=TRUE followed by summarizeToGene versus txOut=FALSE in tximport",
+  "tools": [
+    "tximport",
+    "readr"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: readr, Gene-level count matrix from two-step workflow (transcript import + summarizeToGene), Gene-level count matrix from direct single-step import (txOut=FALSE), Boolean confirmation that both matrices are identical."
+  ],
+  "workflow_description": "1. Load salmon quantification output files and a tx2gene data.frame (transcript-to-gene mapping) using tximport with type='salmon' and txOut=TRUE to retain transcript-level abundance, counts, and length matrices. 2. Apply summarizeToGene function to the transcript-level output, passing the tx2gene mapping to collapse transcript estimates to gene level. 3. Load the same salmon files directly using tximport with txOut=FALSE (default) to generate gene-level matrices in a single step. 4. Compare the gene-level count matrices from steps 2 and 3 to verify they are identical."
+}

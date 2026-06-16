@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in github:cwieder__metabolomics-ORA repository containing background-set construction implementation"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script runs without errors when executed on a synthetic detection list and pathway database input"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output background set is a named artifact (e.g., list, file, or table) with at least one field identifying metabolite identifiers"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "robust to parameter choices: background set cardinality matches the documented filtering logic applied to the pathway database"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in github:cwieder__metabolomics-ORA repository containing background-set construction implementation",
+      "verify script runs without errors when executed on a synthetic detection list and pathway database input",
+      "verify output background set is a named artifact (e.g., list, file, or table) with at least one field identifying metabolite identifiers",
+      "robust to parameter choices: background set cardinality matches the documented filtering logic applied to the pathway database"
+    ],
+    "expert_review": [
+      "whether the background-set construction procedure correctly implements the statistical logic for ORA background definition as described in the paper's methods section",
+      "whether the resulting background set composition (metabolite overlap with pathway database, exclusion criteria, filtering order) aligns with best-practice guidance and stated pitfall avoidance"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

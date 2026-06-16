@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in constantino-garcia/cmmrt repository containing trained DNN model weights or checkpoint"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: training script (Python .py file) loads SMRT dataset (80,038 experimental retention times from METLIN)"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: training script executes without errors on standard PyTorch/TensorFlow environment"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: reported mean absolute error is 39.2\u00b11.2 s (byte-for-byte match against published value in repository documentation or results file)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: reported median absolute error is 17.2\u00b10.9 s (byte-for-byte match against published value in repository documentation or results file)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: training configuration includes 'cosine annealing warm restarts' in hyperparameter specification or learning rate schedule"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: training configuration includes 'stochastic weight averaging' (SWA) in model or optimizer code"
+    },
+    {
+      "id": "pf_008",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: model or training log contains regularization parameters (L1/L2 penalty, dropout, weight decay specifications)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in constantino-garcia/cmmrt repository containing trained DNN model weights or checkpoint",
+      "verify file_format_is: training script (Python .py file) loads SMRT dataset (80,038 experimental retention times from METLIN)",
+      "verify script_runs: training script executes without errors on standard PyTorch/TensorFlow environment",
+      "verify output_matches_reference: reported mean absolute error is 39.2\u00b11.2 s (byte-for-byte match against published value in repository documentation or results file)",
+      "verify output_matches_reference: reported median absolute error is 17.2\u00b10.9 s (byte-for-byte match against published value in repository documentation or results file)",
+      "verify contains_substring: training configuration includes 'cosine annealing warm restarts' in hyperparameter specification or learning rate schedule",
+      "verify contains_substring: training configuration includes 'stochastic weight averaging' (SWA) in model or optimizer code",
+      "verify field_present: model or training log contains regularization parameters (L1/L2 penalty, dropout, weight decay specifications)"
+    ],
+    "expert_review": [
+      "assess whether DNN regularization strength and architecture (layer count, units, activation functions) are appropriate and 'heavily regularized' as claimed",
+      "assess whether reported error metrics (39.2\u00b11.2 s mean, 17.2\u00b10.9 s median) are consistent with the descriptor + fingerprint input features and the SMRT dataset size",
+      "assess whether cosine annealing warm restarts learning rate schedule parameters (cycle length, warm restarts frequency) are reasonably configured",
+      "assess whether stochastic weight averaging implementation (update frequency, number of averaged checkpoints) follows standard best practices"
+    ]
+  },
+  "max_score": 8.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_001"
+}

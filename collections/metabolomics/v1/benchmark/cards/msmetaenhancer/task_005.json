@@ -1,0 +1,361 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/scheme.png",
+      "role": "figure",
+      "sha256": "e7c622951c71be810b654c83fc95efc3c3e4f8bbeec7228f346be5e6163cea76"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "92ad66c17337db77fb80dc97bca8063643688c39a219cf835db6a1c88a4b55e7"
+    }
+  ],
+  "created_at": "2026-06-16T05:39:21.024441+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "MSMetaEnhancer public example .msp test file",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Structured Logger output with per-attribute annotation events and statistics",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Summary table of annotation coverage per metadata field (CSV or structured format)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "MSMetaEnhancer adds metadata fields including SMILES, InChI, and CAS number through asynchronous queries to external chemical databases.",
+    "The annotation pipeline supports both web-based converters (CIR, CTS, PubChem, IDSM, BridgeDb) that call external APIs and compute-based converters (RDKit) for local chemical structure transformations.",
+    "The Logger component tracks per-attribute conversion success/failure events; fill-rate is the proportion of spectra records with a non-null value for a given metadata field.",
+    "The .msp (NIST MS Search) format is a text-based spectral library format where each entry contains a spectrum and associated metadata fields (e.g., Name, PrecursorMZ, Compound_Name, SMILES).",
+    "Annotation coverage improvement is measured as the change in fill rate from baseline (input file) to final (post-annotation), quantifying the enrichment value delivered by the converter pipeline."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that a public .msp test file is accessible in the github.com/RECETOX/MSMetaEnhancer repository (check repository structure or documentation for file location)",
+      "script_runs: execute MSMetaEnhancer annotation pipeline on the .msp file with logging enabled and verify that the process completes without fatal errors",
+      "file_format_is: verify that the Logger component output file exists and is valid JSON or structured text format",
+      "contains_substring: verify that the Logger output contains per-attribute fill-rate statistics (quantitative progress metrics)",
+      "output_matches_reference: verify that the summary table structure includes named metadata field columns and numeric coverage/fill-rate values, robust to ordering and whitespace",
+      "value_in_range: verify that all fill-rate values in the summary table are between 0 and 100 (or 0 and 1 if normalized), parameter-sensitive to normalization convention"
+    ],
+    "expert_review": [
+      "assess whether the per-attribute fill-rate statistics reported in the Logger output are consistent with expected behavior for the annotation services queried (CIR, CTS, PubChem, IDSM, BridgeDb)",
+      "evaluate whether the summary table's coverage metrics reflect realistic annotation success rates given potential service downtime, rate limiting, or malformed input compounds",
+      "assess whether the choice and labeling of metadata fields in the summary table align with the package's stated design (SMILES, InChI, CAS number, and related attributes)"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] What are the per-attribute fill-rate statistics and annotation coverage metrics produced by MSMetaEnhancer's Logger component when running the full annotation pipeline on a test .msp file?: 'MSMetaEnhancer is a tool used for `.msp` files annotation. It adds metadata like SMILES, InChI, and CAS number'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] MSMetaEnhancer adds metadata including SMILES, InChI, and CAS number to .msp files through asynchronous annotation processing.: 'It adds metadata like SMILES, InChI, and CAS number fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb. The app uses asynchronous implementation of annotation process allowing'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MSMetaEnhancer public example .msp test file: 'Run the full annotation pipeline on the publicly available MSMetaEnhancer example/test .msp file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Structured Logger output with per-attribute annotation events and statistics: 'extract the structured log produced by the `Logger` component, including per-attribute fill-rate statistics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Summary table of annotation coverage per metadata field (CSV or structured format): 'Produce a summary table of annotation coverage per metadata field'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] MSMetaEnhancer: 'Run the full annotation pipeline on the publicly available MSMetaEnhancer example/test .msp file'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CIR: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] CTS: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] PubChem: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] IDSM: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] BridgeDb: 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] RDKit: 'Use the RDKit converter as a reference implementation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Python: 'A Python package for mass spectra metadata annotation'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_014",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] location and public accessibility of example/test .msp file in the MSMetaEnhancer repository: 'No specific reference to a public test .msp file location is provided in the changelog or discussion section'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_015",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] exact schema and format specification of the Logger component output (JSON structure, field names, metric definitions): 'monitoring of services status during annotation process [#56]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_016",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] definition of 'fill-rate' or 'annotation coverage' metrics and how they are computed per attribute by the Logger: 'Added logging and quantitative progress of annotation process [#22]'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_017",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] minimum version of MSMetaEnhancer required to support Logger functionality as described in v0.1.0 changelog: '## [0.1.0] - 2021-11-16'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-c",
+      "import sys; from msmetaenhancer import MSMetaEnhancer, ConverterBuilder; import logging; logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'); builder = ConverterBuilder(); builder.add_converter('CIR').add_converter('CTS').add_converter('PubChem').add_converter('IDSM').add_converter('BridgeDb').add_converter('RDKit'); enhancer = MSMetaEnhancer(builder.build()); spectra = enhancer.load_spectra('{inputs.msp_file}'); enriched = enhancer.annotate_spectra(spectra); import pandas as pd; from collections import defaultdict; initial_fills = defaultdict(int); final_fills = defaultdict(int); field_counts = defaultdict(int); for spec in spectra: field_counts.update({k: 1 for k in spec.metadata.keys()}); for spec in enriched: for k in spec.metadata.keys(): field_counts[k] = max(field_counts.get(k, 0), 1); initial_fills[k] += 1 if spec.metadata.get(k) else 0; final_fills[k] += 1 if spec.metadata.get(k) else 0; total_spectra = len(enriched); summary = pd.DataFrame([{'field': k, 'initial_fill_rate': initial_fills[k]/total_spectra if total_spectra > 0 else 0, 'final_fill_rate': final_fills[k]/total_spectra if total_spectra > 0 else 0, 'absolute_gain': (final_fills[k] - initial_fills[k])/total_spectra if total_spectra > 0 else 0, 'relative_gain_pct': ((final_fills[k] - initial_fills[k])/max(initial_fills[k], 1))*100 if max(initial_fills[k], 1) > 0 else 0} for k in sorted(field_counts.keys())]); summary.to_csv('annotation_coverage_summary.csv', index=False); print(summary); print(f'Summary table rows: {len(summary)}, metadata fields: {len(field_counts)}')"
+    ],
+    "env": {},
+    "grounding_notes": "Unverified by the executable guard \u2014 command runs inline code (-c/-e); its API calls cannot be validated against package files. Treat this command as a best-effort inference; verify the entry point and APIs against the real code before running.",
+    "inferred": true,
+    "timeout_s": 600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "annotation_coverage_summary.csv",
+  "expected_outputs": [
+    "Structured Logger output with per-attribute annotation events and statistics",
+    "Summary table of annotation coverage per metadata field (CSV or structured format)"
+  ],
+  "finding": "MSMetaEnhancer adds metadata including SMILES, InChI, and CAS number to .msp files through asynchronous annotation processing.",
+  "github_name": "RECETOX/MSMetaEnhancer",
+  "input_from": "task_004",
+  "inputs": [
+    "MSMetaEnhancer public example .msp test file"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "raw_annotation_log.json",
+    "per_field_fill_rates.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002",
+    "result_003",
+    "result_004",
+    "result_037",
+    "result_043"
+  ],
+  "methodology_summary": [
+    "Load the example .msp file and initialize the MSMetaEnhancer Application with all available converters (CIR, CTS, PubChem, IDSM, BridgeDb, RDKit) via ConverterBuilder.",
+    "Run the asynchronous annotate_spectra() method with all supported conversion jobs to enrich spectra metadata in parallel.",
+    "Capture structured Logger output events recording per-attribute conversion success, failure, and enrichment outcome for each spectrum.",
+    "Parse Logger records to compute initial and final fill rates (non-null counts) for each metadata field across the spectra dataset.",
+    "Construct a summary table with metadata fields as rows and fill-rate before/after annotation, absolute and relative gain as columns.",
+    "Validation: verify that summary table row count matches the number of metadata fields present in the annotated .msp file, and that all fill-rate values are in [0, 1]."
+  ],
+  "missing_information": [
+    "location and public accessibility of example/test .msp file in the MSMetaEnhancer repository",
+    "exact schema and format specification of the Logger component output (JSON structure, field names, metric definitions)",
+    "definition of 'fill-rate' or 'annotation coverage' metrics and how they are computed per attribute by the Logger",
+    "minimum version of MSMetaEnhancer required to support Logger functionality as described in v0.1.0 changelog"
+  ],
+  "parameters": [],
+  "primary_domain": "cheminformatics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "What are the per-attribute fill-rate statistics and annotation coverage metrics produced by MSMetaEnhancer's Logger component when running the full annotation pipeline on a test .msp file?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "methods",
+    "discussion"
+  ],
+  "skills": [
+    "spectra-metadata-enrichment-via-chemical-services",
+    "asynchronous-api-orchestration-for-annotation",
+    "structured-logging-and-metric-extraction",
+    "annotation-coverage-statistics-computation",
+    "msp-file-format-handling-and-parsing",
+    "converter-pipeline-integration-and-execution"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_msmetaenhancer/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "SYS_MSMETAENHANCER",
+    "ARCH_ANNOTATION_PIPELINE",
+    "COMP_LOGGER",
+    "COMP_METRICS"
+  ],
+  "subdomains": [
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "information-extraction",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:RECETOX__MSMetaEnhancer",
+  "task_description": "Execute the MSMetaEnhancer annotation pipeline on a public .msp test file using all available converters (web and compute services), then extract and summarize the structured Logger output to produce a per-attribute annotation fill-rate table showing metadata enrichment coverage.",
+  "task_id": "task_005",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "MSMetaEnhancer example .msp test file",
+      "port_id": "msp_file",
+      "resolved_via": null,
+      "source": "task_004/compute_converter_module",
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "analysis",
+  "task_objective": "Execute MSMetaEnhancer's annotation pipeline on a test .msp file and generate a structured summary table reporting fill-rate coverage for each metadata field (SMILES, InChI, CAS number, etc.).",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Structured Logger output with per-attribute fill-rate statistics",
+      "port_id": "annotation_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Summary table of annotation coverage per metadata field",
+      "port_id": "coverage_summary",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "database-annotation",
+    "metabolite-identification"
+  ],
+  "title": "Analyze the metadata annotation coverage and logging output produced on a reference .msp dataset",
+  "tools": [
+    "MSMetaEnhancer",
+    "CIR",
+    "CTS",
+    "PubChem",
+    "IDSM",
+    "BridgeDb",
+    "RDKit",
+    "Python"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.",
+    "Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred \u2014 verify before use: Structured Logger output with per-attribute annotation events and statistics, Summary table of annotation coverage per metadata field (CSV or structured format)."
+  ],
+  "workflow_description": "1. Load the public MSMetaEnhancer example .msp file into the Application class. 2. Initialize all available converters (CIR, CTS, PubChem, IDSM, BridgeDb, RDKit) via the ConverterBuilder. 3. Execute the asynchronous annotate_spectra() method with all supported conversion jobs to enrich metadata fields (SMILES, InChI, CAS number, etc.). 4. Capture the structured output from the Logger component during annotation, recording per-attribute conversion success/failure events. 5. Parse Logger records to compute fill-rate statistics (count of non-null values per metadata attribute before and after annotation). 6. Generate a summary table with rows for each metadata field and columns for initial fill rate, final fill rate, and absolute gain in enriched records."
+}

@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in github:NLeSC__MAGMa repository at path containing metabolite generation logic (e.g., magma/job or similar job subproject directory)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "file_format_is",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "identify and confirm format of primary generation-logic artifact (Python source,",
+      "value": "JSON"
+    },
+    {
+      "id": "pf_003",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_004",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "if output is structured (JSON/XML), verify presence of expected keys documenting",
+      "value": [
+        "documenting function call sequence",
+        "parameter names",
+        "and dependency order for metabolite candidate generation"
+      ]
+    },
+    {
+      "id": "pf_005",
+      "kind": "contains_substring",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "documented workflow explicitly references chemo-informatics operations (e.g., 'f",
+      "value": "fragment"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in github:NLeSC__MAGMa repository at path containing metabolite generation logic (e.g., magma/job or similar job subproject directory)",
+      "file_format_is: identify and confirm format of primary generation-logic artifact (Python source, JSON flowchart, XML call-graph, or annotated text file)",
+      "script_runs: if artifact is executable code, verify that import statements and function definitions parse without syntax error",
+      "field_present: if output is structured (JSON/XML), verify presence of expected keys documenting function call sequence, parameter names, and dependency order for metabolite candidate generation",
+      "contains_substring: verify that documented workflow explicitly references chemo-informatics operations (e.g., 'fragment', 'generate', 'candidate', 'metabolite', 'in silico') \u2014 no canonical answer; multiple defensible phrasings acceptable"
+    ],
+    "expert_review": [
+      "confirm that extracted workflow correctly represents the metabolite-generation stage and does not conflate it with MS annotation or matching stages",
+      "assess whether the documented flowchart/call-graph captures sufficient detail for a computational agent to independently trace metabolite generation; multiple valid levels of abstraction exist",
+      "evaluate whether chemo-informatics operations (functional group rules, fragmentation patterns, reaction templates) are correctly characterized"
+    ]
+  },
+  "max_score": 5.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

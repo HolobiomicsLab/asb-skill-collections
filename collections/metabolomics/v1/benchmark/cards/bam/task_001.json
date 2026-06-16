@@ -1,0 +1,338 @@
+{
+  "abstraction_frame": "tool_dataset",
+  "article_type": "research-article",
+  "artifact_refs": [
+    {
+      "locator": "https://github.com/HassounLab/BAM",
+      "locator_id": "gh_hassounlab_bam",
+      "locator_kind": "github",
+      "name": "HassounLab/BAM",
+      "prose": "HassounLab/BAM repository codebase",
+      "score": 0.5,
+      "side": "input"
+    }
+  ],
+  "available_artifacts": [
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "dc86550c053bb49dc462ac43c834959a9182e65c94abdf4e662068621a7f1919"
+    }
+  ],
+  "created_at": "2026-06-15T14:05:17.730493+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "HassounLab/BAM repository codebase",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Deposited validation metabolomics dataset with reference annotations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Annotation predictions (structures assigned by BAM pipeline)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation metrics (annotation accuracy, coverage scores)",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Performance report comparing BAM predictions to reference annotations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "BAM uses biotransformation rules to infer plausible metabolite structures from untargeted mass spectrometry data by tracking molecular transformations from known compounds.",
+    "Global molecular networking groups related compounds by spectral similarity and biotransformation relationships, enabling hierarchical structure discovery.",
+    "Annotation accuracy measures the proportion of correctly predicted structures; coverage quantifies the fraction of input features that receive a structure assignment.",
+    "The validation dataset must include reference (ground-truth) structure annotations to enable metric computation against pipeline output.",
+    "End-to-end pipeline execution includes preprocessing metabolomics data, constructing molecular networks, applying biotransformation rules, and ranking candidate structures."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "verify that the BAM repository (HassounLab/BAM) is accessible and contains executable pipeline code",
+      "verify that a validation dataset is deposited and accessible (e.g., via GitHub repository, Zenodo, or supplementary materials)",
+      "verify that the pipeline script runs without errors on the validation dataset using the repository codebase",
+      "verify that pipeline execution produces output files in expected format (e.g., CSV, JSON, or structured results table)",
+      "value of reported validation metric (annotation accuracy or coverage) matches the metric value produced by pipeline execution on validation dataset \u2014 exact match required",
+      "verify output file contains required fields for validation metrics (e.g., accuracy, coverage, sensitivity, specificity columns or equivalent)"
+    ],
+    "expert_review": [
+      "assess whether the pipeline execution faithfully implements the biotransformation-based annotation method as described in the article methods",
+      "assess whether the reproduced validation metrics are scientifically reasonable and consistent with method design",
+      "assess whether any discrepancies between reported and reproduced metrics can be explained by documentation, parameter defaults, or known environment differences"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the BAM pipeline, when executed end-to-end on the deposited validation dataset, reproduce the reported validation metrics for molecular structure discovery from untargeted metabolomics data?: 'code to implement the biotransformation-based annotation method (**BAM**) [[1]](#1), as well as the data used to validate BAM [[2]](#2)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The repository contains both the BAM implementation code and the validation dataset required to execute and assess the biotransformation-based annotation method.: 'This repository contains code to implement the biotransformation-based annotation method (**BAM**) [[1]](#1), as well as the data used to validate BAM [[2]](#2).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[other] HassounLab/BAM repository codebase: 'HassounLab/BAM'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Deposited validation metabolomics dataset with reference annotations: 'deposited validation dataset'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Annotation predictions (structures assigned by BAM pipeline): 'Molecular structure discovery from untargeted metabolomics data'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Validation metrics (annotation accuracy, coverage scores): 'reproduce the reported validation metrics (e.g. annotation accuracy, coverage)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[other] Performance report comparing BAM predictions to reference annotations: 'reported validation metrics'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[other] HassounLab/BAM: 'HassounLab/BAM'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[discussion] No changelog documenting version history, updates, or changes to the BAM codebase is available.: '_No changelog found._'"
+    }
+  ],
+  "executable": null,
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "validation_metrics.csv",
+  "expected_outputs": [
+    "Annotation predictions (structures assigned by BAM pipeline)",
+    "Validation metrics (annotation accuracy, coverage scores)",
+    "Performance report comparing BAM predictions to reference annotations"
+  ],
+  "finding": "The repository contains both the BAM implementation code and the validation dataset required to execute and assess the biotransformation-based annotation method.",
+  "github_name": "HassounLab/BAM",
+  "input_from": null,
+  "inputs": [
+    "HassounLab/BAM repository codebase",
+    "Deposited validation metabolomics dataset with reference annotations"
+  ],
+  "keywords": [],
+  "landmark_outputs": [
+    "bam_config.json",
+    "molecular_network.graphml",
+    "structure_predictions.csv",
+    "accuracy_coverage_scores.csv"
+  ],
+  "linked_result_ids": [
+    "result_001",
+    "result_002"
+  ],
+  "methodology_summary": [
+    "Obtain the HassounLab/BAM repository and validation dataset (metabolomics data + reference annotations).",
+    "Configure and initialize the BAM pipeline with biotransformation rules and molecular networking parameters.",
+    "Execute the BAM pipeline end-to-end to generate structure annotations for validation data.",
+    "Compute annotation accuracy (percentage of correct predictions) and coverage (percentage of features with assignments) against reference.",
+    "Validation: Reported validation metrics (annotation accuracy and coverage) must match or closely approximate the paper's published benchmarks for the validation dataset."
+  ],
+  "missing_information": [
+    "No changelog documenting version history, updates, or changes to the BAM codebase is available."
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the BAM pipeline, when executed end-to-end on the deposited validation dataset, reproduce the reported validation metrics for molecular structure discovery from untargeted metabolomics data?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro"
+  ],
+  "skills": [
+    "metabolite-structure-annotation-from-biotransformation-rules",
+    "molecular-network-construction-for-metabolomics",
+    "pipeline-end-to-end-execution-and-validation",
+    "annotation-accuracy-and-coverage-metrics-computation",
+    "reference-prediction-comparison-evaluation"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_bam/synthesized_package",
+  "spine_condition_ids": [],
+  "spine_entity_ids": [
+    "dataset_validation_data",
+    "tool_bam_codebase"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "data-processing",
+    "benchmark-evaluation"
+  ],
+  "synthesized_from": "github:HassounLab__BAM",
+  "task_description": "Execute the BAM (biotransformation-based annotation method) pipeline end-to-end on a deposited validation dataset using the HassounLab/BAM repository codebase, and reproduce reported validation metrics including annotation accuracy and coverage.",
+  "task_id": "task_001",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "HassounLab/BAM repository codebase",
+      "port_id": "bam_repo",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Deposited validation metabolomics dataset with reference annotations",
+      "port_id": "validation_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute the BAM pipeline end-to-end on the validation dataset and verify that reported annotation metrics (accuracy, coverage) are reproduced.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Annotation predictions (structures assigned by BAM pipeline)",
+      "port_id": "structure_predictions",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Validation metrics (annotation accuracy, coverage scores)",
+      "port_id": "validation_metrics",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Performance report comparing BAM predictions to reference annotations",
+      "port_id": "performance_report",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "metabolite-identification",
+    "network-annotation-propagation",
+    "database-annotation",
+    "high-resolution-ms"
+  ],
+  "title": "Reproduce BAM Validation Results Using the BAM Codebase and Validation Dataset",
+  "tools": [
+    "HassounLab/BAM"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Clone or obtain the HassounLab/BAM repository and verify the pipeline codebase is intact. 2. Retrieve the deposited validation dataset (input metabolomics data and reference annotations). 3. Configure the BAM pipeline with appropriate parameters for the validation dataset (biotransformation rules, molecular networking settings). 4. Execute the BAM pipeline end-to-end on the validation data to generate structure annotations. 5. Compute validation metrics (annotation accuracy, coverage) by comparing pipeline predictions against reference annotations. 6. Generate a metrics report documenting achieved accuracy, coverage, and any performance benchmarks."
+}

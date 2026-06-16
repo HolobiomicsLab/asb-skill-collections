@@ -1,0 +1,159 @@
+# SciTask Card: Reproduce neighborhood enrichment analysis using gr.nhood_enrichment on the Visium dataset
+
+- Task ID: `task_003`
+- Schema version: `0.18.0`
+- Created at: `2026-06-15T17:58:24.733366+00:00`
+- Source package: `/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_transcriptomics/coll_squidpy/synthesized_package`
+- Domain: `bioinformatics`
+- Subtask categories: `data-analysis`, `statistical-analysis`, `information-extraction`
+- DOI: `10.1038/s41592-021-01358-2`
+- GitHub: `scverse/squidpy`
+- Input from: `task_001`
+
+## Classification
+
+- Task kind: `reproduction`
+- Article type: `software-tool`
+- Primary domain: `bioinformatics`
+- Subdomains: `multi-omics-integration`, `spatial-metabolomics`
+- Techniques: `clustering`, `dimensionality-reduction`, `machine-learning`, `statistical-analysis`
+
+## Research Question
+Does squidpy's nhood_enrichment function correctly compute and store neighborhood enrichment scores in an AnnData object when applied to spatial data with a pre-built neighbor graph?
+
+## Connected Finding
+Squidpy provides streamlined APIs for spatial statistics, which includes the capability to compute neighborhood enrichment analysis on spatial molecular data.
+
+## Task Description
+Execute squidpy.gr.nhood_enrichment on Visium spatial transcriptomics data after constructing a spatial neighbor graph, and verify that the enrichment score matrix is stored in the AnnData object at the expected key.
+
+## Inputs
+- Squidpy Visium example dataset
+
+## Expected Outputs
+- Enrichment score matrix stored in AnnData.uns['nhood_enrichment']
+- NhoodEnrichmentResult object containing enrichment statistics
+
+## Expected Output File
+
+- `adata_with_nhood_enrichment.h5ad`
+
+## Landmark Outputs
+
+- `spatial_neighbors_graph.h5ad`
+- `nhood_enrichment_matrix.csv`
+- `enrichment_scores.png`
+
+## Tools
+- Squidpy
+- anndata
+- Python
+
+## Skills
+- spatial-neighbor-graph-construction
+- neighborhood-enrichment-computation
+- anndata-object-manipulation-and-inspection
+- spatial-statistics-interpretation
+- categorical-annotation-handling-in-omics-data
+
+## Workflow Description
+1. Load the Visium example dataset using squidpy.datasets.visium(). 2. Build a spatial neighbor graph using squidpy.gr.spatial_neighbors() with radius-based neighborhood detection. 3. Execute squidpy.gr.nhood_enrichment() on the AnnData object with a specified categorical annotation to compute neighborhood enrichment statistics. 4. Verify that the enrichment result is written to the AnnData object's .uns dictionary at the key 'nhood_enrichment' and inspect the output matrix structure.
+
+## Available Artifacts
+| Path | Role | Indexable |
+|---|---|---|
+| `figures/ContainerShow_axis.png` | figure | False |
+| `figures/ContainerShow_channel.png` | figure | False |
+| `figures/ContainerShow_channelwise.png` | figure | False |
+| `figures/ContainerShow_channelwise_segmentation.png` | figure | False |
+| `figures/ContainerShow_imshow_kwargs.png` | figure | False |
+| `figures/ContainerShow_library_id.png` | figure | False |
+| `figures/ContainerShow_scale_mask_circle_crop.png` | figure | False |
+| `figures/ContainerShow_segmentation.png` | figure | False |
+| `figures/ContainerShow_transpose_channelwise_False_False.png` | figure | False |
+| `figures/ContainerShow_transpose_channelwise_False_True.png` | figure | False |
+| `figures/ContainerShow_transpose_channelwise_True_False.png` | figure | False |
+| `figures/ContainerShow_transpose_channelwise_True_True.png` | figure | False |
+| `figures/DetectTissue_detect_tissue_felzenszwalb.png` | figure | False |
+| `figures/DetectTissue_detect_tissue_otsu.png` | figure | False |
+| `figures/figure1.png` | figure | False |
+| `figures/squidpy_horizontal.png` | figure | False |
+| `figures/squidpy_vertical.png` | figure | False |
+| `figures/test_img.jpg` | figure | False |
+| `figures/tissue_hires_image.png` | figure | False |
+| `figures/tissue_lowres_image.png` | figure | False |
+| `paper.md` | main_article | True |
+
+## Missing Information
+- No changelog found
+
+## Domain Knowledge
+- Neighborhood enrichment quantifies whether cell types or annotations cluster non-randomly in space by comparing observed vs. shuffled neighborhood distributions.
+- The squidpy.gr.nhood_enrichment function outputs a NhoodEnrichmentResult containing a score matrix with dimensions [n_categories, n_categories] representing pairwise enrichment between annotation groups.
+- Spatial neighbor graphs constructed with radius-based methods define neighborhoods as all cells within a specified Euclidean distance threshold from each cell.
+- The enrichment result is stored in AnnData.uns as a structured dictionary keyed by 'nhood_enrichment' to preserve metadata for downstream plotting and interpretation.
+- Statistical shuffling in nhood_enrichment breaks spatial correlations by randomizing cell-type assignments while preserving the spatial graph structure to test null hypothesis of random mixing.
+
+## Uncertainty Notes
+- This card was generated by the LLM-assisted pipeline and needs scientific expert review.
+- Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results.
+- Synthesis grounding: the following tools/outputs were NOT found in the source paper and are inferred — verify before use: Enrichment score matrix stored in AnnData.uns['nhood_enrichment'], NhoodEnrichmentResult object containing enrichment statistics.
+
+## Evidence Snippets
+- `ev_001` from `agent2_synthesis` (agent2_traced): [intro] Does squidpy's nhood_enrichment function correctly compute and store neighborhood enrichment scores in an AnnData object when applied to spatial data with a pre-built neighbor graph?: 'providing streamlined APIs for feature extraction, spatial statistics, and interactive exploration of tissue sections together with microscopy images'
+- `ev_002` from `agent2_synthesis` (agent2_traced): [intro] Squidpy provides streamlined APIs for spatial statistics, which includes the capability to compute neighborhood enrichment analysis on spatial molecular data.: 'providing streamlined APIs for feature extraction, spatial statistics, and interactive exploration of tissue sections together with microscopy images'
+- `ev_003` from `agent2_synthesis` (agent2_traced): [other] Squidpy Visium example dataset: 'datasets.visium'
+- `ev_004` from `agent2_synthesis` (agent2_traced): [other] Enrichment score matrix stored in AnnData.uns['nhood_enrichment']: 'gr.nhood_enrichment'
+- `ev_005` from `agent2_synthesis` (agent2_traced): [other] NhoodEnrichmentResult object containing enrichment statistics: 'gr.NhoodEnrichmentResult'
+- `ev_006` from `agent2_synthesis` (agent2_traced): [other] Squidpy: 'gr.nhood_enrichment'
+- `ev_007` from `agent2_synthesis` (agent2_traced): [intro] anndata: 'It builds on scanpy and anndata'
+- `ev_008` from `agent2_synthesis` (agent2_traced): [intro] Python: 'Spatial Single Cell Analysis in Python'
+- `ev_009` from `agent2_synthesis` (agent2_traced): [discussion] No changelog found: '_No changelog found._'
+
+## Evaluation Strategy
+### Direct Checks
+- verify file exists: squidpy package contains module squidpy.gr with nhood_enrichment function
+- verify script runs: load squidpy Visium example dataset (via squidpy.datasets.visium or equivalent public accession), construct spatial neighbor graph using squidpy.gr.neighbors, execute squidpy.gr.nhood_enrichment on the AnnData object without errors
+- verify field_present: after nhood_enrichment execution, AnnData object .uns or .obsm attribute contains enrichment score matrix at the expected key (robust to parameter choices in function call)
+- output_matches_reference: enrichment score matrix dimensions and data type are consistent with documented squidpy API specification
+
+### Expert Review
+- assess whether enrichment scores in the matrix are statistically meaningful and consistent with spatial neighborhood structure used to compute them
+- confirm that the key naming and storage location (obsm vs. uns) follow squidpy conventions and match expected output from nhood_enrichment documentation
+
+## Review Questions
+- Is the research question correctly identified and scoped?
+- Does the connected finding have enough supporting evidence?
+- Which artifacts are required before this can become an executable benchmark task?
+- What direct, visual, textual, or expert-review checks should be used for evaluation?
+
+## Methodology Summary
+1. Load Visium example dataset containing spatial coordinates and cell-type annotations.
+2. Construct spatial neighbor graph using radius-based neighborhood detection on spatial coordinates.
+3. Compute neighborhood enrichment by comparing observed co-occurrence of annotated cell types in spatial neighborhoods against shuffled distributions.
+4. Store enrichment statistics in AnnData.uns dictionary under 'nhood_enrichment' key.
+5. Validation: verify that the enrichment matrix exists in .uns, has expected dimensions [n_categories, n_categories], and contains numeric enrichment scores.
+6. References: source article (DOI: 10.1038/s41592-021-01358-2)
+
+## Workflow Ports
+
+**Inputs:**
+
+- `visium_dataset` — Squidpy Visium example AnnData object ← `task_001/adata_with_graph`
+
+**Outputs:**
+
+- `enriched_adata` — AnnData object with neighborhood enrichment stored in .uns
+- `enrichment_matrix` — Neighborhood enrichment score matrix
+
+**Used:** `urn:asb:port:task_001/adata_with_graph`
+
+## Provenance
+
+- **Source kind:** github
+- **Synthesized from:** `github:scverse__squidpy`
+- **Synthesized at:** 2026-06-15T18:06:28+00:00
+
+---
+
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*

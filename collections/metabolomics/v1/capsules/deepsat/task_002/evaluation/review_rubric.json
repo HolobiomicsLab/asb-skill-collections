@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists in github:mwang87__DeepSAT repository containing API endpoint documentation or implementation for /api/smart3/search"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "returned response is valid JSON with a structured prediction object (no canonica"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify response contains at least one field indicative of classification output (e.g. compound name, confidence score, or metadata \u2014 parameter-sensitive to API contract version)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists in github:mwang87__DeepSAT repository containing API endpoint documentation or implementation for /api/smart3/search",
+      "script_runs: execute a programmatic POST request to the /api/smart3/search endpoint with a valid JSON payload containing a list of dicts with '1H' and '13C' keys",
+      "output_matches_reference: returned response is valid JSON with a structured prediction object (no canonical answer \u2014 structure depends on model version and API contract)",
+      "verify response contains at least one field indicative of classification output (e.g. compound name, confidence score, or metadata \u2014 parameter-sensitive to API contract version)"
+    ],
+    "expert_review": [
+      "assess whether the JSON response structure and field semantics align with the documented DeepSAT Classification API specification",
+      "evaluate whether peak input format (1H and 13C headers as list of dicts) matches the actual API contract and produces chemically valid predictions",
+      "review whether any validation errors or malformed responses indicate missing or incompatible model input names (per finding: 'Model input names may change and require code updates')"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

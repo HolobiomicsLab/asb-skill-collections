@@ -1,0 +1,309 @@
+schema_version: 0.1.0
+workflow_id: coll_mspcompiler_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_004
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_005
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: mspcompiler is an R package that compiles EI and tandem mass spectral libraries
+    from multiple sources (NIST, MoNA, GNPS, RIKEN) into consolidated, MS-DIAL-compatible
+    MSP files. The package provides a systematic workflow for reading, enriching with
+    chemical structures and retention indices, and organizing spectral data.
+  pseudo_abstract: mspcompiler describes mechanisms for processing mass spectral libraries
+    across two main workflows. The EI library pipeline reads libraries via read_lib
+    or read_multilibs, assigns SMILES structures and Kovats retention indices, combines
+    processed libraries, and writes consolidated output via write_EI_msp for use in
+    MS-DIAL. The MS2 library workflow loads libraries from multiple sources via read_lib,
+    optionally completes MGF metadata via complete_mgf, assigns SMILES structures,
+    separates positive and negative ionization modes via separate_polarity, and writes
+    polarity-separated MSP files via write_MS2_msp. Supporting mechanisms include
+    extract_ri and assign_ri for extracting and assigning experimental retention indices
+    from NIST data, and reorganize_mona for extracting and reorganizing SMILES information
+    from MoNA library comment fields. The package integrates with future and future.apply
+    packages to enable parallel processing during library compilation.
+  research_questions:
+  - What is the orchestrated sequence of operations for compiling EI mass spectral
+    libraries from multiple sources (NIST, MoNA, RIKEN, SWGDRUG) into a single MSP
+    file in mspcompiler?
+  - What is the sequence of operations in the MS2 library compilation pipeline for
+    loading, completing metadata, assigning chemical structures, separating by ionization
+    polarity, and writing polarity-specific MSP files?
+  - How does extract_ri extract Kovats retention index values from a NIST ri.dat file,
+    and how does assign_ri then populate those RI values into a compiled EI library
+    object?
+  - How does the reorganize_mona function restructure a downloaded MoNA EI library
+    file into the internal list format required by subsequent mspcompiler pipeline
+    steps?
+  - Does configuring the future::plan(multisession) parallel backend before calling
+    read_multilibs on a directory of MSP files successfully spawn multiple worker
+    sessions while producing a merged library object identical to the serial result?
+  methods_summary: "Load and parse four EI libraries (NIST, RIKEN, MoNA, SWGDRUG)\
+    \ from MSP and SDF formats into R objects. Extract and assign chemical structure\
+    \ annotations (SMILES) from MOL/SDF files, handling library-specific metadata\
+    \ fields (e.g., MoNA Comment field). Retrieve and assign experimental Kovats RI\
+    \ values from NIST reference files, filtering for capillary GC columns and median\
+    \ RI with SD < 30. Merge all four annotated libraries into a single combined object\
+    \ using concatenation. Validate merged library completeness and write output as\
+    \ MS-DIAL\u2013compatible MSP file. Load MS2 spectral data from four independent\
+    \ sources (NIST, RIKEN, MoNA, GNPS) in their native formats. Extract and assign\
+    \ chemical structure identifiers (SMILES, InChIKey, Molecular Formula) to all\
+    \ entries via structure file conversion and matching. Standardize metadata fields\
+    \ across heterogeneous library formats by extracting SMILES from embedded Comment\
+    \ fields (MoNA) and computing missing Molecular Formula from SMILES (GNPS). Separate\
+    \ mixed-polarity libraries into positive and negative ionization mode subsets.\
+    \ Merge all four library sources into two polarity-specific objects and write\
+    \ as MS-DIAL-compatible MSP files. Validation: Output MSP files contain no mixed\
+    \ polarities, SMILES fields are populated for all entries, and Molecular Formula\
+    \ is present where applicable. Load a compiled EI library object and NIST RI database\
+    \ files (ri.dat and USER.DBU) into R. Parse NIST RI database files using extract_ri\
+    \ to retrieve experimental retention index records. Filter RI records to retain\
+    \ only those from capillary GC columns; compute median RI for compounds with multiple\
+    \ records and discard records with standard deviation > 30. Assign filtered RI\
+    \ values to the EI library object using assign_ri with semi-polar column polarity\
+    \ specification. Validation: Verify that RI field is populated in the output library\
+    \ object and confirm presence of RI values in MSP output file. Load the MoNA EI\
+    \ MSP file into R using read_lib() to parse the initial msp structure. Apply reorganize_mona()\
+    \ to extract SMILES from the Comment field and populate the SMILES field. Validation:\
+    \ Verify the output object has a populated SMILES field for all records and row\
+    \ count equals input row count. Load mspcompiler, future, future.apply, and parallel\
+    \ packages. Configure multisession parallel backend with worker count set to detectCores()\
+    \ - 1. Ingest all MSP files from the in-house directory using read_multilibs().\
+    \ Disable parallel execution and return to sequential mode. Validation: Compare\
+    \ merged library object structure, spectrum count, and metadata fields against\
+    \ a serial reference generated from identical input files processed sequentially\
+    \ to confirm equivalence."
+  domain: metabolomics
+  techniques:
+  - database-annotation
+  - gc-ms
+  - spectral-library-matching
+  - tandem-ms
+  claims:
+  - claim_text: The goal of mspcompiler is to offer ways to compile either EI or tandem
+      mass spectral libraries from various sources such as NIST, MoNA, and GPNS.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSPCOMPILER
+  - claim_text: NIST is the most commonly used commercial EI library.
+    claim_type: finding
+    speculative: false
+  - claim_text: Lib2NIST can be downloaded from https://chemdata.nist.gov/dokuwiki/doku.php?id=chemdata:nist17
+      if not installed with the NIST library.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_LIB2NIST
+  - claim_text: For Agilent users, the NIST input file for Lib2NIST can be found in,
+      for example, C:/database/NIST14.L.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_LIB2NIST
+  - claim_text: The total number of spectra in a NIST library can be checked in the
+      MS Search program under Options -> Libraries.
+    claim_type: finding
+    speculative: false
+  - claim_text: The *.MOL folder in NIST library export contains a large number of
+      mol files and is time-consuming to move, copy, or delete.
+    claim_type: finding
+    speculative: false
+  - claim_text: The RIKEN EI library can be downloaded from http://prime.psc.riken.jp/compms/msdial/main.html#MSP.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_RIKEN_EI
+  - claim_text: The RIKEN EI library contains Kovats RI included.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_MSDIAL
+  - claim_text: The RIKEN EI library already has SMILES and InChIKey well-organized,
+      so no further treatment is needed.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_RIKEN_EI
+  - claim_text: The MassBank of North America (MoNA) has an EI library available for
+      download at https://mona.fiehnlab.ucdavis.edu/downloads.
+    claim_type: finding
+    speculative: false
+  - claim_text: The MoNA EI library file has SMILES information in the Comment field
+      rather than the SMILES field.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_MONA_EI
+  - claim_text: The SMILES in MoNA EI library must be extracted from the Comment field
+      and put into the SMILES field using the reorganize_mona function.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_REORGANIZE_MONA
+  - claim_text: The Scientific Working Group for the Analysis of Seized Drugs (SWGDRUG)
+      has compiled an EI library with drug or drug-related compounds.
+    claim_type: finding
+    speculative: false
+  - claim_text: The SWGDRUG library is available at https://swgdrug.org/ms.html.
+    claim_type: finding
+    speculative: false
+  - claim_text: To correctly parse the SWGDRUG library by mspcompiler, both NIST Format
+      and Agilent Format downloads are required.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSPCOMPILER
+  - claim_text: The SWGDRUG file does not contain InChIKey information.
+    claim_type: finding
+    speculative: false
+  - claim_text: Polarity options for assigning RI to combined EI libraries are semi-polar,
+      non-polar, or polar.
+    claim_type: finding
+    speculative: false
+  - claim_text: Capillary GC columns are commonly used in the assign_ri function.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_ASSIGN_RI
+  - claim_text: When there are multiple RI records for a single compound, the median
+      RI will be used.
+    claim_type: finding
+    speculative: false
+  - claim_text: RI values with a standard deviation higher than 30 will be discarded.
+    claim_type: finding
+    speculative: false
+  - claim_text: Positive and negative modes in MS2 libraries are normally separated
+      into 2 msp files.
+    claim_type: finding
+    speculative: false
+  - claim_text: The NIST MS2 library input file for Lib2NIST can be found in C:/Programs/nist14/mssearch/nist_msms.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_LIB2NIST
+  - claim_text: The NIST MS2 exported msp file has both positive and negative modes
+      mixed in a single file.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_NIST_MS2
+  - claim_text: The RIKEN MS2 libraries can be downloaded from the MS-DIAL homepage
+      at http://prime.psc.riken.jp/compms/msdial/main.html#MSP.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_MSDIAL
+  - claim_text: The MoNA MS2 libraries can be downloaded from https://mona.fiehnlab.ucdavis.edu/downloads.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_MONA_MS2
+  - claim_text: The GNPS library is organized in mgf format.
+    claim_type: finding
+    speculative: false
+    entity_id: COMP_MGF_FORMAT
+  - claim_text: The GNPS library does not have the Molecular Formula (MF) field.
+    claim_type: finding
+    speculative: false
+  - claim_text: The molecular formula in GNPS library can be calculated from SMILES
+      using the complete_mgf function.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_COMPLETE_MGF
+  - claim_text: Both positive and negative modes are in a single GNPS file.
+    claim_type: finding
+    speculative: false
+  - claim_text: The GNPS library can be downloaded from https://gnps.ucsd.edu/ProteoSAFe/libraries.jsp.
+    claim_type: finding
+    speculative: false
+  - claim_text: The read_multilibs function allows reading multiple msp files from
+      a folder at once.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_READ_MULTILIBS
+  - claim_text: The mspcompiler package offers remove_ri and remove_rt functions to
+      remove RI and RT respectively.
+    claim_type: finding
+    speculative: false
+    entity_id: SYS_MSPCOMPILER
+  - claim_text: The change_meta function can be used to modify metadata such as comment,
+      collision energy, and instrument type.
+    claim_type: finding
+    speculative: false
+    entity_id: TOOL_CHANGE_META
+  - claim_text: The RIKEN, MoNA, and GNPS MS2 libraries might contain identical spectra
+      as they all compile some well-known libraries.
+    claim_type: finding
+    speculative: false
+    entity_id: DS_GNPS_MS2
+  - claim_text: It takes a long time to process the NIST libraries.
+    claim_type: finding
+    speculative: false
+  - claim_text: Once NIST libraries are organized, they can be saved as .Rda files
+      and reused in subsequent compilations.
+    claim_type: finding
+    speculative: false
+  - claim_text: Tandem mass spectral libraries are relatively big and consume high
+      amounts of memory when read into R.
+    claim_type: finding
+    speculative: false
+  - claim_text: If a PC does not have enough memory, libraries can be processed separately
+      and combined in a text editor like Notepad++.
+    claim_type: finding
+    speculative: false
+  - claim_text: The msp file is basically a text file.
+    claim_type: finding
+    speculative: false
+  speculative: false
+  task_openness: closed
+  method_alternatives:
+  - match = 'inchikey' for Linux-based or Mac OS instead of match = 'name'
+  substitution_constraints:
+  - SWGDRUG file should not use match = 'inchikey' because it does not contain InChIKey
+    information
+instructions: Reproduce the 5-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: Combined MS2 positive mode library in MSP format (combine_ms2_pos.msp)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Combined MS2 negative mode library in MSP format (combine_ms2_neg.msp)
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: EI library object with RI field populated for each compound based on median
+    experimental RI from capillary columns, excluding records with standard deviation
+    > 30
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Reorganized MoNA EI library object with SMILES field properly populated from
+    Comment field
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+- path: Merged library R object containing all spectra from input MSP files, ready
+    for downstream enrichment or export
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []

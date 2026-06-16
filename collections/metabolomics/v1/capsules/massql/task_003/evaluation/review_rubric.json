@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify that github:mwang87__MassQueryLanguage repository is publicly accessible and contains test-package.yml in .github/workflows/ directory"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_exists: test-package.yml at path .github/workflows/test-package.yml in the repository"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: execute test-package.yml workflow using GitHub Actions CLI or local CI runner against the published MassQL package without errors"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: the workflow execution produces a structured pass/fail report (JSON, YAML, or plain text) with at least one test result field indicating overall pass or fail status"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: the generated report is in a machine-readable format (JSON, YAML, CSV, or plaintext with parseable structure)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify contains_substring: the final report output contains explicit pass/fail indicators (e.g. 'PASSED', 'FAILED', 'success: true', or equivalent status token) \u2014 multiple defensible output formats acceptable"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify that github:mwang87__MassQueryLanguage repository is publicly accessible and contains test-package.yml in .github/workflows/ directory",
+      "verify file_exists: test-package.yml at path .github/workflows/test-package.yml in the repository",
+      "verify script_runs: execute test-package.yml workflow using GitHub Actions CLI or local CI runner against the published MassQL package without errors",
+      "verify output_matches_reference: the workflow execution produces a structured pass/fail report (JSON, YAML, or plain text) with at least one test result field indicating overall pass or fail status",
+      "verify file_format_is: the generated report is in a machine-readable format (JSON, YAML, CSV, or plaintext with parseable structure)",
+      "verify contains_substring: the final report output contains explicit pass/fail indicators (e.g. 'PASSED', 'FAILED', 'success: true', or equivalent status token) \u2014 multiple defensible output formats acceptable"
+    ],
+    "expert_review": [
+      "confirm that all integration tests in test-package.yml are semantically appropriate for validating core MassQL package functionality (query parsing, execution, result serialization) and not redundant with unit tests",
+      "assess whether the reported passing badge state (if claimed in repository README or CI status page) aligns with the observed workflow execution result"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

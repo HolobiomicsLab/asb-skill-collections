@@ -1,10 +1,10 @@
-name: Docker Compose
+name: docker-compose
 slug: docker-compose
 evidence_spans:
-- Docker Compose configuration
+- you need docker and docker-compose
 derived_from:
-- doi: 10.1186/s12859-021-04490-0
-  title: aird
+- doi: 10.1021/acs.jnatprod.1c00399
+  title: npclassifier
 source_repos:
-- CSi-Studio/AirdPro
+- mwang87/NP-Classifier
 schema_version: 0.2.0

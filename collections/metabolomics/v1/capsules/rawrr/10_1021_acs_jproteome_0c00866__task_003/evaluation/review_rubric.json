@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "file_exists",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "20181113_010_autoQC01.raw"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "field_present",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "spectrum object for scan 9594 contains fields for resolving power, AGC injection",
+      "value": [
+        "for resolving power",
+        "AGC injection time",
+        "m/z values",
+        "and intensity values"
+      ]
+    },
+    {
+      "id": "pf_004",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "resolving power reported for scan 9594 equals 30000 (or within \u00b15% tolerance)"
+    },
+    {
+      "id": "pf_005",
+      "kind": "value_in_range",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "AGC injection time for scan 9594 equals 2.8 ms (or within \u00b10.1 ms tolerance)"
+    },
+    {
+      "id": "pf_006",
+      "kind": "output_matches_reference",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "target": "y-ion signals in scan 9594 spectrum are numeric values, extractable, and compara"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "file_exists: verify that MassIVE dataset MSV000086542 contains file 20181113_010_autoQC01.raw and is accessible",
+      "script_runs: execute rawrr::readSpectrum(rawfile, scan=9594) on the downloaded raw file without errors",
+      "field_present: verify that spectrum object for scan 9594 contains fields for resolving power, AGC injection time, m/z values, and intensity values",
+      "value_in_range: resolving power reported for scan 9594 equals 30000 (or within \u00b15% tolerance)",
+      "value_in_range: AGC injection time for scan 9594 equals 2.8 ms (or within \u00b10.1 ms tolerance)",
+      "output_matches_reference: y-ion signals in scan 9594 spectrum are numeric values, extractable, and comparable to baseline noise level (no canonical answer for 'tens to hundreds above noise' without reference noise floor value provided in article)"
+    ],
+    "expert_review": [
+      "Assess whether extracted y-ion signals from scan 9594 are qualitatively 'several tens to hundreds above the noise level' by visual inspection of intensity distribution and peak heights relative to baseline",
+      "Verify that resolving power value of 30000 at 200 m/z is consistent with Orbitrap FTMS instrument specifications for Q Exactive HF",
+      "Confirm that AGC injection time of 2.8 ms aligns with reasonable acquisition settings for FTMS analysis"
+    ]
+  },
+  "max_score": 6.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_003"
+}

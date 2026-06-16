@@ -1,0 +1,423 @@
+{
+  "abstraction_frame": "architecture",
+  "article_type": "software-tool",
+  "artifact_refs": [],
+  "available_artifacts": [
+    {
+      "indexable": false,
+      "path": "figures/fiddle_logo.png",
+      "role": "figure",
+      "sha256": "b3a240b5acc490ee66008501fdba7b3e6231f1d2011c98a1f94d2170004424e6"
+    },
+    {
+      "indexable": true,
+      "path": "paper.md",
+      "role": "main_article",
+      "sha256": "f65164b799de86c48e2278fd20a124cd91aabf04f75b2d43697befed3cd34928"
+    }
+  ],
+  "created_at": "2026-06-16T07:03:35.842382+00:00",
+  "crossref_doi": null,
+  "data_accessions": [],
+  "data_in": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "task_001.expected_outputs[0]: Training set compound count: 28,751",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Pre-trained TCN spectrum encoder checkpoint",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Training dataset with MS/MS spectra and molecular formula annotations",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Validation dataset for formula accuracy monitoring",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "data_out": [
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Best model checkpoint containing formula_encoder_state_dict and rescore_head_state_dict",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    },
+    {
+      "acquisition_mode": null,
+      "confidence": "none",
+      "content_signature": null,
+      "description": "Training log recording formula_acc (with H) and loss metrics per epoch",
+      "detection_method": "none",
+      "file_extension": null,
+      "format_id": null,
+      "format_iri": null,
+      "instrument_class": null,
+      "ionization_polarity": null,
+      "ontology_class": null
+    }
+  ],
+  "domain": "mass-spectrometry / metabolomics",
+  "domain_knowledge": [
+    "TCN (temporal convolutional network) spectrum encoders must be frozen during transfer learning to preserve learned spectral feature representations while allowing downstream task-specific modules to adapt.",
+    "Formula accuracy with hydrogen (formula_acc with H) is the canonical validation metric for molecular formula prediction in mass spectrometry, requiring exact matching of elemental composition including hydrogens.",
+    "Binary cross-entropy loss is appropriate for multi-label classification in formula prediction because each element and its count represents an independent binary decision.",
+    "Early stopping based on validation formula_acc prevents overfitting and ensures the checkpoint captures the best generalization performance to unseen spectra.",
+    "State dict serialization must preserve both encoder and head module parameters separately to allow independent reuse in downstream inference or fine-tuning workflows."
+  ],
+  "evaluation_strategy": {
+    "direct_checks": [
+      "file_exists: verify that train_rescore.py exists in the repository root or running_scripts/ directory",
+      "script_runs: execute train_rescore.py with a minimal configuration (e.g., single epoch, small batch size on a subset of data) and verify it completes without runtime errors",
+      "file_exists: verify that a checkpoint file is created in the expected output directory after training",
+      "file_format_is: verify that checkpoint file is in PyTorch .pt or .pth format and is loadable",
+      "contains_substring: load checkpoint and verify it contains both 'formula_encoder_state_dict' and 'rescore_head_state_dict' keys",
+      "expert_review: verify that TCN spectrum encoder parameters remain frozen (weights unchanged) throughout training by comparing encoder weights before and after training",
+      "expert_review: verify that FormulaEncoder and RescoreHead parameters are trainable (gradients flow) during training",
+      "expert_review: verify that BCE (binary cross-entropy) loss is applied during training by inspecting loss computation in train_rescore.py source code",
+      "expert_review: verify that checkpoints are saved only when formula_acc (with H) improves by checking training logs or checkpoint save conditions in code"
+    ],
+    "expert_review": [
+      "Confirm that the rescore model architecture correctly implements a Siamese design with frozen TCN encoder, element-wise product (z_spec \u2299 z_form), and scalar logit output",
+      "Verify that formula_acc metric is computed correctly (accuracy including hydrogen atom prediction) and that improvement-based checkpoint saving logic is correctly implemented",
+      "Inspect train_rescore.py source to confirm BCE loss is used for binary classification (positive/negative candidate pairs) rather than alternatives",
+      "Validate that the frozen TCN encoder prevents gradient updates to spectrum encoder weights by inspecting require_grad flags in code"
+    ]
+  },
+  "evidence_snippets": [
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_001",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] Does the rescore model training script freeze the TCN spectrum encoder and train only the FormulaEncoder and RescoreHead components?: 'The rescore model has been redesigned (Siamese architecture)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_002",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] The rescore model has been redesigned with a Siamese architecture in version 2.0.0, indicating a structural change to the model components that would affect encoder freezing and training behavior.: 'The rescore model has been redesigned (Siamese architecture), see details in [CHANGELOG.md](./CHANGELOG.md).'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_003",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Pre-trained TCN spectrum encoder checkpoint: 'freeze the TCN spectrum encoder'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_004",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Training dataset with MS/MS spectra and molecular formula annotations: 'train FormulaEncoder + RescoreHead'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_005",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Validation dataset for formula accuracy monitoring: 'formula_acc (with H) improves'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_006",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Best model checkpoint containing formula_encoder_state_dict and rescore_head_state_dict: 'output stores formula_encoder_state_dict and rescore_head_state_dict'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_007",
+      "source_path": "agent2_synthesis",
+      "text": "[methods] Training log recording formula_acc (with H) and loss metrics per epoch: 'formula_acc (with H) improves'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_008",
+      "source_path": "agent2_synthesis",
+      "text": "[intro] msfiddle: 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_009",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No explicit specification of the required input data format, expected file paths, or configuration file schema for train_rescore.py: '`train_rescore.py`: Siamese rescore trainer. Freezes the TCN spectrum encoder; trains `FormulaEncoder` + `RescoreHead` with BCE loss.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_010",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No documentation of the expected hyperparameters (learning rate, batch size, number of epochs, optimizer type) for train_rescore.py: '`train_rescore.py`: Siamese rescore trainer. Freezes the TCN spectrum encoder; trains `FormulaEncoder` + `RescoreHead` with BCE loss.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_011",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No specification of the exact structure or naming convention of checkpoint files or the directory where checkpoints are saved: 'Checkpoint stores `formula_encoder_state_dict` and `rescore_head_state_dict`.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_012",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No definition of what constitutes an 'improvement' in formula_acc (with H) or the baseline/tolerance threshold for checkpoint saving: 'checkpoint saved only when `formula_acc` (with H) improves.'"
+    },
+    {
+      "reason": "agent2_traced",
+      "snippet_id": "ev_013",
+      "source_path": "agent2_synthesis",
+      "text": "[other] No details on the data pipeline, required preprocessing steps, or data format expected by train_rescore.py before execution: '`prepare_augment_rescore.py`: unified rescore data preparation script.'"
+    }
+  ],
+  "executable": {
+    "cmd": [
+      "python",
+      "-m",
+      "msfiddle.train_rescore",
+      "--tcn-encoder",
+      "{inputs.tcn_encoder_checkpoint}",
+      "--train-dataset",
+      "{inputs.training_dataset}",
+      "--val-dataset",
+      "{inputs.validation_dataset}",
+      "--output-dir",
+      "checkpoints/{task_id}"
+    ],
+    "env": {},
+    "grounding_notes": null,
+    "inferred": false,
+    "timeout_s": 3600,
+    "working_dir": null
+  },
+  "execution_environment": null,
+  "execution_profile": {
+    "commercial_software": [],
+    "compute_tier": "medium",
+    "open_source_alternatives": []
+  },
+  "expected_artifact_name": "best_rescore_checkpoint.pt",
+  "expected_outputs": [
+    "Best model checkpoint containing formula_encoder_state_dict and rescore_head_state_dict",
+    "Training log recording formula_acc (with H) and loss metrics per epoch"
+  ],
+  "finding": "The rescore model has been redesigned with a Siamese architecture in version 2.0.0, indicating a structural change to the model components that would affect encoder freezing and training behavior.",
+  "github_name": "josiehong/FIDDLE",
+  "input_from": "task_001",
+  "inputs": [
+    "task_001.expected_outputs[0]: Training set compound count: 28,751",
+    "Pre-trained TCN spectrum encoder checkpoint",
+    "Training dataset with MS/MS spectra and molecular formula annotations",
+    "Validation dataset for formula accuracy monitoring"
+  ],
+  "keywords": [
+    "molecular formula prediction",
+    "mass spectrometry",
+    "ms/ms spectra",
+    "deep learning",
+    "siamese network",
+    "tandem mass spectrometry"
+  ],
+  "landmark_outputs": [
+    "training_log.csv",
+    "validation_metrics_per_epoch.csv",
+    "best_rescore_checkpoint.pt"
+  ],
+  "linked_result_ids": [
+    "result_004",
+    "result_008",
+    "result_009",
+    "result_010",
+    "result_013",
+    "result_015"
+  ],
+  "methodology_summary": [
+    "Load and freeze pre-trained TCN spectrum encoder to preserve learned spectral feature representations",
+    "Initialize trainable FormulaEncoder and RescoreHead modules",
+    "Train encoder and head modules using binary cross-entropy loss on annotated MS/MS spectra",
+    "Monitor formula_acc (with H) on validation set after each epoch",
+    "Save checkpoint only when validation formula_acc improves; serialize formula_encoder_state_dict and rescore_head_state_dict",
+    "Validation: checkpoint is accepted when formula_acc (with H) on validation set reaches or exceeds reported baseline performance threshold"
+  ],
+  "missing_information": [
+    "No explicit specification of the required input data format, expected file paths, or configuration file schema for train_rescore.py",
+    "No documentation of the expected hyperparameters (learning rate, batch size, number of epochs, optimizer type) for train_rescore.py",
+    "No specification of the exact structure or naming convention of checkpoint files or the directory where checkpoints are saved",
+    "No definition of what constitutes an 'improvement' in formula_acc (with H) or the baseline/tolerance threshold for checkpoint saving",
+    "No details on the data pipeline, required preprocessing steps, or data format expected by train_rescore.py before execution"
+  ],
+  "parameters": [],
+  "primary_domain": "metabolomics",
+  "project_id": null,
+  "prov": {
+    "used": [],
+    "was_influenced_by": []
+  },
+  "provenance_source": "published",
+  "reproducibility_tier": "type-checked",
+  "research_question": "Does the rescore model training script freeze the TCN spectrum encoder and train only the FormulaEncoder and RescoreHead components?",
+  "resumption_contract": null,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "run_command": null,
+  "run_cwd": null,
+  "run_timeout_seconds": 60.0,
+  "scenario_id": null,
+  "schema_version": "0.18.0",
+  "scitask_version": "0.1.1",
+  "script_refs": [],
+  "section_provenance": [
+    "intro",
+    "discussion"
+  ],
+  "skills": [
+    "neural-network-encoder-freezing",
+    "deep-learning-model-training-with-monitoring",
+    "formula-accuracy-metric-evaluation",
+    "binary-cross-entropy-loss-optimization",
+    "checkpoint-selection-based-on-validation-metric",
+    "state-dict-serialization-and-extraction"
+  ],
+  "source_package": "/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot/coll_fiddle/synthesized_package",
+  "spine_condition_ids": [
+    "cond_orbitrap_expanded",
+    "cond_ablation_components"
+  ],
+  "spine_entity_ids": [
+    "TCN_encoder",
+    "formula_encoder",
+    "rescore_head",
+    "siamese_rescore_arch",
+    "cond_ablation_components",
+    "metric_orbitrap_train_size",
+    "result_siamese_replaces_fdrnet",
+    "result_checkpoint_formula_acc",
+    "tool_prepare_augment_rescore",
+    "tool_train_rescore"
+  ],
+  "subdomains": [
+    "untargeted-metabolomics",
+    "computational-metabolomics"
+  ],
+  "subtask_categories": [
+    "model-training",
+    "data-processing"
+  ],
+  "synthesized_from": "github:JosieHong__FIDDLE",
+  "task_description": "Execute train_rescore.py to train the FormulaEncoder and RescoreHead modules with frozen TCN spectrum encoder using binary cross-entropy loss. Verify that model checkpoints are saved only when formula accuracy (including hydrogen atoms) improves, and confirm output contains formula_encoder_state_dict and rescore_head_state_dict.",
+  "task_id": "task_003",
+  "task_inputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Pre-trained TCN spectrum encoder checkpoint",
+      "port_id": "tcn_encoder_checkpoint",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Training dataset with MS/MS spectra and formula annotations",
+      "port_id": "training_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Validation dataset for accuracy monitoring",
+      "port_id": "validation_dataset",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "task_kind": "reproduction",
+  "task_objective": "Execute train_rescore.py to train FormulaEncoder and RescoreHead with frozen TCN encoder, verify checkpoint saving on formula_acc improvement, and confirm output contains formula_encoder_state_dict and rescore_head_state_dict.",
+  "task_outputs": [
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Best model checkpoint with formula_encoder and rescore_head state dicts",
+      "port_id": "best_checkpoint",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    },
+    {
+      "edam_format_uri": null,
+      "edam_operation_uri": null,
+      "evidence_id": null,
+      "label": "Training log with formula_acc and loss metrics",
+      "port_id": "training_log",
+      "resolved_via": null,
+      "source": null,
+      "source_dataset": null
+    }
+  ],
+  "techniques": [
+    "molecular-networking",
+    "gnps-workflow",
+    "spectral-library-matching",
+    "database-annotation",
+    "metabolite-identification"
+  ],
+  "title": "Reproduce the Siamese rescore model training with train_rescore.py",
+  "tools": [
+    "msfiddle"
+  ],
+  "uncertainty_notes": [
+    "This card was generated by the LLM-assisted pipeline and needs scientific expert review.",
+    "Each TracedClaim's evidence_span has been substring-checked against its source section; see logs/llm_calls.jsonl and capsules/<task_id>/quality_report.json for groundedness results."
+  ],
+  "workflow_description": "1. Load pre-trained TCN spectrum encoder weights and freeze all parameters to prevent gradient updates. 2. Initialize FormulaEncoder and RescoreHead modules with random weights. 3. Prepare training dataset with annotated MS/MS spectra and ground-truth molecular formulas. 4. Train FormulaEncoder and RescoreHead using binary cross-entropy loss, monitoring formula_acc (with H) on validation set after each epoch. 5. Save model checkpoint only when formula_acc (with H) improves over previous best validation metric. 6. Extract and serialize formula_encoder_state_dict and rescore_head_state_dict from the best checkpoint into output artifact."
+}

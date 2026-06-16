@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: EPICSimData dataset loadable via data(EPICSimData) in R/ChAMP environment"
+    },
+    {
+      "id": "pf_002",
+      "kind": "script_runs",
+      "points": 1.0,
+      "source": "programmatic_fallback"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: Block.GUI() graphical output displays zero differentially methylated blocks detected for EPICSimData, as expected for simulation dataset with no true signal"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file_format_is: Block.GUI() output is a valid interactive Shiny/Plotly web interface (HTML or R Shiny object)"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: EPICSimData dataset loadable via data(EPICSimData) in R/ChAMP environment",
+      "script_runs: champ.Block(arraytype='EPIC') executes without error on EPICSimData input",
+      "verify output_matches_reference: Block.GUI() graphical output displays zero differentially methylated blocks detected for EPICSimData, as expected for simulation dataset with no true signal",
+      "verify file_format_is: Block.GUI() output is a valid interactive Shiny/Plotly web interface (HTML or R Shiny object)"
+    ],
+    "expert_review": [
+      "Confirm that the simulation design of EPICSimData is appropriate for a null-signal test case (i.e., that the dataset was intentionally constructed to contain no true differentially methylated blocks)",
+      "Assess whether zero blocks detected is the correct expected outcome given EPICSimData's documented provenance and construction parameters"
+    ]
+  },
+  "max_score": 4.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_004"
+}

@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "pf_001",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify file exists: chromVAR package installed and loadable via library(chromVAR)"
+    },
+    {
+      "id": "pf_002",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: R script calling computeVariability on chromVARDeviations object from 10-GM / 10-H1 example dataset completes without error"
+    },
+    {
+      "id": "pf_003",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify script_runs: R script calling differentialDeviations to test GM vs H1 group differences completes without error"
+    },
+    {
+      "id": "pf_004",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: ranked variability table contains per-motif variability scores; row_count_equals at least one row per tested motif"
+    },
+    {
+      "id": "pf_005",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify output_matches_reference: differential-deviation results table contains per-motif test statistics (p-values, effect sizes, or equivalent); structure matches reported statistics in article or supplementary material"
+    },
+    {
+      "id": "pf_006",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: both output tables include motif identifiers (name or ID column)"
+    },
+    {
+      "id": "pf_007",
+      "kind": "expert_review",
+      "points": 1.0,
+      "source": "programmatic_fallback",
+      "value": "verify field_present: variability table includes numeric rank or score column; differential results table includes numeric test statistic column"
+    }
+  ],
+  "criteria": {
+    "direct_checks": [
+      "verify file exists: chromVAR package installed and loadable via library(chromVAR)",
+      "verify script_runs: R script calling computeVariability on chromVARDeviations object from 10-GM / 10-H1 example dataset completes without error",
+      "verify script_runs: R script calling differentialDeviations to test GM vs H1 group differences completes without error",
+      "verify output_matches_reference: ranked variability table contains per-motif variability scores; row_count_equals at least one row per tested motif",
+      "verify output_matches_reference: differential-deviation results table contains per-motif test statistics (p-values, effect sizes, or equivalent); structure matches reported statistics in article or supplementary material",
+      "verify field_present: both output tables include motif identifiers (name or ID column)",
+      "verify field_present: variability table includes numeric rank or score column; differential results table includes numeric test statistic column"
+    ],
+    "expert_review": [
+      "Verify that motif ranking by variability score is biologically plausible given the 10-GM / 10-H1 cell populations (genomics domain expertise required)",
+      "Verify that GM vs H1 differential-deviation test results are consistent with expected cell-type-specific transcription factor usage patterns (domain expertise required)",
+      "Assess whether reported per-motif statistics in article or SI match the computational outputs in magnitude and direction (statistical and biological interpretation)"
+    ]
+  },
+  "max_score": 7.0,
+  "review_questions": [
+    "Is the research question correctly identified and scoped?",
+    "Does the connected finding have enough supporting evidence?",
+    "Which artifacts are required before this can become an executable benchmark task?",
+    "What direct, visual, textual, or expert-review checks should be used for evaluation?"
+  ],
+  "rubric_type": "mvp_review_rubric",
+  "task_id": "task_002"
+}

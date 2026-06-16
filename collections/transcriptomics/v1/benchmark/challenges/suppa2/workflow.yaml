@@ -1,0 +1,118 @@
+schema_version: 0.1.0
+workflow_id: coll_suppa2_workflow
+mode: actual
+steps:
+- task: task_001
+  after: []
+  inputs_from: {}
+  trap: false
+- task: task_002
+  after:
+  - task_001
+  inputs_from: {}
+  trap: false
+- task: task_003
+  after:
+  - task_002
+  inputs_from: {}
+  trap: false
+reproducibility_tier: type-checked
+workflow_characteristics:
+  coupling: loose
+  composition_modularity: flat
+  abstraction_level: intermediate
+  orchestration_planning: static
+  data_transport: file
+  characterisation_confidence: inferred
+narrative:
+  tagline: SUPPA2 is a tool for fast, accurate, and uncertainty-aware differential
+    splicing analysis across multiple conditions that leverages transcript quantification
+    for efficient alternative splicing profiling.
+  pseudo_abstract: 'SUPPA2 implements a workflow for differential splicing analysis
+    consisting of three main computational steps: (1) generation of transcript events
+    and local alternative splicing events from genome annotation GTF files via the
+    generateEvents subcommand, which produces ioi (input-output index), ioe (input-output
+    events), and gtf artifacts; (2) calculation of PSI (percent spliced in) values
+    for transcript events and local alternative splicing events by leveraging transcript
+    quantification data; and (3) differential splicing analysis across multiple conditions
+    by consuming PSI matrices and expression data to generate differential splicing
+    results with uncertainty quantification.'
+  research_questions:
+  - What are the three distinct output file artifacts produced by the SUPPA2 generateEvents
+    subcommand when parsing a genome annotation GTF file?
+  - How does SUPPA2 compute PSI (Percent Spliced In) values from transcript quantification
+    data and event definitions to produce a PSI matrix?
+  - How does the SUPPA2 diffSplice subcommand compute differential splicing statistics
+    (delta PSI and p-values) from per-condition PSI matrices and transcript expression
+    data?
+  methods_summary: "Load genome annotation in GTF format into SUPPA2 generateEvents\
+    \ subcommand. Extract transcript structures and identify all exonic features,\
+    \ promoter/terminator variants, and isoform-specific junctions. Generate index\
+    \ of events (ioe) file enumerating transcript-level and local splicing events\
+    \ with event definitions. Generate index of isoforms (ioi) file mapping each event\
+    \ to the set of isoforms that include or exclude it. Filter and extract only local\
+    \ alternative splicing events (exon skipping, intron retention, alternative splice\
+    \ sites) into a separate GTF file. Validation: verify that all three output files\
+    \ are produced with correct format and non-empty event/isoform mappings consistent\
+    \ with input annotation complexity. Load transcript quantification output with\
+    \ transcript identifiers and abundance values (TPM or counts). Parse SUPPA2 event\
+    \ definition file (ioe or ioi) to extract event\u2013transcript mappings. Aggregate\
+    \ transcript abundances per event according to inclusion/exclusion isoform sets.\
+    \ Calculate PSI as the ratio of inclusion isoform total to total event abundance.\
+    \ Validation: PSI matrix has one row per event, one column per sample, all values\
+    \ in [0,1]. Load PSI matrices and transcript expression quantification for each\
+    \ condition. Align sample identifiers across PSI and expression files. Apply SUPPA2\
+    \ diffSplice statistical test with uncertainty-aware variance estimation. Compute\
+    \ \u0394PSI (mean difference) and two-sided p-values per event. Validation: output\
+    \ table row count equals total number of events; all p-values fall in [0, 1] and\
+    \ \u0394PSI in [\u22121, 1]."
+  domain: transcriptomics
+  techniques:
+  - statistical-analysis
+  - differential-abundance-analysis
+  claims:
+  - claim_text: SUPPA performs fast, accurate, and uncertainty-aware differential
+      splicing analysis across multiple conditions.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_diffSplicing
+  - claim_text: SUPPA2 was published in Genome Biology in 2018.
+    claim_type: finding
+    speculative: false
+    entity_id: SUPPA2_system
+  - claim_text: Transcript quantification can be leveraged for fast computation of
+      alternative splicing profiles.
+    claim_type: finding
+    speculative: false
+    entity_id: tool_salmon_kallisto
+  - claim_text: A short SUPPA tutorial on an example dataset is available on GitHub.
+    claim_type: finding
+    speculative: false
+  - claim_text: SUPPA has command and subcommand structure.
+    claim_type: finding
+    speculative: false
+    entity_id: arch_commandSubcommand
+  - claim_text: SUPPA includes functionality for generation of transcript events and
+      local alternative splicing events.
+    claim_type: finding
+    speculative: false
+  - claim_text: SUPPA includes functionality for PSI calculation for Transcripts and
+      Events.
+    claim_type: finding
+    speculative: false
+    entity_id: comp_psiCalculation
+  speculative: false
+  task_openness: closed
+  method_alternatives: []
+  substitution_constraints: []
+instructions: Reproduce the 3-step workflow below. Honor each step's IO contract;
+  produce the files listed under 'Final expected outputs'.
+expected_final_outputs:
+- path: 'Differential splicing results table (TSV/CSV) with columns: event_id, dpsi,
+    pvalue, and per-condition mean PSI values'
+  type: file
+  tolerance: hash
+  numeric_tolerance_pct: 0.05
+low_plausibility: false
+trap_steps: []
+source_dois: []
